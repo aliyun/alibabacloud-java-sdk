@@ -4,10 +4,9 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class DeleteAppGroupResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public DeleteAppGroupResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
+     * <p>The HTTP status code that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -15,6 +14,8 @@ public class DeleteAppGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>The additional information that is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>app is not existed, groupId=xxxx, namesapce=xxxx</p>
      */
@@ -22,6 +23,8 @@ public class DeleteAppGroupResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
@@ -29,6 +32,10 @@ public class DeleteAppGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indices whether the request was successful. Valid values:</p>
+     * <p>true: The request was successful.
+     * false: The request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,14 +45,6 @@ public class DeleteAppGroupResponseBody extends TeaModel {
     public static DeleteAppGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAppGroupResponseBody self = new DeleteAppGroupResponseBody();
         return TeaModel.build(map, self);
-    }
-
-    public DeleteAppGroupResponseBody setAccessDeniedDetail(DeleteAppGroupResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public DeleteAppGroupResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
     }
 
     public DeleteAppGroupResponseBody setCode(Integer code) {
@@ -78,91 +77,6 @@ public class DeleteAppGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class DeleteAppGroupResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static DeleteAppGroupResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            DeleteAppGroupResponseBodyAccessDeniedDetail self = new DeleteAppGroupResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public DeleteAppGroupResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
     }
 
 }

@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public ListNamespacesResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -58,14 +55,6 @@ public class ListNamespacesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListNamespacesResponseBody setAccessDeniedDetail(ListNamespacesResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public ListNamespacesResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
-    }
-
     public ListNamespacesResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -104,91 +93,6 @@ public class ListNamespacesResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListNamespacesResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static ListNamespacesResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            ListNamespacesResponseBodyAccessDeniedDetail self = new ListNamespacesResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public ListNamespacesResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
     }
 
     public static class ListNamespacesResponseBodyDataNamespaces extends TeaModel {

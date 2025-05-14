@@ -231,6 +231,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     /**
      * <p>The maximum capacity of the task queue. You can specify this parameter for MapReduce jobs. Default value: 10000.</p>
      * 
@@ -560,6 +563,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public CreateJobRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public CreateJobRequest setQueueSize(Integer queueSize) {

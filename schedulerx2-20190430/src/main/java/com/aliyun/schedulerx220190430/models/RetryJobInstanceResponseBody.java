@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class RetryJobInstanceResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public RetryJobInstanceResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -52,14 +49,6 @@ public class RetryJobInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public RetryJobInstanceResponseBody setAccessDeniedDetail(RetryJobInstanceResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public RetryJobInstanceResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
-    }
-
     public RetryJobInstanceResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -90,91 +79,6 @@ public class RetryJobInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class RetryJobInstanceResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static RetryJobInstanceResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            RetryJobInstanceResponseBodyAccessDeniedDetail self = new RetryJobInstanceResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public RetryJobInstanceResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
     }
 
 }

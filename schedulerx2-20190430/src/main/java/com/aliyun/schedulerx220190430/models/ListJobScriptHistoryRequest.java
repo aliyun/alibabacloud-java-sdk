@@ -3,9 +3,9 @@ package com.aliyun.schedulerx220190430.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteWorkflowRequest extends TeaModel {
+public class ListJobScriptHistoryRequest extends TeaModel {
     /**
-     * <p>The application group ID. You can obtain the application group ID on the Application Management page in the SchedulerX console.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>testSchedulerx.defaultGroup</p>
@@ -14,18 +14,24 @@ public class DeleteWorkflowRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The namespace ID. You can obtain the namespace ID on the Namespace page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
+     * <p>92583</p>
+     */
+    @NameInMap("JobId")
+    public Long jobId;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401108</p>
      */
     @NameInMap("Namespace")
     public String namespace;
 
     /**
-     * <p>The source of the namespace. This parameter is required only for a special third party.</p>
-     * 
      * <strong>example:</strong>
      * <p>schedulerx</p>
      */
@@ -33,7 +39,6 @@ public class DeleteWorkflowRequest extends TeaModel {
     public String namespaceSource;
 
     /**
-     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,22 +47,12 @@ public class DeleteWorkflowRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The workflow ID.</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>111</p>
-     */
-    @NameInMap("WorkflowId")
-    public Long workflowId;
-
-    public static DeleteWorkflowRequest build(java.util.Map<String, ?> map) throws Exception {
-        DeleteWorkflowRequest self = new DeleteWorkflowRequest();
+    public static ListJobScriptHistoryRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListJobScriptHistoryRequest self = new ListJobScriptHistoryRequest();
         return TeaModel.build(map, self);
     }
 
-    public DeleteWorkflowRequest setGroupId(String groupId) {
+    public ListJobScriptHistoryRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
@@ -65,7 +60,15 @@ public class DeleteWorkflowRequest extends TeaModel {
         return this.groupId;
     }
 
-    public DeleteWorkflowRequest setNamespace(String namespace) {
+    public ListJobScriptHistoryRequest setJobId(Long jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public Long getJobId() {
+        return this.jobId;
+    }
+
+    public ListJobScriptHistoryRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -73,7 +76,7 @@ public class DeleteWorkflowRequest extends TeaModel {
         return this.namespace;
     }
 
-    public DeleteWorkflowRequest setNamespaceSource(String namespaceSource) {
+    public ListJobScriptHistoryRequest setNamespaceSource(String namespaceSource) {
         this.namespaceSource = namespaceSource;
         return this;
     }
@@ -81,20 +84,12 @@ public class DeleteWorkflowRequest extends TeaModel {
         return this.namespaceSource;
     }
 
-    public DeleteWorkflowRequest setRegionId(String regionId) {
+    public ListJobScriptHistoryRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public DeleteWorkflowRequest setWorkflowId(Long workflowId) {
-        this.workflowId = workflowId;
-        return this;
-    }
-    public Long getWorkflowId() {
-        return this.workflowId;
     }
 
 }

@@ -3,10 +3,8 @@ package com.aliyun.schedulerx220190430.models;
 
 import com.aliyun.tea.*;
 
-public class BatchDisableJobsResponseBody extends TeaModel {
+public class DeleteNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -14,42 +12,32 @@ public class BatchDisableJobsResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The additional information that was returned.</p>
-     * 
      * <strong>example:</strong>
-     * <p>disable failed jobs=[99341]</p>
+     * <p>The system namespace cannot be deleted</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
-     * 
      * <strong>example:</strong>
-     * <p>71BCC0E3-64B2-4B63-A870-AFB64EBCB5A7</p>
+     * <p>4F68ABED-AC31-4412-9297-D9A8F0401107</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
-     * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static BatchDisableJobsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        BatchDisableJobsResponseBody self = new BatchDisableJobsResponseBody();
+    public static DeleteNamespaceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteNamespaceResponseBody self = new DeleteNamespaceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public BatchDisableJobsResponseBody setCode(Integer code) {
+    public DeleteNamespaceResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -57,7 +45,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public BatchDisableJobsResponseBody setMessage(String message) {
+    public DeleteNamespaceResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -65,7 +53,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public BatchDisableJobsResponseBody setRequestId(String requestId) {
+    public DeleteNamespaceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -73,7 +61,7 @@ public class BatchDisableJobsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public BatchDisableJobsResponseBody setSuccess(Boolean success) {
+    public DeleteNamespaceResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

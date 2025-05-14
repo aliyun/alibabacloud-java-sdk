@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ExecuteJobResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public ExecuteJobResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -58,14 +55,6 @@ public class ExecuteJobResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ExecuteJobResponseBody setAccessDeniedDetail(ExecuteJobResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public ExecuteJobResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
-    }
-
     public ExecuteJobResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -104,91 +93,6 @@ public class ExecuteJobResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ExecuteJobResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static ExecuteJobResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            ExecuteJobResponseBodyAccessDeniedDetail self = new ExecuteJobResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public ExecuteJobResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
     }
 
     public static class ExecuteJobResponseBodyData extends TeaModel {

@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetAppGroupResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public GetAppGroupResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
      * <p>The HTTP status code that is returned.</p>
      * 
@@ -58,14 +55,6 @@ public class GetAppGroupResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAppGroupResponseBody setAccessDeniedDetail(GetAppGroupResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public GetAppGroupResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
-    }
-
     public GetAppGroupResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -104,91 +93,6 @@ public class GetAppGroupResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class GetAppGroupResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static GetAppGroupResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            GetAppGroupResponseBodyAccessDeniedDetail self = new GetAppGroupResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public GetAppGroupResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
     }
 
     public static class GetAppGroupResponseBodyData extends TeaModel {
@@ -256,13 +160,37 @@ public class GetAppGroupResponseBody extends TeaModel {
         public Integer maxJobs;
 
         /**
-         * <p>The configuration of the alert. The value is a JSON string. For more information, see <strong>the additional information about response parameters below this table.</strong></p>
+         * <p>The alert notification configurations.</p>
+         * <blockquote>
+         * <p> For more information about this parameter, see the following <strong>additional information about request parameters</strong>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;sendChannel&quot;:&quot;sms,mail,ding&quot;}</p>
          */
         @NameInMap("MonitorConfigJson")
         public String monitorConfigJson;
+
+        /**
+         * <p>The alert contact configurations.</p>
+         * <blockquote>
+         * <p> For more information about this parameter, see the following <strong>additional information about request parameters</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[ {&quot;name&quot;: &quot;Peter&quot;}, {&quot;name&quot;: &quot;Paul&quot;} ]</p>
+         */
+        @NameInMap("MonitorContactsJson")
+        public String monitorContactsJson;
+
+        /**
+         * <p>The ID of the namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adcfc35d-e2fe-4fe9-bbaa-20e90ffc****</p>
+         */
+        @NameInMap("Namespace")
+        public String namespace;
 
         public static GetAppGroupResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAppGroupResponseBodyData self = new GetAppGroupResponseBodyData();
@@ -331,6 +259,22 @@ public class GetAppGroupResponseBody extends TeaModel {
         }
         public String getMonitorConfigJson() {
             return this.monitorConfigJson;
+        }
+
+        public GetAppGroupResponseBodyData setMonitorContactsJson(String monitorContactsJson) {
+            this.monitorContactsJson = monitorContactsJson;
+            return this;
+        }
+        public String getMonitorContactsJson() {
+            return this.monitorContactsJson;
+        }
+
+        public GetAppGroupResponseBodyData setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
     }

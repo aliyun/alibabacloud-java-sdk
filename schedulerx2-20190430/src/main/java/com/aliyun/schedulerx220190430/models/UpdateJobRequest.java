@@ -218,6 +218,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("Parameters")
     public String parameters;
 
+    @NameInMap("Priority")
+    public Integer priority;
+
     /**
      * <p>The maximum number of tasks that can be queued. Default value: 10000. This parameter is an advanced configuration item of the MapReduce job.</p>
      * 
@@ -580,6 +583,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getParameters() {
         return this.parameters;
+    }
+
+    public UpdateJobRequest setPriority(Integer priority) {
+        this.priority = priority;
+        return this;
+    }
+    public Integer getPriority() {
+        return this.priority;
     }
 
     public UpdateJobRequest setQueueSize(Integer queueSize) {

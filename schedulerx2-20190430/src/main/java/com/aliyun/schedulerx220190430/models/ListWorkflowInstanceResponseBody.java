@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class ListWorkflowInstanceResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public ListWorkflowInstanceResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
      * <p>The HTTP status code.</p>
      * 
@@ -58,14 +55,6 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListWorkflowInstanceResponseBody setAccessDeniedDetail(ListWorkflowInstanceResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public ListWorkflowInstanceResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
-    }
-
     public ListWorkflowInstanceResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -104,91 +93,6 @@ public class ListWorkflowInstanceResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
-    }
-
-    public static class ListWorkflowInstanceResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static ListWorkflowInstanceResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            ListWorkflowInstanceResponseBodyAccessDeniedDetail self = new ListWorkflowInstanceResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public ListWorkflowInstanceResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
     }
 
     public static class ListWorkflowInstanceResponseBodyDataWfInstanceInfos extends TeaModel {

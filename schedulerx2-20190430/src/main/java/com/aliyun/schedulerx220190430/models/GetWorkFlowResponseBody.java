@@ -4,9 +4,6 @@ package com.aliyun.schedulerx220190430.models;
 import com.aliyun.tea.*;
 
 public class GetWorkFlowResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
-    public GetWorkFlowResponseBodyAccessDeniedDetail accessDeniedDetail;
-
     /**
      * <p>Error codes</p>
      * 
@@ -54,14 +51,6 @@ public class GetWorkFlowResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetWorkFlowResponseBody setAccessDeniedDetail(GetWorkFlowResponseBodyAccessDeniedDetail accessDeniedDetail) {
-        this.accessDeniedDetail = accessDeniedDetail;
-        return this;
-    }
-    public GetWorkFlowResponseBodyAccessDeniedDetail getAccessDeniedDetail() {
-        return this.accessDeniedDetail;
-    }
-
     public GetWorkFlowResponseBody setCode(Integer code) {
         this.code = code;
         return this;
@@ -102,91 +91,6 @@ public class GetWorkFlowResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetWorkFlowResponseBodyAccessDeniedDetail extends TeaModel {
-        @NameInMap("AuthAction")
-        public String authAction;
-
-        @NameInMap("AuthPrincipalDisplayName")
-        public String authPrincipalDisplayName;
-
-        @NameInMap("AuthPrincipalOwnerId")
-        public String authPrincipalOwnerId;
-
-        @NameInMap("AuthPrincipalType")
-        public String authPrincipalType;
-
-        @NameInMap("EncodedDiagnosticMessage")
-        public String encodedDiagnosticMessage;
-
-        @NameInMap("NoPermissionType")
-        public String noPermissionType;
-
-        @NameInMap("PolicyType")
-        public String policyType;
-
-        public static GetWorkFlowResponseBodyAccessDeniedDetail build(java.util.Map<String, ?> map) throws Exception {
-            GetWorkFlowResponseBodyAccessDeniedDetail self = new GetWorkFlowResponseBodyAccessDeniedDetail();
-            return TeaModel.build(map, self);
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setAuthAction(String authAction) {
-            this.authAction = authAction;
-            return this;
-        }
-        public String getAuthAction() {
-            return this.authAction;
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setAuthPrincipalDisplayName(String authPrincipalDisplayName) {
-            this.authPrincipalDisplayName = authPrincipalDisplayName;
-            return this;
-        }
-        public String getAuthPrincipalDisplayName() {
-            return this.authPrincipalDisplayName;
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setAuthPrincipalOwnerId(String authPrincipalOwnerId) {
-            this.authPrincipalOwnerId = authPrincipalOwnerId;
-            return this;
-        }
-        public String getAuthPrincipalOwnerId() {
-            return this.authPrincipalOwnerId;
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setAuthPrincipalType(String authPrincipalType) {
-            this.authPrincipalType = authPrincipalType;
-            return this;
-        }
-        public String getAuthPrincipalType() {
-            return this.authPrincipalType;
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setEncodedDiagnosticMessage(String encodedDiagnosticMessage) {
-            this.encodedDiagnosticMessage = encodedDiagnosticMessage;
-            return this;
-        }
-        public String getEncodedDiagnosticMessage() {
-            return this.encodedDiagnosticMessage;
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setNoPermissionType(String noPermissionType) {
-            this.noPermissionType = noPermissionType;
-            return this;
-        }
-        public String getNoPermissionType() {
-            return this.noPermissionType;
-        }
-
-        public GetWorkFlowResponseBodyAccessDeniedDetail setPolicyType(String policyType) {
-            this.policyType = policyType;
-            return this;
-        }
-        public String getPolicyType() {
-            return this.policyType;
-        }
-
-    }
-
     public static class GetWorkFlowResponseBodyDataWorkFlowInfo extends TeaModel {
         /**
          * <p>The description of the workflow.</p>
@@ -197,6 +101,12 @@ public class GetWorkFlowResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("GroupId")
+        public String groupId;
+
+        @NameInMap("MaxConcurrency")
+        public String maxConcurrency;
+
         /**
          * <p>The name of the workflow.</p>
          * 
@@ -205,6 +115,9 @@ public class GetWorkFlowResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Namespace")
+        public String namespace;
 
         /**
          * <p>The status of the workflow.</p>
@@ -255,12 +168,36 @@ public class GetWorkFlowResponseBody extends TeaModel {
             return this.description;
         }
 
+        public GetWorkFlowResponseBodyDataWorkFlowInfo setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetWorkFlowResponseBodyDataWorkFlowInfo setMaxConcurrency(String maxConcurrency) {
+            this.maxConcurrency = maxConcurrency;
+            return this;
+        }
+        public String getMaxConcurrency() {
+            return this.maxConcurrency;
+        }
+
         public GetWorkFlowResponseBodyDataWorkFlowInfo setName(String name) {
             this.name = name;
             return this;
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetWorkFlowResponseBodyDataWorkFlowInfo setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
         }
 
         public GetWorkFlowResponseBodyDataWorkFlowInfo setStatus(String status) {

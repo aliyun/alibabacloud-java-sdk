@@ -42,6 +42,28 @@ public class UpdateAppGroupRequest extends TeaModel {
     public Integer maxConcurrency;
 
     /**
+     * <p>The configuration of the alert. The value is a JSON string. For more information about this parameter, see <strong>Additional information about request parameters</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;sendChannel&quot;: &quot;ding,sms,mail,phone&quot;,
+     *     &quot;alarmType&quot;: &quot;Contacts&quot;,
+     *     &quot;webhookIsAtAll&quot;: false
+     * }</p>
+     */
+    @NameInMap("MonitorConfigJson")
+    public String monitorConfigJson;
+
+    /**
+     * <p>The configuration of alert contacts. The value is a JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;userName&quot;:&quot;Tom&quot;,&quot;userPhone&quot;:&quot;89756******&quot;},{&quot;userName&quot;:&quot;Bob&quot;,&quot;ding&quot;:&quot;<a href="http://www.example.com%22%7D%5D">http://www.example.com&quot;}]</a></p>
+     */
+    @NameInMap("MonitorContactsJson")
+    public String monitorContactsJson;
+
+    /**
      * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
@@ -96,6 +118,22 @@ public class UpdateAppGroupRequest extends TeaModel {
     }
     public Integer getMaxConcurrency() {
         return this.maxConcurrency;
+    }
+
+    public UpdateAppGroupRequest setMonitorConfigJson(String monitorConfigJson) {
+        this.monitorConfigJson = monitorConfigJson;
+        return this;
+    }
+    public String getMonitorConfigJson() {
+        return this.monitorConfigJson;
+    }
+
+    public UpdateAppGroupRequest setMonitorContactsJson(String monitorContactsJson) {
+        this.monitorContactsJson = monitorContactsJson;
+        return this;
+    }
+    public String getMonitorContactsJson() {
+        return this.monitorContactsJson;
     }
 
     public UpdateAppGroupRequest setNamespace(String namespace) {

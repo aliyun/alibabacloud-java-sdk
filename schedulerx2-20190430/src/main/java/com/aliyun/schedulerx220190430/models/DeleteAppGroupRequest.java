@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteAppGroupRequest extends TeaModel {
     /**
+     * <p>Specifies whether to delete the jobs in the application group. Valid values:</p>
+     * <p>true: deletes the jobs in the application group.
+     * false: does not delete the jobs in the application group.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +16,7 @@ public class DeleteAppGroupRequest extends TeaModel {
     public Boolean deleteJobs;
 
     /**
+     * <p>The ID of the application. You can obtain the ID of the application on the Application Management page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +26,7 @@ public class DeleteAppGroupRequest extends TeaModel {
     public String groupId;
 
     /**
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +36,7 @@ public class DeleteAppGroupRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

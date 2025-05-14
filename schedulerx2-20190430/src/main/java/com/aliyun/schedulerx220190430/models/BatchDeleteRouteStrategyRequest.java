@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteRouteStrategyRequest extends TeaModel {
     /**
+     * <p>The ID of the application. You can obtain the application ID on the Application Management page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,14 @@ public class BatchDeleteRouteStrategyRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The IDs of the jobs.</p>
+     */
     @NameInMap("JobIdList")
     public java.util.List<Long> jobIdList;
 
     /**
+     * <p>The ID of the namespace. You can obtain the ID of the namespace on the Namespace page in the SchedulerX console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +31,7 @@ public class BatchDeleteRouteStrategyRequest extends TeaModel {
     public String namespace;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
