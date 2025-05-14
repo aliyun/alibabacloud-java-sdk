@@ -117,6 +117,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("OfficeSiteIds")
     public java.util.List<String> officeSiteIds;
 
+    @NameInMap("QosRuleIds")
+    public java.util.List<String> qosRuleIds;
+
     /**
      * <p>The sales mode.</p>
      * <p>Valid values:</p>
@@ -279,6 +282,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public java.util.List<String> getOfficeSiteIds() {
         return this.officeSiteIds;
+    }
+
+    public DescribeAndroidInstancesRequest setQosRuleIds(java.util.List<String> qosRuleIds) {
+        this.qosRuleIds = qosRuleIds;
+        return this;
+    }
+    public java.util.List<String> getQosRuleIds() {
+        return this.qosRuleIds;
     }
 
     public DescribeAndroidInstancesRequest setSaleMode(String saleMode) {

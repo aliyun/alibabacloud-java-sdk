@@ -1496,6 +1496,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OfficeSiteIds", request.officeSiteIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.qosRuleIds)) {
+            query.put("QosRuleIds", request.qosRuleIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
             query.put("SaleMode", request.saleMode);
         }
@@ -1781,6 +1785,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudPhoneNodesResponse describeCloudPhoneNodes(DescribeCloudPhoneNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudPhoneNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询显示设置</p>
+     * 
+     * @param request DescribeDisplayConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDisplayConfigResponse
+     */
+    public DescribeDisplayConfigResponse describeDisplayConfigWithOptions(DescribeDisplayConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDisplayConfig"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDisplayConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询显示设置</p>
+     * 
+     * @param request DescribeDisplayConfigRequest
+     * @return DescribeDisplayConfigResponse
+     */
+    public DescribeDisplayConfigResponse describeDisplayConfig(DescribeDisplayConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDisplayConfigWithOptions(request, runtime);
     }
 
     /**
@@ -2995,6 +3043,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCloudPhoneNodeResponse modifyCloudPhoneNode(ModifyCloudPhoneNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCloudPhoneNodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改显示设置</p>
+     * 
+     * @param tmpReq ModifyDisplayConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyDisplayConfigResponse
+     */
+    public ModifyDisplayConfigResponse modifyDisplayConfigWithOptions(ModifyDisplayConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyDisplayConfigShrinkRequest request = new ModifyDisplayConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.displayConfig)) {
+            request.displayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.displayConfig, "DisplayConfig", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayConfigShrink)) {
+            body.put("DisplayConfig", request.displayConfigShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyDisplayConfig"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyDisplayConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改显示设置</p>
+     * 
+     * @param request ModifyDisplayConfigRequest
+     * @return ModifyDisplayConfigResponse
+     */
+    public ModifyDisplayConfigResponse modifyDisplayConfig(ModifyDisplayConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyDisplayConfigWithOptions(request, runtime);
     }
 
     /**

@@ -472,6 +472,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("PublicIpv6Address")
         public String publicIpv6Address;
 
+        @NameInMap("QosRuleId")
+        public String qosRuleId;
+
         /**
          * <p>The progress of instance data backup or restoration.</p>
          * 
@@ -754,6 +757,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getPublicIpv6Address() {
             return this.publicIpv6Address;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setQosRuleId(String qosRuleId) {
+            this.qosRuleId = qosRuleId;
+            return this;
+        }
+        public String getQosRuleId() {
+            return this.qosRuleId;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setRate(Integer rate) {
