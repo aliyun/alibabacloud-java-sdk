@@ -55,14 +55,14 @@ public class SubmitCopyrightJobRequest extends TeaModel {
      * <p>0</p>
      */
     @NameInMap("StartTime")
-    public String startTime;
+    public Long startTime;
 
     /**
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("TotalTime")
-    public String totalTime;
+    public Long totalTime;
 
     /**
      * <strong>example:</strong>
@@ -139,19 +139,19 @@ public class SubmitCopyrightJobRequest extends TeaModel {
         return this.params;
     }
 
-    public SubmitCopyrightJobRequest setStartTime(String startTime) {
+    public SubmitCopyrightJobRequest setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
-    public String getStartTime() {
+    public Long getStartTime() {
         return this.startTime;
     }
 
-    public SubmitCopyrightJobRequest setTotalTime(String totalTime) {
+    public SubmitCopyrightJobRequest setTotalTime(Long totalTime) {
         this.totalTime = totalTime;
         return this;
     }
-    public String getTotalTime() {
+    public Long getTotalTime() {
         return this.totalTime;
     }
 
