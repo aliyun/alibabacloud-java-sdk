@@ -294,6 +294,12 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         @NameInMap("AppName")
         public String appName;
 
+        @NameInMap("ApplicationEnableGreyTagRoute")
+        public Boolean applicationEnableGreyTagRoute;
+
+        @NameInMap("ApplicationUpdateStrategy")
+        public String applicationUpdateStrategy;
+
         /**
          * <p>The approval ID of the change order.</p>
          * 
@@ -501,6 +507,22 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public DescribeChangeOrderResponseBodyData setApplicationEnableGreyTagRoute(Boolean applicationEnableGreyTagRoute) {
+            this.applicationEnableGreyTagRoute = applicationEnableGreyTagRoute;
+            return this;
+        }
+        public Boolean getApplicationEnableGreyTagRoute() {
+            return this.applicationEnableGreyTagRoute;
+        }
+
+        public DescribeChangeOrderResponseBodyData setApplicationUpdateStrategy(String applicationUpdateStrategy) {
+            this.applicationUpdateStrategy = applicationUpdateStrategy;
+            return this;
+        }
+        public String getApplicationUpdateStrategy() {
+            return this.applicationUpdateStrategy;
         }
 
         public DescribeChangeOrderResponseBodyData setApprovalId(String approvalId) {

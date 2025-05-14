@@ -241,6 +241,9 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        @NameInMap("PackageVersionId")
+        public String packageVersionId;
+
         /**
          * <p>The total number of instances.</p>
          * 
@@ -343,6 +346,14 @@ public class DescribeApplicationGroupsResponseBody extends TeaModel {
         }
         public String getPackageVersion() {
             return this.packageVersion;
+        }
+
+        public DescribeApplicationGroupsResponseBodyData setPackageVersionId(String packageVersionId) {
+            this.packageVersionId = packageVersionId;
+            return this;
+        }
+        public String getPackageVersionId() {
+            return this.packageVersionId;
         }
 
         public DescribeApplicationGroupsResponseBodyData setReplicas(Integer replicas) {

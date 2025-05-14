@@ -471,6 +471,15 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationSlbsResponseBodyData extends TeaModel {
+        @NameInMap("AppId")
+        public String appId;
+
+        @NameInMap("AppName")
+        public String appName;
+
+        @NameInMap("ClusterId")
+        public String clusterId;
+
         /**
          * <p>The configurations of the Internet-facing SLB instance.</p>
          */
@@ -554,6 +563,30 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         public static DescribeApplicationSlbsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationSlbsResponseBodyData self = new DescribeApplicationSlbsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setAppName(String appName) {
+            this.appName = appName;
+            return this;
+        }
+        public String getAppName() {
+            return this.appName;
+        }
+
+        public DescribeApplicationSlbsResponseBodyData setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public DescribeApplicationSlbsResponseBodyData setInternet(java.util.List<DescribeApplicationSlbsResponseBodyDataInternet> internet) {
