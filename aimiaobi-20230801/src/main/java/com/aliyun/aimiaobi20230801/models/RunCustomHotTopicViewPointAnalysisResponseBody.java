@@ -159,7 +159,95 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
 
     }
 
+    public static class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles extends TeaModel {
+        @NameInMap("Author")
+        public String author;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("PubTime")
+        public String pubTime;
+
+        @NameInMap("Source")
+        public String source;
+
+        @NameInMap("Summary")
+        public String summary;
+
+        @NameInMap("Title")
+        public String title;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles build(java.util.Map<String, ?> map) throws Exception {
+            RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles self = new RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles();
+            return TeaModel.build(map, self);
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setAuthor(String author) {
+            this.author = author;
+            return this;
+        }
+        public String getAuthor() {
+            return this.author;
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setPubTime(String pubTime) {
+            this.pubTime = pubTime;
+            return this;
+        }
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
     public static class RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput extends TeaModel {
+        @NameInMap("Articles")
+        public java.util.List<RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles> articles;
+
         @NameInMap("AskUser")
         public java.util.List<String> askUser;
 
@@ -201,6 +289,14 @@ public class RunCustomHotTopicViewPointAnalysisResponseBody extends TeaModel {
         public static RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput build(java.util.Map<String, ?> map) throws Exception {
             RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput self = new RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput();
             return TeaModel.build(map, self);
+        }
+
+        public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput setArticles(java.util.List<RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles> articles) {
+            this.articles = articles;
+            return this;
+        }
+        public java.util.List<RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutputArticles> getArticles() {
+            return this.articles;
         }
 
         public RunCustomHotTopicViewPointAnalysisResponseBodyPayloadOutput setAskUser(java.util.List<String> askUser) {

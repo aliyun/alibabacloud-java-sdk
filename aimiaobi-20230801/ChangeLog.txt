@@ -1,3 +1,7 @@
+2025-05-14 Version: 1.24.1
+- Update API RunCustomHotTopicViewPointAnalysis: add response parameters Body.Payload.Output.Articles.
+
+
 2025-05-12 Version: 1.24.0
 - Support API GetStyleLearningResult.
 - Support API ListWritingStyles.
