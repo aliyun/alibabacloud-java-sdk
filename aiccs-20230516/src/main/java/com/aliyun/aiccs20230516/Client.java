@@ -733,18 +733,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.customersShrink)) {
-            query.put("Customers", request.customersShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.failReturn)) {
-            query.put("FailReturn", request.failReturn);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
-            query.put("OutId", request.outId);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -757,12 +745,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customersShrink)) {
+            body.put("Customers", request.customersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.failReturn)) {
+            body.put("FailReturn", request.failReturn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            body.put("OutId", request.outId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            query.put("TaskId", request.taskId);
+            body.put("TaskId", request.taskId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ImportNumberV2"),

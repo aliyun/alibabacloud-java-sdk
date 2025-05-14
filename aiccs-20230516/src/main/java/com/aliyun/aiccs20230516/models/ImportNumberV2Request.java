@@ -9,7 +9,7 @@ public class ImportNumberV2Request extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>38</p>
+     * <p>1</p>
      */
     @NameInMap("FailReturn")
     public Long failReturn;
@@ -32,7 +32,7 @@ public class ImportNumberV2Request extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>89</p>
+     * <p>92</p>
      */
     @NameInMap("TaskId")
     public Long taskId;
