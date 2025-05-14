@@ -202,6 +202,77 @@ public class CreateFeatureViewRequest extends TeaModel {
         return this.writeToFeatureDB;
     }
 
+    public static class CreateFeatureViewRequestFieldsTransformInput extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateFeatureViewRequestFieldsTransformInput build(java.util.Map<String, ?> map) throws Exception {
+            CreateFeatureViewRequestFieldsTransformInput self = new CreateFeatureViewRequestFieldsTransformInput();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFeatureViewRequestFieldsTransformInput setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateFeatureViewRequestFieldsTransformInput setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class CreateFeatureViewRequestFieldsTransform extends TeaModel {
+        @NameInMap("Input")
+        public java.util.List<CreateFeatureViewRequestFieldsTransformInput> input;
+
+        @NameInMap("LLMConfigId")
+        public Integer LLMConfigId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateFeatureViewRequestFieldsTransform build(java.util.Map<String, ?> map) throws Exception {
+            CreateFeatureViewRequestFieldsTransform self = new CreateFeatureViewRequestFieldsTransform();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFeatureViewRequestFieldsTransform setInput(java.util.List<CreateFeatureViewRequestFieldsTransformInput> input) {
+            this.input = input;
+            return this;
+        }
+        public java.util.List<CreateFeatureViewRequestFieldsTransformInput> getInput() {
+            return this.input;
+        }
+
+        public CreateFeatureViewRequestFieldsTransform setLLMConfigId(Integer LLMConfigId) {
+            this.LLMConfigId = LLMConfigId;
+            return this;
+        }
+        public Integer getLLMConfigId() {
+            return this.LLMConfigId;
+        }
+
+        public CreateFeatureViewRequestFieldsTransform setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class CreateFeatureViewRequestFields extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
@@ -212,6 +283,9 @@ public class CreateFeatureViewRequest extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Transform")
+        public java.util.List<CreateFeatureViewRequestFieldsTransform> transform;
 
         /**
          * <strong>example:</strong>
@@ -239,6 +313,14 @@ public class CreateFeatureViewRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateFeatureViewRequestFields setTransform(java.util.List<CreateFeatureViewRequestFieldsTransform> transform) {
+            this.transform = transform;
+            return this;
+        }
+        public java.util.List<CreateFeatureViewRequestFieldsTransform> getTransform() {
+            return this.transform;
         }
 
         public CreateFeatureViewRequestFields setType(String type) {

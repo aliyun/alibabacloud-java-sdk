@@ -382,6 +382,81 @@ public class GetFeatureViewResponseBody extends TeaModel {
         return this.writeToFeatureDB;
     }
 
+    public static class GetFeatureViewResponseBodyFieldsTransformInput extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetFeatureViewResponseBodyFieldsTransformInput build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureViewResponseBodyFieldsTransformInput self = new GetFeatureViewResponseBodyFieldsTransformInput();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureViewResponseBodyFieldsTransformInput setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetFeatureViewResponseBodyFieldsTransformInput setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetFeatureViewResponseBodyFieldsTransform extends TeaModel {
+        @NameInMap("Input")
+        public java.util.List<GetFeatureViewResponseBodyFieldsTransformInput> input;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("LLMConfigId")
+        public Integer LLMConfigId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetFeatureViewResponseBodyFieldsTransform build(java.util.Map<String, ?> map) throws Exception {
+            GetFeatureViewResponseBodyFieldsTransform self = new GetFeatureViewResponseBodyFieldsTransform();
+            return TeaModel.build(map, self);
+        }
+
+        public GetFeatureViewResponseBodyFieldsTransform setInput(java.util.List<GetFeatureViewResponseBodyFieldsTransformInput> input) {
+            this.input = input;
+            return this;
+        }
+        public java.util.List<GetFeatureViewResponseBodyFieldsTransformInput> getInput() {
+            return this.input;
+        }
+
+        public GetFeatureViewResponseBodyFieldsTransform setLLMConfigId(Integer LLMConfigId) {
+            this.LLMConfigId = LLMConfigId;
+            return this;
+        }
+        public Integer getLLMConfigId() {
+            return this.LLMConfigId;
+        }
+
+        public GetFeatureViewResponseBodyFieldsTransform setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
     public static class GetFeatureViewResponseBodyFields extends TeaModel {
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
@@ -392,6 +467,9 @@ public class GetFeatureViewResponseBody extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        @NameInMap("Transform")
+        public GetFeatureViewResponseBodyFieldsTransform transform;
 
         /**
          * <strong>example:</strong>
@@ -419,6 +497,14 @@ public class GetFeatureViewResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public GetFeatureViewResponseBodyFields setTransform(GetFeatureViewResponseBodyFieldsTransform transform) {
+            this.transform = transform;
+            return this;
+        }
+        public GetFeatureViewResponseBodyFieldsTransform getTransform() {
+            return this.transform;
         }
 
         public GetFeatureViewResponseBodyFields setType(String type) {

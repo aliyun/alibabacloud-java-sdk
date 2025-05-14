@@ -38,6 +38,13 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     public static class ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels extends TeaModel {
         /**
          * <strong>example:</strong>
+         * <p>f1</p>
+         */
+        @NameInMap("FeatureAliasName")
+        public String featureAliasName;
+
+        /**
+         * <strong>example:</strong>
          * <p>3</p>
          */
         @NameInMap("ModelId")
@@ -53,6 +60,14 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
         public static ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels build(java.util.Map<String, ?> map) throws Exception {
             ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels self = new ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels();
             return TeaModel.build(map, self);
+        }
+
+        public ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels setFeatureAliasName(String featureAliasName) {
+            this.featureAliasName = featureAliasName;
+            return this;
+        }
+        public String getFeatureAliasName() {
+            return this.featureAliasName;
         }
 
         public ListFeatureViewFieldRelationshipsResponseBodyRelationshipsModels setModelId(String modelId) {
