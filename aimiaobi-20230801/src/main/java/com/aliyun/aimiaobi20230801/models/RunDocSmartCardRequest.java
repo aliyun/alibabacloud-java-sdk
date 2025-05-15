@@ -13,6 +13,9 @@ public class RunDocSmartCardRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("Prompt")
+    public String prompt;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -42,6 +45,14 @@ public class RunDocSmartCardRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunDocSmartCardRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
     }
 
     public RunDocSmartCardRequest setSessionId(String sessionId) {

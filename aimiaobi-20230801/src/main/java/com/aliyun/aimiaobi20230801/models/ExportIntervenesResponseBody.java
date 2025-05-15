@@ -96,6 +96,9 @@ public class ExportIntervenesResponseBody extends TeaModel {
     }
 
     public static class ExportIntervenesResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         /**
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.xls">http://xxx/xxx.xls</a></p>
@@ -106,6 +109,14 @@ public class ExportIntervenesResponseBody extends TeaModel {
         public static ExportIntervenesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ExportIntervenesResponseBodyData self = new ExportIntervenesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ExportIntervenesResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ExportIntervenesResponseBodyData setFileUrl(String fileUrl) {

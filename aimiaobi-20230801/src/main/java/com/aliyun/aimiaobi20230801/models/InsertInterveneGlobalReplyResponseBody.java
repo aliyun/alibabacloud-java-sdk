@@ -96,6 +96,9 @@ public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
     }
 
     public static class InsertInterveneGlobalReplyResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
@@ -109,6 +112,14 @@ public class InsertInterveneGlobalReplyResponseBody extends TeaModel {
         public static InsertInterveneGlobalReplyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             InsertInterveneGlobalReplyResponseBodyData self = new InsertInterveneGlobalReplyResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public InsertInterveneGlobalReplyResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public InsertInterveneGlobalReplyResponseBodyData setFailIdList(java.util.List<String> failIdList) {

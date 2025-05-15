@@ -3,16 +3,16 @@ package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class InsertInterveneRuleResponseBody extends TeaModel {
+public class GetFileContentLengthResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>successful</p>
      */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Data")
-    public InsertInterveneRuleResponseBodyData data;
+    public GetFileContentLengthResponseBodyData data;
 
     /**
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>successful</p>
+     * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
@@ -37,17 +37,17 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>True</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
-    public static InsertInterveneRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        InsertInterveneRuleResponseBody self = new InsertInterveneRuleResponseBody();
+    public static GetFileContentLengthResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetFileContentLengthResponseBody self = new GetFileContentLengthResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public InsertInterveneRuleResponseBody setCode(String code) {
+    public GetFileContentLengthResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -55,15 +55,15 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         return this.code;
     }
 
-    public InsertInterveneRuleResponseBody setData(InsertInterveneRuleResponseBodyData data) {
+    public GetFileContentLengthResponseBody setData(GetFileContentLengthResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public InsertInterveneRuleResponseBodyData getData() {
+    public GetFileContentLengthResponseBodyData getData() {
         return this.data;
     }
 
-    public InsertInterveneRuleResponseBody setHttpStatusCode(Integer httpStatusCode) {
+    public GetFileContentLengthResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
     }
@@ -71,7 +71,7 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         return this.httpStatusCode;
     }
 
-    public InsertInterveneRuleResponseBody setMessage(String message) {
+    public GetFileContentLengthResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -79,7 +79,7 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         return this.message;
     }
 
-    public InsertInterveneRuleResponseBody setRequestId(String requestId) {
+    public GetFileContentLengthResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -87,7 +87,7 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public InsertInterveneRuleResponseBody setSuccess(Boolean success) {
+    public GetFileContentLengthResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -95,36 +95,25 @@ public class InsertInterveneRuleResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class InsertInterveneRuleResponseBodyData extends TeaModel {
-        @NameInMap("Code")
-        public Integer code;
-
+    public static class GetFileContentLengthResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>12345</p>
+         * <p>1024</p>
          */
-        @NameInMap("RuleId")
-        public Long ruleId;
+        @NameInMap("WordNum")
+        public Long wordNum;
 
-        public static InsertInterveneRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            InsertInterveneRuleResponseBodyData self = new InsertInterveneRuleResponseBodyData();
+        public static GetFileContentLengthResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetFileContentLengthResponseBodyData self = new GetFileContentLengthResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public InsertInterveneRuleResponseBodyData setCode(Integer code) {
-            this.code = code;
+        public GetFileContentLengthResponseBodyData setWordNum(Long wordNum) {
+            this.wordNum = wordNum;
             return this;
         }
-        public Integer getCode() {
-            return this.code;
-        }
-
-        public InsertInterveneRuleResponseBodyData setRuleId(Long ruleId) {
-            this.ruleId = ruleId;
-            return this;
-        }
-        public Long getRuleId() {
-            return this.ruleId;
+        public Long getWordNum() {
+            return this.wordNum;
         }
 
     }

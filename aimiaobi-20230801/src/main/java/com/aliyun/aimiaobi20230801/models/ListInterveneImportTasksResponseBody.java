@@ -179,6 +179,9 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
     }
 
     public static class ListInterveneImportTasksResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -206,6 +209,14 @@ public class ListInterveneImportTasksResponseBody extends TeaModel {
         public static ListInterveneImportTasksResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListInterveneImportTasksResponseBodyData self = new ListInterveneImportTasksResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListInterveneImportTasksResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ListInterveneImportTasksResponseBodyData setPageIndex(Integer pageIndex) {

@@ -96,6 +96,9 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
     }
 
     public static class GetInterveneTemplateFileUrlResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         /**
          * <strong>example:</strong>
          * <p><a href="http://xxx/xxx.xls">http://xxx/xxx.xls</a></p>
@@ -106,6 +109,14 @@ public class GetInterveneTemplateFileUrlResponseBody extends TeaModel {
         public static GetInterveneTemplateFileUrlResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInterveneTemplateFileUrlResponseBodyData self = new GetInterveneTemplateFileUrlResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetInterveneTemplateFileUrlResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public GetInterveneTemplateFileUrlResponseBodyData setFileUrl(String fileUrl) {

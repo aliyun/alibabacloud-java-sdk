@@ -280,12 +280,23 @@ public class GetInterveneRuleDetailResponseBody extends TeaModel {
     }
 
     public static class GetInterveneRuleDetailResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("InterveneRuleDetail")
         public GetInterveneRuleDetailResponseBodyDataInterveneRuleDetail interveneRuleDetail;
 
         public static GetInterveneRuleDetailResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInterveneRuleDetailResponseBodyData self = new GetInterveneRuleDetailResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetInterveneRuleDetailResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public GetInterveneRuleDetailResponseBodyData setInterveneRuleDetail(GetInterveneRuleDetailResponseBodyDataInterveneRuleDetail interveneRuleDetail) {

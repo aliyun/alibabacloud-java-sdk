@@ -179,12 +179,23 @@ public class GetInterveneImportTaskInfoResponseBody extends TeaModel {
     }
 
     public static class GetInterveneImportTaskInfoResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("Status")
         public GetInterveneImportTaskInfoResponseBodyDataStatus status;
 
         public static GetInterveneImportTaskInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInterveneImportTaskInfoResponseBodyData self = new GetInterveneImportTaskInfoResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetInterveneImportTaskInfoResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public GetInterveneImportTaskInfoResponseBodyData setStatus(GetInterveneImportTaskInfoResponseBodyDataStatus status) {

@@ -250,6 +250,9 @@ public class ListInterveneRulesResponseBody extends TeaModel {
     }
 
     public static class ListInterveneRulesResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -277,6 +280,14 @@ public class ListInterveneRulesResponseBody extends TeaModel {
         public static ListInterveneRulesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListInterveneRulesResponseBodyData self = new ListInterveneRulesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListInterveneRulesResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ListInterveneRulesResponseBodyData setCount(Long count) {

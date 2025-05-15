@@ -134,12 +134,23 @@ public class GetInterveneGlobalReplyResponseBody extends TeaModel {
     }
 
     public static class GetInterveneGlobalReplyResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("ReplyMessagList")
         public java.util.List<GetInterveneGlobalReplyResponseBodyDataReplyMessagList> replyMessagList;
 
         public static GetInterveneGlobalReplyResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetInterveneGlobalReplyResponseBodyData self = new GetInterveneGlobalReplyResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetInterveneGlobalReplyResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public GetInterveneGlobalReplyResponseBodyData setReplyMessagList(java.util.List<GetInterveneGlobalReplyResponseBodyDataReplyMessagList> replyMessagList) {

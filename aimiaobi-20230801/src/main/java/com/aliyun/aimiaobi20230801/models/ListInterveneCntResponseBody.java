@@ -99,6 +99,9 @@ public class ListInterveneCntResponseBody extends TeaModel {
         @NameInMap("CntList")
         public java.util.List<?> cntList;
 
+        @NameInMap("Code")
+        public Integer code;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -131,6 +134,14 @@ public class ListInterveneCntResponseBody extends TeaModel {
         }
         public java.util.List<?> getCntList() {
             return this.cntList;
+        }
+
+        public ListInterveneCntResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ListInterveneCntResponseBodyData setPageCnt(Integer pageCnt) {

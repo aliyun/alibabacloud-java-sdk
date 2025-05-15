@@ -96,6 +96,9 @@ public class ClearIntervenesResponseBody extends TeaModel {
     }
 
     public static class ClearIntervenesResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
@@ -109,6 +112,14 @@ public class ClearIntervenesResponseBody extends TeaModel {
         public static ClearIntervenesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ClearIntervenesResponseBodyData self = new ClearIntervenesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ClearIntervenesResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ClearIntervenesResponseBodyData setFailIdList(java.util.List<String> failIdList) {

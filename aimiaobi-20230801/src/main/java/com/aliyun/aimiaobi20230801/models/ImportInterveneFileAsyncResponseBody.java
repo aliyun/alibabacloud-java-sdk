@@ -96,6 +96,9 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
     }
 
     public static class ImportInterveneFileAsyncResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
@@ -109,6 +112,14 @@ public class ImportInterveneFileAsyncResponseBody extends TeaModel {
         public static ImportInterveneFileAsyncResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ImportInterveneFileAsyncResponseBodyData self = new ImportInterveneFileAsyncResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ImportInterveneFileAsyncResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ImportInterveneFileAsyncResponseBodyData setFailIdList(java.util.List<String> failIdList) {

@@ -96,6 +96,9 @@ public class DeleteInterveneRuleResponseBody extends TeaModel {
     }
 
     public static class DeleteInterveneRuleResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("FailIdList")
         public java.util.List<String> failIdList;
 
@@ -109,6 +112,14 @@ public class DeleteInterveneRuleResponseBody extends TeaModel {
         public static DeleteInterveneRuleResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteInterveneRuleResponseBodyData self = new DeleteInterveneRuleResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteInterveneRuleResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public DeleteInterveneRuleResponseBodyData setFailIdList(java.util.List<String> failIdList) {

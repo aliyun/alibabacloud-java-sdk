@@ -132,6 +132,9 @@ public class ListIntervenesResponseBody extends TeaModel {
     }
 
     public static class ListIntervenesResponseBodyData extends TeaModel {
+        @NameInMap("Code")
+        public Integer code;
+
         @NameInMap("InterveneList")
         public java.util.List<ListIntervenesResponseBodyDataInterveneList> interveneList;
 
@@ -159,6 +162,14 @@ public class ListIntervenesResponseBody extends TeaModel {
         public static ListIntervenesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIntervenesResponseBodyData self = new ListIntervenesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListIntervenesResponseBodyData setCode(Integer code) {
+            this.code = code;
+            return this;
+        }
+        public Integer getCode() {
+            return this.code;
         }
 
         public ListIntervenesResponseBodyData setInterveneList(java.util.List<ListIntervenesResponseBodyDataInterveneList> interveneList) {
