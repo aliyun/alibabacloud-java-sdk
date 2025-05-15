@@ -64,6 +64,9 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     @NameInMap("textProcessTasks")
     public java.util.List<SubmitVideoAnalysisTaskRequestTextProcessTasks> textProcessTasks;
 
+    @NameInMap("videoCaptionInfo")
+    public SubmitVideoAnalysisTaskRequestVideoCaptionInfo videoCaptionInfo;
+
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
 
@@ -191,6 +194,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     }
     public java.util.List<SubmitVideoAnalysisTaskRequestTextProcessTasks> getTextProcessTasks() {
         return this.textProcessTasks;
+    }
+
+    public SubmitVideoAnalysisTaskRequest setVideoCaptionInfo(SubmitVideoAnalysisTaskRequestVideoCaptionInfo videoCaptionInfo) {
+        this.videoCaptionInfo = videoCaptionInfo;
+        return this;
+    }
+    public SubmitVideoAnalysisTaskRequestVideoCaptionInfo getVideoCaptionInfo() {
+        return this.videoCaptionInfo;
     }
 
     public SubmitVideoAnalysisTaskRequest setVideoExtraInfo(String videoExtraInfo) {
@@ -331,6 +342,93 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
         }
         public String getModelId() {
             return this.modelId;
+        }
+
+    }
+
+    public static class SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("endTime")
+        public Long endTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
+        @NameInMap("speaker")
+        public String speaker;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("startTime")
+        public Long startTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
+        @NameInMap("text")
+        public String text;
+
+        public static SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions self = new SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions setSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+        public String getSpeaker() {
+            return this.speaker;
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class SubmitVideoAnalysisTaskRequestVideoCaptionInfo extends TeaModel {
+        @NameInMap("videoCaptions")
+        public java.util.List<SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions> videoCaptions;
+
+        public static SubmitVideoAnalysisTaskRequestVideoCaptionInfo build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestVideoCaptionInfo self = new SubmitVideoAnalysisTaskRequestVideoCaptionInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoCaptionInfo setVideoCaptions(java.util.List<SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions> videoCaptions) {
+            this.videoCaptions = videoCaptions;
+            return this;
+        }
+        public java.util.List<SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions> getVideoCaptions() {
+            return this.videoCaptions;
         }
 
     }

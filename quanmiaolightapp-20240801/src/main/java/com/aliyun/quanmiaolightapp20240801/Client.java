@@ -430,6 +430,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取挖掘分析结果明细列表</p>
+     * 
+     * @param request ListAnalysisTagDetailByTaskIdRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAnalysisTagDetailByTaskIdResponse
+     */
+    public ListAnalysisTagDetailByTaskIdResponse listAnalysisTagDetailByTaskIdWithOptions(String workspaceId, ListAnalysisTagDetailByTaskIdRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAnalysisTagDetailByTaskId"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/listAnalysisTagDetailByTaskId"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAnalysisTagDetailByTaskIdResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取挖掘分析结果明细列表</p>
+     * 
+     * @param request ListAnalysisTagDetailByTaskIdRequest
+     * @return ListAnalysisTagDetailByTaskIdResponse
+     */
+    public ListAnalysisTagDetailByTaskIdResponse listAnalysisTagDetailByTaskId(String workspaceId, ListAnalysisTagDetailByTaskIdRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAnalysisTagDetailByTaskIdWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>轻应用-新闻播报-获取热点话题摘要列表</p>
      * 
      * @param request ListHotTopicSummariesRequest
@@ -1386,6 +1441,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.textProcessTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textProcessTasks, "textProcessTasks", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoCaptionInfo)) {
+            request.videoCaptionInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoCaptionInfo, "videoCaptionInfo", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
             request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
         }
@@ -1441,6 +1500,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.textProcessTasksShrink)) {
             body.put("textProcessTasks", request.textProcessTasksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoCaptionInfoShrink)) {
+            body.put("videoCaptionInfo", request.videoCaptionInfoShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoExtraInfo)) {
@@ -1713,6 +1776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.textProcessTasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.textProcessTasks, "textProcessTasks", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoCaptionInfo)) {
+            request.videoCaptionInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoCaptionInfo, "videoCaptionInfo", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.videoRoles)) {
             request.videoRolesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.videoRoles, "videoRoles", "json");
         }
@@ -1764,6 +1831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.textProcessTasksShrink)) {
             body.put("textProcessTasks", request.textProcessTasksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoCaptionInfoShrink)) {
+            body.put("videoCaptionInfo", request.videoCaptionInfoShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoExtraInfo)) {
@@ -1866,5 +1937,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateVideoAnalysisConfigWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频理解-修改任务状态</p>
+     * 
+     * @param request UpdateVideoAnalysisTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVideoAnalysisTaskResponse
+     */
+    public UpdateVideoAnalysisTaskResponse updateVideoAnalysisTaskWithOptions(String workspaceId, UpdateVideoAnalysisTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("taskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskStatus)) {
+            body.put("taskStatus", request.taskStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVideoAnalysisTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/videoAnalysis/updateVideoAnalysisTask"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVideoAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>视频理解-修改任务状态</p>
+     * 
+     * @param request UpdateVideoAnalysisTaskRequest
+     * @return UpdateVideoAnalysisTaskResponse
+     */
+    public UpdateVideoAnalysisTaskResponse updateVideoAnalysisTask(String workspaceId, UpdateVideoAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateVideoAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
     }
 }

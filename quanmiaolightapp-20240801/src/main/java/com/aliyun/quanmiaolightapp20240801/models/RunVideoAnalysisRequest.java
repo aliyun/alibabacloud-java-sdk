@@ -67,6 +67,9 @@ public class RunVideoAnalysisRequest extends TeaModel {
     @NameInMap("textProcessTasks")
     public java.util.List<RunVideoAnalysisRequestTextProcessTasks> textProcessTasks;
 
+    @NameInMap("videoCaptionInfo")
+    public RunVideoAnalysisRequestVideoCaptionInfo videoCaptionInfo;
+
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
 
@@ -202,6 +205,14 @@ public class RunVideoAnalysisRequest extends TeaModel {
         return this.textProcessTasks;
     }
 
+    public RunVideoAnalysisRequest setVideoCaptionInfo(RunVideoAnalysisRequestVideoCaptionInfo videoCaptionInfo) {
+        this.videoCaptionInfo = videoCaptionInfo;
+        return this;
+    }
+    public RunVideoAnalysisRequestVideoCaptionInfo getVideoCaptionInfo() {
+        return this.videoCaptionInfo;
+    }
+
     public RunVideoAnalysisRequest setVideoExtraInfo(String videoExtraInfo) {
         this.videoExtraInfo = videoExtraInfo;
         return this;
@@ -328,6 +339,93 @@ public class RunVideoAnalysisRequest extends TeaModel {
         }
         public String getModelId() {
             return this.modelId;
+        }
+
+    }
+
+    public static class RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("endTime")
+        public Long endTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
+        @NameInMap("speaker")
+        public String speaker;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("startTime")
+        public Long startTime;
+
+        /**
+         * <strong>example:</strong>
+         * <p>你好</p>
+         */
+        @NameInMap("text")
+        public String text;
+
+        public static RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions self = new RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions setSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+        public String getSpeaker() {
+            return this.speaker;
+        }
+
+        public RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class RunVideoAnalysisRequestVideoCaptionInfo extends TeaModel {
+        @NameInMap("videoCaptions")
+        public java.util.List<RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions> videoCaptions;
+
+        public static RunVideoAnalysisRequestVideoCaptionInfo build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisRequestVideoCaptionInfo self = new RunVideoAnalysisRequestVideoCaptionInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisRequestVideoCaptionInfo setVideoCaptions(java.util.List<RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions> videoCaptions) {
+            this.videoCaptions = videoCaptions;
+            return this;
+        }
+        public java.util.List<RunVideoAnalysisRequestVideoCaptionInfoVideoCaptions> getVideoCaptions() {
+            return this.videoCaptions;
         }
 
     }

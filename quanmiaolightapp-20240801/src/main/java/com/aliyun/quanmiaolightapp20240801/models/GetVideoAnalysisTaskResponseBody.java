@@ -389,6 +389,13 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>张三</p>
+         */
+        @NameInMap("speaker")
+        public String speaker;
+
+        /**
+         * <strong>example:</strong>
          * <p>00:01</p>
          */
         @NameInMap("startTime")
@@ -427,6 +434,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
         public String getEndTimeFormat() {
             return this.endTimeFormat;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoCaptionResultVideoCaptions setSpeaker(String speaker) {
+            this.speaker = speaker;
+            return this;
+        }
+        public String getSpeaker() {
+            return this.speaker;
         }
 
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoCaptionResultVideoCaptions setStartTime(Long startTime) {

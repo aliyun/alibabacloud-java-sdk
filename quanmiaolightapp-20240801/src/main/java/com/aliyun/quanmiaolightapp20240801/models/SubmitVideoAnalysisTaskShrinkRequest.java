@@ -64,6 +64,9 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("textProcessTasks")
     public String textProcessTasksShrink;
 
+    @NameInMap("videoCaptionInfo")
+    public String videoCaptionInfoShrink;
+
     @NameInMap("videoExtraInfo")
     public String videoExtraInfo;
 
@@ -191,6 +194,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     }
     public String getTextProcessTasksShrink() {
         return this.textProcessTasksShrink;
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setVideoCaptionInfoShrink(String videoCaptionInfoShrink) {
+        this.videoCaptionInfoShrink = videoCaptionInfoShrink;
+        return this;
+    }
+    public String getVideoCaptionInfoShrink() {
+        return this.videoCaptionInfoShrink;
     }
 
     public SubmitVideoAnalysisTaskShrinkRequest setVideoExtraInfo(String videoExtraInfo) {
