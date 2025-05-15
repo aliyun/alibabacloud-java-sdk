@@ -916,6 +916,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除指定自定义文体</p>
+     * 
+     * @param request DeleteStyleLearningResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteStyleLearningResultResponse
+     */
+    public DeleteStyleLearningResultResponse deleteStyleLearningResultWithOptions(DeleteStyleLearningResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteStyleLearningResult"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteStyleLearningResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定自定义文体</p>
+     * 
+     * @param request DeleteStyleLearningResultRequest
+     * @return DeleteStyleLearningResultResponse
+     */
+    public DeleteStyleLearningResultResponse deleteStyleLearningResult(DeleteStyleLearningResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteStyleLearningResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>从链接中提取文档内容</p>
      * 
      * @param tmpReq DocumentExtractionRequest

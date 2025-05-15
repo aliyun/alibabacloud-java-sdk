@@ -331,6 +331,9 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         @NameInMap("Content")
         public String content;
 
+        @NameInMap("HtmlContent")
+        public String htmlContent;
+
         @NameInMap("Response")
         public QueryAuditTaskResponseBodyDataResponse response;
 
@@ -347,6 +350,9 @@ public class QueryAuditTaskResponseBody extends TeaModel {
          */
         @NameInMap("TaskStatus")
         public Integer taskStatus;
+
+        @NameInMap("Title")
+        public String title;
 
         public static QueryAuditTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryAuditTaskResponseBodyData self = new QueryAuditTaskResponseBodyData();
@@ -367,6 +373,14 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public QueryAuditTaskResponseBodyData setHtmlContent(String htmlContent) {
+            this.htmlContent = htmlContent;
+            return this;
+        }
+        public String getHtmlContent() {
+            return this.htmlContent;
         }
 
         public QueryAuditTaskResponseBodyData setResponse(QueryAuditTaskResponseBodyDataResponse response) {
@@ -391,6 +405,14 @@ public class QueryAuditTaskResponseBody extends TeaModel {
         }
         public Integer getTaskStatus() {
             return this.taskStatus;
+        }
+
+        public QueryAuditTaskResponseBodyData setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
         }
 
     }
