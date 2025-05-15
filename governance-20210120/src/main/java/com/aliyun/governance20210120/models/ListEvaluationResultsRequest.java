@@ -19,6 +19,9 @@ public class ListEvaluationResultsRequest extends TeaModel {
     @NameInMap("Filters")
     public java.util.List<ListEvaluationResultsRequestFilters> filters;
 
+    @NameInMap("LensCode")
+    public String lensCode;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -53,6 +56,14 @@ public class ListEvaluationResultsRequest extends TeaModel {
     }
     public java.util.List<ListEvaluationResultsRequestFilters> getFilters() {
         return this.filters;
+    }
+
+    public ListEvaluationResultsRequest setLensCode(String lensCode) {
+        this.lensCode = lensCode;
+        return this;
+    }
+    public String getLensCode() {
+        return this.lensCode;
     }
 
     public ListEvaluationResultsRequest setRegionId(String regionId) {

@@ -17,6 +17,9 @@ public class ListEvaluationMetadataRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("LensCode")
+    public String lensCode;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -37,6 +40,14 @@ public class ListEvaluationMetadataRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public ListEvaluationMetadataRequest setLensCode(String lensCode) {
+        this.lensCode = lensCode;
+        return this;
+    }
+    public String getLensCode() {
+        return this.lensCode;
     }
 
     public ListEvaluationMetadataRequest setRegionId(String regionId) {
