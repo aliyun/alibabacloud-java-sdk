@@ -2633,6 +2633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListReportsResponse listReportsWithOptions(ListReportsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }

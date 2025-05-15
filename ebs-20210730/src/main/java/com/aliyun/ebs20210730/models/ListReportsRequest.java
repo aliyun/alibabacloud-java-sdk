@@ -4,9 +4,11 @@ package com.aliyun.ebs20210730.models;
 import com.aliyun.tea.*;
 
 public class ListReportsRequest extends TeaModel {
+    @NameInMap("AppId")
+    public String appId;
+
     /**
      * <p>App name.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>App1</p>
@@ -62,6 +64,14 @@ public class ListReportsRequest extends TeaModel {
     public static ListReportsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListReportsRequest self = new ListReportsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListReportsRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
     }
 
     public ListReportsRequest setAppName(String appName) {
