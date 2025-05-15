@@ -13,6 +13,9 @@ public class DeleteUserConfigRequest extends TeaModel {
     @NameInMap("ConfigKey")
     public String configKey;
 
+    @NameInMap("Scope")
+    public String scope;
+
     public static DeleteUserConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteUserConfigRequest self = new DeleteUserConfigRequest();
         return TeaModel.build(map, self);
@@ -24,6 +27,14 @@ public class DeleteUserConfigRequest extends TeaModel {
     }
     public String getConfigKey() {
         return this.configKey;
+    }
+
+    public DeleteUserConfigRequest setScope(String scope) {
+        this.scope = scope;
+        return this;
+    }
+    public String getScope() {
+        return this.scope;
     }
 
 }

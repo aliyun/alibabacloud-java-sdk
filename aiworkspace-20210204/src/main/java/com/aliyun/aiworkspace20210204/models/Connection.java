@@ -162,6 +162,9 @@ public class Connection extends TeaModel {
         @NameInMap("ModelType")
         public String modelType;
 
+        @NameInMap("ToolCall")
+        public Boolean toolCall;
+
         public static ConnectionModels build(java.util.Map<String, ?> map) throws Exception {
             ConnectionModels self = new ConnectionModels();
             return TeaModel.build(map, self);
@@ -189,6 +192,14 @@ public class Connection extends TeaModel {
         }
         public String getModelType() {
             return this.modelType;
+        }
+
+        public ConnectionModels setToolCall(Boolean toolCall) {
+            this.toolCall = toolCall;
+            return this;
+        }
+        public Boolean getToolCall() {
+            return this.toolCall;
         }
 
     }
