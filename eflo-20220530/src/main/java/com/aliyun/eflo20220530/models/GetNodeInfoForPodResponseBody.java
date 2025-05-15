@@ -179,6 +179,15 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
+        @NameInMap("hdeniIpv6SipQuota")
+        public Integer hdeniIpv6SipQuota;
+
+        @NameInMap("hdeniSipQuota")
+        public Integer hdeniSipQuota;
+
+        @NameInMap("leniIpv6SipQuota")
+        public Integer leniIpv6SipQuota;
+
         public static GetNodeInfoForPodResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
             GetNodeInfoForPodResponseBodyContent self = new GetNodeInfoForPodResponseBodyContent();
             return TeaModel.build(map, self);
@@ -262,6 +271,30 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
+        }
+
+        public GetNodeInfoForPodResponseBodyContent setHdeniIpv6SipQuota(Integer hdeniIpv6SipQuota) {
+            this.hdeniIpv6SipQuota = hdeniIpv6SipQuota;
+            return this;
+        }
+        public Integer getHdeniIpv6SipQuota() {
+            return this.hdeniIpv6SipQuota;
+        }
+
+        public GetNodeInfoForPodResponseBodyContent setHdeniSipQuota(Integer hdeniSipQuota) {
+            this.hdeniSipQuota = hdeniSipQuota;
+            return this;
+        }
+        public Integer getHdeniSipQuota() {
+            return this.hdeniSipQuota;
+        }
+
+        public GetNodeInfoForPodResponseBodyContent setLeniIpv6SipQuota(Integer leniIpv6SipQuota) {
+            this.leniIpv6SipQuota = leniIpv6SipQuota;
+            return this;
+        }
+        public Integer getLeniIpv6SipQuota() {
+            return this.leniIpv6SipQuota;
         }
 
     }
