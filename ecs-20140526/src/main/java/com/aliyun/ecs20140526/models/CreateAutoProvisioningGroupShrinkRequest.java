@@ -688,6 +688,12 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationDataDisk extends TeaModel {
         /**
+         * <p>The ID of the automatic snapshot policy to apply to data disk N.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>sp-bp67acfmxazb4p****</p>
          */
@@ -715,7 +721,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <ul>
          * <li>cloud_efficiency: utra disk.</li>
          * <li>cloud_ssd: standard SSD.</li>
-         * <li>cloud_essd: enterprise SSD (ESSD).</li>
+         * <li>cloud_essd: ESSD.</li>
          * <li>cloud: basic disk.</li>
          * </ul>
          * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
@@ -761,7 +767,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, periods (.), colons (:), underscores (_), and hyphens (-).</p>
          * <p>This parameter is left empty by default.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
@@ -788,7 +794,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <li>true: encrypts system disk N.</li>
          * <li>false: does not encrypt system disk N.</li>
          * </ul>
-         * <p>Default value: false.</p>
+         * <p>Default value: false. Valid values:</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -824,7 +830,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <blockquote>
          * <p> This parameter is available only if you set LaunchConfiguration.DataDisk.N.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -997,6 +1003,12 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationSystemDisk extends TeaModel {
         /**
+         * <p>The ID of the automatic snapshot policy to apply to the system disk.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>sp-bp67acfmxazb4p****</p>
          */
@@ -1043,7 +1055,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
          * <li>true: encrypts system disk N.</li>
          * <li>false: does not encrypt system disk N.</li>
          * </ul>
-         * <p>Default value: false.</p>
+         * <p>Default value: false. Valid values:</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -1053,7 +1065,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The ID of the KMS key to use for the system disk.</p>
+         * <p>The ID of the KMS key to use for system disk N.</p>
          * <p>When both LaunchTemplateId and LaunchConfiguration.\* parameters are specified, LaunchTemplateId takes precedence.</p>
          * 
          * <strong>example:</strong>
@@ -1063,7 +1075,7 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String KMSKeyId;
 
         /**
-         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as data disk N. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
+         * <p>The provisioned read/write IOPS of the ESSD AutoPL disk to use as the system disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
          * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}.</p>
          * <blockquote>
          * <p> This parameter is available only if you set LaunchConfiguration.SystemDisk.Category to cloud_auto. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
@@ -1174,6 +1186,12 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
 
     public static class CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions extends TeaModel {
         /**
+         * <p>Indicates whether the instance that uses the image supports logons of the ecs-user user. Valid value:</p>
+         * <ul>
+         * <li>true: The instance that uses the image supports logons of the ecs-user user.</li>
+         * <li>false: The instance that uses the image does not support logons of the ecs-user user.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -1574,6 +1592,13 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         @NameInMap("AutoRenewPeriod")
         public Integer autoRenewPeriod;
 
+        /**
+         * <p>The image options.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</li>
+         * </ul>
+         */
         @NameInMap("ImageOptions")
         public CreateAutoProvisioningGroupShrinkRequestLaunchConfigurationImageOptions imageOptions;
 
@@ -1598,6 +1623,17 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public String periodUnit;
 
         /**
+         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+         * <ul>
+         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for one hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * </ul>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1605,6 +1641,18 @@ public class CreateAutoProvisioningGroupShrinkRequest extends TeaModel {
         public Integer spotDuration;
 
         /**
+         * <p>The interruption event of the preemptible instances. Valid values:</p>
+         * <ul>
+         * <li>Terminate: The instance is released.</li>
+         * <li>Stop: The instance is stopped in economical mode.</li>
+         * </ul>
+         * <p>For information about the economical mode, see <a href="https://help.aliyun.com/zh/ecs/user-guide/economical-mode?spm=a2c4g.11186623.0.0.58796e1dJaYlK0">Economical mode</a>.</p>
+         * <p>Default value: Terminate.</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
+         * <ul>
+         * <li>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Terminate</p>
          */

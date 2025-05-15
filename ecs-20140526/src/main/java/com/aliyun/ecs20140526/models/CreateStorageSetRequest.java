@@ -63,6 +63,9 @@ public class CreateStorageSetRequest extends TeaModel {
     @NameInMap("StorageSetName")
     public String storageSetName;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateStorageSetRequestTag> tag;
+
     /**
      * <p>The zone ID of the storage set. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
      * <p>This parameter is required.</p>
@@ -150,12 +153,50 @@ public class CreateStorageSetRequest extends TeaModel {
         return this.storageSetName;
     }
 
+    public CreateStorageSetRequest setTag(java.util.List<CreateStorageSetRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateStorageSetRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateStorageSetRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateStorageSetRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateStorageSetRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateStorageSetRequestTag self = new CreateStorageSetRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateStorageSetRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateStorageSetRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

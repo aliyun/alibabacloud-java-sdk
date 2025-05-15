@@ -29,7 +29,7 @@ public class DescribeDisksRequest extends TeaModel {
     public String autoSnapshotPolicyId;
 
     /**
-     * <p>The category of the disk. Valid values:</p>
+     * <p>The disk category. Valid values:</p>
      * <ul>
      * <li>all: all disk categories</li>
      * <li>cloud: basic disk</li>
@@ -37,6 +37,7 @@ public class DescribeDisksRequest extends TeaModel {
      * <li>cloud_ssd: standard SSD</li>
      * <li>cloud_essd: Enterprise SSD (ESSD)</li>
      * <li>cloud_auto: ESSD AutoPL disk</li>
+     * <li>cloud_regional_disk_auto: Regional ESSD</li>
      * <li>local_ssd_pro: I/O-intensive local disk</li>
      * <li>local_hdd_pro: throughput-intensive local disk</li>
      * <li>cloud_essd_entry: ESSD Entry disk</li>

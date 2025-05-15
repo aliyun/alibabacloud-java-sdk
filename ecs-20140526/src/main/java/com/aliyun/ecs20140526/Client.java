@@ -7600,6 +7600,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StorageSetName", request.storageSetName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
         }
@@ -8388,7 +8392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see <a href="https://help.aliyun.com/document_detail/108407.html">Change the deployment set of an instance</a> and <a href="https://help.aliyun.com/document_detail/25442.html">Release an ECS instance</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.</p>
+     * <p>Deletes a deployment set.</p>
      * 
      * @param request DeleteDeploymentSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8443,7 +8447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Before you delete a deployment set, make sure that no instances exist in the deployment set. If instances exist in the deployment set, move the instances to a different deployment set or release the instances before you delete the deployment set. For more information, see <a href="https://help.aliyun.com/document_detail/108407.html">Change the deployment set of an instance</a> and <a href="https://help.aliyun.com/document_detail/25442.html">Release an ECS instance</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a deployment set in a region. When you call this operation, specify parameters such as RegionId and DeploymentSetId in the request.</p>
+     * <p>Deletes a deployment set.</p>
      * 
      * @param request DeleteDeploymentSetRequest
      * @return DeleteDeploymentSetResponse
@@ -11145,7 +11149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information of auto provisioning groups.</p>
+     * <p>Queries information about one or more auto provisioning groups.</p>
      * 
      * @param request DescribeAutoProvisioningGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11221,7 +11225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information of auto provisioning groups.</p>
+     * <p>Queries information about one or more auto provisioning groups.</p>
      * 
      * @param request DescribeAutoProvisioningGroupsRequest
      * @return DescribeAutoProvisioningGroupsResponse
@@ -12727,7 +12731,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.</p>
+     * <p>Queries detailed information about one or more deployment sets.</p>
      * 
      * @param request DescribeDeploymentSetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12807,7 +12811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of one or more deployment sets. When you call this operation, you can specify parameters, such as DeploymentSetIds, Strategy, and DeploymentSetName, in the request.</p>
+     * <p>Queries detailed information about one or more deployment sets.</p>
      * 
      * @param request DescribeDeploymentSetsRequest
      * @return DescribeDeploymentSetsResponse
@@ -18376,7 +18380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can specify the <code>AddressFamily</code>, <code>PrefixListId.N</code>, and <code>PrefixListName</code> request parameters in the request. Specified parameters have logical AND relations. Only the parameters that you set are included in the filter conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information of one or more prefix lists.</p>
+     * <p>Queries the information of prefix lists.</p>
      * 
      * @param request DescribePrefixListsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18459,7 +18463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can specify the <code>AddressFamily</code>, <code>PrefixListId.N</code>, and <code>PrefixListName</code> request parameters in the request. Specified parameters have logical AND relations. Only the parameters that you set are included in the filter conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information of one or more prefix lists.</p>
+     * <p>Queries the information of prefix lists.</p>
      * 
      * @param request DescribePrefixListsRequest
      * @return DescribePrefixListsResponse
@@ -21184,6 +21188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StorageSetName", request.storageSetName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
             query.put("ZoneId", request.zoneId);
         }
@@ -22638,7 +22646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>  <strong>Instructions</strong>
-     *     *   Only Alibaba Cloud accounts can call this operation.</p>
+     *     *   You must grant the RAM user the <code>AliyunECSFullAccess</code> permissions. For information about how to grant permissions to a RAM user, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
      * <li><strong>Considerations</strong><ul>
      * <li>After Account-level EBS Default Encryption is disabled, the encryption status of existing cloud disks is not affected.</li>
@@ -22685,7 +22693,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>  <strong>Instructions</strong>
-     *     *   Only Alibaba Cloud accounts can call this operation.</p>
+     *     *   You must grant the RAM user the <code>AliyunECSFullAccess</code> permissions. For information about how to grant permissions to a RAM user, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
      * <li><strong>Considerations</strong><ul>
      * <li>After Account-level EBS Default Encryption is disabled, the encryption status of existing cloud disks is not affected.</li>
@@ -22708,22 +22716,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use Account-level EBS Default Encryption, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use the feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      * <ul>
      * <li><strong>Precautions</strong><ul>
-     * <li>Only Alibaba Cloud accounts can call this operation.</li>
+     * <li>To enable the Account-level EBS Default Encryption feature as a Resource Access Management (RAM) user, grant the <code>AliyunECSFullAccess</code> permission to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</li>
      * <li>Before you can enable the Account-level EBS Default Encryption feature in a region, you must <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a> in the region.</li>
      * <li>After you enable the Account-level EBS Default Encryption feature in a region, you can purchase only encrypted cloud disks in the region. For more information, see the <a href="~~59643#50de175230erj~~">Limits</a> section of the &quot;Encrypt cloud disks&quot; topic.</li>
      * </ul>
      * </li>
      * <li><strong>Considerations</strong><ul>
-     * <li>After you enable the Account-level EBS Default Encryption feature in a region, new pay-as-you-go and subscription cloud disks in the region must be encrypted. You can use the KMS key configured for the Account-level EBS Default Encryption feature or specify other KMS keys to encrypt the cloud disks.</li>
+     * <li>After you enable the Account-level EBS Default Encryption feature in a region, new pay-as-you-go and subscription cloud disks in the region must be encrypted. You can use the KMS key configured for the feature or specify other KMS keys to encrypt the cloud disks.</li>
      * <li>The first time you enable the Account-level EBS Default Encryption feature in a region, the service key in the region is automatically used to encrypt EBS resources.</li>
      * </ul>
      * </li>
      * <li><strong>Suggestions</strong><ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> operation to query whether the Account-level EBS Default Encryption feature is enabled in a region and the <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> operation to query the ID of the KMS key used by the Account-level EBS Default Encryption feature in a region.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> operation to query whether the Account-level EBS Default Encryption feature is enabled in a region and the <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> operation to query the ID of the KMS key used by the feature in a region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> operation to change or reset the KMS key used by the Account-level EBS Default Encryption feature in a region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> operation to disable the Account-level EBS Default Encryption feature in a region.</li>
      * </ul>
@@ -22780,22 +22788,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use Account-level EBS Default Encryption, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+     * <p> The Account-level EBS Default Encryption feature is available only in specific regions and to specific users. To use the feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      * <ul>
      * <li><strong>Precautions</strong><ul>
-     * <li>Only Alibaba Cloud accounts can call this operation.</li>
+     * <li>To enable the Account-level EBS Default Encryption feature as a Resource Access Management (RAM) user, grant the <code>AliyunECSFullAccess</code> permission to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</li>
      * <li>Before you can enable the Account-level EBS Default Encryption feature in a region, you must <a href="https://help.aliyun.com/document_detail/480156.html">activate Key Management Service (KMS)</a> in the region.</li>
      * <li>After you enable the Account-level EBS Default Encryption feature in a region, you can purchase only encrypted cloud disks in the region. For more information, see the <a href="~~59643#50de175230erj~~">Limits</a> section of the &quot;Encrypt cloud disks&quot; topic.</li>
      * </ul>
      * </li>
      * <li><strong>Considerations</strong><ul>
-     * <li>After you enable the Account-level EBS Default Encryption feature in a region, new pay-as-you-go and subscription cloud disks in the region must be encrypted. You can use the KMS key configured for the Account-level EBS Default Encryption feature or specify other KMS keys to encrypt the cloud disks.</li>
+     * <li>After you enable the Account-level EBS Default Encryption feature in a region, new pay-as-you-go and subscription cloud disks in the region must be encrypted. You can use the KMS key configured for the feature or specify other KMS keys to encrypt the cloud disks.</li>
      * <li>The first time you enable the Account-level EBS Default Encryption feature in a region, the service key in the region is automatically used to encrypt EBS resources.</li>
      * </ul>
      * </li>
      * <li><strong>Suggestions</strong><ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> operation to query whether the Account-level EBS Default Encryption feature is enabled in a region and the <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> operation to query the ID of the KMS key used by the Account-level EBS Default Encryption feature in a region.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851493.html">DescribeDiskEncryptionByDefaultStatus</a> operation to query whether the Account-level EBS Default Encryption feature is enabled in a region and the <a href="https://help.aliyun.com/document_detail/2851490.html">DescribeDiskDefaultKMSKeyId</a> operation to query the ID of the KMS key used by the feature in a region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851492.html">ModifyDiskDefaultKMSKeyId</a> or <a href="https://help.aliyun.com/document_detail/2851539.html">ResetDiskDefaultKMSKeyId</a> operation to change or reset the KMS key used by the Account-level EBS Default Encryption feature in a region.</li>
      * <li>You can call the <a href="https://help.aliyun.com/document_detail/2851491.html">DisableDiskEncryptionByDefault</a> operation to disable the Account-level EBS Default Encryption feature in a region.</li>
      * </ul>
@@ -24027,6 +24035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.windowsPasswordName)) {
             query.put("WindowsPasswordName", request.windowsPasswordName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workingDir)) {
+            query.put("WorkingDir", request.workingDir);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -25925,7 +25937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only Alibaba Cloud accounts can call this operation.</p>
+     * <p>  To call this operation as a Resource Access Management (RAM) user, grant the <code>AliyunECSFullAccess</code> permission to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
      * <li>Before you can call this operation in a region, make sure that the Account-level EBS Default Encryption feature is enabled in the region.</li>
      * <li>The first time you use a customer master key (CMK), you must use the <code>AliyunECSDiskEncryptDefaultRole</code> role to grant Elastic Compute Service (ECS) access to KMS resources. For more information, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant access to KMS keys through RAM roles</a>.</li>
@@ -25972,7 +25984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only Alibaba Cloud accounts can call this operation.</p>
+     * <p>  To call this operation as a Resource Access Management (RAM) user, grant the <code>AliyunECSFullAccess</code> permission to the RAM user. For more information, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
      * <li>Before you can call this operation in a region, make sure that the Account-level EBS Default Encryption feature is enabled in the region.</li>
      * <li>The first time you use a customer master key (CMK), you must use the <code>AliyunECSDiskEncryptDefaultRole</code> role to grant Elastic Compute Service (ECS) access to KMS resources. For more information, see <a href="https://help.aliyun.com/document_detail/2838993.html">Grant access to KMS keys through RAM roles</a>.</li>
@@ -33107,9 +33119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only Alibaba Cloud accounts can call this operation.</p>
+     * <p>  You must grant the RAM user the <code>AliyunECSFullAccess</code> permissions. For information about how to grant permissions to a RAM user, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
-     * <li>Before you can call this operation in a region, make sure that the Account-level Elastic Block Storage (EBS) Default Encryption feature is enabled in the region.</li>
+     * <li>Before you can call this operation in a region, make sure that the <strong>Account-level Elastic Block Storage (EBS) Default Encryption</strong> feature is enabled in the region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -33149,9 +33161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only Alibaba Cloud accounts can call this operation.</p>
+     * <p>  You must grant the RAM user the <code>AliyunECSFullAccess</code> permissions. For information about how to grant permissions to a RAM user, see <a href="https://help.aliyun.com/document_detail/116146.html">Grant permissions to a RAM user</a>.</p>
      * <ul>
-     * <li>Before you can call this operation in a region, make sure that the Account-level Elastic Block Storage (EBS) Default Encryption feature is enabled in the region.</li>
+     * <li>Before you can call this operation in a region, make sure that the <strong>Account-level Elastic Block Storage (EBS) Default Encryption</strong> feature is enabled in the region.</li>
      * </ul>
      * 
      * <b>summary</b> : 

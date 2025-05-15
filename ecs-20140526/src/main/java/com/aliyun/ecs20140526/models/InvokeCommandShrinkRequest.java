@@ -280,6 +280,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
 
+    @NameInMap("WorkingDir")
+    public String workingDir;
+
     public static InvokeCommandShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandShrinkRequest self = new InvokeCommandShrinkRequest();
         return TeaModel.build(map, self);
@@ -459,6 +462,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
+    }
+
+    public InvokeCommandShrinkRequest setWorkingDir(String workingDir) {
+        this.workingDir = workingDir;
+        return this;
+    }
+    public String getWorkingDir() {
+        return this.workingDir;
     }
 
     public static class InvokeCommandShrinkRequestResourceTag extends TeaModel {

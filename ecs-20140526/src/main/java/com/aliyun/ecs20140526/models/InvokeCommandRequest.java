@@ -280,6 +280,9 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("WindowsPasswordName")
     public String windowsPasswordName;
 
+    @NameInMap("WorkingDir")
+    public String workingDir;
+
     public static InvokeCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeCommandRequest self = new InvokeCommandRequest();
         return TeaModel.build(map, self);
@@ -459,6 +462,14 @@ public class InvokeCommandRequest extends TeaModel {
     }
     public String getWindowsPasswordName() {
         return this.windowsPasswordName;
+    }
+
+    public InvokeCommandRequest setWorkingDir(String workingDir) {
+        this.workingDir = workingDir;
+        return this;
+    }
+    public String getWorkingDir() {
+        return this.workingDir;
     }
 
     public static class InvokeCommandRequestResourceTag extends TeaModel {

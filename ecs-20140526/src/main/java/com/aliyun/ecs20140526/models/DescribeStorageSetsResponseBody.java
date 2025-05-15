@@ -91,6 +91,55 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag self = new DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeStorageSetsResponseBodyStorageSetsStorageSetTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag> tag;
+
+        public static DescribeStorageSetsResponseBodyStorageSetsStorageSetTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeStorageSetsResponseBodyStorageSetsStorageSetTags self = new DescribeStorageSetsResponseBodyStorageSetsStorageSetTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSetTags setTag(java.util.List<DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeStorageSetsResponseBodyStorageSetsStorageSetTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeStorageSetsResponseBodyStorageSetsStorageSet extends TeaModel {
         /**
          * <p>The time when the storage set was created.</p>
@@ -119,6 +168,9 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The ID of the storage set.</p>
          * 
@@ -145,6 +197,9 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
          */
         @NameInMap("StorageSetPartitionNumber")
         public Integer storageSetPartitionNumber;
+
+        @NameInMap("Tags")
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSetTags tags;
 
         /**
          * <p>The ID of the zone to which the storage set belongs.</p>
@@ -184,6 +239,14 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public DescribeStorageSetsResponseBodyStorageSetsStorageSet setStorageSetId(String storageSetId) {
             this.storageSetId = storageSetId;
             return this;
@@ -206,6 +269,14 @@ public class DescribeStorageSetsResponseBody extends TeaModel {
         }
         public Integer getStorageSetPartitionNumber() {
             return this.storageSetPartitionNumber;
+        }
+
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSet setTags(DescribeStorageSetsResponseBodyStorageSetsStorageSetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeStorageSetsResponseBodyStorageSetsStorageSetTags getTags() {
+            return this.tags;
         }
 
         public DescribeStorageSetsResponseBodyStorageSetsStorageSet setZoneId(String zoneId) {
