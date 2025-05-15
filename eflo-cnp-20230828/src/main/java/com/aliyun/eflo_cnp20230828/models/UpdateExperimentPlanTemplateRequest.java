@@ -3,74 +3,30 @@ package com.aliyun.eflo_cnp20230828.models;
 
 import com.aliyun.tea.*;
 
-public class CreateExperimentPlanTemplateRequest extends TeaModel {
+public class UpdateExperimentPlanTemplateRequest extends TeaModel {
     /**
-     * <p>Privacy Level</p>
+     * <p>Template code</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>private</p>
-     */
-    @NameInMap("PrivacyLevel")
-    public String privacyLevel;
-
-    /**
-     * <p>Template Description</p>
-     * 
-     * <strong>example:</strong>
-     * <p>The template installs jdk and tomcat on a new ECS instance.</p>
-     */
-    @NameInMap("TemplateDescription")
-    public String templateDescription;
-
-    /**
-     * <p>Template ID</p>
-     * 
-     * <strong>example:</strong>
-     * <p>4724</p>
+     * <p>349623</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
     /**
-     * <p>Template Name</p>
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>test</p>
-     */
-    @NameInMap("TemplateName")
-    public String templateName;
-
-    /**
-     * <p>Template Pipeline</p>
+     * <p>Template pipeline</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TemplatePipeline")
-    public java.util.List<CreateExperimentPlanTemplateRequestTemplatePipeline> templatePipeline;
+    public java.util.List<UpdateExperimentPlanTemplateRequestTemplatePipeline> templatePipeline;
 
-    public static CreateExperimentPlanTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateExperimentPlanTemplateRequest self = new CreateExperimentPlanTemplateRequest();
+    public static UpdateExperimentPlanTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateExperimentPlanTemplateRequest self = new UpdateExperimentPlanTemplateRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateExperimentPlanTemplateRequest setPrivacyLevel(String privacyLevel) {
-        this.privacyLevel = privacyLevel;
-        return this;
-    }
-    public String getPrivacyLevel() {
-        return this.privacyLevel;
-    }
-
-    public CreateExperimentPlanTemplateRequest setTemplateDescription(String templateDescription) {
-        this.templateDescription = templateDescription;
-        return this;
-    }
-    public String getTemplateDescription() {
-        return this.templateDescription;
-    }
-
-    public CreateExperimentPlanTemplateRequest setTemplateId(Long templateId) {
+    public UpdateExperimentPlanTemplateRequest setTemplateId(Long templateId) {
         this.templateId = templateId;
         return this;
     }
@@ -78,23 +34,15 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateExperimentPlanTemplateRequest setTemplateName(String templateName) {
-        this.templateName = templateName;
-        return this;
-    }
-    public String getTemplateName() {
-        return this.templateName;
-    }
-
-    public CreateExperimentPlanTemplateRequest setTemplatePipeline(java.util.List<CreateExperimentPlanTemplateRequestTemplatePipeline> templatePipeline) {
+    public UpdateExperimentPlanTemplateRequest setTemplatePipeline(java.util.List<UpdateExperimentPlanTemplateRequestTemplatePipeline> templatePipeline) {
         this.templatePipeline = templatePipeline;
         return this;
     }
-    public java.util.List<CreateExperimentPlanTemplateRequestTemplatePipeline> getTemplatePipeline() {
+    public java.util.List<UpdateExperimentPlanTemplateRequestTemplatePipeline> getTemplatePipeline() {
         return this.templatePipeline;
     }
 
-    public static class CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams extends TeaModel {
+    public static class UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams extends TeaModel {
         /**
          * <p>CPU allocation count</p>
          * <p>This parameter is required.</p>
@@ -106,7 +54,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer cpuPerWorker;
 
         /**
-         * <p>CUDA Version</p>
+         * <p>CUDA version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -115,7 +63,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String cudaVersion;
 
         /**
-         * <p>GPU Driver Version</p>
+         * <p>GPU driver version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -134,7 +82,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer gpuPerWorker;
 
         /**
-         * <p>Memory (GB) allocation count</p>
+         * <p>Memory GB allocation count</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +92,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer memoryPerWorker;
 
         /**
-         * <p>NCCL Version</p>
+         * <p>NCCL version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -153,7 +101,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String NCCLVersion;
 
         /**
-         * <p>PyTorch Version</p>
+         * <p>PyTorch version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -162,7 +110,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String pyTorchVersion;
 
         /**
-         * <p>Shared Memory (GB) allocation count</p>
+         * <p>Shared memory GB allocation count</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,12 +129,12 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         @NameInMap("WorkerNum")
         public Integer workerNum;
 
-        public static CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams build(java.util.Map<String, ?> map) throws Exception {
-            CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams self = new CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams();
+        public static UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams self = new UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams();
             return TeaModel.build(map, self);
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setCpuPerWorker(Integer cpuPerWorker) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setCpuPerWorker(Integer cpuPerWorker) {
             this.cpuPerWorker = cpuPerWorker;
             return this;
         }
@@ -194,7 +142,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.cpuPerWorker;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setCudaVersion(String cudaVersion) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setCudaVersion(String cudaVersion) {
             this.cudaVersion = cudaVersion;
             return this;
         }
@@ -202,7 +150,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.cudaVersion;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setGpuDriverVersion(String gpuDriverVersion) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setGpuDriverVersion(String gpuDriverVersion) {
             this.gpuDriverVersion = gpuDriverVersion;
             return this;
         }
@@ -210,7 +158,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.gpuDriverVersion;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setGpuPerWorker(Integer gpuPerWorker) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setGpuPerWorker(Integer gpuPerWorker) {
             this.gpuPerWorker = gpuPerWorker;
             return this;
         }
@@ -218,7 +166,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.gpuPerWorker;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setMemoryPerWorker(Integer memoryPerWorker) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setMemoryPerWorker(Integer memoryPerWorker) {
             this.memoryPerWorker = memoryPerWorker;
             return this;
         }
@@ -226,7 +174,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.memoryPerWorker;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setNCCLVersion(String NCCLVersion) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setNCCLVersion(String NCCLVersion) {
             this.NCCLVersion = NCCLVersion;
             return this;
         }
@@ -234,7 +182,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.NCCLVersion;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setPyTorchVersion(String pyTorchVersion) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setPyTorchVersion(String pyTorchVersion) {
             this.pyTorchVersion = pyTorchVersion;
             return this;
         }
@@ -242,7 +190,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.pyTorchVersion;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setShareMemory(Integer shareMemory) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setShareMemory(Integer shareMemory) {
             this.shareMemory = shareMemory;
             return this;
         }
@@ -250,7 +198,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.shareMemory;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams setWorkerNum(Integer workerNum) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams setWorkerNum(Integer workerNum) {
             this.workerNum = workerNum;
             return this;
         }
@@ -260,16 +208,16 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
 
     }
 
-    public static class CreateExperimentPlanTemplateRequestTemplatePipeline extends TeaModel {
+    public static class UpdateExperimentPlanTemplateRequestTemplatePipeline extends TeaModel {
         /**
-         * <p>Configured Environment Parameters</p>
+         * <p>Configured environment parameters</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("EnvParams")
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams envParams;
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams envParams;
 
         /**
-         * <p>Node Order Number</p>
+         * <p>Node order number</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -279,7 +227,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Integer pipelineOrder;
 
         /**
-         * <p>Usage Scenario, e.g., &quot;baseline&quot;</p>
+         * <p>Usage scenario, e.g., &quot;baseline&quot;</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -289,7 +237,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public String scene;
 
         /**
-         * <p>Configured Workload Parameters</p>
+         * <p>Configured workload parameters</p>
          */
         @NameInMap("SettingParams")
         public java.util.Map<String, String> settingParams;
@@ -305,7 +253,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         public Long workloadId;
 
         /**
-         * <p>Workload Name</p>
+         * <p>Workload name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -314,20 +262,20 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
         @NameInMap("WorkloadName")
         public String workloadName;
 
-        public static CreateExperimentPlanTemplateRequestTemplatePipeline build(java.util.Map<String, ?> map) throws Exception {
-            CreateExperimentPlanTemplateRequestTemplatePipeline self = new CreateExperimentPlanTemplateRequestTemplatePipeline();
+        public static UpdateExperimentPlanTemplateRequestTemplatePipeline build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExperimentPlanTemplateRequestTemplatePipeline self = new UpdateExperimentPlanTemplateRequestTemplatePipeline();
             return TeaModel.build(map, self);
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipeline setEnvParams(CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams envParams) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipeline setEnvParams(UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams envParams) {
             this.envParams = envParams;
             return this;
         }
-        public CreateExperimentPlanTemplateRequestTemplatePipelineEnvParams getEnvParams() {
+        public UpdateExperimentPlanTemplateRequestTemplatePipelineEnvParams getEnvParams() {
             return this.envParams;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipeline setPipelineOrder(Integer pipelineOrder) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipeline setPipelineOrder(Integer pipelineOrder) {
             this.pipelineOrder = pipelineOrder;
             return this;
         }
@@ -335,7 +283,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.pipelineOrder;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipeline setScene(String scene) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipeline setScene(String scene) {
             this.scene = scene;
             return this;
         }
@@ -343,7 +291,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.scene;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipeline setSettingParams(java.util.Map<String, String> settingParams) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipeline setSettingParams(java.util.Map<String, String> settingParams) {
             this.settingParams = settingParams;
             return this;
         }
@@ -351,7 +299,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.settingParams;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipeline setWorkloadId(Long workloadId) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipeline setWorkloadId(Long workloadId) {
             this.workloadId = workloadId;
             return this;
         }
@@ -359,7 +307,7 @@ public class CreateExperimentPlanTemplateRequest extends TeaModel {
             return this.workloadId;
         }
 
-        public CreateExperimentPlanTemplateRequestTemplatePipeline setWorkloadName(String workloadName) {
+        public UpdateExperimentPlanTemplateRequestTemplatePipeline setWorkloadName(String workloadName) {
             this.workloadName = workloadName;
             return this;
         }

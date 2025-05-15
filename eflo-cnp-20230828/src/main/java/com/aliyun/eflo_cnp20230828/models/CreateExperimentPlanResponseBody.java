@@ -32,7 +32,7 @@ public class CreateExperimentPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count of the query</p>
+     * <p>Total count</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

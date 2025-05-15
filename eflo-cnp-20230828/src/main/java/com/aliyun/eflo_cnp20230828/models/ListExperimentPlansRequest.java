@@ -47,6 +47,15 @@ public class ListExperimentPlansRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Resource ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>189</p>
+     */
+    @NameInMap("ResourceId")
+    public Long resourceId;
+
+    /**
      * <p>Resource</p>
      */
     @NameInMap("ResourceName")
@@ -69,6 +78,21 @@ public class ListExperimentPlansRequest extends TeaModel {
      */
     @NameInMap("StartTimeOrder")
     public String startTimeOrder;
+
+    /**
+     * <p>The tags.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<ListExperimentPlansRequestTag> tag;
+
+    /**
+     * <p>Template Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96</p>
+     */
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static ListExperimentPlansRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExperimentPlansRequest self = new ListExperimentPlansRequest();
@@ -115,6 +139,14 @@ public class ListExperimentPlansRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public ListExperimentPlansRequest setResourceId(Long resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public Long getResourceId() {
+        return this.resourceId;
+    }
+
     public ListExperimentPlansRequest setResourceName(java.util.List<String> resourceName) {
         this.resourceName = resourceName;
         return this;
@@ -137,6 +169,64 @@ public class ListExperimentPlansRequest extends TeaModel {
     }
     public String getStartTimeOrder() {
         return this.startTimeOrder;
+    }
+
+    public ListExperimentPlansRequest setTag(java.util.List<ListExperimentPlansRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<ListExperimentPlansRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public ListExperimentPlansRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
+    public static class ListExperimentPlansRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>Tag value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static ListExperimentPlansRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            ListExperimentPlansRequestTag self = new ListExperimentPlansRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListExperimentPlansRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListExperimentPlansRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

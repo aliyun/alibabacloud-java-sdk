@@ -15,6 +15,7 @@ public class CreateResourceRequest extends TeaModel {
 
     /**
      * <p>Cluster ID</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-sh-fj71c0ycfw</p>
@@ -24,6 +25,7 @@ public class CreateResourceRequest extends TeaModel {
 
     /**
      * <p>Cluster Name</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>tre-1-ppu</p>
@@ -32,31 +34,15 @@ public class CreateResourceRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Cluster Type</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ACK</p>
-     */
-    @NameInMap("ClusterType")
-    public String clusterType;
-
-    /**
      * <p>Machine Types</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MachineTypes")
     public CreateResourceRequestMachineTypes machineTypes;
 
     /**
-     * <p>Resource Type</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ACK</p>
-     */
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    /**
      * <p>User Access Parameters</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserAccessParam")
     public CreateResourceRequestUserAccessParam userAccessParam;
@@ -90,28 +76,12 @@ public class CreateResourceRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public CreateResourceRequest setClusterType(String clusterType) {
-        this.clusterType = clusterType;
-        return this;
-    }
-    public String getClusterType() {
-        return this.clusterType;
-    }
-
     public CreateResourceRequest setMachineTypes(CreateResourceRequestMachineTypes machineTypes) {
         this.machineTypes = machineTypes;
         return this;
     }
     public CreateResourceRequestMachineTypes getMachineTypes() {
         return this.machineTypes;
-    }
-
-    public CreateResourceRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public CreateResourceRequest setUserAccessParam(CreateResourceRequestUserAccessParam userAccessParam) {
@@ -134,6 +104,7 @@ public class CreateResourceRequest extends TeaModel {
 
         /**
          * <p>CPU Information</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2x Intel Saphhire Rapid 8469C 48C CPU</p>
@@ -152,6 +123,7 @@ public class CreateResourceRequest extends TeaModel {
 
         /**
          * <p>GPU Information</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
@@ -303,6 +275,7 @@ public class CreateResourceRequest extends TeaModel {
     public static class CreateResourceRequestUserAccessParam extends TeaModel {
         /**
          * <p>User ID</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -312,6 +285,7 @@ public class CreateResourceRequest extends TeaModel {
 
         /**
          * <p>User Key</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -321,6 +295,7 @@ public class CreateResourceRequest extends TeaModel {
 
         /**
          * <p>Endpoint</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -330,6 +305,7 @@ public class CreateResourceRequest extends TeaModel {
 
         /**
          * <p>Workspace ID</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1245688643</p>

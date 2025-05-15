@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetWorkloadResponseBody extends TeaModel {
     /**
+     * <p>Access Denied Information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("Data")
     public GetWorkloadResponseBodyData data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>E67E2E4C-2B47-5C55-AA17-1D771E070AEF</p>
      */
@@ -22,6 +29,8 @@ public class GetWorkloadResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>total</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,16 +76,26 @@ public class GetWorkloadResponseBody extends TeaModel {
 
     public static class GetWorkloadResponseBodyDataParamSettings extends TeaModel {
         /**
+         * <p>Default Parameter Value</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>Parameter Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>number</p>
+         */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
         /**
+         * <p>Parameter Name</p>
+         * 
          * <strong>example:</strong>
          * <p>ITERATION</p>
          */
@@ -84,6 +103,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String paramName;
 
         /**
+         * <p>Parameter Regular Expression</p>
+         * 
          * <strong>example:</strong>
          * <p>[0-9]+</p>
          */
@@ -91,6 +112,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String paramRegex;
 
         /**
+         * <p>Parameter type</p>
+         * 
          * <strong>example:</strong>
          * <p>number</p>
          */
@@ -98,6 +121,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String paramType;
 
         /**
+         * <p>Parameter Value</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -161,6 +186,8 @@ public class GetWorkloadResponseBody extends TeaModel {
 
     public static class GetWorkloadResponseBodyDataStaticConfig extends TeaModel {
         /**
+         * <p>Framework</p>
+         * 
          * <strong>example:</strong>
          * <p>PyTorch</p>
          */
@@ -168,6 +195,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String frameWork;
 
         /**
+         * <p>Operating System</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -175,6 +204,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String os;
 
         /**
+         * <p>Parameter Volume</p>
+         * 
          * <strong>example:</strong>
          * <p>7B</p>
          */
@@ -182,6 +213,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String parameters;
 
         /**
+         * <p>Software Stack</p>
+         * 
          * <strong>example:</strong>
          * <p>python</p>
          */
@@ -229,6 +262,8 @@ public class GetWorkloadResponseBody extends TeaModel {
 
     public static class GetWorkloadResponseBodyData extends TeaModel {
         /**
+         * <p>Default CPU Allocation per Worker</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -236,6 +271,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public Integer defaultCpuPerWorker;
 
         /**
+         * <p>Default GPU Allocation per Worker</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -243,6 +280,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public Integer defaultGpuPerWorker;
 
         /**
+         * <p>Default Memory (GB) Allocation per Worker</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -250,6 +289,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public Integer defaultMemoryPerWorker;
 
         /**
+         * <p>Default Shared Memory (GB) Allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -257,6 +298,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public Integer defaultShareMemory;
 
         /**
+         * <p>Workload Cluster, e.g., AI, GPU</p>
+         * 
          * <strong>example:</strong>
          * <p>AI</p>
          */
@@ -264,16 +307,23 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String family;
 
         /**
+         * <p>Training Job Type</p>
+         * 
          * <strong>example:</strong>
          * <p>PyTorchJob</p>
          */
         @NameInMap("JobKind")
         public String jobKind;
 
+        /**
+         * <p>Parameter Settings</p>
+         */
         @NameInMap("ParamSettings")
         public java.util.List<GetWorkloadResponseBodyDataParamSettings> paramSettings;
 
         /**
+         * <p>Workload Usage Scenario</p>
+         * 
          * <strong>example:</strong>
          * <p>NLP-LLM</p>
          */
@@ -281,16 +331,23 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String scene;
 
         /**
+         * <p>Scope Identifier for Workload Usage</p>
+         * 
          * <strong>example:</strong>
          * <p>common</p>
          */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>Static Configuration</p>
+         */
         @NameInMap("StaticConfig")
         public GetWorkloadResponseBodyDataStaticConfig staticConfig;
 
         /**
+         * <p>Version ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -298,6 +355,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public Long versionId;
 
         /**
+         * <p>Workload Description</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -305,6 +364,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String workloadDescription;
 
         /**
+         * <p>Workload ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -312,6 +373,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public Long workloadId;
 
         /**
+         * <p>Workload Name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -319,6 +382,8 @@ public class GetWorkloadResponseBody extends TeaModel {
         public String workloadName;
 
         /**
+         * <p>Workload Type</p>
+         * 
          * <strong>example:</strong>
          * <p>AI</p>
          */

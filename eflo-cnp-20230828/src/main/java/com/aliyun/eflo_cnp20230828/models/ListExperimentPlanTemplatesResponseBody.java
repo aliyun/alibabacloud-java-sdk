@@ -68,6 +68,24 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         public Integer cpuPerWorker;
 
         /**
+         * <p>Cuda Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("CudaVersion")
+        public String cudaVersion;
+
+        /**
+         * <p>The version of the GPU driver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("GpuDriverVersion")
+        public String gpuDriverVersion;
+
+        /**
          * <p>GPU allocation</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +102,24 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
          */
         @NameInMap("MemoryPerWorker")
         public Integer memoryPerWorker;
+
+        /**
+         * <p>NCCL Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("NCCLVersion")
+        public String NCCLVersion;
+
+        /**
+         * <p>PyTorch Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.0</p>
+         */
+        @NameInMap("PyTorchVersion")
+        public String pyTorchVersion;
 
         /**
          * <p>Allocated shared memory in GB</p>
@@ -116,6 +152,22 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
             return this.cpuPerWorker;
         }
 
+        public ListExperimentPlanTemplatesResponseBodyDataTemplatePipelineParamEnvParams setCudaVersion(String cudaVersion) {
+            this.cudaVersion = cudaVersion;
+            return this;
+        }
+        public String getCudaVersion() {
+            return this.cudaVersion;
+        }
+
+        public ListExperimentPlanTemplatesResponseBodyDataTemplatePipelineParamEnvParams setGpuDriverVersion(String gpuDriverVersion) {
+            this.gpuDriverVersion = gpuDriverVersion;
+            return this;
+        }
+        public String getGpuDriverVersion() {
+            return this.gpuDriverVersion;
+        }
+
         public ListExperimentPlanTemplatesResponseBodyDataTemplatePipelineParamEnvParams setGpuPerWorker(Integer gpuPerWorker) {
             this.gpuPerWorker = gpuPerWorker;
             return this;
@@ -130,6 +182,22 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         }
         public Integer getMemoryPerWorker() {
             return this.memoryPerWorker;
+        }
+
+        public ListExperimentPlanTemplatesResponseBodyDataTemplatePipelineParamEnvParams setNCCLVersion(String NCCLVersion) {
+            this.NCCLVersion = NCCLVersion;
+            return this;
+        }
+        public String getNCCLVersion() {
+            return this.NCCLVersion;
+        }
+
+        public ListExperimentPlanTemplatesResponseBodyDataTemplatePipelineParamEnvParams setPyTorchVersion(String pyTorchVersion) {
+            this.pyTorchVersion = pyTorchVersion;
+            return this;
+        }
+        public String getPyTorchVersion() {
+            return this.pyTorchVersion;
         }
 
         public ListExperimentPlanTemplatesResponseBodyDataTemplatePipelineParamEnvParams setShareMemory(Integer shareMemory) {
@@ -292,6 +360,15 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         public String privacyLevel;
 
         /**
+         * <p>The template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>475315534</p>
+         */
+        @NameInMap("TemplateCode")
+        public Long templateCode;
+
+        /**
          * <p>Template description</p>
          * 
          * <strong>example:</strong>
@@ -377,6 +454,14 @@ public class ListExperimentPlanTemplatesResponseBody extends TeaModel {
         }
         public String getPrivacyLevel() {
             return this.privacyLevel;
+        }
+
+        public ListExperimentPlanTemplatesResponseBodyData setTemplateCode(Long templateCode) {
+            this.templateCode = templateCode;
+            return this;
+        }
+        public Long getTemplateCode() {
+            return this.templateCode;
         }
 
         public ListExperimentPlanTemplatesResponseBodyData setTemplateDescription(String templateDescription) {

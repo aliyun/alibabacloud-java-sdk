@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     /**
+     * <p>Experiment ID</p>
+     * 
      * <strong>example:</strong>
      * <p>54</p>
      */
@@ -12,6 +14,8 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     public Long experimentId;
 
     /**
+     * <p>Host IP</p>
+     * 
      * <strong>example:</strong>
      * <p>p-jt-waf-app1</p>
      */
@@ -19,6 +23,8 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     public String hostname;
 
     /**
+     * <p>Pod name</p>
+     * 
      * <strong>example:</strong>
      * <p>fluxserv-6fc89b45cf-w8wq6</p>
      */
@@ -26,6 +32,8 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     public String podName;
 
     /**
+     * <p>GPU数量</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -33,6 +41,8 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     public Integer gpuNum;
 
     /**
+     * <p>GPU名称</p>
+     * 
      * <strong>example:</strong>
      * <p>8x OAM 810 GPU</p>
      */
@@ -40,27 +50,43 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     public String gpuName;
 
     /**
+     * <p>Whether there is a warning</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("WarningFlag")
     public Boolean warningFlag;
 
+    /**
+     * <p>Warning message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>warning message</p>
+     */
     @NameInMap("WarningMsg")
     public String warningMsg;
 
     /**
+     * <p>Whether there is an error</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("ErrorFlag")
     public Boolean errorFlag;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>error message</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     /**
-     * <p>TFLOPS</p>
+     * <p>TFLOPS value</p>
      * 
      * <strong>example:</strong>
      * <p>45</p>
@@ -69,6 +95,8 @@ public class DataResultsTaskIndividualResultMapValue extends TeaModel {
     public Double tflops;
 
     /**
+     * <p>Throughput</p>
+     * 
      * <strong>example:</strong>
      * <p>23</p>
      */

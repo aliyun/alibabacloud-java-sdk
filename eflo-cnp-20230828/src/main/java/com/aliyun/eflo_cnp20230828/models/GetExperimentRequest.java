@@ -5,11 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetExperimentRequest extends TeaModel {
     /**
+     * <p>Experiment ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */
     @NameInMap("ExperimentId")
     public Long experimentId;
+
+    /**
+     * <p>Resource Group Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-sdsmfg23</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     public static GetExperimentRequest build(java.util.Map<String, ?> map) throws Exception {
         GetExperimentRequest self = new GetExperimentRequest();
@@ -22,6 +34,14 @@ public class GetExperimentRequest extends TeaModel {
     }
     public Long getExperimentId() {
         return this.experimentId;
+    }
+
+    public GetExperimentRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

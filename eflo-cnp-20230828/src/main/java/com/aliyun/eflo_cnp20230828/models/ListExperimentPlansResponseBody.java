@@ -74,6 +74,48 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListExperimentPlansResponseBodyDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListExperimentPlansResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
+            ListExperimentPlansResponseBodyDataTags self = new ListExperimentPlansResponseBodyDataTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListExperimentPlansResponseBodyDataTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListExperimentPlansResponseBodyDataTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class ListExperimentPlansResponseBodyData extends TeaModel {
         /**
          * <p>Creation Time</p>
@@ -118,6 +160,15 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>189</p>
+         */
+        @NameInMap("ResourceId")
+        public Long resourceId;
+
+        /**
          * <p>Associated Resource Name</p>
          * 
          * <strong>example:</strong>
@@ -134,6 +185,12 @@ public class ListExperimentPlansResponseBody extends TeaModel {
          */
         @NameInMap("StartTime")
         public String startTime;
+
+        /**
+         * <p>The tag.</p>
+         */
+        @NameInMap("Tags")
+        public java.util.List<ListExperimentPlansResponseBodyDataTags> tags;
 
         /**
          * <p>Associated Test Plan Template ID</p>
@@ -207,6 +264,14 @@ public class ListExperimentPlansResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public ListExperimentPlansResponseBodyData setResourceId(Long resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public Long getResourceId() {
+            return this.resourceId;
+        }
+
         public ListExperimentPlansResponseBodyData setResourceName(String resourceName) {
             this.resourceName = resourceName;
             return this;
@@ -221,6 +286,14 @@ public class ListExperimentPlansResponseBody extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public ListExperimentPlansResponseBodyData setTags(java.util.List<ListExperimentPlansResponseBodyDataTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListExperimentPlansResponseBodyDataTags> getTags() {
+            return this.tags;
         }
 
         public ListExperimentPlansResponseBodyData setTemplateId(Long templateId) {

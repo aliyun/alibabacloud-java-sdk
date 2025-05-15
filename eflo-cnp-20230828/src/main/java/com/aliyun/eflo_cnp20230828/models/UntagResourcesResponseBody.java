@@ -3,7 +3,7 @@ package com.aliyun.eflo_cnp20230828.models;
 
 import com.aliyun.tea.*;
 
-public class DeleteExperimentResponseBody extends TeaModel {
+public class UntagResourcesResponseBody extends TeaModel {
     /**
      * <p>Access denied information</p>
      * 
@@ -20,19 +20,19 @@ public class DeleteExperimentResponseBody extends TeaModel {
      * <p>[]</p>
      */
     @NameInMap("Data")
-    public Boolean data;
+    public String data;
 
     /**
      * <p>Request ID</p>
      * 
      * <strong>example:</strong>
-     * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
+     * <p>25859897-35C8-5015-8365-7A3CE52F4854</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Total count of queries</p>
+     * <p>Total</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -40,12 +40,12 @@ public class DeleteExperimentResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    public static DeleteExperimentResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeleteExperimentResponseBody self = new DeleteExperimentResponseBody();
+    public static UntagResourcesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UntagResourcesResponseBody self = new UntagResourcesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeleteExperimentResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public UntagResourcesResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -53,15 +53,15 @@ public class DeleteExperimentResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public DeleteExperimentResponseBody setData(Boolean data) {
+    public UntagResourcesResponseBody setData(String data) {
         this.data = data;
         return this;
     }
-    public Boolean getData() {
+    public String getData() {
         return this.data;
     }
 
-    public DeleteExperimentResponseBody setRequestId(String requestId) {
+    public UntagResourcesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -69,7 +69,7 @@ public class DeleteExperimentResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public DeleteExperimentResponseBody setTotalCount(Long totalCount) {
+    public UntagResourcesResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }

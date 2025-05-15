@@ -22,6 +22,15 @@ public class ListExperimentsRequest extends TeaModel {
     @NameInMap("PlanId")
     public Long planId;
 
+    /**
+     * <p>资源组id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-uo8f26cpmo</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     public static ListExperimentsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExperimentsRequest self = new ListExperimentsRequest();
         return TeaModel.build(map, self);
@@ -41,6 +50,14 @@ public class ListExperimentsRequest extends TeaModel {
     }
     public Long getPlanId() {
         return this.planId;
+    }
+
+    public ListExperimentsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
 }

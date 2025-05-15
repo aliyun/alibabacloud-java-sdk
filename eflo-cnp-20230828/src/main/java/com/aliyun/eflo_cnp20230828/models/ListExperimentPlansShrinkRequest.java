@@ -47,6 +47,15 @@ public class ListExperimentPlansShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Resource ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>189</p>
+     */
+    @NameInMap("ResourceId")
+    public Long resourceId;
+
+    /**
      * <p>Resource</p>
      */
     @NameInMap("ResourceName")
@@ -69,6 +78,21 @@ public class ListExperimentPlansShrinkRequest extends TeaModel {
      */
     @NameInMap("StartTimeOrder")
     public String startTimeOrder;
+
+    /**
+     * <p>The tags.</p>
+     */
+    @NameInMap("Tag")
+    public String tagShrink;
+
+    /**
+     * <p>Template Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96</p>
+     */
+    @NameInMap("TemplateId")
+    public Long templateId;
 
     public static ListExperimentPlansShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListExperimentPlansShrinkRequest self = new ListExperimentPlansShrinkRequest();
@@ -115,6 +139,14 @@ public class ListExperimentPlansShrinkRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public ListExperimentPlansShrinkRequest setResourceId(Long resourceId) {
+        this.resourceId = resourceId;
+        return this;
+    }
+    public Long getResourceId() {
+        return this.resourceId;
+    }
+
     public ListExperimentPlansShrinkRequest setResourceNameShrink(String resourceNameShrink) {
         this.resourceNameShrink = resourceNameShrink;
         return this;
@@ -137,6 +169,22 @@ public class ListExperimentPlansShrinkRequest extends TeaModel {
     }
     public String getStartTimeOrder() {
         return this.startTimeOrder;
+    }
+
+    public ListExperimentPlansShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
+        return this;
+    }
+    public String getTagShrink() {
+        return this.tagShrink;
+    }
+
+    public ListExperimentPlansShrinkRequest setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
 }

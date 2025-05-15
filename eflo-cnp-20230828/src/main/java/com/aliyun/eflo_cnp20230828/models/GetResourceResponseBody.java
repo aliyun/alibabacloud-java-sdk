@@ -451,15 +451,6 @@ public class GetResourceResponseBody extends TeaModel {
         public Long resourceId;
 
         /**
-         * <p>Cluster name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ecs.g6.4xlarge</p>
-         */
-        @NameInMap("ResourceName")
-        public String resourceName;
-
-        /**
          * <p>List of resource nodes</p>
          */
         @NameInMap("ResourceNodes")
@@ -562,14 +553,6 @@ public class GetResourceResponseBody extends TeaModel {
         }
         public Long getResourceId() {
             return this.resourceId;
-        }
-
-        public GetResourceResponseBodyData setResourceName(String resourceName) {
-            this.resourceName = resourceName;
-            return this;
-        }
-        public String getResourceName() {
-            return this.resourceName;
         }
 
         public GetResourceResponseBodyData setResourceNodes(java.util.List<GetResourceResponseBodyDataResourceNodes> resourceNodes) {

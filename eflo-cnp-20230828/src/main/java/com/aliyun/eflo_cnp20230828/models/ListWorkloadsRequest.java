@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListWorkloadsRequest extends TeaModel {
     /**
+     * <p>Scope</p>
+     * 
      * <strong>example:</strong>
      * <p>common</p>
      */

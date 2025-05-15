@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class GetResourceRequest extends TeaModel {
     /**
      * <p>The cluster ID of Lingjun</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-bj-uo8f26cpmo</p>

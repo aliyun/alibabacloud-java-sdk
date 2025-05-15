@@ -3,7 +3,7 @@ package com.aliyun.eflo_cnp20230828.models;
 
 import com.aliyun.tea.*;
 
-public class GetExperimentPlanRequest extends TeaModel {
+public class DeleteExperimentPlanRequest extends TeaModel {
     /**
      * <p>Plan ID</p>
      * <p>This parameter is required.</p>
@@ -14,12 +14,12 @@ public class GetExperimentPlanRequest extends TeaModel {
     @NameInMap("PlanId")
     public Long planId;
 
-    public static GetExperimentPlanRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetExperimentPlanRequest self = new GetExperimentPlanRequest();
+    public static DeleteExperimentPlanRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteExperimentPlanRequest self = new DeleteExperimentPlanRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetExperimentPlanRequest setPlanId(Long planId) {
+    public DeleteExperimentPlanRequest setPlanId(Long planId) {
         this.planId = planId;
         return this;
     }

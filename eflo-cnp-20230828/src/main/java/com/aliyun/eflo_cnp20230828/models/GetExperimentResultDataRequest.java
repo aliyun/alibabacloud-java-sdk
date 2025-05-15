@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetExperimentResultDataRequest extends TeaModel {
     /**
+     * <p>Experiment ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>234</p>
      */
@@ -12,6 +15,8 @@ public class GetExperimentResultDataRequest extends TeaModel {
     public Long experimentId;
 
     /**
+     * <p>Hostname</p>
+     * 
      * <strong>example:</strong>
      * <p>iZj6ccwd7zwfms7hzaz2riZ</p>
      */
@@ -19,6 +24,17 @@ public class GetExperimentResultDataRequest extends TeaModel {
     public String hostname;
 
     /**
+     * <p>Resource Group Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-sfjgskdfj3k4</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
+    /**
+     * <p>Workload Type</p>
+     * 
      * <strong>example:</strong>
      * <p>AI</p>
      */
@@ -44,6 +60,14 @@ public class GetExperimentResultDataRequest extends TeaModel {
     }
     public String getHostname() {
         return this.hostname;
+    }
+
+    public GetExperimentResultDataRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public GetExperimentResultDataRequest setWorkloadType(String workloadType) {

@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class ValidateResourceRequest extends TeaModel {
     /**
      * <p>Resource ID</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-sh-ouypm5aucy</p>

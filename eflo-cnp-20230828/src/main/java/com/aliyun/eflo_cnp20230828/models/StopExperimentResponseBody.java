@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopExperimentResponseBody extends TeaModel {
     /**
+     * <p>Access denied information</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -12,6 +14,8 @@ public class StopExperimentResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>Data</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class StopExperimentResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
      */
@@ -26,6 +32,8 @@ public class StopExperimentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of queries</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
+     * <p>Region Id</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
      * <p>The resource group id.</p>
      * <p>This parameter is required.</p>
      * 
@@ -36,6 +45,14 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public static ChangeResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeResourceGroupRequest self = new ChangeResourceGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeResourceGroupRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public ChangeResourceGroupRequest setResourceGroupId(String resourceGroupId) {

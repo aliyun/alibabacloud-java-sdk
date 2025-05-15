@@ -15,6 +15,7 @@ public class CreateResourceShrinkRequest extends TeaModel {
 
     /**
      * <p>Cluster ID</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ehpc-sh-fj71c0ycfw</p>
@@ -24,6 +25,7 @@ public class CreateResourceShrinkRequest extends TeaModel {
 
     /**
      * <p>Cluster Name</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>tre-1-ppu</p>
@@ -32,31 +34,15 @@ public class CreateResourceShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Cluster Type</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ACK</p>
-     */
-    @NameInMap("ClusterType")
-    public String clusterType;
-
-    /**
      * <p>Machine Types</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("MachineTypes")
     public String machineTypesShrink;
 
     /**
-     * <p>Resource Type</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ACK</p>
-     */
-    @NameInMap("ResourceType")
-    public String resourceType;
-
-    /**
      * <p>User Access Parameters</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("UserAccessParam")
     public String userAccessParamShrink;
@@ -90,28 +76,12 @@ public class CreateResourceShrinkRequest extends TeaModel {
         return this.clusterName;
     }
 
-    public CreateResourceShrinkRequest setClusterType(String clusterType) {
-        this.clusterType = clusterType;
-        return this;
-    }
-    public String getClusterType() {
-        return this.clusterType;
-    }
-
     public CreateResourceShrinkRequest setMachineTypesShrink(String machineTypesShrink) {
         this.machineTypesShrink = machineTypesShrink;
         return this;
     }
     public String getMachineTypesShrink() {
         return this.machineTypesShrink;
-    }
-
-    public CreateResourceShrinkRequest setResourceType(String resourceType) {
-        this.resourceType = resourceType;
-        return this;
-    }
-    public String getResourceType() {
-        return this.resourceType;
     }
 
     public CreateResourceShrinkRequest setUserAccessParamShrink(String userAccessParamShrink) {

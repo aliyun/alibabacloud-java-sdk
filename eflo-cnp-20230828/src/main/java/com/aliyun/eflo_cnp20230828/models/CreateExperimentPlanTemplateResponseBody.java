@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
     /**
+     * <p>Access Denied Detail</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("Data")
     public CreateExperimentPlanTemplateResponseBodyData data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
      */
@@ -22,6 +29,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>total</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,6 +76,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
 
     public static class CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams extends TeaModel {
         /**
+         * <p>CPU Allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -83,7 +94,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public String cudaVersion;
 
         /**
-         * <p>GpuDriverVersion</p>
+         * <p>GPU Driver Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -92,6 +103,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public String gpuDriverVersion;
 
         /**
+         * <p>GPU Allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -99,6 +112,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Integer gpuPerWorker;
 
         /**
+         * <p>Memory (GB) Allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -106,7 +121,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Integer memoryPerWorker;
 
         /**
-         * <p>NCCLVersion</p>
+         * <p>NCCL Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -115,7 +130,7 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public String NCCLVersion;
 
         /**
-         * <p>PyTorchVersion</p>
+         * <p>PyTorch Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -124,6 +139,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public String pyTorchVersion;
 
         /**
+         * <p>Shared Memory (GB) Allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -131,6 +148,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Integer shareMemory;
 
         /**
+         * <p>Number of Nodes</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -217,10 +236,15 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
     }
 
     public static class CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam extends TeaModel {
+        /**
+         * <p>Configured Environment Parameters</p>
+         */
         @NameInMap("EnvParams")
         public CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams envParams;
 
         /**
+         * <p>Pipeline Order</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -228,16 +252,23 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Integer pipelineOrder;
 
         /**
+         * <p>Usage Scenario, e.g., &quot;baseline&quot;</p>
+         * 
          * <strong>example:</strong>
          * <p>baseline</p>
          */
         @NameInMap("Scene")
         public String scene;
 
+        /**
+         * <p>Configured Workload Parameters</p>
+         */
         @NameInMap("SettingParams")
         public java.util.Map<String, String> settingParams;
 
         /**
+         * <p>Workload ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -245,6 +276,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Long workloadId;
 
         /**
+         * <p>Workload Name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -308,6 +341,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
 
     public static class CreateExperimentPlanTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-19T02:01:05Z</p>
          */
@@ -315,6 +350,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Primary Account UID</p>
+         * 
          * <strong>example:</strong>
          * <p>12312312312312</p>
          */
@@ -322,6 +359,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Long creatorUid;
 
         /**
+         * <p>Is Deleted</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -329,29 +368,59 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public Integer isDelete;
 
         /**
+         * <p>Privacy Level</p>
+         * 
          * <strong>example:</strong>
          * <p>private</p>
          */
         @NameInMap("PrivacyLevel")
         public String privacyLevel;
 
+        /**
+         * <p>Template Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("TemplateCode")
+        public Long templateCode;
+
+        /**
+         * <p>Template Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TemplateDescription")
         public String templateDescription;
 
         /**
+         * <p>Template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>17615126</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <p>Template Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
+        /**
+         * <p>Template Pipeline</p>
+         */
         @NameInMap("TemplatePipelineParam")
         public java.util.List<CreateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam> templatePipelineParam;
 
         /**
+         * <p>Update Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-10-16T01:58Z</p>
          */
@@ -359,6 +428,8 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Version ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -400,6 +471,14 @@ public class CreateExperimentPlanTemplateResponseBody extends TeaModel {
         }
         public String getPrivacyLevel() {
             return this.privacyLevel;
+        }
+
+        public CreateExperimentPlanTemplateResponseBodyData setTemplateCode(Long templateCode) {
+            this.templateCode = templateCode;
+            return this;
+        }
+        public Long getTemplateCode() {
+            return this.templateCode;
         }
 
         public CreateExperimentPlanTemplateResponseBodyData setTemplateDescription(String templateDescription) {

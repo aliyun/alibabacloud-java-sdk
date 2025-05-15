@@ -5,6 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateExperimentPlanTemplateShrinkRequest extends TeaModel {
     /**
+     * <p>Privacy Level</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>private</p>
      */
@@ -12,6 +15,8 @@ public class CreateExperimentPlanTemplateShrinkRequest extends TeaModel {
     public String privacyLevel;
 
     /**
+     * <p>Template Description</p>
+     * 
      * <strong>example:</strong>
      * <p>The template installs jdk and tomcat on a new ECS instance.</p>
      */
@@ -19,15 +24,28 @@ public class CreateExperimentPlanTemplateShrinkRequest extends TeaModel {
     public String templateDescription;
 
     /**
+     * <p>Template ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4724</p>
      */
     @NameInMap("TemplateId")
     public Long templateId;
 
+    /**
+     * <p>Template Name</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    /**
+     * <p>Template Pipeline</p>
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplatePipeline")
     public String templatePipelineShrink;
 

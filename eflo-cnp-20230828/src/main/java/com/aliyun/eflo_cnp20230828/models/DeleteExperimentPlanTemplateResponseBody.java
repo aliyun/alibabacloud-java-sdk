@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
     /**
+     * <p>Data</p>
+     * 
      * <strong>example:</strong>
      * <p>[]</p>
      */
@@ -12,6 +14,8 @@ public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>4D3FD55F-3BCD-5914-9B74-A1F4961327E7</p>
      */
@@ -19,6 +23,8 @@ public class DeleteExperimentPlanTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total Count</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

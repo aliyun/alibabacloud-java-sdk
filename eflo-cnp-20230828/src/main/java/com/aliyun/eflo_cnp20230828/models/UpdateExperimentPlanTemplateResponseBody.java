@@ -3,7 +3,7 @@ package com.aliyun.eflo_cnp20230828.models;
 
 import com.aliyun.tea.*;
 
-public class GetExperimentPlanResponseBody extends TeaModel {
+public class UpdateExperimentPlanTemplateResponseBody extends TeaModel {
     /**
      * <p>Access denied information</p>
      * 
@@ -17,19 +17,19 @@ public class GetExperimentPlanResponseBody extends TeaModel {
      * <p>Data</p>
      */
     @NameInMap("Data")
-    public GetExperimentPlanResponseBodyData data;
+    public UpdateExperimentPlanTemplateResponseBodyData data;
 
     /**
      * <p>Request ID</p>
      * 
      * <strong>example:</strong>
-     * <p>6DBAC169-93D1-5DCD-8109-30FB623B3197</p>
+     * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Total count of the query</p>
+     * <p>Total</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -37,12 +37,12 @@ public class GetExperimentPlanResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Long totalCount;
 
-    public static GetExperimentPlanResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetExperimentPlanResponseBody self = new GetExperimentPlanResponseBody();
+    public static UpdateExperimentPlanTemplateResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateExperimentPlanTemplateResponseBody self = new UpdateExperimentPlanTemplateResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetExperimentPlanResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public UpdateExperimentPlanTemplateResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -50,15 +50,15 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public GetExperimentPlanResponseBody setData(GetExperimentPlanResponseBodyData data) {
+    public UpdateExperimentPlanTemplateResponseBody setData(UpdateExperimentPlanTemplateResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public GetExperimentPlanResponseBodyData getData() {
+    public UpdateExperimentPlanTemplateResponseBodyData getData() {
         return this.data;
     }
 
-    public GetExperimentPlanResponseBody setRequestId(String requestId) {
+    public UpdateExperimentPlanTemplateResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -66,7 +66,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetExperimentPlanResponseBody setTotalCount(Long totalCount) {
+    public UpdateExperimentPlanTemplateResponseBody setTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;
     }
@@ -74,12 +74,12 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes extends TeaModel {
+    public static class UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes extends TeaModel {
         /**
-         * <p>Node name</p>
+         * <p>Node Name</p>
          * 
          * <strong>example:</strong>
-         * <p>ods_galaxy_gateway_tickets</p>
+         * <p>honeypot</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
@@ -88,7 +88,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>Requested CPU</p>
          * 
          * <strong>example:</strong>
-         * <p>90</p>
+         * <p>10</p>
          */
         @NameInMap("RequestCPU")
         public Integer requestCPU;
@@ -97,16 +97,16 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>Requested GPU</p>
          * 
          * <strong>example:</strong>
-         * <p>8</p>
+         * <p>10</p>
          */
         @NameInMap("RequestGPU")
         public Integer requestGPU;
 
         /**
-         * <p>Memory of the current request</p>
+         * <p>Requested Memory</p>
          * 
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>10</p>
          */
         @NameInMap("RequestMemory")
         public Integer requestMemory;
@@ -115,7 +115,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>Total CPU</p>
          * 
          * <strong>example:</strong>
-         * <p>90</p>
+         * <p>100</p>
          */
         @NameInMap("TotalCPU")
         public Integer totalCPU;
@@ -124,26 +124,26 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>Total GPU</p>
          * 
          * <strong>example:</strong>
-         * <p>8</p>
+         * <p>100</p>
          */
         @NameInMap("TotalGPU")
         public Integer totalGPU;
 
         /**
-         * <p>Total memory</p>
+         * <p>Total Memory</p>
          * 
          * <strong>example:</strong>
-         * <p>500</p>
+         * <p>100</p>
          */
         @NameInMap("TotalMemory")
         public Long totalMemory;
 
-        public static GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes build(java.util.Map<String, ?> map) throws Exception {
-            GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes self = new GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes();
+        public static UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes self = new UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes();
             return TeaModel.build(map, self);
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setNodeName(String nodeName) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setNodeName(String nodeName) {
             this.nodeName = nodeName;
             return this;
         }
@@ -151,7 +151,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.nodeName;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setRequestCPU(Integer requestCPU) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setRequestCPU(Integer requestCPU) {
             this.requestCPU = requestCPU;
             return this;
         }
@@ -159,7 +159,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.requestCPU;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setRequestGPU(Integer requestGPU) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setRequestGPU(Integer requestGPU) {
             this.requestGPU = requestGPU;
             return this;
         }
@@ -167,7 +167,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.requestGPU;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setRequestMemory(Integer requestMemory) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setRequestMemory(Integer requestMemory) {
             this.requestMemory = requestMemory;
             return this;
         }
@@ -175,7 +175,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.requestMemory;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setTotalCPU(Integer totalCPU) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setTotalCPU(Integer totalCPU) {
             this.totalCPU = totalCPU;
             return this;
         }
@@ -183,7 +183,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.totalCPU;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setTotalGPU(Integer totalGPU) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setTotalGPU(Integer totalGPU) {
             this.totalGPU = totalGPU;
             return this;
         }
@@ -191,7 +191,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.totalGPU;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes setTotalMemory(Long totalMemory) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes setTotalMemory(Long totalMemory) {
             this.totalMemory = totalMemory;
             return this;
         }
@@ -201,9 +201,9 @@ public class GetExperimentPlanResponseBody extends TeaModel {
 
     }
 
-    public static class GetExperimentPlanResponseBodyDataPlanPipelineEnvParams extends TeaModel {
+    public static class UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams extends TeaModel {
         /**
-         * <p>CPU allocation</p>
+         * <p>CPU Allocation</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -212,7 +212,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public Integer cpuPerWorker;
 
         /**
-         * <p>CUDA version</p>
+         * <p>CUDA Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -221,13 +221,13 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public String cudaVersion;
 
         /**
-         * <p>Additional parameters</p>
+         * <p>Extend Param</p>
          */
         @NameInMap("ExtendParam")
         public java.util.Map<String, String> extendParam;
 
         /**
-         * <p>GPU driver version</p>
+         * <p>GPU Driver Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -236,7 +236,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public String gpuDriverVersion;
 
         /**
-         * <p>Number of GPUs allocated</p>
+         * <p>GPU Allocation</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -245,7 +245,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public Integer gpuPerWorker;
 
         /**
-         * <p>Memory GB allocation</p>
+         * <p>Memory (GB) Allocation</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -254,7 +254,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public Integer memoryPerWorker;
 
         /**
-         * <p>NCCL version</p>
+         * <p>NCCL Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -263,7 +263,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public String NCCLVersion;
 
         /**
-         * <p>PyTorch version</p>
+         * <p>PyTorch Version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -272,13 +272,13 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public String pyTorchVersion;
 
         /**
-         * <p>Specified nodes</p>
+         * <p>Specified Nodes</p>
          */
         @NameInMap("ResourceNodes")
-        public java.util.List<GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes> resourceNodes;
+        public java.util.List<UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes> resourceNodes;
 
         /**
-         * <p>Shared memory GB allocation</p>
+         * <p>Shared Memory (GB) Allocation</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>
@@ -287,7 +287,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public Integer shareMemory;
 
         /**
-         * <p>Number of nodes</p>
+         * <p>Number of Nodes</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -295,12 +295,12 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         @NameInMap("WorkerNum")
         public Integer workerNum;
 
-        public static GetExperimentPlanResponseBodyDataPlanPipelineEnvParams build(java.util.Map<String, ?> map) throws Exception {
-            GetExperimentPlanResponseBodyDataPlanPipelineEnvParams self = new GetExperimentPlanResponseBodyDataPlanPipelineEnvParams();
+        public static UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams self = new UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams();
             return TeaModel.build(map, self);
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setCpuPerWorker(Integer cpuPerWorker) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setCpuPerWorker(Integer cpuPerWorker) {
             this.cpuPerWorker = cpuPerWorker;
             return this;
         }
@@ -308,7 +308,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.cpuPerWorker;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setCudaVersion(String cudaVersion) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setCudaVersion(String cudaVersion) {
             this.cudaVersion = cudaVersion;
             return this;
         }
@@ -316,7 +316,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.cudaVersion;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setExtendParam(java.util.Map<String, String> extendParam) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setExtendParam(java.util.Map<String, String> extendParam) {
             this.extendParam = extendParam;
             return this;
         }
@@ -324,7 +324,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.extendParam;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setGpuDriverVersion(String gpuDriverVersion) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setGpuDriverVersion(String gpuDriverVersion) {
             this.gpuDriverVersion = gpuDriverVersion;
             return this;
         }
@@ -332,7 +332,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.gpuDriverVersion;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setGpuPerWorker(Integer gpuPerWorker) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setGpuPerWorker(Integer gpuPerWorker) {
             this.gpuPerWorker = gpuPerWorker;
             return this;
         }
@@ -340,7 +340,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.gpuPerWorker;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setMemoryPerWorker(Integer memoryPerWorker) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setMemoryPerWorker(Integer memoryPerWorker) {
             this.memoryPerWorker = memoryPerWorker;
             return this;
         }
@@ -348,7 +348,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.memoryPerWorker;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setNCCLVersion(String NCCLVersion) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setNCCLVersion(String NCCLVersion) {
             this.NCCLVersion = NCCLVersion;
             return this;
         }
@@ -356,7 +356,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.NCCLVersion;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setPyTorchVersion(String pyTorchVersion) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setPyTorchVersion(String pyTorchVersion) {
             this.pyTorchVersion = pyTorchVersion;
             return this;
         }
@@ -364,15 +364,15 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.pyTorchVersion;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setResourceNodes(java.util.List<GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes> resourceNodes) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setResourceNodes(java.util.List<UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes> resourceNodes) {
             this.resourceNodes = resourceNodes;
             return this;
         }
-        public java.util.List<GetExperimentPlanResponseBodyDataPlanPipelineEnvParamsResourceNodes> getResourceNodes() {
+        public java.util.List<UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParamsResourceNodes> getResourceNodes() {
             return this.resourceNodes;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setShareMemory(Integer shareMemory) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setShareMemory(Integer shareMemory) {
             this.shareMemory = shareMemory;
             return this;
         }
@@ -380,7 +380,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.shareMemory;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams setWorkerNum(Integer workerNum) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams setWorkerNum(Integer workerNum) {
             this.workerNum = workerNum;
             return this;
         }
@@ -390,15 +390,15 @@ public class GetExperimentPlanResponseBody extends TeaModel {
 
     }
 
-    public static class GetExperimentPlanResponseBodyDataPlanPipeline extends TeaModel {
+    public static class UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam extends TeaModel {
         /**
-         * <p>Configured environment parameters</p>
+         * <p>Configured Environment Parameters</p>
          */
         @NameInMap("EnvParams")
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams envParams;
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams envParams;
 
         /**
-         * <p>Node order number</p>
+         * <p>Node sequence number</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -407,25 +407,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public Integer pipelineOrder;
 
         /**
-         * <p>Resource ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>36</p>
-         */
-        @NameInMap("ResourceId")
-        public Long resourceId;
-
-        /**
-         * <p>Resource name</p>
-         * 
-         * <strong>example:</strong>
-         * <p>PPU</p>
-         */
-        @NameInMap("ResourceName")
-        public String resourceName;
-
-        /**
-         * <p>Usage scenario, e.g., &quot;baseline&quot;</p>
+         * <p>Usage Scenario, e.g., &quot;baseline&quot;</p>
          * 
          * <strong>example:</strong>
          * <p>baseline</p>
@@ -434,7 +416,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>Configured workload parameters</p>
+         * <p>Configured Workload Parameters</p>
          */
         @NameInMap("SettingParams")
         public java.util.Map<String, String> settingParams;
@@ -443,13 +425,13 @@ public class GetExperimentPlanResponseBody extends TeaModel {
          * <p>Workload ID</p>
          * 
          * <strong>example:</strong>
-         * <p>14</p>
+         * <p>13</p>
          */
         @NameInMap("WorkloadId")
         public Long workloadId;
 
         /**
-         * <p>Workload name</p>
+         * <p>Workload Name</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -457,20 +439,20 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         @NameInMap("WorkloadName")
         public String workloadName;
 
-        public static GetExperimentPlanResponseBodyDataPlanPipeline build(java.util.Map<String, ?> map) throws Exception {
-            GetExperimentPlanResponseBodyDataPlanPipeline self = new GetExperimentPlanResponseBodyDataPlanPipeline();
+        public static UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam self = new UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam();
             return TeaModel.build(map, self);
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipeline setEnvParams(GetExperimentPlanResponseBodyDataPlanPipelineEnvParams envParams) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam setEnvParams(UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams envParams) {
             this.envParams = envParams;
             return this;
         }
-        public GetExperimentPlanResponseBodyDataPlanPipelineEnvParams getEnvParams() {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParamEnvParams getEnvParams() {
             return this.envParams;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipeline setPipelineOrder(Integer pipelineOrder) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam setPipelineOrder(Integer pipelineOrder) {
             this.pipelineOrder = pipelineOrder;
             return this;
         }
@@ -478,23 +460,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.pipelineOrder;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipeline setResourceId(Long resourceId) {
-            this.resourceId = resourceId;
-            return this;
-        }
-        public Long getResourceId() {
-            return this.resourceId;
-        }
-
-        public GetExperimentPlanResponseBodyDataPlanPipeline setResourceName(String resourceName) {
-            this.resourceName = resourceName;
-            return this;
-        }
-        public String getResourceName() {
-            return this.resourceName;
-        }
-
-        public GetExperimentPlanResponseBodyDataPlanPipeline setScene(String scene) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam setScene(String scene) {
             this.scene = scene;
             return this;
         }
@@ -502,7 +468,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.scene;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipeline setSettingParams(java.util.Map<String, String> settingParams) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam setSettingParams(java.util.Map<String, String> settingParams) {
             this.settingParams = settingParams;
             return this;
         }
@@ -510,7 +476,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.settingParams;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipeline setWorkloadId(Long workloadId) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam setWorkloadId(Long workloadId) {
             this.workloadId = workloadId;
             return this;
         }
@@ -518,7 +484,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.workloadId;
         }
 
-        public GetExperimentPlanResponseBodyDataPlanPipeline setWorkloadName(String workloadName) {
+        public UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam setWorkloadName(String workloadName) {
             this.workloadName = workloadName;
             return this;
         }
@@ -528,117 +494,87 @@ public class GetExperimentPlanResponseBody extends TeaModel {
 
     }
 
-    public static class GetExperimentPlanResponseBodyDataTags extends TeaModel {
+    public static class UpdateExperimentPlanTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>Create Time</p>
          * 
          * <strong>example:</strong>
-         * <p>acs:testLXP:test-quota40-19</p>
-         */
-        @NameInMap("TagKey")
-        public String tagKey;
-
-        /**
-         * <p>The tag value.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>000088aabb0019e4</p>
-         */
-        @NameInMap("TagValue")
-        public String tagValue;
-
-        public static GetExperimentPlanResponseBodyDataTags build(java.util.Map<String, ?> map) throws Exception {
-            GetExperimentPlanResponseBodyDataTags self = new GetExperimentPlanResponseBodyDataTags();
-            return TeaModel.build(map, self);
-        }
-
-        public GetExperimentPlanResponseBodyDataTags setTagKey(String tagKey) {
-            this.tagKey = tagKey;
-            return this;
-        }
-        public String getTagKey() {
-            return this.tagKey;
-        }
-
-        public GetExperimentPlanResponseBodyDataTags setTagValue(String tagValue) {
-            this.tagValue = tagValue;
-            return this;
-        }
-        public String getTagValue() {
-            return this.tagValue;
-        }
-
-    }
-
-    public static class GetExperimentPlanResponseBodyData extends TeaModel {
-        /**
-         * <p>Creation time</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2024-07-07 02:08:54</p>
+         * <p>2024-10-22 10:18:10</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
-         * <p>Plan ID</p>
+         * <p>Primary account UID</p>
          * 
          * <strong>example:</strong>
-         * <p>189</p>
+         * <p>12312312312312</p>
          */
-        @NameInMap("PlanId")
-        public Long planId;
+        @NameInMap("CreatorUid")
+        public Long creatorUid;
 
         /**
-         * <p>Test plan pipeline</p>
-         */
-        @NameInMap("PlanPipeline")
-        public java.util.List<GetExperimentPlanResponseBodyDataPlanPipeline> planPipeline;
-
-        /**
-         * <p>Resource group ID</p>
+         * <p>Whether it is deleted</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-acfmvmpzi7lmxhq</p>
+         * <p>0</p>
          */
-        @NameInMap("ResourceGroupId")
-        public String resourceGroupId;
+        @NameInMap("IsDelete")
+        public Integer isDelete;
 
         /**
-         * <p>Associated resource ID</p>
+         * <p>Privacy Level</p>
          * 
          * <strong>example:</strong>
-         * <p>260860230684</p>
+         * <p>private</p>
          */
-        @NameInMap("ResourceId")
-        public Long resourceId;
+        @NameInMap("PrivacyLevel")
+        public String privacyLevel;
 
         /**
-         * <p>The tag.</p>
-         */
-        @NameInMap("Tags")
-        public java.util.List<GetExperimentPlanResponseBodyDataTags> tags;
-
-        /**
-         * <p>Associated test plan template ID</p>
+         * <p>Template code</p>
          * 
          * <strong>example:</strong>
-         * <p>2162</p>
+         * <p>472840184</p>
+         */
+        @NameInMap("TemplateCode")
+        public Long templateCode;
+
+        /**
+         * <p>Template Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("TemplateDescription")
+        public String templateDescription;
+
+        /**
+         * <p>Template ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17815441</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
         /**
-         * <p>Associated test plan template name</p>
+         * <p>Template Name</p>
          * 
          * <strong>example:</strong>
-         * <p>MM</p>
+         * <p>test</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>Update time</p>
+         * <p>Template Pipeline</p>
+         */
+        @NameInMap("TemplatePipelineParam")
+        public java.util.List<UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam> templatePipelineParam;
+
+        /**
+         * <p>Update Time</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-07 02:08:54</p>
@@ -646,12 +582,21 @@ public class GetExperimentPlanResponseBody extends TeaModel {
         @NameInMap("UpdateTime")
         public String updateTime;
 
-        public static GetExperimentPlanResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetExperimentPlanResponseBodyData self = new GetExperimentPlanResponseBodyData();
+        /**
+         * <p>Version ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("VersionId")
+        public Long versionId;
+
+        public static UpdateExperimentPlanTemplateResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            UpdateExperimentPlanTemplateResponseBodyData self = new UpdateExperimentPlanTemplateResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public GetExperimentPlanResponseBodyData setCreateTime(String createTime) {
+        public UpdateExperimentPlanTemplateResponseBodyData setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -659,47 +604,47 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public GetExperimentPlanResponseBodyData setPlanId(Long planId) {
-            this.planId = planId;
+        public UpdateExperimentPlanTemplateResponseBodyData setCreatorUid(Long creatorUid) {
+            this.creatorUid = creatorUid;
             return this;
         }
-        public Long getPlanId() {
-            return this.planId;
+        public Long getCreatorUid() {
+            return this.creatorUid;
         }
 
-        public GetExperimentPlanResponseBodyData setPlanPipeline(java.util.List<GetExperimentPlanResponseBodyDataPlanPipeline> planPipeline) {
-            this.planPipeline = planPipeline;
+        public UpdateExperimentPlanTemplateResponseBodyData setIsDelete(Integer isDelete) {
+            this.isDelete = isDelete;
             return this;
         }
-        public java.util.List<GetExperimentPlanResponseBodyDataPlanPipeline> getPlanPipeline() {
-            return this.planPipeline;
+        public Integer getIsDelete() {
+            return this.isDelete;
         }
 
-        public GetExperimentPlanResponseBodyData setResourceGroupId(String resourceGroupId) {
-            this.resourceGroupId = resourceGroupId;
+        public UpdateExperimentPlanTemplateResponseBodyData setPrivacyLevel(String privacyLevel) {
+            this.privacyLevel = privacyLevel;
             return this;
         }
-        public String getResourceGroupId() {
-            return this.resourceGroupId;
+        public String getPrivacyLevel() {
+            return this.privacyLevel;
         }
 
-        public GetExperimentPlanResponseBodyData setResourceId(Long resourceId) {
-            this.resourceId = resourceId;
+        public UpdateExperimentPlanTemplateResponseBodyData setTemplateCode(Long templateCode) {
+            this.templateCode = templateCode;
             return this;
         }
-        public Long getResourceId() {
-            return this.resourceId;
+        public Long getTemplateCode() {
+            return this.templateCode;
         }
 
-        public GetExperimentPlanResponseBodyData setTags(java.util.List<GetExperimentPlanResponseBodyDataTags> tags) {
-            this.tags = tags;
+        public UpdateExperimentPlanTemplateResponseBodyData setTemplateDescription(String templateDescription) {
+            this.templateDescription = templateDescription;
             return this;
         }
-        public java.util.List<GetExperimentPlanResponseBodyDataTags> getTags() {
-            return this.tags;
+        public String getTemplateDescription() {
+            return this.templateDescription;
         }
 
-        public GetExperimentPlanResponseBodyData setTemplateId(Long templateId) {
+        public UpdateExperimentPlanTemplateResponseBodyData setTemplateId(Long templateId) {
             this.templateId = templateId;
             return this;
         }
@@ -707,7 +652,7 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.templateId;
         }
 
-        public GetExperimentPlanResponseBodyData setTemplateName(String templateName) {
+        public UpdateExperimentPlanTemplateResponseBodyData setTemplateName(String templateName) {
             this.templateName = templateName;
             return this;
         }
@@ -715,12 +660,28 @@ public class GetExperimentPlanResponseBody extends TeaModel {
             return this.templateName;
         }
 
-        public GetExperimentPlanResponseBodyData setUpdateTime(String updateTime) {
+        public UpdateExperimentPlanTemplateResponseBodyData setTemplatePipelineParam(java.util.List<UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam> templatePipelineParam) {
+            this.templatePipelineParam = templatePipelineParam;
+            return this;
+        }
+        public java.util.List<UpdateExperimentPlanTemplateResponseBodyDataTemplatePipelineParam> getTemplatePipelineParam() {
+            return this.templatePipelineParam;
+        }
+
+        public UpdateExperimentPlanTemplateResponseBodyData setUpdateTime(String updateTime) {
             this.updateTime = updateTime;
             return this;
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public UpdateExperimentPlanTemplateResponseBodyData setVersionId(Long versionId) {
+            this.versionId = versionId;
+            return this;
+        }
+        public Long getVersionId() {
+            return this.versionId;
         }
 
     }

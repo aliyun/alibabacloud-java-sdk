@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetExperimentResponseBody extends TeaModel {
     /**
+     * <p>Access denied detail</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>Data</p>
+     */
     @NameInMap("Data")
     public GetExperimentResponseBodyData data;
 
     /**
+     * <p>RequestId</p>
+     * 
      * <strong>example:</strong>
      * <p>E67E2E4C-2B47-5C55-AA17-1D771E070AEF</p>
      */
@@ -22,6 +29,8 @@ public class GetExperimentResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>total</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -67,6 +76,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataEnvParamsResourceNodes extends TeaModel {
         /**
+         * <p>Node name</p>
+         * 
          * <strong>example:</strong>
          * <p>p-jt-waf-app1</p>
          */
@@ -74,6 +85,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String nodeName;
 
         /**
+         * <p>Requested CPU</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -81,6 +94,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer requestCPU;
 
         /**
+         * <p>Requested GPU</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -88,6 +103,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer requestGPU;
 
         /**
+         * <p>Requested memory</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -95,6 +112,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer requestMemory;
 
         /**
+         * <p>Total CPU</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -102,6 +121,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer totalCPU;
 
         /**
+         * <p>Total GPU</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -109,6 +130,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer totalGPU;
 
         /**
+         * <p>Total memory</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -180,6 +203,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataEnvParams extends TeaModel {
         /**
+         * <p>CPU allocation number</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -195,11 +220,14 @@ public class GetExperimentResponseBody extends TeaModel {
         @NameInMap("CudaVersion")
         public String cudaVersion;
 
+        /**
+         * <p>Additional parameters</p>
+         */
         @NameInMap("ExtendParam")
         public java.util.Map<String, String> extendParam;
 
         /**
-         * <p>GpuDriverVersion</p>
+         * <p>GPU driver version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -208,6 +236,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String gpuDriverVersion;
 
         /**
+         * <p>GPU allocation number</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -215,6 +245,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer gpuPerWorker;
 
         /**
+         * <p>Memory Per Worker</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -222,7 +254,7 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer memoryPerWorker;
 
         /**
-         * <p>NCCLVersion</p>
+         * <p>NCCL version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -231,7 +263,7 @@ public class GetExperimentResponseBody extends TeaModel {
         public String NCCLVersion;
 
         /**
-         * <p>PyTorchVersion</p>
+         * <p>PyTorch version</p>
          * 
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -239,10 +271,15 @@ public class GetExperimentResponseBody extends TeaModel {
         @NameInMap("PyTorchVersion")
         public String pyTorchVersion;
 
+        /**
+         * <p>Specified nodes</p>
+         */
         @NameInMap("ResourceNodes")
         public java.util.List<GetExperimentResponseBodyDataEnvParamsResourceNodes> resourceNodes;
 
         /**
+         * <p>Share Memory</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -250,6 +287,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer shareMemory;
 
         /**
+         * <p>Worker number</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -353,6 +392,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResourceMachineType extends TeaModel {
         /**
+         * <p>Number of network bonds</p>
+         * 
          * <strong>example:</strong>
          * <p>5</p>
          */
@@ -360,6 +401,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer bondNum;
 
         /**
+         * <p>CPU information</p>
+         * 
          * <strong>example:</strong>
          * <p>2x Intel Icelake 8369B 32C CPU</p>
          */
@@ -367,6 +410,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String cpuInfo;
 
         /**
+         * <p>Disk information</p>
+         * 
          * <strong>example:</strong>
          * <p>2x 480GB SATA SSD \n 4x 3.84TB NVMe SSD</p>
          */
@@ -374,6 +419,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String diskInfo;
 
         /**
+         * <p>GPU information</p>
+         * 
          * <strong>example:</strong>
          * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
          */
@@ -381,6 +428,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String gpuInfo;
 
         /**
+         * <p>Memory information</p>
+         * 
          * <strong>example:</strong>
          * <p>32x 64GB DDR4 3200 Memory</p>
          */
@@ -388,6 +437,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String memoryInfo;
 
         /**
+         * <p>Specification name</p>
+         * 
          * <strong>example:</strong>
          * <p>efg1.nvga1n</p>
          */
@@ -395,6 +446,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Network information</p>
+         * 
          * <strong>example:</strong>
          * <p>1x 100Gbps DP NIC for VPC \n 4x 100Gbps DP RoCE NIC</p>
          */
@@ -402,6 +455,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String networkInfo;
 
         /**
+         * <p>Network mode</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -409,6 +464,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String networkMode;
 
         /**
+         * <p>Number of nodes</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -416,6 +473,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer nodeCount;
 
         /**
+         * <p>Type</p>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -511,6 +570,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResourceResourceNodes extends TeaModel {
         /**
+         * <p>Node name</p>
+         * 
          * <strong>example:</strong>
          * <p>InputCheck</p>
          */
@@ -534,6 +595,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResourceUserAccessParam extends TeaModel {
         /**
+         * <p>User ID</p>
+         * 
          * <strong>example:</strong>
          * <p>dev</p>
          */
@@ -541,6 +604,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String accessId;
 
         /**
+         * <p>User key</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -548,7 +613,7 @@ public class GetExperimentResponseBody extends TeaModel {
         public String accessKey;
 
         /**
-         * <p>endpoint</p>
+         * <p>Endpoint</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -557,6 +622,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>Workspace ID</p>
+         * 
          * <strong>example:</strong>
          * <p>123434542498</p>
          */
@@ -604,6 +671,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResource extends TeaModel {
         /**
+         * <p>Used CPU</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -611,16 +680,23 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer cpuCoreLimit;
 
         /**
+         * <p>Used GPU</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
         @NameInMap("GpuLimit")
         public Integer gpuLimit;
 
+        /**
+         * <p>Instance type</p>
+         */
         @NameInMap("MachineType")
         public GetExperimentResponseBodyDataResourceMachineType machineType;
 
         /**
+         * <p>Used memory</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -628,6 +704,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer maxCpuCore;
 
         /**
+         * <p>Used memory</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -635,6 +713,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer maxGpu;
 
         /**
+         * <p>Used memory</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -642,6 +722,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long maxMemory;
 
         /**
+         * <p>Used memory</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -649,6 +731,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long memoryLimit;
 
         /**
+         * <p>Cluster ID</p>
+         * 
          * <strong>example:</strong>
          * <p>189</p>
          */
@@ -656,15 +740,23 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long resourceId;
 
         /**
+         * <p>Cluster name</p>
+         * 
          * <strong>example:</strong>
          * <p>ecs.r8y.4xlarge</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>Resource node list</p>
+         */
         @NameInMap("ResourceNodes")
         public java.util.List<GetExperimentResponseBodyDataResourceResourceNodes> resourceNodes;
 
+        /**
+         * <p>User authorization parameters</p>
+         */
         @NameInMap("UserAccessParam")
         public GetExperimentResponseBodyDataResourceUserAccessParam userAccessParam;
 
@@ -765,6 +857,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResultsErrorWorker extends TeaModel {
         /**
+         * <p>error flag</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -772,6 +866,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Boolean errorFlag;
 
         /**
+         * <p>error message</p>
+         * 
          * <strong>example:</strong>
          * <p>Connection reset</p>
          */
@@ -779,6 +875,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Experiment ID</p>
+         * 
          * <strong>example:</strong>
          * <p>97</p>
          */
@@ -786,6 +884,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long experimentId;
 
         /**
+         * <p>GPU name</p>
+         * 
          * <strong>example:</strong>
          * <p>8x OAM 810 GPU</p>
          */
@@ -793,6 +893,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String gpuName;
 
         /**
+         * <p>Number of GPUs</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -800,6 +902,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer gpuNum;
 
         /**
+         * <p>Service address</p>
+         * 
          * <strong>example:</strong>
          * <p>60.188.98.209</p>
          */
@@ -807,6 +911,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Pod name.</p>
+         * 
          * <strong>example:</strong>
          * <p>hzs-forge-sdxl-online-7ff4d86444-pc95h</p>
          */
@@ -814,6 +920,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String podName;
 
         /**
+         * <p>Samples Per Second</p>
+         * 
          * <strong>example:</strong>
          * <p>23</p>
          */
@@ -821,6 +929,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double samplesPerSecond;
 
         /**
+         * <p>TFLOPS</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -828,12 +938,20 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double tflops;
 
         /**
+         * <p>Whether there is a warning</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("WarningFlag")
         public Boolean warningFlag;
 
+        /**
+         * <p>Warning message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warning message</p>
+         */
         @NameInMap("WarningMsg")
         public String warningMsg;
 
@@ -934,16 +1052,26 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResultsTaskIndividualResultList extends TeaModel {
         /**
+         * <p>Whether there is an error</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("ErrorFlag")
         public Boolean errorFlag;
 
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
+         * <p>实验ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>48</p>
          */
@@ -951,6 +1079,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long experimentId;
 
         /**
+         * <p>GPU name</p>
+         * 
          * <strong>example:</strong>
          * <p>8x OAM 810 GPU</p>
          */
@@ -958,6 +1088,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String gpuName;
 
         /**
+         * <p>Number of GPUs</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -965,6 +1097,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer gpuNum;
 
         /**
+         * <p>节点主机名称。</p>
+         * 
          * <strong>example:</strong>
          * <p>p-jt-waf-app1</p>
          */
@@ -972,6 +1106,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Pod名称。</p>
+         * 
          * <strong>example:</strong>
          * <p>fluxserv-6fc89b45cf-w8wq6</p>
          */
@@ -979,6 +1115,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String podName;
 
         /**
+         * <p>Throughput</p>
+         * 
          * <strong>example:</strong>
          * <p>28</p>
          */
@@ -986,6 +1124,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double samplesPerSecond;
 
         /**
+         * <p>TFLOPS value</p>
+         * 
          * <strong>example:</strong>
          * <p>16</p>
          */
@@ -993,12 +1133,20 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double tflops;
 
         /**
+         * <p>Whether there is a warning</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("WarningFlag")
         public Boolean warningFlag;
 
+        /**
+         * <p>Warning message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warning message</p>
+         */
         @NameInMap("WarningMsg")
         public String warningMsg;
 
@@ -1099,6 +1247,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResultsWarningBoundList extends TeaModel {
         /**
+         * <p>Iteration</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1156,16 +1306,26 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResultsWarningWorker extends TeaModel {
         /**
+         * <p>Whether there is an error</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("ErrorFlag")
         public Boolean errorFlag;
 
+        /**
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error message</p>
+         */
         @NameInMap("ErrorMsg")
         public String errorMsg;
 
         /**
+         * <p>Experiment ID</p>
+         * 
          * <strong>example:</strong>
          * <p>9</p>
          */
@@ -1173,6 +1333,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long experimentId;
 
         /**
+         * <p>GPU name</p>
+         * 
          * <strong>example:</strong>
          * <p>8x OAM 810 GPU</p>
          */
@@ -1180,6 +1342,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String gpuName;
 
         /**
+         * <p>Number of GPUs</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -1187,6 +1351,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer gpuNum;
 
         /**
+         * <p>Service address</p>
+         * 
          * <strong>example:</strong>
          * <p>whza008403</p>
          */
@@ -1194,6 +1360,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Pod name.</p>
+         * 
          * <strong>example:</strong>
          * <p>fluxserv-6fc89b45cf-w8wq6</p>
          */
@@ -1201,6 +1369,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String podName;
 
         /**
+         * <p>Throughput</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */
@@ -1208,6 +1378,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double samplesPerSecond;
 
         /**
+         * <p>TFLOPS value</p>
+         * 
          * <strong>example:</strong>
          * <p>14</p>
          */
@@ -1215,12 +1387,20 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double tflops;
 
         /**
+         * <p>Whether there is an alarm</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("WarningFlag")
         public Boolean warningFlag;
 
+        /**
+         * <p>Alarm message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>warging message</p>
+         */
         @NameInMap("WarningMsg")
         public String warningMsg;
 
@@ -1321,16 +1501,23 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataResults extends TeaModel {
         /**
+         * <p>Duration</p>
+         * 
          * <strong>example:</strong>
          * <p>764</p>
          */
         @NameInMap("Duration")
         public Double duration;
 
+        /**
+         * <p>Error node</p>
+         */
         @NameInMap("ErrorWorker")
         public java.util.List<GetExperimentResponseBodyDataResultsErrorWorker> errorWorker;
 
         /**
+         * <p>Parameter name</p>
+         * 
          * <strong>example:</strong>
          * <p>1748274952976261121</p>
          */
@@ -1347,6 +1534,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double mfu;
 
         /**
+         * <p>Samples Per Second</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -1354,21 +1543,35 @@ public class GetExperimentResponseBody extends TeaModel {
         public Double samplesPerSecond;
 
         /**
+         * <p>Seconds per iteration</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("SecondsPerIteration")
         public Double secondsPerIteration;
 
+        /**
+         * <p>Task individual result list</p>
+         */
         @NameInMap("TaskIndividualResultList")
         public java.util.List<GetExperimentResponseBodyDataResultsTaskIndividualResultList> taskIndividualResultList;
 
+        /**
+         * <p>Invalid task results</p>
+         */
         @NameInMap("TaskIndividualResultMap")
         public java.util.Map<String, java.util.List<DataResultsTaskIndividualResultMapValue>> taskIndividualResultMap;
 
+        /**
+         * <p>Warning bound list</p>
+         */
         @NameInMap("WarningBoundList")
         public java.util.List<GetExperimentResponseBodyDataResultsWarningBoundList> warningBoundList;
 
+        /**
+         * <p>Warning worker</p>
+         */
         @NameInMap("WarningWorker")
         public java.util.List<GetExperimentResponseBodyDataResultsWarningWorker> warningWorker;
 
@@ -1461,6 +1664,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataTask extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:08</p>
          */
@@ -1468,16 +1673,23 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>End time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:34:08</p>
          */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>Experiment parameters</p>
+         */
         @NameInMap("Params")
         public java.util.Map<String, String> params;
 
         /**
+         * <p>Scene</p>
+         * 
          * <strong>example:</strong>
          * <p>baseline</p>
          */
@@ -1485,6 +1697,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String scene;
 
         /**
+         * <p>Start time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:08</p>
          */
@@ -1492,6 +1706,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>Status</p>
+         * 
          * <strong>example:</strong>
          * <p>success</p>
          */
@@ -1499,6 +1715,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>167420</p>
          */
@@ -1506,6 +1724,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long taskId;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:08</p>
          */
@@ -1585,16 +1805,26 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataWorkloadParamSettings extends TeaModel {
         /**
+         * <p>Default parameter value</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("DefaultValue")
         public String defaultValue;
 
+        /**
+         * <p>Parameter description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>number</p>
+         */
         @NameInMap("ParamDesc")
         public String paramDesc;
 
         /**
+         * <p>Parameter name</p>
+         * 
          * <strong>example:</strong>
          * <p>ITERATION</p>
          */
@@ -1602,6 +1832,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String paramName;
 
         /**
+         * <p>Parameter regular expression</p>
+         * 
          * <strong>example:</strong>
          * <p>[0-9]+</p>
          */
@@ -1609,6 +1841,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String paramRegex;
 
         /**
+         * <p>Parameter type</p>
+         * 
          * <strong>example:</strong>
          * <p>number</p>
          */
@@ -1616,6 +1850,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String paramType;
 
         /**
+         * <p>Parameter value</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -1679,6 +1915,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataWorkloadStaticConfig extends TeaModel {
         /**
+         * <p>Framework</p>
+         * 
          * <strong>example:</strong>
          * <p>pyTorch</p>
          */
@@ -1686,6 +1924,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String frameWork;
 
         /**
+         * <p>Operating system</p>
+         * 
          * <strong>example:</strong>
          * <p>linux</p>
          */
@@ -1693,6 +1933,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String os;
 
         /**
+         * <p>Number of parameters</p>
+         * 
          * <strong>example:</strong>
          * <p>7B</p>
          */
@@ -1700,6 +1942,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String parameters;
 
         /**
+         * <p>Software stack</p>
+         * 
          * <strong>example:</strong>
          * <p>python</p>
          */
@@ -1747,6 +1991,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyDataWorkload extends TeaModel {
         /**
+         * <p>Default CPU allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>90</p>
          */
@@ -1754,6 +2000,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer defaultCpuPerWorker;
 
         /**
+         * <p>Default GPU allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -1761,6 +2009,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer defaultGpuPerWorker;
 
         /**
+         * <p>Default memory (GB) allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -1768,6 +2018,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer defaultMemoryPerWorker;
 
         /**
+         * <p>Default shared memory (GB) allocation</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -1775,6 +2027,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Integer defaultShareMemory;
 
         /**
+         * <p>Workload cluster, AI, GPU</p>
+         * 
          * <strong>example:</strong>
          * <p>AI</p>
          */
@@ -1782,16 +2036,23 @@ public class GetExperimentResponseBody extends TeaModel {
         public String family;
 
         /**
+         * <p>JobKind</p>
+         * 
          * <strong>example:</strong>
          * <p>PyTorchJob</p>
          */
         @NameInMap("JobKind")
         public String jobKind;
 
+        /**
+         * <p>Parameter settings</p>
+         */
         @NameInMap("ParamSettings")
         public java.util.List<GetExperimentResponseBodyDataWorkloadParamSettings> paramSettings;
 
         /**
+         * <p>Workload usage scenario</p>
+         * 
          * <strong>example:</strong>
          * <p>NLP-LLM</p>
          */
@@ -1799,16 +2060,23 @@ public class GetExperimentResponseBody extends TeaModel {
         public String scene;
 
         /**
+         * <p>Scope</p>
+         * 
          * <strong>example:</strong>
          * <p>common</p>
          */
         @NameInMap("Scope")
         public String scope;
 
+        /**
+         * <p>Static configuration</p>
+         */
         @NameInMap("StaticConfig")
         public GetExperimentResponseBodyDataWorkloadStaticConfig staticConfig;
 
         /**
+         * <p>Version ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -1816,6 +2084,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long versionId;
 
         /**
+         * <p>Workload description</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1823,6 +2093,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String workloadDescription;
 
         /**
+         * <p>Workload ID</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -1830,6 +2102,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long workloadId;
 
         /**
+         * <p>Workload name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -1837,6 +2111,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public String workloadName;
 
         /**
+         * <p>Workload name</p>
+         * 
          * <strong>example:</strong>
          * <p>AI</p>
          */
@@ -1972,6 +2248,8 @@ public class GetExperimentResponseBody extends TeaModel {
 
     public static class GetExperimentResponseBodyData extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-29 02:16:35</p>
          */
@@ -1979,16 +2257,23 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>Task end time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-29 02:26:35</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Running environment parameters</p>
+         */
         @NameInMap("EnvParams")
         public GetExperimentResponseBodyDataEnvParams envParams;
 
         /**
+         * <p>Experiment ID</p>
+         * 
          * <strong>example:</strong>
          * <p>1726882991828688898</p>
          */
@@ -1996,6 +2281,8 @@ public class GetExperimentResponseBody extends TeaModel {
         public Long experimentId;
 
         /**
+         * <p>Experiment name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -2003,32 +2290,50 @@ public class GetExperimentResponseBody extends TeaModel {
         public String experimentName;
 
         /**
+         * <p>Experiment type</p>
+         * 
          * <strong>example:</strong>
          * <p>AI</p>
          */
         @NameInMap("ExperimentType")
         public String experimentType;
 
+        /**
+         * <p>Parsed workload parameters</p>
+         */
         @NameInMap("GetParams")
         public java.util.Map<String, String> getParams;
 
+        /**
+         * <p>cluster info</p>
+         */
         @NameInMap("Resource")
         public GetExperimentResponseBodyDataResource resource;
 
         /**
+         * <p>Resource name</p>
+         * 
          * <strong>example:</strong>
          * <p>cifnews-guoyuan</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
+        /**
+         * <p>Task results</p>
+         */
         @NameInMap("Results")
         public GetExperimentResponseBodyDataResults results;
 
+        /**
+         * <p>Running workload parameters</p>
+         */
         @NameInMap("SetParams")
         public java.util.Map<String, String> setParams;
 
         /**
+         * <p>Task start time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-29 02:16:35</p>
          */
@@ -2036,26 +2341,38 @@ public class GetExperimentResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>Status</p>
+         * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Experiment task</p>
+         */
         @NameInMap("Task")
         public GetExperimentResponseBodyDataTask task;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-29 02:16:35</p>
          */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <p>Workload information</p>
+         */
         @NameInMap("Workload")
         public GetExperimentResponseBodyDataWorkload workload;
 
         /**
+         * <p>Workload name</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

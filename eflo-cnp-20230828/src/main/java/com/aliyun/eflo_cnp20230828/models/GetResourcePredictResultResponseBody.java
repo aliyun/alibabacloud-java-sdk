@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourcePredictResultResponseBody extends TeaModel {
     /**
+     * <p>Data</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class GetResourcePredictResultResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>5514CB39-B7C0-5B89-8534-2DE1E0F2B7AB</p>
      */
@@ -19,6 +23,8 @@ public class GetResourcePredictResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>total</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

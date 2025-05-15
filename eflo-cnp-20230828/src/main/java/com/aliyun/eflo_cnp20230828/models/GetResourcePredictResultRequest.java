@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetResourcePredictResultRequest extends TeaModel {
     /**
+     * <p>Resource ID</p>
+     * 
      * <strong>example:</strong>
      * <p>36</p>
      */
@@ -12,6 +14,9 @@ public class GetResourcePredictResultRequest extends TeaModel {
     public Long resourceId;
 
     /**
+     * <p>Template ID</p>
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>315797</p>
      */
