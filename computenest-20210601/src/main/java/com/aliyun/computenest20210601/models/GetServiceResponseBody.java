@@ -289,6 +289,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("SupplierUrl")
     public String supplierUrl;
 
+    /**
+     * <p>Contact information of the service provider</p>
+     */
     @NameInMap("SupportContacts")
     public java.util.List<GetServiceResponseBodySupportContacts> supportContacts;
 
@@ -1319,9 +1322,21 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodySupportContacts extends TeaModel {
+        /**
+         * <p>The type of contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Email</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>The value of contact information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:supplier@example.com">supplier@example.com</a></p>
+         */
         @NameInMap("Value")
         public String value;
 

@@ -134,6 +134,36 @@ public class ListServicesResponseBody extends TeaModel {
 
     }
 
+    public static class ListServicesResponseBodyServicesServiceInfosSoftwares extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Version")
+        public String version;
+
+        public static ListServicesResponseBodyServicesServiceInfosSoftwares build(java.util.Map<String, ?> map) throws Exception {
+            ListServicesResponseBodyServicesServiceInfosSoftwares self = new ListServicesResponseBodyServicesServiceInfosSoftwares();
+            return TeaModel.build(map, self);
+        }
+
+        public ListServicesResponseBodyServicesServiceInfosSoftwares setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public ListServicesResponseBodyServicesServiceInfosSoftwares setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
     public static class ListServicesResponseBodyServicesServiceInfos extends TeaModel {
         /**
          * <p>The URL of the service icon.</p>
@@ -175,6 +205,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        @NameInMap("Softwares")
+        public java.util.List<ListServicesResponseBodyServicesServiceInfosSoftwares> softwares;
+
         public static ListServicesResponseBodyServicesServiceInfos build(java.util.Map<String, ?> map) throws Exception {
             ListServicesResponseBodyServicesServiceInfos self = new ListServicesResponseBodyServicesServiceInfos();
             return TeaModel.build(map, self);
@@ -210,6 +243,14 @@ public class ListServicesResponseBody extends TeaModel {
         }
         public String getShortDescription() {
             return this.shortDescription;
+        }
+
+        public ListServicesResponseBodyServicesServiceInfos setSoftwares(java.util.List<ListServicesResponseBodyServicesServiceInfosSoftwares> softwares) {
+            this.softwares = softwares;
+            return this;
+        }
+        public java.util.List<ListServicesResponseBodyServicesServiceInfosSoftwares> getSoftwares() {
+            return this.softwares;
         }
 
     }
