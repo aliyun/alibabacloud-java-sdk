@@ -30,6 +30,9 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    @NameInMap("DataType")
+    public String dataType;
+
     /**
      * <p>The domain name in outbound connections.</p>
      * 
@@ -48,6 +51,9 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("IsAITraffic")
+    public String isAITraffic;
 
     /**
      * <p>The language of the content within the request. Valid values:</p>
@@ -186,6 +192,14 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeOutgoingDomainRequest setDataType(String dataType) {
+        this.dataType = dataType;
+        return this;
+    }
+    public String getDataType() {
+        return this.dataType;
+    }
+
     public DescribeOutgoingDomainRequest setDomain(String domain) {
         this.domain = domain;
         return this;
@@ -200,6 +214,14 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeOutgoingDomainRequest setIsAITraffic(String isAITraffic) {
+        this.isAITraffic = isAITraffic;
+        return this;
+    }
+    public String getIsAITraffic() {
+        return this.isAITraffic;
     }
 
     public DescribeOutgoingDomainRequest setLang(String lang) {

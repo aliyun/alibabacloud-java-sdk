@@ -25,6 +25,9 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     @NameInMap("Quota")
     public Long quota;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
     /**
      * <strong>example:</strong>
      * <p>C6C3B72B********E95FB0A161</p>
@@ -73,6 +76,14 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     }
     public Long getQuota() {
         return this.quota;
+    }
+
+    public DescribeLogStoreInfoResponseBody setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLogStoreInfoResponseBody setRequestId(String requestId) {
