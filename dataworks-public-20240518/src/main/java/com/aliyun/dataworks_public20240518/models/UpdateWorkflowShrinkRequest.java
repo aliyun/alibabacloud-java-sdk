@@ -51,6 +51,9 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     @NameInMap("Id")
     public Long id;
 
+    @NameInMap("InstanceMode")
+    public String instanceMode;
+
     /**
      * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
@@ -148,6 +151,14 @@ public class UpdateWorkflowShrinkRequest extends TeaModel {
     }
     public Long getId() {
         return this.id;
+    }
+
+    public UpdateWorkflowShrinkRequest setInstanceMode(String instanceMode) {
+        this.instanceMode = instanceMode;
+        return this;
+    }
+    public String getInstanceMode() {
+        return this.instanceMode;
     }
 
     public UpdateWorkflowShrinkRequest setName(String name) {

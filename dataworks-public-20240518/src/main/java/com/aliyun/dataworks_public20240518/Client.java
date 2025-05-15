@@ -10837,6 +10837,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Id", request.id);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceMode)) {
+            body.put("InstanceMode", request.instanceMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
