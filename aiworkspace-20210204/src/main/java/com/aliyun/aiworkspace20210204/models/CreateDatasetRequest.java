@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDatasetRequest extends TeaModel {
     /**
-     * <p>The visibility of the workspace. Valid values:</p>
+     * <p>The workspace accessibility. Valid values:</p>
      * <ul>
-     * <li>PRIVATE (default): The workspace is visible only to you and the administrator of the workspace.</li>
-     * <li>PUBLIC: The workspace is visible to all users.</li>
+     * <li>PRIVATE: The workspace is accessible only to you and the administrator of the workspace. This is the default value.</li>
+     * <li>PUBLIC: The workspace is accessible to all users.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateDatasetRequest extends TeaModel {
     public Long dataSize;
 
     /**
-     * <p>The type of the data source. Valid values:</p>
+     * <p>The data source type. Valid values:</p>
      * <ul>
      * <li>OSS: Object Storage Service (OSS).</li>
      * <li>NAS: File Storage NAS (NAS).</li>
@@ -75,32 +75,32 @@ public class CreateDatasetRequest extends TeaModel {
      * <p>The dataset configurations to be imported to a storage, such as OSS, NAS, or Cloud Parallel File Storage (CPFS).</p>
      * <p><strong>OSS</strong></p>
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name\
-     * &quot;path&quot;: &quot;${path}&quot; // The file path\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;bucket&quot;: &quot;${bucket}&quot;,//The bucket name.\
+     * &quot;path&quot;: &quot;${path}&quot; // The file path.\
      * }\</p>
      * <p><strong>NAS</strong></p>
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system.\
      * }\</p>
      * <p><strong>CPFS</strong></p>
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service\
-     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+     * &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The file system protocol service.\
+     * &quot;exportId&quot;: &quot;${export_id}&quot;, // The file system export directory.\
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
      * }\</p>
      * <p><strong>CPFS for Lingjun</strong></p>
      * <p>{\
-     * &quot;region&quot;: &quot;${region}&quot;,// The region ID\
-     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID\
-     * &quot;path&quot;: &quot;${path}&quot;, // The file system path\
-     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only\
-     * &quot;isVpcMount&quot;: boolean, // Whether the mount point is a virtual private cloud (VPC) mount point, CPFS for Lingjun only\
+     * &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
+     * &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
+     * &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
+     * &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount point of the file system, CPFS for Lingjun only.\
+     * &quot;isVpcMount&quot;: boolean, // Whether the mount point is a virtual private cloud (VPC) mount point, CPFS for Lingjun only.\
      * }\</p>
      * 
      * <strong>example:</strong>
@@ -195,7 +195,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String providerType;
 
     /**
-     * <p>The ID of the source dataset of the labeled dataset.</p>
+     * <p>The ID of the source dataset for the labeled dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>d-bvfasdfxxxxj8o411</p>
@@ -204,7 +204,7 @@ public class CreateDatasetRequest extends TeaModel {
     public String sourceDatasetId;
 
     /**
-     * <p>The version of the source dataset of the labeled dataset.</p>
+     * <p>The version of the source dataset for the labeled dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>v2</p>
@@ -213,11 +213,11 @@ public class CreateDatasetRequest extends TeaModel {
     public String sourceDatasetVersion;
 
     /**
-     * <p>The ID of the data source.</p>
+     * <p>The data source ID.</p>
      * <ul>
-     * <li>If SourceType is set to USER, the value of SourceId can be a custom string.</li>
+     * <li>If SourceType is set to USER, the value of SourceId is a custom string.</li>
      * <li>If SourceType is set to ITAG, the value of SourceId is the ID of the labeling job of iTAG.</li>
-     * <li>If SourceType is set to PAI_PUBLIC_DATASET, the value of SourceId is empty by default.</li>
+     * <li>If SourceType is set to PAI_PUBLIC_DATASET, SourceId is empty by default.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -227,9 +227,10 @@ public class CreateDatasetRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The type of the data source. Default value: USER. Valid values:</p>
+     * <p>The type of the data source. Default value: USER.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>PAI-PUBLIC-DATASET: a public dataset of Platform for AI (PAI).</li>
+     * <li>PAI_PUBLIC_DATASET: a public dataset of PAI.</li>
      * <li>ITAG: a dataset generated from a labeling job of iTAG.</li>
      * <li>USER: a dataset registered by a user.</li>
      * </ul>
@@ -243,8 +244,8 @@ public class CreateDatasetRequest extends TeaModel {
     /**
      * <p>The URI of the data source.</p>
      * <ul>
-     * <li>Value format when DataSourceType is set to OSS: <code>oss://bucket.endpoint/object</code>.</li>
-     * <li>Value formats when DataSourceType is set to NAS: General-purpose NAS: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>. CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>. CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
+     * <li>Value format if DataSourceType is set to OSS: <code>oss://bucket.endpoint/object</code>.</li>
+     * <li>Value formats if DataSourceType is set to NAS: General-purpose NAS: <code>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</code>. CPFS 1.0: <code>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</code>. CPFS 2.0: <code>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</code>. You can distinguish CPFS 1.0 and CPFS 2.0 file systems based on the format of the file system ID: The ID for CPFS 1.0 is in the cpfs-&lt;8-bit ASCII characters&gt; format. The ID for CPFS 2.0 is in the cpfs-&lt;16-bit ASCII characters&gt; format.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

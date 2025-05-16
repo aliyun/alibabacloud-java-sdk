@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteConfigRequest extends TeaModel {
     /**
-     * <p>The category of the configuration item. Supported categories:</p>
+     * <p>The category of the configuration item. Valid values:</p>
      * <ul>
      * <li>CommonResourceConfig</li>
      * <li>DLCAutoRecycle - DLCPriorityConfig</li>
      * <li>DSWPriorityConfig</li>
      * <li>QuotaMaximumDuration</li>
+     * <li>CommonTagConfig</li>
      * </ul>
      * 
      * <strong>example:</strong>

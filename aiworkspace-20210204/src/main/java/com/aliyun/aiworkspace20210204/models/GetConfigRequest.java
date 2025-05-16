@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class GetConfigRequest extends TeaModel {
     /**
-     * <p>The category of the configuration item. Supported categories:</p>
+     * <p>The category of the configuration item. Valid values:</p>
      * <ul>
      * <li>CommonResourceConfig</li>
      * <li>DLCAutoRecycle</li>
      * <li>DLCPriorityConfig</li>
      * <li>DSWPriorityConfig</li>
      * <li>QuotaMaximumDuration</li>
+     * <li>CommonTagConfig</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,12 +22,13 @@ public class GetConfigRequest extends TeaModel {
     public String categoryName;
 
     /**
-     * <p>The key of the configuration item. Supported keys:</p>
+     * <p>The key of the configuration item. Valid values:</p>
      * <ul>
      * <li>tempStoragePath: Temporary storage path. This key can be used only when CategoryName is set to CommonResourceConfig.</li>
      * <li>isAutoRecycle: Automatic recycle configuration. This key can be used only when CategoryName is set to DLCAutoRecycle.</li>
      * <li>priorityConfig: Priority configuration. This key can be used only when CategoryName is set to DLCPriorityConfig or DSWPriorityConfig.</li>
-     * <li>quotaMaximumDuration Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+     * <li>quotaMaximumDuration: Maximum run time of DLC jobs for a quota. This key can be used only when CategoryName is set to QuotaMaximumDuration.</li>
+     * <li>predefinedTags: Predefined tags of the workspace. Created resources must include tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>

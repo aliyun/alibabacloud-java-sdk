@@ -390,6 +390,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建连接</p>
+     * 
+     * @param request CreateConnectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateConnectionResponse
+     */
+    public CreateConnectionResponse createConnectionWithOptions(CreateConnectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessibility)) {
+            body.put("Accessibility", request.accessibility);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            body.put("Configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionName)) {
+            body.put("ConnectionName", request.connectionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionType)) {
+            body.put("ConnectionType", request.connectionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.models)) {
+            body.put("Models", request.models);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceMeta)) {
+            body.put("ResourceMeta", request.resourceMeta);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secrets)) {
+            body.put("Secrets", request.secrets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateConnection"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/connections"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建连接</p>
+     * 
+     * @param request CreateConnectionRequest
+     * @return CreateConnectionResponse
+     */
+    public CreateConnectionResponse createConnection(CreateConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createConnectionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a dataset.</p>
      * 
      * @param request CreateDatasetRequest
@@ -1623,6 +1702,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Deletes a connection.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConnectionResponse
+     */
+    public DeleteConnectionResponse deleteConnectionWithOptions(String ConnectionId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConnection"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/connections/" + com.aliyun.openapiutil.Client.getEncodeParam(ConnectionId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes a connection.</p>
+     * @return DeleteConnectionResponse
+     */
+    public DeleteConnectionResponse deleteConnection(String ConnectionId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteConnectionWithOptions(ConnectionId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deletes a dataset.</p>
      * 
      * @param headers map
@@ -2540,6 +2656,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取连接</p>
+     * 
+     * @param request GetConnectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConnectionResponse
+     */
+    public GetConnectionResponse getConnectionWithOptions(String ConnectionId, GetConnectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptOption)) {
+            query.put("EncryptOption", request.encryptOption);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConnection"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/connections/" + com.aliyun.openapiutil.Client.getEncodeParam(ConnectionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取连接</p>
+     * 
+     * @param request GetConnectionRequest
+     * @return GetConnectionResponse
+     */
+    public GetConnectionResponse getConnection(String ConnectionId, GetConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getConnectionWithOptions(ConnectionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains a dataset.</p>
      * 
      * @param headers map
@@ -3373,6 +3536,111 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listConfigsWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists connections.</p>
+     * 
+     * @param tmpReq ListConnectionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConnectionsResponse
+     */
+    public ListConnectionsResponse listConnectionsWithOptions(ListConnectionsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListConnectionsShrinkRequest request = new ListConnectionsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.connectionIds)) {
+            request.connectionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.connectionIds, "ConnectionIds", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.connectionTypes)) {
+            request.connectionTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.connectionTypes, "ConnectionTypes", "simple");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modelTypes)) {
+            request.modelTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modelTypes, "ModelTypes", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionIdsShrink)) {
+            query.put("ConnectionIds", request.connectionIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionName)) {
+            query.put("ConnectionName", request.connectionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectionTypesShrink)) {
+            query.put("ConnectionTypes", request.connectionTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptOption)) {
+            query.put("EncryptOption", request.encryptOption);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.model)) {
+            query.put("Model", request.model);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelTypesShrink)) {
+            query.put("ModelTypes", request.modelTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolCall)) {
+            query.put("ToolCall", request.toolCall);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConnections"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/connections"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConnectionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Lists connections.</p>
+     * 
+     * @param request ListConnectionsRequest
+     * @return ListConnectionsResponse
+     */
+    public ListConnectionsResponse listConnections(ListConnectionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConnectionsWithOptions(request, headers, runtime);
     }
 
     /**
@@ -5506,6 +5774,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateConfigsWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a connection.</p>
+     * 
+     * @param request UpdateConnectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConnectionResponse
+     */
+    public UpdateConnectionResponse updateConnectionWithOptions(String ConnectionId, UpdateConnectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            body.put("Configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.models)) {
+            body.put("Models", request.models);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secrets)) {
+            body.put("Secrets", request.secrets);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConnection"),
+            new TeaPair("version", "2021-02-04"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/connections/" + com.aliyun.openapiutil.Client.getEncodeParam(ConnectionId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConnectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Updates a connection.</p>
+     * 
+     * @param request UpdateConnectionRequest
+     * @return UpdateConnectionResponse
+     */
+    public UpdateConnectionResponse updateConnection(String ConnectionId, UpdateConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateConnectionWithOptions(ConnectionId, request, headers, runtime);
     }
 
     /**

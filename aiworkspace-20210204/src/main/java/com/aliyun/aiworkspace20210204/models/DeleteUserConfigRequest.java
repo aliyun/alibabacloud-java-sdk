@@ -13,6 +13,12 @@ public class DeleteUserConfigRequest extends TeaModel {
     @NameInMap("ConfigKey")
     public String configKey;
 
+    /**
+     * <p>The scope. Valid values: subUser and owner.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>subUser</p>
+     */
     @NameInMap("Scope")
     public String scope;
 

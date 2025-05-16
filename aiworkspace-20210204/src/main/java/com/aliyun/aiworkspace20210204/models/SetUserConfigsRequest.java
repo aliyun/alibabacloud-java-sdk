@@ -25,7 +25,8 @@ public class SetUserConfigsRequest extends TeaModel {
 
     public static class SetUserConfigsRequestConfigs extends TeaModel {
         /**
-         * <p>The category. Currently, only DataPrivacyConfig is supported.</p>
+         * <p>The category. Only DataPrivacyConfig is supported.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DataPrivacyConfig</p>
@@ -35,6 +36,7 @@ public class SetUserConfigsRequest extends TeaModel {
 
         /**
          * <p>The key of the configuration item.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>customizePAIAssumedRole</p>
@@ -44,6 +46,7 @@ public class SetUserConfigsRequest extends TeaModel {
 
         /**
          * <p>The value of the configuration item.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>role</p>
@@ -52,7 +55,8 @@ public class SetUserConfigsRequest extends TeaModel {
         public String configValue;
 
         /**
-         * <p>The scope. Currently, subUser and owner are supported.</p>
+         * <p>The scope. Valid values: subUser and owner.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>owner</p>
