@@ -22,6 +22,12 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -92,6 +98,22 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeSnapshotLinksRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeSnapshotLinksRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSnapshotLinksRequest setOwnerAccount(String ownerAccount) {

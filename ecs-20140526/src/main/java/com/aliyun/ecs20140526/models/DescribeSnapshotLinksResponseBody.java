@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSnapshotLinksResponseBody extends TeaModel {
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The page number.</p>
      * 
@@ -49,6 +52,14 @@ public class DescribeSnapshotLinksResponseBody extends TeaModel {
     public static DescribeSnapshotLinksResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSnapshotLinksResponseBody self = new DescribeSnapshotLinksResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSnapshotLinksResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeSnapshotLinksResponseBody setPageNumber(Integer pageNumber) {

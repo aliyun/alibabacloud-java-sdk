@@ -38,11 +38,11 @@ public class DescribeDisksRequest extends TeaModel {
      * <li>cloud_essd: Enterprise SSD (ESSD)</li>
      * <li>cloud_auto: ESSD AutoPL disk</li>
      * <li>cloud_regional_disk_auto: Regional ESSD</li>
-     * <li>local_ssd_pro: I/O-intensive local disk</li>
-     * <li>local_hdd_pro: throughput-intensive local disk</li>
      * <li>cloud_essd_entry: ESSD Entry disk</li>
      * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
      * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
+     * <li>local_ssd_pro: I/O-intensive local disk</li>
+     * <li>local_hdd_pro: throughput-intensive local disk</li>
      * <li>ephemeral: retired local disk</li>
      * <li>ephemeral_ssd: retired local SSD</li>
      * </ul>

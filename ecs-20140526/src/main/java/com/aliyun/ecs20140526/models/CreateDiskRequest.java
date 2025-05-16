@@ -57,12 +57,12 @@ public class CreateDiskRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The category of the data disk. Valid values for different disk categories:</p>
+     * <p>The category of the data disk. Valid values:</p>
      * <ul>
      * <li>cloud: basic disk</li>
-     * <li>cloud_efficiency: utra disk</li>
+     * <li>cloud_efficiency: ultra disk</li>
      * <li>cloud_ssd: standard SSD</li>
-     * <li>cloud_essd: ESSD</li>
+     * <li>cloud_essd: Enterprise SSD (ESSD)</li>
      * <li>cloud_auto: ESSD AutoPL disk</li>
      * <li>cloud_essd_entry: ESSD Entry disk</li>
      * <li>cloud_regional_disk_auto: Regional ESSD</li>
@@ -70,12 +70,6 @@ public class CreateDiskRequest extends TeaModel {
      * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
      * </ul>
      * <p>Default value: cloud.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cloud_regional_disk_auto</li>
-     * <li>elastic_ephemeral_disk_standard</li>
-     * <li>elastic_ephemeral_disk_premium</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cloud_ssd</p>
@@ -180,8 +174,13 @@ public class CreateDiskRequest extends TeaModel {
     public String performanceLevel;
 
     /**
-     * <p>The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}.</p>
-     * <p>Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}</p>
+     * <p>The provisioned read/write IOPS per ESSD AutoPL disk. Valid values:</p>
+     * <ul>
+     * <li>Capacity (GiB) ≤ 3: not configurable.</li>
+     * <li>Capacity (GiB) ≥ 4: [0, min{(1,000</li>
+     * </ul>
+     * <p>IOPS/GiB × Capacity - Baseline IOPS), 50,000}].</p>
+     * <p>Baseline IOPS = max{min{1,800 + 50 × Capacity, 50,000}, 3,000}.</p>
      * <blockquote>
      * <p> This parameter is available only if you set <code>DiskCategory</code> to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
      * </blockquote>
@@ -218,7 +217,7 @@ public class CreateDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The disk size. Unit: GiB. This parameter is required. Valid values for different disk categories:</p>
+     * <p>The disk size. Unit: GiB. You must specify this parameter. Valid values for different disk categories:</p>
      * <ul>
      * <li><p>Valid values when DiskCategory is set to cloud: 5 to 2000.</p>
      * </li>
