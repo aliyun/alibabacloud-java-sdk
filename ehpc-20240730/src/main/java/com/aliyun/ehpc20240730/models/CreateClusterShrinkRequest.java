@@ -154,7 +154,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Integer maxCount;
 
     /**
-     * <p>The configurations of the queues in the cluster. The number of queues can be 0 to 8.</p>
+     * <p>The queues in the cluster. The number of queues can be 0 to 8.</p>
      */
     @NameInMap("Queues")
     public String queuesShrink;
@@ -180,7 +180,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The configurations of shared storage in the cluster.</p>
+     * <p>The shared storage resources of the cluster.</p>
      */
     @NameInMap("SharedStorages")
     public String sharedStoragesShrink;

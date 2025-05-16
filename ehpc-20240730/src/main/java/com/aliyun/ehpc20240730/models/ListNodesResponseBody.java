@@ -160,6 +160,12 @@ public class ListNodesResponseBody extends TeaModel {
         @NameInMap("AddTime")
         public String addTime;
 
+        /**
+         * <p>The deployment set ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds-8vbe4av4gededlqg****</p>
+         */
         @NameInMap("DeploymentSetId")
         public String deploymentSetId;
 

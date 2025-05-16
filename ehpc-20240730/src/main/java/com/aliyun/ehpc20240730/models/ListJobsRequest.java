@@ -85,12 +85,30 @@ public class ListJobsRequest extends TeaModel {
     }
 
     public static class ListJobsRequestJobFilterDiagnosis extends TeaModel {
+        /**
+         * <p>Job diagnosis threshold comparator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>greater</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>Job diagnosis and analysis metrics</p>
+         * 
+         * <strong>example:</strong>
+         * <p>run_duration</p>
+         */
         @NameInMap("Option")
         public String option;
 
+        /**
+         * <p>Job diagnosis threshold.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24</p>
+         */
         @NameInMap("Threshold")
         public String threshold;
 
@@ -218,6 +236,9 @@ public class ListJobsRequest extends TeaModel {
         @NameInMap("CreateTimeStart")
         public String createTimeStart;
 
+        /**
+         * <p>Job diagnosis and analysis list.</p>
+         */
         @NameInMap("Diagnosis")
         public java.util.List<ListJobsRequestJobFilterDiagnosis> diagnosis;
 
@@ -231,7 +252,7 @@ public class ListJobsRequest extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The job state. Valid values:</p>
+         * <p>The job status. Valid values:</p>
          * <ul>
          * <li>all: returns all jobs.</li>
          * <li>finished: returns completed jobs.</li>

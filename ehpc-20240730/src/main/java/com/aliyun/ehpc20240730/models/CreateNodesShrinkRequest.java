@@ -34,6 +34,12 @@ public class CreateNodesShrinkRequest extends TeaModel {
     @NameInMap("Count")
     public Integer count;
 
+    /**
+     * <p>Deployment set ID. You can obtain the deployment set ID through <a href="https://help.aliyun.com/document_detail/91313.html">DescribeDeploymentSets</a>. Currently, only deployment sets with a low network latency strategy are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds-bp1frxuzdg87zh4pzq****</p>
+     */
     @NameInMap("DeploymentSetId")
     public String deploymentSetId;
 
@@ -94,6 +100,15 @@ public class CreateNodesShrinkRequest extends TeaModel {
      */
     @NameInMap("RamRole")
     public String ramRole;
+
+    /**
+     * <p>Preset node pool ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rnp-756vlp7a</p>
+     */
+    @NameInMap("ReservedNodePoolId")
+    public String reservedNodePoolId;
 
     /**
      * <p>The ID of the vSwitch to be used by the added nodes.</p>
@@ -187,6 +202,14 @@ public class CreateNodesShrinkRequest extends TeaModel {
     }
     public String getRamRole() {
         return this.ramRole;
+    }
+
+    public CreateNodesShrinkRequest setReservedNodePoolId(String reservedNodePoolId) {
+        this.reservedNodePoolId = reservedNodePoolId;
+        return this;
+    }
+    public String getReservedNodePoolId() {
+        return this.reservedNodePoolId;
     }
 
     public CreateNodesShrinkRequest setVSwitchId(String vSwitchId) {

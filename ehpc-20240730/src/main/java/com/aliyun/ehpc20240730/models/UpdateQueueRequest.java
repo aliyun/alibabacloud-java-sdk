@@ -76,8 +76,8 @@ public class UpdateQueueRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable auto scale-out for the queue. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: deletion protection is enabled.</li>
+         * <li>false: disables ASM.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class UpdateQueueRequest extends TeaModel {
         public Boolean enableScaleOut;
 
         /**
-         * <p>The hostname prefix of the compute nodes in the queue.</p>
+         * <p>The hostname prefix of the added compute nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>compute</p>
@@ -173,6 +173,9 @@ public class UpdateQueueRequest extends TeaModel {
          */
         @NameInMap("RamRole")
         public String ramRole;
+
+        @NameInMap("ReservedNodePoolId")
+        public String reservedNodePoolId;
 
         /**
          * <p>The vSwitches available for use by compute nodes in the queue.</p>
@@ -295,6 +298,14 @@ public class UpdateQueueRequest extends TeaModel {
         }
         public String getRamRole() {
             return this.ramRole;
+        }
+
+        public UpdateQueueRequestQueue setReservedNodePoolId(String reservedNodePoolId) {
+            this.reservedNodePoolId = reservedNodePoolId;
+            return this;
+        }
+        public String getReservedNodePoolId() {
+            return this.reservedNodePoolId;
         }
 
         public UpdateQueueRequestQueue setVSwitchIds(java.util.List<String> vSwitchIds) {

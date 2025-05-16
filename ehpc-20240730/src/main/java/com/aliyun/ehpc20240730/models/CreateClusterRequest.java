@@ -154,7 +154,7 @@ public class CreateClusterRequest extends TeaModel {
     public Integer maxCount;
 
     /**
-     * <p>The configurations of the queues in the cluster. The number of queues can be 0 to 8.</p>
+     * <p>The queues in the cluster. The number of queues can be 0 to 8.</p>
      */
     @NameInMap("Queues")
     public java.util.List<QueueTemplate> queues;
@@ -180,7 +180,7 @@ public class CreateClusterRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The configurations of shared storage in the cluster.</p>
+     * <p>The shared storage resources of the cluster.</p>
      */
     @NameInMap("SharedStorages")
     public java.util.List<SharedStorageTemplate> sharedStorages;
@@ -577,9 +577,9 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestManagerDNS extends TeaModel {
         /**
          * <p>The domain name resolution type.</p>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <ul>
-         * <li>NIS: NIS.</li>
+         * <li>NIS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -623,9 +623,9 @@ public class CreateClusterRequest extends TeaModel {
     public static class CreateClusterRequestManagerDirectoryService extends TeaModel {
         /**
          * <p>The type of the domain account.</p>
-         * <p>Valid values:</p>
+         * <p>Valid value:</p>
          * <ul>
-         * <li>NIS: NIS.</li>
+         * <li>NIS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -723,7 +723,7 @@ public class CreateClusterRequest extends TeaModel {
         public CreateClusterRequestManagerDNS DNS;
 
         /**
-         * <p>The configurations of the directory service.</p>
+         * <p>The configurations of the domain account service.</p>
          */
         @NameInMap("DirectoryService")
         public CreateClusterRequestManagerDirectoryService directoryService;

@@ -27,7 +27,7 @@ public class ListUsersRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 50.</p>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

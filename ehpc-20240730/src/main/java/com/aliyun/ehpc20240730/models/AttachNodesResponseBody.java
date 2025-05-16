@@ -3,21 +3,22 @@ package com.aliyun.ehpc20240730.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateClusterResponseBody extends TeaModel {
+public class AttachNodesResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>04F0F334-1335-436C-A1D7-6C044FE7****</p>
+     * <p>2263XXXX-XXXX-XXXX-XXXX-XXXX2448XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>Request result, possible values: </p>
+     * <p>Indicates whether the request is successful.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>true: request succeeded </li>
-     * <li>false: request failed</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,12 +27,12 @@ public class UpdateClusterResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static UpdateClusterResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        UpdateClusterResponseBody self = new UpdateClusterResponseBody();
+    public static AttachNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        AttachNodesResponseBody self = new AttachNodesResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public UpdateClusterResponseBody setRequestId(String requestId) {
+    public AttachNodesResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -39,7 +40,7 @@ public class UpdateClusterResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public UpdateClusterResponseBody setSuccess(Boolean success) {
+    public AttachNodesResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }

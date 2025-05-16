@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAddonResponseBody extends TeaModel {
     /**
-     * <p>The details about the addon.</p>
+     * <p>The information about the addon.</p>
      */
     @NameInMap("Addon")
     public GetAddonResponseBodyAddon addon;

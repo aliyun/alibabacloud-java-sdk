@@ -92,6 +92,13 @@ public class QueueTemplate extends TeaModel {
     @NameInMap("RamRole")
     public String ramRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rnp-756vlp7a</p>
+     */
+    @NameInMap("ReservedNodePoolId")
+    public String reservedNodePoolId;
+
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
@@ -210,6 +217,14 @@ public class QueueTemplate extends TeaModel {
     }
     public String getRamRole() {
         return this.ramRole;
+    }
+
+    public QueueTemplate setReservedNodePoolId(String reservedNodePoolId) {
+        this.reservedNodePoolId = reservedNodePoolId;
+        return this;
+    }
+    public String getReservedNodePoolId() {
+        return this.reservedNodePoolId;
     }
 
     public QueueTemplate setVSwitchIds(java.util.List<String> vSwitchIds) {

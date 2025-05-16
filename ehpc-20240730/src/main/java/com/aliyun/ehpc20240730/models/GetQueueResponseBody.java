@@ -175,6 +175,15 @@ public class GetQueueResponseBody extends TeaModel {
         public String ramRole;
 
         /**
+         * <p>Preset node pool ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rnp-756vlp7a</p>
+         */
+        @NameInMap("ReservedNodePoolId")
+        public String reservedNodePoolId;
+
+        /**
          * <p>The available vSwitches for compute nodes in the queue. Valid values of N: 1 to 5.</p>
          */
         @NameInMap("VSwitchIds")
@@ -295,6 +304,14 @@ public class GetQueueResponseBody extends TeaModel {
         }
         public String getRamRole() {
             return this.ramRole;
+        }
+
+        public GetQueueResponseBodyQueue setReservedNodePoolId(String reservedNodePoolId) {
+            this.reservedNodePoolId = reservedNodePoolId;
+            return this;
+        }
+        public String getReservedNodePoolId() {
+            return this.reservedNodePoolId;
         }
 
         public GetQueueResponseBodyQueue setVSwitchIds(java.util.List<String> vSwitchIds) {

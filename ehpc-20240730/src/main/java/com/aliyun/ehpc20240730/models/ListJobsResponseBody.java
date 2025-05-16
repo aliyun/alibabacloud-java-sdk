@@ -189,15 +189,39 @@ public class ListJobsResponseBody extends TeaModel {
     }
 
     public static class ListJobsResponseBodyJobsJobSpecResourcesActualOccupied extends TeaModel {
+        /**
+         * <p>Number of CPU cores.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Cores")
         public String cores;
 
+        /**
+         * <p>Number of CPUs</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Gpus")
         public String gpus;
 
+        /**
+         * <p>Number of memory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>982MB</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <p>Number of compute nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Nodes")
         public String nodes;
 
@@ -332,6 +356,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Resources")
         public ListJobsResponseBodyJobsJobSpecResources resources;
 
+        /**
+         * <p>Actual resource usage of the job program</p>
+         */
         @NameInMap("ResourcesActualOccupied")
         public ListJobsResponseBodyJobsJobSpecResourcesActualOccupied resourcesActualOccupied;
 
@@ -344,6 +371,12 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("RunasUser")
         public String runasUser;
 
+        /**
+         * <p>Job start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1724122486</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

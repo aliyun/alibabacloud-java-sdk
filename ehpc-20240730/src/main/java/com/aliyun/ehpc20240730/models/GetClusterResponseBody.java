@@ -210,6 +210,9 @@ public class GetClusterResponseBody extends TeaModel {
     @NameInMap("MaxCount")
     public String maxCount;
 
+    /**
+     * <p>The monitoring details of the cluster.</p>
+     */
     @NameInMap("MonitorSpec")
     public GetClusterResponseBodyMonitorSpec monitorSpec;
 
@@ -231,6 +234,9 @@ public class GetClusterResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The scheduler specifications of the cluster.</p>
+     */
     @NameInMap("SchedulerSpec")
     public GetClusterResponseBodySchedulerSpec schedulerSpec;
 
@@ -846,6 +852,16 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodyMonitorSpec extends TeaModel {
+        /**
+         * <p>Indicates whether the monitoring component of compute nodes is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableComputeLoadMonitor")
         public Boolean enableComputeLoadMonitor;
 
@@ -865,6 +881,16 @@ public class GetClusterResponseBody extends TeaModel {
     }
 
     public static class GetClusterResponseBodySchedulerSpec extends TeaModel {
+        /**
+         * <p>Indicates whether the topology awareness feature is enabled for the cluster. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableTopologyAwareness")
         public Boolean enableTopologyAwareness;
 
