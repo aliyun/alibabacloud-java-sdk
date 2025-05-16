@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
     @NameInMap("data")
-    public ListTextbookAssistantGradeVolumesResponseBodyData data;
+    public java.util.List<ListTextbookAssistantGradeVolumesResponseBodyData> data;
 
     /**
      * <strong>example:</strong>
@@ -45,11 +45,11 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListTextbookAssistantGradeVolumesResponseBody setData(ListTextbookAssistantGradeVolumesResponseBodyData data) {
+    public ListTextbookAssistantGradeVolumesResponseBody setData(java.util.List<ListTextbookAssistantGradeVolumesResponseBodyData> data) {
         this.data = data;
         return this;
     }
-    public ListTextbookAssistantGradeVolumesResponseBodyData getData() {
+    public java.util.List<ListTextbookAssistantGradeVolumesResponseBodyData> getData() {
         return this.data;
     }
 
@@ -95,8 +95,6 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
 
     public static class ListTextbookAssistantGradeVolumesResponseBodyDataGradeVolumes extends TeaModel {
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -104,8 +102,6 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         public String grade;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -140,8 +136,6 @@ public class ListTextbookAssistantGradeVolumesResponseBody extends TeaModel {
         public java.util.List<ListTextbookAssistantGradeVolumesResponseBodyDataGradeVolumes> gradeVolumes;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>人教版</p>
          */

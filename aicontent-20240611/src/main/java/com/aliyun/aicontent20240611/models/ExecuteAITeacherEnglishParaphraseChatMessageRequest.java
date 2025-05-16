@@ -12,6 +12,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String chatId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>How much is this?</p>
      */
@@ -33,6 +35,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String questionId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>How to inquire about the price</p>
      */
@@ -40,6 +44,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String questionInfo;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>sreaming</p>
      */
@@ -47,6 +53,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String responseMode;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>How much is this?</p>
      */
@@ -54,6 +62,8 @@ public class ExecuteAITeacherEnglishParaphraseChatMessageRequest extends TeaMode
     public String userAnswer;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxx</p>
      */

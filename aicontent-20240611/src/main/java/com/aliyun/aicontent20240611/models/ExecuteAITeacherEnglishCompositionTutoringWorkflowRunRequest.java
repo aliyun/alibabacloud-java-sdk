@@ -33,6 +33,8 @@ public class ExecuteAITeacherEnglishCompositionTutoringWorkflowRunRequest extend
     public String essayTopic;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>essay</p>
      */

@@ -7,13 +7,21 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     @NameInMap("essayOutline")
     public String essayOutline;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("essayRequirements")
     public String essayRequirements;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("essayTopic")
     public String essayTopic;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>essay</p>
      */
@@ -28,6 +36,8 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public Long essayWordCount;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -35,6 +45,8 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public Long grade;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>streaming</p>
      */
@@ -42,6 +54,8 @@ public class ExecuteAITeacherChineseCompositionTutoringWorkflowRunRequest extend
     public String responseMode;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */
