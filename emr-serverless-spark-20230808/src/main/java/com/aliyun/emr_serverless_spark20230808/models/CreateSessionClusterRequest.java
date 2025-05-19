@@ -71,6 +71,9 @@ public class CreateSessionClusterRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("publicEndpointEnabled")
+    public Boolean publicEndpointEnabled;
+
     /**
      * <p>The queue name.</p>
      * 
@@ -165,6 +168,14 @@ public class CreateSessionClusterRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateSessionClusterRequest setPublicEndpointEnabled(Boolean publicEndpointEnabled) {
+        this.publicEndpointEnabled = publicEndpointEnabled;
+        return this;
+    }
+    public Boolean getPublicEndpointEnabled() {
+        return this.publicEndpointEnabled;
     }
 
     public CreateSessionClusterRequest setQueueName(String queueName) {

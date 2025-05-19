@@ -365,6 +365,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("name")
         public String name;
 
+        @NameInMap("publicEndpointEnabled")
+        public Boolean publicEndpointEnabled;
+
         /**
          * <p>The name of the queue that is used to run the session.</p>
          * 
@@ -558,6 +561,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setPublicEndpointEnabled(Boolean publicEndpointEnabled) {
+            this.publicEndpointEnabled = publicEndpointEnabled;
+            return this;
+        }
+        public Boolean getPublicEndpointEnabled() {
+            return this.publicEndpointEnabled;
         }
 
         public ListSessionClustersResponseBodySessionClusters setQueueName(String queueName) {

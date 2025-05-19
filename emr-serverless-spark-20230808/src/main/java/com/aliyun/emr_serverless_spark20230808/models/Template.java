@@ -4,6 +4,9 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class Template extends TeaModel {
+    @NameInMap("bizId")
+    public String bizId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -28,11 +31,17 @@ public class Template extends TeaModel {
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    @NameInMap("isDefault")
+    public Boolean isDefault;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("modifier")
     public Long modifier;
+
+    @NameInMap("name")
+    public String name;
 
     @NameInMap("sparkConf")
     public java.util.List<SparkConf> sparkConf;
@@ -87,6 +96,14 @@ public class Template extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public Template setBizId(String bizId) {
+        this.bizId = bizId;
+        return this;
+    }
+    public String getBizId() {
+        return this.bizId;
+    }
+
     public Template setCreator(Long creator) {
         this.creator = creator;
         return this;
@@ -127,12 +144,28 @@ public class Template extends TeaModel {
         return this.gmtModified;
     }
 
+    public Template setIsDefault(Boolean isDefault) {
+        this.isDefault = isDefault;
+        return this;
+    }
+    public Boolean getIsDefault() {
+        return this.isDefault;
+    }
+
     public Template setModifier(Long modifier) {
         this.modifier = modifier;
         return this;
     }
     public Long getModifier() {
         return this.modifier;
+    }
+
+    public Template setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public Template setSparkConf(java.util.List<SparkConf> sparkConf) {

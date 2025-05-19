@@ -150,6 +150,9 @@ public class ListWorkspacesResponseBody extends TeaModel {
         @NameInMap("maxResource")
         public String maxResource;
 
+        @NameInMap("orderId")
+        public String orderId;
+
         /**
          * <p>The status of the subscription quota. Valid values:</p>
          * <ul>
@@ -224,6 +227,14 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
         public String getMaxResource() {
             return this.maxResource;
+        }
+
+        public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setOrderId(String orderId) {
+            this.orderId = orderId;
+            return this;
+        }
+        public String getOrderId() {
+            return this.orderId;
         }
 
         public ListWorkspacesResponseBodyWorkspacesPrePaidQuota setPaymentStatus(String paymentStatus) {

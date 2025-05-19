@@ -13,6 +13,9 @@ public class GetTemplateRequest extends TeaModel {
     @NameInMap("regionId")
     public String regionId;
 
+    @NameInMap("templateBizId")
+    public String templateBizId;
+
     /**
      * <p>The template type.</p>
      * <p>Valid values:</p>
@@ -38,6 +41,14 @@ public class GetTemplateRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetTemplateRequest setTemplateBizId(String templateBizId) {
+        this.templateBizId = templateBizId;
+        return this;
+    }
+    public String getTemplateBizId() {
+        return this.templateBizId;
     }
 
     public GetTemplateRequest setTemplateType(String templateType) {
