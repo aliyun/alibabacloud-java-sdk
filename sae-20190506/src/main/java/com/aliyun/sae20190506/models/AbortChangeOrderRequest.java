@@ -14,6 +14,9 @@ public class AbortChangeOrderRequest extends TeaModel {
     @NameInMap("ChangeOrderId")
     public String changeOrderId;
 
+    @NameInMap("Rollback")
+    public Boolean rollback;
+
     public static AbortChangeOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         AbortChangeOrderRequest self = new AbortChangeOrderRequest();
         return TeaModel.build(map, self);
@@ -25,6 +28,14 @@ public class AbortChangeOrderRequest extends TeaModel {
     }
     public String getChangeOrderId() {
         return this.changeOrderId;
+    }
+
+    public AbortChangeOrderRequest setRollback(Boolean rollback) {
+        this.rollback = rollback;
+        return this;
+    }
+    public Boolean getRollback() {
+        return this.rollback;
     }
 
 }
