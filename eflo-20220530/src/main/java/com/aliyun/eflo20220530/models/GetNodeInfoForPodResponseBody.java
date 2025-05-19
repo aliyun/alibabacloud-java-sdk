@@ -101,6 +101,9 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
+        @NameInMap("HdeniIpv6SipQuota")
+        public Integer hdeniIpv6SipQuota;
+
         /**
          * <p>Lingjun Gaomi network interface controller quota</p>
          * 
@@ -109,6 +112,12 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
          */
         @NameInMap("HdeniQuota")
         public Integer hdeniQuota;
+
+        @NameInMap("HdeniSipQuota")
+        public Integer hdeniSipQuota;
+
+        @NameInMap("LeniIpv6SipQuota")
+        public Integer leniIpv6SipQuota;
 
         /**
          * <p>Lingjun Elastic Network Interface quota, including system type</p>
@@ -179,15 +188,6 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
-        @NameInMap("hdeniIpv6SipQuota")
-        public Integer hdeniIpv6SipQuota;
-
-        @NameInMap("hdeniSipQuota")
-        public Integer hdeniSipQuota;
-
-        @NameInMap("leniIpv6SipQuota")
-        public Integer leniIpv6SipQuota;
-
         public static GetNodeInfoForPodResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
             GetNodeInfoForPodResponseBodyContent self = new GetNodeInfoForPodResponseBodyContent();
             return TeaModel.build(map, self);
@@ -201,12 +201,36 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             return this.clusterId;
         }
 
+        public GetNodeInfoForPodResponseBodyContent setHdeniIpv6SipQuota(Integer hdeniIpv6SipQuota) {
+            this.hdeniIpv6SipQuota = hdeniIpv6SipQuota;
+            return this;
+        }
+        public Integer getHdeniIpv6SipQuota() {
+            return this.hdeniIpv6SipQuota;
+        }
+
         public GetNodeInfoForPodResponseBodyContent setHdeniQuota(Integer hdeniQuota) {
             this.hdeniQuota = hdeniQuota;
             return this;
         }
         public Integer getHdeniQuota() {
             return this.hdeniQuota;
+        }
+
+        public GetNodeInfoForPodResponseBodyContent setHdeniSipQuota(Integer hdeniSipQuota) {
+            this.hdeniSipQuota = hdeniSipQuota;
+            return this;
+        }
+        public Integer getHdeniSipQuota() {
+            return this.hdeniSipQuota;
+        }
+
+        public GetNodeInfoForPodResponseBodyContent setLeniIpv6SipQuota(Integer leniIpv6SipQuota) {
+            this.leniIpv6SipQuota = leniIpv6SipQuota;
+            return this;
+        }
+        public Integer getLeniIpv6SipQuota() {
+            return this.leniIpv6SipQuota;
         }
 
         public GetNodeInfoForPodResponseBodyContent setLeniQuota(Integer leniQuota) {
@@ -271,30 +295,6 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         }
         public String getZoneId() {
             return this.zoneId;
-        }
-
-        public GetNodeInfoForPodResponseBodyContent setHdeniIpv6SipQuota(Integer hdeniIpv6SipQuota) {
-            this.hdeniIpv6SipQuota = hdeniIpv6SipQuota;
-            return this;
-        }
-        public Integer getHdeniIpv6SipQuota() {
-            return this.hdeniIpv6SipQuota;
-        }
-
-        public GetNodeInfoForPodResponseBodyContent setHdeniSipQuota(Integer hdeniSipQuota) {
-            this.hdeniSipQuota = hdeniSipQuota;
-            return this;
-        }
-        public Integer getHdeniSipQuota() {
-            return this.hdeniSipQuota;
-        }
-
-        public GetNodeInfoForPodResponseBodyContent setLeniIpv6SipQuota(Integer leniIpv6SipQuota) {
-            this.leniIpv6SipQuota = leniIpv6SipQuota;
-            return this;
-        }
-        public Integer getLeniIpv6SipQuota() {
-            return this.leniIpv6SipQuota;
         }
 
     }
