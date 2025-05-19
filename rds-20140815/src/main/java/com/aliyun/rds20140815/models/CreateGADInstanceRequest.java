@@ -222,7 +222,7 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <ul>
          * <li>The name must be <strong>2 to 255</strong> characters in length.</li>
          * <li>The name can contain letters, digits, underscores (_), and hyphens (-) and must start with a letter.</li>
-         * <li>The name cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>Does not start with <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The storage capacity of the unit node that you want to create. Unit: GB You can adjust the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</p>
+         * <p>The storage capacity of the unit node that you want to create. Unit: GB. You can adjust the storage capacity in increments of 5 GB. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>. You can also call the DescribeAvailableResource operation to query the storage capacity range that is supported by the new instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -241,17 +241,17 @@ public class CreateGADInstanceRequest extends TeaModel {
         public Long DBInstanceStorage;
 
         /**
-         * <p>The storage type of the instance. Valid values:</p>
+         * <p>The storage type of the new instance. Valid values:</p>
          * <ul>
-         * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
-         * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in some Alibaba Cloud regions.</li>
-         * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
-         * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-         * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
+         * <li><strong>local_ssd</strong>: Premium Local SSD (recommended)</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD. This storage type is not recommended. Standard SSDs are no longer available for purchase in specific Alibaba Cloud regions.</li>
+         * <li><strong>cloud_essd</strong>: Enterprise SSD (ESSD) of performance level 1 (PL1).</li>
+         * <li><strong>cloud_essd2</strong>: ESSD of PL2.</li>
+         * <li><strong>cloud_essd3</strong>: ESSD of PL3.</li>
          * </ul>
          * <p>The default value of this parameter is determined by the instance type specified by the <strong>DBInstanceClass</strong> parameter.</p>
          * <ul>
-         * <li>If the instance type specifies the local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
+         * <li>If the instance type specifies the Premium Local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
          * <li>If the instance type specifies the cloud disk storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
          * </ul>
          * 

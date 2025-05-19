@@ -4896,12 +4896,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             query.put("Size", request.size);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
             query.put("SnapshotId", request.snapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
@@ -16982,8 +16990,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>查询RDS Custom实例被DDos攻击的数量</p>
+     * <p>Queries the number of DDos attacks on an RDS Custom for SQL Server instance and monitors the security status of the instance in real time to assess potential security risks.</p>
      * 
      * @param request DescribeRCInstanceDdosCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17022,8 +17036,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * 
      * <b>summary</b> : 
-     * <p>查询RDS Custom实例被DDos攻击的数量</p>
+     * <p>Queries the number of DDos attacks on an RDS Custom for SQL Server instance and monitors the security status of the instance in real time to assess potential security risks.</p>
      * 
      * @param request DescribeRCInstanceDdosCountRequest
      * @return DescribeRCInstanceDdosCountResponse
@@ -17138,8 +17158,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * <blockquote>
+     * <p> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询RDS Custom实例的公网IP</p>
+     * <p>Queries the protection information about an RDS Custom for SQL Server instance and the details of the Anti-DDoS Origin instance to which the RDS Custom instance is added.</p>
      * 
      * @param request DescribeRCInstanceIpAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17206,8 +17235,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to ApsaraDB RDS Custom</a></p>
+     * <blockquote>
+     * <p> If one or more assets of the current Alibaba Cloud account are added to an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin instance</a>, you can call the DescribeRCInstanceIpAddress operation to query the DDoS mitigation information and the details of the Anti-DDoS Origin instance. The information and the details include the basic protection threshold and traffic scrubbing threshold for the assets, DDoS mitigation status of the assets, ID of the instance, and the mitigation status of the instance.</p>
+     * </blockquote>
+     * 
      * <b>summary</b> : 
-     * <p>查询RDS Custom实例的公网IP</p>
+     * <p>Queries the protection information about an RDS Custom for SQL Server instance and the details of the Anti-DDoS Origin instance to which the RDS Custom instance is added.</p>
      * 
      * @param request DescribeRCInstanceIpAddressRequest
      * @return DescribeRCInstanceIpAddressResponse
@@ -19503,10 +19541,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out.</p>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call the DescribeTasks operation to query the tasks that are running on an instance.</p>
+     * <p>Queries the tasks in the Waiting or Executing state on an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19578,10 +19620,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is phased out.</p>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> operation to query the tasks on an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance</p>
+     * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>You can call the DescribeTasks operation to query the tasks that are running on an instance.</p>
+     * <p>Queries the tasks in the Waiting or Executing state on an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -26897,6 +26943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoPay", request.autoPay);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
         }
@@ -26911,6 +26961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rebootTime)) {
@@ -27032,6 +27086,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</li>
+     * <li>The instances must be in the <strong>Running</strong> or <strong>Stopped</strong> state, and you have no overdue payments for the instances.</li>
+     * <li>The disk is in the <strong>In_use</strong> state and the billing method of the disk has not been changed within the previous 15 minutes.</li>
+     * <li>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <p>For more information, see the following documentation:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the billing method of an RDS Custom instance or cloud disks. You can call this operation to change the billing method of instances between pay-as-you-go and subscription.</p>
      * 
@@ -27120,6 +27189,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Precautions</h3>
+     * <ul>
+     * <li>Before you call this operation, make sure that you are familiar with the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</li>
+     * <li>The instances must be in the <strong>Running</strong> or <strong>Stopped</strong> state, and you have no overdue payments for the instances.</li>
+     * <li>The disk is in the <strong>In_use</strong> state and the billing method of the disk has not been changed within the previous 15 minutes.</li>
+     * <li>After you change the billing method, the payment is automatically completed. Make sure that the balance in your account is sufficient. Otherwise, your order becomes invalid and is canceled.</li>
+     * </ul>
+     * <h3><a href="#"></a>Considerations</h3>
+     * <p>For more information, see the following documentation:</p>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/2878542.html">Change the billing method of an instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2878547.html">Change the billing method of a disk</a></li>
+     * </ul>
+     * 
      * <b>summary</b> : 
      * <p>Modifies the billing method of an RDS Custom instance or cloud disks. You can call this operation to change the billing method of instances between pay-as-you-go and subscription.</p>
      * 
@@ -30639,6 +30723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoRenew", request.autoRenew);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
+            query.put("AutoUseCoupon", request.autoUseCoupon);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -30717,6 +30805,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
             query.put("PeriodUnit", request.periodUnit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            query.put("PromotionCode", request.promotionCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {

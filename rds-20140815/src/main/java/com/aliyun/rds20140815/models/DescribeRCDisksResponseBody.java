@@ -91,13 +91,43 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeRCDisksResponseBodyDisksTag extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static DescribeRCDisksResponseBodyDisksTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCDisksResponseBodyDisksTag self = new DescribeRCDisksResponseBodyDisksTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCDisksResponseBodyDisksTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public DescribeRCDisksResponseBodyDisksTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class DescribeRCDisksResponseBodyDisks extends TeaModel {
         /**
          * <p>The category of the disk. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>: ultra disk</li>
-         * <li><strong>cloud_ssd</strong>: standard SSD</li>
-         * <li><strong>cloud_essd</strong>: ESSD</li>
+         * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD.</li>
+         * <li><strong>cloud_essd</strong>: ESSD.</li>
          * <li><strong>cloud_auto</strong>: Premium ESSD</li>
          * </ul>
          * 
@@ -334,6 +364,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @NameInMap("StorageSetId")
         public String storageSetId;
 
+        @NameInMap("Tag")
+        public java.util.List<DescribeRCDisksResponseBodyDisksTag> tag;
+
         /**
          * <p>The disk type. Valid values:</p>
          * <ul>
@@ -543,6 +576,14 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         }
         public String getStorageSetId() {
             return this.storageSetId;
+        }
+
+        public DescribeRCDisksResponseBodyDisks setTag(java.util.List<DescribeRCDisksResponseBodyDisksTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeRCDisksResponseBodyDisksTag> getTag() {
+            return this.tag;
         }
 
         public DescribeRCDisksResponseBodyDisks setType(String type) {

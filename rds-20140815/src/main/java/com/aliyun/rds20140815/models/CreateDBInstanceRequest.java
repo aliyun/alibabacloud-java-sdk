@@ -115,13 +115,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>Specifies whether to enable the I/O burst feature of general ESSDs. Valid values:</p>
+     * <p>Specifies whether to enable the I/O burst feature of Premium ESSDs. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the I/O burst feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are general ESSDs?</a></p>
+     * <p> For more information about the I/O burst feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2340501.html">What are Premium ESSDs?</a></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -178,13 +178,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable the data archiving feature of general ESSDs. Valid values:</p>
+     * <p>Specifies whether to enable the data archiving feature of Premium ESSDs. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the data archiving feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature of general ESSDs</a>.</p>
+     * <p> For more information about the data archiving feature of Premium ESSDs, see <a href="https://help.aliyun.com/document_detail/2701832.html">Use the data archiving feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -285,8 +285,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The storage type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: local SSD. This is the recommended storage type.</li>
-     * <li><strong>general_essd</strong>: general Enterprise SSD (ESSD). This is the recommended storage type.</li>
+     * <li><strong>local_ssd</strong>: Premium Local SSD (recommended)</li>
+     * <li><strong>general_essd</strong>: Premium Enterprise SSD (ESSD) (recommend)</li>
      * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
@@ -294,11 +294,11 @@ public class CreateDBInstanceRequest extends TeaModel {
      * </ul>
      * <p>The default value of this parameter is determined by the instance type specified by the <strong>DBInstanceClass</strong> parameter.</p>
      * <ul>
-     * <li>If the instance type specifies the local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
-     * <li>If the instance type specifies the standard SSD or ESSD storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
+     * <li>If the instance type specifies the Premium Local SSD storage type, the default value of this parameter is <strong>local_ssd</strong>.</li>
+     * <li>If the instance type specifies the cloud disk storage type, the default value of this parameter is <strong>cloud_essd</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> Serverless instances support only PL1 ESSDs and general ESSDs.</p>
+     * <p> Serverless instances support only PL1 ESSDs and Premium ESSDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -333,27 +333,29 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBParamGroupId;
 
     /**
-     * <p>The time zone of the instance. This parameter takes effect only when you set the <strong>Engine</strong> parameter to <strong>MySQL</strong> or <strong>PostgreSQL</strong>.</p>
+     * <p>The time zone of the instance. This parameter takes effect only when you set <strong>Engine</strong> to <strong>MySQL</strong> or <strong>PostgreSQL</strong>.</p>
      * <ul>
-     * <li><p>If you set <strong>Engine</strong> to <strong>MySQL</strong>:</p>
+     * <li><p><strong>Engine</strong> is set to <strong>MySQL</strong>:</p>
      * <ul>
-     * <li>The time zone of the instance is in UTC. Valid values: <strong>-12:59</strong> to <strong>+13:00</strong>.</li>
-     * <li>If the instance uses local SSDs, you can specify the name of the time zone. Example: Asia/Hong_Kong. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</li>
+     * <li>This time zone is in UTC. Valid values: \<em>\</em>-12:59\<em>\</em> to <strong>+13:00</strong>.</li>
+     * <li>If the instance uses Premium Local SSDs, you can specify the name of the time zone. For example, you can specify the Asia/Hong_Kong time zone. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</li>
      * </ul>
      * </li>
-     * <li><p>If you set <strong>Engine</strong> to <strong>PostgreSQL</strong>:</p>
+     * <li><p><strong>Engine</strong> is set to <strong>PostgreSQL</strong>.</p>
      * <ul>
-     * <li>The time zone of the instance is not in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</li>
-     * <li>You can specify this parameter only when the instance runs PostgreSQL with standard SSDs or ESSDs.</li>
+     * <li>This time zone is not in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/297356.html">Time zones</a>.</li>
+     * <li>You can configure this parameter only when the RDS instance uses cloud disks.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</li>
-     * <li>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</p>
+     * </li>
+     * <li><p>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>+08:00</p>
@@ -437,12 +439,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The database engine version of the instance. Valid values:</p>
+     * <p>The database engine version of the instance.</p>
      * <ul>
      * <li><p>Regular RDS instance</p>
      * <ul>
      * <li>Valid values when you set Engine to MySQL: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
-     * <li>Valid values when you set Engine to SQLServer: <strong>08r2_ent_ha</strong> (cloud disks, discontinued), <strong>2008r2</strong> (local disks, discontinued), <strong>2012</strong> (SQL Server EE Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+     * <li>Valid values when you set Engine to SQLServer: <strong>08r2_ent_ha</strong>(cloud disks, discontinued), <strong>2008r2</strong>(premium local disks, discontinued), <strong>2012</strong>(SQL Server EE Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
      * <li>Valid values when you set Engine to PostgreSQL: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, <strong>15.0</strong>, <strong>16.0</strong>, and <strong>17.0</strong></li>
      * <li>Valid values when you set Engine to MariaDB: <strong>10.3</strong> and <strong>10.6</strong></li>
      * </ul>
@@ -499,13 +501,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>Specifies whether to enable the I/O acceleration feature of general ESSDs. Valid values:</p>
+     * <p>Specifies whether to enable Buffer Pool Extension (BPE) of Premium ESSDs. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
-     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enables BPE.</li>
+     * <li><strong>0</strong>: disables BPE.</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the I/O acceleration feature of general ESSDs, see <a href="https://help.aliyun.com/document_detail/2527067.html">Introduction</a>.</p>
+     * <p> For more information about Buffer Pool Extension(BPE) of Premium ESSDs, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension(BPE)</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -515,13 +517,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String ioAccelerationEnabled;
 
     /**
-     * <p>Specifies whether to enable the write optimization feature. Valid values:</p>
+     * <p>The switch of the 16K atomic write function. Valid values:</p>
      * <ul>
      * <li><strong>optimized</strong></li>
      * <li><strong>none</strong> (default)</li>
      * </ul>
      * <blockquote>
-     * <p> For more information about the write optimization feature, see <a href="https://help.aliyun.com/document_detail/2858761.html">Write optimization</a>.</p>
+     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/2858761.html">Use the 16K atomic write feature</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

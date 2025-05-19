@@ -20,6 +20,9 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoUseCoupon")
+    public Boolean autoUseCoupon;
+
     /**
      * <p>The type of the change that you want to perform on the instance. Valid values:</p>
      * <blockquote>
@@ -67,6 +70,9 @@ public class ModifyRCInstanceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     @NameInMap("RebootTime")
     public String rebootTime;
 
@@ -93,6 +99,14 @@ public class ModifyRCInstanceRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public ModifyRCInstanceRequest setAutoUseCoupon(Boolean autoUseCoupon) {
+        this.autoUseCoupon = autoUseCoupon;
+        return this;
+    }
+    public Boolean getAutoUseCoupon() {
+        return this.autoUseCoupon;
     }
 
     public ModifyRCInstanceRequest setDirection(String direction) {
@@ -125,6 +139,14 @@ public class ModifyRCInstanceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public ModifyRCInstanceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
     }
 
     public ModifyRCInstanceRequest setRebootTime(String rebootTime) {

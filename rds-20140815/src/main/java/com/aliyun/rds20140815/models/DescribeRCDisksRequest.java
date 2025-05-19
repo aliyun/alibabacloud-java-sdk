@@ -41,7 +41,7 @@ public class DescribeRCDisksRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,6 +49,9 @@ public class DescribeRCDisksRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Tag")
+    public java.util.List<DescribeRCDisksRequestTag> tag;
 
     public static DescribeRCDisksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCDisksRequest self = new DescribeRCDisksRequest();
@@ -93,6 +96,44 @@ public class DescribeRCDisksRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeRCDisksRequest setTag(java.util.List<DescribeRCDisksRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeRCDisksRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeRCDisksRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeRCDisksRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCDisksRequestTag self = new DescribeRCDisksRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCDisksRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeRCDisksRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

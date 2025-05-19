@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeRCInstanceDdosCountRequest extends TeaModel {
     /**
+     * <p>The region ID of the asset.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -12,6 +14,8 @@ public class DescribeRCInstanceDdosCountRequest extends TeaModel {
     public String ddosRegionId;
 
     /**
+     * <p>The type of the asset that is assigned a public IP address. Fixed value: <strong>ecs</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs</p>
      */
@@ -19,6 +23,8 @@ public class DescribeRCInstanceDdosCountRequest extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The ID of the region in which the RDS Custom instance resides.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */

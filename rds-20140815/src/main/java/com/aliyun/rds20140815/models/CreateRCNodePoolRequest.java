@@ -17,8 +17,8 @@ public class CreateRCNodePoolRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+     * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient when you enable automatic payment.</li>
+     * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
      * </ul>
      * <blockquote>
      * <p> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
