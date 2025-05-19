@@ -28,6 +28,12 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     @NameInMap("ExecutionTime")
     public String executionTime;
 
+    @NameInMap("FlinkResourceId")
+    public String flinkResourceId;
+
+    @NameInMap("FlinkResourceName")
+    public String flinkResourceName;
+
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
@@ -170,6 +176,22 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     }
     public String getExecutionTime() {
         return this.executionTime;
+    }
+
+    public GetTrafficControlTaskResponseBody setFlinkResourceId(String flinkResourceId) {
+        this.flinkResourceId = flinkResourceId;
+        return this;
+    }
+    public String getFlinkResourceId() {
+        return this.flinkResourceId;
+    }
+
+    public GetTrafficControlTaskResponseBody setFlinkResourceName(String flinkResourceName) {
+        this.flinkResourceName = flinkResourceName;
+        return this;
+    }
+    public String getFlinkResourceName() {
+        return this.flinkResourceName;
     }
 
     public GetTrafficControlTaskResponseBody setGmtCreateTime(String gmtCreateTime) {

@@ -53,6 +53,9 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     @NameInMap("ExecutionTime")
     public String executionTime;
 
+    @NameInMap("FlinkResourceId")
+    public String flinkResourceId;
+
     /**
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
@@ -232,6 +235,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     }
     public String getExecutionTime() {
         return this.executionTime;
+    }
+
+    public CreateTrafficControlTaskRequest setFlinkResourceId(String flinkResourceId) {
+        this.flinkResourceId = flinkResourceId;
+        return this;
+    }
+    public String getFlinkResourceId() {
+        return this.flinkResourceId;
     }
 
     public CreateTrafficControlTaskRequest setInstanceId(String instanceId) {
