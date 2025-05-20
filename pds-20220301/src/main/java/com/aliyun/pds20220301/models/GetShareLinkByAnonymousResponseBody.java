@@ -103,6 +103,12 @@ public class GetShareLinkByAnonymousResponseBody extends TeaModel {
     @NameInMap("expiration")
     public String expiration;
 
+    /**
+     * <p>Indicates whether a password is specified for the share link.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("has_pwd")
     public Boolean hasPwd;
 

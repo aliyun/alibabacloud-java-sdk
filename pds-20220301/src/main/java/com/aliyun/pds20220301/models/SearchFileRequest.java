@@ -14,6 +14,14 @@ public class SearchFileRequest extends TeaModel {
     public String driveId;
 
     /**
+     * <p>The field that is used to return additional information about files. Valid values:</p>
+     * <ul>
+     * <li>dir_size: returns the statistics on each subfolder in the response.</li>
+     * <li>id_path: returns the id_path value of each child subject in the response.</li>
+     * <li>name_path: returns the name_path value of each child subject in the response.</li>
+     * </ul>
+     * <p>You can specify multiple fields by separating them with commas (,). Example: &quot;id_path,name_path,dir_size&quot;.</p>
+     * 
      * <strong>example:</strong>
      * <p>url,thumbnail</p>
      */

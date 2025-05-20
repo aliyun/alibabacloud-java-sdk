@@ -4,6 +4,9 @@ package com.aliyun.pds20220301.models;
 import com.aliyun.tea.*;
 
 public class CompleteFileRequest extends TeaModel {
+    @NameInMap("crc64_hash")
+    public String crc64Hash;
+
     /**
      * <p>The drive ID.</p>
      * <p>This parameter is required.</p>
@@ -37,6 +40,14 @@ public class CompleteFileRequest extends TeaModel {
     public static CompleteFileRequest build(java.util.Map<String, ?> map) throws Exception {
         CompleteFileRequest self = new CompleteFileRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CompleteFileRequest setCrc64Hash(String crc64Hash) {
+        this.crc64Hash = crc64Hash;
+        return this;
+    }
+    public String getCrc64Hash() {
+        return this.crc64Hash;
     }
 
     public CompleteFileRequest setDriveId(String driveId) {

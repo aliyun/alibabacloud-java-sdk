@@ -561,6 +561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CompleteFileResponse completeFileWithOptions(CompleteFileRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.crc64Hash)) {
+            body.put("crc64_hash", request.crc64Hash);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.driveId)) {
             body.put("drive_id", request.driveId);
         }
@@ -3422,7 +3426,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * <p>  <strong>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425220.html">pricing</a> of Drive and Photo Service (PDS).</strong></p>
+     * <ul>
+     * <li>Before you call this operation, make sure that the transcoding mode which you want to specify by using the category parameter is enabled for the domain. To enable the transcoding feature and configure transcoding templates, contact our technical support. For more information, see <a href="https://help.aliyun.com/document_detail/175917.html">Contact us</a>.</li>
+     * <li>This operation is a synchronous operation. If the specified file is not transcoded in the specified transcoding mode, the API call returns <strong>202 VideoPreviewWaitAndRetry</strong>, which indicates that you need to wait a moment and try again. If the specified file cannot be transcoded in the specified transcoding mode, the API call returns <strong>404 NotFound.VideoPreviewInfo</strong>.</li>
+     * <li>This operation generates transcoding data and stores it in the space that is used to store the value-added data of the tenant domain. This way, end users can play audio and videos online. For specific transcoding modes, this operation provides domain-level deduplication for transcoding.</li>
+     * <li>If the transcoding mode is set to quick_video, the playback URL returned by this operation contains the <code>{</code> and <code>}</code> characters that are not URL-encoded. For development on iOS, decode and encode the returned URL first to avoid decoding failure of the NSURL library of the system.</li>
+     * <li>If the transcoding mode is set to quick_video, you cannot use the GET Range method to obtain segments of the M3U8 file in the playback URL.<blockquote>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about video playback.</p>
@@ -3491,7 +3504,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For more information about best practices, see <a href="https://help.aliyun.com/document_detail/427477.html">Preview videos online</a>.</p>
+     * <p>  <strong>Before you call this operation, make sure that you fully understand the billing methods and <a href="https://help.aliyun.com/document_detail/425220.html">pricing</a> of Drive and Photo Service (PDS).</strong></p>
+     * <ul>
+     * <li>Before you call this operation, make sure that the transcoding mode which you want to specify by using the category parameter is enabled for the domain. To enable the transcoding feature and configure transcoding templates, contact our technical support. For more information, see <a href="https://help.aliyun.com/document_detail/175917.html">Contact us</a>.</li>
+     * <li>This operation is a synchronous operation. If the specified file is not transcoded in the specified transcoding mode, the API call returns <strong>202 VideoPreviewWaitAndRetry</strong>, which indicates that you need to wait a moment and try again. If the specified file cannot be transcoded in the specified transcoding mode, the API call returns <strong>404 NotFound.VideoPreviewInfo</strong>.</li>
+     * <li>This operation generates transcoding data and stores it in the space that is used to store the value-added data of the tenant domain. This way, end users can play audio and videos online. For specific transcoding modes, this operation provides domain-level deduplication for transcoding.</li>
+     * <li>If the transcoding mode is set to quick_video, the playback URL returned by this operation contains the <code>{</code> and <code>}</code> characters that are not URL-encoded. For development on iOS, decode and encode the returned URL first to avoid decoding failure of the NSURL library of the system.</li>
+     * <li>If the transcoding mode is set to quick_video, you cannot use the GET Range method to obtain segments of the M3U8 file in the playback URL.<blockquote>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about video playback.</p>
