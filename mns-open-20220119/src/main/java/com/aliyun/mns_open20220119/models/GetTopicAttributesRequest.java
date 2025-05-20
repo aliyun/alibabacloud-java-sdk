@@ -4,6 +4,9 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class GetTopicAttributesRequest extends TeaModel {
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<GetTopicAttributesRequestTag> tag;
 
@@ -40,6 +43,8 @@ public class GetTopicAttributesRequest extends TeaModel {
 
     public static class GetTopicAttributesRequestTag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>tag1</p>
          */
@@ -47,6 +52,8 @@ public class GetTopicAttributesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */

@@ -81,6 +81,9 @@ public class SubscribeShrinkRequest extends TeaModel {
     @NameInMap("PushType")
     public String pushType;
 
+    @NameInMap("StsRoleArn")
+    public String stsRoleArn;
+
     /**
      * <p>The name of the subscription.</p>
      * <p>This parameter is required.</p>
@@ -152,6 +155,14 @@ public class SubscribeShrinkRequest extends TeaModel {
     }
     public String getPushType() {
         return this.pushType;
+    }
+
+    public SubscribeShrinkRequest setStsRoleArn(String stsRoleArn) {
+        this.stsRoleArn = stsRoleArn;
+        return this;
+    }
+    public String getStsRoleArn() {
+        return this.stsRoleArn;
     }
 
     public SubscribeShrinkRequest setSubscriptionName(String subscriptionName) {

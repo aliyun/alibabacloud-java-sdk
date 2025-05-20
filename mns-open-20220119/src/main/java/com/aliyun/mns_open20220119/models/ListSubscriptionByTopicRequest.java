@@ -4,6 +4,12 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class ListSubscriptionByTopicRequest extends TeaModel {
+    @NameInMap("EndpointType")
+    public String endpointType;
+
+    @NameInMap("EndpointValue")
+    public String endpointValue;
+
     /**
      * <p>The page number. Valid values: 1 to 100000000. If you set this parameter to a value smaller than 1, the value of this parameter is 1 by default. If you set this parameter to a value greater than 100000000, the value of this parameter is 100000000 by default.</p>
      * 
@@ -43,6 +49,22 @@ public class ListSubscriptionByTopicRequest extends TeaModel {
     public static ListSubscriptionByTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSubscriptionByTopicRequest self = new ListSubscriptionByTopicRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListSubscriptionByTopicRequest setEndpointType(String endpointType) {
+        this.endpointType = endpointType;
+        return this;
+    }
+    public String getEndpointType() {
+        return this.endpointType;
+    }
+
+    public ListSubscriptionByTopicRequest setEndpointValue(String endpointValue) {
+        this.endpointValue = endpointValue;
+        return this;
+    }
+    public String getEndpointValue() {
+        return this.endpointValue;
     }
 
     public ListSubscriptionByTopicRequest setPageNum(Long pageNum) {
