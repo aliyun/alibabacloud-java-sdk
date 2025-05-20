@@ -24,6 +24,9 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DestinationCidrBlock")
+    public String destinationCidrBlock;
+
     /**
      * <p>The direction in which the rule is applied. Valid values:</p>
      * <ul>
@@ -131,6 +134,14 @@ public class CreateNetworkAclEntryRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateNetworkAclEntryRequest setDestinationCidrBlock(String destinationCidrBlock) {
+        this.destinationCidrBlock = destinationCidrBlock;
+        return this;
+    }
+    public String getDestinationCidrBlock() {
+        return this.destinationCidrBlock;
     }
 
     public CreateNetworkAclEntryRequest setDirection(String direction) {

@@ -289,6 +289,9 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DestinationCidrBlock")
+        public String destinationCidrBlock;
+
         /**
          * <p>The ID of the inbound rule.</p>
          * 
@@ -389,6 +392,14 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public DescribeNetworkAclsResponseBodyNetworkAclsIngressAclEntries setDestinationCidrBlock(String destinationCidrBlock) {
+            this.destinationCidrBlock = destinationCidrBlock;
+            return this;
+        }
+        public String getDestinationCidrBlock() {
+            return this.destinationCidrBlock;
         }
 
         public DescribeNetworkAclsResponseBodyNetworkAclsIngressAclEntries setNetworkAclEntryId(String networkAclEntryId) {

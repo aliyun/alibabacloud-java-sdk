@@ -3011,6 +3011,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationCidrBlock)) {
+            query.put("DestinationCidrBlock", request.destinationCidrBlock);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
         }
@@ -8960,7 +8964,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeNetworkAclsResponse describeNetworkAclsWithOptions(DescribeNetworkAclsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAclId)) {
+            query.put("NetworkAclId", request.networkAclId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkAclName)) {
+            query.put("NetworkAclName", request.networkAclName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -8969,7 +8993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2017-11-10"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
