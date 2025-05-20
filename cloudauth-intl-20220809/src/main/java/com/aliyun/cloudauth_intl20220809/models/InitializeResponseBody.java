@@ -75,6 +75,9 @@ public class InitializeResponseBody extends TeaModel {
         @NameInMap("ClientCfg")
         public String clientCfg;
 
+        @NameInMap("Protocol")
+        public String protocol;
+
         /**
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
@@ -100,6 +103,14 @@ public class InitializeResponseBody extends TeaModel {
         }
         public String getClientCfg() {
             return this.clientCfg;
+        }
+
+        public InitializeResponseBodyResult setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
         public InitializeResponseBodyResult setTransactionId(String transactionId) {
