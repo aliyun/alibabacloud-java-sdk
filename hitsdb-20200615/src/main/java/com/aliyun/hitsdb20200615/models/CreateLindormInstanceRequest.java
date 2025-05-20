@@ -86,18 +86,34 @@ public class CreateLindormInstanceRequest extends TeaModel {
 
     /**
      * <p>The specification of the nodes in the instance if you set DiskCategory to local_ssd_pro or local_hdd_pro.</p>
-     * <p>When DiskCategory is set to local_ssd_pro, you can set this parameter to the following values:</p>
+     * <p>Valid values when DiskCategory is set to local_ssd_pro (i3 instance types support only subscription instances):</p>
      * <ul>
-     * <li><strong>lindorm.i2.xlarge</strong>: Each node has 4 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.i2.2xlarge</strong>: Each node has 8 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.i2.4xlarge</strong>: Each node has 16 dedicated CPU cores and 128 GB of dedicated memory.</li>
-     * <li><strong>lindorm.i2.8xlarge</strong>: Each node has 32 dedicated CPU cores and 256 GB of dedicated memory.</li>
+     * <li><strong>lindorm.i4.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
+     * <li><strong>lindorm.i4.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
+     * <li><strong>lindorm.i4.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
+     * <li><strong>lindorm.i4.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
+     * <li><strong>lindorm.i3.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
+     * <li><strong>lindorm.i3.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
+     * <li><strong>lindorm.i3.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
+     * <li><strong>lindorm.i3.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
+     * <li><strong>lindorm.i2.xlarge</strong>: Each node has 4 CPU cores and 32 GB of memory.</li>
+     * <li><strong>lindorm.i2.2xlarge</strong>: Each node has 8 CPU cores and 64 GB of memory.</li>
+     * <li><strong>lindorm.i2.4xlarge</strong>: Each node has 16 CPU cores and 128 GB of memory.</li>
+     * <li><strong>lindorm.i2.8xlarge</strong>: Each node has 32 CPU cores and 256 GB of memory.</li>
      * </ul>
-     * <p>When DiskCategory is set to local_hdd_pro, you can set this parameter to the following values:</p>
+     * <p>Valid values when DiskCategory is set to local_hhd_pro:</p>
      * <ul>
-     * <li><strong>lindorm.d1.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
-     * <li><strong>lindorm.d1.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
-     * <li><strong>lindorm.d1.6xlarge</strong>: Each node has 24 dedicated CPU cores and 96 GB of dedicated memory.</li>
+     * <li><strong>lindorm.sd3c.3xlarge</strong>: Each node has 14 CPU cores and 56 GB of memory.</li>
+     * <li><strong>lindorm.sd3c.7xlarge</strong>: Each node has 28 CPU cores and 112 GB of memory.</li>
+     * <li><strong>lindorm.sd3c.14xlarge</strong>: Each node has 56 CPU cores and 224 GB of memory.</li>
+     * <li><strong>lindorm.d2c.6xlarge</strong>: Each node has 24 CPU cores and 88 GB of memory.</li>
+     * <li><strong>lindorm.d2c.12xlarge</strong>: Each node has 48 CPU cores and 176 GB of memory.</li>
+     * <li><strong>lindorm.d2c.24xlarge</strong>: Each node has 96 CPU cores and 352 GB of memory.</li>
+     * <li><strong>lindorm.d2s.5xlarge</strong>: Each node has 20 CPU cores and 88 GB of memory.</li>
+     * <li><strong>lindorm.d2s.10xlarge</strong>: Each node has 40 CPU cores and 176 GB of memory.</li>
+     * <li><strong>lindorm.d1.2xlarge</strong>: Each node has 8 CPU cores and 32 GB of memory.</li>
+     * <li><strong>lindorm.d1.4xlarge</strong>: Each node has 16 CPU cores and 64 GB of memory.</li>
+     * <li><strong>lindorm.d1.6xlarge</strong>: Each node has 24 CPU cores and 96 GB of memory.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -400,8 +416,11 @@ public class CreateLindormInstanceRequest extends TeaModel {
      * <p>The specification of the LindormSearch nodes in the instance. Valid values:</p>
      * <ul>
      * <li><strong>lindorm.g.xlarge</strong>: Each node has 4 dedicated CPU cores and 16 GB of dedicated memory.</li>
+     * <li><strong>lindorm.c.2xlarge</strong>: Each node has 8 dedicated CPU cores and 16 GB of dedicated memory.</li>
      * <li><strong>lindorm.g.2xlarge</strong>: Each node has 8 dedicated CPU cores and 32 GB of dedicated memory.</li>
+     * <li><strong>lindorm.c.4xlarge</strong>: Each node has 16 dedicated CPU cores and 32 GB of dedicated memory.</li>
      * <li><strong>lindorm.g.4xlarge</strong>: Each node has 16 dedicated CPU cores and 64 GB of dedicated memory.</li>
+     * <li><strong>lindorm.c.8xlarge</strong>: Each node has 32 dedicated CPU cores and 64 GB of dedicated memory.</li>
      * <li><strong>lindorm.g.8xlarge</strong>: Each node has 32 dedicated CPU cores and 128 GB of dedicated memory.</li>
      * </ul>
      * 
@@ -452,6 +471,12 @@ public class CreateLindormInstanceRequest extends TeaModel {
      */
     @NameInMap("StreamSpec")
     public String streamSpec;
+
+    /**
+     * <p>The tags that are added to instances.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateLindormInstanceRequestTag> tag;
 
     /**
      * <p>The number of the LindormTSDB nodes in the instance. The valid values of this parameter depend on the value of the PayType parameter.</p>
@@ -836,6 +861,14 @@ public class CreateLindormInstanceRequest extends TeaModel {
         return this.streamSpec;
     }
 
+    public CreateLindormInstanceRequest setTag(java.util.List<CreateLindormInstanceRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateLindormInstanceRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateLindormInstanceRequest setTsdbNum(Integer tsdbNum) {
         this.tsdbNum = tsdbNum;
         return this;
@@ -874,6 +907,54 @@ public class CreateLindormInstanceRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateLindormInstanceRequestTag extends TeaModel {
+        /**
+         * <p>The tag key. Valid values of N: 1 to 20.</p>
+         * <blockquote>
+         * <p> You can specify the keys of multiple tags. For example, you can specify the key of the first tag in the first key-value pair contained in the value of this parameter and specify the key of the second tag in the second key-value pair.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value. Valid values of N: 1 to 20.</p>
+         * <blockquote>
+         * <p> You can specify the values of multiple tags. For example, you can specify the value of the first tag in the first key-value pair contained in the value of this parameter and specify the value of the second tag in the second key-value pair.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateLindormInstanceRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateLindormInstanceRequestTag self = new CreateLindormInstanceRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLindormInstanceRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateLindormInstanceRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

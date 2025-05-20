@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormFsUsedDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426069.html">GetLindormInstanceList</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,8 @@ public class GetLindormFsUsedDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/426062.html">DescribeRegions</a> operation to query the region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

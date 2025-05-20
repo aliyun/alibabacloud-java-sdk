@@ -7,6 +7,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
+    @NameInMap("ArbiterVSwitchId")
+    public String arbiterVSwitchId;
+
+    @NameInMap("ArbiterZoneId")
+    public String arbiterZoneId;
+
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
@@ -64,6 +70,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("PrimaryVSwitchId")
+    public String primaryVSwitchId;
+
+    @NameInMap("PrimaryZoneId")
+    public String primaryZoneId;
+
     @NameInMap("RegionId")
     public String regionId;
 
@@ -75,6 +87,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     @NameInMap("ServiceType")
     public String serviceType;
+
+    @NameInMap("StandbyVSwitchId")
+    public String standbyVSwitchId;
+
+    @NameInMap("StandbyZoneId")
+    public String standbyZoneId;
 
     @NameInMap("StorageUsage")
     public GetLindormV2InstanceResponseBodyStorageUsage storageUsage;
@@ -105,6 +123,22 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     public Long getAliUid() {
         return this.aliUid;
+    }
+
+    public GetLindormV2InstanceResponseBody setArbiterVSwitchId(String arbiterVSwitchId) {
+        this.arbiterVSwitchId = arbiterVSwitchId;
+        return this;
+    }
+    public String getArbiterVSwitchId() {
+        return this.arbiterVSwitchId;
+    }
+
+    public GetLindormV2InstanceResponseBody setArbiterZoneId(String arbiterZoneId) {
+        this.arbiterZoneId = arbiterZoneId;
+        return this;
+    }
+    public String getArbiterZoneId() {
+        return this.arbiterZoneId;
     }
 
     public GetLindormV2InstanceResponseBody setAutoRenew(Boolean autoRenew) {
@@ -259,6 +293,22 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.payType;
     }
 
+    public GetLindormV2InstanceResponseBody setPrimaryVSwitchId(String primaryVSwitchId) {
+        this.primaryVSwitchId = primaryVSwitchId;
+        return this;
+    }
+    public String getPrimaryVSwitchId() {
+        return this.primaryVSwitchId;
+    }
+
+    public GetLindormV2InstanceResponseBody setPrimaryZoneId(String primaryZoneId) {
+        this.primaryZoneId = primaryZoneId;
+        return this;
+    }
+    public String getPrimaryZoneId() {
+        return this.primaryZoneId;
+    }
+
     public GetLindormV2InstanceResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -289,6 +339,22 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     }
     public String getServiceType() {
         return this.serviceType;
+    }
+
+    public GetLindormV2InstanceResponseBody setStandbyVSwitchId(String standbyVSwitchId) {
+        this.standbyVSwitchId = standbyVSwitchId;
+        return this;
+    }
+    public String getStandbyVSwitchId() {
+        return this.standbyVSwitchId;
+    }
+
+    public GetLindormV2InstanceResponseBody setStandbyZoneId(String standbyZoneId) {
+        this.standbyZoneId = standbyZoneId;
+        return this;
+    }
+    public String getStandbyZoneId() {
+        return this.standbyZoneId;
     }
 
     public GetLindormV2InstanceResponseBody setStorageUsage(GetLindormV2InstanceResponseBodyStorageUsage storageUsage) {

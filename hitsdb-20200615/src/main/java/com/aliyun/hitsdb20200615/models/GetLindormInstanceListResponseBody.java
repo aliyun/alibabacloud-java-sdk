@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLindormInstanceListResponseBody extends TeaModel {
     /**
-     * <p>The list of instance.</p>
+     * <p>The instances.</p>
      */
     @NameInMap("InstanceList")
     public java.util.List<GetLindormInstanceListResponseBodyInstanceList> instanceList;
@@ -210,6 +210,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("EnableMessage")
         public Boolean enableMessage;
 
+        /**
+         * <p>Indicates whether the table 3.0 storage engine is enabled, returning:</p>
+         * <p>true: Enabled. - false: Not enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("EnableRow")
         public Boolean enableRow;
 
