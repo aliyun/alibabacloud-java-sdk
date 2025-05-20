@@ -4,6 +4,12 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SecurityContext extends TeaModel {
+    @NameInMap("Capabilities")
+    public SecurityContextCapabilities capabilities;
+
+    @NameInMap("Privileged")
+    public Boolean privileged;
+
     /**
      * <strong>example:</strong>
      * <p>1000</p>
@@ -24,6 +30,22 @@ public class SecurityContext extends TeaModel {
     public static SecurityContext build(java.util.Map<String, ?> map) throws Exception {
         SecurityContext self = new SecurityContext();
         return TeaModel.build(map, self);
+    }
+
+    public SecurityContext setCapabilities(SecurityContextCapabilities capabilities) {
+        this.capabilities = capabilities;
+        return this;
+    }
+    public SecurityContextCapabilities getCapabilities() {
+        return this.capabilities;
+    }
+
+    public SecurityContext setPrivileged(Boolean privileged) {
+        this.privileged = privileged;
+        return this;
+    }
+    public Boolean getPrivileged() {
+        return this.privileged;
     }
 
     public SecurityContext setRunAsGroup(Long runAsGroup) {

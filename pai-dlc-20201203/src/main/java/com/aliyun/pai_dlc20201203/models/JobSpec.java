@@ -7,6 +7,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("AssignNodeSpec")
     public AssignNodeSpec assignNodeSpec;
 
+    @NameInMap("AutoScalingSpec")
+    public AutoScalingSpec autoScalingSpec;
+
     /**
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -27,6 +30,12 @@ public class JobSpec extends TeaModel {
     @NameInMap("ImageConfig")
     public ImageConfig imageConfig;
 
+    @NameInMap("IsCheif")
+    public Boolean isCheif;
+
+    @NameInMap("LocalMountSpecs")
+    public java.util.List<LocalMountSpec> localMountSpecs;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,6 +45,12 @@ public class JobSpec extends TeaModel {
 
     @NameInMap("ResourceConfig")
     public ResourceConfig resourceConfig;
+
+    @NameInMap("RestartPolicy")
+    public String restartPolicy;
+
+    @NameInMap("ServiceSpec")
+    public ServiceSpec serviceSpec;
 
     @NameInMap("SpotSpec")
     public SpotSpec spotSpec;
@@ -66,6 +81,14 @@ public class JobSpec extends TeaModel {
     }
     public AssignNodeSpec getAssignNodeSpec() {
         return this.assignNodeSpec;
+    }
+
+    public JobSpec setAutoScalingSpec(AutoScalingSpec autoScalingSpec) {
+        this.autoScalingSpec = autoScalingSpec;
+        return this;
+    }
+    public AutoScalingSpec getAutoScalingSpec() {
+        return this.autoScalingSpec;
     }
 
     public JobSpec setEcsSpec(String ecsSpec) {
@@ -100,6 +123,22 @@ public class JobSpec extends TeaModel {
         return this.imageConfig;
     }
 
+    public JobSpec setIsCheif(Boolean isCheif) {
+        this.isCheif = isCheif;
+        return this;
+    }
+    public Boolean getIsCheif() {
+        return this.isCheif;
+    }
+
+    public JobSpec setLocalMountSpecs(java.util.List<LocalMountSpec> localMountSpecs) {
+        this.localMountSpecs = localMountSpecs;
+        return this;
+    }
+    public java.util.List<LocalMountSpec> getLocalMountSpecs() {
+        return this.localMountSpecs;
+    }
+
     public JobSpec setPodCount(Long podCount) {
         this.podCount = podCount;
         return this;
@@ -114,6 +153,22 @@ public class JobSpec extends TeaModel {
     }
     public ResourceConfig getResourceConfig() {
         return this.resourceConfig;
+    }
+
+    public JobSpec setRestartPolicy(String restartPolicy) {
+        this.restartPolicy = restartPolicy;
+        return this;
+    }
+    public String getRestartPolicy() {
+        return this.restartPolicy;
+    }
+
+    public JobSpec setServiceSpec(ServiceSpec serviceSpec) {
+        this.serviceSpec = serviceSpec;
+        return this;
+    }
+    public ServiceSpec getServiceSpec() {
+        return this.serviceSpec;
     }
 
     public JobSpec setSpotSpec(SpotSpec spotSpec) {

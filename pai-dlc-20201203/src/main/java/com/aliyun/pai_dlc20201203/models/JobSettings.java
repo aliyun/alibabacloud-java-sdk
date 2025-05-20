@@ -7,6 +7,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("AdvancedSettings")
     public java.util.Map<String, ?> advancedSettings;
 
+    @NameInMap("AllocateAllRDMADevices")
+    public Boolean allocateAllRDMADevices;
+
     /**
      * <strong>example:</strong>
      * <p>166924</p>
@@ -133,6 +136,14 @@ public class JobSettings extends TeaModel {
     }
     public java.util.Map<String, ?> getAdvancedSettings() {
         return this.advancedSettings;
+    }
+
+    public JobSettings setAllocateAllRDMADevices(Boolean allocateAllRDMADevices) {
+        this.allocateAllRDMADevices = allocateAllRDMADevices;
+        return this;
+    }
+    public Boolean getAllocateAllRDMADevices() {
+        return this.allocateAllRDMADevices;
     }
 
     public JobSettings setBusinessUserId(String businessUserId) {
