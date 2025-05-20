@@ -415,12 +415,27 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     }
 
     public static class SubmitVideoAnalysisTaskRequestVideoCaptionInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>oss:// | http://</p>
+         */
+        @NameInMap("videoCaptionFileUrl")
+        public String videoCaptionFileUrl;
+
         @NameInMap("videoCaptions")
         public java.util.List<SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions> videoCaptions;
 
         public static SubmitVideoAnalysisTaskRequestVideoCaptionInfo build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoAnalysisTaskRequestVideoCaptionInfo self = new SubmitVideoAnalysisTaskRequestVideoCaptionInfo();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoCaptionInfo setVideoCaptionFileUrl(String videoCaptionFileUrl) {
+            this.videoCaptionFileUrl = videoCaptionFileUrl;
+            return this;
+        }
+        public String getVideoCaptionFileUrl() {
+            return this.videoCaptionFileUrl;
         }
 
         public SubmitVideoAnalysisTaskRequestVideoCaptionInfo setVideoCaptions(java.util.List<SubmitVideoAnalysisTaskRequestVideoCaptionInfoVideoCaptions> videoCaptions) {
