@@ -317,6 +317,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The interface provides Q&amp;A services within the scope of the selected directory in the session.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>You can also create a new session via the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Knowledge Base Q\&amp;A</p>
+     * 
+     * @param request ChatRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ChatResponse
+     */
+    public ChatResponse chatWithOptions(ChatRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            body.put("question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Chat"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/chat"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChatResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The interface provides Q&amp;A services within the scope of the selected directory in the session.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>You can also create a new session via the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Knowledge Base Q\&amp;A</p>
+     * 
+     * @param request ChatRequest
+     * @return ChatResponse
+     */
+    public ChatResponse chat(ChatRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.chatWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Create Q&amp;A Window</p>
+     * 
+     * @param request CreateChatSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateChatSessionResponse
+     */
+    public CreateChatSessionResponse createChatSessionWithOptions(CreateChatSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.folderId)) {
+            body.put("folderId", request.folderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateChatSession"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/chat/session/create"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateChatSessionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Create Q&amp;A Window</p>
+     * 
+     * @param request CreateChatSessionRequest
+     * @return CreateChatSessionResponse
+     */
+    public CreateChatSessionResponse createChatSession(CreateChatSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createChatSessionWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>编辑禁用设备</p>
      * 
@@ -599,6 +719,171 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getCarbonEmissionTrendWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get Q&amp;A folder List</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatFolderListResponse
+     */
+    public GetChatFolderListResponse getChatFolderListWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatFolderList"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/chat/folder/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatFolderListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get Q&amp;A folder List</p>
+     * @return GetChatFolderListResponse
+     */
+    public GetChatFolderListResponse getChatFolderList() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getChatFolderListWithOptions(headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API retrieves the list of historical documents within a session by passing in the session ID.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>A new session can also be created using the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieve the historical documents of a session</p>
+     * 
+     * @param request GetChatListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatListResponse
+     */
+    public GetChatListResponse getChatListWithOptions(GetChatListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatList"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/chat/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatListResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>This API retrieves the list of historical documents within a session by passing in the session ID.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>A new session can also be created using the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Retrieve the historical documents of a session</p>
+     * 
+     * @param request GetChatListRequest
+     * @return GetChatListResponse
+     */
+    public GetChatListResponse getChatList(GetChatListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getChatListWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get Q&amp;A Session List</p>
+     * 
+     * @param request GetChatSessionListRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetChatSessionListResponse
+     */
+    public GetChatSessionListResponse getChatSessionListWithOptions(GetChatSessionListRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            body.put("currentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            body.put("userId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetChatSessionList"),
+            new TeaPair("version", "2022-09-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v2/aidoc/document/chat/session/list"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetChatSessionListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Get Q&amp;A Session List</p>
+     * 
+     * @param request GetChatSessionListRequest
+     * @return GetChatSessionListResponse
+     */
+    public GetChatSessionListResponse getChatSessionList(GetChatSessionListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getChatSessionListWithOptions(request, headers, runtime);
     }
 
     /**
