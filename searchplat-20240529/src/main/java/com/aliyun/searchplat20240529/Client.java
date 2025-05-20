@@ -366,6 +366,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>多模态向量化</p>
+     * 
+     * @param request GetMultiModalEmbeddingRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultiModalEmbeddingResponse
+     */
+    public GetMultiModalEmbeddingResponse getMultiModalEmbeddingWithOptions(String workspaceName, String serviceId, GetMultiModalEmbeddingRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMultiModalEmbedding"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/multi-modal-embedding/" + serviceId + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetMultiModalEmbeddingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>多模态向量化</p>
+     * 
+     * @param request GetMultiModalEmbeddingRequest
+     * @return GetMultiModalEmbeddingResponse
+     */
+    public GetMultiModalEmbeddingResponse getMultiModalEmbedding(String workspaceName, String serviceId, GetMultiModalEmbeddingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMultiModalEmbeddingWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取推理结果</p>
      * 
      * @param request GetPredictionRequest
