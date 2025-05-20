@@ -578,7 +578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Vsc</p>
+     * <p>Create Vsc</p>
      * 
      * @param request CreateVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -632,7 +632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建Vsc</p>
+     * <p>Create Vsc</p>
      * 
      * @param request CreateVscRequest
      * @return CreateVscResponse
@@ -742,7 +742,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Vsc</p>
+     * <p>Delete Vsc</p>
      * 
      * @param request DeleteVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -780,7 +780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除Vsc</p>
+     * <p>Delete Vsc</p>
      * 
      * @param request DeleteVscRequest
      * @return DeleteVscResponse
@@ -1172,7 +1172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个Vsc详情</p>
+     * <p>Get details of a single Vsc</p>
      * 
      * @param request DescribeVscRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1204,7 +1204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取单个Vsc详情</p>
+     * <p>Get details of a single Vsc</p>
      * 
      * @param request DescribeVscRequest
      * @return DescribeVscResponse
@@ -1964,7 +1964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Vsc列表</p>
+     * <p>Query Vsc List</p>
      * 
      * @param tmpReq ListVscsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2024,7 +2024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Vsc列表</p>
+     * <p>Query Vsc List</p>
      * 
      * @param request ListVscsRequest
      * @return ListVscsResponse
@@ -2656,6 +2656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.fileSystemMountEnabled)) {
             body.put("FileSystemMountEnabled", request.fileSystemMountEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {

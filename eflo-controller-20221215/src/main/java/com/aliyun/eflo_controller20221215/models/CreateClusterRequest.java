@@ -1115,6 +1115,12 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroups extends TeaModel {
+        /**
+         * <p>Whether file system mounting is supported</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;
 

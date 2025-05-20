@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVscRequest extends TeaModel {
     /**
+     * <p>Idempotent parameter</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,7 @@ public class DeleteVscRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The VscId to be deleted</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

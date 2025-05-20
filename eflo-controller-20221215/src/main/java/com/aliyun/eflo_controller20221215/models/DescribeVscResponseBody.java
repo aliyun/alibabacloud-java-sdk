@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeVscResponseBody extends TeaModel {
     /**
+     * <p>ID of the compute node where the Vsc is located</p>
+     * 
      * <strong>example:</strong>
      * <p>e01-cn-kvw44e6dn04</p>
      */
@@ -12,7 +14,7 @@ public class DescribeVscResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -21,6 +23,8 @@ public class DescribeVscResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Resource Group ID</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2k3rqlvv6ytq</p>
      */
@@ -28,14 +32,16 @@ public class DescribeVscResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
+     * <p>Status of the Vsc</p>
+     * 
      * <strong>example:</strong>
-     * <p>NORMAL</p>
+     * <p>Normal</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>VscId</p>
+     * <p>Vsc ID</p>
      * 
      * <strong>example:</strong>
      * <p>vsc-001</p>
@@ -44,6 +50,8 @@ public class DescribeVscResponseBody extends TeaModel {
     public String vscId;
 
     /**
+     * <p>Custom name of the Vsc</p>
+     * 
      * <strong>example:</strong>
      * <p>test_name</p>
      */
@@ -51,6 +59,8 @@ public class DescribeVscResponseBody extends TeaModel {
     public String vscName;
 
     /**
+     * <p>Vsc type</p>
+     * 
      * <strong>example:</strong>
      * <p>primary</p>
      */

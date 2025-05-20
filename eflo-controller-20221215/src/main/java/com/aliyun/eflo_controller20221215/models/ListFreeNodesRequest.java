@@ -40,6 +40,9 @@ public class ListFreeNodesRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>return array of operating states</p>
+     */
     @NameInMap("OperatingStates")
     public java.util.List<String> operatingStates;
 

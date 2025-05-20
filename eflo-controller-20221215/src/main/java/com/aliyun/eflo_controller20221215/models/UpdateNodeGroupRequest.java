@@ -4,8 +4,23 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class UpdateNodeGroupRequest extends TeaModel {
+    /**
+     * <p>Whether file storage mounting is supported</p>
+     * 
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("FileSystemMountEnabled")
     public Boolean fileSystemMountEnabled;
+
+    /**
+     * <p>节点组的默认镜像id，如果不设置，那么就不会改变。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>i123847249284734</p>
+     */
+    @NameInMap("ImageId")
+    public String imageId;
 
     /**
      * <p>The name of the key pair.</p>
@@ -56,6 +71,14 @@ public class UpdateNodeGroupRequest extends TeaModel {
     }
     public Boolean getFileSystemMountEnabled() {
         return this.fileSystemMountEnabled;
+    }
+
+    public UpdateNodeGroupRequest setImageId(String imageId) {
+        this.imageId = imageId;
+        return this;
+    }
+    public String getImageId() {
+        return this.imageId;
     }
 
     public UpdateNodeGroupRequest setKeyPairName(String keyPairName) {

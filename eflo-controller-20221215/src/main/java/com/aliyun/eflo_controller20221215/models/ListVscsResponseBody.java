@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVscsResponseBody extends TeaModel {
     /**
+     * <p>No return. Please use TotalCount</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,7 @@ public class ListVscsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>Indicates the position of the current call return read. An empty value means that the data has been fully read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +24,7 @@ public class ListVscsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>03668372-18FF-5959-98D9-6B36A4643C7A</p>
@@ -30,12 +33,17 @@ public class ListVscsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count of data under the current request conditions</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>VSC list</p>
+     */
     @NameInMap("Vscs")
     public java.util.List<ListVscsResponseBodyVscs> vscs;
 
@@ -86,6 +94,8 @@ public class ListVscsResponseBody extends TeaModel {
 
     public static class ListVscsResponseBodyVscsTags extends TeaModel {
         /**
+         * <p>Tag key</p>
+         * 
          * <strong>example:</strong>
          * <p>key001</p>
          */
@@ -93,6 +103,8 @@ public class ListVscsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
+         * <p>Tag value</p>
+         * 
          * <strong>example:</strong>
          * <p>value001</p>
          */
@@ -124,6 +136,8 @@ public class ListVscsResponseBody extends TeaModel {
 
     public static class ListVscsResponseBodyVscs extends TeaModel {
         /**
+         * <p>Lingjun node ID</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-fzh47xd7u08</p>
          */
@@ -131,6 +145,8 @@ public class ListVscsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>Resource group ID</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfm2zkwhkns57i</p>
          */
@@ -138,17 +154,22 @@ public class ListVscsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>Status of Vsc</p>
+         * 
          * <strong>example:</strong>
-         * <p>NORMAL</p>
+         * <p>Normal</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>Tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListVscsResponseBodyVscsTags> tags;
 
         /**
-         * <p>VscId</p>
+         * <p>Vsc ID</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>
@@ -157,6 +178,8 @@ public class ListVscsResponseBody extends TeaModel {
         public String vscId;
 
         /**
+         * <p>Customized name of Vsc</p>
+         * 
          * <strong>example:</strong>
          * <p>test_name</p>
          */
@@ -164,6 +187,8 @@ public class ListVscsResponseBody extends TeaModel {
         public String vscName;
 
         /**
+         * <p>Vsc type, primary/standard</p>
+         * 
          * <strong>example:</strong>
          * <p>primary</p>
          */

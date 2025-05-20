@@ -94,6 +94,12 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Whether file storage mounting is supported</p>
+         * 
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;
 
@@ -161,7 +167,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>可用区id</p>
+         * <p>availability zone id</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-c</p>

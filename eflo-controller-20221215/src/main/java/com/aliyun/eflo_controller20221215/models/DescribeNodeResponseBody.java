@@ -47,7 +47,10 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>是否支持文件存储挂载</p>
+     * <p>Whether file storage mounting is supported</p>
+     * 
+     * <strong>example:</strong>
+     * <p>False</p>
      */
     @NameInMap("FileSystemMountEnabled")
     public Boolean fileSystemMountEnabled;
