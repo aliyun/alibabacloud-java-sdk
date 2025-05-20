@@ -207,6 +207,9 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         @NameInMap("TimeType")
         public Integer timeType;
 
+        @NameInMap("TotalTokens")
+        public Integer totalTokens;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -360,6 +363,14 @@ public class ListJobExecutionsResponseBody extends TeaModel {
         }
         public Integer getTimeType() {
             return this.timeType;
+        }
+
+        public ListJobExecutionsResponseBodyDataRecords setTotalTokens(Integer totalTokens) {
+            this.totalTokens = totalTokens;
+            return this;
+        }
+        public Integer getTotalTokens() {
+            return this.totalTokens;
         }
 
         public ListJobExecutionsResponseBodyDataRecords setTriggerType(Integer triggerType) {

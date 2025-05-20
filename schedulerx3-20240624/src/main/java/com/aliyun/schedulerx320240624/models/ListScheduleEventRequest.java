@@ -34,6 +34,9 @@ public class ListScheduleEventRequest extends TeaModel {
     @NameInMap("Event")
     public String event;
 
+    @NameInMap("EventType")
+    public String eventType;
+
     /**
      * <strong>example:</strong>
      * <p>1310630367761285120</p>
@@ -118,6 +121,14 @@ public class ListScheduleEventRequest extends TeaModel {
     }
     public String getEvent() {
         return this.event;
+    }
+
+    public ListScheduleEventRequest setEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    public String getEventType() {
+        return this.eventType;
     }
 
     public ListScheduleEventRequest setJobExecutionId(String jobExecutionId) {
