@@ -32,6 +32,8 @@ public class CreateMultiDimTableFieldRequest extends TeaModel {
     public CreateMultiDimTableFieldRequestTenantContext tenantContext;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */

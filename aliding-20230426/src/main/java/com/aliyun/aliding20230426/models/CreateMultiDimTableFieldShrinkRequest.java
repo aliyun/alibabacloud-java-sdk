@@ -32,6 +32,8 @@ public class CreateMultiDimTableFieldShrinkRequest extends TeaModel {
     public String tenantContextShrink;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>text</p>
      */

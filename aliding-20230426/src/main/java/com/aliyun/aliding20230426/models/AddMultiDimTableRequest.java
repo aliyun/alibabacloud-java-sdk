@@ -60,6 +60,9 @@ public class AddMultiDimTableRequest extends TeaModel {
     }
 
     public static class AddMultiDimTableRequestFields extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -67,6 +70,8 @@ public class AddMultiDimTableRequest extends TeaModel {
         public java.util.Map<String, ?> property;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */

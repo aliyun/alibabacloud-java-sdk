@@ -13,9 +13,15 @@ public class InsertMultiDimTableRecordShrinkRequest extends TeaModel {
     @NameInMap("BaseId")
     public String baseId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Records")
     public String recordsShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SheetIdOrName")
     public String sheetIdOrName;
 

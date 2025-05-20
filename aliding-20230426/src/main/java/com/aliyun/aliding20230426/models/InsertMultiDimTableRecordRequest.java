@@ -13,9 +13,15 @@ public class InsertMultiDimTableRecordRequest extends TeaModel {
     @NameInMap("BaseId")
     public String baseId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Records")
     public java.util.List<InsertMultiDimTableRecordRequestRecords> records;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SheetIdOrName")
     public String sheetIdOrName;
 
@@ -60,6 +66,9 @@ public class InsertMultiDimTableRecordRequest extends TeaModel {
     }
 
     public static class InsertMultiDimTableRecordRequestRecords extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Fields")
         public java.util.Map<String, ?> fields;
 
