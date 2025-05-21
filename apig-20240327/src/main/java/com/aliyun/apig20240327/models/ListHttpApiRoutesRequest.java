@@ -50,6 +50,9 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     @NameInMap("environmentId")
     public String environmentId;
 
+    @NameInMap("forDeploy")
+    public Boolean forDeploy;
+
     /**
      * <p>The ID of the Cloud-native API Gateway instance.</p>
      * 
@@ -166,6 +169,14 @@ public class ListHttpApiRoutesRequest extends TeaModel {
     }
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    public ListHttpApiRoutesRequest setForDeploy(Boolean forDeploy) {
+        this.forDeploy = forDeploy;
+        return this;
+    }
+    public Boolean getForDeploy() {
+        return this.forDeploy;
     }
 
     public ListHttpApiRoutesRequest setGatewayId(String gatewayId) {

@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ImportHttpApiRequest extends TeaModel {
+    @NameInMap("deployConfigs")
+    public HttpApiDeployConfig deployConfigs;
+
     /**
      * <p>The API description, which cannot exceed 255 bytes in length. If you do not specify a description, a description is extracted from the definition file.</p>
      * 
@@ -21,6 +24,9 @@ public class ImportHttpApiRequest extends TeaModel {
      */
     @NameInMap("dryRun")
     public Boolean dryRun;
+
+    @NameInMap("mcpRouteId")
+    public String mcpRouteId;
 
     /**
      * <p>The API name. If you do not specify a name, a name is extracted from the definition file. If a name and a versioning configuration already exist, the existing API definition is updated based on the strategy field.</p>
@@ -98,6 +104,14 @@ public class ImportHttpApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ImportHttpApiRequest setDeployConfigs(HttpApiDeployConfig deployConfigs) {
+        this.deployConfigs = deployConfigs;
+        return this;
+    }
+    public HttpApiDeployConfig getDeployConfigs() {
+        return this.deployConfigs;
+    }
+
     public ImportHttpApiRequest setDescription(String description) {
         this.description = description;
         return this;
@@ -112,6 +126,14 @@ public class ImportHttpApiRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ImportHttpApiRequest setMcpRouteId(String mcpRouteId) {
+        this.mcpRouteId = mcpRouteId;
+        return this;
+    }
+    public String getMcpRouteId() {
+        return this.mcpRouteId;
     }
 
     public ImportHttpApiRequest setName(String name) {

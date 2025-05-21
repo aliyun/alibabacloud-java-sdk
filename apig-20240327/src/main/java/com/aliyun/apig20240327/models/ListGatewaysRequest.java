@@ -13,6 +13,9 @@ public class ListGatewaysRequest extends TeaModel {
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    @NameInMap("gatewayType")
+    public String gatewayType;
+
     /**
      * <p>The search keyword. A full match is performed. The search is case-insensitive.</p>
      * 
@@ -75,6 +78,14 @@ public class ListGatewaysRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public ListGatewaysRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public ListGatewaysRequest setKeyword(String keyword) {

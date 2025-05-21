@@ -21,6 +21,9 @@ public class HttpApiDeployConfig extends TeaModel {
     @NameInMap("customDomainIds")
     public java.util.List<String> customDomainIds;
 
+    @NameInMap("customDomainInfos")
+    public java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos;
+
     /**
      * <strong>example:</strong>
      * <p>env-xxx</p>
@@ -28,11 +31,30 @@ public class HttpApiDeployConfig extends TeaModel {
     @NameInMap("environmentId")
     public String environmentId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>gw-xx</p>
+     */
+    @NameInMap("gatewayId")
+    public String gatewayId;
+
+    @NameInMap("gatewayInfo")
+    public GatewayInfo gatewayInfo;
+
+    @NameInMap("mock")
+    public HttpApiMockContract mock;
+
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiDeployConfigPolicyConfigs> policyConfigs;
 
+    @NameInMap("routeBackend")
+    public Backend routeBackend;
+
     @NameInMap("serviceConfigs")
     public java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs;
+
+    @NameInMap("subDomains")
+    public java.util.List<HttpApiDeployConfigSubDomains> subDomains;
 
     public static HttpApiDeployConfig build(java.util.Map<String, ?> map) throws Exception {
         HttpApiDeployConfig self = new HttpApiDeployConfig();
@@ -63,12 +85,44 @@ public class HttpApiDeployConfig extends TeaModel {
         return this.customDomainIds;
     }
 
+    public HttpApiDeployConfig setCustomDomainInfos(java.util.List<HttpApiDeployConfigCustomDomainInfos> customDomainInfos) {
+        this.customDomainInfos = customDomainInfos;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfigCustomDomainInfos> getCustomDomainInfos() {
+        return this.customDomainInfos;
+    }
+
     public HttpApiDeployConfig setEnvironmentId(String environmentId) {
         this.environmentId = environmentId;
         return this;
     }
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    public HttpApiDeployConfig setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    public HttpApiDeployConfig setGatewayInfo(GatewayInfo gatewayInfo) {
+        this.gatewayInfo = gatewayInfo;
+        return this;
+    }
+    public GatewayInfo getGatewayInfo() {
+        return this.gatewayInfo;
+    }
+
+    public HttpApiDeployConfig setMock(HttpApiMockContract mock) {
+        this.mock = mock;
+        return this;
+    }
+    public HttpApiMockContract getMock() {
+        return this.mock;
     }
 
     public HttpApiDeployConfig setPolicyConfigs(java.util.List<HttpApiDeployConfigPolicyConfigs> policyConfigs) {
@@ -79,12 +133,69 @@ public class HttpApiDeployConfig extends TeaModel {
         return this.policyConfigs;
     }
 
+    public HttpApiDeployConfig setRouteBackend(Backend routeBackend) {
+        this.routeBackend = routeBackend;
+        return this;
+    }
+    public Backend getRouteBackend() {
+        return this.routeBackend;
+    }
+
     public HttpApiDeployConfig setServiceConfigs(java.util.List<HttpApiDeployConfigServiceConfigs> serviceConfigs) {
         this.serviceConfigs = serviceConfigs;
         return this;
     }
     public java.util.List<HttpApiDeployConfigServiceConfigs> getServiceConfigs() {
         return this.serviceConfigs;
+    }
+
+    public HttpApiDeployConfig setSubDomains(java.util.List<HttpApiDeployConfigSubDomains> subDomains) {
+        this.subDomains = subDomains;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfigSubDomains> getSubDomains() {
+        return this.subDomains;
+    }
+
+    public static class HttpApiDeployConfigCustomDomainInfos extends TeaModel {
+        @NameInMap("domainId")
+        public String domainId;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static HttpApiDeployConfigCustomDomainInfos build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigCustomDomainInfos self = new HttpApiDeployConfigCustomDomainInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigCustomDomainInfos setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        public HttpApiDeployConfigCustomDomainInfos setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigCustomDomainInfos setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
     }
 
     public static class HttpApiDeployConfigPolicyConfigsAiFallbackConfig extends TeaModel {
@@ -219,6 +330,58 @@ public class HttpApiDeployConfig extends TeaModel {
         }
         public Long getWeight() {
             return this.weight;
+        }
+
+    }
+
+    public static class HttpApiDeployConfigSubDomains extends TeaModel {
+        @NameInMap("domainId")
+        public String domainId;
+
+        @NameInMap("name")
+        public String name;
+
+        @NameInMap("networkType")
+        public String networkType;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static HttpApiDeployConfigSubDomains build(java.util.Map<String, ?> map) throws Exception {
+            HttpApiDeployConfigSubDomains self = new HttpApiDeployConfigSubDomains();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpApiDeployConfigSubDomains setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        public HttpApiDeployConfigSubDomains setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public HttpApiDeployConfigSubDomains setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public HttpApiDeployConfigSubDomains setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

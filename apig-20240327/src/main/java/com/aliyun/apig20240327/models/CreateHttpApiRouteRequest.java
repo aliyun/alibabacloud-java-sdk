@@ -10,6 +10,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     @NameInMap("backendConfig")
     public CreateHttpApiRouteRequestBackendConfig backendConfig;
 
+    @NameInMap("deployConfigs")
+    public java.util.List<HttpApiDeployConfig> deployConfigs;
+
     /**
      * <p>The route description.</p>
      * 
@@ -60,6 +63,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     }
     public CreateHttpApiRouteRequestBackendConfig getBackendConfig() {
         return this.backendConfig;
+    }
+
+    public CreateHttpApiRouteRequest setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+        this.deployConfigs = deployConfigs;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     public CreateHttpApiRouteRequest setDescription(String description) {

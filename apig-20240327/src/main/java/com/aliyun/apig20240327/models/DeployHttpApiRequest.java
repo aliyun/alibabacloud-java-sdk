@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class DeployHttpApiRequest extends TeaModel {
+    @NameInMap("httpApiConfig")
+    public DeployHttpApiRequestHttpApiConfig httpApiConfig;
+
     /**
      * <p>Rest API deployment configuration. Required when deploying an HTTP API as a Rest API.</p>
      */
@@ -24,6 +27,14 @@ public class DeployHttpApiRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeployHttpApiRequest setHttpApiConfig(DeployHttpApiRequestHttpApiConfig httpApiConfig) {
+        this.httpApiConfig = httpApiConfig;
+        return this;
+    }
+    public DeployHttpApiRequestHttpApiConfig getHttpApiConfig() {
+        return this.httpApiConfig;
+    }
+
     public DeployHttpApiRequest setRestApiConfig(DeployHttpApiRequestRestApiConfig restApiConfig) {
         this.restApiConfig = restApiConfig;
         return this;
@@ -38,6 +49,36 @@ public class DeployHttpApiRequest extends TeaModel {
     }
     public String getRouteId() {
         return this.routeId;
+    }
+
+    public static class DeployHttpApiRequestHttpApiConfig extends TeaModel {
+        @NameInMap("gatewayId")
+        public String gatewayId;
+
+        @NameInMap("routeIds")
+        public java.util.List<String> routeIds;
+
+        public static DeployHttpApiRequestHttpApiConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeployHttpApiRequestHttpApiConfig self = new DeployHttpApiRequestHttpApiConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployHttpApiRequestHttpApiConfig setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public DeployHttpApiRequestHttpApiConfig setRouteIds(java.util.List<String> routeIds) {
+            this.routeIds = routeIds;
+            return this;
+        }
+        public java.util.List<String> getRouteIds() {
+            return this.routeIds;
+        }
+
     }
 
     public static class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs extends TeaModel {
@@ -237,6 +278,12 @@ public class DeployHttpApiRequest extends TeaModel {
         @NameInMap("environment")
         public DeployHttpApiRequestRestApiConfigEnvironment environment;
 
+        @NameInMap("gatewayId")
+        public String gatewayId;
+
+        @NameInMap("operationIds")
+        public java.util.List<String> operationIds;
+
         /**
          * <p>Historical version number. If this field is specified, the publication information will be based on the historical version information.</p>
          * 
@@ -265,6 +312,22 @@ public class DeployHttpApiRequest extends TeaModel {
         }
         public DeployHttpApiRequestRestApiConfigEnvironment getEnvironment() {
             return this.environment;
+        }
+
+        public DeployHttpApiRequestRestApiConfig setGatewayId(String gatewayId) {
+            this.gatewayId = gatewayId;
+            return this;
+        }
+        public String getGatewayId() {
+            return this.gatewayId;
+        }
+
+        public DeployHttpApiRequestRestApiConfig setOperationIds(java.util.List<String> operationIds) {
+            this.operationIds = operationIds;
+            return this;
+        }
+        public java.util.List<String> getOperationIds() {
+            return this.operationIds;
         }
 
         public DeployHttpApiRequestRestApiConfig setRevisionId(String revisionId) {

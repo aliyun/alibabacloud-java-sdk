@@ -13,6 +13,12 @@ public class UndeployHttpApiRequest extends TeaModel {
     @NameInMap("environmentId")
     public String environmentId;
 
+    @NameInMap("gatewayId")
+    public String gatewayId;
+
+    @NameInMap("operationId")
+    public String operationId;
+
     /**
      * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
      * 
@@ -33,6 +39,22 @@ public class UndeployHttpApiRequest extends TeaModel {
     }
     public String getEnvironmentId() {
         return this.environmentId;
+    }
+
+    public UndeployHttpApiRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
+    }
+
+    public UndeployHttpApiRequest setOperationId(String operationId) {
+        this.operationId = operationId;
+        return this;
+    }
+    public String getOperationId() {
+        return this.operationId;
     }
 
     public UndeployHttpApiRequest setRouteId(String routeId) {

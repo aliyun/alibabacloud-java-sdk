@@ -17,6 +17,9 @@ public class HttpApiApiInfo extends TeaModel {
     @NameInMap("basePath")
     public String basePath;
 
+    @NameInMap("deployCntMap")
+    public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
+
     @NameInMap("deployConfigs")
     public java.util.List<HttpApiDeployConfig> deployConfigs;
 
@@ -28,6 +31,9 @@ public class HttpApiApiInfo extends TeaModel {
 
     @NameInMap("environments")
     public java.util.List<HttpApiApiInfoEnvironments> environments;
+
+    @NameInMap("gatewayId")
+    public String gatewayId;
 
     /**
      * <strong>example:</strong>
@@ -95,6 +101,14 @@ public class HttpApiApiInfo extends TeaModel {
         return this.basePath;
     }
 
+    public HttpApiApiInfo setDeployCntMap(java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap) {
+        this.deployCntMap = deployCntMap;
+        return this;
+    }
+    public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> getDeployCntMap() {
+        return this.deployCntMap;
+    }
+
     public HttpApiApiInfo setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
         this.deployConfigs = deployConfigs;
         return this;
@@ -125,6 +139,14 @@ public class HttpApiApiInfo extends TeaModel {
     }
     public java.util.List<HttpApiApiInfoEnvironments> getEnvironments() {
         return this.environments;
+    }
+
+    public HttpApiApiInfo setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public HttpApiApiInfo setHttpApiId(String httpApiId) {

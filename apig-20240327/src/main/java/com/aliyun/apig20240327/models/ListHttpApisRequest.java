@@ -13,6 +13,9 @@ public class ListHttpApisRequest extends TeaModel {
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    @NameInMap("gatewayType")
+    public String gatewayType;
+
     /**
      * <p>The search keyword. You can fuzzy-search by API name or exact-search by API ID.</p>
      * 
@@ -153,6 +156,14 @@ public class ListHttpApisRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public ListHttpApisRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public ListHttpApisRequest setKeyword(String keyword) {

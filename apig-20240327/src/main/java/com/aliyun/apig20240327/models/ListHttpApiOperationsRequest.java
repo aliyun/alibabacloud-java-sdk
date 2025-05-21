@@ -13,6 +13,12 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     @NameInMap("consumerAuthorizationRuleId")
     public String consumerAuthorizationRuleId;
 
+    @NameInMap("forDeploy")
+    public Boolean forDeploy;
+
+    @NameInMap("gatewayId")
+    public String gatewayId;
+
     /**
      * <p>List interfaces by Method.</p>
      * 
@@ -105,6 +111,22 @@ public class ListHttpApiOperationsRequest extends TeaModel {
     }
     public String getConsumerAuthorizationRuleId() {
         return this.consumerAuthorizationRuleId;
+    }
+
+    public ListHttpApiOperationsRequest setForDeploy(Boolean forDeploy) {
+        this.forDeploy = forDeploy;
+        return this;
+    }
+    public Boolean getForDeploy() {
+        return this.forDeploy;
+    }
+
+    public ListHttpApiOperationsRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public ListHttpApiOperationsRequest setMethod(String method) {

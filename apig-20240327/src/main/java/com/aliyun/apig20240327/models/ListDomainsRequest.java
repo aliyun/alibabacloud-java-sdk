@@ -13,6 +13,9 @@ public class ListDomainsRequest extends TeaModel {
     @NameInMap("gatewayId")
     public String gatewayId;
 
+    @NameInMap("gatewayType")
+    public String gatewayType;
+
     /**
      * <p>The domain name keyword for fuzzy search.</p>
      * 
@@ -60,6 +63,14 @@ public class ListDomainsRequest extends TeaModel {
     }
     public String getGatewayId() {
         return this.gatewayId;
+    }
+
+    public ListDomainsRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public ListDomainsRequest setNameLike(String nameLike) {

@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class HttpApiInfoByName extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>gw-xx</p>
+     */
+    @NameInMap("GatewayId")
+    public String gatewayId;
+
+    /**
+     * <strong>example:</strong>
      * <p>test-api</p>
      */
     @NameInMap("name")
@@ -31,6 +38,14 @@ public class HttpApiInfoByName extends TeaModel {
     public static HttpApiInfoByName build(java.util.Map<String, ?> map) throws Exception {
         HttpApiInfoByName self = new HttpApiInfoByName();
         return TeaModel.build(map, self);
+    }
+
+    public HttpApiInfoByName setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public HttpApiInfoByName setName(String name) {

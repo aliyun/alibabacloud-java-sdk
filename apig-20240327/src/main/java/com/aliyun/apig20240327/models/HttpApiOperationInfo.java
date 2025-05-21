@@ -14,6 +14,9 @@ public class HttpApiOperationInfo extends TeaModel {
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    @NameInMap("deployConfigs")
+    public java.util.List<HttpApiDeployConfig> deployConfigs;
+
     /**
      * <strong>example:</strong>
      * <p>获取用户信息</p>
@@ -21,6 +24,10 @@ public class HttpApiOperationInfo extends TeaModel {
     @NameInMap("description")
     public String description;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("enableAuth")
     public Boolean enableAuth;
 
@@ -61,6 +68,13 @@ public class HttpApiOperationInfo extends TeaModel {
     @NameInMap("response")
     public HttpApiResponseContract response;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Deployed</p>
+     */
+    @NameInMap("status")
+    public String status;
+
     public static HttpApiOperationInfo build(java.util.Map<String, ?> map) throws Exception {
         HttpApiOperationInfo self = new HttpApiOperationInfo();
         return TeaModel.build(map, self);
@@ -80,6 +94,14 @@ public class HttpApiOperationInfo extends TeaModel {
     }
     public Long getCreateTimestamp() {
         return this.createTimestamp;
+    }
+
+    public HttpApiOperationInfo setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+        this.deployConfigs = deployConfigs;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     public HttpApiOperationInfo setDescription(String description) {
@@ -152,6 +174,14 @@ public class HttpApiOperationInfo extends TeaModel {
     }
     public HttpApiResponseContract getResponse() {
         return this.response;
+    }
+
+    public HttpApiOperationInfo setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }

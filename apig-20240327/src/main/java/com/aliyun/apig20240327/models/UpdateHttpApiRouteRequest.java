@@ -10,6 +10,9 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     @NameInMap("backendConfig")
     public UpdateHttpApiRouteRequestBackendConfig backendConfig;
 
+    @NameInMap("deployConfigs")
+    public java.util.List<HttpApiDeployConfig> deployConfigs;
+
     /**
      * <p>The route description.</p>
      * 
@@ -51,6 +54,14 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     }
     public UpdateHttpApiRouteRequestBackendConfig getBackendConfig() {
         return this.backendConfig;
+    }
+
+    public UpdateHttpApiRouteRequest setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+        this.deployConfigs = deployConfigs;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     public UpdateHttpApiRouteRequest setDescription(String description) {

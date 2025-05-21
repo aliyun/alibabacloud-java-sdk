@@ -7,6 +7,9 @@ public class HttpApiOperation extends TeaModel {
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
+    @NameInMap("deployConfigs")
+    public java.util.List<HttpApiDeployConfig> deployConfigs;
+
     /**
      * <strong>example:</strong>
      * <p>获取用户信息</p>
@@ -64,6 +67,14 @@ public class HttpApiOperation extends TeaModel {
     }
     public AuthConfig getAuthConfig() {
         return this.authConfig;
+    }
+
+    public HttpApiOperation setDeployConfigs(java.util.List<HttpApiDeployConfig> deployConfigs) {
+        this.deployConfigs = deployConfigs;
+        return this;
+    }
+    public java.util.List<HttpApiDeployConfig> getDeployConfigs() {
+        return this.deployConfigs;
     }
 
     public HttpApiOperation setDescription(String description) {

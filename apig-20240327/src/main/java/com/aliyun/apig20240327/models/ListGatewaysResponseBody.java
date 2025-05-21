@@ -531,6 +531,12 @@ public class ListGatewaysResponseBody extends TeaModel {
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        @NameInMap("gatewayType")
+        public String gatewayType;
+
+        @NameInMap("legacy")
+        public Boolean legacy;
+
         /**
          * <p>The ingress addresses of the instance.</p>
          */
@@ -702,6 +708,22 @@ public class ListGatewaysResponseBody extends TeaModel {
         }
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        public ListGatewaysResponseBodyDataItems setGatewayType(String gatewayType) {
+            this.gatewayType = gatewayType;
+            return this;
+        }
+        public String getGatewayType() {
+            return this.gatewayType;
+        }
+
+        public ListGatewaysResponseBodyDataItems setLegacy(Boolean legacy) {
+            this.legacy = legacy;
+            return this;
+        }
+        public Boolean getLegacy() {
+            return this.legacy;
         }
 
         public ListGatewaysResponseBodyDataItems setLoadBalancers(java.util.List<ListGatewaysResponseBodyDataItemsLoadBalancers> loadBalancers) {

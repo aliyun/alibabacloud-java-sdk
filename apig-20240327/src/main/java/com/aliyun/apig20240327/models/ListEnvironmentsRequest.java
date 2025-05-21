@@ -31,6 +31,9 @@ public class ListEnvironmentsRequest extends TeaModel {
     @NameInMap("gatewayNameLike")
     public String gatewayNameLike;
 
+    @NameInMap("gatewayType")
+    public String gatewayType;
+
     /**
      * <p>Environment name, fuzzy search.</p>
      * 
@@ -94,6 +97,14 @@ public class ListEnvironmentsRequest extends TeaModel {
     }
     public String getGatewayNameLike() {
         return this.gatewayNameLike;
+    }
+
+    public ListEnvironmentsRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public ListEnvironmentsRequest setNameLike(String nameLike) {

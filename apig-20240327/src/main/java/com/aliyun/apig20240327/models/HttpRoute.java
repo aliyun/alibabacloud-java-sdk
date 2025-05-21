@@ -22,6 +22,9 @@ public class HttpRoute extends TeaModel {
     @NameInMap("environmentInfo")
     public HttpRouteEnvironmentInfo environmentInfo;
 
+    @NameInMap("gatewayStatus")
+    public java.util.Map<String, String> gatewayStatus;
+
     @NameInMap("match")
     public HttpRouteMatch match;
 
@@ -85,6 +88,14 @@ public class HttpRoute extends TeaModel {
     }
     public HttpRouteEnvironmentInfo getEnvironmentInfo() {
         return this.environmentInfo;
+    }
+
+    public HttpRoute setGatewayStatus(java.util.Map<String, String> gatewayStatus) {
+        this.gatewayStatus = gatewayStatus;
+        return this;
+    }
+    public java.util.Map<String, String> getGatewayStatus() {
+        return this.gatewayStatus;
     }
 
     public HttpRoute setMatch(HttpRouteMatch match) {

@@ -44,6 +44,9 @@ public class CreateDomainRequest extends TeaModel {
     @NameInMap("forceHttps")
     public Boolean forceHttps;
 
+    @NameInMap("gatewayType")
+    public String gatewayType;
+
     /**
      * <p>The HTTP/2 configuration.</p>
      * <p>Valid values:</p>
@@ -157,6 +160,14 @@ public class CreateDomainRequest extends TeaModel {
     }
     public Boolean getForceHttps() {
         return this.forceHttps;
+    }
+
+    public CreateDomainRequest setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public CreateDomainRequest setHttp2Option(String http2Option) {

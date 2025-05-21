@@ -203,6 +203,9 @@ public class CreateHttpApiRequest extends TeaModel {
     }
 
     public static class CreateHttpApiRequestIngressConfig extends TeaModel {
+        @NameInMap("clusterId")
+        public String clusterId;
+
         /**
          * <p>The environment ID.</p>
          * 
@@ -237,6 +240,7 @@ public class CreateHttpApiRequest extends TeaModel {
          * <p>src-crdddallhtgtr***</p>
          */
         @NameInMap("sourceId")
+        @Deprecated
         public String sourceId;
 
         /**
@@ -251,6 +255,14 @@ public class CreateHttpApiRequest extends TeaModel {
         public static CreateHttpApiRequestIngressConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateHttpApiRequestIngressConfig self = new CreateHttpApiRequestIngressConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateHttpApiRequestIngressConfig setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
         }
 
         public CreateHttpApiRequestIngressConfig setEnvironmentId(String environmentId) {
@@ -277,6 +289,7 @@ public class CreateHttpApiRequest extends TeaModel {
             return this.overrideIngressIp;
         }
 
+        @Deprecated
         public CreateHttpApiRequestIngressConfig setSourceId(String sourceId) {
             this.sourceId = sourceId;
             return this;
