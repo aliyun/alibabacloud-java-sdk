@@ -108,6 +108,55 @@ public class DescribeDisksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDisksResponseBodyDisksDisksTagsTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeDisksResponseBodyDisksDisksTagsTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDisksTagsTags self = new DescribeDisksResponseBodyDisksDisksTagsTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDisksTagsTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeDisksResponseBodyDisksDisksTagsTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeDisksResponseBodyDisksDisksTags extends TeaModel {
+        @NameInMap("Tags")
+        public java.util.List<DescribeDisksResponseBodyDisksDisksTagsTags> tags;
+
+        public static DescribeDisksResponseBodyDisksDisksTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDisksResponseBodyDisksDisksTags self = new DescribeDisksResponseBodyDisksDisksTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDisksResponseBodyDisksDisksTags setTags(java.util.List<DescribeDisksResponseBodyDisksDisksTagsTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeDisksResponseBodyDisksDisksTagsTags> getTags() {
+            return this.tags;
+        }
+
+    }
+
     public static class DescribeDisksResponseBodyDisksDisks extends TeaModel {
         /**
          * <p>The category of the disk.</p>
@@ -298,6 +347,9 @@ public class DescribeDisksResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public DescribeDisksResponseBodyDisksDisksTags tags;
+
         /**
          * <p>The type of the cloud disk or local disk. Valid values:</p>
          * <ul>
@@ -450,6 +502,14 @@ public class DescribeDisksResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDisksResponseBodyDisksDisks setTags(DescribeDisksResponseBodyDisksDisksTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeDisksResponseBodyDisksDisksTags getTags() {
+            return this.tags;
         }
 
         public DescribeDisksResponseBodyDisksDisks setType(String type) {
