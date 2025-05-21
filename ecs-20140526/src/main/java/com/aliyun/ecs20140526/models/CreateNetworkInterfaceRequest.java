@@ -737,6 +737,12 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         @NameInMap("EnableSriov")
         public Boolean enableSriov;
 
+        @NameInMap("VirtualFunctionQuantity")
+        public Integer virtualFunctionQuantity;
+
+        @NameInMap("VirtualFunctionTotalQueueNumber")
+        public Integer virtualFunctionTotalQueueNumber;
+
         public static CreateNetworkInterfaceRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             CreateNetworkInterfaceRequestEnhancedNetwork self = new CreateNetworkInterfaceRequestEnhancedNetwork();
             return TeaModel.build(map, self);
@@ -756,6 +762,22 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
         }
         public Boolean getEnableSriov() {
             return this.enableSriov;
+        }
+
+        public CreateNetworkInterfaceRequestEnhancedNetwork setVirtualFunctionQuantity(Integer virtualFunctionQuantity) {
+            this.virtualFunctionQuantity = virtualFunctionQuantity;
+            return this;
+        }
+        public Integer getVirtualFunctionQuantity() {
+            return this.virtualFunctionQuantity;
+        }
+
+        public CreateNetworkInterfaceRequestEnhancedNetwork setVirtualFunctionTotalQueueNumber(Integer virtualFunctionTotalQueueNumber) {
+            this.virtualFunctionTotalQueueNumber = virtualFunctionTotalQueueNumber;
+            return this;
+        }
+        public Integer getVirtualFunctionTotalQueueNumber() {
+            return this.virtualFunctionTotalQueueNumber;
         }
 
     }

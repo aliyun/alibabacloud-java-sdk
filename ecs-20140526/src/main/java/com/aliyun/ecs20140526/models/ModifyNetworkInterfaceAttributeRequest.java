@@ -379,6 +379,12 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         @NameInMap("EnableSriov")
         public Boolean enableSriov;
 
+        @NameInMap("VirtualFunctionQuantity")
+        public Integer virtualFunctionQuantity;
+
+        @NameInMap("VirtualFunctionTotalQueueNumber")
+        public Integer virtualFunctionTotalQueueNumber;
+
         public static ModifyNetworkInterfaceAttributeRequestEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             ModifyNetworkInterfaceAttributeRequestEnhancedNetwork self = new ModifyNetworkInterfaceAttributeRequestEnhancedNetwork();
             return TeaModel.build(map, self);
@@ -398,6 +404,22 @@ public class ModifyNetworkInterfaceAttributeRequest extends TeaModel {
         }
         public Boolean getEnableSriov() {
             return this.enableSriov;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setVirtualFunctionQuantity(Integer virtualFunctionQuantity) {
+            this.virtualFunctionQuantity = virtualFunctionQuantity;
+            return this;
+        }
+        public Integer getVirtualFunctionQuantity() {
+            return this.virtualFunctionQuantity;
+        }
+
+        public ModifyNetworkInterfaceAttributeRequestEnhancedNetwork setVirtualFunctionTotalQueueNumber(Integer virtualFunctionTotalQueueNumber) {
+            this.virtualFunctionTotalQueueNumber = virtualFunctionTotalQueueNumber;
+            return this;
+        }
+        public Integer getVirtualFunctionTotalQueueNumber() {
+            return this.virtualFunctionTotalQueueNumber;
         }
 
     }

@@ -1021,6 +1021,12 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         @NameInMap("EnableSriov")
         public Boolean enableSriov;
 
+        @NameInMap("VirtualFunctionQuantity")
+        public Integer virtualFunctionQuantity;
+
+        @NameInMap("VirtualFunctionTotalQueueNumber")
+        public Integer virtualFunctionTotalQueueNumber;
+
         public static DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork build(java.util.Map<String, ?> map) throws Exception {
             DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork self = new DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork();
             return TeaModel.build(map, self);
@@ -1040,6 +1046,22 @@ public class DescribeNetworkInterfaceAttributeResponseBody extends TeaModel {
         }
         public Boolean getEnableSriov() {
             return this.enableSriov;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork setVirtualFunctionQuantity(Integer virtualFunctionQuantity) {
+            this.virtualFunctionQuantity = virtualFunctionQuantity;
+            return this;
+        }
+        public Integer getVirtualFunctionQuantity() {
+            return this.virtualFunctionQuantity;
+        }
+
+        public DescribeNetworkInterfaceAttributeResponseBodyEnhancedNetwork setVirtualFunctionTotalQueueNumber(Integer virtualFunctionTotalQueueNumber) {
+            this.virtualFunctionTotalQueueNumber = virtualFunctionTotalQueueNumber;
+            return this;
+        }
+        public Integer getVirtualFunctionTotalQueueNumber() {
+            return this.virtualFunctionTotalQueueNumber;
         }
 
     }

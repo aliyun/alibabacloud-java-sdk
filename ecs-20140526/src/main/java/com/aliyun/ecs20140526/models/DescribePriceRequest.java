@@ -232,9 +232,9 @@ public class DescribePriceRequest extends TeaModel {
     public String priceUnit;
 
     /**
-     * <p>Recurrence rules for the time-segmented assurance of the elasticity assurance.</p>
+     * <p>The assurance schedules of the time-segmented elasticity assurance.</p>
      * <blockquote>
-     * <p> The time-segmented assurance of the elasticity assurance is available only in specific regions and to specific users. To use this feature, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
+     * <p> Time-segmented elasticity assurances are available only in specific regions and to specific users. To use time-segmented elasticity assurances, <a href="https://smartservice.console.aliyun.com/service/create-ticket-intl">submit a ticket</a>.</p>
      * </blockquote>
      */
     @NameInMap("RecurrenceRules")
@@ -852,7 +852,7 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestRecurrenceRules extends TeaModel {
         /**
-         * <p>The time when the time-segmented assurance ends. The value must be on the hour.</p>
+         * <p>The end time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -861,14 +861,14 @@ public class DescribePriceRequest extends TeaModel {
         public Integer endHour;
 
         /**
-         * <p>The type of the recurrence rule. Valid values:</p>
+         * <p>The type of the assurance schedule. Valid values:</p>
          * <ul>
          * <li>Daily</li>
          * <li>Weekly</li>
          * <li>Monthly</li>
          * </ul>
          * <blockquote>
-         * <p> If this parameter is specified, specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -878,14 +878,14 @@ public class DescribePriceRequest extends TeaModel {
         public String recurrenceType;
 
         /**
-         * <p>The recurrency value of the time-segmented assurance.</p>
+         * <p>The days of the week or month on which the capacity reservation of the time-segmented elasticity assurance takes effect or the interval, in number of days, at which the capacity reservation takes effect.</p>
          * <ul>
-         * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can set RecurrenceValue to only one value. Valid values: 1 to 31. The time-segmented assurance is performed every few days.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can set RecurrenceValue to one or more values. Separate the values with commas (,). The values that correspond to Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday are 0, 1, 2, 3, 4, 5, and 6. For example, <code>1,2</code> indicates that the time-segmented assurance is performed on Monday and Tuesday of every week.</li>
-         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can set RecurrenceValue to two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. For example, <code>1-5</code> indicates that the time-segmented assurance is performed from the 1st to the 5th of each month.</li>
+         * <li>If you set <code>RecurrenceType</code> to <code>Daily</code>, you can specify only one value. Valid values: 1 to 31. The value specifies that the capacity reservation takes effect every few days.</li>
+         * <li>If you set <code>RecurrenceType</code> to <code>Weekly</code>, you can specify multiple values. Separate the values with commas (,). Valid values: 0, 1, 2, 3, 4, 5, and 6, which specify Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, and Saturday, respectively. Example: <code>1,2</code>, which specifies that the capacity reservation takes effect on Monday and Tuesday.</li>
+         * <li>If you set <code>RecurrenceType</code> to <code>Monthly</code>, you can specify two values in the <code>A-B</code> format. Valid values of A and B: 1 to 31. B must be greater than or equal to A. Example: <code>1-5</code>, which specifies that the capacity reservation takes effect every day from the first day up to the fifth day of each month.</li>
          * </ul>
          * <blockquote>
-         * <p> If this parameter is specified, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
+         * <p> If you specify this parameter, you must specify <code>RecurrenceType</code> and <code>RecurrenceValue</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -895,9 +895,9 @@ public class DescribePriceRequest extends TeaModel {
         public String recurrenceValue;
 
         /**
-         * <p>The time when the time-segmented assurance takes effect. The value must be on the hour.</p>
+         * <p>The start time of the assurance period for the capacity reservation of the time-segmented elasticity assurance. Specify an on-the-hour point in time.</p>
          * <blockquote>
-         * <p> You must specify both StartHour and EndHour. The EndHour time must be at least 4 hours later than the StartHour time.</p>
+         * <p> You must specify both StartHour and EndHour. The EndHour value must be at least 4 hours later than the StartHour value.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

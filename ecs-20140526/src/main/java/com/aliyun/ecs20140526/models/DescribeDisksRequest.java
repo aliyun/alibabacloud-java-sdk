@@ -47,6 +47,23 @@ public class DescribeDisksRequest extends TeaModel {
      * <li>ephemeral_ssd: retired local SSD</li>
      * </ul>
      * <p>Default value: all.</p>
+     * <p>Enumerated values:</p>
+     * <ul>
+     * <li>all: all disks categories</li>
+     * <li>cloud_efficiency: ultra disk</li>
+     * <li>cloud_ssd: standard SSD</li>
+     * <li>local_ssd_pro: I/O-intensive local disk</li>
+     * <li>ephemeral: retired local disk</li>
+     * <li>cloud_essd_entry: ESSD Entry disk</li>
+     * <li>elastic_ephemeral_disk_premium: premium elastic ephemeral disk</li>
+     * <li>cloud: basic disk</li>
+     * <li>ephemeral_ssd: retired local SSD</li>
+     * <li>cloud_auto: ESSD AutoPL disk</li>
+     * <li>cloud_regional_disk_auto: Regional ESSD</li>
+     * <li>cloud_essd: ESSD</li>
+     * <li>elastic_ephemeral_disk_standard: standard elastic ephemeral disk</li>
+     * <li>local_hdd_pro: throughput-intensive local disk</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>all</p>

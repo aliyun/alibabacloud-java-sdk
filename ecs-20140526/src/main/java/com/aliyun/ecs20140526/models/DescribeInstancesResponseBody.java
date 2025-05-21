@@ -169,7 +169,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The number of threads per CPU core.</p>
          * 
          * <strong>example:</strong>
-         * <p>4</p>
+         * <p>2</p>
          */
         @NameInMap("ThreadsPerCore")
         public Integer threadsPerCore;
