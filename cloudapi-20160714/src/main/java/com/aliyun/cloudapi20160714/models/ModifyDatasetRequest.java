@@ -16,13 +16,15 @@ public class ModifyDatasetRequest extends TeaModel {
 
     /**
      * <p>The name of the dataset.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>NewDatasetName</p>
      */
     @NameInMap("DatasetName")
     public String datasetName;
+
+    @NameInMap("Description")
+    public String description;
 
     @NameInMap("SecurityToken")
     public String securityToken;
@@ -46,6 +48,14 @@ public class ModifyDatasetRequest extends TeaModel {
     }
     public String getDatasetName() {
         return this.datasetName;
+    }
+
+    public ModifyDatasetRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyDatasetRequest setSecurityToken(String securityToken) {

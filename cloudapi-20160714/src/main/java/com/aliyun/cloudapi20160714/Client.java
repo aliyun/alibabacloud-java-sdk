@@ -1419,6 +1419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DatasetType", request.datasetType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {
             query.put("SecurityToken", request.securityToken);
         }
@@ -10991,6 +10995,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.datasetName)) {
             query.put("DatasetName", request.datasetName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.securityToken)) {

@@ -29,6 +29,9 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("DatasetType")
     public String datasetType;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -57,6 +60,14 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getDatasetType() {
         return this.datasetType;
+    }
+
+    public CreateDatasetRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateDatasetRequest setSecurityToken(String securityToken) {

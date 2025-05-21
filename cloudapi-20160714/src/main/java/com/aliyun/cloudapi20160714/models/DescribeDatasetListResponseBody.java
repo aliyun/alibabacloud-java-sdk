@@ -175,6 +175,9 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         @NameInMap("DatasetType")
         public String datasetType;
 
+        @NameInMap("Description")
+        public String description;
+
         /**
          * <p>The time when the dataset was last modified. The time is displayed in UTC.</p>
          * 
@@ -225,6 +228,14 @@ public class DescribeDatasetListResponseBody extends TeaModel {
         }
         public String getDatasetType() {
             return this.datasetType;
+        }
+
+        public DescribeDatasetListResponseBodyDatasetInfoList setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public DescribeDatasetListResponseBodyDatasetInfoList setModifiedTime(String modifiedTime) {
