@@ -53,6 +53,9 @@ public class UpdateHttpApiRequest extends TeaModel {
     @NameInMap("ingressConfig")
     public UpdateHttpApiRequestIngressConfig ingressConfig;
 
+    @NameInMap("onlyChangeConfig")
+    public Boolean onlyChangeConfig;
+
     /**
      * <p>The protocols that are used to access the API.</p>
      */
@@ -124,6 +127,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     }
     public UpdateHttpApiRequestIngressConfig getIngressConfig() {
         return this.ingressConfig;
+    }
+
+    public UpdateHttpApiRequest setOnlyChangeConfig(Boolean onlyChangeConfig) {
+        this.onlyChangeConfig = onlyChangeConfig;
+        return this;
+    }
+    public Boolean getOnlyChangeConfig() {
+        return this.onlyChangeConfig;
     }
 
     public UpdateHttpApiRequest setProtocols(java.util.List<String> protocols) {

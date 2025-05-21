@@ -3146,6 +3146,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ingressConfig", request.ingressConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.onlyChangeConfig)) {
+            body.put("onlyChangeConfig", request.onlyChangeConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.protocols)) {
             body.put("protocols", request.protocols);
         }
