@@ -4,11 +4,14 @@ package com.aliyun.adb20190315.models;
 import com.aliyun.tea.*;
 
 public class DescribeInclinedTablesResponseBody extends TeaModel {
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeInclinedTablesResponseBodyDetectionItems> detectionItems;
 
     /**
-     * <p>The monitoring information about tables.</p>
+     * <p>The queried tables.</p>
      */
     @NameInMap("Items")
     public DescribeInclinedTablesResponseBodyItems items;
@@ -44,7 +47,7 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
      * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>15</p>
      */
     @NameInMap("TotalCount")
     public String totalCount;
@@ -103,12 +106,35 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeInclinedTablesResponseBodyDetectionItems extends TeaModel {
+        /**
+         * <p>The message of the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>There are a total of 10 tables with an excessive number of primary keys.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Excessive primary key fields</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The severity level of the detection result. Valid values:</p>
+         * <ul>
+         * <li>NORMAL</li>
+         * <li>WARNING</li>
+         * <li>CRITICAL</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>WARNING</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -144,27 +170,75 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeInclinedTablesResponseBodyItemsTable extends TeaModel {
+        /**
+         * <p>Indicates whether data is skewed in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsIncline")
         public String isIncline;
 
+        /**
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ff</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The number of rows in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2565</p>
+         */
         @NameInMap("RowCount")
         public Long rowCount;
 
+        /**
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adm_analyze</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
+        /**
+         * <p>The number of rows in the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2416527</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The percentage of the table size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
+         */
         @NameInMap("SpaceRatio")
         public Double spaceRatio;
 
+        /**
+         * <p>The total data size of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>65</p>
+         */
         @NameInMap("TotalSize")
         public Long totalSize;
 
+        /**
+         * <p>The column type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>executor</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -240,6 +314,9 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeInclinedTablesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The queried table.</p>
+         */
         @NameInMap("Table")
         public java.util.List<DescribeInclinedTablesResponseBodyItemsTable> table;
 

@@ -5,23 +5,32 @@ import com.aliyun.tea.*;
 
 public class DescribeInclinedTablesRequest extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>am-bpxxxxxxxx47</p>
+     * <p>am-k2jofo4pi5zhd****</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The language in which you want to send requests and receive messages. Default value: zh. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
-     * <p>The order in which queries are sorted in the JSON format based on the specified fields. Specify the fields used to sort the queries and the order type.</p>
+     * <p>The order by which to sort query results. Specify the parameter value in the JSON format.</p>
      * <p>Example:</p>
-     * <pre><code>
-     * [
+     * <pre><code>[
      * 
      *     {
      * 
@@ -33,9 +42,8 @@ public class DescribeInclinedTablesRequest extends TeaModel {
      * 
      * ]
      * </code></pre>
-     * <p>In the preceding code, Field indicates the field used to sort queries. Set the value of Field to Name.</p>
-     * <p>Type indicates the order type. Valid values of Type: Desc and Asc. A value of Desc indicates a descending order. A value of Asc indicates an ascending order.</p>
-     * <p>Both fields are not case-sensitive.</p>
+     * <p>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</p>
+     * <p>Field and Type are case-insensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>[      {          &quot;Field&quot;:&quot;Name&quot;,          &quot;Type&quot;:&quot;Asc&quot;      }  ]</p>
@@ -50,7 +58,7 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,11 +67,11 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li>30</li>
-     * <li>50</li>
-     * <li>100</li>
+     * <li>30；</li>
+     * <li>50；</li>
+     * <li>100；</li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
@@ -73,6 +81,15 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -85,8 +102,8 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     /**
      * <p>The type of the table. Valid values:</p>
      * <ul>
-     * <li>FactTable</li>
-     * <li>DimensionTable</li>
+     * <li><strong>FactTable</strong>: the partitioned table.</li>
+     * <li><strong>DimensionTable</strong>: the dimension table.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

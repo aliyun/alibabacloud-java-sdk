@@ -24,6 +24,9 @@ public class MigrateDBClusterRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -107,6 +110,14 @@ public class MigrateDBClusterRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public MigrateDBClusterRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public MigrateDBClusterRequest setOwnerAccount(String ownerAccount) {

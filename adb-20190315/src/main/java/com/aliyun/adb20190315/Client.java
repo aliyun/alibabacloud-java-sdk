@@ -4990,7 +4990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring information about tables.</p>
+     * <p>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeInclinedTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5062,7 +5062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring information about tables.</p>
+     * <p>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeInclinedTablesRequest
      * @return DescribeInclinedTablesResponse
@@ -8153,6 +8153,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -9274,7 +9278,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例分片数目</p>
+     * <p>Changes the number of shards for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request ModifyDBClusterShardNumberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9342,7 +9346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改实例分片数目</p>
+     * <p>Changes the number of shards for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request ModifyDBClusterShardNumberRequest
      * @return ModifyDBClusterShardNumberResponse

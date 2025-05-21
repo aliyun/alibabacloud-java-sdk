@@ -41,6 +41,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
     }
 
     public static class DescribeEIURangeResponseBodyEIUInfo extends TeaModel {
+        @NameInMap("DefaultReservedNodeSize")
+        public String defaultReservedNodeSize;
+
         /**
          * <p>The suggested value for the number of EIUs.</p>
          * 
@@ -74,6 +77,9 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         @NameInMap("MinValue")
         public String minValue;
 
+        @NameInMap("ReservedNodeSizeRange")
+        public java.util.List<String> reservedNodeSizeRange;
+
         /**
          * <p>A reserved parameter.</p>
          * 
@@ -92,6 +98,14 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         public static DescribeEIURangeResponseBodyEIUInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeEIURangeResponseBodyEIUInfo self = new DescribeEIURangeResponseBodyEIUInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeEIURangeResponseBodyEIUInfo setDefaultReservedNodeSize(String defaultReservedNodeSize) {
+            this.defaultReservedNodeSize = defaultReservedNodeSize;
+            return this;
+        }
+        public String getDefaultReservedNodeSize() {
+            return this.defaultReservedNodeSize;
         }
 
         public DescribeEIURangeResponseBodyEIUInfo setDefaultValue(String defaultValue) {
@@ -124,6 +138,14 @@ public class DescribeEIURangeResponseBody extends TeaModel {
         }
         public String getMinValue() {
             return this.minValue;
+        }
+
+        public DescribeEIURangeResponseBodyEIUInfo setReservedNodeSizeRange(java.util.List<String> reservedNodeSizeRange) {
+            this.reservedNodeSizeRange = reservedNodeSizeRange;
+            return this;
+        }
+        public java.util.List<String> getReservedNodeSizeRange() {
+            return this.reservedNodeSizeRange;
         }
 
         public DescribeEIURangeResponseBodyEIUInfo setStep(String step) {
