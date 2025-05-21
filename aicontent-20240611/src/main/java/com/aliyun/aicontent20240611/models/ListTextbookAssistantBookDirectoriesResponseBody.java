@@ -127,6 +127,170 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
 
     }
 
+    public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic extends TeaModel {
+        @NameInMap("labelId")
+        public String labelId;
+
+        @NameInMap("labelName")
+        public String labelName;
+
+        public static ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic build(java.util.Map<String, ?> map) throws Exception {
+            ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic self = new ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic setLabelId(String labelId) {
+            this.labelId = labelId;
+            return this;
+        }
+        public String getLabelId() {
+            return this.labelId;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic setLabelName(String labelName) {
+            this.labelName = labelName;
+            return this;
+        }
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+    }
+
+    public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection extends TeaModel {
+        @NameInMap("children")
+        public Object children;
+
+        @NameInMap("directoryId")
+        public String directoryId;
+
+        @NameInMap("directoryName")
+        public String directoryName;
+
+        @NameInMap("topic")
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic> topic;
+
+        public static ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection build(java.util.Map<String, ?> map) throws Exception {
+            ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection self = new ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection setChildren(Object children) {
+            this.children = children;
+            return this;
+        }
+        public Object getChildren() {
+            return this.children;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection setDirectoryId(String directoryId) {
+            this.directoryId = directoryId;
+            return this;
+        }
+        public String getDirectoryId() {
+            return this.directoryId;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection setDirectoryName(String directoryName) {
+            this.directoryName = directoryName;
+            return this;
+        }
+        public String getDirectoryName() {
+            return this.directoryName;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection setTopic(java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic> topic) {
+            this.topic = topic;
+            return this;
+        }
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSectionTopic> getTopic() {
+            return this.topic;
+        }
+
+    }
+
+    public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic extends TeaModel {
+        @NameInMap("labelId")
+        public String labelId;
+
+        @NameInMap("labelName")
+        public String labelName;
+
+        public static ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic build(java.util.Map<String, ?> map) throws Exception {
+            ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic self = new ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic setLabelId(String labelId) {
+            this.labelId = labelId;
+            return this;
+        }
+        public String getLabelId() {
+            return this.labelId;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic setLabelName(String labelName) {
+            this.labelName = labelName;
+            return this;
+        }
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+    }
+
+    public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit extends TeaModel {
+        @NameInMap("directoryId")
+        public String directoryId;
+
+        @NameInMap("directoryName")
+        public String directoryName;
+
+        @NameInMap("section")
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection> section;
+
+        @NameInMap("topic")
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic> topic;
+
+        public static ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit build(java.util.Map<String, ?> map) throws Exception {
+            ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit self = new ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit setDirectoryId(String directoryId) {
+            this.directoryId = directoryId;
+            return this;
+        }
+        public String getDirectoryId() {
+            return this.directoryId;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit setDirectoryName(String directoryName) {
+            this.directoryName = directoryName;
+            return this;
+        }
+        public String getDirectoryName() {
+            return this.directoryName;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit setSection(java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection> section) {
+            this.section = section;
+            return this;
+        }
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitSection> getSection() {
+            return this.section;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit setTopic(java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic> topic) {
+            this.topic = topic;
+            return this;
+        }
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnitTopic> getTopic() {
+            return this.topic;
+        }
+
+    }
+
     public static class ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -144,6 +308,9 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
 
         @NameInMap("topic")
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeTopic> topic;
+
+        @NameInMap("unit")
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit> unit;
 
         public static ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree build(java.util.Map<String, ?> map) throws Exception {
             ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree self = new ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree();
@@ -172,6 +339,14 @@ public class ListTextbookAssistantBookDirectoriesResponseBody extends TeaModel {
         }
         public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeTopic> getTopic() {
             return this.topic;
+        }
+
+        public ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTree setUnit(java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit> unit) {
+            this.unit = unit;
+            return this;
+        }
+        public java.util.List<ListTextbookAssistantBookDirectoriesResponseBodyDataDirectoryTreeUnit> getUnit() {
+            return this.unit;
         }
 
     }

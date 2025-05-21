@@ -444,6 +444,9 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         @NameInMap("sceneTaskList")
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataSceneTaskList> sceneTaskList;
 
+        @NameInMap("sceneTranslate")
+        public String sceneTranslate;
+
         @NameInMap("sentenceList")
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList> sentenceList;
 
@@ -506,6 +509,14 @@ public class ListTextbookAssistantSceneDetailsResponseBody extends TeaModel {
         }
         public java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataSceneTaskList> getSceneTaskList() {
             return this.sceneTaskList;
+        }
+
+        public ListTextbookAssistantSceneDetailsResponseBodyData setSceneTranslate(String sceneTranslate) {
+            this.sceneTranslate = sceneTranslate;
+            return this;
+        }
+        public String getSceneTranslate() {
+            return this.sceneTranslate;
         }
 
         public ListTextbookAssistantSceneDetailsResponseBodyData setSentenceList(java.util.List<ListTextbookAssistantSceneDetailsResponseBodyDataSentenceList> sentenceList) {

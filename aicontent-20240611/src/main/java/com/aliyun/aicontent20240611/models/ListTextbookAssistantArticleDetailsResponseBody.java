@@ -160,8 +160,8 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
         @NameInMap("sceneImageList")
         public java.util.List<String> sceneImageList;
 
-        @NameInMap("sceneTransLate")
-        public String sceneTransLate;
+        @NameInMap("sceneTranslate")
+        public String sceneTranslate;
 
         public static ListTextbookAssistantArticleDetailsResponseBodyDataSceneList build(java.util.Map<String, ?> map) throws Exception {
             ListTextbookAssistantArticleDetailsResponseBodyDataSceneList self = new ListTextbookAssistantArticleDetailsResponseBodyDataSceneList();
@@ -192,12 +192,12 @@ public class ListTextbookAssistantArticleDetailsResponseBody extends TeaModel {
             return this.sceneImageList;
         }
 
-        public ListTextbookAssistantArticleDetailsResponseBodyDataSceneList setSceneTransLate(String sceneTransLate) {
-            this.sceneTransLate = sceneTransLate;
+        public ListTextbookAssistantArticleDetailsResponseBodyDataSceneList setSceneTranslate(String sceneTranslate) {
+            this.sceneTranslate = sceneTranslate;
             return this;
         }
-        public String getSceneTransLate() {
-            return this.sceneTransLate;
+        public String getSceneTranslate() {
+            return this.sceneTranslate;
         }
 
     }
