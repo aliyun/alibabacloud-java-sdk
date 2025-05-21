@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.esa20240910.models;
+
+import com.aliyun.tea.*;
+
+public class OpenErServiceRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("SecurityToken")
+    public String securityToken;
+
+    public static OpenErServiceRequest build(java.util.Map<String, ?> map) throws Exception {
+        OpenErServiceRequest self = new OpenErServiceRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public OpenErServiceRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public OpenErServiceRequest setSecurityToken(String securityToken) {
+        this.securityToken = securityToken;
+        return this;
+    }
+    public String getSecurityToken() {
+        return this.securityToken;
+    }
+
+}

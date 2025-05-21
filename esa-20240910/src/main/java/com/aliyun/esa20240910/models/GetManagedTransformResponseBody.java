@@ -30,6 +30,9 @@ public class GetManagedTransformResponseBody extends TeaModel {
     @NameInMap("AddRealClientIpHeader")
     public String addRealClientIpHeader;
 
+    @NameInMap("RealClientIpHeaderName")
+    public String realClientIpHeaderName;
+
     /**
      * <p>Request ID.</p>
      * 
@@ -67,6 +70,14 @@ public class GetManagedTransformResponseBody extends TeaModel {
     }
     public String getAddRealClientIpHeader() {
         return this.addRealClientIpHeader;
+    }
+
+    public GetManagedTransformResponseBody setRealClientIpHeaderName(String realClientIpHeaderName) {
+        this.realClientIpHeaderName = realClientIpHeaderName;
+        return this;
+    }
+    public String getRealClientIpHeaderName() {
+        return this.realClientIpHeaderName;
     }
 
     public GetManagedTransformResponseBody setRequestId(String requestId) {

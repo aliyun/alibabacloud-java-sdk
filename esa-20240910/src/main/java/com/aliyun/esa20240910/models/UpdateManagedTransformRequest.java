@@ -30,6 +30,9 @@ public class UpdateManagedTransformRequest extends TeaModel {
     @NameInMap("AddRealClientIpHeader")
     public String addRealClientIpHeader;
 
+    @NameInMap("RealClientIpHeaderName")
+    public String realClientIpHeaderName;
+
     /**
      * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +71,14 @@ public class UpdateManagedTransformRequest extends TeaModel {
     }
     public String getAddRealClientIpHeader() {
         return this.addRealClientIpHeader;
+    }
+
+    public UpdateManagedTransformRequest setRealClientIpHeaderName(String realClientIpHeaderName) {
+        this.realClientIpHeaderName = realClientIpHeaderName;
+        return this;
+    }
+    public String getRealClientIpHeaderName() {
+        return this.realClientIpHeaderName;
     }
 
     public UpdateManagedTransformRequest setSiteId(Long siteId) {

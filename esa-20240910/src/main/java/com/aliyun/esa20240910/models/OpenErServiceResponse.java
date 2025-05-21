@@ -3,7 +3,7 @@ package com.aliyun.esa20240910.models;
 
 import com.aliyun.tea.*;
 
-public class CreateRoutineRelatedRouteResponse extends TeaModel {
+public class OpenErServiceResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class CreateRoutineRelatedRouteResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public CreateRoutineRelatedRouteResponseBody body;
+    public OpenErServiceResponseBody body;
 
-    public static CreateRoutineRelatedRouteResponse build(java.util.Map<String, ?> map) throws Exception {
-        CreateRoutineRelatedRouteResponse self = new CreateRoutineRelatedRouteResponse();
+    public static OpenErServiceResponse build(java.util.Map<String, ?> map) throws Exception {
+        OpenErServiceResponse self = new OpenErServiceResponse();
         return TeaModel.build(map, self);
     }
 
-    public CreateRoutineRelatedRouteResponse setHeaders(java.util.Map<String, String> headers) {
+    public OpenErServiceResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class CreateRoutineRelatedRouteResponse extends TeaModel {
         return this.headers;
     }
 
-    public CreateRoutineRelatedRouteResponse setStatusCode(Integer statusCode) {
+    public OpenErServiceResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class CreateRoutineRelatedRouteResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public CreateRoutineRelatedRouteResponse setBody(CreateRoutineRelatedRouteResponseBody body) {
+    public OpenErServiceResponse setBody(OpenErServiceResponseBody body) {
         this.body = body;
         return this;
     }
-    public CreateRoutineRelatedRouteResponseBody getBody() {
+    public OpenErServiceResponseBody getBody() {
         return this.body;
     }
 

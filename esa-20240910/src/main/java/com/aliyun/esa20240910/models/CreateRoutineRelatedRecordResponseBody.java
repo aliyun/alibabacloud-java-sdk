@@ -4,6 +4,9 @@ package com.aliyun.esa20240910.models;
 import com.aliyun.tea.*;
 
 public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
+    @NameInMap("RecordId")
+    public Long recordId;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -25,6 +28,14 @@ public class CreateRoutineRelatedRecordResponseBody extends TeaModel {
     public static CreateRoutineRelatedRecordResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateRoutineRelatedRecordResponseBody self = new CreateRoutineRelatedRecordResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRoutineRelatedRecordResponseBody setRecordId(Long recordId) {
+        this.recordId = recordId;
+        return this;
+    }
+    public Long getRecordId() {
+        return this.recordId;
     }
 
     public CreateRoutineRelatedRecordResponseBody setRequestId(String requestId) {
