@@ -143,6 +143,9 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         @NameInMap("audioUrl")
         public String audioUrl;
 
+        @NameInMap("dateLabel")
+        public String dateLabel;
+
         @NameInMap("evaluationFeedback")
         public String evaluationFeedback;
 
@@ -173,6 +176,14 @@ public class GetAICoachTaskSessionHistoryResponseBody extends TeaModel {
         }
         public String getAudioUrl() {
             return this.audioUrl;
+        }
+
+        public GetAICoachTaskSessionHistoryResponseBodyConversationList setDateLabel(String dateLabel) {
+            this.dateLabel = dateLabel;
+            return this;
+        }
+        public String getDateLabel() {
+            return this.dateLabel;
         }
 
         public GetAICoachTaskSessionHistoryResponseBodyConversationList setEvaluationFeedback(String evaluationFeedback) {

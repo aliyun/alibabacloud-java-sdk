@@ -184,9 +184,56 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
     }
 
+    public static class ListAICoachScriptPageResponseBodyListScoreConfigLevels extends TeaModel {
+        @NameInMap("max")
+        public Integer max;
+
+        @NameInMap("min")
+        public Integer min;
+
+        @NameInMap("name")
+        public String name;
+
+        public static ListAICoachScriptPageResponseBodyListScoreConfigLevels build(java.util.Map<String, ?> map) throws Exception {
+            ListAICoachScriptPageResponseBodyListScoreConfigLevels self = new ListAICoachScriptPageResponseBodyListScoreConfigLevels();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfigLevels setMax(Integer max) {
+            this.max = max;
+            return this;
+        }
+        public Integer getMax() {
+            return this.max;
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfigLevels setMin(Integer min) {
+            this.min = min;
+            return this;
+        }
+        public Integer getMin() {
+            return this.min;
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfigLevels setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class ListAICoachScriptPageResponseBodyListScoreConfig extends TeaModel {
         @NameInMap("enabled")
         public Boolean enabled;
+
+        @NameInMap("levelEnabled")
+        public Boolean levelEnabled;
+
+        @NameInMap("levels")
+        public java.util.List<ListAICoachScriptPageResponseBodyListScoreConfigLevels> levels;
 
         @NameInMap("passScore")
         public Integer passScore;
@@ -202,6 +249,22 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfig setLevelEnabled(Boolean levelEnabled) {
+            this.levelEnabled = levelEnabled;
+            return this;
+        }
+        public Boolean getLevelEnabled() {
+            return this.levelEnabled;
+        }
+
+        public ListAICoachScriptPageResponseBodyListScoreConfig setLevels(java.util.List<ListAICoachScriptPageResponseBodyListScoreConfigLevels> levels) {
+            this.levels = levels;
+            return this;
+        }
+        public java.util.List<ListAICoachScriptPageResponseBodyListScoreConfigLevels> getLevels() {
+            return this.levels;
         }
 
         public ListAICoachScriptPageResponseBodyListScoreConfig setPassScore(Integer passScore) {
@@ -240,6 +303,9 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
 
         @NameInMap("pointDeductionRuleEnabled")
         public Boolean pointDeductionRuleEnabled;
+
+        @NameInMap("similarPronunciationScoringEnabled")
+        public Boolean similarPronunciationScoringEnabled;
 
         /**
          * <strong>example:</strong>
@@ -306,6 +372,14 @@ public class ListAICoachScriptPageResponseBody extends TeaModel {
         }
         public Boolean getPointDeductionRuleEnabled() {
             return this.pointDeductionRuleEnabled;
+        }
+
+        public ListAICoachScriptPageResponseBodyListWeights setSimilarPronunciationScoringEnabled(Boolean similarPronunciationScoringEnabled) {
+            this.similarPronunciationScoringEnabled = similarPronunciationScoringEnabled;
+            return this;
+        }
+        public Boolean getSimilarPronunciationScoringEnabled() {
+            return this.similarPronunciationScoringEnabled;
         }
 
         public ListAICoachScriptPageResponseBodyListWeights setStandard(Integer standard) {
