@@ -1,3 +1,6 @@
+2025-05-22 Version: 2.0.6
+- Generated java 2022-07-11 for docmind-api.
+
 2025-05-22 Version: 2.0.5
 - Update API QueryDocParserStatus: add response parameters Body.Data.Processing.
 - Update API SubmitDocParserJob: add request parameters Option.
