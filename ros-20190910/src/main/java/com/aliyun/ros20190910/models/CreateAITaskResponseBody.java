@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAITaskResponseBody extends TeaModel {
     /**
+     * <p>Error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Forbidden</p>
      */
@@ -12,6 +14,8 @@ public class CreateAITaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class CreateAITaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>You are not authorized to complete this action.</p>
      */
@@ -26,6 +32,8 @@ public class CreateAITaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</p>
      */
@@ -33,6 +41,12 @@ public class CreateAITaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Values:</p>
+     * <ul>
+     * <li>true: Call succeeded.</li>
+     * <li>false: Call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -40,6 +54,8 @@ public class CreateAITaskResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>AI task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-asas*****</p>
      */

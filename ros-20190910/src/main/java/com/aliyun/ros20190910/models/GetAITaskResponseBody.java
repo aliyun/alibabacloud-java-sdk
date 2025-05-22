@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAITaskResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Forbidden</p>
      */
@@ -12,6 +14,8 @@ public class GetAITaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class GetAITaskResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>You are not authorized to complete this action.</p>
      */
@@ -26,6 +32,8 @@ public class GetAITaskResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14A07460-EBE7-47CA-9757-12CC4761D47A</p>
      */
@@ -33,6 +41,15 @@ public class GetAITaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The state of the AI task.</p>
+     * <ul>
+     * <li>PENDING</li>
+     * <li>WAITING</li>
+     * <li>RUNNING</li>
+     * <li>SUCCESS</li>
+     * <li>FAILURE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FAILURE</p>
      */
@@ -40,6 +57,8 @@ public class GetAITaskResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The reason why the AI task is in the state.</p>
+     * 
      * <strong>example:</strong>
      * <p>Handler execution unexpected failure</p>
      */
@@ -47,6 +66,12 @@ public class GetAITaskResponseBody extends TeaModel {
     public String statusReason;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -54,6 +79,8 @@ public class GetAITaskResponseBody extends TeaModel {
     public String success;
 
     /**
+     * <p>The ID of the AI task.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-asasas*****</p>
      */
@@ -61,6 +88,11 @@ public class GetAITaskResponseBody extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The outputs of the AI task. The outputs include the template.</p>
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>&quot;Result&quot;: {
      *     &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
@@ -70,6 +102,11 @@ public class GetAITaskResponseBody extends TeaModel {
     public java.util.Map<String, ?> taskOutput;
 
     /**
+     * <p>The type of the AI task.</p>
+     * <ul>
+     * <li>GenerateTemplate: The AI task is used to generate a template.</li>
+     * <li>FixTemplate: The AI task is used to fix a template.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

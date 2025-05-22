@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListAITaskEventsRequest extends TeaModel {
     /**
+     * <p>The maximum number of results to be returned from a single query when the NextToken parameter is used in the query.</p>
+     * <p>Valid values: 1 to 100.</p>
+     * <p>Default value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +16,8 @@ public class ListAITaskEventsRequest extends TeaModel {
     public String maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****w==</p>
      */
@@ -19,6 +25,8 @@ public class ListAITaskEventsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the AI task.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-asasas*****</p>
      */

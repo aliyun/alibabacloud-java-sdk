@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAITasksRequest extends TeaModel {
     /**
+     * <p>The maximum number of data entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -12,6 +14,8 @@ public class ListAITasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>U12WEI6Ro2ol3wA54rBNS3Cltv2VJyA+7hP4GqbIOhmWU5mWU9ZE3cXLgDaH4KSMRfIYcIVrvtHaAzCoyfo7VQ==</p>
      */
@@ -19,6 +23,8 @@ public class ListAITasksRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the AI task. You can filter AI tasks by task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-asasas*****</p>
      */
@@ -26,6 +32,13 @@ public class ListAITasksRequest extends TeaModel {
     public String taskId;
 
     /**
+     * <p>The type of the AI task. You can filter AI tasks by task type.</p>
+     * <ul>
+     * <li>GenerateTemplate: The AI task is used to generate a template.</li>
+     * <li>FixTemplate: The AI task is used to fix a template.</li>
+     * </ul>
+     * <p>If you leave this parameter empty, all task types are queried.</p>
+     * 
      * <strong>example:</strong>
      * <p>GenerateTemplate</p>
      */

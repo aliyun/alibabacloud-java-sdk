@@ -233,8 +233,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建AI任务</p>
+     * <p>Create AI Task</p>
      * 
      * @param request CreateAITaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -279,8 +282,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This API allows users to create an AI task based on the specified task type, covering a range of capabilities from natural language understanding to resource stack deployment. Users need to provide the task type and any required parameters, and the API will return a unique TaskId for tracking the status and results of the task.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建AI任务</p>
+     * <p>Create AI Task</p>
      * 
      * @param request CreateAITaskRequest
      * @return CreateAITaskResponse
@@ -1753,6 +1759,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>对资源栈组进行偏差检测</p>
+     * 
      * @param tmpReq DetectStackGroupDriftRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetectStackGroupDriftResponse
@@ -1800,6 +1809,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>对资源栈组进行偏差检测</p>
+     * 
      * @param request DetectStackGroupDriftRequest
      * @return DetectStackGroupDriftResponse
      */
@@ -2060,7 +2072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定AI任务信息</p>
+     * <p>Queries the information about an AI task by task ID.</p>
      * 
      * @param request GetAITaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2096,7 +2108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定AI任务信息</p>
+     * <p>Queries the information about an AI task by task ID.</p>
      * 
      * @param request GetAITaskRequest
      * @return GetAITaskResponse
@@ -3586,7 +3598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定AITask事件列表</p>
+     * <p>Queries the events of an AI task.</p>
      * 
      * @param request ListAITaskEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3626,7 +3638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取指定AITask事件列表</p>
+     * <p>Queries the events of an AI task.</p>
      * 
      * @param request ListAITaskEventsRequest
      * @return ListAITaskEventsResponse
@@ -3638,7 +3650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI任务列表</p>
+     * <p>Queries a list of AI tasks.</p>
      * 
      * @param request ListAITasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3682,7 +3694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询AI任务列表</p>
+     * <p>Queries a list of AI tasks.</p>
      * 
      * @param request ListAITasksRequest
      * @return ListAITasksResponse
@@ -5285,6 +5297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改资源栈的删除保护属性</p>
+     * 
      * @param request SetDeletionProtectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDeletionProtectionResponse
@@ -5322,6 +5337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改资源栈的删除保护属性</p>
+     * 
      * @param request SetDeletionProtectionRequest
      * @return SetDeletionProtectionResponse
      */
