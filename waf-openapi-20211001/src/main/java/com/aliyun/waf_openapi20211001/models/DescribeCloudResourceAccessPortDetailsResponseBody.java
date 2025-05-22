@@ -162,6 +162,113 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
 
     }
 
+    public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails extends TeaModel {
+        @NameInMap("AppliedType")
+        public String appliedType;
+
+        @NameInMap("CertId")
+        public String certId;
+
+        @NameInMap("CertName")
+        public String certName;
+
+        @NameInMap("CommonName")
+        public String commonName;
+
+        @NameInMap("Domain")
+        public String domain;
+
+        @NameInMap("ExpireTime")
+        public Long expireTime;
+
+        @NameInMap("ProductCertId")
+        public String productCertId;
+
+        @NameInMap("ProductCertName")
+        public String productCertName;
+
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
+        public static DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails self = new DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setAppliedType(String appliedType) {
+            this.appliedType = appliedType;
+            return this;
+        }
+        public String getAppliedType() {
+            return this.appliedType;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setCertId(String certId) {
+            this.certId = certId;
+            return this;
+        }
+        public String getCertId() {
+            return this.certId;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setCertName(String certName) {
+            this.certName = certName;
+            return this;
+        }
+        public String getCertName() {
+            return this.certName;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setCommonName(String commonName) {
+            this.commonName = commonName;
+            return this;
+        }
+        public String getCommonName() {
+            return this.commonName;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setExpireTime(Long expireTime) {
+            this.expireTime = expireTime;
+            return this;
+        }
+        public Long getExpireTime() {
+            return this.expireTime;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setProductCertId(String productCertId) {
+            this.productCertId = productCertId;
+            return this;
+        }
+        public String getProductCertId() {
+            return this.productCertId;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setProductCertName(String productCertName) {
+            this.productCertName = productCertName;
+            return this;
+        }
+        public String getProductCertName() {
+            return this.productCertName;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+    }
+
     public static class DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails extends TeaModel {
         /**
          * <p>The certificates that are associated with the ports of cloud services.</p>
@@ -315,6 +422,12 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
          */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("SubStatus")
+        public String subStatus;
+
+        @NameInMap("SubStatusDetails")
+        public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails> subStatusDetails;
 
         /**
          * <p>The version of the Transport Layer Security (TLS) protocol. Valid values:</p>
@@ -490,6 +603,22 @@ public class DescribeCloudResourceAccessPortDetailsResponseBody extends TeaModel
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setSubStatus(String subStatus) {
+            this.subStatus = subStatus;
+            return this;
+        }
+        public String getSubStatus() {
+            return this.subStatus;
+        }
+
+        public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setSubStatusDetails(java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails> subStatusDetails) {
+            this.subStatusDetails = subStatusDetails;
+            return this;
+        }
+        public java.util.List<DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetailsSubStatusDetails> getSubStatusDetails() {
+            return this.subStatusDetails;
         }
 
         public DescribeCloudResourceAccessPortDetailsResponseBodyAccessPortDetails setTLSVersion(String TLSVersion) {

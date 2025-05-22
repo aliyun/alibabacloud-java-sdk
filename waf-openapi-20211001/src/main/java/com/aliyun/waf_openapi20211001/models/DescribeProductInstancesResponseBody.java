@@ -57,7 +57,51 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols extends TeaModel {
+        @NameInMap("CertificateIds")
+        public java.util.List<String> certificateIds;
+
+        @NameInMap("Port")
+        public Integer port;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols self = new DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols setCertificateIds(java.util.List<String> certificateIds) {
+            this.certificateIds = certificateIds;
+            return this;
+        }
+        public java.util.List<String> getCertificateIds() {
+            return this.certificateIds;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates extends TeaModel {
+        @NameInMap("AppliedType")
+        public String appliedType;
+
         /**
          * <p>The ID of the certificate.</p>
          * 
@@ -76,9 +120,20 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @NameInMap("CertificateName")
         public String certificateName;
 
+        @NameInMap("Domain")
+        public String domain;
+
         public static DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates build(java.util.Map<String, ?> map) throws Exception {
             DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates self = new DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates setAppliedType(String appliedType) {
+            this.appliedType = appliedType;
+            return this;
+        }
+        public String getAppliedType() {
+            return this.appliedType;
         }
 
         public DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates setCertificateId(String certificateId) {
@@ -95,6 +150,14 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         }
         public String getCertificateName() {
             return this.certificateName;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstancesResourcePortsCertificates setDomain(String domain) {
+            this.domain = domain;
+            return this;
+        }
+        public String getDomain() {
+            return this.domain;
         }
 
     }
@@ -160,6 +223,15 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeProductInstancesResponseBodyProductInstances extends TeaModel {
+        @NameInMap("AccessInstanceId")
+        public String accessInstanceId;
+
+        @NameInMap("AccessPortAndProtocols")
+        public java.util.List<DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols> accessPortAndProtocols;
+
+        @NameInMap("AccessPorts")
+        public java.util.List<Integer> accessPorts;
+
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
          * 
@@ -168,6 +240,12 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
+
+        @NameInMap("ResourceInstanceAccessStatus")
+        public String resourceInstanceAccessStatus;
+
+        @NameInMap("ResourceInstanceEdition")
+        public String resourceInstanceEdition;
 
         /**
          * <p>The ID of the instance.</p>
@@ -262,12 +340,52 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeProductInstancesResponseBodyProductInstances setAccessInstanceId(String accessInstanceId) {
+            this.accessInstanceId = accessInstanceId;
+            return this;
+        }
+        public String getAccessInstanceId() {
+            return this.accessInstanceId;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setAccessPortAndProtocols(java.util.List<DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols> accessPortAndProtocols) {
+            this.accessPortAndProtocols = accessPortAndProtocols;
+            return this;
+        }
+        public java.util.List<DescribeProductInstancesResponseBodyProductInstancesAccessPortAndProtocols> getAccessPortAndProtocols() {
+            return this.accessPortAndProtocols;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setAccessPorts(java.util.List<Integer> accessPorts) {
+            this.accessPorts = accessPorts;
+            return this;
+        }
+        public java.util.List<Integer> getAccessPorts() {
+            return this.accessPorts;
+        }
+
         public DescribeProductInstancesResponseBodyProductInstances setOwnerUserId(String ownerUserId) {
             this.ownerUserId = ownerUserId;
             return this;
         }
         public String getOwnerUserId() {
             return this.ownerUserId;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setResourceInstanceAccessStatus(String resourceInstanceAccessStatus) {
+            this.resourceInstanceAccessStatus = resourceInstanceAccessStatus;
+            return this;
+        }
+        public String getResourceInstanceAccessStatus() {
+            return this.resourceInstanceAccessStatus;
+        }
+
+        public DescribeProductInstancesResponseBodyProductInstances setResourceInstanceEdition(String resourceInstanceEdition) {
+            this.resourceInstanceEdition = resourceInstanceEdition;
+            return this;
+        }
+        public String getResourceInstanceEdition() {
+            return this.resourceInstanceEdition;
         }
 
         public DescribeProductInstancesResponseBodyProductInstances setResourceInstanceId(String resourceInstanceId) {

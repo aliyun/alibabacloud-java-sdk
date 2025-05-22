@@ -57,6 +57,9 @@ public class DescribeProductInstancesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceInstanceAccessStatus")
+    public String resourceInstanceAccessStatus;
+
     /**
      * <p>The ID of the instance.</p>
      * 
@@ -191,6 +194,14 @@ public class DescribeProductInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeProductInstancesRequest setResourceInstanceAccessStatus(String resourceInstanceAccessStatus) {
+        this.resourceInstanceAccessStatus = resourceInstanceAccessStatus;
+        return this;
+    }
+    public String getResourceInstanceAccessStatus() {
+        return this.resourceInstanceAccessStatus;
     }
 
     public DescribeProductInstancesRequest setResourceInstanceId(String resourceInstanceId) {
