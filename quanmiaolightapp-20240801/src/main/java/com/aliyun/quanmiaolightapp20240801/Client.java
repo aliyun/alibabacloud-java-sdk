@@ -430,6 +430,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>热点新闻推荐</p>
+     * 
+     * @param request HotNewsRecommendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return HotNewsRecommendResponse
+     */
+    public HotNewsRecommendResponse hotNewsRecommendWithOptions(String workspaceId, HotNewsRecommendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("prompt", request.prompt);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "HotNewsRecommend"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/hotNewsRecommend"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new HotNewsRecommendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>热点新闻推荐</p>
+     * 
+     * @param request HotNewsRecommendRequest
+     * @return HotNewsRecommendResponse
+     */
+    public HotNewsRecommendResponse hotNewsRecommend(String workspaceId, HotNewsRecommendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.hotNewsRecommendWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取挖掘分析结果明细列表</p>
      * 
      * @param request ListAnalysisTagDetailByTaskIdRequest

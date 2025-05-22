@@ -1,3 +1,7 @@
+2025-05-22 Version: 2.8.0
+- Support API HotNewsRecommend.
+
+
 2025-05-20 Version: 2.7.1
 - Update API RunVideoAnalysis: add request parameters videoCaptionInfo.videoCaptionFileUrl.
 - Update API SubmitVideoAnalysisTask: add request parameters videoCaptionInfo.videoCaptionFileUrl.
