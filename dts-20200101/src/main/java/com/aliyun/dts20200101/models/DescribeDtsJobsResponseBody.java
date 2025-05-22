@@ -809,6 +809,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus extends TeaModel {
+        @NameInMap("CanSwitch")
+        public Boolean canSwitch;
+
         /**
          * <p>The error message returned if the task failed.</p>
          * 
@@ -854,6 +857,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public static DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus setCanSwitch(Boolean canSwitch) {
+            this.canSwitch = canSwitch;
+            return this;
+        }
+        public Boolean getCanSwitch() {
+            return this.canSwitch;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListFullDataCheckStatus setErrorMessage(String errorMessage) {
@@ -1025,6 +1036,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("IncDataCheck")
         public Boolean incDataCheck;
 
+        @NameInMap("StructureDataCheck")
+        public Boolean structureDataCheck;
+
         /**
          * <p>Indicates whether schema migration or schema synchronization is performed. Valid values:</p>
          * <ul>
@@ -1073,6 +1087,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Boolean getIncDataCheck() {
             return this.incDataCheck;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListMigrationMode setStructureDataCheck(Boolean structureDataCheck) {
+            this.structureDataCheck = structureDataCheck;
+            return this;
+        }
+        public Boolean getStructureDataCheck() {
+            return this.structureDataCheck;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListMigrationMode setStructureInitialization(Boolean structureInitialization) {
@@ -1977,6 +1999,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
     }
 
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus extends TeaModel {
+        @NameInMap("CanSwitch")
+        public Boolean canSwitch;
+
         /**
          * <p>The error message returned if the task failed.</p>
          * 
@@ -2022,6 +2047,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         public static DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus setCanSwitch(Boolean canSwitch) {
+            this.canSwitch = canSwitch;
+            return this;
+        }
+        public Boolean getCanSwitch() {
+            return this.canSwitch;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobFullDataCheckStatus setErrorMessage(String errorMessage) {
@@ -2193,6 +2226,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("IncDataCheck")
         public Boolean incDataCheck;
 
+        @NameInMap("StructureDataCheck")
+        public Boolean structureDataCheck;
+
         /**
          * <p>Indicates whether initial schema synchronization is performed. Valid values:</p>
          * <ul>
@@ -2241,6 +2277,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public Boolean getIncDataCheck() {
             return this.incDataCheck;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode setStructureDataCheck(Boolean structureDataCheck) {
+            this.structureDataCheck = structureDataCheck;
+            return this;
+        }
+        public Boolean getStructureDataCheck() {
+            return this.structureDataCheck;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobListReverseJobMigrationMode setStructureInitialization(Boolean structureInitialization) {
@@ -2659,6 +2703,58 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus extends TeaModel {
         /**
          * <p>The error message returned if initial schema synchronization failed.</p>
@@ -3007,6 +3103,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StructureDataCheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus structureDataCheckStatus;
+
         /**
          * <p>The state of initial schema synchronization.</p>
          */
@@ -3266,6 +3365,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
             return this.status;
         }
 
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJob setStructureDataCheckStatus(DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus structureDataCheckStatus) {
+            this.structureDataCheckStatus = structureDataCheckStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureDataCheckStatus getStructureDataCheckStatus() {
+            return this.structureDataCheckStatus;
+        }
+
         public DescribeDtsJobsResponseBodyDtsJobListReverseJob setStructureInitializationStatus(DescribeDtsJobsResponseBodyDtsJobListReverseJobStructureInitializationStatus structureInitializationStatus) {
             this.structureInitializationStatus = structureInitializationStatus;
             return this;
@@ -3459,6 +3566,58 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getUserName() {
             return this.userName;
+        }
+
+    }
+
+    public static class DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus extends TeaModel {
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("Percent")
+        public String percent;
+
+        @NameInMap("Progress")
+        public String progress;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus self = new DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus setPercent(String percent) {
+            this.percent = percent;
+            return this;
+        }
+        public String getPercent() {
+            return this.percent;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus setProgress(String progress) {
+            this.progress = progress;
+            return this;
+        }
+        public String getProgress() {
+            return this.progress;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -4053,6 +4212,9 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StructureDataCheckStatus")
+        public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus structureDataCheckStatus;
+
         /**
          * <p>The state of schema migration or initial schema synchronization.</p>
          */
@@ -4484,6 +4646,14 @@ public class DescribeDtsJobsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDtsJobsResponseBodyDtsJobList setStructureDataCheckStatus(DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus structureDataCheckStatus) {
+            this.structureDataCheckStatus = structureDataCheckStatus;
+            return this;
+        }
+        public DescribeDtsJobsResponseBodyDtsJobListStructureDataCheckStatus getStructureDataCheckStatus() {
+            return this.structureDataCheckStatus;
         }
 
         public DescribeDtsJobsResponseBodyDtsJobList setStructureInitializationStatus(DescribeDtsJobsResponseBodyDtsJobListStructureInitializationStatus structureInitializationStatus) {
