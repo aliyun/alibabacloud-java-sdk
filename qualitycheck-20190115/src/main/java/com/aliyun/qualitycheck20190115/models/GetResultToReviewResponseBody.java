@@ -391,6 +391,9 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("From")
         public Integer from;
 
+        @NameInMap("IsMatch")
+        public Boolean isMatch;
+
         /**
          * <strong>example:</strong>
          * <p>2</p>
@@ -442,6 +445,14 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public Integer getFrom() {
             return this.from;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setIsMatch(Boolean isMatch) {
+            this.isMatch = isMatch;
+            return this;
+        }
+        public Boolean getIsMatch() {
+            return this.isMatch;
         }
 
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoListConditionHitInfoKeyWordsKeyWord setPid(Integer pid) {
@@ -762,6 +773,12 @@ public class GetResultToReviewResponseBody extends TeaModel {
         @NameInMap("ConditionHitInfoList")
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoList conditionHitInfoList;
 
+        @NameInMap("MachineHitResult")
+        public Integer machineHitResult;
+
+        @NameInMap("ReviewHitResult")
+        public Integer reviewHitResult;
+
         @NameInMap("ReviewInfo")
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo reviewInfo;
 
@@ -838,6 +855,22 @@ public class GetResultToReviewResponseBody extends TeaModel {
         }
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoConditionHitInfoList getConditionHitInfoList() {
             return this.conditionHitInfoList;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfo setMachineHitResult(Integer machineHitResult) {
+            this.machineHitResult = machineHitResult;
+            return this;
+        }
+        public Integer getMachineHitResult() {
+            return this.machineHitResult;
+        }
+
+        public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfo setReviewHitResult(Integer reviewHitResult) {
+            this.reviewHitResult = reviewHitResult;
+            return this;
+        }
+        public Integer getReviewHitResult() {
+            return this.reviewHitResult;
         }
 
         public GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfo setReviewInfo(GetResultToReviewResponseBodyDataHitRuleReviewInfoListHitRuleReviewInfoReviewInfo reviewInfo) {
