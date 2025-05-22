@@ -4,9 +4,21 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class CreateProduceForPartnerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P20210301102840000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.hightech</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 

@@ -4,18 +4,48 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class PutMeasureDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.sp</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("Data")
     public String data;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634019240000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1640400574804</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

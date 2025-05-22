@@ -7,12 +7,20 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
     @NameInMap("Data")
     public BindProduceAuthorizationResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>AC492C5D-29D0-5103-9271-2C3A9D99F5CA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,12 +62,24 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
     }
 
     public static class BindProduceAuthorizationResponseBodyDataAuthorizedUserList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("AccountValidType")
         public Integer accountValidType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1219541161213058</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@alibaba-inc.com">test@alibaba-inc.com</a></p>
+         */
         @NameInMap("UserName")
         public String userName;
 
@@ -101,6 +121,10 @@ public class BindProduceAuthorizationResponseBody extends TeaModel {
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

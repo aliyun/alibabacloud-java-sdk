@@ -4,12 +4,30 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class TransferIntentionOwnerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P20210709190452000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.wangwen</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>67842</p>
+     */
     @NameInMap("PersonId")
     public Integer personId;
 

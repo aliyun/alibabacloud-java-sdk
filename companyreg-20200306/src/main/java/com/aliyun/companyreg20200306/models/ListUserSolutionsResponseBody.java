@@ -4,21 +4,41 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListUserSolutionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<ListUserSolutionsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2174AA97-56FB-50FA-B243-0460B9E4CE0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>344</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -76,36 +96,76 @@ public class ListUserSolutionsResponseBody extends TeaModel {
     }
 
     public static class ListUserSolutionsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>S20210924151843000001</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>esp.logo</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>164454443222</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P20210924151843000001</p>
+         */
         @NameInMap("DeliveryOrderBizId")
         public String deliveryOrderBizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>A20210924151843000001</p>
+         */
         @NameInMap("IntentionAssignBizId")
         public String intentionAssignBizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I20210924151843000001</p>
+         */
         @NameInMap("IntentionBizId")
         public String intentionBizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>jinsan</p>
+         */
         @NameInMap("PartnerCode")
         public String partnerCode;
 
         @NameInMap("Reason")
         public String reason;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>164454443222</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1219541161213057</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

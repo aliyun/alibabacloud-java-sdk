@@ -7,27 +7,59 @@ public class ListUserIntentionsRequest extends TeaModel {
     @NameInMap("Area")
     public String area;
 
+    /**
+     * <strong>example:</strong>
+     * <p>esp.companyreg_cloud</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>esp.bookkeeping,esp.bookkeeping_cloud</p>
+     */
     @NameInMap("BizTypes")
     public String bizTypes;
 
+    /**
+     * <strong>example:</strong>
+     * <p>I20210917170147000001</p>
+     */
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>UpdateTime</p>
+     */
     @NameInMap("SortFiled")
     public String sortFiled;
 
+    /**
+     * <strong>example:</strong>
+     * <p>desc</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <strong>example:</strong>
+     * <p>37</p>
+     */
     @NameInMap("Status")
     public Integer status;
 

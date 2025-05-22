@@ -4,15 +4,31 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListUserDetailSolutionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>esp.wangwen</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>I20211222161651000001</p>
+     */
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

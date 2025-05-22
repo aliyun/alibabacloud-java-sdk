@@ -4,21 +4,53 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class StartBackToBackCallRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20211203180209000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>02131584184</p>
+     */
     @NameInMap("CallCenterNumber")
     public String callCenterNumber;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>13162828888</p>
+     */
     @NameInMap("Caller")
     public String caller;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mobile1</p>
+     */
     @NameInMap("MobileKey")
     public String mobileKey;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SkillType")
     public Long skillType;
 

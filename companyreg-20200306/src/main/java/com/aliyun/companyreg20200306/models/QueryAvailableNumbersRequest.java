@@ -4,6 +4,12 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class QueryAvailableNumbersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 

@@ -84,6 +84,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * @param request BindProduceAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindProduceAuthorizationResponse
+     */
     public BindProduceAuthorizationResponse bindProduceAuthorizationWithOptions(BindProduceAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -116,11 +121,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new BindProduceAuthorizationResponse());
     }
 
+    /**
+     * @param request BindProduceAuthorizationRequest
+     * @return BindProduceAuthorizationResponse
+     */
     public BindProduceAuthorizationResponse bindProduceAuthorization(BindProduceAuthorizationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.bindProduceAuthorizationWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CloseIntentionForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseIntentionForPartnerResponse
+     */
     public CloseIntentionForPartnerResponse closeIntentionForPartnerWithOptions(CloseIntentionForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -153,11 +167,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CloseIntentionForPartnerResponse());
     }
 
+    /**
+     * @param request CloseIntentionForPartnerRequest
+     * @return CloseIntentionForPartnerResponse
+     */
     public CloseIntentionForPartnerResponse closeIntentionForPartner(CloseIntentionForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeIntentionForPartnerWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CloseUserIntentionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CloseUserIntentionResponse
+     */
     public CloseUserIntentionResponse closeUserIntentionWithOptions(CloseUserIntentionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -190,11 +213,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CloseUserIntentionResponse());
     }
 
+    /**
+     * @param request CloseUserIntentionRequest
+     * @return CloseUserIntentionResponse
+     */
     public CloseUserIntentionResponse closeUserIntention(CloseUserIntentionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeUserIntentionWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateBusinessOpportunityRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBusinessOpportunityResponse
+     */
     public CreateBusinessOpportunityResponse createBusinessOpportunityWithOptions(CreateBusinessOpportunityRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -235,11 +267,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBusinessOpportunityResponse());
     }
 
+    /**
+     * @param request CreateBusinessOpportunityRequest
+     * @return CreateBusinessOpportunityResponse
+     */
     public CreateBusinessOpportunityResponse createBusinessOpportunity(CreateBusinessOpportunityRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createBusinessOpportunityWithOptions(request, runtime);
     }
 
+    /**
+     * @param request CreateProduceForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateProduceForPartnerResponse
+     */
     public CreateProduceForPartnerResponse createProduceForPartnerWithOptions(CreateProduceForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -272,11 +313,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CreateProduceForPartnerResponse());
     }
 
+    /**
+     * @param request CreateProduceForPartnerRequest
+     * @return CreateProduceForPartnerResponse
+     */
     public CreateProduceForPartnerResponse createProduceForPartner(CreateProduceForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createProduceForPartnerWithOptions(request, runtime);
     }
 
+    /**
+     * @param request DescribePartnerConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePartnerConfigResponse
+     */
     public DescribePartnerConfigResponse describePartnerConfigWithOptions(DescribePartnerConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -305,11 +355,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePartnerConfigResponse());
     }
 
+    /**
+     * @param request DescribePartnerConfigRequest
+     * @return DescribePartnerConfigResponse
+     */
     public DescribePartnerConfigResponse describePartnerConfig(DescribePartnerConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePartnerConfigWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GenerateUploadFilePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateUploadFilePolicyResponse
+     */
     public GenerateUploadFilePolicyResponse generateUploadFilePolicyWithOptions(GenerateUploadFilePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -342,11 +401,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateUploadFilePolicyResponse());
     }
 
+    /**
+     * @param request GenerateUploadFilePolicyRequest
+     * @return GenerateUploadFilePolicyResponse
+     */
     public GenerateUploadFilePolicyResponse generateUploadFilePolicy(GenerateUploadFilePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateUploadFilePolicyWithOptions(request, runtime);
     }
 
+    /**
+     * @param request GetAlipayUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAlipayUrlResponse
+     */
     public GetAlipayUrlResponse getAlipayUrlWithOptions(GetAlipayUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -367,16 +435,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAlipayUrlResponse());
     }
 
+    /**
+     * @param request GetAlipayUrlRequest
+     * @return GetAlipayUrlResponse
+     */
     public GetAlipayUrlResponse getAlipayUrl(GetAlipayUrlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAlipayUrlWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ListIntentionNoteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIntentionNoteResponse
+     */
     public ListIntentionNoteResponse listIntentionNoteWithOptions(ListIntentionNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.beginTime)) {
             query.put("BeginTime", request.beginTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -412,11 +493,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntentionNoteResponse());
     }
 
+    /**
+     * @param request ListIntentionNoteRequest
+     * @return ListIntentionNoteResponse
+     */
     public ListIntentionNoteResponse listIntentionNote(ListIntentionNoteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listIntentionNoteWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ListProduceAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProduceAuthorizationResponse
+     */
     public ListProduceAuthorizationResponse listProduceAuthorizationWithOptions(ListProduceAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -453,11 +543,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListProduceAuthorizationResponse());
     }
 
+    /**
+     * @param request ListProduceAuthorizationRequest
+     * @return ListProduceAuthorizationResponse
+     */
     public ListProduceAuthorizationResponse listProduceAuthorization(ListProduceAuthorizationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listProduceAuthorizationWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ListUserDetailSolutionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserDetailSolutionsResponse
+     */
     public ListUserDetailSolutionsResponse listUserDetailSolutionsWithOptions(ListUserDetailSolutionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -494,11 +593,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserDetailSolutionsResponse());
     }
 
+    /**
+     * @param request ListUserDetailSolutionsRequest
+     * @return ListUserDetailSolutionsResponse
+     */
     public ListUserDetailSolutionsResponse listUserDetailSolutions(ListUserDetailSolutionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserDetailSolutionsWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ListUserIntentionNotesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserIntentionNotesResponse
+     */
     public ListUserIntentionNotesResponse listUserIntentionNotesWithOptions(ListUserIntentionNotesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -535,11 +643,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserIntentionNotesResponse());
     }
 
+    /**
+     * @param request ListUserIntentionNotesRequest
+     * @return ListUserIntentionNotesResponse
+     */
     public ListUserIntentionNotesResponse listUserIntentionNotes(ListUserIntentionNotesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserIntentionNotesWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>用户控制天需求列表查询</p>
+     * 
+     * @param request ListUserIntentionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserIntentionsResponse
+     */
     public ListUserIntentionsResponse listUserIntentionsWithOptions(ListUserIntentionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -600,11 +720,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserIntentionsResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>用户控制天需求列表查询</p>
+     * 
+     * @param request ListUserIntentionsRequest
+     * @return ListUserIntentionsResponse
+     */
     public ListUserIntentionsResponse listUserIntentions(ListUserIntentionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserIntentionsWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ListUserProduceOperateLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserProduceOperateLogsResponse
+     */
     public ListUserProduceOperateLogsResponse listUserProduceOperateLogsWithOptions(ListUserProduceOperateLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -641,11 +773,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserProduceOperateLogsResponse());
     }
 
+    /**
+     * @param request ListUserProduceOperateLogsRequest
+     * @return ListUserProduceOperateLogsResponse
+     */
     public ListUserProduceOperateLogsResponse listUserProduceOperateLogs(ListUserProduceOperateLogsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserProduceOperateLogsWithOptions(request, runtime);
     }
 
+    /**
+     * @param tmpReq ListUserSolutionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserSolutionsResponse
+     */
     public ListUserSolutionsResponse listUserSolutionsWithOptions(ListUserSolutionsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListUserSolutionsShrinkRequest request = new ListUserSolutionsShrinkRequest();
@@ -655,6 +796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.existStatusShrink)) {
             query.put("ExistStatus", request.existStatusShrink);
         }
@@ -688,11 +833,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserSolutionsResponse());
     }
 
+    /**
+     * @param request ListUserSolutionsRequest
+     * @return ListUserSolutionsResponse
+     */
     public ListUserSolutionsResponse listUserSolutions(ListUserSolutionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listUserSolutionsWithOptions(request, runtime);
     }
 
+    /**
+     * @param request OperateProduceForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return OperateProduceForPartnerResponse
+     */
     public OperateProduceForPartnerResponse operateProduceForPartnerWithOptions(OperateProduceForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -729,11 +883,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new OperateProduceForPartnerResponse());
     }
 
+    /**
+     * @param request OperateProduceForPartnerRequest
+     * @return OperateProduceForPartnerResponse
+     */
     public OperateProduceForPartnerResponse operateProduceForPartner(OperateProduceForPartnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.operateProduceForPartnerWithOptions(request, runtime);
     }
 
+    /**
+     * @param request PutMeasureDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutMeasureDataResponse
+     */
     public PutMeasureDataResponse putMeasureDataWithOptions(PutMeasureDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -774,11 +937,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutMeasureDataResponse());
     }
 
+    /**
+     * @param request PutMeasureDataRequest
+     * @return PutMeasureDataResponse
+     */
     public PutMeasureDataResponse putMeasureData(PutMeasureDataRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putMeasureDataWithOptions(request, runtime);
     }
 
+    /**
+     * @param request PutMeasureReadyFlagRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutMeasureReadyFlagResponse
+     */
     public PutMeasureReadyFlagResponse putMeasureReadyFlagWithOptions(PutMeasureReadyFlagRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -819,11 +991,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PutMeasureReadyFlagResponse());
     }
 
+    /**
+     * @param request PutMeasureReadyFlagRequest
+     * @return PutMeasureReadyFlagResponse
+     */
     public PutMeasureReadyFlagResponse putMeasureReadyFlag(PutMeasureReadyFlagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.putMeasureReadyFlagWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取玄坛合作伙伴双呼时可用外呼号码</p>
+     * 
+     * @param request QueryAvailableNumbersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryAvailableNumbersResponse
+     */
     public QueryAvailableNumbersResponse queryAvailableNumbersWithOptions(QueryAvailableNumbersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -848,11 +1032,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryAvailableNumbersResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>获取玄坛合作伙伴双呼时可用外呼号码</p>
+     * 
+     * @param request QueryAvailableNumbersRequest
+     * @return QueryAvailableNumbersResponse
+     */
     public QueryAvailableNumbersResponse queryAvailableNumbers(QueryAvailableNumbersRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryAvailableNumbersWithOptions(request, runtime);
     }
 
+    /**
+     * @param request QueryBagRemainingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryBagRemainingResponse
+     */
     public QueryBagRemainingResponse queryBagRemainingWithOptions(QueryBagRemainingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -873,48 +1069,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryBagRemainingResponse());
     }
 
+    /**
+     * @param request QueryBagRemainingRequest
+     * @return QueryBagRemainingResponse
+     */
     public QueryBagRemainingResponse queryBagRemaining(QueryBagRemainingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryBagRemainingWithOptions(request, runtime);
     }
 
-    public QueryCommodityConfigResponse queryCommodityConfigWithOptions(QueryCommodityConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
-            query.put("BizType", request.bizType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.commodityCode)) {
-            query.put("CommodityCode", request.commodityCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.queryModule)) {
-            query.put("QueryModule", request.queryModule);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "QueryCommodityConfig"),
-            new TeaPair("version", "2020-03-06"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCommodityConfigResponse());
-    }
-
-    public QueryCommodityConfigResponse queryCommodityConfig(QueryCommodityConfigRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.queryCommodityConfigWithOptions(request, runtime);
-    }
-
+    /**
+     * @param request QueryInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryInstanceResponse
+     */
     public QueryInstanceResponse queryInstanceWithOptions(QueryInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -943,11 +1111,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryInstanceResponse());
     }
 
+    /**
+     * @param request QueryInstanceRequest
+     * @return QueryInstanceResponse
+     */
     public QueryInstanceResponse queryInstance(QueryInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryInstanceWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>QueryPartnerIntentionList</p>
+     * 
+     * @param request QueryPartnerIntentionListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryPartnerIntentionListResponse
+     */
     public QueryPartnerIntentionListResponse queryPartnerIntentionListWithOptions(QueryPartnerIntentionListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -984,11 +1164,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPartnerIntentionListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>QueryPartnerIntentionList</p>
+     * 
+     * @param request QueryPartnerIntentionListRequest
+     * @return QueryPartnerIntentionListResponse
+     */
     public QueryPartnerIntentionListResponse queryPartnerIntentionList(QueryPartnerIntentionListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryPartnerIntentionListWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>QueryPartnerProduceList</p>
+     * 
+     * @param request QueryPartnerProduceListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryPartnerProduceListResponse
+     */
     public QueryPartnerProduceListResponse queryPartnerProduceListWithOptions(QueryPartnerProduceListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
@@ -1009,11 +1204,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryPartnerProduceListResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>QueryPartnerProduceList</p>
+     * 
+     * @param request QueryPartnerProduceListRequest
+     * @return QueryPartnerProduceListResponse
+     */
     public QueryPartnerProduceListResponse queryPartnerProduceList(QueryPartnerProduceListRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryPartnerProduceListWithOptions(request, runtime);
     }
 
+    /**
+     * @param request QueryUserNeedAuthRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryUserNeedAuthResponse
+     */
     public QueryUserNeedAuthResponse queryUserNeedAuthWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1030,11 +1237,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new QueryUserNeedAuthResponse());
     }
 
+    /**
+     * @return QueryUserNeedAuthResponse
+     */
     public QueryUserNeedAuthResponse queryUserNeedAuth() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryUserNeedAuthWithOptions(runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>RecordPostBack</p>
+     * 
+     * @param request RecordPostBackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RecordPostBackResponse
+     */
     public RecordPostBackResponse recordPostBackWithOptions(RecordPostBackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1075,14 +1293,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RecordPostBackResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>RecordPostBack</p>
+     * 
+     * @param request RecordPostBackRequest
+     * @return RecordPostBackResponse
+     */
     public RecordPostBackResponse recordPostBack(RecordPostBackRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.recordPostBackWithOptions(request, runtime);
     }
 
+    /**
+     * @param request RejectSolutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RejectSolutionResponse
+     */
     public RejectSolutionResponse rejectSolutionWithOptions(RejectSolutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.note)) {
             query.put("Note", request.note);
         }
@@ -1108,11 +1342,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RejectSolutionResponse());
     }
 
+    /**
+     * @param request RejectSolutionRequest
+     * @return RejectSolutionResponse
+     */
     public RejectSolutionResponse rejectSolution(RejectSolutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rejectSolutionWithOptions(request, runtime);
     }
 
+    /**
+     * @param request RejectUserSolutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RejectUserSolutionResponse
+     */
     public RejectUserSolutionResponse rejectUserSolutionWithOptions(RejectUserSolutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1145,11 +1388,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RejectUserSolutionResponse());
     }
 
+    /**
+     * @param request RejectUserSolutionRequest
+     * @return RejectUserSolutionResponse
+     */
     public RejectUserSolutionResponse rejectUserSolution(RejectUserSolutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rejectUserSolutionWithOptions(request, runtime);
     }
 
+    /**
+     * @param request ReleaseProduceAuthorizationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleaseProduceAuthorizationResponse
+     */
     public ReleaseProduceAuthorizationResponse releaseProduceAuthorizationWithOptions(ReleaseProduceAuthorizationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1182,11 +1434,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ReleaseProduceAuthorizationResponse());
     }
 
+    /**
+     * @param request ReleaseProduceAuthorizationRequest
+     * @return ReleaseProduceAuthorizationResponse
+     */
     public ReleaseProduceAuthorizationResponse releaseProduceAuthorization(ReleaseProduceAuthorizationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.releaseProduceAuthorizationWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛双呼外呼发起</p>
+     * 
+     * @param request StartBackToBackCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartBackToBackCallResponse
+     */
     public StartBackToBackCallResponse startBackToBackCallWithOptions(StartBackToBackCallRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1231,14 +1495,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new StartBackToBackCallResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛双呼外呼发起</p>
+     * 
+     * @param request StartBackToBackCallRequest
+     * @return StartBackToBackCallResponse
+     */
     public StartBackToBackCallResponse startBackToBackCall(StartBackToBackCallRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startBackToBackCallWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>合作伙伴提交需求单</p>
+     * 
+     * @param request SubmitIntentionForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitIntentionForPartnerResponse
+     */
+    public SubmitIntentionForPartnerResponse submitIntentionForPartnerWithOptions(SubmitIntentionForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.area)) {
+            query.put("Area", request.area);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("Channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commodityType)) {
+            query.put("CommodityType", request.commodityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contactName)) {
+            query.put("ContactName", request.contactName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extInfo)) {
+            query.put("ExtInfo", request.extInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grade)) {
+            query.put("Grade", request.grade);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitIntentionForPartner"),
+            new TeaPair("version", "2020-03-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitIntentionForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>合作伙伴提交需求单</p>
+     * 
+     * @param request SubmitIntentionForPartnerRequest
+     * @return SubmitIntentionForPartnerResponse
+     */
+    public SubmitIntentionForPartnerResponse submitIntentionForPartner(SubmitIntentionForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitIntentionForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request SubmitIntentionNoteRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitIntentionNoteResponse
+     */
     public SubmitIntentionNoteResponse submitIntentionNoteWithOptions(SubmitIntentionNoteRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.intentionBizId)) {
             query.put("IntentionBizId", request.intentionBizId);
         }
@@ -1264,11 +1624,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitIntentionNoteResponse());
     }
 
+    /**
+     * @param request SubmitIntentionNoteRequest
+     * @return SubmitIntentionNoteResponse
+     */
     public SubmitIntentionNoteResponse submitIntentionNote(SubmitIntentionNoteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitIntentionNoteWithOptions(request, runtime);
     }
 
+    /**
+     * @param request SubmitSolutionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSolutionResponse
+     */
     public SubmitSolutionResponse submitSolutionWithOptions(SubmitSolutionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1309,11 +1678,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSolutionResponse());
     }
 
+    /**
+     * @param request SubmitSolutionRequest
+     * @return SubmitSolutionResponse
+     */
     public SubmitSolutionResponse submitSolution(SubmitSolutionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitSolutionWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛需求单转派小二</p>
+     * 
+     * @param request TransferIntentionOwnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferIntentionOwnerResponse
+     */
     public TransferIntentionOwnerResponse transferIntentionOwnerWithOptions(TransferIntentionOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1350,11 +1731,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TransferIntentionOwnerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛需求单转派小二</p>
+     * 
+     * @param request TransferIntentionOwnerRequest
+     * @return TransferIntentionOwnerResponse
+     */
     public TransferIntentionOwnerResponse transferIntentionOwner(TransferIntentionOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transferIntentionOwnerWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛服务单转派小二</p>
+     * 
+     * @param request TransferProduceOwnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferProduceOwnerResponse
+     */
     public TransferProduceOwnerResponse transferProduceOwnerWithOptions(TransferProduceOwnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1391,6 +1787,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TransferProduceOwnerResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>玄坛服务单转派小二</p>
+     * 
+     * @param request TransferProduceOwnerRequest
+     * @return TransferProduceOwnerResponse
+     */
     public TransferProduceOwnerResponse transferProduceOwner(TransferProduceOwnerRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.transferProduceOwnerWithOptions(request, runtime);

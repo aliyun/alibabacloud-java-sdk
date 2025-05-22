@@ -7,15 +7,27 @@ public class QueryAvailableNumbersResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<String> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PARTNER.CONFIG.NOT.FOUND</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6A603AA0-73BA-52B3-AC7D-0F846ECF7A9D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

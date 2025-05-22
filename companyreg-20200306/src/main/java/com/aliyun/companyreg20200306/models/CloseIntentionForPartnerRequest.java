@@ -4,12 +4,27 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class CloseIntentionForPartnerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.beian_assist</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>I20211105230733000001</p>
+     */
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Note")
     public String note;
 

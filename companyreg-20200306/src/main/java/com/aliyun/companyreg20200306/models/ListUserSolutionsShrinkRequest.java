@@ -4,21 +4,44 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListUserSolutionsShrinkRequest extends TeaModel {
+    @NameInMap("BizType")
+    public String bizType;
+
     @NameInMap("ExistStatus")
     public String existStatusShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>I20210924151843000001</p>
+     */
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     public static ListUserSolutionsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListUserSolutionsShrinkRequest self = new ListUserSolutionsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListUserSolutionsShrinkRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public ListUserSolutionsShrinkRequest setExistStatusShrink(String existStatusShrink) {

@@ -7,12 +7,20 @@ public class DescribePartnerConfigResponseBody extends TeaModel {
     @NameInMap("Contact")
     public String contact;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jinsan</p>
+     */
     @NameInMap("PartnerCode")
     public String partnerCode;
 
     @NameInMap("PartnerName")
     public String partnerName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8179A0B3-A5D3-52F4-8845-F0ABC3CC6783</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

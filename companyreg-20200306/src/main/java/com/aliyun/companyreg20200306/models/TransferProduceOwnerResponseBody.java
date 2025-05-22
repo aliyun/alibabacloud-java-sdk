@@ -4,18 +4,34 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class TransferProduceOwnerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DD5639FF-1240-51DE-9BA8-2075670A1EAC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -4,12 +4,30 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class TransferProduceOwnerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P20210208152920000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.companyreg_cloud</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>15565</p>
+     */
     @NameInMap("PersonId")
     public Integer personId;
 

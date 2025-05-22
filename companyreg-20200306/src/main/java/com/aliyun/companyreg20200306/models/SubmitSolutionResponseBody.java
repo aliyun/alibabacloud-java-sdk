@@ -4,21 +4,41 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class SubmitSolutionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://companyreg.console.aliyun.com/#/intention-notarize?Type=119&bizid=I20220114181457000001">https://companyreg.console.aliyun.com/#/intention-notarize?Type=119&amp;bizid=I20220114181457000001</a></p>
+     */
     @NameInMap("ConfirmUrl")
     public String confirmUrl;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0A3CFCF5-E0C0-5C0B-A2ED-03827F16D85F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>S20211109140729000001</p>
+     */
     @NameInMap("SolutionBizId")
     public String solutionBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

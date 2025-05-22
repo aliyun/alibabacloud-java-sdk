@@ -4,15 +4,27 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class OperateProduceForPartnerResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D170A4BA-4528-5E07-B8D5-6449C42EC23F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

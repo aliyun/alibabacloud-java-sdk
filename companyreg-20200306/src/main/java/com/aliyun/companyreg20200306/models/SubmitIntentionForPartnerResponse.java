@@ -3,7 +3,7 @@ package com.aliyun.companyreg20200306.models;
 
 import com.aliyun.tea.*;
 
-public class QueryCommodityConfigResponse extends TeaModel {
+public class SubmitIntentionForPartnerResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class QueryCommodityConfigResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public QueryCommodityConfigResponseBody body;
+    public SubmitIntentionForPartnerResponseBody body;
 
-    public static QueryCommodityConfigResponse build(java.util.Map<String, ?> map) throws Exception {
-        QueryCommodityConfigResponse self = new QueryCommodityConfigResponse();
+    public static SubmitIntentionForPartnerResponse build(java.util.Map<String, ?> map) throws Exception {
+        SubmitIntentionForPartnerResponse self = new SubmitIntentionForPartnerResponse();
         return TeaModel.build(map, self);
     }
 
-    public QueryCommodityConfigResponse setHeaders(java.util.Map<String, String> headers) {
+    public SubmitIntentionForPartnerResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class QueryCommodityConfigResponse extends TeaModel {
         return this.headers;
     }
 
-    public QueryCommodityConfigResponse setStatusCode(Integer statusCode) {
+    public SubmitIntentionForPartnerResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class QueryCommodityConfigResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public QueryCommodityConfigResponse setBody(QueryCommodityConfigResponseBody body) {
+    public SubmitIntentionForPartnerResponse setBody(SubmitIntentionForPartnerResponseBody body) {
         this.body = body;
         return this;
     }
-    public QueryCommodityConfigResponseBody getBody() {
+    public SubmitIntentionForPartnerResponseBody getBody() {
         return this.body;
     }
 

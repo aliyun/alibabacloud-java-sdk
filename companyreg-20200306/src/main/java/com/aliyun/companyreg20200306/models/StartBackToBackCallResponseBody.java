@@ -4,18 +4,34 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class StartBackToBackCallResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2174AA97-56FB-50FA-B243-0460B9E4CE0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

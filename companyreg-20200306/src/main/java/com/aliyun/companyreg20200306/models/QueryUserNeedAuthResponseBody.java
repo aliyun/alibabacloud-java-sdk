@@ -4,12 +4,24 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class QueryUserNeedAuthResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("NeedAuth")
     public Boolean needAuth;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2C859C36-886C-5BE7-A606-01F38A5374D6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

@@ -7,21 +7,45 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListUserIntentionNotesResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5D8BD6E8-28D9-5451-BBA1-3D3DCA6971F6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -87,6 +111,10 @@ public class ListUserIntentionNotesResponseBody extends TeaModel {
     }
 
     public static class ListUserIntentionNotesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-25 10:21:38</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 

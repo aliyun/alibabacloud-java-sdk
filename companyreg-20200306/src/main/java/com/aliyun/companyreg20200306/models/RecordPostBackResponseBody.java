@@ -4,12 +4,24 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class RecordPostBackResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AllowRetry")
     public Boolean allowRetry;
 
+    /**
+     * <strong>example:</strong>
+     * <p>esp-core-aliyun-com</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PARAMETER.ILLEGAL</p>
+     */
     @NameInMap("DynamicCode")
     public String dynamicCode;
 
@@ -19,21 +31,41 @@ public class RecordPostBackResponseBody extends TeaModel {
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PARAMETER.ILLEGAL</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Module")
     public Boolean module;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B8E5CC4C-7563-19BD-B02F-DFFFD4E51D4A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

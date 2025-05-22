@@ -4,15 +4,27 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class RejectUserSolutionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>717711FB-F887-597B-8121-B77437E89B97</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

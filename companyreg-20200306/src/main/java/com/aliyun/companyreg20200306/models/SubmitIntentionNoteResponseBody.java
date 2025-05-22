@@ -4,15 +4,27 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class SubmitIntentionNoteResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>668571EF-1E7E-5435-AA65-4ECFFDDA133F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

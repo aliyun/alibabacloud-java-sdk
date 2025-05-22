@@ -4,12 +4,20 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class GenerateUploadFilePolicyRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>esp.isp</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>company_apply_business_license</p>
+     */
     @NameInMap("FileType")
     public String fileType;
 

@@ -4,15 +4,31 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class QueryPartnerProduceListRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>P20211216204717000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>esp.cdn</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

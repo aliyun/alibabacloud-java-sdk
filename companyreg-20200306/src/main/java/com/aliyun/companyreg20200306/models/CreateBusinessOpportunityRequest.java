@@ -4,18 +4,37 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class CreateBusinessOpportunityRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.hightech</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
     @NameInMap("ContactName")
     public String contactName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18704330000</p>
+     */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Source")
     public Integer source;
 
+    /**
+     * <strong>example:</strong>
+     * <p>345674</p>
+     */
     @NameInMap("VCode")
     public String VCode;
 

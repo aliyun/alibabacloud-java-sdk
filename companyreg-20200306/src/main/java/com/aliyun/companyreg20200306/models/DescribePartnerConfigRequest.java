@@ -4,9 +4,21 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class DescribePartnerConfigRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.wangwen</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jinsan</p>
+     */
     @NameInMap("PartnerCode")
     public String partnerCode;
 

@@ -4,18 +4,37 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class SubmitSolutionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.wangwen</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>I20211223101045000001</p>
+     */
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
     @NameInMap("OperateType")
     public String operateType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Solution")
     public String solution;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1219541161213057</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

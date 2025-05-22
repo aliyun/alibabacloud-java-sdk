@@ -6,31 +6,61 @@ import com.aliyun.tea.*;
 public class GenerateUploadFilePolicyResponseBody extends TeaModel {
     /**
      * <p>OSSAccessKeyId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hObpgEXoca42qH3V</p>
      */
     @NameInMap("AccessId")
     public String accessId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>eyJleHBpcmF0aW9uIjoiMjAyMS0xMi0wNlQwNjoxOTowMi40MjdaIiwiY29uZGl0aW9ucyI6W1siZXEiLCIkYnVja2V0IiwibXNlYS1jYWlzaHVpIl1dfQ==</p>
+     */
     @NameInMap("EncodedPolicy")
     public String encodedPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1638169824405</p>
+     */
     @NameInMap("ExpireTime")
     public String expireTime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>company_apply_card/company_change_city/1577930895198750/1638170049657</p>
+     */
     @NameInMap("FileDir")
     public String fileDir;
 
+    /**
+     * <strong>example:</strong>
+     * <p>https://</p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
     /**
      * <p>OSS Endpoint。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>//companyapply.oss-cn-zhangjiakou.aliyuncs.com/</p>
      */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <strong>example:</strong>
+     * <p>EB809CAB-82F7-5843-A42F-356770CD4914</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jykxhmskIF24sLlxc1GafU/eQMU=</p>
+     */
     @NameInMap("Signature")
     public String signature;
 

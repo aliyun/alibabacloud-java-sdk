@@ -4,18 +4,43 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListIntentionNoteRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1640456765459</p>
+     */
     @NameInMap("BeginTime")
     public Long beginTime;
 
+    @NameInMap("BizType")
+    public String bizType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1631635199999</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>I20210420142416000001</p>
+     */
     @NameInMap("IntentionBizId")
     public String intentionBizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
@@ -30,6 +55,14 @@ public class ListIntentionNoteRequest extends TeaModel {
     }
     public Long getBeginTime() {
         return this.beginTime;
+    }
+
+    public ListIntentionNoteRequest setBizType(String bizType) {
+        this.bizType = bizType;
+        return this;
+    }
+    public String getBizType() {
+        return this.bizType;
     }
 
     public ListIntentionNoteRequest setEndTime(Long endTime) {

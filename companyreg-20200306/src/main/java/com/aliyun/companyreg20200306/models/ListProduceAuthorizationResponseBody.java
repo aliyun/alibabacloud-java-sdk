@@ -4,24 +4,48 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListProduceAuthorizationResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<ListProduceAuthorizationResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10AAC56B-C512-5860-9A9E-B949431E7174</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>292</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>27</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -87,9 +111,17 @@ public class ListProduceAuthorizationResponseBody extends TeaModel {
     }
 
     public static class ListProduceAuthorizationResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12195411612139999</p>
+         */
         @NameInMap("AuthorizedUserId")
         public String authorizedUserId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@alibaba-inc.com">test@alibaba-inc.com</a></p>
+         */
         @NameInMap("AuthorizedUserName")
         public String authorizedUserName;
 

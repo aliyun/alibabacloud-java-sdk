@@ -4,12 +4,28 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class BindProduceAuthorizationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1219541161213057,1219541161213059</p>
+     */
     @NameInMap("AuthorizedUserIds")
     public String authorizedUserIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P20210815211849000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.bookkeeping_ai</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 

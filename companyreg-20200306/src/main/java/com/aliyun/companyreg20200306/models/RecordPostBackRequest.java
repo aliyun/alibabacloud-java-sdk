@@ -4,18 +4,42 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class RecordPostBackRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P111111111111</p>
+     */
     @NameInMap("bizId")
     public String bizId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.zhangsan</p>
+     */
     @NameInMap("bizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contactor")
     public String contactor;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("content")
     public String content;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp_produce</p>
+     */
     @NameInMap("entityKey")
     public String entityKey;
 

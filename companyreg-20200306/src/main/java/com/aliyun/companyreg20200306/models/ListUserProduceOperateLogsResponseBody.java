@@ -7,21 +7,45 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<ListUserProduceOperateLogsResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0DCBE2FF-2DFC-56DC-9A15-BDF27B7FFB1B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>23</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -87,12 +111,24 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
     }
 
     public static class ListUserProduceOperateLogsResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>P20210928095324000002</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("BizStatus")
         public Integer bizStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>esp.wangwen</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
@@ -102,12 +138,24 @@ public class ListUserProduceOperateLogsResponseBody extends TeaModel {
         @NameInMap("OperateName")
         public String operateName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1695324000002</p>
+         */
         @NameInMap("OperateTime")
         public Long operateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("OperateUserType")
         public String operateUserType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>35</p>
+         */
         @NameInMap("ToBizStatus")
         public Integer toBizStatus;
 

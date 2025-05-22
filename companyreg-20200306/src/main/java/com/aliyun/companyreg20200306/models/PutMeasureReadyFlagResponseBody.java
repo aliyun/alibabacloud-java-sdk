@@ -4,9 +4,17 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class PutMeasureReadyFlagResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2174AA97-56FB-50FA-B243-0460B9E4CE0C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

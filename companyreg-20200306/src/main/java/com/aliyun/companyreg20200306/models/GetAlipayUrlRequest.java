@@ -4,15 +4,37 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class GetAlipayUrlRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.beian_assist</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>206129201170307</p>
+     */
     @NameInMap("OrderId")
     public Long orderId;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://nfyt.lzsgtghchy.com:502/sigin/">https://nfyt.lzsgtghchy.com:502/sigin/</a></p>
+     */
     @NameInMap("ReturnUrl")
     public String returnUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web</p>
+     */
     @NameInMap("Type")
     public String type;
 

@@ -4,15 +4,35 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListProduceAuthorizationRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>P20210709190452000001</p>
+     */
     @NameInMap("BizId")
     public String bizId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>esp.bookkeeping_ai</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 

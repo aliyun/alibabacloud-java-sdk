@@ -4,12 +4,27 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class RejectUserSolutionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.companyreg</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Note")
     public String note;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S20211227151912000001</p>
+     */
     @NameInMap("SolutionBizId")
     public String solutionBizId;
 

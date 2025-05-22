@@ -4,21 +4,41 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class QueryPartnerIntentionListResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CurrentPageNum")
     public Long currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<QueryPartnerIntentionListResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>78E9DC76-7DFD-5975-99B0-4A95E8A92F5D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>319</p>
+     */
     @NameInMap("TotalItemNum")
     public Long totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>13</p>
+     */
     @NameInMap("TotalPageNum")
     public Long totalPageNum;
 
@@ -76,12 +96,24 @@ public class QueryPartnerIntentionListResponseBody extends TeaModel {
     }
 
     public static class QueryPartnerIntentionListResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>I20211117092704000001</p>
+         */
         @NameInMap("BizId")
         public String bizId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>esp.wangwen</p>
+         */
         @NameInMap("BizType")
         public String bizType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18700000003</p>
+         */
         @NameInMap("Mobile")
         public String mobile;
 

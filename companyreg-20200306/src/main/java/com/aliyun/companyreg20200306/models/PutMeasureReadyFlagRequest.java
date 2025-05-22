@@ -4,18 +4,48 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class PutMeasureReadyFlagRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.bookkeeping</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634784240000</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReadyFlag")
     public String readyFlag;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1634969692175</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 

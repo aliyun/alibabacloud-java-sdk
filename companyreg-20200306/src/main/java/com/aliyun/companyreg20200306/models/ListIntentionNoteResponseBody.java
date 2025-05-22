@@ -4,21 +4,41 @@ package com.aliyun.companyreg20200306.models;
 import com.aliyun.tea.*;
 
 public class ListIntentionNoteResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CurrentPageNum")
     public Integer currentPageNum;
 
     @NameInMap("Data")
     public java.util.List<ListIntentionNoteResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6A603AA0-73BA-52B3-AC7D-0F846ECF7A9D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("TotalItemNum")
     public Integer totalItemNum;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalPageNum")
     public Integer totalPageNum;
 
@@ -76,18 +96,34 @@ public class ListIntentionNoteResponseBody extends TeaModel {
     }
 
     public static class ListIntentionNoteResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2022-01-25 10:21:38</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>I20210420142416000001</p>
+         */
         @NameInMap("IntentionBizId")
         public String intentionBizId;
 
         @NameInMap("Note")
         public String note;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Source")
         public Integer source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public String type;
 
