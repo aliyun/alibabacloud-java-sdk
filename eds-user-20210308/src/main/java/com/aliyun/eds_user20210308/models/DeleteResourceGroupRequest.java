@@ -5,12 +5,27 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceGroupRequest extends TeaModel {
     /**
+     * <blockquote>
+     * <p> The ID of the resource group that you want to delete.</p>
+     * </blockquote>
+     * <ul>
+     * <li>If you also specify ResourceGroupIds, both parameters take effect.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>rg-aj01tck67a0szp***</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <blockquote>
+     * <p> The IDs of the resource groups that you want to delete.</p>
+     * </blockquote>
+     * <ul>
+     * <li>If you also specify ResourceGroupId, both parameters take effect.</li>
+     * </ul>
+     */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 

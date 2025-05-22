@@ -50,6 +50,47 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeResourceGroupsResponseBodyResourceGroupAppRules extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("Type")
+        public Integer type;
+
+        public static DescribeResourceGroupsResponseBodyResourceGroupAppRules build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResourceGroupsResponseBodyResourceGroupAppRules self = new DescribeResourceGroupsResponseBodyResourceGroupAppRules();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroupAppRules setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroupAppRules setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroupAppRules setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
     public static class DescribeResourceGroupsResponseBodyResourceGroupPolicies extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -100,6 +141,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroupTimers extends TeaModel {
+        @NameInMap("BindStatus")
+        public String bindStatus;
+
         /**
          * <strong>example:</strong>
          * <p>t-asdzx0mbjhg***</p>
@@ -110,9 +154,20 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("TimerStatus")
+        public String timerStatus;
+
         public static DescribeResourceGroupsResponseBodyResourceGroupTimers build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceGroupsResponseBodyResourceGroupTimers self = new DescribeResourceGroupsResponseBodyResourceGroupTimers();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroupTimers setBindStatus(String bindStatus) {
+            this.bindStatus = bindStatus;
+            return this;
+        }
+        public String getBindStatus() {
+            return this.bindStatus;
         }
 
         public DescribeResourceGroupsResponseBodyResourceGroupTimers setId(String id) {
@@ -131,9 +186,20 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeResourceGroupsResponseBodyResourceGroupTimers setTimerStatus(String timerStatus) {
+            this.timerStatus = timerStatus;
+            return this;
+        }
+        public String getTimerStatus() {
+            return this.timerStatus;
+        }
+
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroup extends TeaModel {
+        @NameInMap("AppRules")
+        public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules;
+
         /**
          * <strong>example:</strong>
          * <p>3</p>
@@ -174,6 +240,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public static DescribeResourceGroupsResponseBodyResourceGroup build(java.util.Map<String, ?> map) throws Exception {
             DescribeResourceGroupsResponseBodyResourceGroup self = new DescribeResourceGroupsResponseBodyResourceGroup();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroup setAppRules(java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules) {
+            this.appRules = appRules;
+            return this;
+        }
+        public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> getAppRules() {
+            return this.appRules;
         }
 
         public DescribeResourceGroupsResponseBodyResourceGroup setAuthCount(String authCount) {

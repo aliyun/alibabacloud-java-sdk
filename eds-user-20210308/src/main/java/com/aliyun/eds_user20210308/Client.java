@@ -439,7 +439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源组</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -475,7 +475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除资源组</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
