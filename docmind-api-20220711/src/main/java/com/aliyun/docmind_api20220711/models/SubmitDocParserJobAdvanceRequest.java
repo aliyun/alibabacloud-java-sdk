@@ -31,11 +31,17 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("LlmEnhancement")
     public Boolean llmEnhancement;
 
+    @NameInMap("Option")
+    public String option;
+
     @NameInMap("OssBucket")
     public String ossBucket;
 
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
+
+    @NameInMap("PageIndex")
+    public String pageIndex;
 
     public static SubmitDocParserJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocParserJobAdvanceRequest self = new SubmitDocParserJobAdvanceRequest();
@@ -82,6 +88,14 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
         return this.llmEnhancement;
     }
 
+    public SubmitDocParserJobAdvanceRequest setOption(String option) {
+        this.option = option;
+        return this;
+    }
+    public String getOption() {
+        return this.option;
+    }
+
     public SubmitDocParserJobAdvanceRequest setOssBucket(String ossBucket) {
         this.ossBucket = ossBucket;
         return this;
@@ -96,6 +110,14 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     }
     public String getOssEndpoint() {
         return this.ossEndpoint;
+    }
+
+    public SubmitDocParserJobAdvanceRequest setPageIndex(String pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public String getPageIndex() {
+        return this.pageIndex;
     }
 
 }

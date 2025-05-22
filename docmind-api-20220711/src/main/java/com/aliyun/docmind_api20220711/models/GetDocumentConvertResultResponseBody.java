@@ -120,7 +120,7 @@ public class GetDocumentConvertResultResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/convert/docmind-20220816-15bc7965/0.pdf?Expires=1660722412&OSSAccessKeyId=LTAI5tFEK2uEApeeYzxNMEci&Signature=f%2FKluINWMuuVyA5w22Z1wkoRjEg%3D">http://docmind-api-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/convert/docmind-20220816-15bc7965/0.pdf?Expires=1660722412&amp;OSSAccessKeyId=LTAI5tFEK2uEApeeYzxNMEci&amp;Signature=f%2FKluINWMuuVyA5w22Z1wkoRjEg%3D</a></p>
+         * <p><a href="http://example.png">http://example.png</a></p>
          */
         @NameInMap("Url")
         public String url;

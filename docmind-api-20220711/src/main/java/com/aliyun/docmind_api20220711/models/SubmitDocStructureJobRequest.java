@@ -37,6 +37,9 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    @NameInMap("PageIndex")
+    public String pageIndex;
+
     @NameInMap("StructureType")
     public String structureType;
 
@@ -99,6 +102,14 @@ public class SubmitDocStructureJobRequest extends TeaModel {
     }
     public String getOssEndpoint() {
         return this.ossEndpoint;
+    }
+
+    public SubmitDocStructureJobRequest setPageIndex(String pageIndex) {
+        this.pageIndex = pageIndex;
+        return this;
+    }
+    public String getPageIndex() {
+        return this.pageIndex;
     }
 
     public SubmitDocStructureJobRequest setStructureType(String structureType) {

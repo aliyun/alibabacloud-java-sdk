@@ -78,6 +78,9 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         @NameInMap("ParagraphCount")
         public Integer paragraphCount;
 
+        @NameInMap("Processing")
+        public Float processing;
+
         @NameInMap("Status")
         public String status;
 
@@ -122,6 +125,14 @@ public class QueryDocParserStatusResponseBody extends TeaModel {
         }
         public Integer getParagraphCount() {
             return this.paragraphCount;
+        }
+
+        public QueryDocParserStatusResponseBodyData setProcessing(Float processing) {
+            this.processing = processing;
+            return this;
+        }
+        public Float getProcessing() {
+            return this.processing;
         }
 
         public QueryDocParserStatusResponseBodyData setStatus(String status) {
