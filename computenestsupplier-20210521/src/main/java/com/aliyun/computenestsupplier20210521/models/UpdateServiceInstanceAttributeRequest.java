@@ -94,6 +94,47 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
         return this.serviceInstanceId;
     }
 
+    public static class UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo extends TeaModel {
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
+        @NameInMap("UpdateResponse")
+        public Boolean updateResponse;
+
+        public static UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo build(java.util.Map<String, ?> map) throws Exception {
+            UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo self = new UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo setUpdateResponse(Boolean updateResponse) {
+            this.updateResponse = updateResponse;
+            return this;
+        }
+        public Boolean getUpdateResponse() {
+            return this.updateResponse;
+        }
+
+    }
+
     public static class UpdateServiceInstanceAttributeRequestLicenseData extends TeaModel {
         /**
          * <p>The Custom Data</p>
@@ -103,6 +144,9 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
          */
         @NameInMap("CustomData")
         public String customData;
+
+        @NameInMap("ResponseInfo")
+        public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo responseInfo;
 
         public static UpdateServiceInstanceAttributeRequestLicenseData build(java.util.Map<String, ?> map) throws Exception {
             UpdateServiceInstanceAttributeRequestLicenseData self = new UpdateServiceInstanceAttributeRequestLicenseData();
@@ -115,6 +159,14 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
         }
         public String getCustomData() {
             return this.customData;
+        }
+
+        public UpdateServiceInstanceAttributeRequestLicenseData setResponseInfo(UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo responseInfo) {
+            this.responseInfo = responseInfo;
+            return this;
+        }
+        public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo getResponseInfo() {
+            return this.responseInfo;
         }
 
     }
