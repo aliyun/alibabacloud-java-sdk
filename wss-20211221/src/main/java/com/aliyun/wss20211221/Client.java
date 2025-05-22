@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>多商品组合下单</p>
+     * 
      * @param tmpReq CreateMultiOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateMultiOrderResponse
@@ -74,6 +77,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>多商品组合下单</p>
+     * 
      * @param request CreateMultiOrderRequest
      * @return CreateMultiOrderResponse
      */

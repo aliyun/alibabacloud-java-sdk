@@ -117,6 +117,9 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         @NameInMap("AutoRenew")
         public Boolean autoRenew;
 
+        @NameInMap("BuyChange")
+        public Boolean buyChange;
+
         @NameInMap("Components")
         public java.util.List<CreateMultiOrderShrinkRequestOrderItemsComponents> components;
 
@@ -180,6 +183,14 @@ public class CreateMultiOrderShrinkRequest extends TeaModel {
         }
         public Boolean getAutoRenew() {
             return this.autoRenew;
+        }
+
+        public CreateMultiOrderShrinkRequestOrderItems setBuyChange(Boolean buyChange) {
+            this.buyChange = buyChange;
+            return this;
+        }
+        public Boolean getBuyChange() {
+            return this.buyChange;
         }
 
         public CreateMultiOrderShrinkRequestOrderItems setComponents(java.util.List<CreateMultiOrderShrinkRequestOrderItemsComponents> components) {
