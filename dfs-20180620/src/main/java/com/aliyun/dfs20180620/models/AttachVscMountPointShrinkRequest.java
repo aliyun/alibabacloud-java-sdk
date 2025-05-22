@@ -47,6 +47,9 @@ public class AttachVscMountPointShrinkRequest extends TeaModel {
     @NameInMap("VscIds")
     public String vscIdsShrink;
 
+    @NameInMap("VscName")
+    public String vscName;
+
     @NameInMap("VscType")
     public String vscType;
 
@@ -109,6 +112,14 @@ public class AttachVscMountPointShrinkRequest extends TeaModel {
     }
     public String getVscIdsShrink() {
         return this.vscIdsShrink;
+    }
+
+    public AttachVscMountPointShrinkRequest setVscName(String vscName) {
+        this.vscName = vscName;
+        return this;
+    }
+    public String getVscName() {
+        return this.vscName;
     }
 
     public AttachVscMountPointShrinkRequest setVscType(String vscType) {

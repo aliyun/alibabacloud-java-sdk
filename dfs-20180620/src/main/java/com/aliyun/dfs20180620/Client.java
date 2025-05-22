@@ -30,6 +30,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <hr>
      * 
+     * <b>summary</b> : 
+     * <p>挂载VSC挂载点</p>
+     * 
      * @param tmpReq AttachVscMountPointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachVscMountPointResponse
@@ -75,6 +78,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("VscIds", request.vscIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.vscName)) {
+            query.put("VscName", request.vscName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vscType)) {
             query.put("VscType", request.vscType);
         }
@@ -99,6 +106,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>挂载VSC挂载点</p>
      * 
      * @param request AttachVscMountPointRequest
      * @return AttachVscMountPointResponse
@@ -965,6 +975,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询VSC挂载信息</p>
+     * 
      * @param request DescribeVscMountPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeVscMountPointsResponse
@@ -1014,6 +1027,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询VSC挂载信息</p>
+     * 
      * @param request DescribeVscMountPointsRequest
      * @return DescribeVscMountPointsResponse
      */

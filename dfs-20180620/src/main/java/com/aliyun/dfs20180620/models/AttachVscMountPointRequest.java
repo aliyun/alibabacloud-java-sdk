@@ -47,6 +47,9 @@ public class AttachVscMountPointRequest extends TeaModel {
     @NameInMap("VscIds")
     public java.util.List<String> vscIds;
 
+    @NameInMap("VscName")
+    public String vscName;
+
     @NameInMap("VscType")
     public String vscType;
 
@@ -109,6 +112,14 @@ public class AttachVscMountPointRequest extends TeaModel {
     }
     public java.util.List<String> getVscIds() {
         return this.vscIds;
+    }
+
+    public AttachVscMountPointRequest setVscName(String vscName) {
+        this.vscName = vscName;
+        return this;
+    }
+    public String getVscName() {
+        return this.vscName;
     }
 
     public AttachVscMountPointRequest setVscType(String vscType) {

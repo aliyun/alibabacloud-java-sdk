@@ -54,6 +54,9 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         @NameInMap("VscId")
         public String vscId;
 
+        @NameInMap("VscName")
+        public String vscName;
+
         @NameInMap("VscStatus")
         public String vscStatus;
 
@@ -71,6 +74,14 @@ public class DescribeVscMountPointsResponseBody extends TeaModel {
         }
         public String getVscId() {
             return this.vscId;
+        }
+
+        public DescribeVscMountPointsResponseBodyMountPointsInstancesVscs setVscName(String vscName) {
+            this.vscName = vscName;
+            return this;
+        }
+        public String getVscName() {
+            return this.vscName;
         }
 
         public DescribeVscMountPointsResponseBodyMountPointsInstancesVscs setVscStatus(String vscStatus) {
