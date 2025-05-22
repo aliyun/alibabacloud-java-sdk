@@ -1833,6 +1833,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Param", request.paramShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.relatedUserListShrink)) {
             query.put("RelatedUserList", request.relatedUserListShrink);
         }
