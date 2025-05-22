@@ -212,6 +212,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @NameInMap("EphemeralStorage")
         public Float ephemeralStorage;
 
+        @NameInMap("GpuA10")
+        public Float gpuA10;
+
+        @NameInMap("GpuPpu810e")
+        public Float gpuPpu810e;
+
         @NameInMap("IdleCpu")
         public Float idleCpu;
 
@@ -259,6 +265,22 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         }
         public Float getEphemeralStorage() {
             return this.ephemeralStorage;
+        }
+
+        public QueryResourceStaticsResponseBodyDataSummary setGpuA10(Float gpuA10) {
+            this.gpuA10 = gpuA10;
+            return this;
+        }
+        public Float getGpuA10() {
+            return this.gpuA10;
+        }
+
+        public QueryResourceStaticsResponseBodyDataSummary setGpuPpu810e(Float gpuPpu810e) {
+            this.gpuPpu810e = gpuPpu810e;
+            return this;
+        }
+        public Float getGpuPpu810e() {
+            return this.gpuPpu810e;
         }
 
         public QueryResourceStaticsResponseBodyDataSummary setIdleCpu(Float idleCpu) {

@@ -158,6 +158,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    @NameInMap("GpuConfig")
+    public String gpuConfig;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -728,6 +731,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getEnvs() {
         return this.envs;
+    }
+
+    public CreateApplicationRequest setGpuConfig(String gpuConfig) {
+        this.gpuConfig = gpuConfig;
+        return this;
+    }
+    public String getGpuConfig() {
+        return this.gpuConfig;
     }
 
     public CreateApplicationRequest setImagePullSecrets(String imagePullSecrets) {

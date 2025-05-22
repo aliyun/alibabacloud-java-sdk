@@ -435,6 +435,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Envs", request.envs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuConfig)) {
+            query.put("GpuConfig", request.gpuConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imagePullSecrets)) {
             query.put("ImagePullSecrets", request.imagePullSecrets);
         }
@@ -2012,6 +2016,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除实例</p>
+     * 
+     * @param request DeleteInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteInstancesResponse
+     */
+    public DeleteInstancesResponse deleteInstancesWithOptions(DeleteInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteInstances"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/app/deleteInstances"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除实例</p>
+     * 
+     * @param request DeleteInstancesRequest
+     * @return DeleteInstancesResponse
+     */
+    public DeleteInstancesResponse deleteInstances(DeleteInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteInstancesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Delete a job template.</p>
      * 
      * @param request DeleteJobRequest
@@ -2461,6 +2516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
             query.put("Envs", request.envs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gpuConfig)) {
+            query.put("GpuConfig", request.gpuConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imagePullSecrets)) {

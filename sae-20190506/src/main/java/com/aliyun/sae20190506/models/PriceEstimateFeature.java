@@ -32,6 +32,23 @@ public class PriceEstimateFeature extends TeaModel {
     public String cpuStrategy;
 
     /**
+     * <strong>example:</strong>
+     * <p>L1</p>
+     */
+    @NameInMap("CpuUtilLevel")
+    public String cpuUtilLevel;
+
+    @NameInMap("CpuUtilMetrics")
+    public java.util.List<Float> cpuUtilMetrics;
+
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableCpuIdle")
+    public Boolean enableCpuIdle;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +56,13 @@ public class PriceEstimateFeature extends TeaModel {
      */
     @NameInMap("EnvType")
     public String envType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("EphemeralStorageGiB")
+    public Long ephemeralStorageGiB;
 
     /**
      * <strong>example:</strong>
@@ -121,6 +145,13 @@ public class PriceEstimateFeature extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>std</p>
+     */
+    @NameInMap("NewSaeVersion")
+    public String newSaeVersion;
+
+    /**
+     * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("NoneLoadInstanceCount")
@@ -141,6 +172,13 @@ public class PriceEstimateFeature extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>haiguang</p>
+     */
+    @NameInMap("ResourceType")
+    public String resourceType;
 
     public static PriceEstimateFeature build(java.util.Map<String, ?> map) throws Exception {
         PriceEstimateFeature self = new PriceEstimateFeature();
@@ -171,12 +209,44 @@ public class PriceEstimateFeature extends TeaModel {
         return this.cpuStrategy;
     }
 
+    public PriceEstimateFeature setCpuUtilLevel(String cpuUtilLevel) {
+        this.cpuUtilLevel = cpuUtilLevel;
+        return this;
+    }
+    public String getCpuUtilLevel() {
+        return this.cpuUtilLevel;
+    }
+
+    public PriceEstimateFeature setCpuUtilMetrics(java.util.List<Float> cpuUtilMetrics) {
+        this.cpuUtilMetrics = cpuUtilMetrics;
+        return this;
+    }
+    public java.util.List<Float> getCpuUtilMetrics() {
+        return this.cpuUtilMetrics;
+    }
+
+    public PriceEstimateFeature setEnableCpuIdle(Boolean enableCpuIdle) {
+        this.enableCpuIdle = enableCpuIdle;
+        return this;
+    }
+    public Boolean getEnableCpuIdle() {
+        return this.enableCpuIdle;
+    }
+
     public PriceEstimateFeature setEnvType(String envType) {
         this.envType = envType;
         return this;
     }
     public String getEnvType() {
         return this.envType;
+    }
+
+    public PriceEstimateFeature setEphemeralStorageGiB(Long ephemeralStorageGiB) {
+        this.ephemeralStorageGiB = ephemeralStorageGiB;
+        return this;
+    }
+    public Long getEphemeralStorageGiB() {
+        return this.ephemeralStorageGiB;
     }
 
     public PriceEstimateFeature setHighLoadInstanceCount(Long highLoadInstanceCount) {
@@ -267,6 +337,14 @@ public class PriceEstimateFeature extends TeaModel {
         return this.minInstanceCount;
     }
 
+    public PriceEstimateFeature setNewSaeVersion(String newSaeVersion) {
+        this.newSaeVersion = newSaeVersion;
+        return this;
+    }
+    public String getNewSaeVersion() {
+        return this.newSaeVersion;
+    }
+
     public PriceEstimateFeature setNoneLoadInstanceCount(Long noneLoadInstanceCount) {
         this.noneLoadInstanceCount = noneLoadInstanceCount;
         return this;
@@ -289,6 +367,14 @@ public class PriceEstimateFeature extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public PriceEstimateFeature setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
 }

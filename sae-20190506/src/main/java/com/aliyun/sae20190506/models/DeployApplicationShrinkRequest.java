@@ -250,6 +250,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    @NameInMap("GpuConfig")
+    public String gpuConfig;
+
     /**
      * <p>The ID of the corresponding Secret.</p>
      * 
@@ -967,6 +970,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getEnvs() {
         return this.envs;
+    }
+
+    public DeployApplicationShrinkRequest setGpuConfig(String gpuConfig) {
+        this.gpuConfig = gpuConfig;
+        return this;
+    }
+    public String getGpuConfig() {
+        return this.gpuConfig;
     }
 
     public DeployApplicationShrinkRequest setImagePullSecrets(String imagePullSecrets) {
