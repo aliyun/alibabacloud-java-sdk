@@ -4,6 +4,9 @@ package com.aliyun.bailian20231229.models;
 import com.aliyun.tea.*;
 
 public class ListCategoryRequest extends TeaModel {
+    @NameInMap("CategoryName")
+    public String categoryName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -37,6 +40,14 @@ public class ListCategoryRequest extends TeaModel {
     public static ListCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCategoryRequest self = new ListCategoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListCategoryRequest setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
+        return this;
+    }
+    public String getCategoryName() {
+        return this.categoryName;
     }
 
     public ListCategoryRequest setCategoryType(String categoryType) {
