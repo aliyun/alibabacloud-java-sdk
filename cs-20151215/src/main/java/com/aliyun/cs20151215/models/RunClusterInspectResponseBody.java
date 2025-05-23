@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunClusterInspectResponseBody extends TeaModel {
     /**
+     * <p>The inspection report ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5d6557c983064c45bed62ab2a2119cc7</p>
      */
@@ -12,6 +14,8 @@ public class RunClusterInspectResponseBody extends TeaModel {
     public String reportId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0AB4D067-4DD7-5471-B90A-FCC564BC3337</p>
      */
@@ -19,6 +23,8 @@ public class RunClusterInspectResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The inspection task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>T-67d7ec016ce37c0106000***</p>
      */

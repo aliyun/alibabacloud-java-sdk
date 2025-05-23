@@ -23,10 +23,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster.</p>
+     * <p>The edition of the cluster</p>
      * <ul>
-     * <li><code>ack.pro.small</code>: Pro.</li>
-     * <li><code>ack.standard</code>: Basic. If you leave the parameter empty, the Basic edition is selected.</li>
+     * <li><code>ack.pro.small</code>: the Pro edition.</li>
+     * <li><code>ack.standard</code>: the Basic edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,9 +36,10 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterSpec;
 
     /**
+     * <p>The type of the instance.</p>
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic and Pro), ACK Edge clusters (Basic and Pro), and ACK Lingjun clusters (Pro).</li>
+     * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK managed Basic clusters, ACK managed Pro clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, ACK Edge Basic clusters, and ACK Lingjun Pro clusters.</li>
      * <li><code>ExternalKubernetes</code>: registered cluster.</li>
      * </ul>
      * 
@@ -49,7 +50,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The CIDR block of the pod. The configuration of the Flannel network plug-in.</p>
+     * <p>The pod CIDR block. The configuration of the Flannel network plug-in.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
@@ -73,7 +74,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String created;
 
     /**
-     * <p>The current Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+     * <p>The Kubernetes version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.16.6-aliyun.1</p>
@@ -159,8 +160,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String metaData;
 
     /**
-     * <p>The name of the cluster.</p>
-     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-demo</p>
@@ -178,7 +178,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String networkMode;
 
     /**
-     * <p>The Kubernetes version to which the cluster can be updated.</p>
+     * <p>The Kubernetes version to which the cluster can be upgraded.</p>
      * 
      * <strong>example:</strong>
      * <p>1.18.8-aliyun.1</p>
@@ -187,7 +187,8 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>The maximum number of IP addresses that can be assigned to nodes. This number is determined by the node CIDR block. This parameter takes effect only if the cluster uses Flannel network plug-in.</p>
+     * <p>This parameter is available only for Flannel.</p>
+     * <p>The subnet mask length of the node CIDR block. This parameter indicates the maximum number of IP addresses that can be assigned to nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>26</p>
@@ -222,7 +223,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public Boolean privateZone;
 
     /**
-     * <p>If you set <code>cluster_type</code> to <code>ManagedKubernetes</code>, an ACK managed cluster is created. In this case, you can further specify the cluster edition.</p>
+     * <p>The subtype of the cluster.</p>
      * <ul>
      * <li><code>Default</code>. ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
      * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
@@ -277,7 +278,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The CIDR block of the service network.</p>
+     * <p>The Service CIDR block.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -319,14 +320,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</p>
-     * <ul>
-     * <li>10.0.0.0/8</li>
-     * <li>172.16-31.0.0/12-16</li>
-     * <li>192.168.0.0/16</li>
-     * </ul>
-     * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-     * <p>For more information about the network planning of ACK clusters, see <a href="https://help.aliyun.com/document_detail/186964.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+     * <p>The pod CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>172.20.0.0/16</p>
@@ -336,7 +330,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     public String subnetCidr;
 
     /**
-     * <p>The resource tags of the cluster.</p>
+     * <p>The resource labels of the cluster.</p>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -785,7 +779,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String deploymentsetId;
 
         /**
-         * <p>The ID of the image.</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun_3_x64_20G_alibase_20240819.vhd</p>
@@ -827,7 +821,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         public String nodePortRange;
 
         /**
-         * <p>The subscription duration.</p>
+         * <p>The subscription duration of nodes in the node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

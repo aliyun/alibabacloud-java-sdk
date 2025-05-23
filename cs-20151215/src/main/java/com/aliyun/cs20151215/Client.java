@@ -743,6 +743,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("api_audiences", request.apiAudiences);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.auditLogConfig)) {
+            body.put("audit_log_config", request.auditLogConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("auto_renew", request.autoRenew);
         }
@@ -1218,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建集群巡检配置</p>
+     * <p>Configures cluster inspection.</p>
      * 
      * @param request CreateClusterInspectConfigRequest
      * @param headers map
@@ -1260,7 +1264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建集群巡检配置</p>
+     * <p>Configures cluster inspection.</p>
      * 
      * @param request CreateClusterInspectConfigRequest
      * @return CreateClusterInspectConfigResponse
@@ -1807,7 +1811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集群巡检配置</p>
+     * <p>Deletes cluster inspection configurations.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1833,7 +1837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除集群巡检配置</p>
+     * <p>Deletes cluster inspection configurations.</p>
      * @return DeleteClusterInspectConfigResponse
      */
     public DeleteClusterInspectConfigResponse deleteClusterInspectConfig(String clusterId) throws Exception {
@@ -1891,14 +1895,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</p>
+     * <p>  Use this API or the <a href="https://cs.console.aliyun.com">ACK console</a> for node removal. Do not remove a node by running the <code>kubectl delete node</code> command.</p>
      * <ul>
-     * <li>The operation may have unexpected risks. Back up the data before you perform this operation.</li>
-     * <li>When you remove a node, the system sets the status of the node to Unschedulable.</li>
+     * <li>Never directly release or remove ECS instances through the ECS or Auto Scaling console/APIs. Renew subscription ECS instances before they expire. Violations may cause node termination and removal from the ACK console.</li>
+     * <li>If a node pool has the Expected Nodes parameter configured, the node pool automatically scales other ECS instances to maintain the expected number of nodes.</li>
+     * <li>When you remove a node, the pods on the node are migrated to other nodes. To prevent service interruptions, remove nodes during off-peak hours. Unexpected risks may arise during node removal. Back up the data in advance.</li>
+     * <li>ACK drains the node during node removal. Make sure that other nodes in the cluster have sufficient resources to host the evicted pods.</li>
+     * <li>To ensure the pods on the node you want to remove can be successfully scheduled to other nodes, check whether the node affinity rules and scheduling policies of the pods meet the requirements.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.</p>
+     * <p>Removes nodes from a Container Service for Kubernetes (ACK) cluster when they are no longer required through the DeleteClusterNodes interface. When removing nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes.</p>
      * 
      * @param request DeleteClusterNodesRequest
      * @param headers map
@@ -1940,14 +1947,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  When you remove a node, the pods that run on the node are migrated to other nodes. This may cause service interruptions. We recommend that you remove nodes during off-peak hours.</p>
+     * <p>  Use this API or the <a href="https://cs.console.aliyun.com">ACK console</a> for node removal. Do not remove a node by running the <code>kubectl delete node</code> command.</p>
      * <ul>
-     * <li>The operation may have unexpected risks. Back up the data before you perform this operation.</li>
-     * <li>When you remove a node, the system sets the status of the node to Unschedulable.</li>
+     * <li>Never directly release or remove ECS instances through the ECS or Auto Scaling console/APIs. Renew subscription ECS instances before they expire. Violations may cause node termination and removal from the ACK console.</li>
+     * <li>If a node pool has the Expected Nodes parameter configured, the node pool automatically scales other ECS instances to maintain the expected number of nodes.</li>
+     * <li>When you remove a node, the pods on the node are migrated to other nodes. To prevent service interruptions, remove nodes during off-peak hours. Unexpected risks may arise during node removal. Back up the data in advance.</li>
+     * <li>ACK drains the node during node removal. Make sure that other nodes in the cluster have sufficient resources to host the evicted pods.</li>
+     * <li>To ensure the pods on the node you want to remove can be successfully scheduled to other nodes, check whether the node affinity rules and scheduling policies of the pods meet the requirements.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes nodes from a Container Service for Kubernetes (ACK) cluster. When you remove nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes. When you remove nodes, pods on the nodes are migrated. This may adversely affect your businesses. We recommend that you back up data and perform this operation during off-peak hours.</p>
+     * <p>Removes nodes from a Container Service for Kubernetes (ACK) cluster when they are no longer required through the DeleteClusterNodes interface. When removing nodes, you can specify whether to release the Elastic Compute Service (ECS) instances and drain the nodes.</p>
      * 
      * @param request DeleteClusterNodesRequest
      * @return DeleteClusterNodesResponse
@@ -3066,9 +3076,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</p>
-     * </blockquote>
+     * <p>  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</p>
+     * <ul>
+     * <li>We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Kubeconfig files store identity and authentication information that is used by clients to access Container Service for Kubernetes (ACK) clusters. To use a kubectl client to manage an ACK cluster, you need to use the corresponding kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</p>
@@ -3109,9 +3120,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <blockquote>
-     * <p> The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</p>
-     * </blockquote>
+     * <p>  The default validity period of a kubeconfig file is 3 years. 180 days before a kubeconfig file expires, you can renew it in the Container Service for Kubernetes (ACK) console or by calling API operations. After a kubeconfig file is renewed, the kubeconfig file is valid for 3 years. The previous kubeconfig file still remains valid until expiration. We recommend that you renew your kubeconfig file at the earliest opportunity.</p>
+     * <ul>
+     * <li>We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Kubeconfig files store identity and authentication information that is used by clients to access Container Service for Kubernetes (ACK) clusters. To use a kubectl client to manage an ACK cluster, you need to use the corresponding kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</p>
@@ -5106,10 +5118,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Precautions</em>*:</p>
+     * <p>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</p>
      * <ul>
-     * <li>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
-     * <li>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
+     * <li>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5142,10 +5153,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p><em>Precautions</em>*:</p>
+     * <p>  If you use a Resource Access Management (RAM) account to call this operation, make sure it has permissions to modify cluster authorization information for other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</p>
      * <ul>
-     * <li>If you use a Resource Access Management (RAM) user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the <code>StatusForbidden</code> or <code>ForbiddenGrantPermissions</code> error code is returned after you call the operation. For more information, see <a href="https://help.aliyun.com/document_detail/119035.html">Use a RAM user to grant RBAC permissions to other RAM users</a>.</li>
-     * <li>If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.</li>
+     * <li>This operation overwrites all existing cluster permissions for the target RAM user or RAM role. You must specify all the permissions you want to grant to the RAM user or RAM role in the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5162,7 +5172,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.</p>
+     * <p>为了增强Kubernetes能力，ACK集群支持了多种组件，例如托管的核心组件，应用、日志和监控、网络、存储、安全组件等。您可以调用InstallClusterAddons接口，通过组件名称和版本安装组件。</p>
      * 
      * @param request InstallClusterAddonsRequest
      * @param headers map
@@ -5191,7 +5201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Installs a component by specifying the name and version of the component. To enhance Kubernetes capabilities, you can install a variety of components in Container Service for Kubernetes (ACK) clusters, such as fully-managed core components and application, logging and monitoring, network, storage, and security group components.</p>
+     * <p>为了增强Kubernetes能力，ACK集群支持了多种组件，例如托管的核心组件，应用、日志和监控、网络、存储、安全组件等。您可以调用InstallClusterAddons接口，通过组件名称和版本安装组件。</p>
      * 
      * @param request InstallClusterAddonsRequest
      * @return InstallClusterAddonsResponse
@@ -5359,7 +5369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取巡检报告列表</p>
+     * <p>Obtains the details of the cluster inspection report.</p>
      * 
      * @param request ListClusterInspectReportsRequest
      * @param headers map
@@ -5397,7 +5407,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取巡检报告列表</p>
+     * <p>Obtains the details of the cluster inspection report.</p>
      * 
      * @param request ListClusterInspectReportsRequest
      * @return ListClusterInspectReportsResponse
@@ -5662,7 +5672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.</p>
+     * <p>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</p>
      * 
      * @param request MigrateClusterRequest
      * @param headers map
@@ -5700,7 +5710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Container Service for Kubernetes (ACK) Pro clusters are developed based on ACK Basic clusters. ACK Pro clusters provide all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. In addition, ACK Pro clusters provide you with enhanced reliability, security, and schedulability. ACK Pro clusters are covered by the SLA that supports compensation clauses. ACK Pro clusters are suitable for large-scale businesses that require high stability and security in production environments. We recommend that you migrate from ACK Basic clusters to ACK Pro clusters.</p>
+     * <p>The Container Service for Kubernetes (ACK) managed Pro cluster type is developed based on the ACK managed Basic cluster type. It inherits all benefits of ACK managed clusters, such as fully-managed control planes and control plane high availability. It further enhances reliability, security, scheduling capabilities, and offers service level agreement (SLA)-backed guarantees, making it ideal for enterprise customers with large-scale production workloads requiring high stability and security. You can call the MigrateCluster operation to migrate an ACK managed Basic cluster to an ACK managed Pro cluster.</p>
      * 
      * @param request MigrateClusterRequest
      * @return MigrateClusterResponse
@@ -6197,7 +6207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>When you use Container Service for Kubernetes (ACK) for the first time, you must activate ACK by using an Alibaba Cloud account or RAM user with the required permissions and complete ACK authorization.</p>
+     * <p>When using Container Service for Kubernetes (ACK) for the first time, you must call the OpenAckService operation to activate the service.</p>
      * 
      * @param request OpenAckServiceRequest
      * @param headers map
@@ -6237,7 +6247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>When you use Container Service for Kubernetes (ACK) for the first time, you must activate ACK by using an Alibaba Cloud account or RAM user with the required permissions and complete ACK authorization.</p>
+     * <p>When using Container Service for Kubernetes (ACK) for the first time, you must call the OpenAckService operation to activate the service.</p>
      * 
      * @param request OpenAckServiceRequest
      * @return OpenAckServiceResponse
@@ -6823,7 +6833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起集群巡检</p>
+     * <p>Triggers a cluster inspection and generates a report.</p>
      * 
      * @param request RunClusterInspectRequest
      * @param headers map
@@ -6857,7 +6867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发起集群巡检</p>
+     * <p>Triggers a cluster inspection and generates a report.</p>
      * 
      * @param request RunClusterInspectRequest
      * @return RunClusterInspectResponse
@@ -7588,7 +7598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群巡检配置</p>
+     * <p>Modifies cluster inspection configurations.</p>
      * 
      * @param request UpdateClusterInspectConfigRequest
      * @param headers map
@@ -7630,7 +7640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集群巡检配置</p>
+     * <p>Modifies cluster inspection configurations.</p>
      * 
      * @param request UpdateClusterInspectConfigRequest
      * @return UpdateClusterInspectConfigResponse
@@ -8015,7 +8025,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</p>
+     * <p>Outdated Kubernetes versions may have security and stability issues. We recommend that you update the Kubernetes version of your cluster at the earliest opportunity to enjoy the new features of the new Kubernetes version. You can call the UpgradeCluster operation to manually upgrade a cluster.</p>
      * 
      * @param request UpgradeClusterRequest
      * @param headers map
@@ -8074,7 +8084,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the UpgradeCluster operation to upgrade a cluster by cluster ID.</p>
+     * <p>Outdated Kubernetes versions may have security and stability issues. We recommend that you update the Kubernetes version of your cluster at the earliest opportunity to enjoy the new features of the new Kubernetes version. You can call the UpgradeCluster operation to manually upgrade a cluster.</p>
      * 
      * @param request UpgradeClusterRequest
      * @return UpgradeClusterResponse

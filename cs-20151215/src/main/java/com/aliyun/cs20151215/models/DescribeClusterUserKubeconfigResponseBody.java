@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
     /**
-     * <p>The content of the kubeconfig file. For more information about how to view the kubeconfig file, see <a href="https://help.aliyun.com/document_detail/86494.html">Configure cluster credentials</a>.</p>
+     * <p>The kubeconfig file of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>apiVersion: v1****</p>
@@ -14,7 +14,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The validity period of the kubeconfig file. The value is the UTC time displayed in RFC3339 format.</p>
+     * <p>The expiration time of the kubeconfig file. Format: the UTC time in the RFC3339 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-10T09:56:17Z</p>

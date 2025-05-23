@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListClusterInspectReportsResponseBody extends TeaModel {
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>405b99e5411f9a4e7148506e45</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
+    /**
+     * <p>The list of inspection reports.</p>
+     */
     @NameInMap("reports")
     public java.util.List<ListClusterInspectReportsResponseBodyReports> reports;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>49511F2D-D56A-5C24-B9AE-C8491E09B***</p>
      */
@@ -52,6 +59,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
 
     public static class ListClusterInspectReportsResponseBodyReportsSummary extends TeaModel {
         /**
+         * <p>The number of items whose result is advice.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -59,6 +68,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public Integer adviceCount;
 
         /**
+         * <p>Aggregated inspection task result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>warning</p>
          */
@@ -66,6 +77,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The number of items whose result is error.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -73,6 +86,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public Integer errorCount;
 
         /**
+         * <p>The number of items whose result is normal.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -80,6 +95,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public Integer normalCount;
 
         /**
+         * <p>The number of items whose result is warning.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -135,6 +152,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
 
     public static class ListClusterInspectReportsResponseBodyReports extends TeaModel {
         /**
+         * <p>The report completion time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-18T19:40:16.778333+08:00</p>
          */
@@ -142,6 +161,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>An inspection report ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>782df89346054a0000562063a6****</p>
          */
@@ -149,6 +170,8 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String reportId;
 
         /**
+         * <p>The report start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-12-18T19:40:16.778333+08:00</p>
          */
@@ -156,12 +179,17 @@ public class ListClusterInspectReportsResponseBody extends TeaModel {
         public String startTime;
 
         /**
+         * <p>The inspection report status.</p>
+         * 
          * <strong>example:</strong>
          * <p>completed</p>
          */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>The inspection summary.</p>
+         */
         @NameInMap("summary")
         public ListClusterInspectReportsResponseBodyReportsSummary summary;
 

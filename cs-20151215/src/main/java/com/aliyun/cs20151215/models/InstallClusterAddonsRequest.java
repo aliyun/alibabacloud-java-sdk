@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallClusterAddonsRequest extends TeaModel {
     /**
-     * <p>The request body.</p>
+     * <p>请求体参数。</p>
      * 
      * <strong>example:</strong>
      * <p>ags-metrics-collector</p>
@@ -28,33 +28,30 @@ public class InstallClusterAddonsRequest extends TeaModel {
 
     public static class InstallClusterAddonsRequestBody extends TeaModel {
         /**
-         * <p>The custom component settings that you want to use. The value is a JSON string.</p>
+         * <p>组件自定义参数，使用JSON字符串编码。</p>
          * 
          * <strong>example:</strong>
-         * <p>{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}&quot;}</p>
+         * <p>{\&quot;IngressDashboardEnabled\&quot;:\&quot;true\&quot;,\&quot;sls_project_name\&quot;:\&quot;your_sls_project_name\&quot;}</p>
          */
         @NameInMap("config")
         public String config;
 
         /**
-         * <p>The component name.</p>
+         * <p>组件名称。您可以通过<a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a>接口查询可用组件的信息，包括组件名称及版本等。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ags-metrics-collector</p>
+         * <p>logtail-ds</p>
          */
         @NameInMap("name")
         public String name;
 
         /**
-         * <p>The component version.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/197434.html">DescribeClusterAddonsVersion</a> operation to query the version of a component.</p>
-         * </blockquote>
+         * <p>组件版本。您可以通过<a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a>接口查询可用组件的信息，包括组件名称及版本等。</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>v1.0.0.2-cc3b2d6-aliyun</p>
+         * <p>v1.7.3.0-aliyun</p>
          */
         @NameInMap("version")
         public String version;

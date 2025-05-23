@@ -5,13 +5,14 @@ import com.aliyun.tea.*;
 
 public class RunClusterCheckRequest extends TeaModel {
     /**
-     * <p>The cluster check items.</p>
+     * <p>The cluster check parameters.</p>
      */
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
     /**
-     * <p>The target to be checked.</p>
+     * <p>The check target.</p>
+     * <p>If you set <code>type=NodePoolUpgrade</code>, you must set this parameter to the node pool ID. Otherwise, this parameter is optional.</p>
      * 
      * <strong>example:</strong>
      * <p>np1f6779297c4444a3a1cdd29be8e5****</p>
@@ -20,7 +21,14 @@ public class RunClusterCheckRequest extends TeaModel {
     public String target;
 
     /**
-     * <p>The check method.</p>
+     * <p>The check type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>ClusterMigrate: cluster migration.</li>
+     * <li>MasterUpgrade: control plane upgrade.</li>
+     * <li>NodePoolUpgrade: node pool upgrade.</li>
+     * <li>ClusterUpgrade: cluster upgrade.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

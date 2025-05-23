@@ -44,13 +44,12 @@ public class CreateTemplateRequest extends TeaModel {
     public String template;
 
     /**
-     * <p>The type of template. You can set the parameter to a custom value.</p>
+     * <p>The template type.</p>
      * <ul>
      * <li>If the parameter is set to <code>kubernetes</code>, the template is displayed on the Templates page in the console.</li>
-     * <li>If you set the parameter to <code>compose</code>, the template is not displayed in the console.</li>
+     * <li>If this parameter is not specified or the value is set to another value, the template is not displayed on the Orchestration Template page in the console.</li>
      * </ul>
      * <p>We recommend that you set the parameter to <code>kubernetes</code>.</p>
-     * <p>Default value: <code>compose</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>kubernetes</p>

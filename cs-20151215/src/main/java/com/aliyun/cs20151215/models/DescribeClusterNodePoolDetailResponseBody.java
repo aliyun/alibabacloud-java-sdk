@@ -87,7 +87,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     public DescribeClusterNodePoolDetailResponseBodyNodepoolInfo nodepoolInfo;
 
     /**
-     * <p>The configurations of the scaling group used by the node pool.</p>
+     * <p>The configurations of the scaling group that is used by the node pool.</p>
      */
     @NameInMap("scaling_group")
     public DescribeClusterNodePoolDetailResponseBodyScalingGroup scalingGroup;
@@ -222,6 +222,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolDetailResponseBodyAutoMode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("enable")
         public Boolean enable;
 
@@ -1604,7 +1608,12 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>Whether to enable Burst (performance burst) for the node system disk, configured when the disk type is cloud_auto.</p>
+         * <p>Indicates whether to enable the burst feature for the system disk. Valid values:</p>
+         * <ul>
+         * <li>true: enables the burst feature for the system disk. The performance burst feature allows ESSD AutoPL disks to burst their performance when spikes in read/write workloads occur and reduce the performance to the baseline level at the end of workload spikes.</li>
+         * <li>false: does not enable the burst feature for the system disk.</li>
+         * </ul>
+         * <p>This parameter is effective only when <code>system_disk_category</code> is set to <code>cloud_auto</code>. For more information, see <a href="https://help.aliyun.com/document_detail/368372.html">ESSD AutoPL disks</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

@@ -44,7 +44,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
 
     public static class DescribeKubernetesVersionMetadataResponseBodyImages extends TeaModel {
         /**
-         * <p>The image ID.</p>
+         * <p>The ID of the image.</p>
          * 
          * <strong>example:</strong>
          * <p>centos_7_7_x64_20G_alibase_20200426.vhd</p>
@@ -62,7 +62,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String imageName;
 
         /**
-         * <p>The OS platform. Valid values:</p>
+         * <p>The OS platform. You can obtain the terminal ID by calling one of the following operations:</p>
          * <ul>
          * <li><code>AliyunLinux</code></li>
          * <li><code>CentOS</code></li>
@@ -86,7 +86,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public String osVersion;
 
         /**
-         * <p>The type of OS distribution that you want to use. To specify the node OS, we recommend that you use this parameter. Valid values:</p>
+         * <p>The type of operating system distribution that you want to use. We recommend that you use this parameter to specify the node operating system. You can obtain the terminal ID by calling one of the following operations:</p>
          * <ul>
          * <li><code>CentOS</code></li>
          * <li><code>AliyunLinux</code></li>
@@ -288,7 +288,7 @@ public class DescribeKubernetesVersionMetadataResponse extends TeaModel {
         public Boolean creatable;
 
         /**
-         * <p>The list of available versions for updates.</p>
+         * <p>The list of available Kubernetes versions for updates.</p>
          */
         @NameInMap("upgradable_versions")
         public java.util.List<String> upgradableVersions;

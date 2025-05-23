@@ -46,6 +46,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("api_audiences")
     public String apiAudiences;
 
+    @NameInMap("audit_log_config")
+    public CreateClusterRequestAuditLogConfig auditLogConfig;
+
     /**
      * <p>[<strong>Deprecated</strong>]</p>
      * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
@@ -1229,6 +1232,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.apiAudiences;
     }
 
+    public CreateClusterRequest setAuditLogConfig(CreateClusterRequestAuditLogConfig auditLogConfig) {
+        this.auditLogConfig = auditLogConfig;
+        return this;
+    }
+    public CreateClusterRequestAuditLogConfig getAuditLogConfig() {
+        return this.auditLogConfig;
+    }
+
     @Deprecated
     public CreateClusterRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
@@ -2038,6 +2049,36 @@ public class CreateClusterRequest extends TeaModel {
     }
     public java.util.List<String> getZoneIds() {
         return this.zoneIds;
+    }
+
+    public static class CreateClusterRequestAuditLogConfig extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("sls_project_name")
+        public String slsProjectName;
+
+        public static CreateClusterRequestAuditLogConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestAuditLogConfig self = new CreateClusterRequestAuditLogConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestAuditLogConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateClusterRequestAuditLogConfig setSlsProjectName(String slsProjectName) {
+            this.slsProjectName = slsProjectName;
+            return this;
+        }
+        public String getSlsProjectName() {
+            return this.slsProjectName;
+        }
+
     }
 
     public static class CreateClusterRequestControlPlaneConfig extends TeaModel {

@@ -4,11 +4,14 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class ModifyNodePoolNodeConfigRequest extends TeaModel {
+    /**
+     * <p>The containerd runtime configuration.</p>
+     */
     @NameInMap("containerd_config")
     public ContainerdConfig containerdConfig;
 
     /**
-     * <p>The kubelet configuration.</p>
+     * <p>The kubelet configurations.</p>
      */
     @NameInMap("kubelet_config")
     public KubeletConfig kubeletConfig;
@@ -20,7 +23,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
     public ModifyNodePoolNodeConfigRequestOsConfig osConfig;
 
     /**
-     * <p>The rolling update configuration.</p>
+     * <p>The rolling policy configuration.</p>
      */
     @NameInMap("rolling_policy")
     public ModifyNodePoolNodeConfigRequestRollingPolicy rollingPolicy;
@@ -64,7 +67,7 @@ public class ModifyNodePoolNodeConfigRequest extends TeaModel {
 
     public static class ModifyNodePoolNodeConfigRequestOsConfig extends TeaModel {
         /**
-         * <p>Configuration for sysctl kernel parameters.</p>
+         * <p>The sysctl configuration.</p>
          */
         @NameInMap("sysctl")
         public java.util.Map<String, ?> sysctl;

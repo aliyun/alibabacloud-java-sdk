@@ -4,10 +4,14 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterInspectConfigRequest extends TeaModel {
+    /**
+     * <p>The list of disabled inspection items.</p>
+     */
     @NameInMap("disabledCheckItems")
     public java.util.List<String> disabledCheckItems;
 
     /**
+     * <p>Specifies whether to enable cluster inspection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +21,7 @@ public class CreateClusterInspectConfigRequest extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The inspection period defined using RFC5545 Recurrence Rule. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT or UNTIL is not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

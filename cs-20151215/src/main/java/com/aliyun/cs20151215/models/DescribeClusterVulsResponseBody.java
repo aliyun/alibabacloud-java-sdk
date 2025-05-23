@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterVulsResponseBody extends TeaModel {
     /**
-     * <p>An array of vulnerabilities.</p>
+     * <p>The list of vulnerabilities.</p>
      */
     @NameInMap("vul_records")
     public java.util.List<DescribeClusterVulsResponseBodyVulRecords> vulRecords;

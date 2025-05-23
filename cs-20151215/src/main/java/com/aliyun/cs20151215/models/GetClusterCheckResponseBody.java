@@ -14,7 +14,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
     public String checkId;
 
     /**
-     * <p>The list of check items.</p>
+     * <p>A list of check items.</p>
      */
     @NameInMap("check_items")
     public java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems;

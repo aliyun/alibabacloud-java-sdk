@@ -127,11 +127,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure the <code>profile</code> parameter, you can further specify the edition of the cluster. Valid values:</p>
-         * <ul>
-         * <li><code>ack.pro.small</code>: ACK Pro cluster.</li>
-         * <li><code>ack.standard</code>: ACK Basic cluster. If you leave the parameter empty, ACK Basic cluster is selected.</li>
-         * </ul>
+         * <p>The specification of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>ack.standard</p>
@@ -140,11 +136,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String clusterSpec;
 
         /**
-         * <ul>
-         * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
-         * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
-         * <li><code>ExternalKubernetes</code>: registered cluster.</li>
-         * </ul>
+         * <p>The type of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Kubernetes</p>
@@ -162,7 +154,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String containerCidr;
 
         /**
-         * <p>The time when the cluster was created.</p>
+         * <p>The time at which the instance is created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-08-20T10:51:29+08:00</p>
@@ -180,7 +172,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String currentVersion;
 
         /**
-         * <p>Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:</p>
+         * <p>Specifies whether to enable cluster deletion protection. If you enable this option, the cluster cannot be deleted in the console or by calling API operations. Valid values:</p>
          * <ul>
          * <li><code>true</code>: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.</li>
          * <li><code>false</code>: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.</li>
@@ -212,8 +204,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String externalLoadbalancerId;
 
         /**
-         * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
-         * <p>You can create clusters that run the latest two Kubernetes versions in the ACK console. You can call the API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+         * <p>The version of the cluster. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>1.16.9-aliyun.1</p>
@@ -224,8 +215,8 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         /**
          * <p>The IP stack of the cluster. Valid values:</p>
          * <ul>
-         * <li>ipv4: The cluster is an IPv4 cluster.</li>
-         * <li>dual: The cluster is a dual-stack cluster.</li>
+         * <li>ipv4: creates a cluster that supports only the IPv4 protocol stack.</li>
+         * <li>dual: creates a cluster that supports IPv4/IPv6 dual-stack.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +251,6 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
 
         /**
          * <p>The cluster name.</p>
-         * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
          * 
          * <strong>example:</strong>
          * <p>cluster-demo</p>
@@ -312,13 +302,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public Boolean privateZone;
 
         /**
-         * <p>The cluster identifier. Valid values:</p>
-         * <ul>
-         * <li><code>Default</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters and ACK Pro clusters.</li>
-         * <li><code>Edge</code>: ACK Edge cluster. ACK Edge clusters include ACK Edge Basic clusters and ACK Edge Pro clusters.</li>
-         * <li><code>Serverless</code>: ACK Serverless cluster. ACK Serverless clusters include ACK Serverless Basic clusters and ACK Serverless Pro clusters.</li>
-         * <li><code>Lingjun</code>: ACK Lingjun Pro cluster.</li>
-         * </ul>
+         * <p>The subtype of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -327,9 +311,9 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The Kube-proxy mode. Valid values:</p>
+         * <p>The kube-proxy mode.</p>
          * <ul>
-         * <li><code>iptables</code>: a mature and stable kube-proxy mode that uses iptables rules to conduct Service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
+         * <li><code>iptables</code>: a mature and stable mode that uses iptables rules to conduct service discovery and load balancing. The performance of this mode is limited by the size of the cluster. This mode is suitable for clusters that run a small number of Services.</li>
          * <li><code>ipvs</code>: provides high performance and uses IP Virtual Server (IPVS). This allows you to configure service discovery and load balancing. This mode is suitable for clusters that are required to run a large number of services. We recommend that you use this mode in scenarios that require high load balancing performance.</li>
          * </ul>
          * 
@@ -409,14 +393,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>Tis parameter is deprecated. Use the container_cidr parameter to obtain the pod CIDR block. The pod CIDR block. It must be a valid and private CIDR block, and must be one of the following CIDR blocks or their subnets:</p>
-         * <ul>
-         * <li>10.0.0.0/8</li>
-         * <li>172.16-31.0.0/12-16</li>
-         * <li>192.168.0.0/16</li>
-         * </ul>
-         * <p>The pod CIDR block cannot overlap with the CIDR block of the VPC in which the cluster is deployed and the CIDR blocks of existing clusters in the VPC. You cannot modify the pod CIDR block after you create the cluster.</p>
-         * <p>For more information about the network planning of Container Service for Kubernetes (ACK) clusters, see <a href="https://help.aliyun.com/document_detail/86500.html">Plan CIDR blocks for an ACK cluster</a>.</p>
+         * <p>This parameter is deprecated. Use the container_cidr parameter to obtain the pod CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.0.0/16</p>
@@ -426,7 +403,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String subnetCidr;
 
         /**
-         * <p>The resource tags of the cluster.</p>
+         * <p>The label of the cluster.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;
@@ -450,7 +427,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String updated;
 
         /**
-         * <p>The ID of the VPC where the cluster is deployed. This parameter is required when you create a cluster.</p>
+         * <p>The ID of the virtual private cloud (VPC) that is used by the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2vcg932hsxsxuqbgl****</p>
@@ -459,7 +436,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The IDs of the vSwitches. You can select one to three vSwitches when you create a cluster. To ensure the high availability of the cluster, we recommend that you select vSwitches in different zones.</p>
+         * <p>The ID of the vSwitch in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-2vc41xuumx5z2rdma****,vsw-2vc41xuumx5z2rdma****</p>

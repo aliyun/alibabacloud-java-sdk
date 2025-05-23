@@ -20,8 +20,8 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not set this parameter, the latest Kubernetes version is used.</p>
-     * <p>You can create ACK clusters of the latest two Kubernetes versions in the ACK console. You can call the specific ACK API operation to create clusters of other Kubernetes versions. For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
+     * <p>The Kubernetes version of the cluster. The Kubernetes versions supported by ACK are the same as the Kubernetes versions supported by open source Kubernetes. We recommend that you specify the latest Kubernetes version. If you do not configure this parameter, the latest Kubernetes version is used.</p>
+     * <p>For more information about the Kubernetes versions supported by ACK, see <a href="https://help.aliyun.com/document_detail/185269.html">Release notes for Kubernetes versions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.16.9-aliyun.1</p>
@@ -60,7 +60,11 @@ public class DescribeKubernetesVersionMetadataRequest extends TeaModel {
     public String profile;
 
     /**
-     * <p>Specify whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.</p>
+     * <p>Specifies whether to query the Kubernetes versions available for updates. This parameter takes effect only when the KubernetesVersion parameter is specified.</p>
+     * <ul>
+     * <li>true: queries the Kubernetes versions available for updates.</li>
+     * <li>false: does not query the Kubernetes versions available for updates.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1.30.1-aliyun.1</p>

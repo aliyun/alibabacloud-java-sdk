@@ -27,10 +27,11 @@ public class DescribeClustersV1Request extends TeaModel {
     public String clusterSpec;
 
     /**
+     * <p>The type of the instance.</p>
      * <ul>
      * <li><code>Kubernetes</code>: ACK dedicated cluster.</li>
      * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless Basic clusters, ACK Serverless Pro clusters, ACK Edge Basic clusters, ACK Edge Pro clusters, and ACK Lingjun Pro clusters.</li>
-     * <li><code>ExternalKubernetes</code>: registered cluster.</li>
+     * <li><code>ExternalKubernetes</code>: registered cluster</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +42,6 @@ public class DescribeClustersV1Request extends TeaModel {
 
     /**
      * <p>The cluster name.</p>
-     * <p>The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).</p>
      * 
      * <strong>example:</strong>
      * <p>cluster-demo</p>
@@ -50,7 +50,7 @@ public class DescribeClustersV1Request extends TeaModel {
     public String name;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

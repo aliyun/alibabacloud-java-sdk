@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnInstallClusterAddonsResponseBody extends TeaModel {
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
@@ -14,7 +14,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>74D1512F-67DA-54E8-99EA-4D50EB4898F4</p>
@@ -23,7 +23,7 @@ public class UnInstallClusterAddonsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>T-66e39b39c0fdd001320005c0</p>
