@@ -106,6 +106,25 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock extends TeaModel {
+        @NameInMap("PtpSupport")
+        public String ptpSupport;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock setPtpSupport(String ptpSupport) {
+            this.ptpSupport = ptpSupport;
+            return this;
+        }
+        public String getPtpSupport() {
+            return this.ptpSupport;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeCpuOptionsSupportedTopologyTypes extends TeaModel {
         @NameInMap("SupportedTopologyType")
         public java.util.List<String> supportedTopologyType;
@@ -358,6 +377,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         @NameInMap("BaselineCredit")
         public Integer baselineCredit;
+
+        @NameInMap("Clock")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock clock;
 
         /**
          * <p>The CPU architecture. Valid values:</p>
@@ -789,6 +811,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Integer getBaselineCredit() {
             return this.baselineCredit;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setClock(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock clock) {
+            this.clock = clock;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock getClock() {
+            return this.clock;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setCpuArchitecture(String cpuArchitecture) {
