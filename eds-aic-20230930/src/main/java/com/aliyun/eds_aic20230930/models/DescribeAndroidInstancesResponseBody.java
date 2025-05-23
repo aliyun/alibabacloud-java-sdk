@@ -74,6 +74,36 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy extends TeaModel {
+        @NameInMap("AppManagePolicyId")
+        public String appManagePolicyId;
+
+        @NameInMap("AppManagePolicyName")
+        public String appManagePolicyName;
+
+        public static DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy self = new DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy setAppManagePolicyId(String appManagePolicyId) {
+            this.appManagePolicyId = appManagePolicyId;
+            return this;
+        }
+        public String getAppManagePolicyId() {
+            return this.appManagePolicyId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy setAppManagePolicyName(String appManagePolicyName) {
+            this.appManagePolicyName = appManagePolicyName;
+            return this;
+        }
+        public String getAppManagePolicyName() {
+            return this.appManagePolicyName;
+        }
+
+    }
+
     public static class DescribeAndroidInstancesResponseBodyInstanceModelDisks extends TeaModel {
         /**
          * <p>The disk size. Unit: GB.</p>
@@ -284,6 +314,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         @NameInMap("AppInstanceId")
         public String appInstanceId;
+
+        @NameInMap("AppManagePolicy")
+        public DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy appManagePolicy;
 
         /**
          * <p>The ID of the user to whom the instance is assigned.</p>
@@ -581,6 +614,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getAppInstanceId() {
             return this.appInstanceId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setAppManagePolicy(DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy appManagePolicy) {
+            this.appManagePolicy = appManagePolicy;
+            return this;
+        }
+        public DescribeAndroidInstancesResponseBodyInstanceModelAppManagePolicy getAppManagePolicy() {
+            return this.appManagePolicy;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setAuthorizedUserId(String authorizedUserId) {

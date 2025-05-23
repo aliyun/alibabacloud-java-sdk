@@ -19,6 +19,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("AndroidInstanceName")
     public String androidInstanceName;
 
+    @NameInMap("AppManagePolicyId")
+    public String appManagePolicyId;
+
     @NameInMap("AuthorizedUserId")
     public String authorizedUserId;
 
@@ -186,6 +189,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    public DescribeAndroidInstancesRequest setAppManagePolicyId(String appManagePolicyId) {
+        this.appManagePolicyId = appManagePolicyId;
+        return this;
+    }
+    public String getAppManagePolicyId() {
+        return this.appManagePolicyId;
     }
 
     public DescribeAndroidInstancesRequest setAuthorizedUserId(String authorizedUserId) {
