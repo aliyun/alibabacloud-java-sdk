@@ -137,6 +137,9 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("IgnoreContentAuditWords")
+        public String ignoreContentAuditWords;
+
         @NameInMap("KeywordList")
         public java.util.List<String> keywordList;
 
@@ -236,6 +239,14 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public GetGeneratedContentResponseBodyData setIgnoreContentAuditWords(String ignoreContentAuditWords) {
+            this.ignoreContentAuditWords = ignoreContentAuditWords;
+            return this;
+        }
+        public String getIgnoreContentAuditWords() {
+            return this.ignoreContentAuditWords;
         }
 
         public GetGeneratedContentResponseBodyData setKeywordList(java.util.List<String> keywordList) {
