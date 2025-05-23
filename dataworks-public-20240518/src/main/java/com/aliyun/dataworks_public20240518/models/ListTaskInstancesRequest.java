@@ -110,6 +110,9 @@ public class ListTaskInstancesRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>The ID of the task for which the instance is generated.</p>
      * 
@@ -287,6 +290,14 @@ public class ListTaskInstancesRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListTaskInstancesRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTaskInstancesRequest setTaskId(Long taskId) {

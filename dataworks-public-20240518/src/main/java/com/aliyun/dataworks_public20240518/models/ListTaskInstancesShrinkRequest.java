@@ -110,6 +110,9 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     @NameInMap("SortBy")
     public String sortBy;
 
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>The ID of the task for which the instance is generated.</p>
      * 
@@ -287,6 +290,14 @@ public class ListTaskInstancesShrinkRequest extends TeaModel {
     }
     public String getSortBy() {
         return this.sortBy;
+    }
+
+    public ListTaskInstancesShrinkRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListTaskInstancesShrinkRequest setTaskId(Long taskId) {
