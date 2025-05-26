@@ -28,6 +28,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>银行卡核验</p>
+     * 
+     * @param request BankMetaVerifyIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BankMetaVerifyIntlResponse
+     */
+    public BankMetaVerifyIntlResponse bankMetaVerifyIntlWithOptions(BankMetaVerifyIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bankCard)) {
+            query.put("BankCard", request.bankCard);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identifyNum)) {
+            query.put("IdentifyNum", request.identifyNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityType)) {
+            query.put("IdentityType", request.identityType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            query.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            query.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            query.put("UserName", request.userName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyMode)) {
+            query.put("VerifyMode", request.verifyMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BankMetaVerifyIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BankMetaVerifyIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>银行卡核验</p>
+     * 
+     * @param request BankMetaVerifyIntlRequest
+     * @return BankMetaVerifyIntlResponse
+     */
+    public BankMetaVerifyIntlResponse bankMetaVerifyIntl(BankMetaVerifyIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.bankMetaVerifyIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>证件OCR识别纯服务端接口</p>
      * 
      * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
