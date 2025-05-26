@@ -690,6 +690,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> tags;
 
+        @NameInMap("UserGroupName")
+        public String userGroupName;
+
         /**
          * <p>The user\&quot;s organizational unit path.</p>
          * 
@@ -1097,6 +1100,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDesktopGroupsResponseBodyDesktopGroupsTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setUserGroupName(String userGroupName) {
+            this.userGroupName = userGroupName;
+            return this;
+        }
+        public String getUserGroupName() {
+            return this.userGroupName;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setUserOuPath(String userOuPath) {

@@ -37,6 +37,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("UserGroupName")
+    public String userGroupName;
+
     @NameInMap("UserOuPath")
     public String userOuPath;
 
@@ -84,6 +87,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeUsersInGroupResponseBody setUserGroupName(String userGroupName) {
+        this.userGroupName = userGroupName;
+        return this;
+    }
+    public String getUserGroupName() {
+        return this.userGroupName;
     }
 
     public DescribeUsersInGroupResponseBody setUserOuPath(String userOuPath) {

@@ -306,6 +306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {
+            query.put("UserGroupName", request.userGroupName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userOuPath)) {
             query.put("UserOuPath", request.userOuPath);
         }
@@ -3156,6 +3160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TimerGroupId", request.timerGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {
+            query.put("UserGroupName", request.userGroupName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userOuPath)) {
             query.put("UserOuPath", request.userOuPath);
         }
@@ -3343,6 +3351,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             query.put("Amount", request.amount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appRuleId)) {
+            query.put("AppRuleId", request.appRuleId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
@@ -4335,6 +4347,111 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSnapshotResponse createSnapshot(CreateSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSnapshotWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建模板</p>
+     * 
+     * @param request CreateTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTemplateResponse
+     */
+    public CreateTemplateResponse createTemplateWithOptions(CreateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskList)) {
+            bodyFlat.put("DataDiskList", request.dataDiskList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguage)) {
+            body.put("DefaultLanguage", request.defaultLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            body.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionConfigList)) {
+            bodyFlat.put("RegionConfigList", request.regionConfigList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTagList)) {
+            bodyFlat.put("ResourceTagList", request.resourceTagList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteConfigList)) {
+            bodyFlat.put("SiteConfigList", request.siteConfigList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskPerformanceLevel)) {
+            body.put("SystemDiskPerformanceLevel", request.systemDiskPerformanceLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            body.put("SystemDiskSize", request.systemDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            body.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerGroupId)) {
+            body.put("TimerGroupId", request.timerGroupId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTemplate"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建模板</p>
+     * 
+     * @param request CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    public CreateTemplateResponse createTemplate(CreateTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -5333,6 +5450,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteSnapshotResponse deleteSnapshot(DeleteSnapshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSnapshotWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deleting a template does not affect cloud computers created from it or the associated resources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes custom cloud computer templates.</p>
+     * 
+     * @param request DeleteTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteTemplatesResponse
+     */
+    public DeleteTemplatesResponse deleteTemplatesWithOptions(DeleteTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateIds)) {
+            body.put("TemplateIds", request.templateIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteTemplates"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTemplatesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deleting a template does not affect cloud computers created from it or the associated resources.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes custom cloud computer templates.</p>
+     * 
+     * @param request DeleteTemplatesRequest
+     * @return DeleteTemplatesResponse
+     */
+    public DeleteTemplatesResponse deleteTemplates(DeleteTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -9075,6 +9246,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSnapshotsResponse describeSnapshots(DescribeSnapshotsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSnapshotsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询模板列表</p>
+     * 
+     * @param request DescribeTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTemplatesResponse
+     */
+    public DescribeTemplatesResponse describeTemplatesWithOptions(DescribeTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            body.put("BizRegionId", request.bizRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
+            body.put("ProductType", request.productType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateIds)) {
+            body.put("TemplateIds", request.templateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            body.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            body.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTemplates"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询模板列表</p>
+     * 
+     * @param request DescribeTemplatesRequest
+     * @return DescribeTemplatesResponse
+     */
+    public DescribeTemplatesResponse describeTemplates(DescribeTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -14417,6 +14668,163 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>模板全量更新</p>
+     * 
+     * @param request ModifyTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTemplateResponse
+     */
+    public ModifyTemplateResponse modifyTemplateWithOptions(ModifyTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.siteConfigList)) {
+            query.put("SiteConfigList", request.siteConfigList);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguage)) {
+            body.put("DefaultLanguage", request.defaultLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
+            body.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
+            body.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionConfigList)) {
+            bodyFlat.put("RegionConfigList", request.regionConfigList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTagList)) {
+            bodyFlat.put("ResourceTagList", request.resourceTagList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskPerformanceLevel)) {
+            body.put("SystemDiskPerformanceLevel", request.systemDiskPerformanceLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemDiskSize)) {
+            body.put("SystemDiskSize", request.systemDiskSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            body.put("TemplateName", request.templateName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerGroupId)) {
+            body.put("TimerGroupId", request.timerGroupId);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTemplate"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>模板全量更新</p>
+     * 
+     * @param request ModifyTemplateRequest
+     * @return ModifyTemplateResponse
+     */
+    public ModifyTemplateResponse modifyTemplate(ModifyTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
+     * 
+     * @param request ModifyTemplateBaseInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyTemplateBaseInfoResponse
+     */
+    public ModifyTemplateBaseInfoResponse modifyTemplateBaseInfoWithOptions(ModifyTemplateBaseInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            body.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyTemplateBaseInfo"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyTemplateBaseInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
+     * 
+     * @param request ModifyTemplateBaseInfoRequest
+     * @return ModifyTemplateBaseInfoResponse
+     */
+    public ModifyTemplateBaseInfoResponse modifyTemplateBaseInfo(ModifyTemplateBaseInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyTemplateBaseInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies a scheduled task configuration group.</p>
      * 
      * @param request ModifyTimerGroupRequest
@@ -14898,6 +15306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {
+            query.put("UserGroupName", request.userGroupName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userOuPath)) {

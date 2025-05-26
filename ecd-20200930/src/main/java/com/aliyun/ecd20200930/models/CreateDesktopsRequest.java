@@ -13,6 +13,9 @@ public class CreateDesktopsRequest extends TeaModel {
     @NameInMap("Amount")
     public Integer amount;
 
+    @NameInMap("AppRuleId")
+    public String appRuleId;
+
     /**
      * <p>Specifies whether to enable automatic payment.</p>
      * 
@@ -402,6 +405,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public Integer getAmount() {
         return this.amount;
+    }
+
+    public CreateDesktopsRequest setAppRuleId(String appRuleId) {
+        this.appRuleId = appRuleId;
+        return this;
+    }
+    public String getAppRuleId() {
+        return this.appRuleId;
     }
 
     public CreateDesktopsRequest setAutoPay(Boolean autoPay) {

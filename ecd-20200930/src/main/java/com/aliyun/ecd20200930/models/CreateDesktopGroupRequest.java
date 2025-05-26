@@ -641,6 +641,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    @NameInMap("UserGroupName")
+    public String userGroupName;
+
     @NameInMap("UserOuPath")
     public String userOuPath;
 
@@ -1109,6 +1112,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getTimerGroupId() {
         return this.timerGroupId;
+    }
+
+    public CreateDesktopGroupRequest setUserGroupName(String userGroupName) {
+        this.userGroupName = userGroupName;
+        return this;
+    }
+    public String getUserGroupName() {
+        return this.userGroupName;
     }
 
     public CreateDesktopGroupRequest setUserOuPath(String userOuPath) {

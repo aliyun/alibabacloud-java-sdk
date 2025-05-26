@@ -119,6 +119,135 @@ public class CreateConfigGroupRequest extends TeaModel {
         return this.type;
     }
 
+    public static class CreateConfigGroupRequestConfigTimersSegmentTimers extends TeaModel {
+        @NameInMap("EndCronExpression")
+        public String endCronExpression;
+
+        @NameInMap("Enforce")
+        public Boolean enforce;
+
+        @NameInMap("Interval")
+        public Integer interval;
+
+        @NameInMap("NotificationTime")
+        public Integer notificationTime;
+
+        @NameInMap("OperationType")
+        public String operationType;
+
+        @NameInMap("ProcessWhitelist")
+        public java.util.List<String> processWhitelist;
+
+        @NameInMap("ResetType")
+        public String resetType;
+
+        @NameInMap("StartCronExpression")
+        public String startCronExpression;
+
+        @NameInMap("TimerOrder")
+        public Integer timerOrder;
+
+        @NameInMap("Timezone")
+        public String timezone;
+
+        @NameInMap("TriggerType")
+        public String triggerType;
+
+        public static CreateConfigGroupRequestConfigTimersSegmentTimers build(java.util.Map<String, ?> map) throws Exception {
+            CreateConfigGroupRequestConfigTimersSegmentTimers self = new CreateConfigGroupRequestConfigTimersSegmentTimers();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setEndCronExpression(String endCronExpression) {
+            this.endCronExpression = endCronExpression;
+            return this;
+        }
+        public String getEndCronExpression() {
+            return this.endCronExpression;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setEnforce(Boolean enforce) {
+            this.enforce = enforce;
+            return this;
+        }
+        public Boolean getEnforce() {
+            return this.enforce;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setNotificationTime(Integer notificationTime) {
+            this.notificationTime = notificationTime;
+            return this;
+        }
+        public Integer getNotificationTime() {
+            return this.notificationTime;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setProcessWhitelist(java.util.List<String> processWhitelist) {
+            this.processWhitelist = processWhitelist;
+            return this;
+        }
+        public java.util.List<String> getProcessWhitelist() {
+            return this.processWhitelist;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setResetType(String resetType) {
+            this.resetType = resetType;
+            return this;
+        }
+        public String getResetType() {
+            return this.resetType;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setStartCronExpression(String startCronExpression) {
+            this.startCronExpression = startCronExpression;
+            return this;
+        }
+        public String getStartCronExpression() {
+            return this.startCronExpression;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setTimerOrder(Integer timerOrder) {
+            this.timerOrder = timerOrder;
+            return this;
+        }
+        public Integer getTimerOrder() {
+            return this.timerOrder;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setTimezone(String timezone) {
+            this.timezone = timezone;
+            return this;
+        }
+        public String getTimezone() {
+            return this.timezone;
+        }
+
+        public CreateConfigGroupRequestConfigTimersSegmentTimers setTriggerType(String triggerType) {
+            this.triggerType = triggerType;
+            return this;
+        }
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+    }
+
     public static class CreateConfigGroupRequestConfigTimers extends TeaModel {
         /**
          * <p>Specifies whether to allow end users to configure the scheduled task.</p>
@@ -196,6 +325,9 @@ public class CreateConfigGroupRequest extends TeaModel {
          */
         @NameInMap("ResetType")
         public String resetType;
+
+        @NameInMap("SegmentTimers")
+        public java.util.List<CreateConfigGroupRequestConfigTimersSegmentTimers> segmentTimers;
 
         /**
          * <p>The scheduled task type.</p>
@@ -300,6 +432,14 @@ public class CreateConfigGroupRequest extends TeaModel {
         }
         public String getResetType() {
             return this.resetType;
+        }
+
+        public CreateConfigGroupRequestConfigTimers setSegmentTimers(java.util.List<CreateConfigGroupRequestConfigTimersSegmentTimers> segmentTimers) {
+            this.segmentTimers = segmentTimers;
+            return this;
+        }
+        public java.util.List<CreateConfigGroupRequestConfigTimersSegmentTimers> getSegmentTimers() {
+            return this.segmentTimers;
         }
 
         public CreateConfigGroupRequestConfigTimers setTimerType(String timerType) {
