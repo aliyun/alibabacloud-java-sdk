@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInclinedTablesResponseBody extends TeaModel {
     /**
+     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) permission verification failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,
@@ -19,13 +21,21 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The queried detection items and detection results.</p>
+     */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeInclinedTablesResponseBodyDetectionItems> detectionItems;
 
+    /**
+     * <p>The queried tables.</p>
+     */
     @NameInMap("Items")
     public DescribeInclinedTablesResponseBodyItems items;
 
     /**
+     * <p>The page number. Pages start from page 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +43,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The total number of pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -40,6 +52,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
      */
@@ -47,6 +61,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
@@ -115,13 +131,27 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeInclinedTablesResponseBodyDetectionItems extends TeaModel {
+        /**
+         * <p>The message of the detection result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A shard skew is detected in a table.</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <p>The name of the detection item.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Table skew</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The severity level of the detection result.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL
          * WARNNING
@@ -163,6 +193,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
 
     public static class DescribeInclinedTablesResponseBodyItemsTable extends TeaModel {
         /**
+         * <p>Indicates whether data is skewed in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>True</p>
          */
@@ -170,6 +202,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public Boolean isIncline;
 
         /**
+         * <p>The name of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>admin_daily_own_statistic_record</p>
          */
@@ -177,6 +211,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The number of rows in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -184,6 +220,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public Long rowCount;
 
         /**
+         * <p>The name of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>spark_test</p>
          */
@@ -191,6 +229,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public String schema;
 
         /**
+         * <p>The number of rows in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -198,6 +238,11 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public Long size;
 
         /**
+         * <p>The percentage of the table size. Unit: %.</p>
+         * <blockquote>
+         * <p> Formula: Table storage percentage = Total data size of a table/Total data size of the cluster × 100%.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0.4</p>
          */
@@ -205,6 +250,15 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public Double spaceRatio;
 
         /**
+         * <p>The total data size of the table. Unit: bytes.</p>
+         * <blockquote>
+         * <p> The following formulas can be used to calculate the total data size:</p>
+         * </blockquote>
+         * <ul>
+         * <li>Formula 1: Total data size = Hot data size + Cold data size.</li>
+         * <li>Formula 2: Total data size = Data size of table records + Data size of regular indexes + Data size of primary key indexes + Data size of other data.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>53687091200</p>
          */
@@ -212,6 +266,8 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
         public Long totalSize;
 
         /**
+         * <p>The detection type of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>Fact</p>
          */
@@ -290,6 +346,9 @@ public class DescribeInclinedTablesResponseBody extends TeaModel {
     }
 
     public static class DescribeInclinedTablesResponseBodyItems extends TeaModel {
+        /**
+         * <p>The queried table.</p>
+         */
         @NameInMap("Table")
         public java.util.List<DescribeInclinedTablesResponseBodyItemsTable> table;
 

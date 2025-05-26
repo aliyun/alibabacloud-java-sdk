@@ -144,6 +144,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupMethod")
         public String backupMethod;
 
+        @NameInMap("BackupRegion")
+        public String backupRegion;
+
         /**
          * <p>The size of the backup set. Unit: bytes.</p>
          * 
@@ -184,6 +187,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("DBClusterId")
         public String DBClusterId;
 
+        @NameInMap("ParentBackupId")
+        public String parentBackupId;
+
         public static DescribeBackupsResponseBodyItemsBackup build(java.util.Map<String, ?> map) throws Exception {
             DescribeBackupsResponseBodyItemsBackup self = new DescribeBackupsResponseBodyItemsBackup();
             return TeaModel.build(map, self);
@@ -221,6 +227,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.backupMethod;
         }
 
+        public DescribeBackupsResponseBodyItemsBackup setBackupRegion(String backupRegion) {
+            this.backupRegion = backupRegion;
+            return this;
+        }
+        public String getBackupRegion() {
+            return this.backupRegion;
+        }
+
         public DescribeBackupsResponseBodyItemsBackup setBackupSize(Integer backupSize) {
             this.backupSize = backupSize;
             return this;
@@ -251,6 +265,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getDBClusterId() {
             return this.DBClusterId;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setParentBackupId(String parentBackupId) {
+            this.parentBackupId = parentBackupId;
+            return this;
+        }
+        public String getParentBackupId() {
+            return this.parentBackupId;
         }
 
     }

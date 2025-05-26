@@ -3093,6 +3093,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>用于查看表索引信息</p>
+     * 
+     * @param request DescribeAdbMySqlIndexesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAdbMySqlIndexesResponse
+     */
+    public DescribeAdbMySqlIndexesResponse describeAdbMySqlIndexesWithOptions(DescribeAdbMySqlIndexesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAdbMySqlIndexes"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAdbMySqlIndexesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于查看表索引信息</p>
+     * 
+     * @param request DescribeAdbMySqlIndexesRequest
+     * @return DescribeAdbMySqlIndexesResponse
+     */
+    public DescribeAdbMySqlIndexesResponse describeAdbMySqlIndexes(DescribeAdbMySqlIndexesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAdbMySqlIndexesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
@@ -3150,6 +3206,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAdbMySqlSchemasResponse describeAdbMySqlSchemas(DescribeAdbMySqlSchemasRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAdbMySqlSchemasWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于查看表元数据信息</p>
+     * 
+     * @param request DescribeAdbMySqlTableMetaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAdbMySqlTableMetaResponse
+     */
+    public DescribeAdbMySqlTableMetaResponse describeAdbMySqlTableMetaWithOptions(DescribeAdbMySqlTableMetaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schema)) {
+            query.put("Schema", request.schema);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAdbMySqlTableMeta"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAdbMySqlTableMetaResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>用于查看表元数据信息</p>
+     * 
+     * @param request DescribeAdbMySqlTableMetaRequest
+     * @return DescribeAdbMySqlTableMetaResponse
+     */
+    public DescribeAdbMySqlTableMetaResponse describeAdbMySqlTableMeta(DescribeAdbMySqlTableMetaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAdbMySqlTableMetaWithOptions(request, runtime);
     }
 
     /**
@@ -4282,6 +4394,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询实例备份集</p>
+     * 
      * @param request DescribeBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupsResponse
@@ -4317,6 +4432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.remote)) {
+            query.put("Remote", request.remote);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -4349,6 +4468,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询实例备份集</p>
      * 
      * @param request DescribeBackupsRequest
      * @return DescribeBackupsResponse
@@ -6246,7 +6368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表倾斜诊断结果</p>
+     * <p>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeInclinedTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6302,7 +6424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看表倾斜诊断结果</p>
+     * <p>Queries the information about skewed tables for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeInclinedTablesRequest
      * @return DescribeInclinedTablesResponse
@@ -6432,6 +6554,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeKernelVersionResponse describeKernelVersion(DescribeKernelVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeKernelVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the answer by a large language model (LLM) to a user question about the use of AnalyticDB for MySQL.</p>
+     * 
+     * @param request DescribeLLMAnswerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLLMAnswerResponse
+     */
+    public DescribeLLMAnswerResponse describeLLMAnswerWithOptions(DescribeLLMAnswerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLLMAnswer"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLLMAnswerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the answer by a large language model (LLM) to a user question about the use of AnalyticDB for MySQL.</p>
+     * 
+     * @param request DescribeLLMAnswerRequest
+     * @return DescribeLLMAnswerResponse
+     */
+    public DescribeLLMAnswerResponse describeLLMAnswer(DescribeLLMAnswerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLLMAnswerWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request DescribeLLMSimilarQuestionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLLMSimilarQuestionsResponse
+     */
+    public DescribeLLMSimilarQuestionsResponse describeLLMSimilarQuestionsWithOptions(DescribeLLMSimilarQuestionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("Query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLLMSimilarQuestions"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLLMSimilarQuestionsResponse());
+    }
+
+    /**
+     * @param request DescribeLLMSimilarQuestionsRequest
+     * @return DescribeLLMSimilarQuestionsResponse
+     */
+    public DescribeLLMSimilarQuestionsResponse describeLLMSimilarQuestions(DescribeLLMSimilarQuestionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLLMSimilarQuestionsWithOptions(request, runtime);
     }
 
     /**
@@ -6903,8 +7155,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源组规格相关信息</p>
+     * <p>Queries the information about resource group specifications.</p>
      * 
      * @param request DescribeResourceGroupSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6943,8 +7199,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源组规格相关信息</p>
+     * <p>Queries the information about resource group specifications.</p>
      * 
      * @param request DescribeResourceGroupSpecRequest
      * @return DescribeResourceGroupSpecResponse
@@ -7042,6 +7302,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSQLPatternsResponse describeSQLPatterns(DescribeSQLPatternsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeSQLPatternsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看注册的WebSocket域名</p>
+     * 
+     * @param request DescribeSQLWebSocketDomainRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSQLWebSocketDomainResponse
+     */
+    public DescribeSQLWebSocketDomainResponse describeSQLWebSocketDomainWithOptions(DescribeSQLWebSocketDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSQLWebSocketDomain"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSQLWebSocketDomainResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看注册的WebSocket域名</p>
+     * 
+     * @param request DescribeSQLWebSocketDomainRequest
+     * @return DescribeSQLWebSocketDomainResponse
+     */
+    public DescribeSQLWebSocketDomainResponse describeSQLWebSocketDomain(DescribeSQLWebSocketDomainRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSQLWebSocketDomainWithOptions(request, runtime);
     }
 
     /**
@@ -7867,6 +8175,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询表统计信息</p>
+     * 
+     * @param request DescribeTableStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeTableStatisticsResponse
+     */
+    public DescribeTableStatisticsResponse describeTableStatisticsWithOptions(DescribeTableStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
+            query.put("SchemaName", request.schemaName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeTableStatistics"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeTableStatisticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询表统计信息</p>
+     * 
+     * @param request DescribeTableStatisticsRequest
+     * @return DescribeTableStatisticsResponse
+     */
+    public DescribeTableStatisticsResponse describeTableStatistics(DescribeTableStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeTableStatisticsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
      * <ul>
@@ -8609,10 +8985,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries whether a running SQL engine exists.</p>
      * 
+     * @deprecated OpenAPI ExistRunningSQLEngine is deprecated
+     * 
      * @param request ExistRunningSQLEngineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExistRunningSQLEngineResponse
      */
+    @Deprecated
+    // Deprecated
     public ExistRunningSQLEngineResponse existRunningSQLEngineWithOptions(ExistRunningSQLEngineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -8654,9 +9034,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries whether a running SQL engine exists.</p>
      * 
+     * @deprecated OpenAPI ExistRunningSQLEngine is deprecated
+     * 
      * @param request ExistRunningSQLEngineRequest
      * @return ExistRunningSQLEngineResponse
      */
+    @Deprecated
+    // Deprecated
     public ExistRunningSQLEngineResponse existRunningSQLEngine(ExistRunningSQLEngineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.existRunningSQLEngineWithOptions(request, runtime);
@@ -13463,10 +13847,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Starts the Spark SQL engine.</p>
      * 
+     * @deprecated OpenAPI StartSparkSQLEngine is deprecated
+     * 
      * @param request StartSparkSQLEngineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartSparkSQLEngineResponse
      */
+    @Deprecated
+    // Deprecated
     public StartSparkSQLEngineResponse startSparkSQLEngineWithOptions(StartSparkSQLEngineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -13528,9 +13916,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Starts the Spark SQL engine.</p>
      * 
+     * @deprecated OpenAPI StartSparkSQLEngine is deprecated
+     * 
      * @param request StartSparkSQLEngineRequest
      * @return StartSparkSQLEngineResponse
      */
+    @Deprecated
+    // Deprecated
     public StartSparkSQLEngineResponse startSparkSQLEngine(StartSparkSQLEngineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startSparkSQLEngineWithOptions(request, runtime);

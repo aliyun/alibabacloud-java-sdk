@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceGroupSpecResponseBody extends TeaModel {
     /**
-     * <p>requestId</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>10226189-4391-5B10-97AF-5CA5XXXXXXX</p>
@@ -13,6 +13,9 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The queried specifications.</p>
+     */
     @NameInMap("Specs")
     public java.util.List<DescribeResourceGroupSpecResponseBodySpecs> specs;
 
@@ -38,10 +41,15 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupSpecResponseBodySpecs extends TeaModel {
+        /**
+         * <p>The allocation units supported by this specification.</p>
+         */
         @NameInMap("AllocateUnits")
         public java.util.List<String> allocateUnits;
 
         /**
+         * <p>The maximum number of resource groups that can be used with this specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -49,6 +57,8 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
         public Integer maxQuantity;
 
         /**
+         * <p>The name of the specification.</p>
+         * 
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
@@ -56,6 +66,8 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>GPU</p>
          */

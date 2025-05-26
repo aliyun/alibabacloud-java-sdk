@@ -66,6 +66,9 @@ public class DescribeBackupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Remote")
+    public Boolean remote;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -141,6 +144,14 @@ public class DescribeBackupsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeBackupsRequest setRemote(Boolean remote) {
+        this.remote = remote;
+        return this;
+    }
+    public Boolean getRemote() {
+        return this.remote;
     }
 
     public DescribeBackupsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
