@@ -416,10 +416,6 @@ public class GetFeatureViewResponseBody extends TeaModel {
         @NameInMap("Input")
         public java.util.List<GetFeatureViewResponseBodyFieldsTransformInput> input;
 
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("LLMConfigId")
         public Integer LLMConfigId;
 
@@ -469,7 +465,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         public String name;
 
         @NameInMap("Transform")
-        public GetFeatureViewResponseBodyFieldsTransform transform;
+        public java.util.List<GetFeatureViewResponseBodyFieldsTransform> transform;
 
         /**
          * <strong>example:</strong>
@@ -499,11 +495,11 @@ public class GetFeatureViewResponseBody extends TeaModel {
             return this.name;
         }
 
-        public GetFeatureViewResponseBodyFields setTransform(GetFeatureViewResponseBodyFieldsTransform transform) {
+        public GetFeatureViewResponseBodyFields setTransform(java.util.List<GetFeatureViewResponseBodyFieldsTransform> transform) {
             this.transform = transform;
             return this;
         }
-        public GetFeatureViewResponseBodyFieldsTransform getTransform() {
+        public java.util.List<GetFeatureViewResponseBodyFieldsTransform> getTransform() {
             return this.transform;
         }
 
