@@ -1445,6 +1445,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("SlsConfigs")
         public String slsConfigs;
 
+        @NameInMap("StartupProbe")
+        public String startupProbe;
+
         @NameInMap("SwimlanePvtzDiscovery")
         public String swimlanePvtzDiscovery;
 
@@ -2144,6 +2147,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getSlsConfigs() {
             return this.slsConfigs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setStartupProbe(String startupProbe) {
+            this.startupProbe = startupProbe;
+            return this;
+        }
+        public String getStartupProbe() {
+            return this.startupProbe;
         }
 
         public DescribeApplicationConfigResponseBodyData setSwimlanePvtzDiscovery(String swimlanePvtzDiscovery) {

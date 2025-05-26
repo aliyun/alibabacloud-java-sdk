@@ -481,6 +481,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("StartupProbe")
+    public String startupProbe;
+
     /**
      * <p>30</p>
      * 
@@ -1091,6 +1094,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public CreateApplicationRequest setStartupProbe(String startupProbe) {
+        this.startupProbe = startupProbe;
+        return this;
+    }
+    public String getStartupProbe() {
+        return this.startupProbe;
     }
 
     public CreateApplicationRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {

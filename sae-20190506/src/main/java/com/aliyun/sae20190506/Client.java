@@ -579,6 +579,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SlsConfigs", request.slsConfigs);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startupProbe)) {
+            query.put("StartupProbe", request.startupProbe);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.terminationGracePeriodSeconds)) {
             query.put("TerminationGracePeriodSeconds", request.terminationGracePeriodSeconds);
         }
@@ -2652,6 +2656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.slsConfigs)) {
             query.put("SlsConfigs", request.slsConfigs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startupProbe)) {
+            query.put("StartupProbe", request.startupProbe);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.terminationGracePeriodSeconds)) {

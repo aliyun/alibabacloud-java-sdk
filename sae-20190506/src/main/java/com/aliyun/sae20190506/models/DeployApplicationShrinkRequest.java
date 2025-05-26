@@ -696,6 +696,9 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("StartupProbe")
+    public String startupProbe;
+
     @NameInMap("SwimlanePvtzDiscoverySvc")
     public String swimlanePvtzDiscoverySvc;
 
@@ -1314,6 +1317,14 @@ public class DeployApplicationShrinkRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public DeployApplicationShrinkRequest setStartupProbe(String startupProbe) {
+        this.startupProbe = startupProbe;
+        return this;
+    }
+    public String getStartupProbe() {
+        return this.startupProbe;
     }
 
     public DeployApplicationShrinkRequest setSwimlanePvtzDiscoverySvc(String swimlanePvtzDiscoverySvc) {

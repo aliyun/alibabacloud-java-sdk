@@ -481,6 +481,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    @NameInMap("StartupProbe")
+    public String startupProbe;
+
     /**
      * <p>30</p>
      * 
@@ -1091,6 +1094,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getSlsConfigs() {
         return this.slsConfigs;
+    }
+
+    public CreateApplicationShrinkRequest setStartupProbe(String startupProbe) {
+        this.startupProbe = startupProbe;
+        return this;
+    }
+    public String getStartupProbe() {
+        return this.startupProbe;
     }
 
     public CreateApplicationShrinkRequest setTerminationGracePeriodSeconds(Integer terminationGracePeriodSeconds) {
