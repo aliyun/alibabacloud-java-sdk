@@ -138,6 +138,96 @@ public class TargetVideo extends TeaModel {
 
     }
 
+    public static class TargetVideoFilterVideoDesensitizationFace extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("MinSize")
+        public Integer minSize;
+
+        public static TargetVideoFilterVideoDesensitizationFace build(java.util.Map<String, ?> map) throws Exception {
+            TargetVideoFilterVideoDesensitizationFace self = new TargetVideoFilterVideoDesensitizationFace();
+            return TeaModel.build(map, self);
+        }
+
+        public TargetVideoFilterVideoDesensitizationFace setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public TargetVideoFilterVideoDesensitizationFace setMinSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+    }
+
+    public static class TargetVideoFilterVideoDesensitizationLicensePlate extends TeaModel {
+        @NameInMap("Confidence")
+        public Float confidence;
+
+        @NameInMap("MinSize")
+        public Integer minSize;
+
+        public static TargetVideoFilterVideoDesensitizationLicensePlate build(java.util.Map<String, ?> map) throws Exception {
+            TargetVideoFilterVideoDesensitizationLicensePlate self = new TargetVideoFilterVideoDesensitizationLicensePlate();
+            return TeaModel.build(map, self);
+        }
+
+        public TargetVideoFilterVideoDesensitizationLicensePlate setConfidence(Float confidence) {
+            this.confidence = confidence;
+            return this;
+        }
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        public TargetVideoFilterVideoDesensitizationLicensePlate setMinSize(Integer minSize) {
+            this.minSize = minSize;
+            return this;
+        }
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+    }
+
+    public static class TargetVideoFilterVideoDesensitization extends TeaModel {
+        @NameInMap("Face")
+        public TargetVideoFilterVideoDesensitizationFace face;
+
+        @NameInMap("LicensePlate")
+        public TargetVideoFilterVideoDesensitizationLicensePlate licensePlate;
+
+        public static TargetVideoFilterVideoDesensitization build(java.util.Map<String, ?> map) throws Exception {
+            TargetVideoFilterVideoDesensitization self = new TargetVideoFilterVideoDesensitization();
+            return TeaModel.build(map, self);
+        }
+
+        public TargetVideoFilterVideoDesensitization setFace(TargetVideoFilterVideoDesensitizationFace face) {
+            this.face = face;
+            return this;
+        }
+        public TargetVideoFilterVideoDesensitizationFace getFace() {
+            return this.face;
+        }
+
+        public TargetVideoFilterVideoDesensitization setLicensePlate(TargetVideoFilterVideoDesensitizationLicensePlate licensePlate) {
+            this.licensePlate = licensePlate;
+            return this;
+        }
+        public TargetVideoFilterVideoDesensitizationLicensePlate getLicensePlate() {
+            return this.licensePlate;
+        }
+
+    }
+
     public static class TargetVideoFilterVideoWatermarks extends TeaModel {
         @NameInMap("BorderColor")
         public String borderColor;
@@ -326,6 +416,12 @@ public class TargetVideo extends TeaModel {
         @NameInMap("Delogos")
         public java.util.List<TargetVideoFilterVideoDelogos> delogos;
 
+        @NameInMap("Desensitization")
+        public TargetVideoFilterVideoDesensitization desensitization;
+
+        @NameInMap("Speed")
+        public Float speed;
+
         @NameInMap("Watermarks")
         public java.util.List<TargetVideoFilterVideoWatermarks> watermarks;
 
@@ -340,6 +436,22 @@ public class TargetVideo extends TeaModel {
         }
         public java.util.List<TargetVideoFilterVideoDelogos> getDelogos() {
             return this.delogos;
+        }
+
+        public TargetVideoFilterVideo setDesensitization(TargetVideoFilterVideoDesensitization desensitization) {
+            this.desensitization = desensitization;
+            return this;
+        }
+        public TargetVideoFilterVideoDesensitization getDesensitization() {
+            return this.desensitization;
+        }
+
+        public TargetVideoFilterVideo setSpeed(Float speed) {
+            this.speed = speed;
+            return this;
+        }
+        public Float getSpeed() {
+            return this.speed;
         }
 
         public TargetVideoFilterVideo setWatermarks(java.util.List<TargetVideoFilterVideoWatermarks> watermarks) {
