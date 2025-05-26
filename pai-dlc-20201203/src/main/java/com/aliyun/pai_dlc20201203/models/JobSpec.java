@@ -31,7 +31,11 @@ public class JobSpec extends TeaModel {
     public ImageConfig imageConfig;
 
     @NameInMap("IsCheif")
+    @Deprecated
     public Boolean isCheif;
+
+    @NameInMap("IsChief")
+    public Boolean isChief;
 
     @NameInMap("LocalMountSpecs")
     public java.util.List<LocalMountSpec> localMountSpecs;
@@ -123,12 +127,21 @@ public class JobSpec extends TeaModel {
         return this.imageConfig;
     }
 
+    @Deprecated
     public JobSpec setIsCheif(Boolean isCheif) {
         this.isCheif = isCheif;
         return this;
     }
     public Boolean getIsCheif() {
         return this.isCheif;
+    }
+
+    public JobSpec setIsChief(Boolean isChief) {
+        this.isChief = isChief;
+        return this;
+    }
+    public Boolean getIsChief() {
+        return this.isChief;
     }
 
     public JobSpec setLocalMountSpecs(java.util.List<LocalMountSpec> localMountSpecs) {
