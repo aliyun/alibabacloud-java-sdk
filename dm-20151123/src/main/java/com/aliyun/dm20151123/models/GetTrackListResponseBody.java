@@ -4,13 +4,27 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetTrackListResponseBody extends TeaModel {
+    /**
+     * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(This field is deprecated)</p>
+     */
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
 
+    /**
+     * <p>(This field is deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(This field is deprecated)</p>
+     */
     @NameInMap("OffsetCreateTimeDesc")
     public String offsetCreateTimeDesc;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +32,8 @@ public class GetTrackListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +41,8 @@ public class GetTrackListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */
@@ -32,12 +50,17 @@ public class GetTrackListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of items</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
     @NameInMap("Total")
     public Integer total;
 
+    /**
+     * <p>Tracking data records</p>
+     */
     @NameInMap("data")
     public GetTrackListResponseBodyData data;
 
@@ -104,6 +127,8 @@ public class GetTrackListResponseBody extends TeaModel {
 
     public static class GetTrackListResponseBodyDataStat extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-29T13:28Z</p>
          */
@@ -111,6 +136,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Click count</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -118,6 +145,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptClickCount;
 
         /**
+         * <p>Click rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -125,6 +154,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptClickRate;
 
         /**
+         * <p>Number of Opens</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -132,6 +163,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptOpenCount;
 
         /**
+         * <p>Open rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -139,6 +172,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptOpenRate;
 
         /**
+         * <p>Unique click count</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -146,6 +181,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptUniqueClickCount;
 
         /**
+         * <p>Unique click rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -153,6 +190,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptUniqueClickRate;
 
         /**
+         * <p>Unique open count</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -160,6 +199,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptUniqueOpenCount;
 
         /**
+         * <p>Unique open rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -167,6 +208,8 @@ public class GetTrackListResponseBody extends TeaModel {
         public String rcptUniqueOpenRate;
 
         /**
+         * <p>Total number</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

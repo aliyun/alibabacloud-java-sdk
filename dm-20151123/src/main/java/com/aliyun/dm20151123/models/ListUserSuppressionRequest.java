@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListUserSuppressionRequest extends TeaModel {
     /**
+     * <p>Email address or domain name</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@example.net">test@example.net</a></p>
      */
@@ -12,6 +14,8 @@ public class ListUserSuppressionRequest extends TeaModel {
     public String address;
 
     /**
+     * <p>End time of the last bounce hit, timestamp, accurate to the second. The span between start and end times cannot exceed 7 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715669077</p>
      */
@@ -19,6 +23,8 @@ public class ListUserSuppressionRequest extends TeaModel {
     public Integer endBounceTime;
 
     /**
+     * <p>End creation time, timestamp, accurate to the second. The span between start and end times cannot exceed 7 days.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715669077</p>
      */
@@ -29,6 +35,8 @@ public class ListUserSuppressionRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +44,8 @@ public class ListUserSuppressionRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,6 +59,8 @@ public class ListUserSuppressionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Start time of the last bounce hit, timestamp, accurate to the second.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715668852</p>
      */
@@ -56,6 +68,8 @@ public class ListUserSuppressionRequest extends TeaModel {
     public Integer startBounceTime;
 
     /**
+     * <p>Start creation time, timestamp, accurate to the second.</p>
+     * 
      * <strong>example:</strong>
      * <p>1715668852</p>
      */

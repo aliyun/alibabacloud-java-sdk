@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */
@@ -12,12 +14,17 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Data records</p>
+     */
     @NameInMap("data")
     public SenderStatisticsByTagNameAndBatchIDResponseBodyData data;
 
@@ -52,6 +59,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
 
     public static class SenderStatisticsByTagNameAndBatchIDResponseBodyDataStat extends TeaModel {
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-07-02</p>
          */
@@ -59,6 +68,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Failure count</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -66,6 +77,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         public String faildCount;
 
         /**
+         * <p>Request count</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -73,6 +86,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         public String requestCount;
 
         /**
+         * <p>Success rate</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00%</p>
          */
@@ -80,6 +95,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         public String succeededPercent;
 
         /**
+         * <p>Success count</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -87,6 +104,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         public String successCount;
 
         /**
+         * <p>Invalid count</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -94,6 +113,8 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         public String unavailableCount;
 
         /**
+         * <p>Unavailability rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0%</p>
          */

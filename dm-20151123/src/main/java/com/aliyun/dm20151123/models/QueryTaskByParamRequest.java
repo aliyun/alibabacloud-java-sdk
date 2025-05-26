@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskByParamRequest extends TeaModel {
     /**
+     * <p>Keyword, defaults to all information.</p>
+     * 
      * <strong>example:</strong>
      * <p>mesh-notification-788717</p>
      */
@@ -15,6 +17,8 @@ public class QueryTaskByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Current page number, default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class QueryTaskByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size, default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +41,8 @@ public class QueryTaskByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Status, defaults to all statuses.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

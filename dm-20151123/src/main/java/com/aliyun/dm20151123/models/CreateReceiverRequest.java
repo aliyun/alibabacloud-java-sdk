@@ -4,6 +4,12 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateReceiverRequest extends TeaModel {
+    /**
+     * <p>List description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>the description</p>
+     */
     @NameInMap("Desc")
     public String desc;
 
@@ -11,19 +17,21 @@ public class CreateReceiverRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>List alias, an email address less than 30 characters long.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vme</p>
+     * <p>a***@example.net</p>
      */
     @NameInMap("ReceiversAlias")
     public String receiversAlias;
 
     /**
+     * <p>List name, must be unique, with a length of 1-30 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xme</p>
+     * <p>test</p>
      */
     @NameInMap("ReceiversName")
     public String receiversName;

@@ -4,6 +4,12 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class QueryMailAddressByParamRequest extends TeaModel {
+    /**
+     * <p>Email address, length 1-60, supports numbers, letters, ., -, @.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>账号+@+域名</p>
+     */
     @NameInMap("KeyWord")
     public String keyWord;
 
@@ -11,6 +17,8 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Current page number, default: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -18,6 +26,8 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size, default: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -31,6 +41,12 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Type of sending address. Values:</p>
+     * <ul>
+     * <li>batch: bulk email</li>
+     * <li>trigger: triggered email</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>batch</p>
      */

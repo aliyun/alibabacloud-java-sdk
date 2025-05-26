@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryMailAddressByParamResponseBody extends TeaModel {
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
      */
@@ -26,12 +32,17 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>List of mail addresses</p>
+     */
     @NameInMap("data")
     public QueryMailAddressByParamResponseBodyData data;
 
@@ -81,10 +92,18 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     }
 
     public static class QueryMailAddressByParamResponseBodyDataMailAddress extends TeaModel {
+        /**
+         * <p>Sending address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>账户+@+域名</p>
+         */
         @NameInMap("AccountName")
         public String accountName;
 
         /**
+         * <p>Account status, frozen: 1, normal: 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -92,6 +111,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String accountStatus;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-29T13:28Z</p>
          */
@@ -99,6 +120,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Daily quota limit</p>
+         * 
          * <strong>example:</strong>
          * <p>10000</p>
          */
@@ -106,6 +129,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String dailyCount;
 
         /**
+         * <p>Daily quota</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -113,6 +138,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String dailyReqCount;
 
         /**
+         * <p>Domain status, 0 indicates normal, 1 indicates abnormal.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -120,6 +147,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
+         * <p>Mail address ID</p>
+         * 
          * <strong>example:</strong>
          * <p>12122</p>
          */
@@ -127,6 +156,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String mailAddressId;
 
         /**
+         * <p>Monthly quota limit</p>
+         * 
          * <strong>example:</strong>
          * <p>300000</p>
          */
@@ -134,6 +165,8 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String monthCount;
 
         /**
+         * <p>Monthly quota</p>
+         * 
          * <strong>example:</strong>
          * <p>20000</p>
          */
@@ -141,13 +174,17 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String monthReqCount;
 
         /**
+         * <p>Reply address</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="mailto:112@aliyun.com">112@aliyun.com</a></p>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         @NameInMap("ReplyAddress")
         public String replyAddress;
 
         /**
+         * <p>Reply address status</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -155,6 +192,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String replyStatus;
 
         /**
+         * <p>Type of sending address. Values:</p>
+         * <ul>
+         * <li>batch: bulk email</li>
+         * <li>trigger: triggered email</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>batch</p>
          */

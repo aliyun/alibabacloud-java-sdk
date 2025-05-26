@@ -4,6 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class UpdateUserRequest extends TeaModel {
+    /**
+     * <p>User Information</p>
+     */
     @NameInMap("User")
     public UpdateUserRequestUser user;
 
@@ -22,6 +25,8 @@ public class UpdateUserRequest extends TeaModel {
 
     public static class UpdateUserRequestUser extends TeaModel {
         /**
+         * <p>Whether EventBridge is enabled</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

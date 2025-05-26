@@ -8,11 +8,11 @@ public class DeleteReceiverRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the recipient list.</p>
+     * <p>Receiver list ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1453</p>
+     * <p>144adfa772cfe47631de7e86d7da13ae</p>
      */
     @NameInMap("ReceiverId")
     public String receiverId;

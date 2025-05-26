@@ -14,7 +14,7 @@ public class DeleteTagRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the tag.</p>
+     * <p>The ID of the tag</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

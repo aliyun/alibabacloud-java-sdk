@@ -4,6 +4,12 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DeleteReceiverDetailRequest extends TeaModel {
+    /**
+     * <p>The single recipient to be deleted from the recipient list</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("Email")
     public String email;
 
@@ -11,10 +17,11 @@ public class DeleteReceiverDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Recipient list ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123534</p>
+     * <p>53228b7d80c36257927ecd029ccd3c9a</p>
      */
     @NameInMap("ReceiverId")
     public String receiverId;

@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ModifyPWByDomainResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Description of the status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>02B2A890-CBD8-4806-9BCA-C93190CE7EF6</p>
      */
@@ -22,6 +32,8 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Whether it was successful</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

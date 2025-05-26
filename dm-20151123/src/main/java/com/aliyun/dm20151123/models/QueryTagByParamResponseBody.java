@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTagByParamResponseBody extends TeaModel {
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -12,6 +14,8 @@ public class QueryTagByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class QueryTagByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */
@@ -26,12 +32,17 @@ public class QueryTagByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Data records</p>
+     */
     @NameInMap("data")
     public QueryTagByParamResponseBodyData data;
 
@@ -81,10 +92,18 @@ public class QueryTagByParamResponseBody extends TeaModel {
     }
 
     public static class QueryTagByParamResponseBodyDataTag extends TeaModel {
+        /**
+         * <p>Tag description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
+         */
         @NameInMap("TagDescription")
         public String tagDescription;
 
         /**
+         * <p>Tag ID</p>
+         * 
          * <strong>example:</strong>
          * <p>52366</p>
          */
@@ -92,6 +111,8 @@ public class QueryTagByParamResponseBody extends TeaModel {
         public String tagId;
 
         /**
+         * <p>Tag name</p>
+         * 
          * <strong>example:</strong>
          * <p>hellopal</p>
          */

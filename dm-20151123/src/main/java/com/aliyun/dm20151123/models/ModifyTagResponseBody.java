@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyTagResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
-     * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
+     * <p>00BD30D8-2E86-523A-BFC7-63B7FF931A06</p>
      */
     @NameInMap("RequestId")
     public String requestId;

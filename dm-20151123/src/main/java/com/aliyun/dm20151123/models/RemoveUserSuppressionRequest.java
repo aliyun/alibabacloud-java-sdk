@@ -13,6 +13,10 @@ public class RemoveUserSuppressionRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59511</p>
+     */
     @NameInMap("SuppressionIds")
     public String suppressionIds;
 

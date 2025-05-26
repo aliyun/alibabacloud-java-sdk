@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInvalidAddressRequest extends TeaModel {
     /**
+     * <p>End time, with a span from the start time that cannot exceed 30 days, in the format yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-29</p>
      */
@@ -12,6 +14,8 @@ public class QueryInvalidAddressRequest extends TeaModel {
     public String endTime;
 
     /**
+     * <p>Keyword. If not provided, it represents all invalid addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>info</p>
      */
@@ -19,6 +23,8 @@ public class QueryInvalidAddressRequest extends TeaModel {
     public String keyWord;
 
     /**
+     * <p>Number of items per request.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -26,6 +32,8 @@ public class QueryInvalidAddressRequest extends TeaModel {
     public Integer length;
 
     /**
+     * <p>Request starting position.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -42,6 +50,8 @@ public class QueryInvalidAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Start time, which cannot be earlier than 30 days ago, in the format yyyy-MM-dd.</p>
+     * 
      * <strong>example:</strong>
      * <p>2019-09-29</p>
      */

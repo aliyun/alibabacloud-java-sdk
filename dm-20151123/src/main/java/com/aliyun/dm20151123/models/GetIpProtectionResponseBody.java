@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetIpProtectionResponseBody extends TeaModel {
     /**
+     * <p>IP protection switch, On: 1 Off: 0</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class GetIpProtectionResponseBody extends TeaModel {
     public String ipProtection;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>B30E5A62-2E64-577D-A70E-8C6781D6C975</p>
      */

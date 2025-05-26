@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMailAddressRequest extends TeaModel {
     /**
+     * <p>Mail Address ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

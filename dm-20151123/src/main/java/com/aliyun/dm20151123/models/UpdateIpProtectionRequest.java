@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateIpProtectionRequest extends TeaModel {
     /**
+     * <p>IP protection switch, On: 1 Off: 0</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

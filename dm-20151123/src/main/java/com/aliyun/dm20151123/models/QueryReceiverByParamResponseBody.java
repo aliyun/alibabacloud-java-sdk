@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryReceiverByParamResponseBody extends TeaModel {
     /**
+     * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>6aec200853#102#1638894326#<a href="mailto:rdwilbur@verizon.net">rdwilbur@verizon.net</a></p>
+     * <p>6aec200853#102#1638894326#<a href="mailto:test@example.com">test@example.com</a></p>
      */
     @NameInMap("NextStart")
     public String nextStart;
 
     /**
+     * <p>Number of items displayed per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */
@@ -26,12 +32,17 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Detailed information of the recipient list</p>
+     */
     @NameInMap("data")
     public QueryReceiverByParamResponseBodyData data;
 
@@ -82,6 +93,8 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
 
     public static class QueryReceiverByParamResponseBodyDataReceiver extends TeaModel {
         /**
+         * <p>Total number of recipient addresses</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -89,16 +102,26 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         public String count;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-29T13:28Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
+         */
         @NameInMap("Desc")
         public String desc;
 
         /**
+         * <p>Recipient list ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0c910a7143044b1e116719eb678907b3</p>
          */
@@ -106,13 +129,17 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         public String receiverId;
 
         /**
+         * <p>Recipient list alias</p>
+         * 
          * <strong>example:</strong>
-         * <p>10***@163.com</p>
+         * <p>10***@example.com</p>
          */
         @NameInMap("ReceiversAlias")
         public String receiversAlias;
 
         /**
+         * <p>Recipient list name</p>
+         * 
          * <strong>example:</strong>
          * <p>TKP000442-333</p>
          */
@@ -120,6 +147,12 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         public String receiversName;
 
         /**
+         * <p>List status. Values:</p>
+         * <ul>
+         * <li>0: Uploading</li>
+         * <li>1: Upload completed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -127,6 +160,8 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         public String receiversStatus;
 
         /**
+         * <p>UTC formatted creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1569734892</p>
          */

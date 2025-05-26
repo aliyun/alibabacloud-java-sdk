@@ -14,6 +14,8 @@ public class DeleteInvalidAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Target address</p>
+     * 
      * <strong>example:</strong>
      * <p>test1***@example.net</p>
      */

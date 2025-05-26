@@ -5,12 +5,18 @@ import com.aliyun.tea.*;
 
 public class SendTestByTemplateRequest extends TeaModel {
     /**
+     * <p>Sender address, with a maximum length of 60 characters</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
+     * <p>Birthday, with a maximum length of 30 characters</p>
+     * 
      * <strong>example:</strong>
      * <p>2000/01/01</p>
      */
@@ -18,21 +24,39 @@ public class SendTestByTemplateRequest extends TeaModel {
     public String birthday;
 
     /**
+     * <p>Recipient address, with a maximum length of 60 characters</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
+    /**
+     * <p>Gender, with a maximum length of 30 characters</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctor</p>
+     */
     @NameInMap("Gender")
     public String gender;
 
     /**
+     * <p>Mobile, with a maximum length of 30 characters</p>
+     * 
      * <strong>example:</strong>
      * <p>1380000****</p>
      */
     @NameInMap("Mobile")
     public String mobile;
 
+    /**
+     * <p>NickName, with a maximum length of 30 characters</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LC</p>
+     */
     @NameInMap("NickName")
     public String nickName;
 
@@ -46,6 +70,7 @@ public class SendTestByTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Template ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +79,12 @@ public class SendTestByTemplateRequest extends TeaModel {
     @NameInMap("TemplateId")
     public Integer templateId;
 
+    /**
+     * <p>UserName, with a maximum length of 30 characters</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Lucy</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

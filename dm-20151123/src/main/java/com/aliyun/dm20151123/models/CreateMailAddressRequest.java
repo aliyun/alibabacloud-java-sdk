@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateMailAddressRequest extends TeaModel {
     /**
+     * <p>Sender\&quot;s email address</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
      */
     @NameInMap("AccountName")
     public String accountName;
@@ -14,8 +18,10 @@ public class CreateMailAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Reply-to address</p>
+     * 
      * <strong>example:</strong>
-     * <p><a href="mailto:reply@aliyun.com">reply@aliyun.com</a></p>
+     * <p><a href="mailto:test2@example.com">test2@example.com</a></p>
      */
     @NameInMap("ReplyAddress")
     public String replyAddress;
@@ -27,6 +33,13 @@ public class CreateMailAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Type of sending. Values:</p>
+     * <ul>
+     * <li><p>batch: Bulk emails</p>
+     * </li>
+     * <li><p>trigger: Triggered emails</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

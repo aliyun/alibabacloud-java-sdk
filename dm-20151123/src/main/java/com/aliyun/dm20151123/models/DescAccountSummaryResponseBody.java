@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class DescAccountSummaryResponseBody extends TeaModel {
     /**
+     * <p>Daily quota</p>
+     * 
      * <strong>example:</strong>
      * <p>2000</p>
      */
     @NameInMap("DailyQuota")
     public Integer dailyQuota;
 
+    /**
+     * <p>remaining amount of daily free quota</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("DailyRemainFreeQuota")
     public Integer dailyRemainFreeQuota;
 
     /**
+     * <p>Dayu status (deprecated, retained for compatibility reasons.)</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +32,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer dayuStatus;
 
     /**
+     * <p>Number of domains</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +41,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer domains;
 
     /**
+     * <p>Effective time</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -36,6 +50,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer enableTimes;
 
     /**
+     * <p>Number of sending addresses</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -43,6 +59,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer mailAddresses;
 
     /**
+     * <p>Maximum level</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +68,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer maxQuotaLevel;
 
     /**
+     * <p>Monthly quota</p>
+     * 
      * <strong>example:</strong>
      * <p>60000</p>
      */
@@ -57,6 +77,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer monthQuota;
 
     /**
+     * <p>Credit level</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -64,16 +86,26 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer quotaLevel;
 
     /**
+     * <p>Number of recipients</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
     @NameInMap("Receivers")
     public Integer receivers;
 
+    /**
+     * <p>Remaining amount of total free quota</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1910</p>
+     */
     @NameInMap("RemainFreeQuota")
     public Integer remainFreeQuota;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>82B295BB-7E69-491F-9896-ECEAFF09E1A4</p>
      */
@@ -81,6 +113,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Deprecated, retained for compatibility reasons.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -88,6 +122,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer smsRecord;
 
     /**
+     * <p>Deprecated, retained for compatibility reasons.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -95,6 +131,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer smsSign;
 
     /**
+     * <p>Deprecated, retained for compatibility reasons.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -102,6 +140,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer smsTemplates;
 
     /**
+     * <p>Number of tags</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -109,6 +149,8 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer tags;
 
     /**
+     * <p>Number of templates</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -116,6 +158,12 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer templates;
 
     /**
+     * <p>User status:
+     * 1 Frozen
+     * 2 In arrears
+     * 4 Restricted from sending
+     * 8 Logically deleted</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

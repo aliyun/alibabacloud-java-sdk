@@ -13,25 +13,31 @@ public class ModifyTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Tag Description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test description</p>
+     */
     @NameInMap("TagDescription")
     public String tagDescription;
 
     /**
-     * <p>The ID of the tag.</p>
+     * <p>Tag ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>123</p>
+     * <p>100674</p>
      */
     @NameInMap("TagId")
     public Integer tagId;
 
     /**
-     * <p>The name of the tag.</p>
+     * <p>Tag Name</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vme</p>
+     * <p>test</p>
      */
     @NameInMap("TagName")
     public String tagName;

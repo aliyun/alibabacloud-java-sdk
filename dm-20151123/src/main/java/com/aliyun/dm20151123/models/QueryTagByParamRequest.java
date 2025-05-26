@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTagByParamRequest extends TeaModel {
     /**
+     * <p>Tag name, length 1-50, defaults to all tags if not specified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1aTag</p>
      */
@@ -15,6 +17,8 @@ public class QueryTagByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class QueryTagByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     /**
+     * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>90f0243616#203#a***@example.net-1658817689#a***@example.net.247141122178</p>
      */
@@ -12,12 +14,17 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
     public String nextStart;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>B5AB8EBB-EE64-4BB2-B085-B92CC5DEDC41</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Detailed records</p>
+     */
     @NameInMap("data")
     public SenderStatisticsDetailByParamResponseBodyData data;
 
@@ -52,16 +59,27 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
     public static class SenderStatisticsDetailByParamResponseBodyDataMailDetail extends TeaModel {
         /**
+         * <p>Sending address</p>
+         * 
          * <strong>example:</strong>
          * <p>s***@example.net</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>Detailed classification of error reasons: - SendOk - SmtpNxBox
+         * etc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SendOk</p>
+         */
         @NameInMap("ErrorClassification")
         public String errorClassification;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-04-28T17:11Z</p>
          */
@@ -69,6 +87,8 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         public String lastUpdateTime;
 
         /**
+         * <p>Delivery detail information</p>
+         * 
          * <strong>example:</strong>
          * <p>250 Send Mail OK</p>
          */
@@ -76,16 +96,26 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>Delivery status: 0 Success, 2 Invalid Address, 3 Spam, 4 Other Failures</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>Email subject</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test subject</p>
+         */
         @NameInMap("Subject")
         public String subject;
 
         /**
+         * <p>Recipient address</p>
+         * 
          * <strong>example:</strong>
          * <p>b***@example.net</p>
          */
@@ -93,6 +123,8 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         public String toAddress;
 
         /**
+         * <p>UTC formatted update time</p>
+         * 
          * <strong>example:</strong>
          * <p>1619601108</p>
          */

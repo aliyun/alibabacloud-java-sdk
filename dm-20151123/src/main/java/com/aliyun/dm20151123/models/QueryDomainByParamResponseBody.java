@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryDomainByParamResponseBody extends TeaModel {
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */
@@ -19,6 +23,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8C90CCD3-627C-4F87-AD8C-2F03146071EB</p>
      */
@@ -26,12 +32,17 @@ public class QueryDomainByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>List of domains</p>
+     */
     @NameInMap("data")
     public QueryDomainByParamResponseBodyData data;
 
@@ -82,6 +93,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
 
     public static class QueryDomainByParamResponseBodyDataDomain extends TeaModel {
         /**
+         * <p>Track verification</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -89,6 +102,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String cnameAuthStatus;
 
         /**
+         * <p>CName verification status, success: 0; failure: 1</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -96,6 +111,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String confirmStatus;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-29T13:28Z</p>
          */
@@ -103,6 +120,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Domain ID</p>
+         * 
          * <strong>example:</strong>
          * <p>158923</p>
          */
@@ -110,13 +129,17 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String domainId;
 
         /**
+         * <p>Domain name</p>
+         * 
          * <strong>example:</strong>
-         * <p>vmeixme.com</p>
+         * <p>example.com</p>
          */
         @NameInMap("DomainName")
         public String domainName;
 
         /**
+         * <p>Domain record</p>
+         * 
          * <strong>example:</strong>
          * <p>6bd86901b9fe4618a046</p>
          */
@@ -124,6 +147,12 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String domainRecord;
 
         /**
+         * <p>Domain status.</p>
+         * <ul>
+         * <li>0: Available, verified</li>
+         * <li>1: Unavailable, verification failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -131,6 +160,12 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
+         * <p>ICP filing status.</p>
+         * <ul>
+         * <li>1 indicates filed</li>
+         * <li>0 indicates not filed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -138,6 +173,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String icpStatus;
 
         /**
+         * <p>MX authentication status, success: 0, failure: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -145,6 +182,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String mxAuthStatus;
 
         /**
+         * <p>SPF authentication status, success: 0, failure: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -152,6 +191,8 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         public String spfAuthStatus;
 
         /**
+         * <p>Creation time in UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1569734892</p>
          */

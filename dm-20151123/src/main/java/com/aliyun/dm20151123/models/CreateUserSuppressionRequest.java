@@ -4,6 +4,12 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CreateUserSuppressionRequest extends TeaModel {
+    /**
+     * <p>Email address or domain name</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.net">test@example.net</a></p>
+     */
     @NameInMap("Address")
     public String address;
 

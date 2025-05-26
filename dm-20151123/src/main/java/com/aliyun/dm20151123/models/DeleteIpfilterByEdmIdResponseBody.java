@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteIpfilterByEdmIdResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E3DFF97B-00CF-5333-8125-3D6819471984</p>
      */

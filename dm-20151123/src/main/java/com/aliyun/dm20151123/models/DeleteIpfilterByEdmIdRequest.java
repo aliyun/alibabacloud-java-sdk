@@ -4,10 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DeleteIpfilterByEdmIdRequest extends TeaModel {
+    /**
+     * <p>Deprecated, kept for historical compatibility.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FromType")
     public Integer fromType;
 
     /**
+     * <p>Record ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10120</p>
      */

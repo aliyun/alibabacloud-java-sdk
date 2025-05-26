@@ -4,10 +4,20 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class GetTrackListRequest extends TeaModel {
+    /**
+     * <p>Sender address.</p>
+     * <blockquote>
+     * <p>If not filled, it represents all addresses; if TagName is provided, this parameter must not be empty.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:test@example.com">test@example.com</a></p>
+     */
     @NameInMap("AccountName")
     public String accountName;
 
     /**
+     * <p>End time, the span between start and end time cannot exceed 7 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,12 +26,30 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(This field is deprecated)</p>
+     */
     @NameInMap("Offset")
     public String offset;
 
+    /**
+     * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(This field is deprecated)</p>
+     */
     @NameInMap("OffsetCreateTime")
     public String offsetCreateTime;
 
+    /**
+     * <p>(This field is deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(This field is deprecated)</p>
+     */
     @NameInMap("OffsetCreateTimeDesc")
     public String offsetCreateTimeDesc;
 
@@ -29,6 +57,8 @@ public class GetTrackListRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +66,8 @@ public class GetTrackListRequest extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -49,6 +81,7 @@ public class GetTrackListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Start time, which cannot be earlier than 30 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,9 +90,21 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>Tag name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tagname</p>
+     */
     @NameInMap("TagName")
     public String tagName;
 
+    /**
+     * <p>(This field is deprecated)</p>
+     * 
+     * <strong>example:</strong>
+     * <p>(This field is deprecated)</p>
+     */
     @NameInMap("Total")
     public String total;
 

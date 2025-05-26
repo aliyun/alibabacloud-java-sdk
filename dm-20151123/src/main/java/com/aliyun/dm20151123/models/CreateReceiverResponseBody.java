@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateReceiverResponseBody extends TeaModel {
     /**
+     * <p>Receiver list ID</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxx</p>
+     * <p>7312e09b8fffc5c7b2e2fbf5b6dc2073</p>
      */
     @NameInMap("ReceiverId")
     public String receiverId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */

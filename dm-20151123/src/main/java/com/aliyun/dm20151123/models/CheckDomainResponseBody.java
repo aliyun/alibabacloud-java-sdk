@@ -5,13 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckDomainResponseBody extends TeaModel {
     /**
-     * <p>The status of the domain name. Indicates whether the domain name is verified and available.</p>
+     * <p>Domain status. Indicates whether the verification was successful, with values as follows:</p>
      * <ul>
-     * <li>0: indicates that the domain name is verified and available.</li>
-     * <li>1: indicates that the domain name fails to be verified and is unavailable.</li>
-     * <li>2: indicates that the domain name is available, but not filed or configured with a CNAME record.</li>
-     * <li>3: indicates that the domain name is available but not filed.</li>
-     * <li>4: indicates that the domain name is available but not configured with a CNAME record.</li>
+     * <li><strong>0</strong>: Available, verified successfully</li>
+     * <li><strong>1</strong>: Unavailable, verification failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +18,7 @@ public class CheckDomainResponseBody extends TeaModel {
     public Integer domainStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>F0B82E83-A1D9-4FE6-97D2-F4B231F80B02</p>

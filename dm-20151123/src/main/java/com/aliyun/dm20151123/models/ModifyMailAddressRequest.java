@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMailAddressRequest extends TeaModel {
     /**
+     * <p>Sending address ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,13 +18,24 @@ public class ModifyMailAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <ul>
+     * <li><p>Length should be 10 to 20 characters, and must include numbers, uppercase letters, and lowercase letters.</p>
+     * </li>
+     * <li><p>Must contain at least 2 digits, 2 uppercase letters, and 2 lowercase letters, and neither the digits nor the letters can consist of a single character repeated.</p>
+     * </li>
+     * <li><p>Cannot be the same as the last set password.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
-     * <p>pwd129WDCft9</p>
+     * <p>DM1mail1234</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
+     * <p>Reply address</p>
+     * 
      * <strong>example:</strong>
      * <p>a***@example.net</p>
      */

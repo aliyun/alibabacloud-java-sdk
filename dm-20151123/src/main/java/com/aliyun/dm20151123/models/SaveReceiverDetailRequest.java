@@ -5,10 +5,14 @@ import com.aliyun.tea.*;
 
 public class SaveReceiverDetailRequest extends TeaModel {
     /**
+     * <p>Content, supports uploading multiple recipients at once, with a limit of 500 records per upload. Each record is separated by {} and commas, example:</p>
+     * <p>[{ },{ },{ }...], the format within {} is as follows:</p>
+     * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;<a href="mailto:xxx@example.net">xxx@example.net</a>&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}], when passing values, pass it as a string, not a list.</p>
+     * <p>If a duplicate recipient address is inserted, it will return &quot;ErrorCount&quot;: 1</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{“b”:” birthday”,”e”:”<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>”,”g”:” gender”,”m”:” mobile “,”n”:” nickname “,”u”:”name “}]</p>
+     * <p>[{&quot;b&quot;:&quot;birthday&quot;,&quot;e&quot;:&quot;<a href="mailto:xxx@alibaba-inc.com">xxx@alibaba-inc.com</a>&quot;,&quot;g&quot;:&quot;gender&quot;,&quot;m&quot;:&quot;mobile&quot;,&quot;n&quot;:&quot;nickname&quot;,&quot;u&quot;:&quot;name&quot;}]</p>
      */
     @NameInMap("Detail")
     public String detail;
@@ -17,6 +21,7 @@ public class SaveReceiverDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Recipient list ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

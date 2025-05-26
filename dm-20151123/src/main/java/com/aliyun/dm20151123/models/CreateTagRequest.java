@@ -13,14 +13,21 @@ public class CreateTagRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>Tag description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test description</p>
+     */
     @NameInMap("TagDescription")
     public String tagDescription;
 
     /**
+     * <p>Tag name. Limitations: 1-50 characters, allowing English letters, numbers, and underscores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>vme</p>
+     * <p>test</p>
      */
     @NameInMap("TagName")
     public String tagName;

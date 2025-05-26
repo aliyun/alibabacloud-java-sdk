@@ -4,10 +4,18 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class CheckReplyToMailAddressRequest extends TeaModel {
+    /**
+     * <p>Language.</p>
+     * <p>en is English, and any other value or an empty value defaults to Chinese.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Sender Address ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +28,8 @@ public class CheckReplyToMailAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Region</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

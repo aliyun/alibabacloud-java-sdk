@@ -4,6 +4,10 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class RemoveUserSuppressionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1A846D66-5EC7-551B-9687-5BF1963DCFC1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

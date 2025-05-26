@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetIpfilterListResponseBody extends TeaModel {
     /**
+     * <p>Current page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class GetIpfilterListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Number of items per page</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class GetIpfilterListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>84DD77C7-A091-5139-9530-2D1F7CCE59E0</p>
      */
@@ -26,12 +32,17 @@ public class GetIpfilterListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Data records</p>
+     */
     @NameInMap("data")
     public GetIpfilterListResponseBodyData data;
 
@@ -82,6 +93,8 @@ public class GetIpfilterListResponseBody extends TeaModel {
 
     public static class GetIpfilterListResponseBodyDataIpfilters extends TeaModel {
         /**
+         * <p>timestamp</p>
+         * 
          * <strong>example:</strong>
          * <p>1653547140</p>
          */
@@ -89,12 +102,22 @@ public class GetIpfilterListResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Record ID</p>
+         * 
          * <strong>example:</strong>
          * <p>10083</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>IP address/IP range/IP segment</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx.xxx.xxx.xxx
+         * xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
+         * xxx.xxx.xxx.xxx/xxx</p>
+         */
         @NameInMap("IpAddress")
         public String ipAddress;
 

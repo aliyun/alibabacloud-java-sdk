@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryReceiverDetailResponseBody extends TeaModel {
     /**
+     * <p>Field name for the Data of recipients</p>
+     * 
      * <strong>example:</strong>
      * <p>UserName,NickName,Gender,Birthday,Mobile</p>
      */
@@ -12,13 +14,17 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     public String dataSchema;
 
     /**
+     * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
+     * 
      * <strong>example:</strong>
-     * <p>90f0243616#401#b68c2af70b9664b2843f90fd3630b1a3-1650779410#<a href="mailto:xxx@demo.aliyun.com">xxx@demo.aliyun.com</a></p>
+     * <p>90f0243616#<a href="mailto:40test@example.com">40test@example.com</a></p>
      */
     @NameInMap("NextStart")
     public String nextStart;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */
@@ -26,12 +32,17 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count (deprecated field, kept for historical compatibility)</p>
+     * 
      * <strong>example:</strong>
      * <p>361</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Detailed information</p>
+     */
     @NameInMap("data")
     public QueryReceiverDetailResponseBodyData data;
 
@@ -82,6 +93,8 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
 
     public static class QueryReceiverDetailResponseBodyDataDetail extends TeaModel {
         /**
+         * <p>Creation Time</p>
+         * 
          * <strong>example:</strong>
          * <p>2019-09-29T13:28Z</p>
          */
@@ -89,6 +102,8 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Content</p>
+         * 
          * <strong>example:</strong>
          * <p>{\&quot;Domains\&quot;: [\&quot;a.example.net\&quot;, \&quot;b.example.net\&quot;, \&quot;c.example.net\&quot;, \&quot;d.example.net\&quot;]}</p>
          */
@@ -96,6 +111,8 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         public String data;
 
         /**
+         * <p>Recipient address</p>
+         * 
          * <strong>example:</strong>
          * <p>a***@example.net</p>
          */
@@ -103,6 +120,8 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         public String email;
 
         /**
+         * <p>Creation time in UTC format</p>
+         * 
          * <strong>example:</strong>
          * <p>1569734892</p>
          */

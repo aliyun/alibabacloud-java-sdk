@@ -14,7 +14,11 @@ public class ApproveReplyMailAddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Email address Ticket credential, part of the string in the verification email\&quot;s URL.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a724068dac9a45d19574375adeca0d7d</p>
      */
     @NameInMap("Ticket")
     public String ticket;

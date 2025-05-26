@@ -4,10 +4,15 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class ListUserSuppressionResponseBody extends TeaModel {
+    /**
+     * <p>Returned results.</p>
+     */
     @NameInMap("Data")
     public ListUserSuppressionResponseBodyData data;
 
     /**
+     * <p>Page number</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>1A846D66-5EC7-551B-9687-5BF1963DCFC1</p>
      */
@@ -29,6 +38,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -82,6 +93,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
 
     public static class ListUserSuppressionResponseBodyDataUserSuppressions extends TeaModel {
         /**
+         * <p>Email address or domain name</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@example.net">test@example.net</a></p>
          */
@@ -89,6 +102,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         public String address;
 
         /**
+         * <p>Creation time, timestamp, accurate to the second.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715667435</p>
          */
@@ -96,6 +111,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         public Integer createTime;
 
         /**
+         * <p>Last bounce hit time, timestamp, accurate to the second.</p>
+         * 
          * <strong>example:</strong>
          * <p>1715667451</p>
          */
@@ -103,6 +120,8 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         public Integer lastBounceTime;
 
         /**
+         * <p>Invalid address ID</p>
+         * 
          * <strong>example:</strong>
          * <p>59511</p>
          */
@@ -110,11 +129,14 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         public Integer suppressionId;
 
         /**
-         * <strong>example:</strong>
+         * <p>Source of entry, invalid address type</p>
          * <ul>
          * <li>system</li>
          * <li>user</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("Type")
         public String type;

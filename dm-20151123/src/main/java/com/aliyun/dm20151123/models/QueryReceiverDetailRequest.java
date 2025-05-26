@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryReceiverDetailRequest extends TeaModel {
     /**
+     * <p>Recipient address, length 0-50</p>
+     * 
      * <strong>example:</strong>
      * <p>b***@example.net</p>
      */
@@ -12,6 +14,8 @@ public class QueryReceiverDetailRequest extends TeaModel {
     public String keyWord;
 
     /**
+     * <p>Starting position for the next item, default: 0</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -22,6 +26,8 @@ public class QueryReceiverDetailRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Number of items per page, default: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +35,7 @@ public class QueryReceiverDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Recipient list ID (returned when creating a recipient list using the CreateReceiver API).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

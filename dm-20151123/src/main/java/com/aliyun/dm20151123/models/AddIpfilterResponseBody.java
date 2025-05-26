@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddIpfilterResponseBody extends TeaModel {
     /**
+     * <p>ID corresponding to the IP</p>
+     * 
      * <strong>example:</strong>
      * <p>10795</p>
      */
@@ -12,6 +14,8 @@ public class AddIpfilterResponseBody extends TeaModel {
     public String ipFilterId;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>0E9282E8-DC08-5445-8FB0-B9F0CA28B249</p>
      */

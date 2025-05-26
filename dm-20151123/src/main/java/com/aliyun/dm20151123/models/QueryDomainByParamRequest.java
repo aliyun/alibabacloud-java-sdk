@@ -5,8 +5,10 @@ import com.aliyun.tea.*;
 
 public class QueryDomainByParamRequest extends TeaModel {
     /**
+     * <p>Domain name, length 1-50, can include numbers, uppercase and lowercase letters, ., -.</p>
+     * 
      * <strong>example:</strong>
-     * <p>abc.com</p>
+     * <p>example.com</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
@@ -15,6 +17,8 @@ public class QueryDomainByParamRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>Current page number. Default: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +26,8 @@ public class QueryDomainByParamRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>Number of items per page, default: 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -35,6 +41,11 @@ public class QueryDomainByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <ul>
+     * <li>0 indicates normal</li>
+     * <li>1 indicates abnormal</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

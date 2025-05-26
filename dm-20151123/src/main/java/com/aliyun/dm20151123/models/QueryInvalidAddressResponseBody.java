@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryInvalidAddressResponseBody extends TeaModel {
     /**
+     * <p>Next request starting position.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,6 +14,8 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     public String nextStart;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
      */
@@ -19,12 +23,17 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Records.</p>
+     */
     @NameInMap("data")
     public QueryInvalidAddressResponseBodyData data;
 
@@ -67,6 +76,8 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
 
     public static class QueryInvalidAddressResponseBodyDataMailDetail extends TeaModel {
         /**
+         * <p>Update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-04-28T17:11Z</p>
          */
@@ -74,13 +85,17 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         public String lastUpdateTime;
 
         /**
+         * <p>Recipient address.</p>
+         * 
          * <strong>example:</strong>
-         * <p><a href="mailto:toaddress@test.com">toaddress@test.com</a></p>
+         * <p><a href="mailto:toaddress@example.com">toaddress@example.com</a></p>
          */
         @NameInMap("ToAddress")
         public String toAddress;
 
         /**
+         * <p>Update time (in timestamp format).</p>
+         * 
          * <strong>example:</strong>
          * <p>1619601108</p>
          */

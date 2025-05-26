@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     /**
+     * <p>Sending address. If not filled, it represents all addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */
@@ -12,6 +14,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +33,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>Start time, in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,6 +43,8 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     public String startTime;
 
     /**
+     * <p>Email tag. If not filled, it represents all tags.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx</p>
      */

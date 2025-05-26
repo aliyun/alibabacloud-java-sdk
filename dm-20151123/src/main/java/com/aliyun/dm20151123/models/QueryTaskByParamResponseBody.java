@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryTaskByParamResponseBody extends TeaModel {
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -12,6 +14,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -19,6 +23,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
      */
@@ -26,12 +32,17 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total count.</p>
+     * 
      * <strong>example:</strong>
      * <p>15</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
 
+    /**
+     * <p>Returned results.</p>
+     */
     @NameInMap("data")
     public QueryTaskByParamResponseBodyData data;
 
@@ -81,13 +92,27 @@ public class QueryTaskByParamResponseBody extends TeaModel {
     }
 
     public static class QueryTaskByParamResponseBodyDataTask extends TeaModel {
+        /**
+         * <p>Address type, sending address: 1; random address: 0;</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AddressType")
         public String addressType;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-18T10:36Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
+         * <p>Receiver\&quot;s name.</p>
+         * 
          * <strong>example:</strong>
          * <p>TKP000442-333</p>
          */
@@ -95,6 +120,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public String receiversName;
 
         /**
+         * <p>Request count.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -102,6 +129,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public String requestCount;
 
         /**
+         * <p>Tag.</p>
+         * 
          * <strong>example:</strong>
          * <p>202201</p>
          */
@@ -109,6 +138,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public String tagName;
 
         /**
+         * <p>Task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1054296</p>
          */
@@ -116,6 +147,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public String taskId;
 
         /**
+         * <p>Task status, sent successfully: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -123,6 +156,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public String taskStatus;
 
         /**
+         * <p>Template name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Short Simple</p>
          */
@@ -130,6 +165,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public String templateName;
 
         /**
+         * <p>Creation time in UTC format.</p>
+         * 
          * <strong>example:</strong>
          * <p>1569734892</p>
          */
