@@ -3825,6 +3825,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterStatus", request.DBClusterStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterVersion)) {
+            query.put("DBClusterVersion", request.DBClusterVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBVersion)) {
             query.put("DBVersion", request.DBVersion);
         }

@@ -48,6 +48,9 @@ public class DescribeDBClustersRequest extends TeaModel {
     @NameInMap("DBClusterStatus")
     public String DBClusterStatus;
 
+    @NameInMap("DBClusterVersion")
+    public String DBClusterVersion;
+
     /**
      * <p>The version of the cluster. Set the value to <strong>3.0</strong>.</p>
      * 
@@ -147,6 +150,14 @@ public class DescribeDBClustersRequest extends TeaModel {
     }
     public String getDBClusterStatus() {
         return this.DBClusterStatus;
+    }
+
+    public DescribeDBClustersRequest setDBClusterVersion(String DBClusterVersion) {
+        this.DBClusterVersion = DBClusterVersion;
+        return this;
+    }
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
     }
 
     public DescribeDBClustersRequest setDBVersion(String DBVersion) {

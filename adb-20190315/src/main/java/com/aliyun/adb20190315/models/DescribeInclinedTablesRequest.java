@@ -69,9 +69,9 @@ public class DescribeInclinedTablesRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li>30；</li>
-     * <li>50；</li>
-     * <li>100；</li>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
      * </ul>
      * <p>Default value: 30.</p>
      * 
