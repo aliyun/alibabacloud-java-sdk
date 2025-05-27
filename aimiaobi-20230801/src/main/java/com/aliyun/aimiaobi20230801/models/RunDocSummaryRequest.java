@@ -14,6 +14,9 @@ public class RunDocSummaryRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("Query")
     public String query;
 
@@ -57,6 +60,14 @@ public class RunDocSummaryRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunDocSummaryRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocSummaryRequest setQuery(String query) {

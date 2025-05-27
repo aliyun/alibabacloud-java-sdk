@@ -6115,6 +6115,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DocId", request.docId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             body.put("Query", request.query);
         }
