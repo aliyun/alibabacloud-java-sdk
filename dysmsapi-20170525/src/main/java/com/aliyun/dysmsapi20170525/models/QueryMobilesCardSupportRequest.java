@@ -5,6 +5,16 @@ import com.aliyun.tea.*;
 
 public class QueryMobilesCardSupportRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EncryptType")
+    public String encryptType;
+
+    /**
      * <p>The list of mobile phone numbers.</p>
      * <p>This parameter is required.</p>
      */
@@ -27,6 +37,14 @@ public class QueryMobilesCardSupportRequest extends TeaModel {
     public static QueryMobilesCardSupportRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryMobilesCardSupportRequest self = new QueryMobilesCardSupportRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryMobilesCardSupportRequest setEncryptType(String encryptType) {
+        this.encryptType = encryptType;
+        return this;
+    }
+    public String getEncryptType() {
+        return this.encryptType;
     }
 
     public QueryMobilesCardSupportRequest setMobiles(java.util.List<java.util.Map<String, ?>> mobiles) {

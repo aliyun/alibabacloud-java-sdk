@@ -2371,6 +2371,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptType)) {
+            query.put("EncryptType", request.encryptType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mobilesShrink)) {
             query.put("Mobiles", request.mobilesShrink);
         }
