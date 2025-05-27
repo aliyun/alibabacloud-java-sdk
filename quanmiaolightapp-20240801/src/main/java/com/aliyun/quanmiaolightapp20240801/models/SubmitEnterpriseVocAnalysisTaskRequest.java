@@ -33,6 +33,9 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends TeaModel {
     @NameInMap("outputFormat")
     public String outputFormat;
 
+    @NameInMap("sourceTrace")
+    public Boolean sourceTrace;
+
     @NameInMap("tags")
     public java.util.List<SubmitEnterpriseVocAnalysisTaskRequestTags> tags;
 
@@ -105,6 +108,14 @@ public class SubmitEnterpriseVocAnalysisTaskRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskRequest setSourceTrace(Boolean sourceTrace) {
+        this.sourceTrace = sourceTrace;
+        return this;
+    }
+    public Boolean getSourceTrace() {
+        return this.sourceTrace;
     }
 
     public SubmitEnterpriseVocAnalysisTaskRequest setTags(java.util.List<SubmitEnterpriseVocAnalysisTaskRequestTags> tags) {

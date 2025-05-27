@@ -44,6 +44,9 @@ public class RunEnterpriseVocAnalysisRequest extends TeaModel {
     @NameInMap("outputFormat")
     public String outputFormat;
 
+    @NameInMap("sourceTrace")
+    public Boolean sourceTrace;
+
     /**
      * <p>业务标签体系，用于对文本内容进行分类和分析。</p>
      */
@@ -122,6 +125,14 @@ public class RunEnterpriseVocAnalysisRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public RunEnterpriseVocAnalysisRequest setSourceTrace(Boolean sourceTrace) {
+        this.sourceTrace = sourceTrace;
+        return this;
+    }
+    public Boolean getSourceTrace() {
+        return this.sourceTrace;
     }
 
     public RunEnterpriseVocAnalysisRequest setTags(java.util.List<RunEnterpriseVocAnalysisRequestTags> tags) {

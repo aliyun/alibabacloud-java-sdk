@@ -643,6 +643,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("outputFormat", request.outputFormat);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTrace)) {
+            body.put("sourceTrace", request.sourceTrace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
             body.put("tags", request.tagsShrink);
         }
@@ -1660,6 +1664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.outputFormat)) {
             body.put("outputFormat", request.outputFormat);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceTrace)) {
+            body.put("sourceTrace", request.sourceTrace);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {

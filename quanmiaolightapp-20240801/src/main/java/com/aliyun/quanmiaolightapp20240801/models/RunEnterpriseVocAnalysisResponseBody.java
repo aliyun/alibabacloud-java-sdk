@@ -214,6 +214,9 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
         @NameInMap("filterResult")
         public RunEnterpriseVocAnalysisResponseBodyPayloadOutputFilterResult filterResult;
 
+        @NameInMap("reasonContent")
+        public String reasonContent;
+
         @NameInMap("text")
         public String text;
 
@@ -228,6 +231,14 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
         }
         public RunEnterpriseVocAnalysisResponseBodyPayloadOutputFilterResult getFilterResult() {
             return this.filterResult;
+        }
+
+        public RunEnterpriseVocAnalysisResponseBodyPayloadOutput setReasonContent(String reasonContent) {
+            this.reasonContent = reasonContent;
+            return this;
+        }
+        public String getReasonContent() {
+            return this.reasonContent;
         }
 
         public RunEnterpriseVocAnalysisResponseBodyPayloadOutput setText(String text) {

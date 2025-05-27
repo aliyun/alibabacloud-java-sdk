@@ -33,6 +33,9 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     @NameInMap("outputFormat")
     public String outputFormat;
 
+    @NameInMap("sourceTrace")
+    public Boolean sourceTrace;
+
     @NameInMap("tags")
     public String tagsShrink;
 
@@ -105,6 +108,14 @@ public class SubmitEnterpriseVocAnalysisTaskShrinkRequest extends TeaModel {
     }
     public String getOutputFormat() {
         return this.outputFormat;
+    }
+
+    public SubmitEnterpriseVocAnalysisTaskShrinkRequest setSourceTrace(Boolean sourceTrace) {
+        this.sourceTrace = sourceTrace;
+        return this;
+    }
+    public Boolean getSourceTrace() {
+        return this.sourceTrace;
     }
 
     public SubmitEnterpriseVocAnalysisTaskShrinkRequest setTagsShrink(String tagsShrink) {

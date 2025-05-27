@@ -173,6 +173,9 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         @NameInMap("originResponse")
         public String originResponse;
 
+        @NameInMap("sourceList")
+        public java.util.List<String> sourceList;
+
         public static ListAnalysisTagDetailByTaskIdResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAnalysisTagDetailByTaskIdResponseBodyData self = new ListAnalysisTagDetailByTaskIdResponseBodyData();
             return TeaModel.build(map, self);
@@ -200,6 +203,14 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         }
         public String getOriginResponse() {
             return this.originResponse;
+        }
+
+        public ListAnalysisTagDetailByTaskIdResponseBodyData setSourceList(java.util.List<String> sourceList) {
+            this.sourceList = sourceList;
+            return this;
+        }
+        public java.util.List<String> getSourceList() {
+            return this.sourceList;
         }
 
     }
