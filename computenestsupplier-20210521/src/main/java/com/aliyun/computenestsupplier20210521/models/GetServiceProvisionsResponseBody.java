@@ -40,6 +40,47 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         return this.serviceProvisions;
     }
 
+    public static class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions extends TeaModel {
+        @NameInMap("CommodityCode")
+        public String commodityCode;
+
+        @NameInMap("EnableURL")
+        public String enableURL;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions self = new GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions setCommodityCode(String commodityCode) {
+            this.commodityCode = commodityCode;
+            return this;
+        }
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions setEnableURL(String enableURL) {
+            this.enableURL = enableURL;
+            return this;
+        }
+        public String getEnableURL() {
+            return this.enableURL;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class GetServiceProvisionsResponseBodyServiceProvisionsRoleProvisionRolesApiForCreation extends TeaModel {
         /**
          * <p>The name of the API operation.</p>
@@ -253,6 +294,9 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         @NameInMap("AutoEnableService")
         public Boolean autoEnableService;
 
+        @NameInMap("CommodityProvisions")
+        public java.util.List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> commodityProvisions;
+
         /**
          * <p>The URL that points to the activation page of the service.</p>
          * <blockquote>
@@ -318,6 +362,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
         public Boolean getAutoEnableService() {
             return this.autoEnableService;
+        }
+
+        public GetServiceProvisionsResponseBodyServiceProvisions setCommodityProvisions(java.util.List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> commodityProvisions) {
+            this.commodityProvisions = commodityProvisions;
+            return this;
+        }
+        public java.util.List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> getCommodityProvisions() {
+            return this.commodityProvisions;
         }
 
         public GetServiceProvisionsResponseBodyServiceProvisions setEnableURL(String enableURL) {
