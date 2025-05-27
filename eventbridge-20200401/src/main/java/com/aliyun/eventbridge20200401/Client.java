@@ -1045,6 +1045,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>发现EventSource(例如：Mysql)的Schema和SimpleData</p>
+     * 
+     * @param tmpReq DiscoverEventSourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DiscoverEventSourceResponse
+     */
+    public DiscoverEventSourceResponse discoverEventSourceWithOptions(DiscoverEventSourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DiscoverEventSourceShrinkRequest request = new DiscoverEventSourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceMySQLParameters)) {
+            request.sourceMySQLParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceMySQLParameters, "SourceMySQLParameters", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceMySQLParametersShrink)) {
+            body.put("SourceMySQLParameters", request.sourceMySQLParametersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DiscoverEventSource"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DiscoverEventSourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发现EventSource(例如：Mysql)的Schema和SimpleData</p>
+     * 
+     * @param request DiscoverEventSourceRequest
+     * @return DiscoverEventSourceResponse
+     */
+    public DiscoverEventSourceResponse discoverEventSource(DiscoverEventSourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.discoverEventSourceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to enable an event rule.</p>
      * 
@@ -2352,6 +2402,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TestEventPatternResponse testEventPattern(TestEventPatternRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.testEventPatternWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查EventSource配置是否可用</p>
+     * 
+     * @param tmpReq TestEventSourceConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TestEventSourceConfigResponse
+     */
+    public TestEventSourceConfigResponse testEventSourceConfigWithOptions(TestEventSourceConfigRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TestEventSourceConfigShrinkRequest request = new TestEventSourceConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceMySQLParameters)) {
+            request.sourceMySQLParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceMySQLParameters, "SourceMySQLParameters", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceMySQLParametersShrink)) {
+            body.put("SourceMySQLParameters", request.sourceMySQLParametersShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TestEventSourceConfig"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TestEventSourceConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>检查EventSource配置是否可用</p>
+     * 
+     * @param request TestEventSourceConfigRequest
+     * @return TestEventSourceConfigResponse
+     */
+    public TestEventSourceConfigResponse testEventSourceConfig(TestEventSourceConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.testEventSourceConfigWithOptions(request, runtime);
     }
 
     /**
