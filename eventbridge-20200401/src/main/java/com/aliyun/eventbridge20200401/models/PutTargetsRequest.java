@@ -89,6 +89,18 @@ public class PutTargetsRequest extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        @NameInMap("Network")
+        public String network;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static PutTargetsRequestTargetsDeadLetterQueue build(java.util.Map<String, ?> map) throws Exception {
             PutTargetsRequestTargetsDeadLetterQueue self = new PutTargetsRequestTargetsDeadLetterQueue();
             return TeaModel.build(map, self);
@@ -100,6 +112,38 @@ public class PutTargetsRequest extends TeaModel {
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public PutTargetsRequestTargetsDeadLetterQueue setNetwork(String network) {
+            this.network = network;
+            return this;
+        }
+        public String getNetwork() {
+            return this.network;
+        }
+
+        public PutTargetsRequestTargetsDeadLetterQueue setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public PutTargetsRequestTargetsDeadLetterQueue setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public PutTargetsRequestTargetsDeadLetterQueue setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

@@ -321,6 +321,9 @@ public class UpdateEventStreamingRequest extends TeaModel {
         @NameInMap("RetryStrategy")
         public UpdateEventStreamingRequestRunOptionsRetryStrategy retryStrategy;
 
+        @NameInMap("Throttling")
+        public Integer throttling;
+
         public static UpdateEventStreamingRequestRunOptions build(java.util.Map<String, ?> map) throws Exception {
             UpdateEventStreamingRequestRunOptions self = new UpdateEventStreamingRequestRunOptions();
             return TeaModel.build(map, self);
@@ -364,6 +367,14 @@ public class UpdateEventStreamingRequest extends TeaModel {
         }
         public UpdateEventStreamingRequestRunOptionsRetryStrategy getRetryStrategy() {
             return this.retryStrategy;
+        }
+
+        public UpdateEventStreamingRequestRunOptions setThrottling(Integer throttling) {
+            this.throttling = throttling;
+            return this;
+        }
+        public Integer getThrottling() {
+            return this.throttling;
         }
 
     }

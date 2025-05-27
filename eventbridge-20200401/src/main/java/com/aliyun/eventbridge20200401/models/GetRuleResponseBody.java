@@ -120,6 +120,18 @@ public class GetRuleResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        @NameInMap("Network")
+        public String network;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static GetRuleResponseBodyDataTargetsDeadLetterQueue build(java.util.Map<String, ?> map) throws Exception {
             GetRuleResponseBodyDataTargetsDeadLetterQueue self = new GetRuleResponseBodyDataTargetsDeadLetterQueue();
             return TeaModel.build(map, self);
@@ -131,6 +143,38 @@ public class GetRuleResponseBody extends TeaModel {
         }
         public String getArn() {
             return this.arn;
+        }
+
+        public GetRuleResponseBodyDataTargetsDeadLetterQueue setNetwork(String network) {
+            this.network = network;
+            return this;
+        }
+        public String getNetwork() {
+            return this.network;
+        }
+
+        public GetRuleResponseBodyDataTargetsDeadLetterQueue setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetRuleResponseBodyDataTargetsDeadLetterQueue setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public GetRuleResponseBodyDataTargetsDeadLetterQueue setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

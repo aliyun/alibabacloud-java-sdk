@@ -350,6 +350,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("RetryStrategy")
         public GetEventStreamingResponseBodyDataRunOptionsRetryStrategy retryStrategy;
 
+        @NameInMap("Throttling")
+        public Integer throttling;
+
         public static GetEventStreamingResponseBodyDataRunOptions build(java.util.Map<String, ?> map) throws Exception {
             GetEventStreamingResponseBodyDataRunOptions self = new GetEventStreamingResponseBodyDataRunOptions();
             return TeaModel.build(map, self);
@@ -393,6 +396,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataRunOptionsRetryStrategy getRetryStrategy() {
             return this.retryStrategy;
+        }
+
+        public GetEventStreamingResponseBodyDataRunOptions setThrottling(Integer throttling) {
+            this.throttling = throttling;
+            return this;
+        }
+        public Integer getThrottling() {
+            return this.throttling;
         }
 
     }
