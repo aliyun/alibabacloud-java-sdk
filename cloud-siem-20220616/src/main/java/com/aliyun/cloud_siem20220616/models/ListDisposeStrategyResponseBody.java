@@ -400,6 +400,9 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         @NameInMap("TaskParam")
         public String taskParam;
 
+        @NameInMap("TaskUrl")
+        public String taskUrl;
+
         public static ListDisposeStrategyResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListDisposeStrategyResponseBodyDataResponseData self = new ListDisposeStrategyResponseBodyDataResponseData();
             return TeaModel.build(map, self);
@@ -571,6 +574,14 @@ public class ListDisposeStrategyResponseBody extends TeaModel {
         }
         public String getTaskParam() {
             return this.taskParam;
+        }
+
+        public ListDisposeStrategyResponseBodyDataResponseData setTaskUrl(String taskUrl) {
+            this.taskUrl = taskUrl;
+            return this;
+        }
+        public String getTaskUrl() {
+            return this.taskUrl;
         }
 
     }

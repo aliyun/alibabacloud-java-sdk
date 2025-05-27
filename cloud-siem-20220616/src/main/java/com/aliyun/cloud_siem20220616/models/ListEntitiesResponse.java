@@ -3,7 +3,7 @@ package com.aliyun.cloud_siem20220616.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeJobStatusResponse extends TeaModel {
+public class ListEntitiesResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeJobStatusResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeJobStatusResponseBody body;
+    public ListEntitiesResponseBody body;
 
-    public static DescribeJobStatusResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeJobStatusResponse self = new DescribeJobStatusResponse();
+    public static ListEntitiesResponse build(java.util.Map<String, ?> map) throws Exception {
+        ListEntitiesResponse self = new ListEntitiesResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeJobStatusResponse setHeaders(java.util.Map<String, String> headers) {
+    public ListEntitiesResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeJobStatusResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeJobStatusResponse setStatusCode(Integer statusCode) {
+    public ListEntitiesResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeJobStatusResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeJobStatusResponse setBody(DescribeJobStatusResponseBody body) {
+    public ListEntitiesResponse setBody(ListEntitiesResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeJobStatusResponseBody getBody() {
+    public ListEntitiesResponseBody getBody() {
         return this.body;
     }
 

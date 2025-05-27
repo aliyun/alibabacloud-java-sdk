@@ -427,6 +427,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("EntityList")
+        public String entityList;
+
+        @NameInMap("ExtendContent")
+        public String extendContent;
+
         /**
          * <p>The time when the alert was received.</p>
          * 
@@ -529,6 +535,13 @@ public class DescribeAlertsResponseBody extends TeaModel {
          */
         @NameInMap("SubUserId")
         public Long subUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>176555323***</p>
+         */
+        @NameInMap("SubUserName")
+        public String subUserName;
 
         public static DescribeAlertsResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertsResponseBodyDataResponseData self = new DescribeAlertsResponseBodyDataResponseData();
@@ -703,6 +716,22 @@ public class DescribeAlertsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribeAlertsResponseBodyDataResponseData setEntityList(String entityList) {
+            this.entityList = entityList;
+            return this;
+        }
+        public String getEntityList() {
+            return this.entityList;
+        }
+
+        public DescribeAlertsResponseBodyDataResponseData setExtendContent(String extendContent) {
+            this.extendContent = extendContent;
+            return this;
+        }
+        public String getExtendContent() {
+            return this.extendContent;
+        }
+
         public DescribeAlertsResponseBodyDataResponseData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -789,6 +818,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
         public Long getSubUserId() {
             return this.subUserId;
+        }
+
+        public DescribeAlertsResponseBodyDataResponseData setSubUserName(String subUserName) {
+            this.subUserName = subUserName;
+            return this;
+        }
+        public String getSubUserName() {
+            return this.subUserName;
         }
 
     }

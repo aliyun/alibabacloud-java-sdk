@@ -33,6 +33,13 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>6c740667-80b2-476d-8924-2e706feb****</p>
+     */
+    @NameInMap("EntityUuid")
+    public String entityUuid;
+
+    /**
      * <p>The name of the event.</p>
      * 
      * <strong>example:</strong>
@@ -186,6 +193,14 @@ public class DescribeCloudSiemEventsRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeCloudSiemEventsRequest setEntityUuid(String entityUuid) {
+        this.entityUuid = entityUuid;
+        return this;
+    }
+    public String getEntityUuid() {
+        return this.entityUuid;
     }
 
     public DescribeCloudSiemEventsRequest setEventName(String eventName) {

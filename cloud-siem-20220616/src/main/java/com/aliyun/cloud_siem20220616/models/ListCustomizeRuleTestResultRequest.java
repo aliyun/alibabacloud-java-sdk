@@ -14,6 +14,12 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    @NameInMap("DetectionRuleId")
+    public String detectionRuleId;
+
+    @NameInMap("EndTime")
+    public Long endTime;
+
     /**
      * <p>The ID of the rule.</p>
      * 
@@ -68,6 +74,12 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     @NameInMap("RoleType")
     public Integer roleType;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    @NameInMap("VerifyType")
+    public String verifyType;
+
     public static ListCustomizeRuleTestResultRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCustomizeRuleTestResultRequest self = new ListCustomizeRuleTestResultRequest();
         return TeaModel.build(map, self);
@@ -79,6 +91,22 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public ListCustomizeRuleTestResultRequest setDetectionRuleId(String detectionRuleId) {
+        this.detectionRuleId = detectionRuleId;
+        return this;
+    }
+    public String getDetectionRuleId() {
+        return this.detectionRuleId;
+    }
+
+    public ListCustomizeRuleTestResultRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public ListCustomizeRuleTestResultRequest setId(Long id) {
@@ -119,6 +147,22 @@ public class ListCustomizeRuleTestResultRequest extends TeaModel {
     }
     public Integer getRoleType() {
         return this.roleType;
+    }
+
+    public ListCustomizeRuleTestResultRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    public ListCustomizeRuleTestResultRequest setVerifyType(String verifyType) {
+        this.verifyType = verifyType;
+        return this;
+    }
+    public String getVerifyType() {
+        return this.verifyType;
     }
 
 }

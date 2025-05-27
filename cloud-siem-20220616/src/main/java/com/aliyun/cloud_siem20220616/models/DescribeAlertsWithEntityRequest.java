@@ -15,6 +15,13 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
+     */
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    /**
      * <p>The ID of the entity.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +29,13 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
      */
     @NameInMap("EntityId")
     public Long entityId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
+    @NameInMap("EntityUuid")
+    public String entityUuid;
 
     /**
      * <p>The UUID of the event.</p>
@@ -86,6 +100,13 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
     @NameInMap("SophonTaskId")
     public String sophonTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
+     */
+    @NameInMap("StartTime")
+    public Long startTime;
+
     public static DescribeAlertsWithEntityRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAlertsWithEntityRequest self = new DescribeAlertsWithEntityRequest();
         return TeaModel.build(map, self);
@@ -99,12 +120,28 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
         return this.currentPage;
     }
 
+    public DescribeAlertsWithEntityRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
     public DescribeAlertsWithEntityRequest setEntityId(Long entityId) {
         this.entityId = entityId;
         return this;
     }
     public Long getEntityId() {
         return this.entityId;
+    }
+
+    public DescribeAlertsWithEntityRequest setEntityUuid(String entityUuid) {
+        this.entityUuid = entityUuid;
+        return this;
+    }
+    public String getEntityUuid() {
+        return this.entityUuid;
     }
 
     public DescribeAlertsWithEntityRequest setIncidentUuid(String incidentUuid) {
@@ -153,6 +190,14 @@ public class DescribeAlertsWithEntityRequest extends TeaModel {
     }
     public String getSophonTaskId() {
         return this.sophonTaskId;
+    }
+
+    public DescribeAlertsWithEntityRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
 }

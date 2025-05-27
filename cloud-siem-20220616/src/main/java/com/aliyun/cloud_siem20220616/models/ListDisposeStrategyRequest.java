@@ -60,6 +60,9 @@ public class ListDisposeStrategyRequest extends TeaModel {
     @NameInMap("EntityType")
     public String entityType;
 
+    @NameInMap("IncidentUuid")
+    public String incidentUuid;
+
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
@@ -228,6 +231,14 @@ public class ListDisposeStrategyRequest extends TeaModel {
     }
     public String getEntityType() {
         return this.entityType;
+    }
+
+    public ListDisposeStrategyRequest setIncidentUuid(String incidentUuid) {
+        this.incidentUuid = incidentUuid;
+        return this;
+    }
+    public String getIncidentUuid() {
+        return this.incidentUuid;
     }
 
     public ListDisposeStrategyRequest setOrder(String order) {

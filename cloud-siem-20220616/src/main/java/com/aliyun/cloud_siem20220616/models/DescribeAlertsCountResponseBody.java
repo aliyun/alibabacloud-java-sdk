@@ -108,6 +108,9 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         @NameInMap("All")
         public Long all;
 
+        @NameInMap("CountMap")
+        public java.util.Map<String, Long> countMap;
+
         /**
          * <p>The number of high-risk alerts.</p>
          * 
@@ -155,6 +158,14 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
         public Long getAll() {
             return this.all;
+        }
+
+        public DescribeAlertsCountResponseBodyData setCountMap(java.util.Map<String, Long> countMap) {
+            this.countMap = countMap;
+            return this;
+        }
+        public java.util.Map<String, Long> getCountMap() {
+            return this.countMap;
         }
 
         public DescribeAlertsCountResponseBodyData setHigh(Long high) {

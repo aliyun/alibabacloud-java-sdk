@@ -14,6 +14,13 @@ public class DescribeAlertsCountRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>bySrcProd</p>
+     */
+    @NameInMap("QueryType")
+    public String queryType;
+
+    /**
      * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
      * <ul>
      * <li>cn-hangzhou: Your assets reside in regions in China.</li>
@@ -68,6 +75,14 @@ public class DescribeAlertsCountRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAlertsCountRequest setQueryType(String queryType) {
+        this.queryType = queryType;
+        return this;
+    }
+    public String getQueryType() {
+        return this.queryType;
     }
 
     public DescribeAlertsCountRequest setRegionId(String regionId) {

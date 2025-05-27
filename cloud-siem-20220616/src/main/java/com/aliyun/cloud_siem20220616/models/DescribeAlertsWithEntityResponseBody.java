@@ -427,6 +427,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("EntityList")
+        public String entityList;
+
         /**
          * <p>The time when the alert was received.</p>
          * 
@@ -529,6 +532,13 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
          */
         @NameInMap("SubUserId")
         public Long subUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>176555323***</p>
+         */
+        @NameInMap("SubUserName")
+        public String subUserName;
 
         public static DescribeAlertsWithEntityResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertsWithEntityResponseBodyDataResponseData self = new DescribeAlertsWithEntityResponseBodyDataResponseData();
@@ -703,6 +713,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribeAlertsWithEntityResponseBodyDataResponseData setEntityList(String entityList) {
+            this.entityList = entityList;
+            return this;
+        }
+        public String getEntityList() {
+            return this.entityList;
+        }
+
         public DescribeAlertsWithEntityResponseBodyDataResponseData setGmtCreate(String gmtCreate) {
             this.gmtCreate = gmtCreate;
             return this;
@@ -789,6 +807,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         }
         public Long getSubUserId() {
             return this.subUserId;
+        }
+
+        public DescribeAlertsWithEntityResponseBodyDataResponseData setSubUserName(String subUserName) {
+            this.subUserName = subUserName;
+            return this;
+        }
+        public String getSubUserName() {
+            return this.subUserName;
         }
 
     }

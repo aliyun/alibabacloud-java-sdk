@@ -157,6 +157,47 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages extends TeaModel {
+        @NameInMap("AlertNum")
+        public Integer alertNum;
+
+        @NameInMap("TacticId")
+        public String tacticId;
+
+        @NameInMap("TacticName")
+        public String tacticName;
+
+        public static DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages self = new DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages setAlertNum(Integer alertNum) {
+            this.alertNum = alertNum;
+            return this;
+        }
+        public Integer getAlertNum() {
+            return this.alertNum;
+        }
+
+        public DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages setTacticId(String tacticId) {
+            this.tacticId = tacticId;
+            return this;
+        }
+        public String getTacticId() {
+            return this.tacticId;
+        }
+
+        public DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages setTacticName(String tacticName) {
+            this.tacticName = tacticName;
+            return this;
+        }
+        public String getTacticName() {
+            return this.tacticName;
+        }
+
+    }
+
     public static class DescribeCloudSiemEventsResponseBodyDataResponseData extends TeaModel {
         /**
          * <p>The number of alerts that are associated with the event.</p>
@@ -193,6 +234,9 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
          */
         @NameInMap("AttCkLabels")
         public java.util.List<String> attCkLabels;
+
+        @NameInMap("AttckStages")
+        public java.util.List<DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages> attckStages;
 
         /**
          * <p>The sources of the alert.</p>
@@ -266,6 +310,9 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         @NameInMap("IncidentNameEn")
         public String incidentNameEn;
 
+        @NameInMap("IncidentType")
+        public String incidentType;
+
         /**
          * <p>The UUID of the event.</p>
          * 
@@ -292,6 +339,9 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
          */
         @NameInMap("Remark")
         public String remark;
+
+        @NameInMap("RuleId")
+        public String ruleId;
 
         /**
          * <p>The status of the event. Valid values:</p>
@@ -368,6 +418,14 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             return this.attCkLabels;
         }
 
+        public DescribeCloudSiemEventsResponseBodyDataResponseData setAttckStages(java.util.List<DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages> attckStages) {
+            this.attckStages = attckStages;
+            return this;
+        }
+        public java.util.List<DescribeCloudSiemEventsResponseBodyDataResponseDataAttckStages> getAttckStages() {
+            return this.attckStages;
+        }
+
         public DescribeCloudSiemEventsResponseBodyDataResponseData setDataSources(java.util.List<String> dataSources) {
             this.dataSources = dataSources;
             return this;
@@ -432,6 +490,14 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
             return this.incidentNameEn;
         }
 
+        public DescribeCloudSiemEventsResponseBodyDataResponseData setIncidentType(String incidentType) {
+            this.incidentType = incidentType;
+            return this;
+        }
+        public String getIncidentType() {
+            return this.incidentType;
+        }
+
         public DescribeCloudSiemEventsResponseBodyDataResponseData setIncidentUuid(String incidentUuid) {
             this.incidentUuid = incidentUuid;
             return this;
@@ -454,6 +520,14 @@ public class DescribeCloudSiemEventsResponseBody extends TeaModel {
         }
         public String getRemark() {
             return this.remark;
+        }
+
+        public DescribeCloudSiemEventsResponseBodyDataResponseData setRuleId(String ruleId) {
+            this.ruleId = ruleId;
+            return this;
+        }
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         public DescribeCloudSiemEventsResponseBodyDataResponseData setStatus(Integer status) {

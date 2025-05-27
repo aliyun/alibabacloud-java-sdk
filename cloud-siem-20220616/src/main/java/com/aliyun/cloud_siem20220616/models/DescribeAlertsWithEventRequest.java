@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertsWithEventRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AlertName")
+    public String alertName;
+
+    /**
      * <p>The title of the alert.</p>
      * 
      * <strong>example:</strong>
@@ -12,6 +19,27 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
      */
     @NameInMap("AlertTitle")
     public String alertTitle;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AlertType")
+    public String alertType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AssetId")
+    public String assetId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AssetName")
+    public String assetName;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
@@ -22,6 +50,27 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
+     */
+    @NameInMap("EndTime")
+    public Long endTime;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("EntityId")
+    public String entityId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("EntityName")
+    public String entityName;
 
     /**
      * <p>The ID of the event.</p>
@@ -114,6 +163,13 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     public String source;
 
     /**
+     * <strong>example:</strong>
+     * <p>1577808000000</p>
+     */
+    @NameInMap("StartTime")
+    public Long startTime;
+
+    /**
      * <p>The ID of the account within which the alert is generated.</p>
      * 
      * <strong>example:</strong>
@@ -127,6 +183,14 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAlertsWithEventRequest setAlertName(String alertName) {
+        this.alertName = alertName;
+        return this;
+    }
+    public String getAlertName() {
+        return this.alertName;
+    }
+
     public DescribeAlertsWithEventRequest setAlertTitle(String alertTitle) {
         this.alertTitle = alertTitle;
         return this;
@@ -135,12 +199,60 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
         return this.alertTitle;
     }
 
+    public DescribeAlertsWithEventRequest setAlertType(String alertType) {
+        this.alertType = alertType;
+        return this;
+    }
+    public String getAlertType() {
+        return this.alertType;
+    }
+
+    public DescribeAlertsWithEventRequest setAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    public String getAssetId() {
+        return this.assetId;
+    }
+
+    public DescribeAlertsWithEventRequest setAssetName(String assetName) {
+        this.assetName = assetName;
+        return this;
+    }
+    public String getAssetName() {
+        return this.assetName;
+    }
+
     public DescribeAlertsWithEventRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    public DescribeAlertsWithEventRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
+    }
+
+    public DescribeAlertsWithEventRequest setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    public DescribeAlertsWithEventRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
     }
 
     public DescribeAlertsWithEventRequest setIncidentUuid(String incidentUuid) {
@@ -205,6 +317,14 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     }
     public String getSource() {
         return this.source;
+    }
+
+    public DescribeAlertsWithEventRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
     }
 
     public DescribeAlertsWithEventRequest setSubUserId(Long subUserId) {

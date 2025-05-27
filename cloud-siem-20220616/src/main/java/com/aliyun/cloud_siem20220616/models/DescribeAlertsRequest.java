@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AlertName")
+    public String alertName;
+
+    /**
      * <p>The title of the alert.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +21,13 @@ public class DescribeAlertsRequest extends TeaModel {
     public String alertTitle;
 
     /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AlertType")
+    public String alertType;
+
+    /**
      * <p>The UUID of the alert.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +35,20 @@ public class DescribeAlertsRequest extends TeaModel {
      */
     @NameInMap("AlertUuid")
     public String alertUuid;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AssetId")
+    public String assetId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("AssetName")
+    public String assetName;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
@@ -42,6 +70,20 @@ public class DescribeAlertsRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("EntityId")
+    public String entityId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>异常连接-TFTP恶意扫描</p>
+     */
+    @NameInMap("EntityName")
+    public String entityName;
+
+    /**
      * <p>Specifies whether an attack is defended. Valid values:</p>
      * <ul>
      * <li>0: detected.</li>
@@ -53,6 +95,13 @@ public class DescribeAlertsRequest extends TeaModel {
      */
     @NameInMap("IsDefend")
     public String isDefend;
+
+    /**
+     * <strong>example:</strong>
+     * <p>176555323***</p>
+     */
+    @NameInMap("LabelType")
+    public String labelType;
 
     /**
      * <p>The risk level. The value is a JSON array. Valid values:</p>
@@ -145,6 +194,14 @@ public class DescribeAlertsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeAlertsRequest setAlertName(String alertName) {
+        this.alertName = alertName;
+        return this;
+    }
+    public String getAlertName() {
+        return this.alertName;
+    }
+
     public DescribeAlertsRequest setAlertTitle(String alertTitle) {
         this.alertTitle = alertTitle;
         return this;
@@ -153,12 +210,36 @@ public class DescribeAlertsRequest extends TeaModel {
         return this.alertTitle;
     }
 
+    public DescribeAlertsRequest setAlertType(String alertType) {
+        this.alertType = alertType;
+        return this;
+    }
+    public String getAlertType() {
+        return this.alertType;
+    }
+
     public DescribeAlertsRequest setAlertUuid(String alertUuid) {
         this.alertUuid = alertUuid;
         return this;
     }
     public String getAlertUuid() {
         return this.alertUuid;
+    }
+
+    public DescribeAlertsRequest setAssetId(String assetId) {
+        this.assetId = assetId;
+        return this;
+    }
+    public String getAssetId() {
+        return this.assetId;
+    }
+
+    public DescribeAlertsRequest setAssetName(String assetName) {
+        this.assetName = assetName;
+        return this;
+    }
+    public String getAssetName() {
+        return this.assetName;
     }
 
     public DescribeAlertsRequest setCurrentPage(Integer currentPage) {
@@ -177,12 +258,36 @@ public class DescribeAlertsRequest extends TeaModel {
         return this.endTime;
     }
 
+    public DescribeAlertsRequest setEntityId(String entityId) {
+        this.entityId = entityId;
+        return this;
+    }
+    public String getEntityId() {
+        return this.entityId;
+    }
+
+    public DescribeAlertsRequest setEntityName(String entityName) {
+        this.entityName = entityName;
+        return this;
+    }
+    public String getEntityName() {
+        return this.entityName;
+    }
+
     public DescribeAlertsRequest setIsDefend(String isDefend) {
         this.isDefend = isDefend;
         return this;
     }
     public String getIsDefend() {
         return this.isDefend;
+    }
+
+    public DescribeAlertsRequest setLabelType(String labelType) {
+        this.labelType = labelType;
+        return this;
+    }
+    public String getLabelType() {
+        return this.labelType;
     }
 
     public DescribeAlertsRequest setLevel(java.util.List<String> level) {

@@ -118,6 +118,9 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     @NameInMap("Status")
     public Integer status;
 
+    @NameInMap("ThreatLevel")
+    public String threatLevel;
+
     public static PostEventDisposeAndWhiteruleListRequest build(java.util.Map<String, ?> map) throws Exception {
         PostEventDisposeAndWhiteruleListRequest self = new PostEventDisposeAndWhiteruleListRequest();
         return TeaModel.build(map, self);
@@ -185,6 +188,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends TeaModel {
     }
     public Integer getStatus() {
         return this.status;
+    }
+
+    public PostEventDisposeAndWhiteruleListRequest setThreatLevel(String threatLevel) {
+        this.threatLevel = threatLevel;
+        return this;
+    }
+    public String getThreatLevel() {
+        return this.threatLevel;
     }
 
 }

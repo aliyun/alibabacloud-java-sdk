@@ -158,6 +158,9 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
     }
 
     public static class DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList extends TeaModel {
+        @NameInMap("Available")
+        public String available;
+
         /**
          * <p>The playbook description.</p>
          * 
@@ -223,6 +226,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public String taskConfig;
 
         /**
+         * <strong>example:</strong>
+         * <p>kill_process_isolate_file</p>
+         */
+        @NameInMap("Uuid")
+        public String uuid;
+
+        /**
          * <p>Indicates whether the playbook is intended for Web Application Firewall (WAF). Valid values:</p>
          * <ul>
          * <li>true</li>
@@ -238,6 +248,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         public static DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList build(java.util.Map<String, ?> map) throws Exception {
             DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList self = new DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setAvailable(String available) {
+            this.available = available;
+            return this;
+        }
+        public String getAvailable() {
+            return this.available;
         }
 
         public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setDescription(String description) {
@@ -296,6 +314,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
             return this.taskConfig;
         }
 
+        public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
+        }
+
         public DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList setWafPlaybook(Boolean wafPlaybook) {
             this.wafPlaybook = wafPlaybook;
             return this;
@@ -342,6 +368,13 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
          */
         @NameInMap("EntityInfo")
         public java.util.Map<String, ?> entityInfo;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
+        @NameInMap("EntityType")
+        public String entityType;
 
         /**
          * <p>The key-value pairs each of which consists of opcode and oplevel.</p>
@@ -414,6 +447,14 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
         }
         public java.util.Map<String, ?> getEntityInfo() {
             return this.entityInfo;
+        }
+
+        public DescribeDisposeAndPlaybookResponseBodyDataResponseData setEntityType(String entityType) {
+            this.entityType = entityType;
+            return this;
+        }
+        public String getEntityType() {
+            return this.entityType;
         }
 
         public DescribeDisposeAndPlaybookResponseBodyDataResponseData setOpcodeMap(java.util.Map<String, String> opcodeMap) {

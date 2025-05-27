@@ -126,6 +126,9 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         @NameInMap("TotalCount")
         public Long totalCount;
 
+        @NameInMap("VerifiedCount")
+        public Long verifiedCount;
+
         public static ListCustomizeRuleTestResultResponseBodyDataPageInfo build(java.util.Map<String, ?> map) throws Exception {
             ListCustomizeRuleTestResultResponseBodyDataPageInfo self = new ListCustomizeRuleTestResultResponseBodyDataPageInfo();
             return TeaModel.build(map, self);
@@ -153,6 +156,14 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
         public Long getTotalCount() {
             return this.totalCount;
+        }
+
+        public ListCustomizeRuleTestResultResponseBodyDataPageInfo setVerifiedCount(Long verifiedCount) {
+            this.verifiedCount = verifiedCount;
+            return this;
+        }
+        public Long getVerifiedCount() {
+            return this.verifiedCount;
         }
 
     }
@@ -302,6 +313,9 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         @NameInMap("Uuid")
         public String uuid;
 
+        @NameInMap("VerifyType")
+        public String verifyType;
+
         public static ListCustomizeRuleTestResultResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListCustomizeRuleTestResultResponseBodyDataResponseData self = new ListCustomizeRuleTestResultResponseBodyDataResponseData();
             return TeaModel.build(map, self);
@@ -425,6 +439,14 @@ public class ListCustomizeRuleTestResultResponseBody extends TeaModel {
         }
         public String getUuid() {
             return this.uuid;
+        }
+
+        public ListCustomizeRuleTestResultResponseBodyDataResponseData setVerifyType(String verifyType) {
+            this.verifyType = verifyType;
+            return this;
+        }
+        public String getVerifyType() {
+            return this.verifyType;
         }
 
     }

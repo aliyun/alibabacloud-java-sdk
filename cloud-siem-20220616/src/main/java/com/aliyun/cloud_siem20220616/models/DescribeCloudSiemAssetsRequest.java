@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudSiemAssetsRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>test123</p>
+     */
+    @NameInMap("AssetName")
+    public String assetName;
+
+    /**
      * <p>The type of the asset. Valid values:</p>
      * <ul>
      * <li>ip</li>
@@ -20,6 +27,13 @@ public class DescribeCloudSiemAssetsRequest extends TeaModel {
      */
     @NameInMap("AssetType")
     public String assetType;
+
+    /**
+     * <strong>example:</strong>
+     * <p>123456-2222-3333-5555-3435345****</p>
+     */
+    @NameInMap("AssetUuid")
+    public String assetUuid;
 
     /**
      * <p>The page number. Pages start from page 1.</p>
@@ -90,12 +104,28 @@ public class DescribeCloudSiemAssetsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeCloudSiemAssetsRequest setAssetName(String assetName) {
+        this.assetName = assetName;
+        return this;
+    }
+    public String getAssetName() {
+        return this.assetName;
+    }
+
     public DescribeCloudSiemAssetsRequest setAssetType(String assetType) {
         this.assetType = assetType;
         return this;
     }
     public String getAssetType() {
         return this.assetType;
+    }
+
+    public DescribeCloudSiemAssetsRequest setAssetUuid(String assetUuid) {
+        this.assetUuid = assetUuid;
+        return this;
+    }
+    public String getAssetUuid() {
+        return this.assetUuid;
     }
 
     public DescribeCloudSiemAssetsRequest setCurrentPage(Integer currentPage) {
