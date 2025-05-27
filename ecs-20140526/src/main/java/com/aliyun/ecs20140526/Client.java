@@ -7588,6 +7588,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
             query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
         }
@@ -10249,7 +10253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a snapshot. If you call this operation to delete a snapshot that is being created, the snapshot creation task is canceled.</p>
+     * <p>Deletes a specified snapshot. If you call this operation to delete a snapshot that is being created, the associated snapshot creation task is also canceled.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10309,7 +10313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a snapshot. If you call this operation to delete a snapshot that is being created, the snapshot creation task is canceled.</p>
+     * <p>Deletes a specified snapshot. If you call this operation to delete a snapshot that is being created, the associated snapshot creation task is also canceled.</p>
      * 
      * @param request DeleteSnapshotRequest
      * @return DeleteSnapshotResponse

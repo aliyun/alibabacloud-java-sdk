@@ -116,6 +116,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("Iops")
         public Integer iops;
 
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
@@ -192,6 +195,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public Integer getIops() {
             return this.iops;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataSystemDisk setPerformanceLevel(String performanceLevel) {
@@ -303,6 +314,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         @NameInMap("Encrypted")
         public String encrypted;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
 
         /**
          * <p>The performance level of the ESSD to use as a data disk. This parameter is returned only when the value of <code>Category</code> is cloud_essd. Valid values:</p>
@@ -417,6 +431,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public String getEncrypted() {
             return this.encrypted;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataDataDisksDataDisk setPerformanceLevel(String performanceLevel) {

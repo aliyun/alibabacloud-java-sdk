@@ -1091,6 +1091,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         @NameInMap("Iops")
         public Integer iops;
 
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
+
         /**
          * <p>The performance level of the ESSD to use as the system disk. Default value: PL0. Valid values:</p>
          * <ul>
@@ -1201,6 +1204,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         }
         public Integer getIops() {
             return this.iops;
+        }
+
+        public CreateLaunchTemplateRequestSystemDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
         public CreateLaunchTemplateRequestSystemDisk setPerformanceLevel(String performanceLevel) {
@@ -1326,6 +1337,9 @@ public class CreateLaunchTemplateRequest extends TeaModel {
          */
         @NameInMap("Encrypted")
         public String encrypted;
+
+        @NameInMap("KMSKeyId")
+        public String KMSKeyId;
 
         /**
          * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
@@ -1465,6 +1479,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         }
         public String getEncrypted() {
             return this.encrypted;
+        }
+
+        public CreateLaunchTemplateRequestDataDisk setKMSKeyId(String KMSKeyId) {
+            this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
         }
 
         public CreateLaunchTemplateRequestDataDisk setPerformanceLevel(String performanceLevel) {
