@@ -4,6 +4,9 @@ package com.aliyun.contactcenterai20240603.models;
 import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
+    @NameInMap("callBackUrl")
+    public String callBackUrl;
+
     @NameInMap("categoryTags")
     public java.util.List<CreateTaskRequestCategoryTags> categoryTags;
 
@@ -58,6 +61,14 @@ public class CreateTaskRequest extends TeaModel {
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTaskRequest setCallBackUrl(String callBackUrl) {
+        this.callBackUrl = callBackUrl;
+        return this;
+    }
+    public String getCallBackUrl() {
+        return this.callBackUrl;
     }
 
     public CreateTaskRequest setCategoryTags(java.util.List<CreateTaskRequestCategoryTags> categoryTags) {
