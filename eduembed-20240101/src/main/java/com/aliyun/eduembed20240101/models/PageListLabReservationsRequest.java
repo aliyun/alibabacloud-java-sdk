@@ -7,9 +7,17 @@ public class PageListLabReservationsRequest extends TeaModel {
     @NameInMap("AccountId")
     public Long accountId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

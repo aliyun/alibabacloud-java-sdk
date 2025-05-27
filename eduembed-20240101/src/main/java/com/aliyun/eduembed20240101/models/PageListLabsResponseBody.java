@@ -4,27 +4,55 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class PageListLabsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Labs")
     public java.util.List<PageListLabsResponseBodyLabs> labs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ADC729B-...</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -98,15 +126,29 @@ public class PageListLabsResponseBody extends TeaModel {
     }
 
     public static class PageListLabsResponseBodyLabs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>981</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Introduction")
         public String introduction;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("SubTitle")
         public String subTitle;
 

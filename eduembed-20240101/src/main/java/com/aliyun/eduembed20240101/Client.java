@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实验预约
-     *
+     * <b>summary</b> : 
+     * <p>创建实验预约</p>
+     * 
      * @param request CreateLabReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLabReservationResponse
@@ -74,8 +75,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实验预约
-     *
+     * <b>summary</b> : 
+     * <p>创建实验预约</p>
+     * 
      * @param request CreateLabReservationRequest
      * @return CreateLabReservationResponse
      */
@@ -85,8 +87,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实验会话
-     *
+     * <b>summary</b> : 
+     * <p>创建实验会话</p>
+     * 
      * @param request CreateLabSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLabSessionResponse
@@ -124,8 +127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建实验会话
-     *
+     * <b>summary</b> : 
+     * <p>创建实验会话</p>
+     * 
      * @param request CreateLabSessionRequest
      * @return CreateLabSessionResponse
      */
@@ -135,8 +139,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看实验详情
-     *
+     * <b>summary</b> : 
+     * <p>查看课程详情</p>
+     * 
+     * @param request DescribeCourseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCourseResponse
+     */
+    public DescribeCourseResponse describeCourseWithOptions(DescribeCourseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.courseId)) {
+            query.put("CourseId", request.courseId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCourse"),
+            new TeaPair("version", "2024-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCourseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看课程详情</p>
+     * 
+     * @param request DescribeCourseRequest
+     * @return DescribeCourseResponse
+     */
+    public DescribeCourseResponse describeCourse(DescribeCourseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCourseWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看课程课时详情</p>
+     * 
+     * @param request DescribeCourseLessonRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCourseLessonResponse
+     */
+    public DescribeCourseLessonResponse describeCourseLessonWithOptions(DescribeCourseLessonRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.lessonId)) {
+            query.put("LessonId", request.lessonId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCourseLesson"),
+            new TeaPair("version", "2024-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCourseLessonResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看课程课时详情</p>
+     * 
+     * @param request DescribeCourseLessonRequest
+     * @return DescribeCourseLessonResponse
+     */
+    public DescribeCourseLessonResponse describeCourseLesson(DescribeCourseLessonRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCourseLessonWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看实验详情</p>
+     * 
      * @param request DescribeLabRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLabResponse
@@ -162,8 +255,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看实验详情
-     *
+     * <b>summary</b> : 
+     * <p>查看实验详情</p>
+     * 
      * @param request DescribeLabRequest
      * @return DescribeLabResponse
      */
@@ -173,8 +267,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实验预约
-     *
+     * <b>summary</b> : 
+     * <p>查询实验预约</p>
+     * 
      * @param request DescribeLabReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLabReservationResponse
@@ -200,8 +295,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询实验预约
-     *
+     * <b>summary</b> : 
+     * <p>查询实验预约</p>
+     * 
      * @param request DescribeLabReservationRequest
      * @return DescribeLabReservationResponse
      */
@@ -211,8 +307,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看实验会话信息
-     *
+     * <b>summary</b> : 
+     * <p>查看实验会话信息</p>
+     * 
      * @param request DescribeLabSessionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLabSessionResponse
@@ -238,8 +335,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查看实验会话信息
-     *
+     * <b>summary</b> : 
+     * <p>查看实验会话信息</p>
+     * 
      * @param request DescribeLabSessionRequest
      * @return DescribeLabSessionResponse
      */
@@ -249,8 +347,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 分页查询实验预约
-     *
+     * <b>summary</b> : 
+     * <p>查看课程列表</p>
+     * 
+     * @param request ListCoursesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCoursesResponse
+     */
+    public ListCoursesResponse listCoursesWithOptions(ListCoursesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCourses"),
+            new TeaPair("version", "2024-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCoursesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看课程列表</p>
+     * 
+     * @param request ListCoursesRequest
+     * @return ListCoursesResponse
+     */
+    public ListCoursesResponse listCourses(ListCoursesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCoursesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询实验预约</p>
+     * 
      * @param request PageListLabReservationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PageListLabReservationsResponse
@@ -276,8 +427,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 分页查询实验预约
-     *
+     * <b>summary</b> : 
+     * <p>分页查询实验预约</p>
+     * 
      * @param request PageListLabReservationsRequest
      * @return PageListLabReservationsResponse
      */
@@ -287,8 +439,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 分页查询实验会话
-     *
+     * <b>summary</b> : 
+     * <p>分页查询实验会话</p>
+     * 
      * @param request PageListLabSessionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PageListLabSessionsResponse
@@ -314,8 +467,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 分页查询实验会话
-     *
+     * <b>summary</b> : 
+     * <p>分页查询实验会话</p>
+     * 
      * @param request PageListLabSessionsRequest
      * @return PageListLabSessionsResponse
      */
@@ -325,8 +479,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 分页查询实验
-     *
+     * <b>summary</b> : 
+     * <p>分页查询实验</p>
+     * 
      * @param request PageListLabsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PageListLabsResponse
@@ -352,8 +507,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 分页查询实验
-     *
+     * <b>summary</b> : 
+     * <p>分页查询实验</p>
+     * 
      * @param request PageListLabsRequest
      * @return PageListLabsResponse
      */
@@ -363,8 +519,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 移除实验预约
-     *
+     * <b>summary</b> : 
+     * <p>移除实验预约</p>
+     * 
      * @param request RemoveLabReservationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveLabReservationResponse
@@ -398,8 +555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 移除实验预约
-     *
+     * <b>summary</b> : 
+     * <p>移除实验预约</p>
+     * 
      * @param request RemoveLabReservationRequest
      * @return RemoveLabReservationResponse
      */

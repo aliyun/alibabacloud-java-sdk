@@ -4,27 +4,55 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class PageListLabReservationsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LabReservations")
     public java.util.List<PageListLabReservationsResponseBodyLabReservations> labReservations;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ADC729B-...</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -98,18 +126,40 @@ public class PageListLabReservationsResponseBody extends TeaModel {
     }
 
     public static class PageListLabReservationsResponseBodyLabReservations extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("AccountId")
         public Long accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-04 09:25:41</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>552</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MemberCount")
         public Long memberCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-04 07:25:41</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeLabRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>875</p>
      */
     @NameInMap("LabId")
     public Long labId;

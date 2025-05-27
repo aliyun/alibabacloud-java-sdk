@@ -6,30 +6,45 @@ import com.aliyun.tea.*;
 public class CreateLabReservationRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16600</p>
      */
     @NameInMap("AccountId")
     public Long accountId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-29 18:00:00</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>875</p>
      */
     @NameInMap("LabId")
     public Long labId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MemberCount")
     public Long memberCount;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-04-29 16:00:00</p>
      */
     @NameInMap("StartTime")
     public String startTime;

@@ -10,9 +10,17 @@ public class PageListLabSessionsRequest extends TeaModel {
     @NameInMap("LabId")
     public Long labId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 

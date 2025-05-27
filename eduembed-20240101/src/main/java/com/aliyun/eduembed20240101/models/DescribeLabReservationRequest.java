@@ -9,6 +9,9 @@ public class DescribeLabReservationRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LabReservationId")
     public String labReservationId;

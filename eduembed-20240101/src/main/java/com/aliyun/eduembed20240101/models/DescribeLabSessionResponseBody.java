@@ -4,18 +4,34 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLabSessionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LabSession")
     public DescribeLabSessionResponseBodyLabSession labSession;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ADC729B-...</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +81,40 @@ public class DescribeLabSessionResponseBody extends TeaModel {
     }
 
     public static class DescribeLabSessionResponseBodyLabSession extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-05-05 15:01:59</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Finished")
         public Boolean finished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>838</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>875</p>
+         */
         @NameInMap("LabId")
         public Long labId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Url")
         public String url;
 

@@ -4,27 +4,55 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class PageListLabSessionsResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LabSessions")
     public java.util.List<PageListLabSessionsResponseBodyLabSessions> labSessions;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Page")
     public Long page;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ADC729B-...</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("TotalCount")
     public Long totalCount;
 
@@ -98,18 +126,40 @@ public class PageListLabSessionsResponseBody extends TeaModel {
     }
 
     public static class PageListLabSessionsResponseBodyLabSessions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2023-06-24 18:27:25</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("Finished")
         public Boolean finished;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10334</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>875</p>
+         */
         @NameInMap("LabId")
         public Long labId;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Url")
         public String url;
 

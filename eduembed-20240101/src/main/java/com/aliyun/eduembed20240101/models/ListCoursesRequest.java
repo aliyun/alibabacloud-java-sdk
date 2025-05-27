@@ -3,30 +3,22 @@ package com.aliyun.eduembed20240101.models;
 
 import com.aliyun.tea.*;
 
-public class PageListLabsRequest extends TeaModel {
+public class ListCoursesRequest extends TeaModel {
     @NameInMap("Id")
     public java.util.List<Long> id;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("Page")
     public Long page;
 
-    /**
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("PageSize")
     public Long pageSize;
 
-    public static PageListLabsRequest build(java.util.Map<String, ?> map) throws Exception {
-        PageListLabsRequest self = new PageListLabsRequest();
+    public static ListCoursesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListCoursesRequest self = new ListCoursesRequest();
         return TeaModel.build(map, self);
     }
 
-    public PageListLabsRequest setId(java.util.List<Long> id) {
+    public ListCoursesRequest setId(java.util.List<Long> id) {
         this.id = id;
         return this;
     }
@@ -34,7 +26,7 @@ public class PageListLabsRequest extends TeaModel {
         return this.id;
     }
 
-    public PageListLabsRequest setPage(Long page) {
+    public ListCoursesRequest setPage(Long page) {
         this.page = page;
         return this;
     }
@@ -42,7 +34,7 @@ public class PageListLabsRequest extends TeaModel {
         return this.page;
     }
 
-    public PageListLabsRequest setPageSize(Long pageSize) {
+    public ListCoursesRequest setPageSize(Long pageSize) {
         this.pageSize = pageSize;
         return this;
     }

@@ -6,18 +6,31 @@ import com.aliyun.tea.*;
 public class DescribeLabSessionRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("AccountId")
     public Long accountId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("LabSessionId")
     public String labSessionId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <ul>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("RamAccountId")
     public Long ramAccountId;

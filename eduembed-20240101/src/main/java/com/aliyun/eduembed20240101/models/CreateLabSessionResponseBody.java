@@ -4,18 +4,34 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class CreateLabSessionResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("LabSession")
     public CreateLabSessionResponseBodyLabSession labSession;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ADC729B-...</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,9 +81,19 @@ public class CreateLabSessionResponseBody extends TeaModel {
     }
 
     public static class CreateLabSessionResponseBodyLabSession extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>875</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("Url")
         public String url;
 

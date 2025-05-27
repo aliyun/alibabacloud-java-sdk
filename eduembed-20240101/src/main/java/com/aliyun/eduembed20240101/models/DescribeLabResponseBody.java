@@ -4,18 +4,34 @@ package com.aliyun.eduembed20240101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLabResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>00000</p>
+     */
     @NameInMap("Code")
     public String code;
 
     @NameInMap("Lab")
     public DescribeLabResponseBodyLab lab;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9ADC729B-...</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,15 +81,29 @@ public class DescribeLabResponseBody extends TeaModel {
     }
 
     public static class DescribeLabResponseBodyLab extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>875</p>
+         */
         @NameInMap("Id")
         public Long id;
 
         @NameInMap("Introduction")
         public String introduction;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("SubTitle")
         public String subTitle;
 
