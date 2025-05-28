@@ -31,6 +31,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Commodity")
     public GetServiceResponseBodyCommodity commodity;
 
+    @NameInMap("ComplianceMetadata")
+    public GetServiceResponseBodyComplianceMetadata complianceMetadata;
+
     /**
      * <p>Service deployment approach, Valid values：</p>
      * <ul>
@@ -381,6 +384,14 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public GetServiceResponseBodyCommodity getCommodity() {
         return this.commodity;
+    }
+
+    public GetServiceResponseBody setComplianceMetadata(GetServiceResponseBodyComplianceMetadata complianceMetadata) {
+        this.complianceMetadata = complianceMetadata;
+        return this;
+    }
+    public GetServiceResponseBodyComplianceMetadata getComplianceMetadata() {
+        return this.complianceMetadata;
     }
 
     public GetServiceResponseBody setDeployFrom(String deployFrom) {
@@ -993,6 +1004,25 @@ public class GetServiceResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class GetServiceResponseBodyComplianceMetadata extends TeaModel {
+        @NameInMap("CompliancePacks")
+        public java.util.List<String> compliancePacks;
+
+        public static GetServiceResponseBodyComplianceMetadata build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceResponseBodyComplianceMetadata self = new GetServiceResponseBodyComplianceMetadata();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceResponseBodyComplianceMetadata setCompliancePacks(java.util.List<String> compliancePacks) {
+            this.compliancePacks = compliancePacks;
+            return this;
+        }
+        public java.util.List<String> getCompliancePacks() {
+            return this.compliancePacks;
         }
 
     }
