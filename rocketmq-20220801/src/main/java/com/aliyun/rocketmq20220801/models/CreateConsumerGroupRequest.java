@@ -87,6 +87,9 @@ public class CreateConsumerGroupRequest extends TeaModel {
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
 
+        @NameInMap("fixedIntervalRetryTime")
+        public Integer fixedIntervalRetryTime;
+
         /**
          * <p>The maximum number of retries.</p>
          * 
@@ -122,6 +125,14 @@ public class CreateConsumerGroupRequest extends TeaModel {
         }
         public String getDeadLetterTargetTopic() {
             return this.deadLetterTargetTopic;
+        }
+
+        public CreateConsumerGroupRequestConsumeRetryPolicy setFixedIntervalRetryTime(Integer fixedIntervalRetryTime) {
+            this.fixedIntervalRetryTime = fixedIntervalRetryTime;
+            return this;
+        }
+        public Integer getFixedIntervalRetryTime() {
+            return this.fixedIntervalRetryTime;
         }
 
         public CreateConsumerGroupRequestConsumeRetryPolicy setMaxRetryTimes(Integer maxRetryTimes) {

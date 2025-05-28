@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>rocketmq20220801</artifactId>
-  <version>3.1.0</version>
+  <version>3.1.1</version>
   <packaging>jar</packaging>
   <name>rocketmq20220801</name>
   <description>Alibaba Cloud RocketMQ (20220801) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.7</version>
+      <version>0.3.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
