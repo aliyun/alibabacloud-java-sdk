@@ -198,6 +198,120 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建财务单元</p>
+     * 
+     * @param tmpReq CreateCostCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCostCenterResponse
+     */
+    public CreateCostCenterResponse createCostCenterWithOptions(CreateCostCenterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCostCenterShrinkRequest request = new CreateCostCenterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.costCenterEntityList)) {
+            request.costCenterEntityListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.costCenterEntityList, "CostCenterEntityList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.costCenterEntityListShrink)) {
+            query.put("CostCenterEntityList", request.costCenterEntityListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCostCenter"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCostCenterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建财务单元</p>
+     * 
+     * @param request CreateCostCenterRequest
+     * @return CreateCostCenterResponse
+     */
+    public CreateCostCenterResponse createCostCenter(CreateCostCenterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCostCenterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建资金账户付款关系</p>
+     * 
+     * @param tmpReq CreateFundAccountPayRelationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateFundAccountPayRelationResponse
+     */
+    public CreateFundAccountPayRelationResponse createFundAccountPayRelationWithOptions(CreateFundAccountPayRelationRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateFundAccountPayRelationShrinkRequest request = new CreateFundAccountPayRelationShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fundAccountId)) {
+            body.put("FundAccountId", request.fundAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateFundAccountPayRelation"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFundAccountPayRelationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建资金账户付款关系</p>
+     * 
+     * @param request CreateFundAccountPayRelationRequest
+     * @return CreateFundAccountPayRelationResponse
+     */
+    public CreateFundAccountPayRelationResponse createFundAccountPayRelation(CreateFundAccountPayRelationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createFundAccountPayRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建资金账户划拨/回收</p>
      * 
      * @param request CreateFundAccountTransferRequest
@@ -266,6 +380,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建账单订阅</p>
+     * 
+     * @param request CreateReportDefinitionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReportDefinitionResponse
+     */
+    public CreateReportDefinitionResponse createReportDefinitionWithOptions(CreateReportDefinitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.beginBillingCycle)) {
+            query.put("BeginBillingCycle", request.beginBillingCycle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
+            query.put("OssBucketName", request.ossBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketOwnerAccountId)) {
+            query.put("OssBucketOwnerAccountId", request.ossBucketOwnerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketPath)) {
+            query.put("OssBucketPath", request.ossBucketPath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
+            query.put("ReportType", request.reportType);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mcProject)) {
+            body.put("McProject", request.mcProject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcTableName)) {
+            body.put("McTableName", request.mcTableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportSourceType)) {
+            body.put("ReportSourceType", request.reportSourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateReportDefinition"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReportDefinitionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建账单订阅</p>
+     * 
+     * @param request CreateReportDefinitionRequest
+     * @return CreateReportDefinitionResponse
+     */
+    public CreateReportDefinitionResponse createReportDefinition(CreateReportDefinitionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createReportDefinitionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除财务单元</p>
+     * 
+     * @param request DeleteCostCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCostCenterResponse
+     */
+    public DeleteCostCenterResponse deleteCostCenterWithOptions(DeleteCostCenterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.costCenterId)) {
+            query.put("CostCenterId", request.costCenterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccountId)) {
+            query.put("OwnerAccountId", request.ownerAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCostCenter"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCostCenterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除财务单元</p>
+     * 
+     * @param request DeleteCostCenterRequest
+     * @return DeleteCostCenterResponse
+     */
+    public DeleteCostCenterResponse deleteCostCenter(DeleteCostCenterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCostCenterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除优惠券的抵扣标签</p>
      * 
      * @param tmpReq DeleteCouponDeductTagRequest
@@ -328,6 +572,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCouponDeductTagResponse deleteCouponDeductTag(DeleteCouponDeductTagRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCouponDeductTagWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消账单订阅</p>
+     * 
+     * @param request DeleteReportDefinitionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteReportDefinitionResponse
+     */
+    public DeleteReportDefinitionResponse deleteReportDefinitionWithOptions(DeleteReportDefinitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportTaskId)) {
+            query.put("ReportTaskId", request.reportTaskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteReportDefinition"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteReportDefinitionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消账单订阅</p>
+     * 
+     * @param request DeleteReportDefinitionRequest
+     * @return DeleteReportDefinitionResponse
+     */
+    public DeleteReportDefinitionResponse deleteReportDefinition(DeleteReportDefinitionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteReportDefinitionWithOptions(request, runtime);
     }
 
     /**
@@ -1206,6 +1498,240 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFundAccountPayRelationResponse listFundAccountPayRelation(ListFundAccountPayRelationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFundAccountPayRelationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看已订阅的报告列表</p>
+     * 
+     * @param request ListReportDefinitionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListReportDefinitionsResponse
+     */
+    public ListReportDefinitionsResponse listReportDefinitionsWithOptions(ListReportDefinitionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReportDefinitions"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReportDefinitionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看已订阅的报告列表</p>
+     * 
+     * @param request ListReportDefinitionsRequest
+     * @return ListReportDefinitionsResponse
+     */
+    public ListReportDefinitionsResponse listReportDefinitions(ListReportDefinitionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listReportDefinitionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改财务单元</p>
+     * 
+     * @param tmpReq ModifyCostCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCostCenterResponse
+     */
+    public ModifyCostCenterResponse modifyCostCenterWithOptions(ModifyCostCenterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyCostCenterShrinkRequest request = new ModifyCostCenterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.costCenterEntityList)) {
+            request.costCenterEntityListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.costCenterEntityList, "CostCenterEntityList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.costCenterEntityListShrink)) {
+            query.put("CostCenterEntityList", request.costCenterEntityListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCostCenter"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCostCenterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改财务单元</p>
+     * 
+     * @param request ModifyCostCenterRequest
+     * @return ModifyCostCenterResponse
+     */
+    public ModifyCostCenterResponse modifyCostCenter(ModifyCostCenterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCostCenterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询财务单元</p>
+     * 
+     * @param tmpReq QueryCostCenterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCostCenterResponse
+     */
+    public QueryCostCenterResponse queryCostCenterWithOptions(QueryCostCenterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QueryCostCenterShrinkRequest request = new QueryCostCenterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ecIdAccountIds)) {
+            request.ecIdAccountIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ecIdAccountIds, "EcIdAccountIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIdsShrink)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccountId)) {
+            query.put("OwnerAccountId", request.ownerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentCostCenterId)) {
+            query.put("ParentCostCenterId", request.parentCostCenterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCostCenter"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCostCenterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询财务单元</p>
+     * 
+     * @param request QueryCostCenterRequest
+     * @return QueryCostCenterResponse
+     */
+    public QueryCostCenterResponse queryCostCenter(QueryCostCenterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCostCenterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询财务单元下资源信息</p>
+     * 
+     * @param request QueryCostCenterResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCostCenterResourceResponse
+     */
+    public QueryCostCenterResourceResponse queryCostCenterResourceWithOptions(QueryCostCenterResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.costCenterId)) {
+            body.put("CostCenterId", request.costCenterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccountId)) {
+            body.put("OwnerAccountId", request.ownerAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCostCenterResource"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCostCenterResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询财务单元下资源信息</p>
+     * 
+     * @param request QueryCostCenterResourceRequest
+     * @return QueryCostCenterResourceResponse
+     */
+    public QueryCostCenterResourceResponse queryCostCenterResource(QueryCostCenterResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCostCenterResourceWithOptions(request, runtime);
     }
 
     /**
