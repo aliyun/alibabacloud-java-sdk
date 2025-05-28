@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListSharedReportsResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The query results are returned.</p>
+     */
     @NameInMap("Result")
     public ListSharedReportsResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
 
     public static class ListSharedReportsResponseBodyResultData extends TeaModel {
         /**
+         * <p>Queries whether the user has collected the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -59,6 +72,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public Boolean favorite;
 
         /**
+         * <p>The timestamp when the work was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640088615000</p>
          */
@@ -66,6 +81,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The timestamp when the work was modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1644373980000</p>
          */
@@ -73,6 +90,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The query user has the editing rights of the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -80,19 +99,35 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public Boolean hasEditAuth;
 
         /**
+         * <p>The query user has the permission to view the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("HasViewAuth")
         public Boolean hasViewAuth;
 
+        /**
+         * <p>The name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test report</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The Alibaba Cloud account name of the work owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test account</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>The UserID of the work owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1365*****238860</p>
          */
@@ -100,6 +135,14 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public String ownerNum;
 
         /**
+         * <p>The publication status of the work. Valid values:</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>1: published</li>
+         * <li>2: modified and saved but not published.</li>
+         * <li>3: unpublished</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -107,6 +150,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public Integer publishStatus;
 
         /**
+         * <p>The ID of the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>977c7698-<strong><strong>-</strong></strong>-****-44b7304d20fc</p>
          */
@@ -114,6 +159,13 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public String treeId;
 
         /**
+         * <p>The type of the work. Valid values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: workbook</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PAGE</p>
          */
@@ -121,12 +173,20 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The ID of the workspace to which the work belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>gfidm145-<strong><strong>-</strong></strong>-9426-8f93be23****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The name of the workspace to which the work belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Workspace</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -242,10 +302,15 @@ public class ListSharedReportsResponseBody extends TeaModel {
     }
 
     public static class ListSharedReportsResponseBodyResult extends TeaModel {
+        /**
+         * <p>The list of queried works.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListSharedReportsResponseBodyResultData> data;
 
         /**
+         * <p>The page number of the returned page.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -253,6 +318,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>The number of rows per page set when the interface is requested.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -260,6 +327,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of rows in the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -267,6 +336,8 @@ public class ListSharedReportsResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>The total number of pages returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

@@ -5,17 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsByUserIdResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>E2440604-3059-561A-AD68-DEDBC870EB2B</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the group.</p>
+     */
     @NameInMap("Result")
     public java.util.List<ListUserGroupsByUserIdResponseBodyResult> result;
 
     /**
-     * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -54,6 +63,8 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
 
     public static class ListUserGroupsByUserIdResponseBodyResult extends TeaModel {
         /**
+         * <p>The time when the user group was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-15 17:13:55</p>
          */
@@ -61,16 +72,23 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The user group creator. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>46e5374665ba4b679ee22e2a2927****</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>Directory level of the user group.</p>
+         */
         @NameInMap("IdentifiedPath")
         public String identifiedPath;
 
         /**
+         * <p>The time when the user group was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-03-15 20:36:40</p>
          */
@@ -78,6 +96,8 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
+         * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>46e5374665ba4b679ee22e2a2927****</p>
          */
@@ -85,22 +105,38 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         public String modifyUser;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
          */
         @NameInMap("ParentUsergroupId")
         public String parentUsergroupId;
 
+        /**
+         * <p>The description of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
+         */
         @NameInMap("UsergroupDesc")
         public String usergroupDesc;
 
         /**
+         * <p>The ID of the user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>34fd141d-4598-4093-8c33-8e066dcb****</p>
          */
         @NameInMap("UsergroupId")
         public String usergroupId;
 
+        /**
+         * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test user group</p>
+         */
         @NameInMap("UsergroupName")
         public String usergroupName;
 

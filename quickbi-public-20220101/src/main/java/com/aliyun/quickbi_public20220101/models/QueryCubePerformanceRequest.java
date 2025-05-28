@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueryCubePerformanceRequest extends TeaModel {
     /**
+     * <p>The average duration (minutes).</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class QueryCubePerformanceRequest extends TeaModel {
     public Integer costTimeAvgMin;
 
     /**
+     * <p>The dataset ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7c7223ae-****-3c744528014b</p>
      */
@@ -19,6 +23,12 @@ public class QueryCubePerformanceRequest extends TeaModel {
     public String cubeId;
 
     /**
+     * <p>The current page number of the workspace member list:</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,12 @@ public class QueryCubePerformanceRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of rows per page in a paged query.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Maximum value: 1,000.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -33,6 +49,12 @@ public class QueryCubePerformanceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The query type. Valid values:</p>
+     * <ul>
+     * <li><strong>lastDay</strong>: Yesterday</li>
+     * <li><strong>sevenDays</strong>: Within seven days</li>
+     * <li><strong>thirtyDays</strong>: Within 30 days</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +64,7 @@ public class QueryCubePerformanceRequest extends TeaModel {
     public String queryType;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>617277******************ABA47E31</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Basic information of the dataset.</p>
+     */
     @NameInMap("Result")
     public QuerySmartqPermissionByCubeIdResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
 
     public static class QuerySmartqPermissionByCubeIdResponseBodyResult extends TeaModel {
         /**
+         * <p>Dataset ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>7c7223ae-****-3c744528014b</p>
          */
@@ -59,12 +72,17 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         public String cubeId;
 
         /**
+         * <p>Dataset name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("CubeName")
         public String cubeName;
 
+        /**
+         * <p>Whether the current user has permission for the smart question. Note: \&quot;HasPerssion\&quot; seems to be a typo, it should probably be \&quot;HasPermission\&quot;.</p>
+         */
         @NameInMap("HasPerssion")
         public Boolean hasPerssion;
 

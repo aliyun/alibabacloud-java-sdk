@@ -13,6 +13,9 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The query results are returned.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryCubeOptimizationResponseBodyResult> result;
 

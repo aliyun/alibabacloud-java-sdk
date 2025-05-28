@@ -8,7 +8,7 @@ public class GetWorksEmbedListRequest extends TeaModel {
      * <p>Report name (fuzzy match)</p>
      * 
      * <strong>example:</strong>
-     * <p>test dataset</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -35,11 +35,11 @@ public class GetWorksEmbedListRequest extends TeaModel {
      * <p>Report type</p>
      * <ul>
      * <li>page, Dashboard</li>
-     * <li>screen, Visualization Screen</li>
-     * <li>report, Workbooks</li>
-     * <li>ANALYSIS, Ad Hoc Analysis</li>
-     * <li>dashboardOfflineQuery, Downloads</li>
-     * <li>dataForm, Forms</li>
+     * <li>screen, Data Screen</li>
+     * <li>report, Spreadsheet</li>
+     * <li>ANALYSIS, Ad-hoc Analysis</li>
+     * <li>dashboardOfflineQuery, Self-service Data Retrieval</li>
+     * <li>dataForm, Data Entry Form</li>
      * </ul>
      * 
      * <strong>example:</strong>

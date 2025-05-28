@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryWorksResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the work.</p>
+     */
     @NameInMap("Result")
     public QueryWorksResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,22 +63,38 @@ public class QueryWorksResponseBody extends TeaModel {
 
     public static class QueryWorksResponseBodyResultDirectory extends TeaModel {
         /**
+         * <p>The ID of the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test directory</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+         * 
          * <strong>example:</strong>
          * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
          */
         @NameInMap("PathId")
         public String pathId;
 
+        /**
+         * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test directory</p>
+         */
         @NameInMap("PathName")
         public String pathName;
 
@@ -112,19 +139,36 @@ public class QueryWorksResponseBody extends TeaModel {
 
     public static class QueryWorksResponseBodyResult extends TeaModel {
         /**
+         * <p>Third-party embedding status. Valid values:</p>
+         * <ul>
+         * <li>0: The embed service is not enabled.</li>
+         * <li>1: Embed is enabled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Auth3rdFlag")
         public Integer auth3rdFlag;
 
+        /**
+         * <p>Remarks on the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Description</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory to which the work belongs.</p>
+         */
         @NameInMap("Directory")
         public QueryWorksResponseBodyResultDirectory directory;
 
         /**
+         * <p>The timestamp of the creation of the work in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1496651577000</p>
          */
@@ -132,32 +176,75 @@ public class QueryWorksResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The timestamp of the modification of the work in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1496651577000</p>
          */
         @NameInMap("GmtModify")
         public String gmtModify;
 
+        /**
+         * <p>The Alibaba Cloud account name of the person who modified the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
+         */
         @NameInMap("ModifyName")
         public String modifyName;
 
         /**
+         * <p>The user ID of the work owner in the Quick BI.</p>
+         * 
          * <strong>example:</strong>
          * <p>9187a612aa474e2a8ac1414d5529****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>The Alibaba Cloud account name of the work owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tom</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>Is it public</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PublicFlag")
         public Boolean publicFlag;
 
+        /**
+         * <p>Deadline for the public release of the report</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721366354000</p>
+         */
         @NameInMap("PublicInvalidTime")
         public Long publicInvalidTime;
 
         /**
+         * <p>Security policies for collaborative authorization of works. Valid values:</p>
+         * <ul>
+         * <li>0: private</li>
+         * <li>12: Authorize specified members</li>
+         * <li>1 or 11: Authorize all workspace members</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you use legacy permissions, the return value is 1.</p>
+         * </li>
+         * <li><p>If you use the new permissions, the return value is 11.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -165,16 +252,39 @@ public class QueryWorksResponseBody extends TeaModel {
         public String securityLevel;
 
         /**
+         * <p>The status of the report. Valid values:</p>
+         * <ul>
+         * <li>0: unpublished</li>
+         * <li>1: published</li>
+         * <li>2: modified but not published</li>
+         * <li>3: unpublished</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test report</p>
+         */
         @NameInMap("WorkName")
         public String workName;
 
         /**
+         * <p>Queries the types of works. Fill in the blanks to query all types. Valid values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>FULLPAGE: full-screen dashboards</li>
+         * <li>REPORT: workbook</li>
+         * <li>dashboardOfflineQuery: self-service data retrieval</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PAGE</p>
          */
@@ -182,6 +292,8 @@ public class QueryWorksResponseBody extends TeaModel {
         public String workType;
 
         /**
+         * <p>The ID of the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
@@ -189,12 +301,20 @@ public class QueryWorksResponseBody extends TeaModel {
         public String worksId;
 
         /**
+         * <p>The ID of the workspace to which the work belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The name of the workspace to which the work belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Space</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

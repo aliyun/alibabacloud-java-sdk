@@ -8,14 +8,14 @@ public class CreateTicketRequest extends TeaModel {
      * <p>The user\&quot;s account name.</p>
      * <ul>
      * <li>If the user is an Alibaba Cloud primary account <strong>wangwu</strong>, the format is <strong>[Primary Account]</strong>, for example, <strong>wangwu</strong>.</li>
-     * <li>If the user is a RAM account <strong>zhangsan</strong>@aliyun.cn, the format is <strong>[Primary Account: Sub-account]</strong>, for example, <strong>wangwu:zhangsan</strong>.</li>
+     * <li>If the user is a RAM account <strong>zhangsan</strong>@aliyun.cn**, the format is <strong>[Primary Account: Sub-Account]</strong>, for example, <strong>wangwu:zhangsan</strong>.</li>
      * </ul>
      * <blockquote>
      * <p>Only one of UserId and AccountName needs to be filled in. If neither is filled in, it will default to binding the report\&quot;s Owner, and the report will be accessed with that user\&quot;s identity. If you need to configure row-level permissions, please refer to <a href="https://help.aliyun.com/document_detail/322783.html">Row-Level Permissions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>test user</p>
+     * <p>test</p>
      */
     @NameInMap("AccountName")
     @Deprecated
@@ -44,7 +44,7 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>Component ID. This is the ID of a component within the above-mentioned dashboard; other types of works do not support this.
-     * Refer to the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryWorksBloodRelationship?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&lang=JAVA&tab=DOC&sdkStyle=old">QueryWorksBloodRelationship</a> API for obtaining the component ID.</p>
+     * Refer to <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryWorksBloodRelationship?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&lang=JAVA&tab=DOC&sdkStyle=old">QueryWorksBloodRelationship</a> for the API to get the component ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0fc6a275c7f64f17b1****a306ce0f31</p>
@@ -96,7 +96,7 @@ public class CreateTicketRequest extends TeaModel {
 
     /**
      * <p>Quick BI\&quot;s UserId, which is not your Alibaba Cloud account ID.
-     * You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&tab=DOC&sdkStyle=old">QueryUserInfoByAccount</a> API to obtain the UserId. An example of a UserId is fe67f61a35a94b7da1a34ba174a7****.</p>
+     * You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=a2c4g.11186623.0.0.15615d7aWVvWAl&params=%7B%7D&tab=DOC&sdkStyle=old">QueryUserInfoByAccount</a> interface to obtain the UserId. An example of a UserId is fe67f61a35a94b7da1a34ba174a7****.</p>
      * <blockquote>
      * <p>Only one of UserId and AccountName needs to be filled in. If neither is filled in, it will default to binding the report\&quot;s Owner, and the report will be accessed with that user\&quot;s identity. If you need to configure row-level permissions, please refer to <a href="https://help.aliyun.com/document_detail/322783.html">Row-Level Permissions</a>.</p>
      * </blockquote>
@@ -115,7 +115,7 @@ public class CreateTicketRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Three-party embedding</p>
+     * <p>test</p>
      */
     @NameInMap("WatermarkParam")
     public String watermarkParam;

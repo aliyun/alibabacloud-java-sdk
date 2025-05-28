@@ -4,7 +4,13 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class SmartqAuthorizeRequest extends TeaModel {
+    @NameInMap("CubeIds")
+    public String cubeIds;
+
     /**
+     * <p>Expiration time, with a default of seven days.
+     * Format: 2099-12-31</p>
+     * 
      * <strong>example:</strong>
      * <p>2099-12-31</p>
      */
@@ -12,6 +18,8 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String expireDay;
 
     /**
+     * <p>Array of analysis theme IDs, separated by English commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
      */
@@ -19,6 +27,8 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String llmCubeThemes;
 
     /**
+     * <p>Array of Q&amp;A resource IDs, separated by English commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
      */
@@ -26,6 +36,11 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public String llmCubes;
 
     /**
+     * <p>Operation type. The values are as follows:</p>
+     * <ul>
+     * <li>0: Add authorization</li>
+     * <li>1: Remove authorization</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +50,10 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public Integer operationType;
 
     /**
+     * <p>Array of user IDs, separated by English commas.</p>
+     * <blockquote>
+     * <p>Notice: The number of user IDs per request * (number of Q&amp;A resources + number of analysis themes) cannot exceed 100.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +65,14 @@ public class SmartqAuthorizeRequest extends TeaModel {
     public static SmartqAuthorizeRequest build(java.util.Map<String, ?> map) throws Exception {
         SmartqAuthorizeRequest self = new SmartqAuthorizeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SmartqAuthorizeRequest setCubeIds(String cubeIds) {
+        this.cubeIds = cubeIds;
+        return this;
+    }
+    public String getCubeIds() {
+        return this.cubeIds;
     }
 
     public SmartqAuthorizeRequest setExpireDay(String expireDay) {

@@ -223,6 +223,9 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
     }
 
     public static class ListByUserGroupIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>List of failed user groups.</p>
+         */
         @NameInMap("FailedUserGroupIds")
         public java.util.List<String> failedUserGroupIds;
 

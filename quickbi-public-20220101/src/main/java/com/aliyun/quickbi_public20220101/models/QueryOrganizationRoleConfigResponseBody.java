@@ -70,7 +70,7 @@ public class QueryOrganizationRoleConfigResponseBody extends TeaModel {
          * <li>offline_download: Self-service Data Retrieval</li>
          * <li>resource_package: Resource Package Management</li>
          * <li>organization_ask: Organization Access Key/Secret (AK/SK)</li>
-         * <li>developer_openapi: Open API</li>
+         * <li>developer_openapi: OpenAPI</li>
          * <li>data_service: Data Service</li>
          * <li>admin_authorize3rd: Embedded Analysis</li>
          * <li>component_manage: Custom Component</li>

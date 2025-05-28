@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryShareListResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the list of objects to which the work has been shared.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryShareListResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,12 @@ public class QueryShareListResponseBody extends TeaModel {
 
     public static class QueryShareListResponseBodyResult extends TeaModel {
         /**
+         * <p>Sharing permissions. Possible values:</p>
+         * <ul>
+         * <li>1: View only</li>
+         * <li>3: View and export</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -59,6 +76,8 @@ public class QueryShareListResponseBody extends TeaModel {
         public Integer authPoint;
 
         /**
+         * <p>The timestamp in milliseconds indicating the expiration time of the authorization.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640102400000</p>
          */
@@ -66,6 +85,8 @@ public class QueryShareListResponseBody extends TeaModel {
         public Long expireDate;
 
         /**
+         * <p>The ID of the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>6b407e50-e774-406b-9956-da2425c2****</p>
          */
@@ -73,6 +94,8 @@ public class QueryShareListResponseBody extends TeaModel {
         public String reportId;
 
         /**
+         * <p>The ID of the sharing configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>0ab9659e-29cf-47d7-a364-3a91553b****</p>
          */
@@ -80,16 +103,35 @@ public class QueryShareListResponseBody extends TeaModel {
         public String shareId;
 
         /**
+         * <p>The ID of the sharing target, which could be a user ID or a group ID in Quick BI.</p>
+         * <ul>
+         * <li>When ShareToType=2 (all members within an organization), ShareToId is the organization ID.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
         @NameInMap("ShareToId")
         public String shareToId;
 
+        /**
+         * <p>The name of the sharing target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ShareToName")
         public String shareToName;
 
         /**
+         * <p>The type of sharing. Possible values:</p>
+         * <ul>
+         * <li>0: User</li>
+         * <li>1: Group</li>
+         * <li>2: Organization</li>
+         * <li>3: Space</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -97,8 +139,19 @@ public class QueryShareListResponseBody extends TeaModel {
         public Integer shareToType;
 
         /**
+         * <p>The type of the shared work. The value range includes: </p>
+         * <ul>
+         * <li>dataProduct: Data Portal </li>
+         * <li>dashboard: Dashboard </li>
+         * <li>report: Spreadsheet </li>
+         * <li>dashboardOfflineQuery: Self-service Data Extraction </li>
+         * <li>ANALYSIS: Ad-hoc Analysis </li>
+         * <li>DATAFORM: Data Entry </li>
+         * <li>SCREEN: Data Visualization Screen</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>product</p>
+         * <p>dashboard</p>
          */
         @NameInMap("ShareType")
         public String shareType;

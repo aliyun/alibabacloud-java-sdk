@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class QueryEmbeddedInfoResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The embedded information of the reports under the organization.</p>
+     */
     @NameInMap("Result")
     public QueryEmbeddedInfoResponseBodyResult result;
 
@@ -58,6 +63,8 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
 
     public static class QueryEmbeddedInfoResponseBodyResultDetail extends TeaModel {
         /**
+         * <p>The number of embedded self-service fetching.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -65,6 +72,8 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         public Integer dashboardOfflineQuery;
 
         /**
+         * <p>The number of embedded dashboards.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -72,6 +81,8 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of embedded spreadsheets.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,10 +121,15 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
     }
 
     public static class QueryEmbeddedInfoResponseBodyResult extends TeaModel {
+        /**
+         * <p>Embed the statistics of the work.</p>
+         */
         @NameInMap("Detail")
         public QueryEmbeddedInfoResponseBodyResultDetail detail;
 
         /**
+         * <p>The number of reports that are currently embedded.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -121,6 +137,8 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         public Integer embeddedCount;
 
         /**
+         * <p>The maximum number of reports that can be embedded.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

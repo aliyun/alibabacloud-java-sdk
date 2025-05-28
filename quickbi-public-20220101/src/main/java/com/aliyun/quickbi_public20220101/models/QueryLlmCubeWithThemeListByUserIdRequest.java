@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryLlmCubeWithThemeListByUserIdRequest extends TeaModel {
     /**
+     * <p>User ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

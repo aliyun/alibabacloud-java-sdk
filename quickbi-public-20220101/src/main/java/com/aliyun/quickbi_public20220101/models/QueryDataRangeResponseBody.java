@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryDataRangeResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
+     * <p>D787E1A3-A93C-****-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Data range object.</p>
+     */
     @NameInMap("Result")
     public QueryDataRangeResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,13 +62,27 @@ public class QueryDataRangeResponseBody extends TeaModel {
     }
 
     public static class QueryDataRangeResponseBodyResultApiCopilotLlmCubeModels extends TeaModel {
+        /**
+         * <p>Alias of the LlmCube resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>Nickname of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhuge</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
+         * <p>LlmCube resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>sdasdafas23342342342</p>
          */
@@ -96,13 +121,27 @@ public class QueryDataRangeResponseBody extends TeaModel {
     }
 
     public static class QueryDataRangeResponseBodyResultApiCopilotThemeModelsApiCopilotLlmCubeModels extends TeaModel {
+        /**
+         * <p>Alias of the LLM cube resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Alias")
         public String alias;
 
+        /**
+         * <p>Nickname of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhuge</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
+         * <p>LlmCube resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1231242231asdasda</p>
          */
@@ -141,19 +180,36 @@ public class QueryDataRangeResponseBody extends TeaModel {
     }
 
     public static class QueryDataRangeResponseBodyResultApiCopilotThemeModels extends TeaModel {
+        /**
+         * <p>Array of LlmCube resources.</p>
+         */
         @NameInMap("ApiCopilotLlmCubeModels")
         public java.util.List<QueryDataRangeResponseBodyResultApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
 
+        /**
+         * <p>Nickname of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhuge</p>
+         */
         @NameInMap("CreateUser")
         public String createUser;
 
         /**
+         * <p>Analysis theme ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36631232342312312</p>
          */
         @NameInMap("ThemeId")
         public String themeId;
 
+        /**
+         * <p>Nickname of the analysis theme.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test theme</p>
+         */
         @NameInMap("ThemeName")
         public String themeName;
 
@@ -197,9 +253,15 @@ public class QueryDataRangeResponseBody extends TeaModel {
     }
 
     public static class QueryDataRangeResponseBodyResult extends TeaModel {
+        /**
+         * <p>Array of LlmCube resources.</p>
+         */
         @NameInMap("ApiCopilotLlmCubeModels")
         public java.util.List<QueryDataRangeResponseBodyResultApiCopilotLlmCubeModels> apiCopilotLlmCubeModels;
 
+        /**
+         * <p>Array of analysis themes.</p>
+         */
         @NameInMap("ApiCopilotThemeModels")
         public java.util.List<QueryDataRangeResponseBodyResultApiCopilotThemeModels> apiCopilotThemeModels;
 

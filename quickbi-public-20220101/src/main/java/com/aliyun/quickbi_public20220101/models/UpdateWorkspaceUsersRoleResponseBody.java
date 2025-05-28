@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the result of the interface execution.</p>
+     */
     @NameInMap("Result")
     public UpdateWorkspaceUsersRoleResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Value range:</p>
+     * <ul>
+     * <li>true: The request was successful, some members may have been updated successfully while others failed, refer to FailureDetail in the response for reasons of failure</li>
+     * <li>false: The request failed, no data will be persisted</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,16 +63,23 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
 
     public static class UpdateWorkspaceUsersRoleResponseBodyResult extends TeaModel {
         /**
+         * <p>Number of users that failed to update.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("Failure")
         public Integer failure;
 
+        /**
+         * <p>Reasons for the update failures.</p>
+         */
         @NameInMap("FailureDetail")
         public java.util.Map<String, ?> failureDetail;
 
         /**
+         * <p>Number of users that were updated successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -69,6 +87,8 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         public Integer success;
 
         /**
+         * <p>Modify the total number of users.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */

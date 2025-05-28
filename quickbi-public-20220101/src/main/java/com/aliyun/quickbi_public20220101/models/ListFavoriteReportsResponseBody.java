@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListFavoriteReportsResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the query result.</p>
+     */
     @NameInMap("Result")
     public ListFavoriteReportsResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,16 +63,26 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
 
     public static class ListFavoriteReportsResponseBodyResultData extends TeaModel {
         /**
+         * <p>Indicates whether the user has favorited the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Favorite")
         public Boolean favorite;
 
+        /**
+         * <p>The timestamp when the work was favorited.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1640088615000</p>
+         */
         @NameInMap("FavoriteDate")
         public String favoriteDate;
 
         /**
+         * <p>Timestamp of the work creation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640088615000</p>
          */
@@ -69,6 +90,8 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Timestamp of the work modification.</p>
+         * 
          * <strong>example:</strong>
          * <p>1640595729000</p>
          */
@@ -76,6 +99,8 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>Indicates whether the user has edit permission for the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -83,19 +108,35 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public Boolean hasEditAuth;
 
         /**
+         * <p>Check if the user has the permission to view the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("HasViewAuth")
         public Boolean hasViewAuth;
 
+        /**
+         * <p>Name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>Alibaba Cloud account name of the work owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>UserID of the work owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>1365*****238860</p>
          */
@@ -103,6 +144,14 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public String ownerNum;
 
         /**
+         * <p>Publication status of the work. Value range:</p>
+         * <ul>
+         * <li>0: Not published</li>
+         * <li>1: Published</li>
+         * <li>2: Saved with modifications, not published</li>
+         * <li>3: Offline</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -110,6 +159,8 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public Integer publishStatus;
 
         /**
+         * <p>Work ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>977c7698-<strong><strong>-</strong></strong>-****-44b7304d20fc</p>
          */
@@ -117,6 +168,13 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public String treeId;
 
         /**
+         * <p>Type of the work. Value range:</p>
+         * <ul>
+         * <li>DATAPRODUCT: Data Portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: Spreadsheet</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PAGE</p>
          */
@@ -124,12 +182,20 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public String type;
 
         /**
+         * <p>The ID of the workspace to which the work belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>523793cb-<strong><strong>-</strong></strong>-****-aa71c65ffa39</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The name of the workspace to which the work belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 
@@ -253,10 +319,15 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
     }
 
     public static class ListFavoriteReportsResponseBodyResult extends TeaModel {
+        /**
+         * <p>List of works queried.</p>
+         */
         @NameInMap("Data")
         public java.util.List<ListFavoriteReportsResponseBodyResultData> data;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -264,6 +335,8 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of rows per page set when requesting the interface.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -271,6 +344,8 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -278,6 +353,8 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

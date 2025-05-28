@@ -8,7 +8,7 @@ public class ListWorkspaceRoleUsersRequest extends TeaModel {
      * <p>Keyword for the user\&quot;s nickname.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试pop用户</p>
+     * <p>test</p>
      */
     @NameInMap("Keyword")
     public String keyword;
@@ -57,7 +57,7 @@ public class ListWorkspaceRoleUsersRequest extends TeaModel {
     public Long roleId;
 
     /**
-     * <p>Workspace ID.</p>
+     * <p>The ID of the workspace. This parameter is optional. If you do not set this parameter, the roles of all workspaces are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>726bee5a-****-43e1-9a8e-b550f0120f35</p>

@@ -4,10 +4,22 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListSharedReportsRequest extends TeaModel {
+    /**
+     * <p>Keyword of the name of the work.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test report</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Query the number of rows in the work list:</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Maximum value: 9999</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +27,13 @@ public class ListSharedReportsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Query the type of the work (fill in the blank to query all types). Valid values:</p>
+     * <ul>
+     * <li>DATAPRODUCT: BI portal</li>
+     * <li>PAGE: Dashboard</li>
+     * <li>REPORT: workbook</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PAGE</p>
      */
@@ -22,6 +41,7 @@ public class ListSharedReportsRequest extends TeaModel {
     public String treeType;
 
     /**
+     * <p>The UserID of the user to be queried in the Quick BI.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,15 +5,22 @@ import com.aliyun.tea.*;
 
 public class QueryAuditLogRequest extends TeaModel {
     /**
+     * <p>End date of the query, format (&quot;yyyyMMdd&quot;).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1715856218001</p>
+     * <p>20240604</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
+     * <p>Log type:</p>
+     * <ul>
+     * <li>dataView - Access</li>
+     * <li>function - Operation</li>
+     * <li>permission - Permission</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +30,8 @@ public class QueryAuditLogRequest extends TeaModel {
     public String logType;
 
     /**
+     * <p>Operator\&quot;s user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>95296e95-ca89-4c7d-8af9-dedf0ad0***</p>
      */
@@ -30,6 +39,9 @@ public class QueryAuditLogRequest extends TeaModel {
     public String operatorId;
 
     /**
+     * <p>Permission/Access/Operation type, empty - default all;</p>
+     * <p>Refer to the audit log code values, send multiple values separated by English commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>MODIFY</p>
      */
@@ -37,6 +49,8 @@ public class QueryAuditLogRequest extends TeaModel {
     public String operatorTypes;
 
     /**
+     * <p>Resource type, refer to the work type.</p>
+     * 
      * <strong>example:</strong>
      * <p>cube</p>
      */
@@ -44,15 +58,18 @@ public class QueryAuditLogRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>Start date of the query, format (&quot;yyyyMMdd&quot;), cannot be earlier than 90 days from the current time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1715856218001</p>
+     * <p>20240504</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
     /**
+     * <p>Workspace ID, the ID of the workspace to which the logs to be queried belong.</p>
+     * 
      * <strong>example:</strong>
      * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
      */

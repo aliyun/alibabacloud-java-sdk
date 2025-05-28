@@ -4,10 +4,22 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserListRequest extends TeaModel {
+    /**
+     * <p>The keyword of the username or nickname of the organization member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test user</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Current page number for organization member list:</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +27,12 @@ public class QueryUserListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>The number of rows per page in a paged query.</p>
+     * <ul>
+     * <li>Default value: 10.</li>
+     * <li>Maximum value: 1,000.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

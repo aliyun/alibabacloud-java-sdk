@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     /**
+     * <p>Preset workspace role ID, existing roles will be overwritten. Value range:</p>
+     * <ul>
+     * <li>25: Workspace Administrator</li>
+     * <li>26: Workspace Developer</li>
+     * <li>27: Workspace Analyst</li>
+     * <li>30: Workspace Viewer</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>25</p>
      */
@@ -12,10 +20,20 @@ public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     @Deprecated
     public Long roleId;
 
+    /**
+     * <p>Multiple workspace role IDs, separated by commas. If this value is provided, it takes precedence.</p>
+     * <blockquote>
+     * <p>Notice: roleId and roleIds cannot both be empty</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>25,26</p>
+     */
     @NameInMap("RoleIds")
     public String roleIds;
 
     /**
+     * <p>Quick BI user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +43,7 @@ public class UpdateWorkspaceUserRoleRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>Workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

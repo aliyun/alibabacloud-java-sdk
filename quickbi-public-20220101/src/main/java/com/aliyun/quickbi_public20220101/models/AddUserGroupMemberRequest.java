@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddUserGroupMemberRequest extends TeaModel {
     /**
-     * <p>The result of adding members to a user group is returned. Valid values:</p>
-     * <ul>
-     * <li>true: The task is added.</li>
-     * <li>false: The tag failed to be added.</li>
-     * </ul>
+     * <p>The ID of the user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,11 +15,7 @@ public class AddUserGroupMemberRequest extends TeaModel {
     public String userGroupId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
-     * </ul>
+     * <p>The ID of the Quick BI user. Separate multiple IDs with commas (,). Example: abc,efg. You can enter a maximum of 1000 entries.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

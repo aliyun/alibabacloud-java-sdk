@@ -63,12 +63,20 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
 
     public static class QueryWorksByWorkspaceResponseBodyResultDataDirectory extends TeaModel {
         /**
+         * <p>The ID of the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The name of the directory.</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -203,9 +211,21 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         @NameInMap("OwnerName")
         public String ownerName;
 
+        /**
+         * <p>Is it public</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("PublicFlag")
         public Boolean publicFlag;
 
+        /**
+         * <p>Deadline for the public release of the report</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1721366354000</p>
+         */
         @NameInMap("PublicInvalidTime")
         public Long publicInvalidTime;
 

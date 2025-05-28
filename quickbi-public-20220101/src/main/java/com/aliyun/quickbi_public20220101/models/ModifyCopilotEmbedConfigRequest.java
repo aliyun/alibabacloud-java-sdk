@@ -4,10 +4,17 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCopilotEmbedConfigRequest extends TeaModel {
+    /**
+     * <p>Agent nickname.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>smartq</p>
+     */
     @NameInMap("AgentName")
     public String agentName;
 
     /**
+     * <p>Embedding ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +24,11 @@ public class ModifyCopilotEmbedConfigRequest extends TeaModel {
     public String copilotId;
 
     /**
+     * <p>Data range.</p>
+     * <blockquote>
+     * <p>Notice: The parameter type is jsonString, and only one switch between analysis themes and query resources can be effective. When the all-select switch is true, it takes precedence. It is recommended to pass only one parameter, with other notes</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Map&lt;String,Object&gt; data=new HashMap&lt;&gt;();
      *         data.put(&quot;allTheme&quot;,true);
@@ -28,6 +40,12 @@ public class ModifyCopilotEmbedConfigRequest extends TeaModel {
     @NameInMap("DataRange")
     public String dataRange;
 
+    /**
+     * <p>Module name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>smartq</p>
+     */
     @NameInMap("ModuleName")
     public String moduleName;
 

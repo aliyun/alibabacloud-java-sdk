@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class AddWorkspaceUsersResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the result of the API execution.</p>
+     */
     @NameInMap("Result")
     public AddWorkspaceUsersResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Value range:</p>
+     * <ul>
+     * <li>true: The request was successful. There may be cases where some members are added successfully and others fail. For the reasons of failure, refer to the FailureDetail in the response.</li>
+     * <li>false: The request failed, and no data will be persisted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
 
     public static class AddWorkspaceUsersResponseBodyResult extends TeaModel {
         /**
+         * <p>Number of users that failed to be added.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -59,6 +72,8 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         public Integer failure;
 
         /**
+         * <p>Reasons for the failures.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;2046274934845893&quot; : &quot;AE0150010001: This user already exists.&quot;, &quot;1213444447906552&quot; : &quot;AE0150010001: This user already exists.&quot;}</p>
          */
@@ -66,6 +81,8 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         public java.util.Map<String, ?> failureDetail;
 
         /**
+         * <p>Number of users that were added successfully.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -73,6 +90,8 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         public Integer success;
 
         /**
+         * <p>Total number of users being added.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */

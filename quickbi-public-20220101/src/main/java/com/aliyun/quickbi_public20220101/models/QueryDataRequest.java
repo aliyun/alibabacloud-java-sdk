@@ -43,7 +43,7 @@ public class QueryDataRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{ &quot;area&quot;: [&quot;华东&quot;, &quot;华北&quot;],  &quot;shopping_date&quot;: &quot;2019Q1&quot;,  }</p>
+     * <p>test</p>
      */
     @NameInMap("Conditions")
     public String conditions;

@@ -4,10 +4,22 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryOrganizationWorkspaceListRequest extends TeaModel {
+    /**
+     * <p>Keyword for the workspace name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Current page number of the workspace list:</p>
+     * <ul>
+     * <li>Starting value: 1</li>
+     * <li>Default value: 1</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +27,12 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     public Integer pageNum;
 
     /**
+     * <p>Number of rows per page in a paginated query:</p>
+     * <ul>
+     * <li>Default value: 10</li>
+     * <li>Maximum value: 1000</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +40,8 @@ public class QueryOrganizationWorkspaceListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>User ID in Quick BI.</p>
+     * 
      * <strong>example:</strong>
      * <p>fe67f61a35a94b7da1a34ba174a7****</p>
      */

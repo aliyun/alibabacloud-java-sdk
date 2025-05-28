@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryAuditLogResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>78C1AA2D-9201-599E-A0BA-6FC462E57A95</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Array of logs.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryAuditLogResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values: </p>
+     * <ul>
+     * <li>true: The request succeeded </li>
+     * <li>false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryAuditLogResponseBody extends TeaModel {
 
     public static class QueryAuditLogResponseBodyResult extends TeaModel {
         /**
+         * <p>Log time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-16 13:17:39</p>
          */
@@ -59,6 +72,8 @@ public class QueryAuditLogResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>Operator account.</p>
+         * 
          * <strong>example:</strong>
          * <p>wukaibis</p>
          */
@@ -66,6 +81,8 @@ public class QueryAuditLogResponseBody extends TeaModel {
         public String operatorAccountName;
 
         /**
+         * <p>Operator\&quot;s nickname.</p>
+         * 
          * <strong>example:</strong>
          * <p>buc_344078</p>
          */
@@ -73,6 +90,8 @@ public class QueryAuditLogResponseBody extends TeaModel {
         public String operatorName;
 
         /**
+         * <p>Operation type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CREATE</p>
          */
@@ -80,16 +99,26 @@ public class QueryAuditLogResponseBody extends TeaModel {
         public String operatorType;
 
         /**
+         * <p>Target ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1113***************8500</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
+        /**
+         * <p>Target name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("TargetName")
         public String targetName;
 
         /**
+         * <p>Target type.</p>
+         * 
          * <strong>example:</strong>
          * <p>USER</p>
          */
@@ -97,6 +126,8 @@ public class QueryAuditLogResponseBody extends TeaModel {
         public String targetType;
 
         /**
+         * <p>Workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
          */

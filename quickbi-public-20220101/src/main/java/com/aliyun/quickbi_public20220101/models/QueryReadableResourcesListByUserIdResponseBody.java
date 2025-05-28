@@ -63,22 +63,38 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
 
     public static class QueryReadableResourcesListByUserIdResponseBodyResultDirectory extends TeaModel {
         /**
+         * <p>The ID of the directory.</p>
+         * 
          * <strong>example:</strong>
          * <p>e4276ea5-b232-4fb1-8f0f-efcee4a2****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test directory</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The hierarchical structure of the directory ID, which is separated with \&quot;/\&quot;.</p>
+         * 
          * <strong>example:</strong>
          * <p>e4276ea5-b232-4fb1-8f0f-efcee4a2****</p>
          */
         @NameInMap("PathId")
         public String pathId;
 
+        /**
+         * <p>The hierarchical structure of the directory name, which is separated with \&quot;/\&quot;.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test directory</p>
+         */
         @NameInMap("PathName")
         public String pathName;
 
@@ -140,6 +156,9 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory structure in which the work is located.</p>
+         */
         @NameInMap("Directory")
         public QueryReadableResourcesListByUserIdResponseBodyResultDirectory directory;
 
@@ -153,6 +172,8 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
         public String modifyName;
 
         /**
+         * <p>The timestamp of the modification time in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1611023338000</p>
          */
@@ -229,6 +250,9 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
 
         /**
          * <p>The name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Company Region Table</p>
          */
         @NameInMap("WorkName")
         public String workName;

@@ -13,6 +13,9 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryReportPerformanceResponseBodyResult> result;
 
@@ -268,6 +271,9 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

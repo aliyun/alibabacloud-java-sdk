@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class SmartqAuthTransferRequest extends TeaModel {
     /**
+     * <p>Source user ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class SmartqAuthTransferRequest extends TeaModel {
     public String originUserId;
 
     /**
+     * <p>Target user ID array, separated by English commas.</p>
+     * <blockquote>
+     * <p>Warning: The number of user IDs cannot exceed 100.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

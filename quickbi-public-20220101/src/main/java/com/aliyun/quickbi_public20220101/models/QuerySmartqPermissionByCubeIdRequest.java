@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySmartqPermissionByCubeIdRequest extends TeaModel {
     /**
+     * <p>Dataset ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class QuerySmartqPermissionByCubeIdRequest extends TeaModel {
     public String cubeId;
 
     /**
+     * <p>User ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,20 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class ListFavoriteReportsRequest extends TeaModel {
+    /**
+     * <p>Keyword of the work name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>Number of rows in the work list to be queried:
+     * Default value: 10
+     * Maximum value: 9999</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -15,6 +25,13 @@ public class ListFavoriteReportsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Type of the work to be queried (leave blank to query all types). Value range:</p>
+     * <ul>
+     * <li>DATAPRODUCT: Data Portal</li>
+     * <li>PAGE: Dashboard</li>
+     * <li>REPORT: Spreadsheet</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PAGE</p>
      */
@@ -22,6 +39,7 @@ public class ListFavoriteReportsRequest extends TeaModel {
     public String treeType;
 
     /**
+     * <p>The UserID of the user in Quick BI to be queried.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

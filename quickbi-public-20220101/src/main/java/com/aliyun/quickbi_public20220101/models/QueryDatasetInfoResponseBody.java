@@ -262,6 +262,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ExpressionV2")
+        public String expressionV2;
+
+        /**
          * <p>Expression for a calculated dimension; valid only for calculated dimensions.</p>
          * 
          * <strong>example:</strong>
@@ -353,6 +360,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
         public String getExpression() {
             return this.expression;
+        }
+
+        public QueryDatasetInfoResponseBodyResultDimensionList setExpressionV2(String expressionV2) {
+            this.expressionV2 = expressionV2;
+            return this;
+        }
+        public String getExpressionV2() {
+            return this.expressionV2;
         }
 
         public QueryDatasetInfoResponseBodyResultDimensionList setFactColumn(String factColumn) {
@@ -515,6 +530,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ExpressionV2")
+        public String expressionV2;
+
+        /**
          * <p>The type of the measure. Valid values:</p>
          * <ul>
          * <li>standard_measure: General Metrics</li>
@@ -588,6 +610,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
         public String getExpression() {
             return this.expression;
+        }
+
+        public QueryDatasetInfoResponseBodyResultMeasureList setExpressionV2(String expressionV2) {
+            this.expressionV2 = expressionV2;
+            return this;
+        }
+        public String getExpressionV2() {
+            return this.expressionV2;
         }
 
         public QueryDatasetInfoResponseBodyResultMeasureList setFactColumn(String factColumn) {

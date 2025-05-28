@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ChangeVisibilityModelResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
@@ -12,6 +14,8 @@ public class ChangeVisibilityModelResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of menus that are successfully modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -19,6 +23,12 @@ public class ChangeVisibilityModelResponseBody extends TeaModel {
     public Integer result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

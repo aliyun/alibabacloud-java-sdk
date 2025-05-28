@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Preset space role information of the user.</p>
+     */
     @NameInMap("Result")
     public QueryUserRoleInfoInWorkspaceResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request succeeded.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
 
     public static class QueryUserRoleInfoInWorkspaceResponseBodyResult extends TeaModel {
         /**
+         * <p>Preset role code.</p>
+         * 
          * <strong>example:</strong>
          * <p>role_workspace_admin</p>
          */
@@ -59,12 +72,26 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
         public String roleCode;
 
         /**
+         * <p>Preset role ID. Possible values:</p>
+         * <ul>
+         * <li>25: Space Administrator</li>
+         * <li>26: Space Developer</li>
+         * <li>27: Space Analyst</li>
+         * <li>30: Space Viewer</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
         @NameInMap("RoleId")
         public Long roleId;
 
+        /**
+         * <p>Preset role name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 

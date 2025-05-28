@@ -13,6 +13,9 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result returned.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryComponentPerformanceResponseBodyResult> result;
 
@@ -88,6 +91,9 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the add-on.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
@@ -265,6 +271,9 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("WorkspaceName")
         public String workspaceName;

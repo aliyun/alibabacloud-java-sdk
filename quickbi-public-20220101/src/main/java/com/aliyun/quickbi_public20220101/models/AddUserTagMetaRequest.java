@@ -4,11 +4,25 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class AddUserTagMetaRequest extends TeaModel {
+    /**
+     * <p>Tag description. Format check: maximum length of 255 characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TagDescription")
     public String tagDescription;
 
     /**
+     * <p>Tag name. Format check:</p>
+     * <ul>
+     * <li>Maximum length of 50 characters.</li>
+     * <li>Only Chinese, English, numbers, and /\|<a href=""></a> symbols are allowed.</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("TagName")
     public String tagName;

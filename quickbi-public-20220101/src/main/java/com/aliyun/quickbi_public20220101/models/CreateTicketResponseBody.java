@@ -23,10 +23,10 @@ public class CreateTicketResponseBody extends TeaModel {
     public String result;
 
     /**
-     * <p>是否请求成功。取值范围：</p>
+     * <p>Indicates whether the request was successful. Value range: </p>
      * <ul>
-     * <li>true：请求成功</li>
-     * <li>false：请求失败</li>
+     * <li>true: Request succeeded </li>
+     * <li>false: Request failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

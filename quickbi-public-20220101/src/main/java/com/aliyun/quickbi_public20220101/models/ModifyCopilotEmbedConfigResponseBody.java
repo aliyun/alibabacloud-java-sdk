@@ -5,13 +5,21 @@ import com.aliyun.tea.*;
 
 public class ModifyCopilotEmbedConfigResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>4BAA4694-CC27-555F-B15A-688AA9289FEE</p>
+     * <p>4BAA469******A9289FEE</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Returns the result of the API execution. Possible values:</p>
+     * <ul>
+     * <li>true: Execution succeeded</li>
+     * <li>false: Execution failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class ModifyCopilotEmbedConfigResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful</li>
+     * <li>false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

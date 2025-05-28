@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class DataSourceBloodResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46e537a5****,3dadsu****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Array of dataset IDs.</p>
+     */
     @NameInMap("Result")
     public java.util.List<String> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful</li>
+     * <li>false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

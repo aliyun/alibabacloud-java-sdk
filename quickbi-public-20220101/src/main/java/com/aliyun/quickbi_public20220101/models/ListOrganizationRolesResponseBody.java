@@ -70,7 +70,7 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
          * <li>offline_download: Self-service data retrieval</li>
          * <li>resource_package: Resource package management</li>
          * <li>organization_ask: Organization identification code (AK/SK)</li>
-         * <li>developer_openapi: Open API</li>
+         * <li>developer_openapi: OpenAPI</li>
          * <li>data_service: Data service</li>
          * <li>admin_authorize3rd: Embedded analysis</li>
          * <li>component_manage: Custom component</li>

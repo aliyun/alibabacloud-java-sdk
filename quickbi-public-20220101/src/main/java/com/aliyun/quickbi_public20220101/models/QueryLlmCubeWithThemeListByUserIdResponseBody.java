@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2EE822B***************F-F5B42DDADC12</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of datasets and analysis themes.</p>
+     */
     @NameInMap("Result")
     public QueryLlmCubeWithThemeListByUserIdResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful</li>
+     * <li>false: The request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,9 +62,23 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
     }
 
     public static class QueryLlmCubeWithThemeListByUserIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>Dataset map.</p>
+         * <ul>
+         * <li>key - Dataset ID</li>
+         * <li>value - Dataset name</li>
+         * </ul>
+         */
         @NameInMap("CubeIds")
         public java.util.Map<String, String> cubeIds;
 
+        /**
+         * <p>Analysis theme map.</p>
+         * <ul>
+         * <li>key - Analysis theme ID </li>
+         * <li>value - Analysis theme name</li>
+         * </ul>
+         */
         @NameInMap("ThemeIds")
         public java.util.Map<String, String> themeIds;
 

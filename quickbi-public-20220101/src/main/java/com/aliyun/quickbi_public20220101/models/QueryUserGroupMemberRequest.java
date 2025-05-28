@@ -4,10 +4,17 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class QueryUserGroupMemberRequest extends TeaModel {
+    /**
+     * <p>Keyword for the username or nickname of the user group member.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Keyword")
     public String keyword;
 
     /**
+     * <p>User group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

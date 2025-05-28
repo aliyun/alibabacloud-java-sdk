@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteTicketRequest extends TeaModel {
     /**
-     * <p>Deletes a specified ticket from an embedded report.</p>
+     * <p>The value of the third-party embedded ticket, which is the <code>accessTicket</code> in the URL.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

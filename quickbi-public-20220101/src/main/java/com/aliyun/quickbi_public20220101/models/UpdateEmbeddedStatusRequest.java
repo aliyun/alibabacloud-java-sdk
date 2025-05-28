@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateEmbeddedStatusRequest extends TeaModel {
     /**
+     * <p>Whether to enable the embedding feature for the work. Valid values:</p>
+     * <ul>
+     * <li>true: enables embedding.</li>
+     * <li>false: disables embedding.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,10 @@ public class UpdateEmbeddedStatusRequest extends TeaModel {
     public Boolean thirdPartAuthFlag;
 
     /**
+     * <p>The ID of the work.</p>
+     * <ul>
+     * <li>Batch modification is supported. Separate multiple values with commas (,).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

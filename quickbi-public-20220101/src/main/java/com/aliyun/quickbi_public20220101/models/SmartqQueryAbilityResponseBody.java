@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class SmartqQueryAbilityResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A************2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public SmartqQueryAbilityResponseBodyResult result;
 
     /**
+     * <p>Whether the operation was successful.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +60,8 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
     public static class SmartqQueryAbilityResponseBodyResultMetaType extends TeaModel {
         /**
+         * <p>Column tuple name.</p>
+         * 
          * <strong>example:</strong>
          * <p>Polar***STPS</p>
          */
@@ -61,6 +69,15 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        /**
+         * <p>Column tuple type.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -80,6 +97,14 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             return this.key;
         }
 
+        public SmartqQueryAbilityResponseBodyResultMetaType setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
         public SmartqQueryAbilityResponseBodyResultMetaType setValue(String value) {
             this.value = value;
             return this;
@@ -92,6 +117,8 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
     public static class SmartqQueryAbilityResponseBodyResultValues extends TeaModel {
         /**
+         * <p>Data values for each row.</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>true</p>
          */
@@ -114,22 +141,45 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
     }
 
     public static class SmartqQueryAbilityResponseBodyResult extends TeaModel {
+        /**
+         * <p>Suggested chart type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NEW_TABLE</p>
+         */
         @NameInMap("ChartType")
         public String chartType;
 
         /**
+         * <p>Summary information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Schedule</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>true</p>
          */
         @NameInMap("ConclusionText")
         public String conclusionText;
 
+        /**
+         * <p>Visualized logical SQL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>select * ****</p>
+         */
         @NameInMap("LogicSql")
         public String logicSql;
 
+        /**
+         * <p>List of column tuple types.</p>
+         */
         @NameInMap("MetaType")
         public java.util.List<SmartqQueryAbilityResponseBodyResultMetaType> metaType;
 
+        /**
+         * <p>Array of data value lists.</p>
+         */
         @NameInMap("Values")
         public java.util.List<SmartqQueryAbilityResponseBodyResultValues> values;
 

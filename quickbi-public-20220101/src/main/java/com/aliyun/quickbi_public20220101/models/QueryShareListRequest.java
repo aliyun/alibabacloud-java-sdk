@@ -5,16 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryShareListRequest extends TeaModel {
     /**
-     * <p>The type of work being shared. Valid values:</p>
-     * <ul>
-     * <li>product: BI portal</li>
-     * <li>dashboard: dashboard</li>
-     * <li>worksheet: workbook</li>
-     * <li>dashboardOfflineQuery: self-service data retrieval</li>
-     * <li>Analysis: Ad hoc analysis</li>
-     * <li>DATAFORM</li>
-     * <li>SCREEN: Data dashboard</li>
-     * </ul>
+     * <p>The ID of the work. The works include data portal, dashboard, spreadsheet, self-service data retrieval, ad-hoc analysis, data entry, and data screen.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

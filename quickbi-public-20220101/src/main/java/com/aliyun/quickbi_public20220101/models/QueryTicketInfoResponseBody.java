@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryTicketInfoResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The details of the generated ticket.</p>
+     */
     @NameInMap("Result")
     public QueryTicketInfoResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryTicketInfoResponseBody extends TeaModel {
 
     public static class QueryTicketInfoResponseBodyResult extends TeaModel {
         /**
+         * <p>Notes.</p>
+         * 
          * <strong>example:</strong>
          * <p>a27a9aec-<strong><strong>-</strong></strong>-bd40-1a21ea41d7c5</p>
          */
@@ -59,16 +72,26 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String accessTicket;
 
         /**
+         * <p>The ID of the component in the report.</p>
+         * 
          * <strong>example:</strong>
          * <p>sfdgsds-<strong><strong>-</strong></strong>-a608-mghdgd</p>
          */
         @NameInMap("CmptId")
         public String cmptId;
 
+        /**
+         * <p>Global parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&amp;{quot;paramKey\&quot;:\&quot;price\&quot;,\&quot;joinType\&quot;and\&quot;,\&quot;conditionList\&quot;:[{\&quot; operation\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;value ;&amp; quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&quot;\&amp;quot product_type\&quot;,\&quot;joinType\&quot;:\&quot;and &quot;;,&amp; quot;conditionList\&quot;, the conditions must be:[{\&quot;operate&quot; ;:&amp; quot;in\&quot;,\&quot;value\&quot;, the conditions must be:[\&quot; office supplies\&quot;,\&quot; furniture products\&quot;]}]}]\n</p>
+         */
         @NameInMap("GlobalParam")
         public String globalParam;
 
         /**
+         * <p>Expiration time of the note.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-30 03:03:49</p>
          */
@@ -76,6 +99,8 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String invalidTime;
 
         /**
+         * <p>The maximum number of supported bills.</p>
+         * 
          * <strong>example:</strong>
          * <p>9999</p>
          */
@@ -83,6 +108,8 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public Integer maxTicketNum;
 
         /**
+         * <p>The ID of the organization.</p>
+         * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-<strong><strong>-</strong></strong>-b3e1-e92c7af083ea</p>
          */
@@ -90,6 +117,8 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String organizationId;
 
         /**
+         * <p>The registration time of the ticket.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-01-09 22:23:49</p>
          */
@@ -97,6 +126,8 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public String registerTime;
 
         /**
+         * <p>The number of bills that have been consumed.</p>
+         * 
          * <strong>example:</strong>
          * <p>47</p>
          */
@@ -104,16 +135,26 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         public Integer usedTicketNum;
 
         /**
+         * <p>The user ID of the Quick BI.</p>
+         * 
          * <strong>example:</strong>
          * <p>974e50**********9033f46</p>
          */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>Set the watermarking parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Tripartite embedding of Ticket</p>
+         */
         @NameInMap("WatermarkParam")
         public String watermarkParam;
 
         /**
+         * <p>The ID of the operations report.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
          */

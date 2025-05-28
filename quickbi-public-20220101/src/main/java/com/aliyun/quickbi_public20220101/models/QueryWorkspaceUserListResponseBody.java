@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryWorkspaceUserListResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the paginated result of the member list, with detailed information about the members stored in the Data parameter of the response.</p>
+     */
     @NameInMap("Result")
     public QueryWorkspaceUserListResponseBodyResult result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
 
     public static class QueryWorkspaceUserListResponseBodyResultDataRole extends TeaModel {
         /**
+         * <p>Code corresponding to the preset role.</p>
+         * 
          * <strong>example:</strong>
          * <p>role_workspace_admin</p>
          */
@@ -59,12 +72,26 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         public String roleCode;
 
         /**
+         * <p>Preset role ID. Possible values:</p>
+         * <ul>
+         * <li>25: Workspace Administrator</li>
+         * <li>26: Workspace Developer</li>
+         * <li>27: Workspace Analyst</li>
+         * <li>30: Workspace Viewer</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>25</p>
          */
         @NameInMap("RoleId")
         public Long roleId;
 
+        /**
+         * <p>Name of the preset role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
@@ -101,6 +128,8 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
 
     public static class QueryWorkspaceUserListResponseBodyResultData extends TeaModel {
         /**
+         * <p>Alibaba Cloud account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>16020915****8429</p>
          */
@@ -108,19 +137,32 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         public String accountId;
 
         /**
+         * <p>Alibaba Cloud account name.</p>
+         * 
          * <strong>example:</strong>
          * <p>pop****@aliyunid.test</p>
          */
         @NameInMap("AccountName")
         public String accountName;
 
+        /**
+         * <p>Nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("NickName")
         public String nickName;
 
+        /**
+         * <p>Preset role information for the workspace member.</p>
+         */
         @NameInMap("Role")
         public QueryWorkspaceUserListResponseBodyResultDataRole role;
 
         /**
+         * <p>Quick BI user ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>de4bc5f9429141cc8091cdd1c15b****</p>
          */
@@ -175,10 +217,15 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
     }
 
     public static class QueryWorkspaceUserListResponseBodyResult extends TeaModel {
+        /**
+         * <p>Information about the workspace members.</p>
+         */
         @NameInMap("Data")
         public java.util.List<QueryWorkspaceUserListResponseBodyResultData> data;
 
         /**
+         * <p>Page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -186,6 +233,8 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         public Integer pageNum;
 
         /**
+         * <p>Number of rows per page as set in the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -193,6 +242,8 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>Total number of rows.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -200,6 +251,8 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         public Integer totalNum;
 
         /**
+         * <p>Total number of pages.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

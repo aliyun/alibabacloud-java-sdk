@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryUserGroupMemberResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>48C930FF-DFCF-5986-902B-E24C202E2443</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the request for the user group member list.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryUserGroupMemberResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
 
     public static class QueryUserGroupMemberResponseBodyResult extends TeaModel {
         /**
+         * <p>ID of the user group or the user group member.</p>
+         * 
          * <strong>example:</strong>
          * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
          */
@@ -59,22 +72,42 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>Indicates whether it is a user group. Possible values:</p>
+         * <ul>
+         * <li>true: It is a user group.</li>
+         * <li>false: It is a user.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("IsUserGroup")
         public Boolean isUserGroup;
 
+        /**
+         * <p>Name or nickname of the user group or its member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>ID of the parent user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
          */
         @NameInMap("ParentUserGroupId")
         public String parentUserGroupId;
 
+        /**
+         * <p>Name of the parent user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("ParentUserGroupName")
         public String parentUserGroupName;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddUserGroupMemberResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>B6141A5A-A9EF-5F16-BF34-EFB9C1CCE4F3</p>
      */
@@ -12,6 +14,12 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The result of adding members to a user group is returned. Valid values:</p>
+     * <ul>
+     * <li>true: The task is added.</li>
+     * <li>false: The tag failed to be added.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +27,12 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
     public Boolean result;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

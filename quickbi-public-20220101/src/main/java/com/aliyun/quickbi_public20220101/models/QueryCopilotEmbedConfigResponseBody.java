@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1FC71085-D5FD-08E0-813A-4D4BD1031BC5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>List of embedded configurations.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryCopilotEmbedConfigResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,6 +63,8 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
 
     public static class QueryCopilotEmbedConfigResponseBodyResultDataRange extends TeaModel {
         /**
+         * <p>Whether all question resources are selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
@@ -59,15 +72,23 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         public Boolean allCube;
 
         /**
+         * <p>Whether all analysis themes are selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true/false</p>
          */
         @NameInMap("AllTheme")
         public Boolean allTheme;
 
+        /**
+         * <p>Collection of question resource IDs.</p>
+         */
         @NameInMap("LlmCubes")
         public java.util.List<String> llmCubes;
 
+        /**
+         * <p>Collection of analysis theme IDs.</p>
+         */
         @NameInMap("Themes")
         public java.util.List<String> themes;
 
@@ -111,10 +132,18 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
     }
 
     public static class QueryCopilotEmbedConfigResponseBodyResult extends TeaModel {
+        /**
+         * <p>Robot\&quot;s nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>little Q</p>
+         */
         @NameInMap("AgentName")
         public String agentName;
 
         /**
+         * <p>Embedding ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>9c079710-ddbe-48b3-b495-7c83c8d57cc4</p>
          */
@@ -122,29 +151,50 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         public String copilotId;
 
         /**
+         * <p>ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>qweqw12312423521</p>
          */
         @NameInMap("CreateUser")
         public String createUser;
 
+        /**
+         * <p>Nickname of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("CreateUserName")
         public String createUserName;
 
+        /**
+         * <p>Data range (analysis themes and question resources).</p>
+         */
         @NameInMap("DataRange")
         public QueryCopilotEmbedConfigResponseBodyResultDataRange dataRange;
 
         /**
+         * <p>ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>asda1231231dfs</p>
          */
         @NameInMap("ModifyUser")
         public String modifyUser;
 
+        /**
+         * <p>Module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>little Q</p>
+         */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
+         * <p>Name of the embedded module.</p>
+         * 
          * <strong>example:</strong>
          * <p>0327</p>
          */
