@@ -378,12 +378,18 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         @NameInMap("news")
         public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummariesNews> news;
 
+        @NameInMap("pubTime")
+        public String pubTime;
+
         /**
          * <strong>example:</strong>
          * <p>xxx</p>
          */
         @NameInMap("textSummary")
         public String textSummary;
+
+        @NameInMap("url")
+        public String url;
 
         public static RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries build(java.util.Map<String, ?> map) throws Exception {
             RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries self = new RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries();
@@ -446,12 +452,28 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             return this.news;
         }
 
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setPubTime(String pubTime) {
+            this.pubTime = pubTime;
+            return this;
+        }
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
         public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setTextSummary(String textSummary) {
             this.textSummary = textSummary;
             return this;
         }
         public String getTextSummary() {
             return this.textSummary;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
@@ -509,8 +531,17 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         @NameInMap("articles")
         public java.util.List<RunHotTopicChatResponseBodyPayloadOutputArticles> articles;
 
+        @NameInMap("category")
+        public String category;
+
         @NameInMap("hotTopicSummaries")
         public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries> hotTopicSummaries;
+
+        @NameInMap("keyword")
+        public String keyword;
+
+        @NameInMap("location")
+        public String location;
 
         @NameInMap("multimodalMedias")
         public java.util.List<RunHotTopicChatResponseBodyPayloadOutputMultimodalMedias> multimodalMedias;
@@ -541,12 +572,36 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             return this.articles;
         }
 
+        public RunHotTopicChatResponseBodyPayloadOutput setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
         public RunHotTopicChatResponseBodyPayloadOutput setHotTopicSummaries(java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries> hotTopicSummaries) {
             this.hotTopicSummaries = hotTopicSummaries;
             return this;
         }
         public java.util.List<RunHotTopicChatResponseBodyPayloadOutputHotTopicSummaries> getHotTopicSummaries() {
             return this.hotTopicSummaries;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutput setKeyword(String keyword) {
+            this.keyword = keyword;
+            return this;
+        }
+        public String getKeyword() {
+            return this.keyword;
+        }
+
+        public RunHotTopicChatResponseBodyPayloadOutput setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
         }
 
         public RunHotTopicChatResponseBodyPayloadOutput setMultimodalMedias(java.util.List<RunHotTopicChatResponseBodyPayloadOutputMultimodalMedias> multimodalMedias) {
