@@ -43,6 +43,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    @NameInMap("mcpRouteConfig")
+    public CreateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig;
+
     /**
      * <p>The route name.</p>
      * 
@@ -103,6 +106,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
     }
     public HttpRouteMatch getMatch() {
         return this.match;
+    }
+
+    public CreateHttpApiRouteRequest setMcpRouteConfig(CreateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig) {
+        this.mcpRouteConfig = mcpRouteConfig;
+        return this;
+    }
+    public CreateHttpApiRouteRequestMcpRouteConfig getMcpRouteConfig() {
+        return this.mcpRouteConfig;
     }
 
     public CreateHttpApiRouteRequest setName(String name) {
@@ -251,6 +262,36 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         }
         public java.util.List<CreateHttpApiRouteRequestBackendConfigServices> getServices() {
             return this.services;
+        }
+
+    }
+
+    public static class CreateHttpApiRouteRequestMcpRouteConfig extends TeaModel {
+        @NameInMap("exposedUriPath")
+        public String exposedUriPath;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static CreateHttpApiRouteRequestMcpRouteConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateHttpApiRouteRequestMcpRouteConfig self = new CreateHttpApiRouteRequestMcpRouteConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateHttpApiRouteRequestMcpRouteConfig setExposedUriPath(String exposedUriPath) {
+            this.exposedUriPath = exposedUriPath;
+            return this;
+        }
+        public String getExposedUriPath() {
+            return this.exposedUriPath;
+        }
+
+        public CreateHttpApiRouteRequestMcpRouteConfig setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

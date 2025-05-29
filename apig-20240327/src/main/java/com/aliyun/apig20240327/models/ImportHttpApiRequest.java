@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ImportHttpApiRequest extends TeaModel {
+    /**
+     * <p>The deployment configuration.</p>
+     */
     @NameInMap("deployConfigs")
     public HttpApiDeployConfig deployConfigs;
 
@@ -25,6 +28,9 @@ public class ImportHttpApiRequest extends TeaModel {
     @NameInMap("dryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>The MCP route ID.</p>
+     */
     @NameInMap("mcpRouteId")
     public String mcpRouteId;
 
@@ -56,7 +62,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String specContentBase64;
 
     /**
-     * <p>The download URL of the API definition file. You can download the file over the Internet or by using an Object Storage Service (OSS) internal download URL that belongs to the current region. You must obtain the required permissions to download the file. For OSS URLs that are not publicly readable, refer to <a href="https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects">https://help.aliyun.com/zh/oss/user-guide/how-to-obtain-the-url-of-a-single-object-or-the-urls-of-multiple-objects</a> to specify URLs that provide download permissions. Currently, only OSS URLs are supported.</p>
+     * <p>The download URL of the API definition file. You can download the file over the Internet or by using an Object Storage Service (OSS) internal download URL that belongs to the current region. You must obtain the required permissions to download the file. For OSS URLs that are not publicly readable, refer to <a href="https://help.aliyun.com/document_detail/39607.html">Download objects using presigned URLs</a> to specify URLs that provide download permissions. Currently, only OSS URLs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-api/api.yaml">https://my-bucket.oss-cn-hangzhou.aliyuncs.com/my-api/api.yaml</a></p>
@@ -75,7 +81,7 @@ public class ImportHttpApiRequest extends TeaModel {
      * <ul>
      * <li>SpectOnly: All configurations in the file take effect.</li>
      * <li>SpecFirst: The file takes precedence. New APIs are created and existing ones are updated. APIs not included in the file remain unchanged.</li>
-     * <li>ExistFirst (default): The existing APIs take precedence. New APIs are created but existing ones remain unchanged.</li>
+     * <li>ExistFirst (default): The existing APIs take precedence. New APIs are created but existing ones remain unchanged. If this parameter is not specified, the ExistFirst policy takes effect.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -94,7 +100,7 @@ public class ImportHttpApiRequest extends TeaModel {
     public String targetHttpApiId;
 
     /**
-     * <p>Version configuration.</p>
+     * <p>The API versioning configuration. If versioning is enabled for an API and the version and name of an API to be imported are the same as those of the existing API, the existing API is updated by this import. If versioning is not enabled for an API and the name of an API to be imported are the same as that of the existing API, the existing API is updated by this import.</p>
      */
     @NameInMap("versionConfig")
     public HttpApiVersionConfig versionConfig;

@@ -492,6 +492,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("match", request.match);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpRouteConfig)) {
+            body.put("mcpRouteConfig", request.mcpRouteConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
         }
