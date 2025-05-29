@@ -95,12 +95,30 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
     }
 
     public static class UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo extends TeaModel {
+        /**
+         * <p>Mock error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EntityNotExist.Service</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <p>Mock error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The provided parameter &quot;ServiceId&quot; is invalid.</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <p>if you want mock response, please open this option.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("UpdateResponse")
         public Boolean updateResponse;
 
@@ -145,6 +163,9 @@ public class UpdateServiceInstanceAttributeRequest extends TeaModel {
         @NameInMap("CustomData")
         public String customData;
 
+        /**
+         * <p>Mock response info.</p>
+         */
         @NameInMap("ResponseInfo")
         public UpdateServiceInstanceAttributeRequestLicenseDataResponseInfo responseInfo;
 
