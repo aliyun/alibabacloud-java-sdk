@@ -13,6 +13,9 @@ public class TextEmbeddingRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("Dimension")
+    public Integer dimension;
+
     @NameInMap("Input")
     public java.util.List<String> input;
 
@@ -46,6 +49,14 @@ public class TextEmbeddingRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public TextEmbeddingRequest setDimension(Integer dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+    public Integer getDimension() {
+        return this.dimension;
     }
 
     public TextEmbeddingRequest setInput(java.util.List<String> input) {

@@ -114,6 +114,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("AvailabilityValue")
         public String availabilityValue;
 
+        @NameInMap("CacheStorageSize")
+        public String cacheStorageSize;
+
         /**
          * <p>Access mode, with the following values:</p>
          * <ul>
@@ -842,6 +845,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getAvailabilityValue() {
             return this.availabilityValue;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setCacheStorageSize(String cacheStorageSize) {
+            this.cacheStorageSize = cacheStorageSize;
+            return this;
+        }
+        public String getCacheStorageSize() {
+            return this.cacheStorageSize;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setConnectionMode(String connectionMode) {

@@ -80,6 +80,9 @@ public class UpsertChunksShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ShouldReplaceFile")
+    public Boolean shouldReplaceFile;
+
     /**
      * <p>List of split documents.</p>
      */
@@ -145,6 +148,14 @@ public class UpsertChunksShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public UpsertChunksShrinkRequest setShouldReplaceFile(Boolean shouldReplaceFile) {
+        this.shouldReplaceFile = shouldReplaceFile;
+        return this;
+    }
+    public Boolean getShouldReplaceFile() {
+        return this.shouldReplaceFile;
     }
 
     public UpsertChunksShrinkRequest setTextChunksShrink(String textChunksShrink) {

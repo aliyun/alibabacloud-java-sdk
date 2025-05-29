@@ -238,6 +238,9 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("TopK")
     public Integer topK;
 
+    @NameInMap("UrlExpiration")
+    public String urlExpiration;
+
     /**
      * <p>Whether to use full-text retrieval (dual recall). Default is false, which means only vector retrieval is used.</p>
      * 
@@ -402,6 +405,14 @@ public class QueryContentRequest extends TeaModel {
     }
     public Integer getTopK() {
         return this.topK;
+    }
+
+    public QueryContentRequest setUrlExpiration(String urlExpiration) {
+        this.urlExpiration = urlExpiration;
+        return this;
+    }
+    public String getUrlExpiration() {
+        return this.urlExpiration;
     }
 
     public QueryContentRequest setUseFullTextRetrieval(Boolean useFullTextRetrieval) {

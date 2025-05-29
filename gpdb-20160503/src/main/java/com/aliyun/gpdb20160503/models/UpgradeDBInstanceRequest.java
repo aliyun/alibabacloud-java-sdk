@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceRequest extends TeaModel {
+    @NameInMap("CacheStorageSize")
+    public String cacheStorageSize;
+
     /**
      * <p>This parameter is no longer used.</p>
      * 
@@ -126,6 +129,9 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     @NameInMap("SegStorageType")
     public String segStorageType;
 
+    @NameInMap("ServerlessResource")
+    public String serverlessResource;
+
     /**
      * <p>The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.</p>
      * <blockquote>
@@ -168,6 +174,14 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     public static UpgradeDBInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeDBInstanceRequest self = new UpgradeDBInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeDBInstanceRequest setCacheStorageSize(String cacheStorageSize) {
+        this.cacheStorageSize = cacheStorageSize;
+        return this;
+    }
+    public String getCacheStorageSize() {
+        return this.cacheStorageSize;
     }
 
     public UpgradeDBInstanceRequest setDBInstanceClass(String DBInstanceClass) {
@@ -264,6 +278,14 @@ public class UpgradeDBInstanceRequest extends TeaModel {
     }
     public String getSegStorageType() {
         return this.segStorageType;
+    }
+
+    public UpgradeDBInstanceRequest setServerlessResource(String serverlessResource) {
+        this.serverlessResource = serverlessResource;
+        return this;
+    }
+    public String getServerlessResource() {
+        return this.serverlessResource;
     }
 
     public UpgradeDBInstanceRequest setStorageSize(String storageSize) {

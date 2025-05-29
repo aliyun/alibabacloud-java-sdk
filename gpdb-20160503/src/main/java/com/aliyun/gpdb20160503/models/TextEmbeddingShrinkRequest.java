@@ -13,6 +13,9 @@ public class TextEmbeddingShrinkRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    @NameInMap("Dimension")
+    public Integer dimension;
+
     @NameInMap("Input")
     public String inputShrink;
 
@@ -46,6 +49,14 @@ public class TextEmbeddingShrinkRequest extends TeaModel {
     }
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    public TextEmbeddingShrinkRequest setDimension(Integer dimension) {
+        this.dimension = dimension;
+        return this;
+    }
+    public Integer getDimension() {
+        return this.dimension;
     }
 
     public TextEmbeddingShrinkRequest setInputShrink(String inputShrink) {

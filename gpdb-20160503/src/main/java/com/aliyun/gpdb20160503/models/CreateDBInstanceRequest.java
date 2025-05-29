@@ -19,6 +19,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("BackupId")
     public String backupId;
 
+    @NameInMap("CacheStorageSize")
+    public String cacheStorageSize;
+
     /**
      * <p>Idempotence check. For more information, see <a href="https://help.aliyun.com/document_detail/327176.html">How to Ensure Idempotence</a>.</p>
      * 
@@ -640,6 +643,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getBackupId() {
         return this.backupId;
+    }
+
+    public CreateDBInstanceRequest setCacheStorageSize(String cacheStorageSize) {
+        this.cacheStorageSize = cacheStorageSize;
+        return this;
+    }
+    public String getCacheStorageSize() {
+        return this.cacheStorageSize;
     }
 
     public CreateDBInstanceRequest setClientToken(String clientToken) {

@@ -80,6 +80,9 @@ public class UpsertChunksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ShouldReplaceFile")
+    public Boolean shouldReplaceFile;
+
     /**
      * <p>List of split documents.</p>
      */
@@ -147,6 +150,14 @@ public class UpsertChunksRequest extends TeaModel {
         return this.regionId;
     }
 
+    public UpsertChunksRequest setShouldReplaceFile(Boolean shouldReplaceFile) {
+        this.shouldReplaceFile = shouldReplaceFile;
+        return this;
+    }
+    public Boolean getShouldReplaceFile() {
+        return this.shouldReplaceFile;
+    }
+
     public UpsertChunksRequest setTextChunks(java.util.List<UpsertChunksRequestTextChunks> textChunks) {
         this.textChunks = textChunks;
         return this;
@@ -165,6 +176,12 @@ public class UpsertChunksRequest extends TeaModel {
          */
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("Filter")
+        public String filter;
+
+        @NameInMap("Id")
+        public String id;
 
         /**
          * <p>Metadata.</p>
@@ -186,6 +203,22 @@ public class UpsertChunksRequest extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public UpsertChunksRequestTextChunks setFilter(String filter) {
+            this.filter = filter;
+            return this;
+        }
+        public String getFilter() {
+            return this.filter;
+        }
+
+        public UpsertChunksRequestTextChunks setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
         }
 
         public UpsertChunksRequestTextChunks setMetadata(java.util.Map<String, ?> metadata) {

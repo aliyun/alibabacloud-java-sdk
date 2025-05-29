@@ -961,6 +961,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackupId", request.backupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.cacheStorageSize)) {
+            query.put("CacheStorageSize", request.cacheStorageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -11986,6 +11990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TopK", request.topK);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.urlExpiration)) {
+            query.put("UrlExpiration", request.urlExpiration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.useFullTextRetrieval)) {
             query.put("UseFullTextRetrieval", request.useFullTextRetrieval);
         }
@@ -12845,6 +12853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dimension)) {
+            query.put("Dimension", request.dimension);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -13275,6 +13287,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeDBInstanceResponse upgradeDBInstanceWithOptions(UpgradeDBInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cacheStorageSize)) {
+            query.put("CacheStorageSize", request.cacheStorageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceClass)) {
             query.put("DBInstanceClass", request.DBInstanceClass);
         }
@@ -13321,6 +13337,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.segStorageType)) {
             query.put("SegStorageType", request.segStorageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverlessResource)) {
+            query.put("ServerlessResource", request.serverlessResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
@@ -13751,6 +13771,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shouldReplaceFile)) {
+            query.put("ShouldReplaceFile", request.shouldReplaceFile);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
