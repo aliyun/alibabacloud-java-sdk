@@ -14,6 +14,9 @@ public class GenerateAIAgentCallRequest extends TeaModel {
     @NameInMap("AIAgentId")
     public String AIAgentId;
 
+    @NameInMap("AgentConfig")
+    public AIAgentConfig agentConfig;
+
     @NameInMap("ChatSyncConfig")
     public GenerateAIAgentCallRequestChatSyncConfig chatSyncConfig;
 
@@ -37,6 +40,7 @@ public class GenerateAIAgentCallRequest extends TeaModel {
      * <p>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</p>
      */
     @NameInMap("TemplateConfig")
+    @Deprecated
     public AIAgentTemplateConfig templateConfig;
 
     /**
@@ -68,6 +72,14 @@ public class GenerateAIAgentCallRequest extends TeaModel {
         return this.AIAgentId;
     }
 
+    public GenerateAIAgentCallRequest setAgentConfig(AIAgentConfig agentConfig) {
+        this.agentConfig = agentConfig;
+        return this;
+    }
+    public AIAgentConfig getAgentConfig() {
+        return this.agentConfig;
+    }
+
     public GenerateAIAgentCallRequest setChatSyncConfig(GenerateAIAgentCallRequestChatSyncConfig chatSyncConfig) {
         this.chatSyncConfig = chatSyncConfig;
         return this;
@@ -92,6 +104,7 @@ public class GenerateAIAgentCallRequest extends TeaModel {
         return this.sessionId;
     }
 
+    @Deprecated
     public GenerateAIAgentCallRequest setTemplateConfig(AIAgentTemplateConfig templateConfig) {
         this.templateConfig = templateConfig;
         return this;

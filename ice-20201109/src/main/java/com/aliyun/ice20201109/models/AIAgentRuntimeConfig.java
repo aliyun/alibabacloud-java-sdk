@@ -4,13 +4,25 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentRuntimeConfig extends TeaModel {
+    @NameInMap("AgentUserId")
+    public String agentUserId;
+
+    @NameInMap("AuthToken")
+    public String authToken;
+
     @NameInMap("AvatarChat3D")
+    @Deprecated
     public AIAgentRuntimeConfigAvatarChat3D avatarChat3D;
 
+    @NameInMap("ChannelId")
+    public String channelId;
+
     @NameInMap("VisionChat")
+    @Deprecated
     public AIAgentRuntimeConfigVisionChat visionChat;
 
     @NameInMap("VoiceChat")
+    @Deprecated
     public AIAgentRuntimeConfigVoiceChat voiceChat;
 
     public static AIAgentRuntimeConfig build(java.util.Map<String, ?> map) throws Exception {
@@ -18,6 +30,23 @@ public class AIAgentRuntimeConfig extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public AIAgentRuntimeConfig setAgentUserId(String agentUserId) {
+        this.agentUserId = agentUserId;
+        return this;
+    }
+    public String getAgentUserId() {
+        return this.agentUserId;
+    }
+
+    public AIAgentRuntimeConfig setAuthToken(String authToken) {
+        this.authToken = authToken;
+        return this;
+    }
+    public String getAuthToken() {
+        return this.authToken;
+    }
+
+    @Deprecated
     public AIAgentRuntimeConfig setAvatarChat3D(AIAgentRuntimeConfigAvatarChat3D avatarChat3D) {
         this.avatarChat3D = avatarChat3D;
         return this;
@@ -26,6 +55,15 @@ public class AIAgentRuntimeConfig extends TeaModel {
         return this.avatarChat3D;
     }
 
+    public AIAgentRuntimeConfig setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    @Deprecated
     public AIAgentRuntimeConfig setVisionChat(AIAgentRuntimeConfigVisionChat visionChat) {
         this.visionChat = visionChat;
         return this;
@@ -34,6 +72,7 @@ public class AIAgentRuntimeConfig extends TeaModel {
         return this.visionChat;
     }
 
+    @Deprecated
     public AIAgentRuntimeConfig setVoiceChat(AIAgentRuntimeConfigVoiceChat voiceChat) {
         this.voiceChat = voiceChat;
         return this;

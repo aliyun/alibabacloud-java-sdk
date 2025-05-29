@@ -73,6 +73,9 @@ public class AIAgentTemplateConfig extends TeaModel {
     }
 
     public static class AIAgentTemplateConfigAvatarChat3D extends TeaModel {
+        @NameInMap("AsrHotWords")
+        public java.util.List<String> asrHotWords;
+
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
@@ -84,6 +87,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
+
+        @NameInMap("CharBreak")
+        public Boolean charBreak;
 
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
@@ -150,6 +156,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AIAgentTemplateConfigAvatarChat3D setAsrHotWords(java.util.List<String> asrHotWords) {
+            this.asrHotWords = asrHotWords;
+            return this;
+        }
+        public java.util.List<String> getAsrHotWords() {
+            return this.asrHotWords;
+        }
+
         public AIAgentTemplateConfigAvatarChat3D setAsrLanguageId(String asrLanguageId) {
             this.asrLanguageId = asrLanguageId;
             return this;
@@ -180,6 +194,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        public AIAgentTemplateConfigAvatarChat3D setCharBreak(Boolean charBreak) {
+            this.charBreak = charBreak;
+            return this;
+        }
+        public Boolean getCharBreak() {
+            return this.charBreak;
         }
 
         public AIAgentTemplateConfigAvatarChat3D setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
@@ -375,6 +397,9 @@ public class AIAgentTemplateConfig extends TeaModel {
     }
 
     public static class AIAgentTemplateConfigVisionChat extends TeaModel {
+        @NameInMap("AsrHotWords")
+        public java.util.List<String> asrHotWords;
+
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
@@ -383,6 +408,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
+
+        @NameInMap("CharBreak")
+        public Boolean charBreak;
 
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
@@ -449,6 +477,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AIAgentTemplateConfigVisionChat setAsrHotWords(java.util.List<String> asrHotWords) {
+            this.asrHotWords = asrHotWords;
+            return this;
+        }
+        public java.util.List<String> getAsrHotWords() {
+            return this.asrHotWords;
+        }
+
         public AIAgentTemplateConfigVisionChat setAsrLanguageId(String asrLanguageId) {
             this.asrLanguageId = asrLanguageId;
             return this;
@@ -471,6 +507,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        public AIAgentTemplateConfigVisionChat setCharBreak(Boolean charBreak) {
+            this.charBreak = charBreak;
+            return this;
+        }
+        public Boolean getCharBreak() {
+            return this.charBreak;
         }
 
         public AIAgentTemplateConfigVisionChat setEnableIntelligentSegment(Boolean enableIntelligentSegment) {
@@ -666,6 +710,9 @@ public class AIAgentTemplateConfig extends TeaModel {
     }
 
     public static class AIAgentTemplateConfigVoiceChat extends TeaModel {
+        @NameInMap("AsrHotWords")
+        public java.util.List<String> asrHotWords;
+
         @NameInMap("AsrLanguageId")
         public String asrLanguageId;
 
@@ -680,6 +727,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
+
+        @NameInMap("CharBreak")
+        public Boolean charBreak;
 
         @NameInMap("EnableIntelligentSegment")
         public Boolean enableIntelligentSegment;
@@ -746,6 +796,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AIAgentTemplateConfigVoiceChat setAsrHotWords(java.util.List<String> asrHotWords) {
+            this.asrHotWords = asrHotWords;
+            return this;
+        }
+        public java.util.List<String> getAsrHotWords() {
+            return this.asrHotWords;
+        }
+
         public AIAgentTemplateConfigVoiceChat setAsrLanguageId(String asrLanguageId) {
             this.asrLanguageId = asrLanguageId;
             return this;
@@ -784,6 +842,14 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        public AIAgentTemplateConfigVoiceChat setCharBreak(Boolean charBreak) {
+            this.charBreak = charBreak;
+            return this;
+        }
+        public Boolean getCharBreak() {
+            return this.charBreak;
         }
 
         public AIAgentTemplateConfigVoiceChat setEnableIntelligentSegment(Boolean enableIntelligentSegment) {

@@ -1571,12 +1571,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates an origin endpoint for a live package channel to deliver live streams in HLS format.</p>
      * 
-     * @param request CreateLivePackageOriginEndpointRequest
+     * @param tmpReq CreateLivePackageOriginEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLivePackageOriginEndpointResponse
      */
-    public CreateLivePackageOriginEndpointResponse createLivePackageOriginEndpointWithOptions(CreateLivePackageOriginEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateLivePackageOriginEndpointResponse createLivePackageOriginEndpointWithOptions(CreateLivePackageOriginEndpointRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateLivePackageOriginEndpointShrinkRequest request = new CreateLivePackageOriginEndpointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.livePackagingConfig)) {
+            request.livePackagingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.livePackagingConfig, "LivePackagingConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
@@ -1609,6 +1615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipWhitelist)) {
             body.put("IpWhitelist", request.ipWhitelist);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livePackagingConfigShrink)) {
+            body.put("LivePackagingConfig", request.livePackagingConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.manifestName)) {
@@ -5472,6 +5482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         GenerateAIAgentCallShrinkRequest request = new GenerateAIAgentCallShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentConfig)) {
+            request.agentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentConfig, "AgentConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.chatSyncConfig)) {
             request.chatSyncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chatSyncConfig, "ChatSyncConfig", "json");
         }
@@ -5483,6 +5497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
             query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentConfigShrink)) {
+            query.put("AgentConfig", request.agentConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chatSyncConfigShrink)) {
@@ -8793,6 +8811,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAIAgentInstanceResponse listAIAgentInstance(ListAIAgentInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAIAgentInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>罗列用户电话资源接口</p>
+     * 
+     * @param request ListAIAgentPhoneNumberRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAIAgentPhoneNumberResponse
+     */
+    public ListAIAgentPhoneNumberResponse listAIAgentPhoneNumberWithOptions(ListAIAgentPhoneNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAIAgentPhoneNumber"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAIAgentPhoneNumberResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>罗列用户电话资源接口</p>
+     * 
+     * @param request ListAIAgentPhoneNumberRequest
+     * @return ListAIAgentPhoneNumberResponse
+     */
+    public ListAIAgentPhoneNumberResponse listAIAgentPhoneNumber(ListAIAgentPhoneNumberRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAIAgentPhoneNumberWithOptions(request, runtime);
     }
 
     /**
@@ -14192,6 +14258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         StartAIAgentInstanceShrinkRequest request = new StartAIAgentInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentConfig)) {
+            request.agentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentConfig, "AgentConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.chatSyncConfig)) {
             request.chatSyncConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.chatSyncConfig, "ChatSyncConfig", "json");
         }
@@ -14207,6 +14277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
             query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.agentConfigShrink)) {
+            query.put("AgentConfig", request.agentConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chatSyncConfigShrink)) {
@@ -14259,6 +14333,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartAIAgentInstanceResponse startAIAgentInstance(StartAIAgentInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startAIAgentInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * 
+     * @param tmpReq StartAIAgentOutboundCallRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartAIAgentOutboundCallResponse
+     */
+    public StartAIAgentOutboundCallResponse startAIAgentOutboundCallWithOptions(StartAIAgentOutboundCallRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        StartAIAgentOutboundCallShrinkRequest request = new StartAIAgentOutboundCallShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.config)) {
+            request.configShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.config, "Config", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.calledNumber)) {
+            query.put("CalledNumber", request.calledNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
+            query.put("CallerNumber", request.callerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configShrink)) {
+            query.put("Config", request.configShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("SessionId", request.sessionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAIAgentOutboundCall"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAIAgentOutboundCallResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个智能体实例，返回智能体所在的频道、频道内名称以及进入频道所需的token。</p>
+     * 
+     * @param request StartAIAgentOutboundCallRequest
+     * @return StartAIAgentOutboundCallResponse
+     */
+    public StartAIAgentOutboundCallResponse startAIAgentOutboundCall(StartAIAgentOutboundCallRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.startAIAgentOutboundCallWithOptions(request, runtime);
     }
 
     /**
@@ -14689,6 +14833,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StopRtcRobotInstanceResponse stopRtcRobotInstance(StopRtcRobotInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.stopRtcRobotInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频送审任务</p>
+     * 
+     * @param tmpReq SubmitAIAgentVideoAuditTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitAIAgentVideoAuditTaskResponse
+     */
+    public SubmitAIAgentVideoAuditTaskResponse submitAIAgentVideoAuditTaskWithOptions(SubmitAIAgentVideoAuditTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitAIAgentVideoAuditTaskShrinkRequest request = new SubmitAIAgentVideoAuditTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callbackConfig)) {
+            request.callbackConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callbackConfig, "CallbackConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.capturePolicies)) {
+            request.capturePoliciesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.capturePolicies, "CapturePolicies", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.input)) {
+            request.inputShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.input, "Input", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.AIAgentId)) {
+            query.put("AIAgentId", request.AIAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.auditInterval)) {
+            query.put("AuditInterval", request.auditInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.callbackConfigShrink)) {
+            query.put("CallbackConfig", request.callbackConfigShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.capturePoliciesShrink)) {
+            query.put("CapturePolicies", request.capturePoliciesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputShrink)) {
+            query.put("Input", request.inputShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
+            query.put("UserData", request.userData);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitAIAgentVideoAuditTask"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitAIAgentVideoAuditTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交视频送审任务</p>
+     * 
+     * @param request SubmitAIAgentVideoAuditTaskRequest
+     * @return SubmitAIAgentVideoAuditTaskResponse
+     */
+    public SubmitAIAgentVideoAuditTaskResponse submitAIAgentVideoAuditTask(SubmitAIAgentVideoAuditTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitAIAgentVideoAuditTaskWithOptions(request, runtime);
     }
 
     /**
@@ -17505,11 +17727,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateAIAgentInstanceShrinkRequest request = new UpdateAIAgentInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentConfig)) {
+            request.agentConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentConfig, "AgentConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.templateConfig)) {
             request.templateConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.templateConfig, "TemplateConfig", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentConfigShrink)) {
+            query.put("AgentConfig", request.agentConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -18187,12 +18417,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates the origin endpoint settings including the protocol, time shifting, and access control settings.</p>
      * 
-     * @param request UpdateLivePackageOriginEndpointRequest
+     * @param tmpReq UpdateLivePackageOriginEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateLivePackageOriginEndpointResponse
      */
-    public UpdateLivePackageOriginEndpointResponse updateLivePackageOriginEndpointWithOptions(UpdateLivePackageOriginEndpointRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateLivePackageOriginEndpointResponse updateLivePackageOriginEndpointWithOptions(UpdateLivePackageOriginEndpointRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateLivePackageOriginEndpointShrinkRequest request = new UpdateLivePackageOriginEndpointShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.livePackagingConfig)) {
+            request.livePackagingConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.livePackagingConfig, "LivePackagingConfig", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authorizationCode)) {
             body.put("AuthorizationCode", request.authorizationCode);
@@ -18220,6 +18456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipWhitelist)) {
             body.put("IpWhitelist", request.ipWhitelist);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livePackagingConfigShrink)) {
+            body.put("LivePackagingConfig", request.livePackagingConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.manifestName)) {

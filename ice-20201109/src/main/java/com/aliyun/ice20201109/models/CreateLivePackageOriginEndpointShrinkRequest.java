@@ -3,12 +3,12 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
+public class CreateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     /**
      * <p>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</p>
      * 
      * <strong>example:</strong>
-     * <p>Abc123Def456</p>
+     * <p>AbcDef123</p>
      */
     @NameInMap("AuthorizationCode")
     public String authorizationCode;
@@ -22,6 +22,15 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
      */
     @NameInMap("ChannelName")
     public String channelName;
+
+    /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><strong><strong>0311a423d11a5f7dee713535</strong></strong></p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>The endpoint description.</p>
@@ -50,10 +59,10 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The IP address blacklist. It supports subnet masks. Separate multiple IP addresses with commas (,).</p>
+     * <p>The IP address blacklist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
-     * <p>103.0.0.0/8</p>
+     * <p>103.21.222.1/32,192.168.100.0/24</p>
      */
     @NameInMap("IpBlacklist")
     public String ipBlacklist;
@@ -62,13 +71,13 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
      * <p>The IP address whitelist. It supports subnet masks. 0.0.0.0/0 is not allowed. It can be up to 1,000 characters in length. Separate multiple IP addresses with commas (,). You must configure AuthorizationCode, IpWhitelist, or both.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.1.0/24,10.0.0.1</p>
+     * <p>192.168.1.0/24,10.0.0.1/24</p>
      */
     @NameInMap("IpWhitelist")
     public String ipWhitelist;
 
     @NameInMap("LivePackagingConfig")
-    public LivePackagingConfig livePackagingConfig;
+    public String livePackagingConfigShrink;
 
     /**
      * <p>The playlist name. Default value: manifest.</p>
@@ -80,7 +89,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String manifestName;
 
     /**
-     * <p>The protocol. Only HLS is supported.</p>
+     * <p>The distribution protocol.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -90,20 +99,20 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The number of days that time-shifted content is available. Maximum value: 30.</p>
+     * <p>The number of days that time-shifted content is available. Maximum value: 30. Default value: 0, which indicates that time shifting is not supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>5</p>
+     * <p>1</p>
      */
     @NameInMap("TimeshiftVision")
     public Integer timeshiftVision;
 
-    public static UpdateLivePackageOriginEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateLivePackageOriginEndpointRequest self = new UpdateLivePackageOriginEndpointRequest();
+    public static CreateLivePackageOriginEndpointShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateLivePackageOriginEndpointShrinkRequest self = new CreateLivePackageOriginEndpointShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateLivePackageOriginEndpointRequest setAuthorizationCode(String authorizationCode) {
+    public CreateLivePackageOriginEndpointShrinkRequest setAuthorizationCode(String authorizationCode) {
         this.authorizationCode = authorizationCode;
         return this;
     }
@@ -111,7 +120,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.authorizationCode;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setChannelName(String channelName) {
+    public CreateLivePackageOriginEndpointShrinkRequest setChannelName(String channelName) {
         this.channelName = channelName;
         return this;
     }
@@ -119,7 +128,15 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.channelName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setDescription(String description) {
+    public CreateLivePackageOriginEndpointShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateLivePackageOriginEndpointShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -127,7 +144,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setEndpointName(String endpointName) {
+    public CreateLivePackageOriginEndpointShrinkRequest setEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
     }
@@ -135,7 +152,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.endpointName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setGroupName(String groupName) {
+    public CreateLivePackageOriginEndpointShrinkRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -143,7 +160,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.groupName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setIpBlacklist(String ipBlacklist) {
+    public CreateLivePackageOriginEndpointShrinkRequest setIpBlacklist(String ipBlacklist) {
         this.ipBlacklist = ipBlacklist;
         return this;
     }
@@ -151,7 +168,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.ipBlacklist;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setIpWhitelist(String ipWhitelist) {
+    public CreateLivePackageOriginEndpointShrinkRequest setIpWhitelist(String ipWhitelist) {
         this.ipWhitelist = ipWhitelist;
         return this;
     }
@@ -159,15 +176,15 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.ipWhitelist;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setLivePackagingConfig(LivePackagingConfig livePackagingConfig) {
-        this.livePackagingConfig = livePackagingConfig;
+    public CreateLivePackageOriginEndpointShrinkRequest setLivePackagingConfigShrink(String livePackagingConfigShrink) {
+        this.livePackagingConfigShrink = livePackagingConfigShrink;
         return this;
     }
-    public LivePackagingConfig getLivePackagingConfig() {
-        return this.livePackagingConfig;
+    public String getLivePackagingConfigShrink() {
+        return this.livePackagingConfigShrink;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setManifestName(String manifestName) {
+    public CreateLivePackageOriginEndpointShrinkRequest setManifestName(String manifestName) {
         this.manifestName = manifestName;
         return this;
     }
@@ -175,7 +192,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.manifestName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setProtocol(String protocol) {
+    public CreateLivePackageOriginEndpointShrinkRequest setProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
@@ -183,7 +200,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.protocol;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setTimeshiftVision(Integer timeshiftVision) {
+    public CreateLivePackageOriginEndpointShrinkRequest setTimeshiftVision(Integer timeshiftVision) {
         this.timeshiftVision = timeshiftVision;
         return this;
     }

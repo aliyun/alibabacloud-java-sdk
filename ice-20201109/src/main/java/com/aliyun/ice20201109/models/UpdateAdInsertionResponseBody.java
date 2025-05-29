@@ -84,6 +84,12 @@ public class UpdateAdInsertionResponseBody extends TeaModel {
 
     public static class UpdateAdInsertionResponseBodyConfigManifestEndpointConfig extends TeaModel {
         /**
+         * <p>DASH清单播放端点前缀</p>
+         */
+        @NameInMap("DashPrefix")
+        public String dashPrefix;
+
+        /**
          * <p>The prefix of the playback endpoint for HLS manifests.</p>
          */
         @NameInMap("HlsPrefix")
@@ -92,6 +98,14 @@ public class UpdateAdInsertionResponseBody extends TeaModel {
         public static UpdateAdInsertionResponseBodyConfigManifestEndpointConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateAdInsertionResponseBodyConfigManifestEndpointConfig self = new UpdateAdInsertionResponseBodyConfigManifestEndpointConfig();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateAdInsertionResponseBodyConfigManifestEndpointConfig setDashPrefix(String dashPrefix) {
+            this.dashPrefix = dashPrefix;
+            return this;
+        }
+        public String getDashPrefix() {
+            return this.dashPrefix;
         }
 
         public UpdateAdInsertionResponseBodyConfigManifestEndpointConfig setHlsPrefix(String hlsPrefix) {

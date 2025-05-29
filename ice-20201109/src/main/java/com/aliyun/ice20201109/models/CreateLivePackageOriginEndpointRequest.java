@@ -76,6 +76,9 @@ public class CreateLivePackageOriginEndpointRequest extends TeaModel {
     @NameInMap("IpWhitelist")
     public String ipWhitelist;
 
+    @NameInMap("LivePackagingConfig")
+    public LivePackagingConfig livePackagingConfig;
+
     /**
      * <p>The playlist name. Default value: manifest.</p>
      * 
@@ -171,6 +174,14 @@ public class CreateLivePackageOriginEndpointRequest extends TeaModel {
     }
     public String getIpWhitelist() {
         return this.ipWhitelist;
+    }
+
+    public CreateLivePackageOriginEndpointRequest setLivePackagingConfig(LivePackagingConfig livePackagingConfig) {
+        this.livePackagingConfig = livePackagingConfig;
+        return this;
+    }
+    public LivePackagingConfig getLivePackagingConfig() {
+        return this.livePackagingConfig;
     }
 
     public CreateLivePackageOriginEndpointRequest setManifestName(String manifestName) {

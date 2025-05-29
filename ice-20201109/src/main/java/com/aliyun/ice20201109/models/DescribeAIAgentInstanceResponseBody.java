@@ -41,6 +41,9 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeAIAgentInstanceResponseBodyInstance extends TeaModel {
+        @NameInMap("AgentConfig")
+        public AIAgentConfig agentConfig;
+
         /**
          * <p>The URL of the call log file.</p>
          * 
@@ -78,6 +81,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
          * <p>{&quot;VoiceChat&quot;: {&quot;AppId&quot;: &quot;your_voice_chat_app_id&quot;}}</p>
          */
         @NameInMap("TemplateConfig")
+        @Deprecated
         public AIAgentTemplateConfig templateConfig;
 
         /**
@@ -92,6 +96,14 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public static DescribeAIAgentInstanceResponseBodyInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeAIAgentInstanceResponseBodyInstance self = new DescribeAIAgentInstanceResponseBodyInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAIAgentInstanceResponseBodyInstance setAgentConfig(AIAgentConfig agentConfig) {
+            this.agentConfig = agentConfig;
+            return this;
+        }
+        public AIAgentConfig getAgentConfig() {
+            return this.agentConfig;
         }
 
         public DescribeAIAgentInstanceResponseBodyInstance setCallLogUrl(String callLogUrl) {
@@ -126,6 +138,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
             return this.status;
         }
 
+        @Deprecated
         public DescribeAIAgentInstanceResponseBodyInstance setTemplateConfig(AIAgentTemplateConfig templateConfig) {
             this.templateConfig = templateConfig;
             return this;

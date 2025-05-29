@@ -14,6 +14,9 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     @NameInMap("AIAgentId")
     public String AIAgentId;
 
+    @NameInMap("AgentConfig")
+    public String agentConfigShrink;
+
     @NameInMap("ChatSyncConfig")
     public String chatSyncConfigShrink;
 
@@ -37,6 +40,7 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
      * <p>The template configurations of the AI agent. The specified configurations are merged with the template configurations that are specified in the console. If you do not specify this parameter, the system uses the default configurations for an AI agent created in the console.</p>
      */
     @NameInMap("TemplateConfig")
+    @Deprecated
     public String templateConfigShrink;
 
     /**
@@ -68,6 +72,14 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
         return this.AIAgentId;
     }
 
+    public GenerateAIAgentCallShrinkRequest setAgentConfigShrink(String agentConfigShrink) {
+        this.agentConfigShrink = agentConfigShrink;
+        return this;
+    }
+    public String getAgentConfigShrink() {
+        return this.agentConfigShrink;
+    }
+
     public GenerateAIAgentCallShrinkRequest setChatSyncConfigShrink(String chatSyncConfigShrink) {
         this.chatSyncConfigShrink = chatSyncConfigShrink;
         return this;
@@ -92,6 +104,7 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
         return this.sessionId;
     }
 
+    @Deprecated
     public GenerateAIAgentCallShrinkRequest setTemplateConfigShrink(String templateConfigShrink) {
         this.templateConfigShrink = templateConfigShrink;
         return this;

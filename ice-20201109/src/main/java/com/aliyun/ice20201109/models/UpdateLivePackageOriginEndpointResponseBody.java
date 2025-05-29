@@ -128,6 +128,9 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         @NameInMap("LastModified")
         public String lastModified;
 
+        @NameInMap("LivePackagingConfig")
+        public LivePackagingConfig livePackagingConfig;
+
         /**
          * <p>The playlist name. Default value: manifest.</p>
          * 
@@ -238,6 +241,14 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         }
         public String getLastModified() {
             return this.lastModified;
+        }
+
+        public UpdateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint setLivePackagingConfig(LivePackagingConfig livePackagingConfig) {
+            this.livePackagingConfig = livePackagingConfig;
+            return this;
+        }
+        public LivePackagingConfig getLivePackagingConfig() {
+            return this.livePackagingConfig;
         }
 
         public UpdateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint setManifestName(String manifestName) {

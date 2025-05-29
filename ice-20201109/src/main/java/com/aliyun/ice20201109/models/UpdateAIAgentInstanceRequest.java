@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class UpdateAIAgentInstanceRequest extends TeaModel {
+    @NameInMap("AgentConfig")
+    public AIAgentConfig agentConfig;
+
     /**
      * <p>The ID of the AI agent that you want to update.</p>
      * <p>This parameter is required.</p>
@@ -18,6 +21,7 @@ public class UpdateAIAgentInstanceRequest extends TeaModel {
      * <p>The template configurations of the AI agent. The configurations are merged with the template configurations that are used to start the AI agent. For more information, see the definition of TemplateConfig.</p>
      */
     @NameInMap("TemplateConfig")
+    @Deprecated
     public AIAgentTemplateConfig templateConfig;
 
     /**
@@ -32,6 +36,14 @@ public class UpdateAIAgentInstanceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateAIAgentInstanceRequest setAgentConfig(AIAgentConfig agentConfig) {
+        this.agentConfig = agentConfig;
+        return this;
+    }
+    public AIAgentConfig getAgentConfig() {
+        return this.agentConfig;
+    }
+
     public UpdateAIAgentInstanceRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
@@ -40,6 +52,7 @@ public class UpdateAIAgentInstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
+    @Deprecated
     public UpdateAIAgentInstanceRequest setTemplateConfig(AIAgentTemplateConfig templateConfig) {
         this.templateConfig = templateConfig;
         return this;

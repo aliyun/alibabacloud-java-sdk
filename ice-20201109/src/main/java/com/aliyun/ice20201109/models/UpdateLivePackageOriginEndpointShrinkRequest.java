@@ -3,7 +3,7 @@ package com.aliyun.ice20201109.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
+public class UpdateLivePackageOriginEndpointShrinkRequest extends TeaModel {
     /**
      * <p>The authorization code. It can be up to 200 characters in length. You must configure AuthorizationCode, IpWhitelist, or both. Format: [A-Za-z0-9-_.]+</p>
      * 
@@ -68,7 +68,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     public String ipWhitelist;
 
     @NameInMap("LivePackagingConfig")
-    public LivePackagingConfig livePackagingConfig;
+    public String livePackagingConfigShrink;
 
     /**
      * <p>The playlist name. Default value: manifest.</p>
@@ -98,12 +98,12 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
     @NameInMap("TimeshiftVision")
     public Integer timeshiftVision;
 
-    public static UpdateLivePackageOriginEndpointRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateLivePackageOriginEndpointRequest self = new UpdateLivePackageOriginEndpointRequest();
+    public static UpdateLivePackageOriginEndpointShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateLivePackageOriginEndpointShrinkRequest self = new UpdateLivePackageOriginEndpointShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateLivePackageOriginEndpointRequest setAuthorizationCode(String authorizationCode) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setAuthorizationCode(String authorizationCode) {
         this.authorizationCode = authorizationCode;
         return this;
     }
@@ -111,7 +111,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.authorizationCode;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setChannelName(String channelName) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setChannelName(String channelName) {
         this.channelName = channelName;
         return this;
     }
@@ -119,7 +119,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.channelName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setDescription(String description) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -127,7 +127,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setEndpointName(String endpointName) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setEndpointName(String endpointName) {
         this.endpointName = endpointName;
         return this;
     }
@@ -135,7 +135,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.endpointName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setGroupName(String groupName) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -143,7 +143,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.groupName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setIpBlacklist(String ipBlacklist) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setIpBlacklist(String ipBlacklist) {
         this.ipBlacklist = ipBlacklist;
         return this;
     }
@@ -151,7 +151,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.ipBlacklist;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setIpWhitelist(String ipWhitelist) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setIpWhitelist(String ipWhitelist) {
         this.ipWhitelist = ipWhitelist;
         return this;
     }
@@ -159,15 +159,15 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.ipWhitelist;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setLivePackagingConfig(LivePackagingConfig livePackagingConfig) {
-        this.livePackagingConfig = livePackagingConfig;
+    public UpdateLivePackageOriginEndpointShrinkRequest setLivePackagingConfigShrink(String livePackagingConfigShrink) {
+        this.livePackagingConfigShrink = livePackagingConfigShrink;
         return this;
     }
-    public LivePackagingConfig getLivePackagingConfig() {
-        return this.livePackagingConfig;
+    public String getLivePackagingConfigShrink() {
+        return this.livePackagingConfigShrink;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setManifestName(String manifestName) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setManifestName(String manifestName) {
         this.manifestName = manifestName;
         return this;
     }
@@ -175,7 +175,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.manifestName;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setProtocol(String protocol) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
@@ -183,7 +183,7 @@ public class UpdateLivePackageOriginEndpointRequest extends TeaModel {
         return this.protocol;
     }
 
-    public UpdateLivePackageOriginEndpointRequest setTimeshiftVision(Integer timeshiftVision) {
+    public UpdateLivePackageOriginEndpointShrinkRequest setTimeshiftVision(Integer timeshiftVision) {
         this.timeshiftVision = timeshiftVision;
         return this;
     }

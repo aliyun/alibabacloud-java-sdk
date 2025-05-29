@@ -14,6 +14,9 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     @NameInMap("AIAgentId")
     public String AIAgentId;
 
+    @NameInMap("AgentConfig")
+    public String agentConfigShrink;
+
     /**
      * <p>同步聊天记录配置。</p>
      */
@@ -34,6 +37,7 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     public String sessionId;
 
     @NameInMap("TemplateConfig")
+    @Deprecated
     public String templateConfigShrink;
 
     /**
@@ -54,6 +58,14 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     }
     public String getAIAgentId() {
         return this.AIAgentId;
+    }
+
+    public StartAIAgentInstanceShrinkRequest setAgentConfigShrink(String agentConfigShrink) {
+        this.agentConfigShrink = agentConfigShrink;
+        return this;
+    }
+    public String getAgentConfigShrink() {
+        return this.agentConfigShrink;
     }
 
     public StartAIAgentInstanceShrinkRequest setChatSyncConfigShrink(String chatSyncConfigShrink) {
@@ -80,6 +92,7 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
         return this.sessionId;
     }
 
+    @Deprecated
     public StartAIAgentInstanceShrinkRequest setTemplateConfigShrink(String templateConfigShrink) {
         this.templateConfigShrink = templateConfigShrink;
         return this;
