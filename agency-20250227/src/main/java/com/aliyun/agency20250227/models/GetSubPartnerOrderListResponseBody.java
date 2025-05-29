@@ -145,6 +145,9 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         @NameInMap("CreatedAt")
         public String createdAt;
 
+        @NameInMap("CustomerClassification")
+        public String customerClassification;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -255,6 +258,14 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         }
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        public GetSubPartnerOrderListResponseBodyData setCustomerClassification(String customerClassification) {
+            this.customerClassification = customerClassification;
+            return this;
+        }
+        public String getCustomerClassification() {
+            return this.customerClassification;
         }
 
         public GetSubPartnerOrderListResponseBodyData setDeductedAmountByCoupons(Double deductedAmountByCoupons) {
