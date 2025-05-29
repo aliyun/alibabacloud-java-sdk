@@ -61,6 +61,9 @@ public class ListMembersResponseBody extends TeaModel {
         @NameInMap("AccountName")
         public String accountName;
 
+        @NameInMap("AccountType")
+        public String accountType;
+
         /**
          * <p>The display name of the member.</p>
          * 
@@ -123,6 +126,14 @@ public class ListMembersResponseBody extends TeaModel {
         }
         public String getAccountName() {
             return this.accountName;
+        }
+
+        public ListMembersResponseBodyMembers setAccountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
+        public String getAccountType() {
+            return this.accountType;
         }
 
         public ListMembersResponseBodyMembers setDisplayName(String displayName) {

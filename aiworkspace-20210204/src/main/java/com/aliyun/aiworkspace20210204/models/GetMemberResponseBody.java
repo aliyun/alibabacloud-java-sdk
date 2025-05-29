@@ -4,6 +4,9 @@ package com.aliyun.aiworkspace20210204.models;
 import com.aliyun.tea.*;
 
 public class GetMemberResponseBody extends TeaModel {
+    @NameInMap("AccountType")
+    public String accountType;
+
     /**
      * <p>The display name of the member.</p>
      * 
@@ -67,6 +70,14 @@ public class GetMemberResponseBody extends TeaModel {
     public static GetMemberResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetMemberResponseBody self = new GetMemberResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetMemberResponseBody setAccountType(String accountType) {
+        this.accountType = accountType;
+        return this;
+    }
+    public String getAccountType() {
+        return this.accountType;
     }
 
     public GetMemberResponseBody setDisplayName(String displayName) {
