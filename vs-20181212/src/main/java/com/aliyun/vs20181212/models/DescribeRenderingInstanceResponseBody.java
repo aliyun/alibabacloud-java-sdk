@@ -14,6 +14,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @NameInMap("CreationTime")
     public String creationTime;
 
+    @NameInMap("EgressIp")
+    public String egressIp;
+
     /**
      * <strong>example:</strong>
      * <p>cn-xxx.ecr.aliyuncs.com</p>
@@ -69,6 +72,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
     public String getCreationTime() {
         return this.creationTime;
+    }
+
+    public DescribeRenderingInstanceResponseBody setEgressIp(String egressIp) {
+        this.egressIp = egressIp;
+        return this;
+    }
+    public String getEgressIp() {
+        return this.egressIp;
     }
 
     public DescribeRenderingInstanceResponseBody setHostname(String hostname) {

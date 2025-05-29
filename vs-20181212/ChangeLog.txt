@@ -1,3 +1,20 @@
+2025-05-29 Version: 3.3.0
+- Support API AssociateRenderingProjectInstances.
+- Support API CreateRenderingProject.
+- Support API DeleteRenderingProject.
+- Support API DescribeRenderingSession.
+- Support API DisassociateRenderingProjectInstances.
+- Support API GetRenderingProjectInstanceStateMetrics.
+- Support API ListRenderingProjectInstances.
+- Support API ListRenderingProjects.
+- Support API ListRenderingSessions.
+- Support API StartRenderingSession.
+- Support API StopRenderingSession.
+- Support API UpdateRenderingProject.
+- Update API DescribeRenderingInstance: add response parameters Body.EgressIp.
+- Update API RecoverRenderingDataPackage: add request parameters LoadMode.
+
+
 2025-03-12 Version: 3.2.0
 - Support API DeleteRenderingInstanceSettings.
 - Support API DescribeRenderingInstanceSettings.

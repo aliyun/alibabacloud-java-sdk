@@ -13,6 +13,9 @@ public class RecoverRenderingDataPackageRequest extends TeaModel {
     @NameInMap("DataPackageId")
     public String dataPackageId;
 
+    @NameInMap("LoadMode")
+    public String loadMode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class RecoverRenderingDataPackageRequest extends TeaModel {
     }
     public String getDataPackageId() {
         return this.dataPackageId;
+    }
+
+    public RecoverRenderingDataPackageRequest setLoadMode(String loadMode) {
+        this.loadMode = loadMode;
+        return this;
+    }
+    public String getLoadMode() {
+        return this.loadMode;
     }
 
     public RecoverRenderingDataPackageRequest setRenderingInstanceId(String renderingInstanceId) {

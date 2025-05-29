@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>vs20181212</artifactId>
-  <version>3.2.0</version>
+  <version>3.3.0</version>
   <packaging>jar</packaging>
   <name>vs20181212</name>
   <description>Alibaba Cloud video surveillance system (20181212) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.6</version>
+      <version>0.3.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -78,7 +78,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>
