@@ -227,6 +227,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NetworkOptions")
+    public DescribeInstanceAttributeResponseBodyNetworkOptions networkOptions;
+
     /**
      * <p>The reason why the instance was locked. Valid values:</p>
      * <ul>
@@ -525,6 +528,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         return this.memory;
     }
 
+    public DescribeInstanceAttributeResponseBody setNetworkOptions(DescribeInstanceAttributeResponseBodyNetworkOptions networkOptions) {
+        this.networkOptions = networkOptions;
+        return this;
+    }
+    public DescribeInstanceAttributeResponseBodyNetworkOptions getNetworkOptions() {
+        return this.networkOptions;
+    }
+
     public DescribeInstanceAttributeResponseBody setOperationLocks(DescribeInstanceAttributeResponseBodyOperationLocks operationLocks) {
         this.operationLocks = operationLocks;
         return this;
@@ -753,6 +764,36 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getIpAddress() {
             return this.ipAddress;
+        }
+
+    }
+
+    public static class DescribeInstanceAttributeResponseBodyNetworkOptions extends TeaModel {
+        @NameInMap("EnableJumboFrame")
+        public Boolean enableJumboFrame;
+
+        @NameInMap("EnableNetworkEncryption")
+        public Boolean enableNetworkEncryption;
+
+        public static DescribeInstanceAttributeResponseBodyNetworkOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceAttributeResponseBodyNetworkOptions self = new DescribeInstanceAttributeResponseBodyNetworkOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyNetworkOptions setEnableJumboFrame(Boolean enableJumboFrame) {
+            this.enableJumboFrame = enableJumboFrame;
+            return this;
+        }
+        public Boolean getEnableJumboFrame() {
+            return this.enableJumboFrame;
+        }
+
+        public DescribeInstanceAttributeResponseBodyNetworkOptions setEnableNetworkEncryption(Boolean enableNetworkEncryption) {
+            this.enableNetworkEncryption = enableNetworkEncryption;
+            return this;
+        }
+        public Boolean getEnableNetworkEncryption() {
+            return this.enableNetworkEncryption;
         }
 
     }

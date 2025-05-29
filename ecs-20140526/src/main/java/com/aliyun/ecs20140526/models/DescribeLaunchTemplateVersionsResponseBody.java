@@ -315,6 +315,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @NameInMap("Encrypted")
         public String encrypted;
 
+        /**
+         * <p>The ID of the KMS key used for the data disk.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
+         */
         @NameInMap("KMSKeyId")
         public String KMSKeyId;
 

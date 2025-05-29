@@ -304,8 +304,14 @@ public class CreateNetworkInterfaceRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
+     * <p>Specifies whether to enable the source and destination IP address check feature. We recommend that you enable the feature to improve network security. Valid value:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * <blockquote>
-     * <p> This parameter is in invitational preview and is not publicly available.</p>
+     * <p> This feature is available only in some regions. Before you use this method, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

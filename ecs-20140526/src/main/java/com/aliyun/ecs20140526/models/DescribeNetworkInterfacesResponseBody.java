@@ -805,8 +805,14 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
         public Boolean serviceManaged;
 
         /**
+         * <p>Indicates whether the source and destination IP address check feature is enabled. To improve network security, enable this feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p> Before you use this parameter, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

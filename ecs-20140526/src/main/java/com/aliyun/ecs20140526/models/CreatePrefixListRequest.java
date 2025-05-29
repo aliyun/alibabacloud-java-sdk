@@ -78,6 +78,12 @@ public class CreatePrefixListRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group to which to assign the prefix list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-bp67acfmxazb4p****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -87,6 +93,9 @@ public class CreatePrefixListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tags to add to the prefix list.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreatePrefixListRequestTag> tag;
 
@@ -252,9 +261,22 @@ public class CreatePrefixListRequest extends TeaModel {
     }
 
     public static class CreatePrefixListRequestTag extends TeaModel {
+        /**
+         * <p>The key of tag N. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of tag N. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and cannot contain<code> http:// or https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 
