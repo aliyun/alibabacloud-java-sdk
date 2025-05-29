@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class PriceEstimateFeature extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("AppCount")
+    public Long appCount;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -183,6 +190,14 @@ public class PriceEstimateFeature extends TeaModel {
     public static PriceEstimateFeature build(java.util.Map<String, ?> map) throws Exception {
         PriceEstimateFeature self = new PriceEstimateFeature();
         return TeaModel.build(map, self);
+    }
+
+    public PriceEstimateFeature setAppCount(Long appCount) {
+        this.appCount = appCount;
+        return this;
+    }
+    public Long getAppCount() {
+        return this.appCount;
     }
 
     public PriceEstimateFeature setAppType(String appType) {

@@ -970,6 +970,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("Envs")
         public String envs;
 
+        @NameInMap("GpuCount")
+        public String gpuCount;
+
+        @NameInMap("GpuType")
+        public String gpuType;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -1763,6 +1769,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getEnvs() {
             return this.envs;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setGpuCount(String gpuCount) {
+            this.gpuCount = gpuCount;
+            return this;
+        }
+        public String getGpuCount() {
+            return this.gpuCount;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setGpuType(String gpuType) {
+            this.gpuType = gpuType;
+            return this;
+        }
+        public String getGpuType() {
+            return this.gpuType;
         }
 
         public DescribeApplicationConfigResponseBodyData setImagePullSecrets(String imagePullSecrets) {
