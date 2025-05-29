@@ -30,6 +30,16 @@ public class DeleteTrafficMarkingPolicyRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Whether to force delete the traffic marking policy. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default): checks whether there is a traffic classification rule before deleting the traffic marking policy. If there is, the traffic marking policy cannot be deleted and an error is returned.</li>
+     * <li><strong>true</strong>: When you delete a traffic marking policy, all traffic classification rules are deleted by default.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 

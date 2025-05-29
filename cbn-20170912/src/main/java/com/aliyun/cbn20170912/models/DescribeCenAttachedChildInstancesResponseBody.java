@@ -152,6 +152,9 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         @NameInMap("ChildInstanceType")
         public String childInstanceType;
 
+        @NameInMap("ManagedService")
+        public String managedService;
+
         /**
          * <p>The status of the network instance. Valid values:</p>
          * <ul>
@@ -217,6 +220,14 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
         public String getChildInstanceType() {
             return this.childInstanceType;
+        }
+
+        public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setManagedService(String managedService) {
+            this.managedService = managedService;
+            return this;
+        }
+        public String getManagedService() {
+            return this.managedService;
         }
 
         public DescribeCenAttachedChildInstancesResponseBodyChildInstancesChildInstance setStatus(String status) {

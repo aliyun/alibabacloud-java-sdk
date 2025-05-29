@@ -79,6 +79,9 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     @NameInMap("ChildInstanceType")
     public String childInstanceType;
 
+    @NameInMap("ManagedService")
+    public String managedService;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -169,6 +172,14 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     }
     public String getChildInstanceType() {
         return this.childInstanceType;
+    }
+
+    public DescribeCenAttachedChildInstanceAttributeResponseBody setManagedService(String managedService) {
+        this.managedService = managedService;
+        return this;
+    }
+    public String getManagedService() {
+        return this.managedService;
     }
 
     public DescribeCenAttachedChildInstanceAttributeResponseBody setRequestId(String requestId) {

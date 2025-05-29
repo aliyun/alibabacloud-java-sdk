@@ -239,6 +239,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("ManagedService")
+        public String managedService;
+
         /**
          * <p>The entity that pays the fees of the network instance. Valid values:</p>
          * <ul>
@@ -392,6 +395,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         }
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setManagedService(String managedService) {
+            this.managedService = managedService;
+            return this;
+        }
+        public String getManagedService() {
+            return this.managedService;
         }
 
         public ListTransitRouterVpcAttachmentsResponseBodyTransitRouterAttachments setOrderType(String orderType) {
