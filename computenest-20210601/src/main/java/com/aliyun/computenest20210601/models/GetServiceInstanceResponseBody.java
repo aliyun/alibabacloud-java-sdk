@@ -1120,6 +1120,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @NameInMap("DeployType")
         public String deployType;
 
+        @NameInMap("OperationMetadata")
+        public String operationMetadata;
+
         /**
          * <p>The time when the service version was published.</p>
          * 
@@ -1299,6 +1302,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
         public String getDeployType() {
             return this.deployType;
+        }
+
+        public GetServiceInstanceResponseBodyService setOperationMetadata(String operationMetadata) {
+            this.operationMetadata = operationMetadata;
+            return this;
+        }
+        public String getOperationMetadata() {
+            return this.operationMetadata;
         }
 
         public GetServiceInstanceResponseBodyService setPublishTime(String publishTime) {
