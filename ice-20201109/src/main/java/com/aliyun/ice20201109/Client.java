@@ -1410,6 +1410,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建热词库</p>
+     * 
+     * @param tmpReq CreateHotwordLibraryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHotwordLibraryResponse
+     */
+    public CreateHotwordLibraryResponse createHotwordLibraryWithOptions(CreateHotwordLibraryRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateHotwordLibraryShrinkRequest request = new CreateHotwordLibraryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotwords)) {
+            request.hotwordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotwords, "Hotwords", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotwordsShrink)) {
+            query.put("Hotwords", request.hotwordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageScenario)) {
+            query.put("UsageScenario", request.usageScenario);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHotwordLibrary"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHotwordLibraryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建热词库</p>
+     * 
+     * @param request CreateHotwordLibraryRequest
+     * @return CreateHotwordLibraryResponse
+     */
+    public CreateHotwordLibraryResponse createHotwordLibrary(CreateHotwordLibraryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHotwordLibraryWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
@@ -3393,6 +3455,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteEditingProjectsResponse deleteEditingProjects(DeleteEditingProjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEditingProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除热词词库</p>
+     * 
+     * @param request DeleteHotwordLibraryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHotwordLibraryResponse
+     */
+    public DeleteHotwordLibraryResponse deleteHotwordLibraryWithOptions(DeleteHotwordLibraryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotwordLibraryId)) {
+            query.put("HotwordLibraryId", request.hotwordLibraryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteHotwordLibrary"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHotwordLibraryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除热词词库</p>
+     * 
+     * @param request DeleteHotwordLibraryRequest
+     * @return DeleteHotwordLibraryResponse
+     */
+    public DeleteHotwordLibraryResponse deleteHotwordLibrary(DeleteHotwordLibraryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHotwordLibraryWithOptions(request, runtime);
     }
 
     /**
@@ -6421,6 +6527,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetEventCallbackResponse getEventCallback() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEventCallbackWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热词词库</p>
+     * 
+     * @param request GetHotwordLibraryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHotwordLibraryResponse
+     */
+    public GetHotwordLibraryResponse getHotwordLibraryWithOptions(GetHotwordLibraryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hotwordLibraryId)) {
+            query.put("HotwordLibraryId", request.hotwordLibraryId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHotwordLibrary"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHotwordLibraryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询热词词库</p>
+     * 
+     * @param request GetHotwordLibraryRequest
+     * @return GetHotwordLibraryResponse
+     */
+    public GetHotwordLibraryResponse getHotwordLibrary(GetHotwordLibraryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getHotwordLibraryWithOptions(request, runtime);
     }
 
     /**
@@ -9813,6 +9963,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListEditingProjectsResponse listEditingProjects(ListEditingProjectsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEditingProjectsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询所有热词库的列表</p>
+     * 
+     * @param request ListHotwordLibrariesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHotwordLibrariesResponse
+     */
+    public ListHotwordLibrariesResponse listHotwordLibrariesWithOptions(ListHotwordLibrariesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sortBy)) {
+            query.put("SortBy", request.sortBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usageScenario)) {
+            query.put("UsageScenario", request.usageScenario);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHotwordLibraries"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHotwordLibrariesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询所有热词库的列表</p>
+     * 
+     * @param request ListHotwordLibrariesRequest
+     * @return ListHotwordLibrariesResponse
+     */
+    public ListHotwordLibrariesResponse listHotwordLibraries(ListHotwordLibrariesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHotwordLibrariesWithOptions(request, runtime);
     }
 
     /**
@@ -18219,6 +18445,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEditingProjectResponse updateEditingProject(UpdateEditingProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEditingProjectWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新热词库</p>
+     * 
+     * @param tmpReq UpdateHotwordLibraryRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHotwordLibraryResponse
+     */
+    public UpdateHotwordLibraryResponse updateHotwordLibraryWithOptions(UpdateHotwordLibraryRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateHotwordLibraryShrinkRequest request = new UpdateHotwordLibraryShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.hotwords)) {
+            request.hotwordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hotwords, "Hotwords", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotwordLibraryId)) {
+            query.put("HotwordLibraryId", request.hotwordLibraryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hotwordsShrink)) {
+            query.put("Hotwords", request.hotwordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateHotwordLibrary"),
+            new TeaPair("version", "2020-11-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHotwordLibraryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新热词库</p>
+     * 
+     * @param request UpdateHotwordLibraryRequest
+     * @return UpdateHotwordLibraryResponse
+     */
+    public UpdateHotwordLibraryResponse updateHotwordLibrary(UpdateHotwordLibraryRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateHotwordLibraryWithOptions(request, runtime);
     }
 
     /**
