@@ -6069,8 +6069,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PromptParam", request.promptParamShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionTimeout)) {
+            query.put("SessionTimeout", request.sessionTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startWordParamShrink)) {
             query.put("StartWordParam", request.startWordParamShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsSpeed)) {
+            query.put("TtsSpeed", request.ttsSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsVoiceCode)) {
+            query.put("TtsVoiceCode", request.ttsVoiceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttsVolume)) {
+            query.put("TtsVolume", request.ttsVolume);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

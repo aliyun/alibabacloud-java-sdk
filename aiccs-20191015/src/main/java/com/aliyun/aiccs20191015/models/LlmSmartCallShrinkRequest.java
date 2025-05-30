@@ -45,8 +45,20 @@ public class LlmSmartCallShrinkRequest extends TeaModel {
     @NameInMap("PromptParam")
     public String promptParamShrink;
 
+    @NameInMap("SessionTimeout")
+    public Integer sessionTimeout;
+
     @NameInMap("StartWordParam")
     public String startWordParamShrink;
+
+    @NameInMap("TtsSpeed")
+    public Integer ttsSpeed;
+
+    @NameInMap("TtsVoiceCode")
+    public String ttsVoiceCode;
+
+    @NameInMap("TtsVolume")
+    public Integer ttsVolume;
 
     public static LlmSmartCallShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         LlmSmartCallShrinkRequest self = new LlmSmartCallShrinkRequest();
@@ -109,12 +121,44 @@ public class LlmSmartCallShrinkRequest extends TeaModel {
         return this.promptParamShrink;
     }
 
+    public LlmSmartCallShrinkRequest setSessionTimeout(Integer sessionTimeout) {
+        this.sessionTimeout = sessionTimeout;
+        return this;
+    }
+    public Integer getSessionTimeout() {
+        return this.sessionTimeout;
+    }
+
     public LlmSmartCallShrinkRequest setStartWordParamShrink(String startWordParamShrink) {
         this.startWordParamShrink = startWordParamShrink;
         return this;
     }
     public String getStartWordParamShrink() {
         return this.startWordParamShrink;
+    }
+
+    public LlmSmartCallShrinkRequest setTtsSpeed(Integer ttsSpeed) {
+        this.ttsSpeed = ttsSpeed;
+        return this;
+    }
+    public Integer getTtsSpeed() {
+        return this.ttsSpeed;
+    }
+
+    public LlmSmartCallShrinkRequest setTtsVoiceCode(String ttsVoiceCode) {
+        this.ttsVoiceCode = ttsVoiceCode;
+        return this;
+    }
+    public String getTtsVoiceCode() {
+        return this.ttsVoiceCode;
+    }
+
+    public LlmSmartCallShrinkRequest setTtsVolume(Integer ttsVolume) {
+        this.ttsVolume = ttsVolume;
+        return this;
+    }
+    public Integer getTtsVolume() {
+        return this.ttsVolume;
     }
 
 }

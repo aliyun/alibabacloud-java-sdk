@@ -45,8 +45,20 @@ public class LlmSmartCallRequest extends TeaModel {
     @NameInMap("PromptParam")
     public java.util.Map<String, ?> promptParam;
 
+    @NameInMap("SessionTimeout")
+    public Integer sessionTimeout;
+
     @NameInMap("StartWordParam")
     public java.util.Map<String, ?> startWordParam;
+
+    @NameInMap("TtsSpeed")
+    public Integer ttsSpeed;
+
+    @NameInMap("TtsVoiceCode")
+    public String ttsVoiceCode;
+
+    @NameInMap("TtsVolume")
+    public Integer ttsVolume;
 
     public static LlmSmartCallRequest build(java.util.Map<String, ?> map) throws Exception {
         LlmSmartCallRequest self = new LlmSmartCallRequest();
@@ -109,12 +121,44 @@ public class LlmSmartCallRequest extends TeaModel {
         return this.promptParam;
     }
 
+    public LlmSmartCallRequest setSessionTimeout(Integer sessionTimeout) {
+        this.sessionTimeout = sessionTimeout;
+        return this;
+    }
+    public Integer getSessionTimeout() {
+        return this.sessionTimeout;
+    }
+
     public LlmSmartCallRequest setStartWordParam(java.util.Map<String, ?> startWordParam) {
         this.startWordParam = startWordParam;
         return this;
     }
     public java.util.Map<String, ?> getStartWordParam() {
         return this.startWordParam;
+    }
+
+    public LlmSmartCallRequest setTtsSpeed(Integer ttsSpeed) {
+        this.ttsSpeed = ttsSpeed;
+        return this;
+    }
+    public Integer getTtsSpeed() {
+        return this.ttsSpeed;
+    }
+
+    public LlmSmartCallRequest setTtsVoiceCode(String ttsVoiceCode) {
+        this.ttsVoiceCode = ttsVoiceCode;
+        return this;
+    }
+    public String getTtsVoiceCode() {
+        return this.ttsVoiceCode;
+    }
+
+    public LlmSmartCallRequest setTtsVolume(Integer ttsVolume) {
+        this.ttsVolume = ttsVolume;
+        return this;
+    }
+    public Integer getTtsVolume() {
+        return this.ttsVolume;
     }
 
 }
