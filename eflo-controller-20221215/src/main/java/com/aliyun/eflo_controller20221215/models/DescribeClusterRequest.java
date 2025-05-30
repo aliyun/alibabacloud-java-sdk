@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterRequest extends TeaModel {
     /**
-     * <p>Cluster ID.</p>
+     * <p>集群id。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

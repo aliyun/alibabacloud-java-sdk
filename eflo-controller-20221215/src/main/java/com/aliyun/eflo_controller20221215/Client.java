@@ -792,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cluster Details</p>
+     * <p>查询灵骏集群详情。</p>
      * 
      * @param request DescribeClusterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -824,7 +824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cluster Details</p>
+     * <p>查询灵骏集群详情。</p>
      * 
      * @param request DescribeClusterRequest
      * @return DescribeClusterResponse
@@ -2664,6 +2664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairName)) {
             body.put("KeyPairName", request.keyPairName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginPassword)) {
+            body.put("LoginPassword", request.loginPassword);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.newNodeGroupName)) {

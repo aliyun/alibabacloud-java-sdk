@@ -81,7 +81,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>NodeNotExists：</p>
+         * <p>NodeNotExists</p>
          */
         @NameInMap("ErrorCode")
         public String errorCode;

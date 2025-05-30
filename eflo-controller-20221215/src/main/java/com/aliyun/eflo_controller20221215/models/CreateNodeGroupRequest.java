@@ -160,6 +160,9 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        @NameInMap("LoginPassword")
+        public String loginPassword;
+
         /**
          * <p>Machine type</p>
          * <p>This parameter is required.</p>
@@ -241,6 +244,14 @@ public class CreateNodeGroupRequest extends TeaModel {
         }
         public String getKeyPairName() {
             return this.keyPairName;
+        }
+
+        public CreateNodeGroupRequestNodeGroup setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
         }
 
         public CreateNodeGroupRequestNodeGroup setMachineType(String machineType) {

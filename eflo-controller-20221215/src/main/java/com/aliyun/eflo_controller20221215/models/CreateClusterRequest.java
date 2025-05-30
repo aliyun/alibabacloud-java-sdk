@@ -1142,6 +1142,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        @NameInMap("LoginPassword")
+        public String loginPassword;
+
         /**
          * <p>Machine type</p>
          * 
@@ -1226,6 +1229,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getKeyPairName() {
             return this.keyPairName;
+        }
+
+        public CreateClusterRequestNodeGroups setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
         }
 
         public CreateClusterRequestNodeGroups setMachineType(String machineType) {

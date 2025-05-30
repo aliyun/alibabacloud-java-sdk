@@ -14,7 +14,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public Boolean fileSystemMountEnabled;
 
     /**
-     * <p>节点组的默认镜像id，如果不设置，那么就不会改变。</p>
+     * <p>The default image ID of a node group remains unchanged if not explicitly set.</p>
      * 
      * <strong>example:</strong>
      * <p>i123847249284734</p>
@@ -30,6 +30,12 @@ public class UpdateNodeGroupRequest extends TeaModel {
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
+
+    /**
+     * <p>节点组内机器的登录密码</p>
+     */
+    @NameInMap("LoginPassword")
+    public String loginPassword;
 
     /**
      * <p>Node group name</p>
@@ -87,6 +93,14 @@ public class UpdateNodeGroupRequest extends TeaModel {
     }
     public String getKeyPairName() {
         return this.keyPairName;
+    }
+
+    public UpdateNodeGroupRequest setLoginPassword(String loginPassword) {
+        this.loginPassword = loginPassword;
+        return this;
+    }
+    public String getLoginPassword() {
+        return this.loginPassword;
     }
 
     public UpdateNodeGroupRequest setNewNodeGroupName(String newNodeGroupName) {
