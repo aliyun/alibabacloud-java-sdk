@@ -187,6 +187,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateMmsDataSource</p>
+     * 
      * @param request CreateMmsDataSourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -230,6 +233,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateMmsDataSource</p>
+     * 
      * @param request CreateMmsDataSourceRequest
      * @return CreateMmsDataSourceResponse
      */
@@ -658,6 +664,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除迁移计划</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMmsJobResponse
@@ -681,6 +690,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除迁移计划</p>
      * @return DeleteMmsJobResponse
      */
     public DeleteMmsJobResponse deleteMmsJob(String sourceId, String jobId) throws Exception {
@@ -863,7 +874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get basic information about a single job.</p>
+     * <p>Queries the basic information about a job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -889,7 +900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get basic information about a single job.</p>
+     * <p>Queries the basic information about a job.</p>
      * @return GetJobInfoResponse
      */
     public GetJobInfoResponse getJobInfo(String instanceId) throws Exception {
@@ -972,6 +983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsAsyncTask</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsAsyncTaskResponse
@@ -995,6 +1009,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsAsyncTask</p>
      * @return GetMmsAsyncTaskResponse
      */
     public GetMmsAsyncTaskResponse getMmsAsyncTask(String sourceId, String asyncTaskId) throws Exception {
@@ -1004,6 +1020,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取数据源</p>
+     * 
      * @param request GetMmsDataSourceRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1039,6 +1058,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取数据源</p>
+     * 
      * @param request GetMmsDataSourceRequest
      * @return GetMmsDataSourceResponse
      */
@@ -1049,6 +1071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsDb</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsDbResponse
@@ -1072,6 +1097,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsDb</p>
      * @return GetMmsDbResponse
      */
     public GetMmsDbResponse getMmsDb(String sourceId, String dbId) throws Exception {
@@ -1081,6 +1108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsFetchMetadataJob</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsFetchMetadataJobResponse
@@ -1104,6 +1134,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsFetchMetadataJob</p>
      * @return GetMmsFetchMetadataJobResponse
      */
     public GetMmsFetchMetadataJobResponse getMmsFetchMetadataJob(String sourceId, String scanId) throws Exception {
@@ -1113,6 +1145,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取迁移计划</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsJobResponse
@@ -1136,6 +1171,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取迁移计划</p>
      * @return GetMmsJobResponse
      */
     public GetMmsJobResponse getMmsJob(String sourceId, String jobId) throws Exception {
@@ -1145,6 +1182,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsPartition</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsPartitionResponse
@@ -1168,6 +1208,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsPartition</p>
      * @return GetMmsPartitionResponse
      */
     public GetMmsPartitionResponse getMmsPartition(String sourceId, String partitionId) throws Exception {
@@ -1177,6 +1219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsTable</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsTableResponse
@@ -1200,6 +1245,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsTable</p>
      * @return GetMmsTableResponse
      */
     public GetMmsTableResponse getMmsTable(String sourceId, String tableId) throws Exception {
@@ -1209,6 +1256,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsTask</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMmsTaskResponse
@@ -1232,6 +1282,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMmsTask</p>
      * @return GetMmsTaskResponse
      */
     public GetMmsTaskResponse getMmsTask(String sourceId, String taskId) throws Exception {
@@ -2437,6 +2489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsDataSources</p>
+     * 
      * @param request ListMmsDataSourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2484,6 +2539,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsDataSources</p>
+     * 
      * @param request ListMmsDataSourcesRequest
      * @return ListMmsDataSourcesResponse
      */
@@ -2563,6 +2621,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsJobs</p>
+     * 
      * @param request ListMmsJobsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2630,6 +2691,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsJobs</p>
+     * 
      * @param request ListMmsJobsRequest
      * @return ListMmsJobsResponse
      */
@@ -2640,6 +2704,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取元数据-分区</p>
+     * 
      * @param tmpReq ListMmsPartitionsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2717,6 +2784,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取元数据-分区</p>
+     * 
      * @param request ListMmsPartitionsRequest
      * @return ListMmsPartitionsResponse
      */
@@ -2727,6 +2797,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsTables</p>
+     * 
      * @param tmpReq ListMmsTablesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2808,6 +2881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsTables</p>
+     * 
      * @param request ListMmsTablesRequest
      * @return ListMmsTablesResponse
      */
@@ -2818,6 +2894,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsTaskLogs</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListMmsTaskLogsResponse
@@ -2841,6 +2920,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsTaskLogs</p>
      * @return ListMmsTaskLogsResponse
      */
     public ListMmsTaskLogsResponse listMmsTaskLogs(String sourceId, String taskId) throws Exception {
@@ -2850,6 +2931,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsTasks</p>
+     * 
      * @param request ListMmsTasksRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2921,6 +3005,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListMmsTasks</p>
+     * 
      * @param request ListMmsTasksRequest
      * @return ListMmsTasksResponse
      */
@@ -3905,6 +3992,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>RetryMmsJob</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return RetryMmsJobResponse
@@ -3928,6 +4018,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>RetryMmsJob</p>
      * @return RetryMmsJobResponse
      */
     public RetryMmsJobResponse retryMmsJob(String sourceId, String jobId) throws Exception {
@@ -3937,6 +4029,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>StartMmsJob</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StartMmsJobResponse
@@ -3960,6 +4055,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>StartMmsJob</p>
      * @return StartMmsJobResponse
      */
     public StartMmsJobResponse startMmsJob(String sourceId, String jobId) throws Exception {
@@ -3969,6 +4066,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>StopMmsJob</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return StopMmsJobResponse
@@ -3992,6 +4092,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>StopMmsJob</p>
      * @return StopMmsJobResponse
      */
     public StopMmsJobResponse stopMmsJob(String sourceId, String jobId) throws Exception {

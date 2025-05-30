@@ -184,7 +184,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Double cuSnapshot;
 
         /**
-         * <p>The total number of used compute units (CUs).</p>
+         * <p>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100\*Core\*s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -274,7 +274,7 @@ public class ListJobInfosResponseBody extends TeaModel {
         public Double memorySnapshot;
 
         /**
-         * <p>The total memory usage.</p>
+         * <p>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB\*s.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>

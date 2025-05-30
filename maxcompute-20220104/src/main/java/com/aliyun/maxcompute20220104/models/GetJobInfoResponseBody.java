@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobInfoResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("data")
     public GetJobInfoResponseBodyData data;
@@ -100,7 +100,7 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     public static class GetJobInfoResponseBodyDataJobSubStatusList extends TeaModel {
         /**
-         * <p>The code of the sub-status.</p>
+         * <p>The encoding of the substatus.</p>
          * 
          * <strong>example:</strong>
          * <p>1010</p>
@@ -109,7 +109,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Integer code;
 
         /**
-         * <p>The description of the sub-status.</p>
+         * <p>The description of the substatus.</p>
          * 
          * <strong>example:</strong>
          * <p>Waiting for scheduling</p>
@@ -118,7 +118,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The start time of the sub-status.</p>
+         * <p>The start time of the substatus.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-05 00:04:15.717364 +0800</p>
@@ -266,7 +266,7 @@ public class GetJobInfoResponseBody extends TeaModel {
 
     public static class GetJobInfoResponseBodyData extends TeaModel {
         /**
-         * <p>CPU usage of the job at the snapshot time. Unit: Core.</p>
+         * <p>The amount of resources consumed by the job. This parameter is returned only for jobs that are complete.Unit: 100\*Core\*s.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -275,7 +275,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Long cuUsage;
 
         /**
-         * <p>The time when the job was finished.</p>
+         * <p>The end time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1672112913</p>
@@ -284,7 +284,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Long endAtTime;
 
         /**
-         * <p>The ID of the upstream node.</p>
+         * <p>The ID of the ancestor node.</p>
          * 
          * <strong>example:</strong>
          * <p>node_4</p>
@@ -293,7 +293,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String extNodeId;
 
         /**
-         * <p>The account ID of the task owner.</p>
+         * <p>The Alibaba Cloud account ID of the task owner.</p>
          * 
          * <strong>example:</strong>
          * <p>duty_2</p>
@@ -311,7 +311,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String extPlantFrom;
 
         /**
-         * <p>The amount of scanned data for the job. Unit: byte.</p>
+         * <p>The amount of data scanned by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -320,7 +320,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Double inputBytes;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20230410****60gg</p>
@@ -329,7 +329,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The account that commits the job.</p>
+         * <p>The owner of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN$7632***@aliyun.com</p>
@@ -338,7 +338,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String jobOwner;
 
         /**
-         * <p>The list of sub-status of the job.</p>
+         * <p>The substatuses of the job lifecycle.</p>
          */
         @NameInMap("jobSubStatusList")
         public java.util.List<GetJobInfoResponseBodyDataJobSubStatusList> jobSubStatusList;
@@ -353,7 +353,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>Memory usage of the job at the snapshot time. Unit: MB.</p>
+         * <p>The number of memory consumed by the job. This parameter is returned only for jobs that are complete.Unit: MB\*s.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -371,7 +371,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Long priority;
 
         /**
-         * <p>The name of the project.</p>
+         * <p>The project name.</p>
          * 
          * <strong>example:</strong>
          * <p>dp_cdm_prod</p>
@@ -380,7 +380,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The nickname of the computing Quota used by the job.</p>
+         * <p>The nickname of the computing quota that is used by the job.</p>
          * 
          * <strong>example:</strong>
          * <p>os_bigdata</p>
@@ -389,7 +389,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String quotaNickname;
 
         /**
-         * <p>The type of the quota.</p>
+         * <p>The quota type.</p>
          * 
          * <strong>example:</strong>
          * <p>subscription</p>
@@ -407,10 +407,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The start time of the job.</p>
-         * <blockquote>
-         * <p>The time when the job received the first batch of computing resources.</p>
-         * </blockquote>
+         * <p>The start time, which is the time when the job received the first batch of computing resources. For jobs that run for a short period of time or do not consume computing resources, such as the jobs that involve DDL statements, the job submission time is used instead.</p>
          * 
          * <strong>example:</strong>
          * <p>1672112113</p>
@@ -419,7 +416,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Long runningAtTime;
 
         /**
-         * <p>The running duration, which is the duration from the runningAtTime to the snapshotTime of the job. Unit: seconds (s).</p>
+         * <p>The execution duration, which is the duration from the start time to the end time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -428,13 +425,13 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Long runningTime;
 
         /**
-         * <p>The intelligent diagnostics results.</p>
+         * <p>The intelligent diagnostics result.</p>
          */
         @NameInMap("sceneResults")
         public java.util.List<GetJobInfoResponseBodyDataSceneResults> sceneResults;
 
         /**
-         * <p>The signature of the SQL job.</p>
+         * <p>The signature of the SQL job. You can use the signature to find the instances on which each time an SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>20c1efb4a7caca1865f4aa784bb500efae74af04</p>
@@ -443,7 +440,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String signature;
 
         /**
-         * <p>The status of the job.</p>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -452,7 +449,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the job was committed.</p>
+         * <p>The time when the job was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>1672112013</p>
@@ -470,7 +467,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The interval from the time when the job was submitted to the snapshotTime .Unit: seconds (s).</p>
+         * <p>The total duration from the time a job is submitted to the time the job is terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>900</p>
@@ -479,7 +476,7 @@ public class GetJobInfoResponseBody extends TeaModel {
         public Long totalTime;
 
         /**
-         * <p>The duration from the time the job is submitted to the time the job starts to run. Unit: seconds (s).</p>
+         * <p>The wait time, which is the duration from the time the job is submitted to the time the job starts to run.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
