@@ -672,6 +672,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy extends TeaModel {
+        @NameInMap("approval_required")
+        public Boolean approvalRequired;
+
         /**
          * <p>Whether to allow restarting nodes.</p>
          * 
@@ -684,6 +687,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public static DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy self = new DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy setApprovalRequired(Boolean approvalRequired) {
+            this.approvalRequired = approvalRequired;
+            return this;
+        }
+        public Boolean getApprovalRequired() {
+            return this.approvalRequired;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoRepairPolicy setRestartNode(Boolean restartNode) {
