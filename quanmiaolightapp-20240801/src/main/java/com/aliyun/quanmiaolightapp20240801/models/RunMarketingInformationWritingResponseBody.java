@@ -152,12 +152,23 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
     }
 
     public static class RunMarketingInformationWritingResponseBodyPayloadOutput extends TeaModel {
+        @NameInMap("reasonContent")
+        public String reasonContent;
+
         @NameInMap("text")
         public String text;
 
         public static RunMarketingInformationWritingResponseBodyPayloadOutput build(java.util.Map<String, ?> map) throws Exception {
             RunMarketingInformationWritingResponseBodyPayloadOutput self = new RunMarketingInformationWritingResponseBodyPayloadOutput();
             return TeaModel.build(map, self);
+        }
+
+        public RunMarketingInformationWritingResponseBodyPayloadOutput setReasonContent(String reasonContent) {
+            this.reasonContent = reasonContent;
+            return this;
+        }
+        public String getReasonContent() {
+            return this.reasonContent;
         }
 
         public RunMarketingInformationWritingResponseBodyPayloadOutput setText(String text) {
