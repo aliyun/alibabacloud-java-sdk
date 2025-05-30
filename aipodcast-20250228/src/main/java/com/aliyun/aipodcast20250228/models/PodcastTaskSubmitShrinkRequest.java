@@ -14,6 +14,9 @@ public class PodcastTaskSubmitShrinkRequest extends TeaModel {
     @NameInMap("fileUrls")
     public String fileUrlsShrink;
 
+    @NameInMap("sourceLang")
+    public String sourceLang;
+
     @NameInMap("text")
     public String text;
 
@@ -51,6 +54,14 @@ public class PodcastTaskSubmitShrinkRequest extends TeaModel {
     }
     public String getFileUrlsShrink() {
         return this.fileUrlsShrink;
+    }
+
+    public PodcastTaskSubmitShrinkRequest setSourceLang(String sourceLang) {
+        this.sourceLang = sourceLang;
+        return this;
+    }
+    public String getSourceLang() {
+        return this.sourceLang;
     }
 
     public PodcastTaskSubmitShrinkRequest setText(String text) {

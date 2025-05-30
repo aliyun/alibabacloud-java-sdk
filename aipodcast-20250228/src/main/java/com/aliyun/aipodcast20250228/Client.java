@@ -107,6 +107,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("fileUrls", request.fileUrlsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceLang)) {
+            body.put("sourceLang", request.sourceLang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.text)) {
             body.put("text", request.text);
         }

@@ -14,6 +14,9 @@ public class PodcastTaskSubmitRequest extends TeaModel {
     @NameInMap("fileUrls")
     public java.util.List<String> fileUrls;
 
+    @NameInMap("sourceLang")
+    public String sourceLang;
+
     @NameInMap("text")
     public String text;
 
@@ -51,6 +54,14 @@ public class PodcastTaskSubmitRequest extends TeaModel {
     }
     public java.util.List<String> getFileUrls() {
         return this.fileUrls;
+    }
+
+    public PodcastTaskSubmitRequest setSourceLang(String sourceLang) {
+        this.sourceLang = sourceLang;
+        return this;
+    }
+    public String getSourceLang() {
+        return this.sourceLang;
     }
 
     public PodcastTaskSubmitRequest setText(String text) {
