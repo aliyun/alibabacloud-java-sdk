@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>aipodcast20250228</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>jar</packaging>
   <name>aipodcast20250228</name>
   <description>Alibaba Cloud AIPodcast (20250228) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.7</version>
+      <version>0.3.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

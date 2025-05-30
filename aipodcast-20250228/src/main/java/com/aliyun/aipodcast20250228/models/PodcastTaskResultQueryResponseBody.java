@@ -96,6 +96,9 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
     }
 
     public static class PodcastTaskResultQueryResponseBodyData extends TeaModel {
+        @NameInMap("extraResult")
+        public Object extraResult;
+
         /**
          * <strong>example:</strong>
          * <p>{
@@ -126,6 +129,14 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
         public static PodcastTaskResultQueryResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             PodcastTaskResultQueryResponseBodyData self = new PodcastTaskResultQueryResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public PodcastTaskResultQueryResponseBodyData setExtraResult(Object extraResult) {
+            this.extraResult = extraResult;
+            return this;
+        }
+        public Object getExtraResult() {
+            return this.extraResult;
         }
 
         public PodcastTaskResultQueryResponseBodyData setResultUrl(Object resultUrl) {
