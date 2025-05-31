@@ -3635,6 +3635,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SaleMode", request.saleMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.settingResetType)) {
+            query.put("SettingResetType", request.settingResetType);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

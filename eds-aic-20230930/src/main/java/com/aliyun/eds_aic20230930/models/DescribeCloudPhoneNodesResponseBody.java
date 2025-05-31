@@ -95,6 +95,36 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos extends TeaModel {
+        @NameInMap("NetworkId")
+        public String networkId;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        public static DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos self = new DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setNetworkId(String networkId) {
+            this.networkId = networkId;
+            return this;
+        }
+        public String getNetworkId() {
+            return this.networkId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+    }
+
     public static class DescribeCloudPhoneNodesResponseBodyNodeModel extends TeaModel {
         /**
          * <p>The billing method.</p>
@@ -161,6 +191,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         @NameInMap("NetworkId")
         public String networkId;
+
+        @NameInMap("NetworkInfos")
+        public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> networkInfos;
 
         /**
          * <p>The matrix ID.</p>
@@ -319,6 +352,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public String getNetworkId() {
             return this.networkId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setNetworkInfos(java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> networkInfos) {
+            this.networkInfos = networkInfos;
+            return this;
+        }
+        public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> getNetworkInfos() {
+            return this.networkInfos;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setNodeId(String nodeId) {

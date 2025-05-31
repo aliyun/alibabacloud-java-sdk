@@ -555,6 +555,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags;
 
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DescribeAndroidInstancesResponseBodyInstanceModel build(java.util.Map<String, ?> map) throws Exception {
             DescribeAndroidInstancesResponseBodyInstanceModel self = new DescribeAndroidInstancesResponseBodyInstanceModel();
             return TeaModel.build(map, self);
@@ -846,6 +852,22 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

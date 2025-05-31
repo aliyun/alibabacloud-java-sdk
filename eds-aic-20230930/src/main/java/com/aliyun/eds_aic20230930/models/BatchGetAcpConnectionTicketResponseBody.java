@@ -50,6 +50,12 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         @NameInMap("AppInstanceGroupId")
         public String appInstanceGroupId;
 
+        @NameInMap("AppInstanceId")
+        public String appInstanceId;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
         /**
          * <p>The ID of the cloud phone instance.</p>
          * 
@@ -58,6 +64,9 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("PersistentAppInstanceId")
+        public String persistentAppInstanceId;
 
         /**
          * <p>The ID of the task.</p>
@@ -99,12 +108,36 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             return this.appInstanceGroupId;
         }
 
+        public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setAppInstanceId(String appInstanceId) {
+            this.appInstanceId = appInstanceId;
+            return this;
+        }
+        public String getAppInstanceId() {
+            return this.appInstanceId;
+        }
+
+        public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
         public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setPersistentAppInstanceId(String persistentAppInstanceId) {
+            this.persistentAppInstanceId = persistentAppInstanceId;
+            return this;
+        }
+        public String getPersistentAppInstanceId() {
+            return this.persistentAppInstanceId;
         }
 
         public BatchGetAcpConnectionTicketResponseBodyInstanceConnectionModels setTaskId(String taskId) {
