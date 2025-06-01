@@ -1,3 +1,11 @@
+2025-06-01 Version: 1.13.0
+- Support API CreateEnterpriseAcceleratePolicy.
+- Support API DeleteOtpConfig.
+- Update API GetUserDevice: add response parameters Body.Device.MatchDeviceGroupIds.
+- Update API ListUserDevices: add request parameters DeviceGroupId.
+- Update API ListUserDevices: add response parameters Body.Devices.$.MatchDeviceGroupIds.
+
+
 2025-04-27 Version: 1.12.2
 - Update API CreateApprovalProcess: add request parameters MatchSchemas.EndpointHardeningSchemaId.
 - Update API CreateApprovalProcess: add request parameters MatchSchemas.SoftwareHardeningSchemaId.

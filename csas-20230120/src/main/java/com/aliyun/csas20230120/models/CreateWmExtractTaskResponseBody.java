@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmExtractTaskResponseBody extends TeaModel {
+    /**
+     * <p>The information about the watermark extraction task.</p>
+     */
     @NameInMap("Data")
     public CreateWmExtractTaskResponseBodyData data;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
      */
@@ -37,6 +42,8 @@ public class CreateWmExtractTaskResponseBody extends TeaModel {
 
     public static class CreateWmExtractTaskResponseBodyData extends TeaModel {
         /**
+         * <p>The task ID. You can use task IDs to query task results.</p>
+         * 
          * <strong>example:</strong>
          * <p>wmt-9648c22d2eb2cb57bb855dcae7898464********</p>
          */

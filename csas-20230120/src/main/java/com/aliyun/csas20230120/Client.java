@@ -354,6 +354,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建加速策略</p>
+     * 
+     * @param request CreateEnterpriseAcceleratePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEnterpriseAcceleratePolicyResponse
+     */
+    public CreateEnterpriseAcceleratePolicyResponse createEnterpriseAcceleratePolicyWithOptions(CreateEnterpriseAcceleratePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerationType)) {
+            body.put("AccelerationType", request.accelerationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showInClient)) {
+            body.put("ShowInClient", request.showInClient);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamHost)) {
+            body.put("UpstreamHost", request.upstreamHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamPort)) {
+            body.put("UpstreamPort", request.upstreamPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamType)) {
+            body.put("UpstreamType", request.upstreamType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAttributeGroup)) {
+            body.put("UserAttributeGroup", request.userAttributeGroup);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEnterpriseAcceleratePolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEnterpriseAcceleratePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建加速策略</p>
+     * 
+     * @param request CreateEnterpriseAcceleratePolicyRequest
+     * @return CreateEnterpriseAcceleratePolicyResponse
+     */
+    public CreateEnterpriseAcceleratePolicyResponse createEnterpriseAcceleratePolicy(CreateEnterpriseAcceleratePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEnterpriseAcceleratePolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建自定义身份源部门</p>
      * 
      * @param request CreateIdpDepartmentRequest
@@ -401,8 +477,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网访问应用</p>
+     * <p>Creates an office application within the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq CreatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -484,8 +563,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网访问应用</p>
+     * <p>Creates an office application within the current Alibaba Cloud account.</p>
      * 
      * @param request CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
@@ -974,7 +1056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建文件水印提取任务</p>
+     * <p>Creates a digital watermark extraction task.</p>
      * 
      * @param tmpReq CreateWmExtractTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1042,7 +1124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建文件水印提取任务</p>
+     * <p>Creates a digital watermark extraction task.</p>
      * 
      * @param request CreateWmExtractTaskRequest
      * @return CreateWmExtractTaskResponse
@@ -1287,6 +1369,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteIdpDepartmentResponse deleteIdpDepartment(DeleteIdpDepartmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteIdpDepartmentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteOtpConfig</p>
+     * 
+     * @param request DeleteOtpConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteOtpConfigResponse
+     */
+    public DeleteOtpConfigResponse deleteOtpConfigWithOptions(DeleteOtpConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.username)) {
+            body.put("Username", request.username);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteOtpConfig"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteOtpConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteOtpConfig</p>
+     * 
+     * @param request DeleteOtpConfigRequest
+     * @return DeleteOtpConfigResponse
+     */
+    public DeleteOtpConfigResponse deleteOtpConfig(DeleteOtpConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteOtpConfigWithOptions(request, runtime);
     }
 
     /**
@@ -2084,7 +2210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询内网访问应用详情</p>
+     * <p>Queries the details of the office applications that belong to the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2112,7 +2238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询内网访问应用详情</p>
+     * <p>Queries the details of the office applications that belong to the current Alibaba Cloud account.</p>
      * 
      * @param request GetPrivateAccessApplicationRequest
      * @return GetPrivateAccessApplicationResponse
@@ -4611,7 +4737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改内网访问应用</p>
+     * <p>Modifies the office applications of the current Alibaba Cloud account.</p>
      * 
      * @param tmpReq UpdatePrivateAccessApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4698,7 +4824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改内网访问应用</p>
+     * <p>Modifies the office applications of the current Alibaba Cloud account.</p>
      * 
      * @param request UpdatePrivateAccessApplicationRequest
      * @return UpdatePrivateAccessApplicationResponse

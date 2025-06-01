@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateAccessApplicationResponseBody extends TeaModel {
     /**
+     * <p>The ID of the office application.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-application-e12860ef6c48****</p>
      */
@@ -12,6 +14,8 @@ public class CreatePrivateAccessApplicationResponseBody extends TeaModel {
     public String applicationId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
      */

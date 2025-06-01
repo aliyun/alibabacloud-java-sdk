@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class GetPrivateAccessApplicationResponseBody extends TeaModel {
+    /**
+     * <p>The office application.</p>
+     */
     @NameInMap("Application")
     public GetPrivateAccessApplicationResponseBodyApplication application;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3ACC5EDC-2B7D-5032-8C58-D7615D66C1D4</p>
      */
@@ -37,6 +42,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
 
     public static class GetPrivateAccessApplicationResponseBodyApplicationPortRanges extends TeaModel {
         /**
+         * <p>The start port.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -44,6 +51,8 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>The end port.</p>
+         * 
          * <strong>example:</strong>
          * <p>81</p>
          */
@@ -74,55 +83,108 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
     }
 
     public static class GetPrivateAccessApplicationResponseBodyApplication extends TeaModel {
+        /**
+         * <p>The addresses of the office applications.</p>
+         */
         @NameInMap("Addresses")
         public java.util.List<String> addresses;
 
         /**
+         * <p>The ID of the office application.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-application-e12860ef6c48****</p>
          */
         @NameInMap("ApplicationId")
         public String applicationId;
 
+        /**
+         * <p>The browser access mode. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("BrowserAccessStatus")
         public String browserAccessStatus;
 
+        /**
+         * <p>The IDs of connectors.</p>
+         */
         @NameInMap("ConnectorIds")
         public java.util.List<String> connectorIds;
 
         /**
+         * <p>The creation time of the office application.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-08-30 16:50:32</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the office application.</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The browser access mode parameter. The parameter indicates the configurations of Layer 7 applications.</p>
+         */
         @NameInMap("L7Config")
         public PAL7Config l7Config;
 
+        /**
+         * <p>The browser access mode parameter. The parameter indicates the domain name that the proxy gateway uses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app.example.com</p>
+         */
         @NameInMap("L7ProxyDomainAutomatic")
         public String l7ProxyDomainAutomatic;
 
+        /**
+         * <p>The browser access mode parameter. The parameter indicates the custom domain name of the proxy gateway.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app.example.com</p>
+         */
         @NameInMap("L7ProxyDomainCustom")
         public String l7ProxyDomainCustom;
 
         /**
+         * <p>The name of the office application.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_application_name</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The IDs of the private access policies.</p>
+         */
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
+        /**
+         * <p>The port ranges of the office applications. Multiple port ranges cannot be duplicated or overlapped.</p>
+         */
         @NameInMap("PortRanges")
         public java.util.List<GetPrivateAccessApplicationResponseBodyApplicationPortRanges> portRanges;
 
         /**
+         * <p>The protocol that is used by the office application. Valid values:</p>
+         * <ul>
+         * <li><strong>All</strong></li>
+         * <li><strong>TCP</strong></li>
+         * <li><strong>UDP</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>All</p>
          */
@@ -130,12 +192,21 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>The status of the office application. Valid values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong></li>
+         * <li><strong>Disabled</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The IDs of the tags for the office applications.</p>
+         */
         @NameInMap("TagIds")
         public java.util.List<String> tagIds;
 

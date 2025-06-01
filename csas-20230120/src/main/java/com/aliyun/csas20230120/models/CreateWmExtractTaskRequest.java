@@ -4,10 +4,19 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class CreateWmExtractTaskRequest extends TeaModel {
+    /**
+     * <p>The CSV watermark control parameter. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+     */
     @NameInMap("CsvControl")
     public CreateWmExtractTaskRequestCsvControl csvControl;
 
     /**
+     * <p>The document watermark parameter that specifies whether the file to be extracted is a screenshot of a document with a background watermark added. The system determines whether to use the extraction logic for document background watermarks based on whether the file to be extracted is an image file. By default, you do not need to configure this parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -15,6 +24,7 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     public Boolean documentIsCapture;
 
     /**
+     * <p>The URL used to download the file to be extracted. The URL must be accessible over the Internet.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +34,7 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     public String fileUrl;
 
     /**
+     * <p>The name of the file to be extracted. The system needs to check the file type based on the file name extension.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +44,12 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     public String filename;
 
     /**
+     * <p>The watermark parameter for videos that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +57,8 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     public Boolean videoIsLong;
 
     /**
+     * <p>The watermark parameter for long videos that specifies the video speed factor. The value can be a floating-point number or a string. Default value: 1. This parameter indicates the speed at which a watermark is added or the time-stretching rate for videos after a watermark is added.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -47,6 +66,8 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     public String videoSpeed;
 
     /**
+     * <p>The watermark information size. Default value: 32. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. For example, if a 40-bit watermark is used for watermark embedding, you must set this parameter to 40 for watermark extraction.</p>
+     * 
      * <strong>example:</strong>
      * <p>32</p>
      */
@@ -54,6 +75,23 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     public Long wmInfoSize;
 
     /**
+     * <p>The watermark type. Valid values:</p>
+     * <ul>
+     * <li><strong>PureWebappInvisible</strong>: web page watermark</li>
+     * <li><strong>PureAppInvisible</strong>: app watermark</li>
+     * <li><strong>PureScreenInvisible</strong>: screen watermark</li>
+     * <li><strong>PureDocument</strong>: document watermark</li>
+     * <li><strong>PureImage</strong>: image watermark</li>
+     * <li><strong>PureAudio</strong>: audio watermark</li>
+     * <li><strong>PureVideo</strong>: video watermark</li>
+     * <li><strong>AigcWebappInvisible</strong>: artificial intelligence generated content (AIGC)-based webpage watermark</li>
+     * <li><strong>AigcAppInvisible</strong>: AIGC-based app watermark</li>
+     * <li><strong>AigcScreenInvisible</strong>: AIGC-based screen watermark</li>
+     * <li><strong>AigcDocument</strong>: AIGC-based document watermark</li>
+     * <li><strong>AigcImage</strong>: AIGC-based image watermark</li>
+     * <li><strong>AigcAudio</strong>: AIGC-based audio watermark</li>
+     * <li><strong>AigcVideo</strong>: AIGC-based video watermark</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -132,21 +170,57 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     }
 
     public static class CreateWmExtractTaskRequestCsvControl extends TeaModel {
+        /**
+         * <p>The timestamp watermark parameter that specifies how much information a single timestamp holds. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmbedBitsNumberInEachTime")
         public Long embedBitsNumberInEachTime;
 
+        /**
+         * <p>The lossy embedding control parameter that specifies columns to be modified You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EmbedColumn")
         public Long embedColumn;
 
+        /**
+         * <p>The lossy embedding control parameter that specifies the modification precision. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EmbedPrecision")
         public Long embedPrecision;
 
+        /**
+         * <p>The timestamp watermark parameter that specifies the embedding position of the timestamp watermarks. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Min</p>
+         */
         @NameInMap("EmbedTimePosition")
         public String embedTimePosition;
 
+        /**
+         * <p>The CSV watermark embedding method. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lossless_row_shift_embed</p>
+         */
         @NameInMap("Method")
         public String method;
 
+        /**
+         * <p>The timestamp watermark parameter that specifies the timestamp format. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Year-Mon-Day Hour:Min:Sec.MilSec</p>
+         */
         @NameInMap("TimeFormat")
         public String timeFormat;
 

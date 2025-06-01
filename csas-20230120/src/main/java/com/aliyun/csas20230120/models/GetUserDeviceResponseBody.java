@@ -221,6 +221,9 @@ public class GetUserDeviceResponseBody extends TeaModel {
         @NameInMap("Mac")
         public String mac;
 
+        @NameInMap("MatchDeviceGroupIds")
+        public java.util.List<String> matchDeviceGroupIds;
+
         /**
          * <strong>example:</strong>
          * <p>16</p>
@@ -434,6 +437,14 @@ public class GetUserDeviceResponseBody extends TeaModel {
         }
         public String getMac() {
             return this.mac;
+        }
+
+        public GetUserDeviceResponseBodyDevice setMatchDeviceGroupIds(java.util.List<String> matchDeviceGroupIds) {
+            this.matchDeviceGroupIds = matchDeviceGroupIds;
+            return this;
+        }
+        public java.util.List<String> getMatchDeviceGroupIds() {
+            return this.matchDeviceGroupIds;
         }
 
         public GetUserDeviceResponseBodyDevice setMemory(String memory) {

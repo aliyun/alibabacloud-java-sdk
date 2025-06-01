@@ -5,27 +5,57 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateAccessApplicationRequest extends TeaModel {
     /**
+     * <p>The addresses of the office applications. You can enter up to 1,000 addresses of office applications.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Addresses")
     public java.util.List<String> addresses;
 
+    /**
+     * <p>Specifies whether to allow access from a browser. Default value: <strong>Disabled</strong>. Valid values:</p>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
+     */
     @NameInMap("BrowserAccessStatus")
     public String browserAccessStatus;
 
+    /**
+     * <p>The description of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The browser access mode parameter. The parameter specifies the configurations of Layer 7 applications.</p>
+     */
     @NameInMap("L7Config")
     public PAL7Config l7Config;
 
+    /**
+     * <p>The browser access mode parameter. The parameter specifies the prefix of the domain name that the proxy gateway uses. The prefix must be 3 to 20 characters in length, and can contain lowercase letters, digits, and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app-sample</p>
+     */
     @NameInMap("L7ProxyDomainAutomaticPrefix")
     public String l7ProxyDomainAutomaticPrefix;
 
+    /**
+     * <p>The browser access mode parameter. The parameter specifies the custom domain name of the proxy gateway. Enter a valid domain name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app1.example.com</p>
+     */
     @NameInMap("L7ProxyDomainCustom")
     public String l7ProxyDomainCustom;
 
     /**
+     * <p>The name of the office application. The value must be 1 to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,12 +65,19 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The port ranges of the office applications. You can enter up to 65,535 port ranges. Multiple port ranges cannot be duplicated or overlapped.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PortRanges")
     public java.util.List<CreatePrivateAccessApplicationRequestPortRanges> portRanges;
 
     /**
+     * <p>The protocol that is used by the office application. Valid values:</p>
+     * <ul>
+     * <li><strong>All</strong></li>
+     * <li><strong>TCP</strong></li>
+     * <li><strong>UDP</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +87,11 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     public String protocol;
 
     /**
+     * <p>The status of the office application. Valid values:</p>
+     * <ul>
+     * <li><strong>Enabled</strong></li>
+     * <li><strong>Disabled</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +100,9 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The IDs of the tags for the office applications. You can add up to six custom tags to an office application.</p>
+     */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
@@ -156,6 +201,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
 
     public static class CreatePrivateAccessApplicationRequestPortRanges extends TeaModel {
         /**
+         * <p>The start port. The start port must be less than or equal to the end port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +211,7 @@ public class CreatePrivateAccessApplicationRequest extends TeaModel {
         public Integer begin;
 
         /**
+         * <p>The end port. The end port must be greater than or equal to the start port.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

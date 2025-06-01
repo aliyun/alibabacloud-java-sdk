@@ -29,6 +29,9 @@ public class ListUserDevicesRequest extends TeaModel {
     @NameInMap("DeviceBelong")
     public String deviceBelong;
 
+    @NameInMap("DeviceGroupId")
+    public String deviceGroupId;
+
     @NameInMap("DeviceStatuses")
     public java.util.List<String> deviceStatuses;
 
@@ -142,6 +145,14 @@ public class ListUserDevicesRequest extends TeaModel {
     }
     public String getDeviceBelong() {
         return this.deviceBelong;
+    }
+
+    public ListUserDevicesRequest setDeviceGroupId(String deviceGroupId) {
+        this.deviceGroupId = deviceGroupId;
+        return this;
+    }
+    public String getDeviceGroupId() {
+        return this.deviceGroupId;
     }
 
     public ListUserDevicesRequest setDeviceStatuses(java.util.List<String> deviceStatuses) {
