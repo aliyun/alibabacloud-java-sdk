@@ -16,6 +16,9 @@ public class StartStreamingOutRequest extends TeaModel {
     @NameInMap("Backgrounds")
     public java.util.List<StartStreamingOutRequestBackgrounds> backgrounds;
 
+    @NameInMap("BgColor")
+    public StartStreamingOutRequestBgColor bgColor;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -62,6 +65,9 @@ public class StartStreamingOutRequest extends TeaModel {
      */
     @NameInMap("StartWithoutChannelWaitTime")
     public Integer startWithoutChannelWaitTime;
+
+    @NameInMap("SubHighResolutionStream")
+    public Boolean subHighResolutionStream;
 
     /**
      * <strong>example:</strong>
@@ -110,6 +116,14 @@ public class StartStreamingOutRequest extends TeaModel {
     }
     public java.util.List<StartStreamingOutRequestBackgrounds> getBackgrounds() {
         return this.backgrounds;
+    }
+
+    public StartStreamingOutRequest setBgColor(StartStreamingOutRequestBgColor bgColor) {
+        this.bgColor = bgColor;
+        return this;
+    }
+    public StartStreamingOutRequestBgColor getBgColor() {
+        return this.bgColor;
     }
 
     public StartStreamingOutRequest setChannelId(String channelId) {
@@ -198,6 +212,14 @@ public class StartStreamingOutRequest extends TeaModel {
     }
     public Integer getStartWithoutChannelWaitTime() {
         return this.startWithoutChannelWaitTime;
+    }
+
+    public StartStreamingOutRequest setSubHighResolutionStream(Boolean subHighResolutionStream) {
+        this.subHighResolutionStream = subHighResolutionStream;
+        return this;
+    }
+    public Boolean getSubHighResolutionStream() {
+        return this.subHighResolutionStream;
     }
 
     public StartStreamingOutRequest setTaskId(String taskId) {
@@ -366,6 +388,59 @@ public class StartStreamingOutRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class StartStreamingOutRequestBgColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static StartStreamingOutRequestBgColor build(java.util.Map<String, ?> map) throws Exception {
+            StartStreamingOutRequestBgColor self = new StartStreamingOutRequestBgColor();
+            return TeaModel.build(map, self);
+        }
+
+        public StartStreamingOutRequestBgColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public StartStreamingOutRequestBgColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public StartStreamingOutRequestBgColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }

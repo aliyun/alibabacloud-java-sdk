@@ -373,6 +373,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>增加纪要热词表</p>
+     * 
+     * @param tmpReq CreateCloudNotePhrasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudNotePhrasesResponse
+     */
+    public CreateCloudNotePhrasesResponse createCloudNotePhrasesWithOptions(CreateCloudNotePhrasesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateCloudNotePhrasesShrinkRequest request = new CreateCloudNotePhrasesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.phrase)) {
+            request.phraseShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.phrase, "Phrase", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phraseShrink)) {
+            query.put("Phrase", request.phraseShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudNotePhrases"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudNotePhrasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>增加纪要热词表</p>
+     * 
+     * @param request CreateCloudNotePhrasesRequest
+     * @return CreateCloudNotePhrasesResponse
+     */
+    public CreateCloudNotePhrasesResponse createCloudNotePhrases(CreateCloudNotePhrasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudNotePhrasesWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CreateEventSubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateEventSubscribeResponse
@@ -756,6 +810,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteChannelResponse deleteChannel(DeleteChannelRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除纪要热词表</p>
+     * 
+     * @param tmpReq DeleteCloudNotePhrasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCloudNotePhrasesResponse
+     */
+    public DeleteCloudNotePhrasesResponse deleteCloudNotePhrasesWithOptions(DeleteCloudNotePhrasesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteCloudNotePhrasesShrinkRequest request = new DeleteCloudNotePhrasesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.phrase)) {
+            request.phraseShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.phrase, "Phrase", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phraseShrink)) {
+            query.put("Phrase", request.phraseShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCloudNotePhrases"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCloudNotePhrasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除纪要热词表</p>
+     * 
+     * @param request DeleteCloudNotePhrasesRequest
+     * @return DeleteCloudNotePhrasesResponse
+     */
+    public DeleteCloudNotePhrasesResponse deleteCloudNotePhrases(DeleteCloudNotePhrasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteCloudNotePhrasesWithOptions(request, runtime);
     }
 
     /**
@@ -2226,6 +2334,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>纪要热词列表</p>
+     * 
+     * @param tmpReq DescribeCloudNotePhrasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudNotePhrasesResponse
+     */
+    public DescribeCloudNotePhrasesResponse describeCloudNotePhrasesWithOptions(DescribeCloudNotePhrasesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeCloudNotePhrasesShrinkRequest request = new DescribeCloudNotePhrasesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.condition)) {
+            request.conditionShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.condition, "Condition", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.conditionShrink)) {
+            query.put("Condition", request.conditionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudNotePhrases"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudNotePhrasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>纪要热词列表</p>
+     * 
+     * @param request DescribeCloudNotePhrasesRequest
+     * @return DescribeCloudNotePhrasesResponse
+     */
+    public DescribeCloudNotePhrasesResponse describeCloudNotePhrases(DescribeCloudNotePhrasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudNotePhrasesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>纪要列表</p>
      * 
      * @param tmpReq DescribeCloudNotesRequest
@@ -2268,6 +2438,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudNotesResponse describeCloudNotes(DescribeCloudNotesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeCloudNotesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询录制任务状态</p>
+     * 
+     * @param request DescribeCloudRecordStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCloudRecordStatusResponse
+     */
+    public DescribeCloudRecordStatusResponse describeCloudRecordStatusWithOptions(DescribeCloudRecordStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
+            query.put("ChannelId", request.channelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCloudRecordStatus"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCloudRecordStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询录制任务状态</p>
+     * 
+     * @param request DescribeCloudRecordStatusRequest
+     * @return DescribeCloudRecordStatusResponse
+     */
+    public DescribeCloudRecordStatusResponse describeCloudRecordStatus(DescribeCloudRecordStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCloudRecordStatusWithOptions(request, runtime);
     }
 
     /**
@@ -4391,6 +4613,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新纪要热词表</p>
+     * 
+     * @param tmpReq ModifyCloudNotePhrasesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyCloudNotePhrasesResponse
+     */
+    public ModifyCloudNotePhrasesResponse modifyCloudNotePhrasesWithOptions(ModifyCloudNotePhrasesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyCloudNotePhrasesShrinkRequest request = new ModifyCloudNotePhrasesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.phrase)) {
+            request.phraseShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.phrase, "Phrase", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.phraseShrink)) {
+            query.put("Phrase", request.phraseShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyCloudNotePhrases"),
+            new TeaPair("version", "2018-01-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyCloudNotePhrasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新纪要热词表</p>
+     * 
+     * @param request ModifyCloudNotePhrasesRequest
+     * @return ModifyCloudNotePhrasesResponse
+     */
+    public ModifyCloudNotePhrasesResponse modifyCloudNotePhrases(ModifyCloudNotePhrasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyCloudNotePhrasesWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ModifyMPULayoutRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMPULayoutResponse
@@ -4759,6 +5035,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Backgrounds", request.backgrounds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bgColor)) {
+            query.put("BgColor", request.bgColor);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
         }
@@ -4797,6 +5077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageConfig)) {
             query.put("StorageConfig", request.storageConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subHighResolutionStream)) {
+            query.put("SubHighResolutionStream", request.subHighResolutionStream);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
@@ -5140,6 +5424,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Backgrounds", request.backgrounds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bgColor)) {
+            query.put("BgColor", request.bgColor);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
         }
@@ -5182,6 +5470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startWithoutChannelWaitTime)) {
             query.put("StartWithoutChannelWaitTime", request.startWithoutChannelWaitTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subHighResolutionStream)) {
+            query.put("SubHighResolutionStream", request.subHighResolutionStream);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
@@ -6098,12 +6390,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Backgrounds", request.backgrounds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bgColor)) {
+            query.put("BgColor", request.bgColor);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channelId)) {
             query.put("ChannelId", request.channelId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clockWidgets)) {
             query.put("ClockWidgets", request.clockWidgets);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cropMode)) {
+            query.put("CropMode", request.cropMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.images)) {
@@ -6116,6 +6416,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.panes)) {
             query.put("Panes", request.panes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionColor)) {
+            query.put("RegionColor", request.regionColor);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {

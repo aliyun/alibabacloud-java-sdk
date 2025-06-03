@@ -17,6 +17,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("Backgrounds")
     public java.util.List<StartCloudRecordShrinkRequestBackgrounds> backgrounds;
 
+    @NameInMap("BgColor")
+    public StartCloudRecordShrinkRequestBgColor bgColor;
+
     /**
      * <p>channelName</p>
      * <p>This parameter is required.</p>
@@ -65,6 +68,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("StorageConfig")
     public StartCloudRecordShrinkRequestStorageConfig storageConfig;
 
+    @NameInMap("SubHighResolutionStream")
+    public Boolean subHighResolutionStream;
+
     /**
      * <p>taskId</p>
      * 
@@ -106,6 +112,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     }
     public java.util.List<StartCloudRecordShrinkRequestBackgrounds> getBackgrounds() {
         return this.backgrounds;
+    }
+
+    public StartCloudRecordShrinkRequest setBgColor(StartCloudRecordShrinkRequestBgColor bgColor) {
+        this.bgColor = bgColor;
+        return this;
+    }
+    public StartCloudRecordShrinkRequestBgColor getBgColor() {
+        return this.bgColor;
     }
 
     public StartCloudRecordShrinkRequest setChannelId(String channelId) {
@@ -186,6 +200,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     }
     public StartCloudRecordShrinkRequestStorageConfig getStorageConfig() {
         return this.storageConfig;
+    }
+
+    public StartCloudRecordShrinkRequest setSubHighResolutionStream(Boolean subHighResolutionStream) {
+        this.subHighResolutionStream = subHighResolutionStream;
+        return this;
+    }
+    public Boolean getSubHighResolutionStream() {
+        return this.subHighResolutionStream;
     }
 
     public StartCloudRecordShrinkRequest setTaskId(String taskId) {
@@ -346,6 +368,59 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class StartCloudRecordShrinkRequestBgColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static StartCloudRecordShrinkRequestBgColor build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordShrinkRequestBgColor self = new StartCloudRecordShrinkRequestBgColor();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordShrinkRequestBgColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public StartCloudRecordShrinkRequestBgColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public StartCloudRecordShrinkRequestBgColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }

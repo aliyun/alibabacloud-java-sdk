@@ -17,6 +17,9 @@ public class StartCloudRecordRequest extends TeaModel {
     @NameInMap("Backgrounds")
     public java.util.List<StartCloudRecordRequestBackgrounds> backgrounds;
 
+    @NameInMap("BgColor")
+    public StartCloudRecordRequestBgColor bgColor;
+
     /**
      * <p>channelName</p>
      * <p>This parameter is required.</p>
@@ -65,6 +68,9 @@ public class StartCloudRecordRequest extends TeaModel {
     @NameInMap("StorageConfig")
     public StartCloudRecordRequestStorageConfig storageConfig;
 
+    @NameInMap("SubHighResolutionStream")
+    public Boolean subHighResolutionStream;
+
     /**
      * <p>taskId</p>
      * 
@@ -106,6 +112,14 @@ public class StartCloudRecordRequest extends TeaModel {
     }
     public java.util.List<StartCloudRecordRequestBackgrounds> getBackgrounds() {
         return this.backgrounds;
+    }
+
+    public StartCloudRecordRequest setBgColor(StartCloudRecordRequestBgColor bgColor) {
+        this.bgColor = bgColor;
+        return this;
+    }
+    public StartCloudRecordRequestBgColor getBgColor() {
+        return this.bgColor;
     }
 
     public StartCloudRecordRequest setChannelId(String channelId) {
@@ -186,6 +200,14 @@ public class StartCloudRecordRequest extends TeaModel {
     }
     public StartCloudRecordRequestStorageConfig getStorageConfig() {
         return this.storageConfig;
+    }
+
+    public StartCloudRecordRequest setSubHighResolutionStream(Boolean subHighResolutionStream) {
+        this.subHighResolutionStream = subHighResolutionStream;
+        return this;
+    }
+    public Boolean getSubHighResolutionStream() {
+        return this.subHighResolutionStream;
     }
 
     public StartCloudRecordRequest setTaskId(String taskId) {
@@ -346,6 +368,59 @@ public class StartCloudRecordRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class StartCloudRecordRequestBgColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static StartCloudRecordRequestBgColor build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestBgColor self = new StartCloudRecordRequestBgColor();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestBgColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public StartCloudRecordRequestBgColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public StartCloudRecordRequestBgColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }

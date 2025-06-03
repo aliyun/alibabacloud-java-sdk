@@ -16,6 +16,9 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("Backgrounds")
     public java.util.List<UpdateStreamingOutShrinkRequestBackgrounds> backgrounds;
 
+    @NameInMap("BgColor")
+    public UpdateStreamingOutShrinkRequestBgColor bgColor;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -28,6 +31,13 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("ClockWidgets")
     public java.util.List<UpdateStreamingOutShrinkRequestClockWidgets> clockWidgets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("CropMode")
+    public Integer cropMode;
+
     @NameInMap("Images")
     public java.util.List<UpdateStreamingOutShrinkRequestImages> images;
 
@@ -36,6 +46,9 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
 
     @NameInMap("Panes")
     public java.util.List<UpdateStreamingOutShrinkRequestPanes> panes;
+
+    @NameInMap("RegionColor")
+    public UpdateStreamingOutShrinkRequestRegionColor regionColor;
 
     /**
      * <p>This parameter is required.</p>
@@ -79,6 +92,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         return this.backgrounds;
     }
 
+    public UpdateStreamingOutShrinkRequest setBgColor(UpdateStreamingOutShrinkRequestBgColor bgColor) {
+        this.bgColor = bgColor;
+        return this;
+    }
+    public UpdateStreamingOutShrinkRequestBgColor getBgColor() {
+        return this.bgColor;
+    }
+
     public UpdateStreamingOutShrinkRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -93,6 +114,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     }
     public java.util.List<UpdateStreamingOutShrinkRequestClockWidgets> getClockWidgets() {
         return this.clockWidgets;
+    }
+
+    public UpdateStreamingOutShrinkRequest setCropMode(Integer cropMode) {
+        this.cropMode = cropMode;
+        return this;
+    }
+    public Integer getCropMode() {
+        return this.cropMode;
     }
 
     public UpdateStreamingOutShrinkRequest setImages(java.util.List<UpdateStreamingOutShrinkRequestImages> images) {
@@ -117,6 +146,14 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
     }
     public java.util.List<UpdateStreamingOutShrinkRequestPanes> getPanes() {
         return this.panes;
+    }
+
+    public UpdateStreamingOutShrinkRequest setRegionColor(UpdateStreamingOutShrinkRequestRegionColor regionColor) {
+        this.regionColor = regionColor;
+        return this;
+    }
+    public UpdateStreamingOutShrinkRequestRegionColor getRegionColor() {
+        return this.regionColor;
     }
 
     public UpdateStreamingOutShrinkRequest setTaskId(String taskId) {
@@ -277,6 +314,59 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class UpdateStreamingOutShrinkRequestBgColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static UpdateStreamingOutShrinkRequestBgColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestBgColor self = new UpdateStreamingOutShrinkRequestBgColor();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutShrinkRequestBgColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public UpdateStreamingOutShrinkRequestBgColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public UpdateStreamingOutShrinkRequestBgColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }
@@ -1471,6 +1561,59 @@ public class UpdateStreamingOutShrinkRequest extends TeaModel {
         }
         public UpdateStreamingOutShrinkRequestPanesWhiteboard getWhiteboard() {
             return this.whiteboard;
+        }
+
+    }
+
+    public static class UpdateStreamingOutShrinkRequestRegionColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static UpdateStreamingOutShrinkRequestRegionColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutShrinkRequestRegionColor self = new UpdateStreamingOutShrinkRequestRegionColor();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutShrinkRequestRegionColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public UpdateStreamingOutShrinkRequestRegionColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public UpdateStreamingOutShrinkRequestRegionColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }

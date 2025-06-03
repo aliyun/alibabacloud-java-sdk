@@ -658,6 +658,13 @@ public class StartCloudNoteRequest extends TeaModel {
         @NameInMap("DiarizationEnabled")
         public Boolean diarizationEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b401a5da78e94xxxxc3129425c78b6a5</p>
+         */
+        @NameInMap("PhraseId")
+        public String phraseId;
+
         @NameInMap("SpeakerCount")
         public Integer speakerCount;
 
@@ -679,6 +686,14 @@ public class StartCloudNoteRequest extends TeaModel {
         }
         public Boolean getDiarizationEnabled() {
             return this.diarizationEnabled;
+        }
+
+        public StartCloudNoteRequestTranscription setPhraseId(String phraseId) {
+            this.phraseId = phraseId;
+            return this;
+        }
+        public String getPhraseId() {
+            return this.phraseId;
         }
 
         public StartCloudNoteRequestTranscription setSpeakerCount(Integer speakerCount) {

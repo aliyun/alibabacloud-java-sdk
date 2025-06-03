@@ -16,6 +16,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
     @NameInMap("Backgrounds")
     public java.util.List<UpdateStreamingOutRequestBackgrounds> backgrounds;
 
+    @NameInMap("BgColor")
+    public UpdateStreamingOutRequestBgColor bgColor;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -28,6 +31,13 @@ public class UpdateStreamingOutRequest extends TeaModel {
     @NameInMap("ClockWidgets")
     public java.util.List<UpdateStreamingOutRequestClockWidgets> clockWidgets;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("CropMode")
+    public Integer cropMode;
+
     @NameInMap("Images")
     public java.util.List<UpdateStreamingOutRequestImages> images;
 
@@ -36,6 +46,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
 
     @NameInMap("Panes")
     public java.util.List<UpdateStreamingOutRequestPanes> panes;
+
+    @NameInMap("RegionColor")
+    public UpdateStreamingOutRequestRegionColor regionColor;
 
     /**
      * <p>This parameter is required.</p>
@@ -79,6 +92,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
         return this.backgrounds;
     }
 
+    public UpdateStreamingOutRequest setBgColor(UpdateStreamingOutRequestBgColor bgColor) {
+        this.bgColor = bgColor;
+        return this;
+    }
+    public UpdateStreamingOutRequestBgColor getBgColor() {
+        return this.bgColor;
+    }
+
     public UpdateStreamingOutRequest setChannelId(String channelId) {
         this.channelId = channelId;
         return this;
@@ -93,6 +114,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
     }
     public java.util.List<UpdateStreamingOutRequestClockWidgets> getClockWidgets() {
         return this.clockWidgets;
+    }
+
+    public UpdateStreamingOutRequest setCropMode(Integer cropMode) {
+        this.cropMode = cropMode;
+        return this;
+    }
+    public Integer getCropMode() {
+        return this.cropMode;
     }
 
     public UpdateStreamingOutRequest setImages(java.util.List<UpdateStreamingOutRequestImages> images) {
@@ -117,6 +146,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
     }
     public java.util.List<UpdateStreamingOutRequestPanes> getPanes() {
         return this.panes;
+    }
+
+    public UpdateStreamingOutRequest setRegionColor(UpdateStreamingOutRequestRegionColor regionColor) {
+        this.regionColor = regionColor;
+        return this;
+    }
+    public UpdateStreamingOutRequestRegionColor getRegionColor() {
+        return this.regionColor;
     }
 
     public UpdateStreamingOutRequest setTaskId(String taskId) {
@@ -277,6 +314,59 @@ public class UpdateStreamingOutRequest extends TeaModel {
         }
         public Double getY() {
             return this.y;
+        }
+
+    }
+
+    public static class UpdateStreamingOutRequestBgColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static UpdateStreamingOutRequestBgColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestBgColor self = new UpdateStreamingOutRequestBgColor();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutRequestBgColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public UpdateStreamingOutRequestBgColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public UpdateStreamingOutRequestBgColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }
@@ -1507,6 +1597,59 @@ public class UpdateStreamingOutRequest extends TeaModel {
         }
         public UpdateStreamingOutRequestPanesWhiteboard getWhiteboard() {
             return this.whiteboard;
+        }
+
+    }
+
+    public static class UpdateStreamingOutRequestRegionColor extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("B")
+        public Integer b;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("G")
+        public Integer g;
+
+        /**
+         * <strong>example:</strong>
+         * <p>255</p>
+         */
+        @NameInMap("R")
+        public Integer r;
+
+        public static UpdateStreamingOutRequestRegionColor build(java.util.Map<String, ?> map) throws Exception {
+            UpdateStreamingOutRequestRegionColor self = new UpdateStreamingOutRequestRegionColor();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateStreamingOutRequestRegionColor setB(Integer b) {
+            this.b = b;
+            return this;
+        }
+        public Integer getB() {
+            return this.b;
+        }
+
+        public UpdateStreamingOutRequestRegionColor setG(Integer g) {
+            this.g = g;
+            return this;
+        }
+        public Integer getG() {
+            return this.g;
+        }
+
+        public UpdateStreamingOutRequestRegionColor setR(Integer r) {
+            this.r = r;
+            return this;
+        }
+        public Integer getR() {
+            return this.r;
         }
 
     }
