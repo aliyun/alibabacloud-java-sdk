@@ -566,6 +566,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
 
+        @NameInMap("PolicyGroupIdList")
+        public java.util.List<String> policyGroupIdList;
+
         /**
          * <p>The name of the applied policy.</p>
          * 
@@ -574,6 +577,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         @NameInMap("PolicyGroupName")
         public String policyGroupName;
+
+        @NameInMap("PolicyGroupNameList")
+        public java.util.List<String> policyGroupNameList;
 
         /**
          * <p>The protocol type.</p>
@@ -1022,12 +1028,28 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             return this.policyGroupId;
         }
 
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setPolicyGroupIdList(java.util.List<String> policyGroupIdList) {
+            this.policyGroupIdList = policyGroupIdList;
+            return this;
+        }
+        public java.util.List<String> getPolicyGroupIdList() {
+            return this.policyGroupIdList;
+        }
+
         public DescribeDesktopGroupsResponseBodyDesktopGroups setPolicyGroupName(String policyGroupName) {
             this.policyGroupName = policyGroupName;
             return this;
         }
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setPolicyGroupNameList(java.util.List<String> policyGroupNameList) {
+            this.policyGroupNameList = policyGroupNameList;
+            return this;
+        }
+        public java.util.List<String> getPolicyGroupNameList() {
+            return this.policyGroupNameList;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setProtocolType(String protocolType) {
