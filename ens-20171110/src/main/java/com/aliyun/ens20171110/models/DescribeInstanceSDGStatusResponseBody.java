@@ -92,6 +92,12 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceSDGStatusResponseBodyDeploymentStatus extends TeaModel {
+        @NameInMap("BlockRwSplitSize")
+        public Integer blockRwSplitSize;
+
+        @NameInMap("CacheSize")
+        public Integer cacheSize;
+
         /**
          * <p>The ID of the edge node.</p>
          * 
@@ -158,6 +164,22 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         public static DescribeInstanceSDGStatusResponseBodyDeploymentStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceSDGStatusResponseBodyDeploymentStatus self = new DescribeInstanceSDGStatusResponseBodyDeploymentStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceSDGStatusResponseBodyDeploymentStatus setBlockRwSplitSize(Integer blockRwSplitSize) {
+            this.blockRwSplitSize = blockRwSplitSize;
+            return this;
+        }
+        public Integer getBlockRwSplitSize() {
+            return this.blockRwSplitSize;
+        }
+
+        public DescribeInstanceSDGStatusResponseBodyDeploymentStatus setCacheSize(Integer cacheSize) {
+            this.cacheSize = cacheSize;
+            return this;
+        }
+        public Integer getCacheSize() {
+            return this.cacheSize;
         }
 
         public DescribeInstanceSDGStatusResponseBodyDeploymentStatus setEnsRegionId(String ensRegionId) {

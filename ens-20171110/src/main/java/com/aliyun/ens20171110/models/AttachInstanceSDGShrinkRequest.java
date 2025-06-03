@@ -11,6 +11,9 @@ public class AttachInstanceSDGShrinkRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
+    @NameInMap("LoadOpt")
+    public String loadOptShrink;
+
     /**
      * <p>The ID of the SDG.</p>
      * <p>This parameter is required.</p>
@@ -32,6 +35,14 @@ public class AttachInstanceSDGShrinkRequest extends TeaModel {
     }
     public String getInstanceIdsShrink() {
         return this.instanceIdsShrink;
+    }
+
+    public AttachInstanceSDGShrinkRequest setLoadOptShrink(String loadOptShrink) {
+        this.loadOptShrink = loadOptShrink;
+        return this;
+    }
+    public String getLoadOptShrink() {
+        return this.loadOptShrink;
     }
 
     public AttachInstanceSDGShrinkRequest setSDGId(String SDGId) {

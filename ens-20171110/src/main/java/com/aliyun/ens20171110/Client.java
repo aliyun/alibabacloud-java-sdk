@@ -570,9 +570,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.instanceIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceIds, "InstanceIds", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.loadOpt)) {
+            request.loadOptShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.loadOpt, "LoadOpt", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
             query.put("InstanceIds", request.instanceIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadOptShrink)) {
+            query.put("LoadOpt", request.loadOptShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.SDGId)) {

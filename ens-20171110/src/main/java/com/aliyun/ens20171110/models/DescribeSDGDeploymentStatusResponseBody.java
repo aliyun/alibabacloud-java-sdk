@@ -92,6 +92,12 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeSDGDeploymentStatusResponseBodyDeploymentStatus extends TeaModel {
+        @NameInMap("BlockRwSplitSize")
+        public Integer blockRwSplitSize;
+
+        @NameInMap("CacheSize")
+        public Integer cacheSize;
+
         /**
          * <p>The ID of the AIC instance.</p>
          * 
@@ -160,6 +166,22 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         public static DescribeSDGDeploymentStatusResponseBodyDeploymentStatus build(java.util.Map<String, ?> map) throws Exception {
             DescribeSDGDeploymentStatusResponseBodyDeploymentStatus self = new DescribeSDGDeploymentStatusResponseBodyDeploymentStatus();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setBlockRwSplitSize(Integer blockRwSplitSize) {
+            this.blockRwSplitSize = blockRwSplitSize;
+            return this;
+        }
+        public Integer getBlockRwSplitSize() {
+            return this.blockRwSplitSize;
+        }
+
+        public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setCacheSize(Integer cacheSize) {
+            this.cacheSize = cacheSize;
+            return this;
+        }
+        public Integer getCacheSize() {
+            return this.cacheSize;
         }
 
         public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setInstanceId(String instanceId) {

@@ -11,6 +11,9 @@ public class AttachInstanceSDGRequest extends TeaModel {
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
+    @NameInMap("LoadOpt")
+    public AttachInstanceSDGRequestLoadOpt loadOpt;
+
     /**
      * <p>The ID of the SDG.</p>
      * <p>This parameter is required.</p>
@@ -34,12 +37,72 @@ public class AttachInstanceSDGRequest extends TeaModel {
         return this.instanceIds;
     }
 
+    public AttachInstanceSDGRequest setLoadOpt(AttachInstanceSDGRequestLoadOpt loadOpt) {
+        this.loadOpt = loadOpt;
+        return this;
+    }
+    public AttachInstanceSDGRequestLoadOpt getLoadOpt() {
+        return this.loadOpt;
+    }
+
     public AttachInstanceSDGRequest setSDGId(String SDGId) {
         this.SDGId = SDGId;
         return this;
     }
     public String getSDGId() {
         return this.SDGId;
+    }
+
+    public static class AttachInstanceSDGRequestLoadOpt extends TeaModel {
+        @NameInMap("BlockRwSplit")
+        public Boolean blockRwSplit;
+
+        @NameInMap("BlockRwSplitSize")
+        public Integer blockRwSplitSize;
+
+        @NameInMap("Cache")
+        public Boolean cache;
+
+        @NameInMap("CacheSize")
+        public Integer cacheSize;
+
+        public static AttachInstanceSDGRequestLoadOpt build(java.util.Map<String, ?> map) throws Exception {
+            AttachInstanceSDGRequestLoadOpt self = new AttachInstanceSDGRequestLoadOpt();
+            return TeaModel.build(map, self);
+        }
+
+        public AttachInstanceSDGRequestLoadOpt setBlockRwSplit(Boolean blockRwSplit) {
+            this.blockRwSplit = blockRwSplit;
+            return this;
+        }
+        public Boolean getBlockRwSplit() {
+            return this.blockRwSplit;
+        }
+
+        public AttachInstanceSDGRequestLoadOpt setBlockRwSplitSize(Integer blockRwSplitSize) {
+            this.blockRwSplitSize = blockRwSplitSize;
+            return this;
+        }
+        public Integer getBlockRwSplitSize() {
+            return this.blockRwSplitSize;
+        }
+
+        public AttachInstanceSDGRequestLoadOpt setCache(Boolean cache) {
+            this.cache = cache;
+            return this;
+        }
+        public Boolean getCache() {
+            return this.cache;
+        }
+
+        public AttachInstanceSDGRequestLoadOpt setCacheSize(Integer cacheSize) {
+            this.cacheSize = cacheSize;
+            return this;
+        }
+        public Integer getCacheSize() {
+            return this.cacheSize;
+        }
+
     }
 
 }
