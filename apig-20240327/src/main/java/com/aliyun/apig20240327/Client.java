@@ -2497,6 +2497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("gatewayType", request.gatewayType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeBuiltinAiGateway)) {
+            query.put("includeBuiltinAiGateway", request.includeBuiltinAiGateway);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("pageNumber", request.pageNumber);
         }

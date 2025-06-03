@@ -32,6 +32,9 @@ public class ListPluginsRequest extends TeaModel {
     @NameInMap("gatewayType")
     public String gatewayType;
 
+    @NameInMap("includeBuiltinAiGateway")
+    public Boolean includeBuiltinAiGateway;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -102,6 +105,14 @@ public class ListPluginsRequest extends TeaModel {
     }
     public String getGatewayType() {
         return this.gatewayType;
+    }
+
+    public ListPluginsRequest setIncludeBuiltinAiGateway(Boolean includeBuiltinAiGateway) {
+        this.includeBuiltinAiGateway = includeBuiltinAiGateway;
+        return this;
+    }
+    public Boolean getIncludeBuiltinAiGateway() {
+        return this.includeBuiltinAiGateway;
     }
 
     public ListPluginsRequest setPageNumber(Integer pageNumber) {
