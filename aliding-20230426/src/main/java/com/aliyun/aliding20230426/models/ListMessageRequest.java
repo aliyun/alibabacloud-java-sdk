@@ -29,10 +29,10 @@ public class ListMessageRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>assistantId</p>
+     * <p>assistantId2</p>
      */
-    @NameInMap("originalAssistantid")
-    public String originalAssistantid;
+    @NameInMap("originalAssistantId")
+    public String originalAssistantId;
 
     /**
      * <strong>example:</strong>
@@ -40,6 +40,20 @@ public class ListMessageRequest extends TeaModel {
      */
     @NameInMap("runId")
     public String runId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>agentKey1</p>
+     */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("sourceTypeOfOriginalAssistantId")
+    public String sourceTypeOfOriginalAssistantId;
 
     /**
      * <p>This parameter is required.</p>
@@ -79,12 +93,12 @@ public class ListMessageRequest extends TeaModel {
         return this.order;
     }
 
-    public ListMessageRequest setOriginalAssistantid(String originalAssistantid) {
-        this.originalAssistantid = originalAssistantid;
+    public ListMessageRequest setOriginalAssistantId(String originalAssistantId) {
+        this.originalAssistantId = originalAssistantId;
         return this;
     }
-    public String getOriginalAssistantid() {
-        return this.originalAssistantid;
+    public String getOriginalAssistantId() {
+        return this.originalAssistantId;
     }
 
     public ListMessageRequest setRunId(String runId) {
@@ -93,6 +107,22 @@ public class ListMessageRequest extends TeaModel {
     }
     public String getRunId() {
         return this.runId;
+    }
+
+    public ListMessageRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+        this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    public ListMessageRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+        this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
     }
 
     public ListMessageRequest setThreadId(String threadId) {

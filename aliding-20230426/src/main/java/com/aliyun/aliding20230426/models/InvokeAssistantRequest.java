@@ -15,24 +15,16 @@ public class InvokeAssistantRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>[
-     *     {
-     *         &quot;type&quot;: &quot;text&quot;,
-     *         &quot;text&quot;: &quot;你好&quot;
-     *     }
-     * ]</p>
      */
-    @NameInMap("content")
-    public java.util.List<InvokeAssistantRequestContent> content;
+    @NameInMap("messages")
+    public java.util.List<InvokeAssistantRequestMessages> messages;
 
     /**
      * <strong>example:</strong>
-     * <p>[]</p>
+     * <p>assistantId2</p>
      */
-    @NameInMap("history")
-    public java.util.List<InvokeAssistantRequestHistory> history;
+    @NameInMap("originalAssistantId")
+    public String originalAssistantId;
 
     /**
      * <strong>example:</strong>
@@ -40,6 +32,20 @@ public class InvokeAssistantRequest extends TeaModel {
      */
     @NameInMap("sessionId")
     public String sessionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>agentKey1</p>
+     */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("sourceTypeOfOriginalAssistantId")
+    public String sourceTypeOfOriginalAssistantId;
 
     /**
      * <strong>example:</strong>
@@ -61,20 +67,20 @@ public class InvokeAssistantRequest extends TeaModel {
         return this.assistantId;
     }
 
-    public InvokeAssistantRequest setContent(java.util.List<InvokeAssistantRequestContent> content) {
-        this.content = content;
+    public InvokeAssistantRequest setMessages(java.util.List<InvokeAssistantRequestMessages> messages) {
+        this.messages = messages;
         return this;
     }
-    public java.util.List<InvokeAssistantRequestContent> getContent() {
-        return this.content;
+    public java.util.List<InvokeAssistantRequestMessages> getMessages() {
+        return this.messages;
     }
 
-    public InvokeAssistantRequest setHistory(java.util.List<InvokeAssistantRequestHistory> history) {
-        this.history = history;
+    public InvokeAssistantRequest setOriginalAssistantId(String originalAssistantId) {
+        this.originalAssistantId = originalAssistantId;
         return this;
     }
-    public java.util.List<InvokeAssistantRequestHistory> getHistory() {
-        return this.history;
+    public String getOriginalAssistantId() {
+        return this.originalAssistantId;
     }
 
     public InvokeAssistantRequest setSessionId(String sessionId) {
@@ -85,6 +91,22 @@ public class InvokeAssistantRequest extends TeaModel {
         return this.sessionId;
     }
 
+    public InvokeAssistantRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+        this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    public InvokeAssistantRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+        this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
+    }
+
     public InvokeAssistantRequest setStream(Boolean stream) {
         this.stream = stream;
         return this;
@@ -93,8 +115,10 @@ public class InvokeAssistantRequest extends TeaModel {
         return this.stream;
     }
 
-    public static class InvokeAssistantRequestContentCardCallback extends TeaModel {
+    public static class InvokeAssistantRequestMessagesContentCardCallback extends TeaModel {
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -102,25 +126,20 @@ public class InvokeAssistantRequest extends TeaModel {
         public String content;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>templateId123</p>
+         * <p>aliding_messageId123</p>
          */
-        @NameInMap("templateId")
-        public String templateId;
+        @NameInMap("relatedMessageId")
+        public String relatedMessageId;
 
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
-        @NameInMap("userId")
-        public String userId;
-
-        public static InvokeAssistantRequestContentCardCallback build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestContentCardCallback self = new InvokeAssistantRequestContentCardCallback();
+        public static InvokeAssistantRequestMessagesContentCardCallback build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentCardCallback self = new InvokeAssistantRequestMessagesContentCardCallback();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestContentCardCallback setContent(String content) {
+        public InvokeAssistantRequestMessagesContentCardCallback setContent(String content) {
             this.content = content;
             return this;
         }
@@ -128,32 +147,17 @@ public class InvokeAssistantRequest extends TeaModel {
             return this.content;
         }
 
-        public InvokeAssistantRequestContentCardCallback setTemplateId(String templateId) {
-            this.templateId = templateId;
+        public InvokeAssistantRequestMessagesContentCardCallback setRelatedMessageId(String relatedMessageId) {
+            this.relatedMessageId = relatedMessageId;
             return this;
         }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
-        public InvokeAssistantRequestContentCardCallback setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
+        public String getRelatedMessageId() {
+            return this.relatedMessageId;
         }
 
     }
 
-    public static class InvokeAssistantRequestContentDingCard extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>卡片描述</p>
-         */
-        @NameInMap("cardDesc")
-        public String cardDesc;
-
+    public static class InvokeAssistantRequestMessagesContentDingCard extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p>{}</p>
@@ -184,20 +188,12 @@ public class InvokeAssistantRequest extends TeaModel {
         @NameInMap("templateId")
         public String templateId;
 
-        public static InvokeAssistantRequestContentDingCard build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestContentDingCard self = new InvokeAssistantRequestContentDingCard();
+        public static InvokeAssistantRequestMessagesContentDingCard build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentDingCard self = new InvokeAssistantRequestMessagesContentDingCard();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestContentDingCard setCardDesc(String cardDesc) {
-            this.cardDesc = cardDesc;
-            return this;
-        }
-        public String getCardDesc() {
-            return this.cardDesc;
-        }
-
-        public InvokeAssistantRequestContentDingCard setContent(String content) {
+        public InvokeAssistantRequestMessagesContentDingCard setContent(String content) {
             this.content = content;
             return this;
         }
@@ -205,7 +201,7 @@ public class InvokeAssistantRequest extends TeaModel {
             return this.content;
         }
 
-        public InvokeAssistantRequestContentDingCard setContentType(String contentType) {
+        public InvokeAssistantRequestMessagesContentDingCard setContentType(String contentType) {
             this.contentType = contentType;
             return this;
         }
@@ -213,7 +209,7 @@ public class InvokeAssistantRequest extends TeaModel {
             return this.contentType;
         }
 
-        public InvokeAssistantRequestContentDingCard setFinished(Boolean finished) {
+        public InvokeAssistantRequestMessagesContentDingCard setFinished(Boolean finished) {
             this.finished = finished;
             return this;
         }
@@ -221,7 +217,7 @@ public class InvokeAssistantRequest extends TeaModel {
             return this.finished;
         }
 
-        public InvokeAssistantRequestContentDingCard setTemplateId(String templateId) {
+        public InvokeAssistantRequestMessagesContentDingCard setTemplateId(String templateId) {
             this.templateId = templateId;
             return this;
         }
@@ -231,56 +227,257 @@ public class InvokeAssistantRequest extends TeaModel {
 
     }
 
-    public static class InvokeAssistantRequestContentImageUrl extends TeaModel {
+    public static class InvokeAssistantRequestMessagesContentDingNormalCardCardData extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>auto</p>
+         * <p>{}</p>
          */
-        @NameInMap("detail")
-        public String detail;
+        @NameInMap("cardParamMap")
+        public java.util.Map<String, ?> cardParamMap;
 
-        @NameInMap("imageDesc")
-        public String imageDesc;
-
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://img.alicdn.com/1234.png">https://img.alicdn.com/1234.png</a></p>
-         */
-        @NameInMap("url")
-        public String url;
-
-        public static InvokeAssistantRequestContentImageUrl build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestContentImageUrl self = new InvokeAssistantRequestContentImageUrl();
+        public static InvokeAssistantRequestMessagesContentDingNormalCardCardData build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentDingNormalCardCardData self = new InvokeAssistantRequestMessagesContentDingNormalCardCardData();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestContentImageUrl setDetail(String detail) {
-            this.detail = detail;
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardData setCardParamMap(java.util.Map<String, ?> cardParamMap) {
+            this.cardParamMap = cardParamMap;
             return this;
         }
-        public String getDetail() {
-            return this.detail;
-        }
-
-        public InvokeAssistantRequestContentImageUrl setImageDesc(String imageDesc) {
-            this.imageDesc = imageDesc;
-            return this;
-        }
-        public String getImageDesc() {
-            return this.imageDesc;
-        }
-
-        public InvokeAssistantRequestContentImageUrl setUrl(String url) {
-            this.url = url;
-            return this;
-        }
-        public String getUrl() {
-            return this.url;
+        public java.util.Map<String, ?> getCardParamMap() {
+            return this.cardParamMap;
         }
 
     }
 
-    public static class InvokeAssistantRequestContentMarkdown extends TeaModel {
+    public static class InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("updateCardDataByKey")
+        public Boolean updateCardDataByKey;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("updatePrivateDataByKey")
+        public Boolean updatePrivateDataByKey;
+
+        public static InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions self = new InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions setUpdateCardDataByKey(Boolean updateCardDataByKey) {
+            this.updateCardDataByKey = updateCardDataByKey;
+            return this;
+        }
+        public Boolean getUpdateCardDataByKey() {
+            return this.updateCardDataByKey;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions setUpdatePrivateDataByKey(Boolean updatePrivateDataByKey) {
+            this.updatePrivateDataByKey = updatePrivateDataByKey;
+            return this;
+        }
+        public Boolean getUpdatePrivateDataByKey() {
+            return this.updatePrivateDataByKey;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("interval")
+        public Integer interval;
+
+        /**
+         * <strong>example:</strong>
+         * <p>NONE</p>
+         */
+        @NameInMap("pullStrategy")
+        public String pullStrategy;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SECONDS</p>
+         */
+        @NameInMap("timeUnit")
+        public String timeUnit;
+
+        public static InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig self = new InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig setInterval(Integer interval) {
+            this.interval = interval;
+            return this;
+        }
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig setPullStrategy(String pullStrategy) {
+            this.pullStrategy = pullStrategy;
+            return this;
+        }
+        public String getPullStrategy() {
+            return this.pullStrategy;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig setTimeUnit(String timeUnit) {
+            this.timeUnit = timeUnit;
+            return this;
+        }
+        public String getTimeUnit() {
+            return this.timeUnit;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("constParams")
+        public java.util.Map<String, ?> constParams;
+
+        /**
+         * <strong>example:</strong>
+         * <p>dynamicDataSourceId1</p>
+         */
+        @NameInMap("dynamicDataSourceId")
+        public String dynamicDataSourceId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("pullConfig")
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig pullConfig;
+
+        public static InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs self = new InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs setConstParams(java.util.Map<String, ?> constParams) {
+            this.constParams = constParams;
+            return this;
+        }
+        public java.util.Map<String, ?> getConstParams() {
+            return this.constParams;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs setDynamicDataSourceId(String dynamicDataSourceId) {
+            this.dynamicDataSourceId = dynamicDataSourceId;
+            return this;
+        }
+        public String getDynamicDataSourceId() {
+            return this.dynamicDataSourceId;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs setPullConfig(InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig pullConfig) {
+            this.pullConfig = pullConfig;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigsPullConfig getPullConfig() {
+            return this.pullConfig;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentDingNormalCard extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("cardData")
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardData cardData;
+
+        /**
+         * <strong>example:</strong>
+         * <p>templateId1</p>
+         */
+        @NameInMap("cardTemplateId")
+        public String cardTemplateId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("cardUpdateOptions")
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions cardUpdateOptions;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("dynamicDataSourceConfigs")
+        public java.util.List<InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs> dynamicDataSourceConfigs;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("privateData")
+        public java.util.Map<String, java.util.Map<String, ?>> privateData;
+
+        public static InvokeAssistantRequestMessagesContentDingNormalCard build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentDingNormalCard self = new InvokeAssistantRequestMessagesContentDingNormalCard();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCard setCardData(InvokeAssistantRequestMessagesContentDingNormalCardCardData cardData) {
+            this.cardData = cardData;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardData getCardData() {
+            return this.cardData;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCard setCardTemplateId(String cardTemplateId) {
+            this.cardTemplateId = cardTemplateId;
+            return this;
+        }
+        public String getCardTemplateId() {
+            return this.cardTemplateId;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCard setCardUpdateOptions(InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions cardUpdateOptions) {
+            this.cardUpdateOptions = cardUpdateOptions;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentDingNormalCardCardUpdateOptions getCardUpdateOptions() {
+            return this.cardUpdateOptions;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCard setDynamicDataSourceConfigs(java.util.List<InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs> dynamicDataSourceConfigs) {
+            this.dynamicDataSourceConfigs = dynamicDataSourceConfigs;
+            return this;
+        }
+        public java.util.List<InvokeAssistantRequestMessagesContentDingNormalCardDynamicDataSourceConfigs> getDynamicDataSourceConfigs() {
+            return this.dynamicDataSourceConfigs;
+        }
+
+        public InvokeAssistantRequestMessagesContentDingNormalCard setPrivateData(java.util.Map<String, java.util.Map<String, ?>> privateData) {
+            this.privateData = privateData;
+            return this;
+        }
+        public java.util.Map<String, java.util.Map<String, ?>> getPrivateData() {
+            return this.privateData;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentMarkdown extends TeaModel {
         /**
          * <strong>example:</strong>
          * <ol>
@@ -291,12 +488,12 @@ public class InvokeAssistantRequest extends TeaModel {
         @NameInMap("value")
         public String value;
 
-        public static InvokeAssistantRequestContentMarkdown build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestContentMarkdown self = new InvokeAssistantRequestContentMarkdown();
+        public static InvokeAssistantRequestMessagesContentMarkdown build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentMarkdown self = new InvokeAssistantRequestMessagesContentMarkdown();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestContentMarkdown setValue(String value) {
+        public InvokeAssistantRequestMessagesContentMarkdown setValue(String value) {
             this.value = value;
             return this;
         }
@@ -306,287 +503,80 @@ public class InvokeAssistantRequest extends TeaModel {
 
     }
 
-    public static class InvokeAssistantRequestContentText extends TeaModel {
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsDataPart extends TeaModel {
+        @NameInMap("data")
+        public Object data;
+
+        public static InvokeAssistantRequestMessagesContentStructViewPartsDataPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsDataPart self = new InvokeAssistantRequestMessagesContentStructViewPartsDataPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsDataPart setData(Object data) {
+            this.data = data;
+            return this;
+        }
+        public Object getData() {
+            return this.data;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsReasonPart extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>你好！</p>
+         * <p>123123</p>
          */
-        @NameInMap("value")
-        public String value;
+        @NameInMap("reason")
+        public String reason;
 
-        public static InvokeAssistantRequestContentText build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestContentText self = new InvokeAssistantRequestContentText();
+        public static InvokeAssistantRequestMessagesContentStructViewPartsReasonPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsReasonPart self = new InvokeAssistantRequestMessagesContentStructViewPartsReasonPart();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestContentText setValue(String value) {
-            this.value = value;
+        public InvokeAssistantRequestMessagesContentStructViewPartsReasonPart setReason(String reason) {
+            this.reason = reason;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getReason() {
+            return this.reason;
         }
 
     }
 
-    public static class InvokeAssistantRequestContent extends TeaModel {
-        @NameInMap("cardCallback")
-        public InvokeAssistantRequestContentCardCallback cardCallback;
-
-        @NameInMap("dingCard")
-        public InvokeAssistantRequestContentDingCard dingCard;
-
-        @NameInMap("imageUrl")
-        public InvokeAssistantRequestContentImageUrl imageUrl;
-
-        @NameInMap("markdown")
-        public InvokeAssistantRequestContentMarkdown markdown;
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends extends TeaModel {
+        @NameInMap("mobileUrl")
+        public String mobileUrl;
 
         @NameInMap("text")
-        public InvokeAssistantRequestContentText text;
+        public String text;
 
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>text</p>
-         */
-        @NameInMap("type")
-        public String type;
-
-        public static InvokeAssistantRequestContent build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestContent self = new InvokeAssistantRequestContent();
-            return TeaModel.build(map, self);
-        }
-
-        public InvokeAssistantRequestContent setCardCallback(InvokeAssistantRequestContentCardCallback cardCallback) {
-            this.cardCallback = cardCallback;
-            return this;
-        }
-        public InvokeAssistantRequestContentCardCallback getCardCallback() {
-            return this.cardCallback;
-        }
-
-        public InvokeAssistantRequestContent setDingCard(InvokeAssistantRequestContentDingCard dingCard) {
-            this.dingCard = dingCard;
-            return this;
-        }
-        public InvokeAssistantRequestContentDingCard getDingCard() {
-            return this.dingCard;
-        }
-
-        public InvokeAssistantRequestContent setImageUrl(InvokeAssistantRequestContentImageUrl imageUrl) {
-            this.imageUrl = imageUrl;
-            return this;
-        }
-        public InvokeAssistantRequestContentImageUrl getImageUrl() {
-            return this.imageUrl;
-        }
-
-        public InvokeAssistantRequestContent setMarkdown(InvokeAssistantRequestContentMarkdown markdown) {
-            this.markdown = markdown;
-            return this;
-        }
-        public InvokeAssistantRequestContentMarkdown getMarkdown() {
-            return this.markdown;
-        }
-
-        public InvokeAssistantRequestContent setText(InvokeAssistantRequestContentText text) {
-            this.text = text;
-            return this;
-        }
-        public InvokeAssistantRequestContentText getText() {
-            return this.text;
-        }
-
-        public InvokeAssistantRequestContent setType(String type) {
-            this.type = type;
-            return this;
-        }
-        public String getType() {
-            return this.type;
-        }
-
-    }
-
-    public static class InvokeAssistantRequestHistoryContentCardCallback extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
-        @NameInMap("content")
-        public String content;
-
-        /**
-         * <strong>example:</strong>
-         * <p>templateId123</p>
-         */
-        @NameInMap("templateId")
-        public String templateId;
-
-        /**
-         * <strong>example:</strong>
-         * <p>012345</p>
-         */
-        @NameInMap("userId")
-        public String userId;
-
-        public static InvokeAssistantRequestHistoryContentCardCallback build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistoryContentCardCallback self = new InvokeAssistantRequestHistoryContentCardCallback();
-            return TeaModel.build(map, self);
-        }
-
-        public InvokeAssistantRequestHistoryContentCardCallback setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public InvokeAssistantRequestHistoryContentCardCallback setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
-        public InvokeAssistantRequestHistoryContentCardCallback setUserId(String userId) {
-            this.userId = userId;
-            return this;
-        }
-        public String getUserId() {
-            return this.userId;
-        }
-
-    }
-
-    public static class InvokeAssistantRequestHistoryContentDingCard extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>卡片描述</p>
-         */
-        @NameInMap("cardDesc")
-        public String cardDesc;
-
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
-        @NameInMap("content")
-        public String content;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>basic_card_schema</p>
-         */
-        @NameInMap("contentType")
-        public String contentType;
-
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("finished")
-        public Boolean finished;
-
-        /**
-         * <strong>example:</strong>
-         * <p>templateId123</p>
-         */
-        @NameInMap("templateId")
-        public String templateId;
-
-        public static InvokeAssistantRequestHistoryContentDingCard build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistoryContentDingCard self = new InvokeAssistantRequestHistoryContentDingCard();
-            return TeaModel.build(map, self);
-        }
-
-        public InvokeAssistantRequestHistoryContentDingCard setCardDesc(String cardDesc) {
-            this.cardDesc = cardDesc;
-            return this;
-        }
-        public String getCardDesc() {
-            return this.cardDesc;
-        }
-
-        public InvokeAssistantRequestHistoryContentDingCard setContent(String content) {
-            this.content = content;
-            return this;
-        }
-        public String getContent() {
-            return this.content;
-        }
-
-        public InvokeAssistantRequestHistoryContentDingCard setContentType(String contentType) {
-            this.contentType = contentType;
-            return this;
-        }
-        public String getContentType() {
-            return this.contentType;
-        }
-
-        public InvokeAssistantRequestHistoryContentDingCard setFinished(Boolean finished) {
-            this.finished = finished;
-            return this;
-        }
-        public Boolean getFinished() {
-            return this.finished;
-        }
-
-        public InvokeAssistantRequestHistoryContentDingCard setTemplateId(String templateId) {
-            this.templateId = templateId;
-            return this;
-        }
-        public String getTemplateId() {
-            return this.templateId;
-        }
-
-    }
-
-    public static class InvokeAssistantRequestHistoryContentImageUrl extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>auto</p>
-         */
-        @NameInMap("detail")
-        public String detail;
-
-        @NameInMap("imageDesc")
-        public String imageDesc;
-
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://img.alicdn.com/1234.png">https://img.alicdn.com/1234.png</a></p>
-         */
         @NameInMap("url")
         public String url;
 
-        public static InvokeAssistantRequestHistoryContentImageUrl build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistoryContentImageUrl self = new InvokeAssistantRequestHistoryContentImageUrl();
+        public static InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends self = new InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestHistoryContentImageUrl setDetail(String detail) {
-            this.detail = detail;
+        public InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends setMobileUrl(String mobileUrl) {
+            this.mobileUrl = mobileUrl;
             return this;
         }
-        public String getDetail() {
-            return this.detail;
+        public String getMobileUrl() {
+            return this.mobileUrl;
         }
 
-        public InvokeAssistantRequestHistoryContentImageUrl setImageDesc(String imageDesc) {
-            this.imageDesc = imageDesc;
+        public InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends setText(String text) {
+            this.text = text;
             return this;
         }
-        public String getImageDesc() {
-            return this.imageDesc;
+        public String getText() {
+            return this.text;
         }
 
-        public InvokeAssistantRequestHistoryContentImageUrl setUrl(String url) {
+        public InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends setUrl(String url) {
             this.url = url;
             return this;
         }
@@ -596,126 +586,319 @@ public class InvokeAssistantRequest extends TeaModel {
 
     }
 
-    public static class InvokeAssistantRequestHistoryContentMarkdown extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <ol>
-         * <li>markdown内容</li>
-         * <li>markdown内容</li>
-         * </ol>
-         */
-        @NameInMap("value")
-        public String value;
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart extends TeaModel {
+        @NameInMap("recommends")
+        public java.util.List<InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends> recommends;
 
-        public static InvokeAssistantRequestHistoryContentMarkdown build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistoryContentMarkdown self = new InvokeAssistantRequestHistoryContentMarkdown();
+        public static InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart self = new InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestHistoryContentMarkdown setValue(String value) {
-            this.value = value;
+        public InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart setRecommends(java.util.List<InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends> recommends) {
+            this.recommends = recommends;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public java.util.List<InvokeAssistantRequestMessagesContentStructViewPartsRecommendPartRecommends> getRecommends() {
+            return this.recommends;
         }
 
     }
 
-    public static class InvokeAssistantRequestHistoryContentText extends TeaModel {
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>你好！</p>
+         * <p>0</p>
          */
-        @NameInMap("value")
-        public String value;
+        @NameInMap("index")
+        public String index;
 
-        public static InvokeAssistantRequestHistoryContentText build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistoryContentText self = new InvokeAssistantRequestHistoryContentText();
+        /**
+         * <strong>example:</strong>
+         * <p>mcp是....</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ata</p>
+         */
+        @NameInMap("sourceCode")
+        public String sourceCode;
+
+        @NameInMap("sourceIcon")
+        public String sourceIcon;
+
+        /**
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
+        @NameInMap("summary")
+        public String summary;
+
+        /**
+         * <strong>example:</strong>
+         * <p>《mcp原理介绍》</p>
+         */
+        @NameInMap("title")
+        public String title;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://taobao.com">https://taobao.com</a></p>
+         */
+        @NameInMap("url")
+        public String url;
+
+        public static InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences self = new InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestHistoryContentText setValue(String value) {
-            this.value = value;
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setIndex(String index) {
+            this.index = index;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getIndex() {
+            return this.index;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setSourceCode(String sourceCode) {
+            this.sourceCode = sourceCode;
+            return this;
+        }
+        public String getSourceCode() {
+            return this.sourceCode;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setSourceIcon(String sourceIcon) {
+            this.sourceIcon = sourceIcon;
+            return this;
+        }
+        public String getSourceIcon() {
+            return this.sourceIcon;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
 
-    public static class InvokeAssistantRequestHistoryContent extends TeaModel {
-        @NameInMap("cardCallback")
-        public InvokeAssistantRequestHistoryContentCardCallback cardCallback;
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsReferencePart extends TeaModel {
+        @NameInMap("references")
+        public java.util.List<InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences> references;
 
-        @NameInMap("dingCard")
-        public InvokeAssistantRequestHistoryContentDingCard dingCard;
+        public static InvokeAssistantRequestMessagesContentStructViewPartsReferencePart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsReferencePart self = new InvokeAssistantRequestMessagesContentStructViewPartsReferencePart();
+            return TeaModel.build(map, self);
+        }
 
-        @NameInMap("imageUrl")
-        public InvokeAssistantRequestHistoryContentImageUrl imageUrl;
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePart setReferences(java.util.List<InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences> references) {
+            this.references = references;
+            return this;
+        }
+        public java.util.List<InvokeAssistantRequestMessagesContentStructViewPartsReferencePartReferences> getReferences() {
+            return this.references;
+        }
 
-        @NameInMap("markdown")
-        public InvokeAssistantRequestHistoryContentMarkdown markdown;
+    }
 
+    public static class InvokeAssistantRequestMessagesContentStructViewPartsTextPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
         @NameInMap("text")
-        public InvokeAssistantRequestHistoryContentText text;
+        public String text;
+
+        public static InvokeAssistantRequestMessagesContentStructViewPartsTextPart build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewPartsTextPart self = new InvokeAssistantRequestMessagesContentStructViewPartsTextPart();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewPartsTextPart setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentStructViewParts extends TeaModel {
+        @NameInMap("append")
+        public Boolean append;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("dataPart")
+        public InvokeAssistantRequestMessagesContentStructViewPartsDataPart dataPart;
+
+        @NameInMap("finish")
+        public Boolean finish;
+
+        /**
+         * <strong>example:</strong>
+         * <p>这是正文内容部分</p>
+         */
+        @NameInMap("partDesc")
+        public String partDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>artifactId123</p>
+         */
+        @NameInMap("partId")
+        public String partId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("reasonPart")
+        public InvokeAssistantRequestMessagesContentStructViewPartsReasonPart reasonPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("recommendPart")
+        public InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart recommendPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("referencePart")
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePart referencePart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("textPart")
+        public InvokeAssistantRequestMessagesContentStructViewPartsTextPart textPart;
 
         /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>text</p>
+         * <p>textPart</p>
          */
         @NameInMap("type")
         public String type;
 
-        public static InvokeAssistantRequestHistoryContent build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistoryContent self = new InvokeAssistantRequestHistoryContent();
+        public static InvokeAssistantRequestMessagesContentStructViewParts build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructViewParts self = new InvokeAssistantRequestMessagesContentStructViewParts();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestHistoryContent setCardCallback(InvokeAssistantRequestHistoryContentCardCallback cardCallback) {
-            this.cardCallback = cardCallback;
+        public InvokeAssistantRequestMessagesContentStructViewParts setAppend(Boolean append) {
+            this.append = append;
             return this;
         }
-        public InvokeAssistantRequestHistoryContentCardCallback getCardCallback() {
-            return this.cardCallback;
+        public Boolean getAppend() {
+            return this.append;
         }
 
-        public InvokeAssistantRequestHistoryContent setDingCard(InvokeAssistantRequestHistoryContentDingCard dingCard) {
-            this.dingCard = dingCard;
+        public InvokeAssistantRequestMessagesContentStructViewParts setDataPart(InvokeAssistantRequestMessagesContentStructViewPartsDataPart dataPart) {
+            this.dataPart = dataPart;
             return this;
         }
-        public InvokeAssistantRequestHistoryContentDingCard getDingCard() {
-            return this.dingCard;
+        public InvokeAssistantRequestMessagesContentStructViewPartsDataPart getDataPart() {
+            return this.dataPart;
         }
 
-        public InvokeAssistantRequestHistoryContent setImageUrl(InvokeAssistantRequestHistoryContentImageUrl imageUrl) {
-            this.imageUrl = imageUrl;
+        public InvokeAssistantRequestMessagesContentStructViewParts setFinish(Boolean finish) {
+            this.finish = finish;
             return this;
         }
-        public InvokeAssistantRequestHistoryContentImageUrl getImageUrl() {
-            return this.imageUrl;
+        public Boolean getFinish() {
+            return this.finish;
         }
 
-        public InvokeAssistantRequestHistoryContent setMarkdown(InvokeAssistantRequestHistoryContentMarkdown markdown) {
-            this.markdown = markdown;
+        public InvokeAssistantRequestMessagesContentStructViewParts setPartDesc(String partDesc) {
+            this.partDesc = partDesc;
             return this;
         }
-        public InvokeAssistantRequestHistoryContentMarkdown getMarkdown() {
-            return this.markdown;
+        public String getPartDesc() {
+            return this.partDesc;
         }
 
-        public InvokeAssistantRequestHistoryContent setText(InvokeAssistantRequestHistoryContentText text) {
-            this.text = text;
+        public InvokeAssistantRequestMessagesContentStructViewParts setPartId(String partId) {
+            this.partId = partId;
             return this;
         }
-        public InvokeAssistantRequestHistoryContentText getText() {
-            return this.text;
+        public String getPartId() {
+            return this.partId;
         }
 
-        public InvokeAssistantRequestHistoryContent setType(String type) {
+        public InvokeAssistantRequestMessagesContentStructViewParts setReasonPart(InvokeAssistantRequestMessagesContentStructViewPartsReasonPart reasonPart) {
+            this.reasonPart = reasonPart;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentStructViewPartsReasonPart getReasonPart() {
+            return this.reasonPart;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewParts setRecommendPart(InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart recommendPart) {
+            this.recommendPart = recommendPart;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentStructViewPartsRecommendPart getRecommendPart() {
+            return this.recommendPart;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewParts setReferencePart(InvokeAssistantRequestMessagesContentStructViewPartsReferencePart referencePart) {
+            this.referencePart = referencePart;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentStructViewPartsReferencePart getReferencePart() {
+            return this.referencePart;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewParts setTextPart(InvokeAssistantRequestMessagesContentStructViewPartsTextPart textPart) {
+            this.textPart = textPart;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentStructViewPartsTextPart getTextPart() {
+            return this.textPart;
+        }
+
+        public InvokeAssistantRequestMessagesContentStructViewParts setType(String type) {
             this.type = type;
             return this;
         }
@@ -725,9 +908,160 @@ public class InvokeAssistantRequest extends TeaModel {
 
     }
 
-    public static class InvokeAssistantRequestHistory extends TeaModel {
+    public static class InvokeAssistantRequestMessagesContentStructView extends TeaModel {
+        @NameInMap("parts")
+        public java.util.List<InvokeAssistantRequestMessagesContentStructViewParts> parts;
+
+        public static InvokeAssistantRequestMessagesContentStructView build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentStructView self = new InvokeAssistantRequestMessagesContentStructView();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentStructView setParts(java.util.List<InvokeAssistantRequestMessagesContentStructViewParts> parts) {
+            this.parts = parts;
+            return this;
+        }
+        public java.util.List<InvokeAssistantRequestMessagesContentStructViewParts> getParts() {
+            return this.parts;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContentText extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>你好！</p>
+         */
+        @NameInMap("value")
+        public String value;
+
+        public static InvokeAssistantRequestMessagesContentText build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContentText self = new InvokeAssistantRequestMessagesContentText();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContentText setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessagesContent extends TeaModel {
+        @NameInMap("cardCallback")
+        public InvokeAssistantRequestMessagesContentCardCallback cardCallback;
+
+        @NameInMap("dingCard")
+        public InvokeAssistantRequestMessagesContentDingCard dingCard;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("dingNormalCard")
+        public InvokeAssistantRequestMessagesContentDingNormalCard dingNormalCard;
+
+        @NameInMap("markdown")
+        public InvokeAssistantRequestMessagesContentMarkdown markdown;
+
+        @NameInMap("structView")
+        public InvokeAssistantRequestMessagesContentStructView structView;
+
+        @NameInMap("text")
+        public InvokeAssistantRequestMessagesContentText text;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>枚举字段，可为：text,markdown,cardCallback,dingCard,agentArtifact,dingNormalCard</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static InvokeAssistantRequestMessagesContent build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessagesContent self = new InvokeAssistantRequestMessagesContent();
+            return TeaModel.build(map, self);
+        }
+
+        public InvokeAssistantRequestMessagesContent setCardCallback(InvokeAssistantRequestMessagesContentCardCallback cardCallback) {
+            this.cardCallback = cardCallback;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentCardCallback getCardCallback() {
+            return this.cardCallback;
+        }
+
+        public InvokeAssistantRequestMessagesContent setDingCard(InvokeAssistantRequestMessagesContentDingCard dingCard) {
+            this.dingCard = dingCard;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentDingCard getDingCard() {
+            return this.dingCard;
+        }
+
+        public InvokeAssistantRequestMessagesContent setDingNormalCard(InvokeAssistantRequestMessagesContentDingNormalCard dingNormalCard) {
+            this.dingNormalCard = dingNormalCard;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentDingNormalCard getDingNormalCard() {
+            return this.dingNormalCard;
+        }
+
+        public InvokeAssistantRequestMessagesContent setMarkdown(InvokeAssistantRequestMessagesContentMarkdown markdown) {
+            this.markdown = markdown;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentMarkdown getMarkdown() {
+            return this.markdown;
+        }
+
+        public InvokeAssistantRequestMessagesContent setStructView(InvokeAssistantRequestMessagesContentStructView structView) {
+            this.structView = structView;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentStructView getStructView() {
+            return this.structView;
+        }
+
+        public InvokeAssistantRequestMessagesContent setText(InvokeAssistantRequestMessagesContentText text) {
+            this.text = text;
+            return this;
+        }
+        public InvokeAssistantRequestMessagesContentText getText() {
+            return this.text;
+        }
+
+        public InvokeAssistantRequestMessagesContent setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class InvokeAssistantRequestMessages extends TeaModel {
         @NameInMap("content")
-        public java.util.List<InvokeAssistantRequestHistoryContent> content;
+        public InvokeAssistantRequestMessagesContent content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>这是一张小猫钓鱼图</p>
+         */
+        @NameInMap("contentDesc")
+        public String contentDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1642448000000</p>
+         */
+        @NameInMap("createAt")
+        public Long createAt;
 
         /**
          * <strong>example:</strong>
@@ -736,20 +1070,36 @@ public class InvokeAssistantRequest extends TeaModel {
         @NameInMap("role")
         public String role;
 
-        public static InvokeAssistantRequestHistory build(java.util.Map<String, ?> map) throws Exception {
-            InvokeAssistantRequestHistory self = new InvokeAssistantRequestHistory();
+        public static InvokeAssistantRequestMessages build(java.util.Map<String, ?> map) throws Exception {
+            InvokeAssistantRequestMessages self = new InvokeAssistantRequestMessages();
             return TeaModel.build(map, self);
         }
 
-        public InvokeAssistantRequestHistory setContent(java.util.List<InvokeAssistantRequestHistoryContent> content) {
+        public InvokeAssistantRequestMessages setContent(InvokeAssistantRequestMessagesContent content) {
             this.content = content;
             return this;
         }
-        public java.util.List<InvokeAssistantRequestHistoryContent> getContent() {
+        public InvokeAssistantRequestMessagesContent getContent() {
             return this.content;
         }
 
-        public InvokeAssistantRequestHistory setRole(String role) {
+        public InvokeAssistantRequestMessages setContentDesc(String contentDesc) {
+            this.contentDesc = contentDesc;
+            return this;
+        }
+        public String getContentDesc() {
+            return this.contentDesc;
+        }
+
+        public InvokeAssistantRequestMessages setCreateAt(Long createAt) {
+            this.createAt = createAt;
+            return this;
+        }
+        public Long getCreateAt() {
+            return this.createAt;
+        }
+
+        public InvokeAssistantRequestMessages setRole(String role) {
             this.role = role;
             return this;
         }

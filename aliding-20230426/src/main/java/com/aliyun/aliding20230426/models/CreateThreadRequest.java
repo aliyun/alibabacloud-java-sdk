@@ -15,17 +15,20 @@ public class CreateThreadRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>{}</p>
-     */
-    @NameInMap("metadata")
-    public java.util.Map<String, ?> metadata;
-
-    /**
-     * <strong>example:</strong>
      * <p>assistantId</p>
      */
     @NameInMap("originalAssistantId")
     public String originalAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>agentKey1</p>
+     */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    @NameInMap("sourceTypeOfOriginalAssistantId")
+    public Integer sourceTypeOfOriginalAssistantId;
 
     public static CreateThreadRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateThreadRequest self = new CreateThreadRequest();
@@ -40,20 +43,28 @@ public class CreateThreadRequest extends TeaModel {
         return this.assistantId;
     }
 
-    public CreateThreadRequest setMetadata(java.util.Map<String, ?> metadata) {
-        this.metadata = metadata;
-        return this;
-    }
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
-    }
-
     public CreateThreadRequest setOriginalAssistantId(String originalAssistantId) {
         this.originalAssistantId = originalAssistantId;
         return this;
     }
     public String getOriginalAssistantId() {
         return this.originalAssistantId;
+    }
+
+    public CreateThreadRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+        this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    public CreateThreadRequest setSourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {
+        this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
+        return this;
+    }
+    public Integer getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
     }
 
 }

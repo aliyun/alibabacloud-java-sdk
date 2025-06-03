@@ -27,20 +27,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>id1</p>
-     */
-    @NameInMap("id")
-    public String id;
-
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
-    @NameInMap("metadata")
-    public java.util.Map<String, ?> metadata;
-
-    /**
-     * <strong>example:</strong>
      * <p>requestId</p>
      */
     @NameInMap("requestId")
@@ -75,22 +61,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         return this.capabilityAssessment;
     }
 
-    public GetAssistantCapabilityResponseBody setId(String id) {
-        this.id = id;
-        return this;
-    }
-    public String getId() {
-        return this.id;
-    }
-
-    public GetAssistantCapabilityResponseBody setMetadata(java.util.Map<String, ?> metadata) {
-        this.metadata = metadata;
-        return this;
-    }
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
-    }
-
     public GetAssistantCapabilityResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -113,13 +83,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
          */
         @NameInMap("description")
         public String description;
-
-        /**
-         * <strong>example:</strong>
-         * <p>{}</p>
-         */
-        @NameInMap("metadata")
-        public java.util.Map<String, ?> metadata;
 
         /**
          * <strong>example:</strong>
@@ -147,14 +110,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
-        }
-
-        public GetAssistantCapabilityResponseBodyCapabilityAssessmentCapabilityList setMetadata(java.util.Map<String, ?> metadata) {
-            this.metadata = metadata;
-            return this;
-        }
-        public java.util.Map<String, ?> getMetadata() {
-            return this.metadata;
         }
 
         public GetAssistantCapabilityResponseBodyCapabilityAssessmentCapabilityList setName(String name) {

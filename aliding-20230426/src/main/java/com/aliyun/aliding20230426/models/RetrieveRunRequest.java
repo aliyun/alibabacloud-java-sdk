@@ -28,13 +28,18 @@ public class RetrieveRunRequest extends TeaModel {
     public String runId;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>threadId123</p>
+     * <p>agentKey1</p>
      */
-    @NameInMap("threadId")
-    public String threadId;
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("sourceTypeOfOriginalAssistantId")
+    public String sourceTypeOfOriginalAssistantId;
 
     public static RetrieveRunRequest build(java.util.Map<String, ?> map) throws Exception {
         RetrieveRunRequest self = new RetrieveRunRequest();
@@ -65,12 +70,20 @@ public class RetrieveRunRequest extends TeaModel {
         return this.runId;
     }
 
-    public RetrieveRunRequest setThreadId(String threadId) {
-        this.threadId = threadId;
+    public RetrieveRunRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+        this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
         return this;
     }
-    public String getThreadId() {
-        return this.threadId;
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    public RetrieveRunRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+        this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
     }
 
 }

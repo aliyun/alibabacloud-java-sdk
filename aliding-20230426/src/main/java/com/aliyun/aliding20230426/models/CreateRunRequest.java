@@ -15,24 +15,24 @@ public class CreateRunRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>你是一个聪明的小助理</p>
-     */
-    @NameInMap("instructions")
-    public String instructions;
-
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
-    @NameInMap("metadata")
-    public java.util.Map<String, ?> metadata;
-
-    /**
-     * <strong>example:</strong>
      * <p>assistantId</p>
      */
     @NameInMap("originalAssistantId")
     public String originalAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>agentKey1</p>
+     */
+    @NameInMap("sourceIdOfOriginalAssistantId")
+    public String sourceIdOfOriginalAssistantId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("sourceTypeOfOriginalAssistantId")
+    public String sourceTypeOfOriginalAssistantId;
 
     /**
      * <strong>example:</strong>
@@ -63,28 +63,28 @@ public class CreateRunRequest extends TeaModel {
         return this.assistantId;
     }
 
-    public CreateRunRequest setInstructions(String instructions) {
-        this.instructions = instructions;
-        return this;
-    }
-    public String getInstructions() {
-        return this.instructions;
-    }
-
-    public CreateRunRequest setMetadata(java.util.Map<String, ?> metadata) {
-        this.metadata = metadata;
-        return this;
-    }
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
-    }
-
     public CreateRunRequest setOriginalAssistantId(String originalAssistantId) {
         this.originalAssistantId = originalAssistantId;
         return this;
     }
     public String getOriginalAssistantId() {
         return this.originalAssistantId;
+    }
+
+    public CreateRunRequest setSourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+        this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    public CreateRunRequest setSourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+        this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
+        return this;
+    }
+    public String getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
     }
 
     public CreateRunRequest setStream(Boolean stream) {
