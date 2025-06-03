@@ -4,10 +4,15 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListDeploymentPackageFilesResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListDeploymentPackageFilesResponseBodyPagingInfo pagingInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -37,16 +42,28 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
 
     public static class ListDeploymentPackageFilesResponseBodyPagingInfoDeploymentPackageFiles extends TeaModel {
         /**
+         * <p>The change type, which is an integer. Valid values:</p>
+         * <ul>
+         * <li>0: addition</li>
+         * <li>1: update</li>
+         * <li>2: deletion</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("ChangeType")
         public Integer changeType;
 
+        /**
+         * <p>The comment for committing.</p>
+         */
         @NameInMap("Comment")
         public String comment;
 
         /**
+         * <p>The time for committing.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-04-10 15:55:47</p>
          */
@@ -54,6 +71,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public String commitTime;
 
         /**
+         * <p>The ID of the Alibaba Cloud account used by the user who committed the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>446***</p>
          */
@@ -61,6 +80,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public String commitUser;
 
         /**
+         * <p>The name of the Alibaba Cloud account used by the user who committed the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>user***</p>
          */
@@ -68,6 +89,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public String commitUserName;
 
         /**
+         * <p>The file ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>520246913</p>
          */
@@ -75,6 +98,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The name of the file of the current version.</p>
+         * 
          * <strong>example:</strong>
          * <p>bak_part_basc_person_relation_all_da</p>
          */
@@ -82,6 +107,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The file type. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -89,6 +116,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Integer fileType;
 
         /**
+         * <p>The file version.</p>
+         * 
          * <strong>example:</strong>
          * <p>34</p>
          */
@@ -96,6 +125,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Long fileVersion;
 
         /**
+         * <p>The unique ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>650433503</p>
          */
@@ -103,6 +134,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>Indicates whether the version is a version in the production environment of the scheduling system.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -110,6 +143,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Boolean isSameAsProductionVersion;
 
         /**
+         * <p>The scheduling property configurations of the node that corresponds to the file, which is a JSON string.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;tagList&quot;: [],
@@ -163,6 +198,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public String nodeConfiguration;
 
         /**
+         * <p>The ID of the auto triggered node that corresponds to the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>700005008419</p>
          */
@@ -170,16 +207,33 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Long nodeId;
 
         /**
+         * <p>The workspace ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>27595</p>
          */
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>The test status in the development environment.</p>
+         */
         @NameInMap("SmokeTestStatus")
         public String smokeTestStatus;
 
         /**
+         * <p>The status of the code for the file of the current version. Valid values:</p>
+         * <ul>
+         * <li>10: committing</li>
+         * <li>11: committed to the development environment of the scheduling system</li>
+         * <li>20: review passed</li>
+         * <li>21: review failed</li>
+         * <li>80: deployment package creation succeeded</li>
+         * <li>100: deploying</li>
+         * <li>101: deployed to the production environment</li>
+         * <li>200: cancelled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -187,6 +241,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>The DataWorks tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>639415964191360</p>
          */
@@ -194,6 +250,16 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Long tenantId;
 
         /**
+         * <p>The module to which the file belongs. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: The file is used for DataStudio.</li>
+         * <li>MANUAL: The file is used for a manually triggered node.</li>
+         * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
+         * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
+         * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
+         * <li>COMPONENT: The file is used for a script template.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -352,10 +418,15 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
     }
 
     public static class ListDeploymentPackageFilesResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The details of the versions of the files to be deployed.</p>
+         */
         @NameInMap("DeploymentPackageFiles")
         public java.util.List<ListDeploymentPackageFilesResponseBodyPagingInfoDeploymentPackageFiles> deploymentPackageFiles;
 
         /**
+         * <p>The page number. Pages start from page 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -363,6 +434,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page. Default value: 10.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -370,6 +443,8 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries returned.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

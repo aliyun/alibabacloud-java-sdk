@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     /**
+     * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the workflow ID by name.</p>
+     * 
      * <strong>example:</strong>
      * <p>100001</p>
      */
@@ -12,6 +14,13 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public Long businessId;
 
     /**
+     * <p>The change type. Valid values:</p>
+     * <ul>
+     * <li>0: addition</li>
+     * <li>1: update</li>
+     * <li>2: deletion</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -19,6 +28,8 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public Integer changeType;
 
     /**
+     * <p>The start date for committing. Specify the date in the yyyy-MM-dd format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-01</p>
      */
@@ -26,6 +37,8 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public String commitFrom;
 
     /**
+     * <p>The end date (included) for committing. Specify the date in the yyyy-MM-dd format.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-01-31</p>
      */
@@ -33,16 +46,23 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public String commitTo;
 
     /**
+     * <p>The ID of the user who commits the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>2003****</p>
      */
     @NameInMap("CommitUserId")
     public String commitUserId;
 
+    /**
+     * <p>The IDs of the files to be queried.</p>
+     */
     @NameInMap("FileIds")
     public String fileIdsShrink;
 
     /**
+     * <p>The name of the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>Filename</p>
      */
@@ -50,6 +70,9 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public String fileName;
 
     /**
+     * <p>The type of the code for the file.</p>
+     * <p>The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,6 +80,8 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public Integer fileType;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -64,6 +89,8 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -71,6 +98,7 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +108,8 @@ public class ListDeploymentPackageFilesShrinkRequest extends TeaModel {
     public Long projectId;
 
     /**
+     * <p>The solution ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8065</p>
      */

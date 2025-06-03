@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateResourceFileResponseBody extends TeaModel {
     /**
+     * <p>The ID of the file that is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000001</p>
      */
@@ -12,6 +14,8 @@ public class CreateResourceFileResponseBody extends TeaModel {
     public Long data;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG</p>
      */

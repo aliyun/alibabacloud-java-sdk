@@ -2109,7 +2109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支持用户指定自己的文件（比如jar，py，arhive，file等）创建数据开发资源文件</p>
+     * <p>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</p>
      * 
      * @param request CreateResourceFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2185,7 +2185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>支持用户指定自己的文件（比如jar，py，arhive，file等）创建数据开发资源文件</p>
+     * <p>Creates a resource file in DataStudio. The following types are supported: JAR, Archive, File, and Python.</p>
      * 
      * @param request CreateResourceFileRequest
      * @return CreateResourceFileResponse
@@ -5059,6 +5059,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a file.</p>
+     * 
      * @param request GetFileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileResponse
@@ -5100,6 +5103,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a file.</p>
+     * 
      * @param request GetFileRequest
      * @return GetFileResponse
      */
@@ -5109,6 +5115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a file version.</p>
+     * 
      * @param request GetFileVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileVersionResponse
@@ -5150,6 +5159,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a file version.</p>
+     * 
      * @param request GetFileVersionRequest
      * @return GetFileVersionResponse
      */
@@ -5250,7 +5262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取扩展点触发时的数据快照</p>
+     * <p>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</p>
      * 
      * @param request GetIDEEventDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5286,7 +5298,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取扩展点触发时的数据快照</p>
+     * <p>Queries the data snapshot of an extension point based on the ID of a message in DataWorks OpenEvent when the related extension point event is triggered.</p>
      * 
      * @param request GetIDEEventDetailRequest
      * @return GetIDEEventDetailResponse
@@ -7489,7 +7501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取待发布的文件版本列表</p>
+     * <p>Queries a list of versions of files to be deployed.</p>
      * 
      * @param tmpReq ListDeploymentPackageFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7571,7 +7583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取待发布的文件版本列表</p>
+     * <p>Queries a list of versions of files to be deployed.</p>
      * 
      * @param request ListDeploymentPackageFilesRequest
      * @return ListDeploymentPackageFilesResponse
