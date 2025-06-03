@@ -138,6 +138,15 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     @NameInMap("HttpsForceCode")
     public String httpsForceCode;
 
+    @NameInMap("HttpsNoSniDeny")
+    public String httpsNoSniDeny;
+
+    @NameInMap("HttpsSniVerify")
+    public String httpsSniVerify;
+
+    @NameInMap("HttpsSniWhitelist")
+    public String httpsSniWhitelist;
+
     /**
      * <p>Rule content, using conditional expressions to match user requests. This parameter is not required when adding a global configuration. There are two usage scenarios:</p>
      * <ul>
@@ -277,6 +286,30 @@ public class UpdateHttpsApplicationConfigurationRequest extends TeaModel {
     }
     public String getHttpsForceCode() {
         return this.httpsForceCode;
+    }
+
+    public UpdateHttpsApplicationConfigurationRequest setHttpsNoSniDeny(String httpsNoSniDeny) {
+        this.httpsNoSniDeny = httpsNoSniDeny;
+        return this;
+    }
+    public String getHttpsNoSniDeny() {
+        return this.httpsNoSniDeny;
+    }
+
+    public UpdateHttpsApplicationConfigurationRequest setHttpsSniVerify(String httpsSniVerify) {
+        this.httpsSniVerify = httpsSniVerify;
+        return this;
+    }
+    public String getHttpsSniVerify() {
+        return this.httpsSniVerify;
+    }
+
+    public UpdateHttpsApplicationConfigurationRequest setHttpsSniWhitelist(String httpsSniWhitelist) {
+        this.httpsSniWhitelist = httpsSniWhitelist;
+        return this;
+    }
+    public String getHttpsSniWhitelist() {
+        return this.httpsSniWhitelist;
     }
 
     public UpdateHttpsApplicationConfigurationRequest setRule(String rule) {

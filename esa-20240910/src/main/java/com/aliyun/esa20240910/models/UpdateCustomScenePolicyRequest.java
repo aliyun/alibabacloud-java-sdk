@@ -27,7 +27,6 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
 
     /**
      * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>123456****</p>
@@ -44,6 +43,9 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
      */
     @NameInMap("PolicyId")
     public Long policyId;
+
+    @NameInMap("SiteIds")
+    public String siteIds;
 
     /**
      * <p>The time when the policy takes effect.</p>
@@ -104,6 +106,14 @@ public class UpdateCustomScenePolicyRequest extends TeaModel {
     }
     public Long getPolicyId() {
         return this.policyId;
+    }
+
+    public UpdateCustomScenePolicyRequest setSiteIds(String siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
+    public String getSiteIds() {
+        return this.siteIds;
     }
 
     public UpdateCustomScenePolicyRequest setStartTime(String startTime) {

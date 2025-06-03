@@ -47,6 +47,9 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SiteIds")
+    public String siteIds;
+
     /**
      * <p>The time when the policy takes effect.</p>
      * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
@@ -112,6 +115,14 @@ public class UpdateCustomScenePolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public UpdateCustomScenePolicyResponseBody setSiteIds(String siteIds) {
+        this.siteIds = siteIds;
+        return this;
+    }
+    public String getSiteIds() {
+        return this.siteIds;
     }
 
     public UpdateCustomScenePolicyResponseBody setStartTime(String startTime) {

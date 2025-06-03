@@ -1519,6 +1519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Objects", request.objects);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.siteIds)) {
+            query.put("SiteIds", request.siteIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -1963,6 +1967,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.httpsForceCode)) {
             query.put("HttpsForceCode", request.httpsForceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsNoSniDeny)) {
+            query.put("HttpsNoSniDeny", request.httpsNoSniDeny);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsSniVerify)) {
+            query.put("HttpsSniVerify", request.httpsSniVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsSniWhitelist)) {
+            query.put("HttpsSniWhitelist", request.httpsSniWhitelist);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
@@ -14794,6 +14810,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PolicyId", request.policyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.siteIds)) {
+            query.put("SiteIds", request.siteIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -15198,6 +15218,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.httpsForceCode)) {
             query.put("HttpsForceCode", request.httpsForceCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsNoSniDeny)) {
+            query.put("HttpsNoSniDeny", request.httpsNoSniDeny);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsSniVerify)) {
+            query.put("HttpsSniVerify", request.httpsSniVerify);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsSniWhitelist)) {
+            query.put("HttpsSniWhitelist", request.httpsSniWhitelist);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
