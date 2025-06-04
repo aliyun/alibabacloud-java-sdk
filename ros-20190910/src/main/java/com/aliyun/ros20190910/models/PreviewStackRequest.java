@@ -123,6 +123,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("StackPolicyURL")
     public String stackPolicyURL;
 
+    @NameInMap("TaintResources")
+    public java.util.List<String> taintResources;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -276,6 +279,14 @@ public class PreviewStackRequest extends TeaModel {
     }
     public String getStackPolicyURL() {
         return this.stackPolicyURL;
+    }
+
+    public PreviewStackRequest setTaintResources(java.util.List<String> taintResources) {
+        this.taintResources = taintResources;
+        return this;
+    }
+    public java.util.List<String> getTaintResources() {
+        return this.taintResources;
     }
 
     public PreviewStackRequest setTemplateBody(String templateBody) {

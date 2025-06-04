@@ -271,6 +271,9 @@ public class CreateChangeSetRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<CreateChangeSetRequestTags> tags;
 
+    @NameInMap("TaintResources")
+    public java.util.List<String> taintResources;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -519,6 +522,14 @@ public class CreateChangeSetRequest extends TeaModel {
     }
     public java.util.List<CreateChangeSetRequestTags> getTags() {
         return this.tags;
+    }
+
+    public CreateChangeSetRequest setTaintResources(java.util.List<String> taintResources) {
+        this.taintResources = taintResources;
+        return this;
+    }
+    public java.util.List<String> getTaintResources() {
+        return this.taintResources;
     }
 
     public CreateChangeSetRequest setTemplateBody(String templateBody) {

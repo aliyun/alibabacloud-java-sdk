@@ -205,6 +205,9 @@ public class UpdateStackRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<UpdateStackRequestTags> tags;
 
+    @NameInMap("TaintResources")
+    public java.util.List<String> taintResources;
+
     @NameInMap("TemplateBody")
     public String templateBody;
 
@@ -400,6 +403,14 @@ public class UpdateStackRequest extends TeaModel {
     }
     public java.util.List<UpdateStackRequestTags> getTags() {
         return this.tags;
+    }
+
+    public UpdateStackRequest setTaintResources(java.util.List<String> taintResources) {
+        this.taintResources = taintResources;
+        return this;
+    }
+    public java.util.List<String> getTaintResources() {
+        return this.taintResources;
     }
 
     public UpdateStackRequest setTemplateBody(String templateBody) {
