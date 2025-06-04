@@ -29,6 +29,9 @@ public class CopySnapshotRequest extends TeaModel {
     @NameInMap("DestinationSnapshotName")
     public String destinationSnapshotName;
 
+    @NameInMap("InstanceBillingCycle")
+    public String instanceBillingCycle;
+
     /**
      * <p>The ID of the source snapshot.</p>
      * <p>This parameter is required.</p>
@@ -66,6 +69,14 @@ public class CopySnapshotRequest extends TeaModel {
     }
     public String getDestinationSnapshotName() {
         return this.destinationSnapshotName;
+    }
+
+    public CopySnapshotRequest setInstanceBillingCycle(String instanceBillingCycle) {
+        this.instanceBillingCycle = instanceBillingCycle;
+        return this;
+    }
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     public CopySnapshotRequest setSnapshotId(String snapshotId) {

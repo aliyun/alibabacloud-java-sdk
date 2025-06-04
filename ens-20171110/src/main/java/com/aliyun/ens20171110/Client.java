@@ -957,6 +957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationSnapshotName", request.destinationSnapshotName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceBillingCycle)) {
+            query.put("InstanceBillingCycle", request.instanceBillingCycle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
             query.put("SnapshotId", request.snapshotId);
         }
