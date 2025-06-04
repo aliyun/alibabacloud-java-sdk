@@ -217,6 +217,9 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("ResourceConfig")
+    public String resourceConfig;
+
     /**
      * <strong>example:</strong>
      * <p>0.89</p>
@@ -624,6 +627,14 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetFeatureConsistencyCheckJobConfigResponseBody setResourceConfig(String resourceConfig) {
+        this.resourceConfig = resourceConfig;
+        return this;
+    }
+    public String getResourceConfig() {
+        return this.resourceConfig;
     }
 
     public GetFeatureConsistencyCheckJobConfigResponseBody setSampleRate(String sampleRate) {

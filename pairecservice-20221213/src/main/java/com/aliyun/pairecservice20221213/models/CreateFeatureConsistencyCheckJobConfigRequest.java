@@ -182,6 +182,9 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     @NameInMap("PredictWorkerMemory")
     public Integer predictWorkerMemory;
 
+    @NameInMap("ResourceConfig")
+    public String resourceConfig;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -521,6 +524,14 @@ public class CreateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     }
     public Integer getPredictWorkerMemory() {
         return this.predictWorkerMemory;
+    }
+
+    public CreateFeatureConsistencyCheckJobConfigRequest setResourceConfig(String resourceConfig) {
+        this.resourceConfig = resourceConfig;
+        return this;
+    }
+    public String getResourceConfig() {
+        return this.resourceConfig;
     }
 
     public CreateFeatureConsistencyCheckJobConfigRequest setSampleRate(Double sampleRate) {

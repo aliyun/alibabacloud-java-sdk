@@ -1359,6 +1359,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PredictWorkerMemory", request.predictWorkerMemory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceConfig)) {
+            body.put("ResourceConfig", request.resourceConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sampleRate)) {
             body.put("SampleRate", request.sampleRate);
         }
@@ -7595,6 +7599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.predictWorkerMemory)) {
             body.put("PredictWorkerMemory", request.predictWorkerMemory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceConfig)) {
+            body.put("ResourceConfig", request.resourceConfig);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sampleRate)) {

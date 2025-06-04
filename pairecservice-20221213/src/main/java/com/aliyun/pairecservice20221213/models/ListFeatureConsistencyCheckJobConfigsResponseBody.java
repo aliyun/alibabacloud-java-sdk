@@ -264,6 +264,9 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @NameInMap("PredictWorkerMemory")
         public Integer predictWorkerMemory;
 
+        @NameInMap("ResourceConfig")
+        public String resourceConfig;
+
         /**
          * <strong>example:</strong>
          * <p>0.89</p>
@@ -671,6 +674,14 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         }
         public Integer getPredictWorkerMemory() {
             return this.predictWorkerMemory;
+        }
+
+        public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setResourceConfig(String resourceConfig) {
+            this.resourceConfig = resourceConfig;
+            return this;
+        }
+        public String getResourceConfig() {
+            return this.resourceConfig;
         }
 
         public ListFeatureConsistencyCheckJobConfigsResponseBodyFeatureConsistencyCheckConfigs setSampleRate(String sampleRate) {
