@@ -1,3 +1,15 @@
+2025-06-04 Version: 2.4.0
+- Support API CancelAiCallDetails.
+- Support API CreateAiCallTask.
+- Support API ImportTaskNumberDatas.
+- Support API QueryAiCallDetailPage.
+- Support API QueryAiCallTaskDetail.
+- Support API QueryAiCallTaskPage.
+- Support API StartAiCallTask.
+- Support API StopAiCallTask.
+- Support API UpdateAiCallTask.
+
+
 2025-06-03 Version: 2.3.0
 - Support API ListAvailableTts.
 
