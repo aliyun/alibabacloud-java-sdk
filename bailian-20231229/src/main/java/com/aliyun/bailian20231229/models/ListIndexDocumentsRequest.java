@@ -26,6 +26,9 @@ public class ListIndexDocumentsRequest extends TeaModel {
     @NameInMap("DocumentStatus")
     public String documentStatus;
 
+    @NameInMap("EnableNameLike")
+    public String enableNameLike;
+
     /**
      * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
      * <p>This parameter is required.</p>
@@ -73,6 +76,14 @@ public class ListIndexDocumentsRequest extends TeaModel {
     }
     public String getDocumentStatus() {
         return this.documentStatus;
+    }
+
+    public ListIndexDocumentsRequest setEnableNameLike(String enableNameLike) {
+        this.enableNameLike = enableNameLike;
+        return this;
+    }
+    public String getEnableNameLike() {
+        return this.enableNameLike;
     }
 
     public ListIndexDocumentsRequest setIndexId(String indexId) {

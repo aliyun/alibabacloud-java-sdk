@@ -1495,6 +1495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DocumentStatus", request.documentStatus);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNameLike)) {
+            query.put("EnableNameLike", request.enableNameLike);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {
             query.put("IndexId", request.indexId);
         }
