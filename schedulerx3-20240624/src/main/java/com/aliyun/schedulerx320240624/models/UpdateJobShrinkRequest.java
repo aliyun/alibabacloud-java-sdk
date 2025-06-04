@@ -117,6 +117,9 @@ public class UpdateJobShrinkRequest extends TeaModel {
     @NameInMap("RouteStrategy")
     public Integer routeStrategy;
 
+    @NameInMap("Script")
+    public String script;
+
     /**
      * <strong>example:</strong>
      * <p>1716902187</p>
@@ -284,6 +287,14 @@ public class UpdateJobShrinkRequest extends TeaModel {
     }
     public Integer getRouteStrategy() {
         return this.routeStrategy;
+    }
+
+    public UpdateJobShrinkRequest setScript(String script) {
+        this.script = script;
+        return this;
+    }
+    public String getScript() {
+        return this.script;
     }
 
     public UpdateJobShrinkRequest setStartTime(Long startTime) {

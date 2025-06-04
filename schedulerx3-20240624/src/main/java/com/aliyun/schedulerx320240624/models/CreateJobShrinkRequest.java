@@ -54,8 +54,6 @@ public class CreateJobShrinkRequest extends TeaModel {
     public Integer executorBlockStrategy;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>testJobVoidHandler</p>
      */
@@ -120,6 +118,9 @@ public class CreateJobShrinkRequest extends TeaModel {
      */
     @NameInMap("RouteStrategy")
     public Integer routeStrategy;
+
+    @NameInMap("Script")
+    public String script;
 
     /**
      * <strong>example:</strong>
@@ -297,6 +298,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     }
     public Integer getRouteStrategy() {
         return this.routeStrategy;
+    }
+
+    public CreateJobShrinkRequest setScript(String script) {
+        this.script = script;
+        return this;
+    }
+    public String getScript() {
+        return this.script;
     }
 
     public CreateJobShrinkRequest setStartTime(Long startTime) {
