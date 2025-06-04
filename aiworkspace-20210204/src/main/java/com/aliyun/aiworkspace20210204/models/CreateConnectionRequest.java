@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateConnectionRequest extends TeaModel {
     /**
+     * <p>The accessibility of the workspace. Valid values:</p>
+     * <ul>
+     * <li>PRIVATE: The workspace is accessible only to you and the administrator of the workspace. This is the default value.</li>
+     * <li>PUBLIC: The workspace is accessible to all users in the workspace.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PRIVATE</p>
      */
@@ -12,12 +18,14 @@ public class CreateConnectionRequest extends TeaModel {
     public String accessibility;
 
     /**
+     * <p>The connection configurations, in key-value pairs. The key varies based on the connection type. For more information, see the supplementary notes below the request parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Configs")
     public java.util.Map<String, String> configs;
 
     /**
+     * <p>The connection name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,25 +35,52 @@ public class CreateConnectionRequest extends TeaModel {
     public String connectionName;
 
     /**
+     * <p>The connection type. Valid values:</p>
+     * <ul>
+     * <li>DashScopeConnection: Alibaba Cloud Model Studio connection</li>
+     * <li>OpenLLMConnection: open source model connection</li>
+     * <li>MilvusConnection: Milvus connection</li>
+     * <li>OpenSearchConnection: OpenSearch connection</li>
+     * <li>LindormConnection: Lindorm connection</li>
+     * <li>ElasticsearchConnection: Elasticsearch connection</li>
+     * <li>HologresConnection: Hologres connection</li>
+     * <li>RDSConnection: RDS connection</li>
+     * <li>CustomConnection: custom connection</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DashScopeConnection</p>
      */
     @NameInMap("ConnectionType")
     public String connectionType;
 
+    /**
+     * <p>The connection description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The models, which apply to model service connections.</p>
+     */
     @NameInMap("Models")
     public java.util.List<CreateConnectionRequestModels> models;
 
+    /**
+     * <p>The instance resource information of the connection, which applies to database connections.</p>
+     */
     @NameInMap("ResourceMeta")
     public CreateConnectionRequestResourceMeta resourceMeta;
 
+    /**
+     * <p>The configuration to be encrypted. Examples: the database logon account and password and the key of the model service.</p>
+     */
     @NameInMap("Secrets")
     public java.util.Map<String, String> secrets;
 
     /**
+     * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123**45</p>
      */
@@ -130,10 +165,15 @@ public class CreateConnectionRequest extends TeaModel {
     }
 
     public static class CreateConnectionRequestModels extends TeaModel {
+        /**
+         * <p>The display name of the model.</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The model identifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>model_001</p>
          */
@@ -141,6 +181,13 @@ public class CreateConnectionRequest extends TeaModel {
         public String model;
 
         /**
+         * <p>The model type. Valid values:</p>
+         * <ul>
+         * <li>LLM</li>
+         * <li>Embedding</li>
+         * <li>ReRank</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>LLM</p>
          */
@@ -148,6 +195,12 @@ public class CreateConnectionRequest extends TeaModel {
         public String modelType;
 
         /**
+         * <p>Specifies whether a tool can be called by using ToolCall. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -195,12 +248,17 @@ public class CreateConnectionRequest extends TeaModel {
 
     public static class CreateConnectionRequestResourceMeta extends TeaModel {
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ld-uf69****9nqjjes</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instance name.</p>
+         */
         @NameInMap("InstanceName")
         public String instanceName;
 

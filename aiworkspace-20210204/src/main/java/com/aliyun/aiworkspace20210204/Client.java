@@ -390,7 +390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建连接</p>
+     * <p>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</p>
      * 
      * @param request CreateConnectionRequest
      * @param headers map
@@ -456,7 +456,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建连接</p>
+     * <p>Creates a connection. This API is used to connect Platform for AI (PAI) to customer models and databases in LangStudio and multimodal dataset search scenarios.</p>
      * 
      * @param request CreateConnectionRequest
      * @return CreateConnectionResponse
@@ -501,6 +501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            body.put("Edition", request.edition);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.importInfo)) {
@@ -2656,7 +2660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取连接</p>
+     * <p>Obtains the connection details.</p>
      * 
      * @param request GetConnectionRequest
      * @param headers map
@@ -2690,7 +2694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取连接</p>
+     * <p>Obtains the connection details.</p>
      * 
      * @param request GetConnectionRequest
      * @return GetConnectionResponse
@@ -5849,6 +5853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            body.put("Edition", request.edition);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mountAccessReadWriteRoleIdList)) {

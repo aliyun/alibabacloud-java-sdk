@@ -71,6 +71,9 @@ public class CreateDatasetRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Edition")
+    public String edition;
+
     /**
      * <p>The dataset configurations to be imported to a storage, such as OSS, NAS, or Cloud Parallel File Storage (CPFS).</p>
      * <p><strong>OSS</strong></p>
@@ -339,6 +342,14 @@ public class CreateDatasetRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateDatasetRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public CreateDatasetRequest setImportInfo(String importInfo) {

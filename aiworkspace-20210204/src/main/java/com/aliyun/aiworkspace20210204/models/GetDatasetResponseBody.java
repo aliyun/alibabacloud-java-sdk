@@ -61,6 +61,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Edition")
+    public String edition;
+
     /**
      * <p>The creation time.</p>
      * 
@@ -356,6 +359,14 @@ public class GetDatasetResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetDatasetResponseBody setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public GetDatasetResponseBody setGmtCreateTime(String gmtCreateTime) {

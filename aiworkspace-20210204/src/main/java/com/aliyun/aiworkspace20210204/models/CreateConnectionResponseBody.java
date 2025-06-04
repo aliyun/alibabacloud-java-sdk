@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateConnectionResponseBody extends TeaModel {
     /**
+     * <p>The connection ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>conn-pai9m***mi47</p>
      */
@@ -12,6 +14,8 @@ public class CreateConnectionResponseBody extends TeaModel {
     public String connectionId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A14FA81-DD4E-******-6343FE44B941</p>
      */

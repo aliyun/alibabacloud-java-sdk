@@ -41,6 +41,13 @@ public class Dataset extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
+     * <strong>example:</strong>
      * <p>2021-01-30T12:51:33.028Z</p>
      */
     @NameInMap("GmtCreateTime")
@@ -206,6 +213,14 @@ public class Dataset extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public Dataset setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public Dataset setGmtCreateTime(String gmtCreateTime) {

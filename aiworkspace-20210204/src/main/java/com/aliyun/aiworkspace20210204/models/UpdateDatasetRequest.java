@@ -10,8 +10,11 @@ public class UpdateDatasetRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Edition")
+    public String edition;
+
     /**
-     * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (\*), all roles have read and write permissions.</p>
+     * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names starting with PAI are basic role names, and the names starting with role- are custom role names. If the list contains asterisks (\*), all roles have read and write permissions.</p>
      * <ul>
      * <li>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</li>
      * <li>If you set the value to [&quot;\*&quot;], all accounts are granted the read and write permissions.</li>
@@ -31,7 +34,7 @@ public class UpdateDatasetRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can configure the mountPath field to specify the default mount path of the dataset.</p>
+     * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can set mountPath to specify the default mount path of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -52,6 +55,14 @@ public class UpdateDatasetRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateDatasetRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public UpdateDatasetRequest setMountAccessReadWriteRoleIdList(java.util.List<String> mountAccessReadWriteRoleIdList) {
