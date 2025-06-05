@@ -1,3 +1,7 @@
+2025-06-05 Version: 2.5.0
+- Support API QueryConversationDetailInfo.
+
+
 2025-06-04 Version: 2.4.0
 - Support API CancelAiCallDetails.
 - Support API CreateAiCallTask.
