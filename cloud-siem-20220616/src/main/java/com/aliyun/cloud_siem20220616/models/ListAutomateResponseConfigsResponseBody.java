@@ -256,6 +256,9 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        @NameInMap("ResponseRuleType")
+        public String responseRuleType;
+
         /**
          * <p>The name of the automated response rule.</p>
          * 
@@ -362,6 +365,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
         public Long getId() {
             return this.id;
+        }
+
+        public ListAutomateResponseConfigsResponseBodyDataResponseData setResponseRuleType(String responseRuleType) {
+            this.responseRuleType = responseRuleType;
+            return this;
+        }
+        public String getResponseRuleType() {
+            return this.responseRuleType;
         }
 
         public ListAutomateResponseConfigsResponseBodyDataResponseData setRuleName(String ruleName) {

@@ -82,6 +82,9 @@ public class ListAutomateResponseConfigsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResponseRuleType")
+    public String responseRuleType;
+
     /**
      * <p>The ID of the account that you switch from the management account.</p>
      * 
@@ -194,6 +197,14 @@ public class ListAutomateResponseConfigsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListAutomateResponseConfigsRequest setResponseRuleType(String responseRuleType) {
+        this.responseRuleType = responseRuleType;
+        return this;
+    }
+    public String getResponseRuleType() {
+        return this.responseRuleType;
     }
 
     public ListAutomateResponseConfigsRequest setRoleFor(Long roleFor) {

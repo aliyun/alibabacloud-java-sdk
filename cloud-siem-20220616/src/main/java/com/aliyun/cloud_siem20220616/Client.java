@@ -3589,6 +3589,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.responseRuleType)) {
+            body.put("ResponseRuleType", request.responseRuleType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.roleFor)) {
             body.put("RoleFor", request.roleFor);
         }
