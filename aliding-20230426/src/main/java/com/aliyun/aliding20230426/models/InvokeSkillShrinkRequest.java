@@ -12,11 +12,16 @@ public class InvokeSkillShrinkRequest extends TeaModel {
     public String paramsShrink;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>a1d033dd-xxxx-49cf-b49b-2068081bb551</p>
      */
     @NameInMap("SkillId")
     public String skillId;
+
+    @NameInMap("Stream")
+    public Boolean stream;
 
     public static InvokeSkillShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         InvokeSkillShrinkRequest self = new InvokeSkillShrinkRequest();
@@ -37,6 +42,14 @@ public class InvokeSkillShrinkRequest extends TeaModel {
     }
     public String getSkillId() {
         return this.skillId;
+    }
+
+    public InvokeSkillShrinkRequest setStream(Boolean stream) {
+        this.stream = stream;
+        return this;
+    }
+    public Boolean getStream() {
+        return this.stream;
     }
 
 }
