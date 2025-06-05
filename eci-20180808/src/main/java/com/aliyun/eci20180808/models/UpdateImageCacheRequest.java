@@ -8,7 +8,7 @@ public class UpdateImageCacheRequest extends TeaModel {
      * <p>The information about the Container Registry Enterprise Edition instance.</p>
      */
     @NameInMap("AcrRegistryInfo")
-    public java.util.List<UpdateImageCacheRequestAcrRegistryInfo> acrRegistryInfo;
+    public java.util.List<AcrRegistryInfo> acrRegistryInfo;
 
     /**
      * <p>Specifies whether to enable reuse of image cache layers. If you enable this feature and the image cache that you want to create and an existing image cache contain duplicate image layers, the system reuses the duplicate image layers to create the new image cache. This accelerates the creation of the image cache. Valid values:</p>
@@ -119,7 +119,7 @@ public class UpdateImageCacheRequest extends TeaModel {
      * <p>The information about the image repository.</p>
      */
     @NameInMap("ImageRegistryCredential")
-    public java.util.List<UpdateImageCacheRequestImageRegistryCredential> imageRegistryCredential;
+    public java.util.List<ImageRegistryCredential> imageRegistryCredential;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -189,7 +189,7 @@ public class UpdateImageCacheRequest extends TeaModel {
      * <p>The tags to add to the image cache. A maximum of 20 tags can be added to the image cache.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<UpdateImageCacheRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The ID of the vSwitch to which the image cache is connected.</p>
@@ -205,11 +205,11 @@ public class UpdateImageCacheRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public UpdateImageCacheRequest setAcrRegistryInfo(java.util.List<UpdateImageCacheRequestAcrRegistryInfo> acrRegistryInfo) {
+    public UpdateImageCacheRequest setAcrRegistryInfo(java.util.List<AcrRegistryInfo> acrRegistryInfo) {
         this.acrRegistryInfo = acrRegistryInfo;
         return this;
     }
-    public java.util.List<UpdateImageCacheRequestAcrRegistryInfo> getAcrRegistryInfo() {
+    public java.util.List<AcrRegistryInfo> getAcrRegistryInfo() {
         return this.acrRegistryInfo;
     }
 
@@ -293,11 +293,11 @@ public class UpdateImageCacheRequest extends TeaModel {
         return this.imageCacheSize;
     }
 
-    public UpdateImageCacheRequest setImageRegistryCredential(java.util.List<UpdateImageCacheRequestImageRegistryCredential> imageRegistryCredential) {
+    public UpdateImageCacheRequest setImageRegistryCredential(java.util.List<ImageRegistryCredential> imageRegistryCredential) {
         this.imageRegistryCredential = imageRegistryCredential;
         return this;
     }
-    public java.util.List<UpdateImageCacheRequestImageRegistryCredential> getImageRegistryCredential() {
+    public java.util.List<ImageRegistryCredential> getImageRegistryCredential() {
         return this.imageRegistryCredential;
     }
 
@@ -373,11 +373,11 @@ public class UpdateImageCacheRequest extends TeaModel {
         return this.standardCopyCount;
     }
 
-    public UpdateImageCacheRequest setTag(java.util.List<UpdateImageCacheRequestTag> tag) {
+    public UpdateImageCacheRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<UpdateImageCacheRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -389,7 +389,7 @@ public class UpdateImageCacheRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public static class UpdateImageCacheRequestAcrRegistryInfo extends TeaModel {
+    public static class AcrRegistryInfo extends TeaModel {
         /**
          * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify multiple domain names. Separate multiple domain names with commas (,).</p>
          * 
@@ -426,12 +426,12 @@ public class UpdateImageCacheRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static UpdateImageCacheRequestAcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
-            UpdateImageCacheRequestAcrRegistryInfo self = new UpdateImageCacheRequestAcrRegistryInfo();
+        public static AcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
+            AcrRegistryInfo self = new AcrRegistryInfo();
             return TeaModel.build(map, self);
         }
 
-        public UpdateImageCacheRequestAcrRegistryInfo setDomain(java.util.List<String> domain) {
+        public AcrRegistryInfo setDomain(java.util.List<String> domain) {
             this.domain = domain;
             return this;
         }
@@ -439,7 +439,7 @@ public class UpdateImageCacheRequest extends TeaModel {
             return this.domain;
         }
 
-        public UpdateImageCacheRequestAcrRegistryInfo setInstanceId(String instanceId) {
+        public AcrRegistryInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -447,7 +447,7 @@ public class UpdateImageCacheRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public UpdateImageCacheRequestAcrRegistryInfo setInstanceName(String instanceName) {
+        public AcrRegistryInfo setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -455,7 +455,7 @@ public class UpdateImageCacheRequest extends TeaModel {
             return this.instanceName;
         }
 
-        public UpdateImageCacheRequestAcrRegistryInfo setRegionId(String regionId) {
+        public AcrRegistryInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -465,7 +465,7 @@ public class UpdateImageCacheRequest extends TeaModel {
 
     }
 
-    public static class UpdateImageCacheRequestImageRegistryCredential extends TeaModel {
+    public static class ImageRegistryCredential extends TeaModel {
         /**
          * <p>The password that is used to access the image repository.</p>
          * 
@@ -493,12 +493,12 @@ public class UpdateImageCacheRequest extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        public static UpdateImageCacheRequestImageRegistryCredential build(java.util.Map<String, ?> map) throws Exception {
-            UpdateImageCacheRequestImageRegistryCredential self = new UpdateImageCacheRequestImageRegistryCredential();
+        public static ImageRegistryCredential build(java.util.Map<String, ?> map) throws Exception {
+            ImageRegistryCredential self = new ImageRegistryCredential();
             return TeaModel.build(map, self);
         }
 
-        public UpdateImageCacheRequestImageRegistryCredential setPassword(String password) {
+        public ImageRegistryCredential setPassword(String password) {
             this.password = password;
             return this;
         }
@@ -506,7 +506,7 @@ public class UpdateImageCacheRequest extends TeaModel {
             return this.password;
         }
 
-        public UpdateImageCacheRequestImageRegistryCredential setServer(String server) {
+        public ImageRegistryCredential setServer(String server) {
             this.server = server;
             return this;
         }
@@ -514,7 +514,7 @@ public class UpdateImageCacheRequest extends TeaModel {
             return this.server;
         }
 
-        public UpdateImageCacheRequestImageRegistryCredential setUserName(String userName) {
+        public ImageRegistryCredential setUserName(String userName) {
             this.userName = userName;
             return this;
         }
@@ -524,7 +524,7 @@ public class UpdateImageCacheRequest extends TeaModel {
 
     }
 
-    public static class UpdateImageCacheRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of tag N to add to the image cache.</p>
          * 
@@ -543,12 +543,12 @@ public class UpdateImageCacheRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static UpdateImageCacheRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            UpdateImageCacheRequestTag self = new UpdateImageCacheRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public UpdateImageCacheRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -556,7 +556,7 @@ public class UpdateImageCacheRequest extends TeaModel {
             return this.key;
         }
 
-        public UpdateImageCacheRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

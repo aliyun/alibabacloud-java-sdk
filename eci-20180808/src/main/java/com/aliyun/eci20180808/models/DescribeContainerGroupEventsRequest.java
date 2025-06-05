@@ -81,7 +81,7 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
      * <p>The tag that is added to the elastic container instances.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<DescribeContainerGroupEventsRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The vSwitch ID.</p>
@@ -162,11 +162,11 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
         return this.sinceSecond;
     }
 
-    public DescribeContainerGroupEventsRequest setTag(java.util.List<DescribeContainerGroupEventsRequestTag> tag) {
+    public DescribeContainerGroupEventsRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<DescribeContainerGroupEventsRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -186,7 +186,7 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class DescribeContainerGroupEventsRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
          * 
@@ -205,12 +205,12 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeContainerGroupEventsRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupEventsRequestTag self = new DescribeContainerGroupEventsRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupEventsRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -218,7 +218,7 @@ public class DescribeContainerGroupEventsRequest extends TeaModel {
             return this.key;
         }
 
-        public DescribeContainerGroupEventsRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

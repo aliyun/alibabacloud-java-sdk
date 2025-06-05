@@ -8,7 +8,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
      * <p>The information about the data caches.</p>
      */
     @NameInMap("DataCaches")
-    public java.util.List<DescribeDataCachesResponseBodyDataCaches> dataCaches;
+    public java.util.List<DataCaches> dataCaches;
 
     /**
      * <p>The query token. Set the value to the NextToken value that is returned in the previous call.</p>
@@ -42,11 +42,11 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeDataCachesResponseBody setDataCaches(java.util.List<DescribeDataCachesResponseBodyDataCaches> dataCaches) {
+    public DescribeDataCachesResponseBody setDataCaches(java.util.List<DataCaches> dataCaches) {
         this.dataCaches = dataCaches;
         return this;
     }
-    public java.util.List<DescribeDataCachesResponseBodyDataCaches> getDataCaches() {
+    public java.util.List<DataCaches> getDataCaches() {
         return this.dataCaches;
     }
 
@@ -74,7 +74,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeDataCachesResponseBodyDataCachesDataSource extends TeaModel {
+    public static class DataSource extends TeaModel {
         /**
          * <p>The parameters that are configured for the data source.</p>
          * 
@@ -107,12 +107,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeDataCachesResponseBodyDataCachesDataSource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDataCachesResponseBodyDataCachesDataSource self = new DescribeDataCachesResponseBodyDataCachesDataSource();
+        public static DataSource build(java.util.Map<String, ?> map) throws Exception {
+            DataSource self = new DataSource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDataCachesResponseBodyDataCachesDataSource setOptions(String options) {
+        public DataSource setOptions(String options) {
             this.options = options;
             return this;
         }
@@ -120,7 +120,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.options;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesDataSource setType(String type) {
+        public DataSource setType(String type) {
             this.type = type;
             return this;
         }
@@ -130,7 +130,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDataCachesResponseBodyDataCachesEvents extends TeaModel {
+    public static class Events extends TeaModel {
         /**
          * <p>The number of times that the event occurred.</p>
          * 
@@ -198,12 +198,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeDataCachesResponseBodyDataCachesEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDataCachesResponseBodyDataCachesEvents self = new DescribeDataCachesResponseBodyDataCachesEvents();
+        public static Events build(java.util.Map<String, ?> map) throws Exception {
+            Events self = new Events();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setCount(Integer count) {
+        public Events setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -211,7 +211,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.count;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setFirstTimestamp(String firstTimestamp) {
+        public Events setFirstTimestamp(String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
@@ -219,7 +219,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.firstTimestamp;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setLastTimestamp(String lastTimestamp) {
+        public Events setLastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
@@ -227,7 +227,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setMessage(String message) {
+        public Events setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -235,7 +235,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setName(String name) {
+        public Events setName(String name) {
             this.name = name;
             return this;
         }
@@ -243,7 +243,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setReason(String reason) {
+        public Events setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -251,7 +251,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesEvents setType(String type) {
+        public Events setType(String type) {
             this.type = type;
             return this;
         }
@@ -261,7 +261,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDataCachesResponseBodyDataCachesTags extends TeaModel {
+    public static class Tags extends TeaModel {
         /**
          * <p>The tag key.</p>
          * 
@@ -280,12 +280,12 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeDataCachesResponseBodyDataCachesTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDataCachesResponseBodyDataCachesTags self = new DescribeDataCachesResponseBodyDataCachesTags();
+        public static Tags build(java.util.Map<String, ?> map) throws Exception {
+            Tags self = new Tags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDataCachesResponseBodyDataCachesTags setKey(String key) {
+        public Tags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -293,7 +293,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeDataCachesResponseBodyDataCachesTags setValue(String value) {
+        public Tags setValue(String value) {
             this.value = value;
             return this;
         }
@@ -303,7 +303,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeDataCachesResponseBodyDataCaches extends TeaModel {
+    public static class DataCaches extends TeaModel {
         /**
          * <p>The bucket that stores the data cache.</p>
          * 
@@ -344,13 +344,13 @@ public class DescribeDataCachesResponseBody extends TeaModel {
          * <p>The information about the data source.</p>
          */
         @NameInMap("DataSource")
-        public DescribeDataCachesResponseBodyDataCachesDataSource dataSource;
+        public DataSource dataSource;
 
         /**
          * <p>The events.</p>
          */
         @NameInMap("Events")
-        public java.util.List<DescribeDataCachesResponseBodyDataCachesEvents> events;
+        public java.util.List<Events> events;
 
         /**
          * <p>The time when the data cache expires.</p>
@@ -464,14 +464,14 @@ public class DescribeDataCachesResponseBody extends TeaModel {
          * <p>The tags that are attached to the data cache.</p>
          */
         @NameInMap("Tags")
-        public java.util.List<DescribeDataCachesResponseBodyDataCachesTags> tags;
+        public java.util.List<Tags> tags;
 
-        public static DescribeDataCachesResponseBodyDataCaches build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDataCachesResponseBodyDataCaches self = new DescribeDataCachesResponseBodyDataCaches();
+        public static DataCaches build(java.util.Map<String, ?> map) throws Exception {
+            DataCaches self = new DataCaches();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setBucket(String bucket) {
+        public DataCaches setBucket(String bucket) {
             this.bucket = bucket;
             return this;
         }
@@ -479,7 +479,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.bucket;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setContainerGroupId(String containerGroupId) {
+        public DataCaches setContainerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
             return this;
         }
@@ -487,7 +487,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.containerGroupId;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setCreationTime(String creationTime) {
+        public DataCaches setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -495,7 +495,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setDataCacheId(String dataCacheId) {
+        public DataCaches setDataCacheId(String dataCacheId) {
             this.dataCacheId = dataCacheId;
             return this;
         }
@@ -503,23 +503,23 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.dataCacheId;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setDataSource(DescribeDataCachesResponseBodyDataCachesDataSource dataSource) {
+        public DataCaches setDataSource(DataSource dataSource) {
             this.dataSource = dataSource;
             return this;
         }
-        public DescribeDataCachesResponseBodyDataCachesDataSource getDataSource() {
+        public DataSource getDataSource() {
             return this.dataSource;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setEvents(java.util.List<DescribeDataCachesResponseBodyDataCachesEvents> events) {
+        public DataCaches setEvents(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
-        public java.util.List<DescribeDataCachesResponseBodyDataCachesEvents> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setExpireDateTime(String expireDateTime) {
+        public DataCaches setExpireDateTime(String expireDateTime) {
             this.expireDateTime = expireDateTime;
             return this;
         }
@@ -527,7 +527,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.expireDateTime;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setFlashSnapshotId(String flashSnapshotId) {
+        public DataCaches setFlashSnapshotId(String flashSnapshotId) {
             this.flashSnapshotId = flashSnapshotId;
             return this;
         }
@@ -535,7 +535,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.flashSnapshotId;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setLastMatchedTime(String lastMatchedTime) {
+        public DataCaches setLastMatchedTime(String lastMatchedTime) {
             this.lastMatchedTime = lastMatchedTime;
             return this;
         }
@@ -543,7 +543,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.lastMatchedTime;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setName(String name) {
+        public DataCaches setName(String name) {
             this.name = name;
             return this;
         }
@@ -551,7 +551,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setPath(String path) {
+        public DataCaches setPath(String path) {
             this.path = path;
             return this;
         }
@@ -559,7 +559,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.path;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setProgress(String progress) {
+        public DataCaches setProgress(String progress) {
             this.progress = progress;
             return this;
         }
@@ -567,7 +567,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setRegionId(String regionId) {
+        public DataCaches setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -575,7 +575,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setResourceGroupId(String resourceGroupId) {
+        public DataCaches setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -583,7 +583,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setSize(Integer size) {
+        public DataCaches setSize(Integer size) {
             this.size = size;
             return this;
         }
@@ -591,7 +591,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.size;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setSnapshotId(String snapshotId) {
+        public DataCaches setSnapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
@@ -599,7 +599,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.snapshotId;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setStatus(String status) {
+        public DataCaches setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -607,11 +607,11 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeDataCachesResponseBodyDataCaches setTags(java.util.List<DescribeDataCachesResponseBodyDataCachesTags> tags) {
+        public DataCaches setTags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeDataCachesResponseBodyDataCachesTags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 

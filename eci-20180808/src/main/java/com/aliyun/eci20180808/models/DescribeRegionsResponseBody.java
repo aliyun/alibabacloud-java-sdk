@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>The queried regions.</p>
+     * <p>The list of regions.</p>
      */
     @NameInMap("Regions")
-    public java.util.List<DescribeRegionsResponseBodyRegions> regions;
+    public java.util.List<Regions> regions;
 
     /**
      * <p>The request ID.</p>
@@ -24,11 +24,11 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeRegionsResponseBody setRegions(java.util.List<DescribeRegionsResponseBodyRegions> regions) {
+    public DescribeRegionsResponseBody setRegions(java.util.List<Regions> regions) {
         this.regions = regions;
         return this;
     }
-    public java.util.List<DescribeRegionsResponseBodyRegions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -40,9 +40,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeRegionsResponseBodyRegions extends TeaModel {
+    public static class Regions extends TeaModel {
         /**
-         * <p>The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.</p>
+         * <p>The list of recommended zones.</p>
          */
         @NameInMap("RecommendZones")
         public java.util.List<String> recommendZones;
@@ -66,17 +66,23 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The list of unavailable zones.</p>
+         */
+        @NameInMap("UnavailableZones")
+        public java.util.List<String> unavailableZones;
+
+        /**
          * <p>The queried zones.</p>
          */
         @NameInMap("Zones")
         public java.util.List<String> zones;
 
-        public static DescribeRegionsResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeRegionsResponseBodyRegions self = new DescribeRegionsResponseBodyRegions();
+        public static Regions build(java.util.Map<String, ?> map) throws Exception {
+            Regions self = new Regions();
             return TeaModel.build(map, self);
         }
 
-        public DescribeRegionsResponseBodyRegions setRecommendZones(java.util.List<String> recommendZones) {
+        public Regions setRecommendZones(java.util.List<String> recommendZones) {
             this.recommendZones = recommendZones;
             return this;
         }
@@ -84,7 +90,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.recommendZones;
         }
 
-        public DescribeRegionsResponseBodyRegions setRegionEndpoint(String regionEndpoint) {
+        public Regions setRegionEndpoint(String regionEndpoint) {
             this.regionEndpoint = regionEndpoint;
             return this;
         }
@@ -92,7 +98,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.regionEndpoint;
         }
 
-        public DescribeRegionsResponseBodyRegions setRegionId(String regionId) {
+        public Regions setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -100,7 +106,15 @@ public class DescribeRegionsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeRegionsResponseBodyRegions setZones(java.util.List<String> zones) {
+        public Regions setUnavailableZones(java.util.List<String> unavailableZones) {
+            this.unavailableZones = unavailableZones;
+            return this;
+        }
+        public java.util.List<String> getUnavailableZones() {
+            return this.unavailableZones;
+        }
+
+        public Regions setZones(java.util.List<String> zones) {
             this.zones = zones;
             return this;
         }

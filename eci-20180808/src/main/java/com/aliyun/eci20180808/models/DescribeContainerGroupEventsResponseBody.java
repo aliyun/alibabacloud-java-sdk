@@ -8,7 +8,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
      * <p>Details of the events.</p>
      */
     @NameInMap("Data")
-    public java.util.List<DescribeContainerGroupEventsResponseBodyData> data;
+    public java.util.List<Data> data;
 
     /**
      * <p>The request ID.</p>
@@ -33,11 +33,11 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeContainerGroupEventsResponseBody setData(java.util.List<DescribeContainerGroupEventsResponseBodyData> data) {
+    public DescribeContainerGroupEventsResponseBody setData(java.util.List<Data> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<DescribeContainerGroupEventsResponseBodyData> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,7 +57,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeContainerGroupEventsResponseBodyDataEventsMetadata extends TeaModel {
+    public static class Metadata extends TeaModel {
         /**
          * <p>The event name.</p>
          * 
@@ -76,12 +76,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         @NameInMap("Namespace")
         public String namespace;
 
-        public static DescribeContainerGroupEventsResponseBodyDataEventsMetadata build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupEventsResponseBodyDataEventsMetadata self = new DescribeContainerGroupEventsResponseBodyDataEventsMetadata();
+        public static Metadata build(java.util.Map<String, ?> map) throws Exception {
+            Metadata self = new Metadata();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsMetadata setName(String name) {
+        public Metadata setName(String name) {
             this.name = name;
             return this;
         }
@@ -89,7 +89,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsMetadata setNamespace(String namespace) {
+        public Metadata setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
@@ -99,7 +99,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupEventsResponseBodyDataEventsSource extends TeaModel {
+    public static class Source extends TeaModel {
         /**
          * <p>The component.</p>
          * 
@@ -118,12 +118,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         @NameInMap("Host")
         public String host;
 
-        public static DescribeContainerGroupEventsResponseBodyDataEventsSource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupEventsResponseBodyDataEventsSource self = new DescribeContainerGroupEventsResponseBodyDataEventsSource();
+        public static Source build(java.util.Map<String, ?> map) throws Exception {
+            Source self = new Source();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsSource setComponent(String component) {
+        public Source setComponent(String component) {
             this.component = component;
             return this;
         }
@@ -131,7 +131,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.component;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsSource setHost(String host) {
+        public Source setHost(String host) {
             this.host = host;
             return this;
         }
@@ -141,7 +141,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject extends TeaModel {
+    public static class InvolvedObject extends TeaModel {
         /**
          * <p>The version of Kubernetes.</p>
          * 
@@ -187,12 +187,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         @NameInMap("Uid")
         public String uid;
 
-        public static DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject self = new DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject();
+        public static InvolvedObject build(java.util.Map<String, ?> map) throws Exception {
+            InvolvedObject self = new InvolvedObject();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject setApiVersion(String apiVersion) {
+        public InvolvedObject setApiVersion(String apiVersion) {
             this.apiVersion = apiVersion;
             return this;
         }
@@ -200,7 +200,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.apiVersion;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject setKind(String kind) {
+        public InvolvedObject setKind(String kind) {
             this.kind = kind;
             return this;
         }
@@ -208,7 +208,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.kind;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject setName(String name) {
+        public InvolvedObject setName(String name) {
             this.name = name;
             return this;
         }
@@ -216,7 +216,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject setNamespace(String namespace) {
+        public InvolvedObject setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
@@ -224,7 +224,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject setUid(String uid) {
+        public InvolvedObject setUid(String uid) {
             this.uid = uid;
             return this;
         }
@@ -234,7 +234,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupEventsResponseBodyDataEvents extends TeaModel {
+    public static class Events extends TeaModel {
         /**
          * <p>The number of events.</p>
          * 
@@ -275,7 +275,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
          * <p>The metadata of the event.</p>
          */
         @NameInMap("Metadata")
-        public DescribeContainerGroupEventsResponseBodyDataEventsMetadata metadata;
+        public Metadata metadata;
 
         /**
          * <p>The cause of the event.</p>
@@ -308,7 +308,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
          * <p>The source.</p>
          */
         @NameInMap("Source")
-        public DescribeContainerGroupEventsResponseBodyDataEventsSource source;
+        public Source source;
 
         /**
          * <p>The event type. Valid values:</p>
@@ -327,14 +327,14 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
          * <p>The resource object that the event is about.</p>
          */
         @NameInMap("involvedObject")
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject involvedObject;
+        public InvolvedObject involvedObject;
 
-        public static DescribeContainerGroupEventsResponseBodyDataEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupEventsResponseBodyDataEvents self = new DescribeContainerGroupEventsResponseBodyDataEvents();
+        public static Events build(java.util.Map<String, ?> map) throws Exception {
+            Events self = new Events();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setCount(Integer count) {
+        public Events setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -342,7 +342,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.count;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setFirstTimestamp(String firstTimestamp) {
+        public Events setFirstTimestamp(String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
@@ -350,7 +350,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.firstTimestamp;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setLastTimestamp(String lastTimestamp) {
+        public Events setLastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
@@ -358,7 +358,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setMessage(String message) {
+        public Events setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -366,15 +366,15 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setMetadata(DescribeContainerGroupEventsResponseBodyDataEventsMetadata metadata) {
+        public Events setMetadata(Metadata metadata) {
             this.metadata = metadata;
             return this;
         }
-        public DescribeContainerGroupEventsResponseBodyDataEventsMetadata getMetadata() {
+        public Metadata getMetadata() {
             return this.metadata;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setReason(String reason) {
+        public Events setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -382,7 +382,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setReportingComponent(String reportingComponent) {
+        public Events setReportingComponent(String reportingComponent) {
             this.reportingComponent = reportingComponent;
             return this;
         }
@@ -390,7 +390,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.reportingComponent;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setReportingInstance(String reportingInstance) {
+        public Events setReportingInstance(String reportingInstance) {
             this.reportingInstance = reportingInstance;
             return this;
         }
@@ -398,15 +398,15 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.reportingInstance;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setSource(DescribeContainerGroupEventsResponseBodyDataEventsSource source) {
+        public Events setSource(Source source) {
             this.source = source;
             return this;
         }
-        public DescribeContainerGroupEventsResponseBodyDataEventsSource getSource() {
+        public Source getSource() {
             return this.source;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setType(String type) {
+        public Events setType(String type) {
             this.type = type;
             return this;
         }
@@ -414,17 +414,17 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.type;
         }
 
-        public DescribeContainerGroupEventsResponseBodyDataEvents setInvolvedObject(DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject involvedObject) {
+        public Events setInvolvedObject(InvolvedObject involvedObject) {
             this.involvedObject = involvedObject;
             return this;
         }
-        public DescribeContainerGroupEventsResponseBodyDataEventsInvolvedObject getInvolvedObject() {
+        public InvolvedObject getInvolvedObject() {
             return this.involvedObject;
         }
 
     }
 
-    public static class DescribeContainerGroupEventsResponseBodyData extends TeaModel {
+    public static class Data extends TeaModel {
         /**
          * <p>The annotations of the elastic container instance.</p>
          * 
@@ -447,7 +447,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
          * <p>The events.</p>
          */
         @NameInMap("Events")
-        public java.util.List<DescribeContainerGroupEventsResponseBodyDataEvents> events;
+        public java.util.List<Events> events;
 
         /**
          * <p>The name of the elastic container instance.</p>
@@ -476,12 +476,12 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         @NameInMap("uuid")
         public String uuid;
 
-        public static DescribeContainerGroupEventsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupEventsResponseBodyData self = new DescribeContainerGroupEventsResponseBodyData();
+        public static Data build(java.util.Map<String, ?> map) throws Exception {
+            Data self = new Data();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupEventsResponseBodyData setAnnotations(String annotations) {
+        public Data setAnnotations(String annotations) {
             this.annotations = annotations;
             return this;
         }
@@ -489,7 +489,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.annotations;
         }
 
-        public DescribeContainerGroupEventsResponseBodyData setContainerGroupId(String containerGroupId) {
+        public Data setContainerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
             return this;
         }
@@ -497,15 +497,15 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.containerGroupId;
         }
 
-        public DescribeContainerGroupEventsResponseBodyData setEvents(java.util.List<DescribeContainerGroupEventsResponseBodyDataEvents> events) {
+        public Data setEvents(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
-        public java.util.List<DescribeContainerGroupEventsResponseBodyDataEvents> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
-        public DescribeContainerGroupEventsResponseBodyData setName(String name) {
+        public Data setName(String name) {
             this.name = name;
             return this;
         }
@@ -513,7 +513,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupEventsResponseBodyData setNamespace(String namespace) {
+        public Data setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
@@ -521,7 +521,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public DescribeContainerGroupEventsResponseBodyData setUuid(String uuid) {
+        public Data setUuid(String uuid) {
             this.uuid = uuid;
             return this;
         }

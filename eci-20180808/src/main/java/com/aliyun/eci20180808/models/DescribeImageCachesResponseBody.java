@@ -8,7 +8,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
      * <p>The information about image caches.</p>
      */
     @NameInMap("ImageCaches")
-    public java.util.List<DescribeImageCachesResponseBodyImageCaches> imageCaches;
+    public java.util.List<ImageCaches> imageCaches;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
@@ -42,11 +42,11 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeImageCachesResponseBody setImageCaches(java.util.List<DescribeImageCachesResponseBodyImageCaches> imageCaches) {
+    public DescribeImageCachesResponseBody setImageCaches(java.util.List<ImageCaches> imageCaches) {
         this.imageCaches = imageCaches;
         return this;
     }
-    public java.util.List<DescribeImageCachesResponseBodyImageCaches> getImageCaches() {
+    public java.util.List<ImageCaches> getImageCaches() {
         return this.imageCaches;
     }
 
@@ -74,7 +74,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeImageCachesResponseBodyImageCachesEvents extends TeaModel {
+    public static class Events extends TeaModel {
         /**
          * <p>The number of events.</p>
          * 
@@ -138,12 +138,12 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeImageCachesResponseBodyImageCachesEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageCachesResponseBodyImageCachesEvents self = new DescribeImageCachesResponseBodyImageCachesEvents();
+        public static Events build(java.util.Map<String, ?> map) throws Exception {
+            Events self = new Events();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setCount(Integer count) {
+        public Events setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -151,7 +151,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.count;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setFirstTimestamp(String firstTimestamp) {
+        public Events setFirstTimestamp(String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
@@ -159,7 +159,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.firstTimestamp;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setLastTimestamp(String lastTimestamp) {
+        public Events setLastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
@@ -167,7 +167,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setMessage(String message) {
+        public Events setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -175,7 +175,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setName(String name) {
+        public Events setName(String name) {
             this.name = name;
             return this;
         }
@@ -183,7 +183,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setReason(String reason) {
+        public Events setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -191,7 +191,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesEvents setType(String type) {
+        public Events setType(String type) {
             this.type = type;
             return this;
         }
@@ -201,7 +201,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeImageCachesResponseBodyImageCachesTags extends TeaModel {
+    public static class Tags extends TeaModel {
         /**
          * <p>The tag key.</p>
          * 
@@ -220,12 +220,12 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeImageCachesResponseBodyImageCachesTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageCachesResponseBodyImageCachesTags self = new DescribeImageCachesResponseBodyImageCachesTags();
+        public static Tags build(java.util.Map<String, ?> map) throws Exception {
+            Tags self = new Tags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageCachesResponseBodyImageCachesTags setKey(String key) {
+        public Tags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -233,7 +233,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeImageCachesResponseBodyImageCachesTags setValue(String value) {
+        public Tags setValue(String value) {
             this.value = value;
             return this;
         }
@@ -243,7 +243,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeImageCachesResponseBodyImageCaches extends TeaModel {
+    public static class ImageCaches extends TeaModel {
         /**
          * <p>The ID of the elastic container instance.</p>
          * 
@@ -276,7 +276,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
          * <p>The events of pulling an image to create the image cache.</p>
          */
         @NameInMap("Events")
-        public java.util.List<DescribeImageCachesResponseBodyImageCachesEvents> events;
+        public java.util.List<Events> events;
 
         /**
          * <p>The time when the image cache expires.</p>
@@ -399,14 +399,14 @@ public class DescribeImageCachesResponseBody extends TeaModel {
          * <p>The tags of the image cache.</p>
          */
         @NameInMap("Tags")
-        public java.util.List<DescribeImageCachesResponseBodyImageCachesTags> tags;
+        public java.util.List<Tags> tags;
 
-        public static DescribeImageCachesResponseBodyImageCaches build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageCachesResponseBodyImageCaches self = new DescribeImageCachesResponseBodyImageCaches();
+        public static ImageCaches build(java.util.Map<String, ?> map) throws Exception {
+            ImageCaches self = new ImageCaches();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setContainerGroupId(String containerGroupId) {
+        public ImageCaches setContainerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
             return this;
         }
@@ -414,7 +414,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.containerGroupId;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setCreationTime(String creationTime) {
+        public ImageCaches setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -422,7 +422,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setEliminationStrategy(String eliminationStrategy) {
+        public ImageCaches setEliminationStrategy(String eliminationStrategy) {
             this.eliminationStrategy = eliminationStrategy;
             return this;
         }
@@ -430,15 +430,15 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.eliminationStrategy;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setEvents(java.util.List<DescribeImageCachesResponseBodyImageCachesEvents> events) {
+        public ImageCaches setEvents(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
-        public java.util.List<DescribeImageCachesResponseBodyImageCachesEvents> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setExpireDateTime(String expireDateTime) {
+        public ImageCaches setExpireDateTime(String expireDateTime) {
             this.expireDateTime = expireDateTime;
             return this;
         }
@@ -446,7 +446,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.expireDateTime;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setFlashSnapshotId(String flashSnapshotId) {
+        public ImageCaches setFlashSnapshotId(String flashSnapshotId) {
             this.flashSnapshotId = flashSnapshotId;
             return this;
         }
@@ -454,7 +454,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.flashSnapshotId;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setImageCacheId(String imageCacheId) {
+        public ImageCaches setImageCacheId(String imageCacheId) {
             this.imageCacheId = imageCacheId;
             return this;
         }
@@ -462,7 +462,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.imageCacheId;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setImageCacheName(String imageCacheName) {
+        public ImageCaches setImageCacheName(String imageCacheName) {
             this.imageCacheName = imageCacheName;
             return this;
         }
@@ -470,7 +470,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.imageCacheName;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setImageCacheSize(Integer imageCacheSize) {
+        public ImageCaches setImageCacheSize(Integer imageCacheSize) {
             this.imageCacheSize = imageCacheSize;
             return this;
         }
@@ -478,7 +478,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.imageCacheSize;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setImages(java.util.List<String> images) {
+        public ImageCaches setImages(java.util.List<String> images) {
             this.images = images;
             return this;
         }
@@ -486,7 +486,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.images;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setLastMatchedTime(String lastMatchedTime) {
+        public ImageCaches setLastMatchedTime(String lastMatchedTime) {
             this.lastMatchedTime = lastMatchedTime;
             return this;
         }
@@ -494,7 +494,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.lastMatchedTime;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setProgress(String progress) {
+        public ImageCaches setProgress(String progress) {
             this.progress = progress;
             return this;
         }
@@ -502,7 +502,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setRegionId(String regionId) {
+        public ImageCaches setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -510,7 +510,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setResourceGroupId(String resourceGroupId) {
+        public ImageCaches setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -518,7 +518,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setSnapshotId(String snapshotId) {
+        public ImageCaches setSnapshotId(String snapshotId) {
             this.snapshotId = snapshotId;
             return this;
         }
@@ -526,7 +526,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.snapshotId;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setStatus(String status) {
+        public ImageCaches setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -534,11 +534,11 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeImageCachesResponseBodyImageCaches setTags(java.util.List<DescribeImageCachesResponseBodyImageCachesTags> tags) {
+        public ImageCaches setTags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeImageCachesResponseBodyImageCachesTags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 

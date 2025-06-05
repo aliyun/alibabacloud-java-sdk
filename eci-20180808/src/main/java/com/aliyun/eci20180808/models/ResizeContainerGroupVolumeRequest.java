@@ -65,7 +65,7 @@ public class ResizeContainerGroupVolumeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The name of the volume that you want to scale up. The volume must be an Alibaba Cloud disk.</p>
+     * <p>The name of the volume that is mounted to the elastic container instance. Only disk volumes can be scaled up.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

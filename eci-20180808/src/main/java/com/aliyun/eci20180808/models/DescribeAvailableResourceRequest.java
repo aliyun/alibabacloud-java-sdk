@@ -9,7 +9,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationResource")
-    public DescribeAvailableResourceRequestDestinationResource destinationResource;
+    public DestinationResource destinationResource;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -38,7 +38,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
      * <p>The information about the preemptible instances that you want to query.</p>
      */
     @NameInMap("SpotResource")
-    public DescribeAvailableResourceRequestSpotResource spotResource;
+    public SpotResource spotResource;
 
     /**
      * <p>The zone ID of the ECS instance families.</p>
@@ -55,11 +55,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAvailableResourceRequest setDestinationResource(DescribeAvailableResourceRequestDestinationResource destinationResource) {
+    public DescribeAvailableResourceRequest setDestinationResource(DestinationResource destinationResource) {
         this.destinationResource = destinationResource;
         return this;
     }
-    public DescribeAvailableResourceRequestDestinationResource getDestinationResource() {
+    public DestinationResource getDestinationResource() {
         return this.destinationResource;
     }
 
@@ -103,11 +103,11 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeAvailableResourceRequest setSpotResource(DescribeAvailableResourceRequestSpotResource spotResource) {
+    public DescribeAvailableResourceRequest setSpotResource(SpotResource spotResource) {
         this.spotResource = spotResource;
         return this;
     }
-    public DescribeAvailableResourceRequestSpotResource getSpotResource() {
+    public SpotResource getSpotResource() {
         return this.spotResource;
     }
 
@@ -119,7 +119,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class DescribeAvailableResourceRequestDestinationResource extends TeaModel {
+    public static class DestinationResource extends TeaModel {
         /**
          * <p>The type of the resource. Valid values:</p>
          * <ul>
@@ -165,12 +165,12 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeAvailableResourceRequestDestinationResource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceRequestDestinationResource self = new DescribeAvailableResourceRequestDestinationResource();
+        public static DestinationResource build(java.util.Map<String, ?> map) throws Exception {
+            DestinationResource self = new DestinationResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceRequestDestinationResource setCategory(String category) {
+        public DestinationResource setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -178,7 +178,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
             return this.category;
         }
 
-        public DescribeAvailableResourceRequestDestinationResource setCores(Float cores) {
+        public DestinationResource setCores(Float cores) {
             this.cores = cores;
             return this;
         }
@@ -186,7 +186,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
             return this.cores;
         }
 
-        public DescribeAvailableResourceRequestDestinationResource setMemory(Float memory) {
+        public DestinationResource setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
@@ -194,7 +194,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
             return this.memory;
         }
 
-        public DescribeAvailableResourceRequestDestinationResource setValue(String value) {
+        public DestinationResource setValue(String value) {
             this.value = value;
             return this;
         }
@@ -204,7 +204,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
 
     }
 
-    public static class DescribeAvailableResourceRequestSpotResource extends TeaModel {
+    public static class SpotResource extends TeaModel {
         /**
          * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.</p>
          * 
@@ -241,12 +241,12 @@ public class DescribeAvailableResourceRequest extends TeaModel {
         @NameInMap("SpotStrategy")
         public String spotStrategy;
 
-        public static DescribeAvailableResourceRequestSpotResource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceRequestSpotResource self = new DescribeAvailableResourceRequestSpotResource();
+        public static SpotResource build(java.util.Map<String, ?> map) throws Exception {
+            SpotResource self = new SpotResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceRequestSpotResource setSpotDuration(Integer spotDuration) {
+        public SpotResource setSpotDuration(Integer spotDuration) {
             this.spotDuration = spotDuration;
             return this;
         }
@@ -254,7 +254,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
             return this.spotDuration;
         }
 
-        public DescribeAvailableResourceRequestSpotResource setSpotPriceLimit(Double spotPriceLimit) {
+        public SpotResource setSpotPriceLimit(Double spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
             return this;
         }
@@ -262,7 +262,7 @@ public class DescribeAvailableResourceRequest extends TeaModel {
             return this.spotPriceLimit;
         }
 
-        public DescribeAvailableResourceRequestSpotResource setSpotStrategy(String spotStrategy) {
+        public SpotResource setSpotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
             return this;
         }

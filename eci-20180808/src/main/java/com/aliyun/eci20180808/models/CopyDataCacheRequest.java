@@ -104,7 +104,7 @@ public class CopyDataCacheRequest extends TeaModel {
      * <p>The tags of the DataCache.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CopyDataCacheRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     public static CopyDataCacheRequest build(java.util.Map<String, ?> map) throws Exception {
         CopyDataCacheRequest self = new CopyDataCacheRequest();
@@ -215,15 +215,15 @@ public class CopyDataCacheRequest extends TeaModel {
         return this.retentionDays;
     }
 
-    public CopyDataCacheRequest setTag(java.util.List<CopyDataCacheRequestTag> tag) {
+    public CopyDataCacheRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CopyDataCacheRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public static class CopyDataCacheRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
          * 
@@ -242,12 +242,12 @@ public class CopyDataCacheRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CopyDataCacheRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CopyDataCacheRequestTag self = new CopyDataCacheRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public CopyDataCacheRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -255,7 +255,7 @@ public class CopyDataCacheRequest extends TeaModel {
             return this.key;
         }
 
-        public CopyDataCacheRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

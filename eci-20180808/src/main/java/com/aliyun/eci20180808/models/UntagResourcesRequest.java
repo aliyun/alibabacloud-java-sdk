@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
+     * <p>Specifies whether to remove all tags from the resource. This parameter is valid only when the <code>TagKey</code> parameter is not specified in the request. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -12,6 +19,8 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-xxx-xxx-xxxx-42665544xxxx</p>
      */
@@ -25,6 +34,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +44,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IDs of the resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -46,6 +57,13 @@ public class UntagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>ContainerGroup: elastic container instance</li>
+     * <li>ImageCache: image cache</li>
+     * <li>DataCache: data cache</li>
+     * <li>VirtualNode: virtual node</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +72,9 @@ public class UntagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The keys of the tags that you want to remove from the resource. You can enter up to 20 tag keys.</p>
+     */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;
 

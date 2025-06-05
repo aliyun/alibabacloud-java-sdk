@@ -81,7 +81,7 @@ public class DescribeDataCachesRequest extends TeaModel {
      * <p>The tags that are attached to the data cache.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<DescribeDataCachesRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     public static DescribeDataCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataCachesRequest self = new DescribeDataCachesRequest();
@@ -176,15 +176,15 @@ public class DescribeDataCachesRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public DescribeDataCachesRequest setTag(java.util.List<DescribeDataCachesRequestTag> tag) {
+    public DescribeDataCachesRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<DescribeDataCachesRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public static class DescribeDataCachesRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The tag key.</p>
          * 
@@ -203,12 +203,12 @@ public class DescribeDataCachesRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeDataCachesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeDataCachesRequestTag self = new DescribeDataCachesRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeDataCachesRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -216,7 +216,7 @@ public class DescribeDataCachesRequest extends TeaModel {
             return this.key;
         }
 
-        public DescribeDataCachesRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

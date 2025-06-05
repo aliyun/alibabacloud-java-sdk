@@ -35,7 +35,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
      * <p>The virtual nodes that were queried.</p>
      */
     @NameInMap("VirtualNodes")
-    public java.util.List<DescribeVirtualNodesResponseBodyVirtualNodes> virtualNodes;
+    public java.util.List<VirtualNodes> virtualNodes;
 
     public static DescribeVirtualNodesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeVirtualNodesResponseBody self = new DescribeVirtualNodesResponseBody();
@@ -66,15 +66,15 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public DescribeVirtualNodesResponseBody setVirtualNodes(java.util.List<DescribeVirtualNodesResponseBodyVirtualNodes> virtualNodes) {
+    public DescribeVirtualNodesResponseBody setVirtualNodes(java.util.List<VirtualNodes> virtualNodes) {
         this.virtualNodes = virtualNodes;
         return this;
     }
-    public java.util.List<DescribeVirtualNodesResponseBodyVirtualNodes> getVirtualNodes() {
+    public java.util.List<VirtualNodes> getVirtualNodes() {
         return this.virtualNodes;
     }
 
-    public static class DescribeVirtualNodesResponseBodyVirtualNodesEvents extends TeaModel {
+    public static class Events extends TeaModel {
         /**
          * <p>The number of events.</p>
          * 
@@ -142,12 +142,12 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeVirtualNodesResponseBodyVirtualNodesEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVirtualNodesResponseBodyVirtualNodesEvents self = new DescribeVirtualNodesResponseBodyVirtualNodesEvents();
+        public static Events build(java.util.Map<String, ?> map) throws Exception {
+            Events self = new Events();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setCount(Integer count) {
+        public Events setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -155,7 +155,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.count;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setFirstTimestamp(String firstTimestamp) {
+        public Events setFirstTimestamp(String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
@@ -163,7 +163,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.firstTimestamp;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setLastTimestamp(String lastTimestamp) {
+        public Events setLastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
@@ -171,7 +171,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setMessage(String message) {
+        public Events setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -179,7 +179,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setName(String name) {
+        public Events setName(String name) {
             this.name = name;
             return this;
         }
@@ -187,7 +187,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setReason(String reason) {
+        public Events setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -195,7 +195,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesEvents setType(String type) {
+        public Events setType(String type) {
             this.type = type;
             return this;
         }
@@ -205,7 +205,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeVirtualNodesResponseBodyVirtualNodesTags extends TeaModel {
+    public static class Tags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
          * 
@@ -224,12 +224,12 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeVirtualNodesResponseBodyVirtualNodesTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVirtualNodesResponseBodyVirtualNodesTags self = new DescribeVirtualNodesResponseBodyVirtualNodesTags();
+        public static Tags build(java.util.Map<String, ?> map) throws Exception {
+            Tags self = new Tags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesTags setKey(String key) {
+        public Tags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -237,7 +237,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodesTags setValue(String value) {
+        public Tags setValue(String value) {
             this.value = value;
             return this;
         }
@@ -247,7 +247,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeVirtualNodesResponseBodyVirtualNodes extends TeaModel {
+    public static class VirtualNodes extends TeaModel {
         /**
          * <p>The time when the virtual node was created. The time follows the RFC 3339 standard and is displayed in UTC.</p>
          * 
@@ -261,7 +261,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
          * <p>The events about the virtual node.</p>
          */
         @NameInMap("Events")
-        public java.util.List<DescribeVirtualNodesResponseBodyVirtualNodesEvents> events;
+        public java.util.List<Events> events;
 
         /**
          * <p>The public IP address of the virtual node.</p>
@@ -317,7 +317,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
          * <p>The tags that are bound to the virtual node.</p>
          */
         @NameInMap("Tags")
-        public java.util.List<DescribeVirtualNodesResponseBodyVirtualNodesTags> tags;
+        public java.util.List<Tags> tags;
 
         /**
          * <p>The ID of the virtual node.</p>
@@ -364,12 +364,12 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
-        public static DescribeVirtualNodesResponseBodyVirtualNodes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVirtualNodesResponseBodyVirtualNodes self = new DescribeVirtualNodesResponseBodyVirtualNodes();
+        public static VirtualNodes build(java.util.Map<String, ?> map) throws Exception {
+            VirtualNodes self = new VirtualNodes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setCreationTime(String creationTime) {
+        public VirtualNodes setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -377,15 +377,15 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setEvents(java.util.List<DescribeVirtualNodesResponseBodyVirtualNodesEvents> events) {
+        public VirtualNodes setEvents(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
-        public java.util.List<DescribeVirtualNodesResponseBodyVirtualNodesEvents> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setInternetIp(String internetIp) {
+        public VirtualNodes setInternetIp(String internetIp) {
             this.internetIp = internetIp;
             return this;
         }
@@ -393,7 +393,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.internetIp;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setIntranetIp(String intranetIp) {
+        public VirtualNodes setIntranetIp(String intranetIp) {
             this.intranetIp = intranetIp;
             return this;
         }
@@ -401,7 +401,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setRegionId(String regionId) {
+        public VirtualNodes setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -409,7 +409,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setResourceGroupId(String resourceGroupId) {
+        public VirtualNodes setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -417,7 +417,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setStatus(String status) {
+        public VirtualNodes setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -425,15 +425,15 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setTags(java.util.List<DescribeVirtualNodesResponseBodyVirtualNodesTags> tags) {
+        public VirtualNodes setTags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeVirtualNodesResponseBodyVirtualNodesTags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setVirtualNodeId(String virtualNodeId) {
+        public VirtualNodes setVirtualNodeId(String virtualNodeId) {
             this.virtualNodeId = virtualNodeId;
             return this;
         }
@@ -441,7 +441,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.virtualNodeId;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setVirtualNodeName(String virtualNodeName) {
+        public VirtualNodes setVirtualNodeName(String virtualNodeName) {
             this.virtualNodeName = virtualNodeName;
             return this;
         }
@@ -449,7 +449,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.virtualNodeName;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setVirtualNodeSecurityGroupId(String virtualNodeSecurityGroupId) {
+        public VirtualNodes setVirtualNodeSecurityGroupId(String virtualNodeSecurityGroupId) {
             this.virtualNodeSecurityGroupId = virtualNodeSecurityGroupId;
             return this;
         }
@@ -457,7 +457,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.virtualNodeSecurityGroupId;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setVirtualNodeVSwitchId(String virtualNodeVSwitchId) {
+        public VirtualNodes setVirtualNodeVSwitchId(String virtualNodeVSwitchId) {
             this.virtualNodeVSwitchId = virtualNodeVSwitchId;
             return this;
         }
@@ -465,7 +465,7 @@ public class DescribeVirtualNodesResponseBody extends TeaModel {
             return this.virtualNodeVSwitchId;
         }
 
-        public DescribeVirtualNodesResponseBodyVirtualNodes setVpcId(String vpcId) {
+        public VirtualNodes setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

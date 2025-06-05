@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
     /**
-     * <p>The details of the O\&amp;M tasks.</p>
+     * <p>The details of the queried O\&amp;M tasks.</p>
      */
     @NameInMap("Records")
-    public java.util.List<DescribeInstanceOpsRecordsResponseBodyRecords> records;
+    public java.util.List<Records> records;
 
     /**
      * <p>The request ID.</p>
@@ -24,11 +24,11 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeInstanceOpsRecordsResponseBody setRecords(java.util.List<DescribeInstanceOpsRecordsResponseBodyRecords> records) {
+    public DescribeInstanceOpsRecordsResponseBody setRecords(java.util.List<Records> records) {
         this.records = records;
         return this;
     }
-    public java.util.List<DescribeInstanceOpsRecordsResponseBodyRecords> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -40,7 +40,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeInstanceOpsRecordsResponseBodyRecords extends TeaModel {
+    public static class Records extends TeaModel {
         /**
          * <p>The time when the O\&amp;M task was created.</p>
          * 
@@ -85,7 +85,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         public String opsType;
 
         /**
-         * <p>The content of the O\&amp;M result. The content is the download URL of the files that are generated for the O\&amp;M task.</p>
+         * <p>The content of the O\&amp;M result. The value is the download URL of the files that are generated for the O\&amp;M task. This parameter is returned only when the value of the OpsStatus parameter is Success.</p>
          * 
          * <strong>example:</strong>
          * <p>https://******</p>
@@ -94,7 +94,8 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         public String resultContent;
 
         /**
-         * <p>The type of the O\&amp;M result. Valid value: OSS. This value indicates that the files generated for the O\&amp;M task are saved to Object Storage Service (OSS) buckets.</p>
+         * <p>The type of the O\&amp;M result. This parameter is returned only when the value of the OpsStatus parameter is Success.\
+         * The only value of the parameter is Oss. The value indicates that the files generated for the O\&amp;M task are saved to Object Storage Service (OSS) buckets.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -102,12 +103,12 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         @NameInMap("ResultType")
         public String resultType;
 
-        public static DescribeInstanceOpsRecordsResponseBodyRecords build(java.util.Map<String, ?> map) throws Exception {
-            DescribeInstanceOpsRecordsResponseBodyRecords self = new DescribeInstanceOpsRecordsResponseBodyRecords();
+        public static Records build(java.util.Map<String, ?> map) throws Exception {
+            Records self = new Records();
             return TeaModel.build(map, self);
         }
 
-        public DescribeInstanceOpsRecordsResponseBodyRecords setCreateTime(String createTime) {
+        public Records setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
@@ -115,7 +116,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             return this.createTime;
         }
 
-        public DescribeInstanceOpsRecordsResponseBodyRecords setExpireTime(String expireTime) {
+        public Records setExpireTime(String expireTime) {
             this.expireTime = expireTime;
             return this;
         }
@@ -123,7 +124,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             return this.expireTime;
         }
 
-        public DescribeInstanceOpsRecordsResponseBodyRecords setOpsStatus(String opsStatus) {
+        public Records setOpsStatus(String opsStatus) {
             this.opsStatus = opsStatus;
             return this;
         }
@@ -131,7 +132,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             return this.opsStatus;
         }
 
-        public DescribeInstanceOpsRecordsResponseBodyRecords setOpsType(String opsType) {
+        public Records setOpsType(String opsType) {
             this.opsType = opsType;
             return this;
         }
@@ -139,7 +140,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             return this.opsType;
         }
 
-        public DescribeInstanceOpsRecordsResponseBodyRecords setResultContent(String resultContent) {
+        public Records setResultContent(String resultContent) {
             this.resultContent = resultContent;
             return this;
         }
@@ -147,7 +148,7 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             return this.resultContent;
         }
 
-        public DescribeInstanceOpsRecordsResponseBodyRecords setResultType(String resultType) {
+        public Records setResultType(String resultType) {
             this.resultType = resultType;
             return this;
         }

@@ -122,7 +122,7 @@ public class DescribeImageCachesRequest extends TeaModel {
      * <p>The tags to add to the image caches.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<DescribeImageCachesRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     public static DescribeImageCachesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeImageCachesRequest self = new DescribeImageCachesRequest();
@@ -249,15 +249,15 @@ public class DescribeImageCachesRequest extends TeaModel {
         return this.snapshotId;
     }
 
-    public DescribeImageCachesRequest setTag(java.util.List<DescribeImageCachesRequestTag> tag) {
+    public DescribeImageCachesRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<DescribeImageCachesRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public static class DescribeImageCachesRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of tag N of the image cache.</p>
          * 
@@ -276,12 +276,12 @@ public class DescribeImageCachesRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeImageCachesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeImageCachesRequestTag self = new DescribeImageCachesRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeImageCachesRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -289,7 +289,7 @@ public class DescribeImageCachesRequest extends TeaModel {
             return this.key;
         }
 
-        public DescribeImageCachesRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

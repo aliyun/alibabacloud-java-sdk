@@ -456,6 +456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ipv6GatewayBandwidthEnable", request.ipv6GatewayBandwidthEnable);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxPendingMinute)) {
+            query.put("MaxPendingMinute", request.maxPendingMinute);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.memory)) {
             query.put("Memory", request.memory);
         }
@@ -466,10 +470,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
             query.put("OsType", request.osType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.overheadReservationOption)) {
-            query.put("OverheadReservationOption", request.overheadReservationOption);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -857,6 +857,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.insecureRegistry)) {
             query.put("InsecureRegistry", request.insecureRegistry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.osType)) {
+            query.put("OsType", request.osType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -2862,7 +2866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户tag</p>
+     * <p>Queries the tags that are added to an Elastic Container Instance resource.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2934,7 +2938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户tag</p>
+     * <p>Queries the tags that are added to an Elastic Container Instance resource.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -3016,10 +3020,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can scale up volumes by calling this operation. You cannot scale down volumes by calling this operation. Only volumes of Alibaba Cloud disks can be scaled up.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>You can scale up volumes by calling this operation. You cannot scale down volumes by calling this operation.</li>
+     * <li>Only volumes of the disk type can be scaled up. Volumes of other types cannot be scaled up.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Scales out volumes on an elastic container instance.</p>
+     * <p>Scales up a disk volume that is mounted to an elastic container instance.</p>
      * 
      * @param request ResizeContainerGroupVolumeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3087,10 +3095,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can scale up volumes by calling this operation. You cannot scale down volumes by calling this operation. Only volumes of Alibaba Cloud disks can be scaled up.</p>
+     * <h2><a href="#"></a>Usage notes</h2>
+     * <ul>
+     * <li>You can scale up volumes by calling this operation. You cannot scale down volumes by calling this operation.</li>
+     * <li>Only volumes of the disk type can be scaled up. Volumes of other types cannot be scaled up.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Scales out volumes on an elastic container instance.</p>
+     * <p>Scales up a disk volume that is mounted to an elastic container instance.</p>
      * 
      * @param request ResizeContainerGroupVolumeRequest
      * @return ResizeContainerGroupVolumeResponse
@@ -3188,7 +3200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打用户tag</p>
+     * <p>Adds tags to an Elastic Container Instance resource.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3252,7 +3264,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>打用户tag</p>
+     * <p>Adds tags to an Elastic Container Instance resource.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -3264,7 +3276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>去除用户tag</p>
+     * <p>Removes tags from an Elastic Container Instance resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3336,7 +3348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>去除用户tag</p>
+     * <p>Removes tags from an Elastic Container Instance resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

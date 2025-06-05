@@ -84,7 +84,7 @@ public class DescribeVirtualNodesRequest extends TeaModel {
      * <p>The tags that are bound to the virtual node.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<DescribeVirtualNodesRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The IDs of the virtual nodes. You can specify up to 20 IDs. Each ID must be a string in the JSON format.</p>
@@ -189,11 +189,11 @@ public class DescribeVirtualNodesRequest extends TeaModel {
         return this.status;
     }
 
-    public DescribeVirtualNodesRequest setTag(java.util.List<DescribeVirtualNodesRequestTag> tag) {
+    public DescribeVirtualNodesRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<DescribeVirtualNodesRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -213,7 +213,7 @@ public class DescribeVirtualNodesRequest extends TeaModel {
         return this.virtualNodeName;
     }
 
-    public static class DescribeVirtualNodesRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of tag N.</p>
          * 
@@ -232,12 +232,12 @@ public class DescribeVirtualNodesRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeVirtualNodesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeVirtualNodesRequestTag self = new DescribeVirtualNodesRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeVirtualNodesRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -245,7 +245,7 @@ public class DescribeVirtualNodesRequest extends TeaModel {
             return this.key;
         }
 
-        public DescribeVirtualNodesRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

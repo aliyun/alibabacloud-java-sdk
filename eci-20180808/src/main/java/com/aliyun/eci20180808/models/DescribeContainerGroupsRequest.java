@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerGroupsRequest extends TeaModel {
     /**
-     * <p>The computing power type of the elastic container instance. A value of economy specifies economic elastic container instances.</p>
+     * <p>The compute category of the instance. Valid values:</p>
+     * <ul>
+     * <li>economy</li>
+     * <li>general</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>economy</p>
@@ -120,7 +124,7 @@ public class DescribeContainerGroupsRequest extends TeaModel {
      * <p>The tag of the instances.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<DescribeContainerGroupsRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The ID of the vSwitch to which the elastic container instances are connected.</p>
@@ -259,11 +263,11 @@ public class DescribeContainerGroupsRequest extends TeaModel {
         return this.status;
     }
 
-    public DescribeContainerGroupsRequest setTag(java.util.List<DescribeContainerGroupsRequestTag> tag) {
+    public DescribeContainerGroupsRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<DescribeContainerGroupsRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -291,7 +295,7 @@ public class DescribeContainerGroupsRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class DescribeContainerGroupsRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The tag key of the instances.</p>
          * 
@@ -310,12 +314,12 @@ public class DescribeContainerGroupsRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeContainerGroupsRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsRequestTag self = new DescribeContainerGroupsRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -323,7 +327,7 @@ public class DescribeContainerGroupsRequest extends TeaModel {
             return this.key;
         }
 
-        public DescribeContainerGroupsRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

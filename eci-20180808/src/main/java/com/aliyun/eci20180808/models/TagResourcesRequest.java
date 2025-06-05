@@ -11,6 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IDs of the resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -32,6 +34,13 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>ContainerGroup: elastic container instance</li>
+     * <li>ImageCache: image cache</li>
+     * <li>DataCache: data cache</li>
+     * <li>VirtualNode: virtual node</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,10 +50,11 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tags that you want to add to the resource. A maximum of 20 tags can be added to a resource.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<TagResourcesRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     public static TagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         TagResourcesRequest self = new TagResourcesRequest();
@@ -107,16 +117,18 @@ public class TagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public TagResourcesRequest setTag(java.util.List<TagResourcesRequestTag> tag) {
+    public TagResourcesRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<TagResourcesRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public static class TagResourcesRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
+         * <p>The tag key. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>testkey</p>
          */
@@ -124,18 +136,20 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag value cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;
 
-        public static TagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            TagResourcesRequestTag self = new TagResourcesRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public TagResourcesRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -143,7 +157,7 @@ public class TagResourcesRequest extends TeaModel {
             return this.key;
         }
 
-        public TagResourcesRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

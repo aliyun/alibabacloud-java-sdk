@@ -67,7 +67,7 @@ public class DescribeContainerGroupStatusRequest extends TeaModel {
      * <p>The tag that is bound to the instances.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<DescribeContainerGroupStatusRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The vSwitch ID.</p>
@@ -140,11 +140,11 @@ public class DescribeContainerGroupStatusRequest extends TeaModel {
         return this.sinceSecond;
     }
 
-    public DescribeContainerGroupStatusRequest setTag(java.util.List<DescribeContainerGroupStatusRequestTag> tag) {
+    public DescribeContainerGroupStatusRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<DescribeContainerGroupStatusRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -164,7 +164,7 @@ public class DescribeContainerGroupStatusRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class DescribeContainerGroupStatusRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
          * 
@@ -183,12 +183,12 @@ public class DescribeContainerGroupStatusRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeContainerGroupStatusRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusRequestTag self = new DescribeContainerGroupStatusRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -196,7 +196,7 @@ public class DescribeContainerGroupStatusRequest extends TeaModel {
             return this.key;
         }
 
-        public DescribeContainerGroupStatusRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

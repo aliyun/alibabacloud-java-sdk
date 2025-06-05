@@ -11,13 +11,13 @@ public class CommitContainerRequest extends TeaModel {
      * </blockquote>
      */
     @NameInMap("AcrRegistryInfo")
-    public CommitContainerRequestAcrRegistryInfo acrRegistryInfo;
+    public AcrRegistryInfo acrRegistryInfo;
 
     /**
      * <p>The details about the ARN that is required for authorization.</p>
      */
     @NameInMap("Arn")
-    public CommitContainerRequestArn arn;
+    public Arn arn;
 
     /**
      * <p>The ID of the container group.</p>
@@ -43,7 +43,7 @@ public class CommitContainerRequest extends TeaModel {
      * <p>The image of the container.</p>
      */
     @NameInMap("Image")
-    public CommitContainerRequestImage image;
+    public Image image;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -72,19 +72,19 @@ public class CommitContainerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CommitContainerRequest setAcrRegistryInfo(CommitContainerRequestAcrRegistryInfo acrRegistryInfo) {
+    public CommitContainerRequest setAcrRegistryInfo(AcrRegistryInfo acrRegistryInfo) {
         this.acrRegistryInfo = acrRegistryInfo;
         return this;
     }
-    public CommitContainerRequestAcrRegistryInfo getAcrRegistryInfo() {
+    public AcrRegistryInfo getAcrRegistryInfo() {
         return this.acrRegistryInfo;
     }
 
-    public CommitContainerRequest setArn(CommitContainerRequestArn arn) {
+    public CommitContainerRequest setArn(Arn arn) {
         this.arn = arn;
         return this;
     }
-    public CommitContainerRequestArn getArn() {
+    public Arn getArn() {
         return this.arn;
     }
 
@@ -104,11 +104,11 @@ public class CommitContainerRequest extends TeaModel {
         return this.containerName;
     }
 
-    public CommitContainerRequest setImage(CommitContainerRequestImage image) {
+    public CommitContainerRequest setImage(Image image) {
         this.image = image;
         return this;
     }
-    public CommitContainerRequestImage getImage() {
+    public Image getImage() {
         return this.image;
     }
 
@@ -152,7 +152,7 @@ public class CommitContainerRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public static class CommitContainerRequestAcrRegistryInfo extends TeaModel {
+    public static class AcrRegistryInfo extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.</p>
          * 
@@ -189,12 +189,12 @@ public class CommitContainerRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static CommitContainerRequestAcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
-            CommitContainerRequestAcrRegistryInfo self = new CommitContainerRequestAcrRegistryInfo();
+        public static AcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
+            AcrRegistryInfo self = new AcrRegistryInfo();
             return TeaModel.build(map, self);
         }
 
-        public CommitContainerRequestAcrRegistryInfo setArnService(String arnService) {
+        public AcrRegistryInfo setArnService(String arnService) {
             this.arnService = arnService;
             return this;
         }
@@ -202,7 +202,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.arnService;
         }
 
-        public CommitContainerRequestAcrRegistryInfo setArnUser(String arnUser) {
+        public AcrRegistryInfo setArnUser(String arnUser) {
             this.arnUser = arnUser;
             return this;
         }
@@ -210,7 +210,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.arnUser;
         }
 
-        public CommitContainerRequestAcrRegistryInfo setInstanceId(String instanceId) {
+        public AcrRegistryInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -218,7 +218,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public CommitContainerRequestAcrRegistryInfo setRegionId(String regionId) {
+        public AcrRegistryInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -228,7 +228,7 @@ public class CommitContainerRequest extends TeaModel {
 
     }
 
-    public static class CommitContainerRequestArn extends TeaModel {
+    public static class Arn extends TeaModel {
         /**
          * <p>The ARN of the authorized role.</p>
          * 
@@ -247,12 +247,12 @@ public class CommitContainerRequest extends TeaModel {
         @NameInMap("RoleType")
         public String roleType;
 
-        public static CommitContainerRequestArn build(java.util.Map<String, ?> map) throws Exception {
-            CommitContainerRequestArn self = new CommitContainerRequestArn();
+        public static Arn build(java.util.Map<String, ?> map) throws Exception {
+            Arn self = new Arn();
             return TeaModel.build(map, self);
         }
 
-        public CommitContainerRequestArn setRoleArn(String roleArn) {
+        public Arn setRoleArn(String roleArn) {
             this.roleArn = roleArn;
             return this;
         }
@@ -260,7 +260,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.roleArn;
         }
 
-        public CommitContainerRequestArn setRoleType(String roleType) {
+        public Arn setRoleType(String roleType) {
             this.roleType = roleType;
             return this;
         }
@@ -270,7 +270,7 @@ public class CommitContainerRequest extends TeaModel {
 
     }
 
-    public static class CommitContainerRequestImage extends TeaModel {
+    public static class Image extends TeaModel {
         /**
          * <p>The authorization of the image.</p>
          * 
@@ -309,12 +309,12 @@ public class CommitContainerRequest extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
-        public static CommitContainerRequestImage build(java.util.Map<String, ?> map) throws Exception {
-            CommitContainerRequestImage self = new CommitContainerRequestImage();
+        public static Image build(java.util.Map<String, ?> map) throws Exception {
+            Image self = new Image();
             return TeaModel.build(map, self);
         }
 
-        public CommitContainerRequestImage setAuthor(String author) {
+        public Image setAuthor(String author) {
             this.author = author;
             return this;
         }
@@ -322,7 +322,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.author;
         }
 
-        public CommitContainerRequestImage setMessage(String message) {
+        public Image setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -330,7 +330,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.message;
         }
 
-        public CommitContainerRequestImage setRepository(String repository) {
+        public Image setRepository(String repository) {
             this.repository = repository;
             return this;
         }
@@ -338,7 +338,7 @@ public class CommitContainerRequest extends TeaModel {
             return this.repository;
         }
 
-        public CommitContainerRequestImage setTag(String tag) {
+        public Image setTag(String tag) {
             this.tag = tag;
             return this;
         }

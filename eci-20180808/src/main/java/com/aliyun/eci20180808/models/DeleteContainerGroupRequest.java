@@ -23,6 +23,16 @@ public class DeleteContainerGroupRequest extends TeaModel {
     @NameInMap("ContainerGroupId")
     public String containerGroupId;
 
+    /**
+     * <p>Specifies whether to forcibly delete resources. Default value: false. Valid values:</p>
+     * <ul>
+     * <li>true: forcibly deletes resources without waiting for the timeout period for graceful terminations.</li>
+     * <li>false: waits for the timeout period for graceful terminations to delete resources.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 

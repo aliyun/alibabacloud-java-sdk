@@ -8,7 +8,7 @@ public class CreateImageCacheRequest extends TeaModel {
      * <p>Information about the Container Registry Enterprise Edition instance. For more information, see <a href="https://help.aliyun.com/document_detail/194250.html">Pull images from a Container Registry Enterprise Edition instance without using secrets</a>.</p>
      */
     @NameInMap("AcrRegistryInfo")
-    public java.util.List<CreateImageCacheRequestAcrRegistryInfo> acrRegistryInfo;
+    public java.util.List<AcrRegistryInfo> acrRegistryInfo;
 
     /**
      * <p>Comments.</p>
@@ -120,7 +120,7 @@ public class CreateImageCacheRequest extends TeaModel {
      * <p>The image repository.</p>
      */
     @NameInMap("ImageRegistryCredential")
-    public java.util.List<CreateImageCacheRequestImageRegistryCredential> imageRegistryCredential;
+    public java.util.List<ImageRegistryCredential> imageRegistryCredential;
 
     /**
      * <p>The address of the self-managed image repository.</p>
@@ -131,6 +131,22 @@ public class CreateImageCacheRequest extends TeaModel {
      */
     @NameInMap("InsecureRegistry")
     public String insecureRegistry;
+
+    /**
+     * <p>The operating system of the image. Default value: Linux. Valid values:</p>
+     * <ul>
+     * <li>Linux</li>
+     * <li>Windows</li>
+     * </ul>
+     * <blockquote>
+     * <p>Windows instances are in invitational preview. To use the operating system, submit a ticket.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Linux</p>
+     */
+    @NameInMap("OsType")
+    public String osType;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -209,7 +225,7 @@ public class CreateImageCacheRequest extends TeaModel {
      * <p>The tag of the image cache.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateImageCacheRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The ID of the vSwitch. You can specify up to 10 vSwitch IDs. Separate multiple vSwitch IDs with commas (,). Example: <code>vsw-***,vsw-***</code>.</p>
@@ -234,11 +250,11 @@ public class CreateImageCacheRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateImageCacheRequest setAcrRegistryInfo(java.util.List<CreateImageCacheRequestAcrRegistryInfo> acrRegistryInfo) {
+    public CreateImageCacheRequest setAcrRegistryInfo(java.util.List<AcrRegistryInfo> acrRegistryInfo) {
         this.acrRegistryInfo = acrRegistryInfo;
         return this;
     }
-    public java.util.List<CreateImageCacheRequestAcrRegistryInfo> getAcrRegistryInfo() {
+    public java.util.List<AcrRegistryInfo> getAcrRegistryInfo() {
         return this.acrRegistryInfo;
     }
 
@@ -322,11 +338,11 @@ public class CreateImageCacheRequest extends TeaModel {
         return this.imageCacheSize;
     }
 
-    public CreateImageCacheRequest setImageRegistryCredential(java.util.List<CreateImageCacheRequestImageRegistryCredential> imageRegistryCredential) {
+    public CreateImageCacheRequest setImageRegistryCredential(java.util.List<ImageRegistryCredential> imageRegistryCredential) {
         this.imageRegistryCredential = imageRegistryCredential;
         return this;
     }
-    public java.util.List<CreateImageCacheRequestImageRegistryCredential> getImageRegistryCredential() {
+    public java.util.List<ImageRegistryCredential> getImageRegistryCredential() {
         return this.imageRegistryCredential;
     }
 
@@ -336,6 +352,14 @@ public class CreateImageCacheRequest extends TeaModel {
     }
     public String getInsecureRegistry() {
         return this.insecureRegistry;
+    }
+
+    public CreateImageCacheRequest setOsType(String osType) {
+        this.osType = osType;
+        return this;
+    }
+    public String getOsType() {
+        return this.osType;
     }
 
     public CreateImageCacheRequest setOwnerAccount(String ownerAccount) {
@@ -418,11 +442,11 @@ public class CreateImageCacheRequest extends TeaModel {
         return this.standardCopyCount;
     }
 
-    public CreateImageCacheRequest setTag(java.util.List<CreateImageCacheRequestTag> tag) {
+    public CreateImageCacheRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateImageCacheRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -442,7 +466,7 @@ public class CreateImageCacheRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class CreateImageCacheRequestAcrRegistryInfo extends TeaModel {
+    public static class AcrRegistryInfo extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the RAM roles in the Alibaba Cloud account to which the elastic container instance belongs.</p>
          * 
@@ -497,12 +521,12 @@ public class CreateImageCacheRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static CreateImageCacheRequestAcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateImageCacheRequestAcrRegistryInfo self = new CreateImageCacheRequestAcrRegistryInfo();
+        public static AcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
+            AcrRegistryInfo self = new AcrRegistryInfo();
             return TeaModel.build(map, self);
         }
 
-        public CreateImageCacheRequestAcrRegistryInfo setArnService(String arnService) {
+        public AcrRegistryInfo setArnService(String arnService) {
             this.arnService = arnService;
             return this;
         }
@@ -510,7 +534,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.arnService;
         }
 
-        public CreateImageCacheRequestAcrRegistryInfo setArnUser(String arnUser) {
+        public AcrRegistryInfo setArnUser(String arnUser) {
             this.arnUser = arnUser;
             return this;
         }
@@ -518,7 +542,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.arnUser;
         }
 
-        public CreateImageCacheRequestAcrRegistryInfo setDomain(java.util.List<String> domain) {
+        public AcrRegistryInfo setDomain(java.util.List<String> domain) {
             this.domain = domain;
             return this;
         }
@@ -526,7 +550,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.domain;
         }
 
-        public CreateImageCacheRequestAcrRegistryInfo setInstanceId(String instanceId) {
+        public AcrRegistryInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -534,7 +558,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public CreateImageCacheRequestAcrRegistryInfo setInstanceName(String instanceName) {
+        public AcrRegistryInfo setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -542,7 +566,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.instanceName;
         }
 
-        public CreateImageCacheRequestAcrRegistryInfo setRegionId(String regionId) {
+        public AcrRegistryInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -552,7 +576,7 @@ public class CreateImageCacheRequest extends TeaModel {
 
     }
 
-    public static class CreateImageCacheRequestImageRegistryCredential extends TeaModel {
+    public static class ImageRegistryCredential extends TeaModel {
         /**
          * <p>The password that is used to log on to image repository N.</p>
          * 
@@ -580,12 +604,12 @@ public class CreateImageCacheRequest extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        public static CreateImageCacheRequestImageRegistryCredential build(java.util.Map<String, ?> map) throws Exception {
-            CreateImageCacheRequestImageRegistryCredential self = new CreateImageCacheRequestImageRegistryCredential();
+        public static ImageRegistryCredential build(java.util.Map<String, ?> map) throws Exception {
+            ImageRegistryCredential self = new ImageRegistryCredential();
             return TeaModel.build(map, self);
         }
 
-        public CreateImageCacheRequestImageRegistryCredential setPassword(String password) {
+        public ImageRegistryCredential setPassword(String password) {
             this.password = password;
             return this;
         }
@@ -593,7 +617,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.password;
         }
 
-        public CreateImageCacheRequestImageRegistryCredential setServer(String server) {
+        public ImageRegistryCredential setServer(String server) {
             this.server = server;
             return this;
         }
@@ -601,7 +625,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.server;
         }
 
-        public CreateImageCacheRequestImageRegistryCredential setUserName(String userName) {
+        public ImageRegistryCredential setUserName(String userName) {
             this.userName = userName;
             return this;
         }
@@ -611,7 +635,7 @@ public class CreateImageCacheRequest extends TeaModel {
 
     }
 
-    public static class CreateImageCacheRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of tag N of the image cache. Valid values of N: 1 to 20.</p>
          * 
@@ -630,12 +654,12 @@ public class CreateImageCacheRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateImageCacheRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateImageCacheRequestTag self = new CreateImageCacheRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public CreateImageCacheRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -643,7 +667,7 @@ public class CreateImageCacheRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateImageCacheRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

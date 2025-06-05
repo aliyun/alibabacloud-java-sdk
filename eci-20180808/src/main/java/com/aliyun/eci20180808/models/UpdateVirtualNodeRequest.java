@@ -66,7 +66,7 @@ public class UpdateVirtualNodeRequest extends TeaModel {
      * <p>The tags to add to the virtual node.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<UpdateVirtualNodeRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The ID of the virtual node.</p>
@@ -164,11 +164,11 @@ public class UpdateVirtualNodeRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public UpdateVirtualNodeRequest setTag(java.util.List<UpdateVirtualNodeRequestTag> tag) {
+    public UpdateVirtualNodeRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<UpdateVirtualNodeRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -188,7 +188,7 @@ public class UpdateVirtualNodeRequest extends TeaModel {
         return this.virtualNodeName;
     }
 
-    public static class UpdateVirtualNodeRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of tag N to add to the virtual node.</p>
          * 
@@ -207,12 +207,12 @@ public class UpdateVirtualNodeRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static UpdateVirtualNodeRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            UpdateVirtualNodeRequestTag self = new UpdateVirtualNodeRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public UpdateVirtualNodeRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -220,7 +220,7 @@ public class UpdateVirtualNodeRequest extends TeaModel {
             return this.key;
         }
 
-        public UpdateVirtualNodeRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

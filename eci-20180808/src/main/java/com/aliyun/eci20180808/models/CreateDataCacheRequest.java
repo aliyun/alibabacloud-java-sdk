@@ -29,13 +29,13 @@ public class CreateDataCacheRequest extends TeaModel {
      * <p>The data source.</p>
      */
     @NameInMap("DataSource")
-    public CreateDataCacheRequestDataSource dataSource;
+    public DataSource dataSource;
 
     /**
      * <p>The elastic IP address (EIP) to be created and associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.</p>
      */
     @NameInMap("EipCreateParam")
-    public CreateDataCacheRequestEipCreateParam eipCreateParam;
+    public EipCreateParam eipCreateParam;
 
     /**
      * <p>The existing elastic IP address (EIP) to be associated. If no NAT gateway is configured for the virtual private cloud (VPC), you can associate an EIP to pull data from the Internet.</p>
@@ -126,7 +126,7 @@ public class CreateDataCacheRequest extends TeaModel {
      * <p>The tags to be bound to the data cache.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateDataCacheRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The ID of the vSwitch to which the generated ECI belongs during the creation of the data cache.</p>
@@ -158,19 +158,19 @@ public class CreateDataCacheRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateDataCacheRequest setDataSource(CreateDataCacheRequestDataSource dataSource) {
+    public CreateDataCacheRequest setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;
         return this;
     }
-    public CreateDataCacheRequestDataSource getDataSource() {
+    public DataSource getDataSource() {
         return this.dataSource;
     }
 
-    public CreateDataCacheRequest setEipCreateParam(CreateDataCacheRequestEipCreateParam eipCreateParam) {
+    public CreateDataCacheRequest setEipCreateParam(EipCreateParam eipCreateParam) {
         this.eipCreateParam = eipCreateParam;
         return this;
     }
-    public CreateDataCacheRequestEipCreateParam getEipCreateParam() {
+    public EipCreateParam getEipCreateParam() {
         return this.eipCreateParam;
     }
 
@@ -270,11 +270,11 @@ public class CreateDataCacheRequest extends TeaModel {
         return this.size;
     }
 
-    public CreateDataCacheRequest setTag(java.util.List<CreateDataCacheRequestTag> tag) {
+    public CreateDataCacheRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateDataCacheRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -286,7 +286,7 @@ public class CreateDataCacheRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public static class CreateDataCacheRequestDataSource extends TeaModel {
+    public static class DataSource extends TeaModel {
         /**
          * <p>The parameters that are configured for the data source.</p>
          */
@@ -308,12 +308,12 @@ public class CreateDataCacheRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static CreateDataCacheRequestDataSource build(java.util.Map<String, ?> map) throws Exception {
-            CreateDataCacheRequestDataSource self = new CreateDataCacheRequestDataSource();
+        public static DataSource build(java.util.Map<String, ?> map) throws Exception {
+            DataSource self = new DataSource();
             return TeaModel.build(map, self);
         }
 
-        public CreateDataCacheRequestDataSource setOptions(java.util.Map<String, String> options) {
+        public DataSource setOptions(java.util.Map<String, String> options) {
             this.options = options;
             return this;
         }
@@ -321,7 +321,7 @@ public class CreateDataCacheRequest extends TeaModel {
             return this.options;
         }
 
-        public CreateDataCacheRequestDataSource setType(String type) {
+        public DataSource setType(String type) {
             this.type = type;
             return this;
         }
@@ -331,7 +331,7 @@ public class CreateDataCacheRequest extends TeaModel {
 
     }
 
-    public static class CreateDataCacheRequestEipCreateParam extends TeaModel {
+    public static class EipCreateParam extends TeaModel {
         /**
          * <p>The bandwidth of the EIP. Unit: Mbit/s. Default value: 5.</p>
          * 
@@ -385,12 +385,12 @@ public class CreateDataCacheRequest extends TeaModel {
         @NameInMap("PublicIpAddressPoolId")
         public String publicIpAddressPoolId;
 
-        public static CreateDataCacheRequestEipCreateParam build(java.util.Map<String, ?> map) throws Exception {
-            CreateDataCacheRequestEipCreateParam self = new CreateDataCacheRequestEipCreateParam();
+        public static EipCreateParam build(java.util.Map<String, ?> map) throws Exception {
+            EipCreateParam self = new EipCreateParam();
             return TeaModel.build(map, self);
         }
 
-        public CreateDataCacheRequestEipCreateParam setBandwidth(Integer bandwidth) {
+        public EipCreateParam setBandwidth(Integer bandwidth) {
             this.bandwidth = bandwidth;
             return this;
         }
@@ -398,7 +398,7 @@ public class CreateDataCacheRequest extends TeaModel {
             return this.bandwidth;
         }
 
-        public CreateDataCacheRequestEipCreateParam setCommonBandwidthPackage(String commonBandwidthPackage) {
+        public EipCreateParam setCommonBandwidthPackage(String commonBandwidthPackage) {
             this.commonBandwidthPackage = commonBandwidthPackage;
             return this;
         }
@@ -406,7 +406,7 @@ public class CreateDataCacheRequest extends TeaModel {
             return this.commonBandwidthPackage;
         }
 
-        public CreateDataCacheRequestEipCreateParam setISP(String ISP) {
+        public EipCreateParam setISP(String ISP) {
             this.ISP = ISP;
             return this;
         }
@@ -414,7 +414,7 @@ public class CreateDataCacheRequest extends TeaModel {
             return this.ISP;
         }
 
-        public CreateDataCacheRequestEipCreateParam setInternetChargeType(String internetChargeType) {
+        public EipCreateParam setInternetChargeType(String internetChargeType) {
             this.internetChargeType = internetChargeType;
             return this;
         }
@@ -422,7 +422,7 @@ public class CreateDataCacheRequest extends TeaModel {
             return this.internetChargeType;
         }
 
-        public CreateDataCacheRequestEipCreateParam setPublicIpAddressPoolId(String publicIpAddressPoolId) {
+        public EipCreateParam setPublicIpAddressPoolId(String publicIpAddressPoolId) {
             this.publicIpAddressPoolId = publicIpAddressPoolId;
             return this;
         }
@@ -432,7 +432,7 @@ public class CreateDataCacheRequest extends TeaModel {
 
     }
 
-    public static class CreateDataCacheRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
          * 
@@ -451,12 +451,12 @@ public class CreateDataCacheRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateDataCacheRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateDataCacheRequestTag self = new CreateDataCacheRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public CreateDataCacheRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -464,7 +464,7 @@ public class CreateDataCacheRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateDataCacheRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

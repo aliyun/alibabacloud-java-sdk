@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries to return.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -12,6 +14,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String limit;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAdDWBF2****</p>
      */
@@ -25,6 +29,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +38,9 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The IDs of the resources.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -43,6 +51,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The type of the resource. Valid values:</p>
+     * <ul>
+     * <li>ContainerGroup: elastic container instance</li>
+     * <li>ImageCache: image cache</li>
+     * <li>DataCache: data cache</li>
+     * <li>VirtualNode: virtual node</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,8 +66,11 @@ public class ListTagResourcesRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags that are added to the resource.</p>
+     */
     @NameInMap("Tag")
-    public java.util.List<ListTagResourcesRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
@@ -131,16 +149,18 @@ public class ListTagResourcesRequest extends TeaModel {
         return this.resourceType;
     }
 
-    public ListTagResourcesRequest setTag(java.util.List<ListTagResourcesRequestTag> tag) {
+    public ListTagResourcesRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<ListTagResourcesRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public static class ListTagResourcesRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>testkey</p>
          */
@@ -148,18 +168,20 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>testvalue</p>
          */
         @NameInMap("Value")
         public String value;
 
-        public static ListTagResourcesRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTagResourcesRequestTag self = new ListTagResourcesRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public ListTagResourcesRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -167,7 +189,7 @@ public class ListTagResourcesRequest extends TeaModel {
             return this.key;
         }
 
-        public ListTagResourcesRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }

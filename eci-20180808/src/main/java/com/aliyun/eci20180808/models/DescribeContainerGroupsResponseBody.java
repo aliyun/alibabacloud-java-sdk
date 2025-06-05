@@ -8,7 +8,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      * <p>Details about the queried elastic container instances.</p>
      */
     @NameInMap("ContainerGroups")
-    public java.util.List<DescribeContainerGroupsResponseBodyContainerGroups> containerGroups;
+    public java.util.List<ContainerGroups> containerGroups;
 
     /**
      * <p>The token that determines the start point of the query.</p>
@@ -42,11 +42,11 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeContainerGroupsResponseBody setContainerGroups(java.util.List<DescribeContainerGroupsResponseBodyContainerGroups> containerGroups) {
+    public DescribeContainerGroupsResponseBody setContainerGroups(java.util.List<ContainerGroups> containerGroups) {
         this.containerGroups = containerGroups;
         return this;
     }
-    public java.util.List<DescribeContainerGroupsResponseBodyContainerGroups> getContainerGroups() {
+    public java.util.List<ContainerGroups> getContainerGroups() {
         return this.containerGroups;
     }
 
@@ -74,7 +74,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState extends TeaModel {
+    public static class CurrentState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
          * 
@@ -152,12 +152,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState();
+        public static CurrentState build(java.util.Map<String, ?> map) throws Exception {
+            CurrentState self = new CurrentState();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setDetailStatus(String detailStatus) {
+        public CurrentState setDetailStatus(String detailStatus) {
             this.detailStatus = detailStatus;
             return this;
         }
@@ -165,7 +165,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.detailStatus;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setExitCode(Integer exitCode) {
+        public CurrentState setExitCode(Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -173,7 +173,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setFinishTime(String finishTime) {
+        public CurrentState setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -181,7 +181,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setMessage(String message) {
+        public CurrentState setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -189,7 +189,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setReason(String reason) {
+        public CurrentState setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -197,7 +197,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setSignal(Integer signal) {
+        public CurrentState setSignal(Integer signal) {
             this.signal = signal;
             return this;
         }
@@ -205,7 +205,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.signal;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setStartTime(String startTime) {
+        public CurrentState setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -213,7 +213,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState setState(String state) {
+        public CurrentState setState(String state) {
             this.state = state;
             return this;
         }
@@ -223,7 +223,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef extends TeaModel {
+    public static class FieldRef extends TeaModel {
         /**
          * <p>The path of the field.</p>
          * 
@@ -233,12 +233,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("FieldPath")
         public String fieldPath;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef();
+        public static FieldRef build(java.util.Map<String, ?> map) throws Exception {
+            FieldRef self = new FieldRef();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef setFieldPath(String fieldPath) {
+        public FieldRef setFieldPath(String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
@@ -248,29 +248,29 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom extends TeaModel {
+    public static class ValueFrom extends TeaModel {
         /**
          * <p>The specified field.</p>
          */
         @NameInMap("FieldRef")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef fieldRef;
+        public FieldRef fieldRef;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom();
+        public static ValueFrom build(java.util.Map<String, ?> map) throws Exception {
+            ValueFrom self = new ValueFrom();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom setFieldRef(DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef fieldRef) {
+        public ValueFrom setFieldRef(FieldRef fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFromFieldRef getFieldRef() {
+        public FieldRef getFieldRef() {
             return this.fieldRef;
         }
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars extends TeaModel {
+    public static class EnvironmentVars extends TeaModel {
         /**
          * <p>The name of the environment variable.</p>
          * 
@@ -293,14 +293,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The source of the environment variable value. This parameter has a value only when the Value parameter is left empty.</p>
          */
         @NameInMap("ValueFrom")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom valueFrom;
+        public ValueFrom valueFrom;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars();
+        public static EnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
+            EnvironmentVars self = new EnvironmentVars();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars setKey(String key) {
+        public EnvironmentVars setKey(String key) {
             this.key = key;
             return this;
         }
@@ -308,7 +308,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars setValue(String value) {
+        public EnvironmentVars setValue(String value) {
             this.value = value;
             return this;
         }
@@ -316,17 +316,17 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars setValueFrom(DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom valueFrom) {
+        public EnvironmentVars setValueFrom(ValueFrom valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVarsValueFrom getValueFrom() {
+        public ValueFrom getValueFrom() {
             return this.valueFrom;
         }
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet extends TeaModel {
+    public static class HttpGet extends TeaModel {
         /**
          * <p>The path to which the system sends an HTTP GET request for a health check.</p>
          * 
@@ -354,12 +354,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Scheme")
         public String scheme;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet();
+        public static HttpGet build(java.util.Map<String, ?> map) throws Exception {
+            HttpGet self = new HttpGet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet setPath(String path) {
+        public HttpGet setPath(String path) {
             this.path = path;
             return this;
         }
@@ -367,7 +367,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.path;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet setPort(Integer port) {
+        public HttpGet setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -375,7 +375,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet setScheme(String scheme) {
+        public HttpGet setScheme(String scheme) {
             this.scheme = scheme;
             return this;
         }
@@ -385,7 +385,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket extends TeaModel {
+    public static class TcpSocket extends TeaModel {
         /**
          * <p>The hostname.</p>
          * 
@@ -404,12 +404,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket();
+        public static TcpSocket build(java.util.Map<String, ?> map) throws Exception {
+            TcpSocket self = new TcpSocket();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket setHost(String host) {
+        public TcpSocket setHost(String host) {
             this.host = host;
             return this;
         }
@@ -417,7 +417,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket setPort(Integer port) {
+        public TcpSocket setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -427,7 +427,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe extends TeaModel {
+    public static class LivenessProbe extends TeaModel {
         /**
          * <p>The commands that are used to check the containers.</p>
          */
@@ -447,7 +447,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The HTTP GET method that is used to check the container.</p>
          */
         @NameInMap("HttpGet")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet httpGet;
+        public HttpGet httpGet;
 
         /**
          * <p>The number of seconds between the time when the startup of the container ends and the time when the probe starts.</p>
@@ -480,7 +480,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The TCP socket method that is used to check the container.</p>
          */
         @NameInMap("TcpSocket")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket tcpSocket;
+        public TcpSocket tcpSocket;
 
         /**
          * <p>The timeout period of the check. Default value: 1. Minimum value: 1. Unit: seconds.</p>
@@ -491,12 +491,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("TimeoutSeconds")
         public Integer timeoutSeconds;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe();
+        public static LivenessProbe build(java.util.Map<String, ?> map) throws Exception {
+            LivenessProbe self = new LivenessProbe();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setExecs(java.util.List<String> execs) {
+        public LivenessProbe setExecs(java.util.List<String> execs) {
             this.execs = execs;
             return this;
         }
@@ -504,7 +504,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.execs;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setFailureThreshold(Integer failureThreshold) {
+        public LivenessProbe setFailureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
@@ -512,15 +512,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.failureThreshold;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setHttpGet(DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet httpGet) {
+        public LivenessProbe setHttpGet(HttpGet httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeHttpGet getHttpGet() {
+        public HttpGet getHttpGet() {
             return this.httpGet;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
+        public LivenessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
@@ -528,7 +528,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.initialDelaySeconds;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setPeriodSeconds(Integer periodSeconds) {
+        public LivenessProbe setPeriodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
@@ -536,7 +536,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.periodSeconds;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setSuccessThreshold(Integer successThreshold) {
+        public LivenessProbe setSuccessThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
@@ -544,15 +544,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.successThreshold;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setTcpSocket(DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket tcpSocket) {
+        public LivenessProbe setTcpSocket(TcpSocket tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbeTcpSocket getTcpSocket() {
+        public TcpSocket getTcpSocket() {
             return this.tcpSocket;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe setTimeoutSeconds(Integer timeoutSeconds) {
+        public LivenessProbe setTimeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
@@ -562,7 +562,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts extends TeaModel {
+    public static class Ports extends TeaModel {
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
          * 
@@ -581,12 +581,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts();
+        public static Ports build(java.util.Map<String, ?> map) throws Exception {
+            Ports self = new Ports();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts setPort(Integer port) {
+        public Ports setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -594,7 +594,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts setProtocol(String protocol) {
+        public Ports setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -604,7 +604,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState extends TeaModel {
+    public static class PreviousState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
          * 
@@ -682,12 +682,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState();
+        public static PreviousState build(java.util.Map<String, ?> map) throws Exception {
+            PreviousState self = new PreviousState();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setDetailStatus(String detailStatus) {
+        public PreviousState setDetailStatus(String detailStatus) {
             this.detailStatus = detailStatus;
             return this;
         }
@@ -695,7 +695,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.detailStatus;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setExitCode(Integer exitCode) {
+        public PreviousState setExitCode(Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -703,7 +703,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setFinishTime(String finishTime) {
+        public PreviousState setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -711,7 +711,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setMessage(String message) {
+        public PreviousState setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -719,7 +719,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setReason(String reason) {
+        public PreviousState setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -727,7 +727,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setSignal(Integer signal) {
+        public PreviousState setSignal(Integer signal) {
             this.signal = signal;
             return this;
         }
@@ -735,7 +735,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.signal;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setStartTime(String startTime) {
+        public PreviousState setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -743,7 +743,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState setState(String state) {
+        public PreviousState setState(String state) {
             this.state = state;
             return this;
         }
@@ -753,7 +753,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet extends TeaModel {
+    public static class ReadinessProbeHttpGet extends TeaModel {
         /**
          * <p>The path to which the system sends an HTTP GET request for a health check.</p>
          * 
@@ -781,12 +781,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Scheme")
         public String scheme;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet();
+        public static ReadinessProbeHttpGet build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbeHttpGet self = new ReadinessProbeHttpGet();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet setPath(String path) {
+        public ReadinessProbeHttpGet setPath(String path) {
             this.path = path;
             return this;
         }
@@ -794,7 +794,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.path;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet setPort(Integer port) {
+        public ReadinessProbeHttpGet setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -802,7 +802,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet setScheme(String scheme) {
+        public ReadinessProbeHttpGet setScheme(String scheme) {
             this.scheme = scheme;
             return this;
         }
@@ -812,7 +812,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket extends TeaModel {
+    public static class ReadinessProbeTcpSocket extends TeaModel {
         /**
          * <p>The hostname.</p>
          * 
@@ -831,12 +831,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket();
+        public static ReadinessProbeTcpSocket build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbeTcpSocket self = new ReadinessProbeTcpSocket();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket setHost(String host) {
+        public ReadinessProbeTcpSocket setHost(String host) {
             this.host = host;
             return this;
         }
@@ -844,7 +844,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.host;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket setPort(Integer port) {
+        public ReadinessProbeTcpSocket setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -854,7 +854,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe extends TeaModel {
+    public static class ReadinessProbe extends TeaModel {
         /**
          * <p>The commands that are run in the container when you use a CLI to perform health checks.</p>
          */
@@ -874,7 +874,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The HTTP GET method that is used to check the container.</p>
          */
         @NameInMap("HttpGet")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet httpGet;
+        public ReadinessProbeHttpGet httpGet;
 
         /**
          * <p>The number of seconds between the time when the startup of the container ends and the time when the probe starts.</p>
@@ -907,7 +907,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The TCP socket method that is used to check the container.</p>
          */
         @NameInMap("TcpSocket")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket tcpSocket;
+        public ReadinessProbeTcpSocket tcpSocket;
 
         /**
          * <p>The timeout period of the check. Default value: 1. Minimum value: 1. Unit: seconds.</p>
@@ -918,12 +918,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("TimeoutSeconds")
         public Integer timeoutSeconds;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe();
+        public static ReadinessProbe build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbe self = new ReadinessProbe();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setExecs(java.util.List<String> execs) {
+        public ReadinessProbe setExecs(java.util.List<String> execs) {
             this.execs = execs;
             return this;
         }
@@ -931,7 +931,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.execs;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setFailureThreshold(Integer failureThreshold) {
+        public ReadinessProbe setFailureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
@@ -939,15 +939,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.failureThreshold;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setHttpGet(DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet httpGet) {
+        public ReadinessProbe setHttpGet(ReadinessProbeHttpGet httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeHttpGet getHttpGet() {
+        public ReadinessProbeHttpGet getHttpGet() {
             return this.httpGet;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
+        public ReadinessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
@@ -955,7 +955,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.initialDelaySeconds;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setPeriodSeconds(Integer periodSeconds) {
+        public ReadinessProbe setPeriodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
@@ -963,7 +963,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.periodSeconds;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setSuccessThreshold(Integer successThreshold) {
+        public ReadinessProbe setSuccessThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
@@ -971,15 +971,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.successThreshold;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setTcpSocket(DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket tcpSocket) {
+        public ReadinessProbe setTcpSocket(ReadinessProbeTcpSocket tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbeTcpSocket getTcpSocket() {
+        public ReadinessProbeTcpSocket getTcpSocket() {
             return this.tcpSocket;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe setTimeoutSeconds(Integer timeoutSeconds) {
+        public ReadinessProbe setTimeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
@@ -989,19 +989,19 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability extends TeaModel {
+    public static class Capability extends TeaModel {
         /**
          * <p>The permissions specific to the process in the container.</p>
          */
         @NameInMap("Adds")
         public java.util.List<String> adds;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability();
+        public static Capability build(java.util.Map<String, ?> map) throws Exception {
+            Capability self = new Capability();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability setAdds(java.util.List<String> adds) {
+        public Capability setAdds(java.util.List<String> adds) {
             this.adds = adds;
             return this;
         }
@@ -1011,12 +1011,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext extends TeaModel {
+    public static class SecurityContext extends TeaModel {
         /**
          * <p>The permissions specific to the processes in the container.</p>
          */
         @NameInMap("Capability")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability capability;
+        public Capability capability;
 
         /**
          * <p>Indicates whether permissions on the root file system are read-only. Valid value: true.</p>
@@ -1036,20 +1036,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext();
+        public static SecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            SecurityContext self = new SecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext setCapability(DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability capability) {
+        public SecurityContext setCapability(Capability capability) {
             this.capability = capability;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContextCapability getCapability() {
+        public Capability getCapability() {
             return this.capability;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
+        public SecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
@@ -1057,7 +1057,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.readOnlyRootFilesystem;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext setRunAsUser(Long runAsUser) {
+        public SecurityContext setRunAsUser(Long runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
@@ -1067,7 +1067,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts extends TeaModel {
+    public static class VolumeMounts extends TeaModel {
         /**
          * <p>The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume.</p>
          * 
@@ -1118,12 +1118,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("SubPath")
         public String subPath;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts self = new DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts();
+        public static VolumeMounts build(java.util.Map<String, ?> map) throws Exception {
+            VolumeMounts self = new VolumeMounts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts setMountPath(String mountPath) {
+        public VolumeMounts setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -1131,7 +1131,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.mountPath;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts setMountPropagation(String mountPropagation) {
+        public VolumeMounts setMountPropagation(String mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
@@ -1139,7 +1139,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.mountPropagation;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts setName(String name) {
+        public VolumeMounts setName(String name) {
             this.name = name;
             return this;
         }
@@ -1147,7 +1147,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts setReadOnly(Boolean readOnly) {
+        public VolumeMounts setReadOnly(Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
@@ -1155,7 +1155,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.readOnly;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts setSubPath(String subPath) {
+        public VolumeMounts setSubPath(String subPath) {
             this.subPath = subPath;
             return this;
         }
@@ -1165,7 +1165,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsContainers extends TeaModel {
+    public static class Containers extends TeaModel {
         /**
          * <p>The arguments that are passed to the startup commands of the container.</p>
          */
@@ -1191,13 +1191,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The current container status.</p>
          */
         @NameInMap("CurrentState")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState currentState;
+        public CurrentState currentState;
 
         /**
          * <p>The environment variables of the container.</p>
          */
         @NameInMap("EnvironmentVars")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars> environmentVars;
+        public java.util.List<EnvironmentVars> environmentVars;
 
         /**
          * <p>The number of GPUs.</p>
@@ -1235,7 +1235,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The liveness probe of the container.</p>
          */
         @NameInMap("LivenessProbe")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe livenessProbe;
+        public LivenessProbe livenessProbe;
 
         /**
          * <p>The memory size of the container. Unit: GiB.</p>
@@ -1259,19 +1259,19 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The exposed port and protocol of the container.</p>
          */
         @NameInMap("Ports")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts> ports;
+        public java.util.List<Ports> ports;
 
         /**
          * <p>The previous state of the container.</p>
          */
         @NameInMap("PreviousState")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState previousState;
+        public PreviousState previousState;
 
         /**
          * <p>The readiness probe that is used to check whether the container is ready to serve a request.</p>
          */
         @NameInMap("ReadinessProbe")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe readinessProbe;
+        public ReadinessProbe readinessProbe;
 
         /**
          * <p>Indicates whether the container passed the readiness probe.</p>
@@ -1295,7 +1295,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The security context of the elastic container instance.</p>
          */
         @NameInMap("SecurityContext")
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext securityContext;
+        public SecurityContext securityContext;
 
         /**
          * <p>Indicates whether the container allocates buffer resources to standard input streams when the container is running. If you do not specify this parameter, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.</p>
@@ -1328,7 +1328,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>Information about the mounted volumes.</p>
          */
         @NameInMap("VolumeMounts")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts> volumeMounts;
+        public java.util.List<VolumeMounts> volumeMounts;
 
         /**
          * <p>The working directory of the container.</p>
@@ -1339,12 +1339,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("WorkingDir")
         public String workingDir;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsContainers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsContainers self = new DescribeContainerGroupsResponseBodyContainerGroupsContainers();
+        public static Containers build(java.util.Map<String, ?> map) throws Exception {
+            Containers self = new Containers();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setArgs(java.util.List<String> args) {
+        public Containers setArgs(java.util.List<String> args) {
             this.args = args;
             return this;
         }
@@ -1352,7 +1352,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.args;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setCommands(java.util.List<String> commands) {
+        public Containers setCommands(java.util.List<String> commands) {
             this.commands = commands;
             return this;
         }
@@ -1360,7 +1360,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.commands;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setCpu(Float cpu) {
+        public Containers setCpu(Float cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -1368,23 +1368,23 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setCurrentState(DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState currentState) {
+        public Containers setCurrentState(CurrentState currentState) {
             this.currentState = currentState;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersCurrentState getCurrentState() {
+        public CurrentState getCurrentState() {
             return this.currentState;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setEnvironmentVars(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars> environmentVars) {
+        public Containers setEnvironmentVars(java.util.List<EnvironmentVars> environmentVars) {
             this.environmentVars = environmentVars;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersEnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setGpu(Integer gpu) {
+        public Containers setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -1392,7 +1392,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.gpu;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setImage(String image) {
+        public Containers setImage(String image) {
             this.image = image;
             return this;
         }
@@ -1400,7 +1400,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.image;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setImagePullPolicy(String imagePullPolicy) {
+        public Containers setImagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
@@ -1408,15 +1408,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.imagePullPolicy;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setLivenessProbe(DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe livenessProbe) {
+        public Containers setLivenessProbe(LivenessProbe livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersLivenessProbe getLivenessProbe() {
+        public LivenessProbe getLivenessProbe() {
             return this.livenessProbe;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setMemory(Float memory) {
+        public Containers setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
@@ -1424,7 +1424,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setName(String name) {
+        public Containers setName(String name) {
             this.name = name;
             return this;
         }
@@ -1432,31 +1432,31 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setPorts(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts> ports) {
+        public Containers setPorts(java.util.List<Ports> ports) {
             this.ports = ports;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersPorts> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setPreviousState(DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState previousState) {
+        public Containers setPreviousState(PreviousState previousState) {
             this.previousState = previousState;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersPreviousState getPreviousState() {
+        public PreviousState getPreviousState() {
             return this.previousState;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setReadinessProbe(DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe readinessProbe) {
+        public Containers setReadinessProbe(ReadinessProbe readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersReadinessProbe getReadinessProbe() {
+        public ReadinessProbe getReadinessProbe() {
             return this.readinessProbe;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setReady(Boolean ready) {
+        public Containers setReady(Boolean ready) {
             this.ready = ready;
             return this;
         }
@@ -1464,7 +1464,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.ready;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setRestartCount(Integer restartCount) {
+        public Containers setRestartCount(Integer restartCount) {
             this.restartCount = restartCount;
             return this;
         }
@@ -1472,15 +1472,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.restartCount;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setSecurityContext(DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext securityContext) {
+        public Containers setSecurityContext(SecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainersSecurityContext getSecurityContext() {
+        public SecurityContext getSecurityContext() {
             return this.securityContext;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setStdin(Boolean stdin) {
+        public Containers setStdin(Boolean stdin) {
             this.stdin = stdin;
             return this;
         }
@@ -1488,7 +1488,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.stdin;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setStdinOnce(Boolean stdinOnce) {
+        public Containers setStdinOnce(Boolean stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
@@ -1496,7 +1496,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.stdinOnce;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setTty(Boolean tty) {
+        public Containers setTty(Boolean tty) {
             this.tty = tty;
             return this;
         }
@@ -1504,15 +1504,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.tty;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setVolumeMounts(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts> volumeMounts) {
+        public Containers setVolumeMounts(java.util.List<VolumeMounts> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainersVolumeMounts> getVolumeMounts() {
+        public java.util.List<VolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsContainers setWorkingDir(String workingDir) {
+        public Containers setWorkingDir(String workingDir) {
             this.workingDir = workingDir;
             return this;
         }
@@ -1522,7 +1522,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions extends TeaModel {
+    public static class Options extends TeaModel {
         /**
          * <p>The variable name of the option.</p>
          * 
@@ -1541,12 +1541,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions self = new DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions();
+        public static Options build(java.util.Map<String, ?> map) throws Exception {
+            Options self = new Options();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions setName(String name) {
+        public Options setName(String name) {
             this.name = name;
             return this;
         }
@@ -1554,7 +1554,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions setValue(String value) {
+        public Options setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1564,7 +1564,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig extends TeaModel {
+    public static class DnsConfig extends TeaModel {
         /**
          * <p>The IP addresses of DNS servers.</p>
          */
@@ -1575,7 +1575,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
          */
         @NameInMap("Options")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions> options;
+        public java.util.List<Options> options;
 
         /**
          * <p>The search domains of DNS servers.</p>
@@ -1583,12 +1583,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Searches")
         public java.util.List<String> searches;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig self = new DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig();
+        public static DnsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DnsConfig self = new DnsConfig();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig setNameServers(java.util.List<String> nameServers) {
+        public DnsConfig setNameServers(java.util.List<String> nameServers) {
             this.nameServers = nameServers;
             return this;
         }
@@ -1596,15 +1596,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.nameServers;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig setOptions(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions> options) {
+        public DnsConfig setOptions(java.util.List<Options> options) {
             this.options = options;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsDnsConfigOptions> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig setSearches(java.util.List<String> searches) {
+        public DnsConfig setSearches(java.util.List<String> searches) {
             this.searches = searches;
             return this;
         }
@@ -1614,7 +1614,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls extends TeaModel {
+    public static class Sysctls extends TeaModel {
         /**
          * <p>The name of the Sysctl parameter.</p>
          * 
@@ -1633,12 +1633,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls self = new DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls();
+        public static Sysctls build(java.util.Map<String, ?> map) throws Exception {
+            Sysctls self = new Sysctls();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls setName(String name) {
+        public Sysctls setName(String name) {
             this.name = name;
             return this;
         }
@@ -1646,7 +1646,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls setValue(String value) {
+        public Sysctls setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1656,29 +1656,29 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext extends TeaModel {
+    public static class EciSecurityContext extends TeaModel {
         /**
          * <p>sysctl parameters.</p>
          */
         @NameInMap("Sysctls")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls> sysctls;
+        public java.util.List<Sysctls> sysctls;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext self = new DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext();
+        public static EciSecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            EciSecurityContext self = new EciSecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext setSysctls(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls> sysctls) {
+        public EciSecurityContext setSysctls(java.util.List<Sysctls> sysctls) {
             this.sysctls = sysctls;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContextSysctls> getSysctls() {
+        public java.util.List<Sysctls> getSysctls() {
             return this.sysctls;
         }
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsEvents extends TeaModel {
+    public static class Events extends TeaModel {
         /**
          * <p>The number of the events.</p>
          * 
@@ -1746,12 +1746,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsEvents build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsEvents self = new DescribeContainerGroupsResponseBodyContainerGroupsEvents();
+        public static Events build(java.util.Map<String, ?> map) throws Exception {
+            Events self = new Events();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setCount(Integer count) {
+        public Events setCount(Integer count) {
             this.count = count;
             return this;
         }
@@ -1759,7 +1759,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.count;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setFirstTimestamp(String firstTimestamp) {
+        public Events setFirstTimestamp(String firstTimestamp) {
             this.firstTimestamp = firstTimestamp;
             return this;
         }
@@ -1767,7 +1767,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.firstTimestamp;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setLastTimestamp(String lastTimestamp) {
+        public Events setLastTimestamp(String lastTimestamp) {
             this.lastTimestamp = lastTimestamp;
             return this;
         }
@@ -1775,7 +1775,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.lastTimestamp;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setMessage(String message) {
+        public Events setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -1783,7 +1783,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setName(String name) {
+        public Events setName(String name) {
             this.name = name;
             return this;
         }
@@ -1791,7 +1791,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setReason(String reason) {
+        public Events setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -1799,7 +1799,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsEvents setType(String type) {
+        public Events setType(String type) {
             this.type = type;
             return this;
         }
@@ -1809,7 +1809,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsHostAliases extends TeaModel {
+    public static class HostAliases extends TeaModel {
         /**
          * <p>The information about the hosts.</p>
          */
@@ -1825,12 +1825,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsHostAliases build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsHostAliases self = new DescribeContainerGroupsResponseBodyContainerGroupsHostAliases();
+        public static HostAliases build(java.util.Map<String, ?> map) throws Exception {
+            HostAliases self = new HostAliases();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsHostAliases setHostnames(java.util.List<String> hostnames) {
+        public HostAliases setHostnames(java.util.List<String> hostnames) {
             this.hostnames = hostnames;
             return this;
         }
@@ -1838,7 +1838,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.hostnames;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsHostAliases setIp(String ip) {
+        public HostAliases setIp(String ip) {
             this.ip = ip;
             return this;
         }
@@ -1848,7 +1848,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState extends TeaModel {
+    public static class InitContainersCurrentState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
          * 
@@ -1926,12 +1926,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState();
+        public static InitContainersCurrentState build(java.util.Map<String, ?> map) throws Exception {
+            InitContainersCurrentState self = new InitContainersCurrentState();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setDetailStatus(String detailStatus) {
+        public InitContainersCurrentState setDetailStatus(String detailStatus) {
             this.detailStatus = detailStatus;
             return this;
         }
@@ -1939,7 +1939,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.detailStatus;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setExitCode(Integer exitCode) {
+        public InitContainersCurrentState setExitCode(Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -1947,7 +1947,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setFinishTime(String finishTime) {
+        public InitContainersCurrentState setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -1955,7 +1955,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setMessage(String message) {
+        public InitContainersCurrentState setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -1963,7 +1963,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setReason(String reason) {
+        public InitContainersCurrentState setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -1971,7 +1971,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setSignal(Integer signal) {
+        public InitContainersCurrentState setSignal(Integer signal) {
             this.signal = signal;
             return this;
         }
@@ -1979,7 +1979,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.signal;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setStartTime(String startTime) {
+        public InitContainersCurrentState setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -1987,7 +1987,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState setState(String state) {
+        public InitContainersCurrentState setState(String state) {
             this.state = state;
             return this;
         }
@@ -1997,7 +1997,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef extends TeaModel {
+    public static class ValueFromFieldRef extends TeaModel {
         /**
          * <p>The path of the field. Only <code>status.podIP</code> is supported.</p>
          * 
@@ -2007,12 +2007,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("FieldPath")
         public String fieldPath;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef();
+        public static ValueFromFieldRef build(java.util.Map<String, ?> map) throws Exception {
+            ValueFromFieldRef self = new ValueFromFieldRef();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef setFieldPath(String fieldPath) {
+        public ValueFromFieldRef setFieldPath(String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
@@ -2022,29 +2022,29 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom extends TeaModel {
+    public static class EnvironmentVarsValueFrom extends TeaModel {
         /**
          * <p>The specified fields.</p>
          */
         @NameInMap("FieldRef")
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef fieldRef;
+        public ValueFromFieldRef fieldRef;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom();
+        public static EnvironmentVarsValueFrom build(java.util.Map<String, ?> map) throws Exception {
+            EnvironmentVarsValueFrom self = new EnvironmentVarsValueFrom();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom setFieldRef(DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef fieldRef) {
+        public EnvironmentVarsValueFrom setFieldRef(ValueFromFieldRef fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFromFieldRef getFieldRef() {
+        public ValueFromFieldRef getFieldRef() {
             return this.fieldRef;
         }
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars extends TeaModel {
+    public static class InitContainersEnvironmentVars extends TeaModel {
         /**
          * <p>The name of the environment variable.</p>
          * 
@@ -2067,14 +2067,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The source of the environment variable value. This parameter has a value only when the Value parameter is left empty.</p>
          */
         @NameInMap("ValueFrom")
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom valueFrom;
+        public EnvironmentVarsValueFrom valueFrom;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars();
+        public static InitContainersEnvironmentVars build(java.util.Map<String, ?> map) throws Exception {
+            InitContainersEnvironmentVars self = new InitContainersEnvironmentVars();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars setKey(String key) {
+        public InitContainersEnvironmentVars setKey(String key) {
             this.key = key;
             return this;
         }
@@ -2082,7 +2082,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars setValue(String value) {
+        public InitContainersEnvironmentVars setValue(String value) {
             this.value = value;
             return this;
         }
@@ -2090,17 +2090,17 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.value;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars setValueFrom(DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom valueFrom) {
+        public InitContainersEnvironmentVars setValueFrom(EnvironmentVarsValueFrom valueFrom) {
             this.valueFrom = valueFrom;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVarsValueFrom getValueFrom() {
+        public EnvironmentVarsValueFrom getValueFrom() {
             return this.valueFrom;
         }
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts extends TeaModel {
+    public static class InitContainersPorts extends TeaModel {
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
          * 
@@ -2119,12 +2119,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts();
+        public static InitContainersPorts build(java.util.Map<String, ?> map) throws Exception {
+            InitContainersPorts self = new InitContainersPorts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts setPort(Integer port) {
+        public InitContainersPorts setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -2132,7 +2132,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.port;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts setProtocol(String protocol) {
+        public InitContainersPorts setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -2142,7 +2142,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState extends TeaModel {
+    public static class InitContainersPreviousState extends TeaModel {
         /**
          * <p>The details of the container status.</p>
          * 
@@ -2215,12 +2215,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState();
+        public static InitContainersPreviousState build(java.util.Map<String, ?> map) throws Exception {
+            InitContainersPreviousState self = new InitContainersPreviousState();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setDetailStatus(String detailStatus) {
+        public InitContainersPreviousState setDetailStatus(String detailStatus) {
             this.detailStatus = detailStatus;
             return this;
         }
@@ -2228,7 +2228,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.detailStatus;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setExitCode(Integer exitCode) {
+        public InitContainersPreviousState setExitCode(Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -2236,7 +2236,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setFinishTime(String finishTime) {
+        public InitContainersPreviousState setFinishTime(String finishTime) {
             this.finishTime = finishTime;
             return this;
         }
@@ -2244,7 +2244,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.finishTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setMessage(String message) {
+        public InitContainersPreviousState setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -2252,7 +2252,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setReason(String reason) {
+        public InitContainersPreviousState setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -2260,7 +2260,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setSignal(Integer signal) {
+        public InitContainersPreviousState setSignal(Integer signal) {
             this.signal = signal;
             return this;
         }
@@ -2268,7 +2268,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.signal;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setStartTime(String startTime) {
+        public InitContainersPreviousState setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -2276,7 +2276,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.startTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState setState(String state) {
+        public InitContainersPreviousState setState(String state) {
             this.state = state;
             return this;
         }
@@ -2286,19 +2286,19 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability extends TeaModel {
+    public static class SecurityContextCapability extends TeaModel {
         /**
          * <p>The permissions specific to the processes in the container.</p>
          */
         @NameInMap("Adds")
         public java.util.List<String> adds;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability();
+        public static SecurityContextCapability build(java.util.Map<String, ?> map) throws Exception {
+            SecurityContextCapability self = new SecurityContextCapability();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability setAdds(java.util.List<String> adds) {
+        public SecurityContextCapability setAdds(java.util.List<String> adds) {
             this.adds = adds;
             return this;
         }
@@ -2308,12 +2308,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext extends TeaModel {
+    public static class InitContainersSecurityContext extends TeaModel {
         /**
          * <p>The permissions specific to the processes in the container.</p>
          */
         @NameInMap("Capability")
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability capability;
+        public SecurityContextCapability capability;
 
         /**
          * <p>Indicates whether permissions on the root file system are read-only.</p>
@@ -2333,20 +2333,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext();
+        public static InitContainersSecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            InitContainersSecurityContext self = new InitContainersSecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext setCapability(DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability capability) {
+        public InitContainersSecurityContext setCapability(SecurityContextCapability capability) {
             this.capability = capability;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContextCapability getCapability() {
+        public SecurityContextCapability getCapability() {
             return this.capability;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
+        public InitContainersSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
@@ -2354,7 +2354,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.readOnlyRootFilesystem;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext setRunAsUser(Long runAsUser) {
+        public InitContainersSecurityContext setRunAsUser(Long runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
@@ -2364,7 +2364,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts extends TeaModel {
+    public static class InitContainersVolumeMounts extends TeaModel {
         /**
          * <p>The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume.</p>
          * 
@@ -2406,12 +2406,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("ReadOnly")
         public Boolean readOnly;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts();
+        public static InitContainersVolumeMounts build(java.util.Map<String, ?> map) throws Exception {
+            InitContainersVolumeMounts self = new InitContainersVolumeMounts();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts setMountPath(String mountPath) {
+        public InitContainersVolumeMounts setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -2419,7 +2419,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.mountPath;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts setMountPropagation(String mountPropagation) {
+        public InitContainersVolumeMounts setMountPropagation(String mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
@@ -2427,7 +2427,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.mountPropagation;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts setName(String name) {
+        public InitContainersVolumeMounts setName(String name) {
             this.name = name;
             return this;
         }
@@ -2435,7 +2435,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts setReadOnly(Boolean readOnly) {
+        public InitContainersVolumeMounts setReadOnly(Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
@@ -2445,7 +2445,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsInitContainers extends TeaModel {
+    public static class InitContainers extends TeaModel {
         /**
          * <p>The arguments that are passed to the startup commands of the container.</p>
          */
@@ -2471,13 +2471,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The current container status.</p>
          */
         @NameInMap("CurrentState")
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState currentState;
+        public InitContainersCurrentState currentState;
 
         /**
          * <p>The environment variables of the init container.</p>
          */
         @NameInMap("EnvironmentVars")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars> environmentVars;
+        public java.util.List<InitContainersEnvironmentVars> environmentVars;
 
         /**
          * <p>The number of GPUs.</p>
@@ -2533,13 +2533,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The exposed port and protocol of the container.</p>
          */
         @NameInMap("Ports")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts> ports;
+        public java.util.List<InitContainersPorts> ports;
 
         /**
          * <p>The previous state of the container.</p>
          */
         @NameInMap("PreviousState")
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState previousState;
+        public InitContainersPreviousState previousState;
 
         /**
          * <p>Indicates whether the container passed the readiness probe.</p>
@@ -2563,13 +2563,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The security context of the container.</p>
          */
         @NameInMap("SecurityContext")
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext securityContext;
+        public InitContainersSecurityContext securityContext;
 
         /**
          * <p>The information about the volumes that are mounted to the init container.</p>
          */
         @NameInMap("VolumeMounts")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts> volumeMounts;
+        public java.util.List<InitContainersVolumeMounts> volumeMounts;
 
         /**
          * <p>The working directory of the container.</p>
@@ -2580,12 +2580,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("WorkingDir")
         public String workingDir;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsInitContainers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsInitContainers self = new DescribeContainerGroupsResponseBodyContainerGroupsInitContainers();
+        public static InitContainers build(java.util.Map<String, ?> map) throws Exception {
+            InitContainers self = new InitContainers();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setArgs(java.util.List<String> args) {
+        public InitContainers setArgs(java.util.List<String> args) {
             this.args = args;
             return this;
         }
@@ -2593,7 +2593,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.args;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setCommand(java.util.List<String> command) {
+        public InitContainers setCommand(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -2601,7 +2601,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.command;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setCpu(Float cpu) {
+        public InitContainers setCpu(Float cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -2609,23 +2609,23 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setCurrentState(DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState currentState) {
+        public InitContainers setCurrentState(InitContainersCurrentState currentState) {
             this.currentState = currentState;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersCurrentState getCurrentState() {
+        public InitContainersCurrentState getCurrentState() {
             return this.currentState;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setEnvironmentVars(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars> environmentVars) {
+        public InitContainers setEnvironmentVars(java.util.List<InitContainersEnvironmentVars> environmentVars) {
             this.environmentVars = environmentVars;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersEnvironmentVars> getEnvironmentVars() {
+        public java.util.List<InitContainersEnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setGpu(Integer gpu) {
+        public InitContainers setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -2633,7 +2633,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.gpu;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setImage(String image) {
+        public InitContainers setImage(String image) {
             this.image = image;
             return this;
         }
@@ -2641,7 +2641,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.image;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setImagePullPolicy(String imagePullPolicy) {
+        public InitContainers setImagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
@@ -2649,7 +2649,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.imagePullPolicy;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setMemory(Float memory) {
+        public InitContainers setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
@@ -2657,7 +2657,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setName(String name) {
+        public InitContainers setName(String name) {
             this.name = name;
             return this;
         }
@@ -2665,23 +2665,23 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setPorts(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts> ports) {
+        public InitContainers setPorts(java.util.List<InitContainersPorts> ports) {
             this.ports = ports;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPorts> getPorts() {
+        public java.util.List<InitContainersPorts> getPorts() {
             return this.ports;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setPreviousState(DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState previousState) {
+        public InitContainers setPreviousState(InitContainersPreviousState previousState) {
             this.previousState = previousState;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersPreviousState getPreviousState() {
+        public InitContainersPreviousState getPreviousState() {
             return this.previousState;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setReady(Boolean ready) {
+        public InitContainers setReady(Boolean ready) {
             this.ready = ready;
             return this;
         }
@@ -2689,7 +2689,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.ready;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setRestartCount(Integer restartCount) {
+        public InitContainers setRestartCount(Integer restartCount) {
             this.restartCount = restartCount;
             return this;
         }
@@ -2697,23 +2697,23 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.restartCount;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setSecurityContext(DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext securityContext) {
+        public InitContainers setSecurityContext(InitContainersSecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainersSecurityContext getSecurityContext() {
+        public InitContainersSecurityContext getSecurityContext() {
             return this.securityContext;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setVolumeMounts(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts> volumeMounts) {
+        public InitContainers setVolumeMounts(java.util.List<InitContainersVolumeMounts> volumeMounts) {
             this.volumeMounts = volumeMounts;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainersVolumeMounts> getVolumeMounts() {
+        public java.util.List<InitContainersVolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsInitContainers setWorkingDir(String workingDir) {
+        public InitContainers setWorkingDir(String workingDir) {
             this.workingDir = workingDir;
             return this;
         }
@@ -2723,7 +2723,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsTags extends TeaModel {
+    public static class Tags extends TeaModel {
         /**
          * <p>The tag key.</p>
          * 
@@ -2742,12 +2742,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsTags build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsTags self = new DescribeContainerGroupsResponseBodyContainerGroupsTags();
+        public static Tags build(java.util.Map<String, ?> map) throws Exception {
+            Tags self = new Tags();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsTags setKey(String key) {
+        public Tags setKey(String key) {
             this.key = key;
             return this;
         }
@@ -2755,7 +2755,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.key;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsTags setValue(String value) {
+        public Tags setValue(String value) {
             this.value = value;
             return this;
         }
@@ -2765,7 +2765,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths extends TeaModel {
+    public static class ConfigFileVolumeConfigFileToPaths extends TeaModel {
         /**
          * <p>The content of the ConfigFile volume. Maximum size: 32 KB.</p>
          * 
@@ -2784,12 +2784,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Path")
         public String path;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths self = new DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths();
+        public static ConfigFileVolumeConfigFileToPaths build(java.util.Map<String, ?> map) throws Exception {
+            ConfigFileVolumeConfigFileToPaths self = new ConfigFileVolumeConfigFileToPaths();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths setContent(String content) {
+        public ConfigFileVolumeConfigFileToPaths setContent(String content) {
             this.content = content;
             return this;
         }
@@ -2797,7 +2797,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.content;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths setPath(String path) {
+        public ConfigFileVolumeConfigFileToPaths setPath(String path) {
             this.path = path;
             return this;
         }
@@ -2807,12 +2807,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroupsVolumes extends TeaModel {
+    public static class Volumes extends TeaModel {
         /**
          * <p>The path of the ConfigFile volume.</p>
          */
         @NameInMap("ConfigFileVolumeConfigFileToPaths")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
+        public java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
         /**
          * <p>The ID of the disk when you set Type to DiskVolume.</p>
@@ -2932,20 +2932,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroupsVolumes build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroupsVolumes self = new DescribeContainerGroupsResponseBodyContainerGroupsVolumes();
+        public static Volumes build(java.util.Map<String, ?> map) throws Exception {
+            Volumes self = new Volumes();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setConfigFileVolumeConfigFileToPaths(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
+        public Volumes setConfigFileVolumeConfigFileToPaths(java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
             this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsVolumesConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
+        public java.util.List<ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
             return this.configFileVolumeConfigFileToPaths;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setDiskVolumeDiskId(String diskVolumeDiskId) {
+        public Volumes setDiskVolumeDiskId(String diskVolumeDiskId) {
             this.diskVolumeDiskId = diskVolumeDiskId;
             return this;
         }
@@ -2953,7 +2953,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.diskVolumeDiskId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setDiskVolumeFsType(String diskVolumeFsType) {
+        public Volumes setDiskVolumeFsType(String diskVolumeFsType) {
             this.diskVolumeFsType = diskVolumeFsType;
             return this;
         }
@@ -2961,7 +2961,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.diskVolumeFsType;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setEmptyDirVolumeMedium(String emptyDirVolumeMedium) {
+        public Volumes setEmptyDirVolumeMedium(String emptyDirVolumeMedium) {
             this.emptyDirVolumeMedium = emptyDirVolumeMedium;
             return this;
         }
@@ -2969,7 +2969,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.emptyDirVolumeMedium;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setEmptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
+        public Volumes setEmptyDirVolumeSizeLimit(String emptyDirVolumeSizeLimit) {
             this.emptyDirVolumeSizeLimit = emptyDirVolumeSizeLimit;
             return this;
         }
@@ -2977,7 +2977,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.emptyDirVolumeSizeLimit;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setFlexVolumeDriver(String flexVolumeDriver) {
+        public Volumes setFlexVolumeDriver(String flexVolumeDriver) {
             this.flexVolumeDriver = flexVolumeDriver;
             return this;
         }
@@ -2985,7 +2985,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.flexVolumeDriver;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setFlexVolumeFsType(String flexVolumeFsType) {
+        public Volumes setFlexVolumeFsType(String flexVolumeFsType) {
             this.flexVolumeFsType = flexVolumeFsType;
             return this;
         }
@@ -2993,7 +2993,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.flexVolumeFsType;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setFlexVolumeOptions(String flexVolumeOptions) {
+        public Volumes setFlexVolumeOptions(String flexVolumeOptions) {
             this.flexVolumeOptions = flexVolumeOptions;
             return this;
         }
@@ -3001,7 +3001,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.flexVolumeOptions;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setNFSVolumePath(String NFSVolumePath) {
+        public Volumes setNFSVolumePath(String NFSVolumePath) {
             this.NFSVolumePath = NFSVolumePath;
             return this;
         }
@@ -3009,7 +3009,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.NFSVolumePath;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setNFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
+        public Volumes setNFSVolumeReadOnly(Boolean NFSVolumeReadOnly) {
             this.NFSVolumeReadOnly = NFSVolumeReadOnly;
             return this;
         }
@@ -3017,7 +3017,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.NFSVolumeReadOnly;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setNFSVolumeServer(String NFSVolumeServer) {
+        public Volumes setNFSVolumeServer(String NFSVolumeServer) {
             this.NFSVolumeServer = NFSVolumeServer;
             return this;
         }
@@ -3025,7 +3025,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.NFSVolumeServer;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setName(String name) {
+        public Volumes setName(String name) {
             this.name = name;
             return this;
         }
@@ -3033,7 +3033,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroupsVolumes setType(String type) {
+        public Volumes setType(String type) {
             this.type = type;
             return this;
         }
@@ -3043,7 +3043,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupsResponseBodyContainerGroups extends TeaModel {
+    public static class ContainerGroups extends TeaModel {
         /**
          * <p>The computing power type of the elastic container instance. Valid values:</p>
          * <ul>
@@ -3079,7 +3079,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The information about containers in the elastic container instance.</p>
          */
         @NameInMap("Containers")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainers> containers;
+        public java.util.List<Containers> containers;
 
         /**
          * <p>The number of vCPUs that are allocated to the elastic container instance.</p>
@@ -3112,13 +3112,26 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The Domain Name System (DNS) settings.</p>
          */
         @NameInMap("DnsConfig")
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig dnsConfig;
+        public DnsConfig dnsConfig;
+
+        /**
+         * <p>The Domain Name System (DNS) policy. Valid values:</p>
+         * <ul>
+         * <li>None: uses the DNS that is specified by DnsConfig.</li>
+         * <li>Default: uses the DNS that is specified for the runtime environment.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
+        @NameInMap("DnsPolicy")
+        public String dnsPolicy;
 
         /**
          * <p>The security context of the elastic container instance.</p>
          */
         @NameInMap("EciSecurityContext")
-        public DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext eciSecurityContext;
+        public EciSecurityContext eciSecurityContext;
 
         /**
          * <p>The ID of the elastic network interface (ENI).</p>
@@ -3142,7 +3155,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The events of the elastic container instance. A maximum of 50 events can be returned.</p>
          */
         @NameInMap("Events")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsEvents> events;
+        public java.util.List<Events> events;
 
         /**
          * <p>The time when the elastic container instance failed to run due to overdue payments. The time follows the RFC 3339 standard. The time is displayed in UTC.</p>
@@ -3166,13 +3179,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The hostnames and IP addresses for a container that are added to the hosts file of the elastic container instance.</p>
          */
         @NameInMap("HostAliases")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsHostAliases> hostAliases;
+        public java.util.List<HostAliases> hostAliases;
 
         /**
          * <p>The information about the init containers.</p>
          */
         @NameInMap("InitContainers")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainers> initContainers;
+        public java.util.List<InitContainers> initContainers;
 
         /**
          * <p>The instance type of the specified Elastic Compute Service (ECS) instance.</p>
@@ -3327,7 +3340,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The tags that are added to the instance.</p>
          */
         @NameInMap("Tags")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsTags> tags;
+        public java.util.List<Tags> tags;
 
         /**
          * <p>This parameter is not publicly available.</p>
@@ -3378,7 +3391,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
          * <p>The information about the volumes.</p>
          */
         @NameInMap("Volumes")
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsVolumes> volumes;
+        public java.util.List<Volumes> volumes;
 
         /**
          * <p>The ID of the VPC to which the instance belongs.</p>
@@ -3398,12 +3411,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
-        public static DescribeContainerGroupsResponseBodyContainerGroups build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupsResponseBodyContainerGroups self = new DescribeContainerGroupsResponseBodyContainerGroups();
+        public static ContainerGroups build(java.util.Map<String, ?> map) throws Exception {
+            ContainerGroups self = new ContainerGroups();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setComputeCategory(String computeCategory) {
+        public ContainerGroups setComputeCategory(String computeCategory) {
             this.computeCategory = computeCategory;
             return this;
         }
@@ -3411,7 +3424,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.computeCategory;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setContainerGroupId(String containerGroupId) {
+        public ContainerGroups setContainerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
             return this;
         }
@@ -3419,7 +3432,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.containerGroupId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setContainerGroupName(String containerGroupName) {
+        public ContainerGroups setContainerGroupName(String containerGroupName) {
             this.containerGroupName = containerGroupName;
             return this;
         }
@@ -3427,15 +3440,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.containerGroupName;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setContainers(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainers> containers) {
+        public ContainerGroups setContainers(java.util.List<Containers> containers) {
             this.containers = containers;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsContainers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setCpu(Float cpu) {
+        public ContainerGroups setCpu(Float cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -3443,7 +3456,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.cpu;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setCreationTime(String creationTime) {
+        public ContainerGroups setCreationTime(String creationTime) {
             this.creationTime = creationTime;
             return this;
         }
@@ -3451,7 +3464,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.creationTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setDiscount(Integer discount) {
+        public ContainerGroups setDiscount(Integer discount) {
             this.discount = discount;
             return this;
         }
@@ -3459,23 +3472,31 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.discount;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setDnsConfig(DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig dnsConfig) {
+        public ContainerGroups setDnsConfig(DnsConfig dnsConfig) {
             this.dnsConfig = dnsConfig;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsDnsConfig getDnsConfig() {
+        public DnsConfig getDnsConfig() {
             return this.dnsConfig;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setEciSecurityContext(DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext eciSecurityContext) {
+        public ContainerGroups setDnsPolicy(String dnsPolicy) {
+            this.dnsPolicy = dnsPolicy;
+            return this;
+        }
+        public String getDnsPolicy() {
+            return this.dnsPolicy;
+        }
+
+        public ContainerGroups setEciSecurityContext(EciSecurityContext eciSecurityContext) {
             this.eciSecurityContext = eciSecurityContext;
             return this;
         }
-        public DescribeContainerGroupsResponseBodyContainerGroupsEciSecurityContext getEciSecurityContext() {
+        public EciSecurityContext getEciSecurityContext() {
             return this.eciSecurityContext;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setEniInstanceId(String eniInstanceId) {
+        public ContainerGroups setEniInstanceId(String eniInstanceId) {
             this.eniInstanceId = eniInstanceId;
             return this;
         }
@@ -3483,7 +3504,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.eniInstanceId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setEphemeralStorage(Integer ephemeralStorage) {
+        public ContainerGroups setEphemeralStorage(Integer ephemeralStorage) {
             this.ephemeralStorage = ephemeralStorage;
             return this;
         }
@@ -3491,15 +3512,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.ephemeralStorage;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setEvents(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsEvents> events) {
+        public ContainerGroups setEvents(java.util.List<Events> events) {
             this.events = events;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsEvents> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setExpiredTime(String expiredTime) {
+        public ContainerGroups setExpiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
             return this;
         }
@@ -3507,7 +3528,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setFailedTime(String failedTime) {
+        public ContainerGroups setFailedTime(String failedTime) {
             this.failedTime = failedTime;
             return this;
         }
@@ -3515,23 +3536,23 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.failedTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setHostAliases(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsHostAliases> hostAliases) {
+        public ContainerGroups setHostAliases(java.util.List<HostAliases> hostAliases) {
             this.hostAliases = hostAliases;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsHostAliases> getHostAliases() {
+        public java.util.List<HostAliases> getHostAliases() {
             return this.hostAliases;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setInitContainers(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainers> initContainers) {
+        public ContainerGroups setInitContainers(java.util.List<InitContainers> initContainers) {
             this.initContainers = initContainers;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsInitContainers> getInitContainers() {
+        public java.util.List<InitContainers> getInitContainers() {
             return this.initContainers;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setInstanceType(String instanceType) {
+        public ContainerGroups setInstanceType(String instanceType) {
             this.instanceType = instanceType;
             return this;
         }
@@ -3539,7 +3560,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setInternetIp(String internetIp) {
+        public ContainerGroups setInternetIp(String internetIp) {
             this.internetIp = internetIp;
             return this;
         }
@@ -3547,7 +3568,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.internetIp;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setIntranetIp(String intranetIp) {
+        public ContainerGroups setIntranetIp(String intranetIp) {
             this.intranetIp = intranetIp;
             return this;
         }
@@ -3555,7 +3576,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.intranetIp;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setIpv6Address(String ipv6Address) {
+        public ContainerGroups setIpv6Address(String ipv6Address) {
             this.ipv6Address = ipv6Address;
             return this;
         }
@@ -3563,7 +3584,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.ipv6Address;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setMemory(Float memory) {
+        public ContainerGroups setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
@@ -3571,7 +3592,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.memory;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setRamRoleName(String ramRoleName) {
+        public ContainerGroups setRamRoleName(String ramRoleName) {
             this.ramRoleName = ramRoleName;
             return this;
         }
@@ -3579,7 +3600,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.ramRoleName;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setRegionId(String regionId) {
+        public ContainerGroups setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -3587,7 +3608,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setResourceGroupId(String resourceGroupId) {
+        public ContainerGroups setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
@@ -3595,7 +3616,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setRestartPolicy(String restartPolicy) {
+        public ContainerGroups setRestartPolicy(String restartPolicy) {
             this.restartPolicy = restartPolicy;
             return this;
         }
@@ -3603,7 +3624,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.restartPolicy;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setSecurityGroupId(String securityGroupId) {
+        public ContainerGroups setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -3611,7 +3632,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.securityGroupId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setSpotPriceLimit(Double spotPriceLimit) {
+        public ContainerGroups setSpotPriceLimit(Double spotPriceLimit) {
             this.spotPriceLimit = spotPriceLimit;
             return this;
         }
@@ -3619,7 +3640,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.spotPriceLimit;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setSpotStrategy(String spotStrategy) {
+        public ContainerGroups setSpotStrategy(String spotStrategy) {
             this.spotStrategy = spotStrategy;
             return this;
         }
@@ -3627,7 +3648,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.spotStrategy;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setStatus(String status) {
+        public ContainerGroups setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -3635,7 +3656,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setSucceededTime(String succeededTime) {
+        public ContainerGroups setSucceededTime(String succeededTime) {
             this.succeededTime = succeededTime;
             return this;
         }
@@ -3643,15 +3664,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.succeededTime;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setTags(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsTags> tags) {
+        public ContainerGroups setTags(java.util.List<Tags> tags) {
             this.tags = tags;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsTags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setTenantEniInstanceId(String tenantEniInstanceId) {
+        public ContainerGroups setTenantEniInstanceId(String tenantEniInstanceId) {
             this.tenantEniInstanceId = tenantEniInstanceId;
             return this;
         }
@@ -3659,7 +3680,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.tenantEniInstanceId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setTenantEniIp(String tenantEniIp) {
+        public ContainerGroups setTenantEniIp(String tenantEniIp) {
             this.tenantEniIp = tenantEniIp;
             return this;
         }
@@ -3667,7 +3688,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.tenantEniIp;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setTenantSecurityGroupId(String tenantSecurityGroupId) {
+        public ContainerGroups setTenantSecurityGroupId(String tenantSecurityGroupId) {
             this.tenantSecurityGroupId = tenantSecurityGroupId;
             return this;
         }
@@ -3675,7 +3696,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.tenantSecurityGroupId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setTenantVSwitchId(String tenantVSwitchId) {
+        public ContainerGroups setTenantVSwitchId(String tenantVSwitchId) {
             this.tenantVSwitchId = tenantVSwitchId;
             return this;
         }
@@ -3683,7 +3704,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.tenantVSwitchId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setVSwitchId(String vSwitchId) {
+        public ContainerGroups setVSwitchId(String vSwitchId) {
             this.vSwitchId = vSwitchId;
             return this;
         }
@@ -3691,15 +3712,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.vSwitchId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setVolumes(java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsVolumes> volumes) {
+        public ContainerGroups setVolumes(java.util.List<Volumes> volumes) {
             this.volumes = volumes;
             return this;
         }
-        public java.util.List<DescribeContainerGroupsResponseBodyContainerGroupsVolumes> getVolumes() {
+        public java.util.List<Volumes> getVolumes() {
             return this.volumes;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setVpcId(String vpcId) {
+        public ContainerGroups setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }
@@ -3707,7 +3728,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             return this.vpcId;
         }
 
-        public DescribeContainerGroupsResponseBodyContainerGroups setZoneId(String zoneId) {
+        public ContainerGroups setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }

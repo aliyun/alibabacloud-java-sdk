@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("DnsConfig")
-    public CreateContainerGroupRequestDnsConfig dnsConfig;
+    public DnsConfig dnsConfig;
 
     @NameInMap("HostSecurityContext")
-    public CreateContainerGroupRequestHostSecurityContext hostSecurityContext;
+    public HostSecurityContext hostSecurityContext;
 
     @NameInMap("SecurityContext")
-    public CreateContainerGroupRequestSecurityContext securityContext;
+    public SecurityContext securityContext;
 
     /**
      * <p>The information about the Container Registry Enterprise Edition instance that provides the image for the creation of the elastic container instance. For more information, see <a href="https://help.aliyun.com/document_detail/194250.html">Pull images from a Container Registry Enterprise Edition instance without using a secret</a>.</p>
      */
     @NameInMap("AcrRegistryInfo")
-    public java.util.List<CreateContainerGroupRequestAcrRegistryInfo> acrRegistryInfo;
+    public java.util.List<AcrRegistryInfo> acrRegistryInfo;
 
     /**
      * <p>The active period of the elastic container instance. After this period expires, the instance is forced to exit. Unit: seconds.</p>
@@ -56,7 +56,7 @@ public class CreateContainerGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The computing power type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2638061.html">Set the computing power type to economy when you create an elastic container instance</a>.</p>
+     * <p>The compute category of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/2638061.html">Specify a compute category to create an elastic container instance</a>.</p>
      */
     @NameInMap("ComputeCategory")
     public java.util.List<String> computeCategory;
@@ -66,7 +66,7 @@ public class CreateContainerGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      */
     @NameInMap("Container")
-    public java.util.List<CreateContainerGroupRequestContainer> container;
+    public java.util.List<Container> container;
 
     /**
      * <p>The name of the elastic container instance (container group). The name must meet the following requirements:</p>
@@ -315,7 +315,7 @@ public class CreateContainerGroupRequest extends TeaModel {
      * <p>The alias of the elastic container instance.</p>
      */
     @NameInMap("HostAliase")
-    public java.util.List<CreateContainerGroupRequestHostAliase> hostAliase;
+    public java.util.List<HostAliase> hostAliase;
 
     /**
      * <p>The hostname.</p>
@@ -345,7 +345,7 @@ public class CreateContainerGroupRequest extends TeaModel {
      * <p>The information about the logon credentials.</p>
      */
     @NameInMap("ImageRegistryCredential")
-    public java.util.List<CreateContainerGroupRequestImageRegistryCredential> imageRegistryCredential;
+    public java.util.List<ImageRegistryCredential> imageRegistryCredential;
 
     /**
      * <p>The ID of the image cache. For more information, see <a href="https://help.aliyun.com/document_detail/141281.html">Use image caches to accelerate the creation of instances</a>.</p>
@@ -369,7 +369,7 @@ public class CreateContainerGroupRequest extends TeaModel {
      * <p>The information about the init containers.</p>
      */
     @NameInMap("InitContainer")
-    public java.util.List<CreateContainerGroupRequestInitContainer> initContainer;
+    public java.util.List<InitContainer> initContainer;
 
     /**
      * <p>The address of the self-managed image repository. When you create an elastic container instance by using an image in a self-managed image repository that uses a self-signed certificate, you must specify this parameter to skip the certificate authentication. This prevents image pull failures caused by certificate authentication failures.</p>
@@ -428,6 +428,9 @@ public class CreateContainerGroupRequest extends TeaModel {
     @NameInMap("Ipv6GatewayBandwidthEnable")
     public Boolean ipv6GatewayBandwidthEnable;
 
+    @NameInMap("MaxPendingMinute")
+    public Integer maxPendingMinute;
+
     /**
      * <p>The memory size that you want to allocate to the instance. Unit: GiB.</p>
      * 
@@ -461,12 +464,6 @@ public class CreateContainerGroupRequest extends TeaModel {
      */
     @NameInMap("OsType")
     public String osType;
-
-    /**
-     * <p>The options that you can configure when you enable the overhead reservation feature.</p>
-     */
-    @NameInMap("OverheadReservationOption")
-    public CreateContainerGroupRequestOverheadReservationOption overheadReservationOption;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -625,7 +622,7 @@ public class CreateContainerGroupRequest extends TeaModel {
      * <p>The tags that you want to add to the instance. You can bind a maximum of 20 tags. For more information, see <a href="https://help.aliyun.com/document_detail/146608.html">Use tags to manage elastic container instances</a>.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateContainerGroupRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
      * <p>The buffer period of time during which the program handles operations before the program is stopped. Unit: seconds.</p>
@@ -653,7 +650,7 @@ public class CreateContainerGroupRequest extends TeaModel {
      * <p>The information about the volume that you want to mount to the container.</p>
      */
     @NameInMap("Volume")
-    public java.util.List<CreateContainerGroupRequestVolume> volume;
+    public java.util.List<Volume> volume;
 
     /**
      * <p>The zone ID of the instance. If you do not specify this parameter, the system selects a zone.</p>
@@ -670,35 +667,35 @@ public class CreateContainerGroupRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public CreateContainerGroupRequest setDnsConfig(CreateContainerGroupRequestDnsConfig dnsConfig) {
+    public CreateContainerGroupRequest setDnsConfig(DnsConfig dnsConfig) {
         this.dnsConfig = dnsConfig;
         return this;
     }
-    public CreateContainerGroupRequestDnsConfig getDnsConfig() {
+    public DnsConfig getDnsConfig() {
         return this.dnsConfig;
     }
 
-    public CreateContainerGroupRequest setHostSecurityContext(CreateContainerGroupRequestHostSecurityContext hostSecurityContext) {
+    public CreateContainerGroupRequest setHostSecurityContext(HostSecurityContext hostSecurityContext) {
         this.hostSecurityContext = hostSecurityContext;
         return this;
     }
-    public CreateContainerGroupRequestHostSecurityContext getHostSecurityContext() {
+    public HostSecurityContext getHostSecurityContext() {
         return this.hostSecurityContext;
     }
 
-    public CreateContainerGroupRequest setSecurityContext(CreateContainerGroupRequestSecurityContext securityContext) {
+    public CreateContainerGroupRequest setSecurityContext(SecurityContext securityContext) {
         this.securityContext = securityContext;
         return this;
     }
-    public CreateContainerGroupRequestSecurityContext getSecurityContext() {
+    public SecurityContext getSecurityContext() {
         return this.securityContext;
     }
 
-    public CreateContainerGroupRequest setAcrRegistryInfo(java.util.List<CreateContainerGroupRequestAcrRegistryInfo> acrRegistryInfo) {
+    public CreateContainerGroupRequest setAcrRegistryInfo(java.util.List<AcrRegistryInfo> acrRegistryInfo) {
         this.acrRegistryInfo = acrRegistryInfo;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestAcrRegistryInfo> getAcrRegistryInfo() {
+    public java.util.List<AcrRegistryInfo> getAcrRegistryInfo() {
         return this.acrRegistryInfo;
     }
 
@@ -742,11 +739,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.computeCategory;
     }
 
-    public CreateContainerGroupRequest setContainer(java.util.List<CreateContainerGroupRequestContainer> container) {
+    public CreateContainerGroupRequest setContainer(java.util.List<Container> container) {
         this.container = container;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestContainer> getContainer() {
+    public java.util.List<Container> getContainer() {
         return this.container;
     }
 
@@ -934,11 +931,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.gpuDriverVersion;
     }
 
-    public CreateContainerGroupRequest setHostAliase(java.util.List<CreateContainerGroupRequestHostAliase> hostAliase) {
+    public CreateContainerGroupRequest setHostAliase(java.util.List<HostAliase> hostAliase) {
         this.hostAliase = hostAliase;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestHostAliase> getHostAliase() {
+    public java.util.List<HostAliase> getHostAliase() {
         return this.hostAliase;
     }
 
@@ -958,11 +955,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.imageAccelerateMode;
     }
 
-    public CreateContainerGroupRequest setImageRegistryCredential(java.util.List<CreateContainerGroupRequestImageRegistryCredential> imageRegistryCredential) {
+    public CreateContainerGroupRequest setImageRegistryCredential(java.util.List<ImageRegistryCredential> imageRegistryCredential) {
         this.imageRegistryCredential = imageRegistryCredential;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestImageRegistryCredential> getImageRegistryCredential() {
+    public java.util.List<ImageRegistryCredential> getImageRegistryCredential() {
         return this.imageRegistryCredential;
     }
 
@@ -982,11 +979,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.ingressBandwidth;
     }
 
-    public CreateContainerGroupRequest setInitContainer(java.util.List<CreateContainerGroupRequestInitContainer> initContainer) {
+    public CreateContainerGroupRequest setInitContainer(java.util.List<InitContainer> initContainer) {
         this.initContainer = initContainer;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestInitContainer> getInitContainer() {
+    public java.util.List<InitContainer> getInitContainer() {
         return this.initContainer;
     }
 
@@ -1030,6 +1027,14 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.ipv6GatewayBandwidthEnable;
     }
 
+    public CreateContainerGroupRequest setMaxPendingMinute(Integer maxPendingMinute) {
+        this.maxPendingMinute = maxPendingMinute;
+        return this;
+    }
+    public Integer getMaxPendingMinute() {
+        return this.maxPendingMinute;
+    }
+
     public CreateContainerGroupRequest setMemory(Float memory) {
         this.memory = memory;
         return this;
@@ -1052,14 +1057,6 @@ public class CreateContainerGroupRequest extends TeaModel {
     }
     public String getOsType() {
         return this.osType;
-    }
-
-    public CreateContainerGroupRequest setOverheadReservationOption(CreateContainerGroupRequestOverheadReservationOption overheadReservationOption) {
-        this.overheadReservationOption = overheadReservationOption;
-        return this;
-    }
-    public CreateContainerGroupRequestOverheadReservationOption getOverheadReservationOption() {
-        return this.overheadReservationOption;
     }
 
     public CreateContainerGroupRequest setOwnerAccount(String ownerAccount) {
@@ -1198,11 +1195,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.strictSpot;
     }
 
-    public CreateContainerGroupRequest setTag(java.util.List<CreateContainerGroupRequestTag> tag) {
+    public CreateContainerGroupRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -1222,11 +1219,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public CreateContainerGroupRequest setVolume(java.util.List<CreateContainerGroupRequestVolume> volume) {
+    public CreateContainerGroupRequest setVolume(java.util.List<Volume> volume) {
         this.volume = volume;
         return this;
     }
-    public java.util.List<CreateContainerGroupRequestVolume> getVolume() {
+    public java.util.List<Volume> getVolume() {
         return this.volume;
     }
 
@@ -1238,7 +1235,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class CreateContainerGroupRequestDnsConfigOption extends TeaModel {
+    public static class Option extends TeaModel {
         /**
          * <p>The name of the option.</p>
          * 
@@ -1257,12 +1254,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestDnsConfigOption build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestDnsConfigOption self = new CreateContainerGroupRequestDnsConfigOption();
+        public static Option build(java.util.Map<String, ?> map) throws Exception {
+            Option self = new Option();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestDnsConfigOption setName(String name) {
+        public Option setName(String name) {
             this.name = name;
             return this;
         }
@@ -1270,7 +1267,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestDnsConfigOption setValue(String value) {
+        public Option setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1280,7 +1277,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestDnsConfig extends TeaModel {
+    public static class DnsConfig extends TeaModel {
         /**
          * <p>The IP addresses of DNS servers.</p>
          * 
@@ -1294,7 +1291,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>Configuration options of the DNS server.</p>
          */
         @NameInMap("Option")
-        public java.util.List<CreateContainerGroupRequestDnsConfigOption> option;
+        public java.util.List<Option> option;
 
         /**
          * <p>The search domains of DNS servers.</p>
@@ -1305,12 +1302,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Search")
         public java.util.List<String> search;
 
-        public static CreateContainerGroupRequestDnsConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestDnsConfig self = new CreateContainerGroupRequestDnsConfig();
+        public static DnsConfig build(java.util.Map<String, ?> map) throws Exception {
+            DnsConfig self = new DnsConfig();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestDnsConfig setNameServer(java.util.List<String> nameServer) {
+        public DnsConfig setNameServer(java.util.List<String> nameServer) {
             this.nameServer = nameServer;
             return this;
         }
@@ -1318,15 +1315,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.nameServer;
         }
 
-        public CreateContainerGroupRequestDnsConfig setOption(java.util.List<CreateContainerGroupRequestDnsConfigOption> option) {
+        public DnsConfig setOption(java.util.List<Option> option) {
             this.option = option;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestDnsConfigOption> getOption() {
+        public java.util.List<Option> getOption() {
             return this.option;
         }
 
-        public CreateContainerGroupRequestDnsConfig setSearch(java.util.List<String> search) {
+        public DnsConfig setSearch(java.util.List<String> search) {
             this.search = search;
             return this;
         }
@@ -1336,7 +1333,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestHostSecurityContextSysctl extends TeaModel {
+    public static class Sysctl extends TeaModel {
         /**
          * <p>The name of the unsafe sysctl when you modify sysctls by configuring a security context. Valid values:</p>
          * <ul>
@@ -1362,12 +1359,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestHostSecurityContextSysctl build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestHostSecurityContextSysctl self = new CreateContainerGroupRequestHostSecurityContextSysctl();
+        public static Sysctl build(java.util.Map<String, ?> map) throws Exception {
+            Sysctl self = new Sysctl();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestHostSecurityContextSysctl setName(String name) {
+        public Sysctl setName(String name) {
             this.name = name;
             return this;
         }
@@ -1375,7 +1372,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestHostSecurityContextSysctl setValue(String value) {
+        public Sysctl setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1385,29 +1382,29 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestHostSecurityContext extends TeaModel {
+    public static class HostSecurityContext extends TeaModel {
         /**
          * <p>Configure a security context to modify unsafe sysctls. For more information, see <a href="https://help.aliyun.com/document_detail/462313.html">Configure a security context</a>.</p>
          */
         @NameInMap("Sysctl")
-        public java.util.List<CreateContainerGroupRequestHostSecurityContextSysctl> sysctl;
+        public java.util.List<Sysctl> sysctl;
 
-        public static CreateContainerGroupRequestHostSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestHostSecurityContext self = new CreateContainerGroupRequestHostSecurityContext();
+        public static HostSecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            HostSecurityContext self = new HostSecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestHostSecurityContext setSysctl(java.util.List<CreateContainerGroupRequestHostSecurityContextSysctl> sysctl) {
+        public HostSecurityContext setSysctl(java.util.List<Sysctl> sysctl) {
             this.sysctl = sysctl;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestHostSecurityContextSysctl> getSysctl() {
+        public java.util.List<Sysctl> getSysctl() {
             return this.sysctl;
         }
 
     }
 
-    public static class CreateContainerGroupRequestSecurityContextSysctl extends TeaModel {
+    public static class SecurityContextSysctl extends TeaModel {
         /**
          * <p>The name of the safe sysctl when you modify sysctls by configuring a security context. Valid values:</p>
          * <ul>
@@ -1430,12 +1427,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestSecurityContextSysctl build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestSecurityContextSysctl self = new CreateContainerGroupRequestSecurityContextSysctl();
+        public static SecurityContextSysctl build(java.util.Map<String, ?> map) throws Exception {
+            SecurityContextSysctl self = new SecurityContextSysctl();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestSecurityContextSysctl setName(String name) {
+        public SecurityContextSysctl setName(String name) {
             this.name = name;
             return this;
         }
@@ -1443,7 +1440,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestSecurityContextSysctl setValue(String value) {
+        public SecurityContextSysctl setValue(String value) {
             this.value = value;
             return this;
         }
@@ -1453,29 +1450,29 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestSecurityContext extends TeaModel {
+    public static class SecurityContext extends TeaModel {
         /**
          * <p>Configure a security context to modify safe sysctls. For more information, see <a href="https://help.aliyun.com/document_detail/462313.html">Configure a security context</a>.</p>
          */
         @NameInMap("Sysctl")
-        public java.util.List<CreateContainerGroupRequestSecurityContextSysctl> sysctl;
+        public java.util.List<SecurityContextSysctl> sysctl;
 
-        public static CreateContainerGroupRequestSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestSecurityContext self = new CreateContainerGroupRequestSecurityContext();
+        public static SecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            SecurityContext self = new SecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestSecurityContext setSysctl(java.util.List<CreateContainerGroupRequestSecurityContextSysctl> sysctl) {
+        public SecurityContext setSysctl(java.util.List<SecurityContextSysctl> sysctl) {
             this.sysctl = sysctl;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestSecurityContextSysctl> getSysctl() {
+        public java.util.List<SecurityContextSysctl> getSysctl() {
             return this.sysctl;
         }
 
     }
 
-    public static class CreateContainerGroupRequestAcrRegistryInfo extends TeaModel {
+    public static class AcrRegistryInfo extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role in the Alibaba Cloud account to which the elastic container instance belongs.</p>
          * 
@@ -1530,12 +1527,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        public static CreateContainerGroupRequestAcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestAcrRegistryInfo self = new CreateContainerGroupRequestAcrRegistryInfo();
+        public static AcrRegistryInfo build(java.util.Map<String, ?> map) throws Exception {
+            AcrRegistryInfo self = new AcrRegistryInfo();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestAcrRegistryInfo setArnService(String arnService) {
+        public AcrRegistryInfo setArnService(String arnService) {
             this.arnService = arnService;
             return this;
         }
@@ -1543,7 +1540,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.arnService;
         }
 
-        public CreateContainerGroupRequestAcrRegistryInfo setArnUser(String arnUser) {
+        public AcrRegistryInfo setArnUser(String arnUser) {
             this.arnUser = arnUser;
             return this;
         }
@@ -1551,7 +1548,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.arnUser;
         }
 
-        public CreateContainerGroupRequestAcrRegistryInfo setDomain(java.util.List<String> domain) {
+        public AcrRegistryInfo setDomain(java.util.List<String> domain) {
             this.domain = domain;
             return this;
         }
@@ -1559,7 +1556,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.domain;
         }
 
-        public CreateContainerGroupRequestAcrRegistryInfo setInstanceId(String instanceId) {
+        public AcrRegistryInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
@@ -1567,7 +1564,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.instanceId;
         }
 
-        public CreateContainerGroupRequestAcrRegistryInfo setInstanceName(String instanceName) {
+        public AcrRegistryInfo setInstanceName(String instanceName) {
             this.instanceName = instanceName;
             return this;
         }
@@ -1575,7 +1572,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.instanceName;
         }
 
-        public CreateContainerGroupRequestAcrRegistryInfo setRegionId(String regionId) {
+        public AcrRegistryInfo setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -1585,16 +1582,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerLivenessProbeExec extends TeaModel {
+    public static class Exec extends TeaModel {
         @NameInMap("Command")
         public java.util.List<String> command;
 
-        public static CreateContainerGroupRequestContainerLivenessProbeExec build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerLivenessProbeExec self = new CreateContainerGroupRequestContainerLivenessProbeExec();
+        public static Exec build(java.util.Map<String, ?> map) throws Exception {
+            Exec self = new Exec();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbeExec setCommand(java.util.List<String> command) {
+        public Exec setCommand(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -1604,7 +1601,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerLivenessProbeHttpGet extends TeaModel {
+    public static class HttpGet extends TeaModel {
         @NameInMap("Path")
         public String path;
 
@@ -1614,12 +1611,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Scheme")
         public String scheme;
 
-        public static CreateContainerGroupRequestContainerLivenessProbeHttpGet build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerLivenessProbeHttpGet self = new CreateContainerGroupRequestContainerLivenessProbeHttpGet();
+        public static HttpGet build(java.util.Map<String, ?> map) throws Exception {
+            HttpGet self = new HttpGet();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbeHttpGet setPath(String path) {
+        public HttpGet setPath(String path) {
             this.path = path;
             return this;
         }
@@ -1627,7 +1624,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.path;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbeHttpGet setPort(Integer port) {
+        public HttpGet setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -1635,7 +1632,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.port;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbeHttpGet setScheme(String scheme) {
+        public HttpGet setScheme(String scheme) {
             this.scheme = scheme;
             return this;
         }
@@ -1645,16 +1642,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerLivenessProbeTcpSocket extends TeaModel {
+    public static class TcpSocket extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
-        public static CreateContainerGroupRequestContainerLivenessProbeTcpSocket build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerLivenessProbeTcpSocket self = new CreateContainerGroupRequestContainerLivenessProbeTcpSocket();
+        public static TcpSocket build(java.util.Map<String, ?> map) throws Exception {
+            TcpSocket self = new TcpSocket();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbeTcpSocket setPort(Integer port) {
+        public TcpSocket setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -1664,15 +1661,15 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerLivenessProbe extends TeaModel {
+    public static class LivenessProbe extends TeaModel {
         @NameInMap("Exec")
-        public CreateContainerGroupRequestContainerLivenessProbeExec exec;
+        public Exec exec;
 
         @NameInMap("FailureThreshold")
         public Integer failureThreshold;
 
         @NameInMap("HttpGet")
-        public CreateContainerGroupRequestContainerLivenessProbeHttpGet httpGet;
+        public HttpGet httpGet;
 
         @NameInMap("InitialDelaySeconds")
         public Integer initialDelaySeconds;
@@ -1684,25 +1681,25 @@ public class CreateContainerGroupRequest extends TeaModel {
         public Integer successThreshold;
 
         @NameInMap("TcpSocket")
-        public CreateContainerGroupRequestContainerLivenessProbeTcpSocket tcpSocket;
+        public TcpSocket tcpSocket;
 
         @NameInMap("TimeoutSeconds")
         public Integer timeoutSeconds;
 
-        public static CreateContainerGroupRequestContainerLivenessProbe build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerLivenessProbe self = new CreateContainerGroupRequestContainerLivenessProbe();
+        public static LivenessProbe build(java.util.Map<String, ?> map) throws Exception {
+            LivenessProbe self = new LivenessProbe();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setExec(CreateContainerGroupRequestContainerLivenessProbeExec exec) {
+        public LivenessProbe setExec(Exec exec) {
             this.exec = exec;
             return this;
         }
-        public CreateContainerGroupRequestContainerLivenessProbeExec getExec() {
+        public Exec getExec() {
             return this.exec;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setFailureThreshold(Integer failureThreshold) {
+        public LivenessProbe setFailureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
@@ -1710,15 +1707,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.failureThreshold;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setHttpGet(CreateContainerGroupRequestContainerLivenessProbeHttpGet httpGet) {
+        public LivenessProbe setHttpGet(HttpGet httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-        public CreateContainerGroupRequestContainerLivenessProbeHttpGet getHttpGet() {
+        public HttpGet getHttpGet() {
             return this.httpGet;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
+        public LivenessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
@@ -1726,7 +1723,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.initialDelaySeconds;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setPeriodSeconds(Integer periodSeconds) {
+        public LivenessProbe setPeriodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
@@ -1734,7 +1731,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.periodSeconds;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setSuccessThreshold(Integer successThreshold) {
+        public LivenessProbe setSuccessThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
@@ -1742,15 +1739,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.successThreshold;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setTcpSocket(CreateContainerGroupRequestContainerLivenessProbeTcpSocket tcpSocket) {
+        public LivenessProbe setTcpSocket(TcpSocket tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-        public CreateContainerGroupRequestContainerLivenessProbeTcpSocket getTcpSocket() {
+        public TcpSocket getTcpSocket() {
             return this.tcpSocket;
         }
 
-        public CreateContainerGroupRequestContainerLivenessProbe setTimeoutSeconds(Integer timeoutSeconds) {
+        public LivenessProbe setTimeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
@@ -1760,16 +1757,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerReadinessProbeExec extends TeaModel {
+    public static class ReadinessProbeExec extends TeaModel {
         @NameInMap("Command")
         public java.util.List<String> command;
 
-        public static CreateContainerGroupRequestContainerReadinessProbeExec build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerReadinessProbeExec self = new CreateContainerGroupRequestContainerReadinessProbeExec();
+        public static ReadinessProbeExec build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbeExec self = new ReadinessProbeExec();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbeExec setCommand(java.util.List<String> command) {
+        public ReadinessProbeExec setCommand(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -1779,7 +1776,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerReadinessProbeHttpGet extends TeaModel {
+    public static class ReadinessProbeHttpGet extends TeaModel {
         @NameInMap("Path")
         public String path;
 
@@ -1789,12 +1786,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Scheme")
         public String scheme;
 
-        public static CreateContainerGroupRequestContainerReadinessProbeHttpGet build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerReadinessProbeHttpGet self = new CreateContainerGroupRequestContainerReadinessProbeHttpGet();
+        public static ReadinessProbeHttpGet build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbeHttpGet self = new ReadinessProbeHttpGet();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbeHttpGet setPath(String path) {
+        public ReadinessProbeHttpGet setPath(String path) {
             this.path = path;
             return this;
         }
@@ -1802,7 +1799,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.path;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbeHttpGet setPort(Integer port) {
+        public ReadinessProbeHttpGet setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -1810,7 +1807,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.port;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbeHttpGet setScheme(String scheme) {
+        public ReadinessProbeHttpGet setScheme(String scheme) {
             this.scheme = scheme;
             return this;
         }
@@ -1820,16 +1817,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerReadinessProbeTcpSocket extends TeaModel {
+    public static class ReadinessProbeTcpSocket extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
-        public static CreateContainerGroupRequestContainerReadinessProbeTcpSocket build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerReadinessProbeTcpSocket self = new CreateContainerGroupRequestContainerReadinessProbeTcpSocket();
+        public static ReadinessProbeTcpSocket build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbeTcpSocket self = new ReadinessProbeTcpSocket();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbeTcpSocket setPort(Integer port) {
+        public ReadinessProbeTcpSocket setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -1839,15 +1836,15 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerReadinessProbe extends TeaModel {
+    public static class ReadinessProbe extends TeaModel {
         @NameInMap("Exec")
-        public CreateContainerGroupRequestContainerReadinessProbeExec exec;
+        public ReadinessProbeExec exec;
 
         @NameInMap("FailureThreshold")
         public Integer failureThreshold;
 
         @NameInMap("HttpGet")
-        public CreateContainerGroupRequestContainerReadinessProbeHttpGet httpGet;
+        public ReadinessProbeHttpGet httpGet;
 
         @NameInMap("InitialDelaySeconds")
         public Integer initialDelaySeconds;
@@ -1859,25 +1856,25 @@ public class CreateContainerGroupRequest extends TeaModel {
         public Integer successThreshold;
 
         @NameInMap("TcpSocket")
-        public CreateContainerGroupRequestContainerReadinessProbeTcpSocket tcpSocket;
+        public ReadinessProbeTcpSocket tcpSocket;
 
         @NameInMap("TimeoutSeconds")
         public Integer timeoutSeconds;
 
-        public static CreateContainerGroupRequestContainerReadinessProbe build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerReadinessProbe self = new CreateContainerGroupRequestContainerReadinessProbe();
+        public static ReadinessProbe build(java.util.Map<String, ?> map) throws Exception {
+            ReadinessProbe self = new ReadinessProbe();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setExec(CreateContainerGroupRequestContainerReadinessProbeExec exec) {
+        public ReadinessProbe setExec(ReadinessProbeExec exec) {
             this.exec = exec;
             return this;
         }
-        public CreateContainerGroupRequestContainerReadinessProbeExec getExec() {
+        public ReadinessProbeExec getExec() {
             return this.exec;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setFailureThreshold(Integer failureThreshold) {
+        public ReadinessProbe setFailureThreshold(Integer failureThreshold) {
             this.failureThreshold = failureThreshold;
             return this;
         }
@@ -1885,15 +1882,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.failureThreshold;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setHttpGet(CreateContainerGroupRequestContainerReadinessProbeHttpGet httpGet) {
+        public ReadinessProbe setHttpGet(ReadinessProbeHttpGet httpGet) {
             this.httpGet = httpGet;
             return this;
         }
-        public CreateContainerGroupRequestContainerReadinessProbeHttpGet getHttpGet() {
+        public ReadinessProbeHttpGet getHttpGet() {
             return this.httpGet;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
+        public ReadinessProbe setInitialDelaySeconds(Integer initialDelaySeconds) {
             this.initialDelaySeconds = initialDelaySeconds;
             return this;
         }
@@ -1901,7 +1898,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.initialDelaySeconds;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setPeriodSeconds(Integer periodSeconds) {
+        public ReadinessProbe setPeriodSeconds(Integer periodSeconds) {
             this.periodSeconds = periodSeconds;
             return this;
         }
@@ -1909,7 +1906,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.periodSeconds;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setSuccessThreshold(Integer successThreshold) {
+        public ReadinessProbe setSuccessThreshold(Integer successThreshold) {
             this.successThreshold = successThreshold;
             return this;
         }
@@ -1917,15 +1914,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.successThreshold;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setTcpSocket(CreateContainerGroupRequestContainerReadinessProbeTcpSocket tcpSocket) {
+        public ReadinessProbe setTcpSocket(ReadinessProbeTcpSocket tcpSocket) {
             this.tcpSocket = tcpSocket;
             return this;
         }
-        public CreateContainerGroupRequestContainerReadinessProbeTcpSocket getTcpSocket() {
+        public ReadinessProbeTcpSocket getTcpSocket() {
             return this.tcpSocket;
         }
 
-        public CreateContainerGroupRequestContainerReadinessProbe setTimeoutSeconds(Integer timeoutSeconds) {
+        public ReadinessProbe setTimeoutSeconds(Integer timeoutSeconds) {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
@@ -1935,16 +1932,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerSecurityContextCapability extends TeaModel {
+    public static class Capability extends TeaModel {
         @NameInMap("Add")
         public java.util.List<String> add;
 
-        public static CreateContainerGroupRequestContainerSecurityContextCapability build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerSecurityContextCapability self = new CreateContainerGroupRequestContainerSecurityContextCapability();
+        public static Capability build(java.util.Map<String, ?> map) throws Exception {
+            Capability self = new Capability();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerSecurityContextCapability setAdd(java.util.List<String> add) {
+        public Capability setAdd(java.util.List<String> add) {
             this.add = add;
             return this;
         }
@@ -1954,9 +1951,9 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerSecurityContext extends TeaModel {
+    public static class ContainerSecurityContext extends TeaModel {
         @NameInMap("Capability")
-        public CreateContainerGroupRequestContainerSecurityContextCapability capability;
+        public Capability capability;
 
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
@@ -1964,20 +1961,20 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
-        public static CreateContainerGroupRequestContainerSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerSecurityContext self = new CreateContainerGroupRequestContainerSecurityContext();
+        public static ContainerSecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            ContainerSecurityContext self = new ContainerSecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerSecurityContext setCapability(CreateContainerGroupRequestContainerSecurityContextCapability capability) {
+        public ContainerSecurityContext setCapability(Capability capability) {
             this.capability = capability;
             return this;
         }
-        public CreateContainerGroupRequestContainerSecurityContextCapability getCapability() {
+        public Capability getCapability() {
             return this.capability;
         }
 
-        public CreateContainerGroupRequestContainerSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
+        public ContainerSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
@@ -1985,7 +1982,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.readOnlyRootFilesystem;
         }
 
-        public CreateContainerGroupRequestContainerSecurityContext setRunAsUser(Long runAsUser) {
+        public ContainerSecurityContext setRunAsUser(Long runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
@@ -1995,16 +1992,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerEnvironmentVarFieldRef extends TeaModel {
+    public static class FieldRef extends TeaModel {
         @NameInMap("FieldPath")
         public String fieldPath;
 
-        public static CreateContainerGroupRequestContainerEnvironmentVarFieldRef build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerEnvironmentVarFieldRef self = new CreateContainerGroupRequestContainerEnvironmentVarFieldRef();
+        public static FieldRef build(java.util.Map<String, ?> map) throws Exception {
+            FieldRef self = new FieldRef();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerEnvironmentVarFieldRef setFieldPath(String fieldPath) {
+        public FieldRef setFieldPath(String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
@@ -2014,12 +2011,12 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerEnvironmentVar extends TeaModel {
+    public static class EnvironmentVar extends TeaModel {
         @NameInMap("FieldRef")
-        public CreateContainerGroupRequestContainerEnvironmentVarFieldRef fieldRef;
+        public FieldRef fieldRef;
 
         /**
-         * <p>The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``</p>
+         * <p>The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``</p>
          * 
          * <strong>example:</strong>
          * <p>PATH</p>
@@ -2036,20 +2033,20 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestContainerEnvironmentVar build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerEnvironmentVar self = new CreateContainerGroupRequestContainerEnvironmentVar();
+        public static EnvironmentVar build(java.util.Map<String, ?> map) throws Exception {
+            EnvironmentVar self = new EnvironmentVar();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerEnvironmentVar setFieldRef(CreateContainerGroupRequestContainerEnvironmentVarFieldRef fieldRef) {
+        public EnvironmentVar setFieldRef(FieldRef fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
-        public CreateContainerGroupRequestContainerEnvironmentVarFieldRef getFieldRef() {
+        public FieldRef getFieldRef() {
             return this.fieldRef;
         }
 
-        public CreateContainerGroupRequestContainerEnvironmentVar setKey(String key) {
+        public EnvironmentVar setKey(String key) {
             this.key = key;
             return this;
         }
@@ -2057,7 +2054,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateContainerGroupRequestContainerEnvironmentVar setValue(String value) {
+        public EnvironmentVar setValue(String value) {
             this.value = value;
             return this;
         }
@@ -2067,7 +2064,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader extends TeaModel {
+    public static class LifecyclePostStartHandlerHttpGetHttpHeader extends TeaModel {
         /**
          * <p>The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a postStart hook.</p>
          * 
@@ -2086,12 +2083,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader self = new CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader();
+        public static LifecyclePostStartHandlerHttpGetHttpHeader build(java.util.Map<String, ?> map) throws Exception {
+            LifecyclePostStartHandlerHttpGetHttpHeader self = new LifecyclePostStartHandlerHttpGetHttpHeader();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader setName(String name) {
+        public LifecyclePostStartHandlerHttpGetHttpHeader setName(String name) {
             this.name = name;
             return this;
         }
@@ -2099,7 +2096,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader setValue(String value) {
+        public LifecyclePostStartHandlerHttpGetHttpHeader setValue(String value) {
             this.value = value;
             return this;
         }
@@ -2109,7 +2106,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader extends TeaModel {
+    public static class LifecyclePreStopHandlerHttpGetHttpHeader extends TeaModel {
         /**
          * <p>The name of the custom field in the HTTP GET request header when you use HTTP requests to specify a presto hook.</p>
          * 
@@ -2128,12 +2125,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader self = new CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader();
+        public static LifecyclePreStopHandlerHttpGetHttpHeader build(java.util.Map<String, ?> map) throws Exception {
+            LifecyclePreStopHandlerHttpGetHttpHeader self = new LifecyclePreStopHandlerHttpGetHttpHeader();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader setName(String name) {
+        public LifecyclePreStopHandlerHttpGetHttpHeader setName(String name) {
             this.name = name;
             return this;
         }
@@ -2141,7 +2138,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader setValue(String value) {
+        public LifecyclePreStopHandlerHttpGetHttpHeader setValue(String value) {
             this.value = value;
             return this;
         }
@@ -2151,7 +2148,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerPort extends TeaModel {
+    public static class Port extends TeaModel {
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
          * 
@@ -2174,12 +2171,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        public static CreateContainerGroupRequestContainerPort build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerPort self = new CreateContainerGroupRequestContainerPort();
+        public static Port build(java.util.Map<String, ?> map) throws Exception {
+            Port self = new Port();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerPort setPort(Integer port) {
+        public Port setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -2187,7 +2184,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.port;
         }
 
-        public CreateContainerGroupRequestContainerPort setProtocol(String protocol) {
+        public Port setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -2197,7 +2194,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainerVolumeMount extends TeaModel {
+    public static class VolumeMount extends TeaModel {
         /**
          * <p>The directory to which the volume is mounted.</p>
          * <blockquote>
@@ -2226,7 +2223,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         public String mountPropagation;
 
         /**
-         * <p>The name of the volume. The value of this parameter is the same as the value of Volume.N.Name.</p>
+         * <p>The name of the volume. The value of this parameter is the same as the name of the volume that is mounted to containers.</p>
          * 
          * <strong>example:</strong>
          * <p>default-volume1</p>
@@ -2252,12 +2249,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("SubPath")
         public String subPath;
 
-        public static CreateContainerGroupRequestContainerVolumeMount build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainerVolumeMount self = new CreateContainerGroupRequestContainerVolumeMount();
+        public static VolumeMount build(java.util.Map<String, ?> map) throws Exception {
+            VolumeMount self = new VolumeMount();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainerVolumeMount setMountPath(String mountPath) {
+        public VolumeMount setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -2265,7 +2262,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.mountPath;
         }
 
-        public CreateContainerGroupRequestContainerVolumeMount setMountPropagation(String mountPropagation) {
+        public VolumeMount setMountPropagation(String mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
@@ -2273,7 +2270,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.mountPropagation;
         }
 
-        public CreateContainerGroupRequestContainerVolumeMount setName(String name) {
+        public VolumeMount setName(String name) {
             this.name = name;
             return this;
         }
@@ -2281,7 +2278,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestContainerVolumeMount setReadOnly(Boolean readOnly) {
+        public VolumeMount setReadOnly(Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
@@ -2289,7 +2286,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.readOnly;
         }
 
-        public CreateContainerGroupRequestContainerVolumeMount setSubPath(String subPath) {
+        public VolumeMount setSubPath(String subPath) {
             this.subPath = subPath;
             return this;
         }
@@ -2299,15 +2296,15 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestContainer extends TeaModel {
+    public static class Container extends TeaModel {
         @NameInMap("LivenessProbe")
-        public CreateContainerGroupRequestContainerLivenessProbe livenessProbe;
+        public LivenessProbe livenessProbe;
 
         @NameInMap("ReadinessProbe")
-        public CreateContainerGroupRequestContainerReadinessProbe readinessProbe;
+        public ReadinessProbe readinessProbe;
 
         @NameInMap("SecurityContext")
-        public CreateContainerGroupRequestContainerSecurityContext securityContext;
+        public ContainerSecurityContext securityContext;
 
         /**
          * <p>The arguments that are passed to the startup command of the container. You can specify up to 10 arguments.</p>
@@ -2319,7 +2316,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         public java.util.List<String> arg;
 
         /**
-         * <p>The commands to be executed in containers when you use a CLI to perform health checks.</p>
+         * <p>The commands to be executed in the container when you use a CLI to perform health checks.</p>
          * <blockquote>
          * <p> When you configure ReadinessProbe-related parameters, you can select only one of the HttpGet, Exec, and TcpSocket check methods.</p>
          * </blockquote>
@@ -2331,7 +2328,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The number of vCPUs that are allocated to the container.</p>
+         * <p>The number of vCPUs that you want to allocate to the container.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -2343,10 +2340,10 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The environment variables of the container.</p>
          */
         @NameInMap("EnvironmentVar")
-        public java.util.List<CreateContainerGroupRequestContainerEnvironmentVar> environmentVar;
+        public java.util.List<EnvironmentVar> environmentVar;
 
         /**
-         * <p>Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Valid values:</p>
+         * <p>Specifies whether to hide the information about environment variables when you query the details of an elastic container instance. Default value: false. Valid values:</p>
          * <ul>
          * <li>false</li>
          * <li>true If environment variables contain sensitive information, you can set this parameter to true to improve security of the information.</li>
@@ -2413,7 +2410,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The HTTP GET request header.</p>
          */
         @NameInMap("LifecyclePostStartHandlerHttpGetHttpHeader")
-        public java.util.List<CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader> lifecyclePostStartHandlerHttpGetHttpHeader;
+        public java.util.List<LifecyclePostStartHandlerHttpGetHttpHeader> lifecyclePostStartHandlerHttpGetHttpHeader;
 
         /**
          * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a postStart hook.</p>
@@ -2486,7 +2483,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The HTTP GET request header.</p>
          */
         @NameInMap("LifecyclePreStopHandlerHttpGetHttpHeader")
-        public java.util.List<CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
+        public java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
 
         /**
          * <p>The path to which the system sends an HTTP GET request for a health check when you use an HTTP request to specify a preSop hook.</p>
@@ -2538,7 +2535,7 @@ public class CreateContainerGroupRequest extends TeaModel {
         public Integer lifecyclePreStopHandlerTcpSocketPort;
 
         /**
-         * <p>The memory size of the container. Unit: GiB.</p>
+         * <p>The memory size of the container. Unit: GiB</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -2563,8 +2560,18 @@ public class CreateContainerGroupRequest extends TeaModel {
          * </blockquote>
          */
         @NameInMap("Port")
-        public java.util.List<CreateContainerGroupRequestContainerPort> port;
+        public java.util.List<Port> port;
 
+        /**
+         * <p>Specifies whether to enable privileged mode for the container. That is, whether to run the container in privileged mode. Default value: false. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SecurityContextPrivileged")
         public Boolean securityContextPrivileged;
 
@@ -2578,7 +2585,11 @@ public class CreateContainerGroupRequest extends TeaModel {
         public Long securityContextRunAsGroup;
 
         /**
-         * <p>Specifies whether to run the container as a non-root user.</p>
+         * <p>Specifies whether to run the container as a non-root user. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -2637,7 +2648,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The information about the volume that you want to mount on the container.</p>
          */
         @NameInMap("VolumeMount")
-        public java.util.List<CreateContainerGroupRequestContainerVolumeMount> volumeMount;
+        public java.util.List<VolumeMount> volumeMount;
 
         /**
          * <p>The working directory of the container.</p>
@@ -2648,36 +2659,36 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("WorkingDir")
         public String workingDir;
 
-        public static CreateContainerGroupRequestContainer build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestContainer self = new CreateContainerGroupRequestContainer();
+        public static Container build(java.util.Map<String, ?> map) throws Exception {
+            Container self = new Container();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestContainer setLivenessProbe(CreateContainerGroupRequestContainerLivenessProbe livenessProbe) {
+        public Container setLivenessProbe(LivenessProbe livenessProbe) {
             this.livenessProbe = livenessProbe;
             return this;
         }
-        public CreateContainerGroupRequestContainerLivenessProbe getLivenessProbe() {
+        public LivenessProbe getLivenessProbe() {
             return this.livenessProbe;
         }
 
-        public CreateContainerGroupRequestContainer setReadinessProbe(CreateContainerGroupRequestContainerReadinessProbe readinessProbe) {
+        public Container setReadinessProbe(ReadinessProbe readinessProbe) {
             this.readinessProbe = readinessProbe;
             return this;
         }
-        public CreateContainerGroupRequestContainerReadinessProbe getReadinessProbe() {
+        public ReadinessProbe getReadinessProbe() {
             return this.readinessProbe;
         }
 
-        public CreateContainerGroupRequestContainer setSecurityContext(CreateContainerGroupRequestContainerSecurityContext securityContext) {
+        public Container setSecurityContext(ContainerSecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-        public CreateContainerGroupRequestContainerSecurityContext getSecurityContext() {
+        public ContainerSecurityContext getSecurityContext() {
             return this.securityContext;
         }
 
-        public CreateContainerGroupRequestContainer setArg(java.util.List<String> arg) {
+        public Container setArg(java.util.List<String> arg) {
             this.arg = arg;
             return this;
         }
@@ -2685,7 +2696,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.arg;
         }
 
-        public CreateContainerGroupRequestContainer setCommand(java.util.List<String> command) {
+        public Container setCommand(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -2693,7 +2704,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.command;
         }
 
-        public CreateContainerGroupRequestContainer setCpu(Float cpu) {
+        public Container setCpu(Float cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -2701,15 +2712,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.cpu;
         }
 
-        public CreateContainerGroupRequestContainer setEnvironmentVar(java.util.List<CreateContainerGroupRequestContainerEnvironmentVar> environmentVar) {
+        public Container setEnvironmentVar(java.util.List<EnvironmentVar> environmentVar) {
             this.environmentVar = environmentVar;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestContainerEnvironmentVar> getEnvironmentVar() {
+        public java.util.List<EnvironmentVar> getEnvironmentVar() {
             return this.environmentVar;
         }
 
-        public CreateContainerGroupRequestContainer setEnvironmentVarHide(Boolean environmentVarHide) {
+        public Container setEnvironmentVarHide(Boolean environmentVarHide) {
             this.environmentVarHide = environmentVarHide;
             return this;
         }
@@ -2717,7 +2728,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.environmentVarHide;
         }
 
-        public CreateContainerGroupRequestContainer setGpu(Integer gpu) {
+        public Container setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -2725,7 +2736,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.gpu;
         }
 
-        public CreateContainerGroupRequestContainer setImage(String image) {
+        public Container setImage(String image) {
             this.image = image;
             return this;
         }
@@ -2733,7 +2744,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.image;
         }
 
-        public CreateContainerGroupRequestContainer setImagePullPolicy(String imagePullPolicy) {
+        public Container setImagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
@@ -2741,7 +2752,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.imagePullPolicy;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerExec(java.util.List<String> lifecyclePostStartHandlerExec) {
+        public Container setLifecyclePostStartHandlerExec(java.util.List<String> lifecyclePostStartHandlerExec) {
             this.lifecyclePostStartHandlerExec = lifecyclePostStartHandlerExec;
             return this;
         }
@@ -2749,7 +2760,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerExec;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
+        public Container setLifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
             this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
             return this;
         }
@@ -2757,15 +2768,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerHttpGetHost;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerHttpGetHttpHeader(java.util.List<CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader> lifecyclePostStartHandlerHttpGetHttpHeader) {
+        public Container setLifecyclePostStartHandlerHttpGetHttpHeader(java.util.List<LifecyclePostStartHandlerHttpGetHttpHeader> lifecyclePostStartHandlerHttpGetHttpHeader) {
             this.lifecyclePostStartHandlerHttpGetHttpHeader = lifecyclePostStartHandlerHttpGetHttpHeader;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestContainerLifecyclePostStartHandlerHttpGetHttpHeader> getLifecyclePostStartHandlerHttpGetHttpHeader() {
+        public java.util.List<LifecyclePostStartHandlerHttpGetHttpHeader> getLifecyclePostStartHandlerHttpGetHttpHeader() {
             return this.lifecyclePostStartHandlerHttpGetHttpHeader;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
+        public Container setLifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
             this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
             return this;
         }
@@ -2773,7 +2784,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerHttpGetPath;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
+        public Container setLifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
             this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
             return this;
         }
@@ -2781,7 +2792,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerHttpGetPort;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
+        public Container setLifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
             this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
             return this;
         }
@@ -2789,7 +2800,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerHttpGetScheme;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
+        public Container setLifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
             this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
             return this;
         }
@@ -2797,7 +2808,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerTcpSocketHost;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
+        public Container setLifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
             this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
             return this;
         }
@@ -2805,7 +2816,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePostStartHandlerTcpSocketPort;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerExec(java.util.List<String> lifecyclePreStopHandlerExec) {
+        public Container setLifecyclePreStopHandlerExec(java.util.List<String> lifecyclePreStopHandlerExec) {
             this.lifecyclePreStopHandlerExec = lifecyclePreStopHandlerExec;
             return this;
         }
@@ -2813,7 +2824,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerExec;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
+        public Container setLifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
             this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
             return this;
         }
@@ -2821,15 +2832,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerHttpGetHost;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerHttpGetHttpHeader(java.util.List<CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader) {
+        public Container setLifecyclePreStopHandlerHttpGetHttpHeader(java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader) {
             this.lifecyclePreStopHandlerHttpGetHttpHeader = lifecyclePreStopHandlerHttpGetHttpHeader;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestContainerLifecyclePreStopHandlerHttpGetHttpHeader> getLifecyclePreStopHandlerHttpGetHttpHeader() {
+        public java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> getLifecyclePreStopHandlerHttpGetHttpHeader() {
             return this.lifecyclePreStopHandlerHttpGetHttpHeader;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
+        public Container setLifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
             this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
             return this;
         }
@@ -2837,7 +2848,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerHttpGetPath;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
+        public Container setLifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
             this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
             return this;
         }
@@ -2845,7 +2856,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerHttpGetPort;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
+        public Container setLifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
             this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
             return this;
         }
@@ -2853,7 +2864,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerHttpGetScheme;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
+        public Container setLifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
             this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
             return this;
         }
@@ -2861,7 +2872,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerTcpSocketHost;
         }
 
-        public CreateContainerGroupRequestContainer setLifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
+        public Container setLifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
             this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
             return this;
         }
@@ -2869,7 +2880,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.lifecyclePreStopHandlerTcpSocketPort;
         }
 
-        public CreateContainerGroupRequestContainer setMemory(Float memory) {
+        public Container setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
@@ -2877,7 +2888,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.memory;
         }
 
-        public CreateContainerGroupRequestContainer setName(String name) {
+        public Container setName(String name) {
             this.name = name;
             return this;
         }
@@ -2885,15 +2896,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestContainer setPort(java.util.List<CreateContainerGroupRequestContainerPort> port) {
+        public Container setPort(java.util.List<Port> port) {
             this.port = port;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestContainerPort> getPort() {
+        public java.util.List<Port> getPort() {
             return this.port;
         }
 
-        public CreateContainerGroupRequestContainer setSecurityContextPrivileged(Boolean securityContextPrivileged) {
+        public Container setSecurityContextPrivileged(Boolean securityContextPrivileged) {
             this.securityContextPrivileged = securityContextPrivileged;
             return this;
         }
@@ -2901,7 +2912,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.securityContextPrivileged;
         }
 
-        public CreateContainerGroupRequestContainer setSecurityContextRunAsGroup(Long securityContextRunAsGroup) {
+        public Container setSecurityContextRunAsGroup(Long securityContextRunAsGroup) {
             this.securityContextRunAsGroup = securityContextRunAsGroup;
             return this;
         }
@@ -2909,7 +2920,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.securityContextRunAsGroup;
         }
 
-        public CreateContainerGroupRequestContainer setSecurityContextRunAsNonRoot(Boolean securityContextRunAsNonRoot) {
+        public Container setSecurityContextRunAsNonRoot(Boolean securityContextRunAsNonRoot) {
             this.securityContextRunAsNonRoot = securityContextRunAsNonRoot;
             return this;
         }
@@ -2917,7 +2928,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.securityContextRunAsNonRoot;
         }
 
-        public CreateContainerGroupRequestContainer setStdin(Boolean stdin) {
+        public Container setStdin(Boolean stdin) {
             this.stdin = stdin;
             return this;
         }
@@ -2925,7 +2936,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.stdin;
         }
 
-        public CreateContainerGroupRequestContainer setStdinOnce(Boolean stdinOnce) {
+        public Container setStdinOnce(Boolean stdinOnce) {
             this.stdinOnce = stdinOnce;
             return this;
         }
@@ -2933,7 +2944,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.stdinOnce;
         }
 
-        public CreateContainerGroupRequestContainer setTerminationMessagePath(String terminationMessagePath) {
+        public Container setTerminationMessagePath(String terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
@@ -2941,7 +2952,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.terminationMessagePath;
         }
 
-        public CreateContainerGroupRequestContainer setTerminationMessagePolicy(String terminationMessagePolicy) {
+        public Container setTerminationMessagePolicy(String terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
@@ -2949,7 +2960,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.terminationMessagePolicy;
         }
 
-        public CreateContainerGroupRequestContainer setTty(Boolean tty) {
+        public Container setTty(Boolean tty) {
             this.tty = tty;
             return this;
         }
@@ -2957,15 +2968,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.tty;
         }
 
-        public CreateContainerGroupRequestContainer setVolumeMount(java.util.List<CreateContainerGroupRequestContainerVolumeMount> volumeMount) {
+        public Container setVolumeMount(java.util.List<VolumeMount> volumeMount) {
             this.volumeMount = volumeMount;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestContainerVolumeMount> getVolumeMount() {
+        public java.util.List<VolumeMount> getVolumeMount() {
             return this.volumeMount;
         }
 
-        public CreateContainerGroupRequestContainer setWorkingDir(String workingDir) {
+        public Container setWorkingDir(String workingDir) {
             this.workingDir = workingDir;
             return this;
         }
@@ -2975,7 +2986,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestHostAliase extends TeaModel {
+    public static class HostAliase extends TeaModel {
         /**
          * <p>The hostnames of the elastic container instance.</p>
          * 
@@ -2994,12 +3005,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
-        public static CreateContainerGroupRequestHostAliase build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestHostAliase self = new CreateContainerGroupRequestHostAliase();
+        public static HostAliase build(java.util.Map<String, ?> map) throws Exception {
+            HostAliase self = new HostAliase();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestHostAliase setHostname(java.util.List<String> hostname) {
+        public HostAliase setHostname(java.util.List<String> hostname) {
             this.hostname = hostname;
             return this;
         }
@@ -3007,7 +3018,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.hostname;
         }
 
-        public CreateContainerGroupRequestHostAliase setIp(String ip) {
+        public HostAliase setIp(String ip) {
             this.ip = ip;
             return this;
         }
@@ -3017,7 +3028,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestImageRegistryCredential extends TeaModel {
+    public static class ImageRegistryCredential extends TeaModel {
         /**
          * <p>The password that you use to access the image repository.</p>
          * 
@@ -3045,12 +3056,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("UserName")
         public String userName;
 
-        public static CreateContainerGroupRequestImageRegistryCredential build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestImageRegistryCredential self = new CreateContainerGroupRequestImageRegistryCredential();
+        public static ImageRegistryCredential build(java.util.Map<String, ?> map) throws Exception {
+            ImageRegistryCredential self = new ImageRegistryCredential();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestImageRegistryCredential setPassword(String password) {
+        public ImageRegistryCredential setPassword(String password) {
             this.password = password;
             return this;
         }
@@ -3058,7 +3069,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.password;
         }
 
-        public CreateContainerGroupRequestImageRegistryCredential setServer(String server) {
+        public ImageRegistryCredential setServer(String server) {
             this.server = server;
             return this;
         }
@@ -3066,7 +3077,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.server;
         }
 
-        public CreateContainerGroupRequestImageRegistryCredential setUserName(String userName) {
+        public ImageRegistryCredential setUserName(String userName) {
             this.userName = userName;
             return this;
         }
@@ -3076,16 +3087,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainerSecurityContextCapability extends TeaModel {
+    public static class SecurityContextCapability extends TeaModel {
         @NameInMap("Add")
         public java.util.List<String> add;
 
-        public static CreateContainerGroupRequestInitContainerSecurityContextCapability build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainerSecurityContextCapability self = new CreateContainerGroupRequestInitContainerSecurityContextCapability();
+        public static SecurityContextCapability build(java.util.Map<String, ?> map) throws Exception {
+            SecurityContextCapability self = new SecurityContextCapability();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainerSecurityContextCapability setAdd(java.util.List<String> add) {
+        public SecurityContextCapability setAdd(java.util.List<String> add) {
             this.add = add;
             return this;
         }
@@ -3095,9 +3106,9 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainerSecurityContext extends TeaModel {
+    public static class InitContainerSecurityContext extends TeaModel {
         @NameInMap("Capability")
-        public CreateContainerGroupRequestInitContainerSecurityContextCapability capability;
+        public SecurityContextCapability capability;
 
         @NameInMap("ReadOnlyRootFilesystem")
         public Boolean readOnlyRootFilesystem;
@@ -3105,20 +3116,20 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("RunAsUser")
         public Long runAsUser;
 
-        public static CreateContainerGroupRequestInitContainerSecurityContext build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainerSecurityContext self = new CreateContainerGroupRequestInitContainerSecurityContext();
+        public static InitContainerSecurityContext build(java.util.Map<String, ?> map) throws Exception {
+            InitContainerSecurityContext self = new InitContainerSecurityContext();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainerSecurityContext setCapability(CreateContainerGroupRequestInitContainerSecurityContextCapability capability) {
+        public InitContainerSecurityContext setCapability(SecurityContextCapability capability) {
             this.capability = capability;
             return this;
         }
-        public CreateContainerGroupRequestInitContainerSecurityContextCapability getCapability() {
+        public SecurityContextCapability getCapability() {
             return this.capability;
         }
 
-        public CreateContainerGroupRequestInitContainerSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
+        public InitContainerSecurityContext setReadOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
             this.readOnlyRootFilesystem = readOnlyRootFilesystem;
             return this;
         }
@@ -3126,7 +3137,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.readOnlyRootFilesystem;
         }
 
-        public CreateContainerGroupRequestInitContainerSecurityContext setRunAsUser(Long runAsUser) {
+        public InitContainerSecurityContext setRunAsUser(Long runAsUser) {
             this.runAsUser = runAsUser;
             return this;
         }
@@ -3136,16 +3147,16 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef extends TeaModel {
+    public static class EnvironmentVarFieldRef extends TeaModel {
         @NameInMap("FieldPath")
         public String fieldPath;
 
-        public static CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef self = new CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef();
+        public static EnvironmentVarFieldRef build(java.util.Map<String, ?> map) throws Exception {
+            EnvironmentVarFieldRef self = new EnvironmentVarFieldRef();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef setFieldPath(String fieldPath) {
+        public EnvironmentVarFieldRef setFieldPath(String fieldPath) {
             this.fieldPath = fieldPath;
             return this;
         }
@@ -3155,9 +3166,9 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainerEnvironmentVar extends TeaModel {
+    public static class InitContainerEnvironmentVar extends TeaModel {
         @NameInMap("FieldRef")
-        public CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef fieldRef;
+        public EnvironmentVarFieldRef fieldRef;
 
         /**
          * <p>The name of the environment variable. The name must be 1 to 128 bits in length and can contain letters, digits, and underscores (_). It cannot start with a digit.``</p>
@@ -3177,20 +3188,20 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestInitContainerEnvironmentVar build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainerEnvironmentVar self = new CreateContainerGroupRequestInitContainerEnvironmentVar();
+        public static InitContainerEnvironmentVar build(java.util.Map<String, ?> map) throws Exception {
+            InitContainerEnvironmentVar self = new InitContainerEnvironmentVar();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainerEnvironmentVar setFieldRef(CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef fieldRef) {
+        public InitContainerEnvironmentVar setFieldRef(EnvironmentVarFieldRef fieldRef) {
             this.fieldRef = fieldRef;
             return this;
         }
-        public CreateContainerGroupRequestInitContainerEnvironmentVarFieldRef getFieldRef() {
+        public EnvironmentVarFieldRef getFieldRef() {
             return this.fieldRef;
         }
 
-        public CreateContainerGroupRequestInitContainerEnvironmentVar setKey(String key) {
+        public InitContainerEnvironmentVar setKey(String key) {
             this.key = key;
             return this;
         }
@@ -3198,7 +3209,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateContainerGroupRequestInitContainerEnvironmentVar setValue(String value) {
+        public InitContainerEnvironmentVar setValue(String value) {
             this.value = value;
             return this;
         }
@@ -3208,7 +3219,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainerPort extends TeaModel {
+    public static class InitContainerPort extends TeaModel {
         /**
          * <p>The port number. Valid values: 1 to 65535.</p>
          * 
@@ -3231,12 +3242,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Protocol")
         public String protocol;
 
-        public static CreateContainerGroupRequestInitContainerPort build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainerPort self = new CreateContainerGroupRequestInitContainerPort();
+        public static InitContainerPort build(java.util.Map<String, ?> map) throws Exception {
+            InitContainerPort self = new InitContainerPort();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainerPort setPort(Integer port) {
+        public InitContainerPort setPort(Integer port) {
             this.port = port;
             return this;
         }
@@ -3244,7 +3255,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.port;
         }
 
-        public CreateContainerGroupRequestInitContainerPort setProtocol(String protocol) {
+        public InitContainerPort setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
         }
@@ -3254,7 +3265,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainerVolumeMount extends TeaModel {
+    public static class InitContainerVolumeMount extends TeaModel {
         /**
          * <p>The directory to which the volume is mounted. The data stored in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
          * 
@@ -3306,12 +3317,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("SubPath")
         public String subPath;
 
-        public static CreateContainerGroupRequestInitContainerVolumeMount build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainerVolumeMount self = new CreateContainerGroupRequestInitContainerVolumeMount();
+        public static InitContainerVolumeMount build(java.util.Map<String, ?> map) throws Exception {
+            InitContainerVolumeMount self = new InitContainerVolumeMount();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainerVolumeMount setMountPath(String mountPath) {
+        public InitContainerVolumeMount setMountPath(String mountPath) {
             this.mountPath = mountPath;
             return this;
         }
@@ -3319,7 +3330,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.mountPath;
         }
 
-        public CreateContainerGroupRequestInitContainerVolumeMount setMountPropagation(String mountPropagation) {
+        public InitContainerVolumeMount setMountPropagation(String mountPropagation) {
             this.mountPropagation = mountPropagation;
             return this;
         }
@@ -3327,7 +3338,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.mountPropagation;
         }
 
-        public CreateContainerGroupRequestInitContainerVolumeMount setName(String name) {
+        public InitContainerVolumeMount setName(String name) {
             this.name = name;
             return this;
         }
@@ -3335,7 +3346,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestInitContainerVolumeMount setReadOnly(Boolean readOnly) {
+        public InitContainerVolumeMount setReadOnly(Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
@@ -3343,7 +3354,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.readOnly;
         }
 
-        public CreateContainerGroupRequestInitContainerVolumeMount setSubPath(String subPath) {
+        public InitContainerVolumeMount setSubPath(String subPath) {
             this.subPath = subPath;
             return this;
         }
@@ -3353,9 +3364,9 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestInitContainer extends TeaModel {
+    public static class InitContainer extends TeaModel {
         @NameInMap("SecurityContext")
-        public CreateContainerGroupRequestInitContainerSecurityContext securityContext;
+        public InitContainerSecurityContext securityContext;
 
         /**
          * <p>The arguments that are passed to the startup command of the init container.</p>
@@ -3388,7 +3399,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The environment variable of the init container.</p>
          */
         @NameInMap("EnvironmentVar")
-        public java.util.List<CreateContainerGroupRequestInitContainerEnvironmentVar> environmentVar;
+        public java.util.List<InitContainerEnvironmentVar> environmentVar;
 
         /**
          * <p>The number of GPUs that you want to allocate to the init container.</p>
@@ -3444,7 +3455,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The information about the port.</p>
          */
         @NameInMap("Port")
-        public java.util.List<CreateContainerGroupRequestInitContainerPort> port;
+        public java.util.List<InitContainerPort> port;
 
         /**
          * <p>The path of the file from which the system retrieves termination messages of the init container when the init container exits.</p>
@@ -3468,7 +3479,7 @@ public class CreateContainerGroupRequest extends TeaModel {
          * <p>The information about the volumes that you want to mount to the init containers.</p>
          */
         @NameInMap("VolumeMount")
-        public java.util.List<CreateContainerGroupRequestInitContainerVolumeMount> volumeMount;
+        public java.util.List<InitContainerVolumeMount> volumeMount;
 
         /**
          * <p>The working directory of the init container.</p>
@@ -3479,20 +3490,20 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("WorkingDir")
         public String workingDir;
 
-        public static CreateContainerGroupRequestInitContainer build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestInitContainer self = new CreateContainerGroupRequestInitContainer();
+        public static InitContainer build(java.util.Map<String, ?> map) throws Exception {
+            InitContainer self = new InitContainer();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestInitContainer setSecurityContext(CreateContainerGroupRequestInitContainerSecurityContext securityContext) {
+        public InitContainer setSecurityContext(InitContainerSecurityContext securityContext) {
             this.securityContext = securityContext;
             return this;
         }
-        public CreateContainerGroupRequestInitContainerSecurityContext getSecurityContext() {
+        public InitContainerSecurityContext getSecurityContext() {
             return this.securityContext;
         }
 
-        public CreateContainerGroupRequestInitContainer setArg(java.util.List<String> arg) {
+        public InitContainer setArg(java.util.List<String> arg) {
             this.arg = arg;
             return this;
         }
@@ -3500,7 +3511,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.arg;
         }
 
-        public CreateContainerGroupRequestInitContainer setCommand(java.util.List<String> command) {
+        public InitContainer setCommand(java.util.List<String> command) {
             this.command = command;
             return this;
         }
@@ -3508,7 +3519,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.command;
         }
 
-        public CreateContainerGroupRequestInitContainer setCpu(Float cpu) {
+        public InitContainer setCpu(Float cpu) {
             this.cpu = cpu;
             return this;
         }
@@ -3516,15 +3527,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.cpu;
         }
 
-        public CreateContainerGroupRequestInitContainer setEnvironmentVar(java.util.List<CreateContainerGroupRequestInitContainerEnvironmentVar> environmentVar) {
+        public InitContainer setEnvironmentVar(java.util.List<InitContainerEnvironmentVar> environmentVar) {
             this.environmentVar = environmentVar;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestInitContainerEnvironmentVar> getEnvironmentVar() {
+        public java.util.List<InitContainerEnvironmentVar> getEnvironmentVar() {
             return this.environmentVar;
         }
 
-        public CreateContainerGroupRequestInitContainer setGpu(Integer gpu) {
+        public InitContainer setGpu(Integer gpu) {
             this.gpu = gpu;
             return this;
         }
@@ -3532,7 +3543,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.gpu;
         }
 
-        public CreateContainerGroupRequestInitContainer setImage(String image) {
+        public InitContainer setImage(String image) {
             this.image = image;
             return this;
         }
@@ -3540,7 +3551,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.image;
         }
 
-        public CreateContainerGroupRequestInitContainer setImagePullPolicy(String imagePullPolicy) {
+        public InitContainer setImagePullPolicy(String imagePullPolicy) {
             this.imagePullPolicy = imagePullPolicy;
             return this;
         }
@@ -3548,7 +3559,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.imagePullPolicy;
         }
 
-        public CreateContainerGroupRequestInitContainer setMemory(Float memory) {
+        public InitContainer setMemory(Float memory) {
             this.memory = memory;
             return this;
         }
@@ -3556,7 +3567,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.memory;
         }
 
-        public CreateContainerGroupRequestInitContainer setName(String name) {
+        public InitContainer setName(String name) {
             this.name = name;
             return this;
         }
@@ -3564,15 +3575,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestInitContainer setPort(java.util.List<CreateContainerGroupRequestInitContainerPort> port) {
+        public InitContainer setPort(java.util.List<InitContainerPort> port) {
             this.port = port;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestInitContainerPort> getPort() {
+        public java.util.List<InitContainerPort> getPort() {
             return this.port;
         }
 
-        public CreateContainerGroupRequestInitContainer setTerminationMessagePath(String terminationMessagePath) {
+        public InitContainer setTerminationMessagePath(String terminationMessagePath) {
             this.terminationMessagePath = terminationMessagePath;
             return this;
         }
@@ -3580,7 +3591,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.terminationMessagePath;
         }
 
-        public CreateContainerGroupRequestInitContainer setTerminationMessagePolicy(String terminationMessagePolicy) {
+        public InitContainer setTerminationMessagePolicy(String terminationMessagePolicy) {
             this.terminationMessagePolicy = terminationMessagePolicy;
             return this;
         }
@@ -3588,15 +3599,15 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.terminationMessagePolicy;
         }
 
-        public CreateContainerGroupRequestInitContainer setVolumeMount(java.util.List<CreateContainerGroupRequestInitContainerVolumeMount> volumeMount) {
+        public InitContainer setVolumeMount(java.util.List<InitContainerVolumeMount> volumeMount) {
             this.volumeMount = volumeMount;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestInitContainerVolumeMount> getVolumeMount() {
+        public java.util.List<InitContainerVolumeMount> getVolumeMount() {
             return this.volumeMount;
         }
 
-        public CreateContainerGroupRequestInitContainer setWorkingDir(String workingDir) {
+        public InitContainer setWorkingDir(String workingDir) {
             this.workingDir = workingDir;
             return this;
         }
@@ -3606,32 +3617,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestOverheadReservationOption extends TeaModel {
-        /**
-         * <p>Specify whether to enable the overhead reservation feature. Default: false. Valid values: true and false. After you enable the overhead reservation feature, the system automatically adds the overhead to the specification of the elastic container instance, and then adjusts the specification of the instance upward to the most approximate specification. You are charged based on the new specification after the adjustment.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("EnableOverheadReservation")
-        public Boolean enableOverheadReservation;
-
-        public static CreateContainerGroupRequestOverheadReservationOption build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestOverheadReservationOption self = new CreateContainerGroupRequestOverheadReservationOption();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateContainerGroupRequestOverheadReservationOption setEnableOverheadReservation(Boolean enableOverheadReservation) {
-            this.enableOverheadReservation = enableOverheadReservation;
-            return this;
-        }
-        public Boolean getEnableOverheadReservation() {
-            return this.enableOverheadReservation;
-        }
-
-    }
-
-    public static class CreateContainerGroupRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
          * <p>The tag key. The tag key cannot be an empty string and must be unique. The tag key can be up to 64 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
@@ -3650,12 +3636,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateContainerGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestTag self = new CreateContainerGroupRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -3663,7 +3649,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateContainerGroupRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -3673,7 +3659,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath extends TeaModel {
+    public static class ConfigFileToPath extends TeaModel {
         @NameInMap("Content")
         public String content;
 
@@ -3683,12 +3669,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Path")
         public String path;
 
-        public static CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath self = new CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath();
+        public static ConfigFileToPath build(java.util.Map<String, ?> map) throws Exception {
+            ConfigFileToPath self = new ConfigFileToPath();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath setContent(String content) {
+        public ConfigFileToPath setContent(String content) {
             this.content = content;
             return this;
         }
@@ -3696,7 +3682,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.content;
         }
 
-        public CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath setMode(Integer mode) {
+        public ConfigFileToPath setMode(Integer mode) {
             this.mode = mode;
             return this;
         }
@@ -3704,7 +3690,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.mode;
         }
 
-        public CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath setPath(String path) {
+        public ConfigFileToPath setPath(String path) {
             this.path = path;
             return this;
         }
@@ -3714,27 +3700,27 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeConfigFileVolume extends TeaModel {
+    public static class ConfigFileVolume extends TeaModel {
         @NameInMap("ConfigFileToPath")
-        public java.util.List<CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath> configFileToPath;
+        public java.util.List<ConfigFileToPath> configFileToPath;
 
         @NameInMap("DefaultMode")
         public Integer defaultMode;
 
-        public static CreateContainerGroupRequestVolumeConfigFileVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeConfigFileVolume self = new CreateContainerGroupRequestVolumeConfigFileVolume();
+        public static ConfigFileVolume build(java.util.Map<String, ?> map) throws Exception {
+            ConfigFileVolume self = new ConfigFileVolume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeConfigFileVolume setConfigFileToPath(java.util.List<CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath> configFileToPath) {
+        public ConfigFileVolume setConfigFileToPath(java.util.List<ConfigFileToPath> configFileToPath) {
             this.configFileToPath = configFileToPath;
             return this;
         }
-        public java.util.List<CreateContainerGroupRequestVolumeConfigFileVolumeConfigFileToPath> getConfigFileToPath() {
+        public java.util.List<ConfigFileToPath> getConfigFileToPath() {
             return this.configFileToPath;
         }
 
-        public CreateContainerGroupRequestVolumeConfigFileVolume setDefaultMode(Integer defaultMode) {
+        public ConfigFileVolume setDefaultMode(Integer defaultMode) {
             this.defaultMode = defaultMode;
             return this;
         }
@@ -3744,7 +3730,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeDiskVolume extends TeaModel {
+    public static class DiskVolume extends TeaModel {
         @NameInMap("DiskId")
         public String diskId;
 
@@ -3754,12 +3740,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("FsType")
         public String fsType;
 
-        public static CreateContainerGroupRequestVolumeDiskVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeDiskVolume self = new CreateContainerGroupRequestVolumeDiskVolume();
+        public static DiskVolume build(java.util.Map<String, ?> map) throws Exception {
+            DiskVolume self = new DiskVolume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeDiskVolume setDiskId(String diskId) {
+        public DiskVolume setDiskId(String diskId) {
             this.diskId = diskId;
             return this;
         }
@@ -3767,7 +3753,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.diskId;
         }
 
-        public CreateContainerGroupRequestVolumeDiskVolume setDiskSize(Integer diskSize) {
+        public DiskVolume setDiskSize(Integer diskSize) {
             this.diskSize = diskSize;
             return this;
         }
@@ -3775,7 +3761,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.diskSize;
         }
 
-        public CreateContainerGroupRequestVolumeDiskVolume setFsType(String fsType) {
+        public DiskVolume setFsType(String fsType) {
             this.fsType = fsType;
             return this;
         }
@@ -3785,19 +3771,19 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeEmptyDirVolume extends TeaModel {
+    public static class EmptyDirVolume extends TeaModel {
         @NameInMap("Medium")
         public String medium;
 
         @NameInMap("SizeLimit")
         public String sizeLimit;
 
-        public static CreateContainerGroupRequestVolumeEmptyDirVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeEmptyDirVolume self = new CreateContainerGroupRequestVolumeEmptyDirVolume();
+        public static EmptyDirVolume build(java.util.Map<String, ?> map) throws Exception {
+            EmptyDirVolume self = new EmptyDirVolume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeEmptyDirVolume setMedium(String medium) {
+        public EmptyDirVolume setMedium(String medium) {
             this.medium = medium;
             return this;
         }
@@ -3805,7 +3791,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.medium;
         }
 
-        public CreateContainerGroupRequestVolumeEmptyDirVolume setSizeLimit(String sizeLimit) {
+        public EmptyDirVolume setSizeLimit(String sizeLimit) {
             this.sizeLimit = sizeLimit;
             return this;
         }
@@ -3815,7 +3801,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeFlexVolume extends TeaModel {
+    public static class FlexVolume extends TeaModel {
         @NameInMap("Driver")
         public String driver;
 
@@ -3825,12 +3811,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Options")
         public String options;
 
-        public static CreateContainerGroupRequestVolumeFlexVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeFlexVolume self = new CreateContainerGroupRequestVolumeFlexVolume();
+        public static FlexVolume build(java.util.Map<String, ?> map) throws Exception {
+            FlexVolume self = new FlexVolume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeFlexVolume setDriver(String driver) {
+        public FlexVolume setDriver(String driver) {
             this.driver = driver;
             return this;
         }
@@ -3838,7 +3824,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.driver;
         }
 
-        public CreateContainerGroupRequestVolumeFlexVolume setFsType(String fsType) {
+        public FlexVolume setFsType(String fsType) {
             this.fsType = fsType;
             return this;
         }
@@ -3846,7 +3832,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.fsType;
         }
 
-        public CreateContainerGroupRequestVolumeFlexVolume setOptions(String options) {
+        public FlexVolume setOptions(String options) {
             this.options = options;
             return this;
         }
@@ -3856,19 +3842,19 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeHostPathVolume extends TeaModel {
+    public static class HostPathVolume extends TeaModel {
         @NameInMap("Path")
         public String path;
 
         @NameInMap("Type")
         public String type;
 
-        public static CreateContainerGroupRequestVolumeHostPathVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeHostPathVolume self = new CreateContainerGroupRequestVolumeHostPathVolume();
+        public static HostPathVolume build(java.util.Map<String, ?> map) throws Exception {
+            HostPathVolume self = new HostPathVolume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeHostPathVolume setPath(String path) {
+        public HostPathVolume setPath(String path) {
             this.path = path;
             return this;
         }
@@ -3876,7 +3862,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.path;
         }
 
-        public CreateContainerGroupRequestVolumeHostPathVolume setType(String type) {
+        public HostPathVolume setType(String type) {
             this.type = type;
             return this;
         }
@@ -3886,7 +3872,7 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolumeNFSVolume extends TeaModel {
+    public static class NFSVolume extends TeaModel {
         @NameInMap("Path")
         public String path;
 
@@ -3896,12 +3882,12 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Server")
         public String server;
 
-        public static CreateContainerGroupRequestVolumeNFSVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolumeNFSVolume self = new CreateContainerGroupRequestVolumeNFSVolume();
+        public static NFSVolume build(java.util.Map<String, ?> map) throws Exception {
+            NFSVolume self = new NFSVolume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolumeNFSVolume setPath(String path) {
+        public NFSVolume setPath(String path) {
             this.path = path;
             return this;
         }
@@ -3909,7 +3895,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.path;
         }
 
-        public CreateContainerGroupRequestVolumeNFSVolume setReadOnly(Boolean readOnly) {
+        public NFSVolume setReadOnly(Boolean readOnly) {
             this.readOnly = readOnly;
             return this;
         }
@@ -3917,7 +3903,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.readOnly;
         }
 
-        public CreateContainerGroupRequestVolumeNFSVolume setServer(String server) {
+        public NFSVolume setServer(String server) {
             this.server = server;
             return this;
         }
@@ -3927,24 +3913,24 @@ public class CreateContainerGroupRequest extends TeaModel {
 
     }
 
-    public static class CreateContainerGroupRequestVolume extends TeaModel {
+    public static class Volume extends TeaModel {
         @NameInMap("ConfigFileVolume")
-        public CreateContainerGroupRequestVolumeConfigFileVolume configFileVolume;
+        public ConfigFileVolume configFileVolume;
 
         @NameInMap("DiskVolume")
-        public CreateContainerGroupRequestVolumeDiskVolume diskVolume;
+        public DiskVolume diskVolume;
 
         @NameInMap("EmptyDirVolume")
-        public CreateContainerGroupRequestVolumeEmptyDirVolume emptyDirVolume;
+        public EmptyDirVolume emptyDirVolume;
 
         @NameInMap("FlexVolume")
-        public CreateContainerGroupRequestVolumeFlexVolume flexVolume;
+        public FlexVolume flexVolume;
 
         @NameInMap("HostPathVolume")
-        public CreateContainerGroupRequestVolumeHostPathVolume hostPathVolume;
+        public HostPathVolume hostPathVolume;
 
         @NameInMap("NFSVolume")
-        public CreateContainerGroupRequestVolumeNFSVolume NFSVolume;
+        public NFSVolume NFSVolume;
 
         /**
          * <p>The name of the volume.</p>
@@ -3971,60 +3957,60 @@ public class CreateContainerGroupRequest extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static CreateContainerGroupRequestVolume build(java.util.Map<String, ?> map) throws Exception {
-            CreateContainerGroupRequestVolume self = new CreateContainerGroupRequestVolume();
+        public static Volume build(java.util.Map<String, ?> map) throws Exception {
+            Volume self = new Volume();
             return TeaModel.build(map, self);
         }
 
-        public CreateContainerGroupRequestVolume setConfigFileVolume(CreateContainerGroupRequestVolumeConfigFileVolume configFileVolume) {
+        public Volume setConfigFileVolume(ConfigFileVolume configFileVolume) {
             this.configFileVolume = configFileVolume;
             return this;
         }
-        public CreateContainerGroupRequestVolumeConfigFileVolume getConfigFileVolume() {
+        public ConfigFileVolume getConfigFileVolume() {
             return this.configFileVolume;
         }
 
-        public CreateContainerGroupRequestVolume setDiskVolume(CreateContainerGroupRequestVolumeDiskVolume diskVolume) {
+        public Volume setDiskVolume(DiskVolume diskVolume) {
             this.diskVolume = diskVolume;
             return this;
         }
-        public CreateContainerGroupRequestVolumeDiskVolume getDiskVolume() {
+        public DiskVolume getDiskVolume() {
             return this.diskVolume;
         }
 
-        public CreateContainerGroupRequestVolume setEmptyDirVolume(CreateContainerGroupRequestVolumeEmptyDirVolume emptyDirVolume) {
+        public Volume setEmptyDirVolume(EmptyDirVolume emptyDirVolume) {
             this.emptyDirVolume = emptyDirVolume;
             return this;
         }
-        public CreateContainerGroupRequestVolumeEmptyDirVolume getEmptyDirVolume() {
+        public EmptyDirVolume getEmptyDirVolume() {
             return this.emptyDirVolume;
         }
 
-        public CreateContainerGroupRequestVolume setFlexVolume(CreateContainerGroupRequestVolumeFlexVolume flexVolume) {
+        public Volume setFlexVolume(FlexVolume flexVolume) {
             this.flexVolume = flexVolume;
             return this;
         }
-        public CreateContainerGroupRequestVolumeFlexVolume getFlexVolume() {
+        public FlexVolume getFlexVolume() {
             return this.flexVolume;
         }
 
-        public CreateContainerGroupRequestVolume setHostPathVolume(CreateContainerGroupRequestVolumeHostPathVolume hostPathVolume) {
+        public Volume setHostPathVolume(HostPathVolume hostPathVolume) {
             this.hostPathVolume = hostPathVolume;
             return this;
         }
-        public CreateContainerGroupRequestVolumeHostPathVolume getHostPathVolume() {
+        public HostPathVolume getHostPathVolume() {
             return this.hostPathVolume;
         }
 
-        public CreateContainerGroupRequestVolume setNFSVolume(CreateContainerGroupRequestVolumeNFSVolume NFSVolume) {
+        public Volume setNFSVolume(NFSVolume NFSVolume) {
             this.NFSVolume = NFSVolume;
             return this;
         }
-        public CreateContainerGroupRequestVolumeNFSVolume getNFSVolume() {
+        public NFSVolume getNFSVolume() {
             return this.NFSVolume;
         }
 
-        public CreateContainerGroupRequestVolume setName(String name) {
+        public Volume setName(String name) {
             this.name = name;
             return this;
         }
@@ -4032,7 +4018,7 @@ public class CreateContainerGroupRequest extends TeaModel {
             return this.name;
         }
 
-        public CreateContainerGroupRequestVolume setType(String type) {
+        public Volume setType(String type) {
             this.type = type;
             return this;
         }

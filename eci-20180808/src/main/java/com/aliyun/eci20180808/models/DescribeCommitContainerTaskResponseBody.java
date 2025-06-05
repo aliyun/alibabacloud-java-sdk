@@ -8,7 +8,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
      * <p>Details of the task.</p>
      */
     @NameInMap("CommitTasks")
-    public java.util.List<DescribeCommitContainerTaskResponseBodyCommitTasks> commitTasks;
+    public java.util.List<CommitTasks> commitTasks;
 
     /**
      * <p>The number of entries returned per page.</p>
@@ -51,11 +51,11 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeCommitContainerTaskResponseBody setCommitTasks(java.util.List<DescribeCommitContainerTaskResponseBodyCommitTasks> commitTasks) {
+    public DescribeCommitContainerTaskResponseBody setCommitTasks(java.util.List<CommitTasks> commitTasks) {
         this.commitTasks = commitTasks;
         return this;
     }
-    public java.util.List<DescribeCommitContainerTaskResponseBodyCommitTasks> getCommitTasks() {
+    public java.util.List<CommitTasks> getCommitTasks() {
         return this.commitTasks;
     }
 
@@ -91,7 +91,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos extends TeaModel {
+    public static class CommitPhaseInfos extends TeaModel {
         /**
          * <p>The message about the phase.</p>
          * 
@@ -133,12 +133,12 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        public static DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos self = new DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos();
+        public static CommitPhaseInfos build(java.util.Map<String, ?> map) throws Exception {
+            CommitPhaseInfos self = new CommitPhaseInfos();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos setMessage(String message) {
+        public CommitPhaseInfos setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -146,7 +146,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos setPhase(String phase) {
+        public CommitPhaseInfos setPhase(String phase) {
             this.phase = phase;
             return this;
         }
@@ -154,7 +154,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.phase;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos setRecordTime(String recordTime) {
+        public CommitPhaseInfos setRecordTime(String recordTime) {
             this.recordTime = recordTime;
             return this;
         }
@@ -162,7 +162,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.recordTime;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos setStatus(String status) {
+        public CommitPhaseInfos setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -172,12 +172,12 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeCommitContainerTaskResponseBodyCommitTasks extends TeaModel {
+    public static class CommitTasks extends TeaModel {
         /**
          * <p>The information about the phase that the task arrives.</p>
          */
         @NameInMap("CommitPhaseInfos")
-        public java.util.List<DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos> commitPhaseInfos;
+        public java.util.List<CommitPhaseInfos> commitPhaseInfos;
 
         /**
          * <p>The container name.</p>
@@ -247,20 +247,20 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         @NameInMap("TaskStatus")
         public String taskStatus;
 
-        public static DescribeCommitContainerTaskResponseBodyCommitTasks build(java.util.Map<String, ?> map) throws Exception {
-            DescribeCommitContainerTaskResponseBodyCommitTasks self = new DescribeCommitContainerTaskResponseBodyCommitTasks();
+        public static CommitTasks build(java.util.Map<String, ?> map) throws Exception {
+            CommitTasks self = new CommitTasks();
             return TeaModel.build(map, self);
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setCommitPhaseInfos(java.util.List<DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos> commitPhaseInfos) {
+        public CommitTasks setCommitPhaseInfos(java.util.List<CommitPhaseInfos> commitPhaseInfos) {
             this.commitPhaseInfos = commitPhaseInfos;
             return this;
         }
-        public java.util.List<DescribeCommitContainerTaskResponseBodyCommitTasksCommitPhaseInfos> getCommitPhaseInfos() {
+        public java.util.List<CommitPhaseInfos> getCommitPhaseInfos() {
             return this.commitPhaseInfos;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setContainerName(String containerName) {
+        public CommitTasks setContainerName(String containerName) {
             this.containerName = containerName;
             return this;
         }
@@ -268,7 +268,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.containerName;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setStatusMessage(String statusMessage) {
+        public CommitTasks setStatusMessage(String statusMessage) {
             this.statusMessage = statusMessage;
             return this;
         }
@@ -276,7 +276,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.statusMessage;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setTaskCreationTime(String taskCreationTime) {
+        public CommitTasks setTaskCreationTime(String taskCreationTime) {
             this.taskCreationTime = taskCreationTime;
             return this;
         }
@@ -284,7 +284,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.taskCreationTime;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setTaskFinishedTime(String taskFinishedTime) {
+        public CommitTasks setTaskFinishedTime(String taskFinishedTime) {
             this.taskFinishedTime = taskFinishedTime;
             return this;
         }
@@ -292,7 +292,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.taskFinishedTime;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setTaskId(String taskId) {
+        public CommitTasks setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
         }
@@ -300,7 +300,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.taskId;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setTaskProgress(String taskProgress) {
+        public CommitTasks setTaskProgress(String taskProgress) {
             this.taskProgress = taskProgress;
             return this;
         }
@@ -308,7 +308,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             return this.taskProgress;
         }
 
-        public DescribeCommitContainerTaskResponseBodyCommitTasks setTaskStatus(String taskStatus) {
+        public CommitTasks setTaskStatus(String taskStatus) {
             this.taskStatus = taskStatus;
             return this;
         }

@@ -8,7 +8,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
      * <p>The collection of the statuses of the container groups.</p>
      */
     @NameInMap("Data")
-    public java.util.List<DescribeContainerGroupStatusResponseBodyData> data;
+    public java.util.List<Data> data;
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -42,11 +42,11 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeContainerGroupStatusResponseBody setData(java.util.List<DescribeContainerGroupStatusResponseBodyData> data) {
+    public DescribeContainerGroupStatusResponseBody setData(java.util.List<Data> data) {
         this.data = data;
         return this;
     }
-    public java.util.List<DescribeContainerGroupStatusResponseBodyData> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -74,7 +74,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusConditions extends TeaModel {
+    public static class Conditions extends TeaModel {
         /**
          * <p>The message about the event.</p>
          * 
@@ -130,12 +130,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("type")
         public String type;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusConditions build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusConditions self = new DescribeContainerGroupStatusResponseBodyDataPodStatusConditions();
+        public static Conditions build(java.util.Map<String, ?> map) throws Exception {
+            Conditions self = new Conditions();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusConditions setMessage(String message) {
+        public Conditions setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -143,7 +143,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusConditions setReason(String reason) {
+        public Conditions setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -151,7 +151,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusConditions setLastTransitionTime(String lastTransitionTime) {
+        public Conditions setLastTransitionTime(String lastTransitionTime) {
             this.lastTransitionTime = lastTransitionTime;
             return this;
         }
@@ -159,7 +159,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.lastTransitionTime;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusConditions setStatus(String status) {
+        public Conditions setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -167,7 +167,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusConditions setType(String type) {
+        public Conditions setType(String type) {
             this.type = type;
             return this;
         }
@@ -177,7 +177,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning extends TeaModel {
+    public static class Running extends TeaModel {
         /**
          * <p>The time when the container started to run.</p>
          * 
@@ -187,12 +187,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("StartedAtstartedAt")
         public String startedAtstartedAt;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning();
+        public static Running build(java.util.Map<String, ?> map) throws Exception {
+            Running self = new Running();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning setStartedAtstartedAt(String startedAtstartedAt) {
+        public Running setStartedAtstartedAt(String startedAtstartedAt) {
             this.startedAtstartedAt = startedAtstartedAt;
             return this;
         }
@@ -202,7 +202,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated extends TeaModel {
+    public static class Terminated extends TeaModel {
         /**
          * <p>The container ID.</p>
          * 
@@ -266,12 +266,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("StartedAt")
         public String startedAt;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated();
+        public static Terminated build(java.util.Map<String, ?> map) throws Exception {
+            Terminated self = new Terminated();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setContainerID(String containerID) {
+        public Terminated setContainerID(String containerID) {
             this.containerID = containerID;
             return this;
         }
@@ -279,7 +279,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.containerID;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setExitCode(Integer exitCode) {
+        public Terminated setExitCode(Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -287,7 +287,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setFinishedAt(String finishedAt) {
+        public Terminated setFinishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
             return this;
         }
@@ -295,7 +295,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.finishedAt;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setMessage(String message) {
+        public Terminated setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -303,7 +303,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setReason(String reason) {
+        public Terminated setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -311,7 +311,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setSignal(Integer signal) {
+        public Terminated setSignal(Integer signal) {
             this.signal = signal;
             return this;
         }
@@ -319,7 +319,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.signal;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated setStartedAt(String startedAt) {
+        public Terminated setStartedAt(String startedAt) {
             this.startedAt = startedAt;
             return this;
         }
@@ -329,7 +329,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting extends TeaModel {
+    public static class Waiting extends TeaModel {
         /**
          * <p>The message about the event.</p>
          * 
@@ -348,12 +348,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting();
+        public static Waiting build(java.util.Map<String, ?> map) throws Exception {
+            Waiting self = new Waiting();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting setMessage(String message) {
+        public Waiting setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -361,7 +361,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting setReason(String reason) {
+        public Waiting setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -371,57 +371,57 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState extends TeaModel {
+    public static class LastState extends TeaModel {
         /**
          * <p>The container is created and running.</p>
          */
         @NameInMap("Running")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning running;
+        public Running running;
 
         /**
          * <p>The container is terminated and exits after a successful or failed running.</p>
          */
         @NameInMap("Terminated")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated terminated;
+        public Terminated terminated;
 
         /**
          * <p>The container is waiting for being created.</p>
          */
         @NameInMap("Waiting")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting waiting;
+        public Waiting waiting;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState();
+        public static LastState build(java.util.Map<String, ?> map) throws Exception {
+            LastState self = new LastState();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState setRunning(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning running) {
+        public LastState setRunning(Running running) {
             this.running = running;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateRunning getRunning() {
+        public Running getRunning() {
             return this.running;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState setTerminated(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated terminated) {
+        public LastState setTerminated(Terminated terminated) {
             this.terminated = terminated;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateTerminated getTerminated() {
+        public Terminated getTerminated() {
             return this.terminated;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState setWaiting(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting waiting) {
+        public LastState setWaiting(Waiting waiting) {
             this.waiting = waiting;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastStateWaiting getWaiting() {
+        public Waiting getWaiting() {
             return this.waiting;
         }
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning extends TeaModel {
+    public static class StateRunning extends TeaModel {
         /**
          * <p>The time when the container started to run.</p>
          * 
@@ -431,12 +431,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("StartedAtstartedAt")
         public String startedAtstartedAt;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning();
+        public static StateRunning build(java.util.Map<String, ?> map) throws Exception {
+            StateRunning self = new StateRunning();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning setStartedAtstartedAt(String startedAtstartedAt) {
+        public StateRunning setStartedAtstartedAt(String startedAtstartedAt) {
             this.startedAtstartedAt = startedAtstartedAt;
             return this;
         }
@@ -446,7 +446,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated extends TeaModel {
+    public static class StateTerminated extends TeaModel {
         /**
          * <p>The container ID.</p>
          * 
@@ -510,12 +510,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("StartedAt")
         public String startedAt;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated();
+        public static StateTerminated build(java.util.Map<String, ?> map) throws Exception {
+            StateTerminated self = new StateTerminated();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setContainerID(String containerID) {
+        public StateTerminated setContainerID(String containerID) {
             this.containerID = containerID;
             return this;
         }
@@ -523,7 +523,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.containerID;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setExitCode(Integer exitCode) {
+        public StateTerminated setExitCode(Integer exitCode) {
             this.exitCode = exitCode;
             return this;
         }
@@ -531,7 +531,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.exitCode;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setFinishedAt(String finishedAt) {
+        public StateTerminated setFinishedAt(String finishedAt) {
             this.finishedAt = finishedAt;
             return this;
         }
@@ -539,7 +539,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.finishedAt;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setMessage(String message) {
+        public StateTerminated setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -547,7 +547,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setReason(String reason) {
+        public StateTerminated setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -555,7 +555,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.reason;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setSignal(Integer signal) {
+        public StateTerminated setSignal(Integer signal) {
             this.signal = signal;
             return this;
         }
@@ -563,7 +563,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.signal;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated setStartedAt(String startedAt) {
+        public StateTerminated setStartedAt(String startedAt) {
             this.startedAt = startedAt;
             return this;
         }
@@ -573,7 +573,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting extends TeaModel {
+    public static class StateWaiting extends TeaModel {
         /**
          * <p>The message about the event.</p>
          * 
@@ -592,12 +592,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("Reason")
         public String reason;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting();
+        public static StateWaiting build(java.util.Map<String, ?> map) throws Exception {
+            StateWaiting self = new StateWaiting();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting setMessage(String message) {
+        public StateWaiting setMessage(String message) {
             this.message = message;
             return this;
         }
@@ -605,7 +605,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.message;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting setReason(String reason) {
+        public StateWaiting setReason(String reason) {
             this.reason = reason;
             return this;
         }
@@ -615,57 +615,57 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState extends TeaModel {
+    public static class State extends TeaModel {
         /**
          * <p>The container is created and running.</p>
          */
         @NameInMap("Running")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning running;
+        public StateRunning running;
 
         /**
          * <p>The container is terminated and exits after a successful or failed running.</p>
          */
         @NameInMap("Terminated")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated terminated;
+        public StateTerminated terminated;
 
         /**
          * <p>The container is waiting for being created.</p>
          */
         @NameInMap("Waiting")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting waiting;
+        public StateWaiting waiting;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState();
+        public static State build(java.util.Map<String, ?> map) throws Exception {
+            State self = new State();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState setRunning(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning running) {
+        public State setRunning(StateRunning running) {
             this.running = running;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateRunning getRunning() {
+        public StateRunning getRunning() {
             return this.running;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState setTerminated(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated terminated) {
+        public State setTerminated(StateTerminated terminated) {
             this.terminated = terminated;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateTerminated getTerminated() {
+        public StateTerminated getTerminated() {
             return this.terminated;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState setWaiting(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting waiting) {
+        public State setWaiting(StateWaiting waiting) {
             this.waiting = waiting;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesStateWaiting getWaiting() {
+        public StateWaiting getWaiting() {
             return this.waiting;
         }
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses extends TeaModel {
+    public static class ContainerStatuses extends TeaModel {
         /**
          * <p>The image of the container.</p>
          * 
@@ -688,7 +688,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
          * <p>The last status of the container.</p>
          */
         @NameInMap("LastState")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState lastState;
+        public LastState lastState;
 
         /**
          * <p>The name of the container.</p>
@@ -735,14 +735,14 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
          * </ul>
          */
         @NameInMap("State")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState state;
+        public State state;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses self = new DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses();
+        public static ContainerStatuses build(java.util.Map<String, ?> map) throws Exception {
+            ContainerStatuses self = new ContainerStatuses();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setImage(String image) {
+        public ContainerStatuses setImage(String image) {
             this.image = image;
             return this;
         }
@@ -750,7 +750,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.image;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setImageID(String imageID) {
+        public ContainerStatuses setImageID(String imageID) {
             this.imageID = imageID;
             return this;
         }
@@ -758,15 +758,15 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.imageID;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setLastState(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState lastState) {
+        public ContainerStatuses setLastState(LastState lastState) {
             this.lastState = lastState;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesLastState getLastState() {
+        public LastState getLastState() {
             return this.lastState;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setName(String name) {
+        public ContainerStatuses setName(String name) {
             this.name = name;
             return this;
         }
@@ -774,7 +774,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setReady(Boolean ready) {
+        public ContainerStatuses setReady(Boolean ready) {
             this.ready = ready;
             return this;
         }
@@ -782,7 +782,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.ready;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setRestartCount(Integer restartCount) {
+        public ContainerStatuses setRestartCount(Integer restartCount) {
             this.restartCount = restartCount;
             return this;
         }
@@ -790,7 +790,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.restartCount;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setStarted(Boolean started) {
+        public ContainerStatuses setStarted(Boolean started) {
             this.started = started;
             return this;
         }
@@ -798,17 +798,17 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.started;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses setState(DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState state) {
+        public ContainerStatuses setState(State state) {
             this.state = state;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatusesState getState() {
+        public State getState() {
             return this.state;
         }
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps extends TeaModel {
+    public static class PodIps extends TeaModel {
         /**
          * <p>The IP address of the container group.</p>
          * 
@@ -818,12 +818,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps self = new DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps();
+        public static PodIps build(java.util.Map<String, ?> map) throws Exception {
+            PodIps self = new PodIps();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps setIp(String ip) {
+        public PodIps setIp(String ip) {
             this.ip = ip;
             return this;
         }
@@ -833,18 +833,18 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyDataPodStatus extends TeaModel {
+    public static class PodStatus extends TeaModel {
         /**
          * <p>The conditions of the container group.</p>
          */
         @NameInMap("Conditions")
-        public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusConditions> conditions;
+        public java.util.List<Conditions> conditions;
 
         /**
          * <p>The statuses about the containers.</p>
          */
         @NameInMap("ContainerStatuses")
-        public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses> containerStatuses;
+        public java.util.List<ContainerStatuses> containerStatuses;
 
         /**
          * <p>The IP address of the host.</p>
@@ -877,7 +877,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
          * <p>The IP addresses of the container groups.</p>
          */
         @NameInMap("PodIps")
-        public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps> podIps;
+        public java.util.List<PodIps> podIps;
 
         /**
          * <p>The quality of service (QoS) of the container group.</p>
@@ -897,28 +897,28 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("StartTime")
         public String startTime;
 
-        public static DescribeContainerGroupStatusResponseBodyDataPodStatus build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyDataPodStatus self = new DescribeContainerGroupStatusResponseBodyDataPodStatus();
+        public static PodStatus build(java.util.Map<String, ?> map) throws Exception {
+            PodStatus self = new PodStatus();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setConditions(java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusConditions> conditions) {
+        public PodStatus setConditions(java.util.List<Conditions> conditions) {
             this.conditions = conditions;
             return this;
         }
-        public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusConditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setContainerStatuses(java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses> containerStatuses) {
+        public PodStatus setContainerStatuses(java.util.List<ContainerStatuses> containerStatuses) {
             this.containerStatuses = containerStatuses;
             return this;
         }
-        public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusContainerStatuses> getContainerStatuses() {
+        public java.util.List<ContainerStatuses> getContainerStatuses() {
             return this.containerStatuses;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setHostIp(String hostIp) {
+        public PodStatus setHostIp(String hostIp) {
             this.hostIp = hostIp;
             return this;
         }
@@ -926,7 +926,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.hostIp;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setPhase(String phase) {
+        public PodStatus setPhase(String phase) {
             this.phase = phase;
             return this;
         }
@@ -934,7 +934,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.phase;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setPodIp(String podIp) {
+        public PodStatus setPodIp(String podIp) {
             this.podIp = podIp;
             return this;
         }
@@ -942,15 +942,15 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.podIp;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setPodIps(java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps> podIps) {
+        public PodStatus setPodIps(java.util.List<PodIps> podIps) {
             this.podIps = podIps;
             return this;
         }
-        public java.util.List<DescribeContainerGroupStatusResponseBodyDataPodStatusPodIps> getPodIps() {
+        public java.util.List<PodIps> getPodIps() {
             return this.podIps;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setQosClass(String qosClass) {
+        public PodStatus setQosClass(String qosClass) {
             this.qosClass = qosClass;
             return this;
         }
@@ -958,7 +958,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.qosClass;
         }
 
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus setStartTime(String startTime) {
+        public PodStatus setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -968,7 +968,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeContainerGroupStatusResponseBodyData extends TeaModel {
+    public static class Data extends TeaModel {
         /**
          * <p>Annotations that are added to the container groups.</p>
          * 
@@ -1009,7 +1009,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
          * <p>The status of the container group.</p>
          */
         @NameInMap("PodStatus")
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus podStatus;
+        public PodStatus podStatus;
 
         /**
          * <p>The status of the container group.</p>
@@ -1029,12 +1029,12 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         @NameInMap("uuid")
         public String uuid;
 
-        public static DescribeContainerGroupStatusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            DescribeContainerGroupStatusResponseBodyData self = new DescribeContainerGroupStatusResponseBodyData();
+        public static Data build(java.util.Map<String, ?> map) throws Exception {
+            Data self = new Data();
             return TeaModel.build(map, self);
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setAnnotations(String annotations) {
+        public Data setAnnotations(String annotations) {
             this.annotations = annotations;
             return this;
         }
@@ -1042,7 +1042,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.annotations;
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setContainerGroupId(String containerGroupId) {
+        public Data setContainerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
             return this;
         }
@@ -1050,7 +1050,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.containerGroupId;
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setName(String name) {
+        public Data setName(String name) {
             this.name = name;
             return this;
         }
@@ -1058,7 +1058,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setNamespace(String namespace) {
+        public Data setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
         }
@@ -1066,15 +1066,15 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.namespace;
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setPodStatus(DescribeContainerGroupStatusResponseBodyDataPodStatus podStatus) {
+        public Data setPodStatus(PodStatus podStatus) {
             this.podStatus = podStatus;
             return this;
         }
-        public DescribeContainerGroupStatusResponseBodyDataPodStatus getPodStatus() {
+        public PodStatus getPodStatus() {
             return this.podStatus;
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setStatus(String status) {
+        public Data setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -1082,7 +1082,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             return this.status;
         }
 
-        public DescribeContainerGroupStatusResponseBodyData setUuid(String uuid) {
+        public Data setUuid(String uuid) {
             this.uuid = uuid;
             return this;
         }

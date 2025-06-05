@@ -60,7 +60,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
     public Boolean enablePublicNetwork;
 
     /**
-     * <p>KubeConfig of the Kubernetes cluster to which the VNode is to be connected. The value must be Base64-encoded.</p>
+     * <p>The KubeConfig of the Kubernetes cluster with which the VNode is connected. The value must be Base64-encoded.</p>
      * 
      * <strong>example:</strong>
      * <p>JTVDbmFwaVZlcnNpb24lM0ElMjB2MSU1Q25jbHVzdGVycyUzQSU1Q24tJTIwY2x1c3RlciUzQSU1Q24uLi******</p>
@@ -110,16 +110,16 @@ public class CreateVirtualNodeRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>Tag.</p>
+     * <p>The tags to add to the VNode. You can add up to 20 tags.</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateVirtualNodeRequestTag> tag;
+    public java.util.List<Tag> tag;
 
     /**
-     * <p>Taint.</p>
+     * <p>The taints of the VNode. You can configure up to 20 taints.</p>
      */
     @NameInMap("Taint")
-    public java.util.List<CreateVirtualNodeRequestTaint> taint;
+    public java.util.List<Taint> taint;
 
     /**
      * <p>Specifies whether to enable TLS bootstrapping. If you set this parameter to true, use the KubeConfig certificate for TLS bootstrapping. Valid values:</p>
@@ -281,19 +281,19 @@ public class CreateVirtualNodeRequest extends TeaModel {
         return this.securityGroupId;
     }
 
-    public CreateVirtualNodeRequest setTag(java.util.List<CreateVirtualNodeRequestTag> tag) {
+    public CreateVirtualNodeRequest setTag(java.util.List<Tag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateVirtualNodeRequestTag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
-    public CreateVirtualNodeRequest setTaint(java.util.List<CreateVirtualNodeRequestTaint> taint) {
+    public CreateVirtualNodeRequest setTaint(java.util.List<Taint> taint) {
         this.taint = taint;
         return this;
     }
-    public java.util.List<CreateVirtualNodeRequestTaint> getTaint() {
+    public java.util.List<Taint> getTaint() {
         return this.taint;
     }
 
@@ -329,9 +329,9 @@ public class CreateVirtualNodeRequest extends TeaModel {
         return this.zoneId;
     }
 
-    public static class CreateVirtualNodeRequestTag extends TeaModel {
+    public static class Tag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -340,7 +340,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -348,12 +348,12 @@ public class CreateVirtualNodeRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateVirtualNodeRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateVirtualNodeRequestTag self = new CreateVirtualNodeRequestTag();
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
             return TeaModel.build(map, self);
         }
 
-        public CreateVirtualNodeRequestTag setKey(String key) {
+        public Tag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -361,7 +361,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateVirtualNodeRequestTag setValue(String value) {
+        public Tag setValue(String value) {
             this.value = value;
             return this;
         }
@@ -371,13 +371,13 @@ public class CreateVirtualNodeRequest extends TeaModel {
 
     }
 
-    public static class CreateVirtualNodeRequestTaint extends TeaModel {
+    public static class Taint extends TeaModel {
         /**
-         * <p>The effect of taint N. Valid values of N: 1 to 20. Valid values:</p>
+         * <p>The effect of the taint. Valid values:</p>
          * <ul>
-         * <li>NoSchedule: No pods are scheduled to the nodes that have the taint.</li>
-         * <li>NoExecute: Existing pods in the node are evicted while no pods are scheduled to the nodes that have the taint.</li>
-         * <li>PreferNoSchedule: Pods are preferentially not scheduled to the nodes that have the taint.</li>
+         * <li>NoSchedule: does not schedule pods to run on the VNodes that have the taint.</li>
+         * <li>NoExecute: evicts existing pods on the VNodes that have the taint while not scheduling pods to run on the VNodes.</li>
+         * <li>PreferNoSchedule: avoids scheduling pods to run on the VNodes that have the taint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +387,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
         public String effect;
 
         /**
-         * <p>The key of taint.</p>
+         * <p>The key of the taint.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>
@@ -396,7 +396,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of taint.</p>
+         * <p>The value of the taint.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
@@ -404,12 +404,12 @@ public class CreateVirtualNodeRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateVirtualNodeRequestTaint build(java.util.Map<String, ?> map) throws Exception {
-            CreateVirtualNodeRequestTaint self = new CreateVirtualNodeRequestTaint();
+        public static Taint build(java.util.Map<String, ?> map) throws Exception {
+            Taint self = new Taint();
             return TeaModel.build(map, self);
         }
 
-        public CreateVirtualNodeRequestTaint setEffect(String effect) {
+        public Taint setEffect(String effect) {
             this.effect = effect;
             return this;
         }
@@ -417,7 +417,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
             return this.effect;
         }
 
-        public CreateVirtualNodeRequestTaint setKey(String key) {
+        public Taint setKey(String key) {
             this.key = key;
             return this;
         }
@@ -425,7 +425,7 @@ public class CreateVirtualNodeRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateVirtualNodeRequestTaint setValue(String value) {
+        public Taint setValue(String value) {
             this.value = value;
             return this;
         }

@@ -8,7 +8,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
      * <p>The monitoring data of the elastic container instances.</p>
      */
     @NameInMap("MonitorDatas")
-    public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatas> monitorDatas;
+    public java.util.List<MonitorDatas> monitorDatas;
 
     /**
      * <p>The request ID.</p>
@@ -24,11 +24,11 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeMultiContainerGroupMetricResponseBody setMonitorDatas(java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatas> monitorDatas) {
+    public DescribeMultiContainerGroupMetricResponseBody setMonitorDatas(java.util.List<MonitorDatas> monitorDatas) {
         this.monitorDatas = monitorDatas;
         return this;
     }
-    public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatas> getMonitorDatas() {
+    public java.util.List<MonitorDatas> getMonitorDatas() {
         return this.monitorDatas;
     }
 
@@ -40,7 +40,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU extends TeaModel {
+    public static class CPU extends TeaModel {
         /**
          * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
          * 
@@ -77,12 +77,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("UsageNanoCores")
         public Long usageNanoCores;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU();
+        public static CPU build(java.util.Map<String, ?> map) throws Exception {
+            CPU self = new CPU();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU setLimit(Long limit) {
+        public CPU setLimit(Long limit) {
             this.limit = limit;
             return this;
         }
@@ -90,7 +90,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.limit;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU setLoad(Long load) {
+        public CPU setLoad(Long load) {
             this.load = load;
             return this;
         }
@@ -98,7 +98,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.load;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU setUsageCoreNanoSeconds(Long usageCoreNanoSeconds) {
+        public CPU setUsageCoreNanoSeconds(Long usageCoreNanoSeconds) {
             this.usageCoreNanoSeconds = usageCoreNanoSeconds;
             return this;
         }
@@ -106,7 +106,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.usageCoreNanoSeconds;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU setUsageNanoCores(Long usageNanoCores) {
+        public CPU setUsageNanoCores(Long usageNanoCores) {
             this.usageNanoCores = usageNanoCores;
             return this;
         }
@@ -116,7 +116,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU extends TeaModel {
+    public static class ContainersCPU extends TeaModel {
         /**
          * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
          * 
@@ -153,12 +153,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("UsageNanoCores")
         public Long usageNanoCores;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU();
+        public static ContainersCPU build(java.util.Map<String, ?> map) throws Exception {
+            ContainersCPU self = new ContainersCPU();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU setLimit(Long limit) {
+        public ContainersCPU setLimit(Long limit) {
             this.limit = limit;
             return this;
         }
@@ -166,7 +166,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.limit;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU setLoad(Long load) {
+        public ContainersCPU setLoad(Long load) {
             this.load = load;
             return this;
         }
@@ -174,7 +174,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.load;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU setUsageCoreNanoSeconds(Long usageCoreNanoSeconds) {
+        public ContainersCPU setUsageCoreNanoSeconds(Long usageCoreNanoSeconds) {
             this.usageCoreNanoSeconds = usageCoreNanoSeconds;
             return this;
         }
@@ -182,7 +182,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.usageCoreNanoSeconds;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU setUsageNanoCores(Long usageNanoCores) {
+        public ContainersCPU setUsageNanoCores(Long usageNanoCores) {
             this.usageNanoCores = usageNanoCores;
             return this;
         }
@@ -192,7 +192,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory extends TeaModel {
+    public static class Memory extends TeaModel {
         /**
          * <p>The size of the available memory. Unit: bytes.</p>
          * 
@@ -238,12 +238,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("WorkingSet")
         public Long workingSet;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory();
+        public static Memory build(java.util.Map<String, ?> map) throws Exception {
+            Memory self = new Memory();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory setAvailableBytes(Long availableBytes) {
+        public Memory setAvailableBytes(Long availableBytes) {
             this.availableBytes = availableBytes;
             return this;
         }
@@ -251,7 +251,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.availableBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory setCache(Long cache) {
+        public Memory setCache(Long cache) {
             this.cache = cache;
             return this;
         }
@@ -259,7 +259,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.cache;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory setRss(Long rss) {
+        public Memory setRss(Long rss) {
             this.rss = rss;
             return this;
         }
@@ -267,7 +267,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.rss;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory setUsageBytes(Long usageBytes) {
+        public Memory setUsageBytes(Long usageBytes) {
             this.usageBytes = usageBytes;
             return this;
         }
@@ -275,7 +275,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.usageBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory setWorkingSet(Long workingSet) {
+        public Memory setWorkingSet(Long workingSet) {
             this.workingSet = workingSet;
             return this;
         }
@@ -285,18 +285,18 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers extends TeaModel {
+    public static class Containers extends TeaModel {
         /**
          * <p>The vCPU monitoring data of the container.</p>
          */
         @NameInMap("CPU")
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU CPU;
+        public ContainersCPU CPU;
 
         /**
          * <p>The memory monitoring data of the container.</p>
          */
         @NameInMap("Memory")
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory memory;
+        public Memory memory;
 
         /**
          * <p>The name.</p>
@@ -307,28 +307,28 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers();
+        public static Containers build(java.util.Map<String, ?> map) throws Exception {
+            Containers self = new Containers();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers setCPU(DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU CPU) {
+        public Containers setCPU(ContainersCPU CPU) {
             this.CPU = CPU;
             return this;
         }
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersCPU getCPU() {
+        public ContainersCPU getCPU() {
             return this.CPU;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers setMemory(DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory memory) {
+        public Containers setMemory(Memory memory) {
             this.memory = memory;
             return this;
         }
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainersMemory getMemory() {
+        public Memory getMemory() {
             return this.memory;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers setName(String name) {
+        public Containers setName(String name) {
             this.name = name;
             return this;
         }
@@ -338,7 +338,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk extends TeaModel {
+    public static class Disk extends TeaModel {
         /**
          * <p>The name of the disk.</p>
          * 
@@ -384,12 +384,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("WriteIo")
         public Long writeIo;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk();
+        public static Disk build(java.util.Map<String, ?> map) throws Exception {
+            Disk self = new Disk();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk setDevice(String device) {
+        public Disk setDevice(String device) {
             this.device = device;
             return this;
         }
@@ -397,7 +397,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.device;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk setReadBytes(Long readBytes) {
+        public Disk setReadBytes(Long readBytes) {
             this.readBytes = readBytes;
             return this;
         }
@@ -405,7 +405,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.readBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk setReadIo(Long readIo) {
+        public Disk setReadIo(Long readIo) {
             this.readIo = readIo;
             return this;
         }
@@ -413,7 +413,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.readIo;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk setWriteBytes(Long writeBytes) {
+        public Disk setWriteBytes(Long writeBytes) {
             this.writeBytes = writeBytes;
             return this;
         }
@@ -421,7 +421,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.writeBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk setWriteIo(Long writeIo) {
+        public Disk setWriteIo(Long writeIo) {
             this.writeIo = writeIo;
             return this;
         }
@@ -431,7 +431,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem extends TeaModel {
+    public static class Filesystem extends TeaModel {
         /**
          * <p>The size of the available space.</p>
          * 
@@ -468,12 +468,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("Usage")
         public Long usage;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem();
+        public static Filesystem build(java.util.Map<String, ?> map) throws Exception {
+            Filesystem self = new Filesystem();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem setAvailable(Long available) {
+        public Filesystem setAvailable(Long available) {
             this.available = available;
             return this;
         }
@@ -481,7 +481,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.available;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem setCapacity(Long capacity) {
+        public Filesystem setCapacity(Long capacity) {
             this.capacity = capacity;
             return this;
         }
@@ -489,7 +489,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.capacity;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem setFsName(String fsName) {
+        public Filesystem setFsName(String fsName) {
             this.fsName = fsName;
             return this;
         }
@@ -497,7 +497,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.fsName;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem setUsage(Long usage) {
+        public Filesystem setUsage(Long usage) {
             this.usage = usage;
             return this;
         }
@@ -507,7 +507,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory extends TeaModel {
+    public static class RecordsMemory extends TeaModel {
         /**
          * <p>The size of the available memory. Unit: bytes.</p>
          * 
@@ -553,12 +553,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("WorkingSet")
         public Long workingSet;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory();
+        public static RecordsMemory build(java.util.Map<String, ?> map) throws Exception {
+            RecordsMemory self = new RecordsMemory();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory setAvailableBytes(Long availableBytes) {
+        public RecordsMemory setAvailableBytes(Long availableBytes) {
             this.availableBytes = availableBytes;
             return this;
         }
@@ -566,7 +566,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.availableBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory setCache(Long cache) {
+        public RecordsMemory setCache(Long cache) {
             this.cache = cache;
             return this;
         }
@@ -574,7 +574,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.cache;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory setRss(Long rss) {
+        public RecordsMemory setRss(Long rss) {
             this.rss = rss;
             return this;
         }
@@ -582,7 +582,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.rss;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory setUsageBytes(Long usageBytes) {
+        public RecordsMemory setUsageBytes(Long usageBytes) {
             this.usageBytes = usageBytes;
             return this;
         }
@@ -590,7 +590,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.usageBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory setWorkingSet(Long workingSet) {
+        public RecordsMemory setWorkingSet(Long workingSet) {
             this.workingSet = workingSet;
             return this;
         }
@@ -600,7 +600,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces extends TeaModel {
+    public static class Interfaces extends TeaModel {
         /**
          * <p>The name of the NIC.</p>
          * 
@@ -682,12 +682,12 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("TxPackets")
         public Long txPackets;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces();
+        public static Interfaces build(java.util.Map<String, ?> map) throws Exception {
+            Interfaces self = new Interfaces();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setName(String name) {
+        public Interfaces setName(String name) {
             this.name = name;
             return this;
         }
@@ -695,7 +695,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setRxBytes(Long rxBytes) {
+        public Interfaces setRxBytes(Long rxBytes) {
             this.rxBytes = rxBytes;
             return this;
         }
@@ -703,7 +703,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.rxBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setRxDrops(Long rxDrops) {
+        public Interfaces setRxDrops(Long rxDrops) {
             this.rxDrops = rxDrops;
             return this;
         }
@@ -711,7 +711,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.rxDrops;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setRxErrors(Long rxErrors) {
+        public Interfaces setRxErrors(Long rxErrors) {
             this.rxErrors = rxErrors;
             return this;
         }
@@ -719,7 +719,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.rxErrors;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setRxPackets(Long rxPackets) {
+        public Interfaces setRxPackets(Long rxPackets) {
             this.rxPackets = rxPackets;
             return this;
         }
@@ -727,7 +727,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.rxPackets;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setTxBytes(Long txBytes) {
+        public Interfaces setTxBytes(Long txBytes) {
             this.txBytes = txBytes;
             return this;
         }
@@ -735,7 +735,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.txBytes;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setTxDrops(Long txDrops) {
+        public Interfaces setTxDrops(Long txDrops) {
             this.txDrops = txDrops;
             return this;
         }
@@ -743,7 +743,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.txDrops;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setTxErrors(Long txErrors) {
+        public Interfaces setTxErrors(Long txErrors) {
             this.txErrors = txErrors;
             return this;
         }
@@ -751,7 +751,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.txErrors;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces setTxPackets(Long txPackets) {
+        public Interfaces setTxPackets(Long txPackets) {
             this.txPackets = txPackets;
             return this;
         }
@@ -761,64 +761,64 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork extends TeaModel {
+    public static class Network extends TeaModel {
         /**
          * <p>The monitoring data of network interface controllers (NICs).</p>
          */
         @NameInMap("Interfaces")
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces> interfaces;
+        public java.util.List<Interfaces> interfaces;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork();
+        public static Network build(java.util.Map<String, ?> map) throws Exception {
+            Network self = new Network();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork setInterfaces(java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces> interfaces) {
+        public Network setInterfaces(java.util.List<Interfaces> interfaces) {
             this.interfaces = interfaces;
             return this;
         }
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetworkInterfaces> getInterfaces() {
+        public java.util.List<Interfaces> getInterfaces() {
             return this.interfaces;
         }
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords extends TeaModel {
+    public static class Records extends TeaModel {
         /**
          * <p>The monitoring data of vCPUs.</p>
          */
         @NameInMap("CPU")
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU CPU;
+        public CPU CPU;
 
         /**
          * <p>The monitoring data of containers.</p>
          */
         @NameInMap("Containers")
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers> containers;
+        public java.util.List<Containers> containers;
 
         /**
          * <p>The monitoring data of disks.</p>
          */
         @NameInMap("Disk")
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk> disk;
+        public java.util.List<Disk> disk;
 
         /**
          * <p>The monitoring data of file system partitions.</p>
          */
         @NameInMap("Filesystem")
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem> filesystem;
+        public java.util.List<Filesystem> filesystem;
 
         /**
          * <p>The monitoring data of the memory.</p>
          */
         @NameInMap("Memory")
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory memory;
+        public RecordsMemory memory;
 
         /**
          * <p>The monitoring data of the network.</p>
          */
         @NameInMap("Network")
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork network;
+        public Network network;
 
         /**
          * <p>The time when the entry of monitoring data was collected. The time follows the RFC 3339 format.</p>
@@ -829,60 +829,60 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public String timestamp;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords();
+        public static Records build(java.util.Map<String, ?> map) throws Exception {
+            Records self = new Records();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setCPU(DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU CPU) {
+        public Records setCPU(CPU CPU) {
             this.CPU = CPU;
             return this;
         }
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsCPU getCPU() {
+        public CPU getCPU() {
             return this.CPU;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setContainers(java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers> containers) {
+        public Records setContainers(java.util.List<Containers> containers) {
             this.containers = containers;
             return this;
         }
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsContainers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setDisk(java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk> disk) {
+        public Records setDisk(java.util.List<Disk> disk) {
             this.disk = disk;
             return this;
         }
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsDisk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setFilesystem(java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem> filesystem) {
+        public Records setFilesystem(java.util.List<Filesystem> filesystem) {
             this.filesystem = filesystem;
             return this;
         }
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsFilesystem> getFilesystem() {
+        public java.util.List<Filesystem> getFilesystem() {
             return this.filesystem;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setMemory(DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory memory) {
+        public Records setMemory(RecordsMemory memory) {
             this.memory = memory;
             return this;
         }
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsMemory getMemory() {
+        public RecordsMemory getMemory() {
             return this.memory;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setNetwork(DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork network) {
+        public Records setNetwork(Network network) {
             this.network = network;
             return this;
         }
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecordsNetwork getNetwork() {
+        public Network getNetwork() {
             return this.network;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords setTimestamp(String timestamp) {
+        public Records setTimestamp(String timestamp) {
             this.timestamp = timestamp;
             return this;
         }
@@ -892,7 +892,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeMultiContainerGroupMetricResponseBodyMonitorDatas extends TeaModel {
+    public static class MonitorDatas extends TeaModel {
         /**
          * <p>The ID of the elastic container instance.</p>
          * 
@@ -906,14 +906,14 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
          * <p>The details about monitoring data.</p>
          */
         @NameInMap("Records")
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords> records;
+        public java.util.List<Records> records;
 
-        public static DescribeMultiContainerGroupMetricResponseBodyMonitorDatas build(java.util.Map<String, ?> map) throws Exception {
-            DescribeMultiContainerGroupMetricResponseBodyMonitorDatas self = new DescribeMultiContainerGroupMetricResponseBodyMonitorDatas();
+        public static MonitorDatas build(java.util.Map<String, ?> map) throws Exception {
+            MonitorDatas self = new MonitorDatas();
             return TeaModel.build(map, self);
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatas setContainerGroupId(String containerGroupId) {
+        public MonitorDatas setContainerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
             return this;
         }
@@ -921,11 +921,11 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
             return this.containerGroupId;
         }
 
-        public DescribeMultiContainerGroupMetricResponseBodyMonitorDatas setRecords(java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords> records) {
+        public MonitorDatas setRecords(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
-        public java.util.List<DescribeMultiContainerGroupMetricResponseBodyMonitorDatasRecords> getRecords() {
+        public java.util.List<Records> getRecords() {
             return this.records;
         }
 

@@ -8,7 +8,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      * <p>The zones in which the specified resources are available.</p>
      */
     @NameInMap("AvailableZones")
-    public DescribeAvailableResourceResponseBodyAvailableZones availableZones;
+    public AvailableZones availableZones;
 
     /**
      * <p>The request ID.</p>
@@ -24,11 +24,11 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public DescribeAvailableResourceResponseBody setAvailableZones(DescribeAvailableResourceResponseBodyAvailableZones availableZones) {
+    public DescribeAvailableResourceResponseBody setAvailableZones(AvailableZones availableZones) {
         this.availableZones = availableZones;
         return this;
     }
-    public DescribeAvailableResourceResponseBodyAvailableZones getAvailableZones() {
+    public AvailableZones getAvailableZones() {
         return this.availableZones;
     }
 
@@ -40,7 +40,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource extends TeaModel {
+    public static class SupportedResource extends TeaModel {
         /**
          * <p>The category of resources based on stock status. Valid values:</p>
          * <ul>
@@ -69,12 +69,12 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource();
+        public static SupportedResource build(java.util.Map<String, ?> map) throws Exception {
+            SupportedResource self = new SupportedResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setStatusCategory(String statusCategory) {
+        public SupportedResource setStatusCategory(String statusCategory) {
             this.statusCategory = statusCategory;
             return this;
         }
@@ -82,7 +82,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.statusCategory;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource setValue(String value) {
+        public SupportedResource setValue(String value) {
             this.value = value;
             return this;
         }
@@ -92,31 +92,31 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources extends TeaModel {
+    public static class SupportedResources extends TeaModel {
         @NameInMap("SupportedResource")
-        public java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> supportedResource;
+        public java.util.List<SupportedResource> supportedResource;
 
-        public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources();
+        public static SupportedResources build(java.util.Map<String, ?> map) throws Exception {
+            SupportedResources self = new SupportedResources();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources setSupportedResource(java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> supportedResource) {
+        public SupportedResources setSupportedResource(java.util.List<SupportedResource> supportedResource) {
             this.supportedResource = supportedResource;
             return this;
         }
-        public java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResourcesSupportedResource> getSupportedResource() {
+        public java.util.List<SupportedResource> getSupportedResource() {
             return this.supportedResource;
         }
 
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource extends TeaModel {
+    public static class AvailableResource extends TeaModel {
         /**
          * <p>The information about the resources that are available in the zones.</p>
          */
         @NameInMap("SupportedResources")
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources;
+        public SupportedResources supportedResources;
 
         /**
          * <p>The type of the resource. Valid values:</p>
@@ -131,20 +131,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource();
+        public static AvailableResource build(java.util.Map<String, ?> map) throws Exception {
+            AvailableResource self = new AvailableResource();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource setSupportedResources(DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources supportedResources) {
+        public AvailableResource setSupportedResources(SupportedResources supportedResources) {
             this.supportedResources = supportedResources;
             return this;
         }
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResourceSupportedResources getSupportedResources() {
+        public SupportedResources getSupportedResources() {
             return this.supportedResources;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource setType(String type) {
+        public AvailableResource setType(String type) {
             this.type = type;
             return this;
         }
@@ -154,31 +154,31 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources extends TeaModel {
+    public static class AvailableResources extends TeaModel {
         @NameInMap("AvailableResource")
-        public java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> availableResource;
+        public java.util.List<AvailableResource> availableResource;
 
-        public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources();
+        public static AvailableResources build(java.util.Map<String, ?> map) throws Exception {
+            AvailableResources self = new AvailableResources();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources setAvailableResource(java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> availableResource) {
+        public AvailableResources setAvailableResource(java.util.List<AvailableResource> availableResource) {
             this.availableResource = availableResource;
             return this;
         }
-        public java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResourcesAvailableResource> getAvailableResource() {
+        public java.util.List<AvailableResource> getAvailableResource() {
             return this.availableResource;
         }
 
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone extends TeaModel {
+    public static class AvailableZone extends TeaModel {
         /**
          * <p>The resources that are available in the specified zone.</p>
          */
         @NameInMap("AvailableResources")
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources;
+        public AvailableResources availableResources;
 
         /**
          * <p>The region ID of the resources.</p>
@@ -198,20 +198,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         @NameInMap("ZoneId")
         public String zoneId;
 
-        public static DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone self = new DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone();
+        public static AvailableZone build(java.util.Map<String, ?> map) throws Exception {
+            AvailableZone self = new AvailableZone();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setAvailableResources(DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources availableResources) {
+        public AvailableZone setAvailableResources(AvailableResources availableResources) {
             this.availableResources = availableResources;
             return this;
         }
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZoneAvailableResources getAvailableResources() {
+        public AvailableResources getAvailableResources() {
             return this.availableResources;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setRegionId(String regionId) {
+        public AvailableZone setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
         }
@@ -219,7 +219,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone setZoneId(String zoneId) {
+        public AvailableZone setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
         }
@@ -229,20 +229,20 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
 
-    public static class DescribeAvailableResourceResponseBodyAvailableZones extends TeaModel {
+    public static class AvailableZones extends TeaModel {
         @NameInMap("AvailableZone")
-        public java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> availableZone;
+        public java.util.List<AvailableZone> availableZone;
 
-        public static DescribeAvailableResourceResponseBodyAvailableZones build(java.util.Map<String, ?> map) throws Exception {
-            DescribeAvailableResourceResponseBodyAvailableZones self = new DescribeAvailableResourceResponseBodyAvailableZones();
+        public static AvailableZones build(java.util.Map<String, ?> map) throws Exception {
+            AvailableZones self = new AvailableZones();
             return TeaModel.build(map, self);
         }
 
-        public DescribeAvailableResourceResponseBodyAvailableZones setAvailableZone(java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> availableZone) {
+        public AvailableZones setAvailableZone(java.util.List<AvailableZone> availableZone) {
             this.availableZone = availableZone;
             return this;
         }
-        public java.util.List<DescribeAvailableResourceResponseBodyAvailableZonesAvailableZone> getAvailableZone() {
+        public java.util.List<AvailableZone> getAvailableZone() {
             return this.availableZone;
         }
 
