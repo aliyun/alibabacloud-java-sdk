@@ -202,6 +202,9 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         @NameInMap("Filters")
         public java.util.List<DescribeSqlLogTasksResponseBodyDataListFilters> filters;
 
+        @NameInMap("InnerResult")
+        public String innerResult;
+
         /**
          * <p>The ID of the database instance.</p>
          * 
@@ -357,6 +360,14 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSqlLogTasksResponseBodyDataListFilters> getFilters() {
             return this.filters;
+        }
+
+        public DescribeSqlLogTasksResponseBodyDataList setInnerResult(String innerResult) {
+            this.innerResult = innerResult;
+            return this;
+        }
+        public String getInnerResult() {
+            return this.innerResult;
         }
 
         public DescribeSqlLogTasksResponseBodyDataList setInstanceId(String instanceId) {

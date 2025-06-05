@@ -153,6 +153,9 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        @NameInMap("TotalSqlSize")
+        public Long totalSqlSize;
+
         public static DescribeSqlLogStatisticResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeSqlLogStatisticResponseBodyData self = new DescribeSqlLogStatisticResponseBodyData();
             return TeaModel.build(map, self);
@@ -204,6 +207,14 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
         public Long getTimestamp() {
             return this.timestamp;
+        }
+
+        public DescribeSqlLogStatisticResponseBodyData setTotalSqlSize(Long totalSqlSize) {
+            this.totalSqlSize = totalSqlSize;
+            return this;
+        }
+        public Long getTotalSqlSize() {
+            return this.totalSqlSize;
         }
 
     }
