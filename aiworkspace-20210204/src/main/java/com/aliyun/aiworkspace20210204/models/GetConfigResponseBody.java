@@ -46,6 +46,12 @@ public class GetConfigResponseBody extends TeaModel {
     @NameInMap("ConfigValue")
     public String configValue;
 
+    @NameInMap("GmtCreateTime")
+    public String gmtCreateTime;
+
+    @NameInMap("GmtModifiedTime")
+    public String gmtModifiedTime;
+
     /**
      * <p>The tags of the configuration item.</p>
      */
@@ -97,6 +103,22 @@ public class GetConfigResponseBody extends TeaModel {
     }
     public String getConfigValue() {
         return this.configValue;
+    }
+
+    public GetConfigResponseBody setGmtCreateTime(String gmtCreateTime) {
+        this.gmtCreateTime = gmtCreateTime;
+        return this;
+    }
+    public String getGmtCreateTime() {
+        return this.gmtCreateTime;
+    }
+
+    public GetConfigResponseBody setGmtModifiedTime(String gmtModifiedTime) {
+        this.gmtModifiedTime = gmtModifiedTime;
+        return this;
+    }
+    public String getGmtModifiedTime() {
+        return this.gmtModifiedTime;
     }
 
     public GetConfigResponseBody setLabels(java.util.List<GetConfigResponseBodyLabels> labels) {
