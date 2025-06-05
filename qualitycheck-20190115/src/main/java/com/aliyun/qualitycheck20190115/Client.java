@@ -551,10 +551,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CreateSkillGroupConfig is deprecated
+     * 
      * @param request CreateSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateSkillGroupConfigResponse createSkillGroupConfigWithOptions(CreateSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -584,9 +588,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI CreateSkillGroupConfig is deprecated
+     * 
      * @param request CreateSkillGroupConfigRequest
      * @return CreateSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public CreateSkillGroupConfigResponse createSkillGroupConfig(CreateSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSkillGroupConfigWithOptions(request, runtime);
@@ -1249,10 +1257,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DeleteSkillGroupConfig is deprecated
+     * 
      * @param request DeleteSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteSkillGroupConfigResponse deleteSkillGroupConfigWithOptions(DeleteSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -1282,9 +1294,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI DeleteSkillGroupConfig is deprecated
+     * 
      * @param request DeleteSkillGroupConfigRequest
      * @return DeleteSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public DeleteSkillGroupConfigResponse deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteSkillGroupConfigWithOptions(request, runtime);
@@ -2161,6 +2177,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取质检任务配置详情</p>
+     * 
+     * @param request GetSchemeTaskConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSchemeTaskConfigResponse
+     */
+    public GetSchemeTaskConfigResponse getSchemeTaskConfigWithOptions(GetSchemeTaskConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.baseMeAgentId)) {
+            query.put("BaseMeAgentId", request.baseMeAgentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jsonStr)) {
+            query.put("JsonStr", request.jsonStr);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSchemeTaskConfig"),
+            new TeaPair("version", "2019-01-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSchemeTaskConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取质检任务配置详情</p>
+     * 
+     * @param request GetSchemeTaskConfigRequest
+     * @return GetSchemeTaskConfigResponse
+     */
+    public GetSchemeTaskConfigResponse getSchemeTaskConfig(GetSchemeTaskConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSchemeTaskConfigWithOptions(request, runtime);
+    }
+
+    /**
      * @deprecated OpenAPI GetScoreInfo is deprecated
      * 
      * @param request GetScoreInfoRequest
@@ -2211,10 +2275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI GetSkillGroupConfig is deprecated
+     * 
      * @param request GetSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public GetSkillGroupConfigResponse getSkillGroupConfigWithOptions(GetSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2244,9 +2312,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI GetSkillGroupConfig is deprecated
+     * 
      * @param request GetSkillGroupConfigRequest
      * @return GetSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public GetSkillGroupConfigResponse getSkillGroupConfig(GetSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSkillGroupConfigWithOptions(request, runtime);
@@ -2937,10 +3009,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ListSkillGroupConfig is deprecated
+     * 
      * @param request ListSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public ListSkillGroupConfigResponse listSkillGroupConfigWithOptions(ListSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -2970,9 +3046,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI ListSkillGroupConfig is deprecated
+     * 
      * @param request ListSkillGroupConfigRequest
      * @return ListSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public ListSkillGroupConfigResponse listSkillGroupConfig(ListSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listSkillGroupConfigWithOptions(request, runtime);
@@ -4021,10 +4101,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI UpdateSkillGroupConfig is deprecated
+     * 
      * @param request UpdateSkillGroupConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateSkillGroupConfigResponse updateSkillGroupConfigWithOptions(UpdateSkillGroupConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4054,9 +4138,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @deprecated OpenAPI UpdateSkillGroupConfig is deprecated
+     * 
      * @param request UpdateSkillGroupConfigRequest
      * @return UpdateSkillGroupConfigResponse
      */
+    @Deprecated
+    // Deprecated
     public UpdateSkillGroupConfigResponse updateSkillGroupConfig(UpdateSkillGroupConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateSkillGroupConfigWithOptions(request, runtime);
