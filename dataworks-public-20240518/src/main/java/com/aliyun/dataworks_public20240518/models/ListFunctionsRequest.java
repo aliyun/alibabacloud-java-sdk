@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListFunctionsRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>The ID of the owner of the UDF. This parameter specifies a filter condition.</p>
      * 
@@ -63,6 +66,14 @@ public class ListFunctionsRequest extends TeaModel {
     public static ListFunctionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFunctionsRequest self = new ListFunctionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFunctionsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListFunctionsRequest setOwner(String owner) {

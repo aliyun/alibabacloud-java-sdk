@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListResourcesRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
      * 
@@ -61,6 +64,14 @@ public class ListResourcesRequest extends TeaModel {
     public static ListResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourcesRequest self = new ListResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourcesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListResourcesRequest setOwner(String owner) {

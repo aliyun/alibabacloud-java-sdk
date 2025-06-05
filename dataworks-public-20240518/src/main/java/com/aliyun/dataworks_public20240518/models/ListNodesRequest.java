@@ -13,6 +13,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("ContainerId")
     public Long containerId;
 
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>The page number.</p>
      * 
@@ -96,6 +99,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public Long getContainerId() {
         return this.containerId;
+    }
+
+    public ListNodesRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListNodesRequest setPageNumber(Integer pageNumber) {

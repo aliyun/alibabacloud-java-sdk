@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListWorkflowDefinitionsRequest extends TeaModel {
+    @NameInMap("Name")
+    public String name;
+
     /**
      * <p>The ID of the Alibaba Cloud account used by the workspace administrator. You can log on to the Alibaba Cloud Management Console and view the ID on the Security Settings page.</p>
      * 
@@ -59,6 +62,14 @@ public class ListWorkflowDefinitionsRequest extends TeaModel {
     public static ListWorkflowDefinitionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWorkflowDefinitionsRequest self = new ListWorkflowDefinitionsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWorkflowDefinitionsRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public ListWorkflowDefinitionsRequest setOwner(String owner) {
