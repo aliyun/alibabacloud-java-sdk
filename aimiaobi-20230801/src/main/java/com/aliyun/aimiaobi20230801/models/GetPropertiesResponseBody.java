@@ -408,6 +408,93 @@ public class GetPropertiesResponseBody extends TeaModel {
 
     }
 
+    public static class GetPropertiesResponseBodyDataMiaosouConfigModelInfos extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>quanmiao-max</p>
+         */
+        @NameInMap("ModelId")
+        public String modelId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>全妙-Max</p>
+         */
+        @NameInMap("ModelName")
+        public String modelName;
+
+        public static GetPropertiesResponseBodyDataMiaosouConfigModelInfos build(java.util.Map<String, ?> map) throws Exception {
+            GetPropertiesResponseBodyDataMiaosouConfigModelInfos self = new GetPropertiesResponseBodyDataMiaosouConfigModelInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPropertiesResponseBodyDataMiaosouConfigModelInfos setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        public GetPropertiesResponseBodyDataMiaosouConfigModelInfos setModelName(String modelName) {
+            this.modelName = modelName;
+            return this;
+        }
+        public String getModelName() {
+            return this.modelName;
+        }
+
+    }
+
+    public static class GetPropertiesResponseBodyDataMiaosouConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("MaxDocSize")
+        public Long maxDocSize;
+
+        @NameInMap("ModelInfos")
+        public java.util.List<GetPropertiesResponseBodyDataMiaosouConfigModelInfos> modelInfos;
+
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("UseDocSize")
+        public Long useDocSize;
+
+        public static GetPropertiesResponseBodyDataMiaosouConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetPropertiesResponseBodyDataMiaosouConfig self = new GetPropertiesResponseBodyDataMiaosouConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetPropertiesResponseBodyDataMiaosouConfig setMaxDocSize(Long maxDocSize) {
+            this.maxDocSize = maxDocSize;
+            return this;
+        }
+        public Long getMaxDocSize() {
+            return this.maxDocSize;
+        }
+
+        public GetPropertiesResponseBodyDataMiaosouConfig setModelInfos(java.util.List<GetPropertiesResponseBodyDataMiaosouConfigModelInfos> modelInfos) {
+            this.modelInfos = modelInfos;
+            return this;
+        }
+        public java.util.List<GetPropertiesResponseBodyDataMiaosouConfigModelInfos> getModelInfos() {
+            return this.modelInfos;
+        }
+
+        public GetPropertiesResponseBodyDataMiaosouConfig setUseDocSize(Long useDocSize) {
+            this.useDocSize = useDocSize;
+            return this;
+        }
+        public Long getUseDocSize() {
+            return this.useDocSize;
+        }
+
+    }
+
     public static class GetPropertiesResponseBodyDataSearchSourceList extends TeaModel {
         @NameInMap("Code")
         public String code;
@@ -651,6 +738,9 @@ public class GetPropertiesResponseBody extends TeaModel {
         @NameInMap("IntelligentSearchConfig")
         public GetPropertiesResponseBodyDataIntelligentSearchConfig intelligentSearchConfig;
 
+        @NameInMap("MiaosouConfig")
+        public GetPropertiesResponseBodyDataMiaosouConfig miaosouConfig;
+
         @NameInMap("SearchSourceList")
         public java.util.List<GetPropertiesResponseBodyDataSearchSourceList> searchSourceList;
 
@@ -708,6 +798,14 @@ public class GetPropertiesResponseBody extends TeaModel {
         }
         public GetPropertiesResponseBodyDataIntelligentSearchConfig getIntelligentSearchConfig() {
             return this.intelligentSearchConfig;
+        }
+
+        public GetPropertiesResponseBodyData setMiaosouConfig(GetPropertiesResponseBodyDataMiaosouConfig miaosouConfig) {
+            this.miaosouConfig = miaosouConfig;
+            return this;
+        }
+        public GetPropertiesResponseBodyDataMiaosouConfig getMiaosouConfig() {
+            return this.miaosouConfig;
         }
 
         public GetPropertiesResponseBodyData setSearchSourceList(java.util.List<GetPropertiesResponseBodyDataSearchSourceList> searchSourceList) {
