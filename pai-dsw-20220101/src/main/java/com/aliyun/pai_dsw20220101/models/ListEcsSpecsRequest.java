@@ -49,6 +49,9 @@ public class ListEcsSpecsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     /**
      * <p>The field by which the query results are sorted. Set the value to gmtCreate.</p>
      * 
@@ -93,6 +96,14 @@ public class ListEcsSpecsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListEcsSpecsRequest setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public ListEcsSpecsRequest setSortBy(String sortBy) {

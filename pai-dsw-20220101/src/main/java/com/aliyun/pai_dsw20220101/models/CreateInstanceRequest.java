@@ -127,6 +127,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Labels")
     public java.util.List<CreateInstanceRequestLabels> labels;
 
+    @NameInMap("OversoldType")
+    public String oversoldType;
+
     /**
      * <p>The priority based on which resources are allocated to instances. Valid values: 1 to 9.</p>
      * <ul>
@@ -324,6 +327,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceRequestLabels> getLabels() {
         return this.labels;
+    }
+
+    public CreateInstanceRequest setOversoldType(String oversoldType) {
+        this.oversoldType = oversoldType;
+        return this;
+    }
+    public String getOversoldType() {
+        return this.oversoldType;
     }
 
     public CreateInstanceRequest setPriority(Long priority) {

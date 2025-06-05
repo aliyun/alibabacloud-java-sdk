@@ -158,6 +158,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("InstanceName")
     public String instanceName;
 
+    @NameInMap("OversoldType")
+    public String oversoldType;
+
     /**
      * <p>The priority based on which resources are allocated to instances. Valid values: 1 to 9.</p>
      * <ul>
@@ -355,6 +358,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getInstanceName() {
         return this.instanceName;
+    }
+
+    public UpdateInstanceRequest setOversoldType(String oversoldType) {
+        this.oversoldType = oversoldType;
+        return this;
+    }
+    public String getOversoldType() {
+        return this.oversoldType;
     }
 
     public UpdateInstanceRequest setPriority(Long priority) {
