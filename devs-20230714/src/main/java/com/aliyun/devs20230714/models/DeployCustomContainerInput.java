@@ -7,6 +7,9 @@ public class DeployCustomContainerInput extends TeaModel {
     @NameInMap("accountID")
     public String accountID;
 
+    @NameInMap("asyncInvokeConfig")
+    public DeployCustomContainerInputAsyncInvokeConfig asyncInvokeConfig;
+
     @NameInMap("concurrencyConfig")
     public DeployCustomContainerInputConcurrencyConfig concurrencyConfig;
 
@@ -55,6 +58,9 @@ public class DeployCustomContainerInput extends TeaModel {
     @NameInMap("originalName")
     public String originalName;
 
+    @NameInMap("ossMountConfig")
+    public DeployCustomContainerInputOssMountConfig ossMountConfig;
+
     @NameInMap("projectName")
     public String projectName;
 
@@ -93,6 +99,14 @@ public class DeployCustomContainerInput extends TeaModel {
     }
     public String getAccountID() {
         return this.accountID;
+    }
+
+    public DeployCustomContainerInput setAsyncInvokeConfig(DeployCustomContainerInputAsyncInvokeConfig asyncInvokeConfig) {
+        this.asyncInvokeConfig = asyncInvokeConfig;
+        return this;
+    }
+    public DeployCustomContainerInputAsyncInvokeConfig getAsyncInvokeConfig() {
+        return this.asyncInvokeConfig;
     }
 
     public DeployCustomContainerInput setConcurrencyConfig(DeployCustomContainerInputConcurrencyConfig concurrencyConfig) {
@@ -215,6 +229,14 @@ public class DeployCustomContainerInput extends TeaModel {
         return this.originalName;
     }
 
+    public DeployCustomContainerInput setOssMountConfig(DeployCustomContainerInputOssMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public DeployCustomContainerInputOssMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
     public DeployCustomContainerInput setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
@@ -277,6 +299,126 @@ public class DeployCustomContainerInput extends TeaModel {
     }
     public DeployCustomContainerInputVpcConfig getVpcConfig() {
         return this.vpcConfig;
+    }
+
+    public static class DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure extends TeaModel {
+        @NameInMap("destination")
+        public String destination;
+
+        public static DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure self = new DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure setDestination(String destination) {
+            this.destination = destination;
+            return this;
+        }
+        public String getDestination() {
+            return this.destination;
+        }
+
+    }
+
+    public static class DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess extends TeaModel {
+        @NameInMap("destination")
+        public String destination;
+
+        public static DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess self = new DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess setDestination(String destination) {
+            this.destination = destination;
+            return this;
+        }
+        public String getDestination() {
+            return this.destination;
+        }
+
+    }
+
+    public static class DeployCustomContainerInputAsyncInvokeConfigDestinationConfig extends TeaModel {
+        @NameInMap("onFailure")
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure onFailure;
+
+        @NameInMap("onSuccess")
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess onSuccess;
+
+        public static DeployCustomContainerInputAsyncInvokeConfigDestinationConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputAsyncInvokeConfigDestinationConfig self = new DeployCustomContainerInputAsyncInvokeConfigDestinationConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfig setOnFailure(DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure onFailure) {
+            this.onFailure = onFailure;
+            return this;
+        }
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnFailure getOnFailure() {
+            return this.onFailure;
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfig setOnSuccess(DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess onSuccess) {
+            this.onSuccess = onSuccess;
+            return this;
+        }
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfigOnSuccess getOnSuccess() {
+            return this.onSuccess;
+        }
+
+    }
+
+    public static class DeployCustomContainerInputAsyncInvokeConfig extends TeaModel {
+        @NameInMap("asyncTask")
+        public Boolean asyncTask;
+
+        @NameInMap("destinationConfig")
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfig destinationConfig;
+
+        @NameInMap("maxAsyncEventAgeInSeconds")
+        public Long maxAsyncEventAgeInSeconds;
+
+        @NameInMap("maxAsyncRetryAttempts")
+        public Long maxAsyncRetryAttempts;
+
+        public static DeployCustomContainerInputAsyncInvokeConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputAsyncInvokeConfig self = new DeployCustomContainerInputAsyncInvokeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfig setAsyncTask(Boolean asyncTask) {
+            this.asyncTask = asyncTask;
+            return this;
+        }
+        public Boolean getAsyncTask() {
+            return this.asyncTask;
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfig setDestinationConfig(DeployCustomContainerInputAsyncInvokeConfigDestinationConfig destinationConfig) {
+            this.destinationConfig = destinationConfig;
+            return this;
+        }
+        public DeployCustomContainerInputAsyncInvokeConfigDestinationConfig getDestinationConfig() {
+            return this.destinationConfig;
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfig setMaxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
+            this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
+            return this;
+        }
+        public Long getMaxAsyncEventAgeInSeconds() {
+            return this.maxAsyncEventAgeInSeconds;
+        }
+
+        public DeployCustomContainerInputAsyncInvokeConfig setMaxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
+            this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
+            return this;
+        }
+        public Long getMaxAsyncRetryAttempts() {
+            return this.maxAsyncRetryAttempts;
+        }
+
     }
 
     public static class DeployCustomContainerInputConcurrencyConfig extends TeaModel {
@@ -484,6 +626,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @NameInMap("port")
         public Integer port;
 
+        @NameInMap("role")
+        public String role;
+
         public static DeployCustomContainerInputCustomContainerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployCustomContainerInputCustomContainerConfig self = new DeployCustomContainerInputCustomContainerConfig();
             return TeaModel.build(map, self);
@@ -545,6 +690,14 @@ public class DeployCustomContainerInput extends TeaModel {
             return this.port;
         }
 
+        public DeployCustomContainerInputCustomContainerConfig setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
     }
 
     public static class DeployCustomContainerInputGpuConfig extends TeaModel {
@@ -581,6 +734,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("disableURLInternet")
+        public Boolean disableURLInternet;
+
         @NameInMap("dsableURLInternet")
         public Boolean dsableURLInternet;
 
@@ -598,6 +754,14 @@ public class DeployCustomContainerInput extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public DeployCustomContainerInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+            this.disableURLInternet = disableURLInternet;
+            return this;
+        }
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
         }
 
         public DeployCustomContainerInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
@@ -746,6 +910,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @NameInMap("srcOssRegion")
         public String srcOssRegion;
 
+        @NameInMap("syncStrategy")
+        public String syncStrategy;
+
         public static DeployCustomContainerInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployCustomContainerInputModelConfig self = new DeployCustomContainerInputModelConfig();
             return TeaModel.build(map, self);
@@ -831,6 +998,14 @@ public class DeployCustomContainerInput extends TeaModel {
             return this.srcOssRegion;
         }
 
+        public DeployCustomContainerInputModelConfig setSyncStrategy(String syncStrategy) {
+            this.syncStrategy = syncStrategy;
+            return this;
+        }
+        public String getSyncStrategy() {
+            return this.syncStrategy;
+        }
+
     }
 
     public static class DeployCustomContainerInputNasConfig extends TeaModel {
@@ -870,6 +1045,88 @@ public class DeployCustomContainerInput extends TeaModel {
         }
         public Long getUserId() {
             return this.userId;
+        }
+
+    }
+
+    public static class DeployCustomContainerInputOssMountConfigMountPoints extends TeaModel {
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        @NameInMap("bucketPath")
+        public String bucketPath;
+
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        @NameInMap("mountDir")
+        public String mountDir;
+
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        public static DeployCustomContainerInputOssMountConfigMountPoints build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputOssMountConfigMountPoints self = new DeployCustomContainerInputOssMountConfigMountPoints();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputOssMountConfigMountPoints setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public DeployCustomContainerInputOssMountConfigMountPoints setBucketPath(String bucketPath) {
+            this.bucketPath = bucketPath;
+            return this;
+        }
+        public String getBucketPath() {
+            return this.bucketPath;
+        }
+
+        public DeployCustomContainerInputOssMountConfigMountPoints setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public DeployCustomContainerInputOssMountConfigMountPoints setMountDir(String mountDir) {
+            this.mountDir = mountDir;
+            return this;
+        }
+        public String getMountDir() {
+            return this.mountDir;
+        }
+
+        public DeployCustomContainerInputOssMountConfigMountPoints setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+    }
+
+    public static class DeployCustomContainerInputOssMountConfig extends TeaModel {
+        @NameInMap("mountPoints")
+        public java.util.List<DeployCustomContainerInputOssMountConfigMountPoints> mountPoints;
+
+        public static DeployCustomContainerInputOssMountConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputOssMountConfig self = new DeployCustomContainerInputOssMountConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputOssMountConfig setMountPoints(java.util.List<DeployCustomContainerInputOssMountConfigMountPoints> mountPoints) {
+            this.mountPoints = mountPoints;
+            return this;
+        }
+        public java.util.List<DeployCustomContainerInputOssMountConfigMountPoints> getMountPoints() {
+            return this.mountPoints;
         }
 
     }

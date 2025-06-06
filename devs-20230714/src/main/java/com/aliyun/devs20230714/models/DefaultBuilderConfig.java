@@ -10,6 +10,13 @@ public class DefaultBuilderConfig extends TeaModel {
     @NameInMap("languages")
     public java.util.List<String> languages;
 
+    /**
+     * <strong>example:</strong>
+     * <p>./src</p>
+     */
+    @NameInMap("rootPath")
+    public String rootPath;
+
     @NameInMap("steps")
     public java.util.List<?> steps;
 
@@ -32,6 +39,14 @@ public class DefaultBuilderConfig extends TeaModel {
     }
     public java.util.List<String> getLanguages() {
         return this.languages;
+    }
+
+    public DefaultBuilderConfig setRootPath(String rootPath) {
+        this.rootPath = rootPath;
+        return this;
+    }
+    public String getRootPath() {
+        return this.rootPath;
     }
 
     public DefaultBuilderConfig setSteps(java.util.List<?> steps) {

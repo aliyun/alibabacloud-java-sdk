@@ -3,12 +3,12 @@ package com.aliyun.devs20230714.models;
 
 import com.aliyun.tea.*;
 
-public class DeployTensorRtModelInput extends TeaModel {
+public class DeploySGLangModelInput extends TeaModel {
     @NameInMap("accountID")
     public String accountID;
 
     @NameInMap("concurrencyConfig")
-    public DeployTensorRtModelInputConcurrencyConfig concurrencyConfig;
+    public DeploySGLangModelInputConcurrencyConfig concurrencyConfig;
 
     @NameInMap("cpu")
     public Float cpu;
@@ -26,10 +26,10 @@ public class DeployTensorRtModelInput extends TeaModel {
     public java.util.Map<String, ?> environmentVariables;
 
     @NameInMap("gpuConfig")
-    public DeployTensorRtModelInputGpuConfig gpuConfig;
+    public DeploySGLangModelInputGpuConfig gpuConfig;
 
     @NameInMap("httpTrigger")
-    public DeployTensorRtModelInputHttpTrigger httpTrigger;
+    public DeploySGLangModelInputHttpTrigger httpTrigger;
 
     @NameInMap("imageName")
     public String imageName;
@@ -38,13 +38,13 @@ public class DeployTensorRtModelInput extends TeaModel {
     public Integer instanceConcurrency;
 
     @NameInMap("logConfig")
-    public DeployTensorRtModelInputLogConfig logConfig;
+    public DeploySGLangModelInputLogConfig logConfig;
 
     @NameInMap("memorySize")
     public Integer memorySize;
 
     @NameInMap("modelConfig")
-    public DeployTensorRtModelInputModelConfig modelConfig;
+    public DeploySGLangModelInputModelConfig modelConfig;
 
     /**
      * <p>This parameter is required.</p>
@@ -53,7 +53,7 @@ public class DeployTensorRtModelInput extends TeaModel {
     public String name;
 
     @NameInMap("nasConfig")
-    public DeployTensorRtModelInputNasConfig nasConfig;
+    public DeploySGLangModelInputNasConfig nasConfig;
 
     @NameInMap("originalName")
     public String originalName;
@@ -62,7 +62,7 @@ public class DeployTensorRtModelInput extends TeaModel {
     public String projectName;
 
     @NameInMap("provisionConfig")
-    public DeployTensorRtModelInputProvisionConfig provisionConfig;
+    public DeploySGLangModelInputProvisionConfig provisionConfig;
 
     @NameInMap("region")
     public String region;
@@ -83,14 +83,14 @@ public class DeployTensorRtModelInput extends TeaModel {
     public String traceId;
 
     @NameInMap("vpcConfig")
-    public DeployTensorRtModelInputVpcConfig vpcConfig;
+    public DeploySGLangModelInputVpcConfig vpcConfig;
 
-    public static DeployTensorRtModelInput build(java.util.Map<String, ?> map) throws Exception {
-        DeployTensorRtModelInput self = new DeployTensorRtModelInput();
+    public static DeploySGLangModelInput build(java.util.Map<String, ?> map) throws Exception {
+        DeploySGLangModelInput self = new DeploySGLangModelInput();
         return TeaModel.build(map, self);
     }
 
-    public DeployTensorRtModelInput setAccountID(String accountID) {
+    public DeploySGLangModelInput setAccountID(String accountID) {
         this.accountID = accountID;
         return this;
     }
@@ -98,15 +98,15 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.accountID;
     }
 
-    public DeployTensorRtModelInput setConcurrencyConfig(DeployTensorRtModelInputConcurrencyConfig concurrencyConfig) {
+    public DeploySGLangModelInput setConcurrencyConfig(DeploySGLangModelInputConcurrencyConfig concurrencyConfig) {
         this.concurrencyConfig = concurrencyConfig;
         return this;
     }
-    public DeployTensorRtModelInputConcurrencyConfig getConcurrencyConfig() {
+    public DeploySGLangModelInputConcurrencyConfig getConcurrencyConfig() {
         return this.concurrencyConfig;
     }
 
-    public DeployTensorRtModelInput setCpu(Float cpu) {
+    public DeploySGLangModelInput setCpu(Float cpu) {
         this.cpu = cpu;
         return this;
     }
@@ -114,7 +114,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.cpu;
     }
 
-    public DeployTensorRtModelInput setDescription(String description) {
+    public DeploySGLangModelInput setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -122,7 +122,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.description;
     }
 
-    public DeployTensorRtModelInput setDiskSize(Integer diskSize) {
+    public DeploySGLangModelInput setDiskSize(Integer diskSize) {
         this.diskSize = diskSize;
         return this;
     }
@@ -130,7 +130,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.diskSize;
     }
 
-    public DeployTensorRtModelInput setEnvName(String envName) {
+    public DeploySGLangModelInput setEnvName(String envName) {
         this.envName = envName;
         return this;
     }
@@ -138,7 +138,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.envName;
     }
 
-    public DeployTensorRtModelInput setEnvironmentVariables(java.util.Map<String, ?> environmentVariables) {
+    public DeploySGLangModelInput setEnvironmentVariables(java.util.Map<String, ?> environmentVariables) {
         this.environmentVariables = environmentVariables;
         return this;
     }
@@ -146,23 +146,23 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.environmentVariables;
     }
 
-    public DeployTensorRtModelInput setGpuConfig(DeployTensorRtModelInputGpuConfig gpuConfig) {
+    public DeploySGLangModelInput setGpuConfig(DeploySGLangModelInputGpuConfig gpuConfig) {
         this.gpuConfig = gpuConfig;
         return this;
     }
-    public DeployTensorRtModelInputGpuConfig getGpuConfig() {
+    public DeploySGLangModelInputGpuConfig getGpuConfig() {
         return this.gpuConfig;
     }
 
-    public DeployTensorRtModelInput setHttpTrigger(DeployTensorRtModelInputHttpTrigger httpTrigger) {
+    public DeploySGLangModelInput setHttpTrigger(DeploySGLangModelInputHttpTrigger httpTrigger) {
         this.httpTrigger = httpTrigger;
         return this;
     }
-    public DeployTensorRtModelInputHttpTrigger getHttpTrigger() {
+    public DeploySGLangModelInputHttpTrigger getHttpTrigger() {
         return this.httpTrigger;
     }
 
-    public DeployTensorRtModelInput setImageName(String imageName) {
+    public DeploySGLangModelInput setImageName(String imageName) {
         this.imageName = imageName;
         return this;
     }
@@ -170,7 +170,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.imageName;
     }
 
-    public DeployTensorRtModelInput setInstanceConcurrency(Integer instanceConcurrency) {
+    public DeploySGLangModelInput setInstanceConcurrency(Integer instanceConcurrency) {
         this.instanceConcurrency = instanceConcurrency;
         return this;
     }
@@ -178,15 +178,15 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.instanceConcurrency;
     }
 
-    public DeployTensorRtModelInput setLogConfig(DeployTensorRtModelInputLogConfig logConfig) {
+    public DeploySGLangModelInput setLogConfig(DeploySGLangModelInputLogConfig logConfig) {
         this.logConfig = logConfig;
         return this;
     }
-    public DeployTensorRtModelInputLogConfig getLogConfig() {
+    public DeploySGLangModelInputLogConfig getLogConfig() {
         return this.logConfig;
     }
 
-    public DeployTensorRtModelInput setMemorySize(Integer memorySize) {
+    public DeploySGLangModelInput setMemorySize(Integer memorySize) {
         this.memorySize = memorySize;
         return this;
     }
@@ -194,15 +194,15 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.memorySize;
     }
 
-    public DeployTensorRtModelInput setModelConfig(DeployTensorRtModelInputModelConfig modelConfig) {
+    public DeploySGLangModelInput setModelConfig(DeploySGLangModelInputModelConfig modelConfig) {
         this.modelConfig = modelConfig;
         return this;
     }
-    public DeployTensorRtModelInputModelConfig getModelConfig() {
+    public DeploySGLangModelInputModelConfig getModelConfig() {
         return this.modelConfig;
     }
 
-    public DeployTensorRtModelInput setName(String name) {
+    public DeploySGLangModelInput setName(String name) {
         this.name = name;
         return this;
     }
@@ -210,15 +210,15 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.name;
     }
 
-    public DeployTensorRtModelInput setNasConfig(DeployTensorRtModelInputNasConfig nasConfig) {
+    public DeploySGLangModelInput setNasConfig(DeploySGLangModelInputNasConfig nasConfig) {
         this.nasConfig = nasConfig;
         return this;
     }
-    public DeployTensorRtModelInputNasConfig getNasConfig() {
+    public DeploySGLangModelInputNasConfig getNasConfig() {
         return this.nasConfig;
     }
 
-    public DeployTensorRtModelInput setOriginalName(String originalName) {
+    public DeploySGLangModelInput setOriginalName(String originalName) {
         this.originalName = originalName;
         return this;
     }
@@ -226,7 +226,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.originalName;
     }
 
-    public DeployTensorRtModelInput setProjectName(String projectName) {
+    public DeploySGLangModelInput setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -234,15 +234,15 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.projectName;
     }
 
-    public DeployTensorRtModelInput setProvisionConfig(DeployTensorRtModelInputProvisionConfig provisionConfig) {
+    public DeploySGLangModelInput setProvisionConfig(DeploySGLangModelInputProvisionConfig provisionConfig) {
         this.provisionConfig = provisionConfig;
         return this;
     }
-    public DeployTensorRtModelInputProvisionConfig getProvisionConfig() {
+    public DeploySGLangModelInputProvisionConfig getProvisionConfig() {
         return this.provisionConfig;
     }
 
-    public DeployTensorRtModelInput setRegion(String region) {
+    public DeploySGLangModelInput setRegion(String region) {
         this.region = region;
         return this;
     }
@@ -250,7 +250,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.region;
     }
 
-    public DeployTensorRtModelInput setReportStatusURL(String reportStatusURL) {
+    public DeploySGLangModelInput setReportStatusURL(String reportStatusURL) {
         this.reportStatusURL = reportStatusURL;
         return this;
     }
@@ -258,7 +258,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.reportStatusURL;
     }
 
-    public DeployTensorRtModelInput setRole(String role) {
+    public DeploySGLangModelInput setRole(String role) {
         this.role = role;
         return this;
     }
@@ -266,7 +266,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.role;
     }
 
-    public DeployTensorRtModelInput setTimeout(Integer timeout) {
+    public DeploySGLangModelInput setTimeout(Integer timeout) {
         this.timeout = timeout;
         return this;
     }
@@ -274,7 +274,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.timeout;
     }
 
-    public DeployTensorRtModelInput setTraceId(String traceId) {
+    public DeploySGLangModelInput setTraceId(String traceId) {
         this.traceId = traceId;
         return this;
     }
@@ -282,24 +282,24 @@ public class DeployTensorRtModelInput extends TeaModel {
         return this.traceId;
     }
 
-    public DeployTensorRtModelInput setVpcConfig(DeployTensorRtModelInputVpcConfig vpcConfig) {
+    public DeploySGLangModelInput setVpcConfig(DeploySGLangModelInputVpcConfig vpcConfig) {
         this.vpcConfig = vpcConfig;
         return this;
     }
-    public DeployTensorRtModelInputVpcConfig getVpcConfig() {
+    public DeploySGLangModelInputVpcConfig getVpcConfig() {
         return this.vpcConfig;
     }
 
-    public static class DeployTensorRtModelInputConcurrencyConfig extends TeaModel {
+    public static class DeploySGLangModelInputConcurrencyConfig extends TeaModel {
         @NameInMap("reservedConcurrency")
         public Integer reservedConcurrency;
 
-        public static DeployTensorRtModelInputConcurrencyConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputConcurrencyConfig self = new DeployTensorRtModelInputConcurrencyConfig();
+        public static DeploySGLangModelInputConcurrencyConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputConcurrencyConfig self = new DeploySGLangModelInputConcurrencyConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputConcurrencyConfig setReservedConcurrency(Integer reservedConcurrency) {
+        public DeploySGLangModelInputConcurrencyConfig setReservedConcurrency(Integer reservedConcurrency) {
             this.reservedConcurrency = reservedConcurrency;
             return this;
         }
@@ -309,19 +309,19 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputGpuConfig extends TeaModel {
+    public static class DeploySGLangModelInputGpuConfig extends TeaModel {
         @NameInMap("gpuMemorySize")
         public Integer gpuMemorySize;
 
         @NameInMap("gpuType")
         public String gpuType;
 
-        public static DeployTensorRtModelInputGpuConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputGpuConfig self = new DeployTensorRtModelInputGpuConfig();
+        public static DeploySGLangModelInputGpuConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputGpuConfig self = new DeploySGLangModelInputGpuConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputGpuConfig setGpuMemorySize(Integer gpuMemorySize) {
+        public DeploySGLangModelInputGpuConfig setGpuMemorySize(Integer gpuMemorySize) {
             this.gpuMemorySize = gpuMemorySize;
             return this;
         }
@@ -329,7 +329,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.gpuMemorySize;
         }
 
-        public DeployTensorRtModelInputGpuConfig setGpuType(String gpuType) {
+        public DeploySGLangModelInputGpuConfig setGpuType(String gpuType) {
             this.gpuType = gpuType;
             return this;
         }
@@ -339,7 +339,7 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputHttpTriggerTriggerConfig extends TeaModel {
+    public static class DeploySGLangModelInputHttpTriggerTriggerConfig extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
@@ -352,12 +352,12 @@ public class DeployTensorRtModelInput extends TeaModel {
         @NameInMap("methods")
         public java.util.List<String> methods;
 
-        public static DeployTensorRtModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputHttpTriggerTriggerConfig self = new DeployTensorRtModelInputHttpTriggerTriggerConfig();
+        public static DeploySGLangModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputHttpTriggerTriggerConfig self = new DeploySGLangModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputHttpTriggerTriggerConfig setAuthType(String authType) {
+        public DeploySGLangModelInputHttpTriggerTriggerConfig setAuthType(String authType) {
             this.authType = authType;
             return this;
         }
@@ -365,7 +365,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.authType;
         }
 
-        public DeployTensorRtModelInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+        public DeploySGLangModelInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
             this.disableURLInternet = disableURLInternet;
             return this;
         }
@@ -373,7 +373,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.disableURLInternet;
         }
 
-        public DeployTensorRtModelInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
+        public DeploySGLangModelInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
             this.dsableURLInternet = dsableURLInternet;
             return this;
         }
@@ -381,7 +381,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.dsableURLInternet;
         }
 
-        public DeployTensorRtModelInputHttpTriggerTriggerConfig setMethods(java.util.List<String> methods) {
+        public DeploySGLangModelInputHttpTriggerTriggerConfig setMethods(java.util.List<String> methods) {
             this.methods = methods;
             return this;
         }
@@ -391,19 +391,19 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputHttpTrigger extends TeaModel {
+    public static class DeploySGLangModelInputHttpTrigger extends TeaModel {
         @NameInMap("qualifier")
         public String qualifier;
 
         @NameInMap("triggerConfig")
-        public DeployTensorRtModelInputHttpTriggerTriggerConfig triggerConfig;
+        public DeploySGLangModelInputHttpTriggerTriggerConfig triggerConfig;
 
-        public static DeployTensorRtModelInputHttpTrigger build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputHttpTrigger self = new DeployTensorRtModelInputHttpTrigger();
+        public static DeploySGLangModelInputHttpTrigger build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputHttpTrigger self = new DeploySGLangModelInputHttpTrigger();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputHttpTrigger setQualifier(String qualifier) {
+        public DeploySGLangModelInputHttpTrigger setQualifier(String qualifier) {
             this.qualifier = qualifier;
             return this;
         }
@@ -411,17 +411,17 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.qualifier;
         }
 
-        public DeployTensorRtModelInputHttpTrigger setTriggerConfig(DeployTensorRtModelInputHttpTriggerTriggerConfig triggerConfig) {
+        public DeploySGLangModelInputHttpTrigger setTriggerConfig(DeploySGLangModelInputHttpTriggerTriggerConfig triggerConfig) {
             this.triggerConfig = triggerConfig;
             return this;
         }
-        public DeployTensorRtModelInputHttpTriggerTriggerConfig getTriggerConfig() {
+        public DeploySGLangModelInputHttpTriggerTriggerConfig getTriggerConfig() {
             return this.triggerConfig;
         }
 
     }
 
-    public static class DeployTensorRtModelInputLogConfig extends TeaModel {
+    public static class DeploySGLangModelInputLogConfig extends TeaModel {
         @NameInMap("enableInstanceMetrics")
         public Boolean enableInstanceMetrics;
 
@@ -437,12 +437,12 @@ public class DeployTensorRtModelInput extends TeaModel {
         @NameInMap("project")
         public String project;
 
-        public static DeployTensorRtModelInputLogConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputLogConfig self = new DeployTensorRtModelInputLogConfig();
+        public static DeploySGLangModelInputLogConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputLogConfig self = new DeploySGLangModelInputLogConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputLogConfig setEnableInstanceMetrics(Boolean enableInstanceMetrics) {
+        public DeploySGLangModelInputLogConfig setEnableInstanceMetrics(Boolean enableInstanceMetrics) {
             this.enableInstanceMetrics = enableInstanceMetrics;
             return this;
         }
@@ -450,7 +450,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.enableInstanceMetrics;
         }
 
-        public DeployTensorRtModelInputLogConfig setEnableRequestMetrics(Boolean enableRequestMetrics) {
+        public DeploySGLangModelInputLogConfig setEnableRequestMetrics(Boolean enableRequestMetrics) {
             this.enableRequestMetrics = enableRequestMetrics;
             return this;
         }
@@ -458,7 +458,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.enableRequestMetrics;
         }
 
-        public DeployTensorRtModelInputLogConfig setLogBeginRule(String logBeginRule) {
+        public DeploySGLangModelInputLogConfig setLogBeginRule(String logBeginRule) {
             this.logBeginRule = logBeginRule;
             return this;
         }
@@ -466,7 +466,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.logBeginRule;
         }
 
-        public DeployTensorRtModelInputLogConfig setLogstore(String logstore) {
+        public DeploySGLangModelInputLogConfig setLogstore(String logstore) {
             this.logstore = logstore;
             return this;
         }
@@ -474,7 +474,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.logstore;
         }
 
-        public DeployTensorRtModelInputLogConfig setProject(String project) {
+        public DeploySGLangModelInputLogConfig setProject(String project) {
             this.project = project;
             return this;
         }
@@ -484,7 +484,128 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputModelConfig extends TeaModel {
+    public static class DeploySGLangModelInputModelConfigFmkSGLangConfig extends TeaModel {
+        @NameInMap("apiKey")
+        public String apiKey;
+
+        @NameInMap("chatTemplate")
+        public String chatTemplate;
+
+        @NameInMap("dtype")
+        public String dtype;
+
+        @NameInMap("fullTextPostfix")
+        public String fullTextPostfix;
+
+        @NameInMap("loadFormat")
+        public String loadFormat;
+
+        @NameInMap("maxRunningRequests")
+        public Integer maxRunningRequests;
+
+        @NameInMap("maxTotalTokens")
+        public Integer maxTotalTokens;
+
+        @NameInMap("memFractionStatic")
+        public Float memFractionStatic;
+
+        @NameInMap("quantization")
+        public String quantization;
+
+        @NameInMap("servedModelName")
+        public String servedModelName;
+
+        public static DeploySGLangModelInputModelConfigFmkSGLangConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputModelConfigFmkSGLangConfig self = new DeploySGLangModelInputModelConfigFmkSGLangConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setApiKey(String apiKey) {
+            this.apiKey = apiKey;
+            return this;
+        }
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setChatTemplate(String chatTemplate) {
+            this.chatTemplate = chatTemplate;
+            return this;
+        }
+        public String getChatTemplate() {
+            return this.chatTemplate;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setDtype(String dtype) {
+            this.dtype = dtype;
+            return this;
+        }
+        public String getDtype() {
+            return this.dtype;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setFullTextPostfix(String fullTextPostfix) {
+            this.fullTextPostfix = fullTextPostfix;
+            return this;
+        }
+        public String getFullTextPostfix() {
+            return this.fullTextPostfix;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setLoadFormat(String loadFormat) {
+            this.loadFormat = loadFormat;
+            return this;
+        }
+        public String getLoadFormat() {
+            return this.loadFormat;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setMaxRunningRequests(Integer maxRunningRequests) {
+            this.maxRunningRequests = maxRunningRequests;
+            return this;
+        }
+        public Integer getMaxRunningRequests() {
+            return this.maxRunningRequests;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setMaxTotalTokens(Integer maxTotalTokens) {
+            this.maxTotalTokens = maxTotalTokens;
+            return this;
+        }
+        public Integer getMaxTotalTokens() {
+            return this.maxTotalTokens;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setMemFractionStatic(Float memFractionStatic) {
+            this.memFractionStatic = memFractionStatic;
+            return this;
+        }
+        public Float getMemFractionStatic() {
+            return this.memFractionStatic;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setQuantization(String quantization) {
+            this.quantization = quantization;
+            return this;
+        }
+        public String getQuantization() {
+            return this.quantization;
+        }
+
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig setServedModelName(String servedModelName) {
+            this.servedModelName = servedModelName;
+            return this;
+        }
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+    }
+
+    public static class DeploySGLangModelInputModelConfig extends TeaModel {
+        @NameInMap("fmkSGLangConfig")
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig fmkSGLangConfig;
+
         @NameInMap("framework")
         public String framework;
 
@@ -522,12 +643,20 @@ public class DeployTensorRtModelInput extends TeaModel {
         @NameInMap("syncStrategy")
         public String syncStrategy;
 
-        public static DeployTensorRtModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputModelConfig self = new DeployTensorRtModelInputModelConfig();
+        public static DeploySGLangModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputModelConfig self = new DeploySGLangModelInputModelConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputModelConfig setFramework(String framework) {
+        public DeploySGLangModelInputModelConfig setFmkSGLangConfig(DeploySGLangModelInputModelConfigFmkSGLangConfig fmkSGLangConfig) {
+            this.fmkSGLangConfig = fmkSGLangConfig;
+            return this;
+        }
+        public DeploySGLangModelInputModelConfigFmkSGLangConfig getFmkSGLangConfig() {
+            return this.fmkSGLangConfig;
+        }
+
+        public DeploySGLangModelInputModelConfig setFramework(String framework) {
             this.framework = framework;
             return this;
         }
@@ -535,7 +664,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.framework;
         }
 
-        public DeployTensorRtModelInputModelConfig setMultiModelConfig(java.util.List<ModelConfig> multiModelConfig) {
+        public DeploySGLangModelInputModelConfig setMultiModelConfig(java.util.List<ModelConfig> multiModelConfig) {
             this.multiModelConfig = multiModelConfig;
             return this;
         }
@@ -543,7 +672,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.multiModelConfig;
         }
 
-        public DeployTensorRtModelInputModelConfig setPrefix(String prefix) {
+        public DeploySGLangModelInputModelConfig setPrefix(String prefix) {
             this.prefix = prefix;
             return this;
         }
@@ -551,7 +680,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.prefix;
         }
 
-        public DeployTensorRtModelInputModelConfig setSourceType(String sourceType) {
+        public DeploySGLangModelInputModelConfig setSourceType(String sourceType) {
             this.sourceType = sourceType;
             return this;
         }
@@ -559,7 +688,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.sourceType;
         }
 
-        public DeployTensorRtModelInputModelConfig setSrcModelScopeModelID(String srcModelScopeModelID) {
+        public DeploySGLangModelInputModelConfig setSrcModelScopeModelID(String srcModelScopeModelID) {
             this.srcModelScopeModelID = srcModelScopeModelID;
             return this;
         }
@@ -567,7 +696,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.srcModelScopeModelID;
         }
 
-        public DeployTensorRtModelInputModelConfig setSrcModelScopeModelRevision(String srcModelScopeModelRevision) {
+        public DeploySGLangModelInputModelConfig setSrcModelScopeModelRevision(String srcModelScopeModelRevision) {
             this.srcModelScopeModelRevision = srcModelScopeModelRevision;
             return this;
         }
@@ -575,7 +704,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.srcModelScopeModelRevision;
         }
 
-        public DeployTensorRtModelInputModelConfig setSrcModelScopeToken(String srcModelScopeToken) {
+        public DeploySGLangModelInputModelConfig setSrcModelScopeToken(String srcModelScopeToken) {
             this.srcModelScopeToken = srcModelScopeToken;
             return this;
         }
@@ -583,7 +712,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.srcModelScopeToken;
         }
 
-        public DeployTensorRtModelInputModelConfig setSrcOssBucket(String srcOssBucket) {
+        public DeploySGLangModelInputModelConfig setSrcOssBucket(String srcOssBucket) {
             this.srcOssBucket = srcOssBucket;
             return this;
         }
@@ -591,7 +720,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.srcOssBucket;
         }
 
-        public DeployTensorRtModelInputModelConfig setSrcOssPath(String srcOssPath) {
+        public DeploySGLangModelInputModelConfig setSrcOssPath(String srcOssPath) {
             this.srcOssPath = srcOssPath;
             return this;
         }
@@ -599,7 +728,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.srcOssPath;
         }
 
-        public DeployTensorRtModelInputModelConfig setSrcOssRegion(String srcOssRegion) {
+        public DeploySGLangModelInputModelConfig setSrcOssRegion(String srcOssRegion) {
             this.srcOssRegion = srcOssRegion;
             return this;
         }
@@ -607,7 +736,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.srcOssRegion;
         }
 
-        public DeployTensorRtModelInputModelConfig setSyncStrategy(String syncStrategy) {
+        public DeploySGLangModelInputModelConfig setSyncStrategy(String syncStrategy) {
             this.syncStrategy = syncStrategy;
             return this;
         }
@@ -617,7 +746,7 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputNasConfigMountPoints extends TeaModel {
+    public static class DeploySGLangModelInputNasConfigMountPoints extends TeaModel {
         @NameInMap("enableTLS")
         public Boolean enableTLS;
 
@@ -627,12 +756,12 @@ public class DeployTensorRtModelInput extends TeaModel {
         @NameInMap("serverAddr")
         public String serverAddr;
 
-        public static DeployTensorRtModelInputNasConfigMountPoints build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputNasConfigMountPoints self = new DeployTensorRtModelInputNasConfigMountPoints();
+        public static DeploySGLangModelInputNasConfigMountPoints build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputNasConfigMountPoints self = new DeploySGLangModelInputNasConfigMountPoints();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputNasConfigMountPoints setEnableTLS(Boolean enableTLS) {
+        public DeploySGLangModelInputNasConfigMountPoints setEnableTLS(Boolean enableTLS) {
             this.enableTLS = enableTLS;
             return this;
         }
@@ -640,7 +769,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.enableTLS;
         }
 
-        public DeployTensorRtModelInputNasConfigMountPoints setMountDir(String mountDir) {
+        public DeploySGLangModelInputNasConfigMountPoints setMountDir(String mountDir) {
             this.mountDir = mountDir;
             return this;
         }
@@ -648,7 +777,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.mountDir;
         }
 
-        public DeployTensorRtModelInputNasConfigMountPoints setServerAddr(String serverAddr) {
+        public DeploySGLangModelInputNasConfigMountPoints setServerAddr(String serverAddr) {
             this.serverAddr = serverAddr;
             return this;
         }
@@ -658,22 +787,22 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputNasConfig extends TeaModel {
+    public static class DeploySGLangModelInputNasConfig extends TeaModel {
         @NameInMap("groupId")
         public Integer groupId;
 
         @NameInMap("mountPoints")
-        public java.util.List<DeployTensorRtModelInputNasConfigMountPoints> mountPoints;
+        public java.util.List<DeploySGLangModelInputNasConfigMountPoints> mountPoints;
 
         @NameInMap("userId")
         public Integer userId;
 
-        public static DeployTensorRtModelInputNasConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputNasConfig self = new DeployTensorRtModelInputNasConfig();
+        public static DeploySGLangModelInputNasConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputNasConfig self = new DeploySGLangModelInputNasConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputNasConfig setGroupId(Integer groupId) {
+        public DeploySGLangModelInputNasConfig setGroupId(Integer groupId) {
             this.groupId = groupId;
             return this;
         }
@@ -681,15 +810,15 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.groupId;
         }
 
-        public DeployTensorRtModelInputNasConfig setMountPoints(java.util.List<DeployTensorRtModelInputNasConfigMountPoints> mountPoints) {
+        public DeploySGLangModelInputNasConfig setMountPoints(java.util.List<DeploySGLangModelInputNasConfigMountPoints> mountPoints) {
             this.mountPoints = mountPoints;
             return this;
         }
-        public java.util.List<DeployTensorRtModelInputNasConfigMountPoints> getMountPoints() {
+        public java.util.List<DeploySGLangModelInputNasConfigMountPoints> getMountPoints() {
             return this.mountPoints;
         }
 
-        public DeployTensorRtModelInputNasConfig setUserId(Integer userId) {
+        public DeploySGLangModelInputNasConfig setUserId(Integer userId) {
             this.userId = userId;
             return this;
         }
@@ -699,7 +828,7 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputProvisionConfigScheduledActions extends TeaModel {
+    public static class DeploySGLangModelInputProvisionConfigScheduledActions extends TeaModel {
         @NameInMap("endTime")
         public String endTime;
 
@@ -718,12 +847,12 @@ public class DeployTensorRtModelInput extends TeaModel {
         @NameInMap("timeZone")
         public String timeZone;
 
-        public static DeployTensorRtModelInputProvisionConfigScheduledActions build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputProvisionConfigScheduledActions self = new DeployTensorRtModelInputProvisionConfigScheduledActions();
+        public static DeploySGLangModelInputProvisionConfigScheduledActions build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputProvisionConfigScheduledActions self = new DeploySGLangModelInputProvisionConfigScheduledActions();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputProvisionConfigScheduledActions setEndTime(String endTime) {
+        public DeploySGLangModelInputProvisionConfigScheduledActions setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
         }
@@ -731,7 +860,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.endTime;
         }
 
-        public DeployTensorRtModelInputProvisionConfigScheduledActions setName(String name) {
+        public DeploySGLangModelInputProvisionConfigScheduledActions setName(String name) {
             this.name = name;
             return this;
         }
@@ -739,7 +868,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.name;
         }
 
-        public DeployTensorRtModelInputProvisionConfigScheduledActions setScheduleExpression(String scheduleExpression) {
+        public DeploySGLangModelInputProvisionConfigScheduledActions setScheduleExpression(String scheduleExpression) {
             this.scheduleExpression = scheduleExpression;
             return this;
         }
@@ -747,7 +876,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.scheduleExpression;
         }
 
-        public DeployTensorRtModelInputProvisionConfigScheduledActions setStartTime(String startTime) {
+        public DeploySGLangModelInputProvisionConfigScheduledActions setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
@@ -755,7 +884,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.startTime;
         }
 
-        public DeployTensorRtModelInputProvisionConfigScheduledActions setTarget(Integer target) {
+        public DeploySGLangModelInputProvisionConfigScheduledActions setTarget(Integer target) {
             this.target = target;
             return this;
         }
@@ -763,7 +892,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.target;
         }
 
-        public DeployTensorRtModelInputProvisionConfigScheduledActions setTimeZone(String timeZone) {
+        public DeploySGLangModelInputProvisionConfigScheduledActions setTimeZone(String timeZone) {
             this.timeZone = timeZone;
             return this;
         }
@@ -773,22 +902,22 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputProvisionConfig extends TeaModel {
+    public static class DeploySGLangModelInputProvisionConfig extends TeaModel {
         @NameInMap("alwaysAllocateGPU")
         public Boolean alwaysAllocateGPU;
 
         @NameInMap("scheduledActions")
-        public java.util.List<DeployTensorRtModelInputProvisionConfigScheduledActions> scheduledActions;
+        public java.util.List<DeploySGLangModelInputProvisionConfigScheduledActions> scheduledActions;
 
         @NameInMap("target")
         public Integer target;
 
-        public static DeployTensorRtModelInputProvisionConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputProvisionConfig self = new DeployTensorRtModelInputProvisionConfig();
+        public static DeploySGLangModelInputProvisionConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputProvisionConfig self = new DeploySGLangModelInputProvisionConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputProvisionConfig setAlwaysAllocateGPU(Boolean alwaysAllocateGPU) {
+        public DeploySGLangModelInputProvisionConfig setAlwaysAllocateGPU(Boolean alwaysAllocateGPU) {
             this.alwaysAllocateGPU = alwaysAllocateGPU;
             return this;
         }
@@ -796,15 +925,15 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.alwaysAllocateGPU;
         }
 
-        public DeployTensorRtModelInputProvisionConfig setScheduledActions(java.util.List<DeployTensorRtModelInputProvisionConfigScheduledActions> scheduledActions) {
+        public DeploySGLangModelInputProvisionConfig setScheduledActions(java.util.List<DeploySGLangModelInputProvisionConfigScheduledActions> scheduledActions) {
             this.scheduledActions = scheduledActions;
             return this;
         }
-        public java.util.List<DeployTensorRtModelInputProvisionConfigScheduledActions> getScheduledActions() {
+        public java.util.List<DeploySGLangModelInputProvisionConfigScheduledActions> getScheduledActions() {
             return this.scheduledActions;
         }
 
-        public DeployTensorRtModelInputProvisionConfig setTarget(Integer target) {
+        public DeploySGLangModelInputProvisionConfig setTarget(Integer target) {
             this.target = target;
             return this;
         }
@@ -814,7 +943,7 @@ public class DeployTensorRtModelInput extends TeaModel {
 
     }
 
-    public static class DeployTensorRtModelInputVpcConfig extends TeaModel {
+    public static class DeploySGLangModelInputVpcConfig extends TeaModel {
         @NameInMap("securityGroupId")
         public String securityGroupId;
 
@@ -824,12 +953,12 @@ public class DeployTensorRtModelInput extends TeaModel {
         @NameInMap("vpcId")
         public String vpcId;
 
-        public static DeployTensorRtModelInputVpcConfig build(java.util.Map<String, ?> map) throws Exception {
-            DeployTensorRtModelInputVpcConfig self = new DeployTensorRtModelInputVpcConfig();
+        public static DeploySGLangModelInputVpcConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputVpcConfig self = new DeploySGLangModelInputVpcConfig();
             return TeaModel.build(map, self);
         }
 
-        public DeployTensorRtModelInputVpcConfig setSecurityGroupId(String securityGroupId) {
+        public DeploySGLangModelInputVpcConfig setSecurityGroupId(String securityGroupId) {
             this.securityGroupId = securityGroupId;
             return this;
         }
@@ -837,7 +966,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.securityGroupId;
         }
 
-        public DeployTensorRtModelInputVpcConfig setVSwitchIds(java.util.List<String> vSwitchIds) {
+        public DeploySGLangModelInputVpcConfig setVSwitchIds(java.util.List<String> vSwitchIds) {
             this.vSwitchIds = vSwitchIds;
             return this;
         }
@@ -845,7 +974,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this.vSwitchIds;
         }
 
-        public DeployTensorRtModelInputVpcConfig setVpcId(String vpcId) {
+        public DeploySGLangModelInputVpcConfig setVpcId(String vpcId) {
             this.vpcId = vpcId;
             return this;
         }

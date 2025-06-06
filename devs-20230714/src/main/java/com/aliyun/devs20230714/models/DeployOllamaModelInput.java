@@ -343,6 +343,9 @@ public class DeployOllamaModelInput extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("disableURLInternet")
+        public Boolean disableURLInternet;
+
         @NameInMap("dsableURLInternet")
         public Boolean dsableURLInternet;
 
@@ -360,6 +363,14 @@ public class DeployOllamaModelInput extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public DeployOllamaModelInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+            this.disableURLInternet = disableURLInternet;
+            return this;
+        }
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
         }
 
         public DeployOllamaModelInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
@@ -794,6 +805,9 @@ public class DeployOllamaModelInput extends TeaModel {
         @NameInMap("srcOssRegion")
         public String srcOssRegion;
 
+        @NameInMap("syncStrategy")
+        public String syncStrategy;
+
         public static DeployOllamaModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployOllamaModelInputModelConfig self = new DeployOllamaModelInputModelConfig();
             return TeaModel.build(map, self);
@@ -885,6 +899,14 @@ public class DeployOllamaModelInput extends TeaModel {
         }
         public String getSrcOssRegion() {
             return this.srcOssRegion;
+        }
+
+        public DeployOllamaModelInputModelConfig setSyncStrategy(String syncStrategy) {
+            this.syncStrategy = syncStrategy;
+            return this;
+        }
+        public String getSyncStrategy() {
+            return this.syncStrategy;
         }
 
     }

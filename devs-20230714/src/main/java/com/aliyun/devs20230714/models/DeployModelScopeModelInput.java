@@ -343,6 +343,9 @@ public class DeployModelScopeModelInput extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("disableURLInternet")
+        public Boolean disableURLInternet;
+
         @NameInMap("dsableURLInternet")
         public Boolean dsableURLInternet;
 
@@ -360,6 +363,14 @@ public class DeployModelScopeModelInput extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public DeployModelScopeModelInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+            this.disableURLInternet = disableURLInternet;
+            return this;
+        }
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
         }
 
         public DeployModelScopeModelInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
@@ -508,6 +519,9 @@ public class DeployModelScopeModelInput extends TeaModel {
         @NameInMap("srcOssRegion")
         public String srcOssRegion;
 
+        @NameInMap("syncStrategy")
+        public String syncStrategy;
+
         public static DeployModelScopeModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployModelScopeModelInputModelConfig self = new DeployModelScopeModelInputModelConfig();
             return TeaModel.build(map, self);
@@ -591,6 +605,14 @@ public class DeployModelScopeModelInput extends TeaModel {
         }
         public String getSrcOssRegion() {
             return this.srcOssRegion;
+        }
+
+        public DeployModelScopeModelInputModelConfig setSyncStrategy(String syncStrategy) {
+            this.syncStrategy = syncStrategy;
+            return this;
+        }
+        public String getSyncStrategy() {
+            return this.syncStrategy;
         }
 
     }

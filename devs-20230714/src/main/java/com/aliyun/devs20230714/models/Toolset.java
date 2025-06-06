@@ -37,6 +37,9 @@ public class Toolset extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    @NameInMap("spec")
+    public ToolsetSpec spec;
+
     @NameInMap("status")
     public ToolsetStatus status;
 
@@ -90,6 +93,14 @@ public class Toolset extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public Toolset setSpec(ToolsetSpec spec) {
+        this.spec = spec;
+        return this;
+    }
+    public ToolsetSpec getSpec() {
+        return this.spec;
     }
 
     public Toolset setStatus(ToolsetStatus status) {

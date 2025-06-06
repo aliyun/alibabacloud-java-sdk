@@ -343,6 +343,9 @@ public class DeployVllmModelInput extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("disableURLInternet")
+        public Boolean disableURLInternet;
+
         @NameInMap("dsableURLInternet")
         public Boolean dsableURLInternet;
 
@@ -360,6 +363,14 @@ public class DeployVllmModelInput extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public DeployVllmModelInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+            this.disableURLInternet = disableURLInternet;
+            return this;
+        }
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
         }
 
         public DeployVllmModelInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
@@ -651,6 +662,9 @@ public class DeployVllmModelInput extends TeaModel {
         @NameInMap("srcOssRegion")
         public String srcOssRegion;
 
+        @NameInMap("syncStrategy")
+        public String syncStrategy;
+
         public static DeployVllmModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployVllmModelInputModelConfig self = new DeployVllmModelInputModelConfig();
             return TeaModel.build(map, self);
@@ -742,6 +756,14 @@ public class DeployVllmModelInput extends TeaModel {
         }
         public String getSrcOssRegion() {
             return this.srcOssRegion;
+        }
+
+        public DeployVllmModelInputModelConfig setSyncStrategy(String syncStrategy) {
+            this.syncStrategy = syncStrategy;
+            return this;
+        }
+        public String getSyncStrategy() {
+            return this.syncStrategy;
         }
 
     }

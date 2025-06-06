@@ -343,6 +343,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("disableURLInternet")
+        public Boolean disableURLInternet;
+
         @NameInMap("dsableURLInternet")
         public Boolean dsableURLInternet;
 
@@ -360,6 +363,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public DeployHuggingFaceModelInputHttpTriggerTriggerConfig setDisableURLInternet(Boolean disableURLInternet) {
+            this.disableURLInternet = disableURLInternet;
+            return this;
+        }
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
         }
 
         public DeployHuggingFaceModelInputHttpTriggerTriggerConfig setDsableURLInternet(Boolean dsableURLInternet) {
@@ -541,6 +552,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         @NameInMap("srcOssRegion")
         public String srcOssRegion;
 
+        @NameInMap("syncStrategy")
+        public String syncStrategy;
+
         public static DeployHuggingFaceModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployHuggingFaceModelInputModelConfig self = new DeployHuggingFaceModelInputModelConfig();
             return TeaModel.build(map, self);
@@ -632,6 +646,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         }
         public String getSrcOssRegion() {
             return this.srcOssRegion;
+        }
+
+        public DeployHuggingFaceModelInputModelConfig setSyncStrategy(String syncStrategy) {
+            this.syncStrategy = syncStrategy;
+            return this;
+        }
+        public String getSyncStrategy() {
+            return this.syncStrategy;
         }
 
     }
