@@ -2186,6 +2186,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>手机二要素核验</p>
+     * 
+     * @param request Mobile2MetaVerifyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Mobile2MetaVerifyResponse
+     */
+    public Mobile2MetaVerifyResponse mobile2MetaVerifyWithOptions(Mobile2MetaVerifyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            body.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Mobile2MetaVerify"),
+            new TeaPair("version", "2019-03-07"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Mobile2MetaVerifyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手机二要素核验</p>
+     * 
+     * @param request Mobile2MetaVerifyRequest
+     * @return Mobile2MetaVerifyResponse
+     */
+    public Mobile2MetaVerifyResponse mobile2MetaVerify(Mobile2MetaVerifyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.mobile2MetaVerifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>手机号三要素详版_标准版</p>
      * 
      * @param request Mobile3MetaDetailStandardVerifyRequest
