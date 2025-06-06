@@ -43,6 +43,9 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    @NameInMap("IsClientEmbed")
+    public Boolean isClientEmbed;
+
     /**
      * <p>The watermark parameter for videos that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
      * <ul>
@@ -135,6 +138,14 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public CreateWmExtractTaskRequest setIsClientEmbed(Boolean isClientEmbed) {
+        this.isClientEmbed = isClientEmbed;
+        return this;
+    }
+    public Boolean getIsClientEmbed() {
+        return this.isClientEmbed;
     }
 
     public CreateWmExtractTaskRequest setVideoIsLong(Boolean videoIsLong) {

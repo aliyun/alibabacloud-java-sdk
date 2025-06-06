@@ -430,6 +430,59 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建加速对象</p>
+     * 
+     * @param request CreateEnterpriseAccelerateTargetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEnterpriseAccelerateTargetResponse
+     */
+    public CreateEnterpriseAccelerateTargetResponse createEnterpriseAccelerateTargetWithOptions(CreateEnterpriseAccelerateTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            bodyFlat.put("Target", request.target);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEnterpriseAccelerateTarget"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEnterpriseAccelerateTargetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建加速对象</p>
+     * 
+     * @param request CreateEnterpriseAccelerateTargetRequest
+     * @return CreateEnterpriseAccelerateTargetResponse
+     */
+    public CreateEnterpriseAccelerateTargetResponse createEnterpriseAccelerateTarget(CreateEnterpriseAccelerateTargetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEnterpriseAccelerateTargetWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建自定义身份源部门</p>
      * 
      * @param request CreateIdpDepartmentRequest
@@ -1075,6 +1128,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CsvControl", request.csvControlShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isClientEmbed)) {
+            query.put("IsClientEmbed", request.isClientEmbed);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.documentIsCapture)) {
             body.put("DocumentIsCapture", request.documentIsCapture);
@@ -1321,6 +1378,103 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDynamicRouteResponse deleteDynamicRoute(DeleteDynamicRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteDynamicRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除加速策略</p>
+     * 
+     * @param request DeleteEnterpriseAcceleratePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEnterpriseAcceleratePolicyResponse
+     */
+    public DeleteEnterpriseAcceleratePolicyResponse deleteEnterpriseAcceleratePolicyWithOptions(DeleteEnterpriseAcceleratePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEnterpriseAcceleratePolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEnterpriseAcceleratePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除加速策略</p>
+     * 
+     * @param request DeleteEnterpriseAcceleratePolicyRequest
+     * @return DeleteEnterpriseAcceleratePolicyResponse
+     */
+    public DeleteEnterpriseAcceleratePolicyResponse deleteEnterpriseAcceleratePolicy(DeleteEnterpriseAcceleratePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEnterpriseAcceleratePolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除加速对象</p>
+     * 
+     * @param request DeleteEnterpriseAccelerateTargetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteEnterpriseAccelerateTargetResponse
+     */
+    public DeleteEnterpriseAccelerateTargetResponse deleteEnterpriseAccelerateTargetWithOptions(DeleteEnterpriseAccelerateTargetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.target)) {
+            bodyFlat.put("Target", request.target);
+        }
+
+        body = TeaConverter.merge(Object.class,
+            body,
+            com.aliyun.openapiutil.Client.query(bodyFlat)
+        );
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteEnterpriseAccelerateTarget"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteEnterpriseAccelerateTargetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除加速对象</p>
+     * 
+     * @param request DeleteEnterpriseAccelerateTargetRequest
+     * @return DeleteEnterpriseAccelerateTargetResponse
+     */
+    public DeleteEnterpriseAccelerateTargetResponse deleteEnterpriseAccelerateTarget(DeleteEnterpriseAccelerateTargetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteEnterpriseAccelerateTargetWithOptions(request, runtime);
     }
 
     /**
@@ -1793,6 +1947,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DetachPolicy2ApprovalProcessResponse detachPolicy2ApprovalProcess(DetachPolicy2ApprovalProcessRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detachPolicy2ApprovalProcessWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用加速策略</p>
+     * 
+     * @param request DisableEnterpriseAcceleratePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableEnterpriseAcceleratePolicyResponse
+     */
+    public DisableEnterpriseAcceleratePolicyResponse disableEnterpriseAcceleratePolicyWithOptions(DisableEnterpriseAcceleratePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableEnterpriseAcceleratePolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableEnterpriseAcceleratePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>禁用加速策略</p>
+     * 
+     * @param request DisableEnterpriseAcceleratePolicyRequest
+     * @return DisableEnterpriseAcceleratePolicyResponse
+     */
+    public DisableEnterpriseAcceleratePolicyResponse disableEnterpriseAcceleratePolicy(DisableEnterpriseAcceleratePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.disableEnterpriseAcceleratePolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用加速策略</p>
+     * 
+     * @param request EnableEnterpriseAcceleratePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableEnterpriseAcceleratePolicyResponse
+     */
+    public EnableEnterpriseAcceleratePolicyResponse enableEnterpriseAcceleratePolicyWithOptions(EnableEnterpriseAcceleratePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableEnterpriseAcceleratePolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableEnterpriseAcceleratePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启用加速策略</p>
+     * 
+     * @param request EnableEnterpriseAcceleratePolicyRequest
+     * @return EnableEnterpriseAcceleratePolicyResponse
+     */
+    public EnableEnterpriseAcceleratePolicyResponse enableEnterpriseAcceleratePolicy(EnableEnterpriseAcceleratePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableEnterpriseAcceleratePolicyWithOptions(request, runtime);
     }
 
     /**
@@ -2490,6 +2732,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>批量导入加速对象异步任务</p>
+     * 
+     * @param request ImportEnterpriseAccelerateTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportEnterpriseAccelerateTargetsResponse
+     */
+    public ImportEnterpriseAccelerateTargetsResponse importEnterpriseAccelerateTargetsWithOptions(ImportEnterpriseAccelerateTargetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportEnterpriseAccelerateTargets"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportEnterpriseAccelerateTargetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量导入加速对象异步任务</p>
+     * 
+     * @param request ImportEnterpriseAccelerateTargetsRequest
+     * @return ImportEnterpriseAccelerateTargetsResponse
+     */
+    public ImportEnterpriseAccelerateTargetsResponse importEnterpriseAccelerateTargets(ImportEnterpriseAccelerateTargetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importEnterpriseAccelerateTargetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>批量查询内网访问策略的应用</p>
      * 
      * @param request ListApplicationsForPrivateAccessPolicyRequest
@@ -2850,7 +3140,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态策略处置流程</p>
+     * <p>Batch Query Dynamic Policy Disposal Processes</p>
      * 
      * @param request ListDynamicDisposalProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2878,7 +3168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>批量查询动态策略处置流程</p>
+     * <p>Batch Query Dynamic Policy Disposal Processes</p>
      * 
      * @param request ListDynamicDisposalProcessesRequest
      * @return ListDynamicDisposalProcessesResponse
@@ -2960,6 +3250,126 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListDynamicRoutesResponse listDynamicRoutes(ListDynamicRoutesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listDynamicRoutesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询加速策略日志列表</p>
+     * 
+     * @param request ListEnterpriseAccelerateLogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnterpriseAccelerateLogsResponse
+     */
+    public ListEnterpriseAccelerateLogsResponse listEnterpriseAccelerateLogsWithOptions(ListEnterpriseAccelerateLogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnterpriseAccelerateLogs"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnterpriseAccelerateLogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询加速策略日志列表</p>
+     * 
+     * @param request ListEnterpriseAccelerateLogsRequest
+     * @return ListEnterpriseAccelerateLogsResponse
+     */
+    public ListEnterpriseAccelerateLogsResponse listEnterpriseAccelerateLogs(ListEnterpriseAccelerateLogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnterpriseAccelerateLogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询加速策略列表</p>
+     * 
+     * @param request ListEnterpriseAcceleratePoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnterpriseAcceleratePoliciesResponse
+     */
+    public ListEnterpriseAcceleratePoliciesResponse listEnterpriseAcceleratePoliciesWithOptions(ListEnterpriseAcceleratePoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnterpriseAcceleratePolicies"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnterpriseAcceleratePoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询加速策略列表</p>
+     * 
+     * @param request ListEnterpriseAcceleratePoliciesRequest
+     * @return ListEnterpriseAcceleratePoliciesResponse
+     */
+    public ListEnterpriseAcceleratePoliciesResponse listEnterpriseAcceleratePolicies(ListEnterpriseAcceleratePoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnterpriseAcceleratePoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询加速对象列表</p>
+     * 
+     * @param request ListEnterpriseAccelerateTargetsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEnterpriseAccelerateTargetsResponse
+     */
+    public ListEnterpriseAccelerateTargetsResponse listEnterpriseAccelerateTargetsWithOptions(ListEnterpriseAccelerateTargetsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEnterpriseAccelerateTargets"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEnterpriseAccelerateTargetsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询加速对象列表</p>
+     * 
+     * @param request ListEnterpriseAccelerateTargetsRequest
+     * @return ListEnterpriseAccelerateTargetsResponse
+     */
+    public ListEnterpriseAccelerateTargetsResponse listEnterpriseAccelerateTargets(ListEnterpriseAccelerateTargetsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listEnterpriseAccelerateTargetsWithOptions(request, runtime);
     }
 
     /**
@@ -4072,6 +4482,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LookupWmInfoMappingResponse lookupWmInfoMapping(LookupWmInfoMappingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.lookupWmInfoMappingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改加速策略</p>
+     * 
+     * @param request ModifyEnterpriseAcceleratePolicyRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyEnterpriseAcceleratePolicyResponse
+     */
+    public ModifyEnterpriseAcceleratePolicyResponse modifyEnterpriseAcceleratePolicyWithOptions(ModifyEnterpriseAcceleratePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accelerationType)) {
+            body.put("AccelerationType", request.accelerationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eapId)) {
+            body.put("EapId", request.eapId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.onTls)) {
+            body.put("OnTls", request.onTls);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.priority)) {
+            body.put("Priority", request.priority);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showInClient)) {
+            body.put("ShowInClient", request.showInClient);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamHost)) {
+            body.put("UpstreamHost", request.upstreamHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamPort)) {
+            body.put("UpstreamPort", request.upstreamPort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamType)) {
+            body.put("UpstreamType", request.upstreamType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAttributeGroup)) {
+            body.put("UserAttributeGroup", request.userAttributeGroup);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyEnterpriseAcceleratePolicy"),
+            new TeaPair("version", "2023-01-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyEnterpriseAcceleratePolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改加速策略</p>
+     * 
+     * @param request ModifyEnterpriseAcceleratePolicyRequest
+     * @return ModifyEnterpriseAcceleratePolicyResponse
+     */
+    public ModifyEnterpriseAcceleratePolicyResponse modifyEnterpriseAcceleratePolicy(ModifyEnterpriseAcceleratePolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyEnterpriseAcceleratePolicyWithOptions(request, runtime);
     }
 
     /**

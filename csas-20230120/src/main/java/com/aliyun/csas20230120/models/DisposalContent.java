@@ -24,6 +24,9 @@ public class DisposalContent extends TeaModel {
     @NameInMap("AlertTitleEn")
     public String alertTitleEn;
 
+    @NameInMap("NacDemotionPolicyIds")
+    public java.util.List<String> nacDemotionPolicyIds;
+
     @NameInMap("NoticeContent")
     public String noticeContent;
 
@@ -77,6 +80,14 @@ public class DisposalContent extends TeaModel {
     }
     public String getAlertTitleEn() {
         return this.alertTitleEn;
+    }
+
+    public DisposalContent setNacDemotionPolicyIds(java.util.List<String> nacDemotionPolicyIds) {
+        this.nacDemotionPolicyIds = nacDemotionPolicyIds;
+        return this;
+    }
+    public java.util.List<String> getNacDemotionPolicyIds() {
+        return this.nacDemotionPolicyIds;
     }
 
     public DisposalContent setNoticeContent(String noticeContent) {

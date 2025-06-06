@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDynamicDisposalProcessesRequest extends TeaModel {
     /**
+     * <p>The page number to display in the paginated query. Range: 1~10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,10 +14,23 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Long currentPage;
 
+    /**
+     * <p>Terminal device ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E7798391-2554-FE83-E0B7-045DDED629A8</p>
+     */
     @NameInMap("DevTag")
     public String devTag;
 
     /**
+     * <p>Disposal action.</p>
+     * <ul>
+     * <li><strong>ztna_connect</strong>: Prohibit connection to the zero-trust intranet.</li>
+     * <li><strong>nac_connect</strong>: Prohibit connection to the office network access.</li>
+     * <li><strong>none</strong>: No disposal action.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>none</p>
      */
@@ -24,6 +38,8 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public String disposalAction;
 
     /**
+     * <p>Disposal process ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dp-xxxxxxxx</p>
      */
@@ -31,6 +47,8 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public String disposalProcessId;
 
     /**
+     * <p>The end time for querying dynamic disposal processes. Format: Unix timestamp (in seconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>1743143296</p>
      */
@@ -38,6 +56,7 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The number of items per page in the paginated query. Range: 1~1000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +66,13 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Recovery type.</p>
+     * <ul>
+     * <li><strong>auto</strong>: Automatic recovery.</li>
+     * <li><strong>console</strong>: Console recovery.</li>
+     * <li><strong>auth</strong>: Recovery by authentication and reporting.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>auto</p>
      */
@@ -54,6 +80,8 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public String recoveryType;
 
     /**
+     * <p>The start time for querying dynamic disposal processes. Format: Unix timestamp (in seconds).</p>
+     * 
      * <strong>example:</strong>
      * <p>1743143296</p>
      */
@@ -61,6 +89,13 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>Disposal status. Values:</p>
+     * <ul>
+     * <li><strong>disposal</strong>: In the disposal state.</li>
+     * <li><strong>finished</strong>: Already automatically recovered.</li>
+     * <li><strong>recovery</strong>: Recovered by authentication and reporting or console recovery.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>disposal</p>
      */
@@ -68,6 +103,8 @@ public class ListDynamicDisposalProcessesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>Username.</p>
+     * 
      * <strong>example:</strong>
      * <p>xiaoming</p>
      */

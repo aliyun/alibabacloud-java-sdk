@@ -1,3 +1,17 @@
+2025-06-06 Version: 1.14.0
+- Support API CreateEnterpriseAccelerateTarget.
+- Support API DeleteEnterpriseAcceleratePolicy.
+- Support API DeleteEnterpriseAccelerateTarget.
+- Support API DisableEnterpriseAcceleratePolicy.
+- Support API EnableEnterpriseAcceleratePolicy.
+- Support API ImportEnterpriseAccelerateTargets.
+- Support API ListEnterpriseAccelerateLogs.
+- Support API ListEnterpriseAcceleratePolicies.
+- Support API ListEnterpriseAccelerateTargets.
+- Support API ModifyEnterpriseAcceleratePolicy.
+- Update API CreateWmExtractTask: add request parameters IsClientEmbed.
+
+
 2025-06-01 Version: 1.13.0
 - Support API CreateEnterpriseAcceleratePolicy.
 - Support API DeleteOtpConfig.

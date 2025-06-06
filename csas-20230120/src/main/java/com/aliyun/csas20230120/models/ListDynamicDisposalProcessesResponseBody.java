@@ -4,10 +4,15 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
+    /**
+     * <p>List of disposal processes.</p>
+     */
     @NameInMap("DisposalProcesses")
     public java.util.List<ListDynamicDisposalProcessesResponseBodyDisposalProcesses> disposalProcesses;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
      */
@@ -15,6 +20,8 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of dynamic disposal processes.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -51,27 +58,83 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
     }
 
     public static class ListDynamicDisposalProcessesResponseBodyDisposalProcessesDeviceBasicInfo extends TeaModel {
+        /**
+         * <p>CPU model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz</p>
+         */
         @NameInMap("Cpu")
         public String cpu;
 
+        /**
+         * <p>Device ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A84D0AF0-1ACC-02B8-6A07-FC898F71BE09</p>
+         */
         @NameInMap("DevTag")
         public String devTag;
 
+        /**
+         * <p>Device operating system type. Values:</p>
+         * <ul>
+         * <li><strong>Windows</strong>：Windows system.</li>
+         * <li><strong>macOS</strong>：macOS system.</li>
+         * <li><strong>Linux</strong>：Linux system.</li>
+         * <li><strong>Android</strong>：Android system.</li>
+         * <li><strong>iOS</strong>：iOS system.</li>
+         * <li><strong>Windows_Wuying</strong>：Wuying cloud desktop system.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>windows</p>
+         */
         @NameInMap("DevType")
         public String devType;
 
+        /**
+         * <p>Device disk model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KXG6AZNV512G TOSHIBA</p>
+         */
         @NameInMap("Disk")
         public String disk;
 
+        /**
+         * <p>Device name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DESKTOP-ERLV3AK</p>
+         */
         @NameInMap("Hostname")
         public String hostname;
 
+        /**
+         * <p>Device MAC address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE:3B:<strong>:</strong>:FD:FB</p>
+         */
         @NameInMap("Mac")
         public String mac;
 
+        /**
+         * <p>Device memory capacity. Unit: GB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Memory")
         public String memory;
 
+        /**
+         * <p>Operating system version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("OsVersion")
         public String osVersion;
 
@@ -147,39 +210,122 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
     }
 
     public static class ListDynamicDisposalProcessesResponseBodyDisposalProcessesDeviceStatusInfo extends TeaModel {
+        /**
+         * <p>Client version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.5.1</p>
+         */
         @NameInMap("AppVersion")
         public String appVersion;
 
+        /**
+         * <p>Department to which the user belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT运维部</p>
+         */
         @NameInMap("Department")
         public String department;
 
+        /**
+         * <p>Office data protection status. Values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Not configured.</li>
+         * <li><strong>Unauthorized</strong>: Unauthorized.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("DlpStatus")
         public String dlpStatus;
 
+        /**
+         * <p>Public IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120.26.XX.XX</p>
+         */
         @NameInMap("InternetIp")
         public String internetIp;
 
+        /**
+         * <p>Internet behavior management enablement status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("LaStatus")
         public String laStatus;
 
+        /**
+         * <p>Login status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("LoginStatus")
         public String loginStatus;
 
+        /**
+         * <p>Network access control status. Values:</p>
+         * <ul>
+         * <li><strong>Enabled</strong>: Enabled.</li>
+         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Unprovisioned</strong>: Not configured.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("NacStatus")
         public String nacStatus;
 
+        /**
+         * <p>Private IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.20.XX.XX</p>
+         */
         @NameInMap("PrivateIp")
         public String privateIp;
 
+        /**
+         * <p>Unique ID of the SASE user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>su_dfsdfsdgasgsgag</p>
+         */
         @NameInMap("SaseUserId")
         public String saseUserId;
 
+        /**
+         * <p>Username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <p>Identified office area name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>office</p>
+         */
         @NameInMap("Workshop")
         public String workshop;
 
+        /**
+         * <p>ZTNA enablement status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("ZtnaStatus")
         public String ztnaStatus;
 
@@ -287,26 +433,45 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
     }
 
     public static class ListDynamicDisposalProcessesResponseBodyDisposalProcesses extends TeaModel {
+        /**
+         * <p>User\&quot;s department.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IT</p>
+         */
         @NameInMap("Department")
         public String department;
 
         /**
+         * <p>Device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>FD7554AD-4CDE-6359-6B49-4FE950606C2C</p>
          */
         @NameInMap("DevTag")
         public String devTag;
 
+        /**
+         * <p>Basic device information.</p>
+         */
         @NameInMap("DeviceBasicInfo")
         public ListDynamicDisposalProcessesResponseBodyDisposalProcessesDeviceBasicInfo deviceBasicInfo;
 
+        /**
+         * <p>设备状态信息。</p>
+         */
         @NameInMap("DeviceStatusInfo")
         public ListDynamicDisposalProcessesResponseBodyDisposalProcessesDeviceStatusInfo deviceStatusInfo;
 
+        /**
+         * <p>List of disposal actions.</p>
+         */
         @NameInMap("DisposalActions")
         public java.util.List<String> disposalActions;
 
         /**
+         * <p>Disposal process ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dp-xxxxxxxx</p>
          */
@@ -314,6 +479,8 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public String disposalProcessId;
 
         /**
+         * <p>Disposal time, in seconds since the epoch.</p>
+         * 
          * <strong>example:</strong>
          * <p>1743059249</p>
          */
@@ -321,16 +488,26 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public String disposalTime;
 
         /**
+         * <p>Dynamic policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>dynamic-policy-xxxxxxxx</p>
          */
         @NameInMap("DynamicPolicyId")
         public String dynamicPolicyId;
 
+        /**
+         * <p>Dynamic policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>动态策略1</p>
+         */
         @NameInMap("DynamicPolicyName")
         public String dynamicPolicyName;
 
         /**
+         * <p>Terminal device name. Length: 1~128 characters, supporting Chinese and uppercase/lowercase English letters, and can include numbers, half-width periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), slashes (/), at (@) symbols, and spaces. Entering an underscore (</em>) alone will additionally query all terminal devices with 4-byte UTF-8 characters in their names.</p>
+         * 
          * <strong>example:</strong>
          * <p>WANGCHENCHENNBB</p>
          */
@@ -338,6 +515,13 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public String hostname;
 
         /**
+         * <p>Recovery type.</p>
+         * <ul>
+         * <li><strong>auto</strong>：Automatic recovery.</li>
+         * <li><strong>console</strong>：Console recovery.</li>
+         * <li><strong>auth</strong>：Certification and reporting recovery.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>auto</p>
          */
@@ -345,6 +529,8 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public String recoveryType;
 
         /**
+         * <p>Rule content.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;Combinator&quot;: &quot;OR&quot;,
@@ -366,6 +552,8 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public Object ruleContent;
 
         /**
+         * <p>SASE用户ID。</p>
+         * 
          * <strong>example:</strong>
          * <p>asdqwedg-xzczvzdaf-asfafs</p>
          */
@@ -373,6 +561,13 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public String saseUserId;
 
         /**
+         * <p>Disposal status. Values:</p>
+         * <ul>
+         * <li><strong>disposal</strong>: In the disposal state.</li>
+         * <li><strong>finished</strong>: Already automatically recovered.</li>
+         * <li><strong>recovery</strong>: Recovered by authentication and reporting or console recovery.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>disposal</p>
          */
@@ -380,6 +575,8 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Username.</p>
+         * 
          * <strong>example:</strong>
          * <p>xiaoming</p>
          */
