@@ -28,6 +28,9 @@ public class HttpRoute extends TeaModel {
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    @NameInMap("mcpServerInfo")
+    public HttpRouteMcpServerInfo mcpServerInfo;
+
     @NameInMap("name")
     public String name;
 
@@ -104,6 +107,14 @@ public class HttpRoute extends TeaModel {
     }
     public HttpRouteMatch getMatch() {
         return this.match;
+    }
+
+    public HttpRoute setMcpServerInfo(HttpRouteMcpServerInfo mcpServerInfo) {
+        this.mcpServerInfo = mcpServerInfo;
+        return this;
+    }
+    public HttpRouteMcpServerInfo getMcpServerInfo() {
+        return this.mcpServerInfo;
     }
 
     public HttpRoute setName(String name) {
@@ -316,6 +327,110 @@ public class HttpRoute extends TeaModel {
         }
         public java.util.List<HttpRouteEnvironmentInfoSubDomains> getSubDomains() {
             return this.subDomains;
+        }
+
+    }
+
+    public static class HttpRouteMcpServerInfoMcpRouteConfig extends TeaModel {
+        @NameInMap("exposedUriPath")
+        public String exposedUriPath;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static HttpRouteMcpServerInfoMcpRouteConfig build(java.util.Map<String, ?> map) throws Exception {
+            HttpRouteMcpServerInfoMcpRouteConfig self = new HttpRouteMcpServerInfoMcpRouteConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpRouteMcpServerInfoMcpRouteConfig setExposedUriPath(String exposedUriPath) {
+            this.exposedUriPath = exposedUriPath;
+            return this;
+        }
+        public String getExposedUriPath() {
+            return this.exposedUriPath;
+        }
+
+        public HttpRouteMcpServerInfoMcpRouteConfig setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
+    public static class HttpRouteMcpServerInfo extends TeaModel {
+        @NameInMap("createFromType")
+        public String createFromType;
+
+        @NameInMap("importInstanceId")
+        public String importInstanceId;
+
+        @NameInMap("importMcpServerId")
+        public String importMcpServerId;
+
+        @NameInMap("importNamespace")
+        public String importNamespace;
+
+        @NameInMap("mcpRouteConfig")
+        public HttpRouteMcpServerInfoMcpRouteConfig mcpRouteConfig;
+
+        @NameInMap("mcpServerConfig")
+        public String mcpServerConfig;
+
+        public static HttpRouteMcpServerInfo build(java.util.Map<String, ?> map) throws Exception {
+            HttpRouteMcpServerInfo self = new HttpRouteMcpServerInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public HttpRouteMcpServerInfo setCreateFromType(String createFromType) {
+            this.createFromType = createFromType;
+            return this;
+        }
+        public String getCreateFromType() {
+            return this.createFromType;
+        }
+
+        public HttpRouteMcpServerInfo setImportInstanceId(String importInstanceId) {
+            this.importInstanceId = importInstanceId;
+            return this;
+        }
+        public String getImportInstanceId() {
+            return this.importInstanceId;
+        }
+
+        public HttpRouteMcpServerInfo setImportMcpServerId(String importMcpServerId) {
+            this.importMcpServerId = importMcpServerId;
+            return this;
+        }
+        public String getImportMcpServerId() {
+            return this.importMcpServerId;
+        }
+
+        public HttpRouteMcpServerInfo setImportNamespace(String importNamespace) {
+            this.importNamespace = importNamespace;
+            return this;
+        }
+        public String getImportNamespace() {
+            return this.importNamespace;
+        }
+
+        public HttpRouteMcpServerInfo setMcpRouteConfig(HttpRouteMcpServerInfoMcpRouteConfig mcpRouteConfig) {
+            this.mcpRouteConfig = mcpRouteConfig;
+            return this;
+        }
+        public HttpRouteMcpServerInfoMcpRouteConfig getMcpRouteConfig() {
+            return this.mcpRouteConfig;
+        }
+
+        public HttpRouteMcpServerInfo setMcpServerConfig(String mcpServerConfig) {
+            this.mcpServerConfig = mcpServerConfig;
+            return this;
+        }
+        public String getMcpServerConfig() {
+            return this.mcpServerConfig;
         }
 
     }
