@@ -106,6 +106,9 @@ public class FilterUsersResponseBody extends TeaModel {
         @NameInMap("OrgName")
         public String orgName;
 
+        @NameInMap("OrgNamePath")
+        public String orgNamePath;
+
         public static FilterUsersResponseBodyUsersOrgList build(java.util.Map<String, ?> map) throws Exception {
             FilterUsersResponseBodyUsersOrgList self = new FilterUsersResponseBodyUsersOrgList();
             return TeaModel.build(map, self);
@@ -125,6 +128,14 @@ public class FilterUsersResponseBody extends TeaModel {
         }
         public String getOrgName() {
             return this.orgName;
+        }
+
+        public FilterUsersResponseBodyUsersOrgList setOrgNamePath(String orgNamePath) {
+            this.orgNamePath = orgNamePath;
+            return this;
+        }
+        public String getOrgNamePath() {
+            return this.orgNamePath;
         }
 
     }

@@ -84,6 +84,9 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     @NameInMap("SolutionId")
     public String solutionId;
 
+    @NameInMap("Status")
+    public Integer status;
+
     public static DescribeUsersShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUsersShrinkRequest self = new DescribeUsersShrinkRequest();
         return TeaModel.build(map, self);
@@ -191,6 +194,14 @@ public class DescribeUsersShrinkRequest extends TeaModel {
     }
     public String getSolutionId() {
         return this.solutionId;
+    }
+
+    public DescribeUsersShrinkRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

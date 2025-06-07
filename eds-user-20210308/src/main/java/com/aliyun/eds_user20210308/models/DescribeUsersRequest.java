@@ -84,6 +84,9 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("SolutionId")
     public String solutionId;
 
+    @NameInMap("Status")
+    public Integer status;
+
     public static DescribeUsersRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUsersRequest self = new DescribeUsersRequest();
         return TeaModel.build(map, self);
@@ -191,6 +194,14 @@ public class DescribeUsersRequest extends TeaModel {
     }
     public String getSolutionId() {
         return this.solutionId;
+    }
+
+    public DescribeUsersRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

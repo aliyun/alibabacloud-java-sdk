@@ -137,6 +137,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("OrgName")
         public String orgName;
 
+        @NameInMap("OrgNamePath")
+        public String orgNamePath;
+
         public static DescribeUsersResponseBodyUsersOrgs build(java.util.Map<String, ?> map) throws Exception {
             DescribeUsersResponseBodyUsersOrgs self = new DescribeUsersResponseBodyUsersOrgs();
             return TeaModel.build(map, self);
@@ -156,6 +159,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getOrgName() {
             return this.orgName;
+        }
+
+        public DescribeUsersResponseBodyUsersOrgs setOrgNamePath(String orgNamePath) {
+            this.orgNamePath = orgNamePath;
+            return this;
+        }
+        public String getOrgNamePath() {
+            return this.orgNamePath;
         }
 
     }
