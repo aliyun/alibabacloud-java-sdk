@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListIngestProcessorsResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The ingest processors that are returned.</p>
+     */
     @NameInMap("processors")
     public java.util.List<IngestProcessor> processors;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

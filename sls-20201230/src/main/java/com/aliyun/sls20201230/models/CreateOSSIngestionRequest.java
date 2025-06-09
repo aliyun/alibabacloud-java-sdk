@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateOSSIngestionRequest extends TeaModel {
     /**
-     * <p>The configurations of the OSS data import job.</p>
+     * <p>The configuration of the OSS data import job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
@@ -18,7 +18,7 @@ public class CreateOSSIngestionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The display name.</p>
+     * <p>The display name of the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("displayName")

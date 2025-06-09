@@ -4,20 +4,20 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class GetAgentInstanceConfigResponseBody extends TeaModel {
+    @NameInMap("attributes")
+    public String attributes;
+
     @NameInMap("config")
     public String config;
 
-    @NameInMap("configMatcher")
-    public String configMatcher;
-
-    @NameInMap("configName")
-    public String configName;
+    @NameInMap("configType")
+    public String configType;
 
     @NameInMap("createTime")
     public Long createTime;
 
-    @NameInMap("isGray")
-    public Boolean isGray;
+    @NameInMap("grayConfigs")
+    public java.util.List<java.util.Map<String, String>> grayConfigs;
 
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
@@ -25,6 +25,14 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     public static GetAgentInstanceConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAgentInstanceConfigResponseBody self = new GetAgentInstanceConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetAgentInstanceConfigResponseBody setAttributes(String attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public String getAttributes() {
+        return this.attributes;
     }
 
     public GetAgentInstanceConfigResponseBody setConfig(String config) {
@@ -35,20 +43,12 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         return this.config;
     }
 
-    public GetAgentInstanceConfigResponseBody setConfigMatcher(String configMatcher) {
-        this.configMatcher = configMatcher;
+    public GetAgentInstanceConfigResponseBody setConfigType(String configType) {
+        this.configType = configType;
         return this;
     }
-    public String getConfigMatcher() {
-        return this.configMatcher;
-    }
-
-    public GetAgentInstanceConfigResponseBody setConfigName(String configName) {
-        this.configName = configName;
-        return this;
-    }
-    public String getConfigName() {
-        return this.configName;
+    public String getConfigType() {
+        return this.configType;
     }
 
     public GetAgentInstanceConfigResponseBody setCreateTime(Long createTime) {
@@ -59,12 +59,12 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetAgentInstanceConfigResponseBody setIsGray(Boolean isGray) {
-        this.isGray = isGray;
+    public GetAgentInstanceConfigResponseBody setGrayConfigs(java.util.List<java.util.Map<String, String>> grayConfigs) {
+        this.grayConfigs = grayConfigs;
         return this;
     }
-    public Boolean getIsGray() {
-        return this.isGray;
+    public java.util.List<java.util.Map<String, String>> getGrayConfigs() {
+        return this.grayConfigs;
     }
 
     public GetAgentInstanceConfigResponseBody setLastModifyTime(Long lastModifyTime) {

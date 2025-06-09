@@ -7,27 +7,35 @@ public class CreateAgentInstanceConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
+    @NameInMap("attributes")
+    public String attributes;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("config")
     public String config;
 
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("configMatcher")
-    public String configMatcher;
+    @NameInMap("configType")
+    public String configType;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
-    @NameInMap("configName")
-    public String configName;
-
-    @NameInMap("isGray")
-    public Boolean isGray;
+    @NameInMap("grayConfigs")
+    public String grayConfigs;
 
     public static CreateAgentInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAgentInstanceConfigRequest self = new CreateAgentInstanceConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAgentInstanceConfigRequest setAttributes(String attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public String getAttributes() {
+        return this.attributes;
     }
 
     public CreateAgentInstanceConfigRequest setConfig(String config) {
@@ -38,28 +46,20 @@ public class CreateAgentInstanceConfigRequest extends TeaModel {
         return this.config;
     }
 
-    public CreateAgentInstanceConfigRequest setConfigMatcher(String configMatcher) {
-        this.configMatcher = configMatcher;
+    public CreateAgentInstanceConfigRequest setConfigType(String configType) {
+        this.configType = configType;
         return this;
     }
-    public String getConfigMatcher() {
-        return this.configMatcher;
+    public String getConfigType() {
+        return this.configType;
     }
 
-    public CreateAgentInstanceConfigRequest setConfigName(String configName) {
-        this.configName = configName;
+    public CreateAgentInstanceConfigRequest setGrayConfigs(String grayConfigs) {
+        this.grayConfigs = grayConfigs;
         return this;
     }
-    public String getConfigName() {
-        return this.configName;
-    }
-
-    public CreateAgentInstanceConfigRequest setIsGray(Boolean isGray) {
-        this.isGray = isGray;
-        return this;
-    }
-    public Boolean getIsGray() {
-        return this.isGray;
+    public String getGrayConfigs() {
+        return this.grayConfigs;
     }
 
 }

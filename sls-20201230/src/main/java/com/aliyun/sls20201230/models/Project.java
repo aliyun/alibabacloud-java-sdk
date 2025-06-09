@@ -38,6 +38,13 @@ public class Project extends TeaModel {
     @NameInMap("quota")
     public java.util.Map<String, ?> quota;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("recycleBinEnabled")
+    public Boolean recycleBinEnabled;
+
     @NameInMap("region")
     public String region;
 
@@ -114,6 +121,14 @@ public class Project extends TeaModel {
     }
     public java.util.Map<String, ?> getQuota() {
         return this.quota;
+    }
+
+    public Project setRecycleBinEnabled(Boolean recycleBinEnabled) {
+        this.recycleBinEnabled = recycleBinEnabled;
+        return this;
+    }
+    public Boolean getRecycleBinEnabled() {
+        return this.recycleBinEnabled;
     }
 
     public Project setRegion(String region) {

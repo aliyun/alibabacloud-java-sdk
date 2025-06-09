@@ -7,21 +7,29 @@ public class UpdateAgentInstanceConfigRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("config")
-    public String config;
+    @NameInMap("attributes")
+    public String attributes;
 
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("configMatcher")
-    public String configMatcher;
+    @NameInMap("config")
+    public String config;
 
-    @NameInMap("isGray")
-    public Boolean isGray;
+    @NameInMap("grayConfigs")
+    public String grayConfigs;
 
     public static UpdateAgentInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAgentInstanceConfigRequest self = new UpdateAgentInstanceConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateAgentInstanceConfigRequest setAttributes(String attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public String getAttributes() {
+        return this.attributes;
     }
 
     public UpdateAgentInstanceConfigRequest setConfig(String config) {
@@ -32,20 +40,12 @@ public class UpdateAgentInstanceConfigRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateAgentInstanceConfigRequest setConfigMatcher(String configMatcher) {
-        this.configMatcher = configMatcher;
+    public UpdateAgentInstanceConfigRequest setGrayConfigs(String grayConfigs) {
+        this.grayConfigs = grayConfigs;
         return this;
     }
-    public String getConfigMatcher() {
-        return this.configMatcher;
-    }
-
-    public UpdateAgentInstanceConfigRequest setIsGray(Boolean isGray) {
-        this.isGray = isGray;
-        return this;
-    }
-    public Boolean getIsGray() {
-        return this.isGray;
+    public String getGrayConfigs() {
+        return this.grayConfigs;
     }
 
 }

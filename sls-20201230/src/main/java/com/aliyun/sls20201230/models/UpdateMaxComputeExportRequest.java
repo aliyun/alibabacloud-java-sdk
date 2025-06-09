@@ -3,44 +3,44 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateOSSHDFSExportRequest extends TeaModel {
+public class UpdateMaxComputeExportRequest extends TeaModel {
     /**
-     * <p>The configuration details of the job.</p>
+     * <p>The setting of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
-    public OSSExportConfiguration configuration;
+    public MaxComputeExportConfiguration configuration;
 
     /**
-     * <p>The description of the job.</p>
+     * <p>The description of the MaxCompute data shipping job.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name of the job.</p>
+     * <p>The display name of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ali-test-oss-hdfs-job</p>
+     * <p>my-mc-job</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
-    public static UpdateOSSHDFSExportRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateOSSHDFSExportRequest self = new UpdateOSSHDFSExportRequest();
+    public static UpdateMaxComputeExportRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateMaxComputeExportRequest self = new UpdateMaxComputeExportRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateOSSHDFSExportRequest setConfiguration(OSSExportConfiguration configuration) {
+    public UpdateMaxComputeExportRequest setConfiguration(MaxComputeExportConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
-    public OSSExportConfiguration getConfiguration() {
+    public MaxComputeExportConfiguration getConfiguration() {
         return this.configuration;
     }
 
-    public UpdateOSSHDFSExportRequest setDescription(String description) {
+    public UpdateMaxComputeExportRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -48,7 +48,7 @@ public class UpdateOSSHDFSExportRequest extends TeaModel {
         return this.description;
     }
 
-    public UpdateOSSHDFSExportRequest setDisplayName(String displayName) {
+    public UpdateMaxComputeExportRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }

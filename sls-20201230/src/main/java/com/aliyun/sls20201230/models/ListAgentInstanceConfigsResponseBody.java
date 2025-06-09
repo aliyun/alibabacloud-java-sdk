@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAgentInstanceConfigsResponseBody extends TeaModel {
     @NameInMap("configs")
-    public java.util.List<String> configs;
+    public java.util.List<ListAgentInstanceConfigsResponseBodyConfigs> configs;
 
     @NameInMap("size")
     public Long size;
@@ -18,11 +18,11 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListAgentInstanceConfigsResponseBody setConfigs(java.util.List<String> configs) {
+    public ListAgentInstanceConfigsResponseBody setConfigs(java.util.List<ListAgentInstanceConfigsResponseBodyConfigs> configs) {
         this.configs = configs;
         return this;
     }
-    public java.util.List<String> getConfigs() {
+    public java.util.List<ListAgentInstanceConfigsResponseBodyConfigs> getConfigs() {
         return this.configs;
     }
 
@@ -40,6 +40,36 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
     }
     public Long getTotal() {
         return this.total;
+    }
+
+    public static class ListAgentInstanceConfigsResponseBodyConfigs extends TeaModel {
+        @NameInMap("attributes")
+        public String attributes;
+
+        @NameInMap("configType")
+        public String configType;
+
+        public static ListAgentInstanceConfigsResponseBodyConfigs build(java.util.Map<String, ?> map) throws Exception {
+            ListAgentInstanceConfigsResponseBodyConfigs self = new ListAgentInstanceConfigsResponseBodyConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAgentInstanceConfigsResponseBodyConfigs setAttributes(String attributes) {
+            this.attributes = attributes;
+            return this;
+        }
+        public String getAttributes() {
+            return this.attributes;
+        }
+
+        public ListAgentInstanceConfigsResponseBodyConfigs setConfigType(String configType) {
+            this.configType = configType;
+            return this;
+        }
+        public String getConfigType() {
+            return this.configType;
+        }
+
     }
 
 }

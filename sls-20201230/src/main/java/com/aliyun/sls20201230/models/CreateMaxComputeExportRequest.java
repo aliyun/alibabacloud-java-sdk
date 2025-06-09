@@ -3,57 +3,54 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class CreateETLRequest extends TeaModel {
+public class CreateMaxComputeExportRequest extends TeaModel {
     /**
-     * <p>The detailed configuration of the job.</p>
+     * <p>The setting of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
-    public ETLConfiguration configuration;
+    public MaxComputeExportConfiguration configuration;
 
     /**
-     * <p>The description of the job.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>this is ETL</p>
+     * <p>The description of the MaxCompute data shipping job.</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The display name of the job.</p>
+     * <p>The display name of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>sls-test-etl</p>
+     * <p>my-mc-job</p>
      */
     @NameInMap("displayName")
     public String displayName;
 
     /**
-     * <p>The name of the job (unique within a project).</p>
+     * <p>The unique identifier of the MaxCompute data shipping job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>etl-123456</p>
+     * <p>export-mc-1234567890-123456</p>
      */
     @NameInMap("name")
     public String name;
 
-    public static CreateETLRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateETLRequest self = new CreateETLRequest();
+    public static CreateMaxComputeExportRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateMaxComputeExportRequest self = new CreateMaxComputeExportRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateETLRequest setConfiguration(ETLConfiguration configuration) {
+    public CreateMaxComputeExportRequest setConfiguration(MaxComputeExportConfiguration configuration) {
         this.configuration = configuration;
         return this;
     }
-    public ETLConfiguration getConfiguration() {
+    public MaxComputeExportConfiguration getConfiguration() {
         return this.configuration;
     }
 
-    public CreateETLRequest setDescription(String description) {
+    public CreateMaxComputeExportRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -61,7 +58,7 @@ public class CreateETLRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateETLRequest setDisplayName(String displayName) {
+    public CreateMaxComputeExportRequest setDisplayName(String displayName) {
         this.displayName = displayName;
         return this;
     }
@@ -69,7 +66,7 @@ public class CreateETLRequest extends TeaModel {
         return this.displayName;
     }
 
-    public CreateETLRequest setName(String name) {
+    public CreateMaxComputeExportRequest setName(String name) {
         this.name = name;
         return this;
     }

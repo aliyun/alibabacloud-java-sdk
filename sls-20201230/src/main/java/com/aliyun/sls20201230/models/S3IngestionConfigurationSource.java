@@ -3,12 +3,53 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class OSSIngestionConfigurationSource extends TeaModel {
+public class S3IngestionConfigurationSource extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ossbucket</p>
+     * <p>AKIxxxxxxxxxxYJE</p>
+     */
+    @NameInMap("awsAccessKey")
+    public String awsAccessKey;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123xxxxxxxxxxfjf</p>
+     */
+    @NameInMap("awsAccessKeySecret")
+    public String awsAccessKeySecret;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-northeast-1</p>
+     */
+    @NameInMap("awsRegion")
+    public String awsRegion;
+
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan">https://sqs.ap-northeast-1.amazonaws.com/123456788/chifan</a></p>
+     */
+    @NameInMap("awsSQSQueueUrl")
+    public String awsSQSQueueUrl;
+
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("awsUseSQS")
+    public Boolean awsUseSQS;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s3bucket</p>
      */
     @NameInMap("bucket")
     public String bucket;
@@ -40,15 +81,6 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>oss-cn-hangzhou.aliyuncs.com</p>
-     */
-    @NameInMap("endpoint")
-    public String endpoint;
-
-    /**
-     * <p>This parameter is required.</p>
      */
     @NameInMap("format")
     public java.util.Map<String, ?> format;
@@ -57,7 +89,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>never</p>
+     * <p>30m</p>
      */
     @NameInMap("interval")
     public String interval;
@@ -78,20 +110,6 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("restoreObjectEnabled")
-    public Boolean restoreObjectEnabled;
-
-    /**
-     * <strong>example:</strong>
-     * <p>acs:ram::12345:role/aliyunlogdefaultrole</p>
-     */
-    @NameInMap("roleARN")
-    public String roleARN;
-
-    /**
-     * <strong>example:</strong>
      * <p>1714274081</p>
      */
     @NameInMap("startTime")
@@ -99,7 +117,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>true</p>
+     * <p>false</p>
      */
     @NameInMap("tagPackId")
     public Boolean tagPackId;
@@ -133,20 +151,58 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
-    @NameInMap("useMetaIndex")
-    public Boolean useMetaIndex;
+    @NameInMap("useAwsSQSOnly")
+    public Boolean useAwsSQSOnly;
 
-    public static OSSIngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
-        OSSIngestionConfigurationSource self = new OSSIngestionConfigurationSource();
+    public static S3IngestionConfigurationSource build(java.util.Map<String, ?> map) throws Exception {
+        S3IngestionConfigurationSource self = new S3IngestionConfigurationSource();
         return TeaModel.build(map, self);
     }
 
-    public OSSIngestionConfigurationSource setBucket(String bucket) {
+    public S3IngestionConfigurationSource setAwsAccessKey(String awsAccessKey) {
+        this.awsAccessKey = awsAccessKey;
+        return this;
+    }
+    public String getAwsAccessKey() {
+        return this.awsAccessKey;
+    }
+
+    public S3IngestionConfigurationSource setAwsAccessKeySecret(String awsAccessKeySecret) {
+        this.awsAccessKeySecret = awsAccessKeySecret;
+        return this;
+    }
+    public String getAwsAccessKeySecret() {
+        return this.awsAccessKeySecret;
+    }
+
+    public S3IngestionConfigurationSource setAwsRegion(String awsRegion) {
+        this.awsRegion = awsRegion;
+        return this;
+    }
+    public String getAwsRegion() {
+        return this.awsRegion;
+    }
+
+    public S3IngestionConfigurationSource setAwsSQSQueueUrl(String awsSQSQueueUrl) {
+        this.awsSQSQueueUrl = awsSQSQueueUrl;
+        return this;
+    }
+    public String getAwsSQSQueueUrl() {
+        return this.awsSQSQueueUrl;
+    }
+
+    public S3IngestionConfigurationSource setAwsUseSQS(Boolean awsUseSQS) {
+        this.awsUseSQS = awsUseSQS;
+        return this;
+    }
+    public Boolean getAwsUseSQS() {
+        return this.awsUseSQS;
+    }
+
+    public S3IngestionConfigurationSource setBucket(String bucket) {
         this.bucket = bucket;
         return this;
     }
@@ -154,7 +210,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.bucket;
     }
 
-    public OSSIngestionConfigurationSource setCompressionCodec(String compressionCodec) {
+    public S3IngestionConfigurationSource setCompressionCodec(String compressionCodec) {
         this.compressionCodec = compressionCodec;
         return this;
     }
@@ -162,7 +218,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.compressionCodec;
     }
 
-    public OSSIngestionConfigurationSource setEncoding(String encoding) {
+    public S3IngestionConfigurationSource setEncoding(String encoding) {
         this.encoding = encoding;
         return this;
     }
@@ -170,7 +226,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.encoding;
     }
 
-    public OSSIngestionConfigurationSource setEndTime(Long endTime) {
+    public S3IngestionConfigurationSource setEndTime(Long endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -178,15 +234,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.endTime;
     }
 
-    public OSSIngestionConfigurationSource setEndpoint(String endpoint) {
-        this.endpoint = endpoint;
-        return this;
-    }
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    public OSSIngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {
+    public S3IngestionConfigurationSource setFormat(java.util.Map<String, ?> format) {
         this.format = format;
         return this;
     }
@@ -194,7 +242,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.format;
     }
 
-    public OSSIngestionConfigurationSource setInterval(String interval) {
+    public S3IngestionConfigurationSource setInterval(String interval) {
         this.interval = interval;
         return this;
     }
@@ -202,7 +250,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.interval;
     }
 
-    public OSSIngestionConfigurationSource setPattern(String pattern) {
+    public S3IngestionConfigurationSource setPattern(String pattern) {
         this.pattern = pattern;
         return this;
     }
@@ -210,7 +258,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.pattern;
     }
 
-    public OSSIngestionConfigurationSource setPrefix(String prefix) {
+    public S3IngestionConfigurationSource setPrefix(String prefix) {
         this.prefix = prefix;
         return this;
     }
@@ -218,23 +266,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.prefix;
     }
 
-    public OSSIngestionConfigurationSource setRestoreObjectEnabled(Boolean restoreObjectEnabled) {
-        this.restoreObjectEnabled = restoreObjectEnabled;
-        return this;
-    }
-    public Boolean getRestoreObjectEnabled() {
-        return this.restoreObjectEnabled;
-    }
-
-    public OSSIngestionConfigurationSource setRoleARN(String roleARN) {
-        this.roleARN = roleARN;
-        return this;
-    }
-    public String getRoleARN() {
-        return this.roleARN;
-    }
-
-    public OSSIngestionConfigurationSource setStartTime(Long startTime) {
+    public S3IngestionConfigurationSource setStartTime(Long startTime) {
         this.startTime = startTime;
         return this;
     }
@@ -242,7 +274,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.startTime;
     }
 
-    public OSSIngestionConfigurationSource setTagPackId(Boolean tagPackId) {
+    public S3IngestionConfigurationSource setTagPackId(Boolean tagPackId) {
         this.tagPackId = tagPackId;
         return this;
     }
@@ -250,7 +282,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.tagPackId;
     }
 
-    public OSSIngestionConfigurationSource setTimeField(String timeField) {
+    public S3IngestionConfigurationSource setTimeField(String timeField) {
         this.timeField = timeField;
         return this;
     }
@@ -258,7 +290,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timeField;
     }
 
-    public OSSIngestionConfigurationSource setTimeFormat(String timeFormat) {
+    public S3IngestionConfigurationSource setTimeFormat(String timeFormat) {
         this.timeFormat = timeFormat;
         return this;
     }
@@ -266,7 +298,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timeFormat;
     }
 
-    public OSSIngestionConfigurationSource setTimePattern(String timePattern) {
+    public S3IngestionConfigurationSource setTimePattern(String timePattern) {
         this.timePattern = timePattern;
         return this;
     }
@@ -274,7 +306,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timePattern;
     }
 
-    public OSSIngestionConfigurationSource setTimeZone(String timeZone) {
+    public S3IngestionConfigurationSource setTimeZone(String timeZone) {
         this.timeZone = timeZone;
         return this;
     }
@@ -282,12 +314,12 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         return this.timeZone;
     }
 
-    public OSSIngestionConfigurationSource setUseMetaIndex(Boolean useMetaIndex) {
-        this.useMetaIndex = useMetaIndex;
+    public S3IngestionConfigurationSource setUseAwsSQSOnly(Boolean useAwsSQSOnly) {
+        this.useAwsSQSOnly = useAwsSQSOnly;
         return this;
     }
-    public Boolean getUseMetaIndex() {
-        return this.useMetaIndex;
+    public Boolean getUseAwsSQSOnly() {
+        return this.useAwsSQSOnly;
     }
 
 }

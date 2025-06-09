@@ -47,6 +47,9 @@ public class ListDashboardResponseBody extends TeaModel {
         @NameInMap("dashboardName")
         public String dashboardName;
 
+        @NameInMap("description")
+        public String description;
+
         /**
          * <p>The display name of the dashboard.</p>
          * 
@@ -67,6 +70,14 @@ public class ListDashboardResponseBody extends TeaModel {
         }
         public String getDashboardName() {
             return this.dashboardName;
+        }
+
+        public ListDashboardResponseBodyDashboardItems setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
         }
 
         public ListDashboardResponseBodyDashboardItems setDisplayName(String displayName) {

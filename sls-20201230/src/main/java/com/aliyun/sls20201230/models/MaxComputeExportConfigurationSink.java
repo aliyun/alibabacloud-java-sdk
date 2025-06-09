@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class MaxComputeExportConfigurationSink extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>1800</p>
+     */
+    @NameInMap("bufferInterval")
+    public String bufferInterval;
+
+    /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("fields")
@@ -70,8 +77,6 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String odpsTable;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p><a href="http://dt.cn-hangzhou.maxcompute.aliyun-inc.com">http://dt.cn-hangzhou.maxcompute.aliyun-inc.com</a></p>
      */
@@ -94,6 +99,13 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public String partitionTimeFormat;
 
     /**
+     * <strong>example:</strong>
+     * <p>StrfTimeFormat</p>
+     */
+    @NameInMap("timeFormatType")
+    public String timeFormatType;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,6 +117,14 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     public static MaxComputeExportConfigurationSink build(java.util.Map<String, ?> map) throws Exception {
         MaxComputeExportConfigurationSink self = new MaxComputeExportConfigurationSink();
         return TeaModel.build(map, self);
+    }
+
+    public MaxComputeExportConfigurationSink setBufferInterval(String bufferInterval) {
+        this.bufferInterval = bufferInterval;
+        return this;
+    }
+    public String getBufferInterval() {
+        return this.bufferInterval;
     }
 
     public MaxComputeExportConfigurationSink setFields(java.util.List<String> fields) {
@@ -195,6 +215,14 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     }
     public String getPartitionTimeFormat() {
         return this.partitionTimeFormat;
+    }
+
+    public MaxComputeExportConfigurationSink setTimeFormatType(String timeFormatType) {
+        this.timeFormatType = timeFormatType;
+        return this;
+    }
+    public String getTimeFormatType() {
+        return this.timeFormatType;
     }
 
     public MaxComputeExportConfigurationSink setTimeZone(String timeZone) {

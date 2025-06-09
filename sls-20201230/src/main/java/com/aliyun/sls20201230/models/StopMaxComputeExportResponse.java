@@ -3,19 +3,19 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateOssExternalStoreResponse extends TeaModel {
+public class StopMaxComputeExportResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
     public Integer statusCode;
 
-    public static UpdateOssExternalStoreResponse build(java.util.Map<String, ?> map) throws Exception {
-        UpdateOssExternalStoreResponse self = new UpdateOssExternalStoreResponse();
+    public static StopMaxComputeExportResponse build(java.util.Map<String, ?> map) throws Exception {
+        StopMaxComputeExportResponse self = new StopMaxComputeExportResponse();
         return TeaModel.build(map, self);
     }
 
-    public UpdateOssExternalStoreResponse setHeaders(java.util.Map<String, String> headers) {
+    public StopMaxComputeExportResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -23,7 +23,7 @@ public class UpdateOssExternalStoreResponse extends TeaModel {
         return this.headers;
     }
 
-    public UpdateOssExternalStoreResponse setStatusCode(Integer statusCode) {
+    public StopMaxComputeExportResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }

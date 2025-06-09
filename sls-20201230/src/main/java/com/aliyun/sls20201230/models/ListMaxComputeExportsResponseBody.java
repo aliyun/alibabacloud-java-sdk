@@ -3,34 +3,30 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class ListETLsResponseBody extends TeaModel {
+public class ListMaxComputeExportsResponseBody extends TeaModel {
     /**
-     * <p>The number of data transformation jobs that are returned.</p>
-     * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>2</p>
      */
     @NameInMap("count")
     public Integer count;
 
     @NameInMap("results")
-    public java.util.List<ETL> results;
+    public java.util.List<MaxComputeExport> results;
 
     /**
-     * <p>The total number of data transformation jobs in the project.</p>
-     * 
      * <strong>example:</strong>
-     * <p>80</p>
+     * <p>10</p>
      */
     @NameInMap("total")
     public Integer total;
 
-    public static ListETLsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListETLsResponseBody self = new ListETLsResponseBody();
+    public static ListMaxComputeExportsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListMaxComputeExportsResponseBody self = new ListMaxComputeExportsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListETLsResponseBody setCount(Integer count) {
+    public ListMaxComputeExportsResponseBody setCount(Integer count) {
         this.count = count;
         return this;
     }
@@ -38,15 +34,15 @@ public class ListETLsResponseBody extends TeaModel {
         return this.count;
     }
 
-    public ListETLsResponseBody setResults(java.util.List<ETL> results) {
+    public ListMaxComputeExportsResponseBody setResults(java.util.List<MaxComputeExport> results) {
         this.results = results;
         return this;
     }
-    public java.util.List<ETL> getResults() {
+    public java.util.List<MaxComputeExport> getResults() {
         return this.results;
     }
 
-    public ListETLsResponseBody setTotal(Integer total) {
+    public ListMaxComputeExportsResponseBody setTotal(Integer total) {
         this.total = total;
         return this;
     }

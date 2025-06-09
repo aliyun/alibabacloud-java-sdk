@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateLogStoreRequest extends TeaModel {
     /**
-     * <p>Specifies whether to record the <strong>public IP address</strong> and <strong>log receiving time</strong>. Default value: false. Valid values:</p>
+     * <p>Specifies whether to record the <strong>public IP address</strong> and the <strong>log receiving time</strong>. Default value: false. Valid values:</p>
      * <ul>
-     * <li>true********</li>
-     * <li>false********</li>
+     * <li>true: records the public IP address and the log receiving time. If you set this parameter to true, Simple Log Service automatically adds the public IP address of the device from which the log is collected and the time when Simple Log Service receives the log to the Tag field of the collected log.</li>
+     * <li>false: does not record the public IP address or log receiving time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public EncryptConf encryptConf;
 
     /**
-     * <p>The retention period of data in the hot storage tier of the Logstore. Valid values: 7 to 3000. Unit: days.</p>
+     * <p>The data retention period for the hot storage tier. Unit: days. Minimum value: 7. The value of this parameter cannot exceed the value of ttl. If you set this parameter to -1, all data is stored in the hot storage tier.</p>
      * <p>After the retention period that is specified for the hot storage tier elapses, the data is moved to the Infrequent Access (IA) storage tier. For more information, see <a href="https://help.aliyun.com/document_detail/308645.html">Enable hot and cold-tiered storage for a Logstore</a>.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public Integer hotTtl;
 
     /**
-     * <p>The retention period of data in the IA storage tier of the Logstore. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</p>
+     * <p>The data retention period for the IA storage tier. You must set this parameter to at least 30 days. After the data retention period that you specify for the IA storage tier elapses, the data is moved to the Archive storage tier.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -73,7 +73,7 @@ public class CreateLogStoreRequest extends TeaModel {
      * <ul>
      * <li>The name must be unique in a project.</li>
      * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
-     * <li>The name must start and end with a lowercase letter or a digit.</li>
+     * <li>The name must start and end with a lowercase letter or digit.</li>
      * <li>The name must be 3 to 63 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -99,8 +99,8 @@ public class CreateLogStoreRequest extends TeaModel {
     /**
      * <p>The type of the Logstore. Simple Log Service provides two types of Logstores: Standard Logstores and Query Logstores. Valid values:</p>
      * <ul>
-     * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can also use this type of Logstore to build a comprehensive observability system.</li>
-     * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance queries. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the log retention period is long, or log analysis is not required. If logs are stored for weeks or months, the log retention period is considered long.</li>
+     * <li><strong>standard</strong>: Standard Logstore. This type of Logstore supports the log analysis feature and is suitable for scenarios such as real-time monitoring and interactive analysis. You can use this type of Logstore to build a comprehensive observability system.</li>
+     * <li><strong>query</strong>: Query Logstore. This type of Logstore supports high-performance query operations. The index traffic fee of a Query Logstore is approximately half that of a Standard Logstore. Query Logstores do not support SQL analysis. Query Logstores are suitable for scenarios in which the amount of data is large, the data retention period is long, or log analysis is not required. Data retention periods of weeks or months are considered long.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -109,6 +109,9 @@ public class CreateLogStoreRequest extends TeaModel {
     @NameInMap("mode")
     public String mode;
 
+    /**
+     * <p>IngestProcessor ID</p>
+     */
     @NameInMap("processorId")
     public String processorId;
 
@@ -139,7 +142,7 @@ public class CreateLogStoreRequest extends TeaModel {
     public String telemetryType;
 
     /**
-     * <p>The retention period of data. Unit: days. Valid values: 1 to 3000. If you set this parameter to 3650, data is permanently stored.</p>
+     * <p>The data retention period. Unit: days. Valid values: 1 to 3650. If you set this parameter to 3650, data is permanently stored.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

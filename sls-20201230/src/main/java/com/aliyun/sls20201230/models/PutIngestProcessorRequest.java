@@ -5,15 +5,20 @@ import com.aliyun.tea.*;
 
 public class PutIngestProcessorRequest extends TeaModel {
     /**
+     * <p>The configuration of the ingest processor.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public IngestProcessorConfiguration configuration;
 
+    /**
+     * <p>The description of the ingest processor.</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>The display name of the ingest processor.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("displayName")

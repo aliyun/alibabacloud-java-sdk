@@ -3,7 +3,7 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class GetExternalStoreResponse extends TeaModel {
+public class GetMaxComputeExportResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetExternalStoreResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public ExternalStore body;
+    public MaxComputeExport body;
 
-    public static GetExternalStoreResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetExternalStoreResponse self = new GetExternalStoreResponse();
+    public static GetMaxComputeExportResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetMaxComputeExportResponse self = new GetMaxComputeExportResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetExternalStoreResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetMaxComputeExportResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetExternalStoreResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetExternalStoreResponse setStatusCode(Integer statusCode) {
+    public GetMaxComputeExportResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetExternalStoreResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetExternalStoreResponse setBody(ExternalStore body) {
+    public GetMaxComputeExportResponse setBody(MaxComputeExport body) {
         this.body = body;
         return this;
     }
-    public ExternalStore getBody() {
+    public MaxComputeExport getBody() {
         return this.body;
     }
 

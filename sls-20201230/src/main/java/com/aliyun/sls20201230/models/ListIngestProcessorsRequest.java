@@ -4,10 +4,15 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListIngestProcessorsRequest extends TeaModel {
+    /**
+     * <p>The display name of the ingest processor.</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
     /**
+     * <p>The offset. Default value: 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -15,6 +20,8 @@ public class ListIngestProcessorsRequest extends TeaModel {
     public Integer offset;
 
     /**
+     * <p>The identifier of the ingest processor.</p>
+     * 
      * <strong>example:</strong>
      * <p>parse-nginx-log</p>
      */
@@ -22,6 +29,8 @@ public class ListIngestProcessorsRequest extends TeaModel {
     public String processorName;
 
     /**
+     * <p>The number of entries. Default value: 200.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

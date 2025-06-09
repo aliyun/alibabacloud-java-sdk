@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class UpdateOSSIngestionRequest extends TeaModel {
     /**
-     * <p>The configurations of the OSS data import job.</p>
+     * <p>The configuration of the OSS data import job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("configuration")
     public OSSIngestionConfiguration configuration;
 
     /**
-     * <p>The description of the OSS data import job.</p>
+     * <p>The description of the Object Storage Service (OSS) data import job.</p>
      */
     @NameInMap("description")
     public String description;

@@ -18,7 +18,7 @@ public class UpdateConsumerGroupRequest extends TeaModel {
     public Boolean order;
 
     /**
-     * <p>The timeout period. If Simple Log Service does not receive heartbeats from a consumer within the timeout period, Simple Log Service deletes the consumer. Unit: seconds.</p>
+     * <p>The timeout period. If Simple Log Service does not receive heartbeats from a consumer within the timeout period, Simple Log Service deletes the consumer. Unit: seconds</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>

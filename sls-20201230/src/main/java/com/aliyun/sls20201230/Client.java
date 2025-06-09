@@ -63,6 +63,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>调用 ai 工具</p>
+     * 
+     * @param request CallAiToolsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CallAiToolsResponse
+     */
+    public CallAiToolsResponse callAiToolsWithOptions(CallAiToolsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.params)) {
+            body.put("params", request.params);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolName)) {
+            body.put("toolName", request.toolName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CallAiTools"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ml/tool/call"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "string")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CallAiToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>调用 ai 工具</p>
+     * 
+     * @param request CallAiToolsRequest
+     * @return CallAiToolsResponse
+     */
+    public CallAiToolsResponse callAiTools(CallAiToolsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.callAiToolsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Changes the resource group to which a resource belongs.</p>
      * 
      * @param request ChangeResourceGroupRequest
@@ -314,20 +369,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAgentInstanceConfigResponse createAgentInstanceConfigWithOptions(CreateAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            body.put("attributes", request.attributes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             body.put("config", request.config);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.configMatcher)) {
-            body.put("configMatcher", request.configMatcher);
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            body.put("configType", request.configType);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
-            body.put("configName", request.configName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isGray)) {
-            body.put("isGray", request.isGray);
+        if (!com.aliyun.teautil.Common.isUnset(request.grayConfigs)) {
+            body.put("grayConfigs", request.grayConfigs);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -875,7 +930,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据加工任务</p>
+     * <p>Creates a data transformation job in a project.</p>
      * 
      * @param request CreateETLRequest
      * @param headers map
@@ -924,7 +979,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建数据加工任务</p>
+     * <p>Creates a data transformation job in a project.</p>
      * 
      * @param request CreateETLRequest
      * @return CreateETLResponse
@@ -1350,6 +1405,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a MaxCompute data shipping job.</p>
+     * 
+     * @param request CreateMaxComputeExportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMaxComputeExportResponse
+     */
+    public CreateMaxComputeExportResponse createMaxComputeExportWithOptions(String project, CreateMaxComputeExportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMaxComputeExport"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateMaxComputeExportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a MaxCompute data shipping job.</p>
+     * 
+     * @param request CreateMaxComputeExportRequest
+     * @return CreateMaxComputeExportResponse
+     */
+    public CreateMaxComputeExportResponse createMaxComputeExport(String project, CreateMaxComputeExportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createMaxComputeExportWithOptions(project, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Metricstores are used to store metric data. For more information, see <a href="https://help.aliyun.com/document_detail/174965.html">Metric data</a>.</p>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -1643,72 +1776,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an Object Storage Service (OSS) external store.</p>
-     * 
-     * @param request CreateOssExternalStoreRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateOssExternalStoreResponse
-     */
-    public CreateOssExternalStoreResponse createOssExternalStoreWithOptions(String project, CreateOssExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.externalStoreName)) {
-            body.put("externalStoreName", request.externalStoreName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parameter)) {
-            body.put("parameter", request.parameter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.storeType)) {
-            body.put("storeType", request.storeType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateOssExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new CreateOssExternalStoreResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an Object Storage Service (OSS) external store.</p>
-     * 
-     * @param request CreateOssExternalStoreRequest
-     * @return CreateOssExternalStoreResponse
-     */
-    public CreateOssExternalStoreResponse createOssExternalStore(String project, CreateOssExternalStoreRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createOssExternalStoreWithOptions(project, request, headers, runtime);
-    }
-
-    /**
      * <b>summary</b> : 
      * <p>Creates a project.</p>
      * 
@@ -1730,6 +1797,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectName)) {
             body.put("projectName", request.projectName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recycleBinEnabled)) {
+            body.put("recycleBinEnabled", request.recycleBinEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -1765,70 +1836,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createProjectWithOptions(request, headers, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an ApsaraDB RDS external store.</p>
-     * 
-     * @param request CreateRdsExternalStoreRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateRdsExternalStoreResponse
-     */
-    public CreateRdsExternalStoreResponse createRdsExternalStoreWithOptions(String project, CreateRdsExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.externalStoreName)) {
-            body.put("externalStoreName", request.externalStoreName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parameter)) {
-            body.put("parameter", request.parameter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.storeType)) {
-            body.put("storeType", request.storeType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateRdsExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new CreateRdsExternalStoreResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Creates an ApsaraDB RDS external store.</p>
-     * 
-     * @param request CreateRdsExternalStoreRequest
-     * @return CreateRdsExternalStoreResponse
-     */
-    public CreateRdsExternalStoreResponse createRdsExternalStore(String project, CreateRdsExternalStoreRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.createRdsExternalStoreWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -2189,11 +2196,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAgentInstanceConfigResponse
      */
-    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfigWithOptions(String configName, DeleteAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfigWithOptions(String configType, DeleteAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.isGray)) {
-            query.put("isGray", request.isGray);
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            query.put("attributes", request.attributes);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2204,7 +2211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("action", "DeleteAgentInstanceConfig"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/agentinstanceconfigs/" + configName + ""),
+            new TeaPair("pathname", "/agentinstanceconfigs/" + configType + ""),
             new TeaPair("method", "DELETE"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -2221,10 +2228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param request DeleteAgentInstanceConfigRequest
      * @return DeleteAgentInstanceConfigResponse
      */
-    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfig(String configName, DeleteAgentInstanceConfigRequest request) throws Exception {
+    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfig(String configType, DeleteAgentInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteAgentInstanceConfigWithOptions(configName, request, headers, runtime);
+        return this.deleteAgentInstanceConfigWithOptions(configType, request, headers, runtime);
     }
 
     /**
@@ -2743,7 +2750,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据加工任务</p>
+     * <p>Deletes a data transformation job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2772,59 +2779,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除数据加工任务</p>
+     * <p>Deletes a data transformation job.</p>
      * @return DeleteETLResponse
      */
     public DeleteETLResponse deleteETL(String project, String etlName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteETLWithOptions(project, etlName, headers, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes an external store.</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteExternalStoreResponse
-     */
-    public DeleteExternalStoreResponse deleteExternalStoreWithOptions(String project, String externalStoreName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores/" + externalStoreName + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteExternalStoreResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Deletes an external store.</p>
-     * @return DeleteExternalStoreResponse
-     */
-    public DeleteExternalStoreResponse deleteExternalStore(String project, String externalStoreName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteExternalStoreWithOptions(project, externalStoreName, headers, runtime);
     }
 
     /**
@@ -2877,7 +2838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除写入处理器。</p>
+     * <p>Deletes an ingest processor.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2906,7 +2867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除写入处理器。</p>
+     * <p>Deletes an ingest processor.</p>
      * @return DeleteIngestProcessorResponse
      */
     public DeleteIngestProcessorResponse deleteIngestProcessor(String project, String processorName) throws Exception {
@@ -3095,6 +3056,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteMachineGroupWithOptions(project, machineGroup, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a MaxCompute data shipping job.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMaxComputeExportResponse
+     */
+    public DeleteMaxComputeExportResponse deleteMaxComputeExportWithOptions(String project, String mcExportName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMaxComputeExport"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports/" + mcExportName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteMaxComputeExportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a MaxCompute data shipping job.</p>
+     * @return DeleteMaxComputeExportResponse
+     */
+    public DeleteMaxComputeExportResponse deleteMaxComputeExport(String project, String mcExportName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteMaxComputeExportWithOptions(project, mcExportName, headers, runtime);
     }
 
     /**
@@ -3308,16 +3325,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Deletes a project.</p>
      * 
+     * @param request DeleteProjectRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteProjectResponse
      */
-    public DeleteProjectResponse deleteProjectWithOptions(String project, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public DeleteProjectResponse deleteProjectWithOptions(String project, DeleteProjectRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.forceDelete)) {
+            query.put("forceDelete", request.forceDelete);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "DeleteProject"),
@@ -3359,12 +3384,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * 
      * <b>summary</b> : 
      * <p>Deletes a project.</p>
+     * 
+     * @param request DeleteProjectRequest
      * @return DeleteProjectResponse
      */
-    public DeleteProjectResponse deleteProject(String project) throws Exception {
+    public DeleteProjectResponse deleteProject(String project, DeleteProjectRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.deleteProjectWithOptions(project, headers, runtime);
+        return this.deleteProjectWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -3595,7 +3622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用的区域</p>
+     * <p>Queries supported regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param headers map
@@ -3629,7 +3656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询可用的区域</p>
+     * <p>Queries supported regions.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -3682,7 +3709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用定时SQL任务</p>
+     * <p>Disables the Scheduled SQL feature.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3711,7 +3738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>禁用定时SQL任务</p>
+     * <p>Disables the Scheduled SQL feature.</p>
      * @return DisableScheduledSQLResponse
      */
     public DisableScheduledSQLResponse disableScheduledSQL(String project, String scheduledSQLName) throws Exception {
@@ -3804,19 +3831,27 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>GetAgentInstanceConfig</p>
      * 
+     * @param request GetAgentInstanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAgentInstanceConfigResponse
      */
-    public GetAgentInstanceConfigResponse getAgentInstanceConfigWithOptions(String configName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetAgentInstanceConfigResponse getAgentInstanceConfigWithOptions(String configType, GetAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            query.put("attributes", request.attributes);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetAgentInstanceConfig"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/agentinstanceconfigs/" + configName + ""),
+            new TeaPair("pathname", "/agentinstanceconfigs/" + configType + ""),
             new TeaPair("method", "GET"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -3829,12 +3864,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>GetAgentInstanceConfig</p>
+     * 
+     * @param request GetAgentInstanceConfigRequest
      * @return GetAgentInstanceConfigResponse
      */
-    public GetAgentInstanceConfigResponse getAgentInstanceConfig(String configName) throws Exception {
+    public GetAgentInstanceConfigResponse getAgentInstanceConfig(String configType, GetAgentInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getAgentInstanceConfigWithOptions(configName, headers, runtime);
+        return this.getAgentInstanceConfigWithOptions(configType, request, headers, runtime);
     }
 
     /**
@@ -4591,7 +4628,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据加工任务信息</p>
+     * <p>Queries the configurations of a data transformation job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4620,65 +4657,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取数据加工任务信息</p>
+     * <p>Queries the configurations of a data transformation job.</p>
      * @return GetETLResponse
      */
     public GetETLResponse getETL(String project, String etlName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getETLWithOptions(project, etlName, headers, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>  The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).</p>
-     * <ul>
-     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of an external store.</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return GetExternalStoreResponse
-     */
-    public GetExternalStoreResponse getExternalStoreWithOptions(String project, String externalStoreName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "GetExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores/" + externalStoreName + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new GetExternalStoreResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>  The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).</p>
-     * <ul>
-     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
-     * </ul>
-     * 
-     * <b>summary</b> : 
-     * <p>Queries the details of an external store.</p>
-     * @return GetExternalStoreResponse
-     */
-    public GetExternalStoreResponse getExternalStore(String project, String externalStoreName) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getExternalStoreWithOptions(project, externalStoreName, headers, runtime);
     }
 
     /**
@@ -4829,7 +4814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询写入处理器信息。</p>
+     * <p>Queries an ingest processor.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4858,7 +4843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询写入处理器信息。</p>
+     * <p>Queries an ingest processor.</p>
      * @return GetIngestProcessorResponse
      */
     public GetIngestProcessorResponse getIngestProcessor(String project, String processorName) throws Exception {
@@ -5265,7 +5250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a Logtail pipeline configuration.</p>
+     * <p>Queries the information about a Logtail pipeline configuration.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5297,7 +5282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The UK (London) region is supported. Supported regions are constantly updated.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a Logtail pipeline configuration.</p>
+     * <p>Queries the information about a Logtail pipeline configuration.</p>
      * @return GetLogtailPipelineConfigResponse
      */
     public GetLogtailPipelineConfigResponse getLogtailPipelineConfig(String project, String configName) throws Exception {
@@ -5307,6 +5292,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must obtain the following basic permissions before you call this operation:
+     *     {
+     *         &quot;Version&quot;: &quot;1&quot;,
+     *         &quot;Statement&quot;: [
+     *             {
+     *                 &quot;Action&quot;: [
+     *                     &quot;log:Get*&quot;
+     *                 ],
+     *                 &quot;Resource&quot;: [
+     *                     &quot;acs:log:<em>:</em>:mlservice/sls_builtin_*&quot;
+     *                 ],
+     *                 &quot;Effect&quot;: &quot;Allow&quot;
+     *             }
+     *         ]
+     *     }</p>
+     * 
      * <b>summary</b> : 
      * <p>Simple Log Service provides intelligent analysis capabilities that can be used to analyze basic data such as logs, metrics, and traces. You can call the GetMLServiceResults operation to obtain the analysis results of a model. You can call the operation in the following scenarios: Named Entity Recognition (NER) tasks on logs, anomaly detection on time series, and root cause analysis on high-latency traces.</p>
      * 
@@ -5346,6 +5348,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must obtain the following basic permissions before you call this operation:
+     *     {
+     *         &quot;Version&quot;: &quot;1&quot;,
+     *         &quot;Statement&quot;: [
+     *             {
+     *                 &quot;Action&quot;: [
+     *                     &quot;log:Get*&quot;
+     *                 ],
+     *                 &quot;Resource&quot;: [
+     *                     &quot;acs:log:<em>:</em>:mlservice/sls_builtin_*&quot;
+     *                 ],
+     *                 &quot;Effect&quot;: &quot;Allow&quot;
+     *             }
+     *         ]
+     *     }</p>
+     * 
      * <b>summary</b> : 
      * <p>Simple Log Service provides intelligent analysis capabilities that can be used to analyze basic data such as logs, metrics, and traces. You can call the GetMLServiceResults operation to obtain the analysis results of a model. You can call the operation in the following scenarios: Named Entity Recognition (NER) tasks on logs, anomaly detection on time series, and root cause analysis on high-latency traces.</p>
      * 
@@ -5402,6 +5421,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getMachineGroupWithOptions(project, machineGroup, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a MaxCompute data shipping job.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMaxComputeExportResponse
+     */
+    public GetMaxComputeExportResponse getMaxComputeExportWithOptions(String project, String mcExportName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMaxComputeExport"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports/" + mcExportName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetMaxComputeExportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a MaxCompute data shipping job.</p>
+     * @return GetMaxComputeExportResponse
+     */
+    public GetMaxComputeExportResponse getMaxComputeExport(String project, String mcExportName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getMaxComputeExportWithOptions(project, mcExportName, headers, runtime);
     }
 
     /**
@@ -6141,6 +6216,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAgentInstanceConfigsResponse listAgentInstanceConfigsWithOptions(ListAgentInstanceConfigsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            query.put("attributes", request.attributes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("configType", request.configType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
             query.put("offset", request.offset);
         }
@@ -6178,6 +6261,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAgentInstanceConfigsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取 ai 工具列表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAiToolsResponse
+     */
+    public ListAiToolsResponse listAiToolsWithOptions(java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAiTools"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/ml/tool/list"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "array")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListAiToolsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取 ai 工具列表</p>
+     * @return ListAiToolsResponse
+     */
+    public ListAiToolsResponse listAiTools() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAiToolsWithOptions(headers, runtime);
     }
 
     /**
@@ -6647,22 +6767,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries a list of dashboards.</p>
      * 
-     * @param request ListDashboardRequest
+     * @param tmpReq ListDashboardRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListDashboardResponse
      */
-    public ListDashboardResponse listDashboardWithOptions(String project, ListDashboardRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListDashboardResponse listDashboardWithOptions(String project, ListDashboardRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
         java.util.Map<String, String> hostMap = new java.util.HashMap<>();
         hostMap.put("project", project);
+        ListDashboardShrinkRequest request = new ListDashboardShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dashboardName)) {
+            query.put("dashboardName", request.dashboardName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("displayName", request.displayName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
             query.put("offset", request.offset);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6836,7 +6974,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出数据加工任务</p>
+     * <p>Queries a list of data transformation jobs in a project.</p>
      * 
      * @param request ListETLsRequest
      * @param headers map
@@ -6881,7 +7019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出数据加工任务</p>
+     * <p>Queries a list of data transformation jobs in a project.</p>
      * 
      * @param request ListETLsRequest
      * @return ListETLsResponse
@@ -6894,7 +7032,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出符合条件的写入处理器信息。</p>
+     * <p>Queries a list of ingest processors that meet specific conditions.</p>
      * 
      * @param request ListIngestProcessorsRequest
      * @param headers map
@@ -6943,7 +7081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出符合条件的写入处理器信息。</p>
+     * <p>Queries a list of ingest processors that meet specific conditions.</p>
      * 
      * @param request ListIngestProcessorsRequest
      * @return ListIngestProcessorsResponse
@@ -7256,6 +7394,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listMachinesWithOptions(project, machineGroup, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of MaxCompute data shipping jobs.</p>
+     * 
+     * @param request ListMaxComputeExportsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMaxComputeExportsResponse
+     */
+    public ListMaxComputeExportsResponse listMaxComputeExportsWithOptions(String project, ListMaxComputeExportsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logstore)) {
+            query.put("logstore", request.logstore);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMaxComputeExports"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListMaxComputeExportsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries a list of MaxCompute data shipping jobs.</p>
+     * 
+     * @param request ListMaxComputeExportsRequest
+     * @return ListMaxComputeExportsResponse
+     */
+    public ListMaxComputeExportsResponse listMaxComputeExports(String project, ListMaxComputeExportsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listMaxComputeExportsWithOptions(project, request, headers, runtime);
     }
 
     /**
@@ -7995,11 +8207,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation by using Alibaba Cloud SDKs. You can use Simple Log Service (SLS) SDKs to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">Overview of Simple Log Service SDKs</a>.</p>
      * <ul>
-     * <li>You must specify a shard when you query logs.</li>
-     * <li>You can query only logs in the Protocol Buffers (Protobuf) format. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
-     * <li>The value of Host consists of a project name and an SLS endpoint. You must specify a project in Host.</li>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>You must specify a shard when you query the logs.</li>
+     * <li>You can query only logs in the Protocol Buffers (protobuf) format. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8058,11 +8270,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation by using Alibaba Cloud SDKs. You can use Simple Log Service (SLS) SDKs to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">Overview of Simple Log Service SDKs</a>.</p>
      * <ul>
-     * <li>You must specify a shard when you query logs.</li>
-     * <li>You can query only logs in the Protocol Buffers (Protobuf) format. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
-     * <li>The value of Host consists of a project name and an SLS endpoint. You must specify a project in Host.</li>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>You must specify a shard when you query the logs.</li>
+     * <li>You can query only logs in the Protocol Buffers (protobuf) format. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8136,7 +8348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或更新写入处理器。</p>
+     * <p>Creates or modifies an ingest processor.</p>
      * 
      * @param request PutIngestProcessorRequest
      * @param headers map
@@ -8181,7 +8393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建或更新写入处理器。</p>
+     * <p>Creates or modifies an ingest processor.</p>
      * 
      * @param request PutIngestProcessorRequest
      * @return PutIngestProcessorResponse
@@ -8194,17 +8406,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation by using Alibaba Cloud SDKs. You can use Simple Log Service (SLS) SDKs to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">Overview of Simple Log Service SDKs</a>.</p>
      * <ul>
-     * <li>When you call the PutLogs operation to write logs to SLS, SLS checks the format of the logs. If a log does not meet the format requirements, the request fails and no logs are written to SLS.</li>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>When you call the PutLogs operation to write logs to Simple Log Service, Simple Log Servicechecks the format of the logs. If a log does not meet the format requirements, the request fails and no logs are written to Simple Log Service.</li>
      * <li>You can write logs only in the Protocol Buffers (Protobuf) format as log groups. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
      * <li>You can write logs in one of the following modes:<ul>
-     * <li>LoadBalance mode: Logs are automatically written to all the writable shards in the specified Logstore. This mode delivers high availability for write operations and is suitable for data consumption scenarios in which you do not need to preserve the order of logs.</li>
-     * <li>KeyHash: Logs are written to a specific shard based on the hash key specified in the URL. The hash key is optional. If you do not specify a hash key, logs are written to shards in LoadBalance mode. For example, you can use the KeyHash mode to write data from a producer, such as an instance, to the shard whose hash value range includes the hash value of the producer name. This ensures that the data that is written to the shard is ordered and the data in the shard is consumed based on the order. This way, when a shard is split or when shards are merged, the data that is associated with the same hash key is stored only in one shard at a point in time. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
+     * <li>LoadBalance mode: In this mode, Log Service automatically writes logs to all writable shards in a Logstore. This mode delivers high availability for write operations and is suitable for data consumption scenarios in which you do not need to preserve the order of logs.</li>
+     * <li>KeyHash: In this mode, a key field is added in the URL parameter. Log Service writes logs to a shard based on the key field. The hash key is optional. If you do not configure the hash key, logs are written to shards in LoadBalance mode. For example, you can use the KeyHash mode to write data from a producer, such as an instance, to the shard whose hash value range includes the hash value of the producer name. This ensures that the data that is written to the shard is ordered and the data in the shard is consumed based on the order. This way, when a shard is split or when shards are merged, the data that is associated with the same hash key is stored only in one shard at a point in time. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
      * </ul>
      * </li>
      * <li>You can call the PutLogs operation to write up to 10 MB of raw logs at a time. We recommend that you keep the total size of the values for each log in a log group to or below 1 MB. Historical versions of SDKs may have different limits. We recommend that you upgrade your SDK to the latest version.</li>
-     * <li>The references for SLS SDK for Java and SLS SDK for Python provide examples on how to call the PutLogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/279525.html">Get started with Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/284638.html">Get started with Simple Log Service SDK for Python</a>.</li>
+     * <li>The references for Log Service SDK for Java and Log Service SDK for Python provide examples on how to call the PutLogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/279525.html">Get started with Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/284638.html">Get started with Simple Log Service SDK for Python</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8249,17 +8461,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation by using Alibaba Cloud SDKs. You can use Simple Log Service (SLS) SDKs to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">Overview of Simple Log Service SDKs</a>.</p>
      * <ul>
-     * <li>When you call the PutLogs operation to write logs to SLS, SLS checks the format of the logs. If a log does not meet the format requirements, the request fails and no logs are written to SLS.</li>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>When you call the PutLogs operation to write logs to Simple Log Service, Simple Log Servicechecks the format of the logs. If a log does not meet the format requirements, the request fails and no logs are written to Simple Log Service.</li>
      * <li>You can write logs only in the Protocol Buffers (Protobuf) format as log groups. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
      * <li>You can write logs in one of the following modes:<ul>
-     * <li>LoadBalance mode: Logs are automatically written to all the writable shards in the specified Logstore. This mode delivers high availability for write operations and is suitable for data consumption scenarios in which you do not need to preserve the order of logs.</li>
-     * <li>KeyHash: Logs are written to a specific shard based on the hash key specified in the URL. The hash key is optional. If you do not specify a hash key, logs are written to shards in LoadBalance mode. For example, you can use the KeyHash mode to write data from a producer, such as an instance, to the shard whose hash value range includes the hash value of the producer name. This ensures that the data that is written to the shard is ordered and the data in the shard is consumed based on the order. This way, when a shard is split or when shards are merged, the data that is associated with the same hash key is stored only in one shard at a point in time. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
+     * <li>LoadBalance mode: In this mode, Log Service automatically writes logs to all writable shards in a Logstore. This mode delivers high availability for write operations and is suitable for data consumption scenarios in which you do not need to preserve the order of logs.</li>
+     * <li>KeyHash: In this mode, a key field is added in the URL parameter. Log Service writes logs to a shard based on the key field. The hash key is optional. If you do not configure the hash key, logs are written to shards in LoadBalance mode. For example, you can use the KeyHash mode to write data from a producer, such as an instance, to the shard whose hash value range includes the hash value of the producer name. This ensures that the data that is written to the shard is ordered and the data in the shard is consumed based on the order. This way, when a shard is split or when shards are merged, the data that is associated with the same hash key is stored only in one shard at a point in time. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
      * </ul>
      * </li>
      * <li>You can call the PutLogs operation to write up to 10 MB of raw logs at a time. We recommend that you keep the total size of the values for each log in a log group to or below 1 MB. Historical versions of SDKs may have different limits. We recommend that you upgrade your SDK to the latest version.</li>
-     * <li>The references for SLS SDK for Java and SLS SDK for Python provide examples on how to call the PutLogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/279525.html">Get started with Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/284638.html">Get started with Simple Log Service SDK for Python</a>.</li>
+     * <li>The references for Log Service SDK for Java and Log Service SDK for Python provide examples on how to call the PutLogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/279525.html">Get started with Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/284638.html">Get started with Simple Log Service SDK for Python</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8646,7 +8858,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动数据加工任务</p>
+     * <p>Starts a data transformation job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8675,13 +8887,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动数据加工任务</p>
+     * <p>Starts a data transformation job.</p>
      * @return StartETLResponse
      */
     public StartETLResponse startETL(String project, String etlName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startETLWithOptions(project, etlName, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a MaxCompute data shipping job.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartMaxComputeExportResponse
+     */
+    public StartMaxComputeExportResponse startMaxComputeExportWithOptions(String project, String mcExportName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartMaxComputeExport"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports/" + mcExportName + "?action=START"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new StartMaxComputeExportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Starts a MaxCompute data shipping job.</p>
+     * @return StartMaxComputeExportResponse
+     */
+    public StartMaxComputeExportResponse startMaxComputeExport(String project, String mcExportName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startMaxComputeExportWithOptions(project, mcExportName, headers, runtime);
     }
 
     /**
@@ -8806,7 +9074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止数据加工任务</p>
+     * <p>Stops a data transformation job.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -8835,13 +9103,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止数据加工任务</p>
+     * <p>Stops a data transformation job.</p>
      * @return StopETLResponse
      */
     public StopETLResponse stopETL(String project, String etlName) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.stopETLWithOptions(project, etlName, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a MaxCompute data shipping job.</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopMaxComputeExportResponse
+     */
+    public StopMaxComputeExportResponse stopMaxComputeExportWithOptions(String project, String mcExportName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopMaxComputeExport"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports/" + mcExportName + "?action=STOP"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new StopMaxComputeExportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Stops a MaxCompute data shipping job.</p>
+     * @return StopMaxComputeExportResponse
+     */
+    public StopMaxComputeExportResponse stopMaxComputeExport(String project, String mcExportName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopMaxComputeExportWithOptions(project, mcExportName, headers, runtime);
     }
 
     /**
@@ -9181,30 +9505,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAgentInstanceConfigResponse
      */
-    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfigWithOptions(String configName, UpdateAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfigWithOptions(String configType, UpdateAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
+            query.put("attributes", request.attributes);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.config)) {
             body.put("config", request.config);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.configMatcher)) {
-            body.put("configMatcher", request.configMatcher);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isGray)) {
-            body.put("isGray", request.isGray);
+        if (!com.aliyun.teautil.Common.isUnset(request.grayConfigs)) {
+            body.put("grayConfigs", request.grayConfigs);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateAgentInstanceConfig"),
             new TeaPair("version", "2020-12-30"),
             new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/agentinstanceconfigs/" + configName + ""),
+            new TeaPair("pathname", "/agentinstanceconfigs/" + configType + ""),
             new TeaPair("method", "PUT"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "ROA"),
@@ -9221,10 +9547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * @param request UpdateAgentInstanceConfigRequest
      * @return UpdateAgentInstanceConfigResponse
      */
-    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfig(String configName, UpdateAgentInstanceConfigRequest request) throws Exception {
+    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfig(String configType, UpdateAgentInstanceConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateAgentInstanceConfigWithOptions(configName, request, headers, runtime);
+        return this.updateAgentInstanceConfigWithOptions(configType, request, headers, runtime);
     }
 
     /**
@@ -9622,7 +9948,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据加工任务</p>
+     * <p>Updates a data transformation job.</p>
      * 
      * @param request UpdateETLRequest
      * @param headers map
@@ -9667,7 +9993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据加工任务</p>
+     * <p>Updates a data transformation job.</p>
      * 
      * @param request UpdateETLRequest
      * @return UpdateETLResponse
@@ -9971,7 +10297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新LogStore关联的写入处理器。</p>
+     * <p>Modifies the ingest processor that is associated with a Logstore.</p>
      * 
      * @param request UpdateLogStoreProcessorRequest
      * @param headers map
@@ -10008,7 +10334,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新LogStore关联的写入处理器。</p>
+     * <p>Modifies the ingest processor that is associated with a Logstore.</p>
      * 
      * @param request UpdateLogStoreProcessorRequest
      * @return UpdateLogStoreProcessorResponse
@@ -10290,6 +10616,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a MaxCompute data shipping job.</p>
+     * 
+     * @param request UpdateMaxComputeExportRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMaxComputeExportResponse
+     */
+    public UpdateMaxComputeExportResponse updateMaxComputeExportWithOptions(String project, String mcExportName, UpdateMaxComputeExportRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMaxComputeExport"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/maxcomputeexports/" + mcExportName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateMaxComputeExportResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Updates a MaxCompute data shipping job.</p>
+     * 
+     * @param request UpdateMaxComputeExportRequest
+     * @return UpdateMaxComputeExportResponse
+     */
+    public UpdateMaxComputeExportResponse updateMaxComputeExport(String project, String mcExportName, UpdateMaxComputeExportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateMaxComputeExportWithOptions(project, mcExportName, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Metricstores are used to store metric data. For more information, see <a href="https://help.aliyun.com/document_detail/174965.html">Metric data</a>.</p>
      * <ul>
      * <li>You must specify an existing Metricstore.</li>
@@ -10434,7 +10834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新MetricStore关联的写入处理器。</p>
+     * <p>Updates the ingest processor that is associated with a Metricstore.</p>
      * 
      * @param request UpdateMetricStoreProcessorRequest
      * @param headers map
@@ -10471,7 +10871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新MetricStore关联的写入处理器。</p>
+     * <p>Updates the ingest processor that is associated with a Metricstore.</p>
      * 
      * @param request UpdateMetricStoreProcessorRequest
      * @return UpdateMetricStoreProcessorResponse
@@ -10662,72 +11062,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates an Object Storage Service (OSS) external store.</p>
-     * 
-     * @param request UpdateOssExternalStoreRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateOssExternalStoreResponse
-     */
-    public UpdateOssExternalStoreResponse updateOssExternalStoreWithOptions(String project, String externalStoreName, UpdateOssExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.externalStoreName)) {
-            body.put("externalStoreName", request.externalStoreName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parameter)) {
-            body.put("parameter", request.parameter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.storeType)) {
-            body.put("storeType", request.storeType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateOssExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores/" + externalStoreName + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateOssExternalStoreResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates an Object Storage Service (OSS) external store.</p>
-     * 
-     * @param request UpdateOssExternalStoreRequest
-     * @return UpdateOssExternalStoreResponse
-     */
-    public UpdateOssExternalStoreResponse updateOssExternalStore(String project, String externalStoreName, UpdateOssExternalStoreRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateOssExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
-    }
-
-    /**
-     * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -10764,6 +11098,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recycleBinEnabled)) {
+            body.put("recycleBinEnabled", request.recycleBinEnabled);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -10818,70 +11156,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateProjectWithOptions(project, request, headers, runtime);
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates an ApsaraDB RDS external store.</p>
-     * 
-     * @param request UpdateRdsExternalStoreRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateRdsExternalStoreResponse
-     */
-    public UpdateRdsExternalStoreResponse updateRdsExternalStoreWithOptions(String project, String externalStoreName, UpdateRdsExternalStoreRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
-        hostMap.put("project", project);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.externalStoreName)) {
-            body.put("externalStoreName", request.externalStoreName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.parameter)) {
-            body.put("parameter", request.parameter);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.storeType)) {
-            body.put("storeType", request.storeType);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("hostMap", hostMap),
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateRdsExternalStore"),
-            new TeaPair("version", "2020-12-30"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/externalstores/" + externalStoreName + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "none")
-        ));
-        return TeaModel.toModel(this.execute(params, req, runtime), new UpdateRdsExternalStoreResponse());
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * <b>summary</b> : 
-     * <p>Updates an ApsaraDB RDS external store.</p>
-     * 
-     * @param request UpdateRdsExternalStoreRequest
-     * @return UpdateRdsExternalStoreResponse
-     */
-    public UpdateRdsExternalStoreResponse updateRdsExternalStore(String project, String externalStoreName, UpdateRdsExternalStoreRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateRdsExternalStoreWithOptions(project, externalStoreName, request, headers, runtime);
     }
 
     /**
