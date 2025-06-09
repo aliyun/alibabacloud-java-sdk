@@ -869,6 +869,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("Schedules")
         public java.util.List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesTimerSchedules> schedules;
 
+        @NameInMap("TimeZone")
+        public String timeZone;
+
         public static DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesTimer build(java.util.Map<String, ?> map) throws Exception {
             DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesTimer self = new DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesTimer();
             return TeaModel.build(map, self);
@@ -904,6 +907,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesTimerSchedules> getSchedules() {
             return this.schedules;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesTimer setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
     }

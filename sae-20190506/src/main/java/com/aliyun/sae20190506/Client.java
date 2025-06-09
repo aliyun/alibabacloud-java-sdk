@@ -235,6 +235,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Associates a Network Load Balancer (NLB) instance with an application.</p>
+     * 
+     * @param request BindNlbRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BindNlbResponse
+     */
+    public BindNlbResponse bindNlbWithOptions(BindNlbRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
+            query.put("AddressType", request.addressType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.listeners)) {
+            query.put("Listeners", request.listeners);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nlbId)) {
+            query.put("NlbId", request.nlbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneMappings)) {
+            query.put("ZoneMappings", request.zoneMappings);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BindNlb"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/app/nlb"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BindNlbResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Associates a Network Load Balancer (NLB) instance with an application.</p>
+     * 
+     * @param request BindNlbRequest
+     * @return BindNlbResponse
+     */
+    public BindNlbResponse bindNlb(BindNlbRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.bindNlbWithOptions(request, headers, runtime);
+    }
+
+    /**
      * @param request BindSlbRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3070,6 +3133,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.describeApplicationInstancesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</p>
+     * 
+     * @param request DescribeApplicationNlbsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationNlbsResponse
+     */
+    public DescribeApplicationNlbsResponse describeApplicationNlbsWithOptions(DescribeApplicationNlbsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationNlbs"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/app/nlb"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationNlbsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</p>
+     * 
+     * @param request DescribeApplicationNlbsRequest
+     * @return DescribeApplicationNlbsResponse
+     */
+    public DescribeApplicationNlbsResponse describeApplicationNlbs(DescribeApplicationNlbsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeApplicationNlbsWithOptions(request, headers, runtime);
     }
 
     /**
