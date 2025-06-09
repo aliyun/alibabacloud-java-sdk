@@ -21,6 +21,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     @Deprecated
     public Long count;
 
+    @NameInMap("eflo_node_group")
+    public CreateClusterNodePoolRequestEfloNodeGroup efloNodeGroup;
+
     /**
      * <p>Specifies whether to set the network type of the pod to host network.</p>
      * <ul>
@@ -135,6 +138,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
     public Long getCount() {
         return this.count;
+    }
+
+    public CreateClusterNodePoolRequest setEfloNodeGroup(CreateClusterNodePoolRequestEfloNodeGroup efloNodeGroup) {
+        this.efloNodeGroup = efloNodeGroup;
+        return this;
+    }
+    public CreateClusterNodePoolRequestEfloNodeGroup getEfloNodeGroup() {
+        return this.efloNodeGroup;
     }
 
     public CreateClusterNodePoolRequest setHostNetwork(Boolean hostNetwork) {
@@ -390,6 +401,36 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class CreateClusterNodePoolRequestEfloNodeGroup extends TeaModel {
+        @NameInMap("cluster_id")
+        public String clusterId;
+
+        @NameInMap("group_id")
+        public String groupId;
+
+        public static CreateClusterNodePoolRequestEfloNodeGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestEfloNodeGroup self = new CreateClusterNodePoolRequestEfloNodeGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestEfloNodeGroup setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public CreateClusterNodePoolRequestEfloNodeGroup setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
         }
 
     }

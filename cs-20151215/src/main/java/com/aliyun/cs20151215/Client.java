@@ -1295,6 +1295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("count", request.count);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.efloNodeGroup)) {
+            body.put("eflo_node_group", request.efloNodeGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hostNetwork)) {
             body.put("host_network", request.hostNetwork);
         }
