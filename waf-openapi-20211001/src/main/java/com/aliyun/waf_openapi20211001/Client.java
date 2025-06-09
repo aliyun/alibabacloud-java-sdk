@@ -465,6 +465,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
@@ -1263,6 +1267,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
@@ -1542,6 +1550,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMemberAccountResponse deleteMemberAccount(DeleteMemberAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMemberAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询异常的云产品接入资源</p>
+     * 
+     * @param request DescribeAbnormalCloudResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAbnormalCloudResourcesResponse
+     */
+    public DescribeAbnormalCloudResourcesResponse describeAbnormalCloudResourcesWithOptions(DescribeAbnormalCloudResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAbnormalCloudResources"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAbnormalCloudResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询异常的云产品接入资源</p>
+     * 
+     * @param request DescribeAbnormalCloudResourcesRequest
+     * @return DescribeAbnormalCloudResourcesResponse
+     */
+    public DescribeAbnormalCloudResourcesResponse describeAbnormalCloudResources(DescribeAbnormalCloudResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAbnormalCloudResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -3941,6 +4001,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
@@ -9451,6 +9515,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
             query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
         }
@@ -10642,6 +10710,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTemplateResourcesResponse modifyTemplateResources(ModifyTemplateResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTemplateResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重新接入云产品</p>
+     * 
+     * @param request ReCreateCloudResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReCreateCloudResourceResponse
+     */
+    public ReCreateCloudResourceResponse reCreateCloudResourceWithOptions(ReCreateCloudResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.port)) {
+            query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceInstanceId)) {
+            query.put("ResourceInstanceId", request.resourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceProduct)) {
+            query.put("ResourceProduct", request.resourceProduct);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReCreateCloudResource"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReCreateCloudResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重新接入云产品</p>
+     * 
+     * @param request ReCreateCloudResourceRequest
+     * @return ReCreateCloudResourceResponse
+     */
+    public ReCreateCloudResourceResponse reCreateCloudResource(ReCreateCloudResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reCreateCloudResourceWithOptions(request, runtime);
     }
 
     /**

@@ -40,6 +40,9 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Resource")
+    public String resource;
+
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
      * 
@@ -91,6 +94,14 @@ public class ModifyDefenseRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDefenseRuleRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
     }
 
     public ModifyDefenseRuleRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {

@@ -52,6 +52,9 @@ public class CreateDefenseRuleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("Resource")
+    public String resource;
+
     /**
      * <p>The ID of the resource group.</p>
      * 
@@ -103,6 +106,14 @@ public class CreateDefenseRuleRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateDefenseRuleRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
     }
 
     public CreateDefenseRuleRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {

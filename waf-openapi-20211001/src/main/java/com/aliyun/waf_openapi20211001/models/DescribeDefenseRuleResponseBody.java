@@ -81,6 +81,9 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         @NameInMap("GmtModified")
         public Long gmtModified;
 
+        @NameInMap("Resource")
+        public String resource;
+
         /**
          * <p>The ID of the protection rule.</p>
          * 
@@ -156,6 +159,14 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         }
         public Long getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeDefenseRuleResponseBodyRule setResource(String resource) {
+            this.resource = resource;
+            return this;
+        }
+        public String getResource() {
+            return this.resource;
         }
 
         public DescribeDefenseRuleResponseBodyRule setRuleId(Long ruleId) {
