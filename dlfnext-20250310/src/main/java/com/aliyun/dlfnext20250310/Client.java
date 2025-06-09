@@ -441,6 +441,168 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCatalogSummaryResponse
+     */
+    public GetCatalogSummaryResponse getCatalogSummaryWithOptions(String catalogId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalogSummary"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/storage-summary/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * @return GetCatalogSummaryResponse
+     */
+    public GetCatalogSummaryResponse getCatalogSummary(String catalogId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCatalogSummaryWithOptions(catalogId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param request GetCatalogSummaryTrendRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCatalogSummaryTrendResponse
+     */
+    public GetCatalogSummaryTrendResponse getCatalogSummaryTrendWithOptions(String catalogId, GetCatalogSummaryTrendRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
+            query.put("endDate", request.endDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
+            query.put("startDate", request.startDate);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalogSummaryTrend"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/storage-summary/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/trend"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogSummaryTrendResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param request GetCatalogSummaryTrendRequest
+     * @return GetCatalogSummaryTrendResponse
+     */
+    public GetCatalogSummaryTrendResponse getCatalogSummaryTrend(String catalogId, GetCatalogSummaryTrendRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCatalogSummaryTrendWithOptions(catalogId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据湖Catalog的临时访问凭证</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCatalogTokenResponse
+     */
+    public GetCatalogTokenResponse getCatalogTokenWithOptions(String catalog, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCatalogToken"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/catalogs/" + com.aliyun.openapiutil.Client.getEncodeParam(catalog) + "/token"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCatalogTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取数据湖Catalog的临时访问凭证</p>
+     * @return GetCatalogTokenResponse
+     */
+    public GetCatalogTokenResponse getCatalogToken(String catalog) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCatalogTokenWithOptions(catalog, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDatabaseSummaryResponse
+     */
+    public GetDatabaseSummaryResponse getDatabaseSummaryWithOptions(String catalogId, String database, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDatabaseSummary"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/storage-summary/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDatabaseSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * @return GetDatabaseSummaryResponse
+     */
+    public GetDatabaseSummaryResponse getDatabaseSummary(String catalogId, String database) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getDatabaseSummaryWithOptions(catalogId, database, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询 DLF 当前地域开通状态</p>
      * 
      * @param headers map
@@ -521,6 +683,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableSummaryResponse
+     */
+    public GetTableSummaryResponse getTableSummaryWithOptions(String catalogId, String database, String table, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableSummary"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/storage-summary/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableSummaryResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * @return GetTableSummaryResponse
+     */
+    public GetTableSummaryResponse getTableSummary(String catalogId, String database, String table) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTableSummaryWithOptions(catalogId, database, table, headers, runtime);
     }
 
     /**
@@ -674,6 +873,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listCatalogsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param request ListPartitionSummariesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPartitionSummariesResponse
+     */
+    public ListPartitionSummariesResponse listPartitionSummariesWithOptions(String catalogId, String database, String table, ListPartitionSummariesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionNamePattern)) {
+            query.put("partitionNamePattern", request.partitionNamePattern);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPartitionSummaries"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/storage-summary/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/partitions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPartitionSummariesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param request ListPartitionSummariesRequest
+     * @return ListPartitionSummariesResponse
+     */
+    public ListPartitionSummariesResponse listPartitionSummaries(String catalogId, String database, String table, ListPartitionSummariesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPartitionSummariesWithOptions(catalogId, database, table, request, headers, runtime);
     }
 
     /**
