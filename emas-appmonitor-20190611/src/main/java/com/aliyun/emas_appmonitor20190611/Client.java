@@ -79,12 +79,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetErrorResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetErrorResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetErrorResponse());
     }
 
     /**
@@ -171,12 +166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetErrorsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetErrorsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetErrorsResponse());
     }
 
     /**
@@ -251,12 +241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetIssueResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetIssueResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIssueResponse());
     }
 
     /**
@@ -351,12 +336,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetIssuesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetIssuesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIssuesResponse());
     }
 
     /**
@@ -372,6 +352,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取符号表文件列表</p>
+     * 
      * @param request GetSymbolicFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSymbolicFilesResponse
@@ -385,6 +368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.appVersion)) {
             body.put("AppVersion", request.appVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.buildId)) {
+            body.put("BuildId", request.buildId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
@@ -437,15 +424,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSymbolicFilesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetSymbolicFilesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSymbolicFilesResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取符号表文件列表</p>
+     * 
      * @param request GetSymbolicFilesRequest
      * @return GetSymbolicFilesResponse
      */
@@ -484,12 +469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new RequestUploadTokenResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new RequestUploadTokenResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RequestUploadTokenResponse());
     }
 
     /**
@@ -555,12 +535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSymbolicResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SubmitSymbolicResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSymbolicResponse());
     }
 
     /**

@@ -21,6 +21,9 @@ public class GetSymbolicFilesRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    @NameInMap("BuildId")
+    public String buildId;
+
     /**
      * <strong>example:</strong>
      * <p>1743523199999</p>
@@ -113,6 +116,14 @@ public class GetSymbolicFilesRequest extends TeaModel {
     }
     public String getAppVersion() {
         return this.appVersion;
+    }
+
+    public GetSymbolicFilesRequest setBuildId(String buildId) {
+        this.buildId = buildId;
+        return this;
+    }
+    public String getBuildId() {
+        return this.buildId;
     }
 
     public GetSymbolicFilesRequest setEndTime(Long endTime) {
