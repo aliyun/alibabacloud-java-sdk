@@ -571,6 +571,9 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         @NameInMap("OutputToken")
         public Integer outputToken;
 
+        @NameInMap("PubTime")
+        public String pubTime;
+
         @NameInMap("Summary")
         public GetHotTopicBroadcastResponseBodyDataDataSummary summary;
 
@@ -580,6 +583,9 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
          */
         @NameInMap("TextSummary")
         public String textSummary;
+
+        @NameInMap("Url")
+        public String url;
 
         public static GetHotTopicBroadcastResponseBodyDataData build(java.util.Map<String, ?> map) throws Exception {
             GetHotTopicBroadcastResponseBodyDataData self = new GetHotTopicBroadcastResponseBodyDataData();
@@ -690,6 +696,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             return this.outputToken;
         }
 
+        public GetHotTopicBroadcastResponseBodyDataData setPubTime(String pubTime) {
+            this.pubTime = pubTime;
+            return this;
+        }
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
         public GetHotTopicBroadcastResponseBodyDataData setSummary(GetHotTopicBroadcastResponseBodyDataDataSummary summary) {
             this.summary = summary;
             return this;
@@ -704,6 +718,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         }
         public String getTextSummary() {
             return this.textSummary;
+        }
+
+        public GetHotTopicBroadcastResponseBodyDataData setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }
