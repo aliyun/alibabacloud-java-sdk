@@ -4,11 +4,8 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class CreateAgentInstanceConfigRequest extends TeaModel {
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("attributes")
-    public String attributes;
+    public java.util.Map<String, String> attributes;
 
     /**
      * <p>This parameter is required.</p>
@@ -23,18 +20,18 @@ public class CreateAgentInstanceConfigRequest extends TeaModel {
     public String configType;
 
     @NameInMap("grayConfigs")
-    public String grayConfigs;
+    public java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
     public static CreateAgentInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAgentInstanceConfigRequest self = new CreateAgentInstanceConfigRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAgentInstanceConfigRequest setAttributes(String attributes) {
+    public CreateAgentInstanceConfigRequest setAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
     }
-    public String getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
@@ -54,11 +51,11 @@ public class CreateAgentInstanceConfigRequest extends TeaModel {
         return this.configType;
     }
 
-    public CreateAgentInstanceConfigRequest setGrayConfigs(String grayConfigs) {
+    public CreateAgentInstanceConfigRequest setGrayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
         this.grayConfigs = grayConfigs;
         return this;
     }
-    public String getGrayConfigs() {
+    public java.util.List<AgentInstanceConfigGrayConfigs> getGrayConfigs() {
         return this.grayConfigs;
     }
 

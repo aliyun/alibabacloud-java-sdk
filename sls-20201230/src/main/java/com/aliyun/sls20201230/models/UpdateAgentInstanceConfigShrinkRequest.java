@@ -3,9 +3,9 @@ package com.aliyun.sls20201230.models;
 
 import com.aliyun.tea.*;
 
-public class UpdateAgentInstanceConfigRequest extends TeaModel {
+public class UpdateAgentInstanceConfigShrinkRequest extends TeaModel {
     @NameInMap("attributes")
-    public java.util.Map<String, String> attributes;
+    public String attributesShrink;
 
     /**
      * <p>This parameter is required.</p>
@@ -16,20 +16,20 @@ public class UpdateAgentInstanceConfigRequest extends TeaModel {
     @NameInMap("grayConfigs")
     public java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
-    public static UpdateAgentInstanceConfigRequest build(java.util.Map<String, ?> map) throws Exception {
-        UpdateAgentInstanceConfigRequest self = new UpdateAgentInstanceConfigRequest();
+    public static UpdateAgentInstanceConfigShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateAgentInstanceConfigShrinkRequest self = new UpdateAgentInstanceConfigShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public UpdateAgentInstanceConfigRequest setAttributes(java.util.Map<String, String> attributes) {
-        this.attributes = attributes;
+    public UpdateAgentInstanceConfigShrinkRequest setAttributesShrink(String attributesShrink) {
+        this.attributesShrink = attributesShrink;
         return this;
     }
-    public java.util.Map<String, String> getAttributes() {
-        return this.attributes;
+    public String getAttributesShrink() {
+        return this.attributesShrink;
     }
 
-    public UpdateAgentInstanceConfigRequest setConfig(String config) {
+    public UpdateAgentInstanceConfigShrinkRequest setConfig(String config) {
         this.config = config;
         return this;
     }
@@ -37,7 +37,7 @@ public class UpdateAgentInstanceConfigRequest extends TeaModel {
         return this.config;
     }
 
-    public UpdateAgentInstanceConfigRequest setGrayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
+    public UpdateAgentInstanceConfigShrinkRequest setGrayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
         this.grayConfigs = grayConfigs;
         return this;
     }

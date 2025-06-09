@@ -12,7 +12,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The log download tasks.</p>
+     * <p>Array, to return a list of log download tasks.</p>
      */
     @NameInMap("results")
     public java.util.List<ListDownloadJobsResponseBodyResults> results;
@@ -452,7 +452,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>任务执行细节</p>
+         * <p>The execution details.</p>
          */
         @NameInMap("executionDetails")
         public ListDownloadJobsResponseBodyResultsExecutionDetails executionDetails;

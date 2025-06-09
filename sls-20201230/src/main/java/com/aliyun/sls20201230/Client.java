@@ -2191,16 +2191,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>DeleteAgentInstanceConfig</p>
      * 
-     * @param request DeleteAgentInstanceConfigRequest
+     * @param tmpReq DeleteAgentInstanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAgentInstanceConfigResponse
      */
-    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfigWithOptions(String configType, DeleteAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DeleteAgentInstanceConfigResponse deleteAgentInstanceConfigWithOptions(String configType, DeleteAgentInstanceConfigRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteAgentInstanceConfigShrinkRequest request = new DeleteAgentInstanceConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributes)) {
+            request.attributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributes, "attributes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
-            query.put("attributes", request.attributes);
+        if (!com.aliyun.teautil.Common.isUnset(request.attributesShrink)) {
+            query.put("attributes", request.attributesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3831,16 +3837,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>GetAgentInstanceConfig</p>
      * 
-     * @param request GetAgentInstanceConfigRequest
+     * @param tmpReq GetAgentInstanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAgentInstanceConfigResponse
      */
-    public GetAgentInstanceConfigResponse getAgentInstanceConfigWithOptions(String configType, GetAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetAgentInstanceConfigResponse getAgentInstanceConfigWithOptions(String configType, GetAgentInstanceConfigRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetAgentInstanceConfigShrinkRequest request = new GetAgentInstanceConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributes)) {
+            request.attributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributes, "attributes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
-            query.put("attributes", request.attributes);
+        if (!com.aliyun.teautil.Common.isUnset(request.attributesShrink)) {
+            query.put("attributes", request.attributesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -6216,10 +6228,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAgentInstanceConfigsResponse listAgentInstanceConfigsWithOptions(ListAgentInstanceConfigsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
-            query.put("attributes", request.attributes);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
             query.put("configType", request.configType);
         }
@@ -6916,7 +6924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举下载任务</p>
+     * <p>Queries a list of log download tasks in a project.</p>
      * 
      * @param request ListDownloadJobsRequest
      * @param headers map
@@ -6961,7 +6969,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列举下载任务</p>
+     * <p>Queries a list of log download tasks in a project.</p>
      * 
      * @param request ListDownloadJobsRequest
      * @return ListDownloadJobsResponse
@@ -9500,16 +9508,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>UpdateAgentInstanceConfig</p>
      * 
-     * @param request UpdateAgentInstanceConfigRequest
+     * @param tmpReq UpdateAgentInstanceConfigRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAgentInstanceConfigResponse
      */
-    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfigWithOptions(String configType, UpdateAgentInstanceConfigRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateAgentInstanceConfigResponse updateAgentInstanceConfigWithOptions(String configType, UpdateAgentInstanceConfigRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateAgentInstanceConfigShrinkRequest request = new UpdateAgentInstanceConfigShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributes)) {
+            request.attributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributes, "attributes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.attributes)) {
-            query.put("attributes", request.attributes);
+        if (!com.aliyun.teautil.Common.isUnset(request.attributesShrink)) {
+            query.put("attributes", request.attributesShrink);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();

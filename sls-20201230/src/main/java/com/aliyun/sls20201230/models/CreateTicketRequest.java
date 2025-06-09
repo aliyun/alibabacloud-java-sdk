@@ -20,7 +20,7 @@ public class CreateTicketRequest extends TeaModel {
     /**
      * <ul>
      * <li>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the CreateTicket operation. After you obtain the ticket, you can use the ticket regardless of the region.</li>
-     * <li>The validity period for the URL of the console page that you want to embed. Unit: seconds. Default value: 86400, which specifies one day. Valid values: 0 to 2592000. The value 2592000 specifies 30 days.</li>
+     * <li>The validity period for the URL of the console page that you want to embed. Unit: seconds. Default value: 86400 (one day). Valid values: 0 to 2592000 (30 days).</li>
      * </ul>
      * 
      * <strong>example:</strong>

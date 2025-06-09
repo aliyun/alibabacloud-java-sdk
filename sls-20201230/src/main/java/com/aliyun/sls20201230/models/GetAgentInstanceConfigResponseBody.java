@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAgentInstanceConfigResponseBody extends TeaModel {
     @NameInMap("attributes")
-    public String attributes;
+    public java.util.Map<String, String> attributes;
 
     @NameInMap("config")
     public String config;
@@ -17,7 +17,7 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     public Long createTime;
 
     @NameInMap("grayConfigs")
-    public java.util.List<java.util.Map<String, String>> grayConfigs;
+    public java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
     @NameInMap("lastModifyTime")
     public Long lastModifyTime;
@@ -27,11 +27,11 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetAgentInstanceConfigResponseBody setAttributes(String attributes) {
+    public GetAgentInstanceConfigResponseBody setAttributes(java.util.Map<String, String> attributes) {
         this.attributes = attributes;
         return this;
     }
-    public String getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
@@ -59,11 +59,11 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         return this.createTime;
     }
 
-    public GetAgentInstanceConfigResponseBody setGrayConfigs(java.util.List<java.util.Map<String, String>> grayConfigs) {
+    public GetAgentInstanceConfigResponseBody setGrayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
         this.grayConfigs = grayConfigs;
         return this;
     }
-    public java.util.List<java.util.Map<String, String>> getGrayConfigs() {
+    public java.util.List<AgentInstanceConfigGrayConfigs> getGrayConfigs() {
         return this.grayConfigs;
     }
 

@@ -4,9 +4,6 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListAgentInstanceConfigsRequest extends TeaModel {
-    @NameInMap("attributes")
-    public String attributes;
-
     @NameInMap("configType")
     public String configType;
 
@@ -19,14 +16,6 @@ public class ListAgentInstanceConfigsRequest extends TeaModel {
     public static ListAgentInstanceConfigsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListAgentInstanceConfigsRequest self = new ListAgentInstanceConfigsRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListAgentInstanceConfigsRequest setAttributes(String attributes) {
-        this.attributes = attributes;
-        return this;
-    }
-    public String getAttributes() {
-        return this.attributes;
     }
 
     public ListAgentInstanceConfigsRequest setConfigType(String configType) {
