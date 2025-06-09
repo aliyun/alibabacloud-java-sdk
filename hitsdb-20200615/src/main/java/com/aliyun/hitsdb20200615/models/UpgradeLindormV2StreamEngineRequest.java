@@ -4,6 +4,9 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class UpgradeLindormV2StreamEngineRequest extends TeaModel {
+    @NameInMap("CustomConfig")
+    public String customConfig;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -55,6 +58,14 @@ public class UpgradeLindormV2StreamEngineRequest extends TeaModel {
     public static UpgradeLindormV2StreamEngineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeLindormV2StreamEngineRequest self = new UpgradeLindormV2StreamEngineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeLindormV2StreamEngineRequest setCustomConfig(String customConfig) {
+        this.customConfig = customConfig;
+        return this;
+    }
+    public String getCustomConfig() {
+        return this.customConfig;
     }
 
     public UpgradeLindormV2StreamEngineRequest setInstanceId(String instanceId) {

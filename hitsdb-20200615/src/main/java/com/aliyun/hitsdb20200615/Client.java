@@ -4218,6 +4218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeLindormV2StreamEngineResponse upgradeLindormV2StreamEngineWithOptions(UpgradeLindormV2StreamEngineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customConfig)) {
+            query.put("CustomConfig", request.customConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
