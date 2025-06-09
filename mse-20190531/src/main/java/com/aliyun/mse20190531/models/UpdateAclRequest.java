@@ -35,6 +35,9 @@ public class UpdateAclRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetworkType")
+    public String networkType;
+
     public static UpdateAclRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAclRequest self = new UpdateAclRequest();
         return TeaModel.build(map, self);
@@ -62,6 +65,14 @@ public class UpdateAclRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public UpdateAclRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
 }
