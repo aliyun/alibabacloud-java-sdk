@@ -458,6 +458,9 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         @NameInMap("Parallelism")
         public Integer parallelism;
 
+        @NameInMap("Priority")
+        public Integer priority;
+
         /**
          * <p>The root task IDs.</p>
          */
@@ -554,6 +557,14 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         }
         public Integer getParallelism() {
             return this.parallelism;
+        }
+
+        public CreateWorkflowInstancesRequestDefaultRunProperties setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public CreateWorkflowInstancesRequestDefaultRunProperties setRootTaskIds(java.util.List<Long> rootTaskIds) {

@@ -2579,6 +2579,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建工作流实例</p>
+     * 
      * @param tmpReq CreateWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWorkflowInstancesResponse
@@ -2658,6 +2661,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建工作流实例</p>
+     * 
      * @param request CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
      */
@@ -11050,6 +11056,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a workflow.</p>
+     * 
      * @param request UpdateBusinessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateBusinessResponse
@@ -11099,6 +11108,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Updates a workflow.</p>
+     * 
      * @param request UpdateBusinessRequest
      * @return UpdateBusinessResponse
      */

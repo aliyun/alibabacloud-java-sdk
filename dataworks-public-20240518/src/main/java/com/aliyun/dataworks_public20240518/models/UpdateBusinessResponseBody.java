@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateBusinessResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid.Tenant.ConnectionNotExists</p>
      */
@@ -12,6 +14,8 @@ public class UpdateBusinessResponseBody extends TeaModel {
     public String errorCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>The connection does not exist.</p>
      */
@@ -19,6 +23,8 @@ public class UpdateBusinessResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateBusinessResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0000-ABCD-EFG****</p>
      */
@@ -33,6 +41,10 @@ public class UpdateBusinessResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>true\
+     * false</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
