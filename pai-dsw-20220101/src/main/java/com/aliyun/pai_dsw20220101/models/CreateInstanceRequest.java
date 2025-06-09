@@ -167,6 +167,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateInstanceRequestTag> tag;
 
+    @NameInMap("UserCommand")
+    public CreateInstanceRequestUserCommand userCommand;
+
     /**
      * <p>The ID of the instance owner. Valid values: Alibaba Cloud account and RAM user.</p>
      * 
@@ -367,6 +370,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public java.util.List<CreateInstanceRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateInstanceRequest setUserCommand(CreateInstanceRequestUserCommand userCommand) {
+        this.userCommand = userCommand;
+        return this;
+    }
+    public CreateInstanceRequestUserCommand getUserCommand() {
+        return this.userCommand;
     }
 
     public CreateInstanceRequest setUserId(String userId) {
@@ -961,6 +972,44 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class CreateInstanceRequestUserCommandOnStart extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        public static CreateInstanceRequestUserCommandOnStart build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestUserCommandOnStart self = new CreateInstanceRequestUserCommandOnStart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestUserCommandOnStart setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+    }
+
+    public static class CreateInstanceRequestUserCommand extends TeaModel {
+        @NameInMap("OnStart")
+        public CreateInstanceRequestUserCommandOnStart onStart;
+
+        public static CreateInstanceRequestUserCommand build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestUserCommand self = new CreateInstanceRequestUserCommand();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestUserCommand setOnStart(CreateInstanceRequestUserCommandOnStart onStart) {
+            this.onStart = onStart;
+            return this;
+        }
+        public CreateInstanceRequestUserCommandOnStart getOnStart() {
+            return this.onStart;
         }
 
     }

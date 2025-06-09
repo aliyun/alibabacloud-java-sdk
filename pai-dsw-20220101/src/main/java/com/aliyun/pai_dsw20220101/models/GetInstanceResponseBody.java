@@ -418,6 +418,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @NameInMap("TerminalUrl")
     public String terminalUrl;
 
+    @NameInMap("UserCommandId")
+    public String userCommandId;
+
     /**
      * <p>The user ID.</p>
      * 
@@ -825,6 +828,14 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getTerminalUrl() {
         return this.terminalUrl;
+    }
+
+    public GetInstanceResponseBody setUserCommandId(String userCommandId) {
+        this.userCommandId = userCommandId;
+        return this;
+    }
+    public String getUserCommandId() {
+        return this.userCommandId;
     }
 
     public GetInstanceResponseBody setUserId(String userId) {

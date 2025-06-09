@@ -169,6 +169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Tag", request.tag);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userCommand)) {
+            body.put("UserCommand", request.userCommand);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             body.put("UserId", request.userId);
         }
@@ -1556,8 +1560,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DisassociateDriver", request.disassociateDriver);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateEnvironmentVariables)) {
+            body.put("DisassociateEnvironmentVariables", request.disassociateEnvironmentVariables);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.disassociateForwardInfos)) {
             body.put("DisassociateForwardInfos", request.disassociateForwardInfos);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.disassociateUserCommand)) {
+            body.put("DisassociateUserCommand", request.disassociateUserCommand);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.disassociateVpc)) {
@@ -1574,6 +1586,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ecsSpec)) {
             body.put("EcsSpec", request.ecsSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentVariables)) {
+            body.put("EnvironmentVariables", request.environmentVariables);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageAuth)) {
@@ -1602,6 +1618,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.requestedResource)) {
             body.put("RequestedResource", request.requestedResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userCommand)) {
+            body.put("UserCommand", request.userCommand);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {

@@ -76,6 +76,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("DisassociateDriver")
     public Boolean disassociateDriver;
 
+    @NameInMap("DisassociateEnvironmentVariables")
+    public Boolean disassociateEnvironmentVariables;
+
     /**
      * <p>Specifies whether to delete the associated forward information.</p>
      * 
@@ -84,6 +87,9 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("DisassociateForwardInfos")
     public Boolean disassociateForwardInfos;
+
+    @NameInMap("DisassociateUserCommand")
+    public Boolean disassociateUserCommand;
 
     /**
      * <p>Specifies whether to delete the associated user VPC.</p>
@@ -117,6 +123,9 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("EcsSpec")
     public String ecsSpec;
+
+    @NameInMap("EnvironmentVariables")
+    public java.util.Map<String, ?> environmentVariables;
 
     /**
      * <p>The Base64-encoded account and password for the user‘s private image. The password will be hidden.</p>
@@ -182,6 +191,9 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("RequestedResource")
     public UpdateInstanceRequestRequestedResource requestedResource;
+
+    @NameInMap("UserCommand")
+    public UpdateInstanceRequestUserCommand userCommand;
 
     /**
      * <p>the User ID of the instance.</p>
@@ -288,12 +300,28 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.disassociateDriver;
     }
 
+    public UpdateInstanceRequest setDisassociateEnvironmentVariables(Boolean disassociateEnvironmentVariables) {
+        this.disassociateEnvironmentVariables = disassociateEnvironmentVariables;
+        return this;
+    }
+    public Boolean getDisassociateEnvironmentVariables() {
+        return this.disassociateEnvironmentVariables;
+    }
+
     public UpdateInstanceRequest setDisassociateForwardInfos(Boolean disassociateForwardInfos) {
         this.disassociateForwardInfos = disassociateForwardInfos;
         return this;
     }
     public Boolean getDisassociateForwardInfos() {
         return this.disassociateForwardInfos;
+    }
+
+    public UpdateInstanceRequest setDisassociateUserCommand(Boolean disassociateUserCommand) {
+        this.disassociateUserCommand = disassociateUserCommand;
+        return this;
+    }
+    public Boolean getDisassociateUserCommand() {
+        return this.disassociateUserCommand;
     }
 
     public UpdateInstanceRequest setDisassociateVpc(Boolean disassociateVpc) {
@@ -326,6 +354,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    public UpdateInstanceRequest setEnvironmentVariables(java.util.Map<String, ?> environmentVariables) {
+        this.environmentVariables = environmentVariables;
+        return this;
+    }
+    public java.util.Map<String, ?> getEnvironmentVariables() {
+        return this.environmentVariables;
     }
 
     public UpdateInstanceRequest setImageAuth(String imageAuth) {
@@ -382,6 +418,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public UpdateInstanceRequestRequestedResource getRequestedResource() {
         return this.requestedResource;
+    }
+
+    public UpdateInstanceRequest setUserCommand(UpdateInstanceRequestUserCommand userCommand) {
+        this.userCommand = userCommand;
+        return this;
+    }
+    public UpdateInstanceRequestUserCommand getUserCommand() {
+        return this.userCommand;
     }
 
     public UpdateInstanceRequest setUserId(String userId) {
@@ -770,6 +814,44 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public String getSharedMemory() {
             return this.sharedMemory;
+        }
+
+    }
+
+    public static class UpdateInstanceRequestUserCommandOnStart extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        public static UpdateInstanceRequestUserCommandOnStart build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestUserCommandOnStart self = new UpdateInstanceRequestUserCommandOnStart();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestUserCommandOnStart setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+    }
+
+    public static class UpdateInstanceRequestUserCommand extends TeaModel {
+        @NameInMap("OnStart")
+        public UpdateInstanceRequestUserCommandOnStart onStart;
+
+        public static UpdateInstanceRequestUserCommand build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestUserCommand self = new UpdateInstanceRequestUserCommand();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestUserCommand setOnStart(UpdateInstanceRequestUserCommandOnStart onStart) {
+            this.onStart = onStart;
+            return this;
+        }
+        public UpdateInstanceRequestUserCommandOnStart getOnStart() {
+            return this.onStart;
         }
 
     }
