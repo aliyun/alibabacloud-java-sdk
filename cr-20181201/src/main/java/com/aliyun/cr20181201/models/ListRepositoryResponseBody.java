@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListRepositoryResponseBody extends TeaModel {
     /**
+     * <p>The return value.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class ListRepositoryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class ListRepositoryResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,16 +32,23 @@ public class ListRepositoryResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The information about the repositories.</p>
+     */
     @NameInMap("Repositories")
     public java.util.List<ListRepositoryResponseBodyRepositories> repositories;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5241C090-DA69-4B0F-8E3F-2F24FDE1110E</p>
      */
@@ -43,6 +56,8 @@ public class ListRepositoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of the queried image repositories.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -112,6 +127,8 @@ public class ListRepositoryResponseBody extends TeaModel {
 
     public static class ListRepositoryResponseBodyRepositories extends TeaModel {
         /**
+         * <p>The time when the repository was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>1564153576000</p>
          */
@@ -119,6 +136,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public Long createTime;
 
         /**
+         * <p>The ID of the Container Registry instance to which the repository belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>cri-kmsiwlxxdcv****</p>
          */
@@ -126,6 +145,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time when the repository was last modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>1564153576000</p>
          */
@@ -133,6 +154,12 @@ public class ListRepositoryResponseBody extends TeaModel {
         public Long modifiedTime;
 
         /**
+         * <p>The type of the repository building. Valid values:</p>
+         * <ul>
+         * <li><code>AUTO</code>: The repository is automatically built.</li>
+         * <li><code>MANUAL</code>: The repository is manually built.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MANUAL</p>
          */
@@ -140,6 +167,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoBuildType;
 
         /**
+         * <p>The ID of the repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>crr-03cuozrsqhkw****</p>
          */
@@ -147,6 +176,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoId;
 
         /**
+         * <p>The name of the repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -154,6 +185,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoName;
 
         /**
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -161,6 +194,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoNamespaceName;
 
         /**
+         * <p>The status of the repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -168,6 +203,12 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoStatus;
 
         /**
+         * <p>The type of the repository. Valid values:</p>
+         * <ul>
+         * <li><code>PUBLIC</code></li>
+         * <li><code>PRIVATE</code></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
          */
@@ -175,6 +216,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String repoType;
 
         /**
+         * <p>The ID of the resource group to which the repository belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-acfm4n5kzyfxxxx</p>
          */
@@ -182,6 +225,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The summary of the repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>test OK</p>
          */
@@ -189,6 +234,8 @@ public class ListRepositoryResponseBody extends TeaModel {
         public String summary;
 
         /**
+         * <p>Indicates whether the feature of image tag immutability is enabled for the repository.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

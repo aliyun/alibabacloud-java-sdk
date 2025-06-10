@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScanBaselineByTaskRequest extends TeaModel {
     /**
-     * <p>The image digest.</p>
+     * <p>The digest value of the image.</p>
      * 
      * <strong>example:</strong>
      * <p>sha256:1c89806cfaf66d2990e2cf1131ebd56ff24b133745a33abf1228*************</p>
@@ -14,7 +14,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the Container Registry instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-***********</p>
@@ -23,7 +23,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The severity of the risk.</p>
+     * <p>The level of the baseline risk.</p>
      * 
      * <strong>example:</strong>
      * <p>High</p>
@@ -50,7 +50,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The repository ID.</p>
+     * <p>The ID of the image repository.</p>
      * 
      * <strong>example:</strong>
      * <p>crr-**************</p>
@@ -68,7 +68,7 @@ public class ListScanBaselineByTaskRequest extends TeaModel {
     public String scanTaskId;
 
     /**
-     * <p>The image tag.</p>
+     * <p>The image version.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.36</p>

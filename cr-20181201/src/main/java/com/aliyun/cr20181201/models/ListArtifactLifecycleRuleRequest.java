@@ -33,7 +33,7 @@ public class ListArtifactLifecycleRuleRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page. Maximum value: 100. If you specify a value greater than 100 for this parameter, the system reports a parameter error or uses 100 as the maximum value.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

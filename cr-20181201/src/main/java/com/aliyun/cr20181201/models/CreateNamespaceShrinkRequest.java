@@ -3,7 +3,7 @@ package com.aliyun.cr20181201.models;
 
 import com.aliyun.tea.*;
 
-public class CreateNamespaceRequest extends TeaModel {
+public class CreateNamespaceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically create an image repository in the namespace.</p>
      * 
@@ -14,7 +14,7 @@ public class CreateNamespaceRequest extends TeaModel {
     public Boolean autoCreateRepo;
 
     @NameInMap("DefaultRepoConfiguration")
-    public RepoConfiguration defaultRepoConfiguration;
+    public String defaultRepoConfigurationShrink;
 
     /**
      * <p>The default type of the repositories that are automatically created in the namespace. Valid values:</p>
@@ -50,12 +50,12 @@ public class CreateNamespaceRequest extends TeaModel {
     @NameInMap("NamespaceName")
     public String namespaceName;
 
-    public static CreateNamespaceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateNamespaceRequest self = new CreateNamespaceRequest();
+    public static CreateNamespaceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateNamespaceShrinkRequest self = new CreateNamespaceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateNamespaceRequest setAutoCreateRepo(Boolean autoCreateRepo) {
+    public CreateNamespaceShrinkRequest setAutoCreateRepo(Boolean autoCreateRepo) {
         this.autoCreateRepo = autoCreateRepo;
         return this;
     }
@@ -63,16 +63,16 @@ public class CreateNamespaceRequest extends TeaModel {
         return this.autoCreateRepo;
     }
 
-    public CreateNamespaceRequest setDefaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
-        this.defaultRepoConfiguration = defaultRepoConfiguration;
+    public CreateNamespaceShrinkRequest setDefaultRepoConfigurationShrink(String defaultRepoConfigurationShrink) {
+        this.defaultRepoConfigurationShrink = defaultRepoConfigurationShrink;
         return this;
     }
-    public RepoConfiguration getDefaultRepoConfiguration() {
-        return this.defaultRepoConfiguration;
+    public String getDefaultRepoConfigurationShrink() {
+        return this.defaultRepoConfigurationShrink;
     }
 
     @Deprecated
-    public CreateNamespaceRequest setDefaultRepoType(String defaultRepoType) {
+    public CreateNamespaceShrinkRequest setDefaultRepoType(String defaultRepoType) {
         this.defaultRepoType = defaultRepoType;
         return this;
     }
@@ -80,7 +80,7 @@ public class CreateNamespaceRequest extends TeaModel {
         return this.defaultRepoType;
     }
 
-    public CreateNamespaceRequest setInstanceId(String instanceId) {
+    public CreateNamespaceShrinkRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -88,7 +88,7 @@ public class CreateNamespaceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateNamespaceRequest setNamespaceName(String namespaceName) {
+    public CreateNamespaceShrinkRequest setNamespaceName(String namespaceName) {
         this.namespaceName = namespaceName;
         return this;
     }

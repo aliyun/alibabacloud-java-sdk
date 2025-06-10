@@ -14,7 +14,7 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     public String digest;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The ID of the Container Registry instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class CreateRepoTagScanTaskRequest extends TeaModel {
     public String scanType;
 
     /**
-     * <p>The version of the image.</p>
+     * <p>The image version.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

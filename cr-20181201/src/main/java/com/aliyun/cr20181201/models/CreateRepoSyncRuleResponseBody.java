@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateRepoSyncRuleResponseBody extends TeaModel {
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -12,6 +14,8 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8F8A0BA6-7F06-4BAE-B147-10BD6A25****</p>
      */
@@ -26,6 +32,8 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the synchronization rule.</p>
+     * 
      * <strong>example:</strong>
      * <p>crsr-gk5p2ns1kzns****</p>
      */

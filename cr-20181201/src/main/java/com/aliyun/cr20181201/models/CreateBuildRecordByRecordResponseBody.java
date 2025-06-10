@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBuildRecordByRecordResponseBody extends TeaModel {
     /**
+     * <p>The ID of the image building record.</p>
+     * 
      * <strong>example:</strong>
      * <p>crbr-ly77w5i3t31f****</p>
      */
@@ -12,6 +14,9 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
     public String buildRecordId;
 
     /**
+     * <p>The HTTP status code. The status code 200 indicates that the request is successful.\
+     * Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,6 +24,12 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -26,6 +37,8 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
      */

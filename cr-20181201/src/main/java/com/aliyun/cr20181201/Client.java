@@ -926,15 +926,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a namespace of image repositories.</p>
      * 
-     * @param request CreateNamespaceRequest
+     * @param tmpReq CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateNamespaceResponse
      */
-    public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateNamespaceResponse createNamespaceWithOptions(CreateNamespaceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateNamespaceShrinkRequest request = new CreateNamespaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultRepoConfiguration)) {
+            request.defaultRepoConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreateRepo)) {
             query.put("AutoCreateRepo", request.autoCreateRepo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultRepoConfigurationShrink)) {
+            query.put("DefaultRepoConfiguration", request.defaultRepoConfigurationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRepoType)) {
@@ -1409,6 +1419,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an image scan task.</p>
+     * 
      * @param request CreateRepoTagScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRepoTagScanTaskResponse
@@ -1458,6 +1471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an image scan task.</p>
+     * 
      * @param request CreateRepoTagScanTaskRequest
      * @return CreateRepoTagScanTaskResponse
      */
@@ -3339,6 +3355,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the scanning status of an image tag.</p>
+     * 
      * @param request GetRepoTagScanStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRepoTagScanStatusResponse
@@ -3388,6 +3407,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the scanning status of an image tag.</p>
+     * 
      * @param request GetRepoTagScanStatusRequest
      * @return GetRepoTagScanStatusResponse
      */
@@ -4212,7 +4234,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cri-94klsruryslx****</p>
+     * <p>Queries namespaces in a Container Registry instance.</p>
      * 
      * @param request ListNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4260,7 +4282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cri-94klsruryslx****</p>
+     * <p>Queries namespaces in a Container Registry instance.</p>
      * 
      * @param request ListNamespaceRequest
      * @return ListNamespaceResponse
@@ -4508,7 +4530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether automatic link is used.</p>
+     * <p>Queries image synchronization tasks in an image repository.</p>
      * 
      * @param request ListRepoSyncTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4564,7 +4586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether automatic link is used.</p>
+     * <p>Queries image synchronization tasks in an image repository.</p>
      * 
      * @param request ListRepoSyncTaskRequest
      * @return ListRepoSyncTaskResponse
@@ -5640,15 +5662,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Updates a namespace.</p>
      * 
-     * @param request UpdateNamespaceRequest
+     * @param tmpReq UpdateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateNamespaceResponse
      */
-    public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateNamespaceResponse updateNamespaceWithOptions(UpdateNamespaceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateNamespaceShrinkRequest request = new UpdateNamespaceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultRepoConfiguration)) {
+            request.defaultRepoConfigurationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoCreateRepo)) {
             query.put("AutoCreateRepo", request.autoCreateRepo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultRepoConfigurationShrink)) {
+            query.put("DefaultRepoConfiguration", request.defaultRepoConfigurationShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.defaultRepoType)) {

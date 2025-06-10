@@ -12,6 +12,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The time when the instance was created.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571926439000</p>
      */
@@ -19,6 +21,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The ID of the Container Registry instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>cri-xkx6vujuhay0****</p>
      */
@@ -35,6 +39,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceIssue;
 
     /**
+     * <p>The name of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>shanghai-instance1</p>
      */
@@ -51,6 +57,18 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceSpecification;
 
     /**
+     * <p>The status of the instance. Valid values:</p>
+     * <ul>
+     * <li><code>PENDING</code>: The instance is being initialized.</li>
+     * <li><code>INIT_ERROR</code>: The instance failed to be initialized.</li>
+     * <li><code>STARTING</code>: The instance is being started.</li>
+     * <li><code>RUNNING</code>: The instance is running.</li>
+     * <li><code>STOPPING</code>: The instance is being stopped.</li>
+     * <li><code>STOPPED</code>: The instance is stopped.</li>
+     * <li><code>DELETING</code>: The instance is being deleted.</li>
+     * <li><code>DELETED</code>: The instance is deleted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */
@@ -58,6 +76,12 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceStatus;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><code>true</code>: The request is successful.</li>
+     * <li><code>false</code>: The request fails.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -65,6 +89,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
+     * <p>The time when the instance was last modified.</p>
+     * 
      * <strong>example:</strong>
      * <p>1571926560000</p>
      */
@@ -72,6 +98,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public Long modifiedTime;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6EF34B18-4228-470C-860C-D28597CF010E</p>
      */
@@ -79,6 +107,8 @@ public class GetInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-acfmv36i4isx****</p>
      */

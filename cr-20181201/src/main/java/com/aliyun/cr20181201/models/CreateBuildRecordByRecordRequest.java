@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBuildRecordByRecordRequest extends TeaModel {
     /**
+     * <p>The ID of the image building record.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateBuildRecordByRecordRequest extends TeaModel {
     public String buildRecordId;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class CreateBuildRecordByRecordRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the image repository.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRepoTagScanStatusRequest extends TeaModel {
     /**
+     * <p>The image digest.</p>
+     * 
      * <strong>example:</strong>
      * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1d529</p>
      */
@@ -12,6 +14,7 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String digest;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,8 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the image repository.</p>
+     * 
      * <strong>example:</strong>
      * <p>crr-uf082u9dg8do****</p>
      */
@@ -28,6 +33,8 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String repoId;
 
     /**
+     * <p>The ID of the image scan task.</p>
+     * 
      * <strong>example:</strong>
      * <p>838152F9-F725-5A52-A344-8972D65AC045</p>
      */
@@ -38,6 +45,8 @@ public class GetRepoTagScanStatusRequest extends TeaModel {
     public String scanType;
 
     /**
+     * <p>The image tag.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

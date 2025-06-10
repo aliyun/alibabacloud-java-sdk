@@ -22,17 +22,21 @@ public class GetNamespaceResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("DefaultRepoConfiguration")
+    public RepoConfiguration defaultRepoConfiguration;
+
     /**
-     * <p>The default type of repositories. Valid values:</p>
+     * <p>The default type of repositories in the namespace. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: The repositories are public repositories.</li>
-     * <li>PRIVATE: The repositories are private repositories.</li>
+     * <li>PUBLIC: public repositories.</li>
+     * <li>PRIVATE: private repositories.</li>
      * </ul>
      * 
      * <strong>example:</strong>
      * <p>PUBLIC</p>
      */
     @NameInMap("DefaultRepoType")
+    @Deprecated
     public String defaultRepoType;
 
     /**
@@ -123,6 +127,15 @@ public class GetNamespaceResponseBody extends TeaModel {
         return this.code;
     }
 
+    public GetNamespaceResponseBody setDefaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
+        this.defaultRepoConfiguration = defaultRepoConfiguration;
+        return this;
+    }
+    public RepoConfiguration getDefaultRepoConfiguration() {
+        return this.defaultRepoConfiguration;
+    }
+
+    @Deprecated
     public GetNamespaceResponseBody setDefaultRepoType(String defaultRepoType) {
         this.defaultRepoType = defaultRepoType;
         return this;

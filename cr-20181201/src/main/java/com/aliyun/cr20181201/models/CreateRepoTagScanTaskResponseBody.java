@@ -14,7 +14,7 @@ public class CreateRepoTagScanTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the API request is successful. Valid values:</p>
      * <ul>
      * <li><code>true</code>: The request is successful.</li>
      * <li><code>false</code>: The request fails.</li>
@@ -27,7 +27,7 @@ public class CreateRepoTagScanTaskResponseBody extends TeaModel {
     public Boolean isSuccess;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
     /**
+     * <p>The ID of the Container Registry instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Indicates whether the API request is successful. Valid values:</p>
+     * <p>Indicates whether the API request was successful. Valid values:</p>
      * <ul>
      * <li><code>true</code>: successful</li>
      * <li><code>false</code>: failed</li>
@@ -54,7 +54,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried baseline risks.</p>
+     * <p>The scanned baseline risks.</p>
      */
     @NameInMap("ScanBaselines")
     public java.util.List<ListScanBaselineByTaskResponseBodyScanBaselines> scanBaselines;
@@ -131,13 +131,13 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
 
     public static class ListScanBaselineByTaskResponseBodyScanBaselines extends TeaModel {
         /**
-         * <p>The category of the baseline risk.</p>
+         * <p>The category to which the baseline risk belongs.</p>
          */
         @NameInMap("BaselineClassAlias")
         public String baselineClassAlias;
 
         /**
-         * <p>The suggestion on handling the baseline risk.</p>
+         * <p>Suggestions about how to fix the baseline risk.</p>
          */
         @NameInMap("BaselineDetailAdvice")
         public String baselineDetailAdvice;
@@ -173,7 +173,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String baselineNameAlias;
 
         /**
-         * <p>The name of the baseline risk.</p>
+         * <p>The key of the baseline name.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_leak</p>
@@ -191,7 +191,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String baselineNameLevel;
 
         /**
-         * <p>The time when the image was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1695090008000</p>
@@ -200,7 +200,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The time when the image was first scanned.</p>
+         * <p>The time of the first scan.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-04-10 15:33:26</p>
@@ -209,7 +209,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Long firstScanTime;
 
         /**
-         * <p>The quantity of baseline risks whose severity is high.</p>
+         * <p>High risk quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,7 +218,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Integer highRiskItemCount;
 
         /**
-         * <p>The quantity of baseline risks whose severity is low.</p>
+         * <p>Low risk quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,7 +227,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public Integer lowRiskItemCount;
 
         /**
-         * <p>The quantity of baseline risks whose severity is medium.</p>
+         * <p>Medium risk quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -245,7 +245,7 @@ public class ListScanBaselineByTaskResponseBody extends TeaModel {
         public String scanTaskId;
 
         /**
-         * <p>The time when the image was updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1684220824226</p>
