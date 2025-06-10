@@ -44,7 +44,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
 
     public static class ListAgentInstanceConfigsResponseBodyConfigs extends TeaModel {
         @NameInMap("attributes")
-        public String attributes;
+        public java.util.Map<String, String> attributes;
 
         @NameInMap("configType")
         public String configType;
@@ -54,11 +54,11 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ListAgentInstanceConfigsResponseBodyConfigs setAttributes(String attributes) {
+        public ListAgentInstanceConfigsResponseBodyConfigs setAttributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
             return this;
         }
-        public String getAttributes() {
+        public java.util.Map<String, String> getAttributes() {
             return this.attributes;
         }
 
