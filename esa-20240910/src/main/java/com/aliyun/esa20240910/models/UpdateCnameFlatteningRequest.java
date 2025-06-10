@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateCnameFlatteningRequest extends TeaModel {
     /**
-     * <p>Flattening mode. Possible values:</p>
+     * <p>The CNAME flattening mode. Valid values:</p>
      * <ul>
-     * <li>flatten_all: Flatten all.</li>
-     * <li>flatten_at_root: Flatten only the root domain. The default is to flatten the root domain.</li>
+     * <li>flatten_all: flattens all CNAMEs.</li>
+     * <li>flatten_at_root: flattens only the root domain. Default: flatten_at_root</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class UpdateCnameFlatteningRequest extends TeaModel {
     public String flattenMode;
 
     /**
-     * <p>Site ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> interface.</p>
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

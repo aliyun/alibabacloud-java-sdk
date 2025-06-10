@@ -107,6 +107,9 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     @NameInMap("Ttl")
     public Integer ttl;
 
+    @NameInMap("Type")
+    public String type;
+
     public static UpdateRecordShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRecordShrinkRequest self = new UpdateRecordShrinkRequest();
         return TeaModel.build(map, self);
@@ -182,6 +185,14 @@ public class UpdateRecordShrinkRequest extends TeaModel {
     }
     public Integer getTtl() {
         return this.ttl;
+    }
+
+    public UpdateRecordShrinkRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

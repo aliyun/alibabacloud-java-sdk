@@ -107,6 +107,9 @@ public class UpdateRecordRequest extends TeaModel {
     @NameInMap("Ttl")
     public Integer ttl;
 
+    @NameInMap("Type")
+    public String type;
+
     public static UpdateRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRecordRequest self = new UpdateRecordRequest();
         return TeaModel.build(map, self);
@@ -182,6 +185,14 @@ public class UpdateRecordRequest extends TeaModel {
     }
     public Integer getTtl() {
         return this.ttl;
+    }
+
+    public UpdateRecordRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public static class UpdateRecordRequestAuthConf extends TeaModel {

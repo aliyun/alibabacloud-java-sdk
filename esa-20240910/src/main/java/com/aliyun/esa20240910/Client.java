@@ -3800,6 +3800,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增站点视频处理配置</p>
+     * 
+     * @param request CreateVideoProcessingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVideoProcessingResponse
+     */
+    public CreateVideoProcessingResponse createVideoProcessingWithOptions(CreateVideoProcessingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.flvSeekEnd)) {
+            query.put("FlvSeekEnd", request.flvSeekEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flvSeekStart)) {
+            query.put("FlvSeekStart", request.flvSeekStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flvVideoSeekMode)) {
+            query.put("FlvVideoSeekMode", request.flvVideoSeekMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mp4SeekEnd)) {
+            query.put("Mp4SeekEnd", request.mp4SeekEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mp4SeekStart)) {
+            query.put("Mp4SeekStart", request.mp4SeekStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
+            query.put("SiteVersion", request.siteVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoSeekEnable)) {
+            query.put("VideoSeekEnable", request.videoSeekEnable);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVideoProcessing"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateVideoProcessingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增站点视频处理配置</p>
+     * 
+     * @param request CreateVideoProcessingRequest
+     * @return CreateVideoProcessingResponse
+     */
+    public CreateVideoProcessingResponse createVideoProcessing(CreateVideoProcessingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createVideoProcessingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Create WAF Rule</p>
      * 
      * @param tmpReq CreateWafRuleRequest
@@ -6030,6 +6118,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteUserDeliveryTaskResponse deleteUserDeliveryTask(DeleteUserDeliveryTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteUserDeliveryTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除站点视频处理配置</p>
+     * 
+     * @param request DeleteVideoProcessingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteVideoProcessingResponse
+     */
+    public DeleteVideoProcessingResponse deleteVideoProcessingWithOptions(DeleteVideoProcessingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteVideoProcessing"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteVideoProcessingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除站点视频处理配置</p>
+     * 
+     * @param request DeleteVideoProcessingRequest
+     * @return DeleteVideoProcessingResponse
+     */
+    public DeleteVideoProcessingResponse deleteVideoProcessing(DeleteVideoProcessingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteVideoProcessingWithOptions(request, runtime);
     }
 
     /**
@@ -10012,6 +10148,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询站点视频处理配置详情</p>
+     * 
+     * @param request GetVideoProcessingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoProcessingResponse
+     */
+    public GetVideoProcessingResponse getVideoProcessingWithOptions(GetVideoProcessingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoProcessing"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVideoProcessingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点视频处理配置详情</p>
+     * 
+     * @param request GetVideoProcessingRequest
+     * @return GetVideoProcessingResponse
+     */
+    public GetVideoProcessingResponse getVideoProcessing(GetVideoProcessingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getVideoProcessingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>This interface is used to obtain the application key (AppKey) for the BOT behavior detection feature in the site\&quot;s Web Application Firewall (WAF). The key is typically used for authentication and data exchange with the WAF service.</p>
      * 
      * @param request GetWafBotAppKeyRequest
@@ -12460,6 +12644,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询站点视频处理配置列表</p>
+     * 
+     * @param request ListVideoProcessingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListVideoProcessingsResponse
+     */
+    public ListVideoProcessingsResponse listVideoProcessingsWithOptions(ListVideoProcessingsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("ConfigType", request.configType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
+            query.put("SiteVersion", request.siteVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListVideoProcessings"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListVideoProcessingsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询站点视频处理配置列表</p>
+     * 
+     * @param request ListVideoProcessingsRequest
+     * @return ListVideoProcessingsResponse
+     */
+    public ListVideoProcessingsResponse listVideoProcessings(ListVideoProcessingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listVideoProcessingsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>List WAF Managed Rules</p>
      * 
      * @param tmpReq ListWafManagedRulesRequest
@@ -14613,7 +14865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify site CNAME flattening configuration</p>
+     * <p>Modifies the CNAME flattening configuration of a website.</p>
      * 
      * @param request UpdateCnameFlatteningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14649,7 +14901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify site CNAME flattening configuration</p>
+     * <p>Modifies the CNAME flattening configuration of a website.</p>
      * 
      * @param request UpdateCnameFlatteningRequest
      * @return UpdateCnameFlatteningResponse
@@ -16313,6 +16565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Ttl", request.ttl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -17273,6 +17529,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserDeliveryTaskStatusResponse updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUserDeliveryTaskStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改站点视频处理配置</p>
+     * 
+     * @param request UpdateVideoProcessingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateVideoProcessingResponse
+     */
+    public UpdateVideoProcessingResponse updateVideoProcessingWithOptions(UpdateVideoProcessingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flvSeekEnd)) {
+            query.put("FlvSeekEnd", request.flvSeekEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flvSeekStart)) {
+            query.put("FlvSeekStart", request.flvSeekStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flvVideoSeekMode)) {
+            query.put("FlvVideoSeekMode", request.flvVideoSeekMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mp4SeekEnd)) {
+            query.put("Mp4SeekEnd", request.mp4SeekEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mp4SeekStart)) {
+            query.put("Mp4SeekStart", request.mp4SeekStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.videoSeekEnable)) {
+            query.put("VideoSeekEnable", request.videoSeekEnable);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateVideoProcessing"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateVideoProcessingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改站点视频处理配置</p>
+     * 
+     * @param request UpdateVideoProcessingRequest
+     * @return UpdateVideoProcessingResponse
+     */
+    public UpdateVideoProcessingResponse updateVideoProcessing(UpdateVideoProcessingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateVideoProcessingWithOptions(request, runtime);
     }
 
     /**
