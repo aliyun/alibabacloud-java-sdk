@@ -19321,6 +19321,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param tmpReq UpdateConvExtensionRequest
+     * @param tmpHeader UpdateConvExtensionHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateConvExtensionResponse
+     */
+    public UpdateConvExtensionResponse updateConvExtensionWithOptions(UpdateConvExtensionRequest tmpReq, UpdateConvExtensionHeaders tmpHeader, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateConvExtensionShrinkRequest request = new UpdateConvExtensionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        UpdateConvExtensionShrinkHeaders headers = new UpdateConvExtensionShrinkHeaders();
+        com.aliyun.openapiutil.Client.convert(tmpHeader, headers);
+        if (!com.aliyun.teautil.Common.isUnset(tmpHeader.accountContext)) {
+            headers.accountContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpHeader.accountContext, "AccountContext", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.staffIdList)) {
+            request.staffIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.staffIdList, "StaffIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantContext)) {
+            request.tenantContextShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantContext, "TenantContext", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileUrl)) {
+            body.put("MobileUrl", request.mobileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pcUrl)) {
+            body.put("PcUrl", request.pcUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.staffIdListShrink)) {
+            body.put("StaffIdList", request.staffIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemUid)) {
+            body.put("SystemUid", request.systemUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantContextShrink)) {
+            body.put("TenantContext", request.tenantContextShrink);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.accountContextShrink)) {
+            realHeaders.put("AccountContext", com.aliyun.teautil.Common.toJSONString(headers.accountContextShrink));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateConvExtension"),
+            new TeaPair("version", "2023-04-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dingtalk/v1/conversation/updateConvExtension"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateConvExtensionResponse());
+    }
+
+    /**
+     * @param request UpdateConvExtensionRequest
+     * @return UpdateConvExtensionResponse
+     */
+    public UpdateConvExtensionResponse updateConvExtension(UpdateConvExtensionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        UpdateConvExtensionHeaders headers = new UpdateConvExtensionHeaders();
+        return this.updateConvExtensionWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>更新表单数据</p>
      * 
