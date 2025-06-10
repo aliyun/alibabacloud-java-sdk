@@ -2178,6 +2178,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取指定机器基本信息</p>
+     * 
+     * @param request ReadSchedulerxDesignateInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReadSchedulerxDesignateInfoResponse
+     */
+    public ReadSchedulerxDesignateInfoResponse readSchedulerxDesignateInfoWithOptions(ReadSchedulerxDesignateInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceSource)) {
+            query.put("NamespaceSource", request.namespaceSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReadSchedulerxDesignateInfo"),
+            new TeaPair("version", "2019-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReadSchedulerxDesignateInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定机器基本信息</p>
+     * 
+     * @param request ReadSchedulerxDesignateInfoRequest
+     * @return ReadSchedulerxDesignateInfoResponse
+     */
+    public ReadSchedulerxDesignateInfoResponse readSchedulerxDesignateInfo(ReadSchedulerxDesignateInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.readSchedulerxDesignateInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Reruns a job to obtain the historical data of the job. You can call this operation only in the professional edition.</p>
      * 
      * @param request RerunJobRequest
