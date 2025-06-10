@@ -10,6 +10,10 @@ public class DetectLiverSteatosisResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>39C848F7-D814-1A06-AE0D-AFC706B9700F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,33 +47,79 @@ public class DetectLiverSteatosisResponseBody extends TeaModel {
     }
 
     public static class DetectLiverSteatosisResponseBodyDataDetections extends TeaModel {
+        @NameInMap("FatFract")
+        public Double fatFract;
+
+        /**
+         * <strong>example:</strong>
+         * <p>62.07644147383561</p>
+         */
         @NameInMap("LiverHU")
         public Float liverHU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>63.50222396850586</p>
+         */
         @NameInMap("LiverROI1")
         public Float liverROI1;
 
+        /**
+         * <strong>example:</strong>
+         * <p>62.23713684082031</p>
+         */
         @NameInMap("LiverROI2")
         public Float liverROI2;
 
+        /**
+         * <strong>example:</strong>
+         * <p>59.78181838989258</p>
+         */
         @NameInMap("LiverROI3")
         public Float liverROI3;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12.0</p>
+         */
         @NameInMap("LiverSlice")
         public Float liverSlice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8.206502275265478</p>
+         */
         @NameInMap("LiverSpleenDifference")
         public Float liverSpleenDifference;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.15233917834983</p>
+         */
         @NameInMap("LiverSpleenRatio")
         public Float liverSpleenRatio;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1059.4175610625439</p>
+         */
         @NameInMap("LiverVolume")
         public Float liverVolume;
 
+        @NameInMap("MaossScore")
+        public Double maossScore;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Mod</p>
+         */
         @NameInMap("Prediction")
         public String prediction;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9457855224609375</p>
+         */
         @NameInMap("Probability")
         public Float probability;
 
@@ -82,27 +132,55 @@ public class DetectLiverSteatosisResponseBody extends TeaModel {
         @NameInMap("ROI3Center")
         public java.util.List<Long> ROI3Center;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("Radius")
         public Long radius;
 
         @NameInMap("SpleenCenter")
         public java.util.List<Long> spleenCenter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>53.86993919857013</p>
+         */
         @NameInMap("SpleenHU")
         public Float spleenHU;
 
+        /**
+         * <strong>example:</strong>
+         * <p>50.553409576416016</p>
+         */
         @NameInMap("SpleenROI")
         public Float spleenROI;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9.0</p>
+         */
         @NameInMap("SpleenSlice")
         public Float spleenSlice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>156.01873229470647</p>
+         */
         @NameInMap("SpleenVolume")
         public Float spleenVolume;
 
         public static DetectLiverSteatosisResponseBodyDataDetections build(java.util.Map<String, ?> map) throws Exception {
             DetectLiverSteatosisResponseBodyDataDetections self = new DetectLiverSteatosisResponseBodyDataDetections();
             return TeaModel.build(map, self);
+        }
+
+        public DetectLiverSteatosisResponseBodyDataDetections setFatFract(Double fatFract) {
+            this.fatFract = fatFract;
+            return this;
+        }
+        public Double getFatFract() {
+            return this.fatFract;
         }
 
         public DetectLiverSteatosisResponseBodyDataDetections setLiverHU(Float liverHU) {
@@ -167,6 +245,14 @@ public class DetectLiverSteatosisResponseBody extends TeaModel {
         }
         public Float getLiverVolume() {
             return this.liverVolume;
+        }
+
+        public DetectLiverSteatosisResponseBodyDataDetections setMaossScore(Double maossScore) {
+            this.maossScore = maossScore;
+            return this;
+        }
+        public Double getMaossScore() {
+            return this.maossScore;
         }
 
         public DetectLiverSteatosisResponseBodyDataDetections setPrediction(String prediction) {
@@ -266,6 +352,9 @@ public class DetectLiverSteatosisResponseBody extends TeaModel {
         @NameInMap("Origin")
         public java.util.List<Float> origin;
 
+        @NameInMap("ResultUrl")
+        public String resultUrl;
+
         @NameInMap("Spacing")
         public java.util.List<Float> spacing;
 
@@ -288,6 +377,14 @@ public class DetectLiverSteatosisResponseBody extends TeaModel {
         }
         public java.util.List<Float> getOrigin() {
             return this.origin;
+        }
+
+        public DetectLiverSteatosisResponseBodyData setResultUrl(String resultUrl) {
+            this.resultUrl = resultUrl;
+            return this;
+        }
+        public String getResultUrl() {
+            return this.resultUrl;
         }
 
         public DetectLiverSteatosisResponseBodyData setSpacing(java.util.List<Float> spacing) {

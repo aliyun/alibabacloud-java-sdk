@@ -7,6 +7,10 @@ public class RunMedQAResponseBody extends TeaModel {
     @NameInMap("Data")
     public RunMedQAResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BFF7EEC3-F6B5-4387-AC1D-BB095A1A02E4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class RunMedQAResponseBody extends TeaModel {
     }
 
     public static class RunMedQAResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>text</p>
+         */
         @NameInMap("AnswerType")
         public String answerType;
 
@@ -41,12 +49,20 @@ public class RunMedQAResponseBody extends TeaModel {
         @NameInMap("Question")
         public String question;
 
+        /**
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("QuestionType")
         public String questionType;
 
         @NameInMap("Reports")
         public java.util.Map<String, String> reports;
 
+        /**
+         * <strong>example:</strong>
+         * <p>d1f6a6c2444f4c01adfadd413938e5c7</p>
+         */
         @NameInMap("SessionId")
         public String sessionId;
 

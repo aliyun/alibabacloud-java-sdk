@@ -7,6 +7,10 @@ public class DetectSkinDiseaseResponseBody extends TeaModel {
     @NameInMap("Data")
     public DetectSkinDiseaseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DE9ABC80-4DD4-4F1B-B95C-D0E438B8FE56</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class DetectSkinDiseaseResponseBody extends TeaModel {
     }
 
     public static class DetectSkinDiseaseResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>leg</p>
+         */
         @NameInMap("BodyPart")
         public String bodyPart;
 
+        /**
+         * <strong>example:</strong>
+         * <p>90.9812</p>
+         */
         @NameInMap("ImageQuality")
         public Float imageQuality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>skin_lesion</p>
+         */
         @NameInMap("ImageType")
         public String imageType;
 
         @NameInMap("Results")
         public java.util.Map<String, ?> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;psoriasis&quot;: 0.998,                     &quot;eczema_dermatitis&quot;: 0.0011,                     &quot;lupus_erythematosus&quot;: 0.0004</p>
+         */
         @NameInMap("ResultsEnglish")
         public java.util.Map<String, ?> resultsEnglish;
 

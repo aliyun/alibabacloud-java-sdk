@@ -4,21 +4,54 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class TargetVolumeSegmentAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LUNG</p>
+     */
     @NameInMap("CancerType")
     public String cancerType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DICOM</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GTV</p>
+     */
     @NameInMap("TargetVolumeType")
     public String targetVolumeType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<TargetVolumeSegmentAdvanceRequestURLList> URLList;
 
@@ -76,6 +109,9 @@ public class TargetVolumeSegmentAdvanceRequest extends TeaModel {
     }
 
     public static class TargetVolumeSegmentAdvanceRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public java.io.InputStream URLObject;
 

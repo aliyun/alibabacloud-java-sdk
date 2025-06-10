@@ -9,10 +9,17 @@ public class DetectLymphResponseBody extends TeaModel {
 
     /**
      * <p>提交异步任务后的提示信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该调用为异步调用，任务已提交成功，请以requestId的值作为jobId参数调用同类目下GetAsyncJobResult接口查询任务执行状态和结果。</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>59598577-13C6-12A2-8CBF-A4DA4C9280A1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,12 +59,20 @@ public class DetectLymphResponseBody extends TeaModel {
         @NameInMap("Diametermm")
         public java.util.List<Float> diametermm;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("KeySlice")
         public Long keySlice;
 
         @NameInMap("Recist")
         public java.util.List<java.util.List<Float>> recist;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.6298</p>
+         */
         @NameInMap("Score")
         public Float score;
 

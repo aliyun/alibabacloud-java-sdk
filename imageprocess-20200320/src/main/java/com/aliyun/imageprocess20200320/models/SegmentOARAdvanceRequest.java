@@ -4,24 +4,50 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class SegmentOARAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>CHEST</p>
+     */
     @NameInMap("BodyPart")
     public String bodyPart;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Contrast")
     public Boolean contrast;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NIFTI</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
     @NameInMap("MaskList")
     public java.util.List<Long> maskList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ff51bfe-e73d-11ea-827d-506b4b3f3cf6</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<SegmentOARAdvanceRequestURLList> URLList;
 
@@ -87,6 +113,9 @@ public class SegmentOARAdvanceRequest extends TeaModel {
     }
 
     public static class SegmentOARAdvanceRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public java.io.InputStream URLObject;
 

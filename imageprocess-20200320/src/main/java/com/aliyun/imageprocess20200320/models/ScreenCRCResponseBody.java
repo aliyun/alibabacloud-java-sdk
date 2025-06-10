@@ -10,6 +10,10 @@ public class ScreenCRCResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>39C848F7-D814-1A06-AE0D-AFC706B9700F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +47,31 @@ public class ScreenCRCResponseBody extends TeaModel {
     }
 
     public static class ScreenCRCResponseBodyDataLesion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>7.83</p>
+         */
         @NameInMap("CRCVolume")
         public String CRCVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>255.93</p>
+         */
         @NameInMap("ColorectumVolume")
         public String colorectumVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen_crc/crc_case2_pre.nii.gz?Expires=1680766116&OSSAccessKeyId=LTAI4GC2dJzdf8ZvnC16MFC7&Signature=9n9C%2B2MnyvLwAC%2FwFyxgY">http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen_crc/crc_case2_pre.nii.gz?Expires=1680766116&amp;OSSAccessKeyId=LTAI4GC2dJzdf8ZvnC16MFC7&amp;Signature=9n9C%2B2MnyvLwAC%2FwFyxgY</a>********</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0779, 0.9221</p>
+         */
         @NameInMap("Probabilities")
         public String probabilities;
 

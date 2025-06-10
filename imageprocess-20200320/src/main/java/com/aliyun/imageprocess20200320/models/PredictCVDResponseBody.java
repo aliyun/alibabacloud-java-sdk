@@ -10,6 +10,10 @@ public class PredictCVDResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7CB9B663-3EF8-4C9C-A464-FDA2B5F1E3A4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -49,6 +53,18 @@ public class PredictCVDResponseBody extends TeaModel {
         @NameInMap("AortaCalciumVolume")
         public java.util.List<Double> aortaCalciumVolume;
 
+        @NameInMap("AortaMaxDiam")
+        public java.util.List<Double> aortaMaxDiam;
+
+        @NameInMap("AortaMaxDiamStd")
+        public java.util.List<Double> aortaMaxDiamStd;
+
+        @NameInMap("AorticHeightIndex")
+        public java.util.List<Double> aorticHeightIndex;
+
+        @NameInMap("AorticTortuosityIndex")
+        public java.util.List<Double> aorticTortuosityIndex;
+
         @NameInMap("AscAoMaxDiam")
         public java.util.List<Double> ascAoMaxDiam;
 
@@ -57,6 +73,9 @@ public class PredictCVDResponseBody extends TeaModel {
 
         @NameInMap("CardioThoracicRatio")
         public java.util.List<Double> cardioThoracicRatio;
+
+        @NameInMap("ChestWidth")
+        public java.util.List<Double> chestWidth;
 
         @NameInMap("CoronaryCalciumScore")
         public java.util.List<Double> coronaryCalciumScore;
@@ -76,11 +95,26 @@ public class PredictCVDResponseBody extends TeaModel {
         @NameInMap("EatVolume")
         public java.util.List<Double> eatVolume;
 
+        @NameInMap("HeartLongDiam")
+        public java.util.List<Double> heartLongDiam;
+
+        @NameInMap("HeartShortDiam")
+        public java.util.List<Double> heartShortDiam;
+
+        @NameInMap("HeartWidth")
+        public java.util.List<Double> heartWidth;
+
+        @NameInMap("LeftLungHighattRatio")
+        public java.util.List<Double> leftLungHighattRatio;
+
         @NameInMap("LeftLungLowattRatio")
         public java.util.List<Double> leftLungLowattRatio;
 
         @NameInMap("MyoEpiRatio")
         public java.util.List<Double> myoEpiRatio;
+
+        @NameInMap("RightLungHighattRatio")
+        public java.util.List<Double> rightLungHighattRatio;
 
         @NameInMap("RightLungLowattRatio")
         public java.util.List<Double> rightLungLowattRatio;
@@ -106,6 +140,38 @@ public class PredictCVDResponseBody extends TeaModel {
             return this.aortaCalciumVolume;
         }
 
+        public PredictCVDResponseBodyDataLesionFeatureScore setAortaMaxDiam(java.util.List<Double> aortaMaxDiam) {
+            this.aortaMaxDiam = aortaMaxDiam;
+            return this;
+        }
+        public java.util.List<Double> getAortaMaxDiam() {
+            return this.aortaMaxDiam;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setAortaMaxDiamStd(java.util.List<Double> aortaMaxDiamStd) {
+            this.aortaMaxDiamStd = aortaMaxDiamStd;
+            return this;
+        }
+        public java.util.List<Double> getAortaMaxDiamStd() {
+            return this.aortaMaxDiamStd;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setAorticHeightIndex(java.util.List<Double> aorticHeightIndex) {
+            this.aorticHeightIndex = aorticHeightIndex;
+            return this;
+        }
+        public java.util.List<Double> getAorticHeightIndex() {
+            return this.aorticHeightIndex;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setAorticTortuosityIndex(java.util.List<Double> aorticTortuosityIndex) {
+            this.aorticTortuosityIndex = aorticTortuosityIndex;
+            return this;
+        }
+        public java.util.List<Double> getAorticTortuosityIndex() {
+            return this.aorticTortuosityIndex;
+        }
+
         public PredictCVDResponseBodyDataLesionFeatureScore setAscAoMaxDiam(java.util.List<Double> ascAoMaxDiam) {
             this.ascAoMaxDiam = ascAoMaxDiam;
             return this;
@@ -128,6 +194,14 @@ public class PredictCVDResponseBody extends TeaModel {
         }
         public java.util.List<Double> getCardioThoracicRatio() {
             return this.cardioThoracicRatio;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setChestWidth(java.util.List<Double> chestWidth) {
+            this.chestWidth = chestWidth;
+            return this;
+        }
+        public java.util.List<Double> getChestWidth() {
+            return this.chestWidth;
         }
 
         public PredictCVDResponseBodyDataLesionFeatureScore setCoronaryCalciumScore(java.util.List<Double> coronaryCalciumScore) {
@@ -178,6 +252,38 @@ public class PredictCVDResponseBody extends TeaModel {
             return this.eatVolume;
         }
 
+        public PredictCVDResponseBodyDataLesionFeatureScore setHeartLongDiam(java.util.List<Double> heartLongDiam) {
+            this.heartLongDiam = heartLongDiam;
+            return this;
+        }
+        public java.util.List<Double> getHeartLongDiam() {
+            return this.heartLongDiam;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setHeartShortDiam(java.util.List<Double> heartShortDiam) {
+            this.heartShortDiam = heartShortDiam;
+            return this;
+        }
+        public java.util.List<Double> getHeartShortDiam() {
+            return this.heartShortDiam;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setHeartWidth(java.util.List<Double> heartWidth) {
+            this.heartWidth = heartWidth;
+            return this;
+        }
+        public java.util.List<Double> getHeartWidth() {
+            return this.heartWidth;
+        }
+
+        public PredictCVDResponseBodyDataLesionFeatureScore setLeftLungHighattRatio(java.util.List<Double> leftLungHighattRatio) {
+            this.leftLungHighattRatio = leftLungHighattRatio;
+            return this;
+        }
+        public java.util.List<Double> getLeftLungHighattRatio() {
+            return this.leftLungHighattRatio;
+        }
+
         public PredictCVDResponseBodyDataLesionFeatureScore setLeftLungLowattRatio(java.util.List<Double> leftLungLowattRatio) {
             this.leftLungLowattRatio = leftLungLowattRatio;
             return this;
@@ -194,6 +300,14 @@ public class PredictCVDResponseBody extends TeaModel {
             return this.myoEpiRatio;
         }
 
+        public PredictCVDResponseBodyDataLesionFeatureScore setRightLungHighattRatio(java.util.List<Double> rightLungHighattRatio) {
+            this.rightLungHighattRatio = rightLungHighattRatio;
+            return this;
+        }
+        public java.util.List<Double> getRightLungHighattRatio() {
+            return this.rightLungHighattRatio;
+        }
+
         public PredictCVDResponseBodyDataLesionFeatureScore setRightLungLowattRatio(java.util.List<Double> rightLungLowattRatio) {
             this.rightLungLowattRatio = rightLungLowattRatio;
             return this;
@@ -205,11 +319,18 @@ public class PredictCVDResponseBody extends TeaModel {
     }
 
     public static class PredictCVDResponseBodyDataLesion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
         @NameInMap("CVDProbability")
         public Float CVDProbability;
 
         @NameInMap("FeatureScore")
         public PredictCVDResponseBodyDataLesionFeatureScore featureScore;
+
+        @NameInMap("ImagesURL")
+        public String imagesURL;
 
         @NameInMap("ResultURL")
         public java.util.List<String> resultURL;
@@ -233,6 +354,14 @@ public class PredictCVDResponseBody extends TeaModel {
         }
         public PredictCVDResponseBodyDataLesionFeatureScore getFeatureScore() {
             return this.featureScore;
+        }
+
+        public PredictCVDResponseBodyDataLesion setImagesURL(String imagesURL) {
+            this.imagesURL = imagesURL;
+            return this;
+        }
+        public String getImagesURL() {
+            return this.imagesURL;
         }
 
         public PredictCVDResponseBodyDataLesion setResultURL(java.util.List<String> resultURL) {

@@ -10,6 +10,10 @@ public class ScreenGCResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9B65AC8E-311A-1ED1-BBE6-6AA6D35D31A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +47,38 @@ public class ScreenGCResponseBody extends TeaModel {
     }
 
     public static class ScreenGCResponseBodyDataLesion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>5.86</p>
+         */
         @NameInMap("GCVolume")
         public String GCVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen_gc/gc_11949981_stomach.nii.gz?Expires=1680678697&OSSAccessKeyId=LTAI4GC2dJzdf8ZvnC16****&Signature=EpKCTEPipWO0AiB3Uip85c%2BuMg">http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen_gc/gc_11949981_stomach.nii.gz?Expires=1680678697&amp;OSSAccessKeyId=LTAI4GC2dJzdf8ZvnC16****&amp;Signature=EpKCTEPipWO0AiB3Uip85c%2BuMg</a>****</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.00</p>
+         */
         @NameInMap("NonGCVolume")
         public String nonGCVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[&quot;0.1467&quot;, &quot;0.8533&quot;, &quot;0.0000&quot;]</p>
+         */
         @NameInMap("Probabilities")
         public String probabilities;
 
+        /**
+         * <strong>example:</strong>
+         * <p>508.79</p>
+         */
         @NameInMap("StomachVolume")
         public String stomachVolume;
 

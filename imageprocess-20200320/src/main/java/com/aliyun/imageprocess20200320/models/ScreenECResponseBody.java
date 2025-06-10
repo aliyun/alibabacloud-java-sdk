@@ -10,6 +10,10 @@ public class ScreenECResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9B65AC8E-311A-1ED1-BBE6-6AA6D35D31A6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,15 +47,31 @@ public class ScreenECResponseBody extends TeaModel {
     }
 
     public static class ScreenECResponseBodyDataLesion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BenignVolume")
         public String benignVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EcVolume")
         public String ecVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>26814</p>
+         */
         @NameInMap("EsoVolume")
         public String esoVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen-pdac/2022-05-25_14%3A33%3A30/4CA2BF25-BCDB-9C6C-B14C-EB41E8266588.nii.gz?Expires=1653462210&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&Signature=8t%2FknUrQyyyCU2p7QhMC%2BXBCR">http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen-pdac/2022-05-25_14%3A33%3A30/4CA2BF25-BCDB-9C6C-B14C-EB41E8266588.nii.gz?Expires=1653462210&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=8t%2FknUrQyyyCU2p7QhMC%2BXBCR</a>****</p>
+         */
         @NameInMap("Mask")
         public String mask;
 

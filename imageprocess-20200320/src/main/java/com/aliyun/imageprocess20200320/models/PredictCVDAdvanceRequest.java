@@ -4,18 +4,42 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class PredictCVDAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DICOM</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP_FILES</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ff51bfe-e73d-11ea-827d-506b4b3f3cf6</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<PredictCVDAdvanceRequestURLList> URLList;
 
@@ -65,6 +89,12 @@ public class PredictCVDAdvanceRequest extends TeaModel {
     }
 
     public static class PredictCVDAdvanceRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/xxx/0001.dcm">https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/xxx/0001.dcm</a></p>
+         */
         @NameInMap("URL")
         public java.io.InputStream URLObject;
 

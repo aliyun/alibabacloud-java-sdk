@@ -26,6 +26,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>主动脉瘤肺动脉高压检测</p>
+     * 
+     * @param request AnalyzeChestVesselRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AnalyzeChestVesselResponse
+     */
     public AnalyzeChestVesselResponse analyzeChestVesselWithOptions(AnalyzeChestVesselRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -66,6 +74,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new AnalyzeChestVesselResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>主动脉瘤肺动脉高压检测</p>
+     * 
+     * @param request AnalyzeChestVesselRequest
+     * @return AnalyzeChestVesselResponse
+     */
     public AnalyzeChestVesselResponse analyzeChestVessel(AnalyzeChestVesselRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.analyzeChestVesselWithOptions(request, runtime);
@@ -78,7 +93,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -102,12 +117,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -153,6 +169,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return analyzeChestVesselResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>骨密度估计</p>
+     * 
+     * @param request CalcBMDRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CalcBMDResponse
+     */
     public CalcBMDResponse calcBMDWithOptions(CalcBMDRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -193,6 +217,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CalcBMDResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>骨密度估计</p>
+     * 
+     * @param request CalcBMDRequest
+     * @return CalcBMDResponse
+     */
     public CalcBMDResponse calcBMD(CalcBMDRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.calcBMDWithOptions(request, runtime);
@@ -205,7 +236,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -229,12 +260,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -280,6 +312,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return calcBMDResp;
     }
 
+    /**
+     * @param request CalcCACSRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CalcCACSResponse
+     */
     public CalcCACSResponse calcCACSWithOptions(CalcCACSRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -320,6 +357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new CalcCACSResponse());
     }
 
+    /**
+     * @param request CalcCACSRequest
+     * @return CalcCACSResponse
+     */
     public CalcCACSResponse calcCACS(CalcCACSRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.calcCACSWithOptions(request, runtime);
@@ -332,7 +373,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -356,12 +397,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -407,125 +449,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return calcCACSResp;
     }
 
-    public ClassifyFNFResponse classifyFNFWithOptions(ClassifyFNFRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
-            body.put("DataFormat", request.dataFormat);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
-            body.put("ImageUrl", request.imageUrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            body.put("OrgId", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
-            body.put("OrgName", request.orgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tracerId)) {
-            body.put("TracerId", request.tracerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ClassifyFNF"),
-            new TeaPair("version", "2020-03-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ClassifyFNFResponse());
-    }
-
-    public ClassifyFNFResponse classifyFNF(ClassifyFNFRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.classifyFNFWithOptions(request, runtime);
-    }
-
-    public ClassifyFNFResponse classifyFNFAdvance(ClassifyFNFAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "imageprocess"),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        ClassifyFNFRequest classifyFNFReq = new ClassifyFNFRequest();
-        com.aliyun.openapiutil.Client.convert(request, classifyFNFReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.imageUrlObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.imageUrlObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            classifyFNFReq.imageUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
-        ClassifyFNFResponse classifyFNFResp = this.classifyFNFWithOptions(classifyFNFReq, runtime);
-        return classifyFNFResp;
-    }
-
+    /**
+     * @param request DetectCovid19CadRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectCovid19CadResponse
+     */
     public DetectCovid19CadResponse detectCovid19CadWithOptions(DetectCovid19CadRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -562,6 +490,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectCovid19CadResponse());
     }
 
+    /**
+     * @param request DetectCovid19CadRequest
+     * @return DetectCovid19CadResponse
+     */
     public DetectCovid19CadResponse detectCovid19Cad(DetectCovid19CadRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectCovid19CadWithOptions(request, runtime);
@@ -574,7 +506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -598,12 +530,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -649,359 +582,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectCovid19CadResp;
     }
 
-    public DetectHipKeypointXRayResponse detectHipKeypointXRayWithOptions(DetectHipKeypointXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
-            body.put("DataFormat", request.dataFormat);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
-            body.put("ImageUrl", request.imageUrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            body.put("OrgId", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
-            body.put("OrgName", request.orgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tracerId)) {
-            body.put("TracerId", request.tracerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DetectHipKeypointXRay"),
-            new TeaPair("version", "2020-03-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectHipKeypointXRayResponse());
-    }
-
-    public DetectHipKeypointXRayResponse detectHipKeypointXRay(DetectHipKeypointXRayRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectHipKeypointXRayWithOptions(request, runtime);
-    }
-
-    public DetectHipKeypointXRayResponse detectHipKeypointXRayAdvance(DetectHipKeypointXRayAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "imageprocess"),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        DetectHipKeypointXRayRequest detectHipKeypointXRayReq = new DetectHipKeypointXRayRequest();
-        com.aliyun.openapiutil.Client.convert(request, detectHipKeypointXRayReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.imageUrlObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.imageUrlObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            detectHipKeypointXRayReq.imageUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
-        DetectHipKeypointXRayResponse detectHipKeypointXRayResp = this.detectHipKeypointXRayWithOptions(detectHipKeypointXRayReq, runtime);
-        return detectHipKeypointXRayResp;
-    }
-
-    public DetectKneeKeypointXRayResponse detectKneeKeypointXRayWithOptions(DetectKneeKeypointXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
-            body.put("DataFormat", request.dataFormat);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
-            body.put("ImageUrl", request.imageUrl);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            body.put("OrgId", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
-            body.put("OrgName", request.orgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tracerId)) {
-            body.put("TracerId", request.tracerId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DetectKneeKeypointXRay"),
-            new TeaPair("version", "2020-03-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectKneeKeypointXRayResponse());
-    }
-
-    public DetectKneeKeypointXRayResponse detectKneeKeypointXRay(DetectKneeKeypointXRayRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectKneeKeypointXRayWithOptions(request, runtime);
-    }
-
-    public DetectKneeKeypointXRayResponse detectKneeKeypointXRayAdvance(DetectKneeKeypointXRayAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "imageprocess"),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        DetectKneeKeypointXRayRequest detectKneeKeypointXRayReq = new DetectKneeKeypointXRayRequest();
-        com.aliyun.openapiutil.Client.convert(request, detectKneeKeypointXRayReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.imageUrlObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.imageUrlObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            detectKneeKeypointXRayReq.imageUrl = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
-        DetectKneeKeypointXRayResponse detectKneeKeypointXRayResp = this.detectKneeKeypointXRayWithOptions(detectKneeKeypointXRayReq, runtime);
-        return detectKneeKeypointXRayResp;
-    }
-
-    public DetectKneeXRayResponse detectKneeXRayWithOptions(DetectKneeXRayRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
-            body.put("DataFormat", request.dataFormat);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            body.put("OrgId", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
-            body.put("OrgName", request.orgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
-            body.put("Url", request.url);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DetectKneeXRay"),
-            new TeaPair("version", "2020-03-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectKneeXRayResponse());
-    }
-
-    public DetectKneeXRayResponse detectKneeXRay(DetectKneeXRayRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectKneeXRayWithOptions(request, runtime);
-    }
-
-    public DetectKneeXRayResponse detectKneeXRayAdvance(DetectKneeXRayAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "imageprocess"),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        DetectKneeXRayRequest detectKneeXRayReq = new DetectKneeXRayRequest();
-        com.aliyun.openapiutil.Client.convert(request, detectKneeXRayReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.urlObject)) {
-            authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-            ossConfig.accessKeyId = authResponse.body.accessKeyId;
-            ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-            ossClient = new com.aliyun.oss.Client(ossConfig);
-            fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                new TeaPair("filename", authResponse.body.objectKey),
-                new TeaPair("content", request.urlObject),
-                new TeaPair("contentType", "")
-            ));
-            ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                new TeaPair("policy", authResponse.body.encodedPolicy),
-                new TeaPair("signature", authResponse.body.signature),
-                new TeaPair("key", authResponse.body.objectKey),
-                new TeaPair("file", fileObj),
-                new TeaPair("successActionStatus", "201")
-            ));
-            uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                new TeaPair("bucketName", authResponse.body.bucket),
-                new TeaPair("header", ossHeader)
-            ));
-            ossClient.postObject(uploadRequest, ossRuntime);
-            detectKneeXRayReq.url = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-        }
-
-        DetectKneeXRayResponse detectKneeXRayResp = this.detectKneeXRayWithOptions(detectKneeXRayReq, runtime);
-        return detectKneeXRayResp;
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>脂肪肝检测</p>
+     * 
+     * @param request DetectLiverSteatosisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectLiverSteatosisResponse
+     */
     public DetectLiverSteatosisResponse detectLiverSteatosisWithOptions(DetectLiverSteatosisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1042,6 +630,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectLiverSteatosisResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>脂肪肝检测</p>
+     * 
+     * @param request DetectLiverSteatosisRequest
+     * @return DetectLiverSteatosisResponse
+     */
     public DetectLiverSteatosisResponse detectLiverSteatosis(DetectLiverSteatosisRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectLiverSteatosisWithOptions(request, runtime);
@@ -1054,7 +649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1078,12 +673,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1129,6 +725,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectLiverSteatosisResp;
     }
 
+    /**
+     * @param request DetectLungNoduleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectLungNoduleResponse
+     */
     public DetectLungNoduleResponse detectLungNoduleWithOptions(DetectLungNoduleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1169,6 +770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectLungNoduleResponse());
     }
 
+    /**
+     * @param request DetectLungNoduleRequest
+     * @return DetectLungNoduleResponse
+     */
     public DetectLungNoduleResponse detectLungNodule(DetectLungNoduleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectLungNoduleWithOptions(request, runtime);
@@ -1181,7 +786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1205,12 +810,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1256,6 +862,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectLungNoduleResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>淋巴结检测</p>
+     * 
+     * @param request DetectLymphRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectLymphResponse
+     */
     public DetectLymphResponse detectLymphWithOptions(DetectLymphRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1284,6 +898,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectLymphResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>淋巴结检测</p>
+     * 
+     * @param request DetectLymphRequest
+     * @return DetectLymphResponse
+     */
     public DetectLymphResponse detectLymph(DetectLymphRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectLymphWithOptions(request, runtime);
@@ -1296,7 +917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1320,12 +941,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1371,6 +993,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectLymphResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胰腺癌检测</p>
+     * 
+     * @param request DetectPancRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectPancResponse
+     */
     public DetectPancResponse detectPancWithOptions(DetectPancRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1399,6 +1029,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectPancResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胰腺癌检测</p>
+     * 
+     * @param request DetectPancRequest
+     * @return DetectPancResponse
+     */
     public DetectPancResponse detectPanc(DetectPancRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectPancWithOptions(request, runtime);
@@ -1411,7 +1048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1435,12 +1072,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1486,6 +1124,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectPancResp;
     }
 
+    /**
+     * @param request DetectRibFractureRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectRibFractureResponse
+     */
     public DetectRibFractureResponse detectRibFractureWithOptions(DetectRibFractureRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1526,6 +1169,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectRibFractureResponse());
     }
 
+    /**
+     * @param request DetectRibFractureRequest
+     * @return DetectRibFractureResponse
+     */
     public DetectRibFractureResponse detectRibFracture(DetectRibFractureRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectRibFractureWithOptions(request, runtime);
@@ -1538,7 +1185,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1562,12 +1209,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1613,6 +1261,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectRibFractureResp;
     }
 
+    /**
+     * @param request DetectSkinDiseaseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetectSkinDiseaseResponse
+     */
     public DetectSkinDiseaseResponse detectSkinDiseaseWithOptions(DetectSkinDiseaseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1645,6 +1298,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new DetectSkinDiseaseResponse());
     }
 
+    /**
+     * @param request DetectSkinDiseaseRequest
+     * @return DetectSkinDiseaseResponse
+     */
     public DetectSkinDiseaseResponse detectSkinDisease(DetectSkinDiseaseRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.detectSkinDiseaseWithOptions(request, runtime);
@@ -1657,7 +1314,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1681,12 +1338,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -1724,129 +1382,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return detectSkinDiseaseResp;
     }
 
-    public DetectSpineMRIResponse detectSpineMRIWithOptions(DetectSpineMRIRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.dataFormat)) {
-            body.put("DataFormat", request.dataFormat);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgId)) {
-            body.put("OrgId", request.orgId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.orgName)) {
-            body.put("OrgName", request.orgName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
-            body.put("URLList", request.URLList);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DetectSpineMRI"),
-            new TeaPair("version", "2020-03-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DetectSpineMRIResponse());
-    }
-
-    public DetectSpineMRIResponse detectSpineMRI(DetectSpineMRIRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.detectSpineMRIWithOptions(request, runtime);
-    }
-
-    public DetectSpineMRIResponse detectSpineMRIAdvance(DetectSpineMRIAdvanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        // Step 0: init client
-        String accessKeyId = _credential.getAccessKeyId();
-        String accessKeySecret = _credential.getAccessKeySecret();
-        String securityToken = _credential.getSecurityToken();
-        String credentialType = _credential.getType();
-        String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
-            openPlatformEndpoint = "openplatform.aliyuncs.com";
-        }
-
-        if (com.aliyun.teautil.Common.isUnset(credentialType)) {
-            credentialType = "access_key";
-        }
-
-        com.aliyun.teaopenapi.models.Config authConfig = com.aliyun.teaopenapi.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeyId", accessKeyId),
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("securityToken", securityToken),
-            new TeaPair("type", credentialType),
-            new TeaPair("endpoint", openPlatformEndpoint),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.Client authClient = new com.aliyun.openplatform20191219.Client(authConfig);
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest authRequest = com.aliyun.openplatform20191219.models.AuthorizeFileUploadRequest.build(TeaConverter.buildMap(
-            new TeaPair("product", "imageprocess"),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
-        com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
-            new TeaPair("accessKeySecret", accessKeySecret),
-            new TeaPair("type", "access_key"),
-            new TeaPair("protocol", _protocol),
-            new TeaPair("regionId", _regionId)
-        ));
-        com.aliyun.oss.Client ossClient = null;
-        com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
-        com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
-        com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
-        com.aliyun.ossutil.models.RuntimeOptions ossRuntime = new com.aliyun.ossutil.models.RuntimeOptions();
-        com.aliyun.openapiutil.Client.convert(runtime, ossRuntime);
-        DetectSpineMRIRequest detectSpineMRIReq = new DetectSpineMRIRequest();
-        com.aliyun.openapiutil.Client.convert(request, detectSpineMRIReq);
-        if (!com.aliyun.teautil.Common.isUnset(request.URLList)) {
-            Integer i0 = 0;
-            for (DetectSpineMRIAdvanceRequest.DetectSpineMRIAdvanceRequestURLList item0 : request.URLList) {
-                if (!com.aliyun.teautil.Common.isUnset(item0.URLObject)) {
-                    authResponse = authClient.authorizeFileUploadWithOptions(authRequest, runtime);
-                    ossConfig.accessKeyId = authResponse.body.accessKeyId;
-                    ossConfig.endpoint = com.aliyun.openapiutil.Client.getEndpoint(authResponse.body.endpoint, authResponse.body.useAccelerate, _endpointType);
-                    ossClient = new com.aliyun.oss.Client(ossConfig);
-                    fileObj = com.aliyun.fileform.models.FileField.build(TeaConverter.buildMap(
-                        new TeaPair("filename", authResponse.body.objectKey),
-                        new TeaPair("content", item0.URLObject),
-                        new TeaPair("contentType", "")
-                    ));
-                    ossHeader = com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader.build(TeaConverter.buildMap(
-                        new TeaPair("accessKeyId", authResponse.body.accessKeyId),
-                        new TeaPair("policy", authResponse.body.encodedPolicy),
-                        new TeaPair("signature", authResponse.body.signature),
-                        new TeaPair("key", authResponse.body.objectKey),
-                        new TeaPair("file", fileObj),
-                        new TeaPair("successActionStatus", "201")
-                    ));
-                    uploadRequest = com.aliyun.oss.models.PostObjectRequest.build(TeaConverter.buildMap(
-                        new TeaPair("bucketName", authResponse.body.bucket),
-                        new TeaPair("header", ossHeader)
-                    ));
-                    ossClient.postObject(uploadRequest, ossRuntime);
-                    DetectSpineMRIRequest.DetectSpineMRIRequestURLList tmp = detectSpineMRIReq.URLList.get(i0);
-                    tmp.URL = "http://" + authResponse.body.bucket + "." + authResponse.body.endpoint + "/" + authResponse.body.objectKey + "";
-                    i0 = com.aliyun.darabonbanumber.Client.ltoi(com.aliyun.darabonbanumber.Client.add(com.aliyun.darabonbanumber.Client.itol(i0), com.aliyun.darabonbanumber.Client.itol(1)));
-                }
-
-            }
-        }
-
-        DetectSpineMRIResponse detectSpineMRIResp = this.detectSpineMRIWithOptions(detectSpineMRIReq, runtime);
-        return detectSpineMRIResp;
-    }
-
+    /**
+     * <b>summary</b> : 
+     * <p>会话反馈</p>
+     * 
+     * @param request FeedbackSessionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FeedbackSessionResponse
+     */
     public FeedbackSessionResponse feedbackSessionWithOptions(FeedbackSessionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1875,11 +1418,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new FeedbackSessionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>会话反馈</p>
+     * 
+     * @param request FeedbackSessionRequest
+     * @return FeedbackSessionResponse
+     */
     public FeedbackSessionResponse feedbackSession(FeedbackSessionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.feedbackSessionWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胸部CT平扫筛查结果报告生成</p>
+     * 
+     * @param tmpReq GenerateReportRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateReportResponse
+     */
+    public GenerateReportResponse generateReportWithOptions(GenerateReportRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GenerateReportShrinkRequest request = new GenerateReportShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reportConfigs)) {
+            request.reportConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reportConfigs, "ReportConfigs", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reportConfigsShrink)) {
+            body.put("ReportConfigs", request.reportConfigsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateReport"),
+            new TeaPair("version", "2020-03-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateReportResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>胸部CT平扫筛查结果报告生成</p>
+     * 
+     * @param request GenerateReportRequest
+     * @return GenerateReportResponse
+     */
+    public GenerateReportResponse generateReport(GenerateReportRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateReportWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request GetAsyncJobResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAsyncJobResultResponse
+     */
     public GetAsyncJobResultResponse getAsyncJobResultWithOptions(GetAsyncJobResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1904,11 +1509,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new GetAsyncJobResultResponse());
     }
 
+    /**
+     * @param request GetAsyncJobResultRequest
+     * @return GetAsyncJobResultResponse
+     */
     public GetAsyncJobResultResponse getAsyncJobResult(GetAsyncJobResultRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAsyncJobResultWithOptions(request, runtime);
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>CVD心血管不良事件预测</p>
+     * 
+     * @param request PredictCVDRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PredictCVDResponse
+     */
     public PredictCVDResponse predictCVDWithOptions(PredictCVDRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -1949,6 +1566,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new PredictCVDResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>CVD心血管不良事件预测</p>
+     * 
+     * @param request PredictCVDRequest
+     * @return PredictCVDResponse
+     */
     public PredictCVDResponse predictCVD(PredictCVDRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.predictCVDWithOptions(request, runtime);
@@ -1961,7 +1585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -1985,12 +1609,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2036,6 +1661,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return predictCVDResp;
     }
 
+    /**
+     * @param request RunCTRegistrationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunCTRegistrationResponse
+     */
     public RunCTRegistrationResponse runCTRegistrationWithOptions(RunCTRegistrationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2080,6 +1710,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RunCTRegistrationResponse());
     }
 
+    /**
+     * @param request RunCTRegistrationRequest
+     * @return RunCTRegistrationResponse
+     */
     public RunCTRegistrationResponse runCTRegistration(RunCTRegistrationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runCTRegistrationWithOptions(request, runtime);
@@ -2092,7 +1726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2116,12 +1750,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2201,6 +1836,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return runCTRegistrationResp;
     }
 
+    /**
+     * @param request RunMedQARequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunMedQAResponse
+     */
     public RunMedQAResponse runMedQAWithOptions(RunMedQARequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2253,6 +1893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new RunMedQAResponse());
     }
 
+    /**
+     * @param request RunMedQARequest
+     * @return RunMedQAResponse
+     */
     public RunMedQAResponse runMedQA(RunMedQARequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.runMedQAWithOptions(request, runtime);
@@ -2265,7 +1909,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2289,12 +1933,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2340,6 +1985,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return runMedQAResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>结直肠癌筛查</p>
+     * 
+     * @param request ScreenCRCRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScreenCRCResponse
+     */
     public ScreenCRCResponse screenCRCWithOptions(ScreenCRCRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2380,6 +2033,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScreenCRCResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>结直肠癌筛查</p>
+     * 
+     * @param request ScreenCRCRequest
+     * @return ScreenCRCResponse
+     */
     public ScreenCRCResponse screenCRC(ScreenCRCRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.screenCRCWithOptions(request, runtime);
@@ -2392,7 +2052,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2416,12 +2076,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2467,6 +2128,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return screenCRCResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胸部CT平扫</p>
+     * 
+     * @param request ScreenChestCTRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScreenChestCTResponse
+     */
     public ScreenChestCTResponse screenChestCTWithOptions(ScreenChestCTRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2511,6 +2180,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScreenChestCTResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胸部CT平扫</p>
+     * 
+     * @param request ScreenChestCTRequest
+     * @return ScreenChestCTResponse
+     */
     public ScreenChestCTResponse screenChestCT(ScreenChestCTRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.screenChestCTWithOptions(request, runtime);
@@ -2523,7 +2199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2547,12 +2223,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2598,6 +2275,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return screenChestCTResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>食管癌筛查</p>
+     * 
+     * @param request ScreenECRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScreenECResponse
+     */
     public ScreenECResponse screenECWithOptions(ScreenECRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2626,6 +2311,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScreenECResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>食管癌筛查</p>
+     * 
+     * @param request ScreenECRequest
+     * @return ScreenECResponse
+     */
     public ScreenECResponse screenEC(ScreenECRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.screenECWithOptions(request, runtime);
@@ -2638,7 +2330,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2662,12 +2354,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2713,6 +2406,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return screenECResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胃癌筛查</p>
+     * 
+     * @param request ScreenGCRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScreenGCResponse
+     */
     public ScreenGCResponse screenGCWithOptions(ScreenGCRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2753,6 +2454,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScreenGCResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>胃癌筛查</p>
+     * 
+     * @param request ScreenGCRequest
+     * @return ScreenGCResponse
+     */
     public ScreenGCResponse screenGC(ScreenGCRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.screenGCWithOptions(request, runtime);
@@ -2765,7 +2473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2789,12 +2497,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2840,6 +2549,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return screenGCResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>肝癌筛查</p>
+     * 
+     * @param request ScreenLCRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ScreenLCResponse
+     */
     public ScreenLCResponse screenLCWithOptions(ScreenLCRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -2880,6 +2597,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new ScreenLCResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>肝癌筛查</p>
+     * 
+     * @param request ScreenLCRequest
+     * @return ScreenLCResponse
+     */
     public ScreenLCResponse screenLC(ScreenLCRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.screenLCWithOptions(request, runtime);
@@ -2892,7 +2616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -2916,12 +2640,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -2967,6 +2692,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return screenLCResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>放疗淋巴站分割</p>
+     * 
+     * @param request SegmentLymphNodeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SegmentLymphNodeResponse
+     */
     public SegmentLymphNodeResponse segmentLymphNodeWithOptions(SegmentLymphNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3007,6 +2740,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SegmentLymphNodeResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>放疗淋巴站分割</p>
+     * 
+     * @param request SegmentLymphNodeRequest
+     * @return SegmentLymphNodeResponse
+     */
     public SegmentLymphNodeResponse segmentLymphNode(SegmentLymphNodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.segmentLymphNodeWithOptions(request, runtime);
@@ -3019,7 +2759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -3043,12 +2783,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -3094,6 +2835,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return segmentLymphNodeResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>多器官分割</p>
+     * 
+     * @param request SegmentOARRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SegmentOARResponse
+     */
     public SegmentOARResponse segmentOARWithOptions(SegmentOARRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3142,6 +2891,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new SegmentOARResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>多器官分割</p>
+     * 
+     * @param request SegmentOARRequest
+     * @return SegmentOARResponse
+     */
     public SegmentOARResponse segmentOAR(SegmentOARRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.segmentOARWithOptions(request, runtime);
@@ -3154,7 +2910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -3178,12 +2934,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -3229,6 +2986,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return segmentOARResp;
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>放疗靶区勾画算法</p>
+     * 
+     * @param request TargetVolumeSegmentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TargetVolumeSegmentResponse
+     */
     public TargetVolumeSegmentResponse targetVolumeSegmentWithOptions(TargetVolumeSegmentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -3273,6 +3038,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return TeaModel.toModel(this.callApi(params, req, runtime), new TargetVolumeSegmentResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>放疗靶区勾画算法</p>
+     * 
+     * @param request TargetVolumeSegmentRequest
+     * @return TargetVolumeSegmentResponse
+     */
     public TargetVolumeSegmentResponse targetVolumeSegment(TargetVolumeSegmentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.targetVolumeSegmentWithOptions(request, runtime);
@@ -3285,7 +3057,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         String securityToken = _credential.getSecurityToken();
         String credentialType = _credential.getType();
         String openPlatformEndpoint = _openPlatformEndpoint;
-        if (com.aliyun.teautil.Common.isUnset(openPlatformEndpoint)) {
+        if (com.aliyun.teautil.Common.empty(openPlatformEndpoint)) {
             openPlatformEndpoint = "openplatform.aliyuncs.com";
         }
 
@@ -3309,12 +3081,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
         ));
         com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse authResponse = new com.aliyun.openplatform20191219.models.AuthorizeFileUploadResponse();
         com.aliyun.oss.models.Config ossConfig = com.aliyun.oss.models.Config.build(TeaConverter.buildMap(
+            new TeaPair("accessKeyId", accessKeyId),
             new TeaPair("accessKeySecret", accessKeySecret),
             new TeaPair("type", "access_key"),
             new TeaPair("protocol", _protocol),
             new TeaPair("regionId", _regionId)
         ));
-        com.aliyun.oss.Client ossClient = null;
+        com.aliyun.oss.Client ossClient = new com.aliyun.oss.Client(ossConfig);
         com.aliyun.fileform.models.FileField fileObj = new com.aliyun.fileform.models.FileField();
         com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader ossHeader = new com.aliyun.oss.models.PostObjectRequest.PostObjectRequestHeader();
         com.aliyun.oss.models.PostObjectRequest uploadRequest = new com.aliyun.oss.models.PostObjectRequest();
@@ -3358,42 +3131,5 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         TargetVolumeSegmentResponse targetVolumeSegmentResp = this.targetVolumeSegmentWithOptions(targetVolumeSegmentReq, runtime);
         return targetVolumeSegmentResp;
-    }
-
-    public TranslateMedResponse translateMedWithOptions(TranslateMedRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.fromLanguage)) {
-            body.put("FromLanguage", request.fromLanguage);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
-            body.put("Text", request.text);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.toLanguage)) {
-            body.put("ToLanguage", request.toLanguage);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "TranslateMed"),
-            new TeaPair("version", "2020-03-20"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new TranslateMedResponse());
-    }
-
-    public TranslateMedResponse translateMed(TranslateMedRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.translateMedWithOptions(request, runtime);
     }
 }

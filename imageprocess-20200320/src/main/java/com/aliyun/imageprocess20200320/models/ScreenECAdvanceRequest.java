@@ -4,9 +4,18 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class ScreenECAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP_FILES</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<ScreenECAdvanceRequestURLList> URLList;
 
@@ -32,6 +41,9 @@ public class ScreenECAdvanceRequest extends TeaModel {
     }
 
     public static class ScreenECAdvanceRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public java.io.InputStream URLObject;
 

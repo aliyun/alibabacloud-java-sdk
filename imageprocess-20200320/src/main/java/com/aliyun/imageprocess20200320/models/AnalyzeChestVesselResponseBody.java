@@ -10,6 +10,10 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B87D013B-F25F-47DC-ABE1-440F4837AFD2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -52,15 +56,31 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
         @NameInMap("Coordinates")
         public java.util.List<java.util.List<Float>> coordinates;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("LabelValue")
         public Long labelValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2722</p>
+         */
         @NameInMap("MaxArea")
         public Float maxArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>416</p>
+         */
         @NameInMap("MaxAreaIndex")
         public Long maxAreaIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>63</p>
+         */
         @NameInMap("MaxDiameter")
         public Float maxDiameter;
 
@@ -129,18 +149,38 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
         @NameInMap("Coordinates")
         public java.util.List<java.util.List<Float>> coordinates;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LabelValue")
         public Long labelValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>928</p>
+         */
         @NameInMap("MaxArea")
         public Float maxArea;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MaxAreaIndex")
         public Long maxAreaIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>42</p>
+         */
         @NameInMap("MaxDiameter")
         public Float maxDiameter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2439</p>
+         */
         @NameInMap("NearestAortaArea")
         public Float nearestAortaArea;
 
@@ -214,6 +254,10 @@ public class AnalyzeChestVesselResponseBody extends TeaModel {
         @NameInMap("PulmonaryInfo")
         public AnalyzeChestVesselResponseBodyDataPulmonaryInfo pulmonaryInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/ct_artery_aa_ph/local_test/2021-07-08/6C4713DF-F548-47DF-A456-5DA1C8334444_result_compressed.tgz?Expires=1625732732&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&Signature=5UKVmLfM7GWllIcPr9a6dKz%2B5h">http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/ct_artery_aa_ph/local_test/2021-07-08/6C4713DF-F548-47DF-A456-5DA1C8334444_result_compressed.tgz?Expires=1625732732&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=5UKVmLfM7GWllIcPr9a6dKz%2B5h</a>****</p>
+         */
         @NameInMap("ResultURL")
         public String resultURL;
 

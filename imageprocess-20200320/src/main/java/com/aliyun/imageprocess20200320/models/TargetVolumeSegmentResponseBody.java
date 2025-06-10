@@ -10,6 +10,10 @@ public class TargetVolumeSegmentResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6cc7232e-d38b-4dda-b86d-6e0e31704fa1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class TargetVolumeSegmentResponseBody extends TeaModel {
     }
 
     public static class TargetVolumeSegmentResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-med-eas-cn-shanghai.oss-cn-shanghai.aliyuncs.com/seg-organ-ct/2023-01-31/13%3A59%3A57/286304994262646784.nii.gz?Expires=1675146629&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=L7jGtdydjfaFxQQCwqe4q4hlHz">http://vibktprfx-prod-prod-med-eas-cn-shanghai.oss-cn-shanghai.aliyuncs.com/seg-organ-ct/2023-01-31/13%3A59%3A57/286304994262646784.nii.gz?Expires=1675146629&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=L7jGtdydjfaFxQQCwqe4q4hlHz</a>****</p>
+         */
         @NameInMap("ResultURL")
         public String resultURL;
 

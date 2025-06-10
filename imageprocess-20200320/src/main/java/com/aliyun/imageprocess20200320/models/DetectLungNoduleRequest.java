@@ -4,20 +4,43 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectLungNoduleRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DICOM</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0001</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>weiyi</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.60</p>
+     */
     @NameInMap("Threshold")
     public Float threshold;
 
     /**
      * <p>1</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("URLList")
     public java.util.List<DetectLungNoduleRequestURLList> URLList;
@@ -68,6 +91,9 @@ public class DetectLungNoduleRequest extends TeaModel {
     }
 
     public static class DetectLungNoduleRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

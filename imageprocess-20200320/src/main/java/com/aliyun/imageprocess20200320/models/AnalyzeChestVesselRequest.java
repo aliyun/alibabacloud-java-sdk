@@ -4,20 +4,36 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class AnalyzeChestVesselRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ff51bfe-e73d-11ea-827d-506b4b3f3cf6</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
     /**
      * <p>1</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("URLList")
     public java.util.List<AnalyzeChestVesselRequestURLList> URLList;
@@ -68,6 +84,9 @@ public class AnalyzeChestVesselRequest extends TeaModel {
     }
 
     public static class AnalyzeChestVesselRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

@@ -4,18 +4,45 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class SegmentLymphNodeRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CHEST</p>
+     */
     @NameInMap("BodyPart")
     public String bodyPart;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DICOM</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<SegmentLymphNodeRequestURLList> URLList;
 
@@ -65,6 +92,9 @@ public class SegmentLymphNodeRequest extends TeaModel {
     }
 
     public static class SegmentLymphNodeRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

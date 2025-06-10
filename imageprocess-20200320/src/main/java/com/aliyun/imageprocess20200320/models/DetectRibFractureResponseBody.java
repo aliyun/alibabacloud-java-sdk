@@ -10,6 +10,10 @@ public class DetectRibFractureResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>5C695B5D-41A6-4202-8BF7-E647698678DF</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -49,21 +53,45 @@ public class DetectRibFractureResponseBody extends TeaModel {
         @NameInMap("Coordinates")
         public java.util.List<Integer> coordinates;
 
+        /**
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("FracSOPInstanceUID")
         public String fracSOPInstanceUID;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("FractureCategory")
         public String fractureCategory;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.7916666666666667</p>
+         */
         @NameInMap("FractureConfidence")
         public Float fractureConfidence;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("FractureId")
         public Integer fractureId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>L4</p>
+         */
         @NameInMap("FractureLocation")
         public String fractureLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FractureSegment")
         public Long fractureSegment;
 
@@ -145,6 +173,10 @@ public class DetectRibFractureResponseBody extends TeaModel {
         @NameInMap("Origin")
         public java.util.List<Float> origin;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/detect-rib-fracture/local_test/2020-12-22/result-D5CD101C-F8E5-43CA-9E99-44C783B8F8BE.tar.gz?Expires=1608631727&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=d6c32E1IB4b7Ayo1lpjs%2Bq3Ylv">http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/detect-rib-fracture/local_test/2020-12-22/result-D5CD101C-F8E5-43CA-9E99-44C783B8F8BE.tar.gz?Expires=1608631727&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=d6c32E1IB4b7Ayo1lpjs%2Bq3Ylv</a>****</p>
+         */
         @NameInMap("ResultURL")
         public String resultURL;
 

@@ -13,18 +13,43 @@ public class RunMedQARequest extends TeaModel {
     @NameInMap("AnswerTextList")
     public java.util.List<RunMedQARequestAnswerTextList> answerTextList;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Department")
     public String department;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0001</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>weiyi</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chiefComplaint</p>
+     */
     @NameInMap("QuestionType")
     public String questionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d1f6a6c2444f4c01adfadd413938e5c7</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 
@@ -98,6 +123,10 @@ public class RunMedQARequest extends TeaModel {
     }
 
     public static class RunMedQARequestAnswerImageDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>iVBORw0KGgoAAAANSUhEUgAAAoAAAAHJCAIAAACaEB9NAAEAAElEQVR4nNT9Wb****</p>
+         */
         @NameInMap("AnswerImageData")
         public String answerImageData;
 
@@ -117,6 +146,10 @@ public class RunMedQARequest extends TeaModel {
     }
 
     public static class RunMedQARequestAnswerImageURLList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://viapi-oss.oss-cn-shanghai.aliyuncs.com/doc/imageprocess/roseola.jpeg">https://viapi-oss.oss-cn-shanghai.aliyuncs.com/doc/imageprocess/roseola.jpeg</a></p>
+         */
         @NameInMap("AnswerImageURL")
         public String answerImageURL;
 

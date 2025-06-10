@@ -4,15 +4,36 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectCovid19CadAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DICOM</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0001</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>weiyi</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<DetectCovid19CadAdvanceRequestURLList> URLList;
 
@@ -54,6 +75,9 @@ public class DetectCovid19CadAdvanceRequest extends TeaModel {
     }
 
     public static class DetectCovid19CadAdvanceRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public java.io.InputStream URLObject;
 

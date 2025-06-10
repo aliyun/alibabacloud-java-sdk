@@ -4,18 +4,36 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class DetectRibFractureRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ff51bfe-e73d-11ea-827d-506b4b3f3cf6</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("SourceType")
     public String sourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("URLList")
     public java.util.List<DetectRibFractureRequestURLList> URLList;
 
@@ -65,6 +83,9 @@ public class DetectRibFractureRequest extends TeaModel {
     }
 
     public static class DetectRibFractureRequestURLList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("URL")
         public String URL;
 

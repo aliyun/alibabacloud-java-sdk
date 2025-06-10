@@ -4,9 +4,18 @@ package com.aliyun.imageprocess20200320.models;
 import com.aliyun.tea.*;
 
 public class FeedbackSessionRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Feedback")
     public String feedback;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>69675e9ddaea4b1ca8b9ddbafd02edc2</p>
+     */
     @NameInMap("SessionId")
     public String sessionId;
 

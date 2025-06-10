@@ -10,6 +10,10 @@ public class ScreenLCResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473dbfb0-9cb7-e18e-450b-e4d0e4ce6c1c</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -42,22 +46,93 @@ public class ScreenLCResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb extends TeaModel {
+        @NameInMap("BenignProb")
+        public Float benignProb;
+
+        @NameInMap("CalcProb")
+        public Float calcProb;
+
+        @NameInMap("CystProb")
+        public Float cystProb;
+
+        @NameInMap("MalignantProb")
+        public Float malignantProb;
+
+        public static ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb build(java.util.Map<String, ?> map) throws Exception {
+            ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb self = new ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb();
+            return TeaModel.build(map, self);
+        }
+
+        public ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb setBenignProb(Float benignProb) {
+            this.benignProb = benignProb;
+            return this;
+        }
+        public Float getBenignProb() {
+            return this.benignProb;
+        }
+
+        public ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb setCalcProb(Float calcProb) {
+            this.calcProb = calcProb;
+            return this;
+        }
+        public Float getCalcProb() {
+            return this.calcProb;
+        }
+
+        public ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb setCystProb(Float cystProb) {
+            this.cystProb = cystProb;
+            return this;
+        }
+        public Float getCystProb() {
+            return this.cystProb;
+        }
+
+        public ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb setMalignantProb(Float malignantProb) {
+            this.malignantProb = malignantProb;
+            return this;
+        }
+        public Float getMalignantProb() {
+            return this.malignantProb;
+        }
+
+    }
+
     public static class ScreenLCResponseBodyDataLesionLesionList extends TeaModel {
         @NameInMap("Diameter")
         public java.util.List<Float> diameter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("KeySlice")
         public Long keySlice;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9375</p>
+         */
         @NameInMap("Malignancy")
         public Float malignancy;
 
         @NameInMap("RecistEndpoints")
         public java.util.List<Float> recistEndpoints;
 
+        @NameInMap("ScoreAllClassesProb")
+        public ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb scoreAllClassesProb;
+
+        /**
+         * <strong>example:</strong>
+         * <p>HCC</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>305.3661</p>
+         */
         @NameInMap("Volume")
         public Float volume;
 
@@ -98,6 +173,14 @@ public class ScreenLCResponseBody extends TeaModel {
             return this.recistEndpoints;
         }
 
+        public ScreenLCResponseBodyDataLesionLesionList setScoreAllClassesProb(ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb scoreAllClassesProb) {
+            this.scoreAllClassesProb = scoreAllClassesProb;
+            return this;
+        }
+        public ScreenLCResponseBodyDataLesionLesionListScoreAllClassesProb getScoreAllClassesProb() {
+            return this.scoreAllClassesProb;
+        }
+
         public ScreenLCResponseBodyDataLesionLesionList setType(String type) {
             this.type = type;
             return this;
@@ -117,17 +200,42 @@ public class ScreenLCResponseBody extends TeaModel {
     }
 
     public static class ScreenLCResponseBodyDataLesionPatientLevelResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.0077</p>
+         */
         @NameInMap("BenignNonCystProb")
         public String benignNonCystProb;
 
+        @NameInMap("BenignProb")
+        public Float benignProb;
+
+        @NameInMap("CalcProb")
+        public Float calcProb;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.9233</p>
+         */
         @NameInMap("CystProb")
         public Float cystProb;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.9941</p>
+         */
         @NameInMap("HCCProb")
         public Float HCCProb;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0073</p>
+         */
         @NameInMap("MalignantNonHCCProb")
         public Float malignantNonHCCProb;
+
+        @NameInMap("MalignantProb")
+        public Float malignantProb;
 
         public static ScreenLCResponseBodyDataLesionPatientLevelResult build(java.util.Map<String, ?> map) throws Exception {
             ScreenLCResponseBodyDataLesionPatientLevelResult self = new ScreenLCResponseBodyDataLesionPatientLevelResult();
@@ -140,6 +248,22 @@ public class ScreenLCResponseBody extends TeaModel {
         }
         public String getBenignNonCystProb() {
             return this.benignNonCystProb;
+        }
+
+        public ScreenLCResponseBodyDataLesionPatientLevelResult setBenignProb(Float benignProb) {
+            this.benignProb = benignProb;
+            return this;
+        }
+        public Float getBenignProb() {
+            return this.benignProb;
+        }
+
+        public ScreenLCResponseBodyDataLesionPatientLevelResult setCalcProb(Float calcProb) {
+            this.calcProb = calcProb;
+            return this;
+        }
+        public Float getCalcProb() {
+            return this.calcProb;
         }
 
         public ScreenLCResponseBodyDataLesionPatientLevelResult setCystProb(Float cystProb) {
@@ -166,17 +290,36 @@ public class ScreenLCResponseBody extends TeaModel {
             return this.malignantNonHCCProb;
         }
 
+        public ScreenLCResponseBodyDataLesionPatientLevelResult setMalignantProb(Float malignantProb) {
+            this.malignantProb = malignantProb;
+            return this;
+        }
+        public Float getMalignantProb() {
+            return this.malignantProb;
+        }
+
     }
 
     public static class ScreenLCResponseBodyDataLesion extends TeaModel {
         @NameInMap("LesionList")
         public java.util.List<ScreenLCResponseBodyDataLesionLesionList> lesionList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1364.9468</p>
+         */
         @NameInMap("LiverVolume")
         public Float liverVolume;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20-050_0000.nii.gz</p>
+         */
         @NameInMap("Mask")
         public String mask;
+
+        @NameInMap("PatientLevelProb")
+        public Float patientLevelProb;
 
         @NameInMap("PatientLevelResult")
         public ScreenLCResponseBodyDataLesionPatientLevelResult patientLevelResult;
@@ -208,6 +351,14 @@ public class ScreenLCResponseBody extends TeaModel {
         }
         public String getMask() {
             return this.mask;
+        }
+
+        public ScreenLCResponseBodyDataLesion setPatientLevelProb(Float patientLevelProb) {
+            this.patientLevelProb = patientLevelProb;
+            return this;
+        }
+        public Float getPatientLevelProb() {
+            return this.patientLevelProb;
         }
 
         public ScreenLCResponseBodyDataLesion setPatientLevelResult(ScreenLCResponseBodyDataLesionPatientLevelResult patientLevelResult) {

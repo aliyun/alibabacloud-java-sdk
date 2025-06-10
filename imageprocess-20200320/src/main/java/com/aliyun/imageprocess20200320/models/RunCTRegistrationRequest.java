@@ -6,22 +6,47 @@ import com.aliyun.tea.*;
 public class RunCTRegistrationRequest extends TeaModel {
     /**
      * <p>DICOM。</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DICOM</p>
      */
     @NameInMap("DataFormat")
     public String dataFormat;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HTTP_FILES</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("FloatingList")
     public java.util.List<RunCTRegistrationRequestFloatingList> floatingList;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7ff51bfe-e73d-11ea-827d-506b4b3f3cf6</p>
+     */
     @NameInMap("OrgId")
     public String orgId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("OrgName")
     public String orgName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ReferenceList")
     public java.util.List<RunCTRegistrationRequestReferenceList> referenceList;
 
@@ -79,6 +104,12 @@ public class RunCTRegistrationRequest extends TeaModel {
     }
 
     public static class RunCTRegistrationRequestFloatingList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/flt/34_P18.4.1.dcm">https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/flt/34_P18.4.1.dcm</a></p>
+         */
         @NameInMap("FloatingURL")
         public String floatingURL;
 
@@ -98,6 +129,12 @@ public class RunCTRegistrationRequest extends TeaModel {
     }
 
     public static class RunCTRegistrationRequestReferenceList extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/ref/33_P18.4.1.dcm">https://medclients-sh.oss-cn-shanghai.aliyuncs.com/demo/registration/ref/33_P18.4.1.dcm</a></p>
+         */
         @NameInMap("ReferenceURL")
         public String referenceURL;
 

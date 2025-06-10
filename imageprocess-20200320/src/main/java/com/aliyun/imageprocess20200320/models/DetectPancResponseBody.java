@@ -9,10 +9,17 @@ public class DetectPancResponseBody extends TeaModel {
 
     /**
      * <p>提交异步任务后的提示信息。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>该调用为异步调用，任务已提交成功，请以requestId的值作为jobId参数调用同类目下GetAsyncJobResult接口查询任务执行状态和结果。</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CA1C672A-4F85-1CD9-893D-3434C924C4B2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -46,15 +53,31 @@ public class DetectPancResponseBody extends TeaModel {
     }
 
     public static class DetectPancResponseBodyDataLesion extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen-pdac/2022-05-25_14%3A33%3A30/4CA2BF25-BCDB-9C6C-B14C-EB41E8266588.nii.gz?Expires=1653462210&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&Signature=8t%2FknUrQyyyCU2p7QhMC%2BXBCR">http://vibktprfx-prod-prod-aic-med-cn-shanghai.oss-cn-shanghai.aliyuncs.com/screen-pdac/2022-05-25_14%3A33%3A30/4CA2BF25-BCDB-9C6C-B14C-EB41E8266588.nii.gz?Expires=1653462210&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=8t%2FknUrQyyyCU2p7QhMC%2BXBCR</a>****</p>
+         */
         @NameInMap("Mask")
         public String mask;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("NonPdacVol")
         public String nonPdacVol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PancVol")
         public String pancVol;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PdacVol")
         public String pdacVol;
 
