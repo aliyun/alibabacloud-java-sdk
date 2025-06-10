@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class CreateClusterNodePoolRequest extends TeaModel {
+    @NameInMap("auto_mode")
+    public CreateClusterNodePoolRequestAutoMode autoMode;
+
     /**
      * <p>The configurations of auto scaling.</p>
      */
@@ -123,6 +126,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateClusterNodePoolRequest setAutoMode(CreateClusterNodePoolRequestAutoMode autoMode) {
+        this.autoMode = autoMode;
+        return this;
+    }
+    public CreateClusterNodePoolRequestAutoMode getAutoMode() {
+        return this.autoMode;
+    }
+
     public CreateClusterNodePoolRequest setAutoScaling(CreateClusterNodePoolRequestAutoScaling autoScaling) {
         this.autoScaling = autoScaling;
         return this;
@@ -236,6 +247,25 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
     public CreateClusterNodePoolRequestTeeConfig getTeeConfig() {
         return this.teeConfig;
+    }
+
+    public static class CreateClusterNodePoolRequestAutoMode extends TeaModel {
+        @NameInMap("enable")
+        public Boolean enable;
+
+        public static CreateClusterNodePoolRequestAutoMode build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterNodePoolRequestAutoMode self = new CreateClusterNodePoolRequestAutoMode();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestAutoMode setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
     }
 
     public static class CreateClusterNodePoolRequestAutoScaling extends TeaModel {

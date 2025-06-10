@@ -49,6 +49,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("audit_log_config")
     public CreateClusterRequestAuditLogConfig auditLogConfig;
 
+    @NameInMap("auto_mode")
+    public CreateClusterRequestAutoMode autoMode;
+
     /**
      * <p>[<strong>Deprecated</strong>]</p>
      * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>charge_type</code> is set to <code>PrePaid</code>. Valid values:</p>
@@ -1240,6 +1243,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.auditLogConfig;
     }
 
+    public CreateClusterRequest setAutoMode(CreateClusterRequestAutoMode autoMode) {
+        this.autoMode = autoMode;
+        return this;
+    }
+    public CreateClusterRequestAutoMode getAutoMode() {
+        return this.autoMode;
+    }
+
     @Deprecated
     public CreateClusterRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
@@ -2077,6 +2088,25 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getSlsProjectName() {
             return this.slsProjectName;
+        }
+
+    }
+
+    public static class CreateClusterRequestAutoMode extends TeaModel {
+        @NameInMap("enable")
+        public Boolean enable;
+
+        public static CreateClusterRequestAutoMode build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestAutoMode self = new CreateClusterRequestAutoMode();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestAutoMode setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
         }
 
     }

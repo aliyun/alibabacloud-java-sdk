@@ -747,6 +747,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("audit_log_config", request.auditLogConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoMode)) {
+            body.put("auto_mode", request.autoMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("auto_renew", request.autoRenew);
         }
@@ -1287,6 +1291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateClusterNodePoolResponse createClusterNodePoolWithOptions(String ClusterId, CreateClusterNodePoolRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoMode)) {
+            body.put("auto_mode", request.autoMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoScaling)) {
             body.put("auto_scaling", request.autoScaling);
         }

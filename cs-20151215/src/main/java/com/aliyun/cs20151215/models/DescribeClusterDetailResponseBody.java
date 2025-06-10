@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterDetailResponseBody extends TeaModel {
+    @NameInMap("auto_mode")
+    public DescribeClusterDetailResponseBodyAutoMode autoMode;
+
     /**
      * <p>The domain name of the cluster.</p>
      * 
@@ -401,6 +404,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeClusterDetailResponseBody setAutoMode(DescribeClusterDetailResponseBodyAutoMode autoMode) {
+        this.autoMode = autoMode;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyAutoMode getAutoMode() {
+        return this.autoMode;
+    }
+
     public DescribeClusterDetailResponseBody setClusterDomain(String clusterDomain) {
         this.clusterDomain = clusterDomain;
         return this;
@@ -721,6 +732,25 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class DescribeClusterDetailResponseBodyAutoMode extends TeaModel {
+        @NameInMap("enable")
+        public Boolean enable;
+
+        public static DescribeClusterDetailResponseBodyAutoMode build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyAutoMode self = new DescribeClusterDetailResponseBodyAutoMode();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyAutoMode setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
     }
 
     public static class DescribeClusterDetailResponseBodyControlPlaneConfig extends TeaModel {
