@@ -681,6 +681,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("gatewayId")
         public String gatewayId;
 
+        @NameInMap("gatewayType")
+        public String gatewayType;
+
         /**
          * <p>List of entry addresses for the gateway.</p>
          */
@@ -854,6 +857,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public String getGatewayId() {
             return this.gatewayId;
+        }
+
+        public GetGatewayResponseBodyData setGatewayType(String gatewayType) {
+            this.gatewayType = gatewayType;
+            return this;
+        }
+        public String getGatewayType() {
+            return this.gatewayType;
         }
 
         public GetGatewayResponseBodyData setLoadBalancers(java.util.List<GetGatewayResponseBodyDataLoadBalancers> loadBalancers) {

@@ -2471,6 +2471,85 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取挂载列表</p>
+     * 
+     * @param request ListPluginAttachmentsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPluginAttachmentsResponse
+     */
+    public ListPluginAttachmentsResponse listPluginAttachmentsWithOptions(ListPluginAttachmentsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceId)) {
+            query.put("attachResourceId", request.attachResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceType)) {
+            query.put("attachResourceType", request.attachResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceTypes)) {
+            query.put("attachResourceTypes", request.attachResourceTypes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pluginId)) {
+            query.put("pluginId", request.pluginId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withParentResource)) {
+            query.put("withParentResource", request.withParentResource);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPluginAttachments"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/plugin-attachments"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPluginAttachmentsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取挂载列表</p>
+     * 
+     * @param request ListPluginAttachmentsRequest
+     * @return ListPluginAttachmentsResponse
+     */
+    public ListPluginAttachmentsResponse listPluginAttachments(ListPluginAttachmentsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPluginAttachmentsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ListPlugins</p>
      * 
      * @param request ListPluginsRequest
