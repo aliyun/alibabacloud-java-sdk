@@ -6,29 +6,43 @@ import com.aliyun.tea.*;
 public class ListTasksResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0DA2DFC-EB18-59EF-BD82-C30862EBA3A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -41,6 +55,9 @@ public class ListTasksResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -101,75 +118,111 @@ public class ListTasksResponseBody extends TeaModel {
     public static class ListTasksResponseBodyTasks extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-09T05:50:50Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The cause of the task failure.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of `Status` is `Failed`.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>No Permission.</p>
          */
         @NameInMap("FailureReason")
         public String failureReason;
 
         /**
          * <p>The ID of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("PrincipalId")
         public String principalId;
 
         /**
          * <p>The name of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
-         * <br>
-         * <p>*   User</p>
-         * <p>*   Group</p>
+         * <ul>
+         * <li>User</li>
+         * <li>Group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
 
         /**
          * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-09T05:50:50Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   InProgress: The task is running.</p>
-         * <p>*   Success: The task is successful.</p>
-         * <p>*   Failed: The task failed.</p>
+         * <ul>
+         * <li>InProgress: The task is running.</li>
+         * <li>Success: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -188,25 +241,34 @@ public class ListTasksResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task object.</p>
-         * <br>
          * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-sh5k4gesm6twlrqb****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type. Valid values:</p>
-         * <br>
-         * <p>*   ProvisionAccessConfiguration: An access configuration is provisioned.</p>
-         * <p>*   DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
-         * <p>*   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
-         * <p>*   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
+         * <ul>
+         * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
+         * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
+         * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
+         * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateAccessAssignment</p>
          */
         @NameInMap("TaskType")
         public String taskType;

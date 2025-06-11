@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserIdShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;

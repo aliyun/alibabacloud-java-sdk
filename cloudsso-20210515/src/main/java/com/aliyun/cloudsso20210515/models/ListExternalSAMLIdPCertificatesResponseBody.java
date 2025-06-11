@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>400979BC-92EC-58B9-B47C-6913BD56A6FD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -18,6 +21,9 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -54,60 +60,90 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
     public static class ListExternalSAMLIdPCertificatesResponseBodySAMLIdPCertificates extends TeaModel {
         /**
          * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp-c-00dt9gnl7fmjaw9c****</p>
          */
         @NameInMap("CertificateId")
         public String certificateId;
 
         /**
          * <p>The issuer of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.840.113549.1.9.1=#160d696e666f406f6b74612e63****,CN=dev-xxxxxx,OU=SSOProvider,O=Okta,L=San Francisco,ST=California,C=US</p>
          */
         @NameInMap("Issuer")
         public String issuer;
 
         /**
          * <p>The time when the certificate expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2030-06-23T07:04:37Z</p>
          */
         @NameInMap("NotAfter")
         public String notAfter;
 
         /**
          * <p>The time when the certificate was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-06-23T07:03:37Z</p>
          */
         @NameInMap("NotBefore")
         public String notBefore;
 
         /**
          * <p>The public key of the certificate. The value of this parameter is in the PEM format and is Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIBIjANBgkqhkiG****</p>
          */
         @NameInMap("PublicKey")
         public String publicKey;
 
         /**
          * <p>The serial number of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>159289587****</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         /**
          * <p>The signature algorithm of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SHA256withRSA</p>
          */
         @NameInMap("SignatureAlgorithm")
         public String signatureAlgorithm;
 
         /**
          * <p>The subject of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.2.840.113549.1.9.1=#160d696e666f406f6b74612e63****,CN=dev-xxxxxx,OU=SSOProvider,O=Okta,L=San Francisco,ST=California,C=US</p>
          */
         @NameInMap("Subject")
         public String subject;
 
         /**
          * <p>The version of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("Version")
         public Integer version;
 
         /**
          * <p>The X.509 certificate in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIDpDCCAoygAwIBAgIG****</p>
          */
         @NameInMap("X509Certificate")
         public String x509Certificate;

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ClearExternalSAMLIdentityProviderRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;

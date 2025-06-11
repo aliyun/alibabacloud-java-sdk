@@ -12,35 +12,52 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the value of IsTruncated is `true`.``</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the value of IsTruncated is <code>true</code>.``</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66898413-EB80-556D-9429-06FE3548F672</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -101,51 +118,76 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
     public static class ListAccessAssignmentsResponseBodyAccessAssignments extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The time when the access permissions were assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-04T10:03:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("PrincipalId")
         public String principalId;
 
         /**
          * <p>The name of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
-         * <br>
-         * <p>*   User</p>
-         * <p>*   Group</p>
+         * <ul>
+         * <li>User</li>
+         * <li>Group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
 
         /**
          * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -164,8 +206,10 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task object.</p>
-         * <br>
          * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;

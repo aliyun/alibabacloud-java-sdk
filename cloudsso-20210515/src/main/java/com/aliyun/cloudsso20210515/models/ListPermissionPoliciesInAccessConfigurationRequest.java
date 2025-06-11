@@ -6,23 +6,32 @@ import com.aliyun.tea.*;
 public class ListPermissionPoliciesInAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00jhtfl8thteu6uj****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The type of the policy. The type can be used to filter policies. Valid values:</p>
-     * <br>
-     * <p>*   System: system policy</p>
-     * <p>*   Inline: inline policy</p>
-     * <br>
+     * <ul>
+     * <li>System: system policy.</li>
+     * <li>Inline: inline policy.</li>
+     * </ul>
      * <p>If you do not specify this parameter, all types of policies are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("PermissionPolicyType")
     public String permissionPolicyType;

@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
     /**
      * <p>The ID of the SAML signing certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idp-c-00wk2fb4foracls0****</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12B3E332-DD16-515B-B695-39BA233AA172</p>
      */
     @NameInMap("RequestId")
     public String requestId;

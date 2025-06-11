@@ -6,28 +6,38 @@ import com.aliyun.tea.*;
 public class UpdateInlinePolicyForAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00jhtfl8thteu6uj****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The name of the inline policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>InlinePolicy</p>
      */
     @NameInMap("InlinePolicyName")
     public String inlinePolicyName;
 
     /**
      * <p>The new configurations of the inline policy.</p>
-     * <br>
      * <p>The value can be up to 4,096 characters in length.</p>
-     * <br>
-     * <p>For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).</p>
+     * <p>For more information about the syntax and structure of RAM policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
      */
     @NameInMap("NewInlinePolicyDocument")
     public String newInlinePolicyDocument;

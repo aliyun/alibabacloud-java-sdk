@@ -4,6 +4,12 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class EnableDelegateAccountResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

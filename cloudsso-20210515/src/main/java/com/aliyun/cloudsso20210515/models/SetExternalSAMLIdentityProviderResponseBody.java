@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>63160579-2E1B-57B0-8273-B27427172385</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,31 +42,56 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
 
     public static class SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration extends TeaModel {
         /**
-         * <p>The ID of the SAML signing certificate.</p>
+         * <p>The binding for sending SAML requests. Valid values:</p>
+         * <ul>
+         * <li>Post: HTTP Post bindings.</li>
+         * <li>Redirect: HTTP Redirect bindings.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Redirect</p>
+         */
+        @NameInMap("BindingType")
+        public String bindingType;
+
+        /**
+         * <p>The IDs of the SAML signing certificates.</p>
          */
         @NameInMap("CertificateIds")
         public java.util.List<String> certificateIds;
 
         /**
          * <p>The time when the IdP was configured for the first time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-10T02:57:16Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The metadata file of the IdP. The value of this parameter is Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVyc2lvbj0iMS4****</p>
          */
         @NameInMap("EncodedMetadataDocument")
         public String encodedMetadataDocument;
 
         /**
          * <p>The entity ID of the IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.okta.com/exk3qwgtjhetR2Od">http://www.okta.com/exk3qwgtjhetR2Od</a>****</p>
          */
         @NameInMap("EntityId")
         public String entityId;
@@ -76,24 +104,35 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
 
         /**
          * <p>The status of SSO logon. Valid values:</p>
-         * <br>
-         * <p>*   Enabled</p>
-         * <p>*   Disabled</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         @NameInMap("SSOStatus")
         public String SSOStatus;
 
         /**
          * <p>The time when the IdP configurations were last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-10T02:57:16Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</p>
-         * <br>
-         * <p>*   true: yes</p>
-         * <p>*   false: no (default)</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("WantRequestSigned")
         public Boolean wantRequestSigned;
@@ -101,6 +140,14 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         public static SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration build(java.util.Map<String, ?> map) throws Exception {
             SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration self = new SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration();
             return TeaModel.build(map, self);
+        }
+
+        public SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration setBindingType(String bindingType) {
+            this.bindingType = bindingType;
+            return this;
+        }
+        public String getBindingType() {
+            return this.bindingType;
         }
 
         public SetExternalSAMLIdentityProviderResponseBodySAMLIdentityProviderConfiguration setCertificateIds(java.util.List<String> certificateIds) {

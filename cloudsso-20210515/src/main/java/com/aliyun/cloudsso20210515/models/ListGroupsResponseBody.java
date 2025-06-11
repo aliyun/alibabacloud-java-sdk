@@ -12,35 +12,52 @@ public class ListGroupsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true: The queried entries are truncated.</p>
-     * <p>*   false: The queried entries are not truncated.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is returned for the next page.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the `IsTruncated` parameter is set to `true`.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -101,39 +118,58 @@ public class ListGroupsResponseBody extends TeaModel {
     public static class ListGroupsResponseBodyGroups extends TeaModel {
         /**
          * <p>The time when the group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-00jqzghi2n3o5hkh****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the group. Valid values:</p>
-         * <br>
-         * <p>*   Manual: The group is manually created.</p>
-         * <p>*   Synchronized: The group is synchronized from an external IdP.</p>
+         * <ul>
+         * <li>Manual: The group is manually created.</li>
+         * <li>Synchronized: The group is synchronized from an external IdP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
          * <p>The time when the information about the group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

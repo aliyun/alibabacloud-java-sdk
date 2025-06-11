@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddPermissionPolicyToAccessConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B7C6E839-FB65-59BE-B753-003AA8AF7DF7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetServiceStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ADADC31D-90EE-5459-99B0-D83DF07769A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,32 +43,44 @@ public class GetServiceStatusResponseBody extends TeaModel {
     public static class GetServiceStatusResponseBodyServiceStatus extends TeaModel {
         /**
          * <p>The ID of your Alibaba Cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>151266687691****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
         /**
-         * <p>Indicates whether you have permissions to enable CloudSSO. Valid values:</p>
-         * <br>
-         * <p>*   Success: You have permissions to enable CloudSSO.</p>
-         * <p>*   Failed: You do not have permissions to enable CloudSSO.</p>
-         * <br>
-         * <p>>  The value of this parameter is returned only if the value of `Status` is `Disabled`.</p>
+         * <p>Indicates whether you have the permissions to enable CloudSSO. Valid values:</p>
+         * <ul>
+         * <li>Success: You have the permissions to enable CloudSSO.</li>
+         * <li>Failed: You do not have the permissions to enable CloudSSO.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The value of this parameter is returned only if the value of <code>Status</code> is <code>Disabled</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("PrerequisiteCheckResult")
         public String prerequisiteCheckResult;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region IDs.</p>
          */
         @NameInMap("RegionsInUse")
         public java.util.List<String> regionsInUse;
 
         /**
          * <p>Indicates whether CloudSSO is enabled. Valid values:</p>
-         * <br>
-         * <p>*   Enabled</p>
-         * <p>*   Disabled</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;

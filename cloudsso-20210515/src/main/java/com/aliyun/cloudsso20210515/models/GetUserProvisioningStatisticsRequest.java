@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetUserProvisioningStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-003qew84****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the RAM user provisioning.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>up-002axzhapcbz6e63****</p>
      */
     @NameInMap("UserProvisioningId")
     public String userProvisioningId;

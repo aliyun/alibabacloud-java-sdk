@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EE42D2C4-A30A-59B7-ACEB-6D22FB44174A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +43,18 @@ public class GetUserResponseBody extends TeaModel {
     public static class GetUserResponseBodyUserExternalId extends TeaModel {
         /**
          * <p>The identifier of the user that is synchronized from an external IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c73******a5fdd5</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCIM</p>
          */
         @NameInMap("Issuer")
         public String issuer;
@@ -73,27 +82,69 @@ public class GetUserResponseBody extends TeaModel {
 
     }
 
+    public static class GetUserResponseBodyUserTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetUserResponseBodyUserTags build(java.util.Map<String, ?> map) throws Exception {
+            GetUserResponseBodyUserTags self = new GetUserResponseBodyUserTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserResponseBodyUserTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetUserResponseBodyUserTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class GetUserResponseBodyUser extends TeaModel {
         /**
          * <p>The time when the user was created. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-26T03:03:42Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a user.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
@@ -106,48 +157,74 @@ public class GetUserResponseBody extends TeaModel {
 
         /**
          * <p>The first name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("FirstName")
         public String firstName;
 
         /**
          * <p>The last name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lee</p>
          */
         @NameInMap("LastName")
         public String lastName;
 
         /**
          * <p>The type of the user. Valid values:</p>
-         * <br>
-         * <p>*   Manual: The user is manually created.</p>
-         * <p>*   Synchronized: The user is synchronized from an external identity provider (IdP).</p>
+         * <ul>
+         * <li>Manual: The user is manually created.</li>
+         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
          * <p>The status of the user. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The logon of the user is enabled.</p>
-         * <p>*   Disabled: The logon of the user is disabled.</p>
+         * <ul>
+         * <li>Enabled: The logon of the user is enabled.</li>
+         * <li>Disabled: The logon of the user is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<GetUserResponseBodyUserTags> tags;
+
         /**
          * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-26T06:43:55Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -227,6 +304,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetUserResponseBodyUser setTags(java.util.List<GetUserResponseBodyUserTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetUserResponseBodyUserTags> getTags() {
+            return this.tags;
         }
 
         public GetUserResponseBodyUser setUpdateTime(String updateTime) {

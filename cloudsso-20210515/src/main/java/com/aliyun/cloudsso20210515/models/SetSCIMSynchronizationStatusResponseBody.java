@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SetSCIMSynchronizationStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3BF1FC78-5D20-54CC-BAEB-8CC33AE21D01</p>
      */
     @NameInMap("RequestId")
     public String requestId;

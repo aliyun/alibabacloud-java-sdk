@@ -6,24 +6,30 @@ import com.aliyun.tea.*;
 public class CreateGroupRequest extends TeaModel {
     /**
      * <p>The description of the group.</p>
-     * <br>
      * <p>The description can be up to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a group.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The name of the group.</p>
-     * <br>
-     * <p>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).</p>
-     * <br>
+     * <p>The name can contain letters, digits, underscores (_), hyphens (-), and periods (.).``</p>
      * <p>The name can be up to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestGroup</p>
      */
     @NameInMap("GroupName")
     public String groupName;

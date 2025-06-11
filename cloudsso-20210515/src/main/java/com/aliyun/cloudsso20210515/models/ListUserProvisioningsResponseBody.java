@@ -6,39 +6,54 @@ import com.aliyun.tea.*;
 public class ListUserProvisioningsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
      * <p>The maximum number of entries per page.</p>
-     * <br>
      * <p>Valid values: 1 to 100.</p>
-     * <br>
      * <p>Default value: 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The token that is used to initiate the next request.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the `IsTruncated` parameter is set to `true`.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>27EbL9j4ZgZjsMZFqbZFgbwQ1VXFU1Khcpx9e2vrW1zwzTBmTGWaM7ixHhRin8SCsxaJdazYVCzeKc2UF2QkyGb83cPhr8ZxrzoaiTd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F76AF4FC-<strong><strong>-</strong></strong>-B7CB-74F3********</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>110</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -105,90 +120,132 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
     public static class ListUserProvisioningsResponseBodyUserProvisionings extends TeaModel {
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28T03:55:42Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The deletion policy. The policy is used to manage synchronized users when you delete the RAM user provisioning. Valid values:</p>
-         * <br>
-         * <p>*   Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</p>
-         * <p>*   Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</p>
+         * <ul>
+         * <li>Delete: When you delete the RAM user provisioning, the system deletes the synchronized users.</li>
+         * <li>Keep: When you delete the RAM user provisioning, the system retains the synchronized users.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Delete</p>
          */
         @NameInMap("DeletionStrategy")
         public String deletionStrategy;
 
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is a user provisioning.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The conflict handling policy. The policy is used when a RAM user has the same username as the CloudSSO user who is synchronized to RAM. Valid values:</p>
-         * <br>
-         * <p>*   KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix `_sso`.</p>
-         * <p>*   TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</p>
+         * <ul>
+         * <li>KeepBoth: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system creates a RAM user whose username is the username of the CloudSSO user plus the suffix <code>_sso</code>.</li>
+         * <li>TakeOver: When a CloudSSO user is synchronized to RAM, if a RAM user who has the same username as the CloudSSO user exists, the system replaces the RAM user with the CloudSSO user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>KeepBoth</p>
          */
         @NameInMap("DuplicationStrategy")
         public String duplicationStrategy;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639738******</p>
          */
         @NameInMap("OwnerPk")
         public String ownerPk;
 
         /**
          * <p>The identity ID of the RAM user provisioning. Valid values:</p>
-         * <br>
-         * <p>*   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user group (g-\\*\\*\\*\\*\\*\\*\\*\\*).</p>
-         * <p>*   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the ID of a CloudSSO user (u-\\*\\*\\*\\*\\*\\*\\*\\*).</p>
+         * <ul>
+         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user group (g-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
+         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the ID of a CloudSSO user (u-\<em>\</em>\<em>\</em>\<em>\</em>\<em>\</em>).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>g-02ha881d*****</p>
          */
         @NameInMap("PrincipalId")
         public String principalId;
 
         /**
          * <p>The identity name of the RAM user provisioning. Valid values:</p>
-         * <br>
-         * <p>*   If `Group` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user group.</p>
-         * <p>*   If `User` is returned for the `PrincipalType` parameter, the value of this parameter is the name of a CloudSSO user.</p>
+         * <ul>
+         * <li>If <code>Group</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user group.</li>
+         * <li>If <code>User</code> is returned for the <code>PrincipalType</code> parameter, the value of this parameter is the name of a CloudSSO user.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testGroupName</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The identity type of the RAM user provisioning. Valid values:</p>
-         * <br>
-         * <p>*   User: The identity of the RAM user provisioning is a CloudSSO user.</p>
-         * <p>*   Group: The identity of the RAM user provisioning is a CloudSSO user group.</p>
+         * <ul>
+         * <li>User: The identity of the RAM user provisioning is a CloudSSO user.</li>
+         * <li>Group: The identity of the RAM user provisioning is a CloudSSO user group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Group</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
 
         /**
          * <p>The status of the RAM user provisioning. Valid values:</p>
-         * <br>
-         * <p>*   Enabled</p>
-         * <p>*   Disabled</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the object for which you create the RAM user provisioning. The value is fixed as the ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
-         * <p>The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.</p>
+         * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testRdMember</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -200,19 +257,28 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         public String targetPath;
 
         /**
-         * <p>The object for which you create the RAM user provisioning. The value is fixed as `RD-Account`.</p>
+         * <p>The object for which you create the RAM user provisioning. The value is fixed as <code>RD-Account</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28T03:55:42Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The ID of the RAM user provisioning.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>up-002axzhapcbz6e63****</p>
          */
         @NameInMap("UserProvisioningId")
         public String userProvisioningId;

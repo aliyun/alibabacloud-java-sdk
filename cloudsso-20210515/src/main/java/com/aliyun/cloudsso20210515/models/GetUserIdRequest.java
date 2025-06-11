@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserIdRequest extends TeaModel {
     /**
      * <p>The ID of the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
@@ -40,12 +43,18 @@ public class GetUserIdRequest extends TeaModel {
     public static class GetUserIdRequestExternalId extends TeaModel {
         /**
          * <p>The identifier of the user that is synchronized from an external IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c73******a5fdd5</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCIM</p>
          */
         @NameInMap("Issuer")
         public String issuer;

@@ -6,27 +6,40 @@ import com.aliyun.tea.*;
 public class RemovePermissionPolicyFromAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00jhtfl8thteu6uj****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunECSFullAccess</p>
      */
     @NameInMap("PermissionPolicyName")
     public String permissionPolicyName;
 
     /**
      * <p>The type of the policy. Valid values:</p>
-     * <br>
-     * <p>*   System: system policy</p>
-     * <p>*   Inline: inline policy</p>
+     * <ul>
+     * <li>System: system policy.</li>
+     * <li>Inline: inline policy.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("PermissionPolicyType")
     public String permissionPolicyType;

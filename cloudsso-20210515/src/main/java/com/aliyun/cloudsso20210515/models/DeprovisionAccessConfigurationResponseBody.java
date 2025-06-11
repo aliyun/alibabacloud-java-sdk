@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeprovisionAccessConfigurationResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>584FE9D0-D1AC-5B19-A39C-8D244FC0538C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,50 @@ public class DeprovisionAccessConfigurationResponseBody extends TeaModel {
     public static class DeprovisionAccessConfigurationResponseBodyTasks extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   InProgress: The task is running.</p>
-         * <p>*   Success: The task is successful.</p>
-         * <p>*   Failed: The task failed.</p>
+         * <ul>
+         * <li>InProgress: The task is running.</li>
+         * <li>Success: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InProgress</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -86,18 +105,27 @@ public class DeprovisionAccessConfigurationResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-sh0655wnq8pdlrlc****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type. The value is fixed as DeprovisionAccessConfiguration, which indicates that the access configuration is de-provisioned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DeprovisionAccessConfiguration</p>
          */
         @NameInMap("TaskType")
         public String taskType;

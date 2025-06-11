@@ -11,13 +11,19 @@ public class ListDirectoriesResponseBody extends TeaModel {
     public java.util.List<ListDirectoriesResponseBodyDirectories> directories;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9A504392-F06D-5029-AB64-6654CB9F1DC1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of directories.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -54,30 +60,45 @@ public class ListDirectoriesResponseBody extends TeaModel {
     public static class ListDirectoriesResponseBodyDirectories extends TeaModel {
         /**
          * <p>The time when the directory was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T08:35:26Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>new-example</p>
          */
         @NameInMap("DirectoryName")
         public String directoryName;
 
         /**
          * <p>The region ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The time when the directory was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-25T09:13:24Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

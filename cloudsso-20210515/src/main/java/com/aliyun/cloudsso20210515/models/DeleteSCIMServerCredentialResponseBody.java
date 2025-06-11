@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteSCIMServerCredentialResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8CE8B990-193D-50CE-A604-69F3E7DCE740</p>
      */
     @NameInMap("RequestId")
     public String requestId;

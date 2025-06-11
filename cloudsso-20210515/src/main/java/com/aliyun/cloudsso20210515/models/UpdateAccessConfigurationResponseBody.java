@@ -11,7 +11,10 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
     public UpdateAccessConfigurationResponseBodyAccessConfiguration accessConfiguration;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9B13E4EE-3853-5852-9165-597C32AD8FB7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,50 +43,72 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
     public static class UpdateAccessConfigurationResponseBodyAccessConfiguration extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The time when the access configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-02T08:44:23Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an access configuration.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The initial web page</p>
+         * <p>that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
          */
         @NameInMap("RelayState")
         public String relayState;
 
         /**
-         * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
-         * <br>
+         * <p>The duration of a session</p>
+         * <p>in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("SessionDuration")
         public Integer sessionDuration;
 
         /**
-         * <p>The status notification.</p>
+         * <p>The status notifications.</p>
          */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
         /**
          * <p>The time when the information about the access configuration was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-02T10:10:01Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

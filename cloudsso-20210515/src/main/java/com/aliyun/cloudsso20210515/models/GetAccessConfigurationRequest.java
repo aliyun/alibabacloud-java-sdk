@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00ccule7tadaijxc****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;

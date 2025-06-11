@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetMFAAuthenticationSettingInfoRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;

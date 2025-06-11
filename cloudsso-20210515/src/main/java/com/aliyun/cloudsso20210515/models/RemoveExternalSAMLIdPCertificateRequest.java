@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class RemoveExternalSAMLIdPCertificateRequest extends TeaModel {
     /**
      * <p>The ID of the certificate.</p>
-     * <br>
-     * <p>You can call the [ListExternalSAMLIdPCertificates](https://help.aliyun.com/document_detail/341629.html) operation to query the IDs of certificates.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/341629.html">ListExternalSAMLIdPCertificates</a> operation to query the IDs of certificates.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idp-c-00dt9gnl7fmjaw9c****</p>
      */
     @NameInMap("CertificateId")
     public String certificateId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;

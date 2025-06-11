@@ -12,35 +12,52 @@ public class ListGroupMembersResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true: The queried entries are truncated.</p>
-     * <p>*   false: The queried entries are not truncated.</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that is returned for the next page.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BB759F84-2C64-5C36-B6C6-253172C5C370</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -101,60 +118,89 @@ public class ListGroupMembersResponseBody extends TeaModel {
     public static class ListGroupMembersResponseBodyGroupMembers extends TeaModel {
         /**
          * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a user.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:AliceLee@example.com">AliceLee@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-00jqzghi2n3o5hkh****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
-         * <p>The time when the user was added to the user group.</p>
+         * <p>The time when the user was added to the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T06:58:18Z</p>
          */
         @NameInMap("JoinTime")
         public String joinTime;
 
         /**
          * <p>The type of the user. Valid values:</p>
-         * <br>
-         * <p>*   Manual: The user is manually created.</p>
-         * <p>*   Synchronized: The user is synchronized from an external identity provider (IdP).</p>
+         * <ul>
+         * <li>Manual: The user is manually created.</li>
+         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
          * <p>The status of the user. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The logon of the user is enabled.</p>
-         * <p>*   Disabled: The logon of the user is disabled.</p>
+         * <ul>
+         * <li>Enabled: The logon of the user is enabled.</li>
+         * <li>Disabled: The logon of the user is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("UserName")
         public String userName;

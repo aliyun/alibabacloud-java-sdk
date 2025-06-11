@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class UpdateDirectoryRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The new name of the directory. The name must be globally unique.</p>
-     * <br>
-     * <p>The name can contain lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-) and cannot have two consecutive hyphens (-). If you want to start the new name of the directory starts with `d-`, you must set this parameter to the ID of the directory.</p>
-     * <br>
+     * <p>The name can contain lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-) and cannot contain two consecutive hyphens (-). If you want the new name of the directory to start with <code>d-</code>, you must set this parameter to the ID of the directory.</p>
      * <p>The name must be 2 to 64 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>new-example</p>
      */
     @NameInMap("NewDirectoryName")
     public String newDirectoryName;

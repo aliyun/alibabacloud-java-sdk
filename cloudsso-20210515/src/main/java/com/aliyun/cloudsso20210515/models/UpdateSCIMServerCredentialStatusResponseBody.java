@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C086C2F-1C66-57B3-B14E-2C1DA70727CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
     public static class UpdateSCIMServerCredentialStatusResponseBodySCIMServerCredential extends TeaModel {
         /**
          * <p>The time when the SCIM credential was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-09T08:12:52Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the SCIM credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scimcred-004whl0kvfwcypbi****</p>
          */
         @NameInMap("CredentialId")
         public String credentialId;
 
         /**
          * <p>The type of the SCIM credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BearerToken</p>
          */
         @NameInMap("CredentialType")
         public String credentialType;
 
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The time when the SCIM credential expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-09T08:12:52Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The status of the SCIM credential. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The SCIM credential is enabled.</p>
-         * <p>*   Disabled: The SCIM credential is disabled.</p>
+         * <ul>
+         * <li>Enabled: The SCIM credential is enabled.</li>
+         * <li>Disabled: The SCIM credential is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
          */
         @NameInMap("Status")
         public String status;

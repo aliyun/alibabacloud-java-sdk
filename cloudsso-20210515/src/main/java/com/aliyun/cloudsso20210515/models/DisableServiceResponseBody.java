@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DisableServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3257EAD2-8723-1F26-B69C-F8707D8B565D</p>
      */
     @NameInMap("RequestId")
     public String requestId;

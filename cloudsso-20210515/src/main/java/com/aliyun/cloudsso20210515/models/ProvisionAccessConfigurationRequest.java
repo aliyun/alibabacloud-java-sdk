@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class ProvisionAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00jhtfl8thteu6uj****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The directory ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the task object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114240524784****</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
      * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RD-Account</p>
      */
     @NameInMap("TargetType")
     public String targetType;

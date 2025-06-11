@@ -11,7 +11,10 @@ public class GetDirectoryResponseBody extends TeaModel {
     public GetDirectoryResponseBodyDirectory directory;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AA6A9E4B-8A61-59E1-AA87-F61CA18258A3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class GetDirectoryResponseBody extends TeaModel {
     public static class GetDirectoryResponseBodyDirectory extends TeaModel {
         /**
          * <p>The time when the directory was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T08:35:26Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The name of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("DirectoryName")
         public String directoryName;
 
         /**
          * <p>The region ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The time when the directory was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-25T07:18:46Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

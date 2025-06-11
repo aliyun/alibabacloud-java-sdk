@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class UpdateSCIMServerCredentialStatusRequest extends TeaModel {
     /**
      * <p>The ID of the SCIM credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scimcred-004whl0kvfwcypbi****</p>
      */
     @NameInMap("CredentialId")
     public String credentialId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The new status of the SCIM credential. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: The SCIM credential is enabled.</p>
-     * <p>*   Disabled: The SCIM credential is disabled.</p>
+     * <ul>
+     * <li>Enabled: The SCIM credential is enabled.</li>
+     * <li>Disabled: The SCIM credential is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("NewStatus")
     public String newStatus;

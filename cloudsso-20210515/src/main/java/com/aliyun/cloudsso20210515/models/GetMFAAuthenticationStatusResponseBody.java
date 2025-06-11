@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetMFAAuthenticationStatusResponseBody extends TeaModel {
     /**
-     * <p>The status of MFA. Valid values:</p>
-     * <br>
-     * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <p>Indicates whether MFA is enabled for users. Valid values:</p>
+     * <ul>
+     * <li>Enabled</li>
+     * <li>Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("MFAAuthenticationStatus")
     public String MFAAuthenticationStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5E688346-DF1A-5537-9BFC-8A9974D29586</p>
      */
     @NameInMap("RequestId")
     public String requestId;

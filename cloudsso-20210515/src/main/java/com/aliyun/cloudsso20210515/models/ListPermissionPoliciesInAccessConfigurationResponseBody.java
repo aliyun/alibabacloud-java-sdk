@@ -11,13 +11,19 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
     public java.util.List<ListPermissionPoliciesInAccessConfigurationResponseBodyPermissionPolicies> permissionPolicies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3A5E771F-1F5A-5555-A64E-579748AAFD98</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of policies.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -54,26 +60,39 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
     public static class ListPermissionPoliciesInAccessConfigurationResponseBodyPermissionPolicies extends TeaModel {
         /**
          * <p>The time when the policy was created for the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-03T06:37:25Z</p>
          */
         @NameInMap("AddTime")
         public String addTime;
 
         /**
          * <p>The configurations of the inline policy.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of the PermissionPolicyType parameter is Inline.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of the PermissionPolicyType parameter is Inline.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Statement\&quot;: [{\&quot;Action\&quot;: \&quot;<em>\&quot;,\&quot;Effect\&quot;: \&quot;Allow\&quot;,\&quot;Resource\&quot;: \&quot;</em>\&quot;}],\&quot;Version\&quot;: \&quot;1\&quot;}</p>
          */
         @NameInMap("PermissionPolicyDocument")
         public String permissionPolicyDocument;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunECSFullAccess</p>
          */
         @NameInMap("PermissionPolicyName")
         public String permissionPolicyName;
 
         /**
          * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>System</p>
          */
         @NameInMap("PermissionPolicyType")
         public String permissionPolicyType;

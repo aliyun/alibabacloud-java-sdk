@@ -6,42 +6,62 @@ import com.aliyun.tea.*;
 public class CreateAccessAssignmentRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00jhtfl8thteu6uj****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the CloudSSO identity.</p>
-     * <br>
-     * <p>*   If you set `PrincipalType` to `User`, set `PrincipalId` to the ID of the CloudSSO user.</p>
-     * <p>*   If you set `PrincipalType` to `Group`, set `PrincipalId` to the ID of the CloudSSO group.</p>
+     * <ul>
+     * <li>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</li>
+     * <li>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
      */
     @NameInMap("PrincipalId")
     public String principalId;
 
     /**
      * <p>The type of the CloudSSO identity. Valid values:</p>
-     * <br>
-     * <p>*   User</p>
-     * <p>*   Group</p>
+     * <ul>
+     * <li>User</li>
+     * <li>Group</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>User</p>
      */
     @NameInMap("PrincipalType")
     public String principalType;
 
     /**
      * <p>The ID of the task object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>114240524784****</p>
      */
     @NameInMap("TargetId")
     public String targetId;
 
     /**
      * <p>The type of the task object. Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RD-Account</p>
      */
     @NameInMap("TargetType")
     public String targetType;

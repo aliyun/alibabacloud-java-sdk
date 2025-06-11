@@ -12,35 +12,52 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
 
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
      * <p>The maximum number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the value of `IsTruncated` is `true`.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6BA1BDF1-D845-5D2C-B742-74BE2970E4C1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -101,18 +118,27 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     public static class ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00ccule7tadaijxc****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The first time when the access configuration was provisioned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-26T08:54:14Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
@@ -125,36 +151,51 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
 
         /**
          * <p>The name of the RAM role that is created for an account in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunReservedSSO-VPC-Admin</p>
          */
         @NameInMap("RAMRoleName")
         public String RAMRoleName;
 
         /**
          * <p>The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliyunReservedSSO-d-00fc2p61****</p>
          */
         @NameInMap("SAMLProviderName")
         public String SAMLProviderName;
 
         /**
          * <p>The status of the access configuration. Valid values:</p>
-         * <br>
-         * <p>*   Provisioned: The access configuration is provisioned.</p>
-         * <p>*   ReprovisionRequired: The access configuration needs to be re-provisioned.</p>
-         * <p>*   DeprovisionFailed: The access configuration failed to be provisioned.</p>
+         * <ul>
+         * <li>Provisioned: The access configuration is provisioned.</li>
+         * <li>ReprovisionRequired: The access configuration needs to be re-provisioned.</li>
+         * <li>DeprovisionFailed: The access configuration failed to be provisioned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Provisioned</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task object.</p>
-         * <br>
-         * <p>If the value of TargetType is `RD-Account`, the value of this parameter is the UID of an account in the resource directory.</p>
+         * <p>If the value of TargetType is <code>RD-Account</code>, the value of this parameter is the UID of an account in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101522521960****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SharedServices_5009****</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -173,14 +214,19 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task object.</p>
-         * <br>
          * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The last time when the access configuration was provisioned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-07-26T08:54:18Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

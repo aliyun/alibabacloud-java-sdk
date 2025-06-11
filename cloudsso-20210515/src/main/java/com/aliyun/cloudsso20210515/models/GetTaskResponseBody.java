@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetTaskResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>923CA5E8-57BF-5E15-8BA6-E75A966B7E3F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,75 +43,111 @@ public class GetTaskResponseBody extends TeaModel {
     public static class GetTaskResponseBodyTask extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The end time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-05T02:58:08Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The cause of the task failure.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the value of `Status` is `Failed`.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>No Permission.</p>
          */
         @NameInMap("FailureReason")
         public String failureReason;
 
         /**
          * <p>The ID of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("PrincipalId")
         public String principalId;
 
         /**
          * <p>The name of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
-         * <br>
-         * <p>*   User</p>
-         * <p>*   Group</p>
+         * <ul>
+         * <li>User</li>
+         * <li>Group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
 
         /**
          * <p>The start time of the task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-05T02:58:07Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   InProgress: The task is running.</p>
-         * <p>*   Success: The task is successful.</p>
-         * <p>*   Failed: The task failed.</p>
+         * <ul>
+         * <li>InProgress: The task is running.</li>
+         * <li>Success: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -127,23 +166,33 @@ public class GetTaskResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-shfqw1u1edszvxw5****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type. Valid values:</p>
-         * <br>
-         * <p>*   ProvisionAccessConfiguration: An access configuration is provisioned.</p>
-         * <p>*   DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
-         * <p>*   CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
-         * <p>*   DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
+         * <ul>
+         * <li>ProvisionAccessConfiguration: An access configuration is provisioned.</li>
+         * <li>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</li>
+         * <li>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</li>
+         * <li>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DeleteAccessAssignment</p>
          */
         @NameInMap("TaskType")
         public String taskType;

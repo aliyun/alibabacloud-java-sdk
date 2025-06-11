@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateSCIMServerCredentialResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2D2E5180-7ACF-57FF-A56C-26A49ABEBFF7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,44 +43,66 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
     public static class CreateSCIMServerCredentialResponseBodySCIMServerCredential extends TeaModel {
         /**
          * <p>The time when the SCIM credential was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-09T08:12:52Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The ID of the SCIM credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>scimcred-004whl0kvfwcypbi****</p>
          */
         @NameInMap("CredentialId")
         public String credentialId;
 
         /**
          * <p>The SCIM credential.</p>
-         * <br>
-         * <p>>  The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
+         * <blockquote>
+         * <p> The SCIM credential is returned only when it is created. After the SCIM credential is created, you cannot query it. Keep the SCIM credential confidential.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8aAJCtpbyPJ8saXeYDgyw****</p>
          */
         @NameInMap("CredentialSecret")
         public String credentialSecret;
 
         /**
          * <p>The type of the SCIM credential.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BearerToken</p>
          */
         @NameInMap("CredentialType")
         public String credentialType;
 
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The time when the SCIM credential expires.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-09T08:12:52Z</p>
          */
         @NameInMap("ExpireTime")
         public String expireTime;
 
         /**
          * <p>The status of the SCIM credential. The value is fixed as Enabled, which indicates that the SCIM credential is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;

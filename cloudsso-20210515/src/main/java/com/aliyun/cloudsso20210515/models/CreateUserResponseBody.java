@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6F90F3D-4502-5877-B80B-97476F6AE2CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,75 +40,143 @@ public class CreateUserResponseBody extends TeaModel {
         return this.user;
     }
 
+    public static class CreateUserResponseBodyUserTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateUserResponseBodyUserTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateUserResponseBodyUserTags self = new CreateUserResponseBodyUserTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateUserResponseBodyUserTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateUserResponseBodyUserTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateUserResponseBodyUser extends TeaModel {
         /**
-         * <p>The time when the user was created.</p>
+         * <p>The time when the user was created. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-26T03:03:42Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a user.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:Alice@example.com">Alice@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The first name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("FirstName")
         public String firstName;
 
         /**
          * <p>The last name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lee</p>
          */
         @NameInMap("LastName")
         public String lastName;
 
         /**
          * <p>The type of the user. Valid values:</p>
-         * <br>
-         * <p>*   Manual: The user is manually created.</p>
-         * <p>*   Synchronized: The user is synchronized from an external identity provider (IdP).</p>
+         * <ul>
+         * <li>Manual: The user is manually created.</li>
+         * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
          * <p>The status of the user. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The logon of the user is enabled.</p>
-         * <p>*   Disabled: The logon of the user is disabled.</p>
+         * <ul>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<CreateUserResponseBodyUserTags> tags;
+
         /**
-         * <p>The time when the user was modified.</p>
+         * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-26T03:03:42Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The name of the user.</p>
+         * <p>The username of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -177,6 +248,14 @@ public class CreateUserResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public CreateUserResponseBodyUser setTags(java.util.List<CreateUserResponseBodyUserTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<CreateUserResponseBodyUserTags> getTags() {
+            return this.tags;
         }
 
         public CreateUserResponseBodyUser setUpdateTime(String updateTime) {

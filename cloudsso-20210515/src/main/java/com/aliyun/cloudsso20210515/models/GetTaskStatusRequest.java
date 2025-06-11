@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetTaskStatusRequest extends TeaModel {
     /**
      * <p>The directory ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>t-shfqw1u1edszvxw5****</p>
      */
     @NameInMap("TaskId")
     public String taskId;

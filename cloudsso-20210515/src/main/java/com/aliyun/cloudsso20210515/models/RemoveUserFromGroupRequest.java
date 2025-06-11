@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class RemoveUserFromGroupRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-00jqzghi2n3o5hkh****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The ID of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
      */
     @NameInMap("UserId")
     public String userId;

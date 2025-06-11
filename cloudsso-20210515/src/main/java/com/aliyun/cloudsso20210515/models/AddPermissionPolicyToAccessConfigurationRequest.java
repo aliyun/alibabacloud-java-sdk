@@ -6,40 +6,55 @@ import com.aliyun.tea.*;
 public class AddPermissionPolicyToAccessConfigurationRequest extends TeaModel {
     /**
      * <p>The ID of the access configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ac-00jhtfl8thteu6uj****</p>
      */
     @NameInMap("AccessConfigurationId")
     public String accessConfigurationId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The configurations of the inline policy.</p>
-     * <br>
      * <p>The value can be up to 4,096 characters in length.</p>
-     * <br>
-     * <p>If you set `PermissionPolicyType` to `Inline`, you must specify this parameter. For more information about the syntax and structure of RAM policies, see [Policy syntax and structure](https://help.aliyun.com/document_detail/93739.html).</p>
+     * <p>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must specify this parameter. For more information about the syntax and structure of RAM policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;<em>&quot;,&quot;Effect&quot;: &quot;Allow&quot;,&quot;Resource&quot;: &quot;</em>&quot;}],&quot;Version&quot;: &quot;1&quot;}</p>
      */
     @NameInMap("InlinePolicyDocument")
     public String inlinePolicyDocument;
 
     /**
      * <p>The name of the policy.</p>
-     * <br>
-     * <p>*   If you set `PermissionPolicyType` to `System`, you must set this parameter to the name of the system policy. You can obtain the name of the system policy from RAM.</p>
-     * <p>*   If you set `PermissionPolicyType` to `Inline`, you must set this parameter to the name of the inline policy. A custom value is supported.</p>
+     * <ul>
+     * <li>If you set <code>PermissionPolicyType</code> to <code>System</code>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</li>
+     * <li>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>AliyunECSFullAccess</p>
      */
     @NameInMap("PermissionPolicyName")
     public String permissionPolicyName;
 
     /**
      * <p>The type of the policy. Valid values:</p>
-     * <br>
-     * <p>*   System: system policy. Resource Access Management (RAM) system policies are reused.</p>
-     * <p>*   Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</p>
+     * <ul>
+     * <li>System: system policy. Resource Access Management (RAM) system policies are reused.</li>
+     * <li>Inline: inline policy. Inline policies are created based on the RAM policy syntax and structure.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System</p>
      */
     @NameInMap("PermissionPolicyType")
     public String permissionPolicyType;

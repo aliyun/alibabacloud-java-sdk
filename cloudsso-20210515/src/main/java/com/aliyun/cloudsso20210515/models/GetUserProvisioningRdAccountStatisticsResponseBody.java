@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F6F90F3D-4502-5877-B80B-97476F6AE2CC</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
     public static class GetUserProvisioningRdAccountStatisticsResponseBodyUserProvisioningStatistics extends TeaModel {
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-003qew84****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The entity ID, which is the ID of the member in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1743382******</p>
          */
         @NameInMap("EntityId")
         public String entityId;
 
         /**
          * <p>The number of failed RAM user provisioning events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         @NameInMap("FailedEventCount")
         public Long failedEventCount;
 
         /**
          * <p>The time when the RAM user provisioning was last performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28T03:55:42Z</p>
          */
         @NameInMap("LatestAsyncTime")
         public String latestAsyncTime;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the resource directory belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1639738******</p>
          */
         @NameInMap("OwnerPk")
         public String ownerPk;
 
         /**
-         * <p>The entity type. The value is fixed as `RD Account`.</p>
+         * <p>The entity type. The value is fixed as <code>RD Account</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD Account</p>
          */
         @NameInMap("Type")
         public String type;

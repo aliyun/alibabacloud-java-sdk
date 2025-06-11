@@ -6,20 +6,28 @@ import com.aliyun.tea.*;
 public class DeleteMFADeviceForUserRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the MFA device.</p>
-     * <br>
-     * <p>You can call the [ListMFADevicesForUser](https://help.aliyun.com/document_detail/333531.html) operation to query the IDs of MFA devices.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/333531.html">ListMFADevicesForUser</a> operation to query the IDs of MFA devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mfa-00ujhet8pycljj7j****</p>
      */
     @NameInMap("MFADeviceId")
     public String MFADeviceId;
 
     /**
      * <p>The ID of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
      */
     @NameInMap("UserId")
     public String userId;

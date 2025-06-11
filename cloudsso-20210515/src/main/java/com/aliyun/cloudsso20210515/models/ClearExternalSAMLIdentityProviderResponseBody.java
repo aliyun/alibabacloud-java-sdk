@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ClearExternalSAMLIdentityProviderResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>96D1E5FF-0301-5636-8D33-071E033CFB82</p>
      */
     @NameInMap("RequestId")
     public String requestId;

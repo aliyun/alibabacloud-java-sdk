@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4632107D-BCE1-5A96-B30B-182EE0709625</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,34 +43,76 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
     public static class GetDirectorySAMLServiceProviderInfoResponseBodySAMLServiceProvider extends TeaModel {
         /**
          * <p>The Assertion Consumer Service (ACS) URL of the SP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin-cn-shanghai.alibabacloudsso.com/saml/acs/51d298a9-2a3f-4e23-97c7-7ad1cfa9">https://signin-cn-shanghai.alibabacloudsso.com/saml/acs/51d298a9-2a3f-4e23-97c7-7ad1cfa9</a>****</p>
          */
         @NameInMap("AcsUrl")
         public String acsUrl;
 
+        /**
+         * <p>The signature algorithm supported by the AuthNRequest initiated by Alibaba Cloud. Value:</p>
+         * <ul>
+         * <li><p>rsa-sha256</p>
+         * </li>
+         * <li><p>rsa-sha1</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rsa-sha256</p>
+         */
         @NameInMap("AuthnSignAlgo")
         public String authnSignAlgo;
 
+        /**
+         * <p>The certificate type used by Alibaba Cloud for signing during the SSO process. Value:</p>
+         * <ul>
+         * <li><p>self-signed: Use a self-signed certificate.</p>
+         * </li>
+         * <li><p>public: Use a certificate issued by CA.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>public</p>
+         */
         @NameInMap("CertificateType")
         public String certificateType;
 
         /**
          * <p>The ID of the directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The metadata file of the SP. The value of this parameter is Base64-encoded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PD94bWwgdmVyc2lv****</p>
          */
         @NameInMap("EncodedMetadataDocument")
         public String encodedMetadataDocument;
 
         /**
          * <p>The entity ID of the SP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://signin-cn-shanghai.alibabacloudsso.com/saml/sp/d-00fc2p61">https://signin-cn-shanghai.alibabacloudsso.com/saml/sp/d-00fc2p61</a>****</p>
          */
         @NameInMap("EntityId")
         public String entityId;
 
+        /**
+         * <p>Whether to support Assertion encryption on the IdP side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportEncryptedAssertion")
         public Boolean supportEncryptedAssertion;
 

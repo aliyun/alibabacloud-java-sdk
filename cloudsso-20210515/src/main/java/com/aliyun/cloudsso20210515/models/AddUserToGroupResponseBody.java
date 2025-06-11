@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddUserToGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F76AF4FC-25E4-5CF1-B7CB-74F3CB72F0F0</p>
      */
     @NameInMap("RequestId")
     public String requestId;

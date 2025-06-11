@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class SetSCIMSynchronizationStatusRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The status of SCIM synchronization. Valid values:</p>
-     * <br>
-     * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <ul>
+     * <li>Enabled</li>
+     * <li>Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("SCIMSynchronizationStatus")
     public String SCIMSynchronizationStatus;

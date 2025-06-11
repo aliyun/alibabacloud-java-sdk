@@ -11,7 +11,10 @@ public class CreateGroupResponseBody extends TeaModel {
     public CreateGroupResponseBodyGroup group;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20E9650E-EC23-593E-933F-EA0D280D040C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,36 +43,54 @@ public class CreateGroupResponseBody extends TeaModel {
     public static class CreateGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The time when the group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-00jqzghi2n3o5hkh****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the group. The value is fixed as Manual, which indicates that the group is manually created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
          * <p>The time when the information about the group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

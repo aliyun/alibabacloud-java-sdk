@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CreateAccessAssignmentResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4726AA56-E138-5C99-85E4-F493536D042F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,55 +43,81 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
     public static class CreateAccessAssignmentResponseBodyTask extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The ID of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("PrincipalId")
         public String principalId;
 
         /**
          * <p>The name of the CloudSSO identity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("PrincipalName")
         public String principalName;
 
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
-         * <br>
-         * <p>*   User</p>
-         * <p>*   Group</p>
+         * <ul>
+         * <li>User</li>
+         * <li>Group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>User</p>
          */
         @NameInMap("PrincipalType")
         public String principalType;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   InProgress: The task is running.</p>
-         * <p>*   Success: The task is successful.</p>
-         * <p>*   Failed: The task failed.</p>
+         * <ul>
+         * <li>InProgress: The task is running.</li>
+         * <li>Success: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>InProgress</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The ID of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114240524784****</p>
          */
         @NameInMap("TargetId")
         public String targetId;
 
         /**
          * <p>The name of the task object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dev-test</p>
          */
         @NameInMap("TargetName")
         public String targetName;
@@ -107,18 +136,27 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
 
         /**
          * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RD-Account</p>
          */
         @NameInMap("TargetType")
         public String targetType;
 
         /**
          * <p>The ID of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>t-sh6tceylhvgejpip****</p>
          */
         @NameInMap("TaskId")
         public String taskId;
 
         /**
          * <p>The task type. The value is fixed as CreateAccessAssignment, which indicates that access permissions on an account in your resource directory are assigned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CreateAccessAssignment</p>
          */
         @NameInMap("TaskType")
         public String taskType;

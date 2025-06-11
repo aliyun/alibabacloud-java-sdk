@@ -11,7 +11,10 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
     public CreateAccessConfigurationResponseBodyAccessConfiguration accessConfiguration;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3A41736-A050-50B6-ABC5-590F376A0044</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -37,53 +40,108 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class CreateAccessConfigurationResponseBodyAccessConfigurationTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateAccessConfigurationResponseBodyAccessConfigurationTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateAccessConfigurationResponseBodyAccessConfigurationTags self = new CreateAccessConfigurationResponseBodyAccessConfigurationTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAccessConfigurationResponseBodyAccessConfigurationTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateAccessConfigurationResponseBodyAccessConfigurationTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class CreateAccessConfigurationResponseBodyAccessConfiguration extends TeaModel {
         /**
          * <p>The ID of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ac-00jhtfl8thteu6uj****</p>
          */
         @NameInMap("AccessConfigurationId")
         public String accessConfigurationId;
 
         /**
          * <p>The name of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS-Admin</p>
          */
         @NameInMap("AccessConfigurationName")
         public String accessConfigurationName;
 
         /**
          * <p>The time when the access configuration was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-02T08:44:23Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the access configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is an access configuration.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The initial web page</p>
+         * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
          */
         @NameInMap("RelayState")
         public String relayState;
 
         /**
-         * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
-         * <br>
+         * <p>The duration of a session</p>
+         * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
          * <p>Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("SessionDuration")
         public Integer sessionDuration;
 
         /**
-         * <p>The status notification.</p>
+         * <p>The status notifications.</p>
          */
         @NameInMap("StatusNotifications")
         public java.util.List<String> statusNotifications;
 
+        @NameInMap("Tags")
+        public java.util.List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> tags;
+
         /**
          * <p>The time when the information about the access configuration was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-02T08:44:23Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
@@ -147,6 +205,14 @@ public class CreateAccessConfigurationResponseBody extends TeaModel {
         }
         public java.util.List<String> getStatusNotifications() {
             return this.statusNotifications;
+        }
+
+        public CreateAccessConfigurationResponseBodyAccessConfiguration setTags(java.util.List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<CreateAccessConfigurationResponseBodyAccessConfigurationTags> getTags() {
+            return this.tags;
         }
 
         public CreateAccessConfigurationResponseBodyAccessConfiguration setUpdateTime(String updateTime) {

@@ -6,35 +6,52 @@ import com.aliyun.tea.*;
 public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the queried entries are truncated. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>>  This parameter is returned only when the `IsTruncated` parameter is `true`.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>734D9AAC-9A8E-5DF6-A633-ADE70FF2A9B1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -101,12 +118,18 @@ public class ListUsersResponseBody extends TeaModel {
     public static class ListUsersResponseBodyUsersExternalId extends TeaModel {
         /**
          * <p>The identifier of the user that is synchronized from an external IdP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c73******a5fdd5</p>
          */
         @NameInMap("Id")
         public String id;
 
         /**
          * <p>The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SCIM</p>
          */
         @NameInMap("Issuer")
         public String issuer;
@@ -134,27 +157,69 @@ public class ListUsersResponseBody extends TeaModel {
 
     }
 
+    public static class ListUsersResponseBodyUsersTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListUsersResponseBodyUsersTags build(java.util.Map<String, ?> map) throws Exception {
+            ListUsersResponseBodyUsersTags self = new ListUsersResponseBodyUsersTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUsersResponseBodyUsersTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListUsersResponseBodyUsersTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListUsersResponseBodyUsers extends TeaModel {
         /**
          * <p>The time when the user was created. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T09:20:08Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a user.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliceLee</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a></p>
          */
         @NameInMap("Email")
         public String email;
@@ -167,48 +232,74 @@ public class ListUsersResponseBody extends TeaModel {
 
         /**
          * <p>The first name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("FirstName")
         public String firstName;
 
         /**
          * <p>The last name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lee</p>
          */
         @NameInMap("LastName")
         public String lastName;
 
         /**
          * <p>The type of the user. Valid values:</p>
-         * <br>
-         * <p>*   Manual: The user is manually created.</p>
-         * <p>*   Synchronized: The user is synchronized from an external IdP.</p>
+         * <ul>
+         * <li>Manual: The user is manually created.</li>
+         * <li>Synchronized: The user is synchronized from an external IdP.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Synchronized</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
          * <p>The status of the user. Valid values:</p>
-         * <br>
-         * <p>*   Enabled: The logon of the user is enabled.</p>
-         * <p>*   Disabled: The logon of the user is disabled.</p>
+         * <ul>
+         * <li>Enabled: The logon of the user is enabled.</li>
+         * <li>Disabled: The logon of the user is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("Tags")
+        public java.util.List<ListUsersResponseBodyUsersTags> tags;
+
         /**
          * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-06-30T09:20:08Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00bikzkuzbb58luh****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:AliceLee@example.onmicrosoft.com">AliceLee@example.onmicrosoft.com</a></p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -288,6 +379,14 @@ public class ListUsersResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListUsersResponseBodyUsers setTags(java.util.List<ListUsersResponseBodyUsersTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListUsersResponseBodyUsersTags> getTags() {
+            return this.tags;
         }
 
         public ListUsersResponseBodyUsers setUpdateTime(String updateTime) {

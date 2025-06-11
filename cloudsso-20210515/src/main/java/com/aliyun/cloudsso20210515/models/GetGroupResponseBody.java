@@ -11,7 +11,10 @@ public class GetGroupResponseBody extends TeaModel {
     public GetGroupResponseBodyGroup group;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,39 +43,58 @@ public class GetGroupResponseBody extends TeaModel {
     public static class GetGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The time when the group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a group.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The ID of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-00jqzghi2n3o5hkh****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestGroup</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
          * <p>The type of the group. Valid values:</p>
-         * <br>
-         * <p>*   Manual: The group is manually created.</p>
-         * <p>*   Synchronized: The group is synchronized from an external identity provider (IdP).</p>
+         * <ul>
+         * <li>Manual: The group is manually created.</li>
+         * <li>Synchronized: The group is synchronized from an external identity provider (IdP).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Manual</p>
          */
         @NameInMap("ProvisionType")
         public String provisionType;
 
         /**
-         * <p>The time when the information about the group was modified.</p>
+         * <p>The time when information about the group was modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-01T02:38:27Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

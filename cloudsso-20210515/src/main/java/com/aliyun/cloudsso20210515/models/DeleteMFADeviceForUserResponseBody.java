@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteMFADeviceForUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B9982ED-FD0D-5622-8EA0-7B768685DCE7</p>
      */
     @NameInMap("RequestId")
     public String requestId;

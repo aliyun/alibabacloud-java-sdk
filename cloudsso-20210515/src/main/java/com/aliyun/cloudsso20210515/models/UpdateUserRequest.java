@@ -6,42 +6,63 @@ import com.aliyun.tea.*;
 public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The new description of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a user.</p>
      */
     @NameInMap("NewDescription")
     public String newDescription;
 
     /**
      * <p>The new display name of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AliceLee</p>
      */
     @NameInMap("NewDisplayName")
     public String newDisplayName;
 
     /**
      * <p>The new email address of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:AliceLee@example.com">AliceLee@example.com</a></p>
      */
     @NameInMap("NewEmail")
     public String newEmail;
 
     /**
      * <p>The new first name of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice</p>
      */
     @NameInMap("NewFirstName")
     public String newFirstName;
 
     /**
      * <p>The new last name of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Lee</p>
      */
     @NameInMap("NewLastName")
     public String newLastName;
 
     /**
      * <p>The ID of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
      */
     @NameInMap("UserId")
     public String userId;

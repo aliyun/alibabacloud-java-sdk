@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetUserProvisioningRdAccountStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-003qew84****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the member in the resource directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1743382******</p>
      */
     @NameInMap("RdMemberId")
     public String rdMemberId;

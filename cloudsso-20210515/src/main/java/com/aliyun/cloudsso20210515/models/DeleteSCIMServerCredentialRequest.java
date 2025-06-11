@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeleteSCIMServerCredentialRequest extends TeaModel {
     /**
      * <p>The ID of the SCIM credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>scimcred-004whl0kvfwcypbi****</p>
      */
     @NameInMap("CredentialId")
     public String credentialId;
 
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;

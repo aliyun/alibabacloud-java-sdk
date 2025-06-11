@@ -4,6 +4,12 @@ package com.aliyun.cloudsso20210515.models;
 import com.aliyun.tea.*;
 
 public class EnableDelegateAccountRequest extends TeaModel {
+    /**
+     * <p>The ID of the delegated administrator account of CloudSSO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>180658567986****</p>
+     */
     @NameInMap("AccountId")
     public String accountId;
 

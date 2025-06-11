@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>66898413-EB80-556D-9429-06FE3548F672</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,38 +43,49 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
     public static class GetUserProvisioningConfigurationResponseBodyUserProvisioningConfiguration extends TeaModel {
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28T03:55:42Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The default URL for a CloudSSO user who logs on to the Alibaba Cloud Management Console.</p>
-         * <br>
-         * <p>Default value: https://homenew.console.aliyun.com.</p>
+         * <p>Default value: <a href="https://homenew.console.aliyun.com">https://homenew.console.aliyun.com</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://homenew.console.aliyun.com">https://homenew.console.aliyun.com</a></p>
          */
         @NameInMap("DefaultLandingPage")
         public String defaultLandingPage;
 
         /**
          * <p>The ID of the resource directory.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d-00fc2p61****</p>
          */
         @NameInMap("DirectoryId")
         public String directoryId;
 
         /**
          * <p>The duration of the logon session.</p>
-         * <br>
          * <p>Unit: hours.</p>
-         * <br>
          * <p>Valid values: 1 to 24.</p>
-         * <br>
          * <p>Default value: 6.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("SessionDuration")
         public Integer sessionDuration;
 
         /**
          * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-11-28T03:55:42Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

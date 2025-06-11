@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class UpdateGroupRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The ID of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>g-00jqzghi2n3o5hkh****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
      * <p>The new description of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a group.</p>
      */
     @NameInMap("NewDescription")
     public String newDescription;
 
     /**
      * <p>The new name of the group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NewTestGroup</p>
      */
     @NameInMap("NewGroupName")
     public String newGroupName;

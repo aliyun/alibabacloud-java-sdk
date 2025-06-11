@@ -11,13 +11,19 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
     public java.util.List<ListMFADevicesForUserResponseBodyMFADevices> MFADevices;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8B9982ED-FD0D-5622-8EA0-7B768685DCE7</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The total number of MFA devices.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCounts")
     public Integer totalCounts;
@@ -54,30 +60,45 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
     public static class ListMFADevicesForUserResponseBodyMFADevices extends TeaModel {
         /**
          * <p>The ID of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mfa-00ujhet8pycljj7j****</p>
          */
         @NameInMap("DeviceId")
         public String deviceId;
 
         /**
          * <p>The name of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice-MFA1</p>
          */
         @NameInMap("DeviceName")
         public String deviceName;
 
         /**
          * <p>The type of the MFA device. The value is fixed as TOTP, which indicates a virtual MFA device. Virtual MFA devices are based on the Time-based One-time Password (TOTP) algorithm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TOTP</p>
          */
         @NameInMap("DeviceType")
         public String deviceType;
 
         /**
          * <p>The time when the MFA device was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-29T09:14:06Z</p>
          */
         @NameInMap("EffectiveTime")
         public String effectiveTime;
 
         /**
          * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>u-00q8wbq42wiltcrk****</p>
          */
         @NameInMap("UserId")
         public String userId;

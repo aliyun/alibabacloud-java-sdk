@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class AddExternalSAMLIdPCertificateRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The X.509 certificate in the PEM format.</p>
-     * <br>
-     * <p>The certificate is provided by the SAML IdP.</p>
+     * <p>The certificate is provided by the SAML identity provider (IdP).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MIIC8DCCAdigAwIBAgIQP9eomUYGeoND****</p>
      */
     @NameInMap("X509Certificate")
     public String x509Certificate;

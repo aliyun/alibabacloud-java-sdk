@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetSCIMSynchronizationStatusResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7C086C2F-1C66-57B3-B14E-2C1DA70727CD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The status of SCIM synchronization. Valid values:</p>
-     * <br>
-     * <p>*   Enabled</p>
-     * <p>*   Disabled</p>
+     * <ul>
+     * <li>Enabled</li>
+     * <li>Disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("SCIMSynchronizationStatus")
     public String SCIMSynchronizationStatus;

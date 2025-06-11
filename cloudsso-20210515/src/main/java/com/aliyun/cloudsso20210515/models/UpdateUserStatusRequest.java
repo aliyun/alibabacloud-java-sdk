@@ -6,21 +6,31 @@ import com.aliyun.tea.*;
 public class UpdateUserStatusRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
      * <p>The new status of the user. Valid values:</p>
-     * <br>
-     * <p>*   Enabled: The logon of the user is enabled.</p>
-     * <p>*   Disabled: The logon of the user is disabled.</p>
+     * <ul>
+     * <li>Enabled: The logon of the user is enabled.</li>
+     * <li>Disabled: The logon of the user is disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
      */
     @NameInMap("NewStatus")
     public String newStatus;
 
     /**
      * <p>The ID of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-00q8wbq42wiltcrk****</p>
      */
     @NameInMap("UserId")
     public String userId;

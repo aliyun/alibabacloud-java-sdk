@@ -6,27 +6,34 @@ import com.aliyun.tea.*;
 public class UpdateMFAAuthenticationSettingsRequest extends TeaModel {
     /**
      * <p>The ID of the directory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d-00fc2p61****</p>
      */
     @NameInMap("DirectoryId")
     public String directoryId;
 
     /**
-     * <p>Specifies whether to enable MFA for all users. Valid value:</p>
-     * <br>
-     * <p>- Enabled: enables MFA for all users.</p>
-     * <p>- Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see [UpdateUserMFAAuthenticationSettings](https://help.aliyun.com/document_detail/450135.html).</p>
-     * <p>- Disabled: disables MFA for all users.</p>
-     * <p>- OnlyRiskyLogin: MFA is required only for unusual logons.</p>
+     * <p>Specifies whether to enable MFA for all users. Valid values:</p>
+     * <ul>
+     * <li>Enabled: enables MFA for all users.</li>
+     * <li>Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
+     * <li>Disabled: disables MFA for all users.</li>
+     * <li>OnlyRiskyLogin: MFA is required only for unusual logons.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Enabled</p>
      */
     @NameInMap("MFAAuthenticationSettings")
     public String MFAAuthenticationSettings;
 
     /**
-     * <p>Specifies whether MFA is required for users who initiated unusual logons. Valid value:</p>
-     * <br>
-     * <p>- Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.</p>
-     * <br>
-     * <p>- EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</p>
+     * <p>Specifies whether MFA is required for users who initiated unusual logons. Valid values:</p>
+     * <p>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA. EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Autonomous</p>
      */
     @NameInMap("OperationForRiskLogin")
     public String operationForRiskLogin;

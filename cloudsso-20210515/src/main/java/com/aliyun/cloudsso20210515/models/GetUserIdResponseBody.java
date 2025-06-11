@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GetUserIdResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3A41736-A050-50B6-ABC5-590F376A0044</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The ID of the CloudSSO user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>u-d8d1iox****</p>
      */
     @NameInMap("UserId")
     public String userId;
