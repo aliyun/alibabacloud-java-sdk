@@ -4,15 +4,31 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDifyAttributeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>92748163-af62-4ca4-ad85-1****</p>
+     */
     @NameInMap("AppUuid")
     public String appUuid;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ETnLKlblzczshOTUbOCzxxxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("DataRegion")
     public String dataRegion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>339170706****</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

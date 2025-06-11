@@ -5262,6 +5262,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>编辑指定guid的元数据业务知识</p>
+     * 
+     * @param request EditMetaKnowledgeAssetRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditMetaKnowledgeAssetResponse
+     */
+    public EditMetaKnowledgeAssetResponse editMetaKnowledgeAssetWithOptions(EditMetaKnowledgeAssetRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.assetDescription)) {
+            query.put("AssetDescription", request.assetDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.columnName)) {
+            query.put("ColumnName", request.columnName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableSchemaName)) {
+            query.put("TableSchemaName", request.tableSchemaName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EditMetaKnowledgeAsset"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EditMetaKnowledgeAssetResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑指定guid的元数据业务知识</p>
+     * 
+     * @param request EditMetaKnowledgeAssetRequest
+     * @return EditMetaKnowledgeAssetResponse
+     */
+    public EditMetaKnowledgeAssetResponse editMetaKnowledgeAsset(EditMetaKnowledgeAssetRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.editMetaKnowledgeAssetWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.</p>
      * <blockquote>
@@ -8683,6 +8743,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetTableDesignProjectInfoResponse getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getTableDesignProjectInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定guid的元数据知识</p>
+     * 
+     * @param request GetTableKnowledgeInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableKnowledgeInfoResponse
+     */
+    public GetTableKnowledgeInfoResponse getTableKnowledgeInfoWithOptions(GetTableKnowledgeInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableSchemaName)) {
+            query.put("TableSchemaName", request.tableSchemaName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableKnowledgeInfo"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableKnowledgeInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取指定guid的元数据知识</p>
+     * 
+     * @param request GetTableKnowledgeInfoRequest
+     * @return GetTableKnowledgeInfoResponse
+     */
+    public GetTableKnowledgeInfoResponse getTableKnowledgeInfo(GetTableKnowledgeInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTableKnowledgeInfoWithOptions(request, runtime);
     }
 
     /**
@@ -12697,6 +12809,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListStandardGroupsResponse listStandardGroups(ListStandardGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listStandardGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取表字段信息</p>
+     * 
+     * @param request ListTableColumnsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTableColumnsResponse
+     */
+    public ListTableColumnsResponse listTableColumnsWithOptions(ListTableColumnsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dbId)) {
+            query.put("DbId", request.dbId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableName)) {
+            query.put("TableName", request.tableName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableSchemaName)) {
+            query.put("TableSchemaName", request.tableSchemaName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tid)) {
+            query.put("Tid", request.tid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTableColumns"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTableColumnsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取表字段信息</p>
+     * 
+     * @param request ListTableColumnsRequest
+     * @return ListTableColumnsResponse
+     */
+    public ListTableColumnsResponse listTableColumns(ListTableColumnsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTableColumnsWithOptions(request, runtime);
     }
 
     /**
