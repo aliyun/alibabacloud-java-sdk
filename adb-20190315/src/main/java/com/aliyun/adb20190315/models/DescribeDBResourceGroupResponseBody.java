@@ -58,6 +58,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
     }
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfo extends TeaModel {
+        @NameInMap("ClusterMode")
+        public String clusterMode;
+
+        @NameInMap("ClusterSizeResource")
+        public String clusterSizeResource;
+
+        @NameInMap("ConnectionString")
+        public String connectionString;
+
         /**
          * <p>The time when the resource group was created.</p>
          * 
@@ -66,6 +75,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("ElasticMinComputeResource")
+        public String elasticMinComputeResource;
+
+        @NameInMap("Engine")
+        public String engine;
+
+        @NameInMap("EngineParams")
+        public java.util.Map<String, ?> engineParams;
 
         /**
          * <p>The name of the resource group.</p>
@@ -107,6 +125,18 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("GroupUsers")
         public String groupUsers;
 
+        @NameInMap("MaxClusterCount")
+        public Integer maxClusterCount;
+
+        @NameInMap("MaxComputeResource")
+        public String maxComputeResource;
+
+        @NameInMap("MinClusterCount")
+        public Integer minClusterCount;
+
+        @NameInMap("MinComputeResource")
+        public String minComputeResource;
+
         /**
          * <p>The number of nodes. Each node provides 16 cores and 64 GB memory.</p>
          * 
@@ -115,6 +145,15 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          */
         @NameInMap("NodeNum")
         public Integer nodeNum;
+
+        @NameInMap("Port")
+        public String port;
+
+        @NameInMap("RunningClusterCount")
+        public Integer runningClusterCount;
+
+        @NameInMap("Status")
+        public String status;
 
         /**
          * <p>The time when the resource group was updated.</p>
@@ -130,12 +169,60 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setClusterMode(String clusterMode) {
+            this.clusterMode = clusterMode;
+            return this;
+        }
+        public String getClusterMode() {
+            return this.clusterMode;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setClusterSizeResource(String clusterSizeResource) {
+            this.clusterSizeResource = clusterSizeResource;
+            return this;
+        }
+        public String getClusterSizeResource() {
+            return this.clusterSizeResource;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setConnectionString(String connectionString) {
+            this.connectionString = connectionString;
+            return this;
+        }
+        public String getConnectionString() {
+            return this.connectionString;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfo setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setElasticMinComputeResource(String elasticMinComputeResource) {
+            this.elasticMinComputeResource = elasticMinComputeResource;
+            return this;
+        }
+        public String getElasticMinComputeResource() {
+            return this.elasticMinComputeResource;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setEngine(String engine) {
+            this.engine = engine;
+            return this;
+        }
+        public String getEngine() {
+            return this.engine;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setEngineParams(java.util.Map<String, ?> engineParams) {
+            this.engineParams = engineParams;
+            return this;
+        }
+        public java.util.Map<String, ?> getEngineParams() {
+            return this.engineParams;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setGroupName(String groupName) {
@@ -170,12 +257,68 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.groupUsers;
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMaxClusterCount(Integer maxClusterCount) {
+            this.maxClusterCount = maxClusterCount;
+            return this;
+        }
+        public Integer getMaxClusterCount() {
+            return this.maxClusterCount;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMaxComputeResource(String maxComputeResource) {
+            this.maxComputeResource = maxComputeResource;
+            return this;
+        }
+        public String getMaxComputeResource() {
+            return this.maxComputeResource;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMinClusterCount(Integer minClusterCount) {
+            this.minClusterCount = minClusterCount;
+            return this;
+        }
+        public Integer getMinClusterCount() {
+            return this.minClusterCount;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setMinComputeResource(String minComputeResource) {
+            this.minComputeResource = minComputeResource;
+            return this;
+        }
+        public String getMinComputeResource() {
+            return this.minComputeResource;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfo setNodeNum(Integer nodeNum) {
             this.nodeNum = nodeNum;
             return this;
         }
         public Integer getNodeNum() {
             return this.nodeNum;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setPort(String port) {
+            this.port = port;
+            return this;
+        }
+        public String getPort() {
+            return this.port;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setRunningClusterCount(Integer runningClusterCount) {
+            this.runningClusterCount = runningClusterCount;
+            return this;
+        }
+        public Integer getRunningClusterCount() {
+            return this.runningClusterCount;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfo setUpdateTime(String updateTime) {

@@ -892,19 +892,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a resource group for an AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * 
-     * @param request CreateDBResourceGroupRequest
+     * @param tmpReq CreateDBResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDBResourceGroupResponse
      */
-    public CreateDBResourceGroupResponse createDBResourceGroupWithOptions(CreateDBResourceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateDBResourceGroupResponse createDBResourceGroupWithOptions(CreateDBResourceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDBResourceGroupShrinkRequest request = new CreateDBResourceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.engineParams)) {
+            request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterMode)) {
+            query.put("ClusterMode", request.clusterMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSizeResource)) {
+            query.put("ClusterSizeResource", request.clusterSizeResource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
+            query.put("Engine", request.engine);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineParamsShrink)) {
+            query.put("EngineParams", request.engineParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
@@ -913,6 +935,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
             query.put("GroupType", request.groupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxClusterCount)) {
+            query.put("MaxClusterCount", request.maxClusterCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxComputeResource)) {
+            query.put("MaxComputeResource", request.maxComputeResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minClusterCount)) {
+            query.put("MinClusterCount", request.minClusterCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minComputeResource)) {
+            query.put("MinComputeResource", request.minComputeResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeNum)) {
@@ -3343,6 +3381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engine)) {
+            query.put("Engine", request.engine);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -9455,6 +9497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyDBResourceGroupShrinkRequest request = new ModifyDBResourceGroupShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.engineParams)) {
+            request.engineParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.engineParams, "EngineParams", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.poolUserList)) {
             request.poolUserListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.poolUserList, "PoolUserList", "json");
         }
@@ -9464,8 +9510,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterMode)) {
+            query.put("ClusterMode", request.clusterMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterSizeResource)) {
+            query.put("ClusterSizeResource", request.clusterSizeResource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
             query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.engineParamsShrink)) {
+            query.put("EngineParams", request.engineParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
@@ -9474,6 +9532,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupType)) {
             query.put("GroupType", request.groupType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxClusterCount)) {
+            query.put("MaxClusterCount", request.maxClusterCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxComputeResource)) {
+            query.put("MaxComputeResource", request.maxComputeResource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minClusterCount)) {
+            query.put("MinClusterCount", request.minClusterCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minComputeResource)) {
+            query.put("MinComputeResource", request.minComputeResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeNum)) {

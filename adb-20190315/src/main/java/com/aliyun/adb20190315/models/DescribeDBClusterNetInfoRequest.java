@@ -14,6 +14,9 @@ public class DescribeDBClusterNetInfoRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("Engine")
+    public String engine;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -46,6 +49,14 @@ public class DescribeDBClusterNetInfoRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeDBClusterNetInfoRequest setEngine(String engine) {
+        this.engine = engine;
+        return this;
+    }
+    public String getEngine() {
+        return this.engine;
     }
 
     public DescribeDBClusterNetInfoRequest setOwnerAccount(String ownerAccount) {

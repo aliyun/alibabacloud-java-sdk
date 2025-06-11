@@ -3,13 +3,7 @@ package com.aliyun.adb20190315.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyDBResourceGroupRequest extends TeaModel {
-    /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>123e4567-e89b-12d3-a456-t7241****</p>
-     */
+public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -32,11 +26,19 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("Engine")
+    public String engine;
+
     @NameInMap("EngineParams")
-    public java.util.Map<String, ?> engineParams;
+    public String engineParamsShrink;
 
     /**
      * <p>The name of the resource group.</p>
+     * <ul>
+     * <li>The name can be up to 255 characters in length.</li>
+     * <li>The name must start with an uppercase letter or a digit.</li>
+     * <li>The name can contain uppercase letters, digits, hyphens (-), and underscores (_).</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,15 +50,12 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The query execution mode. Valid values:</p>
      * <ul>
-     * <li><strong>interactive</strong></li>
+     * <li><strong>interactive</strong> (default)</li>
      * <li><strong>batch</strong></li>
      * </ul>
-     * <blockquote>
-     * <p> For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>batch</p>
+     * <p>interactive</p>
      */
     @NameInMap("GroupType")
     public String groupType;
@@ -81,7 +80,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>2</p>
      */
     @NameInMap("NodeNum")
     public Integer nodeNum;
@@ -92,24 +91,18 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The database accounts with which to associate the resource group. They can be standard accounts or privileged accounts.</p>
-     */
-    @NameInMap("PoolUserList")
-    public java.util.List<String> poolUserList;
-
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static ModifyDBResourceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyDBResourceGroupRequest self = new ModifyDBResourceGroupRequest();
+    public static CreateDBResourceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDBResourceGroupShrinkRequest self = new CreateDBResourceGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyDBResourceGroupRequest setClientToken(String clientToken) {
+    public CreateDBResourceGroupShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -117,7 +110,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public ModifyDBResourceGroupRequest setClusterMode(String clusterMode) {
+    public CreateDBResourceGroupShrinkRequest setClusterMode(String clusterMode) {
         this.clusterMode = clusterMode;
         return this;
     }
@@ -125,7 +118,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.clusterMode;
     }
 
-    public ModifyDBResourceGroupRequest setClusterSizeResource(String clusterSizeResource) {
+    public CreateDBResourceGroupShrinkRequest setClusterSizeResource(String clusterSizeResource) {
         this.clusterSizeResource = clusterSizeResource;
         return this;
     }
@@ -133,7 +126,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.clusterSizeResource;
     }
 
-    public ModifyDBResourceGroupRequest setDBClusterId(String DBClusterId) {
+    public CreateDBResourceGroupShrinkRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -141,15 +134,23 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public ModifyDBResourceGroupRequest setEngineParams(java.util.Map<String, ?> engineParams) {
-        this.engineParams = engineParams;
+    public CreateDBResourceGroupShrinkRequest setEngine(String engine) {
+        this.engine = engine;
         return this;
     }
-    public java.util.Map<String, ?> getEngineParams() {
-        return this.engineParams;
+    public String getEngine() {
+        return this.engine;
     }
 
-    public ModifyDBResourceGroupRequest setGroupName(String groupName) {
+    public CreateDBResourceGroupShrinkRequest setEngineParamsShrink(String engineParamsShrink) {
+        this.engineParamsShrink = engineParamsShrink;
+        return this;
+    }
+    public String getEngineParamsShrink() {
+        return this.engineParamsShrink;
+    }
+
+    public CreateDBResourceGroupShrinkRequest setGroupName(String groupName) {
         this.groupName = groupName;
         return this;
     }
@@ -157,7 +158,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.groupName;
     }
 
-    public ModifyDBResourceGroupRequest setGroupType(String groupType) {
+    public CreateDBResourceGroupShrinkRequest setGroupType(String groupType) {
         this.groupType = groupType;
         return this;
     }
@@ -165,7 +166,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.groupType;
     }
 
-    public ModifyDBResourceGroupRequest setMaxClusterCount(Integer maxClusterCount) {
+    public CreateDBResourceGroupShrinkRequest setMaxClusterCount(Integer maxClusterCount) {
         this.maxClusterCount = maxClusterCount;
         return this;
     }
@@ -173,7 +174,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.maxClusterCount;
     }
 
-    public ModifyDBResourceGroupRequest setMaxComputeResource(String maxComputeResource) {
+    public CreateDBResourceGroupShrinkRequest setMaxComputeResource(String maxComputeResource) {
         this.maxComputeResource = maxComputeResource;
         return this;
     }
@@ -181,7 +182,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.maxComputeResource;
     }
 
-    public ModifyDBResourceGroupRequest setMinClusterCount(Integer minClusterCount) {
+    public CreateDBResourceGroupShrinkRequest setMinClusterCount(Integer minClusterCount) {
         this.minClusterCount = minClusterCount;
         return this;
     }
@@ -189,7 +190,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.minClusterCount;
     }
 
-    public ModifyDBResourceGroupRequest setMinComputeResource(String minComputeResource) {
+    public CreateDBResourceGroupShrinkRequest setMinComputeResource(String minComputeResource) {
         this.minComputeResource = minComputeResource;
         return this;
     }
@@ -197,7 +198,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.minComputeResource;
     }
 
-    public ModifyDBResourceGroupRequest setNodeNum(Integer nodeNum) {
+    public CreateDBResourceGroupShrinkRequest setNodeNum(Integer nodeNum) {
         this.nodeNum = nodeNum;
         return this;
     }
@@ -205,7 +206,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.nodeNum;
     }
 
-    public ModifyDBResourceGroupRequest setOwnerAccount(String ownerAccount) {
+    public CreateDBResourceGroupShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -213,7 +214,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyDBResourceGroupRequest setOwnerId(Long ownerId) {
+    public CreateDBResourceGroupShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -221,15 +222,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyDBResourceGroupRequest setPoolUserList(java.util.List<String> poolUserList) {
-        this.poolUserList = poolUserList;
-        return this;
-    }
-    public java.util.List<String> getPoolUserList() {
-        return this.poolUserList;
-    }
-
-    public ModifyDBResourceGroupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public CreateDBResourceGroupShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -237,7 +230,7 @@ public class ModifyDBResourceGroupRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyDBResourceGroupRequest setResourceOwnerId(Long resourceOwnerId) {
+    public CreateDBResourceGroupShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }

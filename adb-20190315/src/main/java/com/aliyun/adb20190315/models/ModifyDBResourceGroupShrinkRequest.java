@@ -13,6 +13,12 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ClusterMode")
+    public String clusterMode;
+
+    @NameInMap("ClusterSizeResource")
+    public String clusterSizeResource;
+
     /**
      * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
      * <blockquote>
@@ -25,6 +31,9 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;
+
+    @NameInMap("EngineParams")
+    public String engineParamsShrink;
 
     /**
      * <p>The name of the resource group.</p>
@@ -51,6 +60,18 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
      */
     @NameInMap("GroupType")
     public String groupType;
+
+    @NameInMap("MaxClusterCount")
+    public Integer maxClusterCount;
+
+    @NameInMap("MaxComputeResource")
+    public String maxComputeResource;
+
+    @NameInMap("MinClusterCount")
+    public Integer minClusterCount;
+
+    @NameInMap("MinComputeResource")
+    public String minComputeResource;
 
     /**
      * <p>The number of nodes. Default value: 0.</p>
@@ -96,12 +117,36 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public ModifyDBResourceGroupShrinkRequest setClusterMode(String clusterMode) {
+        this.clusterMode = clusterMode;
+        return this;
+    }
+    public String getClusterMode() {
+        return this.clusterMode;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setClusterSizeResource(String clusterSizeResource) {
+        this.clusterSizeResource = clusterSizeResource;
+        return this;
+    }
+    public String getClusterSizeResource() {
+        return this.clusterSizeResource;
+    }
+
     public ModifyDBResourceGroupShrinkRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setEngineParamsShrink(String engineParamsShrink) {
+        this.engineParamsShrink = engineParamsShrink;
+        return this;
+    }
+    public String getEngineParamsShrink() {
+        return this.engineParamsShrink;
     }
 
     public ModifyDBResourceGroupShrinkRequest setGroupName(String groupName) {
@@ -118,6 +163,38 @@ public class ModifyDBResourceGroupShrinkRequest extends TeaModel {
     }
     public String getGroupType() {
         return this.groupType;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setMaxClusterCount(Integer maxClusterCount) {
+        this.maxClusterCount = maxClusterCount;
+        return this;
+    }
+    public Integer getMaxClusterCount() {
+        return this.maxClusterCount;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setMaxComputeResource(String maxComputeResource) {
+        this.maxComputeResource = maxComputeResource;
+        return this;
+    }
+    public String getMaxComputeResource() {
+        return this.maxComputeResource;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setMinClusterCount(Integer minClusterCount) {
+        this.minClusterCount = minClusterCount;
+        return this;
+    }
+    public Integer getMinClusterCount() {
+        return this.minClusterCount;
+    }
+
+    public ModifyDBResourceGroupShrinkRequest setMinComputeResource(String minComputeResource) {
+        this.minComputeResource = minComputeResource;
+        return this;
+    }
+    public String getMinComputeResource() {
+        return this.minComputeResource;
     }
 
     public ModifyDBResourceGroupShrinkRequest setNodeNum(Integer nodeNum) {
