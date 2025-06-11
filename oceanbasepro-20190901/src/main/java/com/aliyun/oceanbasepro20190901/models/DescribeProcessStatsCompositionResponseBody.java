@@ -40,6 +40,389 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList extends TeaModel {
+        @NameInMap("ClientIp")
+        public String clientIp;
+
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("CpuTime")
+        public Long cpuTime;
+
+        @NameInMap("Database")
+        public String database;
+
+        @NameInMap("DynamicSql")
+        public String dynamicSql;
+
+        @NameInMap("ExecuteTime")
+        public Long executeTime;
+
+        @NameInMap("PlanId")
+        public String planId;
+
+        @NameInMap("ProxySessId")
+        public String proxySessId;
+
+        @NameInMap("ServerIp")
+        public String serverIp;
+
+        @NameInMap("SessionId")
+        public Long sessionId;
+
+        @NameInMap("SqlId")
+        public String sqlId;
+
+        @NameInMap("SqlText")
+        public String sqlText;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        @NameInMap("TraceId")
+        public String traceId;
+
+        @NameInMap("User")
+        public String user;
+
+        public static DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList self = new DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setClientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setCpuTime(Long cpuTime) {
+            this.cpuTime = cpuTime;
+            return this;
+        }
+        public Long getCpuTime() {
+            return this.cpuTime;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setDynamicSql(String dynamicSql) {
+            this.dynamicSql = dynamicSql;
+            return this;
+        }
+        public String getDynamicSql() {
+            return this.dynamicSql;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setExecuteTime(Long executeTime) {
+            this.executeTime = executeTime;
+            return this;
+        }
+        public Long getExecuteTime() {
+            return this.executeTime;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setPlanId(String planId) {
+            this.planId = planId;
+            return this;
+        }
+        public String getPlanId() {
+            return this.planId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setProxySessId(String proxySessId) {
+            this.proxySessId = proxySessId;
+            return this;
+        }
+        public String getProxySessId() {
+            return this.proxySessId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setServerIp(String serverIp) {
+            this.serverIp = serverIp;
+            return this;
+        }
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setSessionId(Long sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public Long getSessionId() {
+            return this.sessionId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setSqlId(String sqlId) {
+            this.sqlId = sqlId;
+            return this;
+        }
+        public String getSqlId() {
+            return this.sqlId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setSqlText(String sqlText) {
+            this.sqlText = sqlText;
+            return this;
+        }
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setTraceId(String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+        public String getTraceId() {
+            return this.traceId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
+        }
+
+    }
+
+    public static class DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists extends TeaModel {
+        @NameInMap("ClientIp")
+        public String clientIp;
+
+        @NameInMap("Command")
+        public String command;
+
+        @NameInMap("CpuTime")
+        public Long cpuTime;
+
+        @NameInMap("Database")
+        public String database;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DynamicSql")
+        public String dynamicSql;
+
+        @NameInMap("ExecuteTime")
+        public Long executeTime;
+
+        @NameInMap("PlanId")
+        public String planId;
+
+        @NameInMap("ProcessSqlList")
+        public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList> processSqlList;
+
+        @NameInMap("ProxySessId")
+        public String proxySessId;
+
+        @NameInMap("ServerIp")
+        public String serverIp;
+
+        @NameInMap("SessionId")
+        public Long sessionId;
+
+        @NameInMap("SqlId")
+        public String sqlId;
+
+        @NameInMap("SqlText")
+        public String sqlText;
+
+        @NameInMap("Status")
+        public String status;
+
+        @NameInMap("TenantId")
+        public String tenantId;
+
+        @NameInMap("TraceId")
+        public String traceId;
+
+        @NameInMap("User")
+        public String user;
+
+        public static DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists build(java.util.Map<String, ?> map) throws Exception {
+            DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists self = new DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setClientIp(String clientIp) {
+            this.clientIp = clientIp;
+            return this;
+        }
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setCommand(String command) {
+            this.command = command;
+            return this;
+        }
+        public String getCommand() {
+            return this.command;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setCpuTime(Long cpuTime) {
+            this.cpuTime = cpuTime;
+            return this;
+        }
+        public Long getCpuTime() {
+            return this.cpuTime;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setDatabase(String database) {
+            this.database = database;
+            return this;
+        }
+        public String getDatabase() {
+            return this.database;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setDynamicSql(String dynamicSql) {
+            this.dynamicSql = dynamicSql;
+            return this;
+        }
+        public String getDynamicSql() {
+            return this.dynamicSql;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setExecuteTime(Long executeTime) {
+            this.executeTime = executeTime;
+            return this;
+        }
+        public Long getExecuteTime() {
+            return this.executeTime;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setPlanId(String planId) {
+            this.planId = planId;
+            return this;
+        }
+        public String getPlanId() {
+            return this.planId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setProcessSqlList(java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList> processSqlList) {
+            this.processSqlList = processSqlList;
+            return this;
+        }
+        public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList> getProcessSqlList() {
+            return this.processSqlList;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setProxySessId(String proxySessId) {
+            this.proxySessId = proxySessId;
+            return this;
+        }
+        public String getProxySessId() {
+            return this.proxySessId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setServerIp(String serverIp) {
+            this.serverIp = serverIp;
+            return this;
+        }
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setSessionId(Long sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public Long getSessionId() {
+            return this.sessionId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setSqlId(String sqlId) {
+            this.sqlId = sqlId;
+            return this;
+        }
+        public String getSqlId() {
+            return this.sqlId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setSqlText(String sqlText) {
+            this.sqlText = sqlText;
+            return this;
+        }
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setTenantId(String tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setTraceId(String traceId) {
+            this.traceId = traceId;
+            return this;
+        }
+        public String getTraceId() {
+            return this.traceId;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setUser(String user) {
+            this.user = user;
+            return this;
+        }
+        public String getUser() {
+            return this.user;
+        }
+
+    }
+
     public static class DescribeProcessStatsCompositionResponseBodyDataAllProcessList extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
@@ -81,6 +464,13 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         public String database;
 
         /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("DynamicSql")
+        public String dynamicSql;
+
+        /**
          * <p>The definition of this parameter varies based on whether the SQL statement is executed.</p>
          * <ul>
          * <li>When the request is accepted and the result is not returned to the client, this parameter indicates the time interval between the time when the request is accepted and the current time, in seconds.</li>
@@ -102,6 +492,9 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         @NameInMap("PlanId")
         public String planId;
 
+        @NameInMap("ProcessSqlLists")
+        public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists> processSqlLists;
+
         /**
          * <p>The session ID of the client. If an OceanBase Database Proxy (ODP) is used for connection, the session ID of the ODP is returned.</p>
          * 
@@ -119,6 +512,9 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
          */
         @NameInMap("ServerIp")
         public String serverIp;
+
+        @NameInMap("ServerSn")
+        public String serverSn;
 
         /**
          * <p>The ID of the session.</p>
@@ -220,6 +616,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.database;
         }
 
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setDynamicSql(String dynamicSql) {
+            this.dynamicSql = dynamicSql;
+            return this;
+        }
+        public String getDynamicSql() {
+            return this.dynamicSql;
+        }
+
         public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setExecuteTime(Long executeTime) {
             this.executeTime = executeTime;
             return this;
@@ -236,6 +640,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.planId;
         }
 
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setProcessSqlLists(java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists> processSqlLists) {
+            this.processSqlLists = processSqlLists;
+            return this;
+        }
+        public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists> getProcessSqlLists() {
+            return this.processSqlLists;
+        }
+
         public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setProxySessId(String proxySessId) {
             this.proxySessId = proxySessId;
             return this;
@@ -250,6 +662,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         }
         public String getServerIp() {
             return this.serverIp;
+        }
+
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setServerSn(String serverSn) {
+            this.serverSn = serverSn;
+            return this;
+        }
+        public String getServerSn() {
+            return this.serverSn;
         }
 
         public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setSessionId(Long sessionId) {

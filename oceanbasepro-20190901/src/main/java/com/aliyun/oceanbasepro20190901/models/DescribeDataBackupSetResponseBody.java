@@ -332,7 +332,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
          * <p>imm-test-set-cb****ee-b7d7-11ed-956f-****3e10bd70</p>
          */
         @NameInMap("SetId")
-        public Integer setId;
+        public String setId;
 
         /**
          * <strong>example:</strong>
@@ -470,11 +470,11 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             return this.progress;
         }
 
-        public DescribeDataBackupSetResponseBodyData setSetId(Integer setId) {
+        public DescribeDataBackupSetResponseBodyData setSetId(String setId) {
             this.setId = setId;
             return this;
         }
-        public Integer getSetId() {
+        public String getSetId() {
             return this.setId;
         }
 

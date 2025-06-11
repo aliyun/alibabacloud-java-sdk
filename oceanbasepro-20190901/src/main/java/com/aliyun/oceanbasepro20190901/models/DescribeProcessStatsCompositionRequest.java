@@ -23,6 +23,9 @@ public class DescribeProcessStatsCompositionRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MergeDynamicSql")
+    public Boolean mergeDynamicSql;
+
     /**
      * <p>The IP address of the server.</p>
      * 
@@ -96,6 +99,14 @@ public class DescribeProcessStatsCompositionRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeProcessStatsCompositionRequest setMergeDynamicSql(Boolean mergeDynamicSql) {
+        this.mergeDynamicSql = mergeDynamicSql;
+        return this;
+    }
+    public Boolean getMergeDynamicSql() {
+        return this.mergeDynamicSql;
     }
 
     public DescribeProcessStatsCompositionRequest setServerIp(String serverIp) {

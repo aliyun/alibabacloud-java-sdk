@@ -40,6 +40,36 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeOasTopSQLListResponseBodyDataCustomColumns extends TeaModel {
+        @NameInMap("Expression")
+        public String expression;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeOasTopSQLListResponseBodyDataCustomColumns build(java.util.Map<String, ?> map) throws Exception {
+            DescribeOasTopSQLListResponseBodyDataCustomColumns self = new DescribeOasTopSQLListResponseBodyDataCustomColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeOasTopSQLListResponseBodyDataCustomColumns setExpression(String expression) {
+            this.expression = expression;
+            return this;
+        }
+        public String getExpression() {
+            return this.expression;
+        }
+
+        public DescribeOasTopSQLListResponseBodyDataCustomColumns setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeOasTopSQLListResponseBodyDataSqlList extends TeaModel {
         @NameInMap("AvgAffectedRows")
         public Double avgAffectedRows;
@@ -1189,6 +1219,9 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         @NameInMap("CpuPercentage")
         public Double cpuPercentage;
 
+        @NameInMap("CustomColumns")
+        public DescribeOasTopSQLListResponseBodyDataCustomColumns customColumns;
+
         /**
          * <p>The name of the database.</p>
          * 
@@ -1365,6 +1398,9 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          */
         @NameInMap("MissPlans")
         public Double missPlans;
+
+        @NameInMap("ObDbId")
+        public String obDbId;
 
         /**
          * <p>Remote plan percentage during the execution period.</p>
@@ -1864,6 +1900,14 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.cpuPercentage;
         }
 
+        public DescribeOasTopSQLListResponseBodyData setCustomColumns(DescribeOasTopSQLListResponseBodyDataCustomColumns customColumns) {
+            this.customColumns = customColumns;
+            return this;
+        }
+        public DescribeOasTopSQLListResponseBodyDataCustomColumns getCustomColumns() {
+            return this.customColumns;
+        }
+
         public DescribeOasTopSQLListResponseBodyData setDbName(String dbName) {
             this.dbName = dbName;
             return this;
@@ -2030,6 +2074,14 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         }
         public Double getMissPlans() {
             return this.missPlans;
+        }
+
+        public DescribeOasTopSQLListResponseBodyData setObDbId(String obDbId) {
+            this.obDbId = obDbId;
+            return this;
+        }
+        public String getObDbId() {
+            return this.obDbId;
         }
 
         public DescribeOasTopSQLListResponseBodyData setRemotePlanPercentage(Double remotePlanPercentage) {

@@ -4,6 +4,9 @@ package com.aliyun.oceanbasepro20190901.models;
 import com.aliyun.tea.*;
 
 public class BatchKillProcessListRequest extends TeaModel {
+    @NameInMap("ByObSessionId")
+    public Boolean byObSessionId;
+
     /**
      * <p>The ID of the OceanBase cluster.</p>
      * <p>This parameter is required.</p>
@@ -37,6 +40,14 @@ public class BatchKillProcessListRequest extends TeaModel {
     public static BatchKillProcessListRequest build(java.util.Map<String, ?> map) throws Exception {
         BatchKillProcessListRequest self = new BatchKillProcessListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public BatchKillProcessListRequest setByObSessionId(Boolean byObSessionId) {
+        this.byObSessionId = byObSessionId;
+        return this;
+    }
+    public Boolean getByObSessionId() {
+        return this.byObSessionId;
     }
 
     public BatchKillProcessListRequest setInstanceId(String instanceId) {

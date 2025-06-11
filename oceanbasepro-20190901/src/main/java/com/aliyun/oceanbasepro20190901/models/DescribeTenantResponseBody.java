@@ -488,6 +488,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @NameInMap("InternetRpcPort")
         public Integer internetRpcPort;
 
+        @NameInMap("InternetSqlPort")
+        public Integer internetSqlPort;
+
         /**
          * <p>The intranet address for accessing the tenant.</p>
          * 
@@ -723,6 +726,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public Integer getInternetRpcPort() {
             return this.internetRpcPort;
+        }
+
+        public DescribeTenantResponseBodyTenantTenantConnections setInternetSqlPort(Integer internetSqlPort) {
+            this.internetSqlPort = internetSqlPort;
+            return this;
+        }
+        public Integer getInternetSqlPort() {
+            return this.internetSqlPort;
         }
 
         public DescribeTenantResponseBodyTenantTenantConnections setIntranetAddress(String intranetAddress) {

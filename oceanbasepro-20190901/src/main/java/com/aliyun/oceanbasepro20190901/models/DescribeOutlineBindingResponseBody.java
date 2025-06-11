@@ -77,6 +77,12 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         @NameInMap("OutlineId")
         public Long outlineId;
 
+        @NameInMap("SqlText")
+        public String sqlText;
+
+        @NameInMap("SqlTextConcurrentNum")
+        public Long sqlTextConcurrentNum;
+
         /**
          * <p>The name of the tenant. The tenant name must start with a letter or an underscore (<em>), and contain 2 to 20 characters, which can be uppercase letters, lowercase letters, digits, and underscores (</em>). It cannot be set to sys.</p>
          * 
@@ -121,6 +127,22 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         }
         public Long getOutlineId() {
             return this.outlineId;
+        }
+
+        public DescribeOutlineBindingResponseBodyOutlineBinding setSqlText(String sqlText) {
+            this.sqlText = sqlText;
+            return this;
+        }
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        public DescribeOutlineBindingResponseBodyOutlineBinding setSqlTextConcurrentNum(Long sqlTextConcurrentNum) {
+            this.sqlTextConcurrentNum = sqlTextConcurrentNum;
+            return this;
+        }
+        public Long getSqlTextConcurrentNum() {
+            return this.sqlTextConcurrentNum;
         }
 
         public DescribeOutlineBindingResponseBodyOutlineBinding setTableName(String tableName) {

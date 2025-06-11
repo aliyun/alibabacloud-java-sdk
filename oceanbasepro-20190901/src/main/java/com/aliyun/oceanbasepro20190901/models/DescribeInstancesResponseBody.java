@@ -201,6 +201,121 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult extends TeaModel {
+        @NameInMap("Code")
+        public String code;
+
+        @NameInMap("CodeName")
+        public String codeName;
+
+        @NameInMap("Level")
+        public String level;
+
+        @NameInMap("Module")
+        public String module;
+
+        @NameInMap("ModuleName")
+        public String moduleName;
+
+        @NameInMap("SubModule")
+        public String subModule;
+
+        @NameInMap("SubModuleName")
+        public String subModuleName;
+
+        public static DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult self = new DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setCodeName(String codeName) {
+            this.codeName = codeName;
+            return this;
+        }
+        public String getCodeName() {
+            return this.codeName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setLevel(String level) {
+            this.level = level;
+            return this;
+        }
+        public String getLevel() {
+            return this.level;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setModule(String module) {
+            this.module = module;
+            return this;
+        }
+        public String getModule() {
+            return this.module;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setSubModule(String subModule) {
+            this.subModule = subModule;
+            return this;
+        }
+        public String getSubModule() {
+            return this.subModule;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult setSubModuleName(String subModuleName) {
+            this.subModuleName = subModuleName;
+            return this;
+        }
+        public String getSubModuleName() {
+            return this.subModuleName;
+        }
+
+    }
+
+    public static class DescribeInstancesResponseBodyInstancesMigrationInfo extends TeaModel {
+        @NameInMap("CheckResult")
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult checkResult;
+
+        @NameInMap("Migratable")
+        public Boolean migratable;
+
+        public static DescribeInstancesResponseBodyInstancesMigrationInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesMigrationInfo self = new DescribeInstancesResponseBodyInstancesMigrationInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfo setCheckResult(DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult checkResult) {
+            this.checkResult = checkResult;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesMigrationInfoCheckResult getCheckResult() {
+            return this.checkResult;
+        }
+
+        public DescribeInstancesResponseBodyInstancesMigrationInfo setMigratable(Boolean migratable) {
+            this.migratable = migratable;
+            return this;
+        }
+        public Boolean getMigratable() {
+            return this.migratable;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesResourceCapacityUnit extends TeaModel {
         /**
          * <p>The maximum number of capacity units.</p>
@@ -789,6 +904,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("Mem")
         public Long mem;
 
+        @NameInMap("Migratable")
+        public Boolean migratable;
+
+        @NameInMap("MigrationInfo")
+        public DescribeInstancesResponseBodyInstancesMigrationInfo migrationInfo;
+
         /**
          * <p>The version of the OceanBase Database RedHat Package Managerment (RPM) package.</p>
          * 
@@ -1117,6 +1238,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getMem() {
             return this.mem;
+        }
+
+        public DescribeInstancesResponseBodyInstances setMigratable(Boolean migratable) {
+            this.migratable = migratable;
+            return this;
+        }
+        public Boolean getMigratable() {
+            return this.migratable;
+        }
+
+        public DescribeInstancesResponseBodyInstances setMigrationInfo(DescribeInstancesResponseBodyInstancesMigrationInfo migrationInfo) {
+            this.migrationInfo = migrationInfo;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesMigrationInfo getMigrationInfo() {
+            return this.migrationInfo;
         }
 
         public DescribeInstancesResponseBodyInstances setObRpmVersion(String obRpmVersion) {

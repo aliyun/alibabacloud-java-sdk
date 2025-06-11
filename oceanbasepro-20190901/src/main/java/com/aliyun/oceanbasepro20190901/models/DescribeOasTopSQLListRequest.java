@@ -17,6 +17,9 @@ public class DescribeOasTopSQLListRequest extends TeaModel {
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    @NameInMap("CustomColumns")
+    public String customColumns;
+
     /**
      * <p>The name of the database.</p>
      * 
@@ -160,6 +163,14 @@ public class DescribeOasTopSQLListRequest extends TeaModel {
     }
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    public DescribeOasTopSQLListRequest setCustomColumns(String customColumns) {
+        this.customColumns = customColumns;
+        return this;
+    }
+    public String getCustomColumns() {
+        return this.customColumns;
     }
 
     public DescribeOasTopSQLListRequest setDbName(String dbName) {

@@ -354,6 +354,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @NameInMap("SqlId")
         public String sqlId;
 
+        @NameInMap("SqlText")
+        public String sqlText;
+
         /**
          * <p>Whether a full table scan is performed.</p>
          * 
@@ -640,6 +643,14 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         }
         public String getSqlId() {
             return this.sqlId;
+        }
+
+        public DescribeOasSQLPlansResponseBodyDataPlans setSqlText(String sqlText) {
+            this.sqlText = sqlText;
+            return this;
+        }
+        public String getSqlText() {
+            return this.sqlText;
         }
 
         public DescribeOasSQLPlansResponseBodyDataPlans setTableScan(Boolean tableScan) {

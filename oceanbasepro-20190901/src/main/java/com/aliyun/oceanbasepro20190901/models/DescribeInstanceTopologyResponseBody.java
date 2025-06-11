@@ -235,6 +235,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @NameInMap("NodeNum")
         public Integer nodeNum;
 
+        @NameInMap("OnlineNodeNum")
+        public Long onlineNodeNum;
+
         /**
          * <p>The type of the read-only replica.</p>
          * 
@@ -314,6 +317,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
         public Integer getNodeNum() {
             return this.nodeNum;
+        }
+
+        public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setOnlineNodeNum(Long onlineNodeNum) {
+            this.onlineNodeNum = onlineNodeNum;
+            return this;
+        }
+        public Long getOnlineNodeNum() {
+            return this.onlineNodeNum;
         }
 
         public DescribeInstanceTopologyResponseBodyInstanceTopologyReplicas setReadOnlyReplicaType(String readOnlyReplicaType) {

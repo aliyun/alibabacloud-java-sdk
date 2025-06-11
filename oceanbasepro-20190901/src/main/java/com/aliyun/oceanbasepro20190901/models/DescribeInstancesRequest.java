@@ -66,6 +66,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("SearchKey")
     public String searchKey;
 
+    @NameInMap("WithOBCloudInstances")
+    public Boolean withOBCloudInstances;
+
     public static DescribeInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstancesRequest self = new DescribeInstancesRequest();
         return TeaModel.build(map, self);
@@ -117,6 +120,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getSearchKey() {
         return this.searchKey;
+    }
+
+    public DescribeInstancesRequest setWithOBCloudInstances(Boolean withOBCloudInstances) {
+        this.withOBCloudInstances = withOBCloudInstances;
+        return this;
+    }
+    public Boolean getWithOBCloudInstances() {
+        return this.withOBCloudInstances;
     }
 
 }
