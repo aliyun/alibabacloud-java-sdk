@@ -27,6 +27,9 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     @NameInMap("Category")
     public String category;
 
+    @NameInMap("CategoryChangePaused")
+    public Boolean categoryChangePaused;
+
     /**
      * <p>The components of the message template.</p>
      * <blockquote>
@@ -139,6 +142,14 @@ public class ModifyChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public ModifyChatappTemplateShrinkRequest setCategoryChangePaused(Boolean categoryChangePaused) {
+        this.categoryChangePaused = categoryChangePaused;
+        return this;
+    }
+    public Boolean getCategoryChangePaused() {
+        return this.categoryChangePaused;
     }
 
     public ModifyChatappTemplateShrinkRequest setComponentsShrink(String componentsShrink) {

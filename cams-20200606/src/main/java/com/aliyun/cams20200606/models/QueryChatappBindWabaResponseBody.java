@@ -182,6 +182,13 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <strong>example:</strong>
+         * <p>Y</p>
+         */
+        @NameInMap("MarketingMessageLiteStatus")
+        public String marketingMessageLiteStatus;
+
+        /**
          * <p>The namespace of the message template.</p>
          * 
          * <strong>example:</strong>
@@ -259,6 +266,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public QueryChatappBindWabaResponseBodyData setMarketingMessageLiteStatus(String marketingMessageLiteStatus) {
+            this.marketingMessageLiteStatus = marketingMessageLiteStatus;
+            return this;
+        }
+        public String getMarketingMessageLiteStatus() {
+            return this.marketingMessageLiteStatus;
         }
 
         public QueryChatappBindWabaResponseBodyData setMessageTemplateNamespace(String messageTemplateNamespace) {

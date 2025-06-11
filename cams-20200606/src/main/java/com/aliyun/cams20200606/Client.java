@@ -847,6 +847,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Category", request.category);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryChangePaused)) {
+            body.put("CategoryChangePaused", request.categoryChangePaused);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
             body.put("Components", request.componentsShrink);
         }
@@ -2870,6 +2874,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Category", request.category);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryChangePaused)) {
+            body.put("CategoryChangePaused", request.categoryChangePaused);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.componentsShrink)) {
             body.put("Components", request.componentsShrink);
         }
@@ -2940,6 +2948,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyChatappTemplateResponse modifyChatappTemplate(ModifyChatappTemplateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyChatappTemplateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改模板上的一些属性</p>
+     * 
+     * @param request ModifyChatappTemplatePropertiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyChatappTemplatePropertiesResponse
+     */
+    public ModifyChatappTemplatePropertiesResponse modifyChatappTemplatePropertiesWithOptions(ModifyChatappTemplatePropertiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowSend)) {
+            query.put("AllowSend", request.allowSend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryChangePaused)) {
+            query.put("CategoryChangePaused", request.categoryChangePaused);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
+            query.put("CustSpaceId", request.custSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateType)) {
+            query.put("TemplateType", request.templateType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyChatappTemplateProperties"),
+            new TeaPair("version", "2020-06-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyChatappTemplatePropertiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改模板上的一些属性</p>
+     * 
+     * @param request ModifyChatappTemplatePropertiesRequest
+     * @return ModifyChatappTemplatePropertiesResponse
+     */
+    public ModifyChatappTemplatePropertiesResponse modifyChatappTemplateProperties(ModifyChatappTemplatePropertiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyChatappTemplatePropertiesWithOptions(request, runtime);
     }
 
     /**

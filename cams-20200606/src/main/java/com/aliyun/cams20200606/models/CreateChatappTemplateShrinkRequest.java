@@ -11,6 +11,7 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("AllowCategoryChange")
+    @Deprecated
     public Boolean allowCategoryChange;
 
     /**
@@ -39,6 +40,9 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
      */
     @NameInMap("Category")
     public String category;
+
+    @NameInMap("CategoryChangePaused")
+    public Boolean categoryChangePaused;
 
     /**
      * <p>The components of the message template.</p>
@@ -139,6 +143,7 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public CreateChatappTemplateShrinkRequest setAllowCategoryChange(Boolean allowCategoryChange) {
         this.allowCategoryChange = allowCategoryChange;
         return this;
@@ -153,6 +158,14 @@ public class CreateChatappTemplateShrinkRequest extends TeaModel {
     }
     public String getCategory() {
         return this.category;
+    }
+
+    public CreateChatappTemplateShrinkRequest setCategoryChangePaused(Boolean categoryChangePaused) {
+        this.categoryChangePaused = categoryChangePaused;
+        return this;
+    }
+    public Boolean getCategoryChangePaused() {
+        return this.categoryChangePaused;
     }
 
     public CreateChatappTemplateShrinkRequest setComponentsShrink(String componentsShrink) {

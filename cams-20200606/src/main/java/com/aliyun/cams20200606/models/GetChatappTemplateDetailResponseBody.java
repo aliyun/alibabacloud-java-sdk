@@ -1071,6 +1071,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
     }
 
     public static class GetChatappTemplateDetailResponseBodyData extends TeaModel {
+        @NameInMap("AllowSend")
+        public Boolean allowSend;
+
         /**
          * <p>The review status of the message template. Valid values:</p>
          * <ul>
@@ -1114,6 +1117,9 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         @NameInMap("Category")
         public String category;
+
+        @NameInMap("CategoryChangePaused")
+        public Boolean categoryChangePaused;
 
         /**
          * <p>The components of the message template.</p>
@@ -1200,6 +1206,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetChatappTemplateDetailResponseBodyData setAllowSend(Boolean allowSend) {
+            this.allowSend = allowSend;
+            return this;
+        }
+        public Boolean getAllowSend() {
+            return this.allowSend;
+        }
+
         public GetChatappTemplateDetailResponseBodyData setAuditStatus(String auditStatus) {
             this.auditStatus = auditStatus;
             return this;
@@ -1214,6 +1228,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
         public String getCategory() {
             return this.category;
+        }
+
+        public GetChatappTemplateDetailResponseBodyData setCategoryChangePaused(Boolean categoryChangePaused) {
+            this.categoryChangePaused = categoryChangePaused;
+            return this;
+        }
+        public Boolean getCategoryChangePaused() {
+            return this.categoryChangePaused;
         }
 
         public GetChatappTemplateDetailResponseBodyData setComponents(java.util.List<GetChatappTemplateDetailResponseBodyDataComponents> components) {
