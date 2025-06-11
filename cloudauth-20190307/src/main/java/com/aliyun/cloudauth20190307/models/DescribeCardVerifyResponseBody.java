@@ -76,6 +76,9 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         @NameInMap("CardInfo")
         public String cardInfo;
 
+        @NameInMap("FaceDetail")
+        public String faceDetail;
+
         @NameInMap("OcrCardInfo")
         public String ocrCardInfo;
 
@@ -108,6 +111,14 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         }
         public String getCardInfo() {
             return this.cardInfo;
+        }
+
+        public DescribeCardVerifyResponseBodyResultObject setFaceDetail(String faceDetail) {
+            this.faceDetail = faceDetail;
+            return this;
+        }
+        public String getFaceDetail() {
+            return this.faceDetail;
         }
 
         public DescribeCardVerifyResponseBodyResultObject setOcrCardInfo(String ocrCardInfo) {
