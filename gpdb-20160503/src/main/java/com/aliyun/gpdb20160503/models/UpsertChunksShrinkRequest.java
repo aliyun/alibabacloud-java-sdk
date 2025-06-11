@@ -4,6 +4,9 @@ package com.aliyun.gpdb20160503.models;
 import com.aliyun.tea.*;
 
 public class UpsertChunksShrinkRequest extends TeaModel {
+    @NameInMap("AllowInsertWithFilter")
+    public Boolean allowInsertWithFilter;
+
     /**
      * <p>Document collection name.</p>
      * <blockquote>
@@ -92,6 +95,14 @@ public class UpsertChunksShrinkRequest extends TeaModel {
     public static UpsertChunksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpsertChunksShrinkRequest self = new UpsertChunksShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpsertChunksShrinkRequest setAllowInsertWithFilter(Boolean allowInsertWithFilter) {
+        this.allowInsertWithFilter = allowInsertWithFilter;
+        return this;
+    }
+    public Boolean getAllowInsertWithFilter() {
+        return this.allowInsertWithFilter;
     }
 
     public UpsertChunksShrinkRequest setCollection(String collection) {

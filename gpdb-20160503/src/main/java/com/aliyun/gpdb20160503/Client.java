@@ -13817,6 +13817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.allowInsertWithFilter)) {
+            query.put("AllowInsertWithFilter", request.allowInsertWithFilter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
             query.put("Collection", request.collection);
         }
