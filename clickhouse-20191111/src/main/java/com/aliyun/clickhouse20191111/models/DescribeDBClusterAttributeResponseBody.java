@@ -159,6 +159,18 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public String aliUid;
 
+        @NameInMap("AppointmentElectZookeeperDisableWrite")
+        public Boolean appointmentElectZookeeperDisableWrite;
+
+        @NameInMap("AppointmentElectZookeeperTime")
+        public String appointmentElectZookeeperTime;
+
+        @NameInMap("AppointmentRestartNodeList")
+        public String appointmentRestartNodeList;
+
+        @NameInMap("AppointmentRestartNodeTime")
+        public String appointmentRestartNodeTime;
+
         /**
          * <p>The scheduled restart time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in Coordinated Universal Time (UTC).</p>
          * 
@@ -169,6 +181,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public String appointmentRestartTime;
 
         /**
+         * <p>The major engine versions available for upgrades.</p>
+         * 
          * <strong>example:</strong>
          * <p>{&quot;MajorVersion&quot;:&quot;MinorVersion&quot;}</p>
          */
@@ -732,6 +746,38 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
         public String getAliUid() {
             return this.aliUid;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setAppointmentElectZookeeperDisableWrite(Boolean appointmentElectZookeeperDisableWrite) {
+            this.appointmentElectZookeeperDisableWrite = appointmentElectZookeeperDisableWrite;
+            return this;
+        }
+        public Boolean getAppointmentElectZookeeperDisableWrite() {
+            return this.appointmentElectZookeeperDisableWrite;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setAppointmentElectZookeeperTime(String appointmentElectZookeeperTime) {
+            this.appointmentElectZookeeperTime = appointmentElectZookeeperTime;
+            return this;
+        }
+        public String getAppointmentElectZookeeperTime() {
+            return this.appointmentElectZookeeperTime;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setAppointmentRestartNodeList(String appointmentRestartNodeList) {
+            this.appointmentRestartNodeList = appointmentRestartNodeList;
+            return this;
+        }
+        public String getAppointmentRestartNodeList() {
+            return this.appointmentRestartNodeList;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyDBCluster setAppointmentRestartNodeTime(String appointmentRestartNodeTime) {
+            this.appointmentRestartNodeTime = appointmentRestartNodeTime;
+            return this;
+        }
+        public String getAppointmentRestartNodeTime() {
+            return this.appointmentRestartNodeTime;
         }
 
         public DescribeDBClusterAttributeResponseBodyDBCluster setAppointmentRestartTime(String appointmentRestartTime) {

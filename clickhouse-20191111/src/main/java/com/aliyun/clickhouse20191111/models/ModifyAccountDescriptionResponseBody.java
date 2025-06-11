@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
      */

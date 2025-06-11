@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     /**
+     * <p>The attribute of the IP address whitelist. By default, this parameter is <strong>empty</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>NULL</p>
      */
@@ -12,6 +14,11 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public String DBClusterIPArrayAttribute;
 
     /**
+     * <p>The name of the IP address whitelist that you want to modify.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the default IP address whitelist is modified.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -19,6 +26,7 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public String DBClusterIPArrayName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +36,16 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The method that is used to modify the IP address whitelist. Valid values:</p>
+     * <ul>
+     * <li><strong>Cover</strong>: overwrites the original IP address whitelist.</li>
+     * <li><strong>Append</strong>: appends the specified IP addresses to the original IP address whitelist.</li>
+     * <li><strong>Delete</strong>: deletes the original IP address whitelist.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the default value of Cover is used.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Cover</p>
      */
@@ -47,6 +65,19 @@ public class ModifyDBClusterAccessWhiteListRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The IP addresses in the IP address whitelist. You can specify IP addresses in the following formats:</p>
+     * <ul>
+     * <li>IP address. For example, you can set SecurityIps to 192.168.0.1. This allows you to use this IP address to access your ApsaraDB for ClickHouse cluster.</li>
+     * <li>CIDR block. For example, you can set SecurityIps to 192.168.0.0/24. This allows you to use the IP addresses from 192.168.0.1 to 192.168.0.255 to access your ApsaraDB for ClickHouse cluster.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Do not set SecurityIps to 0.0.0.0.</p>
+     * </li>
+     * <li><p>If you set SecurityIps to 127.0.0.1, all IP addresses are blocked from accessing your ApsaraDB for ClickHouse cluster.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

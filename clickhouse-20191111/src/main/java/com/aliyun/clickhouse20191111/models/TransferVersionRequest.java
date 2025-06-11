@@ -14,6 +14,12 @@ public class TransferVersionRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The time window during which write operations are stopped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
+     */
     @NameInMap("DisableWriteWindows")
     public String disableWriteWindows;
 
@@ -72,6 +78,12 @@ public class TransferVersionRequest extends TeaModel {
     @NameInMap("SourceAccount")
     public String sourceAccount;
 
+    /**
+     * <p>The name of the self-managed ClickHouse cluster. You can execute the <code>SELECT * FROM system.clusters</code> statement to query the cluster name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("SourceClusterName")
     public String sourceClusterName;
 
@@ -85,6 +97,12 @@ public class TransferVersionRequest extends TeaModel {
     @NameInMap("SourcePassword")
     public String sourcePassword;
 
+    /**
+     * <p>The endpoint and TCP port of the self-managed ClickHouse cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</p>
+     */
     @NameInMap("SourceShards")
     public String sourceShards;
 

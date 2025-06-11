@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
+     * <p>The backup task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>117403****</p>
      */
@@ -12,6 +14,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupId;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +24,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,6 +40,8 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -63,6 +69,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

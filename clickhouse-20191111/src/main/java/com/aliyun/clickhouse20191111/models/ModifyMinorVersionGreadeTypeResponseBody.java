@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyMinorVersionGreadeTypeResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D0CEC6AC-7760-409A-A0D5-E6CD8660E9CC</p>
      */

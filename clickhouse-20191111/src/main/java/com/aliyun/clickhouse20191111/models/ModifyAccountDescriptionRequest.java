@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountDescriptionRequest extends TeaModel {
     /**
+     * <p>The new description of the database account.</p>
+     * <ul>
+     * <li>The value cannot start with http:// or https://.</li>
+     * <li>The value must be 0 to 256 characters in length.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountDescription;
 
     /**
+     * <p>The name of the database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +29,7 @@ public class ModifyAccountDescriptionRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

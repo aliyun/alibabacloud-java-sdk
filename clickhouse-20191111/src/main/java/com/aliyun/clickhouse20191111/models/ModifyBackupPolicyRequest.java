@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupPolicyRequest extends TeaModel {
     /**
-     * <p>The retention period for the backup data. Valid values: 7 to 730. Unit: day.</p>
+     * <p>The retention period for the backup data. Valid values: 7 to 730. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyMinorVersionGreadeTypeRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyMinorVersionGreadeTypeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The update type. If you set the parameter to <strong>false</strong>, you perform the manual update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

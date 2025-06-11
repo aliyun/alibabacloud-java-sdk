@@ -38,7 +38,7 @@ public class ModifyDBClusterConfigInXMLRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specific region. The information includes the cluster IDs.</p>
+     * <p>The cluster ID. You can call the <a href="https://help.aliyun.com/document_detail/170879.html">DescribeDBClusters</a> operation to query information about all the clusters that are deployed in a specified region, including the cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

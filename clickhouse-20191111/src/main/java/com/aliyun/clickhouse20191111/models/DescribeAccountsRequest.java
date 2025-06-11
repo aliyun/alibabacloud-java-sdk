@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountsRequest extends TeaModel {
     /**
+     * <p>The name of the database account.</p>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the information about all database accounts in the ApsaraDB for ClickHouse cluster is queried by default.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -12,6 +17,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +33,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of pages to return. The value must be an integer that is greater than 0. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from 1. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +42,7 @@ public class DescribeAccountsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return per page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
      * <li><strong>30</strong> (default)</li>
      * <li><strong>50</strong></li>

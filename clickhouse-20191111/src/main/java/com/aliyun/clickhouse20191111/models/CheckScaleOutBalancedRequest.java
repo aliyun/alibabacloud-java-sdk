@@ -21,7 +21,7 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The number of pages to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,9 +30,9 @@ public class CheckScaleOutBalancedRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values:</p>
+     * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default)</li>
+     * <li><strong>30</strong></li>
      * <li><strong>50</strong></li>
      * <li><strong>100</strong></li>
      * </ul>

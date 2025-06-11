@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The information about the cluster.</p>
+     * <p>The clusters.</p>
      */
     @NameInMap("DBCluster")
     public ModifyDBClusterResponseBodyDBCluster DBCluster;

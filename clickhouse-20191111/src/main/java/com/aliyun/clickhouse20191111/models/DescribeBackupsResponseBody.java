@@ -4,10 +4,15 @@ package com.aliyun.clickhouse20191111.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
+    /**
+     * <p>The backup sets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeBackupsResponseBodyItems> items;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: Valid values:</p>
+     * <ul>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -22,6 +34,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F5178C10-1407-4987-9133-DE4DC9119F75</p>
      */
@@ -29,6 +43,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -82,6 +98,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
 
     public static class DescribeBackupsResponseBodyItems extends TeaModel {
         /**
+         * <p>The end time of the backup task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:41Z</p>
          */
@@ -89,6 +107,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupEndTime;
 
         /**
+         * <p>The backup task ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>117403****</p>
          */
@@ -96,6 +116,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupId;
 
         /**
+         * <p>The backup method. Valid values: Only <strong>Physical</strong> is returned. This value indicates that a physical backup was performed.</p>
+         * 
          * <strong>example:</strong>
          * <p>Physical</p>
          */
@@ -103,13 +125,21 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupMethod;
 
         /**
+         * <p>The number of nodes in the cluster.</p>
+         * <ul>
+         * <li>If the cluster is of Single-replica Edition, the value ranges from 1 to 48.</li>
+         * <li>If the cluster is of Double-replica Edition, the value ranges from 1 to 24.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;shard_count&quot;：4}</p>
+         * <p>{&quot;shard_count&quot;:4}</p>
          */
         @NameInMap("BackupSetInfo")
         public String backupSetInfo;
 
         /**
+         * <p>The size of the backup set. Unit: MB.</p>
+         * 
          * <strong>example:</strong>
          * <p>131072</p>
          */
@@ -117,6 +147,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public Long backupSize;
 
         /**
+         * <p>The start time of the backup task. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2021-11-22T18:28:22Z</p>
          */
@@ -124,6 +156,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStartTime;
 
         /**
+         * <p>The backup status. Valid values:</p>
+         * <ul>
+         * <li><strong>Success</strong></li>
+         * <li><strong>Failure</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */
@@ -131,6 +169,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupStatus;
 
         /**
+         * <p>The backup type. Valid values:</p>
+         * <ul>
+         * <li><strong>FullBackup</strong></li>
+         * <li><strong>IncrementalBackup</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>IncrementalBackup</p>
          */
@@ -138,6 +182,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String backupType;
 
         /**
+         * <p>The cluster ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cc-bp1qx68m06981****</p>
          */
@@ -145,6 +191,8 @@ public class DescribeBackupsResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
+         * <p>The time when the backup set expired. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time is displayed in UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-07-22T18:28:41Z</p>
          */

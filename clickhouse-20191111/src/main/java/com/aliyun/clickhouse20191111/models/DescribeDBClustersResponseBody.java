@@ -370,6 +370,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("DBNodeStorage")
         public Long DBNodeStorage;
 
+        /**
+         * <p>The engine version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23.8</p>
+         */
         @NameInMap("DbVersion")
         public String dbVersion;
 
@@ -491,6 +497,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        /**
+         * <p>The time window during which write operations are stopped for specification changes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
+         */
         @NameInMap("ScaleOutDisableWriteWindows")
         public String scaleOutDisableWriteWindows;
 
