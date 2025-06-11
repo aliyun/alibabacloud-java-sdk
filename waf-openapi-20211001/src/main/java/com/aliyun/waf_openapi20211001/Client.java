@@ -457,6 +457,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DefenseScene", request.defenseScene);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.defenseType)) {
+            query.put("DefenseType", request.defenseType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -1259,6 +1263,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteDefenseRuleResponse deleteDefenseRuleWithOptions(DeleteDefenseRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defenseType)) {
+            query.put("DefenseType", request.defenseType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -3995,6 +4003,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDefenseRuleResponse describeDefenseRuleWithOptions(DescribeDefenseRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defenseType)) {
+            query.put("DefenseType", request.defenseType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -9505,6 +9517,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.defenseScene)) {
             query.put("DefenseScene", request.defenseScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defenseType)) {
+            query.put("DefenseType", request.defenseType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {

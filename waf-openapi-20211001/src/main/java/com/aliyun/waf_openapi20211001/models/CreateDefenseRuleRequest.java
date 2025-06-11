@@ -26,6 +26,9 @@ public class CreateDefenseRuleRequest extends TeaModel {
     @NameInMap("DefenseScene")
     public String defenseScene;
 
+    @NameInMap("DefenseType")
+    public String defenseType;
+
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
@@ -90,6 +93,14 @@ public class CreateDefenseRuleRequest extends TeaModel {
     }
     public String getDefenseScene() {
         return this.defenseScene;
+    }
+
+    public CreateDefenseRuleRequest setDefenseType(String defenseType) {
+        this.defenseType = defenseType;
+        return this;
+    }
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     public CreateDefenseRuleRequest setInstanceId(String instanceId) {

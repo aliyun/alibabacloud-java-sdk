@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class DeleteDefenseRuleRequest extends TeaModel {
+    @NameInMap("DefenseType")
+    public String defenseType;
+
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
@@ -64,6 +67,14 @@ public class DeleteDefenseRuleRequest extends TeaModel {
     public static DeleteDefenseRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteDefenseRuleRequest self = new DeleteDefenseRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteDefenseRuleRequest setDefenseType(String defenseType) {
+        this.defenseType = defenseType;
+        return this;
+    }
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     public DeleteDefenseRuleRequest setInstanceId(String instanceId) {
