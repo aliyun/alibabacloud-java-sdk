@@ -63,6 +63,9 @@ public class GetTaskResultResponseBody extends TeaModel {
         @NameInMap("role")
         public String role;
 
+        @NameInMap("roleName")
+        public String roleName;
+
         @NameInMap("speechRate")
         public Integer speechRate;
 
@@ -104,6 +107,14 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
         public String getRole() {
             return this.role;
+        }
+
+        public GetTaskResultResponseBodyDataAsrResult setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
         }
 
         public GetTaskResultResponseBodyDataAsrResult setSpeechRate(Integer speechRate) {
