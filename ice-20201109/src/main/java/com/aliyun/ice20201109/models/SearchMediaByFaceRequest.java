@@ -36,6 +36,9 @@ public class SearchMediaByFaceRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -100,6 +103,14 @@ public class SearchMediaByFaceRequest extends TeaModel {
     }
     public String getMediaType() {
         return this.mediaType;
+    }
+
+    public SearchMediaByFaceRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public SearchMediaByFaceRequest setPageNo(Integer pageNo) {

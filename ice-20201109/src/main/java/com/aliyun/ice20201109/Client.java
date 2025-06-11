@@ -9190,6 +9190,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public InsertMediaToSearchLibResponse insertMediaToSearchLibWithOptions(InsertMediaToSearchLibRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imagesInput)) {
+            query.put("ImagesInput", request.imagesInput);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.input)) {
             query.put("Input", request.input);
         }
@@ -14085,6 +14089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MultimodalSearchType", request.multimodalSearchType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("PageNo", request.pageNo);
         }
@@ -14167,6 +14175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MediaType", request.mediaType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("PageNo", request.pageNo);
         }
@@ -14234,6 +14246,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MediaType", request.mediaType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
             query.put("PageNo", request.pageNo);
         }
@@ -14295,6 +14311,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.mediaType)) {
             query.put("MediaType", request.mediaType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {

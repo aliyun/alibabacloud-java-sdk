@@ -865,6 +865,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("Height")
         public String height;
 
+        @NameInMap("ImagesInput")
+        public String imagesInput;
+
         /**
          * <p>The time when the file was last modified.</p>
          * 
@@ -975,6 +978,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public String getHeight() {
             return this.height;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo setImagesInput(String imagesInput) {
+            this.imagesInput = imagesInput;
+            return this;
+        }
+        public String getImagesInput() {
+            return this.imagesInput;
         }
 
         public SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo setModifiedTime(String modifiedTime) {
@@ -1184,6 +1195,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @NameInMap("ModifiedTime")
         public String modifiedTime;
 
+        @NameInMap("Namespace")
+        public String namespace;
+
         /**
          * <p>The custom ID of the media asset. The ID is a string that contains 6 to 64 characters. Only letters, digits, hyphens (-), and underscores (_) are supported. Each custom ID is unique.</p>
          * 
@@ -1261,6 +1275,9 @@ public class SearchMediaResponseBody extends TeaModel {
          */
         @NameInMap("UserData")
         public String userData;
+
+        @NameInMap("VisionDescription")
+        public String visionDescription;
 
         public static SearchMediaResponseBodyMediaInfoListMediaBasicInfo build(java.util.Map<String, ?> map) throws Exception {
             SearchMediaResponseBodyMediaInfoListMediaBasicInfo self = new SearchMediaResponseBodyMediaInfoListMediaBasicInfo();
@@ -1379,6 +1396,14 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.modifiedTime;
         }
 
+        public SearchMediaResponseBodyMediaInfoListMediaBasicInfo setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
         public SearchMediaResponseBodyMediaInfoListMediaBasicInfo setReferenceId(String referenceId) {
             this.referenceId = referenceId;
             return this;
@@ -1449,6 +1474,14 @@ public class SearchMediaResponseBody extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public SearchMediaResponseBodyMediaInfoListMediaBasicInfo setVisionDescription(String visionDescription) {
+            this.visionDescription = visionDescription;
+            return this;
+        }
+        public String getVisionDescription() {
+            return this.visionDescription;
         }
 
     }

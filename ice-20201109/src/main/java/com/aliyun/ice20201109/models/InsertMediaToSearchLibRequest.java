@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class InsertMediaToSearchLibRequest extends TeaModel {
+    @NameInMap("ImagesInput")
+    public String imagesInput;
+
     /**
      * <p>The URL of the video, audio, or image file that you want to import to the search library.</p>
      * <p>Note: Make sure that you specify a correct file name and the bucket in which the file resides is in the same region where this operation is called. Otherwise, the file cannot be found or the operation may fail.</p>
@@ -61,6 +64,14 @@ public class InsertMediaToSearchLibRequest extends TeaModel {
     public static InsertMediaToSearchLibRequest build(java.util.Map<String, ?> map) throws Exception {
         InsertMediaToSearchLibRequest self = new InsertMediaToSearchLibRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InsertMediaToSearchLibRequest setImagesInput(String imagesInput) {
+        this.imagesInput = imagesInput;
+        return this;
+    }
+    public String getImagesInput() {
+        return this.imagesInput;
     }
 
     public InsertMediaToSearchLibRequest setInput(String input) {

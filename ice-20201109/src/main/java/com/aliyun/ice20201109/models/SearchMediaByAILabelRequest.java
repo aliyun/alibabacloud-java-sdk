@@ -45,6 +45,9 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     @NameInMap("MultimodalSearchType")
     public String multimodalSearchType;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -139,6 +142,14 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     }
     public String getMultimodalSearchType() {
         return this.multimodalSearchType;
+    }
+
+    public SearchMediaByAILabelRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public SearchMediaByAILabelRequest setPageNo(Integer pageNo) {

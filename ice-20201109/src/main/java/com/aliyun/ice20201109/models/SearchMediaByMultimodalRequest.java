@@ -18,6 +18,9 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The page number. Default value: 1.</p>
      * 
@@ -62,6 +65,14 @@ public class SearchMediaByMultimodalRequest extends TeaModel {
     }
     public String getMediaType() {
         return this.mediaType;
+    }
+
+    public SearchMediaByMultimodalRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public SearchMediaByMultimodalRequest setPageNo(Integer pageNo) {

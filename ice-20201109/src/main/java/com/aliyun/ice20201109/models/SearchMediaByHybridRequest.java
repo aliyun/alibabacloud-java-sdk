@@ -20,6 +20,9 @@ public class SearchMediaByHybridRequest extends TeaModel {
     @NameInMap("MediaType")
     public String mediaType;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -63,6 +66,14 @@ public class SearchMediaByHybridRequest extends TeaModel {
     }
     public String getMediaType() {
         return this.mediaType;
+    }
+
+    public SearchMediaByHybridRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public SearchMediaByHybridRequest setPageNo(Integer pageNo) {
