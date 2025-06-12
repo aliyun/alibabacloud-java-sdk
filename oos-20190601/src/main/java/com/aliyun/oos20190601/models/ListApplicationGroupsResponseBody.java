@@ -131,6 +131,12 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("ErrorDetail")
+        public String errorDetail;
+
+        @NameInMap("ErrorType")
+        public String errorType;
+
         /**
          * <p>The tag key.</p>
          * 
@@ -236,6 +242,22 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setErrorDetail(String errorDetail) {
+            this.errorDetail = errorDetail;
+            return this;
+        }
+        public String getErrorDetail() {
+            return this.errorDetail;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setErrorType(String errorType) {
+            this.errorType = errorType;
+            return this;
+        }
+        public String getErrorType() {
+            return this.errorType;
         }
 
         public ListApplicationGroupsResponseBodyApplicationGroups setImportTagKey(String importTagKey) {
