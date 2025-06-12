@@ -6,24 +6,36 @@ import com.aliyun.tea.*;
 public class BindMFADeviceRequest extends TeaModel {
     /**
      * <p>The first authentication code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11****</p>
      */
     @NameInMap("AuthenticationCode1")
     public String authenticationCode1;
 
     /**
      * <p>The second authentication code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>33****</p>
      */
     @NameInMap("AuthenticationCode2")
     public String authenticationCode2;
 
     /**
      * <p>The serial number of the MFA device.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::123456789012****:mfa/device002</p>
      */
     @NameInMap("SerialNumber")
     public String serialNumber;
 
     /**
      * <p>The name of the RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangq****</p>
      */
     @NameInMap("UserName")
     public String userName;

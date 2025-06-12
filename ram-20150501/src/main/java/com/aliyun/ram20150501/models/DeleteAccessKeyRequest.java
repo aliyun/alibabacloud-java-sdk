@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DeleteAccessKeyRequest extends TeaModel {
     /**
-     * <p>The AccessKey ID in the AccessKey pair that you want to delete.</p>
+     * <p>The AccessKey ID in the AccessKey pair that you want to delete.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0wNEpMMlzy7s****</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
     /**
      * <p>The name of the RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangq****</p>
      */
     @NameInMap("UserName")
     public String userName;

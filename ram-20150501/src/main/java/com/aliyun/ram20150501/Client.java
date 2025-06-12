@@ -27,8 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a RAM user to a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a Resource Access Management (RAM) user to a RAM user group.</p>
+     * 
      * @param request AddUserToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddUserToGroupResponse
@@ -62,8 +63,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Adds a RAM user to a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Adds a Resource Access Management (RAM) user to a RAM user group.</p>
+     * 
      * @param request AddUserToGroupRequest
      * @return AddUserToGroupResponse
      */
@@ -73,8 +75,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a policy to a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a policy to a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request AttachPolicyToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachPolicyToGroupResponse
@@ -112,8 +115,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a policy to a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a policy to a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request AttachPolicyToGroupRequest
      * @return AttachPolicyToGroupResponse
      */
@@ -123,8 +127,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a policy to a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a policy to a Resource Access Management (RAM) role.</p>
+     * 
      * @param request AttachPolicyToRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachPolicyToRoleResponse
@@ -162,8 +167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a policy to a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a policy to a Resource Access Management (RAM) role.</p>
+     * 
      * @param request AttachPolicyToRoleRequest
      * @return AttachPolicyToRoleResponse
      */
@@ -173,8 +179,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a policy to a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a policy to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request AttachPolicyToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AttachPolicyToUserResponse
@@ -212,8 +219,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Attaches a policy to a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Attaches a policy to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request AttachPolicyToUserRequest
      * @return AttachPolicyToUserResponse
      */
@@ -223,6 +231,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request BindMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindMFADeviceResponse
@@ -264,6 +275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Binds a multi-factor authentication (MFA) device to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request BindMFADeviceRequest
      * @return BindMFADeviceResponse
      */
@@ -273,8 +287,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](https://help.aliyun.com/document_detail/43765.html) is set to `True`. The value True indicates that RAM users can change their passwords.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request ChangePasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangePasswordResponse
@@ -308,8 +328,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](https://help.aliyun.com/document_detail/43765.html) is set to `True`. The value True indicates that RAM users can change their passwords.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the password that is used to log on to the console for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request ChangePasswordRequest
      * @return ChangePasswordResponse
      */
@@ -319,6 +345,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes the alias of an Alibaba Cloud account.</p>
+     * 
      * @param request ClearAccountAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ClearAccountAliasResponse
@@ -340,6 +369,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes the alias of an Alibaba Cloud account.</p>
      * @return ClearAccountAliasResponse
      */
     public ClearAccountAliasResponse clearAccountAlias() throws Exception {
@@ -348,6 +379,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an AccessKey pair for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request CreateAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAccessKeyResponse
@@ -377,6 +411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an AccessKey pair for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request CreateAccessKeyRequest
      * @return CreateAccessKeyResponse
      */
@@ -386,8 +423,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a RAM user group.</p>
+     * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateGroupResponse
@@ -421,8 +459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Creates a RAM user group.</p>
+     * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
      */
@@ -432,8 +471,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables console logon for a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Enables console logon for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request CreateLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLoginProfileResponse
@@ -475,8 +515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Enables console logon for a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Enables console logon for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request CreateLoginProfileRequest
      * @return CreateLoginProfileResponse
      */
@@ -486,17 +527,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom policy.
-     *
-     * @description For more information about policies, see [Policy overview](https://help.aliyun.com/document_detail/93732.html).
-     * This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.
-     *
-     * @param request CreatePolicyRequest
+     * <b>description</b> :
+     * <p>For more information about policies, see <a href="https://help.aliyun.com/document_detail/93732.html">Policy overview</a>.
+     * This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom policy.</p>
+     * 
+     * @param tmpReq CreatePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePolicyResponse
      */
-    public CreatePolicyResponse createPolicyWithOptions(CreatePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreatePolicyResponse createPolicyWithOptions(CreatePolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePolicyShrinkRequest request = new CreatePolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
@@ -508,6 +557,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
             query.put("PolicyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -528,11 +581,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a custom policy.
-     *
-     * @description For more information about policies, see [Policy overview](https://help.aliyun.com/document_detail/93732.html).
-     * This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.
-     *
+     * <b>description</b> :
+     * <p>For more information about policies, see <a href="https://help.aliyun.com/document_detail/93732.html">Policy overview</a>.
+     * This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a custom policy.</p>
+     * 
      * @param request CreatePolicyRequest
      * @return CreatePolicyResponse
      */
@@ -542,6 +597,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a version for a policy.</p>
+     * 
      * @param request CreatePolicyVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreatePolicyVersionResponse
@@ -583,6 +641,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a version for a policy.</p>
+     * 
      * @param request CreatePolicyVersionRequest
      * @return CreatePolicyVersionResponse
      */
@@ -592,17 +653,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a RAM role.
-     *
-     * @description ## Description
-     * For more information about RAM roles, see [Overview of RAM roles](https://help.aliyun.com/document_detail/93689.html).
-     *
-     * @param request CreateRoleRequest
+     * <b>description</b> :
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Resource Access Management (RAM) role.</p>
+     * 
+     * @param tmpReq CreateRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateRoleResponse
      */
-    public CreateRoleResponse createRoleWithOptions(CreateRoleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateRoleResponse createRoleWithOptions(CreateRoleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateRoleShrinkRequest request = new CreateRoleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.assumeRolePolicyDocument)) {
             query.put("AssumeRolePolicyDocument", request.assumeRolePolicyDocument);
@@ -618,6 +687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.roleName)) {
             query.put("RoleName", request.roleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -638,11 +711,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a RAM role.
-     *
-     * @description ## Description
-     * For more information about RAM roles, see [Overview of RAM roles](https://help.aliyun.com/document_detail/93689.html).
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Resource Access Management (RAM) role.</p>
+     * 
      * @param request CreateRoleRequest
      * @return CreateRoleResponse
      */
@@ -652,10 +727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Resource Access Management (RAM) user.
-     *
-     * @description This topic provides an example on how to create a RAM user named `alice`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Resource Access Management (RAM) user.</p>
+     * 
      * @param request CreateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateUserResponse
@@ -701,10 +778,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Creates a Resource Access Management (RAM) user.
-     *
-     * @description This topic provides an example on how to create a RAM user named `alice`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to create a RAM user named <code>alice</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a Resource Access Management (RAM) user.</p>
+     * 
      * @param request CreateUserRequest
      * @return CreateUserResponse
      */
@@ -714,6 +793,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a multi-factor authentication (MFA) device.</p>
+     * 
      * @param request CreateVirtualMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateVirtualMFADeviceResponse
@@ -743,6 +825,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a multi-factor authentication (MFA) device.</p>
+     * 
      * @param request CreateVirtualMFADeviceRequest
      * @return CreateVirtualMFADeviceResponse
      */
@@ -752,8 +837,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Decodes the diagnostic information in the response that contains an access denied error. The error is caused by no RAM permissions.
-     *
+     * <b>summary</b> : 
+     * <p>Decodes the diagnostic information in the response that contains an access denied error. The error is caused by no RAM permissions.</p>
+     * 
      * @param request DecodeDiagnosticMessageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DecodeDiagnosticMessageResponse
@@ -783,8 +869,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Decodes the diagnostic information in the response that contains an access denied error. The error is caused by no RAM permissions.
-     *
+     * <b>summary</b> : 
+     * <p>Decodes the diagnostic information in the response that contains an access denied error. The error is caused by no RAM permissions.</p>
+     * 
      * @param request DecodeDiagnosticMessageRequest
      * @return DecodeDiagnosticMessageResponse
      */
@@ -794,6 +881,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an AccessKey pair of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DeleteAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteAccessKeyResponse
@@ -827,6 +917,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an AccessKey pair of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DeleteAccessKeyRequest
      * @return DeleteAccessKeyResponse
      */
@@ -836,8 +929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
-     *
+     * <b>description</b> :
+     * <p>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request DeleteGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteGroupResponse
@@ -867,8 +964,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
-     *
+     * <b>description</b> :
+     * <p>Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
      */
@@ -878,6 +979,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables console logon for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DeleteLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteLoginProfileResponse
@@ -907,6 +1011,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Disables console logon for a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DeleteLoginProfileRequest
      * @return DeleteLoginProfileResponse
      */
@@ -916,6 +1023,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a policy.</p>
+     * 
      * @param request DeletePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePolicyResponse
@@ -923,6 +1033,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePolicyResponse deletePolicyWithOptions(DeletePolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cascadingDelete)) {
+            query.put("CascadingDelete", request.cascadingDelete);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
             query.put("PolicyName", request.policyName);
         }
@@ -945,6 +1059,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a policy.</p>
+     * 
      * @param request DeletePolicyRequest
      * @return DeletePolicyResponse
      */
@@ -954,6 +1071,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a policy version.</p>
+     * 
      * @param request DeletePolicyVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeletePolicyVersionResponse
@@ -987,6 +1107,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a policy version.</p>
+     * 
      * @param request DeletePolicyVersionRequest
      * @return DeletePolicyVersionResponse
      */
@@ -996,6 +1119,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) role.</p>
+     * 
      * @param request DeleteRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteRoleResponse
@@ -1025,6 +1151,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) role.</p>
+     * 
      * @param request DeleteRoleRequest
      * @return DeleteRoleResponse
      */
@@ -1034,8 +1163,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.
-     *
+     * <b>description</b> :
+     * <p>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DeleteUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteUserResponse
@@ -1065,8 +1198,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.
-     *
+     * <b>description</b> :
+     * <p>Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DeleteUserRequest
      * @return DeleteUserResponse
      */
@@ -1076,6 +1213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a multi-factor authentication (MFA) device.</p>
+     * 
      * @param request DeleteVirtualMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteVirtualMFADeviceResponse
@@ -1105,6 +1245,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a multi-factor authentication (MFA) device.</p>
+     * 
      * @param request DeleteVirtualMFADeviceRequest
      * @return DeleteVirtualMFADeviceResponse
      */
@@ -1114,8 +1257,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches a policy from a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches a policy from a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request DetachPolicyFromGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachPolicyFromGroupResponse
@@ -1153,8 +1297,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches a policy from a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches a policy from a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request DetachPolicyFromGroupRequest
      * @return DetachPolicyFromGroupResponse
      */
@@ -1164,8 +1309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches a policy from a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches a policy from a Resource Access Management (RAM) role.</p>
+     * 
      * @param request DetachPolicyFromRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachPolicyFromRoleResponse
@@ -1203,8 +1349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches a policy from a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches a policy from a Resource Access Management (RAM) role.</p>
+     * 
      * @param request DetachPolicyFromRoleRequest
      * @return DetachPolicyFromRoleResponse
      */
@@ -1214,8 +1361,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches a policy from a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches a policy from a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DetachPolicyFromUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DetachPolicyFromUserResponse
@@ -1253,8 +1401,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Detaches a policy from a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Detaches a policy from a Resource Access Management (RAM) user.</p>
+     * 
      * @param request DetachPolicyFromUserRequest
      * @return DetachPolicyFromUserResponse
      */
@@ -1306,6 +1455,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the alias of an Alibaba Cloud account.</p>
+     * 
      * @param request GetAccountAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAccountAliasResponse
@@ -1327,6 +1479,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the alias of an Alibaba Cloud account.</p>
      * @return GetAccountAliasResponse
      */
     public GetAccountAliasResponse getAccountAlias() throws Exception {
@@ -1335,8 +1489,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request GetGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetGroupResponse
@@ -1366,8 +1521,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request GetGroupRequest
      * @return GetGroupResponse
      */
@@ -1377,6 +1533,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the logon configurations of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request GetLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLoginProfileResponse
@@ -1406,6 +1565,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the logon configurations of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request GetLoginProfileRequest
      * @return GetLoginProfileResponse
      */
@@ -1415,6 +1577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the password policy of Resource Access Management (RAM) users, including the password strength.</p>
+     * 
      * @param request GetPasswordPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPasswordPolicyResponse
@@ -1436,6 +1601,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the password policy of Resource Access Management (RAM) users, including the password strength.</p>
      * @return GetPasswordPolicyResponse
      */
     public GetPasswordPolicyResponse getPasswordPolicy() throws Exception {
@@ -1444,8 +1611,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a policy.</p>
+     * 
      * @param request GetPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPolicyResponse
@@ -1479,8 +1647,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a policy.</p>
+     * 
      * @param request GetPolicyRequest
      * @return GetPolicyResponse
      */
@@ -1490,8 +1659,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a policy version.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a policy version.</p>
+     * 
      * @param request GetPolicyVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetPolicyVersionResponse
@@ -1529,8 +1699,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information of a policy version.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about a policy version.</p>
+     * 
      * @param request GetPolicyVersionRequest
      * @return GetPolicyVersionResponse
      */
@@ -1540,8 +1711,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information of a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a Resource Access Management (RAM) role.</p>
+     * 
      * @param request GetRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetRoleResponse
@@ -1571,8 +1743,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries information of a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Queries information about a Resource Access Management (RAM) role.</p>
+     * 
      * @param request GetRoleRequest
      * @return GetRoleResponse
      */
@@ -1582,6 +1755,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the security preferences.</p>
+     * 
      * @param request GetSecurityPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSecurityPreferenceResponse
@@ -1603,6 +1779,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the security preferences.</p>
      * @return GetSecurityPreferenceResponse
      */
     public GetSecurityPreferenceResponse getSecurityPreference() throws Exception {
@@ -1611,10 +1789,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a RAM user.
-     *
-     * @description This topic provides an example on how to query the information about the RAM user `alice`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query information about the RAM user <code>alice</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about a Resource Access Management (RAM) user.</p>
+     * 
      * @param request GetUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserResponse
@@ -1644,10 +1824,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about a RAM user.
-     *
-     * @description This topic provides an example on how to query the information about the RAM user `alice`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to query information about the RAM user <code>alice</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about a Resource Access Management (RAM) user.</p>
+     * 
      * @param request GetUserRequest
      * @return GetUserResponse
      */
@@ -1657,6 +1839,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request GetUserMFAInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetUserMFAInfoResponse
@@ -1686,6 +1871,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the multi-factor authentication (MFA) device that is bound to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request GetUserMFAInfoRequest
      * @return GetUserMFAInfoResponse
      */
@@ -1695,8 +1883,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of all AccessKey pairs that belong to a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all AccessKey pairs that belong to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request ListAccessKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAccessKeysResponse
@@ -1726,8 +1915,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of all AccessKey pairs that belong to a RAM user.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all AccessKey pairs that belong to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request ListAccessKeysRequest
      * @return ListAccessKeysResponse
      */
@@ -1737,8 +1927,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the entities to which a policy is attached.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the entities to which a policy is attached.</p>
+     * 
      * @param request ListEntitiesForPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListEntitiesForPolicyResponse
@@ -1772,8 +1963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the entities to which a policy is attached.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the entities to which a policy is attached.</p>
+     * 
      * @param request ListEntitiesForPolicyRequest
      * @return ListEntitiesForPolicyResponse
      */
@@ -1783,8 +1975,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries RAM user groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Resource Access Management (RAM) user groups.</p>
+     * 
      * @param request ListGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGroupsResponse
@@ -1818,8 +2011,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries RAM user groups.
-     *
+     * <b>summary</b> : 
+     * <p>Queries Resource Access Management (RAM) user groups.</p>
+     * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
      */
@@ -1829,10 +2023,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Resource Access Management (RAM) user groups to which a RAM user belongs.
-     *
-     * @description This topic provides an example on how to query the RAM user groups to which the RAM user `Alice` belongs. The response shows that `Alice` belongs to the RAM user group named `Dev-Team`.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>This topic provides an example on how to query the RAM user groups to which the RAM user <code>Alice</code> belongs. The response shows that <code>Alice</code> belongs to the RAM user group named <code>Dev-Team</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Resource Access Management (RAM) user groups to which a RAM user belongs.</p>
+     * 
      * @param request ListGroupsForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListGroupsForUserResponse
@@ -1862,10 +2059,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the Resource Access Management (RAM) user groups to which a RAM user belongs.
-     *
-     * @description This topic provides an example on how to query the RAM user groups to which the RAM user `Alice` belongs. The response shows that `Alice` belongs to the RAM user group named `Dev-Team`.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>This topic provides an example on how to query the RAM user groups to which the RAM user <code>Alice</code> belongs. The response shows that <code>Alice</code> belongs to the RAM user group named <code>Dev-Team</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Resource Access Management (RAM) user groups to which a RAM user belongs.</p>
+     * 
      * @param request ListGroupsForUserRequest
      * @return ListGroupsForUserResponse
      */
@@ -1875,14 +2075,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of policies.
-     *
-     * @param request ListPoliciesRequest
+     * <b>summary</b> : 
+     * <p>Queries a list of policies.</p>
+     * 
+     * @param tmpReq ListPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPoliciesResponse
      */
-    public ListPoliciesResponse listPoliciesWithOptions(ListPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListPoliciesResponse listPoliciesWithOptions(ListPoliciesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPoliciesShrinkRequest request = new ListPoliciesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
             query.put("Marker", request.marker);
@@ -1894,6 +2101,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
             query.put("PolicyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1914,8 +2125,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries a list of policies.
-     *
+     * <b>summary</b> : 
+     * <p>Queries a list of policies.</p>
+     * 
      * @param request ListPoliciesRequest
      * @return ListPoliciesResponse
      */
@@ -1925,8 +2137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the policies that are attached to a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the policies that are attached to a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request ListPoliciesForGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPoliciesForGroupResponse
@@ -1956,8 +2169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the policies that are attached to a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the policies that are attached to a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request ListPoliciesForGroupRequest
      * @return ListPoliciesForGroupResponse
      */
@@ -1967,8 +2181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the policies that are attached to a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the policies that are attached to a Resource Access Management (RAM) role.</p>
+     * 
      * @param request ListPoliciesForRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPoliciesForRoleResponse
@@ -1998,8 +2213,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the policies that are attached to a RAM role.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the policies that are attached to a Resource Access Management (RAM) role.</p>
+     * 
      * @param request ListPoliciesForRoleRequest
      * @return ListPoliciesForRoleResponse
      */
@@ -2009,10 +2225,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the policies that are attached to a RAM user.
-     *
-     * @description > You can call this operation to query only the policies that are attached to Alibaba Cloud accounts. You cannot query the policies that are attached to resource groups.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to query only the policies that are attached to Alibaba Cloud accounts. You cannot query the policies that are attached to resource groups.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the policies that are attached to a RAM user.</p>
+     * 
      * @param request ListPoliciesForUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPoliciesForUserResponse
@@ -2042,10 +2262,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the policies that are attached to a RAM user.
-     *
-     * @description > You can call this operation to query only the policies that are attached to Alibaba Cloud accounts. You cannot query the policies that are attached to resource groups.
-     *
+     * <b>description</b> :
+     * <blockquote>
+     * <p>You can call this operation to query only the policies that are attached to Alibaba Cloud accounts. You cannot query the policies that are attached to resource groups.</p>
+     * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the policies that are attached to a RAM user.</p>
+     * 
      * @param request ListPoliciesForUserRequest
      * @return ListPoliciesForUserResponse
      */
@@ -2055,8 +2279,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the versions of a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the versions of a policy.</p>
+     * 
      * @param request ListPolicyVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListPolicyVersionsResponse
@@ -2090,8 +2315,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the versions of a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the versions of a policy.</p>
+     * 
      * @param request ListPolicyVersionsRequest
      * @return ListPolicyVersionsResponse
      */
@@ -2101,14 +2327,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of all RAM roles.
-     *
-     * @param request ListRolesRequest
+     * <b>summary</b> : 
+     * <p>Queries all Resource Access Management (RAM) roles.</p>
+     * 
+     * @param tmpReq ListRolesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListRolesResponse
      */
-    public ListRolesResponse listRolesWithOptions(ListRolesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListRolesResponse listRolesWithOptions(ListRolesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListRolesShrinkRequest request = new ListRolesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.marker)) {
             query.put("Marker", request.marker);
@@ -2116,6 +2349,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxItems)) {
             query.put("MaxItems", request.maxItems);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2136,8 +2373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of all RAM roles.
-     *
+     * <b>summary</b> : 
+     * <p>Queries all Resource Access Management (RAM) roles.</p>
+     * 
      * @param request ListRolesRequest
      * @return ListRolesResponse
      */
@@ -2147,8 +2385,79 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all RAM users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to resources.</p>
+     * 
+     * @param tmpReq ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTagResourcesShrinkRequest request = new ListTagResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceNames)) {
+            request.resourceNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceNames, "ResourceNames", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceNamesShrink)) {
+            query.put("ResourceNames", request.resourceNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagResources"),
+            new TeaPair("version", "2015-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the tags that are added to resources.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the information about all RAM users.</p>
+     * 
      * @param request ListUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUsersResponse
@@ -2182,8 +2491,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the information about all RAM users.
-     *
+     * <b>summary</b> : 
+     * <p>Queries the information about all RAM users.</p>
+     * 
      * @param request ListUsersRequest
      * @return ListUsersResponse
      */
@@ -2193,6 +2503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries Resource Access Management (RAM) users in a RAM user group.</p>
+     * 
      * @param request ListUsersForGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListUsersForGroupResponse
@@ -2230,6 +2543,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries Resource Access Management (RAM) users in a RAM user group.</p>
+     * 
      * @param request ListUsersForGroupRequest
      * @return ListUsersForGroupResponse
      */
@@ -2239,8 +2555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of all multi-factor authentication (MFA) devices.
-     *
+     * <b>summary</b> : 
+     * <p>Queries multi-factor authentication (MFA) devices.</p>
+     * 
      * @param request ListVirtualMFADevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListVirtualMFADevicesResponse
@@ -2262,8 +2579,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Queries the list of all multi-factor authentication (MFA) devices.
-     *
+     * <b>summary</b> : 
+     * <p>Queries multi-factor authentication (MFA) devices.</p>
      * @return ListVirtualMFADevicesResponse
      */
     public ListVirtualMFADevicesResponse listVirtualMFADevices() throws Exception {
@@ -2272,6 +2589,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Removes a Resource Access Management (RAM) user from a RAM user group.</p>
+     * 
      * @param request RemoveUserFromGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RemoveUserFromGroupResponse
@@ -2305,6 +2625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Removes a Resource Access Management (RAM) user from a RAM user group.</p>
+     * 
      * @param request RemoveUserFromGroupRequest
      * @return RemoveUserFromGroupResponse
      */
@@ -2314,8 +2637,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to specify an alias for an Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Configures an alias for an Alibaba Cloud account.</p>
+     * 
      * @param request SetAccountAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetAccountAliasResponse
@@ -2345,8 +2669,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary You can call this operation to specify an alias for an Alibaba Cloud account.
-     *
+     * <b>summary</b> : 
+     * <p>Configures an alias for an Alibaba Cloud account.</p>
+     * 
      * @param request SetAccountAliasRequest
      * @return SetAccountAliasResponse
      */
@@ -2356,8 +2681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sets the default version of a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Specifies a version for a policy as the default version.</p>
+     * 
      * @param request SetDefaultPolicyVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetDefaultPolicyVersionResponse
@@ -2391,8 +2717,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Sets the default version of a policy.
-     *
+     * <b>summary</b> : 
+     * <p>Specifies a version for a policy as the default version.</p>
+     * 
      * @param request SetDefaultPolicyVersionRequest
      * @return SetDefaultPolicyVersionResponse
      */
@@ -2402,6 +2729,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Configures the password policy for Resource Access Management (RAM) users, including the password strength.</p>
+     * 
      * @param request SetPasswordPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetPasswordPolicyResponse
@@ -2463,6 +2793,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Configures the password policy for Resource Access Management (RAM) users, including the password strength.</p>
+     * 
      * @param request SetPasswordPolicyRequest
      * @return SetPasswordPolicyResponse
      */
@@ -2472,6 +2805,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Configures the security preferences.</p>
+     * 
      * @param request SetSecurityPreferenceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SetSecurityPreferenceResponse
@@ -2525,6 +2861,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Configures the security preferences.</p>
+     * 
      * @param request SetSecurityPreferenceRequest
      * @return SetSecurityPreferenceResponse
      */
@@ -2534,6 +2873,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
+     * @param tmpReq TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TagResourcesShrinkRequest request = new TagResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceNames)) {
+            request.resourceNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceNames, "ResourceNames", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceNamesShrink)) {
+            query.put("ResourceNames", request.resourceNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("Tag", request.tagShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResources"),
+            new TeaPair("version", "2015-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Adds tags to resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UnbindMFADeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnbindMFADeviceResponse
@@ -2563,6 +2967,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Unbinds a multi-factor authentication (MFA) device from a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UnbindMFADeviceRequest
      * @return UnbindMFADeviceResponse
      */
@@ -2572,6 +2979,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
+     * @param tmpReq UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UntagResourcesShrinkRequest request = new UntagResourcesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.resourceNames)) {
+            request.resourceNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.resourceNames, "ResourceNames", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tagKeys)) {
+            request.tagKeysShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tagKeys, "TagKeys", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceNamesShrink)) {
+            query.put("ResourceNames", request.resourceNamesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeysShrink)) {
+            query.put("TagKeys", request.tagKeysShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2015-05-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Changes the status of an AccessKey pair that belongs to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UpdateAccessKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateAccessKeyResponse
@@ -2609,6 +3085,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the status of an AccessKey pair that belongs to a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UpdateAccessKeyRequest
      * @return UpdateAccessKeyResponse
      */
@@ -2618,8 +3097,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request UpdateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGroupResponse
@@ -2657,8 +3137,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies a RAM user group.
-     *
+     * <b>summary</b> : 
+     * <p>Modifies a Resource Access Management (RAM) user group.</p>
+     * 
      * @param request UpdateGroupRequest
      * @return UpdateGroupResponse
      */
@@ -2668,6 +3149,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the logon configurations of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UpdateLoginProfileRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateLoginProfileResponse
@@ -2709,6 +3193,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the logon configurations of a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UpdateLoginProfileRequest
      * @return UpdateLoginProfileResponse
      */
@@ -2718,10 +3205,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a custom policy.
-     *
-     * @description You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a custom policy.</p>
+     * 
      * @param request UpdatePolicyDescriptionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdatePolicyDescriptionResponse
@@ -2755,10 +3245,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Modifies the description of a custom policy.
-     *
-     * @description You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.
-     *
+     * <b>description</b> :
+     * <h3><a href="#"></a></h3>
+     * <p>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the description of a custom policy.</p>
+     * 
      * @param request UpdatePolicyDescriptionRequest
      * @return UpdatePolicyDescriptionResponse
      */
@@ -2768,10 +3261,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the description of a RAM role.
-     *
-     * @description This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the description of <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies information about a Resource Access Management (RAM) role.</p>
+     * 
      * @param request UpdateRoleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateRoleResponse
@@ -2813,10 +3308,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary Changes the description of a RAM role.
-     *
-     * @description This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the description of <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies information about a Resource Access Management (RAM) role.</p>
+     * 
      * @param request UpdateRoleRequest
      * @return UpdateRoleResponse
      */
@@ -2826,8 +3323,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description This topic provides an example on how to change the name of a RAM user from `zhangq****` to `xiaoq****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the name of a RAM user from <code>zhangq****</code> to <code>xiaoq****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies information about a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UpdateUserRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateUserResponse
@@ -2877,8 +3378,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @description This topic provides an example on how to change the name of a RAM user from `zhangq****` to `xiaoq****`.
-     *
+     * <b>description</b> :
+     * <p>This topic provides an example on how to change the name of a RAM user from <code>zhangq****</code> to <code>xiaoq****</code>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies information about a Resource Access Management (RAM) user.</p>
+     * 
      * @param request UpdateUserRequest
      * @return UpdateUserResponse
      */

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetSecurityPreferenceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DC1213F1-A9D5-4A01-A996-44983689126C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,10 +42,14 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference extends TeaModel {
         /**
-         * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
-         * <br>
-         * <p>*   true: RAM users can manage their AccessKey pairs.</p>
-         * <p>*   false: RAM users cannot manage their AccessKey pairs.</p>
+         * <p>Indicates whether Resource Access Management (RAM) users can manage their AccessKey pairs. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowUserToManageAccessKeys")
         public Boolean allowUserToManageAccessKeys;
@@ -65,35 +72,49 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
-         * <br>
-         * <p>*   true: RAM users can change their passwords.</p>
-         * <p>*   false: RAM users cannot change their passwords.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
         /**
-         * <p>Indicates whether RAM users can save security codes for multi-factor authentication (MFA) during logon. Each security code is valid for seven days. Valid values:</p>
-         * <br>
-         * <p>*   true: RAM users can save MFA security codes during logon.</p>
-         * <p>*   false: RAM users cannot save MFA security codes during logon.</p>
+         * <p>Indicates whether RAM users can save security codes for MFA during logon. Each security code is valid for seven days. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("EnableSaveMFATicket")
         public Boolean enableSaveMFATicket;
 
         /**
          * <p>The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.</p>
-         * <br>
-         * <p>*   If a subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console only by using the IP addresses in the subnetwork.</p>
-         * <p>*   If no subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console by using all IP addresses.</p>
-         * <br>
-         * <p>If more than one subnet mask is specified, the masks are separated with semicolons (;), for example, 192.168.0.0/16;10.0.0.0/8.</p>
+         * <ul>
+         * <li>If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.</li>
+         * <li>If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.</li>
+         * </ul>
+         * <p>If you want to specify more than one subnet mask, separate the masks with semicolons (;). Example: 192.168.0.0/16;10.0.0.0/8.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.0.0.0/8</p>
          */
         @NameInMap("LoginNetworkMasks")
         public String loginNetworkMasks;
 
         /**
-         * <p>The validity period of a logon session of a RAM user. Unit: hours.</p>
+         * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         @NameInMap("LoginSessionDuration")
         public Integer loginSessionDuration;
@@ -140,9 +161,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
-         * <br>
-         * <p>*   true: RAM users can manage their MFA devices.</p>
-         * <p>*   false: RAM users cannot manage their MFA devices.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("AllowUserToManageMFADevices")
         public Boolean allowUserToManageMFADevices;
@@ -165,9 +190,13 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
     public static class GetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference extends TeaModel {
         /**
          * <p>Indicates whether RAM users can manage their public keys. Valid values:</p>
-         * <br>
-         * <p>*   true: RAM users can manage their public keys.</p>
-         * <p>*   false: RAM users cannot manage their public keys.</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("AllowUserToManagePublicKeys")
         public Boolean allowUserToManagePublicKeys;
@@ -195,21 +224,22 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public GetSecurityPreferenceResponseBodySecurityPreferenceAccessKeyPreference accessKeyPreference;
 
         /**
-         * <p>The logon preferences.</p>
+         * <p>The logon preference.</p>
          */
         @NameInMap("LoginProfilePreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference loginProfilePreference;
 
         /**
-         * <p>The MFA preference.</p>
+         * <p>The multi-factor authentication (MFA) preference.</p>
          */
         @NameInMap("MFAPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
         /**
          * <p>The public key preference.</p>
-         * <br>
-         * <p>>  The public key preference is valid only for the Japan site.</p>
+         * <blockquote>
+         * <p> This parameter is valid only for the Japan site.</p>
+         * </blockquote>
          */
         @NameInMap("PublicKeyPreference")
         public GetSecurityPreferenceResponseBodySecurityPreferencePublicKeyPreference publicKeyPreference;

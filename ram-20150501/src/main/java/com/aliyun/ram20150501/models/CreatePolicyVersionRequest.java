@@ -6,31 +6,42 @@ import com.aliyun.tea.*;
 public class CreatePolicyVersionRequest extends TeaModel {
     /**
      * <p>The document of the policy. The document can be up to 6,144 bytes in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;Statement&quot;:[{&quot;Action&quot;:[&quot;oss:<em>&quot;],&quot;Effect&quot;:&quot;Allow&quot;,&quot;Resource&quot;:[&quot;acs:oss:</em>:<em>:</em>&quot;]}],&quot;Version&quot;:&quot;1&quot;}</p>
      */
     @NameInMap("PolicyDocument")
     public String policyDocument;
 
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The rotation strategy of the policy. The rotation strategy can be used to delete an early policy version.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   `None`: disables the rotation strategy.</p>
-     * <p>*   `DeleteOldestNonDefaultVersionWhenLimitExceeded`: deletes the earliest non-active version if the number of versions exceeds the limit.</p>
-     * <br>
-     * <p>Default value: `None`.</p>
+     * <ul>
+     * <li><code>None</code>: disables the rotation strategy.</li>
+     * <li><code>DeleteOldestNonDefaultVersionWhenLimitExceeded</code>: deletes the earliest non-active version if the number of versions exceeds the limit.</li>
+     * </ul>
+     * <p>Default value: <code>None</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
      */
     @NameInMap("RotateStrategy")
     public String rotateStrategy;
 
     /**
-     * <p>Specifies whether to set this policy as the default policy. Default value: `false`.</p>
+     * <p>Specifies whether to set this policy as the default policy. Default value: <code>false</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("SetAsDefault")
     public Boolean setAsDefault;

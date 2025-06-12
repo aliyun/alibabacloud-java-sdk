@@ -12,6 +12,9 @@ public class CreateGroupResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D3F0679E-9757-95DB-AF2D-04D5188C69C5</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class CreateGroupResponseBody extends TeaModel {
     public static class CreateGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The ID of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-FpMEHiMysofp****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("GroupName")
         public String groupName;

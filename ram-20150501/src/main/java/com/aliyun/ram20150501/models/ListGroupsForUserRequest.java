@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserRequest extends TeaModel {
     /**
-     * <p>The username of the RAM user.</p>
+     * <p>The name of the RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice</p>
      */
     @NameInMap("UserName")
     public String userName;

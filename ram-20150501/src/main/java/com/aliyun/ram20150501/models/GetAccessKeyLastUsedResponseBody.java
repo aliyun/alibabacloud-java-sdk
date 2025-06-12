@@ -4,9 +4,18 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedResponseBody extends TeaModel {
+    /**
+     * <p>The details of the time when the AccessKey pair was used for the last time.</p>
+     */
     @NameInMap("AccessKeyLastUsed")
     public GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed accessKeyLastUsed;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5CCE804C-6450-49A7-B1DB-2460F7A97416</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +41,12 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
     }
 
     public static class GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed extends TeaModel {
+        /**
+         * <p>The time when the AccessKey pair was used for the last time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-21T06:37:40Z</p>
+         */
         @NameInMap("LastUsedDate")
         public String lastUsedDate;
 

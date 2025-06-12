@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnbindMFADeviceRequest extends TeaModel {
     /**
-     * <p>The name of the RAM user.</p>
+     * <p>Specifies the username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangq****</p>
      */
     @NameInMap("UserName")
     public String userName;

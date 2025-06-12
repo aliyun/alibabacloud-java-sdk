@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DeletePolicyVersionRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The ID of the policy version.</p>
+     * <p>The ID of the policy version that you want to delete.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v3</p>
      */
     @NameInMap("VersionId")
     public String versionId;

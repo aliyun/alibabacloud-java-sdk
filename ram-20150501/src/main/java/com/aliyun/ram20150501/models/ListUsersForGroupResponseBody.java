@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class ListUsersForGroupResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value of IsTruncated is `true`, you can call this operation again and set `marker` to obtain the truncated part.</p>
+     * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of the RAM users.</p>
+     * <p>The information about the RAM users.</p>
      */
     @NameInMap("Users")
     public ListUsersForGroupResponseBodyUsers users;
@@ -68,18 +77,27 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     public static class ListUsersForGroupResponseBodyUsersUser extends TeaModel {
         /**
          * <p>The display name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The time when the RAM user joined the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("JoinDate")
         public String joinDate;
 
         /**
          * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangqiang</p>
          */
         @NameInMap("UserName")
         public String userName;

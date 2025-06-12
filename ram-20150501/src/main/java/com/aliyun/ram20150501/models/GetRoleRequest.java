@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class GetRoleRequest extends TeaModel {
     /**
      * <p>The name of the RAM role.</p>
-     * <br>
      * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECSAdmin</p>
      */
     @NameInMap("RoleName")
     public String roleName;

@@ -4,9 +4,17 @@ package com.aliyun.ram20150501.models;
 import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+     */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

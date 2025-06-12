@@ -6,24 +6,33 @@ import com.aliyun.tea.*;
 public class ListRolesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value is `true`, you can call this operation again and set the `Marker` parameter to obtain the truncated part.</p>
+     * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The information of RAM roles.</p>
+     * <p>The information about the RAM roles.</p>
      */
     @NameInMap("Roles")
     public ListRolesResponseBodyRoles roles;
@@ -65,45 +74,133 @@ public class ListRolesResponseBody extends TeaModel {
         return this.roles;
     }
 
+    public static class ListRolesResponseBodyRolesRoleTagsTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>owner</p>
+         */
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
+         */
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static ListRolesResponseBodyRolesRoleTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            ListRolesResponseBodyRolesRoleTagsTag self = new ListRolesResponseBodyRolesRoleTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRolesResponseBodyRolesRoleTagsTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListRolesResponseBodyRolesRoleTagsTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class ListRolesResponseBodyRolesRoleTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<ListRolesResponseBodyRolesRoleTagsTag> tag;
+
+        public static ListRolesResponseBodyRolesRoleTags build(java.util.Map<String, ?> map) throws Exception {
+            ListRolesResponseBodyRolesRoleTags self = new ListRolesResponseBodyRolesRoleTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListRolesResponseBodyRolesRoleTags setTag(java.util.List<ListRolesResponseBodyRolesRoleTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListRolesResponseBodyRolesRoleTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class ListRolesResponseBodyRolesRole extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:role/ECSAdmin</p>
          */
         @NameInMap("Arn")
         public String arn;
 
         /**
-         * <p>The time when the RAM role was created.</p>
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The description of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS administrator</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The maximum session duration of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         @NameInMap("MaxSessionDuration")
         public Long maxSessionDuration;
 
         /**
          * <p>The ID of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>901234567890****</p>
          */
         @NameInMap("RoleId")
         public String roleId;
 
         /**
          * <p>The name of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECSAdmin</p>
          */
         @NameInMap("RoleName")
         public String roleName;
 
         /**
-         * <p>The time when the RAM role was modified.</p>
+         * <p>The tags.</p>
+         */
+        @NameInMap("Tags")
+        public ListRolesResponseBodyRolesRoleTags tags;
+
+        /**
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;
@@ -159,6 +256,14 @@ public class ListRolesResponseBody extends TeaModel {
         }
         public String getRoleName() {
             return this.roleName;
+        }
+
+        public ListRolesResponseBodyRolesRole setTags(ListRolesResponseBodyRolesRoleTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public ListRolesResponseBodyRolesRoleTags getTags() {
+            return this.tags;
         }
 
         public ListRolesResponseBodyRolesRole setUpdateDate(String updateDate) {

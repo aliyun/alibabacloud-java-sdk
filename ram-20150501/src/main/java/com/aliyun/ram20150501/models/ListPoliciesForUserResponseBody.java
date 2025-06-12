@@ -12,6 +12,9 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
     public static class ListPoliciesForUserResponseBodyPoliciesPolicy extends TeaModel {
         /**
          * <p>The time at which the policy is attached to the RAM user. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("AttachDate")
         public String attachDate;
 
         /**
          * <p>The current version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS administrator</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   System: system policy</p>
-         * <p>*   Custom: custom policy</p>
+         * <ul>
+         * <li>System: system policy</li>
+         * <li>Custom: custom policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;

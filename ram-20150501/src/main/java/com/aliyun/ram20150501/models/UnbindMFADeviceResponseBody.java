@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class UnbindMFADeviceResponseBody extends TeaModel {
     /**
-     * <p>The information of the MFA device.</p>
+     * <p>The information about the MFA device.</p>
      */
     @NameInMap("MFADevice")
     public UnbindMFADeviceResponseBodyMFADevice MFADevice;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
     public static class UnbindMFADeviceResponseBodyMFADevice extends TeaModel {
         /**
          * <p>The serial number of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:mfa/device002</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetGroupResponseBody extends TeaModel {
     /**
-     * <p>The information of the RAM user group.</p>
+     * <p>The information about the RAM user group.</p>
      */
     @NameInMap("Group")
     public GetGroupResponseBodyGroup group;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D4065824-E422-3ED6-68B1-1AF7D5C7804C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class GetGroupResponseBody extends TeaModel {
     public static class GetGroupResponseBodyGroup extends TeaModel {
         /**
          * <p>The description of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The time when the RAM user group was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The ID of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-FpMEHiMysofp****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The time when the information of the RAM user group was updated.</p>
+         * <p>The modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-02-11T03:15:21Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

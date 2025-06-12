@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteRoleRequest extends TeaModel {
     /**
      * <p>The name of the RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECSAdmin</p>
      */
     @NameInMap("RoleName")
     public String roleName;

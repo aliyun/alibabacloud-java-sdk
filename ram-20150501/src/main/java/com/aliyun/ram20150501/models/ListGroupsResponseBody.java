@@ -5,25 +5,41 @@ import com.aliyun.tea.*;
 
 public class ListGroupsResponseBody extends TeaModel {
     /**
-     * <p>The list of the RAM user groups.</p>
+     * <p>The information about the RAM user groups.</p>
      */
     @NameInMap("Groups")
     public ListGroupsResponseBodyGroups groups;
 
     /**
-     * <p>Indicates whether the response is truncated.</p>
+     * <p>Indicates whether the response is truncated. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If `true` is returned, you can call this operation again and set the `Marker` parameter to obtain the truncated part.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <blockquote>
+     * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>065527AA-2F2E-AD7C-7484-F2626CFE4934</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -67,31 +83,46 @@ public class ListGroupsResponseBody extends TeaModel {
 
     public static class ListGroupsResponseBodyGroupsGroup extends TeaModel {
         /**
-         * <p>The description of the RAM user group.</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
-         * <p>The time when the RAM user group was created.</p>
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The ID of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-FpMEHiMysofp****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The time when the information of the RAM user group was updated.</p>
+         * <p>The update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;

@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListVirtualMFADevicesResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The list of MFA devices.</p>
+     * <p>The information about the MFA devices.</p>
      */
     @NameInMap("VirtualMFADevices")
     public ListVirtualMFADevicesResponseBodyVirtualMFADevices virtualMFADevices;
@@ -40,18 +43,27 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser extends TeaModel {
         /**
          * <p>The display name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The unique ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122748924538****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -90,18 +102,24 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
     public static class ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADevice extends TeaModel {
         /**
          * <p>The time when the MFA device was enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-02-18T17:22:08Z</p>
          */
         @NameInMap("ActivateDate")
         public String activateDate;
 
         /**
          * <p>The serial number of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::123456789012****:mfa/device002</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         /**
-         * <p>The basic information of the RAM user to which the MFA device is attached.</p>
+         * <p>The basic information about the Resource Access Management (RAM) user to which the MFA device is bound.</p>
          */
         @NameInMap("User")
         public ListVirtualMFADevicesResponseBodyVirtualMFADevicesVirtualMFADeviceUser user;

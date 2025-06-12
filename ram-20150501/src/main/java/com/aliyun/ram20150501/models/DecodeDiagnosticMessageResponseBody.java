@@ -12,6 +12,9 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D2331703-AADF-5564-BA9B-26CD51A33BA0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,6 +43,9 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
     public static class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageAuthConditions extends TeaModel {
         /**
          * <p>The key of the condition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:SourceIp</p>
          */
         @NameInMap("ConditionKey")
         public String conditionKey;
@@ -76,28 +82,38 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
     public static class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageAuthPrincipal extends TeaModel {
         /**
          * <p>The identity.</p>
-         * <br>
-         * <p>*   If the operator is a RAM user, the ID of the user is displayed.</p>
-         * <p>*   If the operator is a RAM role, the name and session name of the role are displayed. Example: RoleName:RoleSessionName.</p>
-         * <p>*   If the operator is an SSO federated identity, the type and name of the identity provider (IdP) are displayed. Example: saml-provider/AzureAD.</p>
+         * <ul>
+         * <li>If the operator is a RAM user, the ID of the user is displayed.</li>
+         * <li>If the operator is a RAM role, the name and session name of the role are displayed. Example: RoleName:RoleSessionName.</li>
+         * <li>If the operator is an SSO federated identity, the type and name of the identity provider (IdP) are displayed. Example: saml-provider/AzureAD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>28877424437521****</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
         /**
          * <p>The ID of the Alibaba Cloud account to which the identity belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>196813200012****</p>
          */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
         /**
          * <p>The identity type that is used for authentication in the request.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   SubUser: RAM user</p>
-         * <p>*   AssumedRoleUser: RAM role</p>
-         * <p>*   Federated: SSO federated identity</p>
+         * <ul>
+         * <li>SubUser: RAM user</li>
+         * <li>AssumedRoleUser: RAM role</li>
+         * <li>Federated: SSO federated identity</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SubUser</p>
          */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
@@ -136,76 +152,95 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
     public static class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageMatchedPolicies extends TeaModel {
         /**
          * <p>The type of the entity to which the policy is attached.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   RamUser: RAM user</p>
-         * <p>*   RamRole: RAM role</p>
-         * <p>*   ResourceDirectoryTarget: entity in a resource directory</p>
-         * <p>*   RamGroup: RAM user group</p>
+         * <ul>
+         * <li>RamUser: RAM user</li>
+         * <li>RamRole: RAM role</li>
+         * <li>ResourceDirectoryTarget: entity in a resource directory</li>
+         * <li>RamGroup: RAM user group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RamUser</p>
          */
         @NameInMap("AttachedEntityType")
         public String attachedEntityType;
 
         /**
          * <p>The authorization scope of the policy.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Account: Alibaba Cloud account</p>
-         * <p>*   Folder: folder in the resource directory</p>
-         * <p>*   ResourceGroup: resource group</p>
+         * <ul>
+         * <li>Account: Alibaba Cloud account</li>
+         * <li>Folder: folder in the resource directory</li>
+         * <li>ResourceGroup: resource group</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Account</p>
          */
         @NameInMap("AttachedScope")
         public String attachedScope;
 
         /**
          * <p>The effect of the policy.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Deny</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   Allow</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Deny</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- -->
+         * </li>
+         * <li><p>Allow</p>
+         * <!-- -->
+         * 
+         * <!-- -->
+         * 
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Deny</p>
          */
         @NameInMap("Effect")
         public String effect;
 
         /**
          * <p>The identifier of the policy.</p>
-         * <br>
-         * <p>*   Control policy: the ID of the control policy</p>
-         * <p>*   RAM policy: the name of the policy</p>
+         * <ul>
+         * <li>Control policy: the ID of the control policy</li>
+         * <li>RAM policy: the name of the policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MyPolicyName</p>
          */
         @NameInMap("PolicyIdentifier")
         public String policyIdentifier;
 
         /**
          * <p>The type of the policy.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <p>*   Custom: custom policy</p>
-         * <p>*   System: system policy</p>
+         * <ul>
+         * <li>Custom: custom policy</li>
+         * <li>System: system policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;
 
         /**
          * <p>The version number of the policy.</p>
-         * <br>
-         * <p>> Only custom policies have version numbers.</p>
+         * <blockquote>
+         * <p>Only custom policies have version numbers.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("PolicyVersion")
         public String policyVersion;
@@ -268,6 +303,9 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
     public static class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessage extends TeaModel {
         /**
          * <p>The operation that is used for authentication in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram:DecodeDiagnosticMessage</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -286,30 +324,25 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
 
         /**
          * <p>The resource that is used for authentication in the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AuthResource")
         public String authResource;
 
         /**
          * <p>Indicates whether the access denied error is caused by an explicit deny.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   true</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   false</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         @NameInMap("ExplicitDeny")
         public Boolean explicitDeny;
@@ -322,14 +355,17 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
 
         /**
          * <p>The type of the policy that causes the access denied error.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   AssumeRolePolicy: role-specific trust policy</p>
-         * <p>*   ControlPolicy: control policy</p>
-         * <p>*   AccountLevelIdentityBasedPolicy: identity-based policy at the account level</p>
-         * <p>*   ResourceGroupLevelIdentityBasedPolicy: identity-based policy at the resource group level</p>
-         * <p>*   SessionPolicy: session policy</p>
+         * <ul>
+         * <li>AssumeRolePolicy: role-specific trust policy</li>
+         * <li>ControlPolicy: control policy</li>
+         * <li>AccountLevelIdentityBasedPolicy: identity-based policy at the account level</li>
+         * <li>ResourceGroupLevelIdentityBasedPolicy: identity-based policy at the resource group level</li>
+         * <li>SessionPolicy: session policy</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AccountLevelIdentityBasedPolicy</p>
          */
         @NameInMap("NoPermissionPolicyType")
         public String noPermissionPolicyType;

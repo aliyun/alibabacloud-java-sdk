@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListPolicyVersionsResponseBody extends TeaModel {
     /**
-     * <p>The list of the policy versions.</p>
+     * <p>The information about the policy versions.</p>
      */
     @NameInMap("PolicyVersions")
     public ListPolicyVersionsResponseBodyPolicyVersions policyVersions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
     public static class ListPolicyVersionsResponseBodyPolicyVersionsPolicyVersion extends TeaModel {
         /**
          * <p>The time when the version was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-02-26T01:25:52Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
-         * <p>Indicates whether the version is the default version.</p>
+         * <p>Indicates whether the policy version is the default version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsDefaultVersion")
         public Boolean isDefaultVersion;
 
         /**
-         * <p>The script of the policy.</p>
+         * <p>The document of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
          */
         @NameInMap("PolicyDocument")
         public String policyDocument;
 
         /**
-         * <p>The ID of the version.</p>
+         * <p>The ID of the policy version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v3</p>
          */
         @NameInMap("VersionId")
         public String versionId;

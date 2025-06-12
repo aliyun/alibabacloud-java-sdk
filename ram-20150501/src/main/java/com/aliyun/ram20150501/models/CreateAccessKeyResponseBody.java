@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateAccessKeyResponseBody extends TeaModel {
     /**
-     * <p>The information of the AccessKey pair.</p>
+     * <p>The information about the AccessKey pair.</p>
      */
     @NameInMap("AccessKey")
     public CreateAccessKeyResponseBodyAccessKey accessKey;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,24 +43,36 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     public static class CreateAccessKeyResponseBodyAccessKey extends TeaModel {
         /**
          * <p>The AccessKey ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0wNEpMMlzy7s****</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
 
         /**
          * <p>The AccessKey secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PupkTg8jdmau1cXxYacgE736PJ****</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
 
         /**
          * <p>The time when the AccessKey pair was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The status of the AccessKey pair. Valid values: Active and Inactive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;

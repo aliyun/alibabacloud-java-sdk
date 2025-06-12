@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListGroupsForUserResponseBody extends TeaModel {
     /**
-     * <p>The list of the RAM user groups.</p>
+     * <p>The information about the RAM user groups.</p>
      */
     @NameInMap("Groups")
     public ListGroupsForUserResponseBodyGroups groups;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DA772B52-BF9F-54CA-AC77-AA7A2DA89D46</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -39,25 +42,37 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
     public static class ListGroupsForUserResponseBodyGroupsGroup extends TeaModel {
         /**
-         * <p>The description of the RAM user group.</p>
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The ID of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>g-zYtroLrgbZR1****</p>
          */
         @NameInMap("GroupId")
         public String groupId;
 
         /**
          * <p>The name of the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dev-Team</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The time when the RAM user joined the RAM user group.</p>
+         * <p>The time when the RAM user was added to the RAM user group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("JoinDate")
         public String joinDate;

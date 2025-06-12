@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class ListUsersResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the response is truncated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsTruncated")
     public Boolean isTruncated;
 
     /**
-     * <p>The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set `Marker` to obtain the truncated part.``</p>
+     * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set <code>Marker</code> to obtain the truncated part.``</p>
+     * 
+     * <strong>example:</strong>
+     * <p>EXAMPLE</p>
      */
     @NameInMap("Marker")
     public String marker;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -68,52 +77,78 @@ public class ListUsersResponseBody extends TeaModel {
     public static class ListUsersResponseBodyUsersUser extends TeaModel {
         /**
          * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cloud computing engineer</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The time when the RAM user was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The display name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhangq****</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the RAM user.</p>
-         * <br>
-         * <p>> This parameter is unavailable.</p>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****@example.com</p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The mobile phone number of the RAM user.</p>
-         * <br>
-         * <p>> This parameter is unavailable.</p>
+         * <blockquote>
+         * <p>This parameter is unavailable.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86-1860000****</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
         /**
          * <p>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("UpdateDate")
         public String updateDate;
 
         /**
          * <p>The ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122748924538****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
          * <p>The logon name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         @NameInMap("UserName")
         public String userName;

@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateUserResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,46 +43,69 @@ public class CreateUserResponseBody extends TeaModel {
     public static class CreateUserResponseBodyUser extends TeaModel {
         /**
          * <p>The description of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This is a cloud computing engineer.</p>
          */
         @NameInMap("Comments")
         public String comments;
 
         /**
          * <p>The point in time when the RAM user was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The display name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
          * <p>The email address of the RAM user.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
          */
         @NameInMap("Email")
         public String email;
 
         /**
          * <p>The mobile phone number of the RAM user.</p>
-         * <br>
-         * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+         * <blockquote>
+         * <p> This parameter applies only to the China site (aliyun.com).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>86-1868888****</p>
          */
         @NameInMap("MobilePhone")
         public String mobilePhone;
 
         /**
          * <p>The ID of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>122748924538****</p>
          */
         @NameInMap("UserId")
         public String userId;
 
         /**
-         * <p>The username of the RAM user.</p>
+         * <p>The name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alice</p>
          */
         @NameInMap("UserName")
         public String userName;

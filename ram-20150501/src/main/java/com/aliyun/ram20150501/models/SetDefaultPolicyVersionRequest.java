@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class SetDefaultPolicyVersionRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
      * <p>The ID of the policy version that you want to set as the default version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>v2</p>
      */
     @NameInMap("VersionId")
     public String versionId;

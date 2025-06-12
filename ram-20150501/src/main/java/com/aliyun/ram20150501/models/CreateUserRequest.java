@@ -6,42 +6,55 @@ import com.aliyun.tea.*;
 public class CreateUserRequest extends TeaModel {
     /**
      * <p>The description of the RAM user.</p>
-     * <br>
      * <p>The description must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a cloud computing engineer.</p>
      */
     @NameInMap("Comments")
     public String comments;
 
     /**
      * <p>The display name of the RAM user.</p>
-     * <br>
-     * <p>The display name must be 1 to 128 characters in length.</p>
+     * <p>The name must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
      */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
      * <p>The email address of the RAM user.</p>
-     * <br>
-     * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="mailto:alice@example.com">alice@example.com</a></p>
      */
     @NameInMap("Email")
     public String email;
 
     /**
      * <p>The mobile phone number of the RAM user.</p>
-     * <br>
-     * <p>Format: Country code-Mobile phone number.</p>
-     * <br>
-     * <p>>  This parameter applies only to the China site (aliyun.com).</p>
+     * <p>Format: \<Country code>-\<Mobile phone number>.</p>
+     * <blockquote>
+     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>86-1868888****</p>
      */
     @NameInMap("MobilePhone")
     public String mobilePhone;
 
     /**
-     * <p>The username of the RAM user.</p>
-     * <br>
-     * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     * <p>The name of the RAM user.</p>
+     * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
      */
     @NameInMap("UserName")
     public String userName;

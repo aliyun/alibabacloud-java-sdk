@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListPoliciesForRoleResponseBody extends TeaModel {
     /**
-     * <p>The list of the policies that are attached to the RAM role.</p>
+     * <p>The information about the policies.</p>
      */
     @NameInMap("Policies")
     public ListPoliciesForRoleResponseBodyPolicies policies;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,30 +43,45 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
     public static class ListPoliciesForRoleResponseBodyPoliciesPolicy extends TeaModel {
         /**
          * <p>The time when the policy was attached to the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-01-23T12:33:18Z</p>
          */
         @NameInMap("AttachDate")
         public String attachDate;
 
         /**
          * <p>The default version of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS administrator</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS-Administrator</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;

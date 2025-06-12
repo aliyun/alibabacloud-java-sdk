@@ -11,7 +11,10 @@ public class CreatePolicyResponseBody extends TeaModel {
     public CreatePolicyResponseBodyPolicy policy;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BA34C54A-C2B1-5A65-B6B0-B5842C1DB4DA</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,33 +43,49 @@ public class CreatePolicyResponseBody extends TeaModel {
     public static class CreatePolicyResponseBodyPolicy extends TeaModel {
         /**
          * <p>The time when the policy was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-10-13T02:46:57Z</p>
          */
         @NameInMap("CreateDate")
         public String createDate;
 
         /**
          * <p>The version of the policy. Default value: v1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         @NameInMap("DefaultVersion")
         public String defaultVersion;
 
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Query ECS instances in a specific region</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The name of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>View-ECS-instances-in-a-specific-region</p>
          */
         @NameInMap("PolicyName")
         public String policyName;
 
         /**
          * <p>The type of the policy. Valid values:</p>
-         * <br>
-         * <p>*   Custom: custom policy</p>
-         * <p>*   System: system policy</p>
+         * <ul>
+         * <li>Custom</li>
+         * <li>System</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         @NameInMap("PolicyType")
         public String policyType;

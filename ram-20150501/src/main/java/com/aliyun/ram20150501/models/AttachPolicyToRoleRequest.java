@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class AttachPolicyToRoleRequest extends TeaModel {
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS-Administrator</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The type of the policy. Valid values: `System` and `Custom`.</p>
+     * <p>The type of the policy. Valid values: <code>System</code> and <code>Custom</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Custom</p>
      */
     @NameInMap("PolicyType")
     public String policyType;
 
     /**
      * <p>The name of the RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSSAdminRole</p>
      */
     @NameInMap("RoleName")
     public String roleName;

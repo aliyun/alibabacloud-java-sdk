@@ -6,48 +6,64 @@ import com.aliyun.tea.*;
 public class UpdateUserRequest extends TeaModel {
     /**
      * <p>The new description of the RAM user.</p>
-     * <br>
      * <p>The description must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a cloud computing engineer.</p>
      */
     @NameInMap("NewComments")
     public String newComments;
 
     /**
      * <p>The new display name of the RAM user.</p>
-     * <br>
      * <p>The name must be 1 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaoq****</p>
      */
     @NameInMap("NewDisplayName")
     public String newDisplayName;
 
     /**
      * <p>The new email address of the RAM user.</p>
-     * <br>
-     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     * <blockquote>
+     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaoq****@example.com</p>
      */
     @NameInMap("NewEmail")
     public String newEmail;
 
     /**
      * <p>The new mobile phone number of the RAM user.</p>
-     * <br>
-     * <p>Format: \\<Country code>-\\<Mobile phone number>.</p>
-     * <br>
-     * <p>>  This parameter can be returned only on the China site (aliyun.com).</p>
+     * <p>Format: \<Country code>-\<Mobile phone number>.</p>
+     * <blockquote>
+     * <p> This parameter applies only to the China site (aliyun.com).</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>86-1860000****</p>
      */
     @NameInMap("NewMobilePhone")
     public String newMobilePhone;
 
     /**
      * <p>The new username of the RAM user.</p>
-     * <br>
      * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xiaoq****</p>
      */
     @NameInMap("NewUserName")
     public String newUserName;
 
     /**
      * <p>The username of the RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zhangq****</p>
      */
     @NameInMap("UserName")
     public String userName;

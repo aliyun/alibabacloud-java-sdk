@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class GetUserMFAInfoResponseBody extends TeaModel {
     /**
-     * <p>The information about the MFA device that is attached to the RAM user.</p>
+     * <p>The information about the MFA device that is bound to the RAM user.</p>
      */
     @NameInMap("MFADevice")
     public GetUserMFAInfoResponseBodyMFADevice MFADevice;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,15 +43,22 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     public static class GetUserMFAInfoResponseBodyMFADevice extends TeaModel {
         /**
          * <p>The serial number of the MFA device.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::177242285274****:mfa/test</p>
          */
         @NameInMap("SerialNumber")
         public String serialNumber;
 
         /**
          * <p>The type of the MFA device. Valid values:</p>
-         * <br>
-         * <p>*   VMFA: virtual MFA device</p>
-         * <p>*   U2F: Universal 2nd Factor (U2F) security key</p>
+         * <ul>
+         * <li>VMFA: virtual MFA device.</li>
+         * <li>U2F: Universal 2nd Factor (U2F) security key.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VMFA</p>
          */
         @NameInMap("Type")
         public String type;

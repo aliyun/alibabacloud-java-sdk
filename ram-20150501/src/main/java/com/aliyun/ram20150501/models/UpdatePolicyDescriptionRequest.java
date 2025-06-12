@@ -6,14 +6,19 @@ import com.aliyun.tea.*;
 public class UpdatePolicyDescriptionRequest extends TeaModel {
     /**
      * <p>The description of the policy.</p>
-     * <br>
-     * <p>The value of the parameter must be 1 to 1,024 characters in length.</p>
+     * <p>The description must be 1 to 1,024 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>This is a test policy.</p>
      */
     @NameInMap("NewDescription")
     public String newDescription;
 
     /**
      * <p>The name of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestPolicy</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
