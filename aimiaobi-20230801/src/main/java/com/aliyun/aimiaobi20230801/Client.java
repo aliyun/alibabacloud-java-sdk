@@ -1080,6 +1080,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>导出-自定义数据源-选题视角分析任务结果</p>
+     * 
+     * @param request ExportCustomSourceAnalysisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportCustomSourceAnalysisTaskResponse
+     */
+    public ExportCustomSourceAnalysisTaskResponse exportCustomSourceAnalysisTaskWithOptions(ExportCustomSourceAnalysisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportCustomSourceAnalysisTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportCustomSourceAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出-自定义数据源-选题视角分析任务结果</p>
+     * 
+     * @param request ExportCustomSourceAnalysisTaskRequest
+     * @return ExportCustomSourceAnalysisTaskResponse
+     */
+    public ExportCustomSourceAnalysisTaskResponse exportCustomSourceAnalysisTask(ExportCustomSourceAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportCustomSourceAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>文档管理-导出。</p>
      * 
      * @param request ExportGeneratedContentRequest
@@ -1718,6 +1766,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetCustomHotTopicBroadcastJobResponse getCustomHotTopicBroadcastJob(GetCustomHotTopicBroadcastJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getCustomHotTopicBroadcastJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义数据源-选题视角分析任务结果</p>
+     * 
+     * @param request GetCustomSourceTopicAnalysisTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCustomSourceTopicAnalysisTaskResponse
+     */
+    public GetCustomSourceTopicAnalysisTaskResponse getCustomSourceTopicAnalysisTaskWithOptions(GetCustomSourceTopicAnalysisTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCustomSourceTopicAnalysisTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCustomSourceTopicAnalysisTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取自定义数据源-选题视角分析任务结果</p>
+     * 
+     * @param request GetCustomSourceTopicAnalysisTaskRequest
+     * @return GetCustomSourceTopicAnalysisTaskResponse
+     */
+    public GetCustomSourceTopicAnalysisTaskResponse getCustomSourceTopicAnalysisTask(GetCustomSourceTopicAnalysisTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCustomSourceTopicAnalysisTaskWithOptions(request, runtime);
     }
 
     /**
@@ -8028,6 +8124,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitCustomHotTopicBroadcastJobResponse submitCustomHotTopicBroadcastJob(SubmitCustomHotTopicBroadcastJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitCustomHotTopicBroadcastJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从自定义数据源提交选题热点分析</p>
+     * 
+     * @param tmpReq SubmitCustomSourceTopicAnalysisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitCustomSourceTopicAnalysisResponse
+     */
+    public SubmitCustomSourceTopicAnalysisResponse submitCustomSourceTopicAnalysisWithOptions(SubmitCustomSourceTopicAnalysisRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitCustomSourceTopicAnalysisShrinkRequest request = new SubmitCustomSourceTopicAnalysisShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.news)) {
+            request.newsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.news, "News", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
+            body.put("FileType", request.fileType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxTopicSize)) {
+            body.put("MaxTopicSize", request.maxTopicSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.newsShrink)) {
+            body.put("News", request.newsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitCustomSourceTopicAnalysis"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitCustomSourceTopicAnalysisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>从自定义数据源提交选题热点分析</p>
+     * 
+     * @param request SubmitCustomSourceTopicAnalysisRequest
+     * @return SubmitCustomSourceTopicAnalysisResponse
+     */
+    public SubmitCustomSourceTopicAnalysisResponse submitCustomSourceTopicAnalysis(SubmitCustomSourceTopicAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitCustomSourceTopicAnalysisWithOptions(request, runtime);
     }
 
     /**
