@@ -98,6 +98,9 @@ public class CreateScriptRequest extends TeaModel {
     @NameInMap("ScriptName")
     public String scriptName;
 
+    @NameInMap("ScriptNluProfileJsonString")
+    public String scriptNluProfileJsonString;
+
     /**
      * <strong>example:</strong>
      * <p>[]</p>
@@ -251,6 +254,14 @@ public class CreateScriptRequest extends TeaModel {
     }
     public String getScriptName() {
         return this.scriptName;
+    }
+
+    public CreateScriptRequest setScriptNluProfileJsonString(String scriptNluProfileJsonString) {
+        this.scriptNluProfileJsonString = scriptNluProfileJsonString;
+        return this;
+    }
+    public String getScriptNluProfileJsonString() {
+        return this.scriptNluProfileJsonString;
     }
 
     public CreateScriptRequest setScriptWaveform(java.util.List<String> scriptWaveform) {

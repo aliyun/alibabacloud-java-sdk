@@ -114,6 +114,47 @@ public class DescribeScriptResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class DescribeScriptResponseBodyScriptNluProfile extends TeaModel {
+        @NameInMap("FcFunction")
+        public String fcFunction;
+
+        @NameInMap("FcHttpTriggerUrl")
+        public String fcHttpTriggerUrl;
+
+        @NameInMap("FcRegion")
+        public String fcRegion;
+
+        public static DescribeScriptResponseBodyScriptNluProfile build(java.util.Map<String, ?> map) throws Exception {
+            DescribeScriptResponseBodyScriptNluProfile self = new DescribeScriptResponseBodyScriptNluProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeScriptResponseBodyScriptNluProfile setFcFunction(String fcFunction) {
+            this.fcFunction = fcFunction;
+            return this;
+        }
+        public String getFcFunction() {
+            return this.fcFunction;
+        }
+
+        public DescribeScriptResponseBodyScriptNluProfile setFcHttpTriggerUrl(String fcHttpTriggerUrl) {
+            this.fcHttpTriggerUrl = fcHttpTriggerUrl;
+            return this;
+        }
+        public String getFcHttpTriggerUrl() {
+            return this.fcHttpTriggerUrl;
+        }
+
+        public DescribeScriptResponseBodyScriptNluProfile setFcRegion(String fcRegion) {
+            this.fcRegion = fcRegion;
+            return this;
+        }
+        public String getFcRegion() {
+            return this.fcRegion;
+        }
+
+    }
+
     public static class DescribeScriptResponseBodyScript extends TeaModel {
         @NameInMap("AgentId")
         public Long agentId;
@@ -172,6 +213,9 @@ public class DescribeScriptResponseBody extends TeaModel {
         @NameInMap("IsDrafted")
         public Boolean isDrafted;
 
+        @NameInMap("LabelConfig")
+        public String labelConfig;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -192,6 +236,12 @@ public class DescribeScriptResponseBody extends TeaModel {
          */
         @NameInMap("NewBargeInEnable")
         public Boolean newBargeInEnable;
+
+        @NameInMap("NluEngine")
+        public String nluEngine;
+
+        @NameInMap("NluProfile")
+        public DescribeScriptResponseBodyScriptNluProfile nluProfile;
 
         @NameInMap("Scene")
         public String scene;
@@ -323,6 +373,14 @@ public class DescribeScriptResponseBody extends TeaModel {
             return this.isDrafted;
         }
 
+        public DescribeScriptResponseBodyScript setLabelConfig(String labelConfig) {
+            this.labelConfig = labelConfig;
+            return this;
+        }
+        public String getLabelConfig() {
+            return this.labelConfig;
+        }
+
         public DescribeScriptResponseBodyScript setLongWaitEnable(Boolean longWaitEnable) {
             this.longWaitEnable = longWaitEnable;
             return this;
@@ -345,6 +403,22 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
         public Boolean getNewBargeInEnable() {
             return this.newBargeInEnable;
+        }
+
+        public DescribeScriptResponseBodyScript setNluEngine(String nluEngine) {
+            this.nluEngine = nluEngine;
+            return this;
+        }
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
+        public DescribeScriptResponseBodyScript setNluProfile(DescribeScriptResponseBodyScriptNluProfile nluProfile) {
+            this.nluProfile = nluProfile;
+            return this;
+        }
+        public DescribeScriptResponseBodyScriptNluProfile getNluProfile() {
+            return this.nluProfile;
         }
 
         public DescribeScriptResponseBodyScript setScene(String scene) {

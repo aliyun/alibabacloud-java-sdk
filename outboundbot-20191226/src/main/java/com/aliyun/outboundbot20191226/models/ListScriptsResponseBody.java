@@ -95,6 +95,47 @@ public class ListScriptsResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class ListScriptsResponseBodyScriptsListNluProfile extends TeaModel {
+        @NameInMap("FcFunction")
+        public String fcFunction;
+
+        @NameInMap("FcHttpTriggerUrl")
+        public String fcHttpTriggerUrl;
+
+        @NameInMap("FcRegion")
+        public String fcRegion;
+
+        public static ListScriptsResponseBodyScriptsListNluProfile build(java.util.Map<String, ?> map) throws Exception {
+            ListScriptsResponseBodyScriptsListNluProfile self = new ListScriptsResponseBodyScriptsListNluProfile();
+            return TeaModel.build(map, self);
+        }
+
+        public ListScriptsResponseBodyScriptsListNluProfile setFcFunction(String fcFunction) {
+            this.fcFunction = fcFunction;
+            return this;
+        }
+        public String getFcFunction() {
+            return this.fcFunction;
+        }
+
+        public ListScriptsResponseBodyScriptsListNluProfile setFcHttpTriggerUrl(String fcHttpTriggerUrl) {
+            this.fcHttpTriggerUrl = fcHttpTriggerUrl;
+            return this;
+        }
+        public String getFcHttpTriggerUrl() {
+            return this.fcHttpTriggerUrl;
+        }
+
+        public ListScriptsResponseBodyScriptsListNluProfile setFcRegion(String fcRegion) {
+            this.fcRegion = fcRegion;
+            return this;
+        }
+        public String getFcRegion() {
+            return this.fcRegion;
+        }
+
+    }
+
     public static class ListScriptsResponseBodyScriptsList extends TeaModel {
         @NameInMap("AgentKey")
         public String agentKey;
@@ -169,6 +210,9 @@ public class ListScriptsResponseBody extends TeaModel {
 
         @NameInMap("NluEngine")
         public String nluEngine;
+
+        @NameInMap("NluProfile")
+        public ListScriptsResponseBodyScriptsListNluProfile nluProfile;
 
         @NameInMap("RejectReason")
         public String rejectReason;
@@ -321,6 +365,14 @@ public class ListScriptsResponseBody extends TeaModel {
         }
         public String getNluEngine() {
             return this.nluEngine;
+        }
+
+        public ListScriptsResponseBodyScriptsList setNluProfile(ListScriptsResponseBodyScriptsListNluProfile nluProfile) {
+            this.nluProfile = nluProfile;
+            return this;
+        }
+        public ListScriptsResponseBodyScriptsListNluProfile getNluProfile() {
+            return this.nluProfile;
         }
 
         public ListScriptsResponseBodyScriptsList setRejectReason(String rejectReason) {

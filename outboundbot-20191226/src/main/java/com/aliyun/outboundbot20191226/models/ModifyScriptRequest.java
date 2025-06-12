@@ -52,6 +52,9 @@ public class ModifyScriptRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LabelConfig")
+    public String labelConfig;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -197,6 +200,14 @@ public class ModifyScriptRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyScriptRequest setLabelConfig(String labelConfig) {
+        this.labelConfig = labelConfig;
+        return this;
+    }
+    public String getLabelConfig() {
+        return this.labelConfig;
     }
 
     public ModifyScriptRequest setLongWaitEnable(Boolean longWaitEnable) {
