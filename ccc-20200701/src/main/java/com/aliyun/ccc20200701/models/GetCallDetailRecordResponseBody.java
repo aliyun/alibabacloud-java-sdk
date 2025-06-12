@@ -827,6 +827,9 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @NameInMap("IvrEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataIvrEvents> ivrEvents;
 
+        @NameInMap("OutsideNumberReleaseReason")
+        public String outsideNumberReleaseReason;
+
         @NameInMap("QueueEvents")
         public java.util.List<GetCallDetailRecordResponseBodyDataQueueEvents> queueEvents;
 
@@ -1043,6 +1046,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
         public java.util.List<GetCallDetailRecordResponseBodyDataIvrEvents> getIvrEvents() {
             return this.ivrEvents;
+        }
+
+        public GetCallDetailRecordResponseBodyData setOutsideNumberReleaseReason(String outsideNumberReleaseReason) {
+            this.outsideNumberReleaseReason = outsideNumberReleaseReason;
+            return this;
+        }
+        public String getOutsideNumberReleaseReason() {
+            return this.outsideNumberReleaseReason;
         }
 
         public GetCallDetailRecordResponseBodyData setQueueEvents(java.util.List<GetCallDetailRecordResponseBodyDataQueueEvents> queueEvents) {

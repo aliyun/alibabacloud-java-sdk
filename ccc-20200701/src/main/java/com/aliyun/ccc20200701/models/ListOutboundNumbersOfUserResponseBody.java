@@ -87,6 +87,15 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         @NameInMap("Number")
         public String number;
 
+        @NameInMap("Provider")
+        public String provider;
+
+        @NameInMap("ProviderCode")
+        public String providerCode;
+
+        @NameInMap("ProviderDisplayName")
+        public String providerDisplayName;
+
         @NameInMap("Province")
         public String province;
 
@@ -109,6 +118,30 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
         public String getNumber() {
             return this.number;
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyDataList setProvider(String provider) {
+            this.provider = provider;
+            return this;
+        }
+        public String getProvider() {
+            return this.provider;
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyDataList setProviderCode(String providerCode) {
+            this.providerCode = providerCode;
+            return this;
+        }
+        public String getProviderCode() {
+            return this.providerCode;
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyDataList setProviderDisplayName(String providerDisplayName) {
+            this.providerDisplayName = providerDisplayName;
+            return this;
+        }
+        public String getProviderDisplayName() {
+            return this.providerDisplayName;
         }
 
         public ListOutboundNumbersOfUserResponseBodyDataList setProvince(String province) {

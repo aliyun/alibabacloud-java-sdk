@@ -347,6 +347,25 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
 
     }
 
+    public static class ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex extends TeaModel {
+        @NameInMap("Keywords")
+        public String keywords;
+
+        public static ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex build(java.util.Map<String, ?> map) throws Exception {
+            ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex self = new ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex setKeywords(String keywords) {
+            this.keywords = keywords;
+            return this;
+        }
+        public String getKeywords() {
+            return this.keywords;
+        }
+
+    }
+
     public static class ListCallDetailRecordsV2ResponseBodyDataList extends TeaModel {
         @NameInMap("AccessChannelName")
         public String accessChannelName;
@@ -574,6 +593,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @NameInMap("OffsiteAgentOriginatorNumbers")
         public String offsiteAgentOriginatorNumbers;
 
+        @NameInMap("OutsideNumberReleaseReason")
+        public String outsideNumberReleaseReason;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -663,6 +685,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
          */
         @NameInMap("StartTime")
         public Long startTime;
+
+        @NameInMap("SummaryIndex")
+        public ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex summaryIndex;
 
         /**
          * <strong>example:</strong>
@@ -994,6 +1019,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             return this.offsiteAgentOriginatorNumbers;
         }
 
+        public ListCallDetailRecordsV2ResponseBodyDataList setOutsideNumberReleaseReason(String outsideNumberReleaseReason) {
+            this.outsideNumberReleaseReason = outsideNumberReleaseReason;
+            return this;
+        }
+        public String getOutsideNumberReleaseReason() {
+            return this.outsideNumberReleaseReason;
+        }
+
         public ListCallDetailRecordsV2ResponseBodyDataList setQueueTime(Long queueTime) {
             this.queueTime = queueTime;
             return this;
@@ -1104,6 +1137,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setSummaryIndex(ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex summaryIndex) {
+            this.summaryIndex = summaryIndex;
+            return this;
+        }
+        public ListCallDetailRecordsV2ResponseBodyDataListSummaryIndex getSummaryIndex() {
+            return this.summaryIndex;
         }
 
         public ListCallDetailRecordsV2ResponseBodyDataList setTalkTime(Long talkTime) {
