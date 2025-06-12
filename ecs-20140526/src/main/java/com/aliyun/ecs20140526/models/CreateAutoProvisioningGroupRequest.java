@@ -50,7 +50,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
      * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is smaller than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified type to meet the total target capacity. Valid values:</p>
      * <ul>
      * <li>PayAsYouGo: pay-as-you-go</li>
-     * <li>Spot: preemptible instance</li>
+     * <li>Spot: spot instance</li>
      * </ul>
      * <p>Default value: Spot.</p>
      * 
@@ -120,7 +120,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String launchTemplateVersion;
 
     /**
-     * <p>The maximum price of preemptible instances in the auto provisioning group.</p>
+     * <p>The maximum price of spot instances in the auto provisioning group.</p>
      * <blockquote>
      * <p> When both <code>MaxSpotPrice</code> and <code>LaunchTemplateConfig.N.MaxPrice</code> are specified, the smaller one of the two parameter values is used.</p>
      * </blockquote>
@@ -216,7 +216,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public CreateAutoProvisioningGroupRequestResourcePoolOptions resourcePoolOptions;
 
     /**
-     * <p>The policy for creating preemptible instances. Valid values:</p>
+     * <p>The policy for creating spot instances. Valid values:</p>
      * <ul>
      * <li>lowest-price: cost optimization policy. The auto provisioning group selects the lowest-priced instance type to create instances.</li>
      * <li>diversified: balanced distribution policy. The auto provisioning group creates instances in zones that are specified in extended configurations and then evenly distributes the instances across the zones.</li>
@@ -231,10 +231,10 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String spotAllocationStrategy;
 
     /**
-     * <p>The operation to be performed on the preemptible instance when it is interrupted. Valid values:</p>
+     * <p>The operation to be performed on the spot instance when it is interrupted. Valid values:</p>
      * <ul>
-     * <li>stop: stops the preemptible instance.</li>
-     * <li>terminate: releases the preemptible instance.</li>
+     * <li>stop: stops the spot instance.</li>
+     * <li>terminate: releases the spot instance.</li>
      * </ul>
      * <p>Default value: terminate.</p>
      * 
@@ -245,7 +245,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public String spotInstanceInterruptionBehavior;
 
     /**
-     * <p>The number of preemptible instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when <code>SpotAllocationStrategy</code> is set to <code>lowest-price</code>.</p>
+     * <p>The number of spot instances of the lowest-priced instance type to be created by the auto provisioning group. This parameter takes effect when <code>SpotAllocationStrategy</code> is set to <code>lowest-price</code>.</p>
      * <p>The value must be smaller than the N value specified in <code>LaunchTemplateConfig.N</code>.</p>
      * 
      * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
     public Integer spotInstancePoolsToUseCount;
 
     /**
-     * <p>The target capacity of preemptible instances in the auto provisioning group. The value must be less than or equal to the <code>TotalTargetCapacity</code> value.</p>
+     * <p>The target capacity of spot instances in the auto provisioning group. The value must be less than or equal to the <code>TotalTargetCapacity</code> value.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -305,7 +305,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     /**
      * <p>The total target capacity of the auto provisioning group. The value must be a positive integer.</p>
-     * <p>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by <code>PayAsYouGoTargetCapacity</code> and the target capacity of preemptible instances specified by <code>SpotTargetCapacity</code>.</p>
+     * <p>The total target capacity of the auto provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by <code>PayAsYouGoTargetCapacity</code> and the target capacity of spot instances specified by <code>SpotTargetCapacity</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -1623,12 +1623,12 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values: Valid values:</p>
+         * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values: Valid values:</p>
          * <ul>
-         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The preemptible instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The spot instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
          * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>This parameter takes effect only when the AutoProvisioningGroupType parameter is set to instant.</li>
@@ -1641,7 +1641,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public Integer spotDuration;
 
         /**
-         * <p>The interruption event of the preemptible instances. Valid values:</p>
+         * <p>The interruption event of the spot instances. Valid values:</p>
          * <ul>
          * <li>Terminate: The instance is released.</li>
          * <li>Stop: The instance is stopped in economical mode.</li>
@@ -2069,7 +2069,7 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The maximum price of preemptible instances in extended configuration N.</p>
+         * <p>The maximum price of spot instances in extended configuration N.</p>
          * <blockquote>
          * <p> If you specify one or more <code>LaunchTemplateConfig.N.*</code> parameters, you must also specify <code>LaunchTemplateConfig.N.MaxPrice</code>.</p>
          * </blockquote>

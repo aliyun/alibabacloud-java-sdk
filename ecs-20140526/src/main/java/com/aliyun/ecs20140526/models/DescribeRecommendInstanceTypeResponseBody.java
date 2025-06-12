@@ -11,7 +11,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
     public DescribeRecommendInstanceTypeResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -171,13 +171,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
 
     public static class DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZone extends TeaModel {
         /**
-         * <p>The details of network types of instance types.</p>
+         * <p>The details of the network types of the instance type.</p>
          */
         @NameInMap("NetworkTypes")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZonesZoneNetworkTypes networkTypes;
 
         /**
-         * <p>The ID of the zone where the instance type is available.</p>
+         * <p>The ID of the zone in which the instance type is available.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-h</p>
@@ -238,7 +238,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>The billing method of the instance.</p>
+         * <p>The billing method of the instances.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -247,13 +247,13 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The name of the instance type.</p>
+         * <p>The details of the instance type.</p>
          */
         @NameInMap("InstanceType")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeInstanceType instanceType;
 
         /**
-         * <p>The network type of the instance.</p>
+         * <p>The network type of the ECS instances.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -271,7 +271,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The region ID of the instance type.</p>
+         * <p>The ID of the region in which the instance type is available.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -280,7 +280,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The scenarios in which the instance type is recommended.</p>
+         * <p>The scenario in which the instance type is recommended.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE</p>
@@ -289,7 +289,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The bidding policy for the preemptible instance.</p>
+         * <p>The bidding policy for the spot instances.</p>
          * 
          * <strong>example:</strong>
          * <p>NoSpot</p>
@@ -307,7 +307,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The details of the zones where the instance types resides.</p>
+         * <p>The details of the zones in which the instance type is available.</p>
          */
         @NameInMap("Zones")
         public DescribeRecommendInstanceTypeResponseBodyDataRecommendInstanceTypeZones zones;

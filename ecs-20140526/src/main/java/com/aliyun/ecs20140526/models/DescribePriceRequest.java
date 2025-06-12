@@ -290,12 +290,12 @@ public class DescribePriceRequest extends TeaModel {
     public String scope;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <blockquote>
      * <p> This parameter takes effect only when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
@@ -310,8 +310,8 @@ public class DescribePriceRequest extends TeaModel {
      * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
      * <ul>
      * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is created as a preemptible instance that has a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is created as a preemptible instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.</li>
+     * <li>SpotWithPriceLimit: The instance is created as a spot instance that has a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a spot instance whose bid price is based on the market price at the time of purchase. The market price can be up to the pay-as-you-go price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * <blockquote>
@@ -336,7 +336,7 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The zone ID.</p>
      * <blockquote>
-     * <p>Prices of preemptible instances vary based on zones. When you query the price of a preemptible instance, specify ZoneId.</p>
+     * <p>Prices of spot instances vary based on zones. When you query the price of a spot instance, specify ZoneId.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

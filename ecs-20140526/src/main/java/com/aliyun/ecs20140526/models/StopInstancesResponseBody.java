@@ -69,7 +69,7 @@ public class StopInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The error message returned for the instance. A return value of success indicates that the operation was successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
+         * <p>The error message returned for the instance. The return value <code>success</code> indicates that the operation is successful. For more information, see the &quot;Error codes&quot; section of this topic.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

@@ -26,7 +26,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
      * <p>The type of supplemental instances. When the sum of the PayAsYouGoTargetCapacity and SpotTargetCapacity values is smaller than the TotalTargetCapacity value, the auto-provisioning group creates instances of the specified type to meet the target capacity. Valid values:</p>
      * <ul>
      * <li>PayAsYouGo: pay-as-you-go instances</li>
-     * <li>Spot: preemptible instances</li>
+     * <li>Spot: spot instances</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public java.util.List<ModifyAutoProvisioningGroupRequestLaunchTemplateConfig> launchTemplateConfig;
 
     /**
-     * <p>The maximum price of preemptible instances in the auto-provisioning group.</p>
+     * <p>The maximum price of spot instances in the auto-provisioning group.</p>
      * <blockquote>
      * <p>When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used. The LaunchTemplateConfig.N.MaxPrice parameter is specified when the auto-provisioning group is created, and cannot be modified.</p>
      * </blockquote>
@@ -98,7 +98,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The target capacity of preemptible instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
+     * <p>The target capacity of spot instances in the auto-provisioning group. Valid values: Set this parameter to a value smaller than the TotalTargetCapacity value.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -121,7 +121,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
 
     /**
      * <p>The total target capacity of the auto-provisioning group. The value must be a positive integer.</p>
-     * <p>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of preemptible instances specified by the SpotTargetCapacity parameter.</p>
+     * <p>The total target capacity of the auto-provisioning group must be greater than or equal to the sum of the target capacity of pay-as-you-go instances specified by the PayAsYouGoTargetCapacity parameter as well as the target capacity of spot instances specified by the SpotTargetCapacity parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>70</p>
@@ -265,7 +265,7 @@ public class ModifyAutoProvisioningGroupRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The maximum price of preemptible instances in extended configuration N.</p>
+         * <p>The maximum price of spot instances in extended configuration N.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

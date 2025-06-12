@@ -237,7 +237,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
 
     public static class DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions extends TeaModel {
         /**
-         * <p>The policy for creating preemptible instances. Valid values:</p>
+         * <p>The policy for creating spot instances. Valid values:</p>
          * <ul>
          * <li>lowest-price: cost optimization policy. This policy indicates that the lowest-priced instance type is used to create instances.</li>
          * <li>diversified: balanced distribution policy. This policy indicates that instances are created evenly across multiple zones specified in the extended configuration.</li>
@@ -250,10 +250,10 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public String allocationStrategy;
 
         /**
-         * <p>The action to be performed after the excess preemptible instances are stopped. Valid values:</p>
+         * <p>The action to be performed after the excess spot instances are stopped. Valid values:</p>
          * <ul>
-         * <li>stop: retains the excess preemptible instances in the stopped state.</li>
-         * <li>terminate: releases the excess preemptible instances.</li>
+         * <li>stop: retains the excess spot instances in the stopped state.</li>
+         * <li>terminate: releases the excess spot instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -373,7 +373,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
          * <p>The type of supplemental instances. When the sum of the <code>PayAsYouGoTargetCapacity</code> and <code>SpotTargetCapacity</code> values is less than the <code>TotalTargetCapacity</code> value, the auto provisioning group creates instances of the specified billing method to meet the target capacity. Valid values:</p>
          * <ul>
          * <li>PayAsYouGo: pay-as-you-go instances.</li>
-         * <li>Spot: preemptible instances.</li>
+         * <li>Spot: spot instances.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -392,7 +392,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public Float payAsYouGoTargetCapacity;
 
         /**
-         * <p>The target capacity of preemptible instances that the auto provisioning group provisions.</p>
+         * <p>The target capacity of spot instances that the auto provisioning group provisions.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -532,7 +532,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public String launchTemplateVersion;
 
         /**
-         * <p>The maximum price of preemptible instances in the auto provisioning group.</p>
+         * <p>The maximum price of spot  instances in the auto provisioning group.</p>
          * <blockquote>
          * <p> When both the MaxSpotPrice and LaunchTemplateConfig.N.MaxPrice parameters are specified, the smaller one of the two parameter values is used.</p>
          * </blockquote>
@@ -569,7 +569,7 @@ public class DescribeAutoProvisioningGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The policy related to preemptible instances.</p>
+         * <p>The policy related to spot instances.</p>
          */
         @NameInMap("SpotOptions")
         public DescribeAutoProvisioningGroupsResponseBodyAutoProvisioningGroupsAutoProvisioningGroupSpotOptions spotOptions;

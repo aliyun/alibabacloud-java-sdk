@@ -36,6 +36,9 @@ public class StartTerminalSessionRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("PasswordName")
+    public String passwordName;
+
     /**
      * <p>The port number of the ECS instance. The port is used to forward data. After this parameter is configured, Cloud Assistant Agent forwards data to the specified port. For example, you can set this parameter to 22 for data forwarding over SSH.</p>
      * <p>This parameter is empty by default, which indicates that no port is configured to forward data.</p>
@@ -126,6 +129,14 @@ public class StartTerminalSessionRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public StartTerminalSessionRequest setPasswordName(String passwordName) {
+        this.passwordName = passwordName;
+        return this;
+    }
+    public String getPasswordName() {
+        return this.passwordName;
     }
 
     public StartTerminalSessionRequest setPortNumber(Integer portNumber) {

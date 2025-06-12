@@ -41,7 +41,7 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The network type of the preemptible instance. Valid values:</p>
+     * <p>The network type of the spot instance. Valid values:</p>
      * <ul>
      * <li>classic: classic network</li>
      * <li>vpc: Virtual Private Cloud (VPC)</li>
@@ -84,7 +84,7 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The zone ID of the preemptible instance.</p>
+     * <p>The zone ID of the spot instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,12 +100,12 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <blockquote>
      * <p> This parameter takes effect only if you set SpotStrategy to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
@@ -127,7 +127,7 @@ public class DescribeSpotPriceHistoryRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The spot price (market price) of the preemptible instance.</p>
+     * <p>The spot price (market price) of the spot instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-g</p>

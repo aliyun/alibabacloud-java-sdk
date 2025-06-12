@@ -77,10 +77,20 @@ public class StopInstanceRequest extends TeaModel {
     /**
      * <p>The stop mode of the pay-as-you-go instance. Valid values:</p>
      * <ul>
-     * <li>StopCharging: economical mode. For information about how <code>StopCharging</code> takes effect, see the &quot;Conditions for enabling economical mode&quot; section in <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</li>
-     * <li>KeepCharging: standard mode. You continue to be charged for instances that are stopped in standard mode.</li>
+     * <li><p>StopCharging: economical mode. After the economical mode is enabled, billing for the following resources of the instance stops: computing resources (vCPUs, memory, and GPUs), image licenses, and public bandwidth of the static public IP address (if any) that uses the pay-by-bandwidth metering method. Billing for the following resources of the instance continues: system disk, data disks, and public bandwidth of the elastic IP address (EIP) (if any) that uses the pay-by-bandwidth metering method. For more information, see <a href="https://help.aliyun.com/document_detail/63353.html">Economical mode</a>.</p>
+     * <p>**</p>
+     * <p><strong>Note</strong></p>
+     * </li>
+     * <li><p>If the instance does not support the <strong>economical</strong> mode, the system stops the instance and does not report errors during the operation call. The economical mode cannot be enabled for instances of the classic network type, instances that use local disks, and instances that use persistent memory.</p>
+     * </li>
+     * <li><p>The instance may fail to restart due to the reclaimed computing resources or insufficient resources. Try again later or change the instance type of the instance.</p>
+     * </li>
+     * <li><p>If an EIP is associated with the instance before the instance is stopped, the EIP remains unchanged after the instance is restarted. If a static public IP address is associated with the instance before the instance is stopped, the static public IP address may change, but the private IP address does not change.</p>
+     * </li>
+     * <li><p>KeepCharging: standard mode. After the instance is stopped in standard mode, you continue to be charged for the instance.</p>
+     * </li>
      * </ul>
-     * <p>Default value: If the conditions for enabling the economical mode are met and you have enabled this mode in the ECS console, the default value is <a href="~~63353#default~~">StopCharging</a>. For more information, see the &quot;Enable economical mode&quot; section in <code>Economical mode</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
+     * <p>Default value: If the conditions for <a href="~~63353#default~~">enabling the economical mode for an instance in a VPC</a> are met and you have enabled this mode in the ECS console, the default value is <code>StopCharging</code>. Otherwise, the default value is <code>KeepCharging</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>KeepCharging</p>

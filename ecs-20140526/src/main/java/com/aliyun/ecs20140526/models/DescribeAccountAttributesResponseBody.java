@@ -226,9 +226,9 @@ public class DescribeAccountAttributesResponseBody extends TeaModel {
          * <li>max-security-groups: the maximum number of security groups.</li>
          * <li>max-elastic-network-interfaces: the maximum number of ENIs.</li>
          * <li>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</li>
-         * <li>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</li>
+         * <li>max-spot-instance-vcpu-count: the maximum number of vCPUs for spot instances.</li>
          * <li>used-postpaid-instance-vcpu-count: the number of vCPUs that were allocated to pay-as-you-go instances.</li>
-         * <li>used-spot-instance-vcpu-count: the number of vCPUs that were allocated to preemptible instances.</li>
+         * <li>used-spot-instance-vcpu-count: the number of vCPUs that were allocated to spot instances.</li>
          * <li>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</li>
          * <li>used-postpaid-yundisk-capacity: the capacity of pay-as-you-go data disks that were created. (The value is deprecated.)</li>
          * <li>max-dedicated-hosts: the maximum number of dedicated hosts.</li>

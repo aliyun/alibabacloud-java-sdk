@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
-     * <p>The number of vCPUs of the instance.</p>
+     * <p>The number of vCPU cores of the instance type.</p>
      * <blockquote>
-     * <p>If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
+     * <p> If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Integer cores;
 
     /**
-     * <p>The billing method of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
+     * <p>The billing method of ECS instances. For more information, see <a href="https://help.aliyun.com/document_detail/25398.html">Billing overview</a>. Valid values:</p>
      * <ul>
      * <li>PrePaid: subscription</li>
      * <li>PostPaid: pay-as-you-go</li>
@@ -33,9 +33,9 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>The level of the instance family. Valid values:</p>
      * <ul>
-     * <li>EntryLevel</li>
-     * <li>EnterpriseLevel</li>
-     * <li>CreditEntryLevel For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</li>
+     * <li>EntryLevel: entry level.</li>
+     * <li>EnterpriseLevel: enterprise level.</li>
+     * <li>CreditEntryLevel: credit-based entry level. For more information, see <a href="https://help.aliyun.com/document_detail/59977.html">Burstable instance families</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceFamilyLevel;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
+     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the most recent instance type list.</p>
      * <blockquote>
-     * <p>If you specify <code>InstanceType</code>, the <code>Cores</code> and <code>Memory</code> parameters are ignored.</p>
+     * <p> If you specify <code>InstanceType</code>, you cannot specify <code>Cores</code> or <code>Memory</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>Specifies the instance families from which the alternative instance types are selected. You can specify up to 10 instance families.</p>
+     * <p>The instance families from which the alternative instance types are selected. You can specify up to 10 instance families.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.hfg6</p>
@@ -66,10 +66,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public java.util.List<String> instanceTypeFamily;
 
     /**
-     * <p>Specifies whether the instance is I/O optimized. The IoOptimized parameter cannot be specified when the instance is not I/O optimized. Valid values:</p>
+     * <p>Specifies whether instances of the instance type are I/O optimized. You cannot specify IoOptimized if the instance type supports only non-I/O optimized instances. Valid values:</p>
      * <ul>
-     * <li>optimized: The instance is I/O optimized.</li>
-     * <li>none: The instance is not I/O optimized.</li>
+     * <li>optimized: The instances are I/O optimized.</li>
+     * <li>none: The instances are non-I/O optimized.</li>
      * </ul>
      * <p>Default value: optimized.</p>
      * <p>If you query alternative instance types for retired instance types, this parameter is set to none by default.</p>
@@ -81,7 +81,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String ioOptimized;
 
     /**
-     * <p>The maximum hourly price for pay-as-you-go instances or preemptible instances.</p>
+     * <p>The maximum hourly price for pay-as-you-go instances or spot instances.</p>
      * <blockquote>
      * <p> This parameter takes effect only when <code>SpotStrategy</code> is set to <code>SpotWithPriceLimit</code>.</p>
      * </blockquote>
@@ -93,9 +93,9 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Float maxPrice;
 
     /**
-     * <p>The memory size of the instance. Unit: GiB.</p>
+     * <p>The memory size of the instance type. Unit: GiB.</p>
      * <blockquote>
-     * <p>If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
+     * <p> If you specify both <code>Cores</code> and <code>Memory</code>, the system returns all instance types that match the values of the parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Float memory;
 
     /**
-     * <p>The network type of the instance. Valid values:</p>
+     * <p>The network type of ECS instances. Valid values:</p>
      * <ul>
      * <li>classic</li>
      * <li>vpc</li>
@@ -157,7 +157,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies the scenarios in which instance types are recommended. Valid values:</p>
+     * <p>The scenario in which instance types are recommended. Valid values:</p>
      * <ul>
      * <li>UPGRADE: instance type upgrade or downgrade</li>
      * <li>CREATE: instance creation</li>
@@ -171,11 +171,11 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     public String scene;
 
     /**
-     * <p>The bidding policy of the preemptible instance. Valid values:</p>
+     * <p>The bidding policy of spot instances. Valid values:</p>
      * <ul>
-     * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li>NoSpot: The instances are regular pay-as-you-go instances.</li>
+     * <li>SpotWithPriceLimit: The instances are created as spot instances for which you can specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instances are spot instances for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
      * </ul>
      * <blockquote>
      * <p> If you specify <code>SpotStrategy</code>, you must set <code>InstanceChargeType</code> to <code>PostPaid</code>.</p>
@@ -192,8 +192,8 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
      * <p>The category of the system disk. Valid values:</p>
      * <ul>
      * <li>cloud_efficiency: ultra disk</li>
-     * <li>cloud_ssd: SSD</li>
-     * <li>cloud_essd: ESSD</li>
+     * <li>cloud_ssd: standard SSD</li>
+     * <li>cloud_essd: Enterprise SSD (ESSD)</li>
      * <li>cloud: basic disk</li>
      * </ul>
      * <p>For non-I/O optimized instances, the default value is cloud.</p>
@@ -207,7 +207,7 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
 
     /**
      * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/25610.html">DescribeZones</a> operation to query the most recent zone list.</p>
-     * <p>We recommend that you set the value of ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by the ZoneId parameter based on priority. The system also recommends instance types that are available in other zones within the same region.</p>
+     * <p>We recommend that you set ZoneMatchMode to Include, which is the default value. This way, the system recommends instance types that are available in the zone specified by ZoneId based on the priority policy. The system also recommends instance types that are available in other zones within the same region.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-f</p>
@@ -218,10 +218,10 @@ public class DescribeRecommendInstanceTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to recommend only instance types in the zone specified by ZoneId. Valid values:</p>
      * <ul>
-     * <li>Strict: recommends only instance types that are available in zones specified by the ZoneId parameter.</li>
-     * <li>Include: recommends instance types that are available in zones specified by the ZoneId parameter and other zones within the same region.</li>
+     * <li>Strict: recommends only instance types that are available in the zone specified by ZoneId.</li>
+     * <li>Include: recommends instance types that are available in the zone specified by ZoneId and instance types that are available in other zones within the same region.</li>
      * </ul>
-     * <p>If <code>ZoneId</code> is specified, the default value of this parameter is Strict. This value indicates that only alternative instance types in the zone specified by ZoneId are recommended.</p>
+     * <p>If <code>ZoneId</code> is specified, the default value of this parameter is Strict, which indicates that only instance types in the zone specified by ZoneId are recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>Strict</p>

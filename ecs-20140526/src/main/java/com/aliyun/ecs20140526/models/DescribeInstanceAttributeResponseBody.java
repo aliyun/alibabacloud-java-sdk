@@ -235,7 +235,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
      * <ul>
      * <li>financial: The dedicated host was locked due to overdue payments.</li>
      * <li>security: The instance was locked due to security reasons.</li>
-     * <li>recycling: The preemptible instance was locked and pending release.</li>
+     * <li>recycling: The spot instance was locked and pending release.</li>
      * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
      * <li>refunded: The instance was locked because a refund was made for the instance.</li>
      * </ul>
@@ -804,7 +804,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          * <ul>
          * <li>financial: The instance was locked due to overdue payments.</li>
          * <li>security: The instance was locked due to security reasons.</li>
-         * <li>recycling: The preemptible instance was locked and pending release.</li>
+         * <li>recycling: The spot instance was locked and pending release.</li>
          * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
          * <li>refunded: The instance was locked because a refund is made for the instance.</li>
          * </ul>

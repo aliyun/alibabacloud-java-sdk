@@ -81,8 +81,8 @@ public class DescribeBandwidthLimitationRequest extends TeaModel {
      * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
      * <ul>
      * <li>NoSpot: The instance is a pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you can specify the maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li>SpotWithPriceLimit: The instance is a spot instance for which you can specify the maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * <blockquote>

@@ -15,11 +15,11 @@ public class DescribeAccountAttributesRequest extends TeaModel {
      * </li>
      * <li><p>max-postpaid-instance-vcpu-count: the maximum number of vCPUs for pay-as-you-go instances.</p>
      * </li>
-     * <li><p>max-spot-instance-vcpu-count: the maximum number of vCPUs for preemptible instances.</p>
+     * <li><p>max-spot-instance-vcpu-count: the maximum number of vCPUs for spot instances.</p>
      * </li>
      * <li><p>used-postpaid-instance-vcpu-count: the number of vCPUs that have been allocated to pay-as-you-go instances.</p>
      * </li>
-     * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to preemptible instances.</p>
+     * <li><p>used-spot-instance-vcpu-count: the number of vCPUs that have been allocated to spot instances.</p>
      * </li>
      * <li><p>max-postpaid-yundisk-capacity: the maximum capacity of pay-as-you-go data disks. (The value is deprecated.)</p>
      * </li>

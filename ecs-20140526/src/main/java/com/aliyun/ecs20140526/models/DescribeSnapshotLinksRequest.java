@@ -22,9 +22,25 @@ public class DescribeSnapshotLinksRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The maximum number of entries per page. Maximum value: 100. Default value:</p>
+     * <ul>
+     * <li>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</li>
+     * <li>If you set a value greater than 100, the default value is 100.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>caeba0bbb2be03f84eb48b699f0a****</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 

@@ -238,7 +238,7 @@ public class DescribeDisksRequest extends TeaModel {
      * <ul>
      * <li>financial: The disk is locked due to overdue payments.</li>
      * <li>security: The disk is locked due to security reasons.</li>
-     * <li>recycling: The preemptible instance is locked and pending release.</li>
+     * <li>recycling: The spot instance is locked and pending release.</li>
      * <li>dedicatedhostfinancial: The instance is locked due to overdue payments for the dedicated host.</li>
      * </ul>
      * 

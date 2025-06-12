@@ -60,11 +60,11 @@ public class DescribeZonesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The bidding policy for the pay-as-you-go instance. You can specify this parameter when you set <code>InstanceChargeType</code> to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Preemptible instances</a>. Valid values:</p>
+     * <p>The bidding policy for the pay-as-you-go instance. You can specify this parameter when you set <code>InstanceChargeType</code> to PostPaid. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Spot instances</a>. Valid values:</p>
      * <ul>
      * <li>NoSpot: The instances are regular pay-as-you-go instances.</li>
-     * <li>SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+     * <li>SpotWithPriceLimit: The instance is a spot instance that has a user-defined maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
      * </ul>
      * <p>Default value: NoSpot.</p>
      * 

@@ -60,7 +60,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String creditSpecification;
 
     /**
-     * <p>The data disks.</p>
+     * <p>The information about the data disks.</p>
      */
     @NameInMap("DataDisk")
     public java.util.List<CreateLaunchTemplateVersionRequestDataDisk> dataDisk;
@@ -455,12 +455,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
      * <ul>
-     * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-     * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
      * <blockquote>
      * <p> This parameter takes effect only if SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
      * </blockquote>
@@ -472,7 +472,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The maximum hourly price of the preemptible instance. A maximum of three decimal places are allowed.</p>
+     * <p>The maximum hourly price of the spot instance. A maximum of three decimal places are allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>0.97</p>
@@ -484,8 +484,8 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
      * <p>The preemption policy for the pay-as-you-go instance. This parameter is valid only when the <code>InstanceChargeType</code> parameter is set to <code>PostPaid</code>. Default value: NoSpot. Valid values:</p>
      * <ul>
      * <li>NoSpot: The instance is created as a pay-as-you-go instance.</li>
-     * <li>SpotWithPriceLimit: The instances of the compute node are preemptible instances. These types of instances have a specified maximum hourly price.</li>
-     * <li>SpotAsPriceGo: The instance is created as a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.</li>
+     * <li>SpotWithPriceLimit: The instances of the compute node are spot instances. These types of instances have a specified maximum hourly price.</li>
+     * <li>SpotAsPriceGo: The instance is created as a spot instance for which the market price at the time of purchase is automatically used as the bid price.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -1251,7 +1251,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
          * <li>cloud: basic disk</li>
          * <li>cloud_efficiency: utra disk</li>
          * <li>cloud_ssd: standard SSD</li>
-         * <li>cloud_auto: Enterprise SSD (ESSD) AutoPL disk.</li>
+         * <li>cloud_auto: ESSD AutoPL disk</li>
          * <li>cloud_essd: ESSD</li>
          * <li>cloud_essd_entry: ESSD Entry disk</li>
          * </ul>
@@ -1303,7 +1303,7 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         public String device;
 
         /**
-         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+         * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>testDataDiskName</p>

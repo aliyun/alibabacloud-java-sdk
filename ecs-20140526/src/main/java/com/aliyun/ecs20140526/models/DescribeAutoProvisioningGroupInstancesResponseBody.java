@@ -138,7 +138,7 @@ public class DescribeAutoProvisioningGroupInstancesResponseBody extends TeaModel
         public Boolean ioOptimized;
 
         /**
-         * <p>Indicates whether the instance is a preemptible instance.</p>
+         * <p>Indicates whether the instance is a spot instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

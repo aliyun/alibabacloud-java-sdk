@@ -86,6 +86,9 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("FailedDetail")
+        public String failedDetail;
+
         /**
          * <p>The instance ID.</p>
          * 
@@ -140,6 +143,14 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeTerminalSessionsResponseBodySessionsSessionConnectionsConnection setFailedDetail(String failedDetail) {
+            this.failedDetail = failedDetail;
+            return this;
+        }
+        public String getFailedDetail() {
+            return this.failedDetail;
         }
 
         public DescribeTerminalSessionsResponseBodySessionsSessionConnectionsConnection setInstanceId(String instanceId) {

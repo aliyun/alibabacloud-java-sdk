@@ -1053,7 +1053,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <ul>
          * <li>financial: The instance was locked due to overdue payments.</li>
          * <li>security: The instance was locked due to security reasons.</li>
-         * <li>recycling: The preemptible instance was locked and pending release.</li>
+         * <li>recycling: The spot instance was locked and pending release.</li>
          * <li>dedicatedhostfinancial: The instance was locked due to overdue payments for the dedicated host.</li>
          * <li>refunded: The instance was locked because a refund was made for the instance.</li>
          * </ul>
@@ -1940,12 +1940,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String serialNumber;
 
         /**
-         * <p>The protection period of the preemptible instance. Unit: hours. Valid values:</p>
+         * <p>The protection period of the spot instance. Unit: hours. Valid values:</p>
          * <ul>
-         * <li>1: After a preemptible instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-         * <li>0: After a preemptible instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+         * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
          * </ul>
-         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Preemptible instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
+         * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. Spot instances are billed by second. We recommend that you specify a protection period based on your business requirements.</p>
          * <blockquote>
          * <p> This parameter is returned when SpotStrategy is set to SpotWithPriceLimit or SpotAsPriceGo.</p>
          * </blockquote>
@@ -1957,9 +1957,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Integer spotDuration;
 
         /**
-         * <p>The interruption mode of the preemptible instance when the system initiates a preemptible instance interruption operation. Valid values:</p>
+         * <p>The interruption mode of the spot instance when the system initiates a spot instance interruption operation. Valid values:</p>
          * <ul>
-         * <li>Terminate: releases the preemptible instance.</li>
+         * <li>Terminate: releases the spot instance.</li>
          * <li>Stop: stops the instance in economical mode.</li>
          * </ul>
          * 
@@ -1982,8 +1982,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <ul>
          * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-         * <li>SpotWithPriceLimit: The instance is a preemptible instance with a user-defined maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
+         * <li>SpotWithPriceLimit: The instance is a spot instance with a user-defined maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a spot instance for which the market price is automatically used as the bid price. The market price can be up to the pay-as-you-go price.</li>
          * </ul>
          * 
          * <strong>example:</strong>

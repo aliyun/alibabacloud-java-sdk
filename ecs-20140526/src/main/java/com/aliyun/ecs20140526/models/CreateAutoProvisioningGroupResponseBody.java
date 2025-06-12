@@ -123,8 +123,8 @@ public class CreateAutoProvisioningGroupResponseBody extends TeaModel {
          * <p>The bidding policy for the pay-as-you-go instance. Valid values:</p>
          * <ul>
          * <li>NoSpot: The instance is a regular pay-as-you-go instance.</li>
-         * <li>SpotWithPriceLimit: The instance is a preemptible instance for which you specify the maximum hourly price.</li>
-         * <li>SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.</li>
+         * <li>SpotWithPriceLimit: The instance is a spot instance for which you specify the maximum hourly price.</li>
+         * <li>SpotAsPriceGo: The instance is a spot instance for which the market price at the time of purchase is used as the bid price.</li>
          * </ul>
          * 
          * <strong>example:</strong>
