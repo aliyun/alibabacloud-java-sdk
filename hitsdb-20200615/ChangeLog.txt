@@ -1,3 +1,7 @@
+2025-06-12 Version: 5.3.0
+- Support API GetLindormV2StreamEngineInfo.
+
+
 2025-06-09 Version: 5.2.4
 - Generated java 2020-06-15 for hitsdb.
 
