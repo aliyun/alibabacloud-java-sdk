@@ -32,6 +32,9 @@ public class CredentialVerifyV2ShrinkRequest extends TeaModel {
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    @NameInMap("ImageContext")
+    public String imageContext;
+
     @NameInMap("ImageFile")
     public String imageFile;
 
@@ -117,6 +120,14 @@ public class CredentialVerifyV2ShrinkRequest extends TeaModel {
     }
     public String getIdentifyNum() {
         return this.identifyNum;
+    }
+
+    public CredentialVerifyV2ShrinkRequest setImageContext(String imageContext) {
+        this.imageContext = imageContext;
+        return this;
+    }
+    public String getImageContext() {
+        return this.imageContext;
     }
 
     public CredentialVerifyV2ShrinkRequest setImageFile(String imageFile) {
