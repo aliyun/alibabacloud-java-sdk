@@ -60,6 +60,9 @@ public class ListApplicationRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("ShowHide")
+    public Boolean showHide;
+
     /**
      * <p>The status of the applications to be returned.</p>
      * 
@@ -132,6 +135,14 @@ public class ListApplicationRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public ListApplicationRequest setShowHide(Boolean showHide) {
+        this.showHide = showHide;
+        return this;
+    }
+    public Boolean getShowHide() {
+        return this.showHide;
     }
 
     public ListApplicationRequest setStatus(String status) {
