@@ -3,7 +3,7 @@ package com.aliyun.imm20200930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDatasetRequest extends TeaModel {
+public class CreateDatasetShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of bindings for the dataset. Valid values: 1 to 10. Default value: 10.</p>
      * 
@@ -93,14 +93,14 @@ public class CreateDatasetRequest extends TeaModel {
     public String templateId;
 
     @NameInMap("WorkflowParameters")
-    public java.util.List<WorkflowParameter> workflowParameters;
+    public String workflowParametersShrink;
 
-    public static CreateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDatasetRequest self = new CreateDatasetRequest();
+    public static CreateDatasetShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDatasetShrinkRequest self = new CreateDatasetShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDatasetRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
+    public CreateDatasetShrinkRequest setDatasetMaxBindCount(Long datasetMaxBindCount) {
         this.datasetMaxBindCount = datasetMaxBindCount;
         return this;
     }
@@ -108,7 +108,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.datasetMaxBindCount;
     }
 
-    public CreateDatasetRequest setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
+    public CreateDatasetShrinkRequest setDatasetMaxEntityCount(Long datasetMaxEntityCount) {
         this.datasetMaxEntityCount = datasetMaxEntityCount;
         return this;
     }
@@ -116,7 +116,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.datasetMaxEntityCount;
     }
 
-    public CreateDatasetRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
+    public CreateDatasetShrinkRequest setDatasetMaxFileCount(Long datasetMaxFileCount) {
         this.datasetMaxFileCount = datasetMaxFileCount;
         return this;
     }
@@ -124,7 +124,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.datasetMaxFileCount;
     }
 
-    public CreateDatasetRequest setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
+    public CreateDatasetShrinkRequest setDatasetMaxRelationCount(Long datasetMaxRelationCount) {
         this.datasetMaxRelationCount = datasetMaxRelationCount;
         return this;
     }
@@ -132,7 +132,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.datasetMaxRelationCount;
     }
 
-    public CreateDatasetRequest setDatasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
+    public CreateDatasetShrinkRequest setDatasetMaxTotalFileSize(Long datasetMaxTotalFileSize) {
         this.datasetMaxTotalFileSize = datasetMaxTotalFileSize;
         return this;
     }
@@ -140,7 +140,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.datasetMaxTotalFileSize;
     }
 
-    public CreateDatasetRequest setDatasetName(String datasetName) {
+    public CreateDatasetShrinkRequest setDatasetName(String datasetName) {
         this.datasetName = datasetName;
         return this;
     }
@@ -148,7 +148,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.datasetName;
     }
 
-    public CreateDatasetRequest setDescription(String description) {
+    public CreateDatasetShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -156,7 +156,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.description;
     }
 
-    public CreateDatasetRequest setProjectName(String projectName) {
+    public CreateDatasetShrinkRequest setProjectName(String projectName) {
         this.projectName = projectName;
         return this;
     }
@@ -164,7 +164,7 @@ public class CreateDatasetRequest extends TeaModel {
         return this.projectName;
     }
 
-    public CreateDatasetRequest setTemplateId(String templateId) {
+    public CreateDatasetShrinkRequest setTemplateId(String templateId) {
         this.templateId = templateId;
         return this;
     }
@@ -172,12 +172,12 @@ public class CreateDatasetRequest extends TeaModel {
         return this.templateId;
     }
 
-    public CreateDatasetRequest setWorkflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
-        this.workflowParameters = workflowParameters;
+    public CreateDatasetShrinkRequest setWorkflowParametersShrink(String workflowParametersShrink) {
+        this.workflowParametersShrink = workflowParametersShrink;
         return this;
     }
-    public java.util.List<WorkflowParameter> getWorkflowParameters() {
-        return this.workflowParameters;
+    public String getWorkflowParametersShrink() {
+        return this.workflowParametersShrink;
     }
 
 }

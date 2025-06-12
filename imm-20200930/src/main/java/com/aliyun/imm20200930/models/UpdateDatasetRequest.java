@@ -71,6 +71,9 @@ public class UpdateDatasetRequest extends TeaModel {
     @NameInMap("TemplateId")
     public String templateId;
 
+    @NameInMap("WorkflowParameters")
+    public java.util.List<WorkflowParameter> workflowParameters;
+
     public static UpdateDatasetRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateDatasetRequest self = new UpdateDatasetRequest();
         return TeaModel.build(map, self);
@@ -146,6 +149,14 @@ public class UpdateDatasetRequest extends TeaModel {
     }
     public String getTemplateId() {
         return this.templateId;
+    }
+
+    public UpdateDatasetRequest setWorkflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
+        this.workflowParameters = workflowParameters;
+        return this;
+    }
+    public java.util.List<WorkflowParameter> getWorkflowParameters() {
+        return this.workflowParameters;
     }
 
 }

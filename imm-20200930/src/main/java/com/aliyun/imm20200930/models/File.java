@@ -115,6 +115,13 @@ public class File extends TeaModel {
     @NameInMap("ImageWidth")
     public Long imageWidth;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Insights")
+    public Insights insights;
+
     @NameInMap("Labels")
     public java.util.List<Label> labels;
 
@@ -552,6 +559,14 @@ public class File extends TeaModel {
     }
     public Long getImageWidth() {
         return this.imageWidth;
+    }
+
+    public File setInsights(Insights insights) {
+        this.insights = insights;
+        return this;
+    }
+    public Insights getInsights() {
+        return this.insights;
     }
 
     public File setLabels(java.util.List<Label> labels) {
