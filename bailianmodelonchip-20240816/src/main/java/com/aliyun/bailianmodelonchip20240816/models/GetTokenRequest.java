@@ -6,6 +6,12 @@ import com.aliyun.tea.*;
 public class GetTokenRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     */
+    @NameInMap("appId")
+    public String appId;
+
+    /**
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>5b504f84b69b9a73d3a21a2cff05e190</p>
@@ -21,15 +27,6 @@ public class GetTokenRequest extends TeaModel {
      */
     @NameInMap("nonce")
     public String nonce;
-
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>el3SzmCU2p0x4RBc</p>
-     */
-    @NameInMap("productKey")
-    public String productKey;
 
     /**
      * <p>This parameter is required.</p>
@@ -70,6 +67,14 @@ public class GetTokenRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetTokenRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
     public GetTokenRequest setDeviceName(String deviceName) {
         this.deviceName = deviceName;
         return this;
@@ -84,14 +89,6 @@ public class GetTokenRequest extends TeaModel {
     }
     public String getNonce() {
         return this.nonce;
-    }
-
-    public GetTokenRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public GetTokenRequest setRequestTime(String requestTime) {

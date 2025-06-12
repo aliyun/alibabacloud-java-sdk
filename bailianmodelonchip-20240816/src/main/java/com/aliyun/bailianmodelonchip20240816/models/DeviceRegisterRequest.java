@@ -6,6 +6,12 @@ import com.aliyun.tea.*;
 public class DeviceRegisterRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     */
+    @NameInMap("appId")
+    public String appId;
+
+    /**
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>2a64edd96296880f55aa61987b</p>
@@ -15,27 +21,12 @@ public class DeviceRegisterRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>el3SzmCU2p0x4RBc</p>
-     */
-    @NameInMap("productKey")
-    public String productKey;
-
-    /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1748312544852</p>
      */
     @NameInMap("requestTime")
     public String requestTime;
 
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>3spKwUgUpAGsXbbrHKnpVJPlI9wamoyhh96uqJuSyCKyJ7oscLAHRcz15dSzLG5L+ywFgYXSQNqdRtsn/Ri0j7pD0IuoKt9R7EnNo/U6viPvWD3Ldp3ehDDtOFtSrpUg6LTedvGtUWYU4x/zSD2jgCXijEdZCCMGCypcheMHRXfInYWF1xFtnCEXJfxtrBrnCk1p/pW3JSmdHJzmInnUEO3dWbNe3A==</p>
      */
     @NameInMap("signature")
     public String signature;
@@ -45,20 +36,20 @@ public class DeviceRegisterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DeviceRegisterRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
     public DeviceRegisterRequest setNonce(String nonce) {
         this.nonce = nonce;
         return this;
     }
     public String getNonce() {
         return this.nonce;
-    }
-
-    public DeviceRegisterRequest setProductKey(String productKey) {
-        this.productKey = productKey;
-        return this;
-    }
-    public String getProductKey() {
-        return this.productKey;
     }
 
     public DeviceRegisterRequest setRequestTime(String requestTime) {

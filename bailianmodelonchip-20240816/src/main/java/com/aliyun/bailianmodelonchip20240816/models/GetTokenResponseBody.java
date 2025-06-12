@@ -96,6 +96,9 @@ public class GetTokenResponseBody extends TeaModel {
     }
 
     public static class GetTokenResponseBodyData extends TeaModel {
+        @NameInMap("appId")
+        public String appId;
+
         /**
          * <strong>example:</strong>
          * <p>5b504f84b69b9a73d3a21a2cff05e190</p>
@@ -109,13 +112,6 @@ public class GetTokenResponseBody extends TeaModel {
          */
         @NameInMap("nonce")
         public String nonce;
-
-        /**
-         * <strong>example:</strong>
-         * <p>el3SzmCU2p0x4RBc</p>
-         */
-        @NameInMap("productKey")
-        public String productKey;
 
         /**
          * <strong>example:</strong>
@@ -143,6 +139,14 @@ public class GetTokenResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetTokenResponseBodyData setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
         public GetTokenResponseBodyData setDeviceName(String deviceName) {
             this.deviceName = deviceName;
             return this;
@@ -157,14 +161,6 @@ public class GetTokenResponseBody extends TeaModel {
         }
         public String getNonce() {
             return this.nonce;
-        }
-
-        public GetTokenResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public GetTokenResponseBodyData setRequestIp(String requestIp) {

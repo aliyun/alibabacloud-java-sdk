@@ -98,6 +98,9 @@ public class DeviceRegisterResponseBody extends TeaModel {
     }
 
     public static class DeviceRegisterResponseBodyData extends TeaModel {
+        @NameInMap("appId")
+        public String appId;
+
         /**
          * <strong>example:</strong>
          * <p>991fa52b7935aaa33536e05d4f4b5003</p>
@@ -111,13 +114,6 @@ public class DeviceRegisterResponseBody extends TeaModel {
          */
         @NameInMap("nonce")
         public String nonce;
-
-        /**
-         * <strong>example:</strong>
-         * <p>el3SzmCU2p0x4RBc</p>
-         */
-        @NameInMap("productKey")
-        public String productKey;
 
         /**
          * <strong>example:</strong>
@@ -138,6 +134,14 @@ public class DeviceRegisterResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DeviceRegisterResponseBodyData setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
         public DeviceRegisterResponseBodyData setDeviceName(String deviceName) {
             this.deviceName = deviceName;
             return this;
@@ -152,14 +156,6 @@ public class DeviceRegisterResponseBody extends TeaModel {
         }
         public String getNonce() {
             return this.nonce;
-        }
-
-        public DeviceRegisterResponseBodyData setProductKey(String productKey) {
-            this.productKey = productKey;
-            return this;
-        }
-        public String getProductKey() {
-            return this.productKey;
         }
 
         public DeviceRegisterResponseBodyData setResponseTime(String responseTime) {
