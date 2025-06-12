@@ -84,9 +84,21 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <p>The ID of the moderated object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>text1234</p>
+         */
         @NameInMap("dataId")
         public String dataId;
 
+        /**
+         * <p>The description of the labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("descriptions")
         public String descriptions;
 
@@ -100,7 +112,7 @@ public class TextModerationResponseBody extends TeaModel {
         public String deviceId;
 
         /**
-         * <p>Labels.</p>
+         * <p>The labels. Multiple labels are separated by commas (,). Valid values: ad: ad violation profanity: abuse contraband: contraband sexual_content: pornography violence: violence nonsense: irrigation spam: spam negative_content: undesirable content cyberbullying: cyberbullying C_customized: custom library that is hit</p>
          * 
          * <strong>example:</strong>
          * <p>porn</p>
@@ -108,8 +120,11 @@ public class TextModerationResponseBody extends TeaModel {
         @NameInMap("labels")
         public String labels;
 
+        @NameInMap("manualTaskId")
+        public String manualTaskId;
+
         /**
-         * <p>The JSON string used to locate the cause.</p>
+         * <p>The JSON string used to locate the cause. Valid values: riskTips: subcategory label riskWords: risk words adNums: hit advertising number customizedWords: customized words customizedLibs: customized libraries</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;detectedLanguage\&quot;:\&quot;ar\&quot;,\&quot;riskTips\&quot;:\&quot;sexuality_Suggestive\&quot;,\&quot;riskWords\&quot;:\&quot;pxxxxy\&quot;,\&quot;translatedContent\&quot;:\&quot;pxxxxy sxxxx\&quot;}</p>
@@ -160,6 +175,14 @@ public class TextModerationResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public TextModerationResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public TextModerationResponseBodyData setReason(String reason) {

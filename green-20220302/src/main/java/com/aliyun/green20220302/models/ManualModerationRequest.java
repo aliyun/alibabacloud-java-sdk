@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ManualModerationRequest extends TeaModel {
     /**
+     * <p>Service.</p>
+     * 
      * <strong>example:</strong>
      * <p>imageManualCheck</p>
      */
@@ -12,6 +14,12 @@ public class ManualModerationRequest extends TeaModel {
     public String service;
 
     /**
+     * <p>Parameter set required for the review service, in JSON string format.</p>
+     * <ul>
+     * <li>url: The URL of the object to be checked. Please ensure that this URL is publicly accessible.</li>
+     * <li>dataId: Optional, the data ID corresponding to the object being checked.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;url&quot;: &quot;<a href="https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4">https://talesofai.oss-cn-shanghai.aliyuncs.com/xxx.mp4</a>&quot;, &quot;dataId&quot;: &quot;data1234&quot;}</p>
      */

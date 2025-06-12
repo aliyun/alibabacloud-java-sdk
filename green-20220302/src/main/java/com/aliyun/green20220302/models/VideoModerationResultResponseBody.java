@@ -75,6 +75,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultAudioSummarys extends TeaModel {
+        /**
+         * <p>The description of the labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Description")
         public String description;
 
@@ -128,6 +134,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataAudioResultSliceDetails extends TeaModel {
+        /**
+         * <p>The description of the labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Descriptions")
         public String descriptions;
 
@@ -505,15 +517,39 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation extends TeaModel {
+        /**
+         * <p>The height of the text area. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <p>The width of the text area. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <p>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <p>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>222</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -557,12 +593,30 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo extends TeaModel {
+        /**
+         * <p>Confidence score, ranging from 0 to 100, with two decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99.10</p>
+         */
         @NameInMap("confidence")
         public Long confidence;
 
+        /**
+         * <p>label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt_logotoSocialNetwork</p>
+         */
         @NameInMap("label")
         public String label;
 
+        /**
+         * <p>Logo name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**logo</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -598,9 +652,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
     }
 
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData extends TeaModel {
+        /**
+         * <p>The location of the logo.</p>
+         */
         @NameInMap("Location")
         public VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLocation location;
 
+        /**
+         * <p>Logo information.</p>
+         */
         @NameInMap("Logo")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoDataLogo> logo;
 
@@ -718,6 +778,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("CustomImage")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsCustomImage> customImage;
 
+        /**
+         * <p>Returns logo information when the video contains a logo.</p>
+         */
         @NameInMap("LogoData")
         public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsLogoData> logoData;
 
@@ -994,6 +1057,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
+        @NameInMap("ManualTaskId")
+        public String manualTaskId;
+
         /**
          * <p>Risk Level.</p>
          * 
@@ -1047,6 +1113,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getLiveId() {
             return this.liveId;
+        }
+
+        public VideoModerationResultResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public VideoModerationResultResponseBodyData setRiskLevel(String riskLevel) {

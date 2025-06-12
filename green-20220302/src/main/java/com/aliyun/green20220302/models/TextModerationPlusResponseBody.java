@@ -445,6 +445,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("ManualTaskId")
+        public String manualTaskId;
+
         /**
          * <p>The results.</p>
          */
@@ -519,6 +522,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public TextModerationPlusResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public TextModerationPlusResponseBodyData setResult(java.util.List<TextModerationPlusResponseBodyDataResult> result) {

@@ -922,6 +922,9 @@ public class ImageBatchModerationResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("ManualTaskId")
+        public String manualTaskId;
+
         /**
          * <p>The risk labels, confidence scores, and other parameters of image detection results, in an array structure.</p>
          */
@@ -954,6 +957,14 @@ public class ImageBatchModerationResponseBody extends TeaModel {
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public ImageBatchModerationResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public ImageBatchModerationResponseBodyData setResult(java.util.List<ImageBatchModerationResponseBodyDataResult> result) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ManualCallbackResponseBody extends TeaModel {
     /**
+     * <p>Error code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ManualCallbackResponseBody extends TeaModel {
     public Integer code;
 
     /**
+     * <p>Message information</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -19,7 +23,7 @@ public class ManualCallbackResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

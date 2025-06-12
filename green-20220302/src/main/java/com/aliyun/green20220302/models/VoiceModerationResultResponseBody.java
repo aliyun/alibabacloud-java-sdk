@@ -75,6 +75,12 @@ public class VoiceModerationResultResponseBody extends TeaModel {
     }
 
     public static class VoiceModerationResultResponseBodyDataSliceDetails extends TeaModel {
+        /**
+         * <p>The description of the labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Descriptions")
         public String descriptions;
 
@@ -333,6 +339,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @NameInMap("LiveId")
         public String liveId;
 
+        @NameInMap("ManualTaskId")
+        public String manualTaskId;
+
         /**
          * <p>Risk Level.</p>
          * 
@@ -385,6 +394,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         }
         public String getLiveId() {
             return this.liveId;
+        }
+
+        public VoiceModerationResultResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public VoiceModerationResultResponseBodyData setRiskLevel(String riskLevel) {

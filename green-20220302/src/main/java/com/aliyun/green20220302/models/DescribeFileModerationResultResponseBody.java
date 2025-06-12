@@ -306,6 +306,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The description of the labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Descriptions")
         public String descriptions;
 
@@ -637,6 +643,12 @@ public class DescribeFileModerationResultResponseBody extends TeaModel {
     }
 
     public static class DescribeFileModerationResultResponseBodyDataPageSummaryTextSummaryTextLabels extends TeaModel {
+        /**
+         * <p>The description of the labels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>no risk</p>
+         */
         @NameInMap("Description")
         public String description;
 

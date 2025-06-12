@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ManualModerationResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public Integer code;
 
+    /**
+     * <p>Returned data.</p>
+     */
     @NameInMap("Data")
     public ManualModerationResponseBodyData data;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,7 +29,7 @@ public class ManualModerationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -69,6 +76,8 @@ public class ManualModerationResponseBody extends TeaModel {
 
     public static class ManualModerationResponseBodyData extends TeaModel {
         /**
+         * <p>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</p>
+         * 
          * <strong>example:</strong>
          * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
          */
@@ -76,6 +85,8 @@ public class ManualModerationResponseBody extends TeaModel {
         public String dataId;
 
         /**
+         * <p>Task ID</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxx-xxxxx</p>
          */

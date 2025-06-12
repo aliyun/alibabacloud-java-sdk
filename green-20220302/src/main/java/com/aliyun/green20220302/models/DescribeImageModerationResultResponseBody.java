@@ -102,6 +102,12 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>Risk Level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
@@ -172,6 +178,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @NameInMap("FrameNum")
         public Integer frameNum;
 
+        @NameInMap("ManualTaskId")
+        public String manualTaskId;
+
         /**
          * <p>The reqId field returned by the Image Async Moderation API.</p>
          * 
@@ -223,6 +232,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
         public Integer getFrameNum() {
             return this.frameNum;
+        }
+
+        public DescribeImageModerationResultResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public DescribeImageModerationResultResponseBodyData setReqId(String reqId) {

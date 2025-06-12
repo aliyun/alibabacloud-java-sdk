@@ -1626,6 +1626,12 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <p>Risk Level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>high</p>
+         */
         @NameInMap("RiskLevel")
         public String riskLevel;
 
@@ -1687,6 +1693,9 @@ public class ImageModerationResponseBody extends TeaModel {
         @NameInMap("Ext")
         public ImageModerationResponseBodyDataExt ext;
 
+        @NameInMap("ManualTaskId")
+        public String manualTaskId;
+
         /**
          * <p>The results of image moderation parameters such as the label parameter and the confidence parameter, which are an array structure.</p>
          */
@@ -1721,6 +1730,14 @@ public class ImageModerationResponseBody extends TeaModel {
         }
         public ImageModerationResponseBodyDataExt getExt() {
             return this.ext;
+        }
+
+        public ImageModerationResponseBodyData setManualTaskId(String manualTaskId) {
+            this.manualTaskId = manualTaskId;
+            return this;
+        }
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         public ImageModerationResponseBodyData setResult(java.util.List<ImageModerationResponseBodyDataResult> result) {
