@@ -16,6 +16,9 @@ public class UpdateInstanceSettingsRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
+    @NameInMap("force")
+    public Boolean force;
+
     @NameInMap("updateStrategy")
     public String updateStrategy;
 
@@ -38,6 +41,14 @@ public class UpdateInstanceSettingsRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public UpdateInstanceSettingsRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public UpdateInstanceSettingsRequest setUpdateStrategy(String updateStrategy) {

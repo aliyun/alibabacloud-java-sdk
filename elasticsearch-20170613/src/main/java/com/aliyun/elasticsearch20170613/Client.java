@@ -3415,8 +3415,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public InstallUserPluginsResponse installUserPluginsWithOptions(String InstanceId, InstallUserPluginsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("force", request.force);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", request.body)
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -4833,6 +4839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.size)) {
             query.put("size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
@@ -8781,6 +8791,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("clientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("force", request.force);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.updateStrategy)) {

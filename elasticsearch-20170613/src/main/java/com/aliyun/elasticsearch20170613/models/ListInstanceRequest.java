@@ -80,6 +80,9 @@ public class ListInstanceRequest extends TeaModel {
     @NameInMap("size")
     public Integer size;
 
+    @NameInMap("status")
+    public String status;
+
     /**
      * <p>The header of the response.</p>
      * 
@@ -174,6 +177,14 @@ public class ListInstanceRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public ListInstanceRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListInstanceRequest setTags(String tags) {
