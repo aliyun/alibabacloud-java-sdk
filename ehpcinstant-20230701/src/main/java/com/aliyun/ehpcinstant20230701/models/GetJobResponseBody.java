@@ -396,6 +396,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks> disks;
 
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
+
         /**
          * <strong>example:</strong>
          * <p>4</p>
@@ -422,6 +425,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecResourceDisks> getDisks() {
             return this.disks;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecResource setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
         }
 
         public GetJobResponseBodyJobInfoTasksTaskSpecResource setMemory(Integer memory) {
@@ -456,6 +467,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Script")
         public String script;
 
+        @NameInMap("UserName")
+        public String userName;
+
         public static GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM self = new GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM();
             return TeaModel.build(map, self);
@@ -483,6 +497,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getScript() {
             return this.script;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

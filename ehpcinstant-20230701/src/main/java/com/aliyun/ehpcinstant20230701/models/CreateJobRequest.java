@@ -165,6 +165,12 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Network")
         public CreateJobRequestDeploymentPolicyNetwork network;
 
+        @NameInMap("Pool")
+        public String pool;
+
+        @NameInMap("Priority")
+        public Integer priority;
+
         @NameInMap("Tag")
         public java.util.List<CreateJobRequestDeploymentPolicyTag> tag;
 
@@ -195,6 +201,22 @@ public class CreateJobRequest extends TeaModel {
         }
         public CreateJobRequestDeploymentPolicyNetwork getNetwork() {
             return this.network;
+        }
+
+        public CreateJobRequestDeploymentPolicy setPool(String pool) {
+            this.pool = pool;
+            return this;
+        }
+        public String getPool() {
+            return this.pool;
+        }
+
+        public CreateJobRequestDeploymentPolicy setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
         }
 
         public CreateJobRequestDeploymentPolicy setTag(java.util.List<CreateJobRequestDeploymentPolicyTag> tag) {
@@ -381,6 +403,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<CreateJobRequestTasksTaskSpecResourceDisks> disks;
 
+        @NameInMap("InstanceTypes")
+        public java.util.List<String> instanceTypes;
+
         /**
          * <strong>example:</strong>
          * <p>4</p>
@@ -407,6 +432,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public java.util.List<CreateJobRequestTasksTaskSpecResourceDisks> getDisks() {
             return this.disks;
+        }
+
+        public CreateJobRequestTasksTaskSpecResource setInstanceTypes(java.util.List<String> instanceTypes) {
+            this.instanceTypes = instanceTypes;
+            return this;
+        }
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
         }
 
         public CreateJobRequestTasksTaskSpecResource setMemory(Float memory) {
@@ -461,6 +494,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("AppId")
         public String appId;
 
+        @NameInMap("Arg")
+        public java.util.List<String> arg;
+
         @NameInMap("Command")
         public java.util.List<String> command;
 
@@ -494,6 +530,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getAppId() {
             return this.appId;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorContainer setArg(java.util.List<String> arg) {
+            this.arg = arg;
+            return this;
+        }
+        public java.util.List<String> getArg() {
+            return this.arg;
         }
 
         public CreateJobRequestTasksTaskSpecTaskExecutorContainer setCommand(java.util.List<String> command) {
@@ -543,6 +587,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Image")
         public String image;
 
+        @NameInMap("Password")
+        public String password;
+
         /**
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -576,6 +623,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getImage() {
             return this.image;
+        }
+
+        public CreateJobRequestTasksTaskSpecTaskExecutorVM setPassword(String password) {
+            this.password = password;
+            return this;
+        }
+        public String getPassword() {
+            return this.password;
         }
 
         public CreateJobRequestTasksTaskSpecTaskExecutorVM setPrologScript(String prologScript) {
@@ -641,6 +696,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("MountPath")
         public String mountPath;
 
+        @NameInMap("ReadOnly")
+        public Boolean readOnly;
+
         /**
          * <strong>example:</strong>
          * <p>alicloud/nas</p>
@@ -667,6 +725,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public String getMountPath() {
             return this.mountPath;
+        }
+
+        public CreateJobRequestTasksTaskSpecVolumeMount setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
         }
 
         public CreateJobRequestTasksTaskSpecVolumeMount setVolumeDriver(String volumeDriver) {
