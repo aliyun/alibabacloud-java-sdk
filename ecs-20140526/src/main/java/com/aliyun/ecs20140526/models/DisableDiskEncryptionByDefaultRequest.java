@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DisableDiskEncryptionByDefaultRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The ID of the region for which you want to disable Account-level EBS Default Encryption. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -20,6 +23,14 @@ public class DisableDiskEncryptionByDefaultRequest extends TeaModel {
     public static DisableDiskEncryptionByDefaultRequest build(java.util.Map<String, ?> map) throws Exception {
         DisableDiskEncryptionByDefaultRequest self = new DisableDiskEncryptionByDefaultRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DisableDiskEncryptionByDefaultRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DisableDiskEncryptionByDefaultRequest setRegionId(String regionId) {

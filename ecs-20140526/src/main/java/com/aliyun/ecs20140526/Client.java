@@ -13084,6 +13084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDiskDefaultKMSKeyIdResponse describeDiskDefaultKMSKeyIdWithOptions(DescribeDiskDefaultKMSKeyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -13132,6 +13136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDiskEncryptionByDefaultStatusResponse describeDiskEncryptionByDefaultStatusWithOptions(DescribeDiskEncryptionByDefaultStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -22691,6 +22699,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableDiskEncryptionByDefaultResponse disableDiskEncryptionByDefaultWithOptions(DisableDiskEncryptionByDefaultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -25981,6 +25993,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.KMSKeyId)) {
             query.put("KMSKeyId", request.KMSKeyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
@@ -33160,6 +33176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResetDiskDefaultKMSKeyIdResponse resetDiskDefaultKMSKeyIdWithOptions(ResetDiskDefaultKMSKeyIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }

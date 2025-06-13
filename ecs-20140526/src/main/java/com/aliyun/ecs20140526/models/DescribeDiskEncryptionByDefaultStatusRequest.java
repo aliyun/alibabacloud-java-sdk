@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeDiskEncryptionByDefaultStatusRequest extends TeaModel {
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -20,6 +23,14 @@ public class DescribeDiskEncryptionByDefaultStatusRequest extends TeaModel {
     public static DescribeDiskEncryptionByDefaultStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDiskEncryptionByDefaultStatusRequest self = new DescribeDiskEncryptionByDefaultStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeDiskEncryptionByDefaultStatusRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public DescribeDiskEncryptionByDefaultStatusRequest setRegionId(String regionId) {

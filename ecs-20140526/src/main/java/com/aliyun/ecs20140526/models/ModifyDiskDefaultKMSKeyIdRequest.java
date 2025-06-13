@@ -14,6 +14,9 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends TeaModel {
     @NameInMap("KMSKeyId")
     public String KMSKeyId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -38,6 +41,14 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends TeaModel {
     }
     public String getKMSKeyId() {
         return this.KMSKeyId;
+    }
+
+    public ModifyDiskDefaultKMSKeyIdRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     public ModifyDiskDefaultKMSKeyIdRequest setRegionId(String regionId) {
