@@ -1382,6 +1382,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取异步导出文档任务结果</p>
+     * 
+     * @param request FetchExportWordTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchExportWordTaskResponse
+     */
+    public FetchExportWordTaskResponse fetchExportWordTaskWithOptions(FetchExportWordTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchExportWordTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchExportWordTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取异步导出文档任务结果</p>
+     * 
+     * @param request FetchExportWordTaskRequest
+     * @return FetchExportWordTaskResponse
+     */
+    public FetchExportWordTaskResponse fetchExportWordTask(FetchExportWordTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.fetchExportWordTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取图片任务执行结果</p>
      * 
      * @param tmpReq FetchImageTaskRequest
@@ -1438,6 +1488,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FetchImageTaskResponse fetchImageTask(FetchImageTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fetchImageTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成内容导出文档任务</p>
+     * 
+     * @param request GenerateExportWordTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateExportWordTaskResponse
+     */
+    public GenerateExportWordTaskResponse generateExportWordTaskWithOptions(GenerateExportWordTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.generatedContentId)) {
+            body.put("GeneratedContentId", request.generatedContentId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateExportWordTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateExportWordTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成内容导出文档任务</p>
+     * 
+     * @param request GenerateExportWordTaskRequest
+     * @return GenerateExportWordTaskResponse
+     */
+    public GenerateExportWordTaskResponse generateExportWordTask(GenerateExportWordTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.generateExportWordTaskWithOptions(request, runtime);
     }
 
     /**
