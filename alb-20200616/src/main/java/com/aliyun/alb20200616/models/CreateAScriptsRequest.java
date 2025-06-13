@@ -168,6 +168,23 @@ public class CreateAScriptsRequest extends TeaModel {
         public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> extAttributes;
 
         /**
+         * <p>可编程脚本执行位置</p>
+         * <ul>
+         * <li><p>RequestHead（默认值）：请求方向规则执行前</p>
+         * </li>
+         * <li><p>RequestFoot：请求方向规则执行后</p>
+         * </li>
+         * <li><p>ResponseHead：响应方向规则执行前</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RequestFoot</p>
+         */
+        @NameInMap("Position")
+        public String position;
+
+        /**
          * <p>The content of the AScript rule.</p>
          * <p>This parameter is required.</p>
          * 
@@ -212,6 +229,14 @@ public class CreateAScriptsRequest extends TeaModel {
         }
         public java.util.List<CreateAScriptsRequestAScriptsExtAttributes> getExtAttributes() {
             return this.extAttributes;
+        }
+
+        public CreateAScriptsRequestAScripts setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
         }
 
         public CreateAScriptsRequestAScripts setScriptContent(String scriptContent) {

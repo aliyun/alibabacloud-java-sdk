@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The mode in which IP addresses are allocated. Default value: Dynamic. Valid values:</p>
+     * <p>The mode in which IP addresses are allocated to the ALB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Fixed</strong>: The ALB instance uses a static IP address.</li>
-     * <li><strong>Dynamic</strong> (default): The system dynamically allocates an IP address to each zone of the ALB instance.</li>
+     * <li><strong>Fixed</strong> (default): a fixed IP address is assigned to the ALB instance in each zone.</li>
+     * <li><strong>Dynamic</strong>: IP addresses are dynamically allocated to the ALB instance in each zone.</li>
      * </ul>
+     * <blockquote>
+     * <p> Starting from 00:00:00 on February 25, 2025 (UTC+8), when you call this operation to create an ALB instance, the instance is automatically the <a href="https://help.aliyun.com/document_detail/2864070.html">upgraded version</a> regardless of the mode you specify. Upgraded ALB instances no longer differentiate between IP modes. Instead, they globally auto-scale IP addresses for providing load balancing services. The ALB instances you created before this date and time are not affected.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>Dynamic</p>
@@ -116,7 +119,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * <p>The configuration of the configuration read-only mode.</p>
+     * <p>The configuration read-only mode settings.</p>
      */
     @NameInMap("ModificationProtectionConfig")
     public CreateLoadBalancerRequestModificationProtectionConfig modificationProtectionConfig;
@@ -281,7 +284,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String bandwidthPackageId;
 
         /**
-         * <p>The billing method of the ALB instance.</p>
+         * <p>The billing method of the instance.</p>
          * <p>Set the value to <strong>PostPay</strong>, which specifies the pay-as-you-go billing method.</p>
          * <p>This parameter is required.</p>
          * 
@@ -316,9 +319,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestModificationProtectionConfig extends TeaModel {
         /**
-         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
+         * <p>The reason for enabling the configuration read-only mode.</p>
+         * <p>The reason must be 2 to 128 characters in length, can contain letters, digits, periods (.), underscores (_), and hyphens (-), and must start with a letter.</p>
          * <blockquote>
-         * <p>This parameter takes effect only if <code>Status</code> is set to <strong>ConsoleProtection</strong>.</p>
+         * <p> This parameter takes effect only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -330,11 +334,11 @@ public class CreateLoadBalancerRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
          * <ul>
-         * <li><strong>NonProtection</strong>: disables the configuration read-only mode. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</li>
-         * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. In this case, you can specify ModificationProtectionReason.</li>
+         * <li><strong>NonProtection</strong>: Disables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify does not take effect. If you specify <strong>Reason</strong>, the value of the parameter is cleared.</li>
+         * <li><strong>ConsoleProtection</strong>: Enables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify takes effect.****</li>
          * </ul>
          * <blockquote>
-         * <p>If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         * <p> If the parameter is set to <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

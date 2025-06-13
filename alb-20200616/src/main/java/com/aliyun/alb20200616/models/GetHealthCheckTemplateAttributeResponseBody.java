@@ -151,6 +151,12 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

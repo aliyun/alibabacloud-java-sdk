@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListListenerCertificatesRequest extends TeaModel {
     /**
-     * <p>The certificate IDs.</p>
+     * <p>The certificates.</p>
      */
     @NameInMap("CertificateIds")
     public java.util.List<String> certificateIds;
@@ -30,7 +30,7 @@ public class ListListenerCertificatesRequest extends TeaModel {
     public String listenerId;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return in each call. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

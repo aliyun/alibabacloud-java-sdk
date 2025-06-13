@@ -37,7 +37,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The security IDs.</p>
+     * <p>The security group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecurityGroupIds")

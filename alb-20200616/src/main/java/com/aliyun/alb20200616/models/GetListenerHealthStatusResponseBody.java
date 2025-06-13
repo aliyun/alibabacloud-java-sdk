@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListenerHealthStatusResponseBody extends TeaModel {
     /**
-     * <p>The health check status of the server groups that are associated with the listener.</p>
+     * <p>The health check status of the server groups associated with the listener.</p>
      */
     @NameInMap("ListenerHealthStatus")
     public java.util.List<GetListenerHealthStatusResponseBodyListenerHealthStatus> listenerHealthStatus;
@@ -111,7 +111,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
          * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
          * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
          * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
-         * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+         * <li><strong>RESPONSE_MISMATCH</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The cause of the abnormal state.</p>
+         * <p>The cause for the unhealthy state of the backend servers.</p>
          */
         @NameInMap("Reason")
         public GetListenerHealthStatusResponseBodyListenerHealthStatusServerGroupInfosNonNormalServersReason reason;
@@ -424,7 +424,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public String expectedResponse;
 
         /**
-         * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
+         * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only forwarding rules for HTTP and HTTPS listeners support this parameter.</p>
          * <ul>
          * <li><strong>CONNECT_TIMEOUT</strong>: ALB failed to connect to the backend server within the specified period of time.</li>
          * <li><strong>CONNECT_FAILED</strong>: ALB failed to connect to the backend server.</li>
@@ -433,7 +433,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
          * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
          * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
          * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
-         * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+         * <li><strong>RESPONSE_MISMATCH</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -484,7 +484,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The cause of the abnormal state.</p>
+         * <p>The cause for the unhealthy state of the backend servers.</p>
          */
         @NameInMap("Reason")
         public GetListenerHealthStatusResponseBodyRuleHealthStatusServerGroupInfosNonNormalServersReason reason;

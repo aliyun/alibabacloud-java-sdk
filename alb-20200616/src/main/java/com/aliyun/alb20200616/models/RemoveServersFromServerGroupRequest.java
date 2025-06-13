@@ -41,7 +41,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
     public String serverGroupId;
 
     /**
-     * <p>The server group. You can add at most 200 backend servers to the server group.</p>
+     * <p>The backend servers to be removed. You can specify up to 200 backend servers.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Servers")
@@ -98,14 +98,14 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The ID of the server group.</p>
+         * <p>The backend server ID.</p>
          * <ul>
          * <li>If the server group is of the <strong>Instance</strong> type, set ServerId to the ID of a resource of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-         * <li>If the server group is of the <strong>Ip</strong> type, set ServerId to IP addresses.</li>
-         * <li>If the server group is of the <strong>Fc</strong>, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</li>
+         * <li>If the server group is of the <strong>Ip</strong> type, set this parameter to IP addresses.</li>
+         * <li>If the server group is of the <strong>Fc</strong> type, set ServerId to the Alibaba Cloud Resource Name (ARN) of a function.</li>
          * </ul>
          * <blockquote>
-         * <p> You can call the ListServerGroups operation to query information about the server group type so that you can set ServerId to a proper value.<a href="~~213627~~"></a></p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> operation to query information about the server group type so that you can set ServerId to a proper value.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -116,7 +116,7 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         public String serverId;
 
         /**
-         * <p>The IP address of the elastic network interface (ENI) in exclusive mode.</p>
+         * <p>The IP address of the elastic network interface (ENI) in inclusive mode.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -127,11 +127,11 @@ public class RemoveServersFromServerGroupRequest extends TeaModel {
         /**
          * <p>The type of the backend server. Valid values:</p>
          * <ul>
-         * <li><strong>Ecs</strong>: ECS instance</li>
+         * <li><strong>Ecs</strong>: Elastic Compute Service (ECS) instance</li>
          * <li><strong>Eni</strong>: ENI</li>
          * <li><strong>Eci</strong>: elastic container instance</li>
          * <li><strong>Ip</strong>: IP address</li>
-         * <li><strong>Fc</strong>: Function Compute</li>
+         * <li><strong>Fc</strong>: Function Compute instance</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

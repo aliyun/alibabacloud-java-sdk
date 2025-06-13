@@ -176,7 +176,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     public String loadBalancerStatus;
 
     /**
-     * <p>The configuration of the configuration read-only mode.</p>
+     * <p>The configuration read-only mode settings.</p>
      */
     @NameInMap("ModificationProtectionConfig")
     public GetLoadBalancerAttributeResponseBodyModificationProtectionConfig modificationProtectionConfig;
@@ -597,8 +597,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
 
     public static class GetLoadBalancerAttributeResponseBodyModificationProtectionConfig extends TeaModel {
         /**
-         * <p>The reason for enabling the configuration read-only mode. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The reason must start with a letter.</p>
-         * <p>This parameter is valid only if <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
+         * <p>The reason why the configuration read-only mode is enabled.</p>
+         * <p>The name must be 2 to 128 character characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+         * <p>This parameter takes effect only if <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -607,13 +608,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The status of the configuration read-only mode. Valid values:</p>
+         * <p>Specifies whether the configuration read-only mode is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. In this case, you cannot specify ModificationProtectionReason. If you specify ModificationProtectionReason, the value of the parameter is cleared.</li>
-         * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled. In this case, you can specify ModificationProtectionReason.</li>
+         * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. In this case, the value of the <strong>Reason</strong> parameter that you specify does not take effect. If you set <strong>Reason</strong>, the value is cleared.</li>
+         * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled. In this case, the value of the <strong>Reason</strong> parameter takes effect.****</li>
          * </ul>
          * <blockquote>
-         * <p>If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+         * <p> If the parameter is set to <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

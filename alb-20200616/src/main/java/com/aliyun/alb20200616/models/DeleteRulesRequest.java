@@ -31,7 +31,7 @@ public class DeleteRulesRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The forwarding rules.</p>
+     * <p>The forwarding rules. You can specify at most 100 forwarding rules in each call.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuleIds")

@@ -169,6 +169,12 @@ public class CreateHealthCheckTemplateRequest extends TeaModel {
     @NameInMap("HealthyThreshold")
     public Integer healthyThreshold;
 
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-atstuj3rtop****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 

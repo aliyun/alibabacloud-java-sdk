@@ -94,8 +94,8 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     public Boolean http2Enabled;
 
     /**
-     * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1 to 60</strong>.</p>
-     * <p>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
+     * <p>The timeout period for idle connections. Unit: seconds. Valid values: <strong>1 to 60</strong></p>
+     * <p>If no requests are received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

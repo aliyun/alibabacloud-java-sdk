@@ -185,7 +185,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     public static class ListLoadBalancersResponseBodyLoadBalancersLoadBalancerBillingConfig extends TeaModel {
         /**
-         * <p>The billing method. Valid values:</p>
+         * <p>The billing method. Valid value:</p>
          * <p>Only <strong>PostPay</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         /**
          * <p>The reason why the configuration read-only mode is enabled.</p>
          * <p>The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-         * <p>This parameter is available only if the <strong>ModificationProtectionStatus</strong> parameter is set to <strong>ConsoleProtection</strong>.</p>
+         * <p>This parameter takes effect only if <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Test Reason</p>
@@ -270,13 +270,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:</p>
+         * <p>Indicates whether the configuration read-only mode is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>NonProtection</strong>: Modification protection is disabled. In this case, you cannot set the ModificationProtectionReason parameter. If the ModificationProtectionReason parameter is specified, the value is cleared.</li>
-         * <li><strong>ConsoleProtection</strong>: Modification protection is enabled. In this case, you can set the ModificationProtectionReason parameter.</li>
+         * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. In this case, <strong>Reason</strong> is not returned. If <strong>Reason</strong> is set, the value is cleared.</li>
+         * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled. In this case, <strong>Reason</strong> is returned.****</li>
          * </ul>
          * <blockquote>
-         * <p> If the value is <strong>ConsoleProtection</strong>, modification protection is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
+         * <p> If the value is <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -516,7 +516,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public String loadBalancerStatus;
 
         /**
-         * <p>The configuration of modification protection.</p>
+         * <p>The configuration read-only mode settings.</p>
          */
         @NameInMap("ModificationProtectionConfig")
         public ListLoadBalancersResponseBodyLoadBalancersModificationProtectionConfig modificationProtectionConfig;
@@ -529,6 +529,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
+
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
 
         /**
          * <p>The information about the tags.</p>
@@ -692,6 +695,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
+        }
+
+        public ListLoadBalancersResponseBodyLoadBalancers setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
         }
 
         public ListLoadBalancersResponseBodyLoadBalancers setTags(java.util.List<ListLoadBalancersResponseBodyLoadBalancersTags> tags) {

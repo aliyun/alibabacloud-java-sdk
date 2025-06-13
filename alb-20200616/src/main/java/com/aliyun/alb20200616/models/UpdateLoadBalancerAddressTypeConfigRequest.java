@@ -119,10 +119,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends TeaModel {
         public String allocationId;
 
         /**
-         * <p>The type of EIP. Valid values:</p>
+         * <p>The type of the EIP. Valid values:</p>
          * <ul>
-         * <li><strong>Common</strong>: an EIP.</li>
-         * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+         * <li>Common (default): indicates an EIP</li>
+         * <li>Anycast: indicates an Anycast EIP</li>
          * </ul>
          * <blockquote>
          * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>
