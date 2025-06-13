@@ -16,6 +16,12 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("DedicatedIp")
+    public String dedicatedIp;
+
+    @NameInMap("DedicatedIpPoolId")
+    public String dedicatedIpPoolId;
+
     /**
      * <p>End time, with a span from the start time that cannot exceed 15 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
@@ -25,6 +31,9 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Esp")
+    public String esp;
 
     /**
      * <p>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</p>
@@ -121,12 +130,36 @@ public class GetTrackListByMailFromAndTagNameRequest extends TeaModel {
         return this.accountName;
     }
 
+    public GetTrackListByMailFromAndTagNameRequest setDedicatedIp(String dedicatedIp) {
+        this.dedicatedIp = dedicatedIp;
+        return this;
+    }
+    public String getDedicatedIp() {
+        return this.dedicatedIp;
+    }
+
+    public GetTrackListByMailFromAndTagNameRequest setDedicatedIpPoolId(String dedicatedIpPoolId) {
+        this.dedicatedIpPoolId = dedicatedIpPoolId;
+        return this;
+    }
+    public String getDedicatedIpPoolId() {
+        return this.dedicatedIpPoolId;
+    }
+
     public GetTrackListByMailFromAndTagNameRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetTrackListByMailFromAndTagNameRequest setEsp(String esp) {
+        this.esp = esp;
+        return this;
+    }
+    public String getEsp() {
+        return this.esp;
     }
 
     public GetTrackListByMailFromAndTagNameRequest setOffset(String offset) {

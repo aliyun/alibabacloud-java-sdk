@@ -16,6 +16,12 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("DedicatedIp")
+    public String dedicatedIp;
+
+    @NameInMap("DedicatedIpPoolId")
+    public String dedicatedIpPoolId;
+
     /**
      * <p>End time, the span between start and end time cannot exceed 7 days. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
@@ -25,6 +31,9 @@ public class GetTrackListRequest extends TeaModel {
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Esp")
+    public String esp;
 
     /**
      * <p>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</p>
@@ -121,12 +130,36 @@ public class GetTrackListRequest extends TeaModel {
         return this.accountName;
     }
 
+    public GetTrackListRequest setDedicatedIp(String dedicatedIp) {
+        this.dedicatedIp = dedicatedIp;
+        return this;
+    }
+    public String getDedicatedIp() {
+        return this.dedicatedIp;
+    }
+
+    public GetTrackListRequest setDedicatedIpPoolId(String dedicatedIpPoolId) {
+        this.dedicatedIpPoolId = dedicatedIpPoolId;
+        return this;
+    }
+    public String getDedicatedIpPoolId() {
+        return this.dedicatedIpPoolId;
+    }
+
     public GetTrackListRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetTrackListRequest setEsp(String esp) {
+        this.esp = esp;
+        return this;
+    }
+    public String getEsp() {
+        return this.esp;
     }
 
     public GetTrackListRequest setOffset(String offset) {

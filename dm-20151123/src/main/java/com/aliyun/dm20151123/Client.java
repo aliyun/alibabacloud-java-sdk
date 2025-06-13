@@ -1341,8 +1341,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountName", request.accountName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
+            query.put("DedicatedIp", request.dedicatedIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIpPoolId)) {
+            query.put("DedicatedIpPoolId", request.dedicatedIpPoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.esp)) {
+            query.put("Esp", request.esp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
@@ -1433,8 +1445,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountName", request.accountName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
+            query.put("DedicatedIp", request.dedicatedIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIpPoolId)) {
+            query.put("DedicatedIpPoolId", request.dedicatedIpPoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.esp)) {
+            query.put("Esp", request.esp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
@@ -2509,8 +2533,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountName", request.accountName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
+            query.put("DedicatedIp", request.dedicatedIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIpPoolId)) {
+            query.put("DedicatedIpPoolId", request.dedicatedIpPoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.esp)) {
+            query.put("Esp", request.esp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {

@@ -58,6 +58,9 @@ public class GetTrackListResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
+    @NameInMap("TotalPages")
+    public Integer totalPages;
+
     /**
      * <p>Tracking data records</p>
      */
@@ -115,6 +118,14 @@ public class GetTrackListResponseBody extends TeaModel {
     }
     public Integer getTotal() {
         return this.total;
+    }
+
+    public GetTrackListResponseBody setTotalPages(Integer totalPages) {
+        this.totalPages = totalPages;
+        return this;
+    }
+    public Integer getTotalPages() {
+        return this.totalPages;
     }
 
     public GetTrackListResponseBody setData(GetTrackListResponseBodyData data) {

@@ -13,6 +13,12 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("DedicatedIp")
+    public String dedicatedIp;
+
+    @NameInMap("DedicatedIpPoolId")
+    public String dedicatedIpPoolId;
+
     /**
      * <p>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
@@ -22,6 +28,9 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    @NameInMap("Esp")
+    public String esp;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -64,12 +73,36 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends TeaModel {
         return this.accountName;
     }
 
+    public SenderStatisticsByTagNameAndBatchIDRequest setDedicatedIp(String dedicatedIp) {
+        this.dedicatedIp = dedicatedIp;
+        return this;
+    }
+    public String getDedicatedIp() {
+        return this.dedicatedIp;
+    }
+
+    public SenderStatisticsByTagNameAndBatchIDRequest setDedicatedIpPoolId(String dedicatedIpPoolId) {
+        this.dedicatedIpPoolId = dedicatedIpPoolId;
+        return this;
+    }
+    public String getDedicatedIpPoolId() {
+        return this.dedicatedIpPoolId;
+    }
+
     public SenderStatisticsByTagNameAndBatchIDRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public SenderStatisticsByTagNameAndBatchIDRequest setEsp(String esp) {
+        this.esp = esp;
+        return this;
+    }
+    public String getEsp() {
+        return this.esp;
     }
 
     public SenderStatisticsByTagNameAndBatchIDRequest setOwnerId(Long ownerId) {
