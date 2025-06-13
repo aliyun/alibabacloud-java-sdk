@@ -6180,6 +6180,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询实例高可用相关日志</p>
+     * 
+     * @param request DescribeHALogsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeHALogsResponse
+     */
+    public DescribeHALogsResponse describeHALogsWithOptions(DescribeHALogsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBNodeId)) {
+            query.put("DBNodeId", request.DBNodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logType)) {
+            query.put("LogType", request.logType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeHALogs"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeHALogsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例高可用相关日志</p>
+     * 
+     * @param request DescribeHALogsRequest
+     * @return DescribeHALogsResponse
+     */
+    public DescribeHALogsResponse describeHALogs(DescribeHALogsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeHALogsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>任务中心任务列表</p>
      * 
      * @param request DescribeHistoryTasksRequest
@@ -11378,6 +11446,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public OpenAITaskResponse openAITask(OpenAITaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.openAITaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Reactivates the backup feature.</p>
+     * 
+     * @param request ReactivateDBClusterBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReactivateDBClusterBackupResponse
+     */
+    public ReactivateDBClusterBackupResponse reactivateDBClusterBackupWithOptions(ReactivateDBClusterBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReactivateDBClusterBackup"),
+            new TeaPair("version", "2017-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReactivateDBClusterBackupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Reactivates the backup feature.</p>
+     * 
+     * @param request ReactivateDBClusterBackupRequest
+     * @return ReactivateDBClusterBackupResponse
+     */
+    public ReactivateDBClusterBackupResponse reactivateDBClusterBackup(ReactivateDBClusterBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.reactivateDBClusterBackupWithOptions(request, runtime);
     }
 
     /**
