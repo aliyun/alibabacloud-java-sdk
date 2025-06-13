@@ -162,6 +162,12 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         @NameInMap("Priority")
         public Long priority;
 
+        @NameInMap("TrustedProcessGroupIds")
+        public java.util.List<String> trustedProcessGroupIds;
+
+        @NameInMap("TrustedSoftwareIds")
+        public java.util.List<String> trustedSoftwareIds;
+
         /**
          * <strong>example:</strong>
          * <p>Custom</p>
@@ -228,6 +234,22 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         }
         public Long getPriority() {
             return this.priority;
+        }
+
+        public ListUserPrivateAccessPoliciesResponseBodyPolices setTrustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
+            this.trustedProcessGroupIds = trustedProcessGroupIds;
+            return this;
+        }
+        public java.util.List<String> getTrustedProcessGroupIds() {
+            return this.trustedProcessGroupIds;
+        }
+
+        public ListUserPrivateAccessPoliciesResponseBodyPolices setTrustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
+            this.trustedSoftwareIds = trustedSoftwareIds;
+            return this;
+        }
+        public java.util.List<String> getTrustedSoftwareIds() {
+            return this.trustedSoftwareIds;
         }
 
         public ListUserPrivateAccessPoliciesResponseBodyPolices setUserGroupMode(String userGroupMode) {

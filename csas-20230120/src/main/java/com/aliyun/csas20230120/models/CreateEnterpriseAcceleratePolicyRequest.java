@@ -32,6 +32,8 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer showInClient;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>12.34.56.XX</p>
      */
@@ -39,6 +41,8 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public String upstreamHost;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -46,12 +50,17 @@ public class CreateEnterpriseAcceleratePolicyRequest extends TeaModel {
     public Integer upstreamPort;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>ga</p>
      */
     @NameInMap("UpstreamType")
     public String upstreamType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserAttributeGroup")
     public String userAttributeGroup;
 

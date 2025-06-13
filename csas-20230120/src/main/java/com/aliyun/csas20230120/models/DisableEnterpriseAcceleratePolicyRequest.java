@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DisableEnterpriseAcceleratePolicyRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-d50b45aa7dc04aef</p>
      */

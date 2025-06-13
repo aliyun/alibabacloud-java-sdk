@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnterpriseAccelerateTargetsRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListEnterpriseAccelerateTargetsRequest extends TeaModel {
     public Long currentPage;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-424ba3f47660425c</p>
      */
@@ -19,6 +23,8 @@ public class ListEnterpriseAccelerateTargetsRequest extends TeaModel {
     public String eapId;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

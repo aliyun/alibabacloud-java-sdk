@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEnterpriseAcceleratePolicyRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-6edfb9d722ef8429</p>
      */

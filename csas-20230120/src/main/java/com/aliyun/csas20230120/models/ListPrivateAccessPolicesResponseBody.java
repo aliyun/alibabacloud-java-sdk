@@ -283,6 +283,15 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("TriggerTemplateId")
         public String triggerTemplateId;
 
+        @NameInMap("TrustedProcessGroupIds")
+        public java.util.List<String> trustedProcessGroupIds;
+
+        @NameInMap("TrustedProcessStatus")
+        public String trustedProcessStatus;
+
+        @NameInMap("TrustedSoftwareIds")
+        public java.util.List<String> trustedSoftwareIds;
+
         /**
          * <p>The IDs of user groups in the private access policy. If the value of UserGroupMode is <strong>Normal</strong>, this parameter is returned.</p>
          */
@@ -417,6 +426,30 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         }
         public String getTriggerTemplateId() {
             return this.triggerTemplateId;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setTrustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
+            this.trustedProcessGroupIds = trustedProcessGroupIds;
+            return this;
+        }
+        public java.util.List<String> getTrustedProcessGroupIds() {
+            return this.trustedProcessGroupIds;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setTrustedProcessStatus(String trustedProcessStatus) {
+            this.trustedProcessStatus = trustedProcessStatus;
+            return this;
+        }
+        public String getTrustedProcessStatus() {
+            return this.trustedProcessStatus;
+        }
+
+        public ListPrivateAccessPolicesResponseBodyPolices setTrustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
+            this.trustedSoftwareIds = trustedSoftwareIds;
+            return this;
+        }
+        public java.util.List<String> getTrustedSoftwareIds() {
+            return this.trustedSoftwareIds;
         }
 
         public ListPrivateAccessPolicesResponseBodyPolices setUserGroupIds(java.util.List<String> userGroupIds) {

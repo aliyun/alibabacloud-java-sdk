@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteEnterpriseAccelerateTargetRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-ed1f0e392a28a4e6</p>
      */
     @NameInMap("EapId")
     public String eapId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Target")
     public java.util.List<String> target;
 

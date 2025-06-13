@@ -76,6 +76,23 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     @NameInMap("TriggerTemplateId")
     public String triggerTemplateId;
 
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("TrustedProcessGroupIds")
+    public java.util.List<String> trustedProcessGroupIds;
+
+    @NameInMap("TrustedProcessStatus")
+    public String trustedProcessStatus;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("TrustedSoftwareIds")
+    public java.util.List<String> trustedSoftwareIds;
+
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
@@ -199,6 +216,30 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     }
     public String getTriggerTemplateId() {
         return this.triggerTemplateId;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setTrustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
+        this.trustedProcessGroupIds = trustedProcessGroupIds;
+        return this;
+    }
+    public java.util.List<String> getTrustedProcessGroupIds() {
+        return this.trustedProcessGroupIds;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setTrustedProcessStatus(String trustedProcessStatus) {
+        this.trustedProcessStatus = trustedProcessStatus;
+        return this;
+    }
+    public String getTrustedProcessStatus() {
+        return this.trustedProcessStatus;
+    }
+
+    public UpdatePrivateAccessPolicyRequest setTrustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
+        this.trustedSoftwareIds = trustedSoftwareIds;
+        return this;
+    }
+    public java.util.List<String> getTrustedSoftwareIds() {
+        return this.trustedSoftwareIds;
     }
 
     public UpdatePrivateAccessPolicyRequest setUserGroupIds(java.util.List<String> userGroupIds) {

@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateEnterpriseAccelerateTargetRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>eap-eec34d4b12fcca61</p>
      */
     @NameInMap("EapId")
     public String eapId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Target")
     public java.util.List<String> target;
 

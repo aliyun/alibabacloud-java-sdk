@@ -1,3 +1,20 @@
+2025-06-13 Version: 1.14.1
+- Update API CreatePrivateAccessPolicy: add request parameters TrustedProcessGroupIds.
+- Update API CreatePrivateAccessPolicy: add request parameters TrustedProcessStatus.
+- Update API CreatePrivateAccessPolicy: add request parameters TrustedSoftwareIds.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.TrustedProcessGroupIds.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.TrustedProcessStatus.
+- Update API GetPrivateAccessPolicy: add response parameters Body.Policy.TrustedSoftwareIds.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.TrustedProcessGroupIds.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.TrustedProcessStatus.
+- Update API ListPrivateAccessPolices: add response parameters Body.Polices.$.TrustedSoftwareIds.
+- Update API ListUserPrivateAccessPolicies: add response parameters Body.Polices.$.TrustedProcessGroupIds.
+- Update API ListUserPrivateAccessPolicies: add response parameters Body.Polices.$.TrustedSoftwareIds.
+- Update API UpdatePrivateAccessPolicy: add request parameters TrustedProcessGroupIds.
+- Update API UpdatePrivateAccessPolicy: add request parameters TrustedProcessStatus.
+- Update API UpdatePrivateAccessPolicy: add request parameters TrustedSoftwareIds.
+
+
 2025-06-06 Version: 1.14.0
 - Support API CreateEnterpriseAccelerateTarget.
 - Support API DeleteEnterpriseAcceleratePolicy.

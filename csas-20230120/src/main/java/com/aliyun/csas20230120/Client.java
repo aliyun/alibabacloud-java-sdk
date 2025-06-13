@@ -690,6 +690,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TriggerTemplateId", request.triggerTemplateId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedProcessGroupIds)) {
+            bodyFlat.put("TrustedProcessGroupIds", request.trustedProcessGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedProcessStatus)) {
+            body.put("TrustedProcessStatus", request.trustedProcessStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedSoftwareIds)) {
+            bodyFlat.put("TrustedSoftwareIds", request.trustedSoftwareIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {
             bodyFlat.put("UserGroupIds", request.userGroupIds);
         }
@@ -5390,6 +5402,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.triggerTemplateId)) {
             body.put("TriggerTemplateId", request.triggerTemplateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedProcessGroupIds)) {
+            bodyFlat.put("TrustedProcessGroupIds", request.trustedProcessGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedProcessStatus)) {
+            body.put("TrustedProcessStatus", request.trustedProcessStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trustedSoftwareIds)) {
+            bodyFlat.put("TrustedSoftwareIds", request.trustedSoftwareIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userGroupIds)) {

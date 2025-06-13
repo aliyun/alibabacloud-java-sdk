@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListEnterpriseAcceleratePoliciesRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class ListEnterpriseAcceleratePoliciesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
