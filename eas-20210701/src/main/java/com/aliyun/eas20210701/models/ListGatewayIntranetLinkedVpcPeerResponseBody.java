@@ -67,6 +67,9 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         @NameInMap("Region")
         public String region;
 
+        @NameInMap("Status")
+        public String status;
+
         /**
          * <p>The ID of the VPC peer.</p>
          * 
@@ -87,6 +90,14 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
         public String getRegion() {
             return this.region;
+        }
+
+        public ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs setVpcId(String vpcId) {

@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class DescribeGatewayResponseBody extends TeaModel {
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
      * 
@@ -167,6 +170,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
     public static DescribeGatewayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeGatewayResponseBody self = new DescribeGatewayResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGatewayResponseBody setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public DescribeGatewayResponseBody setCreateTime(String createTime) {
