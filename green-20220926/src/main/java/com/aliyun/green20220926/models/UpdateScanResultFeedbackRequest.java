@@ -11,6 +11,9 @@ public class UpdateScanResultFeedbackRequest extends TeaModel {
     @NameInMap("Feedback")
     public String feedback;
 
+    @NameInMap("Labels")
+    public String labels;
+
     /**
      * <strong>example:</strong>
      * <p>46232656-984E-****-A648-B1D0667B6C3E</p>
@@ -32,6 +35,9 @@ public class UpdateScanResultFeedbackRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("RiskLevel")
+    public String riskLevel;
+
     public static UpdateScanResultFeedbackRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateScanResultFeedbackRequest self = new UpdateScanResultFeedbackRequest();
         return TeaModel.build(map, self);
@@ -43,6 +49,14 @@ public class UpdateScanResultFeedbackRequest extends TeaModel {
     }
     public String getFeedback() {
         return this.feedback;
+    }
+
+    public UpdateScanResultFeedbackRequest setLabels(String labels) {
+        this.labels = labels;
+        return this;
+    }
+    public String getLabels() {
+        return this.labels;
     }
 
     public UpdateScanResultFeedbackRequest setQueryRequestId(String queryRequestId) {
@@ -67,6 +81,14 @@ public class UpdateScanResultFeedbackRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public UpdateScanResultFeedbackRequest setRiskLevel(String riskLevel) {
+        this.riskLevel = riskLevel;
+        return this;
+    }
+    public String getRiskLevel() {
+        return this.riskLevel;
     }
 
 }

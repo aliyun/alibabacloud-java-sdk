@@ -145,6 +145,21 @@ public class GetScanResultResponseBody extends TeaModel {
     }
 
     public static class GetScanResultResponseBodyDataItems extends TeaModel {
+        @NameInMap("ApiLabels")
+        public String apiLabels;
+
+        @NameInMap("ApiRequestTime")
+        public String apiRequestTime;
+
+        @NameInMap("ApiRiskLevel")
+        public String apiRiskLevel;
+
+        @NameInMap("ApiService")
+        public String apiService;
+
+        @NameInMap("ApiTaskId")
+        public String apiTaskId;
+
         @NameInMap("AttackLevel")
         public String attackLevel;
 
@@ -225,6 +240,9 @@ public class GetScanResultResponseBody extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        @NameInMap("ManualOnly")
+        public Boolean manualOnly;
+
         @NameInMap("NoLabels")
         public java.util.List<String> noLabels;
 
@@ -259,8 +277,26 @@ public class GetScanResultResponseBody extends TeaModel {
         @NameInMap("RequestTime")
         public String requestTime;
 
+        @NameInMap("ResourceType")
+        public String resourceType;
+
         @NameInMap("Result")
         public java.util.List<GetScanResultResponseBodyDataItemsResult> result;
+
+        @NameInMap("ReviewLabels")
+        public String reviewLabels;
+
+        @NameInMap("ReviewRiskLevel")
+        public String reviewRiskLevel;
+
+        @NameInMap("ReviewTime")
+        public String reviewTime;
+
+        @NameInMap("ReviewUid")
+        public String reviewUid;
+
+        @NameInMap("Reviewed")
+        public Boolean reviewed;
 
         @NameInMap("RiskLevel")
         public String riskLevel;
@@ -362,6 +398,46 @@ public class GetScanResultResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetScanResultResponseBodyDataItems setApiLabels(String apiLabels) {
+            this.apiLabels = apiLabels;
+            return this;
+        }
+        public String getApiLabels() {
+            return this.apiLabels;
+        }
+
+        public GetScanResultResponseBodyDataItems setApiRequestTime(String apiRequestTime) {
+            this.apiRequestTime = apiRequestTime;
+            return this;
+        }
+        public String getApiRequestTime() {
+            return this.apiRequestTime;
+        }
+
+        public GetScanResultResponseBodyDataItems setApiRiskLevel(String apiRiskLevel) {
+            this.apiRiskLevel = apiRiskLevel;
+            return this;
+        }
+        public String getApiRiskLevel() {
+            return this.apiRiskLevel;
+        }
+
+        public GetScanResultResponseBodyDataItems setApiService(String apiService) {
+            this.apiService = apiService;
+            return this;
+        }
+        public String getApiService() {
+            return this.apiService;
+        }
+
+        public GetScanResultResponseBodyDataItems setApiTaskId(String apiTaskId) {
+            this.apiTaskId = apiTaskId;
+            return this;
+        }
+        public String getApiTaskId() {
+            return this.apiTaskId;
+        }
+
         public GetScanResultResponseBodyDataItems setAttackLevel(String attackLevel) {
             this.attackLevel = attackLevel;
             return this;
@@ -458,6 +534,14 @@ public class GetScanResultResponseBody extends TeaModel {
             return this.labels;
         }
 
+        public GetScanResultResponseBodyDataItems setManualOnly(Boolean manualOnly) {
+            this.manualOnly = manualOnly;
+            return this;
+        }
+        public Boolean getManualOnly() {
+            return this.manualOnly;
+        }
+
         public GetScanResultResponseBodyDataItems setNoLabels(java.util.List<String> noLabels) {
             this.noLabels = noLabels;
             return this;
@@ -506,12 +590,60 @@ public class GetScanResultResponseBody extends TeaModel {
             return this.requestTime;
         }
 
+        public GetScanResultResponseBodyDataItems setResourceType(String resourceType) {
+            this.resourceType = resourceType;
+            return this;
+        }
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
         public GetScanResultResponseBodyDataItems setResult(java.util.List<GetScanResultResponseBodyDataItemsResult> result) {
             this.result = result;
             return this;
         }
         public java.util.List<GetScanResultResponseBodyDataItemsResult> getResult() {
             return this.result;
+        }
+
+        public GetScanResultResponseBodyDataItems setReviewLabels(String reviewLabels) {
+            this.reviewLabels = reviewLabels;
+            return this;
+        }
+        public String getReviewLabels() {
+            return this.reviewLabels;
+        }
+
+        public GetScanResultResponseBodyDataItems setReviewRiskLevel(String reviewRiskLevel) {
+            this.reviewRiskLevel = reviewRiskLevel;
+            return this;
+        }
+        public String getReviewRiskLevel() {
+            return this.reviewRiskLevel;
+        }
+
+        public GetScanResultResponseBodyDataItems setReviewTime(String reviewTime) {
+            this.reviewTime = reviewTime;
+            return this;
+        }
+        public String getReviewTime() {
+            return this.reviewTime;
+        }
+
+        public GetScanResultResponseBodyDataItems setReviewUid(String reviewUid) {
+            this.reviewUid = reviewUid;
+            return this;
+        }
+        public String getReviewUid() {
+            return this.reviewUid;
+        }
+
+        public GetScanResultResponseBodyDataItems setReviewed(Boolean reviewed) {
+            this.reviewed = reviewed;
+            return this;
+        }
+        public Boolean getReviewed() {
+            return this.reviewed;
         }
 
         public GetScanResultResponseBodyDataItems setRiskLevel(String riskLevel) {

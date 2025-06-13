@@ -25,6 +25,9 @@ public class UpdateServiceConfigRequest extends TeaModel {
     @NameInMap("KeywordHitLibs")
     public String keywordHitLibs;
 
+    @NameInMap("ManualMachineConfig")
+    public String manualMachineConfig;
+
     /**
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -94,6 +97,14 @@ public class UpdateServiceConfigRequest extends TeaModel {
     }
     public String getKeywordHitLibs() {
         return this.keywordHitLibs;
+    }
+
+    public UpdateServiceConfigRequest setManualMachineConfig(String manualMachineConfig) {
+        this.manualMachineConfig = manualMachineConfig;
+        return this;
+    }
+    public String getManualMachineConfig() {
+        return this.manualMachineConfig;
     }
 
     public UpdateServiceConfigRequest setRegionId(String regionId) {

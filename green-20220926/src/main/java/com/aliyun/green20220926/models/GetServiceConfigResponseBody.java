@@ -80,12 +80,67 @@ public class GetServiceConfigResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig extends TeaModel {
+        @NameInMap("AuditRiskLevels")
+        public java.util.List<String> auditRiskLevels;
+
+        @NameInMap("CallbackId")
+        public Long callbackId;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("ManualService")
+        public String manualService;
+
+        public static GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig self = new GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig setAuditRiskLevels(java.util.List<String> auditRiskLevels) {
+            this.auditRiskLevels = auditRiskLevels;
+            return this;
+        }
+        public java.util.List<String> getAuditRiskLevels() {
+            return this.auditRiskLevels;
+        }
+
+        public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig setCallbackId(Long callbackId) {
+            this.callbackId = callbackId;
+            return this;
+        }
+        public Long getCallbackId() {
+            return this.callbackId;
+        }
+
+        public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig setManualService(String manualService) {
+            this.manualService = manualService;
+            return this;
+        }
+        public String getManualService() {
+            return this.manualService;
+        }
+
+    }
+
     public static class GetServiceConfigResponseBodyDataCustomServiceConf extends TeaModel {
         @NameInMap("KeywordFilterLibs")
         public java.util.List<String> keywordFilterLibs;
 
         @NameInMap("KeywordHitLibs")
         public java.util.List<String> keywordHitLibs;
+
+        @NameInMap("ManualMachineConfig")
+        public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig manualMachineConfig;
 
         @NameInMap("SimilarTextHitLibs")
         public java.util.List<String> similarTextHitLibs;
@@ -109,6 +164,14 @@ public class GetServiceConfigResponseBody extends TeaModel {
         }
         public java.util.List<String> getKeywordHitLibs() {
             return this.keywordHitLibs;
+        }
+
+        public GetServiceConfigResponseBodyDataCustomServiceConf setManualMachineConfig(GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig manualMachineConfig) {
+            this.manualMachineConfig = manualMachineConfig;
+            return this;
+        }
+        public GetServiceConfigResponseBodyDataCustomServiceConfManualMachineConfig getManualMachineConfig() {
+            return this.manualMachineConfig;
         }
 
         public GetServiceConfigResponseBodyDataCustomServiceConf setSimilarTextHitLibs(java.util.List<String> similarTextHitLibs) {
