@@ -1080,6 +1080,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>导出智能审核报告</p>
+     * 
+     * @param request ExportAuditContentResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportAuditContentResultResponse
+     */
+    public ExportAuditContentResultResponse exportAuditContentResultWithOptions(ExportAuditContentResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportAuditContentResult"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportAuditContentResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出智能审核报告</p>
+     * 
+     * @param request ExportAuditContentResultRequest
+     * @return ExportAuditContentResultResponse
+     */
+    public ExportAuditContentResultResponse exportAuditContentResult(ExportAuditContentResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportAuditContentResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>导出-自定义数据源-选题视角分析任务结果</p>
      * 
      * @param request ExportCustomSourceAnalysisTaskRequest
@@ -2828,6 +2876,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询智能审核结果</p>
+     * 
+     * @param request GetSmartAuditResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSmartAuditResultResponse
+     */
+    public GetSmartAuditResultResponse getSmartAuditResultWithOptions(GetSmartAuditResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSmartAuditResult"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSmartAuditResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询智能审核结果</p>
+     * 
+     * @param request GetSmartAuditResultRequest
+     * @return GetSmartAuditResultResponse
+     */
+    public GetSmartAuditResultResponse getSmartAuditResult(GetSmartAuditResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getSmartAuditResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询一键成片剪辑任务</p>
      * 
      * @param request GetSmartClipTaskRequest
@@ -3420,6 +3516,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAsyncTasksResponse listAsyncTasks(ListAsyncTasksRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAsyncTasksWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取审核维度列表</p>
+     * 
+     * @param request ListAuditContentErrorTypesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuditContentErrorTypesResponse
+     */
+    public ListAuditContentErrorTypesResponse listAuditContentErrorTypesWithOptions(ListAuditContentErrorTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuditContentErrorTypes"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuditContentErrorTypesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取审核维度列表</p>
+     * 
+     * @param request ListAuditContentErrorTypesRequest
+     * @return ListAuditContentErrorTypesResponse
+     */
+    public ListAuditContentErrorTypesResponse listAuditContentErrorTypes(ListAuditContentErrorTypesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuditContentErrorTypesWithOptions(request, runtime);
     }
 
     /**
@@ -8520,6 +8668,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitEnterpriseVocAnalysisTaskResponse submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitEnterpriseVocAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交智能审核</p>
+     * 
+     * @param tmpReq SubmitSmartAuditRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitSmartAuditResponse
+     */
+    public SubmitSmartAuditResponse submitSmartAuditWithOptions(SubmitSmartAuditRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitSmartAuditShrinkRequest request = new SubmitSmartAuditShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.subCodes)) {
+            request.subCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subCodes, "SubCodes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.subCodesShrink)) {
+            body.put("SubCodes", request.subCodesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            body.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitSmartAudit"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitSmartAuditResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交智能审核</p>
+     * 
+     * @param request SubmitSmartAuditRequest
+     * @return SubmitSmartAuditResponse
+     */
+    public SubmitSmartAuditResponse submitSmartAudit(SubmitSmartAuditRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitSmartAuditWithOptions(request, runtime);
     }
 
     /**
