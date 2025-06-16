@@ -40,6 +40,99 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         return this.vpnConnectionConfig;
     }
 
+    public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig extends TeaModel {
+        @NameInMap("LocalAsn")
+        public String localAsn;
+
+        @NameInMap("LocalBgpIp")
+        public String localBgpIp;
+
+        @NameInMap("PeerAsn")
+        public String peerAsn;
+
+        @NameInMap("PeerBgpIp")
+        public String peerBgpIp;
+
+        @NameInMap("TunnelCidr")
+        public String tunnelCidr;
+
+        @NameInMap("TunnelId")
+        public String tunnelId;
+
+        public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig build(java.util.Map<String, ?> map) throws Exception {
+            DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig setLocalAsn(String localAsn) {
+            this.localAsn = localAsn;
+            return this;
+        }
+        public String getLocalAsn() {
+            return this.localAsn;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig setLocalBgpIp(String localBgpIp) {
+            this.localBgpIp = localBgpIp;
+            return this;
+        }
+        public String getLocalBgpIp() {
+            return this.localBgpIp;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig setPeerAsn(String peerAsn) {
+            this.peerAsn = peerAsn;
+            return this;
+        }
+        public String getPeerAsn() {
+            return this.peerAsn;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig setPeerBgpIp(String peerBgpIp) {
+            this.peerBgpIp = peerBgpIp;
+            return this;
+        }
+        public String getPeerBgpIp() {
+            return this.peerBgpIp;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig setTunnelCidr(String tunnelCidr) {
+            this.tunnelCidr = tunnelCidr;
+            return this;
+        }
+        public String getTunnelCidr() {
+            return this.tunnelCidr;
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig setTunnelId(String tunnelId) {
+            this.tunnelId = tunnelId;
+            return this;
+        }
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+    }
+
+    public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs extends TeaModel {
+        @NameInMap("BgpConfig")
+        public java.util.List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig> bgpConfig;
+
+        public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs build(java.util.Map<String, ?> map) throws Exception {
+            DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs setBgpConfig(java.util.List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig> bgpConfig) {
+            this.bgpConfig = bgpConfig;
+            return this;
+        }
+        public java.util.List<DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigsBgpConfig> getBgpConfig() {
+            return this.bgpConfig;
+        }
+
+    }
+
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig extends TeaModel {
         /**
          * <p>The authentication algorithm in the IKE phase.</p>
@@ -629,6 +722,9 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
     }
 
     public static class DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig extends TeaModel {
+        @NameInMap("BgpConfigs")
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs bgpConfigs;
+
         /**
          * <p>The configurations of Phase 1 negotiations.</p>
          */
@@ -687,6 +783,14 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         public static DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig build(java.util.Map<String, ?> map) throws Exception {
             DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig self = new DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig setBgpConfigs(DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs bgpConfigs) {
+            this.bgpConfigs = bgpConfigs;
+            return this;
+        }
+        public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigBgpConfigs getBgpConfigs() {
+            return this.bgpConfigs;
         }
 
         public DownloadVpnConnectionConfigResponseBodyVpnConnectionConfig setIkeConfig(DownloadVpnConnectionConfigResponseBodyVpnConnectionConfigIkeConfig ikeConfig) {

@@ -223,7 +223,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         public String name;
 
         @NameInMap("OwnerId")
-        public String ownerId;
+        public Long ownerId;
 
         /**
          * <p>The ID of the region in which the IPv6 gateway is deployed.</p>
@@ -332,11 +332,11 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             return this.name;
         }
 
-        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setOwnerId(String ownerId) {
+        public DescribeIpv6GatewaysResponseBodyIpv6GatewaysIpv6Gateway setOwnerId(Long ownerId) {
             this.ownerId = ownerId;
             return this;
         }
-        public String getOwnerId() {
+        public Long getOwnerId() {
             return this.ownerId;
         }
 

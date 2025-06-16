@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class DeleteRouteEntriesRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -36,6 +39,14 @@ public class DeleteRouteEntriesRequest extends TeaModel {
     public static DeleteRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRouteEntriesRequest self = new DeleteRouteEntriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteRouteEntriesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public DeleteRouteEntriesRequest setOwnerAccount(String ownerAccount) {

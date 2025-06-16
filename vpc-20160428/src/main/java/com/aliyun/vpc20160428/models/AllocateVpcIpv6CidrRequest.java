@@ -5,10 +5,13 @@ import com.aliyun.tea.*;
 
 public class AllocateVpcIpv6CidrRequest extends TeaModel {
     /**
-     * <p>The type of the IPv6 address pool. Set the value to <strong>custom</strong>.</p>
-     * <blockquote>
-     * <p> This parameter is required.</p>
-     * </blockquote>
+     * <p>The type of the IPv6 address pool. Valid values:</p>
+     * <ul>
+     * <li><p><strong>aliyun</strong> (default): IPv6 CIDR block is allocated by the system.</p>
+     * </li>
+     * <li><p><strong>custom</strong>: custom IPv6 CIDR block.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -40,17 +43,19 @@ public class AllocateVpcIpv6CidrRequest extends TeaModel {
     /**
      * <p>The type of IPv6 CIDR block. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default)</li>
-     * <li><strong>ChinaMobile</strong></li>
-     * <li><strong>ChinaUnicom</strong></li>
-     * <li><strong>ChinaTelecom</strong></li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
+     * <li><strong>BGP</strong> (default): BGP (Multi-ISP)</li>
+     * <li><strong>BGP_International</strong>: BGP (Multi-ISP) International</li>
+     * <li><strong>ChinaMobile</strong>: China Mobile (Single-ISP)</li>
+     * <li><strong>ChinaUnicom</strong>: China Unicom (Single-ISP)</li>
+     * <li><strong>ChinaTelecom</strong>: China Telecom (Single-ISP)</li>
+     * <li><strong>ChinaMobile_L2</strong>: China Mobile (Single-ISP)_L2</li>
+     * <li><strong>ChinaUnicom_L2</strong>: China Unicom (Single-ISP)_L2</li>
+     * <li><strong>ChinaTelecom_L2</strong>: China Telecom (Single-ISP)_L2<blockquote>
      * <ul>
-     * <li><p>If your Alibaba Cloud account is allowed to use single-ISP bandwidth, valid values are: <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, and <strong>ChinaMobile</strong>.</p>
-     * </li>
-     * <li><p>You can reserve only one IPv6 CIDR block of each type. After a reserved IPv6 CIDR block of a type is allocated to a VPC, you can reserve another IPv6 CIDR of the type.</p>
+     * <li>If your account is included in the whitelist, you can set this parameter to one of the following values: <strong>ChinaTelecom</strong>, <strong>ChinaUnicom</strong>, <strong>ChinaMobile</strong>, <strong>ChinaTelecom_L2</strong>, <strong>ChinaUnicom_L2</strong>, <strong>ChinaMobile_L2</strong>, and <strong>BGP_International</strong>.</li>
+     * <li>You can reserve only one IPv6 CIDR block of each type. You can reserve another IPv6 CIDR block only after the existing one is allocated to a VPC.</li>
+     * </ul>
+     * </blockquote>
      * </li>
      * </ul>
      * 

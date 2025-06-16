@@ -92,6 +92,9 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<ListVpcGatewayEndpointsRequestTags> tags;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ListVpcGatewayEndpointsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListVpcGatewayEndpointsRequest self = new ListVpcGatewayEndpointsRequest();
         return TeaModel.build(map, self);
@@ -191,6 +194,14 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     }
     public java.util.List<ListVpcGatewayEndpointsRequestTags> getTags() {
         return this.tags;
+    }
+
+    public ListVpcGatewayEndpointsRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static class ListVpcGatewayEndpointsRequestTags extends TeaModel {

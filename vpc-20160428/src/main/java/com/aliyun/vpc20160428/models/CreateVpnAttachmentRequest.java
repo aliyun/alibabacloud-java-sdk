@@ -70,6 +70,9 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     @NameInMap("CustomerGatewayId")
     public String customerGatewayId;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to immediately start IPsec negotiations after the configuration takes effect. Valid values:</p>
      * <ul>
@@ -358,6 +361,14 @@ public class CreateVpnAttachmentRequest extends TeaModel {
     }
     public String getCustomerGatewayId() {
         return this.customerGatewayId;
+    }
+
+    public CreateVpnAttachmentRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateVpnAttachmentRequest setEffectImmediately(Boolean effectImmediately) {

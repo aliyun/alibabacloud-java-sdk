@@ -195,6 +195,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends TeaModel {
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
          * <p>The priority of the outbound rule. A smaller value indicates a higher priority. The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 outbound rules for a filter.</p>
          * 
@@ -269,6 +272,14 @@ public class CreateTrafficMirrorFilterRulesRequest extends TeaModel {
             return this.destinationPortRange;
         }
 
+        public CreateTrafficMirrorFilterRulesRequestEgressRules setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
+        }
+
         public CreateTrafficMirrorFilterRulesRequestEgressRules setPriority(Integer priority) {
             this.priority = priority;
             return this;
@@ -337,6 +348,9 @@ public class CreateTrafficMirrorFilterRulesRequest extends TeaModel {
          */
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
 
         /**
          * <p>The priority of the inbound rule. A smaller value indicates a higher priority. The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 inbound rules for a filter.</p>
@@ -410,6 +424,14 @@ public class CreateTrafficMirrorFilterRulesRequest extends TeaModel {
         }
         public String getDestinationPortRange() {
             return this.destinationPortRange;
+        }
+
+        public CreateTrafficMirrorFilterRulesRequestIngressRules setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public CreateTrafficMirrorFilterRulesRequestIngressRules setPriority(Integer priority) {

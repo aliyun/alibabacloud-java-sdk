@@ -23,6 +23,9 @@ public class ModifyRouteEntryRequest extends TeaModel {
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the new next hop instance.</p>
      * 
@@ -111,6 +114,14 @@ public class ModifyRouteEntryRequest extends TeaModel {
     }
     public String getDestinationCidrBlock() {
         return this.destinationCidrBlock;
+    }
+
+    public ModifyRouteEntryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifyRouteEntryRequest setNewNextHopId(String newNextHopId) {

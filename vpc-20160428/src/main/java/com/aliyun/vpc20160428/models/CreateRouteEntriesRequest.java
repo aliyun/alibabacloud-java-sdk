@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateRouteEntriesRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -13,6 +16,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
     /**
      * <p>The region ID of the route table.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,6 +40,14 @@ public class CreateRouteEntriesRequest extends TeaModel {
     public static CreateRouteEntriesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRouteEntriesRequest self = new CreateRouteEntriesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRouteEntriesRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateRouteEntriesRequest setOwnerAccount(String ownerAccount) {

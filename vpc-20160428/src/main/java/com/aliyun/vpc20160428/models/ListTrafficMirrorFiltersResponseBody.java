@@ -144,6 +144,9 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
          * <p>The priority of the outbound rule. A smaller value indicates a higher priority.</p>
          * 
@@ -261,6 +264,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             return this.destinationPortRange;
         }
 
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
+        }
+
         public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules setPriority(Integer priority) {
             this.priority = priority;
             return this;
@@ -358,6 +369,9 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
          */
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
+
+        @NameInMap("IpVersion")
+        public String ipVersion;
 
         /**
          * <p>The priority of the inbound rule. A smaller value indicates a higher priority.</p>
@@ -474,6 +488,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         }
         public String getDestinationPortRange() {
             return this.destinationPortRange;
+        }
+
+        public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules setPriority(Integer priority) {

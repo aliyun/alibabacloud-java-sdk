@@ -104,6 +104,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     @NameInMap("Compress")
     public Boolean compress;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>Specifies whether to enable two-factor authentication. To enable two-factor authentication, you need to specify <strong>IDaaSInstanceId</strong>, <strong>IDaaSRegionId</strong>, and <strong>IDaaSApplicationId</strong>. Valid values:</p>
      * <ul>
@@ -274,6 +277,14 @@ public class ModifySslVpnServerRequest extends TeaModel {
     }
     public Boolean getCompress() {
         return this.compress;
+    }
+
+    public ModifySslVpnServerRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public ModifySslVpnServerRequest setEnableMultiFactorAuth(Boolean enableMultiFactorAuth) {

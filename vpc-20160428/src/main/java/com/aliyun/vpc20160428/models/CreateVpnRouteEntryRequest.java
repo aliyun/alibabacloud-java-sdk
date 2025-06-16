@@ -27,6 +27,9 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The next hop of the destination-based route.</p>
      * <p>This parameter is required.</p>
@@ -136,6 +139,14 @@ public class CreateVpnRouteEntryRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateVpnRouteEntryRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateVpnRouteEntryRequest setNextHop(String nextHop) {

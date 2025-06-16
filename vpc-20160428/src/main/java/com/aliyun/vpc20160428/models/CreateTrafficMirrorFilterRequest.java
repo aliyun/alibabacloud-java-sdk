@@ -31,13 +31,13 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The list of outbound rules.</p>
+     * <p>The information about the outbound rules.</p>
      */
     @NameInMap("EgressRules")
     public java.util.List<CreateTrafficMirrorFilterRequestEgressRules> egressRules;
 
     /**
-     * <p>The list of inbound rules.</p>
+     * <p>The information about inbound rules.</p>
      */
     @NameInMap("IngressRules")
     public java.util.List<CreateTrafficMirrorFilterRequestIngressRules> ingressRules;
@@ -211,7 +211,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
 
     public static class CreateTrafficMirrorFilterRequestEgressRules extends TeaModel {
         /**
-         * <p>The action of the outbound rule. Valid values:</p>
+         * <p>The collection policy of the outbound rule. Valid value:</p>
          * <ul>
          * <li><strong>accept</strong>: collects network traffic.</li>
          * <li><strong>drop</strong>: does not collect network traffic.</li>
@@ -233,9 +233,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The destination port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>. The value -1/-1 specifies all ports.</p>
+         * <p>The destination port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only -1/-1, which specifies all ports.</p>
          * <blockquote>
-         * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+         * <p> If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter. This indicates that all ports are available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -244,9 +244,11 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
-         * <p>The priority of the outbound rule. A smaller value indicates a higher priority.</p>
-         * <p>The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 outbound rules for a filter.</p>
+         * <p>The priority of the outbound rule. A smaller value indicates a higher priority. The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 outbound rules for a filter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,12 +257,12 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
+         * <p>The type of the protocol that is used by the outbound traffic that you want to mirror. Valid value:</p>
          * <ul>
          * <li><strong>ALL</strong>: all protocols</li>
-         * <li><strong>ICMP</strong>: ICMP</li>
-         * <li><strong>TCP</strong>: TCP</li>
-         * <li><strong>UDP</strong>: UDP</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
+         * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,9 +281,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The source port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>. The value -1/-1 specifies all ports.</p>
+         * <p>The source port range of the outbound traffic. Valid values: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only -1/-1, which specifies all ports.</p>
          * <blockquote>
-         * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+         * <p> If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter. This indicates that all ports are available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -317,6 +319,14 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         }
         public String getDestinationPortRange() {
             return this.destinationPortRange;
+        }
+
+        public CreateTrafficMirrorFilterRequestEgressRules setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public CreateTrafficMirrorFilterRequestEgressRules setPriority(Integer priority) {
@@ -355,7 +365,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
 
     public static class CreateTrafficMirrorFilterRequestIngressRules extends TeaModel {
         /**
-         * <p>The action of the inbound rule. Valid values:</p>
+         * <p>The collection policy of the inbound rule. Valid value:</p>
          * <ul>
          * <li><strong>accept</strong>: collects network traffic.</li>
          * <li><strong>drop</strong>: does not collect network traffic.</li>
@@ -377,7 +387,7 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The destination port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+         * <p>The destination port range of the inbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first port and last port with a forward slash (/). For example, <strong>1/200</strong> or <strong>80/80</strong>.</p>
          * <blockquote>
          * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
          * </blockquote>
@@ -388,9 +398,11 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         @NameInMap("DestinationPortRange")
         public String destinationPortRange;
 
+        @NameInMap("IpVersion")
+        public String ipVersion;
+
         /**
-         * <p>The priority of the inbound rule. A smaller value indicates a higher priority.</p>
-         * <p>The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 inbound rules for a filter.</p>
+         * <p>The priority of the inbound rule. A smaller value indicates a higher priority. The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 inbound rules for a filter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -399,12 +411,12 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
+         * <p>The type of the protocol is used by the inbound traffic that you want to mirror. Valid value:</p>
          * <ul>
          * <li><strong>ALL</strong>: all protocols</li>
-         * <li><strong>ICMP</strong>: ICMP</li>
-         * <li><strong>TCP</strong>: TCP</li>
-         * <li><strong>UDP</strong>: UDP</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
+         * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -423,9 +435,9 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The source port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+         * <p>The source port range of the inbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first port and last port with a forward slash (/). For example, <strong>1/200</strong> or <strong>80/80</strong>.</p>
          * <blockquote>
-         * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+         * <p> If <strong>IngressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter. This indicates that all ports are available.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -461,6 +473,14 @@ public class CreateTrafficMirrorFilterRequest extends TeaModel {
         }
         public String getDestinationPortRange() {
             return this.destinationPortRange;
+        }
+
+        public CreateTrafficMirrorFilterRequestIngressRules setIpVersion(String ipVersion) {
+            this.ipVersion = ipVersion;
+            return this;
+        }
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         public CreateTrafficMirrorFilterRequestIngressRules setPriority(Integer priority) {
