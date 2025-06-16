@@ -214,6 +214,9 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         @NameInMap("AssociateVpcCount")
         public Integer associateVpcCount;
 
+        @NameInMap("CreationTime")
+        public String creationTime;
+
         /**
          * <p>The configuration information about the DHCP options set.</p>
          */
@@ -297,6 +300,14 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         }
         public Integer getAssociateVpcCount() {
             return this.associateVpcCount;
+        }
+
+        public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         public ListDhcpOptionsSetsResponseBodyDhcpOptionsSets setDhcpOptions(ListDhcpOptionsSetsResponseBodyDhcpOptionsSetsDhcpOptions dhcpOptions) {

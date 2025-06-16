@@ -10,6 +10,9 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     @NameInMap("AssociateVpcs")
     public java.util.List<GetDhcpOptionsSetResponseBodyAssociateVpcs> associateVpcs;
 
+    @NameInMap("CreationTime")
+    public String creationTime;
+
     /**
      * <p>The configuration information about the DHCP options set.</p>
      */
@@ -102,6 +105,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     }
     public java.util.List<GetDhcpOptionsSetResponseBodyAssociateVpcs> getAssociateVpcs() {
         return this.associateVpcs;
+    }
+
+    public GetDhcpOptionsSetResponseBody setCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    public String getCreationTime() {
+        return this.creationTime;
     }
 
     public GetDhcpOptionsSetResponseBody setDhcpOptions(GetDhcpOptionsSetResponseBodyDhcpOptions dhcpOptions) {
