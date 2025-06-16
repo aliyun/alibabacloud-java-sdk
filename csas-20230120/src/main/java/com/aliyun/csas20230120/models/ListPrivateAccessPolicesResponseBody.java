@@ -283,12 +283,28 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
         @NameInMap("TriggerTemplateId")
         public String triggerTemplateId;
 
+        /**
+         * <p>List of trusted process group IDs.</p>
+         */
         @NameInMap("TrustedProcessGroupIds")
         public java.util.List<String> trustedProcessGroupIds;
 
+        /**
+         * <p>Trusted process switch status. Values: </p>
+         * <ul>
+         * <li><strong>Enabled</strong>: On.</li>
+         * <li><strong>Disabled</strong>: Off.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
         @NameInMap("TrustedProcessStatus")
         public String trustedProcessStatus;
 
+        /**
+         * <p>List of trusted software IDs.</p>
+         */
         @NameInMap("TrustedSoftwareIds")
         public java.util.List<String> trustedSoftwareIds;
 

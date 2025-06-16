@@ -951,15 +951,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建数字水印暗水印透明底图</p>
      * 
-     * @param request CreateWmBaseImageRequest
+     * @param tmpReq CreateWmBaseImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateWmBaseImageResponse
      */
-    public CreateWmBaseImageResponse createWmBaseImageWithOptions(CreateWmBaseImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateWmBaseImageResponse createWmBaseImageWithOptions(CreateWmBaseImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateWmBaseImageShrinkRequest request = new CreateWmBaseImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.imageControl)) {
+            request.imageControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageControl, "ImageControl", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.height)) {
             body.put("Height", request.height);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageControlShrink)) {
+            body.put("ImageControl", request.imageControlShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.opacity)) {
@@ -2504,7 +2514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询内网访问策略详情</p>
+     * <p>Query Intranet Access Policy Details</p>
      * 
      * @param request GetPrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2532,7 +2542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询内网访问策略详情</p>
+     * <p>Query Intranet Access Policy Details</p>
      * 
      * @param request GetPrivateAccessPolicyRequest
      * @return GetPrivateAccessPolicyResponse
@@ -4378,7 +4388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询用户零信任策略</p>
+     * <p>List query of user zero trust policies</p>
      * 
      * @param request ListUserPrivateAccessPoliciesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4406,7 +4416,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列表查询用户零信任策略</p>
+     * <p>List query of user zero trust policies</p>
      * 
      * @param request ListUserPrivateAccessPoliciesRequest
      * @return ListUserPrivateAccessPoliciesResponse
@@ -5342,7 +5352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改内网访问策略</p>
+     * <p>Modify Private Access Policy</p>
      * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5447,7 +5457,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改内网访问策略</p>
+     * <p>Modify Private Access Policy</p>
      * 
      * @param request UpdatePrivateAccessPolicyRequest
      * @return UpdatePrivateAccessPolicyResponse

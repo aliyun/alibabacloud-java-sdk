@@ -1,3 +1,7 @@
+2025-06-16 Version: 1.14.2
+- Update API CreateWmBaseImage: add request parameters ImageControl.
+
+
 2025-06-13 Version: 1.14.1
 - Update API CreatePrivateAccessPolicy: add request parameters TrustedProcessGroupIds.
 - Update API CreatePrivateAccessPolicy: add request parameters TrustedProcessStatus.

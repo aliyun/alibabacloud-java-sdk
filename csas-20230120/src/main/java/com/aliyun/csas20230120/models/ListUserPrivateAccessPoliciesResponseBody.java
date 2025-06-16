@@ -4,11 +4,14 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
+    /**
+     * <p>List of authorized policies.</p>
+     */
     @NameInMap("Polices")
     public java.util.List<ListUserPrivateAccessPoliciesResponseBodyPolices> polices;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9D852F87-AFB5-51B8-AACD-F7D0EFB8277D</p>
@@ -17,6 +20,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of authorized policies.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -54,6 +59,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
 
     public static class ListUserPrivateAccessPoliciesResponseBodyPolicesCustomUserAttributes extends TeaModel {
         /**
+         * <p>The identity provider ID of the user group. This value exists when the custom user group type is <strong>department</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -61,6 +68,12 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public Integer idpId;
 
         /**
+         * <p>Relation of the user group. Values:</p>
+         * <ul>
+         * <li><strong>Equal</strong>: Equal.</li>
+         * <li><strong>Unequal</strong>: Not equal.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Equal</p>
          */
@@ -68,12 +81,32 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public String relation;
 
         /**
+         * <p>Type of the user group. Values:</p>
+         * <ul>
+         * <li><strong>username</strong>: Username.</li>
+         * <li><strong>department</strong>: Department.</li>
+         * <li><strong>email</strong>: Email.</li>
+         * <li><strong>telephone</strong>: Telephone.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>department</p>
          */
         @NameInMap("UserGroupType")
         public String userGroupType;
 
+        /**
+         * <p>The value of the user group attribute.</p>
+         * <ul>
+         * <li>When the user group type is <strong>username</strong>, it represents the value of the username. The length is 1 to 128 characters, supporting Chinese and case-sensitive English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</li>
+         * <li>When the user group type is <strong>department</strong>, it represents the value of the department. For example: OU=Department1,OU=SASE DingTalk.</li>
+         * <li>When the user group type is <strong>email</strong>, it represents the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+         * <li>When the user group type is <strong>telephone</strong>, it represents the value of the phone number. For example: 13900001234.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OU=部门1,OU=SASE钉钉</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -117,10 +150,15 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
     }
 
     public static class ListUserPrivateAccessPoliciesResponseBodyPolices extends TeaModel {
+        /**
+         * <p>Set of custom user group attributes. Multiple custom user group attributes are in an OR relationship, effective as a union.</p>
+         */
         @NameInMap("CustomUserAttributes")
         public java.util.List<ListUserPrivateAccessPoliciesResponseBodyPolicesCustomUserAttributes> customUserAttributes;
 
         /**
+         * <p>Associated security baseline.</p>
+         * 
          * <strong>example:</strong>
          * <p>device_attribute_name</p>
          */
@@ -128,6 +166,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public String deviceAttributeName;
 
         /**
+         * <p>Associated user group.</p>
+         * 
          * <strong>example:</strong>
          * <p>user_group_name</p>
          */
@@ -135,6 +175,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public String matchedUserGroup;
 
         /**
+         * <p>Intranet access policy name.</p>
+         * 
          * <strong>example:</strong>
          * <p>private_access_policy_name</p>
          */
@@ -142,6 +184,12 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>Action of the intranet access policy. Values:</p>
+         * <ul>
+         * <li><strong>Block</strong>: Block.</li>
+         * <li><strong>Allow</strong>: Allow.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Allow</p>
          */
@@ -149,6 +197,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public String policyAction;
 
         /**
+         * <p>Intranet access policy ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>pa-policy-1b0d0e8b4bcf****</p>
          */
@@ -156,19 +206,33 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         public String policyId;
 
         /**
+         * <p>Priority of the intranet access policy. The number 1 indicates the highest priority.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Priority")
         public Long priority;
 
+        /**
+         * <p>List of trusted process group IDs.</p>
+         */
         @NameInMap("TrustedProcessGroupIds")
         public java.util.List<String> trustedProcessGroupIds;
 
+        /**
+         * <p>List of trusted software IDs.</p>
+         */
         @NameInMap("TrustedSoftwareIds")
         public java.util.List<String> trustedSoftwareIds;
 
         /**
+         * <p>Type of the user group for the intranet access policy. Values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: Normal user group.</li>
+         * <li><strong>Custom</strong>: Custom user group.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */

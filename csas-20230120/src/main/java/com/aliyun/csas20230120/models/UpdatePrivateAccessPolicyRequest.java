@@ -4,33 +4,72 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdatePrivateAccessPolicyRequest extends TeaModel {
+    /**
+     * <p>Set of application IDs for the private access policy. A single policy supports up to 100 private access application IDs.</p>
+     */
     @NameInMap("ApplicationIds")
     public java.util.List<String> applicationIds;
 
     /**
+     * <p>Application type of the private access policy. Values:</p>
+     * <ul>
+     * <li><strong>Application</strong>: Application.</li>
+     * <li><strong>Tag</strong>: Tag.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Application</p>
      */
     @NameInMap("ApplicationType")
     public String applicationType;
 
+    /**
+     * <p>Set of custom user attributes for the private access policy, required when the user group type is <strong>Custom</strong>. Mutually exclusive with the user group ID set. The total number of custom user groups is limited to 10.</p>
+     */
     @NameInMap("CustomUserAttributes")
     public java.util.List<UpdatePrivateAccessPolicyRequestCustomUserAttributes> customUserAttributes;
 
     /**
+     * <p>Description of the private access policy. Length should be 1 to 128 characters, supporting Chinese and English letters (both uppercase and lowercase), and can include numbers, periods (.), underscores (_), hyphens (-), and spaces.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The execution strategy for not meeting the security baseline. Values:</p>
+     * <ul>
+     * <li><strong>Block</strong>: Block.</li>
+     * <li><strong>Observe</strong>: Observe.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Block</p>
+     */
     @NameInMap("DeviceAttributeAction")
     public String deviceAttributeAction;
 
+    /**
+     * <p>The ID of the security baseline policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dag-d3f64e8bdd4a****</p>
+     */
     @NameInMap("DeviceAttributeId")
     public String deviceAttributeId;
 
     /**
+     * <p>The modification type of the private access policy. Values:</p>
+     * <ul>
+     * <li><strong>Cover</strong> (default): Use the values of <strong>ApplicationIds</strong>, <strong>UserGroupIds</strong>, and <strong>CustomUserAttributes</strong> to overwrite the original application ID set, user group ID set, and custom user attribute set, respectively.</li>
+     * <li><strong>Append</strong>: Add the values provided in <strong>ApplicationIds</strong>, <strong>UserGroupIds</strong>, and <strong>CustomUserAttributes</strong> to the original application ID set, user group ID set, and custom user attribute set, respectively.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Cover</p>
      */
@@ -38,6 +77,12 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String modifyType;
 
     /**
+     * <p>Action of the private access policy. Values:</p>
+     * <ul>
+     * <li><strong>Block</strong>: Block.</li>
+     * <li><strong>Allow</strong>: Allow.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Allow</p>
      */
@@ -45,6 +90,11 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String policyAction;
 
     /**
+     * <p>ID of the private access policy. Value sources:</p>
+     * <ul>
+     * <li><a href="~~ListPrivateAccessPolicies~~">ListPrivateAccessPolicies</a>: Batch query for private access policies.</li>
+     * <li><a href="~~CreatePrivateAccessPolicy~~">CreatePrivateAccessPolicy</a>: Create a private access policy.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +104,8 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
+     * <p>The priority of the private access policy. The number 1 indicates the highest priority. Range: 1~1000, with the maximum value being the total number of private access policies minus one.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -61,6 +113,12 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The status of the private access policy. Values:</p>
+     * <ul>
+     * <li><strong>Enabled</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -68,39 +126,64 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>内网访问标签ID集合。一条策略最多支持100个内网访问标签ID。</p>
+     * <p>Set of tag IDs for the private access policy. A single policy supports up to 100 private access tag IDs.</p>
      */
     @NameInMap("TagIds")
     public java.util.List<String> tagIds;
 
+    /**
+     * <p>The trigger template ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dag-d3f64e8bdd4a****</p>
+     */
     @NameInMap("TriggerTemplateId")
     public String triggerTemplateId;
 
     /**
+     * <p>Trusted process group ID.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
     @NameInMap("TrustedProcessGroupIds")
     public java.util.List<String> trustedProcessGroupIds;
 
+    /**
+     * <p>Trusted process switch status. Values: </p>
+     * <ul>
+     * <li><p><strong>Enabled</strong>: On. </p>
+     * </li>
+     * <li><p><strong>Disabled</strong>: Off.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Disabled</p>
+     */
     @NameInMap("TrustedProcessStatus")
     public String trustedProcessStatus;
 
     /**
+     * <p>Trusted Software ID.</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>false</p>
      */
     @NameInMap("TrustedSoftwareIds")
     public java.util.List<String> trustedSoftwareIds;
 
+    /**
+     * <p>Set of user group IDs for the private access policy, required when the user group type is <strong>Normal</strong>. Mutually exclusive with the custom user group set. A single policy supports up to 10,000 user groups, and a maximum of 2,000 user group IDs can be modified at once.</p>
+     */
     @NameInMap("UserGroupIds")
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>内网访问策略的用户组类型。取值：</p>
+     * <p>User group type of the private access policy. Values:</p>
      * <ul>
-     * <li><strong>Normal</strong>：普通用户组。</li>
-     * <li><strong>Custom</strong>：自定义用户组。</li>
+     * <li><strong>Normal</strong>: Normal user group.</li>
+     * <li><strong>Custom</strong>: Custom user group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -260,6 +343,8 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
 
     public static class UpdatePrivateAccessPolicyRequestCustomUserAttributes extends TeaModel {
         /**
+         * <p>The identity source ID of the custom user group. Required when the custom user group type is <strong>department</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -267,6 +352,11 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         public Integer idpId;
 
         /**
+         * <p>Relation of the custom user group. Values:</p>
+         * <ul>
+         * <li><strong>Equal</strong>: Equal.</li>
+         * <li><strong>Unequal</strong>: Not equal.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,6 +366,13 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         public String relation;
 
         /**
+         * <p>Type of the custom user group. Values:</p>
+         * <ul>
+         * <li><strong>username</strong>: Username.</li>
+         * <li><strong>department</strong>: Department.</li>
+         * <li><strong>email</strong>: Email.</li>
+         * <li><strong>telephone</strong>: Telephone.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +382,11 @@ public class UpdatePrivateAccessPolicyRequest extends TeaModel {
         public String userGroupType;
 
         /**
+         * <p>Custom user group attribute values. - When the user group type is <strong>username</strong>, it represents the value of the username. The length should be 1 to 128 characters, supporting Chinese and case-sensitive English letters, and can include numbers, half-width periods (.), underscores (_), hyphens (-), asterisks (*), at symbols (@), and spaces. - When the user group type is <strong>department</strong>, it represents the value of the department. For example: OU=Department1,OU=SASE DingTalk. - When the user group type is <strong>email</strong>, it represents the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>. - When the user group type is <strong>telephone</strong>, it represents the value of the mobile phone. For example: 13900001234.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OU=部门1,OU=SASE钉钉</p>
          */
         @NameInMap("Value")
         public String value;
