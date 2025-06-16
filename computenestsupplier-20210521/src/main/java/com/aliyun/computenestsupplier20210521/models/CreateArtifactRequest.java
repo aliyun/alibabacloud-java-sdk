@@ -507,6 +507,9 @@ public class CreateArtifactRequest extends TeaModel {
         @NameInMap("SourceImageId")
         public String sourceImageId;
 
+        @NameInMap("SystemDiskSize")
+        public Long systemDiskSize;
+
         public static CreateArtifactRequestArtifactBuildProperty build(java.util.Map<String, ?> map) throws Exception {
             CreateArtifactRequestArtifactBuildProperty self = new CreateArtifactRequestArtifactBuildProperty();
             return TeaModel.build(map, self);
@@ -574,6 +577,14 @@ public class CreateArtifactRequest extends TeaModel {
         }
         public String getSourceImageId() {
             return this.sourceImageId;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setSystemDiskSize(Long systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
     }
