@@ -660,6 +660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IdOcrPictureUrl", request.idOcrPictureUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.idSpoof)) {
+            body.put("IdSpoof", request.idSpoof);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.idThreshold)) {
             body.put("IdThreshold", request.idThreshold);
         }
@@ -1306,6 +1310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ocr)) {
             query.put("Ocr", request.ocr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pages)) {
+            query.put("Pages", request.pages);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.procedurePriority)) {

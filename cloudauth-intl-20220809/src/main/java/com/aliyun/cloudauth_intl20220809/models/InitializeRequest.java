@@ -123,6 +123,13 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("Ocr")
     public String ocr;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Pages")
+    public String pages;
+
     @NameInMap("ProcedurePriority")
     public String procedurePriority;
 
@@ -371,6 +378,14 @@ public class InitializeRequest extends TeaModel {
     }
     public String getOcr() {
         return this.ocr;
+    }
+
+    public InitializeRequest setPages(String pages) {
+        this.pages = pages;
+        return this;
+    }
+    public String getPages() {
+        return this.pages;
     }
 
     public InitializeRequest setProcedurePriority(String procedurePriority) {

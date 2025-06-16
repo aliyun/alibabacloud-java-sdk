@@ -25,6 +25,9 @@ public class DocOcrMaxRequest extends TeaModel {
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    @NameInMap("IdSpoof")
+    public String idSpoof;
+
     /**
      * <strong>example:</strong>
      * <p>0</p>
@@ -104,6 +107,14 @@ public class DocOcrMaxRequest extends TeaModel {
     }
     public String getIdOcrPictureUrl() {
         return this.idOcrPictureUrl;
+    }
+
+    public DocOcrMaxRequest setIdSpoof(String idSpoof) {
+        this.idSpoof = idSpoof;
+        return this;
+    }
+    public String getIdSpoof() {
+        return this.idSpoof;
     }
 
     public DocOcrMaxRequest setIdThreshold(String idThreshold) {
