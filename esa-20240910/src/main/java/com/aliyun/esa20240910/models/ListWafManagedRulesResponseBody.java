@@ -114,7 +114,7 @@ public class ListWafManagedRulesResponseBody extends TeaModel {
          * <p>Name of the managed rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>SQL注入</p>
+         * <p>SQL injection</p>
          */
         @NameInMap("Name")
         public String name;

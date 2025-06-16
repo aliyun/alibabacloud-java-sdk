@@ -419,6 +419,9 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         @NameInMap("Method")
         public String method;
 
+        @NameInMap("MonitoringRegion")
+        public String monitoringRegion;
+
         /**
          * <p>Path.</p>
          * 
@@ -514,6 +517,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
         public String getMethod() {
             return this.method;
+        }
+
+        public GetLoadBalancerResponseBodyMonitor setMonitoringRegion(String monitoringRegion) {
+            this.monitoringRegion = monitoringRegion;
+            return this;
+        }
+        public String getMonitoringRegion() {
+            return this.monitoringRegion;
         }
 
         public GetLoadBalancerResponseBodyMonitor setPath(String path) {

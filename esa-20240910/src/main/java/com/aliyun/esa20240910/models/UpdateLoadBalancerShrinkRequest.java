@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     /**
-     * <p>Configuration for failover across pools.</p>
+     * <p>Configuration for fallback across pools.</p>
      */
     @NameInMap("AdaptiveRouting")
     public String adaptiveRoutingShrink;
@@ -20,7 +20,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
      * <p>Detailed description of the load balancer, for easier management and identification.</p>
      * 
      * <strong>example:</strong>
-     * <p>负载均衡器描述</p>
+     * <p>Load balancer description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -129,7 +129,7 @@ public class UpdateLoadBalancerShrinkRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the keys can be concatenated with commas.</p>
+     * <p>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the regions can be concatenated with commas as the key.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>

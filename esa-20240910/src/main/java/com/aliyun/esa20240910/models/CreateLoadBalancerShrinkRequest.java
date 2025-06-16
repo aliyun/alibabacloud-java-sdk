@@ -27,7 +27,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
      * <p>Detailed description of the load balancer, for easier management and identification.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试负载均衡器描述</p>
+     * <p>Load balancer description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -145,7 +145,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     /**
      * <p>Load balancing strategy.</p>
      * <ul>
-     * <li>geo: Geographic strategy.</li>
+     * <li>geo: Geographical strategy.</li>
      * <li>random: Weighted round-robin.</li>
      * <li>order: Primary and backup method.</li>
      * </ul>
@@ -158,7 +158,7 @@ public class CreateLoadBalancerShrinkRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</p>
+     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share the same set of address pools, the keys can be concatenated with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>

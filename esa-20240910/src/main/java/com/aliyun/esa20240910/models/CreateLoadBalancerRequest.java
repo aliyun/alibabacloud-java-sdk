@@ -27,7 +27,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
      * <p>Detailed description of the load balancer, for easier management and identification.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试负载均衡器描述</p>
+     * <p>Load balancer description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -145,7 +145,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     /**
      * <p>Load balancing strategy.</p>
      * <ul>
-     * <li>geo: Geographic strategy.</li>
+     * <li>geo: Geographical strategy.</li>
      * <li>random: Weighted round-robin.</li>
      * <li>order: Primary and backup method.</li>
      * </ul>
@@ -158,7 +158,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String steeringPolicy;
 
     /**
-     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share a set of address pools, the keys can be concatenated with commas.</p>
+     * <p>Address pools corresponding to secondary regions. When multiple secondary regions share the same set of address pools, the keys can be concatenated with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -349,7 +349,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public Integer consecutiveUp;
 
         /**
-         * <p>Expected status codes, such as <code>200,202</code>, indicating successful HTTP responses.</p>
+         * <p>Expected status codes, such as <code>200,202</code>, which are successful HTTP responses.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -371,7 +371,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public Boolean followRedirects;
 
         /**
-         * <p>Header information included in the probe, which is the HTTP header.</p>
+         * <p>Header information included in the probe, which is an HTTP header.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -385,7 +385,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public Object header;
 
         /**
-         * <p>Monitoring interval, such as <code>60</code> seconds, representing the frequency of checks.</p>
+         * <p>Monitoring interval, such as <code>60</code> seconds, which is the frequency of checks.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -402,8 +402,11 @@ public class CreateLoadBalancerRequest extends TeaModel {
         @NameInMap("Method")
         public String method;
 
+        @NameInMap("MonitoringRegion")
+        public String monitoringRegion;
+
         /**
-         * <p>Monitor check path, such as <code>/healthcheck</code>, which is the HTTP request path.</p>
+         * <p>Monitor check path, such as <code>/healthcheck</code>, which is an HTTP request path.</p>
          * 
          * <strong>example:</strong>
          * <p>/health</p>
@@ -508,6 +511,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
             return this.method;
         }
 
+        public CreateLoadBalancerRequestMonitor setMonitoringRegion(String monitoringRegion) {
+            this.monitoringRegion = monitoringRegion;
+            return this;
+        }
+        public String getMonitoringRegion() {
+            return this.monitoringRegion;
+        }
+
         public CreateLoadBalancerRequestMonitor setPath(String path) {
             this.path = path;
             return this;
@@ -544,7 +555,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
 
     public static class CreateLoadBalancerRequestRandomSteering extends TeaModel {
         /**
-         * <p>Default weight for round-robin, used for all pools that do not have a specific weight set. The value range is an integer between 0 and 100.</p>
+         * <p>Default weight for all pools that do not have individual weights specified. The value range is an integer between 0 and 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -744,7 +755,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String ruleEnable;
 
         /**
-         * <p>Rule name. This parameter does not need to be set when adding global configurations.</p>
+         * <p>The name of the rule. This parameter does not need to be set when adding global configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>rule_1</p>
@@ -753,7 +764,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it should be an integer greater than 0, with higher values indicating a higher priority for execution.</p>
+         * <p>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
