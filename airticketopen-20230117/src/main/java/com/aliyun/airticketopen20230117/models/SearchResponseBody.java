@@ -667,6 +667,29 @@ public class SearchResponseBody extends TeaModel {
 
     }
 
+    public static class SearchResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("supply_source_type")
+        public String supplySourceType;
+
+        public static SearchResponseBodyDataSolutionListSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
+            SearchResponseBodyDataSolutionListSolutionAttribute self = new SearchResponseBodyDataSolutionListSolutionAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchResponseBodyDataSolutionListSolutionAttribute setSupplySourceType(String supplySourceType) {
+            this.supplySourceType = supplySourceType;
+            return this;
+        }
+        public String getSupplySourceType() {
+            return this.supplySourceType;
+        }
+
+    }
+
     public static class SearchResponseBodyDataSolutionList extends TeaModel {
         /**
          * <p>adult fare</p>
@@ -763,6 +786,9 @@ public class SearchResponseBody extends TeaModel {
          */
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
+
+        @NameInMap("solution_attribute")
+        public SearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
 
         /**
          * <p>solution ID</p>
@@ -872,6 +898,14 @@ public class SearchResponseBody extends TeaModel {
         }
         public java.util.List<SearchResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
             return this.segmentRefundChangeRuleMappingList;
+        }
+
+        public SearchResponseBodyDataSolutionList setSolutionAttribute(SearchResponseBodyDataSolutionListSolutionAttribute solutionAttribute) {
+            this.solutionAttribute = solutionAttribute;
+            return this;
+        }
+        public SearchResponseBodyDataSolutionListSolutionAttribute getSolutionAttribute() {
+            return this.solutionAttribute;
         }
 
         public SearchResponseBodyDataSolutionList setSolutionId(String solutionId) {

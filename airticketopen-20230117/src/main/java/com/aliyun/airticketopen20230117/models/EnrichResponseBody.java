@@ -665,6 +665,29 @@ public class EnrichResponseBody extends TeaModel {
 
     }
 
+    public static class EnrichResponseBodyDataSolutionListSolutionAttribute extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("supply_source_type")
+        public String supplySourceType;
+
+        public static EnrichResponseBodyDataSolutionListSolutionAttribute build(java.util.Map<String, ?> map) throws Exception {
+            EnrichResponseBodyDataSolutionListSolutionAttribute self = new EnrichResponseBodyDataSolutionListSolutionAttribute();
+            return TeaModel.build(map, self);
+        }
+
+        public EnrichResponseBodyDataSolutionListSolutionAttribute setSupplySourceType(String supplySourceType) {
+            this.supplySourceType = supplySourceType;
+            return this;
+        }
+        public String getSupplySourceType() {
+            return this.supplySourceType;
+        }
+
+    }
+
     public static class EnrichResponseBodyDataSolutionList extends TeaModel {
         /**
          * <p>adult fare</p>
@@ -761,6 +784,9 @@ public class EnrichResponseBody extends TeaModel {
          */
         @NameInMap("segment_refund_change_rule_mapping_list")
         public java.util.List<EnrichResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList;
+
+        @NameInMap("solution_attribute")
+        public EnrichResponseBodyDataSolutionListSolutionAttribute solutionAttribute;
 
         /**
          * <p>solution ID</p>
@@ -870,6 +896,14 @@ public class EnrichResponseBody extends TeaModel {
         }
         public java.util.List<EnrichResponseBodyDataSolutionListSegmentRefundChangeRuleMappingList> getSegmentRefundChangeRuleMappingList() {
             return this.segmentRefundChangeRuleMappingList;
+        }
+
+        public EnrichResponseBodyDataSolutionList setSolutionAttribute(EnrichResponseBodyDataSolutionListSolutionAttribute solutionAttribute) {
+            this.solutionAttribute = solutionAttribute;
+            return this;
+        }
+        public EnrichResponseBodyDataSolutionListSolutionAttribute getSolutionAttribute() {
+            return this.solutionAttribute;
         }
 
         public EnrichResponseBodyDataSolutionList setSolutionId(String solutionId) {
