@@ -47,6 +47,9 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
+        @NameInMap("JobName")
+        public String jobName;
+
         /**
          * <p>The output group configurations.</p>
          */
@@ -70,6 +73,14 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         }
         public java.util.List<MediaConvertInput> getInputs() {
             return this.inputs;
+        }
+
+        public GetMediaConvertJobResponseBodyJobConfig setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
         }
 
         public GetMediaConvertJobResponseBodyJobConfig setOutputGroups(java.util.List<MediaConvertOutputGroup> outputGroups) {
@@ -115,6 +126,12 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         @NameInMap("Config")
         public GetMediaConvertJobResponseBodyJobConfig config;
 
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("FinishTime")
+        public String finishTime;
+
         /**
          * <p>The ID of the transcoding task, which is a 32-bit string.</p>
          * 
@@ -144,6 +161,9 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
          */
         @NameInMap("OutputGroupDetails")
         public java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails;
+
+        @NameInMap("Percent")
+        public Integer percent;
 
         /**
          * <p>The ID of the queue.</p>
@@ -217,6 +237,22 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
             return this.config;
         }
 
+        public GetMediaConvertJobResponseBodyJob setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetMediaConvertJobResponseBodyJob setFinishTime(String finishTime) {
+            this.finishTime = finishTime;
+            return this;
+        }
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
         public GetMediaConvertJobResponseBodyJob setJobId(String jobId) {
             this.jobId = jobId;
             return this;
@@ -247,6 +283,14 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         }
         public java.util.List<MediaConvertOutputGroupDetail> getOutputGroupDetails() {
             return this.outputGroupDetails;
+        }
+
+        public GetMediaConvertJobResponseBodyJob setPercent(Integer percent) {
+            this.percent = percent;
+            return this;
+        }
+        public Integer getPercent() {
+            return this.percent;
         }
 
         public GetMediaConvertJobResponseBodyJob setPipelineId(String pipelineId) {

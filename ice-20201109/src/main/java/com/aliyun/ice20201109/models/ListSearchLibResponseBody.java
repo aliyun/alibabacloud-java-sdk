@@ -38,7 +38,7 @@ public class ListSearchLibResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>总数。</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -92,12 +92,24 @@ public class ListSearchLibResponseBody extends TeaModel {
     }
 
     public static class ListSearchLibResponseBodySearchLibInfoListIndexInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("IndexReadiness")
         public String indexReadiness;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Active</p>
+         */
         @NameInMap("IndexStatus")
         public String indexStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>face</p>
+         */
         @NameInMap("IndexType")
         public String indexType;
 

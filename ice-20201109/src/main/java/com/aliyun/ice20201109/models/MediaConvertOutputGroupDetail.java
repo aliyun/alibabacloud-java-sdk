@@ -7,6 +7,12 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    @NameInMap("CreateTime")
+    public String createTime;
+
+    @NameInMap("FinishTime")
+    public String finishTime;
+
     @NameInMap("Message")
     public String message;
 
@@ -33,6 +39,22 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
     }
     public String getCode() {
         return this.code;
+    }
+
+    public MediaConvertOutputGroupDetail setCreateTime(String createTime) {
+        this.createTime = createTime;
+        return this;
+    }
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    public MediaConvertOutputGroupDetail setFinishTime(String finishTime) {
+        this.finishTime = finishTime;
+        return this;
+    }
+    public String getFinishTime() {
+        return this.finishTime;
     }
 
     public MediaConvertOutputGroupDetail setMessage(String message) {

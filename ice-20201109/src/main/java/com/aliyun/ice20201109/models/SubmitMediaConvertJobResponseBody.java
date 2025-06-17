@@ -47,6 +47,9 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
+        @NameInMap("JobName")
+        public String jobName;
+
         /**
          * <p>The output group configurations.</p>
          */
@@ -70,6 +73,14 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         }
         public java.util.List<MediaConvertInput> getInputs() {
             return this.inputs;
+        }
+
+        public SubmitMediaConvertJobResponseBodyJobConfig setJobName(String jobName) {
+            this.jobName = jobName;
+            return this;
+        }
+        public String getJobName() {
+            return this.jobName;
         }
 
         public SubmitMediaConvertJobResponseBodyJobConfig setOutputGroups(java.util.List<MediaConvertOutputGroup> outputGroups) {
