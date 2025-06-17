@@ -69,6 +69,56 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>闯入接口</p>
+     * 
+     * @param tmpReq BatchIntrudeDomainsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return BatchIntrudeDomainsResponse
+     */
+    public BatchIntrudeDomainsResponse batchIntrudeDomainsWithOptions(BatchIntrudeDomainsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        BatchIntrudeDomainsShrinkRequest request = new BatchIntrudeDomainsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.domainNames)) {
+            request.domainNamesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.domainNames, "DomainNames", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.domainNamesShrink)) {
+            query.put("DomainNames", request.domainNamesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "BatchIntrudeDomains"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new BatchIntrudeDomainsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>闯入接口</p>
+     * 
+     * @param request BatchIntrudeDomainsRequest
+     * @return BatchIntrudeDomainsResponse
+     */
+    public BatchIntrudeDomainsResponse batchIntrudeDomains(BatchIntrudeDomainsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.batchIntrudeDomainsWithOptions(request, runtime);
+    }
+
+    /**
      * @param request BidDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BidDomainResponse
@@ -908,6 +958,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryExchangeRateResponse queryExchangeRate(QueryExchangeRateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryExchangeRateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询竞价商品详情</p>
+     * 
+     * @param request QueryExportAuctionDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryExportAuctionDetailResponse
+     */
+    public QueryExportAuctionDetailResponse queryExportAuctionDetailWithOptions(QueryExportAuctionDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.auctionId)) {
+            query.put("AuctionId", request.auctionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryExportAuctionDetail"),
+            new TeaPair("version", "2018-02-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryExportAuctionDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询竞价商品详情</p>
+     * 
+     * @param request QueryExportAuctionDetailRequest
+     * @return QueryExportAuctionDetailResponse
+     */
+    public QueryExportAuctionDetailResponse queryExportAuctionDetail(QueryExportAuctionDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryExportAuctionDetailWithOptions(request, runtime);
     }
 
     /**

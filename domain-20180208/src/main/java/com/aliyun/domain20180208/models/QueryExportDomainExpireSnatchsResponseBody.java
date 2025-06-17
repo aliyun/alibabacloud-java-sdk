@@ -116,6 +116,9 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         @NameInMap("RegDate")
         public String regDate;
 
+        @NameInMap("RenewPrice")
+        public Double renewPrice;
+
         @NameInMap("Reserved")
         public Boolean reserved;
 
@@ -130,6 +133,9 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
 
         @NameInMap("ShortName")
         public String shortName;
+
+        @NameInMap("SnatchNo")
+        public String snatchNo;
 
         @NameInMap("SnatchTypeDesc")
         public String snatchTypeDesc;
@@ -378,6 +384,14 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             return this.regDate;
         }
 
+        public QueryExportDomainExpireSnatchsResponseBodyData setRenewPrice(Double renewPrice) {
+            this.renewPrice = renewPrice;
+            return this;
+        }
+        public Double getRenewPrice() {
+            return this.renewPrice;
+        }
+
         public QueryExportDomainExpireSnatchsResponseBodyData setReserved(Boolean reserved) {
             this.reserved = reserved;
             return this;
@@ -416,6 +430,14 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         }
         public String getShortName() {
             return this.shortName;
+        }
+
+        public QueryExportDomainExpireSnatchsResponseBodyData setSnatchNo(String snatchNo) {
+            this.snatchNo = snatchNo;
+            return this;
+        }
+        public String getSnatchNo() {
+            return this.snatchNo;
         }
 
         public QueryExportDomainExpireSnatchsResponseBodyData setSnatchTypeDesc(String snatchTypeDesc) {
