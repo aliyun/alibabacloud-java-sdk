@@ -165,6 +165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Headers", request.headers);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipPoolId)) {
+            query.put("IpPoolId", request.ipPoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }
@@ -2771,6 +2775,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.htmlBody)) {
             query.put("HtmlBody", request.htmlBody);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipPoolId)) {
+            query.put("IpPoolId", request.ipPoolId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {

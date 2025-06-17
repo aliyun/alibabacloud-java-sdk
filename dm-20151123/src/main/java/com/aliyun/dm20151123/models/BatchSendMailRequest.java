@@ -52,6 +52,9 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("Headers")
     public String headers;
 
+    @NameInMap("IpPoolId")
+    public String ipPoolId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -176,6 +179,14 @@ public class BatchSendMailRequest extends TeaModel {
     }
     public String getHeaders() {
         return this.headers;
+    }
+
+    public BatchSendMailRequest setIpPoolId(String ipPoolId) {
+        this.ipPoolId = ipPoolId;
+        return this;
+    }
+    public String getIpPoolId() {
+        return this.ipPoolId;
     }
 
     public BatchSendMailRequest setOwnerId(Long ownerId) {

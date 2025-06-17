@@ -69,6 +69,9 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("HtmlBody")
     public String htmlBody;
 
+    @NameInMap("IpPoolId")
+    public String ipPoolId;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -224,6 +227,14 @@ public class SingleSendMailRequest extends TeaModel {
     }
     public String getHtmlBody() {
         return this.htmlBody;
+    }
+
+    public SingleSendMailRequest setIpPoolId(String ipPoolId) {
+        this.ipPoolId = ipPoolId;
+        return this;
+    }
+    public String getIpPoolId() {
+        return this.ipPoolId;
     }
 
     public SingleSendMailRequest setOwnerId(Long ownerId) {

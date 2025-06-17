@@ -110,6 +110,12 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("IpPoolId")
+        public String ipPoolId;
+
+        @NameInMap("IpPoolName")
+        public String ipPoolName;
+
         /**
          * <p>Receiver\&quot;s name.</p>
          * 
@@ -192,6 +198,22 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setIpPoolId(String ipPoolId) {
+            this.ipPoolId = ipPoolId;
+            return this;
+        }
+        public String getIpPoolId() {
+            return this.ipPoolId;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setIpPoolName(String ipPoolName) {
+            this.ipPoolName = ipPoolName;
+            return this;
+        }
+        public String getIpPoolName() {
+            return this.ipPoolName;
         }
 
         public QueryTaskByParamResponseBodyDataTask setReceiversName(String receiversName) {
