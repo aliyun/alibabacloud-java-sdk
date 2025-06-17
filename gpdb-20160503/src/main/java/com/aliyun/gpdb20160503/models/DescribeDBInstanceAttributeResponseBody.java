@@ -430,6 +430,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("InstanceNetworkType")
         public String instanceNetworkType;
 
+        @NameInMap("InstanceSpec")
+        public String instanceSpec;
+
         /**
          * <p>Lock mode, with the following values:</p>
          * <ul>
@@ -1077,6 +1080,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getInstanceNetworkType() {
             return this.instanceNetworkType;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setInstanceSpec(String instanceSpec) {
+            this.instanceSpec = instanceSpec;
+            return this;
+        }
+        public String getInstanceSpec() {
+            return this.instanceSpec;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setLockMode(String lockMode) {
