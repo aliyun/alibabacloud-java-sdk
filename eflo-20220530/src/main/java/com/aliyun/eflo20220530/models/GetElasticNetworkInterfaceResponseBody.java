@@ -414,9 +414,21 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class GetElasticNetworkInterfaceResponseBodyContentTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -564,6 +576,12 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>资源组实例ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzzka6bnjvbi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -593,6 +611,9 @@ public class GetElasticNetworkInterfaceResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The details of the resource tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetElasticNetworkInterfaceResponseBodyContentTags> tags;
 

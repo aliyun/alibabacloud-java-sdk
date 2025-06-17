@@ -101,6 +101,12 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
+        /**
+         * <p>Lingjun Hdeni Network Interface IPV6 address Quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("HdeniIpv6SipQuota")
         public Integer hdeniIpv6SipQuota;
 
@@ -113,9 +119,21 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
         @NameInMap("HdeniQuota")
         public Integer hdeniQuota;
 
+        /**
+         * <p>Lingjun Hdeni Network Interface IPV4 address Quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("HdeniSipQuota")
         public Integer hdeniSipQuota;
 
+        /**
+         * <p>Lingjun Elastic Network Interface IPV6 address Quota</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LeniIpv6SipQuota")
         public Integer leniIpv6SipQuota;
 

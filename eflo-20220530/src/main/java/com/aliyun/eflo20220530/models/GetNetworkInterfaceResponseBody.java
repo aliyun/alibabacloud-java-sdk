@@ -278,9 +278,21 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
     }
 
     public static class GetNetworkInterfaceResponseBodyContentTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-test</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-test</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -492,6 +504,12 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzzka6bnjvbi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -519,6 +537,9 @@ public class GetNetworkInterfaceResponseBody extends TeaModel {
         @NameInMap("SubnetBaseInfo")
         public GetNetworkInterfaceResponseBodyContentSubnetBaseInfo subnetBaseInfo;
 
+        /**
+         * <p>The details of the resource tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetNetworkInterfaceResponseBodyContentTags> tags;
 

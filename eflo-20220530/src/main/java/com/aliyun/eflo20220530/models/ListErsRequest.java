@@ -103,6 +103,9 @@ public class ListErsRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>List of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListErsRequestTag> tag;
 
@@ -200,9 +203,21 @@ public class ListErsRequest extends TeaModel {
     }
 
     public static class ListErsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-er</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-xxxxx</p>
+         */
         @NameInMap("Value")
         public String value;
 

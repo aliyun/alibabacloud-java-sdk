@@ -164,6 +164,12 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzzka6bnjvbi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 

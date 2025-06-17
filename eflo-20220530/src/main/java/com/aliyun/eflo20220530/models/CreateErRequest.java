@@ -52,6 +52,9 @@ public class CreateErRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>List of tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<CreateErRequestTag> tag;
 
@@ -109,9 +112,21 @@ public class CreateErRequest extends TeaModel {
     }
 
     public static class CreateErRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value-test</p>
+         */
         @NameInMap("Value")
         public String value;
 

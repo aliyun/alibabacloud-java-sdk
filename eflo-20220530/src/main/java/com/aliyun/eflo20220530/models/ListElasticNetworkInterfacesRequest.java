@@ -73,6 +73,12 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfmzmcpv7odnta</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -93,6 +99,9 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>List of Tags</p>
+     */
     @NameInMap("Tag")
     public java.util.List<ListElasticNetworkInterfacesRequestTag> tag;
 
@@ -255,9 +264,21 @@ public class ListElasticNetworkInterfacesRequest extends TeaModel {
     }
 
     public static class ListElasticNetworkInterfacesRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-test</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-value</p>
+         */
         @NameInMap("Value")
         public String value;
 

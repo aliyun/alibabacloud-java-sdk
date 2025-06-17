@@ -976,9 +976,21 @@ public class GetErResponseBody extends TeaModel {
     }
 
     public static class GetErResponseBodyContentTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -1114,6 +1126,9 @@ public class GetErResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>List of Tags</p>
+         */
         @NameInMap("Tags")
         public java.util.List<GetErResponseBodyContentTags> tags;
 

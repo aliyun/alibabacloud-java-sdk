@@ -284,9 +284,21 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
     }
 
     public static class ListNetworkInterfacesResponseBodyContentDataTags extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -496,6 +508,12 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-1234567890</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
@@ -523,6 +541,9 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
         @NameInMap("SubnetBaseInfo")
         public ListNetworkInterfacesResponseBodyContentDataSubnetBaseInfo subnetBaseInfo;
 
+        /**
+         * <p>List of tags.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListNetworkInterfacesResponseBodyContentDataTags> tags;
 

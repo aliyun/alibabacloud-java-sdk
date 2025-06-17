@@ -164,6 +164,9 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         /**
          * <p>The task status.</p>
          * 
@@ -242,6 +245,14 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
             return this.regionId;
         }
 
+        public ListLeniPrivateIpAddressesResponseBodyContentData setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
         public ListLeniPrivateIpAddressesResponseBodyContentData setStatus(String status) {
             this.status = status;
             return this;
@@ -259,6 +270,12 @@ public class ListLeniPrivateIpAddressesResponseBody extends TeaModel {
         @NameInMap("Data")
         public java.util.List<ListLeniPrivateIpAddressesResponseBodyContentData> data;
 
+        /**
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzzka6bnjvbi</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
