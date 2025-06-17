@@ -10,8 +10,8 @@ public class ModifyCustomDomainSampleRateRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      */
-    @NameInMap("DomainName")
-    public String domainName;
+    @NameInMap("DomainNames")
+    public String domainNames;
 
     /**
      * <p>This parameter is required.</p>
@@ -35,12 +35,12 @@ public class ModifyCustomDomainSampleRateRequest extends TeaModel {
         return this.baseConfigID;
     }
 
-    public ModifyCustomDomainSampleRateRequest setDomainName(String domainName) {
-        this.domainName = domainName;
+    public ModifyCustomDomainSampleRateRequest setDomainNames(String domainNames) {
+        this.domainNames = domainNames;
         return this;
     }
-    public String getDomainName() {
-        return this.domainName;
+    public String getDomainNames() {
+        return this.domainNames;
     }
 
     public ModifyCustomDomainSampleRateRequest setSampleRate(Float sampleRate) {

@@ -27,24 +27,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISPs. If you leave this parameter empty, all ISPs are queried.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>unicom</p>
-     */
-    @NameInMap("IspNameEn")
-    public String ispNameEn;
-
-    /**
-     * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions. If you leave this parameter empty, all regions are queried.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>beijing</p>
-     */
-    @NameInMap("LocationNameEn")
-    public String locationNameEn;
-
-    /**
      * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
@@ -72,22 +54,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
-    }
-
-    public DescribeDomainRealTimeSrcHttpCodeDataRequest setIspNameEn(String ispNameEn) {
-        this.ispNameEn = ispNameEn;
-        return this;
-    }
-    public String getIspNameEn() {
-        return this.ispNameEn;
-    }
-
-    public DescribeDomainRealTimeSrcHttpCodeDataRequest setLocationNameEn(String locationNameEn) {
-        this.locationNameEn = locationNameEn;
-        return this;
-    }
-    public String getLocationNameEn() {
-        return this.locationNameEn;
     }
 
     public DescribeDomainRealTimeSrcHttpCodeDataRequest setStartTime(String startTime) {

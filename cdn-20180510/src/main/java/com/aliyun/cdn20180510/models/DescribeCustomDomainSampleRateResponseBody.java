@@ -65,6 +65,15 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
         @NameInMap("DomainContent")
         public java.util.List<DescribeCustomDomainSampleRateResponseBodyContentDomainContent> domainContent;
 
+        @NameInMap("PageNumber")
+        public Long pageNumber;
+
+        @NameInMap("PageSize")
+        public Long pageSize;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
         public static DescribeCustomDomainSampleRateResponseBodyContent build(java.util.Map<String, ?> map) throws Exception {
             DescribeCustomDomainSampleRateResponseBodyContent self = new DescribeCustomDomainSampleRateResponseBodyContent();
             return TeaModel.build(map, self);
@@ -76,6 +85,30 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCustomDomainSampleRateResponseBodyContentDomainContent> getDomainContent() {
             return this.domainContent;
+        }
+
+        public DescribeCustomDomainSampleRateResponseBodyContent setPageNumber(Long pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Long getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeCustomDomainSampleRateResponseBodyContent setPageSize(Long pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        public DescribeCustomDomainSampleRateResponseBodyContent setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
     }

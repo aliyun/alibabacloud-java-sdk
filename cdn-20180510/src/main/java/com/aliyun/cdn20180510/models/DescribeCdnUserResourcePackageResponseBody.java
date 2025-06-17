@@ -63,6 +63,15 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         @NameInMap("CurrCapacity")
         public String currCapacity;
 
+        @NameInMap("CurrCapacityBaseUnit")
+        public String currCapacityBaseUnit;
+
+        @NameInMap("CurrCapacityShowUnit")
+        public String currCapacityShowUnit;
+
+        @NameInMap("CurrCapacityShowValue")
+        public String currCapacityShowValue;
+
         /**
          * <p>The name of the resource plan.</p>
          * 
@@ -94,6 +103,15 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
         @NameInMap("InitCapacity")
         public String initCapacity;
 
+        @NameInMap("InitCapacityBaseUnit")
+        public String initCapacityBaseUnit;
+
+        @NameInMap("InitCapacityShowUnit")
+        public String initCapacityShowUnit;
+
+        @NameInMap("InitCapacityShowValue")
+        public String initCapacityShowValue;
+
         /**
          * <p>The ID of the instance</p>
          * 
@@ -102,6 +120,9 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
          */
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("Region")
+        public String region;
 
         /**
          * <p>The effective time.</p>
@@ -155,6 +176,30 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             return this.currCapacity;
         }
 
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setCurrCapacityBaseUnit(String currCapacityBaseUnit) {
+            this.currCapacityBaseUnit = currCapacityBaseUnit;
+            return this;
+        }
+        public String getCurrCapacityBaseUnit() {
+            return this.currCapacityBaseUnit;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setCurrCapacityShowUnit(String currCapacityShowUnit) {
+            this.currCapacityShowUnit = currCapacityShowUnit;
+            return this;
+        }
+        public String getCurrCapacityShowUnit() {
+            return this.currCapacityShowUnit;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setCurrCapacityShowValue(String currCapacityShowValue) {
+            this.currCapacityShowValue = currCapacityShowValue;
+            return this;
+        }
+        public String getCurrCapacityShowValue() {
+            return this.currCapacityShowValue;
+        }
+
         public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setDisplayName(String displayName) {
             this.displayName = displayName;
             return this;
@@ -179,12 +224,44 @@ public class DescribeCdnUserResourcePackageResponseBody extends TeaModel {
             return this.initCapacity;
         }
 
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setInitCapacityBaseUnit(String initCapacityBaseUnit) {
+            this.initCapacityBaseUnit = initCapacityBaseUnit;
+            return this;
+        }
+        public String getInitCapacityBaseUnit() {
+            return this.initCapacityBaseUnit;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setInitCapacityShowUnit(String initCapacityShowUnit) {
+            this.initCapacityShowUnit = initCapacityShowUnit;
+            return this;
+        }
+        public String getInitCapacityShowUnit() {
+            return this.initCapacityShowUnit;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setInitCapacityShowValue(String initCapacityShowValue) {
+            this.initCapacityShowValue = initCapacityShowValue;
+            return this;
+        }
+        public String getInitCapacityShowValue() {
+            return this.initCapacityShowValue;
+        }
+
         public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public DescribeCdnUserResourcePackageResponseBodyResourcePackageInfosResourcePackageInfo setStartTime(String startTime) {

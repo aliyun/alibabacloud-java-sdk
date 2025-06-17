@@ -26,6 +26,12 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     @NameInMap("ChangingChargeType")
     public String changingChargeType;
 
+    @NameInMap("ChangingDynamicBillingType")
+    public String changingDynamicBillingType;
+
+    @NameInMap("DynamicBillingType")
+    public String dynamicBillingType;
+
     /**
      * <p>The ID of the instance.</p>
      * 
@@ -91,6 +97,22 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     }
     public String getChangingChargeType() {
         return this.changingChargeType;
+    }
+
+    public DescribeCdnServiceResponseBody setChangingDynamicBillingType(String changingDynamicBillingType) {
+        this.changingDynamicBillingType = changingDynamicBillingType;
+        return this;
+    }
+    public String getChangingDynamicBillingType() {
+        return this.changingDynamicBillingType;
+    }
+
+    public DescribeCdnServiceResponseBody setDynamicBillingType(String dynamicBillingType) {
+        this.dynamicBillingType = dynamicBillingType;
+        return this;
+    }
+    public String getDynamicBillingType() {
+        return this.dynamicBillingType;
     }
 
     public DescribeCdnServiceResponseBody setInstanceId(String instanceId) {

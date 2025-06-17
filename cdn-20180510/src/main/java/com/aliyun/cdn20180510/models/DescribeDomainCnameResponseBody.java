@@ -59,6 +59,12 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("ErrMsg")
+        public String errMsg;
+
+        @NameInMap("Passed")
+        public String passed;
+
         /**
          * <p>The CNAME detection result. Valid values:</p>
          * <ul>
@@ -91,6 +97,22 @@ public class DescribeDomainCnameResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public DescribeDomainCnameResponseBodyCnameDatasData setErrMsg(String errMsg) {
+            this.errMsg = errMsg;
+            return this;
+        }
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        public DescribeDomainCnameResponseBodyCnameDatasData setPassed(String passed) {
+            this.passed = passed;
+            return this;
+        }
+        public String getPassed() {
+            return this.passed;
         }
 
         public DescribeDomainCnameResponseBodyCnameDatasData setStatus(Integer status) {
