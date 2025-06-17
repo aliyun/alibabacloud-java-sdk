@@ -4,6 +4,12 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceLogRequest extends TeaModel {
+    /**
+     * <p>The ID of the sidecar container. You can call the <a href="https://help.aliyun.com/document_detail/2834847.html">DescribeApplicationInstances</a> to obtain the ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sidecar-test-01</p>
+     */
     @NameInMap("ContainerId")
     public String containerId;
 

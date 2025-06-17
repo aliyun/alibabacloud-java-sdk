@@ -194,6 +194,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
     }
 
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ActiveCpu")
         public Float activeCpu;
 
@@ -218,6 +222,10 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @NameInMap("GpuPpu810e")
         public Float gpuPpu810e;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("IdleCpu")
         public Float idleCpu;
 

@@ -107,6 +107,10 @@ public class GetWebshellTokenResponseBody extends TeaModel {
     }
 
     public static class GetWebshellTokenResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HttpUrl :  &quot;<a href="https://saenext.console.aliyun.com/cn-shenzhen/app-list/app1/micro-app/shell/pod1?tokenId=xxx">https://saenext.console.aliyun.com/cn-shenzhen/app-list/app1/micro-app/shell/pod1?tokenId=xxx</a></p>
+         */
         @NameInMap("HttpUrl")
         public String httpUrl;
 
@@ -117,6 +121,10 @@ public class GetWebshellTokenResponseBody extends TeaModel {
         @NameInMap("Token")
         public String token;
 
+        /**
+         * <strong>example:</strong>
+         * <p>wss://sae-webshell.console.aliyun.com/websocket/eamWebshell?tokenId=xxx&amp;region=cn-shenzhen</p>
+         */
         @NameInMap("WebSocketUrl")
         public String webSocketUrl;
 

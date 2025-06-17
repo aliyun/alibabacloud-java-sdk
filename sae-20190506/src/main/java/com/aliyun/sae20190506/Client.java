@@ -363,6 +363,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Confirms whether to start the next batch.</p>
+     * 
      * @param request ConfirmPipelineBatchRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -398,6 +401,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Confirms whether to start the next batch.</p>
+     * 
      * @param request ConfirmPipelineBatchRequest
      * @return ConfirmPipelineBatchResponse
      */
@@ -3184,7 +3190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specified auto scaling policy of an application.</p>
+     * <p>Queries an Auto Scaling policy of an application.</p>
      * 
      * @param request DescribeApplicationScalingRuleRequest
      * @param headers map
@@ -3222,7 +3228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a specified auto scaling policy of an application.</p>
+     * <p>Queries an Auto Scaling policy of an application.</p>
      * 
      * @param request DescribeApplicationScalingRuleRequest
      * @return DescribeApplicationScalingRuleResponse
@@ -3714,6 +3720,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the logs of a sidecar container instance.</p>
+     * 
      * @param request DescribeInstanceLogRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3749,6 +3758,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the logs of a sidecar container instance.</p>
+     * 
      * @param request DescribeInstanceLogRequest
      * @return DescribeInstanceLogResponse
      */
@@ -5563,7 +5575,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of microservices</p>
+     * <p>Queries the list of microservices.</p>
      * 
      * @param request ListAppServicesRequest
      * @param headers map
@@ -5629,7 +5641,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of microservices</p>
+     * <p>Queries the list of microservices.</p>
      * 
      * @param request ListAppServicesRequest
      * @return ListAppServicesResponse
@@ -7908,6 +7920,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>应用闲置模式更新</p>
+     * 
+     * @param request UpdateAppModeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAppModeResponse
+     */
+    public UpdateAppModeResponse updateAppModeWithOptions(UpdateAppModeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableIdle)) {
+            query.put("EnableIdle", request.enableIdle);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAppMode"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/app/updateAppMode"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAppModeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用闲置模式更新</p>
+     * 
+     * @param request UpdateAppModeRequest
+     * @return UpdateAppModeResponse
+     */
+    public UpdateAppModeResponse updateAppMode(UpdateAppModeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAppModeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Updates the security group of an application.</p>
      * 
      * @param request UpdateAppSecurityGroupRequest
@@ -8140,7 +8203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a ConfigMap.</p>
+     * <p>Updates a ConfigMap instance.</p>
      * 
      * @param request UpdateConfigMapRequest
      * @param headers map
@@ -8184,7 +8247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update a ConfigMap.</p>
+     * <p>Updates a ConfigMap instance.</p>
      * 
      * @param request UpdateConfigMapRequest
      * @return UpdateConfigMapResponse

@@ -799,7 +799,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     public static class ListApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The applications.</p>
+         * <p>The queried applications.</p>
          */
         @NameInMap("Applications")
         public java.util.List<ListApplicationsResponseBodyDataApplications> applications;

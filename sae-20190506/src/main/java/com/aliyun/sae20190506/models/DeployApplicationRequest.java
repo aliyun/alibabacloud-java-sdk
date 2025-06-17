@@ -381,6 +381,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("MicroRegistrationConfig")
     public String microRegistrationConfig;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</p>
+     */
     @NameInMap("MicroserviceEngineConfig")
     public String microserviceEngineConfig;
 
@@ -459,6 +463,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("NasId")
     public String nasId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pro</p>
+     */
     @NameInMap("NewSaeVersion")
     public String newSaeVersion;
 
@@ -696,6 +704,10 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("SlsConfigs")
     public String slsConfigs;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
+     */
     @NameInMap("StartupProbe")
     public String startupProbe;
 

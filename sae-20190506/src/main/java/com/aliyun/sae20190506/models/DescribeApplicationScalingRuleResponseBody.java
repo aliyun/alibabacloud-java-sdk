@@ -12,7 +12,7 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationScalingRuleResponseBodyData data;
@@ -905,6 +905,15 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         public DescribeApplicationScalingRuleResponseBodyDataMetric metric;
 
         /**
+         * <p>The ratio of the minimum number of available instances to the current number of instances. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong> (default value): The minimum number of available instances is not determined based on this parameter.</li>
+         * <li><strong>0 to 100</strong>: The minimum number of available instances is calculated by using the following formula: Number of existing instances × Value of MinReadyInstanceRatio × 100%. The calculation result is rounded up to the nearest integer. For example, if the number of existing instances is 5 and MinReadyInstanceRatio is set to 50, the minimum number of available instances is 3.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the <strong>MinReadyInstanceRatio</strong> and <strong>MinReadyInstanceRatio</strong> parameters are configured and the <strong>MinReadyInstanceRatio</strong> parameter is set to a number from 0 to 100, the value of the MinReadyInstanceRatio parameter takes precedence. For example, if the <strong>MinReadyInstances</strong> parameter is set to <strong>5</strong>, and the <strong>MinReadyInstanceRatio</strong> parameter is set to <strong>50</strong>, the minimum number of available instances is set to the nearest integer rounded up from the calculated result of the following formula: Nmber of existing instances × <strong>50</strong>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>-1</p>
          */
@@ -912,6 +921,15 @@ public class DescribeApplicationScalingRuleResponseBody extends TeaModel {
         public Integer minReadyInstanceRatio;
 
         /**
+         * <p>The minimum number of available instances. Valid values:</p>
+         * <ul>
+         * <li>If you set the value to <strong>0</strong>, business is interrupted when the application is updated.</li>
+         * <li>If you set this property to -1, the system calculates a recommended value as the minimum number of available instances by using the following formula: Recommended value = Number of existing instances × 25%. The calculation result is rounded up to the nearest integer. For example, if the number of existing instances is 5, the recommended value is calculated by using the following formula: 5 × 25% = 1.25. In this case, the minimum number of available instances is 2.</li>
+         * </ul>
+         * <blockquote>
+         * <p> To ensure business continuity, make sure that at least one instance is available during application deployment and rollback.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
