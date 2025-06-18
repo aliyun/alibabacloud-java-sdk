@@ -225,6 +225,9 @@ public class RegisterInstanceRequest extends TeaModel {
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
+    @NameInMap("ResourceGroup")
+    public String resourceGroup;
+
     /**
      * <p>The name of the security rule set (GroupName) for the database instance. You can call the <a href="https://help.aliyun.com/document_detail/417891.html">ListStandardGroups</a> or <a href="https://help.aliyun.com/document_detail/141567.html">GetInstance</a> operation to query the name of the security rule set.</p>
      * <p>This parameter is required.</p>
@@ -462,6 +465,14 @@ public class RegisterInstanceRequest extends TeaModel {
     }
     public Integer getQueryTimeout() {
         return this.queryTimeout;
+    }
+
+    public RegisterInstanceRequest setResourceGroup(String resourceGroup) {
+        this.resourceGroup = resourceGroup;
+        return this;
+    }
+    public String getResourceGroup() {
+        return this.resourceGroup;
     }
 
     public RegisterInstanceRequest setSafeRule(String safeRule) {

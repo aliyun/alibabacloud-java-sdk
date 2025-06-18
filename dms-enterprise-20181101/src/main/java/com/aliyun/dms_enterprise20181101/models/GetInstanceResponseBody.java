@@ -380,6 +380,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("SellSitd")
         public String sellSitd;
 
+        @NameInMap("SellTrust")
+        public String sellTrust;
+
         /**
          * <p>The SID of the database instance.</p>
          * 
@@ -601,6 +604,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getSellSitd() {
             return this.sellSitd;
+        }
+
+        public GetInstanceResponseBodyInstance setSellTrust(String sellTrust) {
+            this.sellTrust = sellTrust;
+            return this;
+        }
+        public String getSellTrust() {
+            return this.sellTrust;
         }
 
         public GetInstanceResponseBodyInstance setSid(String sid) {

@@ -14705,6 +14705,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("QueryTimeout", request.queryTimeout);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroup)) {
+            query.put("ResourceGroup", request.resourceGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.safeRule)) {
             query.put("SafeRule", request.safeRule);
         }

@@ -395,6 +395,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("SellSitd")
         public Boolean sellSitd;
 
+        @NameInMap("SellTrust")
+        public String sellTrust;
+
         /**
          * <p>The system ID (SID) of the database instance.</p>
          * 
@@ -612,6 +615,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public Boolean getSellSitd() {
             return this.sellSitd;
+        }
+
+        public ListInstancesResponseBodyInstanceListInstance setSellTrust(String sellTrust) {
+            this.sellTrust = sellTrust;
+            return this;
+        }
+        public String getSellTrust() {
+            return this.sellTrust;
         }
 
         public ListInstancesResponseBodyInstanceListInstance setSid(String sid) {
