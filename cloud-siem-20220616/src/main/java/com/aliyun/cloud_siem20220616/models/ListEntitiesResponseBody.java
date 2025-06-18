@@ -236,6 +236,12 @@ public class ListEntitiesResponseBody extends TeaModel {
         @NameInMap("IncidentUuid")
         public String incidentUuid;
 
+        @NameInMap("IsAsset")
+        public String isAsset;
+
+        @NameInMap("IsMalware")
+        public String isMalware;
+
         /**
          * <strong>example:</strong>
          * <p>aliyun.siem.sas.alert_tag.webshell</p>
@@ -249,6 +255,9 @@ public class ListEntitiesResponseBody extends TeaModel {
          */
         @NameInMap("SubUserId")
         public Long subUserId;
+
+        @NameInMap("Tags")
+        public String tags;
 
         public static ListEntitiesResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             ListEntitiesResponseBodyDataResponseData self = new ListEntitiesResponseBodyDataResponseData();
@@ -367,6 +376,22 @@ public class ListEntitiesResponseBody extends TeaModel {
             return this.incidentUuid;
         }
 
+        public ListEntitiesResponseBodyDataResponseData setIsAsset(String isAsset) {
+            this.isAsset = isAsset;
+            return this;
+        }
+        public String getIsAsset() {
+            return this.isAsset;
+        }
+
+        public ListEntitiesResponseBodyDataResponseData setIsMalware(String isMalware) {
+            this.isMalware = isMalware;
+            return this;
+        }
+        public String getIsMalware() {
+            return this.isMalware;
+        }
+
         public ListEntitiesResponseBodyDataResponseData setMalwareType(String malwareType) {
             this.malwareType = malwareType;
             return this;
@@ -381,6 +406,14 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
         public Long getSubUserId() {
             return this.subUserId;
+        }
+
+        public ListEntitiesResponseBodyDataResponseData setTags(String tags) {
+            this.tags = tags;
+            return this;
+        }
+        public String getTags() {
+            return this.tags;
         }
 
     }

@@ -87,6 +87,9 @@ public class ListEntitiesRequest extends TeaModel {
     @NameInMap("RoleType")
     public Integer roleType;
 
+    @NameInMap("Tags")
+    public String tags;
+
     public static ListEntitiesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListEntitiesRequest self = new ListEntitiesRequest();
         return TeaModel.build(map, self);
@@ -178,6 +181,14 @@ public class ListEntitiesRequest extends TeaModel {
     }
     public Integer getRoleType() {
         return this.roleType;
+    }
+
+    public ListEntitiesRequest setTags(String tags) {
+        this.tags = tags;
+        return this;
+    }
+    public String getTags() {
+        return this.tags;
     }
 
 }

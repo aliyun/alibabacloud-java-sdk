@@ -4361,6 +4361,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("RoleType", request.roleType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("Tags", request.tags);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
