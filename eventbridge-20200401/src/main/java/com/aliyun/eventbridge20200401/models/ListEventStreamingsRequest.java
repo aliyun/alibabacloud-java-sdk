@@ -103,9 +103,17 @@ public class ListEventStreamingsRequest extends TeaModel {
     }
 
     public static class ListEventStreamingsRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>mns</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mnstest</p>
+         */
         @NameInMap("Value")
         public String value;
 

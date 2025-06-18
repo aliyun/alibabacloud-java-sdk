@@ -14,7 +14,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public ListAliyunOfficialEventSourcesResponseBodyData data;

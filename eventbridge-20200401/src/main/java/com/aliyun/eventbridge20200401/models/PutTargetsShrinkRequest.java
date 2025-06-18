@@ -25,7 +25,7 @@ public class PutTargetsShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The event targets to be created or updated. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></p>
+     * <p>The event targets to be created or updated. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Targets")

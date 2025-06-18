@@ -26,6 +26,25 @@ public class UpdateEventStreamingShrinkRequest extends TeaModel {
     /**
      * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *     &quot;source&quot;: [
+     *         {
+     *             &quot;prefix&quot;: &quot;acs:mns&quot;
+     *         }
+     *     ],
+     *     &quot;type&quot;: [
+     *         {
+     *             &quot;prefix&quot;: &quot;mns:Queue&quot;
+     *         }
+     *     ],
+     *     &quot;subject&quot;: [
+     *         {
+     *             &quot;prefix&quot;: &quot;acs:mns:cn-hangzhou:123456789098****:queues/zeus&quot;
+     *         }
+     *     ]
+     * }</p>
      */
     @NameInMap("FilterPattern")
     public String filterPattern;

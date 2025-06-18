@@ -378,7 +378,7 @@ public class UpdateConnectionRequest extends TeaModel {
 
     public static class UpdateConnectionRequestAuthParametersOAuthParametersOAuthHttpParameters extends TeaModel {
         /**
-         * <p>The parameters that are configured for the request.</p>
+         * <p>The parameters that are configured for the request body.</p>
          */
         @NameInMap("BodyParameters")
         public java.util.List<UpdateConnectionRequestAuthParametersOAuthParametersOAuthHttpParametersBodyParameters> bodyParameters;

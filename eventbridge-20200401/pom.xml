@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>eventbridge20200401</artifactId>
-  <version>5.2.0</version>
+  <version>5.2.1</version>
   <packaging>jar</packaging>
   <name>eventbridge20200401</name>
   <description>Alibaba Cloud eventbridge (20200401) SDK for Java
@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

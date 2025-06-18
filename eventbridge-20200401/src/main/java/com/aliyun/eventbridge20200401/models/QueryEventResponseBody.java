@@ -5,7 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryEventResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. The status code 200 indicates that the request was successful.</p>
+     * <p>The response code. Valid values:</p>
+     * <p>200: The request was successful.</p>
+     * <p>Other values indicate that the request failed. For information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

@@ -2405,8 +2405,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation to query all custom event sources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检查EventSource配置是否可用</p>
+     * <p>Checks whether event source configurations are available.</p>
      * 
      * @param tmpReq TestEventSourceConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2443,8 +2446,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation to query all custom event sources.</p>
+     * 
      * <b>summary</b> : 
-     * <p>检查EventSource配置是否可用</p>
+     * <p>Checks whether event source configurations are available.</p>
      * 
      * @param request TestEventSourceConfigRequest
      * @return TestEventSourceConfigResponse

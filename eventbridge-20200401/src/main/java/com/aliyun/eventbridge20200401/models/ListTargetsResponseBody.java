@@ -100,6 +100,12 @@ public class ListTargetsResponseBody extends TeaModel {
     }
 
     public static class ListTargetsResponseBodyDataTargetsConcurrentConfig extends TeaModel {
+        /**
+         * <p>The maximum number of concurrent events allowed in the event target.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Concurrency")
         public Long concurrency;
 
@@ -195,6 +201,9 @@ public class ListTargetsResponseBody extends TeaModel {
     }
 
     public static class ListTargetsResponseBodyDataTargets extends TeaModel {
+        /**
+         * <p>The concurrency configuration.</p>
+         */
         @NameInMap("ConcurrentConfig")
         public ListTargetsResponseBodyDataTargetsConcurrentConfig concurrentConfig;
 

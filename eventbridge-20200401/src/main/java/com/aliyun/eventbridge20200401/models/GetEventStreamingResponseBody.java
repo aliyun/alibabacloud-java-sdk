@@ -92,15 +92,34 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataDetailedStatus extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("DelayTime")
         public Long delayTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("DiffOffset")
         public Long diffOffset;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;test&quot;: &quot;test&quot;,
+         *         &quot;test2&quot;: 1
+         *       }</p>
+         */
         @NameInMap("Extensions")
         public java.util.Map<String, ?> extensions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("TPS")
         public Double TPS;
 
@@ -185,6 +204,47 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
 
+    public static class GetEventStreamingResponseBodyDataRunOptionsBusinessOption extends TeaModel {
+        @NameInMap("BusinessMode")
+        public String businessMode;
+
+        @NameInMap("MaxCapacityUnitCount")
+        public Long maxCapacityUnitCount;
+
+        @NameInMap("MinCapacityUnitCount")
+        public Long minCapacityUnitCount;
+
+        public static GetEventStreamingResponseBodyDataRunOptionsBusinessOption build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataRunOptionsBusinessOption self = new GetEventStreamingResponseBodyDataRunOptionsBusinessOption();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataRunOptionsBusinessOption setBusinessMode(String businessMode) {
+            this.businessMode = businessMode;
+            return this;
+        }
+        public String getBusinessMode() {
+            return this.businessMode;
+        }
+
+        public GetEventStreamingResponseBodyDataRunOptionsBusinessOption setMaxCapacityUnitCount(Long maxCapacityUnitCount) {
+            this.maxCapacityUnitCount = maxCapacityUnitCount;
+            return this;
+        }
+        public Long getMaxCapacityUnitCount() {
+            return this.maxCapacityUnitCount;
+        }
+
+        public GetEventStreamingResponseBodyDataRunOptionsBusinessOption setMinCapacityUnitCount(Long minCapacityUnitCount) {
+            this.minCapacityUnitCount = minCapacityUnitCount;
+            return this;
+        }
+        public Long getMinCapacityUnitCount() {
+            return this.minCapacityUnitCount;
+        }
+
+    }
+
     public static class GetEventStreamingResponseBodyDataRunOptionsDeadLetterQueue extends TeaModel {
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue.</p>
@@ -195,15 +255,31 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Arn")
         public String arn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-2vcgdxz7o1n9zapp****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-m5ev8asdc6h12345****</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2zehizpoendb3****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -320,6 +396,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("BatchWindow")
         public GetEventStreamingResponseBodyDataRunOptionsBatchWindow batchWindow;
 
+        @NameInMap("BusinessOption")
+        public GetEventStreamingResponseBodyDataRunOptionsBusinessOption businessOption;
+
         /**
          * <p>Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Messages that fail to be pushed after allowed retries as specified by the retry policy are discarded.</p>
          */
@@ -366,6 +445,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             return this.batchWindow;
         }
 
+        public GetEventStreamingResponseBodyDataRunOptions setBusinessOption(GetEventStreamingResponseBodyDataRunOptionsBusinessOption businessOption) {
+            this.businessOption = businessOption;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataRunOptionsBusinessOption getBusinessOption() {
+            return this.businessOption;
+        }
+
         public GetEventStreamingResponseBodyDataRunOptions setDeadLetterQueue(GetEventStreamingResponseBodyDataRunOptionsDeadLetterQueue deadLetterQueue) {
             this.deadLetterQueue = deadLetterQueue;
             return this;
@@ -409,12 +496,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1570761026400</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -450,12 +545,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_EVENTBRIDGE_1736234******</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -491,12 +596,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersTopic extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Mytopic</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -538,27 +651,55 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Group")
         public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersGroup group;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.1.1:9876</p>
+         */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-2ze5bmpw6adn0q******</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         @NameInMap("Topic")
         public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParametersTopic topic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-uf62oqt1twuevrt******</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-2zeccak5pb0j3ay******</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -650,9 +791,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParametersConnectorParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *           &quot;connector.class&quot;: &quot;com.mongodb.kafka.connect.MongoSinkConnector&quot;,
+         *           &quot;tasks.max&quot;: &quot;1&quot;,
+         *           &quot;topics&quot;: &quot;sourceA,sourceB&quot;
+         *         }</p>
+         */
         @NameInMap("Config")
         public java.util.Map<String, ?> config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>mongo-sink</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -680,12 +833,27 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV</a>******&quot;</p>
+         */
         @NameInMap("ConnectorPackageUrl")
         public String connectorPackageUrl;
 
         @NameInMap("ConnectorParameters")
         public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaConnectorParametersConnectorParameters connectorParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;group.id&quot;: &quot;connect-eb-cluster-KAFKA_CONNECTORC&quot;,
+         *         &quot;offset.storage.topic&quot;: &quot;connect-eb-offset-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+         *         &quot;config.storage.topic&quot;: &quot;connect-eb-config-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+         *         &quot;status.storage.topic&quot;: &quot;connect-eb-status-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+         *         &quot;consumer.group.id&quot;: &quot;connector-eb-cluster-KAFKA_CONNECTOR_yjqC8K5ewC-mongo-sink&quot;,
+         *         &quot;bootstrap.servers&quot;: &quot;alikafka-post:9092&quot;
+         *       }</p>
+         */
         @NameInMap("WorkerParameters")
         public java.util.Map<String, ?> workerParameters;
 
@@ -721,6 +889,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>90be1f96-4229-4535-bb76-34b4f6fb****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -740,12 +912,38 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>[
+         *   {
+         *     &quot;name&quot;: &quot;schema1&quot;,
+         *     &quot;type&quot;: &quot;INT&quot;,
+         *     &quot;value&quot;: &quot;${value1}&quot;
+         *   },
+         *   {
+         *     &quot;name&quot;: &quot;schema2&quot;,
+         *     &quot;type&quot;: &quot;FLOAT&quot;,
+         *     &quot;value&quot;: &quot;${value2}&quot;
+         *   }
+         * ]</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;value1&quot;:&quot;v1&quot;,
+         *   &quot;value2&quot;:&quot;v2&quot;
+         * }</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -781,12 +979,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPartition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -822,12 +1028,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersPrimaryKeyId extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>${ID}</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>$.data.requestId</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -863,12 +1081,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersVector extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>$.data.messageBody</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -904,21 +1130,41 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDashVectorParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Q34nExQH7sQ****</p>
+         */
         @NameInMap("ApiKey")
         public String apiKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>collection1</p>
+         */
         @NameInMap("Collection")
         public String collection;
 
         @NameInMap("DashVectorSchemaParameters")
         public GetEventStreamingResponseBodyDataSinkSinkDashVectorParametersDashVectorSchemaParameters dashVectorSchemaParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vrs-cn-lbj3ru1***</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
+         */
         @NameInMap("Network")
         public String network;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Upsert</p>
+         */
         @NameInMap("Operation")
         public String operation;
 
@@ -1011,6 +1257,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ORIGINAL</p>
+         */
         @NameInMap("Form")
         public String form;
 
@@ -1052,12 +1302,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersProject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo-project</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1093,12 +1351,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersRoleName extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-role</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1134,12 +1400,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopic extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo-topic</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1175,12 +1449,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicSchema extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;${k1}&quot;,&quot;k2&quot;:&quot;${k2}&quot;}</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1216,12 +1502,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TUPLE</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1326,6 +1620,638 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParametersTopicType getTopicType() {
             return this.topicType;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId self = new GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetEventStreamingResponseBodyDataSinkSinkDorisParameters extends TeaModel {
+        @NameInMap("BeHttpEndpoint")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint beHttpEndpoint;
+
+        @NameInMap("Body")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody body;
+
+        @NameInMap("Database")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase database;
+
+        @NameInMap("FeHttpEndpoint")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint feHttpEndpoint;
+
+        @NameInMap("NetworkType")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType networkType;
+
+        @NameInMap("Password")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword password;
+
+        @NameInMap("QueryEndpoint")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint queryEndpoint;
+
+        @NameInMap("SecurityGroupId")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId securityGroupId;
+
+        @NameInMap("Table")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable table;
+
+        @NameInMap("UserName")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName userName;
+
+        @NameInMap("VSwitchIds")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds vSwitchIds;
+
+        @NameInMap("VpcId")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId vpcId;
+
+        public static GetEventStreamingResponseBodyDataSinkSinkDorisParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetEventStreamingResponseBodyDataSinkSinkDorisParameters self = new GetEventStreamingResponseBodyDataSinkSinkDorisParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setBeHttpEndpoint(GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint beHttpEndpoint) {
+            this.beHttpEndpoint = beHttpEndpoint;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBeHttpEndpoint getBeHttpEndpoint() {
+            return this.beHttpEndpoint;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setBody(GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody body) {
+            this.body = body;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersBody getBody() {
+            return this.body;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setDatabase(GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase database) {
+            this.database = database;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersDatabase getDatabase() {
+            return this.database;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setFeHttpEndpoint(GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint feHttpEndpoint) {
+            this.feHttpEndpoint = feHttpEndpoint;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersFeHttpEndpoint getFeHttpEndpoint() {
+            return this.feHttpEndpoint;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setNetworkType(GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersNetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setPassword(GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword password) {
+            this.password = password;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersPassword getPassword() {
+            return this.password;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setQueryEndpoint(GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint queryEndpoint) {
+            this.queryEndpoint = queryEndpoint;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersQueryEndpoint getQueryEndpoint() {
+            return this.queryEndpoint;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setSecurityGroupId(GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersSecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setTable(GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable table) {
+            this.table = table;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersTable getTable() {
+            return this.table;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setUserName(GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName userName) {
+            this.userName = userName;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersUserName getUserName() {
+            return this.userName;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setVSwitchIds(GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters setVpcId(GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParametersVpcId getVpcId() {
+            return this.vpcId;
         }
 
     }
@@ -1451,12 +2377,26 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkFcParametersDataFormat extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>$.data.key</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;key&quot;: &quot;value&quot;
+         * }</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -1503,6 +2443,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1559,6 +2502,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1615,6 +2561,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -1671,6 +2620,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2130,6 +3082,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2175,12 +3130,26 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;key&quot;: &quot;value&quot;
+         * }</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2227,6 +3196,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2283,6 +3255,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2339,6 +3314,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -2757,12 +3735,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersBody extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;key&quot;: &quot;value&quot;}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2798,12 +3788,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersMessageId extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>12345</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2839,12 +3837,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;: &quot;prod&quot;}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2880,12 +3890,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersRoutingKey extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Form&quot;: &quot;CONSTANT&quot;, &quot;Value&quot;: &quot;my-routing-key&quot;}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -2921,51 +3943,99 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ACL</p>
+         */
         @NameInMap("AuthType")
         public String authType;
 
         @NameInMap("Body")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersBody body;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.1.1:9876</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-exchange</p>
+         */
         @NameInMap("Exchange")
         public String exchange;
 
         @NameInMap("MessageId")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersMessageId messageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Password")
         public String password;
 
         @NameInMap("Properties")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersProperties properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>my-queue</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
         @NameInMap("RoutingKey")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParametersRoutingKey routingKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-uf6of9452b2pba82c ****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Exchange</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-uf6of9452b2pba82c ****</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vhost1</p>
+         */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-uf6of9452b2pba82c ****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -3177,6 +4247,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -3233,6 +4306,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -3411,6 +4487,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -3467,6 +4546,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -3523,6 +4605,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -3758,12 +4843,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersConsumeTimestamp extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1570761026400</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -3799,12 +4892,22 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersGroup extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>Group ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_EVENTBRIDGE_1736234******</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -3840,12 +4943,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersTopic extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Mytopic</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -3887,9 +4998,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Group")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParametersGroup group;
 
+        /**
+         * <strong>example:</strong>
+         * <p>MQ_INST_164901546557****_BAAN****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Cloud_4</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
@@ -4005,12 +5124,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersDeliveryOrderType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Concurrently</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4046,12 +5173,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceEndpoint extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vbr-8vbsvkkbpf3vb0zef****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4098,6 +5233,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -4143,12 +5281,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstancePassword extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4184,12 +5330,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Cloud_4</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4225,12 +5379,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersInstanceUsername extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4327,12 +5489,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersNetwork extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4429,12 +5599,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersSecurityGroupId extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>b4bf375515f6440f942e3a20c33d****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4470,12 +5648,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersShardingKey extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>order_id</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4583,6 +5769,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         /**
          * <p>The template style.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
@@ -4628,12 +5817,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVSwitchIds extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vbr-8vb835n3zf9shwl****mp</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4669,12 +5866,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkRocketMQParametersVpcId extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vbr-8vb835n3zf9shwlvb****</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -4973,12 +6178,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentSchema extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;Key_1&quot;:{&quot;form&quot;:&quot;CONSTANT&quot;,&quot;value&quot;:&quot;demoKey&quot;},&quot;Value_1&quot;:{&quot;form&quot;:&quot;JSONPATH&quot;,&quot;value&quot;:&quot;$.data.value&quot;}}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -5014,12 +6227,20 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentType extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <strong>example:</strong>
+         * <p>JSON</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -5379,9 +6600,15 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSink extends TeaModel {
+        /**
+         * <p>Sink Apache RocketMQ Checkpoint Parameters</p>
+         */
         @NameInMap("SinkApacheRocketMQCheckpointParameters")
         public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
+        /**
+         * <p>Sink BaiLian Parameters</p>
+         */
         @NameInMap("SinkBaiLianParameters")
         public SinkBaiLianParameters sinkBaiLianParameters;
 
@@ -5396,6 +6623,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         @NameInMap("SinkDataHubParameters")
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParameters sinkDataHubParameters;
+
+        @NameInMap("SinkDorisParameters")
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters sinkDorisParameters;
 
         /**
          * <p>The parameters that are returned if the event target is Function Compute.</p>
@@ -5421,6 +6651,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SinkMNSParameters")
         public GetEventStreamingResponseBodyDataSinkSinkMNSParameters sinkMNSParameters;
 
+        /**
+         * <p>Sink Open Source RabbitMQ Parameters</p>
+         */
         @NameInMap("SinkOpenSourceRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSinkSinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters;
 
@@ -5430,6 +6663,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SinkRabbitMQParameters")
         public GetEventStreamingResponseBodyDataSinkSinkRabbitMQParameters sinkRabbitMQParameters;
 
+        /**
+         * <p>Sink RocketMQ Checkpoint Parameters</p>
+         */
         @NameInMap("SinkRocketMQCheckpointParameters")
         public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters;
 
@@ -5496,6 +6732,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParameters getSinkDataHubParameters() {
             return this.sinkDataHubParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSink setSinkDorisParameters(GetEventStreamingResponseBodyDataSinkSinkDorisParameters sinkDorisParameters) {
+            this.sinkDorisParameters = sinkDorisParameters;
+            return this;
+        }
+        public GetEventStreamingResponseBodyDataSinkSinkDorisParameters getSinkDorisParameters() {
+            return this.sinkDorisParameters;
         }
 
         public GetEventStreamingResponseBodyDataSink setSinkFcParameters(GetEventStreamingResponseBodyDataSinkSinkFcParameters sinkFcParameters) {
@@ -5573,33 +6817,73 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceApacheRocketMQCheckpointParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>registry-vpc.cn-hangzhou.aliyuncs.com</p>
+         */
         @NameInMap("InstanceEndpoint")
         public String instanceEndpoint;
 
+        /**
+         * <p>The ID of the Apache RocketMQ instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MQ_INST_164901546557****_BAAN****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("InstanceUsername")
         public String instanceUsername;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-mw43*****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
         @NameInMap("Topics")
         public java.util.List<String> topics;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-dwaafds****</p>
+         */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
+        /**
+         * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-adw1awdw*****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -5691,9 +6975,21 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParametersConnectorParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *           &quot;connector.class&quot;: &quot;com.mongodb.kafka.connect.MongoSinkConnector&quot;,
+         *           &quot;tasks.max&quot;: &quot;1&quot;,
+         *           &quot;topics&quot;: &quot;sourceA,sourceB&quot;
+         *         }</p>
+         */
         @NameInMap("Config")
         public java.util.Map<String, ?> config;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-name</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -5721,12 +7017,27 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</p>
+         */
         @NameInMap("ConnectorPackageUrl")
         public String connectorPackageUrl;
 
         @NameInMap("ConnectorParameters")
         public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaConnectorParametersConnectorParameters connectorParameters;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;group.id&quot;: &quot;connect-eb-cluster-KAFKA_CONNECTORC&quot;,
+         *         &quot;offset.storage.topic&quot;: &quot;connect-eb-offset-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+         *         &quot;config.storage.topic&quot;: &quot;connect-eb-config-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+         *         &quot;status.storage.topic&quot;: &quot;connect-eb-status-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+         *         &quot;consumer.group.id&quot;: &quot;connector-eb-cluster-KAFKA_CONNECTOR_yjqC8K5ewC-mongo-sink&quot;,
+         *         &quot;bootstrap.servers&quot;: &quot;alikafka-post:9092&quot;
+         *       }</p>
+         */
         @NameInMap("WorkerParameters")
         public java.util.Map<String, ?> workerParameters;
 
@@ -5762,6 +7073,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>r-8vb64581862c****</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -5905,9 +7220,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceEventBusParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("EventBusName")
         public String eventBusName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("EventRuleName")
         public String eventRuleName;
 
@@ -6172,6 +7495,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceMQTTParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>JSON</p>
+         */
         @NameInMap("BodyDataType")
         public String bodyDataType;
 
@@ -6242,21 +7569,45 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceOSSParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>bucket_abc</p>
+         */
         @NameInMap("BucketName")
         public String bucketName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>\n</p>
+         */
         @NameInMap("Delimiter")
         public String delimiter;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TextLoader</p>
+         */
         @NameInMap("LoadFormat")
         public String loadFormat;
 
+        /**
+         * <strong>example:</strong>
+         * <p>single</p>
+         */
         @NameInMap("LoadMode")
         public String loadMode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>fun/document/</p>
+         */
         @NameInMap("Prefix")
         public String prefix;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eventbridge_oss_role</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
@@ -6316,36 +7667,80 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceOpenSourceRabbitMQParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ACL</p>
+         */
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Json</p>
+         */
         @NameInMap("BodyDataType")
         public String bodyDataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>192.168.1.100:5672</p>
+         */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PrivateNetwork</p>
+         */
         @NameInMap("NetworkType")
         public String networkType;
 
+        /**
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Password")
         public String password;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("QueueName")
         public String queueName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-2ze65razphjfz3******</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>admin</p>
+         */
         @NameInMap("Username")
         public String username;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-uf65zhil5oukof5******</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>eb-connect</p>
+         */
         @NameInMap("VirtualHostName")
         public String virtualHostName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-bp1vllc1lnw1v657******</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -6459,6 +7854,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;env&quot;:&quot;test&quot;}</p>
+         */
         @NameInMap("ExternalLabels")
         public String externalLabels;
 
@@ -6469,9 +7868,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Labels")
         public String labels;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test-role</p>
+         */
         @NameInMap("RoleName")
         public String roleName;
 
@@ -6607,12 +8014,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSourceSourceRocketMQCheckpointParameters extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>rmp-cn-jte3w******</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Cloud_4</p>
+         */
         @NameInMap("InstanceType")
         public String instanceType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
@@ -6666,12 +8085,24 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("AuthType")
         public String authType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Json</p>
+         */
         @NameInMap("BodyDataType")
         public String bodyDataType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>index &gt; 10</p>
+         */
         @NameInMap("FilterSql")
         public String filterSql;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Tag</p>
+         */
         @NameInMap("FilterType")
         public String filterType;
 
@@ -6749,6 +8180,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("InstanceVpcId")
         public String instanceVpcId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
+         */
         @NameInMap("Network")
         public String network;
 
@@ -6770,6 +8205,10 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>sg-m5edtu24f12345****</p>
+         */
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -6800,9 +8239,17 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("Topic")
         public String topic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vsw-m5ev8asdc6h12345****</p>
+         */
         @NameInMap("VSwitchIds")
         public String vSwitchIds;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-m5e3sv4b12345****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -7088,6 +8535,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
     }
 
     public static class GetEventStreamingResponseBodyDataSource extends TeaModel {
+        /**
+         * <p>The parameters that are returned if Apache RocketMQ (Offset Data) is specified as the event source.</p>
+         */
         @NameInMap("SourceApacheRocketMQCheckpointParameters")
         public GetEventStreamingResponseBodyDataSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters;
 
@@ -7358,7 +8808,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         public GetEventStreamingResponseBodyDataSink sink;
 
         /**
-         * <p>The event provider, which is also known as the event source.</p>
+         * <p>The event source.</p>
          */
         @NameInMap("Source")
         public GetEventStreamingResponseBodyDataSource source;

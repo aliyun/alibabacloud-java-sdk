@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class TestEventSourceConfigRequest extends TeaModel {
+    /**
+     * <p>The parameters that are configured if you specify MySQL as the event source.</p>
+     */
     @NameInMap("SourceMySQLParameters")
     public TestEventSourceConfigRequestSourceMySQLParameters sourceMySQLParameters;
 
@@ -22,6 +25,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
 
     public static class TestEventSourceConfigRequestSourceMySQLParameters extends TeaModel {
         /**
+         * <p>The database name.</p>
+         * 
          * <strong>example:</strong>
          * <p>database1</p>
          */
@@ -29,6 +34,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String databaseName;
 
         /**
+         * <p>The endpoint of the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>rm-bp1vxxx.mysql.rds.aliyuncs.com</p>
          */
@@ -36,6 +43,13 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String hostName;
 
         /**
+         * <p>The network type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PrivateNetwork</li>
+         * <li>PublicNetwork</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PrivateNetwork</p>
          */
@@ -43,6 +57,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String networkType;
 
         /**
+         * <p>The password that is used for authentication.</p>
+         * 
          * <strong>example:</strong>
          * <p>1234xxx</p>
          */
@@ -50,6 +66,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String password;
 
         /**
+         * <p>The port that is used to connect to the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>80</p>
          */
@@ -57,6 +75,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public Integer port;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -64,6 +84,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the security group.</p>
+         * 
          * <strong>example:</strong>
          * <p>sg-xxx</p>
          */
@@ -71,6 +93,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String securityGroupId;
 
         /**
+         * <p>The table name. The name must be prefixed with the database name. ${DatabaseName}.${TableName}</p>
+         * 
          * <strong>example:</strong>
          * <p>database1.table1</p>
          */
@@ -78,6 +102,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String tableNames;
 
         /**
+         * <p>The username that is used to log on to the database.</p>
+         * 
          * <strong>example:</strong>
          * <p>user***</p>
          */
@@ -85,6 +111,8 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String user;
 
         /**
+         * <p>The vSwitch ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vsw-bp1gb7xxx</p>
          */
@@ -92,7 +120,7 @@ public class TestEventSourceConfigRequest extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>

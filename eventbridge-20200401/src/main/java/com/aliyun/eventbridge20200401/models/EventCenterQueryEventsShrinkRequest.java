@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EventCenterQueryEventsShrinkRequest extends TeaModel {
     /**
-     * <p>The parameters in the request body.</p>
+     * <p>The request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Body")

@@ -13,6 +13,10 @@ public class CreateServiceLinkedRoleForProductResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpCode")
     public Integer httpCode;
 

@@ -11,6 +11,9 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CheckServiceLinkedRoleForProductResponseBodyData data;
 
@@ -82,6 +85,8 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
 
     public static class CheckServiceLinkedRoleForProductResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the service-linked role exists.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -89,6 +94,8 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
         public Boolean checkPass;
 
         /**
+         * <p>The name of the service-linked role.</p>
+         * 
          * <strong>example:</strong>
          * <p>AliyunServiceRoleForEventBridgeConnectVPC</p>
          */

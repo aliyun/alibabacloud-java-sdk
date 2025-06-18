@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class TestEventSourceConfigResponseBody extends TeaModel {
     /**
+     * <p>The response code. Valid values:</p>
+     * <ul>
+     * <li>Success: The request was successful.</li>
+     * <li>Other codes indicate that the request failed. For information about error codes, see Error codes.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The update result.</p>
+     */
     @NameInMap("Data")
     public java.util.List<TestEventSourceConfigResponseBodyData> data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,6 +33,8 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FF942675-F937-549C-A942-EB94FFE28DD3</p>
      */
@@ -29,6 +42,8 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -82,6 +97,8 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
 
     public static class TestEventSourceConfigResponseBodyData extends TeaModel {
         /**
+         * <p>The name of the check item.</p>
+         * 
          * <strong>example:</strong>
          * <p>CHECK_CONNECTION</p>
          */
@@ -89,6 +106,8 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         public String checkItem;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>Connection established successfully.</p>
          */
@@ -96,6 +115,8 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         public String errorMsg;
 
         /**
+         * <p>Indicates whether the check item is executed.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */

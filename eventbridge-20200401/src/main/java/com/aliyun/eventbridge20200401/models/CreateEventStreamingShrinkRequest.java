@@ -31,7 +31,7 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String filterPattern;
 
     /**
-     * <p>The configurations of the runtime environment.</p>
+     * <p>The parameters that are configured for the runtime environment.</p>
      */
     @NameInMap("RunOptions")
     public String runOptionsShrink;

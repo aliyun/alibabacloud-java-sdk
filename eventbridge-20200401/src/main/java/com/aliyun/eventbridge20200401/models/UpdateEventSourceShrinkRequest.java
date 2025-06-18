@@ -32,18 +32,27 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The configurations of the external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;ConsumePosition\&quot;:\&quot;end\&quot;,\&quot;LogStore\&quot;:\&quot;oss_log\&quot;,\&quot;Project\&quot;:\&quot;slsaudit-center-5795350335281001-cn-beijing\&quot;,\&quot;RoleName\&quot;:\&quot;sls-beijing-tf\&quot;}</p>
      */
     @NameInMap("ExternalSourceConfig")
     public String externalSourceConfigShrink;
 
     /**
      * <p>The type of the external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SLS</p>
      */
     @NameInMap("ExternalSourceType")
     public String externalSourceType;
 
     /**
      * <p>Specifies whether to connect to an external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("LinkedExternalSource")
     public Boolean linkedExternalSource;

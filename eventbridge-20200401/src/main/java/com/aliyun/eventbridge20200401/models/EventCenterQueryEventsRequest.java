@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EventCenterQueryEventsRequest extends TeaModel {
     /**
-     * <p>The parameters in the request body.</p>
+     * <p>The request body.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Body")
@@ -301,7 +301,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
     public static class EventCenterQueryEventsRequestBodyParameters extends TeaModel {
         /**
-         * <p>Specifies whether to further split the data set based on the column name.</p>
+         * <p>Specifies whether to further split the dataset based on the column name.</p>
          */
         @NameInMap("Breakdowns")
         public java.util.List<String> breakdowns;
@@ -379,7 +379,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The time range during which events are queried. Unit: milliseconds. Minimum value: 1000.</p>
+         * <p>The time range during which events are queried. Minimum value: 1000. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>

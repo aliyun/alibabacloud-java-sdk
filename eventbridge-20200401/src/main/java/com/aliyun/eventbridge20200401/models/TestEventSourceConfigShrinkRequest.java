@@ -4,6 +4,9 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class TestEventSourceConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>The parameters that are configured if you specify MySQL as the event source.</p>
+     */
     @NameInMap("SourceMySQLParameters")
     public String sourceMySQLParametersShrink;
 

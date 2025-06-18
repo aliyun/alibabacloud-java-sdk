@@ -110,6 +110,12 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestEventTargetsConcurrentConfig extends TeaModel {
+        /**
+         * <p>The concurrency.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Concurrency")
         public Long concurrency;
 
@@ -130,7 +136,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestEventTargetsDeadLetterQueue extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The ARN feature is supported by the following queue types: MNS and Message Queue for Apache RocketMQ.</p>
+         * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum number of retries is exceeded are written to the dead-letter queue. Queues in SMQ and ApsaraMQ for RocketMQ can be used as dead-letter queues.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:mns:cn-hangzhou:123456789098****:/queues/rule-deadletterqueue</p>
@@ -199,7 +205,7 @@ public class CreateRuleRequest extends TeaModel {
 
     public static class CreateRuleRequestEventTargetsParamList extends TeaModel {
         /**
-         * <p>The format that is used by the event target parameter. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></p>
+         * <p>The format of input parameters for the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>TEMPLATE</p>
@@ -208,7 +214,7 @@ public class CreateRuleRequest extends TeaModel {
         public String form;
 
         /**
-         * <p>The resource parameter of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits</a></p>
+         * <p>The resource key of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>body</p>
@@ -217,7 +223,7 @@ public class CreateRuleRequest extends TeaModel {
         public String resourceKey;
 
         /**
-         * <p>The template that is used by the event target parameter.</p>
+         * <p>The structure of the template for the event target.</p>
          * 
          * <strong>example:</strong>
          * <p>The value of ${key} is ${value}!</p>
@@ -274,11 +280,14 @@ public class CreateRuleRequest extends TeaModel {
     }
 
     public static class CreateRuleRequestEventTargets extends TeaModel {
+        /**
+         * <p>The concurrency configuration.</p>
+         */
         @NameInMap("ConcurrentConfig")
         public CreateRuleRequestEventTargetsConcurrentConfig concurrentConfig;
 
         /**
-         * <p>The dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. The dead-letter queue feature is supported by the following queue types: Message Queue for Apache RocketMQ, Message Service (MNS), Message Queue for Apache Kafka, and EventBridge.</p>
+         * <p>The dead-letter queue. Events that are not processed or whose maximum number of retries is exceeded are written to the dead-letter queue. You can use queues in ApsaraMQ for RocketMQ, Simple Message Queue (SMQ, formerly MNS), and ApsaraMQ for Kafka as dead-letter queues. You can also use event buses in EventBridge as dead-letter queues.</p>
          */
         @NameInMap("DeadLetterQueue")
         public CreateRuleRequestEventTargetsDeadLetterQueue deadLetterQueue;
@@ -293,7 +302,7 @@ public class CreateRuleRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The fault tolerance policy. Valid values: ALL: allows fault tolerance. If an error occurs, the event processing is not blocked. If the message fails to be sent after the maximum number of retries specified by the retry policy is reached, the message is delivered to the dead-letter queue or discarded based on your configurations. NONE: does not allow fault tolerance. If an error occurs and the message fails to be sent after the maximum number of retries specified by the retry policy is reached, the event processing is blocked.</p>
+         * <p>The fault tolerance policy. Valid values: ALL and NONE. The value ALL specifies that fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations. The value NONE specifies that fault tolerance is not allowed. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -302,7 +311,7 @@ public class CreateRuleRequest extends TeaModel {
         public String errorsTolerance;
 
         /**
-         * <p>The ID of the custom event target.</p>
+         * <p>The ID of the event target.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,7 +327,7 @@ public class CreateRuleRequest extends TeaModel {
         public java.util.List<CreateRuleRequestEventTargetsParamList> paramList;
 
         /**
-         * <p>The retry policy that is used to push events. Valid values: BACKOFF_RETRY: backoff retry. If an event failed to be pushed, it can be retried up to three times. The interval between two consecutive retries is a random value between 10 and 20 seconds. EXPONENTIAL_DECAY_RETRY: exponential decay retry. If an event failed to be pushed, it can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds is used for 167 retries.</p>
+         * <p>The retry policy that you want to use to push failed events. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY. BACKOFF_RETRY: A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 seconds to 20 seconds. EXPONENTIAL_DECAY_RETRY: A failed event can be retried up to 176 times. The interval between two consecutive retries exponentially increases to a maximum of 512 seconds. The total retry time is 1 day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and 512 seconds. The interval of 512 seconds is used for 167 retries.</p>
          * 
          * <strong>example:</strong>
          * <p>BACKOFF_RETRY</p>
@@ -327,7 +336,7 @@ public class CreateRuleRequest extends TeaModel {
         public String pushRetryStrategy;
 
         /**
-         * <p>The type of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+         * <p>The type of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

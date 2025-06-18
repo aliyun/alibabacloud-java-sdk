@@ -38,12 +38,18 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
 
     /**
      * <p>The type of the external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RabbitMQ</p>
      */
     @NameInMap("ExternalSourceType")
     public byte[] externalSourceType;
 
     /**
-     * <p>Specifies whether to connect to an external data source.</p>
+     * <p>Specify whether to connect to an external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("LinkedExternalSource")
     public Boolean linkedExternalSource;
@@ -61,7 +67,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String sourceKafkaParametersShrink;
 
     /**
-     * <p>The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
+     * <p>The parameters that are configured if you specify Simple Message Queue (formerly MNS) (SMQ) as the event source. If you specify SMQ as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
      */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;

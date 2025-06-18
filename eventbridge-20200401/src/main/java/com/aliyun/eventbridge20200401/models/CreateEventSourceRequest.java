@@ -38,12 +38,18 @@ public class CreateEventSourceRequest extends TeaModel {
 
     /**
      * <p>The type of the external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RabbitMQ</p>
      */
     @NameInMap("ExternalSourceType")
     public byte[] externalSourceType;
 
     /**
-     * <p>Specifies whether to connect to an external data source.</p>
+     * <p>Specify whether to connect to an external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("LinkedExternalSource")
     public Boolean linkedExternalSource;
@@ -61,7 +67,7 @@ public class CreateEventSourceRequest extends TeaModel {
     public CreateEventSourceRequestSourceKafkaParameters sourceKafkaParameters;
 
     /**
-     * <p>The parameters that are configured if the event source is Message Service (MNS). If you specify MNS as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
+     * <p>The parameters that are configured if you specify Simple Message Queue (formerly MNS) (SMQ) as the event source. If you specify SMQ as the event source, you must configure RegionId, IsBase64Decode, and QueueName.</p>
      */
     @NameInMap("SourceMNSParameters")
     public CreateEventSourceRequestSourceMNSParameters sourceMNSParameters;
@@ -484,7 +490,7 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceMNSParameters extends TeaModel {
         /**
-         * <p>Specifies whether to enable Base64 decoding. Valid values: true and false.</p>
+         * <p>Specify whether to enable Base64 decoding. Valid values: true and false. If you set this parameter to true, Base64 decoding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -493,7 +499,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The name of the MNS queue.</p>
+         * <p>The name of the SMQ queue.</p>
          * 
          * <strong>example:</strong>
          * <p>MyQueue</p>
@@ -502,7 +508,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The region where the MNS queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</p>
+         * <p>The ID of the region where the SMQ queue resides. Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
