@@ -4,9 +4,25 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
+    /**
+     * <p>CertKmcRep1.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userSeal=MHkCIEu94PQAahFWuFk%</p>
+     * <hr>
+     * <p>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</p>
+     */
     @NameInMap("CertKmcRep1")
     public String certKmcRep1;
 
+    /**
+     * <p>Cert Sign Buf Kmc.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>userSeal=MHkCIEu94PQAahFWuFk%</p>
+     * <hr>
+     * <p>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</p>
+     */
     @NameInMap("CertSignBufKmc")
     public String certSignBufKmc;
 

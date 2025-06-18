@@ -4,6 +4,12 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class DescribeCACertificateListRequest extends TeaModel {
+    @NameInMap("CaStatus")
+    public String caStatus;
+
+    @NameInMap("CertType")
+    public String certType;
+
     /**
      * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
@@ -25,6 +31,9 @@ public class DescribeCACertificateListRequest extends TeaModel {
     @NameInMap("Identifier")
     public String identifier;
 
+    @NameInMap("IssuerType")
+    public String issuerType;
+
     /**
      * <p>The number of CA certificates to return on each page. Default value: <strong>20</strong>.</p>
      * 
@@ -34,9 +43,28 @@ public class DescribeCACertificateListRequest extends TeaModel {
     @NameInMap("ShowSize")
     public Integer showSize;
 
+    @NameInMap("ValidStatus")
+    public String validStatus;
+
     public static DescribeCACertificateListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCACertificateListRequest self = new DescribeCACertificateListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCACertificateListRequest setCaStatus(String caStatus) {
+        this.caStatus = caStatus;
+        return this;
+    }
+    public String getCaStatus() {
+        return this.caStatus;
+    }
+
+    public DescribeCACertificateListRequest setCertType(String certType) {
+        this.certType = certType;
+        return this;
+    }
+    public String getCertType() {
+        return this.certType;
     }
 
     public DescribeCACertificateListRequest setCurrentPage(Integer currentPage) {
@@ -55,12 +83,28 @@ public class DescribeCACertificateListRequest extends TeaModel {
         return this.identifier;
     }
 
+    public DescribeCACertificateListRequest setIssuerType(String issuerType) {
+        this.issuerType = issuerType;
+        return this;
+    }
+    public String getIssuerType() {
+        return this.issuerType;
+    }
+
     public DescribeCACertificateListRequest setShowSize(Integer showSize) {
         this.showSize = showSize;
         return this;
     }
     public Integer getShowSize() {
         return this.showSize;
+    }
+
+    public DescribeCACertificateListRequest setValidStatus(String validStatus) {
+        this.validStatus = validStatus;
+        return this;
+    }
+    public String getValidStatus() {
+        return this.validStatus;
     }
 
 }
