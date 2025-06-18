@@ -25,6 +25,9 @@ public class QuotaDetails extends TeaModel {
     @NameInMap("SelfAllocatedQuota")
     public ResourceAmount selfAllocatedQuota;
 
+    @NameInMap("SelfSubmittedQuota")
+    public ResourceAmount selfSubmittedQuota;
+
     @NameInMap("UsedQuota")
     public ResourceAmount usedQuota;
 
@@ -87,6 +90,14 @@ public class QuotaDetails extends TeaModel {
     }
     public ResourceAmount getSelfAllocatedQuota() {
         return this.selfAllocatedQuota;
+    }
+
+    public QuotaDetails setSelfSubmittedQuota(ResourceAmount selfSubmittedQuota) {
+        this.selfSubmittedQuota = selfSubmittedQuota;
+        return this;
+    }
+    public ResourceAmount getSelfSubmittedQuota() {
+        return this.selfSubmittedQuota;
     }
 
     public QuotaDetails setUsedQuota(ResourceAmount usedQuota) {

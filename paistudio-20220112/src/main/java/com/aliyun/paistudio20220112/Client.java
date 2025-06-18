@@ -1748,6 +1748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AcceleratorType", request.acceleratorType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.availabilityZone)) {
+            query.put("AvailabilityZone", request.availabilityZone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filterByQuotaId)) {
             query.put("FilterByQuotaId", request.filterByQuotaId);
         }
@@ -1758,6 +1762,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.GPUType)) {
             query.put("GPUType", request.GPUType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hyperZone)) {
+            query.put("HyperZone", request.hyperZone);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.machineGroupIds)) {

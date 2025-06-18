@@ -21,14 +21,23 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("DefaultGPUDriver")
     public String defaultGPUDriver;
 
+    @NameInMap("EnableGPUShare")
+    public Boolean enableGPUShare;
+
     @NameInMap("EnablePreemptSubquotaWorkloads")
     public Boolean enablePreemptSubquotaWorkloads;
 
     @NameInMap("EnableSubQuotaPreemption")
     public Boolean enableSubQuotaPreemption;
 
+    @NameInMap("OversoldUsageInfo")
+    public OversoldUsageConfig oversoldUsageInfo;
+
     @NameInMap("ResourceSpecs")
     public java.util.List<WorkspaceSpecs> resourceSpecs;
+
+    @NameInMap("SelfQuotaPreemptionConfig")
+    public SelfQuotaPreemptionConfig selfQuotaPreemptionConfig;
 
     @NameInMap("SubQuotaPreemptionConfig")
     public SubQuotaPreemptionConfig subQuotaPreemptionConfig;
@@ -75,6 +84,14 @@ public class QuotaConfig extends TeaModel {
         return this.defaultGPUDriver;
     }
 
+    public QuotaConfig setEnableGPUShare(Boolean enableGPUShare) {
+        this.enableGPUShare = enableGPUShare;
+        return this;
+    }
+    public Boolean getEnableGPUShare() {
+        return this.enableGPUShare;
+    }
+
     public QuotaConfig setEnablePreemptSubquotaWorkloads(Boolean enablePreemptSubquotaWorkloads) {
         this.enablePreemptSubquotaWorkloads = enablePreemptSubquotaWorkloads;
         return this;
@@ -91,12 +108,28 @@ public class QuotaConfig extends TeaModel {
         return this.enableSubQuotaPreemption;
     }
 
+    public QuotaConfig setOversoldUsageInfo(OversoldUsageConfig oversoldUsageInfo) {
+        this.oversoldUsageInfo = oversoldUsageInfo;
+        return this;
+    }
+    public OversoldUsageConfig getOversoldUsageInfo() {
+        return this.oversoldUsageInfo;
+    }
+
     public QuotaConfig setResourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
         this.resourceSpecs = resourceSpecs;
         return this;
     }
     public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
+    }
+
+    public QuotaConfig setSelfQuotaPreemptionConfig(SelfQuotaPreemptionConfig selfQuotaPreemptionConfig) {
+        this.selfQuotaPreemptionConfig = selfQuotaPreemptionConfig;
+        return this;
+    }
+    public SelfQuotaPreemptionConfig getSelfQuotaPreemptionConfig() {
+        return this.selfQuotaPreemptionConfig;
     }
 
     public QuotaConfig setSubQuotaPreemptionConfig(SubQuotaPreemptionConfig subQuotaPreemptionConfig) {

@@ -94,6 +94,9 @@ public class QueueInfo extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("UseOversoldResource")
+    public Boolean useOversoldResource;
+
     @NameInMap("UserId")
     public String userId;
 
@@ -130,6 +133,9 @@ public class QueueInfo extends TeaModel {
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
+
+    @NameInMap("WorkspaceName")
+    public String workspaceName;
 
     public static QueueInfo build(java.util.Map<String, ?> map) throws Exception {
         QueueInfo self = new QueueInfo();
@@ -248,6 +254,14 @@ public class QueueInfo extends TeaModel {
         return this.status;
     }
 
+    public QueueInfo setUseOversoldResource(Boolean useOversoldResource) {
+        this.useOversoldResource = useOversoldResource;
+        return this;
+    }
+    public Boolean getUseOversoldResource() {
+        return this.useOversoldResource;
+    }
+
     public QueueInfo setUserId(String userId) {
         this.userId = userId;
         return this;
@@ -302,6 +316,14 @@ public class QueueInfo extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public QueueInfo setWorkspaceName(String workspaceName) {
+        this.workspaceName = workspaceName;
+        return this;
+    }
+    public String getWorkspaceName() {
+        return this.workspaceName;
     }
 
 }

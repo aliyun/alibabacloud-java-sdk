@@ -7,6 +7,9 @@ public class Node extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    @NameInMap("AvailabilityZone")
+    public String availabilityZone;
+
     @NameInMap("BoundQuotas")
     public java.util.List<QuotaIdName> boundQuotas;
 
@@ -33,6 +36,9 @@ public class Node extends TeaModel {
 
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
+
+    @NameInMap("HyperZone")
+    public String hyperZone;
 
     @NameInMap("IsBound")
     public Boolean isBound;
@@ -107,6 +113,14 @@ public class Node extends TeaModel {
         return this.acceleratorType;
     }
 
+    public Node setAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    public String getAvailabilityZone() {
+        return this.availabilityZone;
+    }
+
     public Node setBoundQuotas(java.util.List<QuotaIdName> boundQuotas) {
         this.boundQuotas = boundQuotas;
         return this;
@@ -177,6 +191,14 @@ public class Node extends TeaModel {
     }
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    public Node setHyperZone(String hyperZone) {
+        this.hyperZone = hyperZone;
+        return this;
+    }
+    public String getHyperZone() {
+        return this.hyperZone;
     }
 
     public Node setIsBound(Boolean isBound) {

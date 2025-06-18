@@ -14,6 +14,12 @@ public class MachineGroup extends TeaModel {
     @NameInMap("DefaultDriver")
     public String defaultDriver;
 
+    @NameInMap("DiskCapacity")
+    public Long diskCapacity;
+
+    @NameInMap("DiskPL")
+    public String diskPL;
+
     @NameInMap("EcsCount")
     public Long ecsCount;
 
@@ -85,6 +91,22 @@ public class MachineGroup extends TeaModel {
     }
     public String getDefaultDriver() {
         return this.defaultDriver;
+    }
+
+    public MachineGroup setDiskCapacity(Long diskCapacity) {
+        this.diskCapacity = diskCapacity;
+        return this;
+    }
+    public Long getDiskCapacity() {
+        return this.diskCapacity;
+    }
+
+    public MachineGroup setDiskPL(String diskPL) {
+        this.diskPL = diskPL;
+        return this;
+    }
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     public MachineGroup setEcsCount(Long ecsCount) {

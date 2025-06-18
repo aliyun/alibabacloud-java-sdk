@@ -11,6 +11,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    @NameInMap("AvailabilityZone")
+    public String availabilityZone;
+
     /**
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -31,6 +34,9 @@ public class ListNodesRequest extends TeaModel {
      */
     @NameInMap("GPUType")
     public String GPUType;
+
+    @NameInMap("HyperZone")
+    public String hyperZone;
 
     @NameInMap("MachineGroupIds")
     public String machineGroupIds;
@@ -128,6 +134,14 @@ public class ListNodesRequest extends TeaModel {
         return this.acceleratorType;
     }
 
+    public ListNodesRequest setAvailabilityZone(String availabilityZone) {
+        this.availabilityZone = availabilityZone;
+        return this;
+    }
+    public String getAvailabilityZone() {
+        return this.availabilityZone;
+    }
+
     public ListNodesRequest setFilterByQuotaId(String filterByQuotaId) {
         this.filterByQuotaId = filterByQuotaId;
         return this;
@@ -150,6 +164,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public String getGPUType() {
         return this.GPUType;
+    }
+
+    public ListNodesRequest setHyperZone(String hyperZone) {
+        this.hyperZone = hyperZone;
+        return this;
+    }
+    public String getHyperZone() {
+        return this.hyperZone;
     }
 
     public ListNodesRequest setMachineGroupIds(String machineGroupIds) {
