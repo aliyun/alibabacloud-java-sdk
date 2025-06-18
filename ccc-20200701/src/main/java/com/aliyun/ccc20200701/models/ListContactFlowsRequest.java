@@ -34,6 +34,9 @@ public class ListContactFlowsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SearchPattern")
+    public String searchPattern;
+
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -79,6 +82,14 @@ public class ListContactFlowsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListContactFlowsRequest setSearchPattern(String searchPattern) {
+        this.searchPattern = searchPattern;
+        return this;
+    }
+    public String getSearchPattern() {
+        return this.searchPattern;
     }
 
     public ListContactFlowsRequest setSortOrder(String sortOrder) {

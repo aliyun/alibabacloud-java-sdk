@@ -2341,6 +2341,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * @param request DeleteContactFlowRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteContactFlowResponse
@@ -2350,6 +2355,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.contactFlowId)) {
             query.put("ContactFlowId", request.contactFlowId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("Force", request.force);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
@@ -2374,6 +2383,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * @param request DeleteContactFlowRequest
      * @return DeleteContactFlowResponse
      */
@@ -6783,6 +6797,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * @param request ListContactFlowsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListContactFlowsResponse
@@ -6804,6 +6823,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchPattern)) {
+            query.put("SearchPattern", request.searchPattern);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortOrder)) {
@@ -6832,6 +6855,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <ul>
+     * <li></li>
+     * </ul>
+     * 
      * @param request ListContactFlowsRequest
      * @return ListContactFlowsResponse
      */

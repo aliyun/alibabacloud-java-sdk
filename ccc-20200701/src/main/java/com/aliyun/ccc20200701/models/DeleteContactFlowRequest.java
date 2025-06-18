@@ -13,6 +13,9 @@ public class DeleteContactFlowRequest extends TeaModel {
     @NameInMap("ContactFlowId")
     public String contactFlowId;
 
+    @NameInMap("Force")
+    public Boolean force;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class DeleteContactFlowRequest extends TeaModel {
     }
     public String getContactFlowId() {
         return this.contactFlowId;
+    }
+
+    public DeleteContactFlowRequest setForce(Boolean force) {
+        this.force = force;
+        return this;
+    }
+    public Boolean getForce() {
+        return this.force;
     }
 
     public DeleteContactFlowRequest setInstanceId(String instanceId) {
