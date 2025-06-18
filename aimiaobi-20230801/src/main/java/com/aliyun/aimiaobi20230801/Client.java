@@ -90,6 +90,264 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>生成剪辑视频</p>
+     * 
+     * @param tmpReq AsyncCreateClipsTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AsyncCreateClipsTaskResponse
+     */
+    public AsyncCreateClipsTaskResponse asyncCreateClipsTaskWithOptions(AsyncCreateClipsTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AsyncCreateClipsTaskShrinkRequest request = new AsyncCreateClipsTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.colorWords)) {
+            request.colorWordsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.colorWords, "ColorWords", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.colorWordsShrink)) {
+            body.put("ColorWords", request.colorWordsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.height)) {
+            body.put("Height", request.height);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.musicUrl)) {
+            body.put("MusicUrl", request.musicUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.musicVolume)) {
+            body.put("MusicVolume", request.musicVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subtitleFontSize)) {
+            body.put("SubtitleFontSize", request.subtitleFontSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceStyle)) {
+            body.put("VoiceStyle", request.voiceStyle);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.voiceVolume)) {
+            body.put("VoiceVolume", request.voiceVolume);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.width)) {
+            body.put("Width", request.width);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AsyncCreateClipsTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AsyncCreateClipsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成剪辑视频</p>
+     * 
+     * @param request AsyncCreateClipsTaskRequest
+     * @return AsyncCreateClipsTaskResponse
+     */
+    public AsyncCreateClipsTaskResponse asyncCreateClipsTask(AsyncCreateClipsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.asyncCreateClipsTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>智能剪辑timeline</p>
+     * 
+     * @param request AsyncCreateClipsTimeLineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AsyncCreateClipsTimeLineResponse
+     */
+    public AsyncCreateClipsTimeLineResponse asyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.processPrompt)) {
+            body.put("ProcessPrompt", request.processPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AsyncCreateClipsTimeLine"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AsyncCreateClipsTimeLineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>智能剪辑timeline</p>
+     * 
+     * @param request AsyncCreateClipsTimeLineRequest
+     * @return AsyncCreateClipsTimeLineResponse
+     */
+    public AsyncCreateClipsTimeLineResponse asyncCreateClipsTimeLine(AsyncCreateClipsTimeLineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.asyncCreateClipsTimeLineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑剪辑任务的timeline</p>
+     * 
+     * @param tmpReq AsyncEditTimelineRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AsyncEditTimelineResponse
+     */
+    public AsyncEditTimelineResponse asyncEditTimelineWithOptions(AsyncEditTimelineRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AsyncEditTimelineShrinkRequest request = new AsyncEditTimelineShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timelines)) {
+            request.timelinesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timelines, "Timelines", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoClips)) {
+            body.put("AutoClips", request.autoClips);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timelinesShrink)) {
+            body.put("Timelines", request.timelinesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AsyncEditTimeline"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AsyncEditTimelineResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑剪辑任务的timeline</p>
+     * 
+     * @param request AsyncEditTimelineRequest
+     * @return AsyncEditTimelineResponse
+     */
+    public AsyncEditTimelineResponse asyncEditTimeline(AsyncEditTimelineRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.asyncEditTimelineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传剪辑素材</p>
+     * 
+     * @param tmpReq AsyncUploadVideoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AsyncUploadVideoResponse
+     */
+    public AsyncUploadVideoResponse asyncUploadVideoWithOptions(AsyncUploadVideoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AsyncUploadVideoShrinkRequest request = new AsyncUploadVideoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceVideos)) {
+            request.sourceVideosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceVideos, "SourceVideos", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.anlysisPrompt)) {
+            body.put("AnlysisPrompt", request.anlysisPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceVideosShrink)) {
+            body.put("SourceVideos", request.sourceVideosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AsyncUploadVideo"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AsyncUploadVideoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>上传剪辑素材</p>
+     * 
+     * @param request AsyncUploadVideoRequest
+     * @return AsyncUploadVideoResponse
+     */
+    public AsyncUploadVideoResponse asyncUploadVideo(AsyncUploadVideoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.asyncUploadVideoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>取消异步任务</p>
      * 
      * @param request CancelAsyncTaskRequest
@@ -1818,6 +2076,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateViewPointResponse generateViewPoint(GenerateViewPointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateViewPointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获得剪辑任务状态</p>
+     * 
+     * @param request GetAutoClipsTaskInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAutoClipsTaskInfoResponse
+     */
+    public GetAutoClipsTaskInfoResponse getAutoClipsTaskInfoWithOptions(GetAutoClipsTaskInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAutoClipsTaskInfo"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAutoClipsTaskInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获得剪辑任务状态</p>
+     * 
+     * @param request GetAutoClipsTaskInfoRequest
+     * @return GetAutoClipsTaskInfoResponse
+     */
+    public GetAutoClipsTaskInfoResponse getAutoClipsTaskInfo(GetAutoClipsTaskInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAutoClipsTaskInfoWithOptions(request, runtime);
     }
 
     /**
