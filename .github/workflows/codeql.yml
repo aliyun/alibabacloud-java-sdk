@@ -1,0 +1,59 @@
+name: "CodeQL"
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  schedule:
+    - cron: '30 01 * * 2'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        java: [8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup
+      uses: actions/setup-java@v1
+      with:
+        java-version: ${{ matrix.java }}
+
+    - name: Autobuild
+      run: mvn clean package -f pom.xml -V -C -e -Dmaven.test.skip=true
+
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'java-kotlin' ]
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Initialize CodeQL
+      uses: github/codeql-action/init@v3
+      with:
+        languages: ${{ matrix.language }}
+        paths: ecs-20140526
+
+    - name: Autobuild
+      uses: github/codeql-action/autobuild@v3
+      with:
+        working-directory: ecs-20140526
+
+    - name: Perform CodeQL Analysis
+      uses: github/codeql-action/analyze@v3
+      with:
+        category: "/language:${{matrix.language}}"
