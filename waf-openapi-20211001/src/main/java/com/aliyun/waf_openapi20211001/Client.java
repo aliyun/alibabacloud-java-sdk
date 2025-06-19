@@ -380,6 +380,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建防护对象</p>
+     * 
+     * @param tmpReq CreateDefenseResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDefenseResourceResponse
+     */
+    public CreateDefenseResourceResponse createDefenseResourceWithOptions(CreateDefenseResourceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDefenseResourceShrinkRequest request = new CreateDefenseResourceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customHeaders)) {
+            request.customHeadersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customHeaders, "CustomHeaders", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customHeadersShrink)) {
+            query.put("CustomHeaders", request.customHeadersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.detail)) {
+            query.put("Detail", request.detail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerUserId)) {
+            query.put("OwnerUserId", request.ownerUserId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pattern)) {
+            query.put("Pattern", request.pattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.product)) {
+            query.put("Product", request.product);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroup)) {
+            query.put("ResourceGroup", request.resourceGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOrigin)) {
+            query.put("ResourceOrigin", request.resourceOrigin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.xffStatus)) {
+            query.put("XffStatus", request.xffStatus);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDefenseResource"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDefenseResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建防护对象</p>
+     * 
+     * @param request CreateDefenseResourceRequest
+     * @return CreateDefenseResourceResponse
+     */
+    public CreateDefenseResourceResponse createDefenseResource(CreateDefenseResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDefenseResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a protected object group.</p>
      * 
      * @param request CreateDefenseResourceGroupRequest
@@ -1194,6 +1296,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteCloudResourceResponse deleteCloudResource(DeleteCloudResourceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteCloudResourceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除单个防护对象</p>
+     * 
+     * @param request DeleteDefenseResourceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDefenseResourceResponse
+     */
+    public DeleteDefenseResourceResponse deleteDefenseResourceWithOptions(DeleteDefenseResourceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDefenseResource"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDefenseResourceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除单个防护对象</p>
+     * 
+     * @param request DeleteDefenseResourceRequest
+     * @return DeleteDefenseResourceResponse
+     */
+    public DeleteDefenseResourceResponse deleteDefenseResource(DeleteDefenseResourceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDefenseResourceWithOptions(request, runtime);
     }
 
     /**
