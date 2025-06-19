@@ -22,6 +22,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("AddressIPVersion")
     public String addressIPVersion;
 
+    @NameInMap("AddressType")
+    public String addressType;
+
     /**
      * <p>The list of backend servers.</p>
      */
@@ -116,6 +119,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    @NameInMap("LoadBalancerType")
+    public String loadBalancerType;
+
     /**
      * <p>The ID of the network.</p>
      * 
@@ -175,6 +181,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public String getAddressIPVersion() {
         return this.addressIPVersion;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setAddressType(String addressType) {
+        this.addressType = addressType;
+        return this;
+    }
+    public String getAddressType() {
+        return this.addressType;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setBackendServers(java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers) {
@@ -263,6 +277,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
     public String getLoadBalancerStatus() {
         return this.loadBalancerStatus;
+    }
+
+    public DescribeLoadBalancerAttributeResponseBody setLoadBalancerType(String loadBalancerType) {
+        this.loadBalancerType = loadBalancerType;
+        return this;
+    }
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
     }
 
     public DescribeLoadBalancerAttributeResponseBody setNetworkId(String networkId) {

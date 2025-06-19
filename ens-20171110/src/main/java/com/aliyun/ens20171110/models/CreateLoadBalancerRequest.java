@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
+    @NameInMap("BillingCycle")
+    public String billingCycle;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</p>
      * <ul>
@@ -51,6 +54,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     @NameInMap("LoadBalancerSpec")
     public String loadBalancerSpec;
 
+    @NameInMap("LoadBalancerType")
+    public String loadBalancerType;
+
     /**
      * <p>The network ID of the created ELB instance.</p>
      * <p>This parameter is required.</p>
@@ -86,6 +92,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateLoadBalancerRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    public String getBillingCycle() {
+        return this.billingCycle;
+    }
+
     public CreateLoadBalancerRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -116,6 +130,14 @@ public class CreateLoadBalancerRequest extends TeaModel {
     }
     public String getLoadBalancerSpec() {
         return this.loadBalancerSpec;
+    }
+
+    public CreateLoadBalancerRequest setLoadBalancerType(String loadBalancerType) {
+        this.loadBalancerType = loadBalancerType;
+        return this;
+    }
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
     }
 
     public CreateLoadBalancerRequest setNetworkId(String networkId) {

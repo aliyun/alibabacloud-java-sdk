@@ -59,6 +59,9 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     @NameInMap("LoadBalancerStatus")
     public String loadBalancerStatus;
 
+    @NameInMap("LoadBalancerType")
+    public String loadBalancerType;
+
     /**
      * <p>The ID of the network.</p>
      * 
@@ -155,6 +158,14 @@ public class DescribeLoadBalancersRequest extends TeaModel {
     }
     public String getLoadBalancerStatus() {
         return this.loadBalancerStatus;
+    }
+
+    public DescribeLoadBalancersRequest setLoadBalancerType(String loadBalancerType) {
+        this.loadBalancerType = loadBalancerType;
+        return this;
+    }
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
     }
 
     public DescribeLoadBalancersRequest setNetworkId(String networkId) {

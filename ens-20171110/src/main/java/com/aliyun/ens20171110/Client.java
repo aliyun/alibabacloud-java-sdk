@@ -2185,6 +2185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLoadBalancerResponse createLoadBalancerWithOptions(CreateLoadBalancerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.billingCycle)) {
+            query.put("BillingCycle", request.billingCycle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
         }
@@ -2199,6 +2203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerSpec)) {
             query.put("LoadBalancerSpec", request.loadBalancerSpec);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loadBalancerType)) {
+            query.put("LoadBalancerType", request.loadBalancerType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {

@@ -110,6 +110,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         @NameInMap("AddressIPVersion")
         public String addressIPVersion;
 
+        @NameInMap("AddressType")
+        public String addressType;
+
         /**
          * <p>The time when the ELB instance was created. The time is displayed in UTC.</p>
          * 
@@ -158,6 +161,9 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
          */
         @NameInMap("LoadBalancerStatus")
         public String loadBalancerStatus;
+
+        @NameInMap("LoadBalancerType")
+        public String loadBalancerType;
 
         /**
          * <p>The ID of the network.</p>
@@ -211,6 +217,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
             return this.addressIPVersion;
         }
 
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setAddressType(String addressType) {
+            this.addressType = addressType;
+            return this;
+        }
+        public String getAddressType() {
+            return this.addressType;
+        }
+
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -249,6 +263,14 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
         }
         public String getLoadBalancerStatus() {
             return this.loadBalancerStatus;
+        }
+
+        public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setLoadBalancerType(String loadBalancerType) {
+            this.loadBalancerType = loadBalancerType;
+            return this;
+        }
+        public String getLoadBalancerType() {
+            return this.loadBalancerType;
         }
 
         public DescribeLoadBalancersResponseBodyLoadBalancersLoadBalancer setNetworkId(String networkId) {
