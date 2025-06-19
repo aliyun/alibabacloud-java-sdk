@@ -968,6 +968,430 @@ public class CreateRunResponseBody extends TeaModel {
 
     }
 
+    public static class CreateRunResponseBodyMessagesContentStructPartsDataPart extends TeaModel {
+        @NameInMap("data")
+        public Object data;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsDataPart build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsDataPart self = new CreateRunResponseBodyMessagesContentStructPartsDataPart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsDataPart setData(Object data) {
+            this.data = data;
+            return this;
+        }
+        public Object getData() {
+            return this.data;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructPartsReasonPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
+        @NameInMap("reason")
+        public String reason;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsReasonPart build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsReasonPart self = new CreateRunResponseBodyMessagesContentStructPartsReasonPart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReasonPart setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends extends TeaModel {
+        @NameInMap("mobileUrl")
+        public String mobileUrl;
+
+        @NameInMap("text")
+        public String text;
+
+        @NameInMap("url")
+        public String url;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends self = new CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends setMobileUrl(String mobileUrl) {
+            this.mobileUrl = mobileUrl;
+            return this;
+        }
+        public String getMobileUrl() {
+            return this.mobileUrl;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructPartsRecommendPart extends TeaModel {
+        @NameInMap("recommends")
+        public java.util.List<CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends> recommends;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsRecommendPart build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsRecommendPart self = new CreateRunResponseBodyMessagesContentStructPartsRecommendPart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsRecommendPart setRecommends(java.util.List<CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends> recommends) {
+            this.recommends = recommends;
+            return this;
+        }
+        public java.util.List<CreateRunResponseBodyMessagesContentStructPartsRecommendPartRecommends> getRecommends() {
+            return this.recommends;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("index")
+        public String index;
+
+        /**
+         * <strong>example:</strong>
+         * <p>mcp是....</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <strong>example:</strong>
+         * <p>ata</p>
+         */
+        @NameInMap("sourceCode")
+        public String sourceCode;
+
+        @NameInMap("sourceIcon")
+        public String sourceIcon;
+
+        /**
+         * <strong>example:</strong>
+         * <p>摘要</p>
+         */
+        @NameInMap("summary")
+        public String summary;
+
+        /**
+         * <strong>example:</strong>
+         * <p>《mcp原理介绍》</p>
+         */
+        @NameInMap("title")
+        public String title;
+
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://taobao.com">https://taobao.com</a></p>
+         */
+        @NameInMap("url")
+        public String url;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences self = new CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setSourceCode(String sourceCode) {
+            this.sourceCode = sourceCode;
+            return this;
+        }
+        public String getSourceCode() {
+            return this.sourceCode;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setSourceIcon(String sourceIcon) {
+            this.sourceIcon = sourceIcon;
+            return this;
+        }
+        public String getSourceIcon() {
+            return this.sourceIcon;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setSummary(String summary) {
+            this.summary = summary;
+            return this;
+        }
+        public String getSummary() {
+            return this.summary;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setTitle(String title) {
+            this.title = title;
+            return this;
+        }
+        public String getTitle() {
+            return this.title;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructPartsReferencePart extends TeaModel {
+        @NameInMap("references")
+        public java.util.List<CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences> references;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsReferencePart build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsReferencePart self = new CreateRunResponseBodyMessagesContentStructPartsReferencePart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePart setReferences(java.util.List<CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences> references) {
+            this.references = references;
+            return this;
+        }
+        public java.util.List<CreateRunResponseBodyMessagesContentStructPartsReferencePartReferences> getReferences() {
+            return this.references;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructPartsTextPart extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>123123</p>
+         */
+        @NameInMap("text")
+        public String text;
+
+        public static CreateRunResponseBodyMessagesContentStructPartsTextPart build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructPartsTextPart self = new CreateRunResponseBodyMessagesContentStructPartsTextPart();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructPartsTextPart setText(String text) {
+            this.text = text;
+            return this;
+        }
+        public String getText() {
+            return this.text;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStructParts extends TeaModel {
+        @NameInMap("append")
+        public Boolean append;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("dataPart")
+        public CreateRunResponseBodyMessagesContentStructPartsDataPart dataPart;
+
+        @NameInMap("finish")
+        public Boolean finish;
+
+        /**
+         * <strong>example:</strong>
+         * <p>这是正文内容部分</p>
+         */
+        @NameInMap("partDesc")
+        public String partDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>artifactId123</p>
+         */
+        @NameInMap("partId")
+        public String partId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("reasonPart")
+        public CreateRunResponseBodyMessagesContentStructPartsReasonPart reasonPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("recommendPart")
+        public CreateRunResponseBodyMessagesContentStructPartsRecommendPart recommendPart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("referencePart")
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePart referencePart;
+
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        @NameInMap("textPart")
+        public CreateRunResponseBodyMessagesContentStructPartsTextPart textPart;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>textPart</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static CreateRunResponseBodyMessagesContentStructParts build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStructParts self = new CreateRunResponseBodyMessagesContentStructParts();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setAppend(Boolean append) {
+            this.append = append;
+            return this;
+        }
+        public Boolean getAppend() {
+            return this.append;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setDataPart(CreateRunResponseBodyMessagesContentStructPartsDataPart dataPart) {
+            this.dataPart = dataPart;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStructPartsDataPart getDataPart() {
+            return this.dataPart;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setFinish(Boolean finish) {
+            this.finish = finish;
+            return this;
+        }
+        public Boolean getFinish() {
+            return this.finish;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setPartDesc(String partDesc) {
+            this.partDesc = partDesc;
+            return this;
+        }
+        public String getPartDesc() {
+            return this.partDesc;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setPartId(String partId) {
+            this.partId = partId;
+            return this;
+        }
+        public String getPartId() {
+            return this.partId;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setReasonPart(CreateRunResponseBodyMessagesContentStructPartsReasonPart reasonPart) {
+            this.reasonPart = reasonPart;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStructPartsReasonPart getReasonPart() {
+            return this.reasonPart;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setRecommendPart(CreateRunResponseBodyMessagesContentStructPartsRecommendPart recommendPart) {
+            this.recommendPart = recommendPart;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStructPartsRecommendPart getRecommendPart() {
+            return this.recommendPart;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setReferencePart(CreateRunResponseBodyMessagesContentStructPartsReferencePart referencePart) {
+            this.referencePart = referencePart;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStructPartsReferencePart getReferencePart() {
+            return this.referencePart;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setTextPart(CreateRunResponseBodyMessagesContentStructPartsTextPart textPart) {
+            this.textPart = textPart;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStructPartsTextPart getTextPart() {
+            return this.textPart;
+        }
+
+        public CreateRunResponseBodyMessagesContentStructParts setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class CreateRunResponseBodyMessagesContentStruct extends TeaModel {
+        @NameInMap("parts")
+        public java.util.List<CreateRunResponseBodyMessagesContentStructParts> parts;
+
+        public static CreateRunResponseBodyMessagesContentStruct build(java.util.Map<String, ?> map) throws Exception {
+            CreateRunResponseBodyMessagesContentStruct self = new CreateRunResponseBodyMessagesContentStruct();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRunResponseBodyMessagesContentStruct setParts(java.util.List<CreateRunResponseBodyMessagesContentStructParts> parts) {
+            this.parts = parts;
+            return this;
+        }
+        public java.util.List<CreateRunResponseBodyMessagesContentStructParts> getParts() {
+            return this.parts;
+        }
+
+    }
+
     public static class CreateRunResponseBodyMessages extends TeaModel {
         @NameInMap("content")
         public CreateRunResponseBodyMessagesContent content;
@@ -978,6 +1402,9 @@ public class CreateRunResponseBody extends TeaModel {
          */
         @NameInMap("contentDesc")
         public String contentDesc;
+
+        @NameInMap("contentStruct")
+        public CreateRunResponseBodyMessagesContentStruct contentStruct;
 
         /**
          * <strong>example:</strong>
@@ -1033,6 +1460,14 @@ public class CreateRunResponseBody extends TeaModel {
         }
         public String getContentDesc() {
             return this.contentDesc;
+        }
+
+        public CreateRunResponseBodyMessages setContentStruct(CreateRunResponseBodyMessagesContentStruct contentStruct) {
+            this.contentStruct = contentStruct;
+            return this;
+        }
+        public CreateRunResponseBodyMessagesContentStruct getContentStruct() {
+            return this.contentStruct;
         }
 
         public CreateRunResponseBodyMessages setCreateAt(Long createAt) {

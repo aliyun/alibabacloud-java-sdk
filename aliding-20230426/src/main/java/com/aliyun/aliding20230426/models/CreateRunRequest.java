@@ -4,6 +4,9 @@ package com.aliyun.aliding20230426.models;
 import com.aliyun.tea.*;
 
 public class CreateRunRequest extends TeaModel {
+    @NameInMap("allowStructViewContent")
+    public Boolean allowStructViewContent;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +56,14 @@ public class CreateRunRequest extends TeaModel {
     public static CreateRunRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRunRequest self = new CreateRunRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRunRequest setAllowStructViewContent(Boolean allowStructViewContent) {
+        this.allowStructViewContent = allowStructViewContent;
+        return this;
+    }
+    public Boolean getAllowStructViewContent() {
+        return this.allowStructViewContent;
     }
 
     public CreateRunRequest setAssistantId(String assistantId) {
