@@ -2580,7 +2580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作流实例</p>
+     * <p>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</p>
      * 
      * @param tmpReq CreateWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2662,7 +2662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建工作流实例</p>
+     * <p>Creates a workflow instance, such as a data backfill workflow instance, based on configurations.</p>
      * 
      * @param request CreateWorkflowInstancesRequest
      * @return CreateWorkflowInstancesResponse
@@ -5756,6 +5756,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询异步重跑工作流实例的结果</p>
+     * 
+     * @param request GetRerunWorkflowInstancesResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRerunWorkflowInstancesResultResponse
+     */
+    public GetRerunWorkflowInstancesResultResponse getRerunWorkflowInstancesResultWithOptions(GetRerunWorkflowInstancesResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.operationId)) {
+            query.put("OperationId", request.operationId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRerunWorkflowInstancesResult"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRerunWorkflowInstancesResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询异步重跑工作流实例的结果</p>
+     * 
+     * @param request GetRerunWorkflowInstancesResultRequest
+     * @return GetRerunWorkflowInstancesResultResponse
+     */
+    public GetRerunWorkflowInstancesResultResponse getRerunWorkflowInstancesResult(GetRerunWorkflowInstancesResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRerunWorkflowInstancesResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the information about a file resource.</p>
      * 
      * @param request GetResourceRequest
@@ -5887,8 +5931,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取模式详情</p>
+     * <p>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</p>
      * 
      * @param request GetSchemaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5915,8 +5965,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</li>
+     * </ol>
+     * 
      * <b>summary</b> : 
-     * <p>获取模式详情</p>
+     * <p>Queries the information about a schema in Data Map. You can call this API operation to query the information only about MaxCompute and Hologres schemas.</p>
      * 
      * @param request GetSchemaRequest
      * @return GetSchemaResponse
@@ -10123,6 +10179,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RerunTaskInstancesResponse rerunTaskInstances(RerunTaskInstancesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.rerunTaskInstancesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重跑工作流实例</p>
+     * 
+     * @param tmpReq RerunWorkflowInstancesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RerunWorkflowInstancesResponse
+     */
+    public RerunWorkflowInstancesResponse rerunWorkflowInstancesWithOptions(RerunWorkflowInstancesRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RerunWorkflowInstancesShrinkRequest request = new RerunWorkflowInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.filter)) {
+            request.filterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.filter, "Filter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.ids)) {
+            request.idsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ids, "Ids", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizdate)) {
+            body.put("Bizdate", request.bizdate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTriggerTime)) {
+            body.put("EndTriggerTime", request.endTriggerTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            body.put("EnvType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
+            body.put("Filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.idsShrink)) {
+            body.put("Ids", request.idsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTriggerTime)) {
+            body.put("StartTriggerTime", request.startTriggerTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workflowId)) {
+            body.put("WorkflowId", request.workflowId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RerunWorkflowInstances"),
+            new TeaPair("version", "2024-05-18"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RerunWorkflowInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重跑工作流实例</p>
+     * 
+     * @param request RerunWorkflowInstancesRequest
+     * @return RerunWorkflowInstancesResponse
+     */
+    public RerunWorkflowInstancesResponse rerunWorkflowInstances(RerunWorkflowInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rerunWorkflowInstancesWithOptions(request, runtime);
     }
 
     /**

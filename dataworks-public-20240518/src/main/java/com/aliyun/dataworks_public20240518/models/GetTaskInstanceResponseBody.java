@@ -760,6 +760,12 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        @NameInMap("WaitingResourceTime")
+        public Long waitingResourceTime;
+
+        @NameInMap("WaitingTriggerTime")
+        public Long waitingTriggerTime;
+
         /**
          * <p>The ID of the workflow to which the instance belongs.</p>
          * 
@@ -1063,6 +1069,22 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public GetTaskInstanceResponseBodyTaskInstance setWaitingResourceTime(Long waitingResourceTime) {
+            this.waitingResourceTime = waitingResourceTime;
+            return this;
+        }
+        public Long getWaitingResourceTime() {
+            return this.waitingResourceTime;
+        }
+
+        public GetTaskInstanceResponseBodyTaskInstance setWaitingTriggerTime(Long waitingTriggerTime) {
+            this.waitingTriggerTime = waitingTriggerTime;
+            return this;
+        }
+        public Long getWaitingTriggerTime() {
+            return this.waitingTriggerTime;
         }
 
         public GetTaskInstanceResponseBodyTaskInstance setWorkflowId(Long workflowId) {

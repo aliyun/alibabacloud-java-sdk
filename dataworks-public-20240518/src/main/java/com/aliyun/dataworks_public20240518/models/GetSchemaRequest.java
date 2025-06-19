@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetSchemaRequest extends TeaModel {
     /**
+     * <p>The schema ID. You can call the ListSchemas operation to query schema IDs. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+     * <p>Configure this parameter in the <code>${Entity type}:${Instance ID or escaped URL}:${Catalog identifier}:${Database name}:${Schema name}</code> format. If a level does not exist, leave the level empty.</p>
+     * <blockquote>
+     * <p> If you want to query the information about a MaxCompute schema, specify an empty string at the Instance ID level as a placeholder and a MaxCompute project name at the Database name level. Make sure that the schema feature is enabled for the MaxCompute project.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

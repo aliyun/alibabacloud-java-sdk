@@ -10,7 +10,7 @@ public class UpdateDataSourceRequest extends TeaModel {
      * <li>Dev: development environment</li>
      * <li>Prod: production environment</li>
      * </ul>
-     * <p>The parameters that you need to configure to the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
+     * <p>The parameters that you need to configure for the data source vary based on the mode in which the data source is added. For more information, see <a href="https://help.aliyun.com/document_detail/2852465.html">Data source connection information (ConnectionProperties)</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

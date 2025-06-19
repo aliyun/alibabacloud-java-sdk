@@ -340,6 +340,9 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @NameInMap("RuntimeResource")
         public ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource runtimeResource;
 
+        @NameInMap("ScriptParameters")
+        public String scriptParameters;
+
         /**
          * <p>The time when the instance started to run.</p>
          * 
@@ -443,6 +446,12 @@ public class ListTaskInstancesResponseBody extends TeaModel {
          */
         @NameInMap("TriggerType")
         public String triggerType;
+
+        @NameInMap("WaitingResourceTime")
+        public Long waitingResourceTime;
+
+        @NameInMap("WaitingTriggerTime")
+        public Long waitingTriggerTime;
 
         /**
          * <p>The ID of the workflow to which the instance belongs.</p>
@@ -646,6 +655,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             return this.runtimeResource;
         }
 
+        public ListTaskInstancesResponseBodyPagingInfoTaskInstances setScriptParameters(String scriptParameters) {
+            this.scriptParameters = scriptParameters;
+            return this;
+        }
+        public String getScriptParameters() {
+            return this.scriptParameters;
+        }
+
         public ListTaskInstancesResponseBodyPagingInfoTaskInstances setStartedTime(Long startedTime) {
             this.startedTime = startedTime;
             return this;
@@ -716,6 +733,22 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
         public String getTriggerType() {
             return this.triggerType;
+        }
+
+        public ListTaskInstancesResponseBodyPagingInfoTaskInstances setWaitingResourceTime(Long waitingResourceTime) {
+            this.waitingResourceTime = waitingResourceTime;
+            return this;
+        }
+        public Long getWaitingResourceTime() {
+            return this.waitingResourceTime;
+        }
+
+        public ListTaskInstancesResponseBodyPagingInfoTaskInstances setWaitingTriggerTime(Long waitingTriggerTime) {
+            this.waitingTriggerTime = waitingTriggerTime;
+            return this;
+        }
+        public Long getWaitingTriggerTime() {
+            return this.waitingTriggerTime;
         }
 
         public ListTaskInstancesResponseBodyPagingInfoTaskInstances setWorkflowId(Long workflowId) {
