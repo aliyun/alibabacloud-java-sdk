@@ -83,6 +83,9 @@ public class ListClustersRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListClustersRequestTag> tag;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static ListClustersRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClustersRequest self = new ListClustersRequest();
         return TeaModel.build(map, self);
@@ -158,6 +161,14 @@ public class ListClustersRequest extends TeaModel {
     }
     public java.util.List<ListClustersRequestTag> getTag() {
         return this.tag;
+    }
+
+    public ListClustersRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
     public static class ListClustersRequestTag extends TeaModel {
