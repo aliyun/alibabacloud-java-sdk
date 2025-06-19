@@ -1019,7 +1019,10 @@ public class GetMediaLiveChannelResponseBody extends TeaModel {
         public GetMediaLiveChannelResponseBodyChannelVideoSettingsVideoCodecSetting videoCodecSetting;
 
         /**
-         * <p>视频转码方式（普通转码、窄带高清转码等）</p>
+         * <p>The video transcoding method. Valid values: NORMAL (regular transcoding) and NBHD (Narrowband HD™ transcoding).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
          */
         @NameInMap("VideoCodecType")
         public String videoCodecType;

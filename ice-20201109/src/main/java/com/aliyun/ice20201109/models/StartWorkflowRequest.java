@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class StartWorkflowRequest extends TeaModel {
+    @NameInMap("SkipInputVerification")
+    public Boolean skipInputVerification;
+
     /**
      * <p>The workflow input. Only media assets are supported.</p>
      * 
@@ -34,6 +37,14 @@ public class StartWorkflowRequest extends TeaModel {
     public static StartWorkflowRequest build(java.util.Map<String, ?> map) throws Exception {
         StartWorkflowRequest self = new StartWorkflowRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartWorkflowRequest setSkipInputVerification(Boolean skipInputVerification) {
+        this.skipInputVerification = skipInputVerification;
+        return this;
+    }
+    public Boolean getSkipInputVerification() {
+        return this.skipInputVerification;
     }
 
     public StartWorkflowRequest setTaskInput(String taskInput) {
