@@ -201,6 +201,12 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
         @NameInMap("DatabaseNames")
         public java.util.List<String> databaseNames;
 
+        @NameInMap("EstimatedRows")
+        public Long estimatedRows;
+
+        @NameInMap("ExpireLogsDays")
+        public Integer expireLogsDays;
+
         /**
          * <strong>example:</strong>
          * <p>[{\&quot;is_active\&quot;:\&quot;1\&quot;,\&quot;name\&quot;:\&quot;0c0c5d1a-e844-44a8-902d-4f62cbcb0479\&quot;,\&quot;id\&quot;:\&quot;21\&quot;},{\&quot;is_active\&quot;:\&quot;1\&quot;,\&quot;name\&quot;:\&quot;18ef033e-70bb-4795-8222-6cfb54f38f26\&quot;,\&quot;id\&quot;:\&quot;22\&quot;}]</p>
@@ -214,6 +220,9 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
         @NameInMap("TableSchema")
         public DiscoverEventSourceResponseBodyDataSourceMySQLDiscoveryTableSchema tableSchema;
 
+        @NameInMap("WaitTimeout")
+        public Integer waitTimeout;
+
         public static DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery build(java.util.Map<String, ?> map) throws Exception {
             DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery self = new DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery();
             return TeaModel.build(map, self);
@@ -225,6 +234,22 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
         }
         public java.util.List<String> getDatabaseNames() {
             return this.databaseNames;
+        }
+
+        public DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery setEstimatedRows(Long estimatedRows) {
+            this.estimatedRows = estimatedRows;
+            return this;
+        }
+        public Long getEstimatedRows() {
+            return this.estimatedRows;
+        }
+
+        public DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery setExpireLogsDays(Integer expireLogsDays) {
+            this.expireLogsDays = expireLogsDays;
+            return this;
+        }
+        public Integer getExpireLogsDays() {
+            return this.expireLogsDays;
         }
 
         public DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery setSimpleData(String simpleData) {
@@ -249,6 +274,14 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
         }
         public DiscoverEventSourceResponseBodyDataSourceMySQLDiscoveryTableSchema getTableSchema() {
             return this.tableSchema;
+        }
+
+        public DiscoverEventSourceResponseBodyDataSourceMySQLDiscovery setWaitTimeout(Integer waitTimeout) {
+            this.waitTimeout = waitTimeout;
+            return this;
+        }
+        public Integer getWaitTimeout() {
+            return this.waitTimeout;
         }
 
     }
