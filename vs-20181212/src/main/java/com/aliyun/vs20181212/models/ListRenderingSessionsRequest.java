@@ -41,6 +41,9 @@ public class ListRenderingSessionsRequest extends TeaModel {
     @NameInMap("ProjectId")
     public String projectId;
 
+    @NameInMap("RenderingInstanceId")
+    public String renderingInstanceId;
+
     /**
      * <strong>example:</strong>
      * <p>session-i205217481741918129226</p>
@@ -98,6 +101,14 @@ public class ListRenderingSessionsRequest extends TeaModel {
     }
     public String getProjectId() {
         return this.projectId;
+    }
+
+    public ListRenderingSessionsRequest setRenderingInstanceId(String renderingInstanceId) {
+        this.renderingInstanceId = renderingInstanceId;
+        return this;
+    }
+    public String getRenderingInstanceId() {
+        return this.renderingInstanceId;
     }
 
     public ListRenderingSessionsRequest setSessionId(String sessionId) {

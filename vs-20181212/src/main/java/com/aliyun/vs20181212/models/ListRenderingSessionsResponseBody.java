@@ -65,6 +65,9 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         @NameInMap("ClientId")
         public String clientId;
 
+        @NameInMap("RenderingInstanceId")
+        public String renderingInstanceId;
+
         /**
          * <strong>example:</strong>
          * <p>session-i205217481741918129226</p>
@@ -98,6 +101,14 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         }
         public String getClientId() {
             return this.clientId;
+        }
+
+        public ListRenderingSessionsResponseBodySessions setRenderingInstanceId(String renderingInstanceId) {
+            this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+        public String getRenderingInstanceId() {
+            return this.renderingInstanceId;
         }
 
         public ListRenderingSessionsResponseBodySessions setSessionId(String sessionId) {

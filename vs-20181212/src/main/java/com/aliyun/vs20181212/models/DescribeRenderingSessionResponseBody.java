@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeRenderingSessionResponseBody extends TeaModel {
+    @NameInMap("AdditionalIngresses")
+    public java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngresses> additionalIngresses;
+
     /**
      * <strong>example:</strong>
      * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -25,11 +28,17 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     @NameInMap("Hostname")
     public String hostname;
 
+    @NameInMap("Isp")
+    public String isp;
+
     @NameInMap("Location")
     public DescribeRenderingSessionResponseBodyLocation location;
 
     @NameInMap("PortMappings")
     public java.util.List<DescribeRenderingSessionResponseBodyPortMappings> portMappings;
+
+    @NameInMap("RenderingInstanceId")
+    public String renderingInstanceId;
 
     /**
      * <strong>example:</strong>
@@ -60,6 +69,14 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeRenderingSessionResponseBody setAdditionalIngresses(java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngresses> additionalIngresses) {
+        this.additionalIngresses = additionalIngresses;
+        return this;
+    }
+    public java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngresses> getAdditionalIngresses() {
+        return this.additionalIngresses;
+    }
+
     public DescribeRenderingSessionResponseBody setAppId(String appId) {
         this.appId = appId;
         return this;
@@ -84,6 +101,14 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         return this.hostname;
     }
 
+    public DescribeRenderingSessionResponseBody setIsp(String isp) {
+        this.isp = isp;
+        return this;
+    }
+    public String getIsp() {
+        return this.isp;
+    }
+
     public DescribeRenderingSessionResponseBody setLocation(DescribeRenderingSessionResponseBodyLocation location) {
         this.location = location;
         return this;
@@ -98,6 +123,14 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
     public java.util.List<DescribeRenderingSessionResponseBodyPortMappings> getPortMappings() {
         return this.portMappings;
+    }
+
+    public DescribeRenderingSessionResponseBody setRenderingInstanceId(String renderingInstanceId) {
+        this.renderingInstanceId = renderingInstanceId;
+        return this;
+    }
+    public String getRenderingInstanceId() {
+        return this.renderingInstanceId;
     }
 
     public DescribeRenderingSessionResponseBody setRequestId(String requestId) {
@@ -130,6 +163,77 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
     public DescribeRenderingSessionResponseBodyStateInfo getStateInfo() {
         return this.stateInfo;
+    }
+
+    public static class DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings extends TeaModel {
+        @NameInMap("ExternalPort")
+        public String externalPort;
+
+        @NameInMap("InternalPort")
+        public String internalPort;
+
+        public static DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings self = new DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings setExternalPort(String externalPort) {
+            this.externalPort = externalPort;
+            return this;
+        }
+        public String getExternalPort() {
+            return this.externalPort;
+        }
+
+        public DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings setInternalPort(String internalPort) {
+            this.internalPort = internalPort;
+            return this;
+        }
+        public String getInternalPort() {
+            return this.internalPort;
+        }
+
+    }
+
+    public static class DescribeRenderingSessionResponseBodyAdditionalIngresses extends TeaModel {
+        @NameInMap("Hostname")
+        public String hostname;
+
+        @NameInMap("Isp")
+        public String isp;
+
+        @NameInMap("PortMappings")
+        public java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings> portMappings;
+
+        public static DescribeRenderingSessionResponseBodyAdditionalIngresses build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRenderingSessionResponseBodyAdditionalIngresses self = new DescribeRenderingSessionResponseBodyAdditionalIngresses();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRenderingSessionResponseBodyAdditionalIngresses setHostname(String hostname) {
+            this.hostname = hostname;
+            return this;
+        }
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        public DescribeRenderingSessionResponseBodyAdditionalIngresses setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
+        }
+
+        public DescribeRenderingSessionResponseBodyAdditionalIngresses setPortMappings(java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings> portMappings) {
+            this.portMappings = portMappings;
+            return this;
+        }
+        public java.util.List<DescribeRenderingSessionResponseBodyAdditionalIngressesPortMappings> getPortMappings() {
+            return this.portMappings;
+        }
+
     }
 
     public static class DescribeRenderingSessionResponseBodyLocation extends TeaModel {

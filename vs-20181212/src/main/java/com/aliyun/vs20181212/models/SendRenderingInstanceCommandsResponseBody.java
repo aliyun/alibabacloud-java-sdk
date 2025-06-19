@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
+    @NameInMap("CmdId")
+    public String cmdId;
+
     /**
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -21,6 +24,14 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
     public static SendRenderingInstanceCommandsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         SendRenderingInstanceCommandsResponseBody self = new SendRenderingInstanceCommandsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public SendRenderingInstanceCommandsResponseBody setCmdId(String cmdId) {
+        this.cmdId = cmdId;
+        return this;
+    }
+    public String getCmdId() {
+        return this.cmdId;
     }
 
     public SendRenderingInstanceCommandsResponseBody setRequestId(String requestId) {

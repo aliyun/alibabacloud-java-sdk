@@ -24,6 +24,9 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     @NameInMap("PortMappings")
     public java.util.List<StartRenderingSessionResponseBodyPortMappings> portMappings;
 
+    @NameInMap("RenderingInstanceId")
+    public String renderingInstanceId;
+
     /**
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -76,6 +79,14 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     }
     public java.util.List<StartRenderingSessionResponseBodyPortMappings> getPortMappings() {
         return this.portMappings;
+    }
+
+    public StartRenderingSessionResponseBody setRenderingInstanceId(String renderingInstanceId) {
+        this.renderingInstanceId = renderingInstanceId;
+        return this;
+    }
+    public String getRenderingInstanceId() {
+        return this.renderingInstanceId;
     }
 
     public StartRenderingSessionResponseBody setRequestId(String requestId) {

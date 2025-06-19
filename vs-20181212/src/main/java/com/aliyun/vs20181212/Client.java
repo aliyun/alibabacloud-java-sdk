@@ -3927,7 +3927,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public DescribeRenderingInstanceResponse describeRenderingInstanceWithOptions(DescribeRenderingInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
+            query.put("RenderingInstanceId", request.renderingInstanceId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3936,7 +3940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2018-12-12"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -5873,6 +5877,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询命令的执行状态与结果。</p>
+     * 
+     * @param request GetRenderingInstanceCommandsStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRenderingInstanceCommandsStatusResponse
+     */
+    public GetRenderingInstanceCommandsStatusResponse getRenderingInstanceCommandsStatusWithOptions(GetRenderingInstanceCommandsStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cmdId)) {
+            query.put("CmdId", request.cmdId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
+            query.put("RenderingInstanceId", request.renderingInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRenderingInstanceCommandsStatus"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRenderingInstanceCommandsStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询命令的执行状态与结果。</p>
+     * 
+     * @param request GetRenderingInstanceCommandsStatusRequest
+     * @return GetRenderingInstanceCommandsStatusResponse
+     */
+    public GetRenderingInstanceCommandsStatusResponse getRenderingInstanceCommandsStatus(GetRenderingInstanceCommandsStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRenderingInstanceCommandsStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取云渲染实例流连接信息，每次流化建联前都需要调用此接口获取最新连接信息</p>
      * 
      * @param request GetRenderingInstanceStreamingInfoRequest
@@ -6591,6 +6643,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
+            query.put("RenderingInstanceId", request.renderingInstanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
@@ -7888,7 +7944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下发shell命令，同步响应。不适用于耗时命令。</p>
+     * <p>下发shell命令，支持同步/异步响应命令。</p>
      * 
      * @param request SendRenderingInstanceCommandsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7897,8 +7953,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendRenderingInstanceCommandsResponse sendRenderingInstanceCommandsWithOptions(SendRenderingInstanceCommandsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mode)) {
+            query.put("Mode", request.mode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
             query.put("RenderingInstanceId", request.renderingInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            query.put("Timeout", request.timeout);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -7926,7 +7990,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>下发shell命令，同步响应。不适用于耗时命令。</p>
+     * <p>下发shell命令，支持同步/异步响应命令。</p>
      * 
      * @param request SendRenderingInstanceCommandsRequest
      * @return SendRenderingInstanceCommandsResponse
