@@ -3,7 +3,7 @@ package com.aliyun.dlfnext20250310.models;
 
 import com.aliyun.tea.*;
 
-public class Catalog extends TeaModel {
+public class Namespace extends TeaModel {
     @NameInMap("createdAt")
     public Long createdAt;
 
@@ -12,6 +12,9 @@ public class Catalog extends TeaModel {
 
     @NameInMap("id")
     public String id;
+
+    @NameInMap("location")
+    public String location;
 
     @NameInMap("name")
     public String name;
@@ -22,24 +25,18 @@ public class Catalog extends TeaModel {
     @NameInMap("owner")
     public String owner;
 
-    @NameInMap("status")
-    public String status;
-
-    @NameInMap("type")
-    public String type;
-
     @NameInMap("updatedAt")
     public Long updatedAt;
 
     @NameInMap("updatedBy")
     public String updatedBy;
 
-    public static Catalog build(java.util.Map<String, ?> map) throws Exception {
-        Catalog self = new Catalog();
+    public static Namespace build(java.util.Map<String, ?> map) throws Exception {
+        Namespace self = new Namespace();
         return TeaModel.build(map, self);
     }
 
-    public Catalog setCreatedAt(Long createdAt) {
+    public Namespace setCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -47,7 +44,7 @@ public class Catalog extends TeaModel {
         return this.createdAt;
     }
 
-    public Catalog setCreatedBy(String createdBy) {
+    public Namespace setCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
     }
@@ -55,7 +52,7 @@ public class Catalog extends TeaModel {
         return this.createdBy;
     }
 
-    public Catalog setId(String id) {
+    public Namespace setId(String id) {
         this.id = id;
         return this;
     }
@@ -63,7 +60,15 @@ public class Catalog extends TeaModel {
         return this.id;
     }
 
-    public Catalog setName(String name) {
+    public Namespace setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
+    }
+
+    public Namespace setName(String name) {
         this.name = name;
         return this;
     }
@@ -71,7 +76,7 @@ public class Catalog extends TeaModel {
         return this.name;
     }
 
-    public Catalog setOptions(java.util.Map<String, String> options) {
+    public Namespace setOptions(java.util.Map<String, String> options) {
         this.options = options;
         return this;
     }
@@ -79,7 +84,7 @@ public class Catalog extends TeaModel {
         return this.options;
     }
 
-    public Catalog setOwner(String owner) {
+    public Namespace setOwner(String owner) {
         this.owner = owner;
         return this;
     }
@@ -87,23 +92,7 @@ public class Catalog extends TeaModel {
         return this.owner;
     }
 
-    public Catalog setStatus(String status) {
-        this.status = status;
-        return this;
-    }
-    public String getStatus() {
-        return this.status;
-    }
-
-    public Catalog setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public Catalog setUpdatedAt(Long updatedAt) {
+    public Namespace setUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
@@ -111,7 +100,7 @@ public class Catalog extends TeaModel {
         return this.updatedAt;
     }
 
-    public Catalog setUpdatedBy(String updatedBy) {
+    public Namespace setUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }

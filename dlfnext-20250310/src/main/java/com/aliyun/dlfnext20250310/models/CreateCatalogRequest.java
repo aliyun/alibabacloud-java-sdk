@@ -17,6 +17,9 @@ public class CreateCatalogRequest extends TeaModel {
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
+    @NameInMap("type")
+    public String type;
+
     public static CreateCatalogRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateCatalogRequest self = new CreateCatalogRequest();
         return TeaModel.build(map, self);
@@ -44,6 +47,14 @@ public class CreateCatalogRequest extends TeaModel {
     }
     public java.util.Map<String, String> getOptions() {
         return this.options;
+    }
+
+    public CreateCatalogRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

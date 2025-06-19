@@ -3,12 +3,15 @@ package com.aliyun.dlfnext20250310.models;
 
 import com.aliyun.tea.*;
 
-public class Catalog extends TeaModel {
+public class IcebergTable extends TeaModel {
     @NameInMap("createdAt")
     public Long createdAt;
 
     @NameInMap("createdBy")
     public String createdBy;
+
+    @NameInMap("icebergTableMetadata")
+    public IcebergTableMetadata icebergTableMetadata;
 
     @NameInMap("id")
     public String id;
@@ -16,17 +19,11 @@ public class Catalog extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    @NameInMap("options")
-    public java.util.Map<String, String> options;
-
     @NameInMap("owner")
     public String owner;
 
-    @NameInMap("status")
-    public String status;
-
-    @NameInMap("type")
-    public String type;
+    @NameInMap("path")
+    public String path;
 
     @NameInMap("updatedAt")
     public Long updatedAt;
@@ -34,12 +31,15 @@ public class Catalog extends TeaModel {
     @NameInMap("updatedBy")
     public String updatedBy;
 
-    public static Catalog build(java.util.Map<String, ?> map) throws Exception {
-        Catalog self = new Catalog();
+    @NameInMap("version")
+    public Long version;
+
+    public static IcebergTable build(java.util.Map<String, ?> map) throws Exception {
+        IcebergTable self = new IcebergTable();
         return TeaModel.build(map, self);
     }
 
-    public Catalog setCreatedAt(Long createdAt) {
+    public IcebergTable setCreatedAt(Long createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -47,7 +47,7 @@ public class Catalog extends TeaModel {
         return this.createdAt;
     }
 
-    public Catalog setCreatedBy(String createdBy) {
+    public IcebergTable setCreatedBy(String createdBy) {
         this.createdBy = createdBy;
         return this;
     }
@@ -55,7 +55,15 @@ public class Catalog extends TeaModel {
         return this.createdBy;
     }
 
-    public Catalog setId(String id) {
+    public IcebergTable setIcebergTableMetadata(IcebergTableMetadata icebergTableMetadata) {
+        this.icebergTableMetadata = icebergTableMetadata;
+        return this;
+    }
+    public IcebergTableMetadata getIcebergTableMetadata() {
+        return this.icebergTableMetadata;
+    }
+
+    public IcebergTable setId(String id) {
         this.id = id;
         return this;
     }
@@ -63,7 +71,7 @@ public class Catalog extends TeaModel {
         return this.id;
     }
 
-    public Catalog setName(String name) {
+    public IcebergTable setName(String name) {
         this.name = name;
         return this;
     }
@@ -71,15 +79,7 @@ public class Catalog extends TeaModel {
         return this.name;
     }
 
-    public Catalog setOptions(java.util.Map<String, String> options) {
-        this.options = options;
-        return this;
-    }
-    public java.util.Map<String, String> getOptions() {
-        return this.options;
-    }
-
-    public Catalog setOwner(String owner) {
+    public IcebergTable setOwner(String owner) {
         this.owner = owner;
         return this;
     }
@@ -87,23 +87,15 @@ public class Catalog extends TeaModel {
         return this.owner;
     }
 
-    public Catalog setStatus(String status) {
-        this.status = status;
+    public IcebergTable setPath(String path) {
+        this.path = path;
         return this;
     }
-    public String getStatus() {
-        return this.status;
+    public String getPath() {
+        return this.path;
     }
 
-    public Catalog setType(String type) {
-        this.type = type;
-        return this;
-    }
-    public String getType() {
-        return this.type;
-    }
-
-    public Catalog setUpdatedAt(Long updatedAt) {
+    public IcebergTable setUpdatedAt(Long updatedAt) {
         this.updatedAt = updatedAt;
         return this;
     }
@@ -111,12 +103,20 @@ public class Catalog extends TeaModel {
         return this.updatedAt;
     }
 
-    public Catalog setUpdatedBy(String updatedBy) {
+    public IcebergTable setUpdatedBy(String updatedBy) {
         this.updatedBy = updatedBy;
         return this;
     }
     public String getUpdatedBy() {
         return this.updatedBy;
+    }
+
+    public IcebergTable setVersion(Long version) {
+        this.version = version;
+        return this;
+    }
+    public Long getVersion() {
+        return this.version;
     }
 
 }
