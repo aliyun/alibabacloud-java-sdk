@@ -3,7 +3,7 @@ package com.aliyun.dm20151123.models;
 
 import com.aliyun.tea.*;
 
-public class SingleSendMailRequest extends TeaModel {
+public class SingleSendMailAdvanceRequest extends TeaModel {
     /**
      * <p>The sending address configured in the management console.</p>
      * <p>This parameter is required.</p>
@@ -27,7 +27,7 @@ public class SingleSendMailRequest extends TeaModel {
     public Integer addressType;
 
     @NameInMap("Attachments")
-    public java.util.List<SingleSendMailRequestAttachments> attachments;
+    public java.util.List<SingleSendMailAdvanceRequestAttachments> attachments;
 
     /**
      * <p>1: Enable data tracking function</p>
@@ -179,12 +179,12 @@ public class SingleSendMailRequest extends TeaModel {
     @NameInMap("UnSubscribeLinkType")
     public String unSubscribeLinkType;
 
-    public static SingleSendMailRequest build(java.util.Map<String, ?> map) throws Exception {
-        SingleSendMailRequest self = new SingleSendMailRequest();
+    public static SingleSendMailAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
+        SingleSendMailAdvanceRequest self = new SingleSendMailAdvanceRequest();
         return TeaModel.build(map, self);
     }
 
-    public SingleSendMailRequest setAccountName(String accountName) {
+    public SingleSendMailAdvanceRequest setAccountName(String accountName) {
         this.accountName = accountName;
         return this;
     }
@@ -192,7 +192,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.accountName;
     }
 
-    public SingleSendMailRequest setAddressType(Integer addressType) {
+    public SingleSendMailAdvanceRequest setAddressType(Integer addressType) {
         this.addressType = addressType;
         return this;
     }
@@ -200,15 +200,15 @@ public class SingleSendMailRequest extends TeaModel {
         return this.addressType;
     }
 
-    public SingleSendMailRequest setAttachments(java.util.List<SingleSendMailRequestAttachments> attachments) {
+    public SingleSendMailAdvanceRequest setAttachments(java.util.List<SingleSendMailAdvanceRequestAttachments> attachments) {
         this.attachments = attachments;
         return this;
     }
-    public java.util.List<SingleSendMailRequestAttachments> getAttachments() {
+    public java.util.List<SingleSendMailAdvanceRequestAttachments> getAttachments() {
         return this.attachments;
     }
 
-    public SingleSendMailRequest setClickTrace(String clickTrace) {
+    public SingleSendMailAdvanceRequest setClickTrace(String clickTrace) {
         this.clickTrace = clickTrace;
         return this;
     }
@@ -216,7 +216,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.clickTrace;
     }
 
-    public SingleSendMailRequest setFromAlias(String fromAlias) {
+    public SingleSendMailAdvanceRequest setFromAlias(String fromAlias) {
         this.fromAlias = fromAlias;
         return this;
     }
@@ -224,7 +224,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.fromAlias;
     }
 
-    public SingleSendMailRequest setHeaders(String headers) {
+    public SingleSendMailAdvanceRequest setHeaders(String headers) {
         this.headers = headers;
         return this;
     }
@@ -232,7 +232,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.headers;
     }
 
-    public SingleSendMailRequest setHtmlBody(String htmlBody) {
+    public SingleSendMailAdvanceRequest setHtmlBody(String htmlBody) {
         this.htmlBody = htmlBody;
         return this;
     }
@@ -240,7 +240,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.htmlBody;
     }
 
-    public SingleSendMailRequest setIpPoolId(String ipPoolId) {
+    public SingleSendMailAdvanceRequest setIpPoolId(String ipPoolId) {
         this.ipPoolId = ipPoolId;
         return this;
     }
@@ -248,7 +248,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.ipPoolId;
     }
 
-    public SingleSendMailRequest setOwnerId(Long ownerId) {
+    public SingleSendMailAdvanceRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -256,7 +256,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public SingleSendMailRequest setReplyAddress(String replyAddress) {
+    public SingleSendMailAdvanceRequest setReplyAddress(String replyAddress) {
         this.replyAddress = replyAddress;
         return this;
     }
@@ -264,7 +264,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.replyAddress;
     }
 
-    public SingleSendMailRequest setReplyAddressAlias(String replyAddressAlias) {
+    public SingleSendMailAdvanceRequest setReplyAddressAlias(String replyAddressAlias) {
         this.replyAddressAlias = replyAddressAlias;
         return this;
     }
@@ -272,7 +272,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.replyAddressAlias;
     }
 
-    public SingleSendMailRequest setReplyToAddress(Boolean replyToAddress) {
+    public SingleSendMailAdvanceRequest setReplyToAddress(Boolean replyToAddress) {
         this.replyToAddress = replyToAddress;
         return this;
     }
@@ -280,7 +280,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.replyToAddress;
     }
 
-    public SingleSendMailRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public SingleSendMailAdvanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -288,7 +288,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public SingleSendMailRequest setResourceOwnerId(Long resourceOwnerId) {
+    public SingleSendMailAdvanceRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -296,7 +296,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public SingleSendMailRequest setSubject(String subject) {
+    public SingleSendMailAdvanceRequest setSubject(String subject) {
         this.subject = subject;
         return this;
     }
@@ -304,7 +304,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.subject;
     }
 
-    public SingleSendMailRequest setTagName(String tagName) {
+    public SingleSendMailAdvanceRequest setTagName(String tagName) {
         this.tagName = tagName;
         return this;
     }
@@ -312,7 +312,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.tagName;
     }
 
-    public SingleSendMailRequest setTextBody(String textBody) {
+    public SingleSendMailAdvanceRequest setTextBody(String textBody) {
         this.textBody = textBody;
         return this;
     }
@@ -320,7 +320,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.textBody;
     }
 
-    public SingleSendMailRequest setToAddress(String toAddress) {
+    public SingleSendMailAdvanceRequest setToAddress(String toAddress) {
         this.toAddress = toAddress;
         return this;
     }
@@ -328,7 +328,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.toAddress;
     }
 
-    public SingleSendMailRequest setUnSubscribeFilterLevel(String unSubscribeFilterLevel) {
+    public SingleSendMailAdvanceRequest setUnSubscribeFilterLevel(String unSubscribeFilterLevel) {
         this.unSubscribeFilterLevel = unSubscribeFilterLevel;
         return this;
     }
@@ -336,7 +336,7 @@ public class SingleSendMailRequest extends TeaModel {
         return this.unSubscribeFilterLevel;
     }
 
-    public SingleSendMailRequest setUnSubscribeLinkType(String unSubscribeLinkType) {
+    public SingleSendMailAdvanceRequest setUnSubscribeLinkType(String unSubscribeLinkType) {
         this.unSubscribeLinkType = unSubscribeLinkType;
         return this;
     }
@@ -344,19 +344,19 @@ public class SingleSendMailRequest extends TeaModel {
         return this.unSubscribeLinkType;
     }
 
-    public static class SingleSendMailRequestAttachments extends TeaModel {
+    public static class SingleSendMailAdvanceRequestAttachments extends TeaModel {
         @NameInMap("AttachmentName")
         public String attachmentName;
 
         @NameInMap("AttachmentUrl")
-        public String attachmentUrl;
+        public java.io.InputStream attachmentUrlObject;
 
-        public static SingleSendMailRequestAttachments build(java.util.Map<String, ?> map) throws Exception {
-            SingleSendMailRequestAttachments self = new SingleSendMailRequestAttachments();
+        public static SingleSendMailAdvanceRequestAttachments build(java.util.Map<String, ?> map) throws Exception {
+            SingleSendMailAdvanceRequestAttachments self = new SingleSendMailAdvanceRequestAttachments();
             return TeaModel.build(map, self);
         }
 
-        public SingleSendMailRequestAttachments setAttachmentName(String attachmentName) {
+        public SingleSendMailAdvanceRequestAttachments setAttachmentName(String attachmentName) {
             this.attachmentName = attachmentName;
             return this;
         }
@@ -364,12 +364,12 @@ public class SingleSendMailRequest extends TeaModel {
             return this.attachmentName;
         }
 
-        public SingleSendMailRequestAttachments setAttachmentUrl(String attachmentUrl) {
-            this.attachmentUrl = attachmentUrl;
+        public SingleSendMailAdvanceRequestAttachments setAttachmentUrlObject(java.io.InputStream attachmentUrlObject) {
+            this.attachmentUrlObject = attachmentUrlObject;
             return this;
         }
-        public String getAttachmentUrl() {
-            return this.attachmentUrl;
+        public java.io.InputStream getAttachmentUrlObject() {
+            return this.attachmentUrlObject;
         }
 
     }
