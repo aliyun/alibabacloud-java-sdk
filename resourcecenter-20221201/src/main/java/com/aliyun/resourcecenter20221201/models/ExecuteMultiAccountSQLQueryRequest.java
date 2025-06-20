@@ -17,6 +17,10 @@ public class ExecuteMultiAccountSQLQueryRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>The maximum number of entries to return on each page.</p>
+     * <p>Valid values: 1 to 1000.</p>
+     * <p>Default value: 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -24,6 +28,8 @@ public class ExecuteMultiAccountSQLQueryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */

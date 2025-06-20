@@ -104,6 +104,9 @@ public class ListResourceTypesResponseBody extends TeaModel {
         @NameInMap("ProductName")
         public String productName;
 
+        /**
+         * <p>The name of supported related resource types.</p>
+         */
         @NameInMap("RelatedResourceTypes")
         public java.util.List<String> relatedResourceTypes;
 

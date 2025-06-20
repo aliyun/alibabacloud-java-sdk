@@ -55,12 +55,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateDefaultFilterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AssociateDefaultFilterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateDefaultFilterResponse());
     }
 
     /**
@@ -73,6 +68,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AssociateDefaultFilterResponse associateDefaultFilter(AssociateDefaultFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.associateDefaultFilterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建投递渠道</p>
+     * 
+     * @param request CreateDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateDeliveryChannelResponse
+     */
+    public CreateDeliveryChannelResponse createDeliveryChannelWithOptions(CreateDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelDescription)) {
+            query.put("DeliveryChannelDescription", request.deliveryChannelDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelFilter)) {
+            query.put("DeliveryChannelFilter", request.deliveryChannelFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelName)) {
+            query.put("DeliveryChannelName", request.deliveryChannelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceChangeDelivery)) {
+            query.put("ResourceChangeDelivery", request.resourceChangeDelivery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSnapshotDelivery)) {
+            query.put("ResourceSnapshotDelivery", request.resourceSnapshotDelivery);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建投递渠道</p>
+     * 
+     * @param request CreateDeliveryChannelRequest
+     * @return CreateDeliveryChannelResponse
+     */
+    public CreateDeliveryChannelResponse createDeliveryChannel(CreateDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
@@ -108,12 +163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFilterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateFilterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateFilterResponse());
     }
 
     /**
@@ -126,6 +176,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateFilterResponse createFilter(CreateFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createFilterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建多账号投递渠道</p>
+     * 
+     * @param request CreateMultiAccountDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateMultiAccountDeliveryChannelResponse
+     */
+    public CreateMultiAccountDeliveryChannelResponse createMultiAccountDeliveryChannelWithOptions(CreateMultiAccountDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelDescription)) {
+            query.put("DeliveryChannelDescription", request.deliveryChannelDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelFilter)) {
+            query.put("DeliveryChannelFilter", request.deliveryChannelFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelName)) {
+            query.put("DeliveryChannelName", request.deliveryChannelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceChangeDelivery)) {
+            query.put("ResourceChangeDelivery", request.resourceChangeDelivery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSnapshotDelivery)) {
+            query.put("ResourceSnapshotDelivery", request.resourceSnapshotDelivery);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateMultiAccountDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMultiAccountDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建多账号投递渠道</p>
+     * 
+     * @param request CreateMultiAccountDeliveryChannelRequest
+     * @return CreateMultiAccountDeliveryChannelResponse
+     */
+    public CreateMultiAccountDeliveryChannelResponse createMultiAccountDeliveryChannel(CreateMultiAccountDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createMultiAccountDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
@@ -165,12 +275,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSavedQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateSavedQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSavedQueryResponse());
     }
 
     /**
@@ -183,6 +288,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateSavedQueryResponse createSavedQuery(CreateSavedQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createSavedQueryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除投递渠道</p>
+     * 
+     * @param request DeleteDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteDeliveryChannelResponse
+     */
+    public DeleteDeliveryChannelResponse deleteDeliveryChannelWithOptions(DeleteDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除投递渠道</p>
+     * 
+     * @param request DeleteDeliveryChannelRequest
+     * @return DeleteDeliveryChannelResponse
+     */
+    public DeleteDeliveryChannelResponse deleteDeliveryChannel(DeleteDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
@@ -214,12 +363,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFilterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteFilterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFilterResponse());
     }
 
     /**
@@ -232,6 +376,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteFilterResponse deleteFilter(DeleteFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteFilterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除多账号投递渠道</p>
+     * 
+     * @param request DeleteMultiAccountDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteMultiAccountDeliveryChannelResponse
+     */
+    public DeleteMultiAccountDeliveryChannelResponse deleteMultiAccountDeliveryChannelWithOptions(DeleteMultiAccountDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteMultiAccountDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMultiAccountDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除多账号投递渠道</p>
+     * 
+     * @param request DeleteMultiAccountDeliveryChannelRequest
+     * @return DeleteMultiAccountDeliveryChannelResponse
+     */
+    public DeleteMultiAccountDeliveryChannelResponse deleteMultiAccountDeliveryChannel(DeleteMultiAccountDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteMultiAccountDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
@@ -263,12 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSavedQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteSavedQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSavedQueryResponse());
     }
 
     /**
@@ -304,12 +487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableMultiAccountResourceCenterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DisableMultiAccountResourceCenterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableMultiAccountResourceCenterResponse());
     }
 
     /**
@@ -343,12 +521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DisableResourceCenterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DisableResourceCenterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableResourceCenterResponse());
     }
 
     /**
@@ -382,12 +555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateDefaultFilterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DisassociateDefaultFilterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisassociateDefaultFilterResponse());
     }
 
     /**
@@ -424,12 +592,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableMultiAccountResourceCenterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EnableMultiAccountResourceCenterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableMultiAccountResourceCenterResponse());
     }
 
     /**
@@ -466,12 +629,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EnableResourceCenterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EnableResourceCenterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableResourceCenterResponse());
     }
 
     /**
@@ -525,12 +683,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteMultiAccountSQLQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ExecuteMultiAccountSQLQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteMultiAccountSQLQueryResponse());
     }
 
     /**
@@ -586,12 +739,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteSQLQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ExecuteSQLQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteSQLQueryResponse());
     }
 
     /**
@@ -604,6 +752,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteSQLQueryResponse executeSQLQuery(ExecuteSQLQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeSQLQueryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询投递渠道</p>
+     * 
+     * @param request GetDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeliveryChannelResponse
+     */
+    public GetDeliveryChannelResponse getDeliveryChannelWithOptions(GetDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询投递渠道</p>
+     * 
+     * @param request GetDeliveryChannelRequest
+     * @return GetDeliveryChannelResponse
+     */
+    public GetDeliveryChannelResponse getDeliveryChannel(GetDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeliveryChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询投递渠道统计信息</p>
+     * 
+     * @param request GetDeliveryChannelStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeliveryChannelStatisticsResponse
+     */
+    public GetDeliveryChannelStatisticsResponse getDeliveryChannelStatisticsWithOptions(GetDeliveryChannelStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeliveryChannelStatistics"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeliveryChannelStatisticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询投递渠道统计信息</p>
+     * 
+     * @param request GetDeliveryChannelStatisticsRequest
+     * @return GetDeliveryChannelStatisticsResponse
+     */
+    public GetDeliveryChannelStatisticsResponse getDeliveryChannelStatistics(GetDeliveryChannelStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeliveryChannelStatisticsWithOptions(request, runtime);
     }
 
     /**
@@ -635,12 +871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetExampleQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetExampleQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetExampleQueryResponse());
     }
 
     /**
@@ -653,6 +884,94 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetExampleQueryResponse getExampleQuery(GetExampleQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getExampleQueryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询多账号投递渠道</p>
+     * 
+     * @param request GetMultiAccountDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultiAccountDeliveryChannelResponse
+     */
+    public GetMultiAccountDeliveryChannelResponse getMultiAccountDeliveryChannelWithOptions(GetMultiAccountDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMultiAccountDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询多账号投递渠道</p>
+     * 
+     * @param request GetMultiAccountDeliveryChannelRequest
+     * @return GetMultiAccountDeliveryChannelResponse
+     */
+    public GetMultiAccountDeliveryChannelResponse getMultiAccountDeliveryChannel(GetMultiAccountDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMultiAccountDeliveryChannelWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询多账号投递渠道统计信息</p>
+     * 
+     * @param request GetMultiAccountDeliveryChannelStatisticsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultiAccountDeliveryChannelStatisticsResponse
+     */
+    public GetMultiAccountDeliveryChannelStatisticsResponse getMultiAccountDeliveryChannelStatisticsWithOptions(GetMultiAccountDeliveryChannelStatisticsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMultiAccountDeliveryChannelStatistics"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountDeliveryChannelStatisticsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询多账号投递渠道统计信息</p>
+     * 
+     * @param request GetMultiAccountDeliveryChannelStatisticsRequest
+     * @return GetMultiAccountDeliveryChannelStatisticsResponse
+     */
+    public GetMultiAccountDeliveryChannelStatisticsResponse getMultiAccountDeliveryChannelStatistics(GetMultiAccountDeliveryChannelStatisticsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMultiAccountDeliveryChannelStatisticsWithOptions(request, runtime);
     }
 
     /**
@@ -676,12 +995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceCenterServiceStatusResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetMultiAccountResourceCenterServiceStatusResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceCenterServiceStatusResponse());
     }
 
     /**
@@ -735,12 +1049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceConfigurationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetMultiAccountResourceConfigurationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceConfigurationResponse());
     }
 
     /**
@@ -776,12 +1085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceCenterServiceStatusResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceCenterServiceStatusResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceCenterServiceStatusResponse());
     }
 
     /**
@@ -831,12 +1135,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceConfigurationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceConfigurationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceConfigurationResponse());
     }
 
     /**
@@ -884,12 +1183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceCountsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetResourceCountsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetResourceCountsResponse());
     }
 
     /**
@@ -933,12 +1227,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetSavedQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetSavedQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSavedQueryResponse());
     }
 
     /**
@@ -951,6 +1240,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetSavedQueryResponse getSavedQuery(GetSavedQueryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSavedQueryWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出投递渠道</p>
+     * 
+     * @param request ListDeliveryChannelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListDeliveryChannelsResponse
+     */
+    public ListDeliveryChannelsResponse listDeliveryChannelsWithOptions(ListDeliveryChannelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListDeliveryChannels"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListDeliveryChannelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出投递渠道</p>
+     * 
+     * @param request ListDeliveryChannelsRequest
+     * @return ListDeliveryChannelsResponse
+     */
+    public ListDeliveryChannelsResponse listDeliveryChannels(ListDeliveryChannelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listDeliveryChannelsWithOptions(request, runtime);
     }
 
     /**
@@ -986,12 +1323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListExampleQueriesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListExampleQueriesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListExampleQueriesResponse());
     }
 
     /**
@@ -1027,12 +1359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListFiltersResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListFiltersResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFiltersResponse());
     }
 
     /**
@@ -1043,6 +1370,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFiltersResponse listFilters() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFiltersWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出多账号投递渠道</p>
+     * 
+     * @param request ListMultiAccountDeliveryChannelsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListMultiAccountDeliveryChannelsResponse
+     */
+    public ListMultiAccountDeliveryChannelsResponse listMultiAccountDeliveryChannelsWithOptions(ListMultiAccountDeliveryChannelsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListMultiAccountDeliveryChannels"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountDeliveryChannelsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出多账号投递渠道</p>
+     * 
+     * @param request ListMultiAccountDeliveryChannelsRequest
+     * @return ListMultiAccountDeliveryChannelsResponse
+     */
+    public ListMultiAccountDeliveryChannelsResponse listMultiAccountDeliveryChannels(ListMultiAccountDeliveryChannelsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listMultiAccountDeliveryChannelsWithOptions(request, runtime);
     }
 
     /**
@@ -1086,12 +1461,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountResourceGroupsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListMultiAccountResourceGroupsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountResourceGroupsResponse());
     }
 
     /**
@@ -1107,8 +1477,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>跨账号列出资源关系</p>
+     * <p>Queries the relationships between resources within the management account or members of your resource directory.</p>
      * 
      * @param request ListMultiAccountResourceRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1159,17 +1537,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountResourceRelationshipsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListMultiAccountResourceRelationshipsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountResourceRelationshipsResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>跨账号列出资源关系</p>
+     * <p>Queries the relationships between resources within the management account or members of your resource directory.</p>
      * 
      * @param request ListMultiAccountResourceRelationshipsRequest
      * @return ListMultiAccountResourceRelationshipsResponse
@@ -1181,7 +1562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * <p>Queries the tag keys of resources within the management account or a member of your resource directory.</p>
      * 
      * @param request ListMultiAccountTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1224,17 +1605,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountTagKeysResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListMultiAccountTagKeysResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountTagKeysResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the tag keys of resources within the management account or a member of a resource directory by using the management account of the resource directory or a delegated administrator account of Resource Center.</p>
+     * <p>Queries the tag keys of resources within the management account or a member of your resource directory.</p>
      * 
      * @param request ListMultiAccountTagKeysRequest
      * @return ListMultiAccountTagKeysResponse
@@ -1293,12 +1669,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountTagValuesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListMultiAccountTagValuesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListMultiAccountTagValuesResponse());
     }
 
     /**
@@ -1314,8 +1685,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query only the resource relationships on which the current account has access permissions.</p>
+     * <ul>
+     * <li>By default, this operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Entries that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列出资源关系</p>
+     * <p>Queries a list of resource relationships on which the current account has access permissions.</p>
      * 
      * @param request ListResourceRelationshipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1362,17 +1741,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceRelationshipsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListResourceRelationshipsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceRelationshipsResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query only the resource relationships on which the current account has access permissions.</p>
+     * <ul>
+     * <li>By default, this operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Entries that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>列出资源关系</p>
+     * <p>Queries a list of resource relationships on which the current account has access permissions.</p>
      * 
      * @param request ListResourceRelationshipsRequest
      * @return ListResourceRelationshipsResponse
@@ -1384,7 +1766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata of resource types.</p>
+     * <p>Queries the metadata of resource types</p>
      * 
      * @param request ListResourceTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1419,17 +1801,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListResourceTypesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourceTypesResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the metadata of resource types.</p>
+     * <p>Queries the metadata of resource types</p>
      * 
      * @param request ListResourceTypesRequest
      * @return ListResourceTypesResponse
@@ -1472,12 +1849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSavedQueriesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListSavedQueriesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSavedQueriesResponse());
     }
 
     /**
@@ -1533,12 +1905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagKeysResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
     }
 
     /**
@@ -1598,12 +1965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagValuesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
     }
 
     /**
@@ -1673,12 +2035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMultiAccountResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SearchMultiAccountResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchMultiAccountResourcesResponse());
     }
 
     /**
@@ -1757,12 +2114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new SearchResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new SearchResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchResourcesResponse());
     }
 
     /**
@@ -1784,6 +2136,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchResourcesResponse searchResources(SearchResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新投递渠道</p>
+     * 
+     * @param request UpdateDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateDeliveryChannelResponse
+     */
+    public UpdateDeliveryChannelResponse updateDeliveryChannelWithOptions(UpdateDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelDescription)) {
+            query.put("DeliveryChannelDescription", request.deliveryChannelDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelFilter)) {
+            query.put("DeliveryChannelFilter", request.deliveryChannelFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelName)) {
+            query.put("DeliveryChannelName", request.deliveryChannelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceChangeDelivery)) {
+            query.put("ResourceChangeDelivery", request.resourceChangeDelivery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSnapshotDelivery)) {
+            query.put("ResourceSnapshotDelivery", request.resourceSnapshotDelivery);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新投递渠道</p>
+     * 
+     * @param request UpdateDeliveryChannelRequest
+     * @return UpdateDeliveryChannelResponse
+     */
+    public UpdateDeliveryChannelResponse updateDeliveryChannel(UpdateDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
@@ -1819,12 +2235,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFilterResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateFilterResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateFilterResponse());
     }
 
     /**
@@ -1837,6 +2248,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateFilterResponse updateFilter(UpdateFilterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateFilterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新多账号投递渠道</p>
+     * 
+     * @param request UpdateMultiAccountDeliveryChannelRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateMultiAccountDeliveryChannelResponse
+     */
+    public UpdateMultiAccountDeliveryChannelResponse updateMultiAccountDeliveryChannelWithOptions(UpdateMultiAccountDeliveryChannelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelDescription)) {
+            query.put("DeliveryChannelDescription", request.deliveryChannelDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelFilter)) {
+            query.put("DeliveryChannelFilter", request.deliveryChannelFilter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelId)) {
+            query.put("DeliveryChannelId", request.deliveryChannelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryChannelName)) {
+            query.put("DeliveryChannelName", request.deliveryChannelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceChangeDelivery)) {
+            query.put("ResourceChangeDelivery", request.resourceChangeDelivery);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSnapshotDelivery)) {
+            query.put("ResourceSnapshotDelivery", request.resourceSnapshotDelivery);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateMultiAccountDeliveryChannel"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateMultiAccountDeliveryChannelResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新多账号投递渠道</p>
+     * 
+     * @param request UpdateMultiAccountDeliveryChannelRequest
+     * @return UpdateMultiAccountDeliveryChannelResponse
+     */
+    public UpdateMultiAccountDeliveryChannelResponse updateMultiAccountDeliveryChannel(UpdateMultiAccountDeliveryChannelRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateMultiAccountDeliveryChannelWithOptions(request, runtime);
     }
 
     /**
@@ -1880,12 +2355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSavedQueryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateSavedQueryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateSavedQueryResponse());
     }
 
     /**

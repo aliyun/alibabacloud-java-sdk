@@ -170,6 +170,9 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
     public static class SearchMultiAccountResourcesResponseBodyResourcesIpAddressAttributes extends TeaModel {
         /**
          * <p>The IP address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.2</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;

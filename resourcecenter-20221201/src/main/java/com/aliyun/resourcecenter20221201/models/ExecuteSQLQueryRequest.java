@@ -17,6 +17,12 @@ public class ExecuteSQLQueryRequest extends TeaModel {
     public String expression;
 
     /**
+     * <p>The number of entries per page.</p>
+     * <ul>
+     * <li>Valid values: 1 to 1000.</li>
+     * <li>Default value: 1000.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -24,6 +30,8 @@ public class ExecuteSQLQueryRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */

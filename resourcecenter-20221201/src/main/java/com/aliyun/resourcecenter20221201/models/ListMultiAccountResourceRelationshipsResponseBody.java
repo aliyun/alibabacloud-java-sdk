@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +14,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
     public Integer maxResults;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */
@@ -19,16 +23,29 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BCAB07BA-82FA-5DC0-9322-FB7ED726481D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource relationships.</p>
+     */
     @NameInMap("ResourceRelationships")
     public java.util.List<ListMultiAccountResourceRelationshipsResponseBodyResourceRelationships> resourceRelationships;
 
     /**
+     * <p>The search scope. Valid values:</p>
+     * <ul>
+     * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</li>
+     * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</li>
+     * <li>ID of a folder: Resources within all members in the folder are searched.</li>
+     * <li>ID of a member: Resources within the member are searched.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>rd-r4****</p>
      */
@@ -82,6 +99,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
 
     public static class ListMultiAccountResourceRelationshipsResponseBodyResourceRelationships extends TeaModel {
         /**
+         * <p>The ID of the management account or member.</p>
+         * 
          * <strong>example:</strong>
          * <p>193396142051****</p>
          */
@@ -89,6 +108,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         public String accountId;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -96,6 +117,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         public String regionId;
 
         /**
+         * <p>The ID of the associated resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-uf6m5okksddm6c9lh7***</p>
          */
@@ -103,6 +126,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         public String relatedResourceId;
 
         /**
+         * <p>The region ID of the associated resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -110,6 +135,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         public String relatedResourceRegionId;
 
         /**
+         * <p>The type of the associated resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::VPC::VPC</p>
          */
@@ -117,6 +144,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         public String relatedResourceType;
 
         /**
+         * <p>The ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>m-eb3hji****</p>
          */
@@ -124,6 +153,8 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         public String resourceId;
 
         /**
+         * <p>The type of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACS::ACK::Cluster</p>
          */

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListResourceRelationshipsRequest extends TeaModel {
     /**
+     * <p>The maximum number of entries per page.</p>
+     * <p>Valid values: 1 to 500.</p>
+     * <p>Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,6 +16,8 @@ public class ListResourceRelationshipsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * 
      * <strong>example:</strong>
      * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
      */
@@ -19,6 +25,7 @@ public class ListResourceRelationshipsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,10 +34,14 @@ public class ListResourceRelationshipsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The filter conditions for resources associated with the resource.</p>
+     */
     @NameInMap("RelatedResourceFilter")
     public java.util.List<ListResourceRelationshipsRequestRelatedResourceFilter> relatedResourceFilter;
 
     /**
+     * <p>The ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,6 +51,7 @@ public class ListResourceRelationshipsRequest extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The type of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,6 +115,8 @@ public class ListResourceRelationshipsRequest extends TeaModel {
 
     public static class ListResourceRelationshipsRequestRelatedResourceFilter extends TeaModel {
         /**
+         * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>RelatedResourceRegionId</p>
          */
@@ -110,12 +124,17 @@ public class ListResourceRelationshipsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The matching method.</p>
+         * 
          * <strong>example:</strong>
          * <p>Equals</p>
          */
         @NameInMap("MatchType")
         public String matchType;
 
+        /**
+         * <p>The values of the filter condition.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 
