@@ -149,6 +149,18 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4n7pokxxxxxxxxxxxxxx</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
          * <p>The version of the resource change.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +168,18 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
          */
         @NameInMap("Version")
         public Long version;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nhheyvay74fp7n0hxxx</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList build(java.util.Map<String, ?> map) throws Exception {
             ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList self = new ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList();
@@ -250,12 +274,28 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVersion(Long version) {
             this.version = version;
             return this;
         }
         public Long getVersion() {
             return this.version;
+        }
+
+        public ListDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

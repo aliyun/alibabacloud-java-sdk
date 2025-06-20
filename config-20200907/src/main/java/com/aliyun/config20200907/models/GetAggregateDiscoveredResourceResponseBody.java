@@ -164,6 +164,25 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         @NameInMap("Tags")
         public String tags;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4n7pokxxxxxxxxxxxxxx</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>vpc-t4nhheyvay74fp7n0hxxx</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
+
         public static GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail build(java.util.Map<String, ?> map) throws Exception {
             GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail self = new GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail();
             return TeaModel.build(map, self);
@@ -263,6 +282,22 @@ public class GetAggregateDiscoveredResourceResponseBody extends TeaModel {
         }
         public String getTags() {
             return this.tags;
+        }
+
+        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public GetAggregateDiscoveredResourceResponseBodyDiscoveredResourceDetail setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }

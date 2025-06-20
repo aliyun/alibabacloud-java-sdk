@@ -158,6 +158,18 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-t4n7pokxxxxxxxxxxxxxx</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        /**
          * <p>The build version of the resource.</p>
          * 
          * <strong>example:</strong>
@@ -165,6 +177,18 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
          */
         @NameInMap("Version")
         public Long version;
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-t4nhheyvay74fp7n0hxxx</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList build(java.util.Map<String, ?> map) throws Exception {
             ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList self = new ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList();
@@ -267,12 +291,28 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
             return this.updateTime;
         }
 
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
         public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVersion(Long version) {
             this.version = version;
             return this;
         }
         public Long getVersion() {
             return this.version;
+        }
+
+        public ListAggregateDiscoveredResourcesResponseBodyDiscoveredResourceProfilesDiscoveredResourceProfileList setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
