@@ -120,6 +120,9 @@ public class ListAppEventsResponseBody extends TeaModel {
     }
 
     public static class ListAppEventsResponseBodyDataAppEventEntity extends TeaModel {
+        @NameInMap("CauseAnalysis")
+        public String causeAnalysis;
+
         /**
          * <p>The type of the event. Valid values:</p>
          * 
@@ -186,6 +189,14 @@ public class ListAppEventsResponseBody extends TeaModel {
         public static ListAppEventsResponseBodyDataAppEventEntity build(java.util.Map<String, ?> map) throws Exception {
             ListAppEventsResponseBodyDataAppEventEntity self = new ListAppEventsResponseBodyDataAppEventEntity();
             return TeaModel.build(map, self);
+        }
+
+        public ListAppEventsResponseBodyDataAppEventEntity setCauseAnalysis(String causeAnalysis) {
+            this.causeAnalysis = causeAnalysis;
+            return this;
+        }
+        public String getCauseAnalysis() {
+            return this.causeAnalysis;
         }
 
         public ListAppEventsResponseBodyDataAppEventEntity setEventType(String eventType) {
