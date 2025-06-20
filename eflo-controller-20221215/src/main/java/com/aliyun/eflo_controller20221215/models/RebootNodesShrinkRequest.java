@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RebootNodesShrinkRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i15b480fbd2fcdbc2869cd80</p>
@@ -14,7 +14,7 @@ public class RebootNodesShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class RebootNodesShrinkRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>List of nodes</p>
+     * <p>The nodes.</p>
      */
     @NameInMap("Nodes")
     public String nodesShrink;

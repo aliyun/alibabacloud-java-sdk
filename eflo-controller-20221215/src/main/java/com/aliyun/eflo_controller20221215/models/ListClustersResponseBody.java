@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListClustersResponseBody extends TeaModel {
     /**
-     * <p>Cluster information</p>
+     * <p>The clusters.</p>
      */
     @NameInMap("Clusters")
     public java.util.List<ListClustersResponseBodyClusters> clusters;
 
     /**
-     * <p>The query token value returned by this call.</p>
+     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>f4f9a292c17072a2</p>
@@ -20,7 +20,7 @@ public class ListClustersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2FE2B22C-CF9D-59DE-BF63-DC9B9B33A9D1</p>
@@ -59,7 +59,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClustersTags extends TeaModel {
         /**
-         * <p>The key of tag object</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>aa_key</p>
@@ -68,7 +68,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag object</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>aa_value</p>
@@ -101,7 +101,7 @@ public class ListClustersResponseBody extends TeaModel {
 
     public static class ListClustersResponseBodyClusters extends TeaModel {
         /**
-         * <p>Cluster description</p>
+         * <p>The cluster description.</p>
          * 
          * <strong>example:</strong>
          * <p>PPU-cluster2 bz</p>
@@ -110,7 +110,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterDescription;
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i137590131672134915401</p>
@@ -119,7 +119,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Cluster name</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>cnp_test_cluster</p>
@@ -128,7 +128,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>Cluster type</p>
+         * <p>The cluster type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AckEdgePro</li>
+         * <li>ExclusiveBareCluster</li>
+         * <li>Lite</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>AckEdgePro</p>
@@ -137,7 +143,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String clusterType;
 
         /**
-         * <p>Component information</p>
+         * <p>The component information.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -146,7 +152,7 @@ public class ListClustersResponseBody extends TeaModel {
         public Object components;
 
         /**
-         * <p>IP version of the computing network</p>
+         * <p>The IP type of the computing network.</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -155,7 +161,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String computingIpVersion;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1672134938</p>
@@ -164,7 +170,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Cluster number</p>
+         * <p>The cluster number.</p>
          * 
          * <strong>example:</strong>
          * <p>B1</p>
@@ -173,7 +179,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
-         * <p>Number of nodes</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -182,7 +188,7 @@ public class ListClustersResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
-         * <p>Number of node groups</p>
+         * <p>The number of node groups.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -191,7 +197,14 @@ public class ListClustersResponseBody extends TeaModel {
         public Long nodeGroupCount;
 
         /**
-         * <p>Cluster status</p>
+         * <p>The cluster status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>running</li>
+         * <li>expanding</li>
+         * <li>shrinking</li>
+         * <li>initializing</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>initializing</p>
@@ -200,7 +213,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String operatingState;
 
         /**
-         * <p>Resource group ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2ajbjoloa23q</p>
@@ -209,13 +222,13 @@ public class ListClustersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>tag information</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListClustersResponseBodyClustersTags> tags;
 
         /**
-         * <p>Task ID</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i156365121663149566024</p>
@@ -224,7 +237,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>Update time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1672134968</p>
@@ -233,7 +246,7 @@ public class ListClustersResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>VPC ID</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jlx4hol2bjboafzmffvd</p>

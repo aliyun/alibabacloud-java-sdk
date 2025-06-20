@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,11 @@ public class CreateNodeGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Node ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public CreateNodeGroupRequestNodeGroup nodeGroup;
 
-    /**
-     * <p>Node information</p>
-     */
     @NameInMap("NodeUnit")
     public java.util.Map<String, ?> nodeUnit;
 
@@ -58,7 +54,9 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     public static class CreateNodeGroupRequestNodeGroupSystemDisk extends TeaModel {
         /**
-         * <p>Disk performance level</p>
+         * <ul>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -67,13 +65,10 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level of the disk if the disk is an ESSD. Valid values:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li></li>
+         * <li></li>
          * </ul>
-         * <p>Default value: PL1.</p>
-         * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>PL!</p>
@@ -82,8 +77,6 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>System disk size</p>
-         * 
          * <strong>example:</strong>
          * <p>250</p>
          */
@@ -123,7 +116,6 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     public static class CreateNodeGroupRequestNodeGroup extends TeaModel {
         /**
-         * <p>Availability Zone</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -133,7 +125,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String az;
 
         /**
-         * <p>Whether file storage mounting is supported</p>
+         * <p>Indicates whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -142,7 +134,6 @@ public class CreateNodeGroupRequest extends TeaModel {
         public Boolean fileSystemMountEnabled;
 
         /**
-         * <p>Image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,8 +143,6 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The name of the key pair.</p>
-         * 
          * <strong>example:</strong>
          * <p>test-keypair</p>
          */
@@ -164,7 +153,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>Machine type</p>
+         * <p>The instance type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,8 +163,6 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String machineType;
 
         /**
-         * <p>Node group description</p>
-         * 
          * <strong>example:</strong>
          * <p>describe for node group</p>
          */
@@ -183,7 +170,6 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String nodeGroupDescription;
 
         /**
-         * <p>Node group name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,15 +178,10 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
-        /**
-         * <p>SystemDisk</p>
-         */
         @NameInMap("SystemDisk")
         public CreateNodeGroupRequestNodeGroupSystemDisk systemDisk;
 
         /**
-         * <p>user data</p>
-         * 
          * <strong>example:</strong>
          * <p>#!/bin/bash
          * uptime

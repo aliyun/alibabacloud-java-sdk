@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticTaskRequest extends TeaModel {
     /**
-     * <p>Log information</p>
+     * <p>The log information.</p>
      */
     @NameInMap("AiJobLogInfo")
     public CreateDiagnosticTaskRequestAiJobLogInfo aiJobLogInfo;
 
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i118913031696573280136</p>
@@ -20,7 +20,7 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Diagnostic type.</p>
+     * <p>The diagnostics type.</p>
      * 
      * <strong>example:</strong>
      * <p>CheckByAiJobLogs</p>
@@ -29,7 +29,7 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
     public String diagnosticType;
 
     /**
-     * <p>List of node IDs</p>
+     * <p>The IDs of the nodes.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
@@ -73,7 +73,7 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
 
     public static class CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogsLogs extends TeaModel {
         /**
-         * <p>Sent date, in the format yyyymmdd.</p>
+         * <p>The sending date in the yyyymmdd format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-08-05T10:10:01</p>
@@ -82,7 +82,7 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
         public String datetime;
 
         /**
-         * <p>Log content</p>
+         * <p>The log content.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -115,7 +115,7 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
 
     public static class CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogs extends TeaModel {
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -124,13 +124,13 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
         public String aiInstance;
 
         /**
-         * <p>Log object</p>
+         * <p>The logs.</p>
          */
         @NameInMap("Logs")
         public java.util.List<CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogsLogs> logs;
 
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-tw-p2p2al5u1hn</p>
@@ -171,15 +171,15 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
 
     public static class CreateDiagnosticTaskRequestAiJobLogInfo extends TeaModel {
         /**
-         * <p>Task logs</p>
+         * <p>The task logs.</p>
          */
         @NameInMap("AiJobLogs")
         public java.util.List<CreateDiagnosticTaskRequestAiJobLogInfoAiJobLogs> aiJobLogs;
 
         /**
-         * <p>End time. In timestamp format, unit: seconds.</p>
+         * <p>The end time. The value is in the timestamp format. Unit: seconds.</p>
          * <blockquote>
-         * <p>Must be on the hour or half-hour mark.</p>
+         * <p> This timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,9 +189,9 @@ public class CreateDiagnosticTaskRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>Start time. In timestamp format, unit: seconds.</p>
+         * <p>The start time. The value is in the timestamp format. Unit: seconds.</p>
          * <blockquote>
-         * <p>Must be on the hour or half-hour mark.</p>
+         * <p> This timestamp must indicate a point in time that is accurate to the minute.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

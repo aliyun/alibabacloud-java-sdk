@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Whether to remove all, only effective when TagKey.N is empty. Valid values:</p>
+     * <p>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is not specified. Valid values:</p>
      * <ul>
-     * <li>True, remove all</li>
-     * <li>False, do not remove all</li>
+     * <li>True</li>
+     * <li>False</li>
      * </ul>
-     * <p>Default is False</p>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -19,7 +19,7 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,14 +29,19 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>List of resource IDs</p>
+     * <p>The resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>Resource type</p>
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Node</li>
+     * <li>Cluster</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +51,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>List of tag keys</p>
+     * <p>The tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

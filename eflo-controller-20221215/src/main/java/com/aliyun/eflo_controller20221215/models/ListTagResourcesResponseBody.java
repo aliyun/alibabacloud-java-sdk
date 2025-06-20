@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>NextToken for the next page, include this returned value when requesting the next page</p>
+     * <p>The token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8F208B6D-4C42-5FD3-B6BE-E826E92A44DD</p>
@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Tagged resources.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("TagResources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -59,7 +59,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResourcesTagResource extends TeaModel {
         /**
-         * <p>Resource ID</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i15azeddnvf7uhw2oij57o0</p>
@@ -68,7 +68,12 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>Resource type</p>
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Node</li>
+         * <li>Cluster</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Cluster</p>
@@ -77,7 +82,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -86,7 +91,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>Tag value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNodeGroupRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i114444141733395242745</p>
@@ -14,7 +14,7 @@ public class DeleteNodeGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Node Group ID</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i121824791737080429819</p>

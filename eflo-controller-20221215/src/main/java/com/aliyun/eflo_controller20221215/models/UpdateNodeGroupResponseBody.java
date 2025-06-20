@@ -14,7 +14,7 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Task ID</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i15374011238111706</p>

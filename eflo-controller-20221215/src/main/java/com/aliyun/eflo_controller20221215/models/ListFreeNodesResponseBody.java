@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFreeNodesResponseBody extends TeaModel {
     /**
-     * <p>The query token value returned by this call.</p>
+     * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -14,13 +14,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>List of nodes</p>
+     * <p>The nodes.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<ListFreeNodesResponseBodyNodes> nodes;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</p>
@@ -59,7 +59,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
 
     public static class ListFreeNodesResponseBodyNodesTags extends TeaModel {
         /**
-         * <p>The key of tag object</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>aa_key</p>
@@ -68,7 +68,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag object</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>aa_vakye</p>
@@ -101,7 +101,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
 
     public static class ListFreeNodesResponseBodyNodes extends TeaModel {
         /**
-         * <p>Product Code</p>
+         * <p>The commodity code.</p>
          * 
          * <strong>example:</strong>
          * <p>bccluster_eflocomputing_public_cn</p>
@@ -110,7 +110,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1652321554</p>
@@ -119,7 +119,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Expiration time of the machine</p>
+         * <p>The time when the node expires.</p>
          * 
          * <strong>example:</strong>
          * <p>1673107200</p>
@@ -128,7 +128,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>Cluster number</p>
+         * <p>The cluster number.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -137,7 +137,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
-         * <p>Machine type</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
@@ -146,7 +146,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String machineType;
 
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-7pp2x193801</p>
@@ -155,7 +155,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>Node status</p>
+         * <p>The node status.</p>
          * 
          * <strong>example:</strong>
          * <p>Unused</p>
@@ -164,7 +164,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String operatingState;
 
         /**
-         * <p>Resource group ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aekzkkbrpl4owgy</p>
@@ -173,7 +173,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Machine SN</p>
+         * <p>The serial number of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>sn_pozkHBgicd</p>
@@ -182,13 +182,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String sn;
 
         /**
-         * <p>Tags Info</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListFreeNodesResponseBodyNodesTags> tags;
 
         /**
-         * <p>Availability zone ID</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-j</p>

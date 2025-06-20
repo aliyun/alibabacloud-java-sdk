@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSessionResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
@@ -14,7 +14,7 @@ public class CreateSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>节点  ID。</p>
+     * <p>The node ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2A59143F1</p>
@@ -23,7 +23,7 @@ public class CreateSessionResponseBody extends TeaModel {
     public String serverSn;
 
     /**
-     * <p>Session ID.</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i207023871669364793713</p>
@@ -32,7 +32,7 @@ public class CreateSessionResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Session token.</p>
+     * <p>The session credential.</p>
      * 
      * <strong>example:</strong>
      * <p>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389c980</p>
@@ -41,7 +41,7 @@ public class CreateSessionResponseBody extends TeaModel {
     public String sessionToken;
 
     /**
-     * <p>WebSocket address</p>
+     * <p>The WebSocket address.</p>
      * 
      * <strong>example:</strong>
      * <p>ws://x.x.x.x:xx/calypso_web_console</p>

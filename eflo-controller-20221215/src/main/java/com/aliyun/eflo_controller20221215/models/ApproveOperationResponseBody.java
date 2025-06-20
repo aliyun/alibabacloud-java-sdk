@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApproveOperationResponseBody extends TeaModel {
     /**
-     * <p>Error Message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Resource not found</p>
@@ -14,7 +14,7 @@ public class ApproveOperationResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>

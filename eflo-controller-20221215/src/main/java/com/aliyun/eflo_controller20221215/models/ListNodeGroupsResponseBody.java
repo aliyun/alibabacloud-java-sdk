@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupsResponseBody extends TeaModel {
     /**
-     * <p>Cluster group information</p>
+     * <p>The node groups.</p>
      */
     @NameInMap("Groups")
     public java.util.List<ListNodeGroupsResponseBodyGroups> groups;
 
     /**
-     * <p>NextToken for the next page, include this value when requesting the next page</p>
+     * <p>The token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -20,7 +20,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
@@ -59,7 +59,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
 
     public static class ListNodeGroupsResponseBodyGroups extends TeaModel {
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i113952461729854708648</p>
@@ -68,7 +68,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Cluster name</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>wzq-exclusivelite-71</p>
@@ -77,7 +77,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String clusterName;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-27T13:16:31.599</p>
@@ -86,7 +86,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>created by ga2_prepare</p>
@@ -95,7 +95,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Whether file storage mounting is supported</p>
+         * <p>Indicates whether file storage mounting is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -104,7 +104,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public Boolean fileSystemMountEnabled;
 
         /**
-         * <p>Group ID.</p>
+         * <p>The group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>238276221</p>
@@ -113,7 +113,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>Group name.</p>
+         * <p>The group name.</p>
          * 
          * <strong>example:</strong>
          * <p>backend-group</p>
@@ -122,7 +122,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Image ID</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i194015071707321240258</p>
@@ -131,7 +131,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Image name</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS_7.9_x86_64_FULL_20221110</p>
@@ -140,7 +140,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>Machine type</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1n</p>
@@ -149,7 +149,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String machineType;
 
         /**
-         * <p>Number of nodes</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -158,7 +158,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
-         * <p>Update time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-22T00:03:05.114</p>
@@ -167,7 +167,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>availability zone id</p>
+         * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-c</p>

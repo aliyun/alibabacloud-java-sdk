@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNodeResponseBody extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i116913051662373010974</p>
@@ -14,7 +14,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Cluster name</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
@@ -23,7 +23,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Creation time</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-09-30T03:35:53Z</p>
@@ -32,13 +32,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>Disk infos</p>
+     * <p>The disks.</p>
      */
     @NameInMap("Disks")
     public java.util.List<DescribeNodeResponseBodyDisks> disks;
 
     /**
-     * <p>Expiration time</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-06-23T16:00:00Z</p>
@@ -47,7 +47,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String expiredTime;
 
     /**
-     * <p>Whether file storage mounting is supported</p>
+     * <p>Indicates whether file storage mounting is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -56,7 +56,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public Boolean fileSystemMountEnabled;
 
     /**
-     * <p>Hostname</p>
+     * <p>The hostname.</p>
      * 
      * <strong>example:</strong>
      * <p>31d38530-241e-11ed-bc63-acde48001122</p>
@@ -65,7 +65,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String hostname;
 
     /**
-     * <p>Cluster number</p>
+     * <p>The cluster number.</p>
      * 
      * <strong>example:</strong>
      * <p>A1</p>
@@ -74,7 +74,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>Image ID</p>
+     * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i190297201634099844192</p>
@@ -83,7 +83,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String imageId;
 
     /**
-     * <p>Image name</p>
+     * <p>The image name.</p>
      * 
      * <strong>example:</strong>
      * <p>Centos7.9_all_0811</p>
@@ -92,7 +92,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String imageName;
 
     /**
-     * <p>Machine type</p>
+     * <p>The instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>efg1.nvga1</p>
@@ -101,13 +101,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String machineType;
 
     /**
-     * <p>Network information</p>
+     * <p>The network information.</p>
      */
     @NameInMap("Networks")
     public java.util.List<DescribeNodeResponseBodyNetworks> networks;
 
     /**
-     * <p>Node group ID</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>
@@ -116,7 +116,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>Node group name</p>
+     * <p>The node group name.</p>
      * 
      * <strong>example:</strong>
      * <p>emr-default</p>
@@ -125,7 +125,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeGroupName;
 
     /**
-     * <p>Node ID</p>
+     * <p>The node ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>
@@ -134,7 +134,23 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>Node status</p>
+     * <p>The node status.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Extending</li>
+     * <li>UnusedNodeStopped</li>
+     * <li>UnusedNodeStopping</li>
+     * <li>Unused</li>
+     * <li>Using</li>
+     * <li>ReleaseLocking</li>
+     * <li>Operating</li>
+     * <li>Cutting</li>
+     * <li>ClusterNodeStopped</li>
+     * <li>UnusedNodeRecovering</li>
+     * <li>ClusterNodeStopping</li>
+     * <li>ClusterNodeRecovering</li>
+     * <li>Replacing</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Using</p>
@@ -143,7 +159,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String operatingState;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
@@ -152,7 +168,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Resource group ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmywpvugkh7kq</p>
@@ -161,7 +177,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Unique machine identifier</p>
+     * <p>The serial number of the node.</p>
      * 
      * <strong>example:</strong>
      * <p>sag42ckf4jx</p>
@@ -170,7 +186,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String sn;
 
     /**
-     * <p>The script by user defined</p>
+     * <p>The custom script.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/bash
@@ -181,7 +197,7 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String userData;
 
     /**
-     * <p>Zone ID</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
@@ -364,9 +380,9 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     public static class DescribeNodeResponseBodyDisks extends TeaModel {
         /**
-         * <p>The category of the disk.</p>
+         * <p>The disk type. Valid values:</p>
          * <ul>
-         * <li>cloud_ssd: all-flash disk.</li>
+         * <li>cloud_essd</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -376,7 +392,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The ID of the disk.</p>
+         * <p>The disk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d-bp1fi88ryk4yah8a6yos</p>
@@ -385,7 +401,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The performance level of the ESSD. Valid values:</p>
+         * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
          * <ul>
          * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
          * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
@@ -398,7 +414,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>The size of the disk. Unit: GiB.</p>
+         * <p>The disk size. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -407,9 +423,10 @@ public class DescribeNodeResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The type of the disk. Valid values:</p>
+         * <p>The disk type. Valid values:</p>
          * <ul>
          * <li>system: system disk</li>
+         * <li>data: data disk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -467,7 +484,7 @@ public class DescribeNodeResponseBody extends TeaModel {
 
     public static class DescribeNodeResponseBodyNetworks extends TeaModel {
         /**
-         * <p>Network interface port information</p>
+         * <p>The port information of the elastic network interface (ENI).</p>
          * 
          * <strong>example:</strong>
          * <p>Bond0</p>
@@ -476,7 +493,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String bondName;
 
         /**
-         * <p>Machine IP</p>
+         * <p>The IP address of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>47.254.235.44</p>
@@ -485,7 +502,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>Cluster subnet ID</p>
+         * <p>The subnet ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf68v51fldm5egmui5a6k</p>
@@ -494,7 +511,7 @@ public class DescribeNodeResponseBody extends TeaModel {
         public String subnetId;
 
         /**
-         * <p>Cluster network ID</p>
+         * <p>The ID of the cluster network.</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-xcuhjyrj</p>

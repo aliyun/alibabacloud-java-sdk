@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupShrinkRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,15 +15,11 @@ public class CreateNodeGroupShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Node ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public String nodeGroupShrink;
 
-    /**
-     * <p>Node information</p>
-     */
     @NameInMap("NodeUnit")
     public String nodeUnitShrink;
 

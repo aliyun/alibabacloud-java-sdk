@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopNodesRequest extends TeaModel {
     /**
-     * <p>Whether to allow skipping failed node tasks, default value is False.</p>
+     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -14,7 +14,7 @@ public class StopNodesRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>List of nodes.</p>
+     * <p>The nodes.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<String> nodes;

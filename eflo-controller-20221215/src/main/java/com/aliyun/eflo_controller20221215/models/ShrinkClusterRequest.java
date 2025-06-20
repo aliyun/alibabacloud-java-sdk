@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShrinkClusterRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
@@ -14,7 +14,7 @@ public class ShrinkClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,7 +23,7 @@ public class ShrinkClusterRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>Node group information</p>
+     * <p>The node groups.</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<ShrinkClusterRequestNodeGroups> nodeGroups;
@@ -59,7 +59,7 @@ public class ShrinkClusterRequest extends TeaModel {
 
     public static class ShrinkClusterRequestNodeGroupsNodes extends TeaModel {
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01poc-cn-zmb2ypjdc01</p>
@@ -84,7 +84,7 @@ public class ShrinkClusterRequest extends TeaModel {
 
     public static class ShrinkClusterRequestNodeGroups extends TeaModel {
         /**
-         * <p>Node group ID</p>
+         * <p>The node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-3b6fbd24b1b845a0</p>
@@ -93,7 +93,7 @@ public class ShrinkClusterRequest extends TeaModel {
         public String nodeGroupId;
 
         /**
-         * <p>List of nodes</p>
+         * <p>The nodes.</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ShrinkClusterRequestNodeGroupsNodes> nodes;

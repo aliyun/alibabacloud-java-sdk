@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNodeGroupsRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
@@ -14,12 +14,10 @@ public class ListNodeGroupsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Number of items per page in a paginated query. The maximum value is 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <p>Default value:</p>
-     * <ul>
-     * <li>If no value is set or the set value is less than 20, the default value is 20.</li>
-     * <li>If the set value is greater than 100, the default value is 100.</li>
-     * </ul>
+     * <p>• If you do not configure this parameter or if you set this parameter to a value less than 20, the default value is 20.</p>
+     * <p>• If you set this parameter to a value greater than 100, the default value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -28,7 +26,7 @@ public class ListNodeGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>NextToken for the next page, include this value when requesting the next page</p>
+     * <p>The token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -37,7 +35,7 @@ public class ListNodeGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Node group ID</p>
+     * <p>The node group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ng-ec3c96ff0aa4c60d</p>

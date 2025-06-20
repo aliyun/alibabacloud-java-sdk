@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteVscResponseBody extends TeaModel {
     /**
-     * <p>ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>

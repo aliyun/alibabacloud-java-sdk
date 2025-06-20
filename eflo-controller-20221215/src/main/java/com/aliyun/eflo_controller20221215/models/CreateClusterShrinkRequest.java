@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterShrinkRequest extends TeaModel {
     /**
-     * <p>Cluster description</p>
+     * <p>The cluster description.</p>
      * 
      * <strong>example:</strong>
      * <p>Cluster description</p>
@@ -14,7 +14,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterDescription;
 
     /**
-     * <p>Cluster name</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
@@ -23,7 +23,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Cluster type</p>
+     * <p>The cluster type.</p>
      * 
      * <strong>example:</strong>
      * <p>Lite</p>
@@ -32,13 +32,13 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Components (software instances)</p>
+     * <p>The components (software instance).</p>
      */
     @NameInMap("Components")
     public String componentsShrink;
 
     /**
-     * <p>Cluster number</p>
+     * <p>The cluster number.</p>
      * 
      * <strong>example:</strong>
      * <p>A1</p>
@@ -47,7 +47,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>Whether to allow skipping failed nodes, default value is False</p>
+     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -56,25 +56,25 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>Network information</p>
+     * <p>The network information.</p>
      */
     @NameInMap("Networks")
     public String networksShrink;
 
     /**
-     * <p>Node VSwitches</p>
+     * <p>The node vSwitch.</p>
      */
     @NameInMap("NimizVSwitches")
     public String nimizVSwitchesShrink;
 
     /**
-     * <p>Node group list</p>
+     * <p>The node groups.</p>
      */
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
 
     /**
-     * <p>Open Eni Jumbo Frame</p>
+     * <p>Specifies whether the elastic network interface (ENI) supports the Jumbo Frames feature.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -83,7 +83,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public Boolean openEniJumboFrame;
 
     /**
-     * <p>Resource group ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
@@ -92,7 +92,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Resource tags</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateClusterShrinkRequestTag> tag;
@@ -200,7 +200,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
 
     public static class CreateClusterShrinkRequestTag extends TeaModel {
         /**
-         * <p>Key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>env-name</p>
@@ -209,7 +209,7 @@ public class CreateClusterShrinkRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>

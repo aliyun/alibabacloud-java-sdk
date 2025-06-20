@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExtendClusterShrinkRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i15b480fbd2fcdbc2869cd80</p>
@@ -14,7 +14,7 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,19 +23,19 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>IP allocation policy combination: Each policy can only choose one type, and multiple policies can be combined</p>
+     * <p>The combined policies for assigning IP addresses: Only one policy type can be selected for each policy, and multiple policies can be combined.</p>
      */
     @NameInMap("IpAllocationPolicy")
     public String ipAllocationPolicyShrink;
 
     /**
-     * <p>Node Group</p>
+     * <p>The node groups.</p>
      */
     @NameInMap("NodeGroups")
     public String nodeGroupsShrink;
 
     /**
-     * <p>VSwitch availability zone ID</p>
+     * <p>The ID of the zone to which the vSwitch belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-b</p>
@@ -44,7 +44,7 @@ public class ExtendClusterShrinkRequest extends TeaModel {
     public String vSwitchZoneId;
 
     /**
-     * <p>List of cluster subnets</p>
+     * <p>The subnets of the cluster.</p>
      */
     @NameInMap("VpdSubnets")
     public String vpdSubnetsShrink;

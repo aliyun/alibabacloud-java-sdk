@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNetTestTaskShrinkRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
@@ -14,7 +14,7 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Cluster name</p>
+     * <p>The cluster name.</p>
      * 
      * <strong>example:</strong>
      * <p>Eflo-YJ-Test-Cluster</p>
@@ -23,20 +23,19 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>Required when the test type is communication library testing</p>
+     * <p>Specify when NetTestType is CommTest.</p>
      */
     @NameInMap("CommTest")
     public String commTestShrink;
 
     /**
-     * <p>Fill in this field when the network test type is delay testing.</p>
+     * <p>Specify when NetTestType is DelayTest.</p>
      */
     @NameInMap("DelayTest")
     public String delayTestShrink;
 
     /**
-     * <p>Network test type.
-     * For example: DelayTest for latency testing, TrafficTest for traffic testing, CommTest for communication library testing.</p>
+     * <p>The type of the network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
      * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
@@ -45,7 +44,7 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String netTestType;
 
     /**
-     * <p>Network mode</p>
+     * <p>The network mode.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -54,7 +53,7 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String networkMode;
 
     /**
-     * <p>Test port number.</p>
+     * <p>The port number.</p>
      * 
      * <strong>example:</strong>
      * <p>23604</p>
@@ -63,7 +62,7 @@ public class CreateNetTestTaskShrinkRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>This field is empty if the TrafficModel is Fullmesh.</p>
+     * <p>If the TrafficModel is Fullmesh, leave this parameter empty.</p>
      */
     @NameInMap("TrafficTest")
     public String trafficTestShrink;

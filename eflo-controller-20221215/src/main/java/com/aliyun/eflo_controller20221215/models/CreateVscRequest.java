@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVscRequest extends TeaModel {
     /**
-     * <p>Idempotent parameter</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -14,7 +14,7 @@ public class CreateVscRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Node ID</p>
+     * <p>The node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateVscRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>Resource group ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
@@ -33,13 +33,13 @@ public class CreateVscRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Resource tags</p>
+     * <p>The resource tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateVscRequestTag> tag;
 
     /**
-     * <p>User-defined name for vscId, unique on a single compute node</p>
+     * <p>The custom name of the VSC, which is unique on a compute node.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -48,7 +48,7 @@ public class CreateVscRequest extends TeaModel {
     public String vscName;
 
     /**
-     * <p>Set VSC type, primary/standard, default value is primary</p>
+     * <p>The VSC type. Valid values: primary and standard. Default value: primary.</p>
      * 
      * <strong>example:</strong>
      * <p>primary</p>
@@ -111,7 +111,7 @@ public class CreateVscRequest extends TeaModel {
 
     public static class CreateVscRequestTag extends TeaModel {
         /**
-         * <p>Resource tag key</p>
+         * <p>The resource tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key001</p>
@@ -120,7 +120,7 @@ public class CreateVscRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Resource tag value</p>
+         * <p>The resource tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value001</p>

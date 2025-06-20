@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSendFileResultsResponseBody extends TeaModel {
     /**
-     * <p>Record of file distribution.</p>
+     * <p>The file sending records.</p>
      */
     @NameInMap("Invocations")
     public DescribeSendFileResultsResponseBodyInvocations invocations;
 
     /**
-     * <p>ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -20,7 +20,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of commands.</p>
+     * <p>The total number of the commands.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,7 +59,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeNodesInvokeNode extends TeaModel {
         /**
-         * <p>The creation time of the file distribution task.</p>
+         * <p>The time when the file sending task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-06T07:12:50Z</p>
@@ -68,26 +68,8 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The failure reason code for file distribution. Possible values:</p>
-         * <ul>
-         * <li>Empty: The file was distributed normally. </li>
-         * <li>NodeNotExists: The specified instance does not exist or has been released. </li>
-         * <li>NodeReleased: The instance was released during the file distribution process. </li>
-         * <li>NodeNotRunning: The instance was not running when the file distribution task was created. </li>
-         * <li>AccountNotExists: The specified account does not exist. </li>
-         * <li>ClientNotRunning: The Cloud Assistant Agent is not running. </li>
-         * <li>ClientNotResponse: The Cloud Assistant Agent is not responding. </li>
-         * <li>ClientIsUpgrading: The Cloud Assistant Agent is currently being upgraded. </li>
-         * <li>ClientNeedUpgrade: The Cloud Assistant Agent needs to be upgraded. </li>
-         * <li>DeliveryTimeout: File delivery timed out. </li>
-         * <li>FileCreateFail: Failed to create the file. </li>
-         * <li>FileAlreadyExists: A file with the same name already exists at the specified path. </li>
-         * <li>FileContentInvalid: The file content is invalid. </li>
-         * <li>FileNameInvalid: The file name is invalid. </li>
-         * <li>FilePathInvalid: The file path is invalid. </li>
-         * <li>FileAuthorityInvalid: The file permissions are invalid. </li>
-         * <li>UserGroupNotExists: The user group specified for file delivery does not exist.</li>
-         * </ul>
+         * <p>The error code returned when the file failed to be sent to the instance. Valid values:</p>
+         * <p>Null: The file is sent to the instance. NodeNotExists: The specified instance does not exist or has been released. NodeReleased: The instance was released while the file was being sent. NodeNotRunning: The instance was not running while the file sending task was being created. AccountNotExists: The specified account does not exist. ClientNotRunning: Cloud Assistant Agent is not running. ClientNotResponse: Cloud Assistant Agent did not respond. ClientIsUpgrading: Cloud Assistant Agent was being upgraded. ClientNeedUpgrade: Cloud Assistant Agent needs to be upgraded. DeliveryTimeout: The file sending task timed out. FileCreateFail: The file failed to be created. FileAlreadyExists: A file with the same name exists in the specified directory. FileContentInvalid: The file content is invalid. FileNameInvalid: The file name is invalid. FilePathInvalid: The specified directory is invalid. FileAuthorityInvalid: The specified permissions on the file are invalid. UserGroupNotExists: The specified user group does not exist.</p>
          * 
          * <strong>example:</strong>
          * <p>AccountNotExists</p>
@@ -96,26 +78,26 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>Details of the reason for command delivery failure or execution failure, possible values: </p>
+         * <p>The error message returned if the command failed to be sent or run. Valid values:</p>
          * <ul>
-         * <li>Empty: The command executed normally. </li>
-         * <li>the specified instance does not exist: The specified instance does not exist or has been released. </li>
-         * <li>the node has been released when creating task: The instance was released during the command execution. </li>
-         * <li>the node is not running when creating task: The instance was not in a running state when the command was executed. </li>
-         * <li>the command is not applicable: The command is not applicable to the specified instance. </li>
-         * <li>the specified account does not exist: The specified account does not exist. </li>
-         * <li>the specified directory does not exist: The specified directory does not exist. </li>
-         * <li>the cron job expression is invalid: The specified execution time expression is invalid. </li>
-         * <li>the aliyun service is not running on the instance: The Cloud Assistant Agent is not running. </li>
-         * <li>the aliyun service in the instance does not respond: The Cloud Assistant Agent is not responding. </li>
-         * <li>the aliyun service in the node is upgrading now: The Cloud Assistant Agent is currently being upgraded. </li>
-         * <li>the aliyun service in the node needs upgrade: The Cloud Assistant Agent needs an upgrade. </li>
-         * <li>the command delivery has timed out: Command delivery has timed out. </li>
-         * <li>the command execution has timed out: Command execution has timed out. </li>
-         * <li>the command execution got an exception: An exception occurred during command execution. </li>
-         * <li>the command execution has been interrupted: The command execution was interrupted. </li>
-         * <li>the command execution exit code is not zero: The command execution completed with a non-zero exit code. </li>
-         * <li>the specified instance has been released: The instance was released during file delivery.</li>
+         * <li>null: The command is run as expected.</li>
+         * <li>the specified instance does not exists: The specified instance does not exist or is released.</li>
+         * <li>the node has released when create task: The instance is released when the command is being run.</li>
+         * <li>the node is not running when create task: The instance is not in the Running state while the command is being run.</li>
+         * <li>the command is not applicable: The command is not applicable to the specified instance.</li>
+         * <li>the specified account does not exists: The specified account does not exist.</li>
+         * <li>the specified directory does not exists: The specified directory does not exist.</li>
+         * <li>the cron job expression is invalid: The cron expression that specifies the execution time is invalid.</li>
+         * <li>the aliyun service is not running on the instance: Cloud Assistant Agent is not running.</li>
+         * <li>the aliyun service in the instance does not response: Cloud Assistant Agent does not respond.</li>
+         * <li>the aliyun service in the node is upgrading now: Cloud Assistant Agent is being upgraded.</li>
+         * <li>the aliyun service in the node need upgrade: Cloud Assistant Agent needs to be upgraded.</li>
+         * <li>the command delivery has been timeout: The request to send the command timed out.</li>
+         * <li>the command execution has been timeout: The command execution timed out.</li>
+         * <li>the command execution got an exception: An exception occurred when the command is being run.</li>
+         * <li>the command execution has been interrupted: The command execution is interrupted.</li>
+         * <li>the command execution exit code is not zero: The command execution completes, but the exit code is not 0.</li>
+         * <li>the specified instance has been released: The instance is released while the file is being sent.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +107,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String errorInfo;
 
         /**
-         * <p>Completion time, format: &quot;2020-05-22T17:04:18&quot;.</p>
+         * <p>The time when the file sending task ends. The time is in the 2020-05-22T17:04:18 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-10T10:53:46.156+08:00</p>
@@ -134,16 +116,16 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>Status of the task on a single instance. Possible values:</p>
+         * <p>The status of the file sending task on an instance. Valid values:</p>
          * <ul>
-         * <li>Pending: The system is validating or distributing the file.</li>
-         * <li>Invalid: The specified file parameters are incorrect, and validation failed.</li>
-         * <li>Running: The file is being distributed to the instance.</li>
-         * <li>Aborted: Failed to distribute the file to the instance.</li>
-         * <li>Success: The file distribution is complete.</li>
-         * <li>Failed: The file creation failed within the instance.</li>
-         * <li>Error: An exception occurred during file distribution and could not continue.</li>
-         * <li>Timeout: The file distribution timed out.</li>
+         * <li>Pending: The file is being verified or sent.</li>
+         * <li>Invalid: The file is invalid.</li>
+         * <li>Running: The file is being sent to the instance.</li>
+         * <li>Aborted: The file failed to be sent to the instance.</li>
+         * <li>Success: The file is sent.</li>
+         * <li>Failed: The file failed to be created on the instance.</li>
+         * <li>Error: An error occurred and interrupted the file sending task.</li>
+         * <li>Timeout: The file sending task timed out.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +135,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String invocationStatus;
 
         /**
-         * <p>Node ID.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-9lb3c15m81j</p>
@@ -162,7 +144,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>Start Time</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-30T16:00:00Z</p>
@@ -171,7 +153,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>Update Time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-30T16:00:00Z</p>
@@ -252,7 +234,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeNodes extends TeaModel {
         /**
-         * <p>Record of file distribution for the node.</p>
+         * <p>The file sending records on a node.</p>
          */
         @NameInMap("InvokeNode")
         public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeNodesInvokeNode> invokeNode;
@@ -274,9 +256,8 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     public static class DescribeSendFileResultsResponseBodyInvocationsInvocation extends TeaModel {
         /**
-         * <p>Output information after command execution.</p>
-         * <p>If ContentEncoding is specified as PlainText, the original output information is returned.
-         * If ContentEncoding is specified as Base64, the Base64 encoded output information is returned.</p>
+         * <p>The command output.</p>
+         * <p>If ContentEncoding is set to PlainText in the request, the original command output is returned. If ContentEncoding is set to Base64 in the request, the Base64-encoded command output is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>Base64</p>
@@ -285,10 +266,8 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>File content type.</p>
-         * <p>PlainText: Plain text.
-         * Base64: Base64 encoding.
-         * The default value is PlainText.</p>
+         * <p>The content type of the file.</p>
+         * <p>PlainText: The file content is not encoded. Base64: The file content is encoded in Base64. Default value: PlainText.</p>
          * 
          * <strong>example:</strong>
          * <p>PlainText</p>
@@ -297,7 +276,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>Creation time of the distribution.</p>
+         * <p>The time when the file sending task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-10T10:53:46.156+08:00</p>
@@ -306,10 +285,10 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Command description.</p>
+         * <p>The command description.</p>
          * 
          * <strong>example:</strong>
-         * <p>描述信息。</p>
+         * <p>Description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -324,7 +303,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String fileGroup;
 
         /**
-         * <p>File permissions.</p>
+         * <p>The permissions on the file.</p>
          * 
          * <strong>example:</strong>
          * <p>0644</p>
@@ -342,20 +321,25 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String fileOwner;
 
         /**
-         * <p>Overall status of the file distribution. The overall status depends on the common execution status of all instances involved in this distribution, possible values are:</p>
+         * <p>The overall sending status of the file. The overall sending status of the file varies based on the sending status of the file on all destination instances. Valid values:</p>
          * <ul>
-         * <li>Pending: The system is verifying or distributing the file. If at least one instance has a file distribution status of Pending, the overall execution status will be Pending.</li>
-         * <li>Running: The file is being distributed on the instance. If at least one instance has a file distribution status of Running, the overall execution status will be Running.</li>
-         * <li>Success: All instances have a file distribution status of Success, then the overall execution status will be Success.</li>
-         * <li>Failed: All instances have a file distribution status of Failed, then the overall execution status will be Failed. If any of the following conditions occur for the file distribution status on an instance, the return value will be Failed:<ul>
-         * <li>The specified file parameters are incorrect, verification failed (Invalid).</li>
-         * <li>Failed to distribute the file to the instance (Aborted).</li>
-         * <li>The file creation failed within the instance (Failed).</li>
-         * <li>The file distribution timed out (Timeout).</li>
-         * <li>An exception occurred during file distribution and could not continue (Error).</li>
+         * <li><p>Pending: The file is being verified or sent. If the sending state of the file on at least one instance is Pending, the overall sending state of the file is Pending.</p>
+         * </li>
+         * <li><p>Running: The file is being sent to the instance. If the sending state of the file on at least one instance is Running, the overall sending state of the file is Running.</p>
+         * </li>
+         * <li><p>Success: If the sending state of the file on all instances is Success, the overall sending state of the file is Success.</p>
+         * </li>
+         * <li><p>Failed: If the sending state of the file on all instances is Failed, the overall sending state of the file is Failed. If the sending state of the file on one or more instances is one of the following values, the overall sending state of the file is Failed:</p>
+         * <ul>
+         * <li>Invalid: The file is invalid.</li>
+         * <li>Aborted: The file failed to be sent to the instances.</li>
+         * <li>Failed: The file failed to be created on the instances.</li>
+         * <li>Timeout: The file sending task timed out.</li>
+         * <li>Error: An error occurred and interrupted the file sending task.</li>
          * </ul>
          * </li>
-         * <li>PartialFailed: Some instances successfully received the file while others failed. If the file distribution status of all instances is either Success or Failed, the overall execution status will be PartialFailed.</li>
+         * <li><p>PartialFailed: The file sending task was completed on some instances but failed on other instances. If the sending state of the file is Success on some instances and is Failed on other instances, the overall sending state of the file is PartialFailed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,13 +349,13 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String invocationStatus;
 
         /**
-         * <p>Record of file distribution.</p>
+         * <p>The file sending records.</p>
          */
         @NameInMap("InvokeNodes")
         public DescribeSendFileResultsResponseBodyInvocationsInvocationInvokeNodes invokeNodes;
 
         /**
-         * <p>Name of the file distribution.</p>
+         * <p>The name of the file sending task.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -380,7 +364,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Number of nodes</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -389,12 +373,12 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public Integer nodeCount;
 
         /**
-         * <p>Whether to overwrite the file if a file with the same name already exists in the target directory.</p>
+         * <p>Indicates whether a file was overwritten in the destination directory if the file has the same name as the sent file.</p>
          * <ul>
-         * <li>true: Overwrite.</li>
-         * <li>false: Do not overwrite.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
-         * <p>The default value is false.</p>
+         * <p>Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -403,7 +387,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
         public Boolean overwrite;
 
         /**
-         * <p>Target path.</p>
+         * <p>The destination directory.</p>
          * 
          * <strong>example:</strong>
          * <p>/home/user</p>
@@ -524,7 +508,7 @@ public class DescribeSendFileResultsResponseBody extends TeaModel {
 
     public static class DescribeSendFileResultsResponseBodyInvocations extends TeaModel {
         /**
-         * <p>Command execution ID.</p>
+         * <p>The command execution ID.</p>
          */
         @NameInMap("Invocation")
         public java.util.List<DescribeSendFileResultsResponseBodyInvocationsInvocation> invocation;

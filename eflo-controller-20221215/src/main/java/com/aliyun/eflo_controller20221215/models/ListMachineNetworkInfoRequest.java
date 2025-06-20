@@ -4,9 +4,6 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListMachineNetworkInfoRequest extends TeaModel {
-    /**
-     * <p>Array</p>
-     */
     @NameInMap("MachineHpnInfo")
     public java.util.List<ListMachineNetworkInfoRequestMachineHpnInfo> machineHpnInfo;
 
@@ -25,8 +22,6 @@ public class ListMachineNetworkInfoRequest extends TeaModel {
 
     public static class ListMachineNetworkInfoRequestMachineHpnInfo extends TeaModel {
         /**
-         * <p>Cluster ID</p>
-         * 
          * <strong>example:</strong>
          * <p>C1</p>
          */
@@ -34,8 +29,6 @@ public class ListMachineNetworkInfoRequest extends TeaModel {
         public String hpnZone;
 
         /**
-         * <p>Machine type</p>
-         * 
          * <strong>example:</strong>
          * <p>efg2.C48cNHmcn</p>
          */
@@ -43,8 +36,6 @@ public class ListMachineNetworkInfoRequest extends TeaModel {
         public String machineType;
 
         /**
-         * <p>Region ID</p>
-         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */

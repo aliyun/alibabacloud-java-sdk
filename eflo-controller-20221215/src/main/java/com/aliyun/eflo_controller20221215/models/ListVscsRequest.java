@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVscsRequest extends TeaModel {
     /**
-     * <p>The maximum number of data records to be read in this request.</p>
+     * <p>The maximum number of data entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListVscsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Marks the position to start reading from. If empty, it starts from the beginning.</p>
+     * <p>The token that is used in the next request to retrieve a new page of results. If you leave this parameter empty, the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>563d42ae0b17572449ec8c97f7f66069</p>
@@ -23,13 +23,13 @@ public class ListVscsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>List of node IDs</p>
+     * <p>The IDs of the nodes.</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
-     * <p>Resource group ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
@@ -38,13 +38,13 @@ public class ListVscsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>List of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListVscsRequestTag> tag;
 
     /**
-     * <p>Vsc name</p>
+     * <p>The VSC name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_name</p>
@@ -107,7 +107,7 @@ public class ListVscsRequest extends TeaModel {
 
     public static class ListVscsRequestTag extends TeaModel {
         /**
-         * <p>Tag key.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key001</p>
@@ -116,7 +116,7 @@ public class ListVscsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value001</p>

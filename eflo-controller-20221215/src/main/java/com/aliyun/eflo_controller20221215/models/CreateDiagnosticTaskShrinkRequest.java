@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateDiagnosticTaskShrinkRequest extends TeaModel {
     /**
-     * <p>Log information</p>
+     * <p>The log information.</p>
      */
     @NameInMap("AiJobLogInfo")
     public String aiJobLogInfoShrink;
 
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i118913031696573280136</p>
@@ -20,7 +20,7 @@ public class CreateDiagnosticTaskShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Diagnostic type.</p>
+     * <p>The diagnostics type.</p>
      * 
      * <strong>example:</strong>
      * <p>CheckByAiJobLogs</p>
@@ -29,7 +29,7 @@ public class CreateDiagnosticTaskShrinkRequest extends TeaModel {
     public String diagnosticType;
 
     /**
-     * <p>List of node IDs</p>
+     * <p>The IDs of the nodes.</p>
      */
     @NameInMap("NodeIds")
     public String nodeIdsShrink;

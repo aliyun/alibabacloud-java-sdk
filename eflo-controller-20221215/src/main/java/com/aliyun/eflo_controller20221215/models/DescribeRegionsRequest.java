@@ -5,10 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>Filter the returned results based on Chinese, English, and Japanese. For more information, see RFC7231. Valid values:</p>
-     * <p>zh-CN
-     * en-US
-     * Default value: zh-CN</p>
+     * <p>The natural language that is used to filter responses. For more information, see RFC 7231.</p>
+     * <p>zh-CN en-US Default value: zh-CN.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>en-US</li>
+     * <li>zh-CN</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>

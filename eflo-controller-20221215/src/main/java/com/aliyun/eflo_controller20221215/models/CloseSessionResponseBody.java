@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CloseSessionResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>07AA3A1F-321E-50D8-B834-88C411331C94</p>
      */
@@ -14,8 +12,6 @@ public class CloseSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Session ID.</p>
-     * 
      * <strong>example:</strong>
      * <p>i206495551737511455528</p>
      */

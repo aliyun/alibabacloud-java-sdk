@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>Query token (Token), the value should be the NextToken returned from the previous API call</p>
+     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Region ID</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,13 +24,21 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>List of resource IDs</p>
+     * <p>The IDs of the resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>Resource type</p>
+     * <p>The resource type.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Node</li>
+     * <li>Vcc</li>
+     * <li>Cluster</li>
+     * <li>Subnet</li>
+     * <li>Vpd</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +48,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>List of tags</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -92,7 +100,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>PodName</p>
@@ -101,7 +109,7 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Tag value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>WFT-OTC</p>

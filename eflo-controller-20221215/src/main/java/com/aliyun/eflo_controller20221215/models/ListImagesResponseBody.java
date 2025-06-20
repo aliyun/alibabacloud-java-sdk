@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListImagesResponseBody extends TeaModel {
     /**
-     * <p>Image details</p>
+     * <p>The image details.</p>
      */
     @NameInMap("Images")
     public java.util.List<ListImagesResponseBodyImages> images;
 
     /**
-     * <p>NextToken for the next page, include this value when requesting the next page</p>
+     * <p>The token that is used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b56790c91</p>
@@ -59,7 +59,7 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static class ListImagesResponseBodyImages extends TeaModel {
         /**
-         * <p>Architecture</p>
+         * <p>The architecture.</p>
          * 
          * <strong>example:</strong>
          * <p>x86_64</p>
@@ -68,7 +68,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String architecture;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>alibaba cloud linux 3 full for H800</p>
@@ -77,7 +77,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Image ID</p>
+         * <p>The image ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i190951671671438639388</p>
@@ -86,7 +86,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageId;
 
         /**
-         * <p>Image name</p>
+         * <p>The image name.</p>
          * 
          * <strong>example:</strong>
          * <p>CentOS_7.9_x86_64_FULL_20221110</p>
@@ -95,7 +95,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageName;
 
         /**
-         * <p>Image version</p>
+         * <p>The image version.</p>
          * 
          * <strong>example:</strong>
          * <p>7.9</p>
@@ -104,7 +104,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String imageVersion;
 
         /**
-         * <p>node count</p>
+         * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -113,7 +113,7 @@ public class ListImagesResponseBody extends TeaModel {
         public Long nodeCount;
 
         /**
-         * <p>Platform</p>
+         * <p>The platform.</p>
          * 
          * <strong>example:</strong>
          * <p>ALinux3</p>
@@ -122,7 +122,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String platform;
 
         /**
-         * <p>File MD5</p>
+         * <p>The MD5 hash value of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>40741292480fc6d778138adcf8c</p>
@@ -131,7 +131,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String releaseFileMd5;
 
         /**
-         * <p>Image size</p>
+         * <p>The image size.</p>
          * 
          * <strong>example:</strong>
          * <p>5.8G</p>
@@ -140,7 +140,7 @@ public class ListImagesResponseBody extends TeaModel {
         public String releaseFileSize;
 
         /**
-         * <p>image type</p>
+         * <p>The image type.</p>
          * 
          * <strong>example:</strong>
          * <p>Public</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
-     * <p>Number of items per page for paginated queries, with a default value of 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,7 @@ public class ListClustersRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>Query token, which is the value of the NextToken parameter returned by the previous API call.</p>
+     * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
      * 
      * <strong>example:</strong>
      * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -23,7 +23,7 @@ public class ListClustersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Resource group ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2bg6wyoox6jq</p>
@@ -32,7 +32,7 @@ public class ListClustersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>tag info</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListClustersRequestTags> tags;
@@ -76,7 +76,7 @@ public class ListClustersRequest extends TeaModel {
 
     public static class ListClustersRequestTags extends TeaModel {
         /**
-         * <p>The key of tag object</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key_aa</p>
@@ -85,7 +85,7 @@ public class ListClustersRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag object</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value_aa</p>

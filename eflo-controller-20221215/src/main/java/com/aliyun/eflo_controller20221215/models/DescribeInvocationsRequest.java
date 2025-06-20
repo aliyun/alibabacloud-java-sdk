@@ -5,12 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeInvocationsRequest extends TeaModel {
     /**
-     * <p>Sets the encoding method for the <code>CommandContent</code> and <code>Output</code> fields in the returned data. Possible values:</p>
+     * <p>The encoding mode of the <code>CommandContent</code> and <code>Output</code> response parameters. Valid values:</p>
      * <ul>
-     * <li>PlainText: Returns the original command content and output information.</li>
-     * <li>Base64: Returns the Base64-encoded command content and output information.</li>
+     * <li>PlainText: returns the original command content and command outputs.</li>
+     * <li>Base64 (default): returns the Base64-encoded command content and command output.</li>
      * </ul>
-     * <p>Default value: Base64.</p>
      * 
      * <strong>example:</strong>
      * <p>PlainText</p>
@@ -19,12 +18,11 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String contentEncoding;
 
     /**
-     * <p>Indicates whether to return the output information of the command execution in the result.</p>
+     * <p>Specifies whether to return the command outputs in the response.</p>
      * <ul>
-     * <li>true: Return. In this case, you must specify at least the <code>InvokeId</code> or <code>InstanceId</code> parameter.</li>
-     * <li>false: Do not return.</li>
+     * <li>true: returns the command outputs. When this parameter is set to true, you must specify <code>InvokeId</code>, <code>InstanceId</code>, or both.</li>
+     * <li>false (default)</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -33,7 +31,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public Boolean includeOutput;
 
     /**
-     * <p>Command execution ID</p>
+     * <p>The execution ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +41,7 @@ public class DescribeInvocationsRequest extends TeaModel {
     public String invokeId;
 
     /**
-     * <p>Instance ID</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>e01-cn-zvp2tgykr08</p>

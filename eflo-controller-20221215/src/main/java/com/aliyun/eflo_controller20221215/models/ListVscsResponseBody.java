@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVscsResponseBody extends TeaModel {
     /**
-     * <p>No return. Please use TotalCount</p>
+     * <p>No response is returned. The TotalCount parameter is used.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class ListVscsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Indicates the position of the current call return read. An empty value means that the data has been fully read.</p>
+     * <p>The token. It can be used in the next request to retrieve a new page of results. If this parameter is empty, no next page exists.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListVscsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>ID of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>03668372-18FF-5959-98D9-6B36A4643C7A</p>
@@ -33,7 +33,7 @@ public class ListVscsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total count of data under the current request conditions</p>
+     * <p>The total number of VSCs.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -42,7 +42,7 @@ public class ListVscsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>VSC list</p>
+     * <p>The VSCs.</p>
      */
     @NameInMap("Vscs")
     public java.util.List<ListVscsResponseBodyVscs> vscs;
@@ -94,7 +94,7 @@ public class ListVscsResponseBody extends TeaModel {
 
     public static class ListVscsResponseBodyVscsTags extends TeaModel {
         /**
-         * <p>Tag key</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>key001</p>
@@ -103,7 +103,7 @@ public class ListVscsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>Tag value</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>value001</p>
@@ -136,7 +136,7 @@ public class ListVscsResponseBody extends TeaModel {
 
     public static class ListVscsResponseBodyVscs extends TeaModel {
         /**
-         * <p>Lingjun node ID</p>
+         * <p>The ID of the Lingjun node.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-fzh47xd7u08</p>
@@ -145,7 +145,7 @@ public class ListVscsResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>Resource group ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm2zkwhkns57i</p>
@@ -154,7 +154,13 @@ public class ListVscsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Status of Vsc</p>
+         * <p>The VSC status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Normal</li>
+         * <li>Deleting</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -163,13 +169,13 @@ public class ListVscsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Tags</p>
+         * <p>The tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListVscsResponseBodyVscsTags> tags;
 
         /**
-         * <p>Vsc ID</p>
+         * <p>The VSC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>
@@ -178,7 +184,7 @@ public class ListVscsResponseBody extends TeaModel {
         public String vscId;
 
         /**
-         * <p>Customized name of Vsc</p>
+         * <p>The custom name of the VSC.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -187,7 +193,7 @@ public class ListVscsResponseBody extends TeaModel {
         public String vscName;
 
         /**
-         * <p>Vsc type, primary/standard</p>
+         * <p>The VSC type. Valid values: primary and standard.</p>
          * 
          * <strong>example:</strong>
          * <p>primary</p>

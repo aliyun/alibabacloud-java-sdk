@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ReimageNodesShrinkRequest extends TeaModel {
     /**
-     * <p>Cluster ID</p>
+     * <p>The cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
@@ -14,7 +14,7 @@ public class ReimageNodesShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Whether to allow skipping failed node tasks, default value is False</p>
+     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,13 +23,13 @@ public class ReimageNodesShrinkRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>Node list</p>
+     * <p>The nodes.</p>
      */
     @NameInMap("Nodes")
     public String nodesShrink;
 
     /**
-     * <p>Custom data</p>
+     * <p>The user data.</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/sh

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListImagesRequest extends TeaModel {
     /**
-     * <p>Architecture</p>
+     * <p>The architecture.</p>
      * 
      * <strong>example:</strong>
      * <p>x86_64</p>
@@ -14,7 +14,7 @@ public class ListImagesRequest extends TeaModel {
     public String architecture;
 
     /**
-     * <p>Image version</p>
+     * <p>The image version.</p>
      * 
      * <strong>example:</strong>
      * <p>7.9</p>
@@ -23,7 +23,7 @@ public class ListImagesRequest extends TeaModel {
     public String imageVersion;
 
     /**
-     * <p>Platform</p>
+     * <p>The platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ALinux3</p>
