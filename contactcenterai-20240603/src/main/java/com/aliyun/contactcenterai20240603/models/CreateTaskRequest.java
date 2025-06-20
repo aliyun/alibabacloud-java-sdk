@@ -564,6 +564,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("fileName")
         public String fileName;
 
+        @NameInMap("languageHints")
+        public String languageHints;
+
         @NameInMap("level")
         public String level;
 
@@ -627,6 +630,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getFileName() {
             return this.fileName;
+        }
+
+        public CreateTaskRequestTranscription setLanguageHints(String languageHints) {
+            this.languageHints = languageHints;
+            return this;
+        }
+        public String getLanguageHints() {
+            return this.languageHints;
         }
 
         public CreateTaskRequestTranscription setLevel(String level) {
