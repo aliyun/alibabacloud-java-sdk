@@ -31,6 +31,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("AppInstanceId")
     public String appInstanceId;
 
+    @NameInMap("AppPolicyId")
+    public String appPolicyId;
+
     /**
      * <strong>example:</strong>
      * <p>1.0.0.1</p>
@@ -188,6 +191,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    public GetConnectionTicketRequest setAppPolicyId(String appPolicyId) {
+        this.appPolicyId = appPolicyId;
+        return this;
+    }
+    public String getAppPolicyId() {
+        return this.appPolicyId;
     }
 
     public GetConnectionTicketRequest setAppVersion(String appVersion) {
