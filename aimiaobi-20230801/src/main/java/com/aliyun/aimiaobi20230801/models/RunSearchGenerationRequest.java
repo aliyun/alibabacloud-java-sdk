@@ -663,6 +663,9 @@ public class RunSearchGenerationRequest extends TeaModel {
         @NameInMap("EnableThinking")
         public Boolean enableThinking;
 
+        @NameInMap("ExcludeGenerateOptions")
+        public java.util.List<String> excludeGenerateOptions;
+
         /**
          * <strong>example:</strong>
          * <p>concise</p>
@@ -694,6 +697,14 @@ public class RunSearchGenerationRequest extends TeaModel {
         }
         public Boolean getEnableThinking() {
             return this.enableThinking;
+        }
+
+        public RunSearchGenerationRequestChatConfig setExcludeGenerateOptions(java.util.List<String> excludeGenerateOptions) {
+            this.excludeGenerateOptions = excludeGenerateOptions;
+            return this;
+        }
+        public java.util.List<String> getExcludeGenerateOptions() {
+            return this.excludeGenerateOptions;
         }
 
         public RunSearchGenerationRequestChatConfig setGenerateLevel(String generateLevel) {

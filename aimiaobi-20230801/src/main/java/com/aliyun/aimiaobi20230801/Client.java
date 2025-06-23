@@ -90,7 +90,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成剪辑视频</p>
+     * <p>生成剪辑视频任务</p>
      * 
      * @param tmpReq AsyncCreateClipsTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -164,7 +164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>生成剪辑视频</p>
+     * <p>生成剪辑视频任务</p>
      * 
      * @param request AsyncCreateClipsTaskRequest
      * @return AsyncCreateClipsTaskResponse
