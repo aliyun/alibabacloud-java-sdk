@@ -77,6 +77,9 @@ public class DescDomainResponseBody extends TeaModel {
     @NameInMap("DkimRR")
     public String dkimRR;
 
+    @NameInMap("DkimRsaLength")
+    public Integer dkimRsaLength;
+
     /**
      * <p>DMARC verification flag, indicating whether the DMARC record set by the user in DNS has passed validation, 0: Passed, 1: Not passed</p>
      * 
@@ -337,6 +340,14 @@ public class DescDomainResponseBody extends TeaModel {
     }
     public String getDkimRR() {
         return this.dkimRR;
+    }
+
+    public DescDomainResponseBody setDkimRsaLength(Integer dkimRsaLength) {
+        this.dkimRsaLength = dkimRsaLength;
+        return this;
+    }
+    public Integer getDkimRsaLength() {
+        return this.dkimRsaLength;
     }
 
     public DescDomainResponseBody setDmarcAuthStatus(Integer dmarcAuthStatus) {
