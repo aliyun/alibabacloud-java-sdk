@@ -138,12 +138,18 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         /**
          * <strong>example:</strong>
          * <p>Deleted</p>
          */
         @NameInMap("InstanceState")
         public String instanceState;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
 
         /**
          * <strong>example:</strong>
@@ -169,6 +175,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("SessionId")
+        public String sessionId;
+
         /**
          * <strong>example:</strong>
          * <p>2024-07-31T02:00Z</p>
@@ -189,6 +198,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
          */
         @NameInMap("UsedTime")
         public Long usedTime;
+
+        @NameInMap("UsedTimeWithScale")
+        public Long usedTimeWithScale;
 
         public static DescribePackageDeductionsResponseBodyDeductions build(java.util.Map<String, ?> map) throws Exception {
             DescribePackageDeductionsResponseBodyDeductions self = new DescribePackageDeductionsResponseBodyDeductions();
@@ -235,12 +247,28 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             return this.endTime;
         }
 
+        public DescribePackageDeductionsResponseBodyDeductions setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
         public DescribePackageDeductionsResponseBodyDeductions setInstanceState(String instanceState) {
             this.instanceState = instanceState;
             return this;
         }
         public String getInstanceState() {
             return this.instanceState;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public DescribePackageDeductionsResponseBodyDeductions setMemory(Long memory) {
@@ -275,6 +303,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             return this.resourceType;
         }
 
+        public DescribePackageDeductionsResponseBodyDeductions setSessionId(String sessionId) {
+            this.sessionId = sessionId;
+            return this;
+        }
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
         public DescribePackageDeductionsResponseBodyDeductions setStaTime(String staTime) {
             this.staTime = staTime;
             return this;
@@ -297,6 +333,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
         public Long getUsedTime() {
             return this.usedTime;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setUsedTimeWithScale(Long usedTimeWithScale) {
+            this.usedTimeWithScale = usedTimeWithScale;
+            return this;
+        }
+        public Long getUsedTimeWithScale() {
+            return this.usedTimeWithScale;
         }
 
     }

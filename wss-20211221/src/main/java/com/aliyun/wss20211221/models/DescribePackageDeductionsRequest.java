@@ -28,13 +28,14 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>CorePackage</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
+
+    @NameInMap("ResourceTypes")
+    public java.util.List<String> resourceTypes;
 
     @NameInMap("StartTime")
     public Long startTime;
@@ -90,6 +91,14 @@ public class DescribePackageDeductionsRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public DescribePackageDeductionsRequest setResourceTypes(java.util.List<String> resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
     }
 
     public DescribePackageDeductionsRequest setStartTime(Long startTime) {

@@ -89,6 +89,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询物流地址</p>
+     * 
      * @param request DescribeDeliveryAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeDeliveryAddressResponse
@@ -110,6 +113,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询物流地址</p>
      * @return DescribeDeliveryAddressResponse
      */
     public DescribeDeliveryAddressResponse describeDeliveryAddress() throws Exception {
@@ -118,6 +123,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量询价</p>
+     * 
      * @param request DescribeMultiPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMultiPriceResponse
@@ -159,6 +167,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量询价</p>
+     * 
      * @param request DescribeMultiPriceRequest
      * @return DescribeMultiPriceResponse
      */
@@ -202,6 +213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypes)) {
+            query.put("ResourceTypes", request.resourceTypes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             query.put("StartTime", request.startTime);
         }
@@ -236,6 +251,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新实例属性</p>
+     * 
      * @param request ModifyInstancePropertiesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstancePropertiesResponse
@@ -281,6 +299,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新实例属性</p>
+     * 
      * @param request ModifyInstancePropertiesRequest
      * @return ModifyInstancePropertiesResponse
      */
