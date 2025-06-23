@@ -17,6 +17,9 @@ public class DescribeDomainTopAttackListRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("Interval")
+    public Long interval;
+
     /**
      * <p>The ID of the resource group to which the instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.</p>
      * 
@@ -50,6 +53,14 @@ public class DescribeDomainTopAttackListRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeDomainTopAttackListRequest setInterval(Long interval) {
+        this.interval = interval;
+        return this;
+    }
+    public Long getInterval() {
+        return this.interval;
     }
 
     public DescribeDomainTopAttackListRequest setResourceGroupId(String resourceGroupId) {
