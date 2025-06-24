@@ -1,3 +1,11 @@
+2025-06-24 Version: 5.4.0
+- Support API GetLindormEngineConfig.
+- Support API MigrateSingleZoneToMultiZone.
+- Update API GetLindormFsUsedDetail: add response parameters Body.LStorageUsageList.$.UsedLindormColumn3.
+- Update API GetLindormFsUsedDetail: add response parameters Body.LStorageUsageList.$.UsedLindormMessage3.
+- Update API GetLindormFsUsedDetail: add response parameters Body.LStorageUsageList.$.UsedLindormVector3.
+
+
 2025-06-12 Version: 5.3.0
 - Support API GetLindormV2StreamEngineInfo.
 

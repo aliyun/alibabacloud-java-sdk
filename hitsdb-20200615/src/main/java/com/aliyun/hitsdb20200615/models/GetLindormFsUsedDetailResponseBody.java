@@ -382,6 +382,12 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         @NameInMap("Used")
         public String used;
 
+        @NameInMap("UsedLindormColumn3")
+        public String usedLindormColumn3;
+
+        @NameInMap("UsedLindormMessage3")
+        public String usedLindormMessage3;
+
         /**
          * <p>The storage usage of the search engine. Unit: bytes.</p>
          * 
@@ -417,6 +423,9 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
          */
         @NameInMap("UsedLindormTsdb")
         public String usedLindormTsdb;
+
+        @NameInMap("UsedLindormVector3")
+        public String usedLindormVector3;
 
         /**
          * <p>The storage usage of other resources, such as logs and recycle bins. Unit: bytes.</p>
@@ -456,6 +465,22 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             return this.used;
         }
 
+        public GetLindormFsUsedDetailResponseBodyLStorageUsageList setUsedLindormColumn3(String usedLindormColumn3) {
+            this.usedLindormColumn3 = usedLindormColumn3;
+            return this;
+        }
+        public String getUsedLindormColumn3() {
+            return this.usedLindormColumn3;
+        }
+
+        public GetLindormFsUsedDetailResponseBodyLStorageUsageList setUsedLindormMessage3(String usedLindormMessage3) {
+            this.usedLindormMessage3 = usedLindormMessage3;
+            return this;
+        }
+        public String getUsedLindormMessage3() {
+            return this.usedLindormMessage3;
+        }
+
         public GetLindormFsUsedDetailResponseBodyLStorageUsageList setUsedLindormSearch(String usedLindormSearch) {
             this.usedLindormSearch = usedLindormSearch;
             return this;
@@ -486,6 +511,14 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
         public String getUsedLindormTsdb() {
             return this.usedLindormTsdb;
+        }
+
+        public GetLindormFsUsedDetailResponseBodyLStorageUsageList setUsedLindormVector3(String usedLindormVector3) {
+            this.usedLindormVector3 = usedLindormVector3;
+            return this;
+        }
+        public String getUsedLindormVector3() {
+            return this.usedLindormVector3;
         }
 
         public GetLindormFsUsedDetailResponseBodyLStorageUsageList setUsedOther(String usedOther) {
