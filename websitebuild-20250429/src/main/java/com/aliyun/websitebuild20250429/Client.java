@@ -28,6 +28,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提交创建Logo任务</p>
+     * 
+     * @param request CreateLogoTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLogoTaskResponse
+     */
+    public CreateLogoTaskResponse createLogoTaskWithOptions(CreateLogoTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.negativePrompt)) {
+            query.put("NegativePrompt", request.negativePrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            query.put("Parameters", request.parameters);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            query.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("Version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLogoTask"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLogoTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交创建Logo任务</p>
+     * 
+     * @param request CreateLogoTaskRequest
+     * @return CreateLogoTaskResponse
+     */
+    public CreateLogoTaskResponse createLogoTask(CreateLogoTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLogoTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Logo创建任务</p>
+     * 
+     * @param request GetCreateLogoTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCreateLogoTaskResponse
+     */
+    public GetCreateLogoTaskResponse getCreateLogoTaskWithOptions(GetCreateLogoTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCreateLogoTask"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCreateLogoTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Logo创建任务</p>
+     * 
+     * @param request GetCreateLogoTaskRequest
+     * @return GetCreateLogoTaskResponse
+     */
+    public GetCreateLogoTaskResponse getCreateLogoTask(GetCreateLogoTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getCreateLogoTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>合作伙伴操作应用</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
