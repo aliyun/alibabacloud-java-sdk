@@ -214,6 +214,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        @NameInMap("IsStateful")
+        public Boolean isStateful;
+
         @NameInMap("Mem")
         public Integer mem;
 
@@ -314,6 +317,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public Integer getInstances() {
             return this.instances;
+        }
+
+        public ListApplicationsResponseBodyDataApplicationsChildren setIsStateful(Boolean isStateful) {
+            this.isStateful = isStateful;
+            return this;
+        }
+        public Boolean getIsStateful() {
+            return this.isStateful;
         }
 
         public ListApplicationsResponseBodyDataApplicationsChildren setMem(Integer mem) {
@@ -534,6 +545,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        @NameInMap("IsStateful")
+        public Boolean isStateful;
+
         /**
          * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
          * <ul>
@@ -605,6 +619,9 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("Tags")
         public java.util.List<ListApplicationsResponseBodyDataApplicationsTags> tags;
+
+        @NameInMap("VpcId")
+        public String vpcId;
 
         public static ListApplicationsResponseBodyDataApplications build(java.util.Map<String, ?> map) throws Exception {
             ListApplicationsResponseBodyDataApplications self = new ListApplicationsResponseBodyDataApplications();
@@ -707,6 +724,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.instances;
         }
 
+        public ListApplicationsResponseBodyDataApplications setIsStateful(Boolean isStateful) {
+            this.isStateful = isStateful;
+            return this;
+        }
+        public Boolean getIsStateful() {
+            return this.isStateful;
+        }
+
         public ListApplicationsResponseBodyDataApplications setMem(Integer mem) {
             this.mem = mem;
             return this;
@@ -793,6 +818,14 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
         public java.util.List<ListApplicationsResponseBodyDataApplicationsTags> getTags() {
             return this.tags;
+        }
+
+        public ListApplicationsResponseBodyDataApplications setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
