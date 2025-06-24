@@ -225,6 +225,9 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("ProductAction")
     public String productActionShrink;
 
+    @NameInMap("RecipientType")
+    public String recipientType;
+
     /**
      * <p>The tag information of the Viber message.</p>
      * 
@@ -449,6 +452,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getProductActionShrink() {
         return this.productActionShrink;
+    }
+
+    public SendChatappMessageShrinkRequest setRecipientType(String recipientType) {
+        this.recipientType = recipientType;
+        return this;
+    }
+    public String getRecipientType() {
+        return this.recipientType;
     }
 
     public SendChatappMessageShrinkRequest setTag(String tag) {
