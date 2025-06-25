@@ -13,6 +13,9 @@ public class RunDocSmartCardRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("Prompt")
     public String prompt;
 
@@ -45,6 +48,14 @@ public class RunDocSmartCardRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunDocSmartCardRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocSmartCardRequest setPrompt(String prompt) {

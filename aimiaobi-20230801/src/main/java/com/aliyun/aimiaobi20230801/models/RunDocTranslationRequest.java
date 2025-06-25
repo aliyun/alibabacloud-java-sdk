@@ -14,6 +14,9 @@ public class RunDocTranslationRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("RecommendContent")
     public String recommendContent;
 
@@ -62,6 +65,14 @@ public class RunDocTranslationRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunDocTranslationRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocTranslationRequest setRecommendContent(String recommendContent) {

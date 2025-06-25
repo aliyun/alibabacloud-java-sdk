@@ -11,6 +11,9 @@ public class RunGenerateQuestionsRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("ReferenceContent")
     public String referenceContent;
 
@@ -41,6 +44,14 @@ public class RunGenerateQuestionsRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunGenerateQuestionsRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunGenerateQuestionsRequest setReferenceContent(String referenceContent) {

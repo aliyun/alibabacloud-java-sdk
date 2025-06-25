@@ -11,6 +11,9 @@ public class RunHotwordRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("Prompt")
     public String prompt;
 
@@ -44,6 +47,14 @@ public class RunHotwordRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunHotwordRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunHotwordRequest setPrompt(String prompt) {

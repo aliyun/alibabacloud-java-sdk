@@ -13,6 +13,9 @@ public class RunDocQaRequest extends TeaModel {
     @NameInMap("DocIds")
     public java.util.List<String> docIds;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -76,6 +79,14 @@ public class RunDocQaRequest extends TeaModel {
     }
     public java.util.List<String> getDocIds() {
         return this.docIds;
+    }
+
+    public RunDocQaRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocQaRequest setQuery(String query) {

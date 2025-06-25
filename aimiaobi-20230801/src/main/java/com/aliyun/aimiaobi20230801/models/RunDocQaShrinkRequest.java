@@ -13,6 +13,9 @@ public class RunDocQaShrinkRequest extends TeaModel {
     @NameInMap("DocIds")
     public String docIdsShrink;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -76,6 +79,14 @@ public class RunDocQaShrinkRequest extends TeaModel {
     }
     public String getDocIdsShrink() {
         return this.docIdsShrink;
+    }
+
+    public RunDocQaShrinkRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocQaShrinkRequest setQuery(String query) {

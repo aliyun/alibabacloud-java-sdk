@@ -16,6 +16,9 @@ public class RunDocBrainmapRequest extends TeaModel {
     @NameInMap("DocId")
     public String docId;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     @NameInMap("NodeNumber")
     public Integer nodeNumber;
 
@@ -65,6 +68,14 @@ public class RunDocBrainmapRequest extends TeaModel {
     }
     public String getDocId() {
         return this.docId;
+    }
+
+    public RunDocBrainmapRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocBrainmapRequest setNodeNumber(Integer nodeNumber) {

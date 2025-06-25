@@ -30,6 +30,9 @@ public class RunCommentGenerationRequest extends TeaModel {
     @NameInMap("LengthRange")
     public java.util.Map<String, ?> lengthRange;
 
+    @NameInMap("ModelId")
+    public String modelId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -113,6 +116,14 @@ public class RunCommentGenerationRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getLengthRange() {
         return this.lengthRange;
+    }
+
+    public RunCommentGenerationRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
     }
 
     public RunCommentGenerationRequest setNumComments(String numComments) {

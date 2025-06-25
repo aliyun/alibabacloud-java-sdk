@@ -30,6 +30,9 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     @NameInMap("LengthRange")
     public String lengthRangeShrink;
 
+    @NameInMap("ModelId")
+    public String modelId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -113,6 +116,14 @@ public class RunCommentGenerationShrinkRequest extends TeaModel {
     }
     public String getLengthRangeShrink() {
         return this.lengthRangeShrink;
+    }
+
+    public RunCommentGenerationShrinkRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
     }
 
     public RunCommentGenerationShrinkRequest setNumComments(String numComments) {

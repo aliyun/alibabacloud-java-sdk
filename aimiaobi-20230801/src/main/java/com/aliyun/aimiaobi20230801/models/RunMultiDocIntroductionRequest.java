@@ -13,6 +13,9 @@ public class RunMultiDocIntroductionRequest extends TeaModel {
     @NameInMap("KeyPointPrompt")
     public String keyPointPrompt;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -53,6 +56,14 @@ public class RunMultiDocIntroductionRequest extends TeaModel {
     }
     public String getKeyPointPrompt() {
         return this.keyPointPrompt;
+    }
+
+    public RunMultiDocIntroductionRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunMultiDocIntroductionRequest setSessionId(String sessionId) {

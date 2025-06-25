@@ -6207,6 +6207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("LengthRange", request.lengthRangeShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("ModelId", request.modelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.numComments)) {
             body.put("NumComments", request.numComments);
         }
@@ -6479,6 +6483,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DocId", request.docId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nodeNumber)) {
             body.put("NodeNumber", request.nodeNumber);
         }
@@ -6557,6 +6565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPointPrompt)) {
             body.put("KeyPointPrompt", request.keyPointPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
@@ -6641,6 +6653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DocIds", request.docIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             body.put("Query", request.query);
         }
@@ -6703,6 +6719,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.docId)) {
             body.put("DocId", request.docId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
@@ -6833,6 +6853,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DocId", request.docId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.recommendContent)) {
             body.put("RecommendContent", request.recommendContent);
         }
@@ -6889,6 +6913,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunDocWashingResponse runDocWashingWithOptions(RunDocWashingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("ModelId", request.modelId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
             body.put("Prompt", request.prompt);
         }
@@ -7013,6 +7041,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DocId", request.docId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.referenceContent)) {
             body.put("ReferenceContent", request.referenceContent);
         }
@@ -7067,6 +7099,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.docId)) {
             body.put("DocId", request.docId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
@@ -7195,6 +7231,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPointPrompt)) {
             body.put("KeyPointPrompt", request.keyPointPrompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelName)) {
+            body.put("ModelName", request.modelName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {

@@ -22,6 +22,9 @@ public class RunDocIntroductionRequest extends TeaModel {
     @NameInMap("KeyPointPrompt")
     public String keyPointPrompt;
 
+    @NameInMap("ModelName")
+    public String modelName;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -81,6 +84,14 @@ public class RunDocIntroductionRequest extends TeaModel {
     }
     public String getKeyPointPrompt() {
         return this.keyPointPrompt;
+    }
+
+    public RunDocIntroductionRequest setModelName(String modelName) {
+        this.modelName = modelName;
+        return this;
+    }
+    public String getModelName() {
+        return this.modelName;
     }
 
     public RunDocIntroductionRequest setSessionId(String sessionId) {

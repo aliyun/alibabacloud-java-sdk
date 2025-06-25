@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunDocWashingRequest extends TeaModel {
+    @NameInMap("ModelId")
+    public String modelId;
+
     @NameInMap("Prompt")
     public String prompt;
 
@@ -44,6 +47,14 @@ public class RunDocWashingRequest extends TeaModel {
     public static RunDocWashingRequest build(java.util.Map<String, ?> map) throws Exception {
         RunDocWashingRequest self = new RunDocWashingRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunDocWashingRequest setModelId(String modelId) {
+        this.modelId = modelId;
+        return this;
+    }
+    public String getModelId() {
+        return this.modelId;
     }
 
     public RunDocWashingRequest setPrompt(String prompt) {
