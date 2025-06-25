@@ -77,6 +77,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("CameraRedirect")
     public String cameraRedirect;
 
+    @NameInMap("ClientControlMenu")
+    public String clientControlMenu;
+
     /**
      * <p>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</p>
      */
@@ -112,6 +115,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("ColorEnhancement")
     public String colorEnhancement;
+
+    @NameInMap("CpdDriveClipboard")
+    public String cpdDriveClipboard;
 
     /**
      * <p>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</p>
@@ -305,6 +311,15 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("FileMigrate")
     public String fileMigrate;
+
+    @NameInMap("FileTransferAddress")
+    public String fileTransferAddress;
+
+    @NameInMap("FileTransferSpeed")
+    public String fileTransferSpeed;
+
+    @NameInMap("FileTransferSpeedLocation")
+    public String fileTransferSpeedLocation;
 
     /**
      * <p>Specifies whether to enable image quality control. This feature is highly recommended for professional design scenarios where computer performance and user experience are critical.</p>
@@ -790,6 +805,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("ScopeValue")
     public java.util.List<String> scopeValue;
 
+    @NameInMap("ScreenDisplayMode")
+    public String screenDisplayMode;
+
     /**
      * <p>The bandwidth peak allowed for sessions. Unit: Kbit/s. Valid values: 2000 to 100000.</p>
      * 
@@ -886,6 +904,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("UsbSupplyRedirectRule")
     public java.util.List<CreateCenterPolicyRequestUsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+    @NameInMap("UseTime")
+    public String useTime;
 
     /**
      * <p>The average bitrate for video encoding. Unit: Kbit/s. Valid values: 1000 to 50000.</p>
@@ -1202,6 +1223,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.cameraRedirect;
     }
 
+    public CreateCenterPolicyRequest setClientControlMenu(String clientControlMenu) {
+        this.clientControlMenu = clientControlMenu;
+        return this;
+    }
+    public String getClientControlMenu() {
+        return this.clientControlMenu;
+    }
+
     public CreateCenterPolicyRequest setClientType(java.util.List<CreateCenterPolicyRequestClientType> clientType) {
         this.clientType = clientType;
         return this;
@@ -1224,6 +1253,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getColorEnhancement() {
         return this.colorEnhancement;
+    }
+
+    public CreateCenterPolicyRequest setCpdDriveClipboard(String cpdDriveClipboard) {
+        this.cpdDriveClipboard = cpdDriveClipboard;
+        return this;
+    }
+    public String getCpdDriveClipboard() {
+        return this.cpdDriveClipboard;
     }
 
     public CreateCenterPolicyRequest setCpuDownGradeDuration(Integer cpuDownGradeDuration) {
@@ -1368,6 +1405,30 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getFileMigrate() {
         return this.fileMigrate;
+    }
+
+    public CreateCenterPolicyRequest setFileTransferAddress(String fileTransferAddress) {
+        this.fileTransferAddress = fileTransferAddress;
+        return this;
+    }
+    public String getFileTransferAddress() {
+        return this.fileTransferAddress;
+    }
+
+    public CreateCenterPolicyRequest setFileTransferSpeed(String fileTransferSpeed) {
+        this.fileTransferSpeed = fileTransferSpeed;
+        return this;
+    }
+    public String getFileTransferSpeed() {
+        return this.fileTransferSpeed;
+    }
+
+    public CreateCenterPolicyRequest setFileTransferSpeedLocation(String fileTransferSpeedLocation) {
+        this.fileTransferSpeedLocation = fileTransferSpeedLocation;
+        return this;
+    }
+    public String getFileTransferSpeedLocation() {
+        return this.fileTransferSpeedLocation;
     }
 
     public CreateCenterPolicyRequest setGpuAcceleration(String gpuAcceleration) {
@@ -1722,6 +1783,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.scopeValue;
     }
 
+    public CreateCenterPolicyRequest setScreenDisplayMode(String screenDisplayMode) {
+        this.screenDisplayMode = screenDisplayMode;
+        return this;
+    }
+    public String getScreenDisplayMode() {
+        return this.screenDisplayMode;
+    }
+
     public CreateCenterPolicyRequest setSessionMaxRateKbps(Integer sessionMaxRateKbps) {
         this.sessionMaxRateKbps = sessionMaxRateKbps;
         return this;
@@ -1784,6 +1853,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public java.util.List<CreateCenterPolicyRequestUsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
         return this.usbSupplyRedirectRule;
+    }
+
+    public CreateCenterPolicyRequest setUseTime(String useTime) {
+        this.useTime = useTime;
+        return this;
+    }
+    public String getUseTime() {
+        return this.useTime;
     }
 
     public CreateCenterPolicyRequest setVideoEncAvgKbps(Integer videoEncAvgKbps) {

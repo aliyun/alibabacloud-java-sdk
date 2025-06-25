@@ -849,6 +849,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("CameraRedirect")
         public String cameraRedirect;
 
+        @NameInMap("ClientControlMenu")
+        public String clientControlMenu;
+
         /**
          * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
          */
@@ -884,6 +887,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("ColorEnhancement")
         public String colorEnhancement;
+
+        @NameInMap("CpdDriveClipboard")
+        public String cpdDriveClipboard;
 
         /**
          * <p>The CPU underclocking duration. Valid values: 30 to 120. Unit: seconds.</p>
@@ -1072,6 +1078,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("FileTransfer")
         public String fileTransfer;
+
+        @NameInMap("FileTransferAddress")
+        public String fileTransferAddress;
+
+        @NameInMap("FileTransferSpeed")
+        public String fileTransferSpeed;
+
+        @NameInMap("FileTransferSpeedLocation")
+        public String fileTransferSpeedLocation;
 
         /**
          * <p>Indicates whether the Image Quality Control feature is enabled. If you have high requirements on the performance and user experience in scenarios such as professional design, we recommend that you enable this feature.</p>
@@ -1605,6 +1620,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("ScopeValue")
         public java.util.List<String> scopeValue;
 
+        @NameInMap("ScreenDisplayMode")
+        public String screenDisplayMode;
+
         /**
          * <p>Indicates whether the Smooth Enhancement switch is turned on.</p>
          * <p>Valid values:</p>
@@ -1674,6 +1692,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("UsbSupplyRedirectRule")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+        @NameInMap("UseTime")
+        public String useTime;
 
         /**
          * <p>The average bitrate for video encoding. Valid values: 1000 to 50000.</p>
@@ -1982,6 +2003,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.cameraRedirect;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientControlMenu(String clientControlMenu) {
+            this.clientControlMenu = clientControlMenu;
+            return this;
+        }
+        public String getClientControlMenu() {
+            return this.clientControlMenu;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setClientTypes(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsClientTypes> clientTypes) {
             this.clientTypes = clientTypes;
             return this;
@@ -2004,6 +2033,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getColorEnhancement() {
             return this.colorEnhancement;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpdDriveClipboard(String cpdDriveClipboard) {
+            this.cpdDriveClipboard = cpdDriveClipboard;
+            return this;
+        }
+        public String getCpdDriveClipboard() {
+            return this.cpdDriveClipboard;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCpuDownGradeDuration(Integer cpuDownGradeDuration) {
@@ -2164,6 +2201,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public String getFileTransfer() {
             return this.fileTransfer;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileTransferAddress(String fileTransferAddress) {
+            this.fileTransferAddress = fileTransferAddress;
+            return this;
+        }
+        public String getFileTransferAddress() {
+            return this.fileTransferAddress;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileTransferSpeed(String fileTransferSpeed) {
+            this.fileTransferSpeed = fileTransferSpeed;
+            return this;
+        }
+        public String getFileTransferSpeed() {
+            return this.fileTransferSpeed;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setFileTransferSpeedLocation(String fileTransferSpeedLocation) {
+            this.fileTransferSpeedLocation = fileTransferSpeedLocation;
+            return this;
+        }
+        public String getFileTransferSpeedLocation() {
+            return this.fileTransferSpeedLocation;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setGpuAcceleration(String gpuAcceleration) {
@@ -2558,6 +2619,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.scopeValue;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setScreenDisplayMode(String screenDisplayMode) {
+            this.screenDisplayMode = screenDisplayMode;
+            return this;
+        }
+        public String getScreenDisplayMode() {
+            return this.screenDisplayMode;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setSmoothEnhancement(String smoothEnhancement) {
             this.smoothEnhancement = smoothEnhancement;
             return this;
@@ -2604,6 +2673,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
             return this.usbSupplyRedirectRule;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setUseTime(String useTime) {
+            this.useTime = useTime;
+            return this;
+        }
+        public String getUseTime() {
+            return this.useTime;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setVideoEncAvgKbps(Integer videoEncAvgKbps) {

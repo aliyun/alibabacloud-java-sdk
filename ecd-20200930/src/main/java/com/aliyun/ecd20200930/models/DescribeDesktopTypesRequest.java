@@ -197,6 +197,9 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     @NameInMap("Scope")
     public String scope;
 
+    @NameInMap("ScopeSet")
+    public java.util.List<String> scopeSet;
+
     /**
      * <p>The sorting order.</p>
      * <p>Valid values:</p>
@@ -354,6 +357,14 @@ public class DescribeDesktopTypesRequest extends TeaModel {
     }
     public String getScope() {
         return this.scope;
+    }
+
+    public DescribeDesktopTypesRequest setScopeSet(java.util.List<String> scopeSet) {
+        this.scopeSet = scopeSet;
+        return this;
+    }
+    public java.util.List<String> getScopeSet() {
+        return this.scopeSet;
     }
 
     public DescribeDesktopTypesRequest setSortType(String sortType) {

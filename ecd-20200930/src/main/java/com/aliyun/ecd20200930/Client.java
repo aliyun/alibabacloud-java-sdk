@@ -2280,6 +2280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CameraRedirect", request.cameraRedirect);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientControlMenu)) {
+            query.put("ClientControlMenu", request.clientControlMenu);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
             query.put("ClientType", request.clientType);
         }
@@ -2290,6 +2294,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.colorEnhancement)) {
             query.put("ColorEnhancement", request.colorEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpdDriveClipboard)) {
+            query.put("CpdDriveClipboard", request.cpdDriveClipboard);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cpuDownGradeDuration)) {
@@ -2362,6 +2370,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileMigrate)) {
             query.put("FileMigrate", request.fileMigrate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferAddress)) {
+            query.put("FileTransferAddress", request.fileTransferAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSpeed)) {
+            query.put("FileTransferSpeed", request.fileTransferSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSpeedLocation)) {
+            query.put("FileTransferSpeedLocation", request.fileTransferSpeedLocation);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
@@ -2540,6 +2560,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScopeValue", request.scopeValue);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.screenDisplayMode)) {
+            query.put("ScreenDisplayMode", request.screenDisplayMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionMaxRateKbps)) {
             query.put("SessionMaxRateKbps", request.sessionMaxRateKbps);
         }
@@ -2570,6 +2594,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.usbSupplyRedirectRule)) {
             query.put("UsbSupplyRedirectRule", request.usbSupplyRedirectRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useTime)) {
+            query.put("UseTime", request.useTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoEncAvgKbps)) {
@@ -7008,6 +7036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
             query.put("Scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scopeSet)) {
+            query.put("ScopeSet", request.scopeSet);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sortType)) {
@@ -12129,6 +12161,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CameraRedirect", request.cameraRedirect);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clientControlMenu)) {
+            query.put("ClientControlMenu", request.clientControlMenu);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clientType)) {
             query.put("ClientType", request.clientType);
         }
@@ -12139,6 +12175,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.colorEnhancement)) {
             query.put("ColorEnhancement", request.colorEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpdDriveClipboard)) {
+            query.put("CpdDriveClipboard", request.cpdDriveClipboard);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.cpuDownGradeDuration)) {
@@ -12211,6 +12251,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileMigrate)) {
             query.put("FileMigrate", request.fileMigrate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferAddress)) {
+            query.put("FileTransferAddress", request.fileTransferAddress);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSpeed)) {
+            query.put("FileTransferSpeed", request.fileTransferSpeed);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileTransferSpeedLocation)) {
+            query.put("FileTransferSpeedLocation", request.fileTransferSpeedLocation);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
@@ -12401,6 +12453,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScopeValue", request.scopeValue);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.screenDisplayMode)) {
+            query.put("ScreenDisplayMode", request.screenDisplayMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionMaxRateKbps)) {
             query.put("SessionMaxRateKbps", request.sessionMaxRateKbps);
         }
@@ -12431,6 +12487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.usbSupplyRedirectRule)) {
             query.put("UsbSupplyRedirectRule", request.usbSupplyRedirectRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useTime)) {
+            query.put("UseTime", request.useTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.videoEncAvgKbps)) {
@@ -14767,7 +14827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</p>
+     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
@@ -14810,7 +14870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</p>
+     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the basic information of a custom cloud computer template, including the template name and template description.</p>
