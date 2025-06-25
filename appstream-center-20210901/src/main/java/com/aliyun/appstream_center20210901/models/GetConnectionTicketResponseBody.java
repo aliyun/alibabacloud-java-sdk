@@ -31,6 +31,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    @NameInMap("AvatarId")
+    public String avatarId;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -134,6 +137,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     }
     public String getAppInstancePersistentId() {
         return this.appInstancePersistentId;
+    }
+
+    public GetConnectionTicketResponseBody setAvatarId(String avatarId) {
+        this.avatarId = avatarId;
+        return this;
+    }
+    public String getAvatarId() {
+        return this.avatarId;
     }
 
     public GetConnectionTicketResponseBody setBizRegionId(String bizRegionId) {

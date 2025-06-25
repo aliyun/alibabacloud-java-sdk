@@ -796,6 +796,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
 
     public static class ListAppInstanceGroupResponseBodyAppInstanceGroupModels extends TeaModel {
         /**
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
+         */
+        @NameInMap("AccessType")
+        public String accessType;
+
+        /**
          * <p>The number of subscription resources. Minimum value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -865,6 +872,13 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
          */
         @NameInMap("Apps")
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
+
+        /**
+         * <strong>example:</strong>
+         * <p>App</p>
+         */
+        @NameInMap("AuthMode")
+        public String authMode;
 
         /**
          * <p>The sales mode.</p>
@@ -1122,6 +1136,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setAccessType(String accessType) {
+            this.accessType = accessType;
+            return this;
+        }
+        public String getAccessType() {
+            return this.accessType;
+        }
+
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setAmount(Integer amount) {
             this.amount = amount;
             return this;
@@ -1192,6 +1214,14 @@ public class ListAppInstanceGroupResponseBody extends TeaModel {
         }
         public java.util.List<ListAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> getApps() {
             return this.apps;
+        }
+
+        public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setAuthMode(String authMode) {
+            this.authMode = authMode;
+            return this;
+        }
+        public String getAuthMode() {
+            return this.authMode;
         }
 
         public ListAppInstanceGroupResponseBodyAppInstanceGroupModels setChargeResourceMode(String chargeResourceMode) {

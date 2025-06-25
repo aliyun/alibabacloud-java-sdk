@@ -23,10 +23,24 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
     public String appInstancePersistentId;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AuthorizeUserGroupIds")
+    public java.util.List<String> authorizeUserGroupIds;
+
+    /**
      * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
      */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
+
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("AvatarId")
+    public String avatarId;
 
     /**
      * <p>This parameter is required.</p>
@@ -36,6 +50,13 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
      */
     @NameInMap("ProductType")
     public String productType;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("UnAuthorizeUserGroupIds")
+    public java.util.List<String> unAuthorizeUserGroupIds;
 
     /**
      * <p>The IDs of the users that you want to remove from the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
@@ -70,6 +91,14 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
         return this.appInstancePersistentId;
     }
 
+    public AuthorizeInstanceGroupShrinkRequest setAuthorizeUserGroupIds(java.util.List<String> authorizeUserGroupIds) {
+        this.authorizeUserGroupIds = authorizeUserGroupIds;
+        return this;
+    }
+    public java.util.List<String> getAuthorizeUserGroupIds() {
+        return this.authorizeUserGroupIds;
+    }
+
     public AuthorizeInstanceGroupShrinkRequest setAuthorizeUserIds(java.util.List<String> authorizeUserIds) {
         this.authorizeUserIds = authorizeUserIds;
         return this;
@@ -78,12 +107,28 @@ public class AuthorizeInstanceGroupShrinkRequest extends TeaModel {
         return this.authorizeUserIds;
     }
 
+    public AuthorizeInstanceGroupShrinkRequest setAvatarId(String avatarId) {
+        this.avatarId = avatarId;
+        return this;
+    }
+    public String getAvatarId() {
+        return this.avatarId;
+    }
+
     public AuthorizeInstanceGroupShrinkRequest setProductType(String productType) {
         this.productType = productType;
         return this;
     }
     public String getProductType() {
         return this.productType;
+    }
+
+    public AuthorizeInstanceGroupShrinkRequest setUnAuthorizeUserGroupIds(java.util.List<String> unAuthorizeUserGroupIds) {
+        this.unAuthorizeUserGroupIds = unAuthorizeUserGroupIds;
+        return this;
+    }
+    public java.util.List<String> getUnAuthorizeUserGroupIds() {
+        return this.unAuthorizeUserGroupIds;
     }
 
     public AuthorizeInstanceGroupShrinkRequest setUnAuthorizeUserIds(java.util.List<String> unAuthorizeUserIds) {

@@ -62,6 +62,9 @@ public class GetConnectionTicketRequest extends TeaModel {
     @NameInMap("AppInstancePersistentId")
     public String appInstancePersistentId;
 
+    @NameInMap("AppPolicyId")
+    public String appPolicyId;
+
     /**
      * <p>The parameters that are configured to start the application. For information about how to obtain these parameters, see <a href="https://help.aliyun.com/document_detail/426045.html">Obtain parameters configured to install and start an application</a>.</p>
      * 
@@ -172,6 +175,14 @@ public class GetConnectionTicketRequest extends TeaModel {
     }
     public String getAppInstancePersistentId() {
         return this.appInstancePersistentId;
+    }
+
+    public GetConnectionTicketRequest setAppPolicyId(String appPolicyId) {
+        this.appPolicyId = appPolicyId;
+        return this;
+    }
+    public String getAppPolicyId() {
+        return this.appPolicyId;
     }
 
     public GetConnectionTicketRequest setAppStartParam(String appStartParam) {

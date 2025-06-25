@@ -579,6 +579,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
     }
 
     public static class GetAppInstanceGroupResponseBodyAppInstanceGroupModels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>INTERNET</p>
+         */
+        @NameInMap("AccessType")
+        public String accessType;
+
         @NameInMap("Amount")
         public Integer amount;
 
@@ -629,6 +636,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         @NameInMap("Apps")
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> apps;
+
+        /**
+         * <strong>example:</strong>
+         * <p>App</p>
+         */
+        @NameInMap("AuthMode")
+        public String authMode;
 
         /**
          * <strong>example:</strong>
@@ -790,6 +804,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setAccessType(String accessType) {
+            this.accessType = accessType;
+            return this;
+        }
+        public String getAccessType() {
+            return this.accessType;
+        }
+
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setAmount(Integer amount) {
             this.amount = amount;
             return this;
@@ -860,6 +882,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
         public java.util.List<GetAppInstanceGroupResponseBodyAppInstanceGroupModelsApps> getApps() {
             return this.apps;
+        }
+
+        public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setAuthMode(String authMode) {
+            this.authMode = authMode;
+            return this;
+        }
+        public String getAuthMode() {
+            return this.authMode;
         }
 
         public GetAppInstanceGroupResponseBodyAppInstanceGroupModels setChargeResourceMode(String chargeResourceMode) {
