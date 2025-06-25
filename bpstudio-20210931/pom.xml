@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>bpstudio20210931</artifactId>
-  <version>8.0.1</version>
+  <version>8.0.2</version>
   <packaging>jar</packaging>
   <name>bpstudio20210931</name>
   <description>Alibaba Cloud BPStudio (20210931) SDK for Java
@@ -56,7 +56,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

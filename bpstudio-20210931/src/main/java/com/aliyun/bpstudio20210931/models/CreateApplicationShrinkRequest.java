@@ -51,6 +51,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ProcessVariables")
+    public String processVariablesShrink;
+
     /**
      * <p>The ID of the resource group to which the application you want to create belongs.</p>
      * 
@@ -122,6 +125,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateApplicationShrinkRequest setProcessVariablesShrink(String processVariablesShrink) {
+        this.processVariablesShrink = processVariablesShrink;
+        return this;
+    }
+    public String getProcessVariablesShrink() {
+        return this.processVariablesShrink;
     }
 
     public CreateApplicationShrinkRequest setResourceGroupId(String resourceGroupId) {

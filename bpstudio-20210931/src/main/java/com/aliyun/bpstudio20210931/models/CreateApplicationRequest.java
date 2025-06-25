@@ -51,6 +51,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("ProcessVariables")
+    public java.util.Map<String, ?> processVariables;
+
     /**
      * <p>The ID of the resource group to which the application you want to create belongs.</p>
      * 
@@ -122,6 +125,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateApplicationRequest setProcessVariables(java.util.Map<String, ?> processVariables) {
+        this.processVariables = processVariables;
+        return this;
+    }
+    public java.util.Map<String, ?> getProcessVariables() {
+        return this.processVariables;
     }
 
     public CreateApplicationRequest setResourceGroupId(String resourceGroupId) {
