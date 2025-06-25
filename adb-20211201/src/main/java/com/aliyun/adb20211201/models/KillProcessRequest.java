@@ -20,7 +20,7 @@ public class KillProcessRequest extends TeaModel {
     /**
      * <p>The query ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143382.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</p>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612277.html">DescribeProcessList</a> operation to query the IDs of queries that are being executed.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

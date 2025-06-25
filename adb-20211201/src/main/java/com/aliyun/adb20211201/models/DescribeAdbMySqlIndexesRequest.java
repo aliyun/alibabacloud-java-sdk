@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlIndexesRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Warehouse Edition clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,10 @@ public class DescribeAdbMySqlIndexesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The region ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +31,8 @@ public class DescribeAdbMySqlIndexesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>tpch_oss</p>
      */
@@ -30,6 +40,11 @@ public class DescribeAdbMySqlIndexesRequest extends TeaModel {
     public String schema;
 
     /**
+     * <p>The name of the table.</p>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the information about all the current tables in the cluster is returned.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>orders</p>
      */

@@ -28,25 +28,13 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterIds;
 
     /**
-     * <p>The state of the cluster. Valid values:</p>
+     * <p>The status of the cluster. Valid values:</p>
      * <ul>
      * <li><strong>Preparing</strong></li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
      * <li><strong>Creating</strong></li>
      * <li><strong>Running</strong></li>
      * <li><strong>Deleting</strong></li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
      * <li><strong>Restoring</strong></li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
      * <li><strong>ClassChanging</strong></li>
      * <li><strong>NetAddressCreating</strong></li>
      * <li><strong>NetAddressDeleting</strong></li>
@@ -60,11 +48,11 @@ public class DescribeDBClustersRequest extends TeaModel {
     public String DBClusterStatus;
 
     /**
-     * <p>The database engine version of the cluster. Valid values:</p>
+     * <p>The version number corresponding to the edition of the cluster. Valid values:</p>
      * <ul>
-     * <li>3.0: Data Warehouse Edition.</li>
-     * <li>5.0 (default): Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
-     * <li>All: Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+     * <li><strong>3.0</strong>: Data Warehouse Edition.</li>
+     * <li><strong>5.0</strong> (default): includes Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
+     * <li><strong>All</strong>: all editions, including Data Warehouse Edition, Data Lakehouse Edition, Enterprise Edition, and Basic Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,10 +87,12 @@ public class DescribeDBClustersRequest extends TeaModel {
     /**
      * <p>The edition of the cluster. Valid values:</p>
      * <ul>
-     * <li>EnterpriseVersion: Enterprise Edition.</li>
-     * <li>BasicVersion: Basic Edition.</li>
+     * <li><strong>EnterpriseVersion</strong>: Enterprise Edition.</li>
+     * <li><strong>BasicVersion</strong>: Basic Edition.</li>
      * </ul>
-     * <p>If you leave this parameter empty, the information about clusters of all editions is returned.</p>
+     * <blockquote>
+     * <p> If you leave this parameter empty, the information about clusters of all editions is returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>BasicVersion</p>

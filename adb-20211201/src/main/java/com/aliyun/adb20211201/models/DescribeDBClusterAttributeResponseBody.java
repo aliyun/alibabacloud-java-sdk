@@ -317,6 +317,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClusterAttributeResponseBodyItemsDBCluster extends TeaModel {
+        @NameInMap("AINodeNumber")
+        public Integer AINodeNumber;
+
+        @NameInMap("AINodeSpec")
+        public String AINodeSpec;
+
         /**
          * <p>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</p>
          * 
@@ -768,6 +774,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static DescribeDBClusterAttributeResponseBodyItemsDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClusterAttributeResponseBodyItemsDBCluster self = new DescribeDBClusterAttributeResponseBodyItemsDBCluster();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setAINodeNumber(Integer AINodeNumber) {
+            this.AINodeNumber = AINodeNumber;
+            return this;
+        }
+        public Integer getAINodeNumber() {
+            return this.AINodeNumber;
+        }
+
+        public DescribeDBClusterAttributeResponseBodyItemsDBCluster setAINodeSpec(String AINodeSpec) {
+            this.AINodeSpec = AINodeSpec;
+            return this;
+        }
+        public String getAINodeSpec() {
+            return this.AINodeSpec;
         }
 
         public DescribeDBClusterAttributeResponseBodyItemsDBCluster setClickhouseEngineCacheSize(Integer clickhouseEngineCacheSize) {

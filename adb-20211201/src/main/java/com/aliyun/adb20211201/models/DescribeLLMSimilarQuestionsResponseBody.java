@@ -4,10 +4,15 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
+    /**
+     * <p>The queried similar questions.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeLLMSimilarQuestionsResponseBodyItems> items;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>96A55627-28E9-5E47-B8F6-D786BE551349</p>
      */
@@ -15,6 +20,8 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4847</p>
      */
@@ -51,10 +58,15 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
     }
 
     public static class DescribeLLMSimilarQuestionsResponseBodyItems extends TeaModel {
+        /**
+         * <p>The answer to the similar question.</p>
+         */
         @NameInMap("Answer")
         public String answer;
 
         /**
+         * <p>The ID of the similar question.</p>
+         * 
          * <strong>example:</strong>
          * <p>2389899</p>
          */
@@ -62,22 +74,35 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The similarity of the similar question.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.58</p>
          */
         @NameInMap("Score")
         public Double score;
 
+        /**
+         * <p>The source of the similar question.</p>
+         */
         @NameInMap("Source")
         public String source;
 
+        /**
+         * <p>The summary of the similar question.</p>
+         */
         @NameInMap("Summary")
         public String summary;
 
+        /**
+         * <p>The content of the similar question.</p>
+         */
         @NameInMap("Title")
         public String title;
 
         /**
+         * <p>The URL of the answer to the similar question.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyun.com/product">www.aliyun.com/product</a></p>
          */

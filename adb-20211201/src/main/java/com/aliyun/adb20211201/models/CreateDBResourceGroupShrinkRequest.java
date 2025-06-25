@@ -120,6 +120,9 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
 
@@ -145,6 +148,9 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("MinComputeResource")
     public String minComputeResource;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
@@ -169,9 +175,15 @@ public class CreateDBResourceGroupShrinkRequest extends TeaModel {
     @NameInMap("Rules")
     public String rulesShrink;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("SpecName")
     public String specName;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("TargetResourceGroupName")
     public String targetResourceGroupName;
 

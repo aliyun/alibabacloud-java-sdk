@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDatabaseObjectsResponseBody extends TeaModel {
     /**
-     * <p>The queried databases.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetDatabaseObjectsResponseBodyData data;
@@ -98,7 +98,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
 
     public static class GetDatabaseObjectsResponseBodyData extends TeaModel {
         /**
-         * <p>The queried database.</p>
+         * <p>The queried databases.</p>
          */
         @NameInMap("DatabaseSummaryModels")
         public java.util.List<DatabaseSummaryModel> databaseSummaryModels;

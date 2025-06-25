@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
     /**
+     * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
     public Long code;
 
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p>adb-ws-beijing.console.aliyun.com/query</p>
      */
@@ -19,6 +23,12 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
     public String domain;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -26,6 +36,8 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E03F0806-A67B-5B24-8562-9589F20DEEB5</p>
      */
@@ -33,6 +45,12 @@ public class DescribeSQLWebSocketDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableColumnsResponseBody extends TeaModel {
     /**
-     * <p>The queried data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public GetTableColumnsResponseBodyData data;

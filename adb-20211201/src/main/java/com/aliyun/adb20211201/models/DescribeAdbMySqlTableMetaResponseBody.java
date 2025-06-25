@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +18,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
      */
@@ -19,12 +27,21 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The queried table metadata.</p>
+     */
     @NameInMap("TableMeta")
     public DescribeAdbMySqlTableMetaResponseBodyTableMeta tableMeta;
 
@@ -67,6 +84,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
 
     public static class DescribeAdbMySqlTableMetaResponseBodyTableMeta extends TeaModel {
         /**
+         * <p>The time when the table was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-03-14 02:18:08.0</p>
          */
@@ -74,6 +93,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The distribution key column.</p>
+         * 
          * <strong>example:</strong>
          * <p>customer_id</p>
          */
@@ -81,6 +102,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String distributeColumn;
 
         /**
+         * <p>The distribution type.</p>
+         * 
          * <strong>example:</strong>
          * <p>hash</p>
          */
@@ -88,6 +111,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String distributeType;
 
         /**
+         * <p>Indicates whether full-column indexes are used.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -95,6 +120,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public Boolean isAllIndex;
 
         /**
+         * <p>Indicates whether dictionary encoding is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -102,6 +129,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public Boolean isDictEncode;
 
         /**
+         * <p>Indicates whether full-text indexes are used.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -109,6 +138,12 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public Boolean isFullTextDict;
 
         /**
+         * <p>Indicates whether pages are hidden.</p>
+         * <ul>
+         * <li><strong>false</strong></li>
+         * <li><strong>true</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -116,6 +151,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public Boolean isHidden;
 
         /**
+         * <p>The partition key column.</p>
+         * 
          * <strong>example:</strong>
          * <p>DATE_FORMAT(login_time, \&quot;%Y%m%d\&quot;)</p>
          */
@@ -123,6 +160,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String partitionColumn;
 
         /**
+         * <p>The type of the partition.</p>
+         * 
          * <strong>example:</strong>
          * <p>value</p>
          */
@@ -130,6 +169,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String partitionType;
 
         /**
+         * <p>The primary key column.</p>
+         * 
          * <strong>example:</strong>
          * <p>login_time,customer_id,phone_num</p>
          */
@@ -137,6 +178,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String primaryKeyColumn;
 
         /**
+         * <p>The table engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>XUANWU</p>
          */
@@ -144,6 +187,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String tableEngine;
 
         /**
+         * <p>The name of the table.</p>
+         * <p>**</p>
+         * <hr>
+         * 
          * <strong>example:</strong>
          * <p>external_supplier</p>
          */
@@ -151,6 +198,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String tableName;
 
         /**
+         * <p>The database to which the table belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>tpch</p>
          */
@@ -158,6 +207,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String tableSchema;
 
         /**
+         * <p>The type of the table.</p>
+         * 
          * <strong>example:</strong>
          * <p>fact_table</p>
          */
@@ -165,6 +216,8 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         public String tableType;
 
         /**
+         * <p>The time when the table was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-07-25 02:07:23.0</p>
          */

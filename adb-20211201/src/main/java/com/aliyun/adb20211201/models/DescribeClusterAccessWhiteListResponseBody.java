@@ -42,9 +42,9 @@ public class DescribeClusterAccessWhiteListResponseBody extends TeaModel {
 
     public static class DescribeClusterAccessWhiteListResponseBodyItemsIPArray extends TeaModel {
         /**
-         * <p>The attribute of the whitelist.</p>
+         * <p>The attribute of the IP address whitelist.</p>
          * <blockquote>
-         * <p>Whitelists with the <strong>hidden</strong> attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</p>
+         * <p> The IP address whitelists that have the <strong>hidden</strong> attribute are not displayed in the console. These IP address whitelists are used to access services such as Data Transmission Service (DTS) and PolarDB.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

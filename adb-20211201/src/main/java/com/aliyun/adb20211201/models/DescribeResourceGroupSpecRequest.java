@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceGroupSpecRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>The Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

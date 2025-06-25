@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeLLMSimilarQuestionsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>am-bp1565u55p32****</p>
      */
@@ -18,12 +23,18 @@ public class DescribeLLMSimilarQuestionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The question proposed by a user.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Query")
     public String query;
 
     /**
+     * <p>The region ID</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     /**
+     * <p>The number of indexes.````</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("IndexCount")
     public Integer indexCount;
 
+    /**
+     * <p>The queried indexes.</p>
+     */
     @NameInMap("Indexes")
     public java.util.List<DescribeAdbMySqlIndexesResponseBodyIndexes> indexes;
 
     /**
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.****</li>
+     * <li>If the request failed, an error message is returned.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -22,6 +33,8 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F0983B43-B2EC-536A-8791-142B5CF1E9B6</p>
      */
@@ -29,6 +42,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The name of the database.</p>
+     * <p>**</p>
+     * <p>****\</p>
+     * 
      * <strong>example:</strong>
      * <p>adb_demo</p>
      */
@@ -36,6 +53,12 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public String schema;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +66,8 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The name of the table.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -112,6 +137,8 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
 
     public static class DescribeAdbMySqlIndexesResponseBodyIndexes extends TeaModel {
         /**
+         * <p>The name of the column.</p>
+         * 
          * <strong>example:</strong>
          * <p>preclcu</p>
          */
@@ -119,6 +146,8 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         public String column;
 
         /**
+         * <p>The name of the index.</p>
+         * 
          * <strong>example:</strong>
          * <p>ttl</p>
          */
@@ -126,6 +155,8 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The index type.</p>
+         * 
          * <strong>example:</strong>
          * <p>normal</p>
          */

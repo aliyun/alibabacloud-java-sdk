@@ -3094,7 +3094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于查看表索引信息</p>
+     * <p>Queries the information about table indexes.</p>
      * 
      * @param request DescribeAdbMySqlIndexesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3138,7 +3138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于查看表索引信息</p>
+     * <p>Queries the information about table indexes.</p>
      * 
      * @param request DescribeAdbMySqlIndexesRequest
      * @return DescribeAdbMySqlIndexesResponse
@@ -3210,7 +3210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于查看表元数据信息</p>
+     * <p>Queries the information about table metadata.</p>
      * 
      * @param request DescribeAdbMySqlTableMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3254,7 +3254,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>用于查看表元数据信息</p>
+     * <p>Queries the information about table metadata.</p>
      * 
      * @param request DescribeAdbMySqlTableMetaRequest
      * @return DescribeAdbMySqlTableMetaResponse
@@ -5462,7 +5462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -5517,7 +5517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the deduplicated statistics of resource groups, databases, usernames, and source IP addresses about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -5535,7 +5535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeDiagnosisRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5642,7 +5642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>Queries the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeDiagnosisRecordsRequest
      * @return DescribeDiagnosisRecordsResponse
@@ -5654,7 +5654,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the execution information about an SQL statement, including the execution plan, execution information, resource usage, and self-diagnostics results.</p>
@@ -5713,7 +5713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the execution information about an SQL statement, including the execution plan, execution information, resource usage, and self-diagnostics results.</p>
@@ -5728,7 +5728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the last five SQL query download tasks of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -5771,7 +5771,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the last five SQL query download tasks of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -6625,6 +6625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of questions similar to a user question.</p>
+     * 
      * @param request DescribeLLMSimilarQuestionsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLLMSimilarQuestionsResponse
@@ -6678,6 +6681,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of questions similar to a user question.</p>
+     * 
      * @param request DescribeLLMSimilarQuestionsRequest
      * @return DescribeLLMSimilarQuestionsResponse
      */
@@ -7157,7 +7163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a></h3>
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about resource group specifications.</p>
@@ -7201,7 +7207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a></h3>
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://www.alibabacloud.com/help/en/analyticdb/analyticdb-for-mysql/developer-reference/api-adb-2021-12-01-endpoint?spm=a2c63.p38356.help-menu-92664.d_5_3_1.57da5837J23pkx">Endpoints</a>.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the information about resource group specifications.</p>
@@ -7306,7 +7312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看注册的WebSocket域名</p>
+     * <p>Queries the WebSocket domain name of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeSQLWebSocketDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7342,7 +7348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看注册的WebSocket域名</p>
+     * <p>Queries the WebSocket domain name of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeSQLWebSocketDomainRequest
      * @return DescribeSQLWebSocketDomainResponse
@@ -7982,7 +7988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of accesses to a table or all tables in an AnalyticDB for MySQL cluster on a date.</p>
@@ -8041,7 +8047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the number of accesses to a table or all tables in an AnalyticDB for MySQL cluster on a date.</p>
@@ -8176,7 +8182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询表统计信息</p>
+     * <p>Queries the table statistics of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeTableStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8232,7 +8238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询表统计信息</p>
+     * <p>Queries the table statistics of an AnalyticDB for MySQL cluster.</p>
      * 
      * @param request DescribeTableStatisticsRequest
      * @return DescribeTableStatisticsResponse
@@ -8582,7 +8588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Downloads the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -8673,7 +8679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For information about the endpoints of AnalyticDB for MySQL, see Endpoints.</p>
+     * <p>For information about the endpoints of AnalyticDB for MySQL, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoints</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Downloads the diagnostic information about SQL statements that meet a query condition for an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
@@ -9526,8 +9532,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <p>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</p>
      * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
      * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
      * </blockquote>
@@ -9573,8 +9580,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</p>
+     * <p>  Before you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/612447.html">PreloadSparkAppMetrics</a> operation to preload the metrics of a Spark application.</p>
      * <ul>
+     * <li>Regional public endpoint: <code>adb.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb.cn-hangzhou.aliyuncs.com</code>.</li>
      * <li>Regional Virtual Private Cloud (VPC) endpoint: <code>adb-vpc.&lt;region-id&gt;.aliyuncs.com</code>. Example: <code>adb-vpc.cn-hangzhou.aliyuncs.com</code>.<blockquote>
      * <p> If HTTP status code 409 is returned when you call this operation in the China (Qingdao), China (Shenzhen), China (Guangzhou), or China (Hong Kong) region, contact technical support.</p>
      * </blockquote>
@@ -9961,10 +9969,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the state information about the Spark SQL engine.</p>
      * 
+     * @deprecated OpenAPI GetSparkSQLEngineState is deprecated
+     * 
      * @param request GetSparkSQLEngineStateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSparkSQLEngineStateResponse
      */
+    @Deprecated
+    // Deprecated
     public GetSparkSQLEngineStateResponse getSparkSQLEngineStateWithOptions(GetSparkSQLEngineStateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -10006,9 +10018,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the state information about the Spark SQL engine.</p>
      * 
+     * @deprecated OpenAPI GetSparkSQLEngineState is deprecated
+     * 
      * @param request GetSparkSQLEngineStateRequest
      * @return GetSparkSQLEngineStateResponse
      */
+    @Deprecated
+    // Deprecated
     public GetSparkSQLEngineStateResponse getSparkSQLEngineState(GetSparkSQLEngineStateRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getSparkSQLEngineStateWithOptions(request, runtime);
@@ -10951,10 +10967,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Shuts down a Spark SQL engine.</p>
      * 
+     * @deprecated OpenAPI KillSparkSQLEngine is deprecated
+     * 
      * @param request KillSparkSQLEngineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return KillSparkSQLEngineResponse
      */
+    @Deprecated
+    // Deprecated
     public KillSparkSQLEngineResponse killSparkSQLEngineWithOptions(KillSparkSQLEngineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -10996,9 +11016,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Shuts down a Spark SQL engine.</p>
      * 
+     * @deprecated OpenAPI KillSparkSQLEngine is deprecated
+     * 
      * @param request KillSparkSQLEngineRequest
      * @return KillSparkSQLEngineResponse
      */
+    @Deprecated
+    // Deprecated
     public KillSparkSQLEngineResponse killSparkSQLEngine(KillSparkSQLEngineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.killSparkSQLEngineWithOptions(request, runtime);

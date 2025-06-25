@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeTableStatisticsRequest extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,8 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The keyword that is used to query information by table name.</p>
+     * 
      * <strong>example:</strong>
      * <p>you_table_name</p>
      */
@@ -21,6 +27,23 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The order by which to sort query results. Specify the parameter value in the JSON format.</p>
+     * <p>Example:</p>
+     * <pre><code>[
+     * 
+     *     {
+     * 
+     *         &quot;Field&quot;:&quot;Name&quot;,
+     * 
+     *         &quot;Type&quot;:&quot;Asc&quot;
+     * 
+     *     }
+     * 
+     * ]
+     * </code></pre>
+     * <p>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</p>
+     * <p>Field and Type are case-insensitive.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
      */
@@ -28,6 +51,8 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     public String order;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +60,8 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>30</p>
      */
@@ -42,6 +69,11 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The region ID</p>
+     * <blockquote>
+     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
@@ -49,6 +81,8 @@ public class DescribeTableStatisticsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The name of the database.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */

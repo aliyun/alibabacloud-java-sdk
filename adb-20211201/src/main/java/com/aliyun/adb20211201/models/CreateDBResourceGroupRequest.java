@@ -120,6 +120,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("MaxComputeResource")
     public String maxComputeResource;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("MaxGpuQuantity")
     public Integer maxGpuQuantity;
 
@@ -145,6 +148,9 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("MinComputeResource")
     public String minComputeResource;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("MinGpuQuantity")
     public Integer minGpuQuantity;
 
@@ -169,9 +175,15 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     @NameInMap("Rules")
     public java.util.List<CreateDBResourceGroupRequestRules> rules;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("SpecName")
     public String specName;
 
+    /**
+     * <p>A reserved parameter.</p>
+     */
     @NameInMap("TargetResourceGroupName")
     public String targetResourceGroupName;
 
@@ -341,24 +353,52 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     }
 
     public static class CreateDBResourceGroupRequestRayConfigWorkerGroups extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AllocateUnit")
         public String allocateUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("GroupName")
         public String groupName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("MaxWorkerQuantity")
         public Integer maxWorkerQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("MinWorkerQuantity")
         public Integer minWorkerQuantity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100G</p>
+         */
         @NameInMap("WorkerDiskCapacity")
         public String workerDiskCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xlarge</p>
+         */
         @NameInMap("WorkerSpecName")
         public String workerSpecName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>GPU</p>
+         */
         @NameInMap("WorkerSpecType")
         public String workerSpecType;
 
@@ -426,9 +466,17 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     }
 
     public static class CreateDBResourceGroupRequestRayConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>BASIC</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>example:</strong>
+         * <p>xlarge</p>
+         */
         @NameInMap("HeadSpec")
         public String headSpec;
 

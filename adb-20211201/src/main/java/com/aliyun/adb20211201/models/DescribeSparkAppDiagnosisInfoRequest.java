@@ -31,7 +31,11 @@ public class DescribeSparkAppDiagnosisInfoRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The execution language of the Spark application.</p>
+     * <p>The language in which you want to display the results. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh (default): Chinese.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

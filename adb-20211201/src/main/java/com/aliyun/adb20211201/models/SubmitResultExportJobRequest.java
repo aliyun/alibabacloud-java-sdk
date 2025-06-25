@@ -27,7 +27,10 @@ public class SubmitResultExportJobRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The export type.</p>
+     * <p>The type of the result set export job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SLS</p>
      */
     @NameInMap("ExportType")
     public String exportType;

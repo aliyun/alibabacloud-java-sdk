@@ -97,9 +97,17 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
     }
 
     public static class DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>max_select_items_count</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -193,6 +201,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         @NameInMap("OutputRows")
         public Long outputRows;
 
+        /**
+         * <strong>example:</strong>
+         * <p>-5575924945138******</p>
+         */
         @NameInMap("PatternId")
         public String patternId;
 
@@ -214,6 +226,12 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
         @NameInMap("ProcessId")
         public String processId;
 
+        /**
+         * <p>The query properties.</p>
+         * <blockquote>
+         * <p> For information about common properties, see <a href="https://help.aliyun.com/document_detail/408955.html">Config and hint configuration parameters</a>.</p>
+         * </blockquote>
+         */
         @NameInMap("QueryProperties")
         public java.util.List<DescribeDiagnosisRecordsResponseBodyQuerysQueryProperties> queryProperties;
 

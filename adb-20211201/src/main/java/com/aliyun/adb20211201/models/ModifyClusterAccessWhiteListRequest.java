@@ -7,7 +7,7 @@ public class ModifyClusterAccessWhiteListRequest extends TeaModel {
     /**
      * <p>The attribute of the IP address whitelist. By default, this parameter is empty.</p>
      * <blockquote>
-     * <p>Whitelists with the hidden attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</p>
+     * <p> IP address whitelists with the hidden attribute are not displayed in the console. Those whitelists are used to access Data Transmission Service (DTS) and PolarDB.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

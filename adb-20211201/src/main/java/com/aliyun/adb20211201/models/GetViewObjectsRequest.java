@@ -104,6 +104,10 @@ public class GetViewObjectsRequest extends TeaModel {
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ShowMvBaseTable")
     public Boolean showMvBaseTable;
 
