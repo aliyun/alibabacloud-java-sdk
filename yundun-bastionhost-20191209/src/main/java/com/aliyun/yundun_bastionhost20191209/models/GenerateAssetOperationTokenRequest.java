@@ -78,6 +78,15 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     @NameInMap("AssetType")
     public String assetType;
 
+    /**
+     * <p>The name of the database. If you set OperationMode to Sso and AssetAccountProtocolName to PostgreSQL or Oracle and you select Custom Account for the Database Account parameter, you must specify this parameter.</p>
+     * <blockquote>
+     * <p>This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>orcl</p>
+     */
     @NameInMap("DatabaseSchema")
     public String databaseSchema;
 
@@ -94,11 +103,46 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The logon attribute. If you set OperationMode to Sso and AssetAccountProtocolName to Oracle, you must specify this parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>SERVICENAME</strong></li>
+     * <li><strong>SID</strong></li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for Bastionhost V3.2.44 and later.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>SID</p>
+     */
     @NameInMap("LoginAttribute")
     public String loginAttribute;
 
+    /**
+     * <p>The O\&amp;M logon method. Valid values:</p>
+     * <ul>
+     * <li><strong>WebToken</strong>: O\&amp;M token-based logon.</li>
+     * <li><strong>Sso</strong>: local client-based logon.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for Bastionhost V3.2.44 and later. If you do not specify this parameter, the default value WebToken is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>Sso</p>
+     */
     @NameInMap("OperationMode")
     public String operationMode;
+
+    /**
+     * <p>The logon remarks. This parameter is required if an administrator enables the feature of logon remarks on the Control Policies page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
+    @NameInMap("OperationNote")
+    public String operationNote;
 
     /**
      * <p>The region ID of the bastion host.</p>
@@ -112,6 +156,19 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The type of the local client that you want to perform O\&amp;M operations on Linux assets. If you set OperationMode to Sso and AssetAccountProtocolName to SSH, you must specify this parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>ssh</strong>: Perform O\&amp;M operations on Linux assets by connecting to a bastion host from an SSH client.</li>
+     * <li><strong>sftp</strong>: Perform O\&amp;M operations on Linux assets by connecting to a bastion host from a Secure File Transfer Protocol (SFTP) client.</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter is available only for Bastionhost V3.2.44 and later.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>ssh</p>
+     */
     @NameInMap("SsoClient")
     public String ssoClient;
 
@@ -198,6 +255,14 @@ public class GenerateAssetOperationTokenRequest extends TeaModel {
     }
     public String getOperationMode() {
         return this.operationMode;
+    }
+
+    public GenerateAssetOperationTokenRequest setOperationNote(String operationNote) {
+        this.operationNote = operationNote;
+        return this;
+    }
+    public String getOperationNote() {
+        return this.operationNote;
     }
 
     public GenerateAssetOperationTokenRequest setRegionId(String regionId) {

@@ -84,6 +84,9 @@ public class ModifyHostAccountRequest extends TeaModel {
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    @NameInMap("PrivilegeType")
+    public String privilegeType;
+
     /**
      * <p>The region ID of the bastion host in which you want to query the details of the host account.</p>
      * <blockquote>
@@ -95,6 +98,9 @@ public class ModifyHostAccountRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RotationMode")
+    public String rotationMode;
 
     public static ModifyHostAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyHostAccountRequest self = new ModifyHostAccountRequest();
@@ -157,12 +163,28 @@ public class ModifyHostAccountRequest extends TeaModel {
         return this.privateKey;
     }
 
+    public ModifyHostAccountRequest setPrivilegeType(String privilegeType) {
+        this.privilegeType = privilegeType;
+        return this;
+    }
+    public String getPrivilegeType() {
+        return this.privilegeType;
+    }
+
     public ModifyHostAccountRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyHostAccountRequest setRotationMode(String rotationMode) {
+        this.rotationMode = rotationMode;
+        return this;
+    }
+    public String getRotationMode() {
+        return this.rotationMode;
     }
 
 }

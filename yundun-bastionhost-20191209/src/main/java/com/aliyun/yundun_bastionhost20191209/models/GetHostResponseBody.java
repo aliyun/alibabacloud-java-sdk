@@ -185,6 +185,21 @@ public class GetHostResponseBody extends TeaModel {
         public String OSType;
 
         /**
+         * <p>The preferred key exchange algorithm of the host. The value of this parameter is returned if OSType is set to Linux. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong></li>
+         * <li><strong>diffie-hellman-group1-sha1</strong></li>
+         * <li><strong>diffie-hellman-group14-sha1</strong></li>
+         * <li><strong>diffie-hellman-group-exchange-sha1</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("PrefKex")
+        public String prefKex;
+
+        /**
          * <p>The protocol information about the host.</p>
          */
         @NameInMap("Protocols")
@@ -296,6 +311,14 @@ public class GetHostResponseBody extends TeaModel {
         }
         public String getOSType() {
             return this.OSType;
+        }
+
+        public GetHostResponseBodyHost setPrefKex(String prefKex) {
+            this.prefKex = prefKex;
+            return this;
+        }
+        public String getPrefKex() {
+            return this.prefKex;
         }
 
         public GetHostResponseBodyHost setProtocols(java.util.List<GetHostResponseBodyHostProtocols> protocols) {

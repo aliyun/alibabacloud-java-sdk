@@ -1,3 +1,18 @@
+2025-06-25 Version: 1.3.2
+- Update API CreateHostAccount: add request parameters PrivilegeType.
+- Update API CreateHostAccount: add request parameters RotationMode.
+- Update API GenerateAssetOperationToken: add request parameters OperationNote.
+- Update API GetHost: add response parameters Body.Host.PrefKex.
+- Update API GetHostAccount: add response parameters Body.HostAccount.PrivilegeType.
+- Update API GetHostAccount: add response parameters Body.HostAccount.RotationMode.
+- Update API ListHostAccounts: add request parameters HostIds.
+- Update API ListHostAccounts: add response parameters Body.HostAccounts.$.PrivilegeType.
+- Update API ListHostAccounts: add response parameters Body.HostAccounts.$.RotationMode.
+- Update API ModifyHost: add request parameters PrefKex.
+- Update API ModifyHostAccount: add request parameters PrivilegeType.
+- Update API ModifyHostAccount: add request parameters RotationMode.
+
+
 2024-12-02 Version: 1.3.1
 - Update API ConfigInstanceWhiteList: add param WhiteListPolicies.
 - Update API DescribeInstanceAttribute: update response param.

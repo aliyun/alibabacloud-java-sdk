@@ -92,6 +92,21 @@ public class ModifyHostRequest extends TeaModel {
     public String OSType;
 
     /**
+     * <p>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</p>
+     * <ul>
+     * <li><strong>default</strong></li>
+     * <li><strong>diffie-hellman-group1-sha1</strong></li>
+     * <li><strong>diffie-hellman-group14-sha1</strong></li>
+     * <li><strong>diffie-hellman-group-exchange-sha1</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
+    @NameInMap("PrefKex")
+    public String prefKex;
+
+    /**
      * <p>The region ID of the bastion host on which you want to modify the information about the host.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
@@ -170,6 +185,14 @@ public class ModifyHostRequest extends TeaModel {
     }
     public String getOSType() {
         return this.OSType;
+    }
+
+    public ModifyHostRequest setPrefKex(String prefKex) {
+        this.prefKex = prefKex;
+        return this;
+    }
+    public String getPrefKex() {
+        return this.prefKex;
     }
 
     public ModifyHostRequest setRegionId(String regionId) {

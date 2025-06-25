@@ -86,6 +86,12 @@ public class GenerateAssetOperationTokenResponseBody extends TeaModel {
         @NameInMap("RenewCount")
         public Long renewCount;
 
+        /**
+         * <p>The single sign-on (SSO) URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sso://eyJOT0RFX0NPTU1PTiI6eyJNb2R******</p>
+         */
         @NameInMap("SsoUrl")
         public String ssoUrl;
 

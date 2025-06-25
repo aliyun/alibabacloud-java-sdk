@@ -4,17 +4,26 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class AcceptOperationTicketRequest extends TeaModel {
+    /**
+     * <p>The review description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>O\&amp;M allowed</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
     /**
      * <p>The maximum number of logons allowed. Valid values:</p>
      * <ul>
-     * <li>0: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for an unlimited number of times during the validity period.</li>
-     * <li>1: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</li>
+     * <li><strong>0</strong>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</li>
+     * <li><strong>1</strong>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</li>
      * </ul>
      * <blockquote>
-     * <p> You can set this parameter only to 0 if you review an O\&amp;M application on a database.</p>
+     * <ul>
+     * <li>You can set this parameter only to 0 if you review an O\&amp;M application on a database.</li>
+     * <li>If you do not specify this parameter, the default value 0 is used.</li>
+     * </ul>
      * </blockquote>
      * 
      * <strong>example:</strong>

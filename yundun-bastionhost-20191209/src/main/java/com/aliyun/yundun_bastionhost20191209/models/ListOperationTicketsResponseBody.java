@@ -76,6 +76,12 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         @NameInMap("ApplyUsername")
         public String applyUsername;
 
+        /**
+         * <p>The remarks entered when the O\&amp;M personnel applies for O\&amp;M permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Apply for O\&amp;M</p>
+         */
         @NameInMap("ApproveComment")
         public String approveComment;
 
@@ -175,12 +181,34 @@ public class ListOperationTicketsResponseBody extends TeaModel {
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The maximum number of logons applied by the O\&amp;M engineer. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The number of logons is unlimited. The O\&amp;M engineer can log on to the specified asset for unlimited times during the validity period.</li>
+         * <li><strong>1</strong>: The O\&amp;M engineer can log on to the specified asset only once during the validity period.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EffectCount")
         public Integer effectCount;
 
+        /**
+         * <p>The end time of the validity period. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1679393152</p>
+         */
         @NameInMap("EffectEndTime")
         public Integer effectEndTime;
 
+        /**
+         * <p>The start time of the validity period. The value is a UNIX timestamp. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1685600242</p>
+         */
         @NameInMap("EffectStartTime")
         public Integer effectStartTime;
 

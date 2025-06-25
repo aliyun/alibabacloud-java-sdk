@@ -26,6 +26,9 @@ public class ListHostAccountsRequest extends TeaModel {
     @NameInMap("HostId")
     public String hostId;
 
+    @NameInMap("HostIds")
+    public String hostIds;
+
     /**
      * <p>The ID of the bastion host in which you want to query accounts of the specified host.</p>
      * <blockquote>
@@ -106,6 +109,14 @@ public class ListHostAccountsRequest extends TeaModel {
     }
     public String getHostId() {
         return this.hostId;
+    }
+
+    public ListHostAccountsRequest setHostIds(String hostIds) {
+        this.hostIds = hostIds;
+        return this;
+    }
+    public String getHostIds() {
+        return this.hostIds;
     }
 
     public ListHostAccountsRequest setInstanceId(String instanceId) {

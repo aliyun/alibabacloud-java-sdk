@@ -126,6 +126,9 @@ public class ListHostAccountsResponseBody extends TeaModel {
         @NameInMap("PrivateKeyFingerprint")
         public String privateKeyFingerprint;
 
+        @NameInMap("PrivilegeType")
+        public String privilegeType;
+
         /**
          * <p>The protocol that is used by the host.</p>
          * <p>Valid values:</p>
@@ -139,6 +142,9 @@ public class ListHostAccountsResponseBody extends TeaModel {
          */
         @NameInMap("ProtocolName")
         public String protocolName;
+
+        @NameInMap("RotationMode")
+        public String rotationMode;
 
         public static ListHostAccountsResponseBodyHostAccounts build(java.util.Map<String, ?> map) throws Exception {
             ListHostAccountsResponseBodyHostAccounts self = new ListHostAccountsResponseBodyHostAccounts();
@@ -201,12 +207,28 @@ public class ListHostAccountsResponseBody extends TeaModel {
             return this.privateKeyFingerprint;
         }
 
+        public ListHostAccountsResponseBodyHostAccounts setPrivilegeType(String privilegeType) {
+            this.privilegeType = privilegeType;
+            return this;
+        }
+        public String getPrivilegeType() {
+            return this.privilegeType;
+        }
+
         public ListHostAccountsResponseBodyHostAccounts setProtocolName(String protocolName) {
             this.protocolName = protocolName;
             return this;
         }
         public String getProtocolName() {
             return this.protocolName;
+        }
+
+        public ListHostAccountsResponseBodyHostAccounts setRotationMode(String rotationMode) {
+            this.rotationMode = rotationMode;
+            return this;
+        }
+        public String getRotationMode() {
+            return this.rotationMode;
         }
 
     }

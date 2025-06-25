@@ -82,6 +82,9 @@ public class CreateHostAccountRequest extends TeaModel {
     @NameInMap("PrivateKey")
     public String privateKey;
 
+    @NameInMap("PrivilegeType")
+    public String privilegeType;
+
     /**
      * <p>The protocol of the host to which you want to add a host account.</p>
      * <p>Valid values:</p>
@@ -108,6 +111,9 @@ public class CreateHostAccountRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("RotationMode")
+    public String rotationMode;
 
     public static CreateHostAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHostAccountRequest self = new CreateHostAccountRequest();
@@ -170,6 +176,14 @@ public class CreateHostAccountRequest extends TeaModel {
         return this.privateKey;
     }
 
+    public CreateHostAccountRequest setPrivilegeType(String privilegeType) {
+        this.privilegeType = privilegeType;
+        return this;
+    }
+    public String getPrivilegeType() {
+        return this.privilegeType;
+    }
+
     public CreateHostAccountRequest setProtocolName(String protocolName) {
         this.protocolName = protocolName;
         return this;
@@ -184,6 +198,14 @@ public class CreateHostAccountRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreateHostAccountRequest setRotationMode(String rotationMode) {
+        this.rotationMode = rotationMode;
+        return this;
+    }
+    public String getRotationMode() {
+        return this.rotationMode;
     }
 
 }

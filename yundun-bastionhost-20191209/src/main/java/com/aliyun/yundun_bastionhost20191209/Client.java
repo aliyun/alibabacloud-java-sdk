@@ -92,7 +92,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Approves an O\\\&amp;M application.</p>
+     * <p>Approves an O\\\\\\&amp;M application.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -152,7 +152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Approves an O\\\&amp;M application.</p>
+     * <p>Approves an O\\\\\\&amp;M application.</p>
      * 
      * @param request AcceptOperationTicketRequest
      * @return AcceptOperationTicketResponse
@@ -1207,12 +1207,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivateKey", request.privateKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privilegeType)) {
+            query.put("PrivilegeType", request.privilegeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.protocolName)) {
             query.put("ProtocolName", request.protocolName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rotationMode)) {
+            query.put("RotationMode", request.rotationMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -3324,7 +3332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for an O&amp;M token.</p>
+     * <p>Applies for an O\&amp;M token.</p>
      * 
      * @param request GenerateAssetOperationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3373,6 +3381,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OperationMode", request.operationMode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.operationNote)) {
+            query.put("OperationNote", request.operationNote);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -3400,7 +3412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies for an O&amp;M token.</p>
+     * <p>Applies for an O\&amp;M token.</p>
      * 
      * @param request GenerateAssetOperationTokenRequest
      * @return GenerateAssetOperationTokenResponse
@@ -4847,6 +4859,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("HostId", request.hostId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hostIds)) {
+            query.put("HostIds", request.hostIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -6050,7 +6066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries O\\\&amp;M applications to be reviewed.</p>
+     * <p>Queries O\\\\\\&amp;M applications to be reviewed.</p>
      * 
      * @param request ListOperationTicketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6102,7 +6118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries O\\\&amp;M applications to be reviewed.</p>
+     * <p>Queries O\\\\\\&amp;M applications to be reviewed.</p>
      * 
      * @param request ListOperationTicketsRequest
      * @return ListOperationTicketsResponse
@@ -6825,6 +6841,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OSType", request.OSType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.prefKex)) {
+            query.put("PrefKex", request.prefKex);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -6903,8 +6923,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PrivateKey", request.privateKey);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privilegeType)) {
+            query.put("PrivilegeType", request.privilegeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rotationMode)) {
+            query.put("RotationMode", request.rotationMode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -8180,7 +8208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>If a Bastionhost administrator enables O\&amp;M Approval on the Create Control Policy page, O\&amp;M engineers can log on to assets to perform O\&amp;M operations only after the administrator approves their O\&amp;M applications.</p>
+     * <p>If a Bastionhost administrator enables O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</p>
      * 
      * @param request RejectOperationTicketRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8228,7 +8256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>If a Bastionhost administrator enables O\&amp;M Approval on the Create Control Policy page, O\&amp;M engineers can log on to assets to perform O\&amp;M operations only after the administrator approves their O\&amp;M applications.</p>
+     * <p>If a Bastionhost administrator enables O\\\&amp;M Approval on the Create Control Policy page, O\\\&amp;M engineers can log on to assets to perform O\\\&amp;M operations only after the administrator approves their O\\\&amp;M applications.</p>
      * 
      * @param request RejectOperationTicketRequest
      * @return RejectOperationTicketResponse

@@ -4,6 +4,12 @@ package com.aliyun.yundun_bastionhost20191209.models;
 import com.aliyun.tea.*;
 
 public class RejectOperationTicketRequest extends TeaModel {
+    /**
+     * <p>The review remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>comment</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
