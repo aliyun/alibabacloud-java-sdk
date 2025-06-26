@@ -8732,11 +8732,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitCustomSourceTopicAnalysisShrinkRequest request = new SubmitCustomSourceTopicAnalysisShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.analysisTypes)) {
+            request.analysisTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.analysisTypes, "AnalysisTypes", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.news)) {
             request.newsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.news, "News", "json");
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.analysisTypesShrink)) {
+            body.put("AnalysisTypes", request.analysisTypesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileType)) {
             body.put("FileType", request.fileType);
         }

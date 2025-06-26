@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
+    @NameInMap("AnalysisTypes")
+    public java.util.List<String> analysisTypes;
+
     /**
      * <strong>example:</strong>
      * <p>json</p>
@@ -40,6 +43,14 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
     public static SubmitCustomSourceTopicAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCustomSourceTopicAnalysisRequest self = new SubmitCustomSourceTopicAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitCustomSourceTopicAnalysisRequest setAnalysisTypes(java.util.List<String> analysisTypes) {
+        this.analysisTypes = analysisTypes;
+        return this;
+    }
+    public java.util.List<String> getAnalysisTypes() {
+        return this.analysisTypes;
     }
 
     public SubmitCustomSourceTopicAnalysisRequest setFileType(String fileType) {
@@ -115,6 +126,9 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
         @NameInMap("PubTime")
         public String pubTime;
 
+        @NameInMap("Source")
+        public String source;
+
         @NameInMap("Title")
         public String title;
 
@@ -152,6 +166,14 @@ public class SubmitCustomSourceTopicAnalysisRequest extends TeaModel {
         }
         public String getPubTime() {
             return this.pubTime;
+        }
+
+        public SubmitCustomSourceTopicAnalysisRequestNews setSource(String source) {
+            this.source = source;
+            return this;
+        }
+        public String getSource() {
+            return this.source;
         }
 
         public SubmitCustomSourceTopicAnalysisRequestNews setTitle(String title) {

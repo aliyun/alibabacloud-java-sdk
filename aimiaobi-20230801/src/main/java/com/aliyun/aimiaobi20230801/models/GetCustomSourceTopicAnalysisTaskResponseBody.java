@@ -198,6 +198,12 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("rt")
+        public Long rt;
+
+        @NameInMap("usages")
+        public java.util.Map<String, Long> usages;
+
         public static GetCustomSourceTopicAnalysisTaskResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetCustomSourceTopicAnalysisTaskResponseBodyData self = new GetCustomSourceTopicAnalysisTaskResponseBodyData();
             return TeaModel.build(map, self);
@@ -249,6 +255,22 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetCustomSourceTopicAnalysisTaskResponseBodyData setRt(Long rt) {
+            this.rt = rt;
+            return this;
+        }
+        public Long getRt() {
+            return this.rt;
+        }
+
+        public GetCustomSourceTopicAnalysisTaskResponseBodyData setUsages(java.util.Map<String, Long> usages) {
+            this.usages = usages;
+            return this;
+        }
+        public java.util.Map<String, Long> getUsages() {
+            return this.usages;
         }
 
     }

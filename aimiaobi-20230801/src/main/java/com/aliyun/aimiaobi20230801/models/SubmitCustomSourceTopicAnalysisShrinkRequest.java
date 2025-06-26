@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
+    @NameInMap("AnalysisTypes")
+    public String analysisTypesShrink;
+
     /**
      * <strong>example:</strong>
      * <p>json</p>
@@ -40,6 +43,14 @@ public class SubmitCustomSourceTopicAnalysisShrinkRequest extends TeaModel {
     public static SubmitCustomSourceTopicAnalysisShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitCustomSourceTopicAnalysisShrinkRequest self = new SubmitCustomSourceTopicAnalysisShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitCustomSourceTopicAnalysisShrinkRequest setAnalysisTypesShrink(String analysisTypesShrink) {
+        this.analysisTypesShrink = analysisTypesShrink;
+        return this;
+    }
+    public String getAnalysisTypesShrink() {
+        return this.analysisTypesShrink;
     }
 
     public SubmitCustomSourceTopicAnalysisShrinkRequest setFileType(String fileType) {
