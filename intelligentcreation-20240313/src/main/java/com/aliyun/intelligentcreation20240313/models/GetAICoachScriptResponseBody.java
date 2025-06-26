@@ -30,6 +30,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @NameInMap("coverUrl")
     public String coverUrl;
 
+    @NameInMap("customReplyRules")
+    public java.util.List<GetAICoachScriptResponseBodyCustomReplyRules> customReplyRules;
+
     /**
      * <strong>example:</strong>
      * <p>500</p>
@@ -246,6 +249,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     }
     public String getCoverUrl() {
         return this.coverUrl;
+    }
+
+    public GetAICoachScriptResponseBody setCustomReplyRules(java.util.List<GetAICoachScriptResponseBodyCustomReplyRules> customReplyRules) {
+        this.customReplyRules = customReplyRules;
+        return this;
+    }
+    public java.util.List<GetAICoachScriptResponseBodyCustomReplyRules> getCustomReplyRules() {
+        return this.customReplyRules;
     }
 
     public GetAICoachScriptResponseBody setDialogueInputTextLimit(Integer dialogueInputTextLimit) {
@@ -620,6 +631,197 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public Boolean getFullCoverageAutoEnd() {
             return this.fullCoverageAutoEnd;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyCustomReplyRulesActionParameters extends TeaModel {
+        @NameInMap("assessPointId")
+        public String assessPointId;
+
+        @NameInMap("customContent")
+        public String customContent;
+
+        public static GetAICoachScriptResponseBodyCustomReplyRulesActionParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCustomReplyRulesActionParameters self = new GetAICoachScriptResponseBodyCustomReplyRulesActionParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesActionParameters setAssessPointId(String assessPointId) {
+            this.assessPointId = assessPointId;
+            return this;
+        }
+        public String getAssessPointId() {
+            return this.assessPointId;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesActionParameters setCustomContent(String customContent) {
+            this.customContent = customContent;
+            return this;
+        }
+        public String getCustomContent() {
+            return this.customContent;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyCustomReplyRulesAction extends TeaModel {
+        @NameInMap("parameters")
+        public GetAICoachScriptResponseBodyCustomReplyRulesActionParameters parameters;
+
+        @NameInMap("type")
+        public String type;
+
+        public static GetAICoachScriptResponseBodyCustomReplyRulesAction build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCustomReplyRulesAction self = new GetAICoachScriptResponseBodyCustomReplyRulesAction();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesAction setParameters(GetAICoachScriptResponseBodyCustomReplyRulesActionParameters parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public GetAICoachScriptResponseBodyCustomReplyRulesActionParameters getParameters() {
+            return this.parameters;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesAction setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters extends TeaModel {
+        @NameInMap("assessPointId")
+        public String assessPointId;
+
+        public static GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters self = new GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters setAssessPointId(String assessPointId) {
+            this.assessPointId = assessPointId;
+            return this;
+        }
+        public String getAssessPointId() {
+            return this.assessPointId;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyCustomReplyRulesMainCondition extends TeaModel {
+        @NameInMap("parameters")
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters parameters;
+
+        @NameInMap("type")
+        public String type;
+
+        public static GetAICoachScriptResponseBodyCustomReplyRulesMainCondition build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCustomReplyRulesMainCondition self = new GetAICoachScriptResponseBodyCustomReplyRulesMainCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainCondition setParameters(GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters parameters) {
+            this.parameters = parameters;
+            return this;
+        }
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainConditionParameters getParameters() {
+            return this.parameters;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainCondition setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyCustomReplyRulesSubCondition extends TeaModel {
+        @NameInMap("type")
+        public String type;
+
+        public static GetAICoachScriptResponseBodyCustomReplyRulesSubCondition build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCustomReplyRulesSubCondition self = new GetAICoachScriptResponseBodyCustomReplyRulesSubCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRulesSubCondition setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetAICoachScriptResponseBodyCustomReplyRules extends TeaModel {
+        @NameInMap("action")
+        public GetAICoachScriptResponseBodyCustomReplyRulesAction action;
+
+        @NameInMap("logic")
+        public String logic;
+
+        @NameInMap("mainCondition")
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainCondition mainCondition;
+
+        @NameInMap("priority")
+        public Integer priority;
+
+        @NameInMap("subCondition")
+        public GetAICoachScriptResponseBodyCustomReplyRulesSubCondition subCondition;
+
+        public static GetAICoachScriptResponseBodyCustomReplyRules build(java.util.Map<String, ?> map) throws Exception {
+            GetAICoachScriptResponseBodyCustomReplyRules self = new GetAICoachScriptResponseBodyCustomReplyRules();
+            return TeaModel.build(map, self);
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRules setAction(GetAICoachScriptResponseBodyCustomReplyRulesAction action) {
+            this.action = action;
+            return this;
+        }
+        public GetAICoachScriptResponseBodyCustomReplyRulesAction getAction() {
+            return this.action;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRules setLogic(String logic) {
+            this.logic = logic;
+            return this;
+        }
+        public String getLogic() {
+            return this.logic;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRules setMainCondition(GetAICoachScriptResponseBodyCustomReplyRulesMainCondition mainCondition) {
+            this.mainCondition = mainCondition;
+            return this;
+        }
+        public GetAICoachScriptResponseBodyCustomReplyRulesMainCondition getMainCondition() {
+            return this.mainCondition;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRules setPriority(Integer priority) {
+            this.priority = priority;
+            return this;
+        }
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        public GetAICoachScriptResponseBodyCustomReplyRules setSubCondition(GetAICoachScriptResponseBodyCustomReplyRulesSubCondition subCondition) {
+            this.subCondition = subCondition;
+            return this;
+        }
+        public GetAICoachScriptResponseBodyCustomReplyRulesSubCondition getSubCondition() {
+            return this.subCondition;
         }
 
     }
@@ -1276,6 +1478,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @NameInMap("assessmentPointEnabled")
         public Boolean assessmentPointEnabled;
 
+        @NameInMap("customReplyRuleEnabled")
+        public Boolean customReplyRuleEnabled;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -1356,6 +1561,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         }
         public Boolean getAssessmentPointEnabled() {
             return this.assessmentPointEnabled;
+        }
+
+        public GetAICoachScriptResponseBodyWeights setCustomReplyRuleEnabled(Boolean customReplyRuleEnabled) {
+            this.customReplyRuleEnabled = customReplyRuleEnabled;
+            return this;
+        }
+        public Boolean getCustomReplyRuleEnabled() {
+            return this.customReplyRuleEnabled;
         }
 
         public GetAICoachScriptResponseBodyWeights setExpressiveness(Integer expressiveness) {

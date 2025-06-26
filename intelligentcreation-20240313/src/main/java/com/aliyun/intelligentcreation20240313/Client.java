@@ -1686,6 +1686,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取对练会话资源使用情况</p>
+     * 
+     * @param request GetAICoachTaskSessionResourceUsageRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAICoachTaskSessionResourceUsageResponse
+     */
+    public GetAICoachTaskSessionResourceUsageResponse getAICoachTaskSessionResourceUsageWithOptions(GetAICoachTaskSessionResourceUsageRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAICoachTaskSessionResourceUsage"),
+            new TeaPair("version", "2024-03-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/yic/yic-console/openService/v1/aicoach/getSessionResourceUsage"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAICoachTaskSessionResourceUsageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取对练会话资源使用情况</p>
+     * 
+     * @param request GetAICoachTaskSessionResourceUsageRequest
+     * @return GetAICoachTaskSessionResourceUsageResponse
+     */
+    public GetAICoachTaskSessionResourceUsageResponse getAICoachTaskSessionResourceUsage(GetAICoachTaskSessionResourceUsageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAICoachTaskSessionResourceUsageWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询配图</p>
      * 
      * @param headers map
