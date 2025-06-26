@@ -42,10 +42,6 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The engine type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>clickhouse</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>clickhouse</p>
@@ -78,6 +74,10 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-*****</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
