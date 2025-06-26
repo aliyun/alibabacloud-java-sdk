@@ -47,6 +47,9 @@ public class RunAgentRequest extends TeaModel {
     @NameInMap("userContent")
     public String userContent;
 
+    @NameInMap("userInputs")
+    public java.util.Map<String, ?> userInputs;
+
     /**
      * <strong>example:</strong>
      * <p>w4paqoezm2</p>
@@ -105,6 +108,14 @@ public class RunAgentRequest extends TeaModel {
     }
     public String getUserContent() {
         return this.userContent;
+    }
+
+    public RunAgentRequest setUserInputs(java.util.Map<String, ?> userInputs) {
+        this.userInputs = userInputs;
+        return this;
+    }
+    public java.util.Map<String, ?> getUserInputs() {
+        return this.userInputs;
     }
 
     public RunAgentRequest setVersionId(String versionId) {

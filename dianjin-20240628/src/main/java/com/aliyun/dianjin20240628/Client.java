@@ -2183,6 +2183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("userContent", request.userContent);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userInputs)) {
+            body.put("userInputs", request.userInputs);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.versionId)) {
             body.put("versionId", request.versionId);
         }
