@@ -11,7 +11,7 @@ public class GetChatListRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("currentPage")
-    public String currentPage;
+    public Integer currentPage;
 
     /**
      * <p>Page size.</p>
@@ -20,7 +20,7 @@ public class GetChatListRequest extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("pageSize")
-    public String pageSize;
+    public Integer pageSize;
 
     /**
      * <p>Q&amp;A session ID, used to record multiple Q&amp;As for the same user.</p>
@@ -37,19 +37,19 @@ public class GetChatListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public GetChatListRequest setCurrentPage(String currentPage) {
+    public GetChatListRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
-    public String getCurrentPage() {
+    public Integer getCurrentPage() {
         return this.currentPage;
     }
 
-    public GetChatListRequest setPageSize(String pageSize) {
+    public GetChatListRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 

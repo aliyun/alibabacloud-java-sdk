@@ -1262,7 +1262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get document parsing/extraction result</p>
+     * <p>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</p>
      * 
      * @param request GetDocumentAnalyzeResultRequest
      * @param headers map
@@ -1296,7 +1296,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get document parsing/extraction result</p>
+     * <p>[Important] The api is no longer maintained, please use GetDocExtractionResult, GetVLExtractionResult to get the extraction results.</p>
      * 
      * @param request GetDocumentAnalyzeResultRequest
      * @return GetDocumentAnalyzeResultResponse
@@ -2623,7 +2623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Online Document Q\&amp;A</p>
+     * <p>[Important] This api is no longer maintained, please use the Chat api.</p>
      * 
      * @param request SendDocumentAskQuestionRequest
      * @param headers map
@@ -2665,7 +2665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Online Document Q\&amp;A</p>
+     * <p>[Important] This api is no longer maintained, please use the Chat api.</p>
      * 
      * @param request SendDocumentAskQuestionRequest
      * @return SendDocumentAskQuestionResponse
@@ -3069,7 +3069,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get document extraction result</p>
+     * <p>[Important] The api is no longer maintained, please use the following api: 
+     * Document parsing using SubmitDocParsingTask. 
+     * Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</p>
      * 
      * @param request SubmitDocumentAnalyzeJobRequest
      * @param headers map
@@ -3119,7 +3121,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get document extraction result</p>
+     * <p>[Important] The api is no longer maintained, please use the following api: 
+     * Document parsing using SubmitDocParsingTask. 
+     * Document extraction using SubmitVLExtractionTask, SubmitDocExtractionTask.</p>
      * 
      * @param request SubmitDocumentAnalyzeJobRequest
      * @return SubmitDocumentAnalyzeJobResponse
