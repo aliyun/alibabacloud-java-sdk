@@ -31,6 +31,9 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    @NameInMap("minDuration")
+    public Long minDuration;
+
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
@@ -39,6 +42,15 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
      */
     @NameInMap("nextToken")
     public String nextToken;
+
+    @NameInMap("orderBy")
+    public java.util.List<String> orderBy;
+
+    @NameInMap("resourceQueueId")
+    public String resourceQueueId;
+
+    @NameInMap("sort")
+    public String sort;
 
     /**
      * <p>The range of start time.</p>
@@ -75,12 +87,44 @@ public class ListKyuubiSparkApplicationsRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListKyuubiSparkApplicationsRequest setMinDuration(Long minDuration) {
+        this.minDuration = minDuration;
+        return this;
+    }
+    public Long getMinDuration() {
+        return this.minDuration;
+    }
+
     public ListKyuubiSparkApplicationsRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListKyuubiSparkApplicationsRequest setOrderBy(java.util.List<String> orderBy) {
+        this.orderBy = orderBy;
+        return this;
+    }
+    public java.util.List<String> getOrderBy() {
+        return this.orderBy;
+    }
+
+    public ListKyuubiSparkApplicationsRequest setResourceQueueId(String resourceQueueId) {
+        this.resourceQueueId = resourceQueueId;
+        return this;
+    }
+    public String getResourceQueueId() {
+        return this.resourceQueueId;
+    }
+
+    public ListKyuubiSparkApplicationsRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
     public ListKyuubiSparkApplicationsRequest setStartTime(ListKyuubiSparkApplicationsRequestStartTime startTime) {

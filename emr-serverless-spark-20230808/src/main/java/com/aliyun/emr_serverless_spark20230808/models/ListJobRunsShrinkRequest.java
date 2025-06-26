@@ -19,6 +19,9 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     @NameInMap("endTime")
     public String endTimeShrink;
 
+    @NameInMap("isWorkflow")
+    public String isWorkflow;
+
     /**
      * <p>The job run ID.</p>
      * 
@@ -131,6 +134,14 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     }
     public String getEndTimeShrink() {
         return this.endTimeShrink;
+    }
+
+    public ListJobRunsShrinkRequest setIsWorkflow(String isWorkflow) {
+        this.isWorkflow = isWorkflow;
+        return this;
+    }
+    public String getIsWorkflow() {
+        return this.isWorkflow;
     }
 
     public ListJobRunsShrinkRequest setJobRunDeploymentId(String jobRunDeploymentId) {

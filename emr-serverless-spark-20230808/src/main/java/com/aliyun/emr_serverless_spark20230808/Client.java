@@ -1000,6 +1000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("endTime", request.endTimeShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isWorkflow)) {
+            query.put("isWorkflow", request.isWorkflow);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobRunDeploymentId)) {
             query.put("jobRunDeploymentId", request.jobRunDeploymentId);
         }
@@ -1077,6 +1081,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>ListKyuubiServices</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKyuubiServicesResponse
+     */
+    public ListKyuubiServicesResponse listKyuubiServicesWithOptions(String workspaceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKyuubiServices"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/kyuubi/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKyuubiServicesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListKyuubiServices</p>
+     * @return ListKyuubiServicesResponse
+     */
+    public ListKyuubiServicesResponse listKyuubiServices(String workspaceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listKyuubiServicesWithOptions(workspaceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the applications that are submitted by using a Kyuubi gateway.</p>
      * 
      * @param tmpReq ListKyuubiSparkApplicationsRequest
@@ -1088,6 +1129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ListKyuubiSparkApplicationsShrinkRequest request = new ListKyuubiSparkApplicationsShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.orderBy)) {
+            request.orderByShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.orderBy, "orderBy", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.startTime)) {
             request.startTimeShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.startTime, "startTime", "json");
         }
@@ -1105,8 +1150,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("maxResults", request.maxResults);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.minDuration)) {
+            query.put("minDuration", request.minDuration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderByShrink)) {
+            query.put("orderBy", request.orderByShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceQueueId)) {
+            query.put("resourceQueueId", request.resourceQueueId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("sort", request.sort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTimeShrink)) {
@@ -1142,6 +1203,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listKyuubiSparkApplicationsWithOptions(workspaceId, kyuubiServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出compute的token</p>
+     * 
+     * @param request ListKyuubiTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListKyuubiTokenResponse
+     */
+    public ListKyuubiTokenResponse listKyuubiTokenWithOptions(String workspaceId, String kyuubiServiceId, ListKyuubiTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListKyuubiToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/kyuubiService/" + com.aliyun.openapiutil.Client.getEncodeParam(kyuubiServiceId) + "/token"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListKyuubiTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出compute的token</p>
+     * 
+     * @param request ListKyuubiTokenRequest
+     * @return ListKyuubiTokenResponse
+     */
+    public ListKyuubiTokenResponse listKyuubiToken(String workspaceId, String kyuubiServiceId, ListKyuubiTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listKyuubiTokenWithOptions(workspaceId, kyuubiServiceId, request, headers, runtime);
     }
 
     /**

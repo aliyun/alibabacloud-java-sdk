@@ -31,6 +31,9 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
     @NameInMap("maxResults")
     public Integer maxResults;
 
+    @NameInMap("minDuration")
+    public Long minDuration;
+
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * 
@@ -39,6 +42,15 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
      */
     @NameInMap("nextToken")
     public String nextToken;
+
+    @NameInMap("orderBy")
+    public String orderByShrink;
+
+    @NameInMap("resourceQueueId")
+    public String resourceQueueId;
+
+    @NameInMap("sort")
+    public String sort;
 
     /**
      * <p>The range of start time.</p>
@@ -75,12 +87,44 @@ public class ListKyuubiSparkApplicationsShrinkRequest extends TeaModel {
         return this.maxResults;
     }
 
+    public ListKyuubiSparkApplicationsShrinkRequest setMinDuration(Long minDuration) {
+        this.minDuration = minDuration;
+        return this;
+    }
+    public Long getMinDuration() {
+        return this.minDuration;
+    }
+
     public ListKyuubiSparkApplicationsShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public ListKyuubiSparkApplicationsShrinkRequest setOrderByShrink(String orderByShrink) {
+        this.orderByShrink = orderByShrink;
+        return this;
+    }
+    public String getOrderByShrink() {
+        return this.orderByShrink;
+    }
+
+    public ListKyuubiSparkApplicationsShrinkRequest setResourceQueueId(String resourceQueueId) {
+        this.resourceQueueId = resourceQueueId;
+        return this;
+    }
+    public String getResourceQueueId() {
+        return this.resourceQueueId;
+    }
+
+    public ListKyuubiSparkApplicationsShrinkRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
     public ListKyuubiSparkApplicationsShrinkRequest setStartTimeShrink(String startTimeShrink) {

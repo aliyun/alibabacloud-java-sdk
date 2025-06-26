@@ -19,6 +19,9 @@ public class ListJobRunsRequest extends TeaModel {
     @NameInMap("endTime")
     public ListJobRunsRequestEndTime endTime;
 
+    @NameInMap("isWorkflow")
+    public String isWorkflow;
+
     /**
      * <p>The job run ID.</p>
      * 
@@ -131,6 +134,14 @@ public class ListJobRunsRequest extends TeaModel {
     }
     public ListJobRunsRequestEndTime getEndTime() {
         return this.endTime;
+    }
+
+    public ListJobRunsRequest setIsWorkflow(String isWorkflow) {
+        this.isWorkflow = isWorkflow;
+        return this;
+    }
+    public String getIsWorkflow() {
+        return this.isWorkflow;
     }
 
     public ListJobRunsRequest setJobRunDeploymentId(String jobRunDeploymentId) {

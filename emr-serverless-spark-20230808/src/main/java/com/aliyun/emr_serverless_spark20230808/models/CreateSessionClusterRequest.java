@@ -12,6 +12,10 @@ public class CreateSessionClusterRequest extends TeaModel {
 
     /**
      * <p>The automatic startup configuration.</p>
+     * <ul>
+     * <li></li>
+     * <li></li>
+     * </ul>
      */
     @NameInMap("autoStartConfiguration")
     public CreateSessionClusterRequestAutoStartConfiguration autoStartConfiguration;
