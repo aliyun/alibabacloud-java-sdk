@@ -17,6 +17,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建语音转录异步任务</p>
+     * 
+     * @param request CreateAudioAsrTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAudioAsrTaskResponse
+     */
+    public CreateAudioAsrTaskResponse createAudioAsrTaskWithOptions(String workspaceName, String serviceId, CreateAudioAsrTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            body.put("output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAudioAsrTask"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/audio-asr/" + serviceId + "/async"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateAudioAsrTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建语音转录异步任务</p>
+     * 
+     * @param request CreateAudioAsrTaskRequest
+     * @return CreateAudioAsrTaskResponse
+     */
+    public CreateAudioAsrTaskResponse createAudioAsrTask(String workspaceName, String serviceId, CreateAudioAsrTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAudioAsrTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建文档解析异步提取任务</p>
      * 
      * @param request CreateDocumentAnalyzeTaskRequest
@@ -115,6 +170,108 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createImageAnalyzeTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建语音转录异步任务</p>
+     * 
+     * @param request CreateVideoSnapshotTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateVideoSnapshotTaskResponse
+     */
+    public CreateVideoSnapshotTaskResponse createVideoSnapshotTaskWithOptions(String workspaceName, String serviceId, CreateVideoSnapshotTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
+            body.put("output", request.output);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parameters)) {
+            body.put("parameters", request.parameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateVideoSnapshotTask"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/video-snapshot/" + serviceId + "/async"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new CreateVideoSnapshotTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建语音转录异步任务</p>
+     * 
+     * @param request CreateVideoSnapshotTaskRequest
+     * @return CreateVideoSnapshotTaskResponse
+     */
+    public CreateVideoSnapshotTaskResponse createVideoSnapshotTask(String workspaceName, String serviceId, CreateVideoSnapshotTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createVideoSnapshotTaskWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频截帧异步提取任务状态</p>
+     * 
+     * @param request GetAudioAsrTaskStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAudioAsrTaskStatusResponse
+     */
+    public GetAudioAsrTaskStatusResponse getAudioAsrTaskStatusWithOptions(String workspaceName, String serviceId, GetAudioAsrTaskStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("task_id", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAudioAsrTaskStatus"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/audio-asr/" + serviceId + "/async/task-status"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetAudioAsrTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频截帧异步提取任务状态</p>
+     * 
+     * @param request GetAudioAsrTaskStatusRequest
+     * @return GetAudioAsrTaskStatusResponse
+     */
+    public GetAudioAsrTaskStatusResponse getAudioAsrTaskStatus(String workspaceName, String serviceId, GetAudioAsrTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAudioAsrTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
     }
 
     /**
@@ -688,6 +845,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取视频截帧异步提取任务状态</p>
+     * 
+     * @param request GetVideoSnapshotTaskStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetVideoSnapshotTaskStatusResponse
+     */
+    public GetVideoSnapshotTaskStatusResponse getVideoSnapshotTaskStatusWithOptions(String workspaceName, String serviceId, GetVideoSnapshotTaskStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("task_id", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetVideoSnapshotTaskStatus"),
+            new TeaPair("version", "2024-05-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v3/openapi/workspaces/" + workspaceName + "/video-snapshot/" + serviceId + "/async/task-status"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetVideoSnapshotTaskStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取视频截帧异步提取任务状态</p>
+     * 
+     * @param request GetVideoSnapshotTaskStatusRequest
+     * @return GetVideoSnapshotTaskStatusResponse
+     */
+    public GetVideoSnapshotTaskStatusResponse getVideoSnapshotTaskStatus(String workspaceName, String serviceId, GetVideoSnapshotTaskStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getVideoSnapshotTaskStatusWithOptions(workspaceName, serviceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>联网搜索</p>
      * 
      * @param request GetWebSearchRequest
@@ -698,8 +902,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetWebSearchResponse getWebSearchWithOptions(String workspaceName, String serviceId, GetWebSearchRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("content_type", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.history)) {
+            body.put("history", request.history);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.query)) {
             body.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryRewrite)) {
+            body.put("query_rewrite", request.queryRewrite);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topK)) {
