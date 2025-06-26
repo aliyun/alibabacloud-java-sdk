@@ -687,6 +687,58 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
     }
 
+    public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation extends TeaModel {
+        @NameInMap("H")
+        public Integer h;
+
+        @NameInMap("W")
+        public Integer w;
+
+        @NameInMap("X")
+        public Integer x;
+
+        @NameInMap("Y")
+        public Integer y;
+
+        public static VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation build(java.util.Map<String, ?> map) throws Exception {
+            VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation();
+            return TeaModel.build(map, self);
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation setH(Integer h) {
+            this.h = h;
+            return this;
+        }
+        public Integer getH() {
+            return this.h;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation setW(Integer w) {
+            this.w = w;
+            return this;
+        }
+        public Integer getW() {
+            return this.w;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation setX(Integer x) {
+            this.x = x;
+            return this;
+        }
+        public Integer getX() {
+            return this.x;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation setY(Integer y) {
+            this.y = y;
+            return this;
+        }
+        public Integer getY() {
+            return this.y;
+        }
+
+    }
+
     public static class VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure extends TeaModel {
         /**
          * <p>The information about the code of the identified figure.</p>
@@ -696,6 +748,12 @@ public class VideoModerationResultResponseBody extends TeaModel {
          */
         @NameInMap("FigureId")
         public String figureId;
+
+        @NameInMap("FigureName")
+        public String figureName;
+
+        @NameInMap("Location")
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> location;
 
         public static VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure build(java.util.Map<String, ?> map) throws Exception {
             VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure self = new VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure();
@@ -708,6 +766,22 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
         public String getFigureId() {
             return this.figureId;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure setFigureName(String figureName) {
+            this.figureName = figureName;
+            return this;
+        }
+        public String getFigureName() {
+            return this.figureName;
+        }
+
+        public VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigure setLocation(java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> location) {
+            this.location = location;
+            return this;
+        }
+        public java.util.List<VideoModerationResultResponseBodyDataFrameResultFramesResultsPublicFigureLocation> getLocation() {
+            return this.location;
         }
 
     }
