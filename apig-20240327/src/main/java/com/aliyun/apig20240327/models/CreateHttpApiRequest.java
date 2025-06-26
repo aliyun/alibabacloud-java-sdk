@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class CreateHttpApiRequest extends TeaModel {
+    @NameInMap("agentProtocols")
+    public java.util.List<String> agentProtocols;
+
     /**
      * <p>The AI API protocols. Valid value:</p>
      * <ul>
@@ -104,6 +107,14 @@ public class CreateHttpApiRequest extends TeaModel {
     public static CreateHttpApiRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateHttpApiRequest self = new CreateHttpApiRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateHttpApiRequest setAgentProtocols(java.util.List<String> agentProtocols) {
+        this.agentProtocols = agentProtocols;
+        return this;
+    }
+    public java.util.List<String> getAgentProtocols() {
+        return this.agentProtocols;
     }
 
     public CreateHttpApiRequest setAiProtocols(java.util.List<String> aiProtocols) {

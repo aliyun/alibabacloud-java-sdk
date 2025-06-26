@@ -98,6 +98,9 @@ public class CreateServiceRequest extends TeaModel {
         @NameInMap("addresses")
         public java.util.List<String> addresses;
 
+        @NameInMap("agentServiceConfig")
+        public AgentServiceConfig agentServiceConfig;
+
         /**
          * <p>The AI service configurations.</p>
          */
@@ -161,6 +164,14 @@ public class CreateServiceRequest extends TeaModel {
         }
         public java.util.List<String> getAddresses() {
             return this.addresses;
+        }
+
+        public CreateServiceRequestServiceConfigs setAgentServiceConfig(AgentServiceConfig agentServiceConfig) {
+            this.agentServiceConfig = agentServiceConfig;
+            return this;
+        }
+        public AgentServiceConfig getAgentServiceConfig() {
+            return this.agentServiceConfig;
         }
 
         public CreateServiceRequestServiceConfigs setAiServiceConfig(AiServiceConfig aiServiceConfig) {

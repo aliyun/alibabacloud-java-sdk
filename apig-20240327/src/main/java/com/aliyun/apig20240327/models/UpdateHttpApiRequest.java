@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class UpdateHttpApiRequest extends TeaModel {
+    @NameInMap("agentProtocols")
+    public java.util.List<String> agentProtocols;
+
     /**
      * <p>The AI protocols.</p>
      */
@@ -71,6 +74,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     public static UpdateHttpApiRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHttpApiRequest self = new UpdateHttpApiRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateHttpApiRequest setAgentProtocols(java.util.List<String> agentProtocols) {
+        this.agentProtocols = agentProtocols;
+        return this;
+    }
+    public java.util.List<String> getAgentProtocols() {
+        return this.agentProtocols;
     }
 
     public UpdateHttpApiRequest setAiProtocols(java.util.List<String> aiProtocols) {

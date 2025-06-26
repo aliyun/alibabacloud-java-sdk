@@ -330,6 +330,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateHttpApiResponse createHttpApiWithOptions(CreateHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentProtocols)) {
+            body.put("agentProtocols", request.agentProtocols);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aiProtocols)) {
             body.put("aiProtocols", request.aiProtocols);
         }
@@ -1179,6 +1183,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除服务</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteServiceResponse
+     */
+    public DeleteServiceResponse deleteServiceWithOptions(String serviceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteService"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/services/" + com.aliyun.openapiutil.Client.getEncodeParam(serviceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteServiceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除服务</p>
+     * @return DeleteServiceResponse
+     */
+    public DeleteServiceResponse deleteService(String serviceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteServiceWithOptions(serviceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Deploy HttpApi</p>
      * 
      * @param request DeployHttpApiRequest
@@ -1458,7 +1499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a gateway.</p>
+     * <p>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -1484,7 +1525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get a gateway.</p>
+     * <p>Queries the basic information about an instance, such as the virtual private cloud (VPC) and vSwitch to which the instance belongs and its ingress.</p>
      * @return GetGatewayResponse
      */
     public GetGatewayResponse getGateway(String gatewayId) throws Exception {
@@ -3205,6 +3246,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateHttpApiResponse updateHttpApiWithOptions(String httpApiId, UpdateHttpApiRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentProtocols)) {
+            body.put("agentProtocols", request.agentProtocols);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.aiProtocols)) {
             body.put("aiProtocols", request.aiProtocols);
         }

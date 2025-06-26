@@ -7,6 +7,9 @@ public class Service extends TeaModel {
     @NameInMap("addresses")
     public java.util.List<String> addresses;
 
+    @NameInMap("agentServiceConfig")
+    public AgentServiceConfig agentServiceConfig;
+
     @NameInMap("aiServiceConfig")
     public AiServiceConfig aiServiceConfig;
 
@@ -86,6 +89,14 @@ public class Service extends TeaModel {
     }
     public java.util.List<String> getAddresses() {
         return this.addresses;
+    }
+
+    public Service setAgentServiceConfig(AgentServiceConfig agentServiceConfig) {
+        this.agentServiceConfig = agentServiceConfig;
+        return this;
+    }
+    public AgentServiceConfig getAgentServiceConfig() {
+        return this.agentServiceConfig;
     }
 
     public Service setAiServiceConfig(AiServiceConfig aiServiceConfig) {
