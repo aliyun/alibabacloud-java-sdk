@@ -2523,6 +2523,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DeleteConsumeProcessor</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteConsumeProcessorResponse
+     */
+    public DeleteConsumeProcessorResponse deleteConsumeProcessorWithOptions(String project, String processorName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteConsumeProcessor"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/consumeprocessors/" + processorName + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new DeleteConsumeProcessorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>DeleteConsumeProcessor</p>
+     * @return DeleteConsumeProcessorResponse
+     */
+    public DeleteConsumeProcessorResponse deleteConsumeProcessor(String project, String processorName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteConsumeProcessorWithOptions(project, processorName, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -4300,6 +4340,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getConfigWithOptions(project, configName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetConsumeProcessor</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetConsumeProcessorResponse
+     */
+    public GetConsumeProcessorResponse getConsumeProcessorWithOptions(String project, String processorName, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetConsumeProcessor"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/consumeprocessors/" + processorName + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new GetConsumeProcessorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetConsumeProcessor</p>
+     * @return GetConsumeProcessorResponse
+     */
+    public GetConsumeProcessorResponse getConsumeProcessor(String project, String processorName) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getConsumeProcessorWithOptions(project, processorName, headers, runtime);
     }
 
     /**
@@ -6677,6 +6757,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListConsumeProcessors</p>
+     * 
+     * @param request ListConsumeProcessorsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListConsumeProcessorsResponse
+     */
+    public ListConsumeProcessorsResponse listConsumeProcessorsWithOptions(String project, ListConsumeProcessorsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            query.put("displayName", request.displayName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("offset", request.offset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processorName)) {
+            query.put("processorName", request.processorName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListConsumeProcessors"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/consumeprocessors"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new ListConsumeProcessorsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListConsumeProcessors</p>
+     * 
+     * @param request ListConsumeProcessorsRequest
+     * @return ListConsumeProcessorsResponse
+     */
+    public ListConsumeProcessorsResponse listConsumeProcessors(String project, ListConsumeProcessorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listConsumeProcessorsWithOptions(project, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -8352,6 +8494,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.putAnnotationDataWithOptions(datasetId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PutConsumeProcessor</p>
+     * 
+     * @param request PutConsumeProcessorRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PutConsumeProcessorResponse
+     */
+    public PutConsumeProcessorResponse putConsumeProcessorWithOptions(String project, String processorName, PutConsumeProcessorRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> hostMap = new java.util.HashMap<>();
+        hostMap.put("project", project);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configuration)) {
+            body.put("configuration", request.configuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayName)) {
+            body.put("displayName", request.displayName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("hostMap", hostMap),
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PutConsumeProcessor"),
+            new TeaPair("version", "2020-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/consumeprocessors/" + processorName + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.execute(params, req, runtime), new PutConsumeProcessorResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>PutConsumeProcessor</p>
+     * 
+     * @param request PutConsumeProcessorRequest
+     * @return PutConsumeProcessorResponse
+     */
+    public PutConsumeProcessorResponse putConsumeProcessor(String project, String processorName, PutConsumeProcessorRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.putConsumeProcessorWithOptions(project, processorName, request, headers, runtime);
     }
 
     /**
@@ -11457,8 +11657,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用UpsertCollectionPolicy接口创建或更新日志采集规则</p>
+     * <p>Creates a log collection policy for a cloud service. This way, logs can be automatically collected from the service.</p>
      * 
      * @param request UpsertCollectionPolicyRequest
      * @param headers map
@@ -11523,8 +11726,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>调用UpsertCollectionPolicy接口创建或更新日志采集规则</p>
+     * <p>Creates a log collection policy for a cloud service. This way, logs can be automatically collected from the service.</p>
      * 
      * @param request UpsertCollectionPolicyRequest
      * @return UpsertCollectionPolicyResponse
