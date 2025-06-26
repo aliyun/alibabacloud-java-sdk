@@ -16,6 +16,9 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    @NameInMap("ChameleonFrameEnable")
+    public String chameleonFrameEnable;
+
     /**
      * <strong>example:</strong>
      * <ul>
@@ -210,6 +213,14 @@ public class InitializeShrinkRequest extends TeaModel {
     }
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    public InitializeShrinkRequest setChameleonFrameEnable(String chameleonFrameEnable) {
+        this.chameleonFrameEnable = chameleonFrameEnable;
+        return this;
+    }
+    public String getChameleonFrameEnable() {
+        return this.chameleonFrameEnable;
     }
 
     public InitializeShrinkRequest setCrop(String crop) {

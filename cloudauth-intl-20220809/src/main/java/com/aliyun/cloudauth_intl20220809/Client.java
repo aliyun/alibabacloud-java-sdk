@@ -1232,6 +1232,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CallbackUrl", request.callbackUrl);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.chameleonFrameEnable)) {
+            query.put("ChameleonFrameEnable", request.chameleonFrameEnable);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.crop)) {
             query.put("Crop", request.crop);
         }
