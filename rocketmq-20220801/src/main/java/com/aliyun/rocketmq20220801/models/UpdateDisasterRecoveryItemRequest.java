@@ -31,6 +31,7 @@ public class UpdateDisasterRecoveryItemRequest extends TeaModel {
          * <p>GID_xxx</p>
          */
         @NameInMap("consumerGroupId")
+        @Deprecated
         public String consumerGroupId;
 
         /**
@@ -92,6 +93,7 @@ public class UpdateDisasterRecoveryItemRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public UpdateDisasterRecoveryItemRequestTopics setConsumerGroupId(String consumerGroupId) {
             this.consumerGroupId = consumerGroupId;
             return this;

@@ -211,6 +211,9 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("consumerGroupId")
+        public String consumerGroupId;
+
         /**
          * <p>Endpoint URL</p>
          * 
@@ -331,6 +334,14 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public ListDisasterRecoveryPlansResponseBodyDataListInstances setConsumerGroupId(String consumerGroupId) {
+            this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         public ListDisasterRecoveryPlansResponseBodyDataListInstances setEndpointUrl(String endpointUrl) {

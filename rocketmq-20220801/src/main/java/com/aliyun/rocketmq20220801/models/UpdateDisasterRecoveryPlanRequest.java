@@ -171,6 +171,9 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("consumerGroupId")
+        public String consumerGroupId;
+
         /**
          * <p>The instance endpoint. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
          * 
@@ -299,6 +302,14 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public UpdateDisasterRecoveryPlanRequestInstances setConsumerGroupId(String consumerGroupId) {
+            this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         public UpdateDisasterRecoveryPlanRequestInstances setEndpointUrl(String endpointUrl) {

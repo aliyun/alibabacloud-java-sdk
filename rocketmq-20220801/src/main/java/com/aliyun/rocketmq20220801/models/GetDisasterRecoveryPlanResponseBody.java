@@ -215,6 +215,9 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        @NameInMap("consumerGroupId")
+        public String consumerGroupId;
+
         /**
          * <p>Endpoint URL, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ</p>
          * 
@@ -343,6 +346,14 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         }
         public String getAuthType() {
             return this.authType;
+        }
+
+        public GetDisasterRecoveryPlanResponseBodyDataInstances setConsumerGroupId(String consumerGroupId) {
+            this.consumerGroupId = consumerGroupId;
+            return this;
+        }
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         public GetDisasterRecoveryPlanResponseBodyDataInstances setEndpointUrl(String endpointUrl) {

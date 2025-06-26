@@ -5,14 +5,19 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>consume retry policy</p>
+     * <p>The consumption retry policy of the consumer group. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry</a>.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("consumeRetryPolicy")
     public CreateConsumerGroupRequestConsumeRetryPolicy consumeRetryPolicy;
 
     /**
-     * <p>The dynamic error message.</p>
+     * <p>The message delivery method of the consumer group.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Concurrently: concurrent delivery</li>
+     * <li>Orderly: ordered delivery</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +27,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String deliveryOrderType;
 
     /**
-     * <p>Maximum received message tps</p>
+     * <p>The maximum number of messages that can be processed by consumers per second.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -31,7 +36,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public Long maxReceiveTps;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The description of the consumer group.</p>
      * 
      * <strong>example:</strong>
      * <p>This is the remark for test.</p>
@@ -79,7 +84,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public static class CreateConsumerGroupRequestConsumeRetryPolicy extends TeaModel {
         /**
          * <p>The dead-letter topic.</p>
-         * <p>If a consumer still fails to consume a message after the message is retried for a specified number of times, the message is delivered to a dead-letter topic for subsequent business recovery or troubleshooting. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
+         * <p>If a message still fails to be consumed after the maximum number of retries specified in the consumption retry policy is reached, the message is delivered to the dead-letter topic for subsequent business recovery or backtracking. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Consumption retry and dead-letter messages</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>DLQ_mqtest</p>
@@ -87,6 +92,16 @@ public class CreateConsumerGroupRequest extends TeaModel {
         @NameInMap("deadLetterTargetTopic")
         public String deadLetterTargetTopic;
 
+        /**
+         * <p>Fixed retry interval, unit: seconds.This option is effective when retryPolicy is FixedRetryPolicy.Value range：</p>
+         * <ul>
+         * <li>Concurrently:10-600</li>
+         * <li>Orderly:1-60</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("fixedIntervalRetryTime")
         public Integer fixedIntervalRetryTime;
 
@@ -103,8 +118,8 @@ public class CreateConsumerGroupRequest extends TeaModel {
          * <p>The retry policy. For more information, see <a href="https://help.aliyun.com/document_detail/440356.html">Message retry</a>.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>FixedRetryPolicy: Failed messages are retried at a fixed interval.</li>
-         * <li>DefaultRetryPolicy: Failed messages are retried at incremental intervals as the number of retries increases.</li>
+         * <li>FixedRetryPolicy: fixed-interval retry. This value is valid only if you set deliveryOrderType to Orderly.</li>
+         * <li>DefaultRetryPolicy: exponential backoff retry. This value is valid only if you set deliveryOrderType to Concurrently.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
