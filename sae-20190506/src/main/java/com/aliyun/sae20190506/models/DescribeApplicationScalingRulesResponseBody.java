@@ -504,6 +504,36 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics extends TeaModel {
+        @NameInMap("PrometheusQuery")
+        public String prometheusQuery;
+
+        @NameInMap("TargetMetricValue")
+        public String targetMetricValue;
+
+        public static DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics build(java.util.Map<String, ?> map) throws Exception {
+            DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics self = new DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics setPrometheusQuery(String prometheusQuery) {
+            this.prometheusQuery = prometheusQuery;
+            return this;
+        }
+        public String getPrometheusQuery() {
+            return this.prometheusQuery;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics setTargetMetricValue(String targetMetricValue) {
+            this.targetMetricValue = targetMetricValue;
+            return this;
+        }
+        public String getTargetMetricValue() {
+            return this.targetMetricValue;
+        }
+
+    }
+
     public static class DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricScaleDownRules extends TeaModel {
         /**
          * <p>Indicates whether the application scale-in was disabled. Valid values:</p>
@@ -646,6 +676,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @NameInMap("MaxReplicas")
         public Integer maxReplicas;
 
+        @NameInMap("MetricSource")
+        public String metricSource;
+
         /**
          * <p>The list of metrics that are used to trigger the auto scaling policy.</p>
          */
@@ -666,6 +699,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
          */
         @NameInMap("MinReplicas")
         public Integer minReplicas;
+
+        @NameInMap("PrometheusMetrics")
+        public java.util.List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics> prometheusMetrics;
+
+        @NameInMap("PrometheusToken")
+        public String prometheusToken;
+
+        @NameInMap("PrometheusUrl")
+        public String prometheusUrl;
 
         /**
          * <p>Rules that determine the application scale-in.</p>
@@ -692,6 +734,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             return this.maxReplicas;
         }
 
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric setMetricSource(String metricSource) {
+            this.metricSource = metricSource;
+            return this;
+        }
+        public String getMetricSource() {
+            return this.metricSource;
+        }
+
         public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric setMetrics(java.util.List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricMetrics> metrics) {
             this.metrics = metrics;
             return this;
@@ -714,6 +764,30 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         }
         public Integer getMinReplicas() {
             return this.minReplicas;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric setPrometheusMetrics(java.util.List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics> prometheusMetrics) {
+            this.prometheusMetrics = prometheusMetrics;
+            return this;
+        }
+        public java.util.List<DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricPrometheusMetrics> getPrometheusMetrics() {
+            return this.prometheusMetrics;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric setPrometheusToken(String prometheusToken) {
+            this.prometheusToken = prometheusToken;
+            return this;
+        }
+        public String getPrometheusToken() {
+            return this.prometheusToken;
+        }
+
+        public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric setPrometheusUrl(String prometheusUrl) {
+            this.prometheusUrl = prometheusUrl;
+            return this;
+        }
+        public String getPrometheusUrl() {
+            return this.prometheusUrl;
         }
 
         public DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetric setScaleDownRules(DescribeApplicationScalingRulesResponseBodyDataApplicationScalingRulesMetricScaleDownRules scaleDownRules) {
