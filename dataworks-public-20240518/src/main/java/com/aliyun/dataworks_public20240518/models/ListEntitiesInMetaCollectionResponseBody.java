@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
+    /**
+     * <p>The pagination information.</p>
+     */
     @NameInMap("PagingInfo")
     public ListEntitiesInMetaCollectionResponseBodyPagingInfo pagingInfo;
 
@@ -52,6 +55,8 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The entity ID. Entities can only be tables. This parameter is left empty if the entity is deleted.</p>
+         * 
          * <strong>example:</strong>
          * <p>dlf-table:123456789:test_catalog:test_database::test_table</p>
          */
@@ -73,6 +78,8 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The type of the entity.</p>
+         * 
          * <strong>example:</strong>
          * <p>dlf-table</p>
          */
@@ -143,6 +150,9 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
     }
 
     public static class ListEntitiesInMetaCollectionResponseBodyPagingInfo extends TeaModel {
+        /**
+         * <p>The entities in the collection.</p>
+         */
         @NameInMap("Entities")
         public java.util.List<ListEntitiesInMetaCollectionResponseBodyPagingInfoEntities> entities;
 

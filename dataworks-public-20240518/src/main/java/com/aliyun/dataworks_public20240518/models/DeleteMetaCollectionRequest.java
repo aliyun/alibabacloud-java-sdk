@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMetaCollectionRequest extends TeaModel {
     /**
+     * <p>The collection ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

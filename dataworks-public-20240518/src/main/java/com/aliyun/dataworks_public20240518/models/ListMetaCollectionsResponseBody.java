@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class ListMetaCollectionsResponseBody extends TeaModel {
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public ListMetaCollectionsResponseBodyData data;
 
@@ -42,6 +45,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public java.util.List<String> administrators;
 
         /**
+         * <p>The time when the collection was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
          */
@@ -59,6 +64,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ID of the collection.</p>
+         * 
          * <strong>example:</strong>
          * <p>category.123</p>
          */
@@ -66,6 +73,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The time when the collection was modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1668568601000</p>
          */
@@ -80,6 +89,8 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>category.1</p>
          */
@@ -173,6 +184,9 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
     }
 
     public static class ListMetaCollectionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The collections.</p>
+         */
         @NameInMap("MetaCollections")
         public java.util.List<ListMetaCollectionsResponseBodyDataMetaCollections> metaCollections;
 

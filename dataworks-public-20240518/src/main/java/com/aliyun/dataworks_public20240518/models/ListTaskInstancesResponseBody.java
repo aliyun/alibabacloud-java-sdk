@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTaskInstancesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination details.</p>
      */
     @NameInMap("PagingInfo")
     public ListTaskInstancesResponseBodyPagingInfo pagingInfo;
@@ -340,6 +340,10 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @NameInMap("RuntimeResource")
         public ListTaskInstancesResponseBodyPagingInfoTaskInstancesRuntimeResource runtimeResource;
 
+        /**
+         * <strong>example:</strong>
+         * <p>para1=val1 para2=val2</p>
+         */
         @NameInMap("ScriptParameters")
         public String scriptParameters;
 
@@ -447,9 +451,17 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("WaitingResourceTime")
         public Long waitingResourceTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("WaitingTriggerTime")
         public Long waitingTriggerTime;
 
@@ -805,7 +817,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The instances.</p>
+         * <p>The list of task instances.</p>
          */
         @NameInMap("TaskInstances")
         public java.util.List<ListTaskInstancesResponseBodyPagingInfoTaskInstances> taskInstances;

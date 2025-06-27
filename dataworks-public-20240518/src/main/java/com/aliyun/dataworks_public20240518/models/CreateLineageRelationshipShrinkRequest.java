@@ -10,6 +10,9 @@ public class CreateLineageRelationshipShrinkRequest extends TeaModel {
     @NameInMap("SrcEntity")
     public String srcEntityShrink;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("Task")
     public String taskShrink;
 

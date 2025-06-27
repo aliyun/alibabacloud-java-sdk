@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateLineageRelationshipResponseBody extends TeaModel {
     /**
+     * <p>The lineage ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</p>
      */

@@ -40,6 +40,17 @@ public class ListCatalogsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
+     * <p>Only DLF and StarRocks data sources support this parameter.</p>
+     * <ul>
+     * <li>For DLF data sources, you can call this API operation to query all catalogs. In this case, you must set the <code>ParentMetaEntityId</code> parameter to <code>dlf</code>.</li>
+     * <li>For StarRocks data sources, you can call this API operation to query the catalogs in a specific instance. In this case, you can configure the <code>ParentMetaEntityId</code> parameter in the <code>starrocks:(instance_id|encoded_jdbc_url)</code> format.</li>
+     * </ul>
+     * <blockquote>
+     * <p>\
+     * <code>instance_id</code>: the ID of an instance. If the related data source is added to DataWorks in Alibaba Cloud instance mode, you must configure this parameter.\
+     * <code>encoded_jdbc_url</code>: the JDBC connection string that is URL-encoded. If the related data source is added to DataWorks in connection string mode, you must configure this parameter.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the instance.</p>
+     * <p>The details of the task instance.</p>
      */
     @NameInMap("TaskInstance")
     public GetTaskInstanceResponseBodyTaskInstance taskInstance;
@@ -760,9 +760,17 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @NameInMap("TriggerType")
         public String triggerType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("WaitingResourceTime")
         public Long waitingResourceTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
+         */
         @NameInMap("WaitingTriggerTime")
         public Long waitingTriggerTime;
 

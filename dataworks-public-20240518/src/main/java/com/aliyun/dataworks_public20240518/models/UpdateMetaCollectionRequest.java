@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class UpdateMetaCollectionRequest extends TeaModel {
+    /**
+     * <p>The collection administrator IDs. This parameter is available only for data albums. The administrator must be an account within the same tenant.</p>
+     */
     @NameInMap("Administrators")
     public java.util.List<String> administrators;
 
@@ -15,6 +18,7 @@ public class UpdateMetaCollectionRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The collection ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableBusinessMetadataRequest extends TeaModel {
     /**
+     * <p>The data table ID. You can call the ListTables operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

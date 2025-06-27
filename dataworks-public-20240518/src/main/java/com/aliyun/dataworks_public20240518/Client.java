@@ -1508,7 +1508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册血缘关系</p>
+     * <p>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</p>
      * 
      * @param tmpReq CreateLineageRelationshipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1562,7 +1562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>注册血缘关系</p>
+     * <p>Creates a lineage between a source entity and a destination entity. Either the source or destination entity must be a custom entity.</p>
      * 
      * @param request CreateLineageRelationshipRequest
      * @return CreateLineageRelationshipResponse
@@ -1574,7 +1574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建集合</p>
+     * <p>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</p>
      * 
      * @param request CreateMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1618,7 +1618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建集合</p>
+     * <p>Creates a collection in Data Map. Collections include categories, subcategories, data albums, and categories that are created in the data albums.</p>
      * 
      * @param request CreateMetaCollectionRequest
      * @return CreateMetaCollectionResponse
@@ -5396,7 +5396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>请求collection详情</p>
+     * <p>Queries the information about a collection in Data Map. Collections include categories and data albums.</p>
      * 
      * @param request GetMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5424,7 +5424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>请求collection详情</p>
+     * <p>Queries the information about a collection in Data Map. Collections include categories and data albums.</p>
      * 
      * @param request GetMetaCollectionRequest
      * @return GetMetaCollectionResponse
@@ -5756,7 +5756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询异步重跑工作流实例的结果</p>
+     * <p>Query the result of asynchronous workflow instance reruns.</p>
      * 
      * @param request GetRerunWorkflowInstancesResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5788,7 +5788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询异步重跑工作流实例的结果</p>
+     * <p>Query the result of asynchronous workflow instance reruns.</p>
      * 
      * @param request GetRerunWorkflowInstancesResultRequest
      * @return GetRerunWorkflowInstancesResultResponse
@@ -7823,7 +7823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集合中的实体列表</p>
+     * <p>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</p>
      * 
      * @param request ListEntitiesInMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7851,7 +7851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询集合中的实体列表</p>
+     * <p>Queries a list of entities in a collection in Data Map. Collections include categories and data albums. Entities can only be tables.</p>
      * 
      * @param request ListEntitiesInMetaCollectionRequest
      * @return ListEntitiesInMetaCollectionResponse
@@ -8149,7 +8149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实体血缘</p>
+     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
      * 
      * @param request ListLineagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8177,7 +8177,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询实体血缘</p>
+     * <p>Queries a list of ancestor and descendant entities of an entity in Data Map. You can specify whether to return the lineage between the entities.</p>
      * 
      * @param request ListLineagesRequest
      * @return ListLineagesResponse
@@ -8189,7 +8189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Collection列表</p>
+     * <p>Queries a list of collections in Data Map. Collections include categories and data albums.</p>
      * 
      * @param request ListMetaCollectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8217,7 +8217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询Collection列表</p>
+     * <p>Queries a list of collections in Data Map. Collections include categories and data albums.</p>
      * 
      * @param request ListMetaCollectionsRequest
      * @return ListMetaCollectionsResponse
@@ -8865,7 +8865,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模式列表</p>
+     * <p>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</p>
      * 
      * @param tmpReq ListSchemasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8899,7 +8899,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询模式列表</p>
+     * <p>Queries a list of schemas in a database or a MaxCompute project in Data Map. Only schemas of the MaxCompute and Hologres metadata crawler types are supported.</p>
      * 
      * @param request ListSchemasRequest
      * @return ListSchemasResponse
@@ -10183,7 +10183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重跑工作流实例</p>
+     * <p>Reruns workflow instances.</p>
      * 
      * @param tmpReq RerunWorkflowInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10265,7 +10265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重跑工作流实例</p>
+     * <p>Reruns workflow instances.</p>
      * 
      * @param request RerunWorkflowInstancesRequest
      * @return RerunWorkflowInstancesResponse
@@ -12191,7 +12191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集合</p>
+     * <p>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param tmpReq UpdateMetaCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12241,7 +12241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新集合</p>
+     * <p>Updates the information about a collection in Data Map, including the collection name, description, and administrator. Collections include categories and data albums. If you want to update the information about a data album, the account that you use must be attached the AliyunDataWorksFullAccess policy, or you are the data album creator or administrator.</p>
      * 
      * @param request UpdateMetaCollectionRequest
      * @return UpdateMetaCollectionResponse
@@ -12620,7 +12620,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据表业务元数据</p>
+     * <p>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</p>
      * 
      * @param request UpdateTableBusinessMetadataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12656,7 +12656,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新数据表业务元数据</p>
+     * <p>Updates the business metadata of a table in Data Map. Currently, only the usage notes of a table can be updated.</p>
      * 
      * @param request UpdateTableBusinessMetadataRequest
      * @return UpdateTableBusinessMetadataResponse

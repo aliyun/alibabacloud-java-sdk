@@ -22,6 +22,7 @@ public class ListEntitiesInMetaCollectionRequest extends TeaModel {
     public String entityType;
 
     /**
+     * <p>The collection ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

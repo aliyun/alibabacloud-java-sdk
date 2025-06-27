@@ -40,6 +40,22 @@ public class ListDatabasesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The parent entity ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">description of concepts related to metadata entities.</a></p>
+     * <p>The type of the parent entity can be found in the response of the ListCrawlerTypes operation.</p>
+     * <ul>
+     * <li>If the parent entity is a catalog, the format of <code>ParentMetaEntityId</code> follows the response of the ListCatalogs API.</li>
+     * <li>If the parent entity is a metadata crawler, the format of <code>ParentMetaEntityId</code> is <code>${CrawlerType}:${Instance ID or encoded URL}.</code></li>
+     * </ul>
+     * <p>ParentMetaEntityId format examples</p>
+     * <p><code>dlf-catalog::catalog_id</code></p>
+     * <p><code>holo:instance_id</code></p>
+     * <p><code>mysql:(instance_id|encoded_jdbc_url)</code></p>
+     * <blockquote>
+     * <p>\
+     * <code>catalog_id</code>: The DLF catalog ID.\
+     * <code>instance_id</code>: The instance ID, required for the data source registered in instance mode.\
+     * <code>encoded_jdbc_url</code>: The JDBC connection string that has been URL encoded, required for the data source registered via a connection string.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

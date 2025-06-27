@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetRerunWorkflowInstancesResultResponseBody extends TeaModel {
     /**
+     * <p>The request ID, used for log tracing and troubleshooting.</p>
+     * 
      * <strong>example:</strong>
      * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The result of the workflow instance rerun.</p>
+     */
     @NameInMap("Result")
     public GetRerunWorkflowInstancesResultResponseBodyResult result;
 
@@ -36,10 +41,18 @@ public class GetRerunWorkflowInstancesResultResponseBody extends TeaModel {
     }
 
     public static class GetRerunWorkflowInstancesResultResponseBodyResult extends TeaModel {
+        /**
+         * <p>The failure message. Returned if the rerun fails.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Invalid Param xxx</p>
+         */
         @NameInMap("FailureMessage")
         public String failureMessage;
 
         /**
+         * <p>The status. NotRun Success Failure</p>
+         * 
          * <strong>example:</strong>
          * <p>Success</p>
          */

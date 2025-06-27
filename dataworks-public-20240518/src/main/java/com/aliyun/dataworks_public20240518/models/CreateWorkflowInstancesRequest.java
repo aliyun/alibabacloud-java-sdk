@@ -461,6 +461,9 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         @NameInMap("Priority")
         public Integer priority;
 
+        @NameInMap("PriorityWeightStrategy")
+        public String priorityWeightStrategy;
+
         /**
          * <p>The root task IDs.</p>
          * <ul>
@@ -571,6 +574,14 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public CreateWorkflowInstancesRequestDefaultRunProperties setPriorityWeightStrategy(String priorityWeightStrategy) {
+            this.priorityWeightStrategy = priorityWeightStrategy;
+            return this;
+        }
+        public String getPriorityWeightStrategy() {
+            return this.priorityWeightStrategy;
         }
 
         public CreateWorkflowInstancesRequestDefaultRunProperties setRootTaskIds(java.util.List<Long> rootTaskIds) {

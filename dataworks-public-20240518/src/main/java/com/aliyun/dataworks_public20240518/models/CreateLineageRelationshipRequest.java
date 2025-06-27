@@ -10,6 +10,9 @@ public class CreateLineageRelationshipRequest extends TeaModel {
     @NameInMap("SrcEntity")
     public LineageEntity srcEntity;
 
+    /**
+     * <p>The task information.</p>
+     */
     @NameInMap("Task")
     public LineageTask task;
 

@@ -4,6 +4,9 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class GetMetaCollectionResponseBody extends TeaModel {
+    /**
+     * <p>The information about the collection.</p>
+     */
     @NameInMap("MetaCollection")
     public GetMetaCollectionResponseBodyMetaCollection metaCollection;
 
@@ -59,6 +62,8 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The collection ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>category.123</p>
          */
@@ -80,6 +85,8 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>category.12</p>
          */

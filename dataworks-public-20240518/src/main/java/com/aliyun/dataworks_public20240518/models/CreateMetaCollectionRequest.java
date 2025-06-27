@@ -21,6 +21,8 @@ public class CreateMetaCollectionRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The ID of the collection of an ancestor node.</p>
+     * 
      * <strong>example:</strong>
      * <p>category.123</p>
      */

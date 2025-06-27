@@ -50,6 +50,8 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the collection of an ancestor node.</p>
+     * 
      * <strong>example:</strong>
      * <p>category.123</p>
      */
@@ -64,6 +66,12 @@ public class ListMetaCollectionsRequest extends TeaModel {
     public String sortBy;
 
     /**
+     * <p>The type of the collection. Valid values:</p>
+     * <ul>
+     * <li>Category</li>
+     * <li>Album</li>
+     * <li>AlbumCategory</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

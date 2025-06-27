@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RerunWorkflowInstancesRequest extends TeaModel {
     /**
+     * <p>The business date used for matching manual workflow instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -12,6 +14,8 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
     public Long bizdate;
 
     /**
+     * <p>The end trigger time of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -19,19 +23,30 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
     public Long endTriggerTime;
 
     /**
+     * <p>The environment of the workspace. Valid values:</p>
+     * <p>Prod Dev</p>
+     * 
      * <strong>example:</strong>
      * <p>Prod</p>
      */
     @NameInMap("EnvType")
     public String envType;
 
+    /**
+     * <p>The match conditions for internal instances of manual workflow instances.</p>
+     */
     @NameInMap("Filter")
     public RerunWorkflowInstancesRequestFilter filter;
 
+    /**
+     * <p>The instance IDs used for matching manual workflow instances.</p>
+     */
     @NameInMap("Ids")
     public java.util.List<Long> ids;
 
     /**
+     * <p>The manual workflow name, used for fuzzy matching.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -39,12 +54,18 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123</p>
      */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
+     * <p>The start trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with EndTriggerTime.</p>
+     * 
      * <strong>example:</strong>
      * <p>1710239005403</p>
      */
@@ -52,6 +73,13 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
     public Long startTriggerTime;
 
     /**
+     * <p>The status used for matching manual workflow instances.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Success</li>
+     * <li>Failure</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Failure</p>
      */
@@ -59,6 +87,8 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The type of the workflow instance. Valid values:</p>
+     * <p>ManualWorkflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,6 +98,7 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
     public String type;
 
     /**
+     * <p>The workflow ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -171,25 +202,38 @@ public class RerunWorkflowInstancesRequest extends TeaModel {
 
     public static class RerunWorkflowInstancesRequestFilter extends TeaModel {
         /**
+         * <p>Specifies whether to rerun the matched instances and all downstream instances.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
         @NameInMap("RerunDownstreamEnabled")
         public Boolean rerunDownstreamEnabled;
 
+        /**
+         * <p>The internal task IDs used for matching manual workflow instances.</p>
+         */
         @NameInMap("TaskIds")
         public java.util.List<Long> taskIds;
 
+        /**
+         * <p>The statuses of internal tasks used for matching manual workflow instances.</p>
+         */
         @NameInMap("TaskInstanceStatuses")
         public java.util.List<String> taskInstanceStatuses;
 
         /**
+         * <p>The internal task name used for matching the manual workflow instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("TaskName")
         public String taskName;
 
+        /**
+         * <p>Match internal tasks within the manual workflow by type.</p>
+         */
         @NameInMap("TaskTypes")
         public java.util.List<String> taskTypes;
 
