@@ -272,7 +272,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
          * <p>123</p>
          */
         @NameInMap("CertId")
-        public Long certId;
+        public String certId;
 
         /**
          * <p>The type of the cipher suites. Valid values:</p>
@@ -458,11 +458,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public DescribeDomainDetailResponseBodyListen setCertId(Long certId) {
+        public DescribeDomainDetailResponseBodyListen setCertId(String certId) {
             this.certId = certId;
             return this;
         }
-        public Long getCertId() {
+        public String getCertId() {
             return this.certId;
         }
 

@@ -106,6 +106,12 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public String templateType;
 
+    @NameInMap("UnbindResourceGroups")
+    public java.util.List<String> unbindResourceGroups;
+
+    @NameInMap("UnbindResources")
+    public java.util.List<String> unbindResources;
+
     public static CreateDefenseTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateDefenseTemplateRequest self = new CreateDefenseTemplateRequest();
         return TeaModel.build(map, self);
@@ -181,6 +187,22 @@ public class CreateDefenseTemplateRequest extends TeaModel {
     }
     public String getTemplateType() {
         return this.templateType;
+    }
+
+    public CreateDefenseTemplateRequest setUnbindResourceGroups(java.util.List<String> unbindResourceGroups) {
+        this.unbindResourceGroups = unbindResourceGroups;
+        return this;
+    }
+    public java.util.List<String> getUnbindResourceGroups() {
+        return this.unbindResourceGroups;
+    }
+
+    public CreateDefenseTemplateRequest setUnbindResources(java.util.List<String> unbindResources) {
+        this.unbindResources = unbindResources;
+        return this;
+    }
+    public java.util.List<String> getUnbindResources() {
+        return this.unbindResources;
     }
 
 }

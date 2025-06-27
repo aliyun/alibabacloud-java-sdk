@@ -17,6 +17,12 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <p>The region where the WAF instance resides. Valid values:</p>
      * <ul>
@@ -29,6 +35,9 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Resource")
+    public String resource;
 
     /**
      * <p>The ID of the Alibaba Cloud resource group.</p>
@@ -76,12 +85,36 @@ public class DescribeTemplateResourcesRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public DescribeTemplateResourcesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeTemplateResourcesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
     public DescribeTemplateResourcesRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeTemplateResourcesRequest setResource(String resource) {
+        this.resource = resource;
+        return this;
+    }
+    public String getResource() {
+        return this.resource;
     }
 
     public DescribeTemplateResourcesRequest setResourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
