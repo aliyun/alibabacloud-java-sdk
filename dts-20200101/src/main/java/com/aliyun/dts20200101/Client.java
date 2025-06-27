@@ -7167,8 +7167,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DtsJobId", request.dtsJobId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyType)) {
+            query.put("ModifyType", request.modifyType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reserved)) {
+            query.put("Reserved", request.reserved);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {

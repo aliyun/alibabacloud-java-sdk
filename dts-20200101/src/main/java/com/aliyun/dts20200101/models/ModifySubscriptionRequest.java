@@ -9,7 +9,6 @@ public class ModifySubscriptionRequest extends TeaModel {
      * <blockquote>
      * <p> You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original objects of the task.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</p>
@@ -35,6 +34,9 @@ public class ModifySubscriptionRequest extends TeaModel {
     @NameInMap("DtsJobId")
     public String dtsJobId;
 
+    @NameInMap("ModifyType")
+    public String modifyType;
+
     /**
      * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
      * 
@@ -43,6 +45,9 @@ public class ModifySubscriptionRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("Reserved")
+    public String reserved;
 
     /**
      * <p>Resource group ID.</p>
@@ -59,7 +64,6 @@ public class ModifySubscriptionRequest extends TeaModel {
      * <li><strong>true</strong>: yes</li>
      * <li><strong>false</strong>: no</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -73,7 +77,6 @@ public class ModifySubscriptionRequest extends TeaModel {
      * <li><strong>true</strong>: yes</li>
      * <li><strong>false</strong>: no</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,12 +113,28 @@ public class ModifySubscriptionRequest extends TeaModel {
         return this.dtsJobId;
     }
 
+    public ModifySubscriptionRequest setModifyType(String modifyType) {
+        this.modifyType = modifyType;
+        return this;
+    }
+    public String getModifyType() {
+        return this.modifyType;
+    }
+
     public ModifySubscriptionRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifySubscriptionRequest setReserved(String reserved) {
+        this.reserved = reserved;
+        return this;
+    }
+    public String getReserved() {
+        return this.reserved;
     }
 
     public ModifySubscriptionRequest setResourceGroupId(String resourceGroupId) {
