@@ -61,6 +61,9 @@ public class GetNisNetworkMetricsShrinkRequest extends TeaModel {
     @NameInMap("ScanBy")
     public String scanBy;
 
+    @NameInMap("StepMinutes")
+    public Integer stepMinutes;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -135,6 +138,14 @@ public class GetNisNetworkMetricsShrinkRequest extends TeaModel {
     }
     public String getScanBy() {
         return this.scanBy;
+    }
+
+    public GetNisNetworkMetricsShrinkRequest setStepMinutes(Integer stepMinutes) {
+        this.stepMinutes = stepMinutes;
+        return this;
+    }
+    public Integer getStepMinutes() {
+        return this.stepMinutes;
     }
 
     public GetNisNetworkMetricsShrinkRequest setUseCrossAccount(Boolean useCrossAccount) {

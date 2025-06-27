@@ -1045,6 +1045,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ScanBy", request.scanBy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.stepMinutes)) {
+            query.put("StepMinutes", request.stepMinutes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.useCrossAccount)) {
             query.put("UseCrossAccount", request.useCrossAccount);
         }
