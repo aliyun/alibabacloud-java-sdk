@@ -17,6 +17,12 @@ public class StartTerminalSessionRequest extends TeaModel {
     public String commandLine;
 
     /**
+     * <p>The network type of the WebSocket URL required to connect to the instance. Valid values:</p>
+     * <ul>
+     * <li>Internet (default)</li>
+     * <li>Intranet</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Intranet</p>
      */

@@ -178,6 +178,12 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>Details about the image options.</p>
+     */
+    @NameInMap("ImageOptions")
+    public CreateLaunchTemplateVersionRequestImageOptions imageOptions;
+
+    /**
      * <p>The source of the image.</p>
      * <blockquote>
      * <p>This parameter will be removed in the future. We recommend that you use other parameters to ensure future compatibility.</p>
@@ -668,6 +674,14 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public CreateLaunchTemplateVersionRequest setImageOptions(CreateLaunchTemplateVersionRequestImageOptions imageOptions) {
+        this.imageOptions = imageOptions;
+        return this;
+    }
+    public CreateLaunchTemplateVersionRequestImageOptions getImageOptions() {
+        return this.imageOptions;
     }
 
     public CreateLaunchTemplateVersionRequest setImageOwnerAlias(String imageOwnerAlias) {
@@ -1505,6 +1519,35 @@ public class CreateLaunchTemplateVersionRequest extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+    }
+
+    public static class CreateLaunchTemplateVersionRequestImageOptions extends TeaModel {
+        /**
+         * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("LoginAsNonRoot")
+        public Boolean loginAsNonRoot;
+
+        public static CreateLaunchTemplateVersionRequestImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateLaunchTemplateVersionRequestImageOptions self = new CreateLaunchTemplateVersionRequestImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateVersionRequestImageOptions setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
     }

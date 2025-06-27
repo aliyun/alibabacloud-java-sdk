@@ -5556,6 +5556,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageId", request.imageId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imageOptions)) {
+            query.put("ImageOptions", request.imageOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageOwnerAlias)) {
             query.put("ImageOwnerAlias", request.imageOwnerAlias);
         }
@@ -5824,6 +5828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             query.put("ImageId", request.imageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageOptions)) {
+            query.put("ImageOptions", request.imageOptions);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageOwnerAlias)) {

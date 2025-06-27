@@ -500,6 +500,35 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions extends TeaModel {
+        /**
+         * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("LoginAsNonRoot")
+        public Boolean loginAsNonRoot;
+
+        public static DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions self = new DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
+        }
+
+    }
+
     public static class DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataNetworkInterfacesNetworkInterfaceSecurityGroupIds extends TeaModel {
         @NameInMap("SecurityGroupId")
         public java.util.List<String> securityGroupId;
@@ -955,6 +984,12 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Details about the image options.</p>
+         */
+        @NameInMap("ImageOptions")
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions imageOptions;
+
+        /**
          * <p>The source of the image. Valid values:</p>
          * <ul>
          * <li>system: public image provided by Alibaba Cloud</li>
@@ -1363,6 +1398,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
         public String getImageId() {
             return this.imageId;
+        }
+
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setImageOptions(DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions imageOptions) {
+            this.imageOptions = imageOptions;
+            return this;
+        }
+        public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateDataImageOptions getImageOptions() {
+            return this.imageOptions;
         }
 
         public DescribeLaunchTemplateVersionsResponseBodyLaunchTemplateVersionSetsLaunchTemplateVersionSetLaunchTemplateData setImageOwnerAlias(String imageOwnerAlias) {

@@ -184,6 +184,12 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>Details about the image options.</p>
+     */
+    @NameInMap("ImageOptions")
+    public CreateLaunchTemplateRequestImageOptions imageOptions;
+
+    /**
      * <p>The source of the image. Valid values:</p>
      * <ul>
      * <li>system: public image provided by Alibaba Cloud.</li>
@@ -684,6 +690,14 @@ public class CreateLaunchTemplateRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public CreateLaunchTemplateRequest setImageOptions(CreateLaunchTemplateRequestImageOptions imageOptions) {
+        this.imageOptions = imageOptions;
+        return this;
+    }
+    public CreateLaunchTemplateRequestImageOptions getImageOptions() {
+        return this.imageOptions;
     }
 
     public CreateLaunchTemplateRequest setImageOwnerAlias(String imageOwnerAlias) {
@@ -1531,6 +1545,35 @@ public class CreateLaunchTemplateRequest extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+    }
+
+    public static class CreateLaunchTemplateRequestImageOptions extends TeaModel {
+        /**
+         * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("LoginAsNonRoot")
+        public Boolean loginAsNonRoot;
+
+        public static CreateLaunchTemplateRequestImageOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateLaunchTemplateRequestImageOptions self = new CreateLaunchTemplateRequestImageOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateLaunchTemplateRequestImageOptions setLoginAsNonRoot(Boolean loginAsNonRoot) {
+            this.loginAsNonRoot = loginAsNonRoot;
+            return this;
+        }
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
         }
 
     }
