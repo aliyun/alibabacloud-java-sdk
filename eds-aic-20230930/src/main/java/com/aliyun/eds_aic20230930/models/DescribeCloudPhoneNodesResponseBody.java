@@ -125,6 +125,36 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo extends TeaModel {
+        @NameInMap("PhoneDataId")
+        public String phoneDataId;
+
+        @NameInMap("PhoneDataVolume")
+        public Integer phoneDataVolume;
+
+        public static DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo self = new DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo setPhoneDataId(String phoneDataId) {
+            this.phoneDataId = phoneDataId;
+            return this;
+        }
+        public String getPhoneDataId() {
+            return this.phoneDataId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo setPhoneDataVolume(Integer phoneDataVolume) {
+            this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+        public Integer getPhoneDataVolume() {
+            return this.phoneDataVolume;
+        }
+
+    }
+
     public static class DescribeCloudPhoneNodesResponseBodyNodeModel extends TeaModel {
         /**
          * <p>The billing method.</p>
@@ -221,6 +251,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         @NameInMap("PhoneCount")
         public Integer phoneCount;
+
+        @NameInMap("PhoneDataInfo")
+        public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo phoneDataInfo;
 
         /**
          * <p>The region ID.</p>
@@ -384,6 +417,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public Integer getPhoneCount() {
             return this.phoneCount;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setPhoneDataInfo(DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo phoneDataInfo) {
+            this.phoneDataInfo = phoneDataInfo;
+            return this;
+        }
+        public DescribeCloudPhoneNodesResponseBodyNodeModelPhoneDataInfo getPhoneDataInfo() {
+            return this.phoneDataInfo;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setRegionId(String regionId) {

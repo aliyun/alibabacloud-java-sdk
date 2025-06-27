@@ -209,6 +209,36 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo extends TeaModel {
+        @NameInMap("PhoneDataId")
+        public String phoneDataId;
+
+        @NameInMap("PhoneDataVolume")
+        public Integer phoneDataVolume;
+
+        public static DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo self = new DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo setPhoneDataId(String phoneDataId) {
+            this.phoneDataId = phoneDataId;
+            return this;
+        }
+        public String getPhoneDataId() {
+            return this.phoneDataId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo setPhoneDataVolume(Integer phoneDataVolume) {
+            this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+        public Integer getPhoneDataVolume() {
+            return this.phoneDataVolume;
+        }
+
+    }
+
     public static class DescribeAndroidInstancesResponseBodyInstanceModelTags extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -475,6 +505,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         @NameInMap("PersistentAppInstanceId")
         public String persistentAppInstanceId;
+
+        @NameInMap("PhoneDataInfo")
+        public DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo phoneDataInfo;
 
         /**
          * <p>The ID of the policy.</p>
@@ -780,6 +813,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getPersistentAppInstanceId() {
             return this.persistentAppInstanceId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setPhoneDataInfo(DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo phoneDataInfo) {
+            this.phoneDataInfo = phoneDataInfo;
+            return this;
+        }
+        public DescribeAndroidInstancesResponseBodyInstanceModelPhoneDataInfo getPhoneDataInfo() {
+            return this.phoneDataInfo;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setPolicyGroupId(String policyGroupId) {

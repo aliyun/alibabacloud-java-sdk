@@ -1144,6 +1144,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除备份文件</p>
+     * 
+     * @param request DeleteBackupFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBackupFileResponse
+     */
+    public DeleteBackupFileResponse deleteBackupFileWithOptions(DeleteBackupFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupFileIdList)) {
+            query.put("BackupFileIdList", request.backupFileIdList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBackupFile"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBackupFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除备份文件</p>
+     * 
+     * @param request DeleteBackupFileRequest
+     * @return DeleteBackupFileResponse
+     */
+    public DeleteBackupFileResponse deleteBackupFile(DeleteBackupFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteBackupFileWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</p>
      * 
