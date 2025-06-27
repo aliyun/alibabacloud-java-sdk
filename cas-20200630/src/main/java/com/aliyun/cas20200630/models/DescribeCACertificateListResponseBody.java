@@ -182,6 +182,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @NameInMap("CountryCode")
         public String countryCode;
 
+        @NameInMap("Gift")
+        public Integer gift;
+
         /**
          * <p>The unique identifier of the CA certificate.</p>
          * 
@@ -322,6 +325,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @NameInMap("SubjectDN")
         public String subjectDN;
 
+        @NameInMap("Trial")
+        public Integer trial;
+
         /**
          * <p>The content of the CA certificate.</p>
          * 
@@ -399,6 +405,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        public DescribeCACertificateListResponseBodyCertificateList setGift(Integer gift) {
+            this.gift = gift;
+            return this;
+        }
+        public Integer getGift() {
+            return this.gift;
         }
 
         public DescribeCACertificateListResponseBodyCertificateList setIdentifier(String identifier) {
@@ -511,6 +525,14 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         }
         public String getSubjectDN() {
             return this.subjectDN;
+        }
+
+        public DescribeCACertificateListResponseBodyCertificateList setTrial(Integer trial) {
+            this.trial = trial;
+            return this;
+        }
+        public Integer getTrial() {
+            return this.trial;
         }
 
         public DescribeCACertificateListResponseBodyCertificateList setX509Certificate(String x509Certificate) {
