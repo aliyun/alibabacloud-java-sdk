@@ -63,6 +63,9 @@ public class UpdateServiceConfigRequest extends TeaModel {
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    @NameInMap("ServiceConfig")
+    public String serviceConfig;
+
     /**
      * <strong>example:</strong>
      * <p>{}</p>
@@ -145,6 +148,14 @@ public class UpdateServiceConfigRequest extends TeaModel {
     }
     public String getServiceCode() {
         return this.serviceCode;
+    }
+
+    public UpdateServiceConfigRequest setServiceConfig(String serviceConfig) {
+        this.serviceConfig = serviceConfig;
+        return this;
+    }
+    public String getServiceConfig() {
+        return this.serviceConfig;
     }
 
     public UpdateServiceConfigRequest setVideoConfig(String videoConfig) {

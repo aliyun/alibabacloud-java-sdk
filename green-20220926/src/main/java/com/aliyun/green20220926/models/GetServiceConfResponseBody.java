@@ -63,6 +63,9 @@ public class GetServiceConfResponseBody extends TeaModel {
     @NameInMap("ServiceCode")
     public String serviceCode;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     /**
      * <strong>example:</strong>
      * <p>True</p>
@@ -154,6 +157,14 @@ public class GetServiceConfResponseBody extends TeaModel {
     }
     public String getServiceCode() {
         return this.serviceCode;
+    }
+
+    public GetServiceConfResponseBody setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
     public GetServiceConfResponseBody setSuccess(Boolean success) {

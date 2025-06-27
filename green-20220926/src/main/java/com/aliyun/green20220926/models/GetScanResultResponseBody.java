@@ -214,6 +214,12 @@ public class GetScanResultResponseBody extends TeaModel {
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        @NameInMap("GuardFileUrls")
+        public java.util.List<String> guardFileUrls;
+
+        @NameInMap("GuardImageUrls")
+        public java.util.List<String> guardImageUrls;
+
         @NameInMap("ImageLabels")
         public java.util.List<java.util.Map<String, ?>> imageLabels;
 
@@ -239,6 +245,12 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         @NameInMap("Labels")
         public String labels;
+
+        @NameInMap("MaliciousFileLevel")
+        public String maliciousFileLevel;
+
+        @NameInMap("MaliciousUrlLevel")
+        public String maliciousUrlLevel;
 
         @NameInMap("ManualOnly")
         public Boolean manualOnly;
@@ -502,6 +514,22 @@ public class GetScanResultResponseBody extends TeaModel {
             return this.gmtCreate;
         }
 
+        public GetScanResultResponseBodyDataItems setGuardFileUrls(java.util.List<String> guardFileUrls) {
+            this.guardFileUrls = guardFileUrls;
+            return this;
+        }
+        public java.util.List<String> getGuardFileUrls() {
+            return this.guardFileUrls;
+        }
+
+        public GetScanResultResponseBodyDataItems setGuardImageUrls(java.util.List<String> guardImageUrls) {
+            this.guardImageUrls = guardImageUrls;
+            return this;
+        }
+        public java.util.List<String> getGuardImageUrls() {
+            return this.guardImageUrls;
+        }
+
         public GetScanResultResponseBodyDataItems setImageLabels(java.util.List<java.util.Map<String, ?>> imageLabels) {
             this.imageLabels = imageLabels;
             return this;
@@ -532,6 +560,22 @@ public class GetScanResultResponseBody extends TeaModel {
         }
         public String getLabels() {
             return this.labels;
+        }
+
+        public GetScanResultResponseBodyDataItems setMaliciousFileLevel(String maliciousFileLevel) {
+            this.maliciousFileLevel = maliciousFileLevel;
+            return this;
+        }
+        public String getMaliciousFileLevel() {
+            return this.maliciousFileLevel;
+        }
+
+        public GetScanResultResponseBodyDataItems setMaliciousUrlLevel(String maliciousUrlLevel) {
+            this.maliciousUrlLevel = maliciousUrlLevel;
+            return this;
+        }
+        public String getMaliciousUrlLevel() {
+            return this.maliciousUrlLevel;
         }
 
         public GetScanResultResponseBodyDataItems setManualOnly(Boolean manualOnly) {
