@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeNumberRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyNodeNumberRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The warehouse ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +24,11 @@ public class ModifyNodeNumberRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("PromotionOptionNo")
+    public String promotionOptionNo;
+
     /**
+     * <p>The number of nodes to which you want to change to.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +56,14 @@ public class ModifyNodeNumberRequest extends TeaModel {
     }
     public String getNodeGroupId() {
         return this.nodeGroupId;
+    }
+
+    public ModifyNodeNumberRequest setPromotionOptionNo(String promotionOptionNo) {
+        this.promotionOptionNo = promotionOptionNo;
+        return this;
+    }
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
     }
 
     public ModifyNodeNumberRequest setTarget(Integer target) {

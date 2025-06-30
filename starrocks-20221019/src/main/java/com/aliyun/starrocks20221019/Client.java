@@ -27,8 +27,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances.
+     * Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can modify the number of CUs for a warehouse of only StarRocks instances of Standard Edition.</li>
+     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs for a warehouse, the billing of CUs has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of CUs.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of CUs before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点Cu数量</p>
+     * <p>Modifies the number of CUs for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyCuRequest
      * @param headers map
@@ -38,12 +50,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCuResponse modifyCuWithOptions(ModifyCuRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fastMode)) {
+            query.put("FastMode", request.fastMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
             query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
+            query.put("PromotionOptionNo", request.promotionOptionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
@@ -69,8 +89,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances.
+     * Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can modify the number of CUs for a warehouse of only StarRocks instances of Standard Edition.</li>
+     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.
+     * After you modify the number of CUs for a warehouse, the billing of CUs has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of CUs.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of CUs before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点Cu数量</p>
+     * <p>Modifies the number of CUs for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyCuRequest
      * @return ModifyCuResponse
@@ -83,7 +115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组中节点Cu预检查</p>
+     * <p>Performs a precheck before you modify the number of CUs for a warehouse.</p>
      * 
      * @param request ModifyCuPreCheckRequest
      * @param headers map
@@ -125,7 +157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组中节点Cu预检查</p>
+     * <p>Performs a precheck before you modify the number of CUs for a warehouse.</p>
      * 
      * @param request ModifyCuPreCheckRequest
      * @return ModifyCuPreCheckResponse
@@ -137,8 +169,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can increase the number of disks only for StarRocks instances of Standard Edition.</li>
+     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.
+     * After you increase the number of disks for a warehouse, the billing of disks has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of disks before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点磁盘块数</p>
+     * <p>Increases the number of disks for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskNumberRequest
      * @param headers map
@@ -148,12 +191,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDiskNumberResponse modifyDiskNumberWithOptions(ModifyDiskNumberRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fastMode)) {
+            query.put("FastMode", request.fastMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
             query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
+            query.put("PromotionOptionNo", request.promotionOptionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
@@ -179,8 +230,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can increase the number of disks only for StarRocks instances of Standard Edition.</li>
+     * <li>You can increase the number of disks only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.
+     * After you increase the number of disks for a warehouse, the billing of disks has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of disks before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点磁盘块数</p>
+     * <p>Increases the number of disks for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskNumberRequest
      * @return ModifyDiskNumberResponse
@@ -192,8 +254,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/en/product/ecs?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.47c9281fkIZGiB#pricing">pricing</a> of EMR Serverless StarRocks instances.
+     * Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can modify the disk performance level only for StarRocks instances of Standard Edition.</li>
+     * <li>You can modify the disk performance level only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>You cannot downgrade the performance level to PL0.</li>
+     * <li>The performance level of an Enterprise SSD (ESSD) is limited by the ESSD disk size. If you cannot upgrade the performance level of an ESSD, expand the ESSD and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.
+     * After the disk performance level is changed, the billing of the disk has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk performance level before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点磁盘性能级别</p>
+     * <p>Modifies the disk performance level for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskPerformanceLevelRequest
      * @param headers map
@@ -209,6 +285,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
             query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
+            query.put("PromotionOptionNo", request.promotionOptionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
@@ -234,8 +314,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/en/product/ecs?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.47c9281fkIZGiB#pricing">pricing</a> of EMR Serverless StarRocks instances.
+     * Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can modify the disk performance level only for StarRocks instances of Standard Edition.</li>
+     * <li>You can modify the disk performance level only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>You cannot downgrade the performance level to PL0.</li>
+     * <li>The performance level of an Enterprise SSD (ESSD) is limited by the ESSD disk size. If you cannot upgrade the performance level of an ESSD, expand the ESSD and try again. For more information, see <a href="https://help.aliyun.com/document_detail/122389.html">Enterprise SSDs</a>.
+     * After the disk performance level is changed, the billing of the disk has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk type.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk performance level before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点磁盘性能级别</p>
+     * <p>Modifies the disk performance level for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskPerformanceLevelRequest
      * @return ModifyDiskPerformanceLevelResponse
@@ -247,8 +341,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can expand the disk size only for StarRocks instances of Standard Edition.</li>
+     * <li>You can expand the disk size only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.
+     * After you expand the disk size, the billing of disks has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk size.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk size before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点存储大小</p>
+     * <p>Expands the disk size for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskSizeRequest
      * @param headers map
@@ -264,6 +369,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
             query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
+            query.put("PromotionOptionNo", request.promotionOptionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
@@ -289,8 +398,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can expand the disk size only for StarRocks instances of Standard Edition.</li>
+     * <li>You can expand the disk size only for warehouses of the standard specifications.</li>
+     * <li>The instance must be in the Running state.
+     * After you expand the disk size, the billing of disks has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged for the disk based on the new disk size.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the disk size before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点存储大小</p>
+     * <p>Expands the disk size for a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyDiskSizeRequest
      * @return ModifyDiskSizeResponse
@@ -302,8 +422,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can modify the number of nodes in a warehouse of only StarRocks instances of Standard Edition.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>The number of frontend nodes (FEs) cannot be an even number, and you cannot reduce the number of FE nodes.
+     * After you modify the number of nodes in a warehouse, the billing of nodes has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of nodes.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of nodes before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点数量</p>
+     * <p>Modifies the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyNodeNumberRequest
      * @param headers map
@@ -319,6 +450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeGroupId)) {
             query.put("NodeGroupId", request.nodeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionOptionNo)) {
+            query.put("PromotionOptionNo", request.promotionOptionNo);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.target)) {
@@ -344,8 +479,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.alibabacloud.com/help/en/emr/emr-serverless-starrocks/product-overview/billable-items?spm=a2c63.p38356.help-menu-28066.d_0_1_0.3aaf4b0b69jN1P">billable items</a> of EMR Serverless StarRocks instances. Before you call this operation, take note of the following items:</p>
+     * <ul>
+     * <li>You can modify the number of nodes in a warehouse of only StarRocks instances of Standard Edition.</li>
+     * <li>The instance must be in the Running state.</li>
+     * <li>The number of frontend nodes (FEs) cannot be an even number, and you cannot reduce the number of FE nodes.
+     * After you modify the number of nodes in a warehouse, the billing of nodes has the following changes:</li>
+     * <li>Pay-as-you-go StarRocks instances: You are charged based on the number of nodes.</li>
+     * <li>Subscription StarRocks instances: You are charged additionally based on the price difference between the number of nodes before and after the change and the remaining days of the billing cycle. The billing cycle starts from 00:00 the next day until the end of the subscription period.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改计算组的节点数量</p>
+     * <p>Modifies the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyNodeNumberRequest
      * @return ModifyNodeNumberResponse
@@ -358,7 +504,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组中节点数量预检查</p>
+     * <p>Performs a precheck before you modify the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyNodeNumberPreCheckRequest
      * @param headers map
@@ -400,7 +546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改计算组中节点数量预检查</p>
+     * <p>Performs a precheck before you modify the number of nodes in a warehouse of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request ModifyNodeNumberPreCheckRequest
      * @return ModifyNodeNumberPreCheckResponse
@@ -413,7 +559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询StarRocks可升级的版本列表</p>
+     * <p>Queries the versions of an E-MapReduce (EMR) Serverless StarRocks instance that the versions that you can upgrade to. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. You can call this operation to query the minor versions or major versions that the versions that you can upgrade to.</p>
      * 
      * @param request QueryUpgradableVersionsRequest
      * @param headers map
@@ -451,7 +597,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询StarRocks可升级的版本列表</p>
+     * <p>Queries the versions of an E-MapReduce (EMR) Serverless StarRocks instance that the versions that you can upgrade to. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. You can call this operation to query the minor versions or major versions that the versions that you can upgrade to.</p>
      * 
      * @param request QueryUpgradableVersionsRequest
      * @return QueryUpgradableVersionsResponse
@@ -463,8 +609,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning:</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>释放starrocks按量计费实例</p>
+     * <p>Releases a pay-as-you-go E-MapReduce (EMR) Serverless StarRocks instance. To unsubscribe from a subscription instance, go to the Unsubscribe page of the Expenses and Costs console.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @param headers map
@@ -497,8 +648,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li><strong>Warning:</strong> After an instance is released, all physical resources used by the instance are recycled. Relevant data is erased and cannot be restored.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>释放starrocks按量计费实例</p>
+     * <p>Releases a pay-as-you-go E-MapReduce (EMR) Serverless StarRocks instance. To unsubscribe from a subscription instance, go to the Unsubscribe page of the Expenses and Costs console.</p>
      * 
      * @param request ReleaseInstanceRequest
      * @return ReleaseInstanceResponse
@@ -510,8 +666,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an asynchronous operation. After you call this operation to restart a StarRocks instance, the operation sets the status of the instance to Restarting and begins the restart process. When the status of the instance changes to Running, the instance is restarted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>重启starrocks集群</p>
+     * <p>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request RestartInstanceRequest
      * @param headers map
@@ -548,8 +707,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation is an asynchronous operation. After you call this operation to restart a StarRocks instance, the operation sets the status of the instance to Restarting and begins the restart process. When the status of the instance changes to Running, the instance is restarted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>重启starrocks集群</p>
+     * <p>Restarts an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request RestartInstanceRequest
      * @return RestartInstanceResponse
@@ -562,7 +724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改集群名称</p>
+     * <p>Modifies the name of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @param headers map
@@ -600,7 +762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改集群名称</p>
+     * <p>Modifies the name of an E-MapReduce (EMR) Serverless StarRocks instance.</p>
      * 
      * @param request UpdateInstanceNameRequest
      * @return UpdateInstanceNameResponse
@@ -612,8 +774,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance must be in the Running state when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>升级StarRocks的版本</p>
+     * <p>Upgrades the version of an E-MapReduce (EMR) Serverless StarRocks instance. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. This operation can be used to upgrade the minor version or major version of a StarRocks instance. You can call the QueryUpgradableVersions operation to query the versions that you can upgrade to.</p>
      * 
      * @param request UpgradeVersionRequest
      * @param headers map
@@ -623,6 +788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeVersionResponse upgradeVersionWithOptions(UpgradeVersionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fastMode)) {
+            query.put("FastMode", request.fastMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }
@@ -654,8 +823,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The instance must be in the Running state when you call this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>升级StarRocks的版本</p>
+     * <p>Upgrades the version of an E-MapReduce (EMR) Serverless StarRocks instance. The versions of a StarRocks instance include the major version and minor version. You can view the major version and minor version of a StarRocks instance in the Version Information section of the Instance Details tab in the EMR console. This operation can be used to upgrade the minor version or major version of a StarRocks instance. You can call the QueryUpgradableVersions operation to query the versions that you can upgrade to.</p>
      * 
      * @param request UpgradeVersionRequest
      * @return UpgradeVersionResponse

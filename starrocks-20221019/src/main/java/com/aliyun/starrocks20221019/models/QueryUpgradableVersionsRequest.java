@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryUpgradableVersionsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,12 @@ public class QueryUpgradableVersionsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether to query the minor versions that you can upgrade to. Default value: true. Valid values:</p>
+     * <ul>
+     * <li>true: The minor versions that you can upgrade to.</li>
+     * <li>false: The major versions that you can upgrade to.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

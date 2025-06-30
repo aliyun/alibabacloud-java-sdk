@@ -4,7 +4,11 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class UpgradeVersionRequest extends TeaModel {
+    @NameInMap("FastMode")
+    public Boolean fastMode;
+
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +18,12 @@ public class UpgradeVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Specifies whether the minor version is upgraded. Default value: true. Valid values:</p>
+     * <ul>
+     * <li>true: The minor version is upgraded.</li>
+     * <li>false: The major version is upgraded.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -21,6 +31,7 @@ public class UpgradeVersionRequest extends TeaModel {
     public Boolean minor;
 
     /**
+     * <p>The version to which you want to upgrade.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,6 +43,14 @@ public class UpgradeVersionRequest extends TeaModel {
     public static UpgradeVersionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeVersionRequest self = new UpgradeVersionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpgradeVersionRequest setFastMode(Boolean fastMode) {
+        this.fastMode = fastMode;
+        return this;
+    }
+    public Boolean getFastMode() {
+        return this.fastMode;
     }
 
     public UpgradeVersionRequest setInstanceId(String instanceId) {

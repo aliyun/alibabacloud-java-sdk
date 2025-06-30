@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyCuPreCheckRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyCuPreCheckRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The warehouse ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,16 @@ public class ModifyCuPreCheckRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The number of CUs to which you want to change.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>2</li>
+     * <li>4</li>
+     * <li>8</li>
+     * <li>16</li>
+     * <li>32</li>
+     * <li>64</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

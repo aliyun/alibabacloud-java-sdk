@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ModifyCuPreCheckResponseBody extends TeaModel {
     /**
+     * <p>The detailed information about the failed permission verification.</p>
+     * 
      * <strong>example:</strong>
      * <p>{     &quot;PolicyType&quot;: &quot;AccountLevelIdentityBasedPolicy&quot;,     &quot;AuthPrincipalOwnerId&quot;: &quot;xxx&quot;,     &quot;EncodedDiagnosticMessage&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalType&quot;: &quot;xxx&quot;,     &quot;AuthPrincipalDisplayName&quot;: &quot;xxx&quot;,     &quot;NoPermissionType&quot;: &quot;ImplicitDeny&quot;,     &quot;AuthAction&quot;: &quot;sr:xxx&quot;   }</p>
      */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ModifyCuPreCheckResponseBodyData data;
 
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidParams</p>
      */
@@ -22,6 +29,8 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
     public String errCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Invalid params: [instance not exists].</p>
      */
@@ -29,6 +38,8 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
     public String errMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -36,6 +47,8 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>32A44F0D-BFF6-5664-999A-218BBDE7****</p>
      */
@@ -43,6 +56,8 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -112,6 +127,8 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
 
     public static class ModifyCuPreCheckResponseBodyData extends TeaModel {
         /**
+         * <p>Indicates whether the number of CUs can be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -119,6 +136,8 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
         public Boolean allow;
 
         /**
+         * <p>The reason why the number of CUs cannot be modified.</p>
+         * 
          * <strong>example:</strong>
          * <p>Failed to find node group[ng-3d5ce6454354****].</p>
          */

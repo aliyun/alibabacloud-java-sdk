@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
     /**
+     * <p>Specifies whether to restart compute nodes in quick restart mode. Default value: false. Valid values:</p>
+     * <ul>
+     * <li>true: Compute nodes are restarted in quick restart mode in multiple batches. The batches are executed in parallel, and the nodes in each batch are restarted at the same time.</li>
+     * <li>false: Compute nodes are restarted in rolling restart mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,7 @@ public class RestartInstanceRequest extends TeaModel {
     public Boolean fastMode;
 
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

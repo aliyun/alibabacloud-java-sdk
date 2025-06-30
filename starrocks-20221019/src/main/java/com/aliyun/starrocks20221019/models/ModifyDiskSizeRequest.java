@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDiskSizeRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The warehouse ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +24,11 @@ public class ModifyDiskSizeRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("PromotionOptionNo")
+    public String promotionOptionNo;
+
     /**
+     * <p>The disk size to which you want to change to. Unit: GB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +56,14 @@ public class ModifyDiskSizeRequest extends TeaModel {
     }
     public String getNodeGroupId() {
         return this.nodeGroupId;
+    }
+
+    public ModifyDiskSizeRequest setPromotionOptionNo(String promotionOptionNo) {
+        this.promotionOptionNo = promotionOptionNo;
+        return this;
+    }
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
     }
 
     public ModifyDiskSizeRequest setTarget(Integer target) {

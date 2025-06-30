@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyNodeNumberPreCheckRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ModifyNodeNumberPreCheckRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The warehouse ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,7 @@ public class ModifyNodeNumberPreCheckRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
+     * <p>The number of nodes to which you want to change to.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
