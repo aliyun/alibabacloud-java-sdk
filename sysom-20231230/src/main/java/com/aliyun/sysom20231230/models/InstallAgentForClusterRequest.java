@@ -25,6 +25,9 @@ public class InstallAgentForClusterRequest extends TeaModel {
     @NameInMap("cluster_id")
     public String clusterId;
 
+    @NameInMap("config_id")
+    public String configId;
+
     @NameInMap("grayscale_config")
     public String grayscaleConfig;
 
@@ -55,6 +58,14 @@ public class InstallAgentForClusterRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public InstallAgentForClusterRequest setConfigId(String configId) {
+        this.configId = configId;
+        return this;
+    }
+    public String getConfigId() {
+        return this.configId;
     }
 
     public InstallAgentForClusterRequest setGrayscaleConfig(String grayscaleConfig) {

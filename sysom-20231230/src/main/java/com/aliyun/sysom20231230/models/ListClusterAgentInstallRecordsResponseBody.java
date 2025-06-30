@@ -81,6 +81,12 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
     }
 
     public static class ListClusterAgentInstallRecordsResponseBodyData extends TeaModel {
+        @NameInMap("agent_config_id")
+        public String agentConfigId;
+
+        @NameInMap("agent_config_name")
+        public String agentConfigName;
+
         /**
          * <strong>example:</strong>
          * <p>cbf7a37bc905d4682a3338b3744810269</p>
@@ -122,6 +128,22 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         public static ListClusterAgentInstallRecordsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListClusterAgentInstallRecordsResponseBodyData self = new ListClusterAgentInstallRecordsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListClusterAgentInstallRecordsResponseBodyData setAgentConfigId(String agentConfigId) {
+            this.agentConfigId = agentConfigId;
+            return this;
+        }
+        public String getAgentConfigId() {
+            return this.agentConfigId;
+        }
+
+        public ListClusterAgentInstallRecordsResponseBodyData setAgentConfigName(String agentConfigName) {
+            this.agentConfigName = agentConfigName;
+            return this;
+        }
+        public String getAgentConfigName() {
+            return this.agentConfigName;
         }
 
         public ListClusterAgentInstallRecordsResponseBodyData setClusterId(String clusterId) {

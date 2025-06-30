@@ -19,6 +19,9 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     @NameInMap("plugin_version")
     public String pluginVersion;
 
+    @NameInMap("region")
+    public String region;
+
     @NameInMap("status")
     public String status;
 
@@ -65,6 +68,14 @@ public class ListAgentInstallRecordsRequest extends TeaModel {
     }
     public String getPluginVersion() {
         return this.pluginVersion;
+    }
+
+    public ListAgentInstallRecordsRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public ListAgentInstallRecordsRequest setStatus(String status) {

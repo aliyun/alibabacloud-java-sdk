@@ -4,6 +4,9 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListClusterAgentInstallRecordsRequest extends TeaModel {
+    @NameInMap("agent_config_id")
+    public String agentConfigId;
+
     /**
      * <strong>example:</strong>
      * <p>cbd80af02b9d6454ebdc579c5e022d0c8</p>
@@ -42,6 +45,14 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public static ListClusterAgentInstallRecordsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListClusterAgentInstallRecordsRequest self = new ListClusterAgentInstallRecordsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListClusterAgentInstallRecordsRequest setAgentConfigId(String agentConfigId) {
+        this.agentConfigId = agentConfigId;
+        return this;
+    }
+    public String getAgentConfigId() {
+        return this.agentConfigId;
     }
 
     public ListClusterAgentInstallRecordsRequest setClusterId(String clusterId) {

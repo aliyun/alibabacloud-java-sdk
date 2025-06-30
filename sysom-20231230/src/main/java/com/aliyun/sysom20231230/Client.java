@@ -1514,6 +1514,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("cluster_id", request.clusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            body.put("config_id", request.configId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.grayscaleConfig)) {
             body.put("grayscale_config", request.grayscaleConfig);
         }
@@ -1766,6 +1770,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("plugin_version", request.pluginVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("region", request.region);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("status", request.status);
         }
@@ -1872,6 +1880,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListClusterAgentInstallRecordsResponse listClusterAgentInstallRecordsWithOptions(ListClusterAgentInstallRecordsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentConfigId)) {
+            query.put("agent_config_id", request.agentConfigId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("cluster_id", request.clusterId);
         }
