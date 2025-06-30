@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddResolverEndpointResponseBody extends TeaModel {
     /**
-     * <p>The outbound endpoint ID.</p>
+     * <p>The endpoint ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hra0**</p>

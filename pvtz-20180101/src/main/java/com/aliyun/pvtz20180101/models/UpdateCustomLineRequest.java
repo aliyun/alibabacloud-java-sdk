@@ -5,12 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomLineRequest extends TeaModel {
     /**
+     * <p>The IPv4 CIDR blocks.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Ipv4s")
     public java.util.List<String> ipv4s;
 
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -18,6 +21,7 @@ public class UpdateCustomLineRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The unique ID of the custom line.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +30,9 @@ public class UpdateCustomLineRequest extends TeaModel {
     @NameInMap("LineId")
     public String lineId;
 
+    /**
+     * <p>The name of the custom line.</p>
+     */
     @NameInMap("Name")
     public String name;
 

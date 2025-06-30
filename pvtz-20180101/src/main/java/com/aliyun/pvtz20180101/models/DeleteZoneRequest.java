@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteZoneRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>21079fa016944979537637959d09bc</p>
@@ -15,7 +14,12 @@ public class DeleteZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -27,17 +31,20 @@ public class DeleteZoneRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.XX.XX</p>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
+     * <blockquote>
+     * <p> If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE1MA_150</p>
+     * <p>0e41496f12da01311d314f17b801****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

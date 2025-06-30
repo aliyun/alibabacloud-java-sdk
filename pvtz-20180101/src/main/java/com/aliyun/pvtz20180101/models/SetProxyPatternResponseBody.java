@@ -17,7 +17,7 @@ public class SetProxyPatternResponseBody extends TeaModel {
      * <p>The global ID of the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE0OQ_149</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

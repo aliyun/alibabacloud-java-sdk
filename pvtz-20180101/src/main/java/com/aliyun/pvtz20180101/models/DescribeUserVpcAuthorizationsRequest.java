@@ -7,7 +7,7 @@ public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     /**
      * <p>The authorization scope. Valid values:</p>
      * <ul>
-     * <li>NORMAL: general authorization.</li>
+     * <li>NORMAL: general authorization</li>
      * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
      * </ul>
      * 
@@ -18,16 +18,16 @@ public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
      * 
      * <strong>example:</strong>
-     * <p>111222333</p>
+     * <p>141339776561****</p>
      */
     @NameInMap("AuthorizedUserId")
     public Long authorizedUserId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -36,7 +36,7 @@ public class DescribeUserVpcAuthorizationsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

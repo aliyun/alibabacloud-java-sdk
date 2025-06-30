@@ -14,7 +14,12 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language of the values for specific response parameters. Default value: en. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,21 +28,21 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the new resource group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-aekzzk7hx3glaoq</p>
+     * <p>rg-aekz2qj7awz****</p>
      */
     @NameInMap("NewResourceGroupId")
     public String newResourceGroupId;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE1MA_149</p>
+     * <p>df2d03865266bd9842306db586d4****</p>
      */
     @NameInMap("ResourceId")
     public String resourceId;

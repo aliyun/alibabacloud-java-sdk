@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,7 +19,7 @@ public class DescribeTagsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +28,7 @@ public class DescribeTagsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 200.</p>
+     * <p>The number of entries per page. Maximum number: 1. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -41,7 +41,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The total number of returned pages.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -192,13 +192,13 @@ public class DescribeZonesResponseBody extends TeaModel {
          * <p>The creator of the zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>5463564356</p>
+         * <p>546356****</p>
          */
         @NameInMap("Creator")
         public String creator;
 
         /**
-         * <p>The type of the user account.</p>
+         * <p>The account type. Valid values:</p>
          * <ul>
          * <li><strong>CUSTOMER</strong>: Alibaba Cloud account</li>
          * <li><strong>SUB</strong>: RAM user</li>
@@ -252,10 +252,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         public Boolean isPtr;
 
         /**
-         * <p>Indicates whether the recursive resolution proxy feature is enabled for the zone. Valid values:</p>
+         * <p>Indicates whether the recursive resolution proxy for subdomain names is enabled. Valid values:</p>
          * <ul>
-         * <li><strong>ZONE</strong>: The recursive resolution proxy feature is disabled for the zone.</li>
-         * <li><strong>RECORD</strong>: The recursive resolution proxy feature is enabled for the zone.</li>
+         * <li><strong>ZONE</strong>: The recursive resolution proxy for subdomain names is disabled. In this case, NXDOMAIN is returned if the queried domain name does not exist in the zone.</li>
+         * <li><strong>RECORD</strong>: The recursive resolution proxy for subdomain names is enabled. In this case, if the queried domain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String proxyPattern;
 
         /**
-         * <p>The number of Domain Name System (DNS) records.</p>
+         * <p>The number of Domain Name System (DNS) records added in the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -283,19 +283,22 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the resource group to which the zone belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>rg-xxxxx</p>
+         * <p>rg-aekz2qj7awz****</p>
          */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
-         * <p>The tags added to the resources.</p>
+         * <p>The tags added to the zone.</p>
          */
         @NameInMap("ResourceTags")
         public DescribeZonesResponseBodyZonesZoneResourceTags resourceTags;
+
+        @NameInMap("SlaveDnsStatus")
+        public String slaveDnsStatus;
 
         /**
          * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
@@ -316,7 +319,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>6d83e3b31aa60ca4aaa7161f1b6b**95</p>
@@ -347,7 +350,7 @@ public class DescribeZonesResponseBody extends TeaModel {
         public String zoneTag;
 
         /**
-         * <p>The type of zones. Valid values:</p>
+         * <p>The zone type. Valid values:</p>
          * <ul>
          * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
          * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
@@ -458,6 +461,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         }
         public DescribeZonesResponseBodyZonesZoneResourceTags getResourceTags() {
             return this.resourceTags;
+        }
+
+        public DescribeZonesResponseBodyZonesZone setSlaveDnsStatus(String slaveDnsStatus) {
+            this.slaveDnsStatus = slaveDnsStatus;
+            return this;
+        }
+        public String getSlaveDnsStatus() {
+            return this.slaveDnsStatus;
         }
 
         public DescribeZonesResponseBodyZonesZone setUpdateTime(String updateTime) {

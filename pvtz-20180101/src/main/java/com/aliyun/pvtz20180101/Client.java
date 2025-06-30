@@ -27,6 +27,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a custom line.</p>
+     * 
      * @param request AddCustomLineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddCustomLineResponse
@@ -72,6 +75,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a custom line.</p>
+     * 
      * @param request AddCustomLineRequest
      * @return AddCustomLineResponse
      */
@@ -145,6 +151,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a forwarding rule.</p>
      * 
@@ -155,6 +165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddResolverRuleResponse addResolverRuleWithOptions(AddResolverRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edgeDnsClusters)) {
+            query.put("EdgeDnsClusters", request.edgeDnsClusters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpointId)) {
             query.put("EndpointId", request.endpointId);
         }
@@ -173,6 +187,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             query.put("Type", request.type);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcs)) {
+            query.put("Vpcs", request.vpcs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneName)) {
@@ -197,6 +215,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</p>
+     * 
      * <b>summary</b> : 
      * <p>Creates a forwarding rule.</p>
      * 
@@ -209,6 +231,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Limits</strong></h4>
+     * <ul>
+     * <li>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</li>
+     * <li>No API operation is provided for sending the verification codes that are required for authorization.</li>
+     * </ul>
+     * <h4><strong>Precautions</strong></h4>
+     * <p>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds another account to associate one or more virtual private clouds (VPCs) of the current account with a private zone.</p>
      * 
@@ -253,6 +284,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Limits</strong></h4>
+     * <ul>
+     * <li>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</li>
+     * <li>No API operation is provided for sending the verification codes that are required for authorization.</li>
+     * </ul>
+     * <h4><strong>Precautions</strong></h4>
+     * <p>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</p>
+     * 
      * <b>summary</b> : 
      * <p>Adds another account to associate one or more virtual private clouds (VPCs) of the current account with a private zone.</p>
      * 
@@ -266,7 +306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a zone.</p>
+     * <p>Creates a built-in authoritative zone in the regular module or acceleration module.</p>
      * 
      * @param request AddZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -326,7 +366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a zone.</p>
+     * <p>Creates a built-in authoritative zone in the regular module or acceleration module.</p>
      * 
      * @param request AddZoneRequest
      * @return AddZoneResponse
@@ -338,7 +378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Domain Name System (DNS) record for a zone.</p>
+     * <p>Adds a Domain Name System (DNS) record for a built-in authoritative zone. Within the effective scope, the intranet DNS records rather than the Internet DNS records take effect for the zone.</p>
      * 
      * @param request AddZoneRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -414,7 +454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Domain Name System (DNS) record for a zone.</p>
+     * <p>Adds a Domain Name System (DNS) record for a built-in authoritative zone. Within the effective scope, the intranet DNS records rather than the Internet DNS records take effect for the zone.</p>
      * 
      * @param request AddZoneRecordRequest
      * @return AddZoneRecordResponse
@@ -477,8 +517,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h5><a href="#"></a>Precautions:</h5>
+     * <p>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Binds a zone to virtual private clouds (VPCs) or unbinds a zone from VPCs.</p>
+     * <p>Associates or dissociates virtual private clouds (VPCs) from a zone to set the effective scope of the zone.</p>
      * 
      * @param request BindZoneVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -525,8 +569,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h5><a href="#"></a>Precautions:</h5>
+     * <p>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Binds a zone to virtual private clouds (VPCs) or unbinds a zone from VPCs.</p>
+     * <p>Associates or dissociates virtual private clouds (VPCs) from a zone to set the effective scope of the zone.</p>
      * 
      * @param request BindZoneVpcRequest
      * @return BindZoneVpcResponse
@@ -537,6 +585,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the logical location of a zone.</p>
+     * 
      * @param request ChangeZoneDnsGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeZoneDnsGroupResponse
@@ -574,6 +625,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the logical location of a zone.</p>
+     * 
      * @param request ChangeZoneDnsGroupRequest
      * @return ChangeZoneDnsGroupResponse
      */
@@ -584,7 +638,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the name of a zone is valid based on specific rules.</p>
+     * <p>Checks whether a zone name can be added based on a rule.</p>
      * 
      * @param request CheckZoneNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -624,7 +678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the name of a zone is valid based on specific rules.</p>
+     * <p>Checks whether a zone name can be added based on a rule.</p>
      * 
      * @param request CheckZoneNameRequest
      * @return CheckZoneNameResponse
@@ -635,6 +689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom line.</p>
+     * 
      * @param request DeleteCustomLineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteCustomLineResponse
@@ -668,6 +725,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom line.</p>
+     * 
      * @param request DeleteCustomLineRequest
      * @return DeleteCustomLineResponse
      */
@@ -678,7 +738,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an endpoint.</p>
+     * <p>Deletes an endpoint based on the endpoint ID.</p>
      * 
      * @param request DeleteResolverEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -714,7 +774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an endpoint.</p>
+     * <p>Deletes an endpoint based on the endpoint ID.</p>
      * 
      * @param request DeleteResolverEndpointRequest
      * @return DeleteResolverEndpointResponse
@@ -726,7 +786,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a forwarding rule.</p>
+     * <p>Deletes a forwarding rule based on the rule ID.</p>
      * 
      * @param request DeleteResolverRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -762,7 +822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a forwarding rule.</p>
+     * <p>Deletes a forwarding rule based on the rule ID.</p>
      * 
      * @param request DeleteResolverRuleRequest
      * @return DeleteResolverRuleResponse
@@ -774,7 +834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an account whose one or more virtual private clouds (VPCs) are associated with a private zone.</p>
+     * <p>Removes an account from the central management of private Domain Name System (DNS) resolution based on the account ID and authorization type.</p>
      * 
      * @param request DeleteUserVpcAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -810,7 +870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an account whose one or more virtual private clouds (VPCs) are associated with a private zone.</p>
+     * <p>Removes an account from the central management of private Domain Name System (DNS) resolution based on the account ID and authorization type.</p>
      * 
      * @param request DeleteUserVpcAuthorizationRequest
      * @return DeleteUserVpcAuthorizationResponse
@@ -821,8 +881,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a>Precautions</h4>
+     * <p>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a zone.</p>
+     * <p>Deletes an idle built-in authoritative zone.</p>
      * 
      * @param request DeleteZoneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -865,8 +929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a>Precautions</h4>
+     * <p>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a zone.</p>
+     * <p>Deletes an idle built-in authoritative zone.</p>
      * 
      * @param request DeleteZoneRequest
      * @return DeleteZoneResponse
@@ -877,8 +945,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Domain Name System (DNS) record of a zone.</p>
+     * <p>Deletes a Domain Name System (DNS) record based on the ID of the DNS record.</p>
      * 
      * @param request DeleteZoneRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -921,8 +993,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Deletes a Domain Name System (DNS) record of a zone.</p>
+     * <p>Deletes a Domain Name System (DNS) record based on the ID of the DNS record.</p>
      * 
      * @param request DeleteZoneRecordRequest
      * @return DeleteZoneRecordResponse
@@ -933,8 +1009,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>You can query the operation logs of Private DNS that are generated within the last six months.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of operation logs.</p>
+     * <p>Queries the operation logs of Private DNS. Operation logs record operations in modules such as the built-in authoritative module, cache module, forward module, and service address module and record the queries for Domain Name System (DNS) records. You can query operation logs by operation or operation content.</p>
      * 
      * @param request DescribeChangeLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -997,8 +1077,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>You can query the operation logs of Private DNS that are generated within the last six months.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of operation logs.</p>
+     * <p>Queries the operation logs of Private DNS. Operation logs record operations in modules such as the built-in authoritative module, cache module, forward module, and service address module and record the queries for Domain Name System (DNS) records. You can query operation logs by operation or operation content.</p>
      * 
      * @param request DescribeChangeLogsRequest
      * @return DescribeChangeLogsResponse
@@ -1009,6 +1093,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a custom line.</p>
+     * 
      * @param request DescribeCustomLineInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCustomLineInfoResponse
@@ -1042,6 +1129,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a custom line.</p>
+     * 
      * @param request DescribeCustomLineInfoRequest
      * @return DescribeCustomLineInfoResponse
      */
@@ -1051,6 +1141,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of custom lines.</p>
+     * 
      * @param request DescribeCustomLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCustomLinesResponse
@@ -1088,6 +1181,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of custom lines.</p>
+     * 
      * @param request DescribeCustomLinesRequest
      * @return DescribeCustomLinesResponse
      */
@@ -1098,7 +1194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available regions.</p>
+     * <p>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</p>
      * 
      * @param request DescribeRegionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1150,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of available regions.</p>
+     * <p>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</p>
      * 
      * @param request DescribeRegionsRequest
      * @return DescribeRegionsResponse
@@ -1162,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Domain Name System (DNS) requests.</p>
+     * <p>Queries the information about Domain Name System (DNS) requests based on conditions such as the time range.</p>
      * 
      * @param request DescribeRequestGraphRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1222,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about Domain Name System (DNS) requests.</p>
+     * <p>Queries the information about Domain Name System (DNS) requests based on conditions such as the time range.</p>
      * 
      * @param request DescribeRequestGraphRequest
      * @return DescribeRequestGraphResponse
@@ -1286,7 +1382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an endpoint.</p>
+     * <p>Queries the information about an endpoint based on the endpoint ID.</p>
      * 
      * @param request DescribeResolverEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1322,7 +1418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about an endpoint.</p>
+     * <p>Queries the information about an endpoint based on the endpoint ID.</p>
      * 
      * @param request DescribeResolverEndpointRequest
      * @return DescribeResolverEndpointResponse
@@ -1398,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a forwarding rule.</p>
+     * <p>Queries the information about a forwarding rule based on the ID of the forwarding rule.</p>
      * 
      * @param request DescribeResolverRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1434,7 +1530,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a forwarding rule.</p>
+     * <p>Queries the information about a forwarding rule based on the ID of the forwarding rule.</p>
      * 
      * @param request DescribeResolverRuleRequest
      * @return DescribeResolverRuleResponse
@@ -1510,7 +1606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on the Domain Name System (DNS) requests received on the previous day.</p>
+     * <p>Queries the statistics on Domain Name System (DNS) requests received on the previous day, including the top three zones and virtual private clouds (VPCs) with the largest number of DNS requests.</p>
      * 
      * @param request DescribeStatisticSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1546,7 +1642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics on the Domain Name System (DNS) requests received on the previous day.</p>
+     * <p>Queries the statistics on Domain Name System (DNS) requests received on the previous day, including the top three zones and virtual private clouds (VPCs) with the largest number of DNS requests.</p>
      * 
      * @param request DescribeStatisticSummaryRequest
      * @return DescribeStatisticSummaryResponse
@@ -1557,8 +1653,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a hostname synchronization task.</p>
+     * <p>Queries the information about a hostname synchronization task based on a zone ID.</p>
      * 
      * @param request DescribeSyncEcsHostTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1593,8 +1692,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the information about a hostname synchronization task.</p>
+     * <p>Queries the information about a hostname synchronization task based on a zone ID.</p>
      * 
      * @param request DescribeSyncEcsHostTaskRequest
      * @return DescribeSyncEcsHostTaskResponse
@@ -1605,8 +1707,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to query the information about tags added only to zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of existing tags.</p>
+     * <p>Queries a list of tags added to zones.</p>
      * 
      * @param request DescribeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1649,8 +1755,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to query the information about tags added only to zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of existing tags.</p>
+     * <p>Queries a list of tags added to zones.</p>
      * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
@@ -1661,6 +1771,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the current user\&quot;s service status, such as whether the service is activated, whether there are any unpaid fees, etc.</p>
+     * 
      * @param request DescribeUserServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserServiceStatusResponse
@@ -1690,6 +1803,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the current user\&quot;s service status, such as whether the service is activated, whether there are any unpaid fees, etc.</p>
+     * 
      * @param request DescribeUserServiceStatusRequest
      * @return DescribeUserServiceStatusResponse
      */
@@ -1756,7 +1872,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a zone.</p>
+     * <p>Queries the information about a built-in authoritative zone, such as the virtual private clouds (VPCs) that are associated with the zone.</p>
      * 
      * @param request DescribeZoneInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1792,7 +1908,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about a zone.</p>
+     * <p>Queries the information about a built-in authoritative zone, such as the virtual private clouds (VPCs) that are associated with the zone.</p>
      * 
      * @param request DescribeZoneInfoRequest
      * @return DescribeZoneInfoResponse
@@ -1803,6 +1919,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a Domain Name System (DNS) record.</p>
+     * 
      * @param request DescribeZoneRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeZoneRecordResponse
@@ -1832,6 +1951,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the information about a Domain Name System (DNS) record.</p>
+     * 
      * @param request DescribeZoneRecordRequest
      * @return DescribeZoneRecordResponse
      */
@@ -1842,7 +1964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Domain Name System (DNS) records for a zone.</p>
+     * <p>Queries a list of Domain Name System (DNS) records.</p>
      * 
      * @param request DescribeZoneRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1902,7 +2024,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of Domain Name System (DNS) records for a zone.</p>
+     * <p>Queries a list of Domain Name System (DNS) records.</p>
      * 
      * @param request DescribeZoneRecordsRequest
      * @return DescribeZoneRecordsResponse
@@ -1914,10 +2036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs to which a zone is bound, you can call the DescribeZoneInfo operation based on the zone ID.</p>
+     * <p>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of zones and a list of virtual private clouds (VPCs) that are bound to the zones.</p>
+     * <p>Queries a list of zones within the current account and a list of virtual private clouds (VPCs) associated with the zones.</p>
      * 
      * @param request DescribeZoneVpcTreeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1953,10 +2075,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs to which a zone is bound, you can call the DescribeZoneInfo operation based on the zone ID.</p>
+     * <p>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of zones and a list of virtual private clouds (VPCs) that are bound to the zones.</p>
+     * <p>Queries a list of zones within the current account and a list of virtual private clouds (VPCs) associated with the zones.</p>
      * 
      * @param request DescribeZoneVpcTreeRequest
      * @return DescribeZoneVpcTreeResponse
@@ -1968,7 +2090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of zones for a user.</p>
+     * <p>Queries a list of zones within the current account.</p>
      * 
      * @param request DescribeZonesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2040,7 +2162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of zones for a user.</p>
+     * <p>Queries a list of zones within the current account.</p>
      * 
      * @param request DescribeZonesRequest
      * @return DescribeZonesResponse
@@ -2051,8 +2173,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to query tags added only to zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of tags added to one or more resources.</p>
+     * <p>Queries a list of tags added to zones.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2103,8 +2229,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to query tags added only to zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries a list of tags added to one or more resources.</p>
+     * <p>Queries a list of tags added to zones.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2115,8 +2245,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a>Precautions</h4>
+     * <p>You can call this API operation to change a resource group only for a zone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Moves a zone to another resource group.</p>
+     * <p>Changes a resource group.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2159,8 +2293,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a>Precautions</h4>
+     * <p>You can call this API operation to change a resource group only for a zone.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Moves a zone to another resource group.</p>
+     * <p>Changes a resource group.</p>
      * 
      * @param request MoveResourceGroupRequest
      * @return MoveResourceGroupResponse
@@ -2171,6 +2309,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of custom lines.</p>
+     * 
      * @param request SearchCustomLinesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchCustomLinesResponse
@@ -2236,6 +2377,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries a list of custom lines.</p>
+     * 
      * @param request SearchCustomLinesRequest
      * @return SearchCustomLinesResponse
      */
@@ -2246,7 +2390,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the recursive resolution proxy feature.</p>
+     * <p>Enables the recursive resolution proxy for subdomain names.</p>
      * 
      * @param request SetProxyPatternRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2294,7 +2438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Configures the recursive resolution proxy feature.</p>
+     * <p>Enables the recursive resolution proxy for subdomain names.</p>
      * 
      * @param request SetProxyPatternRequest
      * @return SetProxyPatternResponse
@@ -2306,7 +2450,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the status of a Domain Name System (DNS) record for a zone.</p>
+     * <p>Enables or disables a Domain Name System (DNS) record.</p>
      * 
      * @param request SetZoneRecordStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2354,7 +2498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies the status of a Domain Name System (DNS) record for a zone.</p>
+     * <p>Enables or disables a Domain Name System (DNS) record.</p>
      * 
      * @param request SetZoneRecordStatusRequest
      * @return SetZoneRecordStatusResponse
@@ -2365,8 +2509,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h5><a href="#"></a>Precautions</h5>
+     * <p>You can configure tags only for zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Adds or modifies tags for zones.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2413,8 +2561,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h5><a href="#"></a>Precautions</h5>
+     * <p>You can configure tags only for zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Adds tags to resources.</p>
+     * <p>Adds or modifies tags for zones.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -2425,8 +2577,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to remove tags added only to zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes the tags of multiple zones at a time.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2473,8 +2629,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><a href="#"></a><strong>Precautions</strong></h4>
+     * <p>You can call this API operation to remove tags added only to zones.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Removes tags from resources.</p>
+     * <p>Removes the tags of multiple zones at a time.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -2485,6 +2645,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a custom line.</p>
+     * 
      * @param request UpdateCustomLineRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCustomLineResponse
@@ -2526,6 +2689,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies a custom line.</p>
+     * 
      * @param request UpdateCustomLineRequest
      * @return UpdateCustomLineResponse
      */
@@ -2536,7 +2702,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a Domain Name System (DNS) record that is added for a zone.</p>
+     * <p>Modifies the description of a Domain Name System (DNS) record based on the record ID.</p>
      * 
      * @param request UpdateRecordRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2580,7 +2746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a Domain Name System (DNS) record that is added for a zone.</p>
+     * <p>Modifies the description of a Domain Name System (DNS) record based on the record ID.</p>
      * 
      * @param request UpdateRecordRemarkRequest
      * @return UpdateRecordRemarkResponse
@@ -2708,7 +2874,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and updates a hostname synchronize task.</p>
+     * <p>Adds or updates a hostname synchronization task.</p>
      * 
      * @param request UpdateSyncEcsHostTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2752,7 +2918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and updates a hostname synchronize task.</p>
+     * <p>Adds or updates a hostname synchronization task.</p>
      * 
      * @param request UpdateSyncEcsHostTaskRequest
      * @return UpdateSyncEcsHostTaskResponse
@@ -2763,8 +2929,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies a Domain Name System (DNS) record of a zone.</p>
+     * <p>Modifies a Domain Name System (DNS) record of a zone, including the hostname, record value, and weight value of the DNS record.</p>
      * 
      * @param request UpdateZoneRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2835,8 +3005,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h4><strong>Precautions</strong></h4>
+     * <p>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Modifies a Domain Name System (DNS) record of a zone.</p>
+     * <p>Modifies a Domain Name System (DNS) record of a zone, including the hostname, record value, and weight value of the DNS record.</p>
      * 
      * @param request UpdateZoneRecordRequest
      * @return UpdateZoneRecordResponse
@@ -2848,7 +3022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a zone.</p>
+     * <p>Modifies the description of a built-in authoritative zone.</p>
      * 
      * @param request UpdateZoneRemarkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2896,7 +3070,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the description of a zone.</p>
+     * <p>Modifies the description of a built-in authoritative zone.</p>
      * 
      * @param request UpdateZoneRemarkRequest
      * @return UpdateZoneRemarkResponse

@@ -4,8 +4,11 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeZoneInfoResponseBody extends TeaModel {
+    @NameInMap("BindEdgeDnsClusters")
+    public DescribeZoneInfoResponseBodyBindEdgeDnsClusters bindEdgeDnsClusters;
+
     /**
-     * <p>The virtual private clouds (VPCs) bound to the zone.</p>
+     * <p>The VPCs associated with the zone.</p>
      */
     @NameInMap("BindVpcs")
     public DescribeZoneInfoResponseBodyBindVpcs bindVpcs;
@@ -32,13 +35,13 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
      * <p>The creator of the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>2312234523451342</p>
+     * <p>141339776561****</p>
      */
     @NameInMap("Creator")
     public String creator;
 
     /**
-     * <p>The type of the operator.</p>
+     * <p>The type of the creator.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -47,10 +50,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String creatorType;
 
     /**
-     * <p>The logical location of the built-in authoritative module in which the zone is added. Valid values:</p>
+     * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
      * <ul>
-     * <li>NORMAL_ZONE: regular module</li>
-     * <li>FAST_ZONE: acceleration module</li>
+     * <li><strong>NORMAL_ZONE</strong>: regular module</li>
+     * <li><strong>FAST_ZONE</strong>: acceleration module</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +76,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public Boolean dnsGroupChanging;
 
     /**
+     * <p>Indicates whether the zone is a reverse lookup zone. Valid values:</p>
      * <ul>
-     * <li>Indicates whether the zone is a reverse lookup zone. Valid values: true and false. The value true indicates that the zone is a reverse lookup zone.</li>
-     * <li>The value false indicates that the zone is not a reverse lookup zone.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,9 +89,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public Boolean isPtr;
 
     /**
+     * <p>Indicates whether the recursive resolution proxy for subdomain names is enabled. Valid values:</p>
      * <ul>
-     * <li>Indicates whether the recursive resolution proxy feature is enabled for the zone. Valid values: <strong>ZONE</strong>: The recursive resolution proxy feature is disabled for the zone.</li>
-     * <li><strong>RECORD</strong>: The recursive resolution proxy feature is enabled for the zone.</li>
+     * <li>ZONE: The recursive resolution proxy for subdomain names is disabled. In this case, NXDOMAIN is returned if the queried domain name does not exist in the zone.</li>
+     * <li>RECORD: The recursive resolution proxy for subdomain names is enabled. In this case, if the queried domain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +102,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String proxyPattern;
 
     /**
-     * <p>The total number of DNS records.</p>
+     * <p>The total number of DNS records added in the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -109,7 +114,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
      * <p>The description of the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>specialZone</p>
+     * <p>test</p>
      */
     @NameInMap("Remark")
     public String remark;
@@ -124,10 +129,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The ID of the resource group to which the zone belongs.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-xxxxxxxx</p>
+     * <p>rg-acfmykd63gt****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
@@ -146,7 +151,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public Boolean slaveDns;
 
     /**
-     * <p>The time when the zone was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the zone was last updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-01-24T06:35Z</p>
@@ -155,7 +160,7 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the zone was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the zone was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1516775741000</p>
@@ -164,10 +169,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE0OQ_149&lt;</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -176,16 +181,13 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
      * <p>The zone name.</p>
      * 
      * <strong>example:</strong>
-     * <p>test.com</p>
+     * <p>zone-test.cn</p>
      */
     @NameInMap("ZoneName")
     public String zoneName;
 
     /**
-     * <ul>
-     * <li>If ZoneType is set to AUTH_ZONE, no value is returned for this parameter.</li>
-     * <li>If ZoneType is set to CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</li>
-     * </ul>
+     * <p>The tag added to the zone.</p>
      * 
      * <strong>example:</strong>
      * <p>pvtz</p>
@@ -194,10 +196,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public String zoneTag;
 
     /**
-     * <p>The type of the zone. Valid values:</p>
+     * <p>The zone type. Valid values:</p>
      * <ul>
-     * <li>AUTH_ZONE: authoritative zone</li>
-     * <li>CLOUD_PRODUCT_ZONE: authoritative zone for cloud services</li>
+     * <li><strong>AUTH_ZONE</strong>: authoritative zone</li>
+     * <li><strong>CLOUD_PRODUCT_ZONE</strong>: authoritative zone for cloud services</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -209,6 +211,14 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
     public static DescribeZoneInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeZoneInfoResponseBody self = new DescribeZoneInfoResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeZoneInfoResponseBody setBindEdgeDnsClusters(DescribeZoneInfoResponseBodyBindEdgeDnsClusters bindEdgeDnsClusters) {
+        this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+        return this;
+    }
+    public DescribeZoneInfoResponseBodyBindEdgeDnsClusters getBindEdgeDnsClusters() {
+        return this.bindEdgeDnsClusters;
     }
 
     public DescribeZoneInfoResponseBody setBindVpcs(DescribeZoneInfoResponseBodyBindVpcs bindVpcs) {
@@ -371,45 +381,105 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         return this.zoneType;
     }
 
+    public static class DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ClusterUserId")
+        public Long clusterUserId;
+
+        public static DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster self = new DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster setClusterUserId(Long clusterUserId) {
+            this.clusterUserId = clusterUserId;
+            return this;
+        }
+        public Long getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+    }
+
+    public static class DescribeZoneInfoResponseBodyBindEdgeDnsClusters extends TeaModel {
+        @NameInMap("EdgeDnsCluster")
+        public java.util.List<DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster> edgeDnsCluster;
+
+        public static DescribeZoneInfoResponseBodyBindEdgeDnsClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeZoneInfoResponseBodyBindEdgeDnsClusters self = new DescribeZoneInfoResponseBodyBindEdgeDnsClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeZoneInfoResponseBodyBindEdgeDnsClusters setEdgeDnsCluster(java.util.List<DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster> edgeDnsCluster) {
+            this.edgeDnsCluster = edgeDnsCluster;
+            return this;
+        }
+        public java.util.List<DescribeZoneInfoResponseBodyBindEdgeDnsClustersEdgeDnsCluster> getEdgeDnsCluster() {
+            return this.edgeDnsCluster;
+        }
+
+    }
+
     public static class DescribeZoneInfoResponseBodyBindVpcsVpc extends TeaModel {
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the VPC.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-heyuan</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The name of the region where the VPC resides.</p>
          * 
          * <strong>example:</strong>
-         * <p>1304</p>
+         * <p>China (Heyuan)</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID. This ID uniquely identifies the VPC.</p>
          * 
          * <strong>example:</strong>
-         * <p>daily-vpc-id</p>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The VPC name.</p>
          * 
          * <strong>example:</strong>
-         * <p>daily-vpc-name</p>
+         * <p>vpc_test</p>
          */
         @NameInMap("VpcName")
         public String vpcName;
 
         /**
-         * <p>The type of the VPC. Valid values:</p>
+         * <p>The VPC type. Valid values:</p>
          * <ul>
          * <li>STANDARD: standard VPC</li>
          * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
@@ -422,10 +492,10 @@ public class DescribeZoneInfoResponseBody extends TeaModel {
         public String vpcType;
 
         /**
-         * <p>The ID of the user to which the VPC belongs. The value null indicates that the VPC belongs to the current user.</p>
+         * <p>The user ID to which the VPC belongs. If null is returned, the VPC belongs to the current user.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-bp1aevy8sofi8mh1q****</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("VpcUserId")
         public Long vpcUserId;

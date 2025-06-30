@@ -14,7 +14,12 @@ public class SetProxyPatternRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,10 +28,10 @@ public class SetProxyPatternRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to enable the recursive resolution proxy feature for the zone. Valid values:</p>
+     * <p>Specifies whether to enable the recursive resolution proxy for subdomain names. Valid values:</p>
      * <ul>
-     * <li><strong>ZONE</strong>: disables the recursive resolution proxy feature for the zone.</li>
-     * <li><strong>RECORD</strong>: enables the recursive resolution proxy feature for the zone.</li>
+     * <li><strong>ZONE</strong>: disables the recursive resolution proxy for subdomain names. In this case, NXDOMAIN is returned if the queried subdomain name does not exist in the zone.</li>
+     * <li><strong>RECORD</strong>: enables the recursive resolution proxy for subdomain names. In this case, if the queried domain name does not exist in the zone, Domain Name System (DNS) requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,17 +45,17 @@ public class SetProxyPatternRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>10.61.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE0OQ_149</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

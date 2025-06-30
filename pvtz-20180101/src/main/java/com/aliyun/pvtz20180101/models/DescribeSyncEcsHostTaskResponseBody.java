@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     /**
-     * <p>The information about regions.</p>
+     * <p>The synchronized regions where the ECS instances are deployed.</p>
      */
     @NameInMap("EcsRegions")
     public DescribeSyncEcsHostTaskResponseBodyEcsRegions ecsRegions;
 
     /**
-     * <p>The information about the regions within the current account.</p>
+     * <p>The synchronized region IDs of the ECS instances.</p>
      */
     @NameInMap("Regions")
     public DescribeSyncEcsHostTaskResponseBodyRegions regions;
@@ -26,10 +26,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The state of the task. Valid values:</p>
+     * <p>Indicates whether hostname automatic synchronization is enabled. Valid values:</p>
      * <ul>
-     * <li>ON</li>
-     * <li>OFF</li>
+     * <li>ON: Hostname automatic synchronization is enabled. After this feature is enabled, the system automatically reads the hostnames of the Elastic Compute Service (ECS) instances in the specified regions and updates Domain Name System (DNS) records at an interval of 1 minute.</li>
+     * <li>OFF: Hostname automatic synchronization is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,10 +52,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>pvtz-test-id-2989149d628c56f00e</p>
+     * <p>pvtz-test-id-2989149d628c56****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -134,16 +134,16 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
 
     public static class DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegion extends TeaModel {
         /**
-         * <p>The region IDs.</p>
+         * <p>The synchronized region IDs.</p>
          */
         @NameInMap("RegionIds")
         public DescribeSyncEcsHostTaskResponseBodyEcsRegionsEcsRegionRegionIds regionIds;
 
         /**
-         * <p>The Alibaba Cloud account to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
+         * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("UserId")
         public Long userId;

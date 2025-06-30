@@ -9,8 +9,11 @@ public class DescribeRegionsRequest extends TeaModel {
      * <ul>
      * <li>zh-CN: Chinese</li>
      * <li>en-US: English</li>
-     * <li>ja: Japanese</li>
      * </ul>
+     * <p>Default value: en-US.</p>
+     * <blockquote>
+     * <p> AcceptLanguage has a higher priority than Lang.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>en-US</p>
@@ -22,13 +25,21 @@ public class DescribeRegionsRequest extends TeaModel {
      * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
      * 
      * <strong>example:</strong>
-     * <p>111222333</p>
+     * <p>141339776561****</p>
      */
     @NameInMap("AuthorizedUserId")
     public Long authorizedUserId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
+     * <blockquote>
+     * <p> Lang has a lower priority than AcceptLanguage.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -54,13 +65,13 @@ public class DescribeRegionsRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.168.1.1</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The type of the virtual private cloud (VPC). Valid values:</p>
+     * <p>The VPC type. Valid values:</p>
      * <ul>
      * <li>STANDARD: standard VPC</li>
      * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>

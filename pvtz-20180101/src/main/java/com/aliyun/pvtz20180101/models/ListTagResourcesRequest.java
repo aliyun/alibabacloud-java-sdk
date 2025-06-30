@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The language of the values for specific response parameters. Valid values: en, zh, and ja.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,10 +19,10 @@ public class ListTagResourcesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
      * 
      * <strong>example:</strong>
-     * <p>234235354</p>
+     * <p>23423****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -42,7 +47,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The number of entries per page. Valid values: <code>1 to 200</code>. Default value: 20.</p>
+     * <p>The number of entries per page. Maximum value: 200. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

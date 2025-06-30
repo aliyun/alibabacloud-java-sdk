@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
     /**
-     * <p>The information about the queried zones.</p>
+     * <p>The queried zones.</p>
      */
     @NameInMap("AvailableZones")
     public java.util.List<DescribeResolverAvailableZonesResponseBodyAvailableZones> availableZones;

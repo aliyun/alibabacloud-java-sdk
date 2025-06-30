@@ -9,19 +9,27 @@ public class UpdateResolverEndpointRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The source IP addresses of outbound traffic. You must add two to six source IP addresses to ensure high availability.</p>
+     * <p>The source IP addresses of outbound traffic. You can add two to six IP addresses.</p>
+     * <blockquote>
+     * <p> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</p>
+     * </blockquote>
      */
     @NameInMap("IpConfig")
     public java.util.List<UpdateResolverEndpointRequestIpConfig> ipConfig;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -77,7 +85,7 @@ public class UpdateResolverEndpointRequest extends TeaModel {
 
     public static class UpdateResolverEndpointRequestIpConfig extends TeaModel {
         /**
-         * <p>The zone ID.</p>
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -89,16 +97,16 @@ public class UpdateResolverEndpointRequest extends TeaModel {
          * <p>The IPv4 CIDR block of the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.0.0/24</p>
+         * <p>172.16.XX.XX/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The IP address.</p>
+         * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.xx.xx</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -107,7 +115,7 @@ public class UpdateResolverEndpointRequest extends TeaModel {
          * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>sjqkql</p>
+         * <p>vsw-0jlgeyq4oazkh5xue****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

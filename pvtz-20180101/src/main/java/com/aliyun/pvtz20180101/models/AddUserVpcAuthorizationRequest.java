@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class AddUserVpcAuthorizationRequest extends TeaModel {
     /**
-     * <p>The authorization method. Valid values:</p>
+     * <p>The authorization channel. Valid values:</p>
      * <ul>
-     * <li>AUTH_CODE: An authorization code is used to associate VPCs across accounts. The system checks whether the value of AuthCode is valid.</li>
-     * <li>RESOURCE_DIRECTORY: A resource directory is used to associate VPCs across accounts. The system checks whether the value of AuthorizedUserId and the current account are in the same resource directory.</li>
-     * <li>If this parameter is empty, an authorization code is used to associate VPCs across accounts.</li>
+     * <li>AUTH_CODE: A verification code is used for authorization.</li>
+     * <li>RESOURCE_DIRECTORY: A resource directory is used for authorization.</li>
      * </ul>
+     * <p>Default value: AUTH_CODE.</p>
      * 
      * <strong>example:</strong>
      * <p>AUTH_CODE</p>
@@ -20,7 +20,14 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
 
     /**
      * <p>The verification code.</p>
-     * <p>This parameter is required when AuthType is set to NORMAL or is left empty and AuthChannel is set to AUTH_CODE or is left empty.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>The specified authentication code is used if the value of AuthChannel is left empty or is set to AUTH_CODE.</p>
+     * </li>
+     * <li><p>In other cases, a random 6-digit number is used. Example: 123456.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -31,7 +38,7 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
     /**
      * <p>The authorization scope. Valid values:</p>
      * <ul>
-     * <li>NORMAL: general authorization.</li>
+     * <li>NORMAL: general authorization</li>
      * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
      * </ul>
      * 
@@ -42,11 +49,14 @@ public class AddUserVpcAuthorizationRequest extends TeaModel {
     public String authType;
 
     /**
-     * <p>The ID of the Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
+     * <blockquote>
+     * <p> You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>111222333</p>
+     * <p>141339776561****</p>
      */
     @NameInMap("AuthorizedUserId")
     public Long authorizedUserId;

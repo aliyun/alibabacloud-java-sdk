@@ -14,11 +14,15 @@ public class AddZoneRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The logical location of the built-in authoritative module in which the zone is added. Valid values:</p>
+     * <p>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</p>
      * <ul>
-     * <li>Normal zone: regular module</li>
-     * <li>Fast Zone: acceleration module</li>
+     * <li><strong>NORMAL_ZONE</strong>: the regular module. DNS results are stored in the cache module and DNS requests are sent to the regular module if the DNS requests do not match the DNS records in the cache module. DNS record updates take effect based on the time to live (TTL) value. The regular module does not support DNS resolution over user-defined lines or based on weight values.</li>
+     * <li><strong>FAST_ZONE</strong>: the acceleration module. It directly responds to DNS requests with the lowest latency and updates DNS records in real time. The acceleration module supports DNS resolution over user-defined lines or based on weight values.</li>
      * </ul>
+     * <p>Default value: <strong>NORMAL_ZONE</strong>.</p>
+     * <blockquote>
+     * <p> The DNS results returned by the built-in authoritative acceleration module are not stored in the cache module because the built-in authoritative acceleration module is located before the cache module. As a result, you are charged more for DNS requests.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>FAST_ZONE</p>
@@ -27,7 +31,12 @@ public class AddZoneRequest extends TeaModel {
     public String dnsGroup;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * <p>Default value: <strong>en</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -36,10 +45,12 @@ public class AddZoneRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Specifies whether to enable the recursive resolution proxy for subdomain names. Valid values:</p>
      * <ul>
-     * <li>Specifies whether to enable the recursive resolution proxy feature for the zone. Valid values: <strong>ZONE</strong>: disables the recursive resolution proxy feature for the zone.</li>
-     * <li><strong>RECORD</strong>: enables the recursive resolution proxy feature for the zone.</li>
+     * <li><strong>ZONE</strong>: disables the recursive resolution proxy for subdomain names. In this case, NXDOMAIN is returned if the queried subdomain name does not exist in the zone.</li>
+     * <li><strong>RECORD</strong>: enables the recursive resolution proxy for subdomain names. In this case, if the queried subdomain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</li>
      * </ul>
+     * <p>Default value: <strong>ZONE</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>ZONE</p>
@@ -51,13 +62,13 @@ public class AddZoneRequest extends TeaModel {
      * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-resourcegroupid1</p>
+     * <p>rg-acfmykd63gt****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The name of the zone.</p>
+     * <p>The name of the zone to be added.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>

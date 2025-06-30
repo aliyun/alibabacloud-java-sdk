@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of returned pages.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -50,7 +50,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     public Integer totalPages;
 
     /**
-     * <p>The information about the Alibaba Cloud accounts.</p>
+     * <p>The Alibaba Cloud accounts to which the permissions on the resources are granted.</p>
      */
     @NameInMap("Users")
     public java.util.List<DescribeUserVpcAuthorizationsResponseBodyUsers> users;
@@ -110,9 +110,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
 
     public static class DescribeUserVpcAuthorizationsResponseBodyUsers extends TeaModel {
         /**
-         * <p>The authorization scope. Valid value:</p>
+         * <p>The authorization scope. Valid values:</p>
          * <ul>
-         * <li>NORMAL: general authorization.</li>
+         * <li>NORMAL: general authorization</li>
+         * <li>CLOUD_PRODUCT: cloud service-related authorization</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,19 +123,19 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         public String authType;
 
         /**
-         * <p>The name of the Alibaba Cloud account.</p>
+         * <p>The name of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
          * 
          * <strong>example:</strong>
-         * <p>alidns***@test.com</p>
+         * <p>alidn****@test.com</p>
          */
         @NameInMap("AuthorizedAliyunId")
         public String authorizedAliyunId;
 
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</p>
          * 
          * <strong>example:</strong>
-         * <p>111222333</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("AuthorizedUserId")
         public Long authorizedUserId;

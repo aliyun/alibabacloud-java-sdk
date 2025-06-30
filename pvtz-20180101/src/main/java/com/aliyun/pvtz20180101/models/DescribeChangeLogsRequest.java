@@ -16,10 +16,17 @@ public class DescribeChangeLogsRequest extends TeaModel {
     /**
      * <p>The type of operation logs. Valid values:</p>
      * <ul>
-     * <li><strong>PV_ZONE</strong>: the logs that record the operations on zones</li>
+     * <li><strong>PV_ZONE</strong>: the logs that record the operations on built-in authoritative zones</li>
      * <li><strong>PV_RECORD</strong>: the logs that record the operations on DNS records</li>
+     * <li><strong>RESOLVER_RULE</strong>: the logs that record the operations on forwarding rules</li>
+     * <li><strong>CUSTOM_LINE</strong>: the logs that record the operations on user-defined lines</li>
+     * <li><strong>RESOLVER_ENDPOINT</strong>: the logs that record the operations on outbound endpoints</li>
+     * <li><strong>INBOUND_ENDPOINT</strong>: the logs that record the operations on inbound endpoints</li>
+     * <li><strong>CACHE_RESERVE_DOMAIN</strong>: the logs that record the operations on cache retention domain names</li>
      * </ul>
-     * <p>If you set this parameter to other values, all types of operation logs are queried.</p>
+     * <blockquote>
+     * <p> If you set EntityType to other values, all types of logs are queried.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>PV_ZONE</p>
@@ -28,7 +35,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public String entityType;
 
     /**
-     * <p>The keyword for searches in &quot;%KeyWord%&quot; mode. The value is not case-sensitive.</p>
+     * <p>The keyword of the operation or the operation content. Fuzzy search is supported. The value is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -37,7 +44,12 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -46,7 +58,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +67,7 @@ public class DescribeChangeLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -76,18 +88,22 @@ public class DescribeChangeLogsRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.XX.XX</p>
+     * <p>192.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The global ID of the zone.\
-     * If you specify this parameter, the logs that record the operations on the Domain Name System (DNS) records of the specified zone are queried.\
-     * If you leave this parameter empty, the logs that record the operations on all zones that belong to the current Alibaba Cloud account and the DNS records of these zones are queried.</p>
+     * <p>The zone ID. Valid values:</p>
+     * <ul>
+     * <li><p>If you set ZoneId to a zone ID, the logs that record the operations on the DNS records of the specified zone are queried.\</p>
+     * </li>
+     * <li><p>If you leave ZoneId empty, the logs that record the operations on all zones and the DNS records of these zones that belong to the current Alibaba Cloud account are queried.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>6726</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -14,10 +14,10 @@ public class DeleteZoneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE1MA_150</p>
+     * <p>0e41496f12da01311d314f17b801****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

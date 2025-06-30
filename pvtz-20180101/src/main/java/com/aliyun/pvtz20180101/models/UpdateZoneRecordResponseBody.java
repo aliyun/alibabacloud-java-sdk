@@ -8,7 +8,7 @@ public class UpdateZoneRecordResponseBody extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>5809</p>
+     * <p>172223****</p>
      */
     @NameInMap("RecordId")
     public Long recordId;

@@ -14,7 +14,12 @@ public class SetZoneRecordStatusRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -27,7 +32,7 @@ public class SetZoneRecordStatusRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>5809</p>
+     * <p>207541****</p>
      */
     @NameInMap("RecordId")
     public Long recordId;
@@ -50,7 +55,7 @@ public class SetZoneRecordStatusRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.XX.XX</p>
+     * <p>127.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

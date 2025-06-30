@@ -47,7 +47,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages.</p>
+     * <p>The total number of pages returned.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,10 +110,10 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
 
     public static class DescribeChangeLogsResponseBodyChangeLogsChangeLog extends TeaModel {
         /**
-         * <p>The details of the operation.</p>
+         * <p>The operation content.</p>
          * 
          * <strong>example:</strong>
-         * <p>add test-api.com</p>
+         * <p>Add RR:test.03 Type:A Line:default TTL:300 Value:172.20.XX.XX</p>
          */
         @NameInMap("Content")
         public String content;
@@ -122,7 +122,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
          * <p>The operator ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>13270376</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("CreatorId")
         public String creatorId;
@@ -152,16 +152,25 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         public String creatorType;
 
         /**
-         * <p>The ID of the object on which the operation was performed.</p>
+         * <p>The operator ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>CAgICA1OA_58</p>
+         * <p>141339776561****</p>
+         */
+        @NameInMap("CreatorUserId")
+        public String creatorUserId;
+
+        /**
+         * <p>The unique ID of the zone, user-defined line, forwarding rule, outbound endpoint, or inbound endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>df2d03865266bd9842306db586d3****</p>
          */
         @NameInMap("EntityId")
         public String entityId;
 
         /**
-         * <p>The name of the object on which the operation was performed.</p>
+         * <p>The name of the object on which the operation was performed, such as the domain name, user-defined line, cache retention domain name, forwarding rule, outbound endpoint, or inbound endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>test-api.com</p>
@@ -170,16 +179,16 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         public String entityName;
 
         /**
-         * <p>The log ID.</p>
+         * <p>The ID of the operation log.</p>
          * 
          * <strong>example:</strong>
-         * <p>6726</p>
+         * <p>90761578646770****</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
-         * <p>The operation type.</p>
+         * <p>The specific operation performed on the object, such as adding, deleting, modifying, or associating the object.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -188,16 +197,25 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         public String operAction;
 
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The public IP address of the operator terminal. If the IP address of the operator terminal is a private IP address, the value of this parameter is the public IP address to which the private IP address is mapped after network address translation (NAT).</p>
          * 
          * <strong>example:</strong>
-         * <p>1.1.1.1</p>
+         * <p>192.0.XX.XX</p>
          */
         @NameInMap("OperIp")
         public String operIp;
 
         /**
-         * <p>The type of the object on which the operation is performed.</p>
+         * <p>The type of the object on which the operation was performed. Valid values:</p>
+         * <ul>
+         * <li><strong>PV_ZONE</strong>: the built-in authoritative zone</li>
+         * <li><strong>PV_RECORD</strong>: the DNS record</li>
+         * <li><strong>RESOLVER_RULE</strong>: the forwarding rule</li>
+         * <li><strong>CUSTOM_LINE</strong>: the user-defined line</li>
+         * <li><strong>RESOLVER_ENDPOINT</strong>: the outbound endpoint</li>
+         * <li><strong>INBOUND_ENDPOINT</strong>: the inbound endpoint</li>
+         * <li><strong>CACHE_RESERVE_DOMAIN</strong>: the cache retention domain name</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PV_ZONE</p>
@@ -206,7 +224,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         public String operObject;
 
         /**
-         * <p>The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the operation is performed. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-01-24T07:35Z</p>
@@ -258,6 +276,14 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
         public String getCreatorType() {
             return this.creatorType;
+        }
+
+        public DescribeChangeLogsResponseBodyChangeLogsChangeLog setCreatorUserId(String creatorUserId) {
+            this.creatorUserId = creatorUserId;
+            return this;
+        }
+        public String getCreatorUserId() {
+            return this.creatorUserId;
         }
 
         public DescribeChangeLogsResponseBodyChangeLogsChangeLog setEntityId(String entityId) {

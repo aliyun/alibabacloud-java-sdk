@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckZoneNameResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the zone name is valid. Valid values:</p>
+     * <p>Indicates whether the zone name can be added. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>

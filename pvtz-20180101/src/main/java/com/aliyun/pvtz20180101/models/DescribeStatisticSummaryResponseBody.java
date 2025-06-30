@@ -23,13 +23,13 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The top 3 virtual private clouds (VPCs) that initiate the largest number of DNS requests.</p>
+     * <p>The top three VPCs with the largest number of DNS requests.</p>
      */
     @NameInMap("VpcRequestTops")
     public DescribeStatisticSummaryResponseBodyVpcRequestTops vpcRequestTops;
 
     /**
-     * <p>The top 3 zones with the largest number of DNS requests.</p>
+     * <p>The top three zones with the largest number of DNS requests.</p>
      */
     @NameInMap("ZoneRequestTops")
     public DescribeStatisticSummaryResponseBodyZoneRequestTops zoneRequestTops;
@@ -85,13 +85,13 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
          * <p>The name of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>China (Beijing)</p>
+         * <p>华北 2</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
-         * <p>The number of DNS requests.</p>
+         * <p>The number of DNS requests on the previous day.</p>
          * 
          * <strong>example:</strong>
          * <p>2254</p>
@@ -103,7 +103,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
          * <p>The tunnel ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>46574</p>
+         * <p>tun-7h33lkqfuhgnyy****</p>
          */
         @NameInMap("TunnelId")
         public String tunnelId;
@@ -112,13 +112,13 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
          * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-2zeisd8c0j6wk1451jr6o</p>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The type of the VPC. Valid values:</p>
+         * <p>The VPC type. Valid values:</p>
          * <ul>
          * <li>STANDARD: standard VPC</li>
          * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
@@ -210,6 +210,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
          * <ul>
          * <li>AUTH_ZONE: authoritative zone</li>
          * <li>RESOLVER_RULE: forwarding rule</li>
+         * <li>INBOUND: inbound endpoint</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,7 +220,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         public String bizType;
 
         /**
-         * <p>The number of DNS requests.</p>
+         * <p>The number of DNS requests on the previous day.</p>
          * 
          * <strong>example:</strong>
          * <p>2251</p>
@@ -228,10 +229,10 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         public Long requestCount;
 
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
-         * <p>host.local</p>
+         * <p>test.com</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;

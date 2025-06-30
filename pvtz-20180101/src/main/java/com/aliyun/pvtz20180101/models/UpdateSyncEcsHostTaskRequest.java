@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateSyncEcsHostTaskRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,17 +19,17 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The information about regions to be synchronized.</p>
+     * <p>The regions to be synchronized.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Region")
     public java.util.List<UpdateSyncEcsHostTaskRequestRegion> region;
 
     /**
-     * <p>The state of the task. Valid values:</p>
+     * <p>The state of the hostname synchronization task. Valid values:</p>
      * <ul>
-     * <li>ON</li>
-     * <li>OFF</li>
+     * <li>ON: The task is started.</li>
+     * <li>OFF: The task is ended.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -35,11 +40,11 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test79afafec***********1d28f7889c</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -92,10 +97,10 @@ public class UpdateSyncEcsHostTaskRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The Alibaba Cloud account to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
+         * <p>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</p>
          * 
          * <strong>example:</strong>
-         * <p>1234567890</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("UserId")
         public Long userId;

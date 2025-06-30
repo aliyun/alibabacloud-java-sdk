@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomLinesRequest extends TeaModel {
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCustomLinesRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeCustomLinesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

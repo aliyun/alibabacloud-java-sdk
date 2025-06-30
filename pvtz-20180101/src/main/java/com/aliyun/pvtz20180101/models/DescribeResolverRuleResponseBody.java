@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class DescribeResolverRuleResponseBody extends TeaModel {
+    @NameInMap("BindEdgeDnsClusters")
+    public java.util.List<DescribeResolverRuleResponseBodyBindEdgeDnsClusters> bindEdgeDnsClusters;
+
     /**
      * <p>The virtual private clouds (VPCs) that are associated with the forwarding rule.</p>
      */
@@ -11,7 +14,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public java.util.List<DescribeResolverRuleResponseBodyBindVpcs> bindVpcs;
 
     /**
-     * <p>The time when the forwarding rule was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the forwarding rule was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:51:44</p>
@@ -32,7 +35,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
      * <p>The endpoint ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
@@ -53,10 +56,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public java.util.List<DescribeResolverRuleResponseBodyForwardIps> forwardIps;
 
     /**
-     * <p>The forwarding rule ID.</p>
+     * <p>The ID of the forwarding rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra1**</p>
+     * <p>hr****</p>
      */
     @NameInMap("Id")
     public String id;
@@ -81,9 +84,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
 
     /**
      * <p>The type of the forwarding rule. Valid value:</p>
-     * <ul>
-     * <li>OUTBOUND: forwards Domain Name System (DNS) requests to one or more external IP addresses.</li>
-     * </ul>
+     * <p>OUTBOUND: outbound forwarding rule. This type of rule forwards Domain Name System (DNS) requests to one or more external IP addresses.</p>
      * 
      * <strong>example:</strong>
      * <p>OUTBOUND</p>
@@ -92,7 +93,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The time when the forwarding rule was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the forwarding rule was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:51:44</p>
@@ -101,7 +102,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the forwarding rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the forwarding rule was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1594608704000</p>
@@ -121,6 +122,14 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
     public static DescribeResolverRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeResolverRuleResponseBody self = new DescribeResolverRuleResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeResolverRuleResponseBody setBindEdgeDnsClusters(java.util.List<DescribeResolverRuleResponseBodyBindEdgeDnsClusters> bindEdgeDnsClusters) {
+        this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+        return this;
+    }
+    public java.util.List<DescribeResolverRuleResponseBodyBindEdgeDnsClusters> getBindEdgeDnsClusters() {
+        return this.bindEdgeDnsClusters;
     }
 
     public DescribeResolverRuleResponseBody setBindVpcs(java.util.List<DescribeResolverRuleResponseBodyBindVpcs> bindVpcs) {
@@ -227,6 +236,47 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         return this.zoneName;
     }
 
+    public static class DescribeResolverRuleResponseBodyBindEdgeDnsClusters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ClusterUserId")
+        public Long clusterUserId;
+
+        public static DescribeResolverRuleResponseBodyBindEdgeDnsClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResolverRuleResponseBodyBindEdgeDnsClusters self = new DescribeResolverRuleResponseBodyBindEdgeDnsClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResolverRuleResponseBodyBindEdgeDnsClusters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeResolverRuleResponseBodyBindEdgeDnsClusters setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribeResolverRuleResponseBodyBindEdgeDnsClusters setClusterUserId(Long clusterUserId) {
+            this.clusterUserId = clusterUserId;
+            return this;
+        }
+        public Long getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+    }
+
     public static class DescribeResolverRuleResponseBodyBindVpcs extends TeaModel {
         /**
          * <p>The region ID.</p>
@@ -250,7 +300,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
          * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-8vbl8m-vpc-id</p>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -265,7 +315,7 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         public String vpcName;
 
         /**
-         * <p>The type of the VPC. Valid values:</p>
+         * <p>The VPC type. Valid values:</p>
          * <ul>
          * <li>STANDARD: standard VPC</li>
          * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
@@ -278,10 +328,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
         public String vpcType;
 
         /**
-         * <p>The Alibaba Cloud account to which the VPC belongs.</p>
+         * <p>The ID of the user to which the VPC belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>324542413</p>
+         * <p>32454****</p>
          */
         @NameInMap("VpcUserId")
         public String vpcUserId;
@@ -343,10 +393,10 @@ public class DescribeResolverRuleResponseBody extends TeaModel {
 
     public static class DescribeResolverRuleResponseBodyForwardIps extends TeaModel {
         /**
-         * <p>The IP address.</p>
+         * <p>The destination IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.xx.xx</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;

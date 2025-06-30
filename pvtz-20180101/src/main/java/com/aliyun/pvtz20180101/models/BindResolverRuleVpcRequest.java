@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class BindResolverRuleVpcRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,17 +19,17 @@ public class BindResolverRuleVpcRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The forwarding rule ID.</p>
+     * <p>The ID of the forwarding rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;
 
     /**
-     * <p>The VPCs.</p>
+     * <p>The VPCs that you want to associate with the forwarding rule.</p>
      */
     @NameInMap("Vpc")
     public java.util.List<BindResolverRuleVpcRequestVpc> vpc;
@@ -60,7 +65,7 @@ public class BindResolverRuleVpcRequest extends TeaModel {
 
     public static class BindResolverRuleVpcRequestVpc extends TeaModel {
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the outbound VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -72,7 +77,7 @@ public class BindResolverRuleVpcRequest extends TeaModel {
          * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-kqk1i2o2ajsksl-vpc-test</p>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

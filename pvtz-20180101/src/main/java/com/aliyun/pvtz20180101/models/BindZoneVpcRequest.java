@@ -14,7 +14,12 @@ public class BindZoneVpcRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -26,23 +31,26 @@ public class BindZoneVpcRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The information about VPCs.</p>
+     * <p>The VPCs.</p>
+     * <blockquote>
+     * <p> If Vpcs is left empty, all VPCs that are associated with the zone are disassociated from the zone.</p>
+     * </blockquote>
      */
     @NameInMap("Vpcs")
     public java.util.List<BindZoneVpcRequestVpcs> vpcs;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE0OQ_149</p>
+     * <p>34d4031b63c527358b710a61346a****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -94,7 +102,7 @@ public class BindZoneVpcRequest extends TeaModel {
 
     public static class BindZoneVpcRequestVpcs extends TeaModel {
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -103,16 +111,16 @@ public class BindZoneVpcRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The VPC ID. If you do not specify this parameter, the VPCs that are bound to the zone are unbound from the zone.</p>
+         * <p>The VPC ID. If the zone is already associated with VPCs and you do not specify this parameter, the associated VPCs are disassociated from the zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>daily-vpc-id</p>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The type of the VPC. Valid values:</p>
+         * <p>The VPC type. Valid values:</p>
          * <ul>
          * <li><strong>STANDARD</strong>: standard VPC</li>
          * <li><strong>EDS</strong>: Elastic Desktop Service (EDS) workspace VPC</li>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeZoneRecordResponseBody extends TeaModel {
     /**
+     * <p>The time when the DNS record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-23T03:15Z</p>
      */
@@ -12,6 +14,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String createTime;
 
     /**
+     * <p>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1516775741000</p>
      */
@@ -19,6 +23,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
+     * <p>The resolution line.</p>
+     * 
      * <strong>example:</strong>
      * <p>default</p>
      */
@@ -26,6 +32,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String line;
 
     /**
+     * <p>The priority of the mail exchanger (MX) record.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -33,6 +41,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Integer priority;
 
     /**
+     * <p>The ID of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>5808</p>
      */
@@ -40,6 +50,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Long recordId;
 
     /**
+     * <p>The description of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>test record</p>
      */
@@ -47,6 +59,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String remark;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>
      */
@@ -54,6 +68,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The hostname.</p>
+     * 
      * <strong>example:</strong>
      * <p>www</p>
      */
@@ -61,6 +77,12 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String rr;
 
     /**
+     * <p>The state of the DNS record. Valid values:</p>
+     * <ul>
+     * <li><strong>ENABLE</strong>: The DNS record is enabled.</li>
+     * <li><strong>DISABLE</strong>: The DNS record is disabled.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>ENABLE</p>
      */
@@ -68,6 +90,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The time to live (TTL) of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */
@@ -75,6 +99,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Integer ttl;
 
     /**
+     * <p>The type of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>A</p>
      */
@@ -82,6 +108,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String type;
 
     /**
+     * <p>The time when the DNS record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>2018-01-24T06:35Z</p>
      */
@@ -89,6 +117,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String updateTime;
 
     /**
+     * <p>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * 
      * <strong>example:</strong>
      * <p>1516775741000</p>
      */
@@ -96,6 +126,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
+     * <p>The record value.</p>
+     * 
      * <strong>example:</strong>
      * <p>127.0.0.1</p>
      */
@@ -103,6 +135,8 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public String value;
 
     /**
+     * <p>The weight value of the DNS record.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -110,7 +144,7 @@ public class DescribeZoneRecordResponseBody extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>Zone ID。</p>
+     * <p>The zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CAgICA1OA_58</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomLineResponseBody extends TeaModel {
     /**
+     * <p>The unique ID of the custom line.</p>
+     * 
      * <strong>example:</strong>
      * <p>765001</p>
      */
@@ -12,6 +14,8 @@ public class UpdateCustomLineResponseBody extends TeaModel {
     public String lineId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</p>
      */

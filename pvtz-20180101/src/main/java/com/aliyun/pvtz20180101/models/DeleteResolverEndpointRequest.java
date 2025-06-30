@@ -5,17 +5,22 @@ import com.aliyun.tea.*;
 
 public class DeleteResolverEndpointRequest extends TeaModel {
     /**
-     * <p>The endpoint ID.</p>
+     * <p>The endpoint ID. This ID uniquely identifies the endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>

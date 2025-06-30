@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncEcsHostTaskRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,11 +19,11 @@ public class DescribeSyncEcsHostTaskRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pvtz-test-id-2989149d628c56f00e</p>
+     * <p>pvtz-test-id-2989149d628c5****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

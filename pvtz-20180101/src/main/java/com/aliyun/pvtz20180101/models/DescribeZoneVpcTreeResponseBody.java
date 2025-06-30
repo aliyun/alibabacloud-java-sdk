@@ -42,34 +42,34 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
 
     public static class DescribeZoneVpcTreeResponseBodyZonesZoneVpcsVpc extends TeaModel {
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the VPC.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-beijing</p>
+         * <p>cn-heyuan</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The name of the region to which the VPC belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>China North 2</p>
+         * <p>China (Heyuan)</p>
          */
         @NameInMap("RegionName")
         public String regionName;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID. The unique ID of the VPC.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-2z21341ssdadsfzyd49ra</p>
+         * <p>vpc-f8zvrvr1payllgz38****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The VPC name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-vpc</p>
@@ -78,7 +78,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         public String vpcName;
 
         /**
-         * <p>The type of the VPC. Valid values:</p>
+         * <p>The VPC type. Valid values:</p>
          * <ul>
          * <li>STANDARD: standard VPC</li>
          * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
@@ -179,7 +179,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
          * <p>The creator of the zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>5463564356</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("Creator")
         public String creator;
@@ -233,7 +233,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         public Boolean isPtr;
 
         /**
-         * <p>The number of Domain Name System (DNS) records.</p>
+         * <p>The number of Domain Name System (DNS) records added for the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -269,13 +269,13 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
-         * <p>The VPCs bound to the zones.</p>
+         * <p>The VPCs associated with the zone.</p>
          */
         @NameInMap("Vpcs")
         public DescribeZoneVpcTreeResponseBodyZonesZoneVpcs vpcs;
 
         /**
-         * <p>The global ID of the zone.</p>
+         * <p>The zone ID. This ID uniquely identifies the zone.</p>
          * 
          * <strong>example:</strong>
          * <p>6d83e3b31aa60ca4aaa7161f1b6baa95</p>
@@ -284,19 +284,22 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         public String zoneId;
 
         /**
-         * <p>The name of the zone.</p>
+         * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
-         * <p>localzone.demo</p>
+         * <p>example.com</p>
          */
         @NameInMap("ZoneName")
         public String zoneName;
 
         /**
          * <p>The type of the cloud service.</p>
+         * <p><strong>Valid values:</strong></p>
          * <ul>
-         * <li>If the value of the ZoneType parameter is AUTH_ZONE, no value is returned for this parameter.</li>
-         * <li>If the value of the ZoneType parameter is CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</li>
+         * <li><p>If ZoneType is set to AUTH_ZONE, no value is returned for this parameter.</p>
+         * </li>
+         * <li><p>If ZoneType is set to CLOUD_PRODUCT_ZONE, the type of the cloud service is returned.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -306,7 +309,7 @@ public class DescribeZoneVpcTreeResponseBody extends TeaModel {
         public String zoneTag;
 
         /**
-         * <p>The type of the zone. Valid values:</p>
+         * <p>The zone type. Valid values:</p>
          * <ul>
          * <li>AUTH_ZONE: authoritative zone</li>
          * <li>CLOUD_PRODUCT_ZONE: authoritative zone for cloud services</li>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
      * 
      * <strong>example:</strong>
-     * <p>234235354</p>
+     * <p>23423****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -62,7 +62,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <p>The resource ID, which is a zone ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>97fe9321a476d0861f624d3f738dcc38</p>
+         * <p>97fe9321a476d0861f624d3f738d****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;

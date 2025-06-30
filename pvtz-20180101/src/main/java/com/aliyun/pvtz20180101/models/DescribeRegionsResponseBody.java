@@ -69,7 +69,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Beijing)</p>

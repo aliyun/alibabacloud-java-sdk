@@ -14,10 +14,10 @@ public class AddResolverRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The forwarding rule ID.</p>
+     * <p>The ID of the forwarding rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

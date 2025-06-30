@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class CheckZoneNameRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -17,7 +22,7 @@ public class CheckZoneNameRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>192.0.2.0</p>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;

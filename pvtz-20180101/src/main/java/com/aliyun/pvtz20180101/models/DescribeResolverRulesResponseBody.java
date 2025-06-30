@@ -47,7 +47,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
-     * <p>The total number of pages returned.</p>
+     * <p>The total number of returned pages.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,9 +108,50 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         return this.totalPages;
     }
 
+    public static class DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("ClusterName")
+        public String clusterName;
+
+        @NameInMap("ClusterUserId")
+        public Long clusterUserId;
+
+        public static DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters build(java.util.Map<String, ?> map) throws Exception {
+            DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters self = new DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters setClusterName(String clusterName) {
+            this.clusterName = clusterName;
+            return this;
+        }
+        public String getClusterName() {
+            return this.clusterName;
+        }
+
+        public DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters setClusterUserId(Long clusterUserId) {
+            this.clusterUserId = clusterUserId;
+            return this;
+        }
+        public Long getClusterUserId() {
+            return this.clusterUserId;
+        }
+
+    }
+
     public static class DescribeResolverRulesResponseBodyRulesBindVpcs extends TeaModel {
         /**
-         * <p>The region ID.</p>
+         * <p>The region ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -119,7 +160,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The region name.</p>
+         * <p>The name of the region to which the VPC belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-southeast-1</p>
@@ -128,10 +169,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String regionName;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>The VPC ID. This ID uniquely identifies the VPC.</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-8vbl8mpum-vpc-id</p>
+         * <p>vpc-0jl96awrjt75ezglc****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
@@ -146,7 +187,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String vpcName;
 
         /**
-         * <p>The type of the virtual private cloud (VPC). Valid values:</p>
+         * <p>The VPC type. Valid values:</p>
          * <ul>
          * <li>STANDARD: standard VPC</li>
          * <li>EDS: Elastic Desktop Service (EDS) workspace VPC</li>
@@ -159,10 +200,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String vpcType;
 
         /**
-         * <p>The Alibaba Cloud account to which the VPC belongs.</p>
+         * <p>The user ID to which the VPC belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>121098702443**</p>
+         * <p>141339776561****</p>
          */
         @NameInMap("VpcUserId")
         public String vpcUserId;
@@ -224,16 +265,16 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     public static class DescribeResolverRulesResponseBodyRulesForwardIps extends TeaModel {
         /**
-         * <p>The IP address.</p>
+         * <p>The IP address of the destination server.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.xx.xx</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
 
         /**
-         * <p>The port number.</p>
+         * <p>The port of the destination server.</p>
          * 
          * <strong>example:</strong>
          * <p>8080</p>
@@ -265,6 +306,9 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
     }
 
     public static class DescribeResolverRulesResponseBodyRules extends TeaModel {
+        @NameInMap("BindEdgeDnsClusters")
+        public java.util.List<DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters> bindEdgeDnsClusters;
+
         /**
          * <p>The VPCs associated with the forwarding rule.</p>
          */
@@ -293,7 +337,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
          * <p>The endpoint ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>hra0**</p>
+         * <p>hr****</p>
          */
         @NameInMap("EndpointId")
         public String endpointId;
@@ -308,7 +352,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String endpointName;
 
         /**
-         * <p>The destination IP addresses.</p>
+         * <p>The IP addresses and ports of the external DNS servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded.</p>
          */
         @NameInMap("ForwardIps")
         public java.util.List<DescribeResolverRulesResponseBodyRulesForwardIps> forwardIps;
@@ -317,7 +361,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
          * <p>The ID of the forwarding rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>hra1**</p>
+         * <p>hr****</p>
          */
         @NameInMap("Id")
         public String id;
@@ -332,10 +376,8 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the forwarding rule. Valid value:</p>
-         * <ul>
-         * <li>OUTBOUND: Domain Name System (DNS) requests are forwarded to one or more IP addresses.</li>
-         * </ul>
+         * <p>The type of the forwarding rule.</p>
+         * <p>The parameter value can only be OUTBOUND, which indicates that Domain Name System (DNS) requests are forwarded to one or more external IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>OUTBOUND</p>
@@ -353,7 +395,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The timestamp when the forwarding rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the forwarding rule was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1594608704000</p>
@@ -362,7 +404,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public Long updateTimestamp;
 
         /**
-         * <p>The name of the forward zone.</p>
+         * <p>The zone for which you want to forward DNS requests.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>
@@ -373,6 +415,14 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         public static DescribeResolverRulesResponseBodyRules build(java.util.Map<String, ?> map) throws Exception {
             DescribeResolverRulesResponseBodyRules self = new DescribeResolverRulesResponseBodyRules();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeResolverRulesResponseBodyRules setBindEdgeDnsClusters(java.util.List<DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters> bindEdgeDnsClusters) {
+            this.bindEdgeDnsClusters = bindEdgeDnsClusters;
+            return this;
+        }
+        public java.util.List<DescribeResolverRulesResponseBodyRulesBindEdgeDnsClusters> getBindEdgeDnsClusters() {
+            return this.bindEdgeDnsClusters;
         }
 
         public DescribeResolverRulesResponseBodyRules setBindVpcs(java.util.List<DescribeResolverRulesResponseBodyRulesBindVpcs> bindVpcs) {

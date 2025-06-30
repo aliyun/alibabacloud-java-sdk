@@ -4,10 +4,15 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class SearchCustomLinesResponseBody extends TeaModel {
+    /**
+     * <p>The custom lines.</p>
+     */
     @NameInMap("CustomLines")
     public SearchCustomLinesResponseBodyCustomLines customLines;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1 to 100</strong>. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</p>
      */
@@ -29,6 +38,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -36,6 +47,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
     public Integer totalItems;
 
     /**
+     * <p>The total number of returned pages.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -116,6 +129,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
 
     public static class SearchCustomLinesResponseBodyCustomLinesCustomLine extends TeaModel {
         /**
+         * <p>The time when the custom line was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-12-27 18:16:38</p>
          */
@@ -123,6 +138,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The time when the custom line was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1671174074000</p>
          */
@@ -130,6 +147,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
+         * <p>The ID of the creator for the custom line.</p>
+         * 
          * <strong>example:</strong>
          * <p>1851321989648462</p>
          */
@@ -137,6 +156,14 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The creator type. Valid values:</p>
+         * <ul>
+         * <li>CUSTOM: Alibaba Cloud account</li>
+         * <li>SUB: RAM user</li>
+         * <li>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</li>
+         * <li>OTHER: other types</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SUB</p>
          */
@@ -144,26 +171,42 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         public String creatorSubType;
 
         /**
+         * <p>The role of the creator for the custom line. Valid values:</p>
+         * <ul>
+         * <li>USER: user</li>
+         * <li>SYSTEM: system</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>USER</p>
          */
         @NameInMap("CreatorType")
         public String creatorType;
 
+        /**
+         * <p>The IPv4 CIDR blocks.</p>
+         */
         @NameInMap("Ipv4s")
         public SearchCustomLinesResponseBodyCustomLinesCustomLineIpv4s ipv4s;
 
         /**
+         * <p>The unique ID of the custom line.</p>
+         * 
          * <strong>example:</strong>
          * <p>11730</p>
          */
         @NameInMap("LineId")
         public String lineId;
 
+        /**
+         * <p>The name of the custom line.</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The time when the custom line was updated.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-06-14 14:04:08</p>
          */
@@ -171,6 +214,8 @@ public class SearchCustomLinesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>The time when the custom line was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * 
          * <strong>example:</strong>
          * <p>1672136518000</p>
          */

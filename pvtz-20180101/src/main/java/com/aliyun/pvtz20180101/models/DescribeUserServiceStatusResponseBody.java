@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeUserServiceStatusResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>99626905-678A-4E8A-984E-6AEB09993996</p>
      */
@@ -12,6 +14,14 @@ public class DescribeUserServiceStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Current user\&quot;s service status:</p>
+     * <ul>
+     * <li><strong>CLOSED</strong>: Not activated</li>
+     * <li><strong>OPENED</strong>: Activated</li>
+     * <li><strong>IN_DEBT</strong>: Overdue payment</li>
+     * <li><strong>IN_DEBT_OVER_DUE</strong>: Payment overdue</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>OPENED</p>
      */

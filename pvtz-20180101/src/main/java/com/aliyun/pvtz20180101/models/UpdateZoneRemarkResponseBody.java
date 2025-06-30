@@ -14,10 +14,10 @@ public class UpdateZoneRemarkResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The zone ID.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE1MA_149</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

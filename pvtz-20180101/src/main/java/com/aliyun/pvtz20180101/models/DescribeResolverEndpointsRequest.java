@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverEndpointsRequest extends TeaModel {
     /**
-     * <p>The keyword used to filter endpoints in %keyword% mode.</p>
+     * <p>The keyword of the endpoint name, which is used for fuzzy searches.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,12 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +28,7 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +37,7 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,15 +46,18 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The state of the endpoint that you want to query. If you do not specify this parameter, all endpoints are returned. Valid values:</p>
+     * <p>The state of the endpoint that you want to query. Valid values:</p>
      * <ul>
      * <li>SUCCESS: The endpoint works as expected.</li>
      * <li>INIT: The endpoint is being created.</li>
-     * <li>FAILED: The endpoint fails to be created.</li>
+     * <li>FAILED: The endpoint failed to be created.</li>
      * <li>CHANGE_INIT: The endpoint is being modified.</li>
-     * <li>CHANGE_FAILED: The endpoint fails to be modified.</li>
-     * <li>EXCEPTION: The endpoint encounters an exception.</li>
+     * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
+     * <li>EXCEPTION: The endpoint encountered an exception.</li>
      * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, endpoints in all states are returned.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -57,6 +65,12 @@ public class DescribeResolverEndpointsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The region ID of the outbound virtual private cloud (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-zhangjiakou</p>
+     */
     @NameInMap("VpcRegionId")
     public String vpcRegionId;
 

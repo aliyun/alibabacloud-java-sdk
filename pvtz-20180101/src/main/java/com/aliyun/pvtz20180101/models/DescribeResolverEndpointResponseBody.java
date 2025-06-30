@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverEndpointResponseBody extends TeaModel {
     /**
-     * <p>The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the endpoint was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:45:56</p>
@@ -23,22 +23,25 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public Long createTimestamp;
 
     /**
-     * <p>The endpoint ID.</p>
+     * <p>The endpoint ID. This ID uniquely identifies the endpoint.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("Id")
     public String id;
 
     /**
-     * <p>The source IP address of outbound traffic.</p>
+     * <p>The configurations of the source IP addresses for outbound traffic.</p>
      */
     @NameInMap("IpConfigs")
     public java.util.List<DescribeResolverEndpointResponseBodyIpConfigs> ipConfigs;
 
     /**
-     * <p>The endpoint name.</p>
+     * <p>The name of the endpoint.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("Name")
     public String name;
@@ -53,10 +56,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The security group ID.</p>
+     * <p>The ID of the security group. The security group rules are applied to the outbound virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
-     * <p>sg-8vb3sigz86xc-group-test</p>
+     * <p>sg-8vb3sigz86xc-group-****</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
@@ -66,10 +69,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
      * <ul>
      * <li>SUCCESS: The endpoint works as expected.</li>
      * <li>INIT: The endpoint is being created.</li>
-     * <li>FAILED: The endpoint fails to be created.</li>
+     * <li>FAILED: The endpoint failed to be created.</li>
      * <li>CHANGE_INIT: The endpoint is being modified.</li>
-     * <li>CHANGE_FAILED: The endpoint fails to be modified.</li>
-     * <li>EXCEPTION: The endpoint encounters an exception.</li>
+     * <li>CHANGE_FAILED: The endpoint failed to be modified.</li>
+     * <li>EXCEPTION: The endpoint encountered an exception.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +82,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the endpoint was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</p>
+     * <p>The time when the endpoint was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-07-13 10:48:39</p>
@@ -88,7 +91,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String updateTime;
 
     /**
-     * <p>The time when the endpoint was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The time when the endpoint was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1594608519000</p>
@@ -97,16 +100,16 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public Long updateTimestamp;
 
     /**
-     * <p>The outbound VPC ID.</p>
+     * <p>The ID of the outbound VPC. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-8vbl8mpum-vpc-id</p>
+     * <p>vpc-0jl96awrjt75ezglc****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The outbound VPC name.</p>
+     * <p>The name of the outbound VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-name-test</p>
@@ -115,7 +118,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String vpcName;
 
     /**
-     * <p>The ID of the region where the outbound VPC resides.</p>
+     * <p>The region ID of the outbound VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -124,7 +127,10 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
     public String vpcRegionId;
 
     /**
-     * <p>The name of the region where the outbound virtual private cloud (VPC) resides.</p>
+     * <p>The name of the region where the outbound VPC resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>HuaBei</p>
      */
     @NameInMap("VpcRegionName")
     public String vpcRegionName;
@@ -248,7 +254,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
 
     public static class DescribeResolverEndpointResponseBodyIpConfigs extends TeaModel {
         /**
-         * <p>The ID of the zone where the vSwitch resides.</p>
+         * <p>The ID of the zone to which the vSwitch belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -260,16 +266,16 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
          * <p>The IPv4 CIDR block of the vSwitch.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.0.0/24</p>
+         * <p>172.16.XX.XX/24</p>
          */
         @NameInMap("CidrBlock")
         public String cidrBlock;
 
         /**
-         * <p>The IPv4 address.</p>
+         * <p>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If this parameter is left empty, the system automatically allocates an IP address.</p>
          * 
          * <strong>example:</strong>
-         * <p>172.16.xx.xx</p>
+         * <p>172.16.XX.XX</p>
          */
         @NameInMap("Ip")
         public String ip;
@@ -278,7 +284,7 @@ public class DescribeResolverEndpointResponseBody extends TeaModel {
          * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-8vbmks7hzrmk-vswitch-id</p>
+         * <p>vsw-0jlgeyq4oazkh5xue****</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;

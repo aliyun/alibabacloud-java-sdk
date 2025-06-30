@@ -41,7 +41,12 @@ public class DescribeRequestGraphRequest extends TeaModel {
     public Long endTimestamp;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -63,7 +68,7 @@ public class DescribeRequestGraphRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>127.0.0.1</p>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
@@ -72,16 +77,19 @@ public class DescribeRequestGraphRequest extends TeaModel {
      * <p>The ID of the virtual private cloud (VPC).</p>
      * 
      * <strong>example:</strong>
-     * <p>vpc-1111</p>
+     * <p>vpc-f8zvrvr1payllgz38****</p>
      */
     @NameInMap("VpcId")
     public String vpcId;
 
     /**
-     * <p>The global ID of the zone. To query the number of DNS requests for a zone, you can specify ZoneId or BizType and BizId.</p>
+     * <p>The zone ID.</p>
+     * <blockquote>
+     * <p> To query the number of DNS requests for a zone, you can specify ZoneId or BizType and BizId.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>29c752a01cd281a20ddcfaecef</p>
+     * <p>29c752a01cd281a20ddcfa****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

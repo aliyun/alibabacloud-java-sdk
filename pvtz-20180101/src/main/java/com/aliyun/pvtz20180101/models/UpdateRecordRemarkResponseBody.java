@@ -8,7 +8,7 @@ public class UpdateRecordRemarkResponseBody extends TeaModel {
      * <p>The ID of the DNS record.</p>
      * 
      * <strong>example:</strong>
-     * <p>18954952</p>
+     * <p>202991****</p>
      */
     @NameInMap("RecordId")
     public Long recordId;

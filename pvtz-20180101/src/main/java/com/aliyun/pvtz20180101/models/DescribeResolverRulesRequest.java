@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the outbound endpoint.</p>
+     * <p>The outbound endpoint ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra2**</p>
+     * <p>hr****</p>
      */
     @NameInMap("EndpointId")
     public String endpointId;
 
     /**
-     * <p>The keyword used to filter forwarding rules in %keyword% mode.</p>
+     * <p>The keyword of the forwarding rule name. Fuzzy search is supported. The value is not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,7 +23,12 @@ public class DescribeResolverRulesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -32,11 +37,12 @@ public class DescribeResolverRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to return additional information. Default value: false.</p>
+     * <p>Specifies whether to return virtual private clouds (VPCs) associated with the forwarding rule. Valid values:</p>
      * <ul>
-     * <li>If you set this parameter to true, additional information, such as the virtual private clouds (VPCs) that are associated with the queried forwarding rule, is returned.</li>
-     * <li>If you set this parameter to false, no additional information is returned.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -45,7 +51,7 @@ public class DescribeResolverRulesRequest extends TeaModel {
     public Boolean needDetailAttributes;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +60,7 @@ public class DescribeResolverRulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

@@ -14,7 +14,12 @@ public class AddZoneRecordRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +28,20 @@ public class AddZoneRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The resolution line. Default value: <strong>default</strong>.</p>
+     * <p>The DNS request source. Valid values:</p>
+     * <ul>
+     * <li>default: the default resolution line. The default line is equivalent to a global line. We recommend that you configure a default line to ensure that a DNS record can be returned if no intelligent line is matched.</li>
+     * <li>Alibaba Cloud lines: indicate that DNS requests are originated from Alibaba Cloud, including Alibaba Cloud public cloud, Alibaba Finance Cloud, and Alibaba Gov Cloud.</li>
+     * <li>Custom lines: You can configure custom lines so that Private DNS can return specific IP addresses for DNS requests that are originated from a specific CIDR block.</li>
+     * </ul>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>Only built-in authoritative acceleration zones support custom lines.</p>
+     * </li>
+     * <li><p>Set Line to default if you want to choose the default line. Set Line to a specific line code if you want to choose an Alibaba Cloud line or a custom line. Example: aliyun_r_cn-beijing-a.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -32,7 +50,7 @@ public class AddZoneRecordRequest extends TeaModel {
     public String line;
 
     /**
-     * <p>The priority of the mail exchanger (MX) record. Valid values: <strong>1 to 99</strong>.</p>
+     * <p>The priority of the mail exchanger (MX) record. Valid values: <strong>1 to 99</strong>. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -41,7 +59,7 @@ public class AddZoneRecordRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The language.</p>
+     * <p>The description of the DNS record.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -50,8 +68,8 @@ public class AddZoneRecordRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The hostname.</p>
-     * <p>For example, you must set Rr to @ if you want to resolve @.example.com.</p>
+     * <p>The hostname. The hostname is the prefix of the subdomain name for the zone. Example: www, @, \* (used for wildcard DNS resolution), and mail (used for specifying the mail server that receives emails).</p>
+     * <p>For example, if you want to resolve the domain name @.exmaple.com, you must set Rr to @ instead of leaving Rr empty.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +79,7 @@ public class AddZoneRecordRequest extends TeaModel {
     public String rr;
 
     /**
-     * <p>The time to live (TTL) of the DNS record. Default value: <strong>60</strong>.</p>
+     * <p>The time to live (TTL) period. Valid values: 5, 30, 60, 3600, 43200, and 86400. Unit: seconds. Default value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -70,7 +88,19 @@ public class AddZoneRecordRequest extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>The type of the DNS record. Valid values: <strong>A</strong>, <strong>AAAA</strong>, <strong>CNAME</strong>, <strong>TXT</strong>, <strong>MX</strong>, <strong>PTR</strong>, and <strong>SRV</strong>.</p>
+     * <p>The type of the DNS record. Valid values:</p>
+     * <ul>
+     * <li><strong>A</strong>: An A record maps a domain name to an IPv4 address in the dotted decimal notation format.</li>
+     * <li><strong>AAAA</strong>: An AAAA record maps a domain name to an IPv6 address.</li>
+     * <li><strong>CNAME</strong>: A canonical name (CNAME) record maps a domain name to another domain name.</li>
+     * <li><strong>TXT</strong>: A text (TXT) record usually serves as a Sender Policy Framework (SPF) record to prevent email spam. The record value of the TXT record can be up to 255 characters in length.</li>
+     * <li><strong>MX</strong>: A mail exchanger (MX) record maps a domain name to the domain name of a mail server.</li>
+     * <li><strong>PTR</strong>: A pointer (PTR) record maps an IP address to a domain name.</li>
+     * <li><strong>SRV</strong>: A service (SRV) record specifies a server that hosts a specific service. Enter a record value in the format of Priority Weight Port Destination domain name. Separate these items with spaces.</li>
+     * </ul>
+     * <blockquote>
+     * <p> Before you add a PTR record, you must configure a reverse lookup zone. For more information, see <a href="https://help.aliyun.com/document_detail/2592976.html">Add PTR records</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,23 +113,23 @@ public class AddZoneRecordRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>2.2.XX.XX</p>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The record value.</p>
+     * <p>The record value. You need to enter the record value based on the DNS record type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.XX.XX</p>
+     * <p>114.55.XX.XX</p>
      */
     @NameInMap("Value")
     public String value;
 
     /**
-     * <p>The weight of the address. Valid values: <strong>0 to 100</strong>. Default value: 1.</p>
+     * <p>The weight value of the address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for DNS requests. A weight value must be an integer that ranges from 1 to 100. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,11 +138,11 @@ public class AddZoneRecordRequest extends TeaModel {
     public Integer weight;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>CAgICA1OA_58</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -14,7 +14,12 @@ public class UpdateZoneRemarkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -23,7 +28,7 @@ public class UpdateZoneRemarkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The new description.</p>
+     * <p>The new description. If you leave Remark empty, the zone has no description.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -35,17 +40,17 @@ public class UpdateZoneRemarkRequest extends TeaModel {
      * <p>The IP address of the client.</p>
      * 
      * <strong>example:</strong>
-     * <p>1.1.1.1</p>
+     * <p>127.0.XX.XX</p>
      */
     @NameInMap("UserClientIp")
     public String userClientIp;
 
     /**
-     * <p>The unique ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE1MA_149</p>
+     * <p>df2d03865266bd9842306db586d3****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -17,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
      * <p>Specifies whether to replace the original tags added to the resources. Valid values:</p>
      * <ul>
      * <li>True: replaces the original tags.</li>
-     * <li>False|Null: appends the specified one or more tags to the original tags. If a new tag has the same key but a different value from an original tag, the new tag replaces the original tag.</li>
+     * <li>False (default): appends the specified one or more tags to the original tags. If a new tag has the same key but a different value from an original tag, the new tag replaces the original tag.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +32,7 @@ public class TagResourcesRequest extends TeaModel {
     public Boolean overWrite;
 
     /**
-     * <p>The resource IDs, which are zone IDs. You can specify <strong>1 to 50</strong> IDs.</p>
+     * <p>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +42,7 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Valid value: ZONE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +105,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource.</p>
+         * <p>The key of tag N to add to the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>env</p>
@@ -109,7 +114,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource.</p>
+         * <p>The value of tag N to add to the resources.</p>
          * 
          * <strong>example:</strong>
          * <p>daily</p>

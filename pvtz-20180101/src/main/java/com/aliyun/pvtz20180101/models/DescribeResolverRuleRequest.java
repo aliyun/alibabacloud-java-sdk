@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeResolverRuleRequest extends TeaModel {
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -14,11 +19,11 @@ public class DescribeResolverRuleRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The forwarding rule ID.</p>
+     * <p>The ID of the forwarding rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra1**</p>
+     * <p>hr****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

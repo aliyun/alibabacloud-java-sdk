@@ -14,7 +14,7 @@ public class UpdateSyncEcsHostTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the task was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>

@@ -18,7 +18,7 @@ public class DeleteResolverRuleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>hra0**</p>
+     * <p>hr****</p>
      */
     @NameInMap("RuleId")
     public String ruleId;

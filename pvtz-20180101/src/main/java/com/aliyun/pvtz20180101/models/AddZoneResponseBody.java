@@ -23,10 +23,10 @@ public class AddZoneResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The global ID of the zone.</p>
+     * <p>The zone ID. This ID uniquely identifies the zone.</p>
      * 
      * <strong>example:</strong>
-     * <p>AgIDE1MQ_151</p>
+     * <p>6fc186295683a131f63bb8b0cddc****</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;

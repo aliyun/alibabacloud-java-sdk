@@ -5,11 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified one or more resources. This parameter is valid only if the TagKey parameter is left empty. Default value: false. Valid values:</p>
+     * <p>Specifies whether to remove all tags of the specified zones. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: removes all tags of the specified zones.</li>
+     * <li>false: removes only the tags with the specified tag keys.</li>
      * </ul>
+     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -18,7 +19,12 @@ public class UntagResourcesRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>The language.</p>
+     * <p>The language of the response. Valid values:</p>
+     * <ul>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
+     * </ul>
+     * <p>Default value: en.</p>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -37,7 +43,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Valid value: ZONE.</p>
+     * <p>The resource type. The value of ResourceType can only be ZONE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

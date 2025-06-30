@@ -10,6 +10,7 @@ public class DeleteUserVpcAuthorizationRequest extends TeaModel {
      * <li>NORMAL: general authorization</li>
      * <li>NORMAL: cloud service-related authorization</li>
      * </ul>
+     * <p>Default value: NORMAL.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
@@ -22,7 +23,7 @@ public class DeleteUserVpcAuthorizationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>11111111</p>
+     * <p>141339776561****</p>
      */
     @NameInMap("AuthorizedUserId")
     public Long authorizedUserId;

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomLineRequest extends TeaModel {
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -12,6 +14,7 @@ public class DeleteCustomLineRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The unique ID of the custom line.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
