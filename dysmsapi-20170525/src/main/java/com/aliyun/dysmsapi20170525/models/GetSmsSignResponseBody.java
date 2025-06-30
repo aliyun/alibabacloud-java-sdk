@@ -111,6 +111,9 @@ public class GetSmsSignResponseBody extends TeaModel {
     @NameInMap("SignCode")
     public String signCode;
 
+    @NameInMap("SignIspRegisterDetailList")
+    public java.util.List<GetSmsSignResponseBodySignIspRegisterDetailList> signIspRegisterDetailList;
+
     /**
      * <p>SMS signature name.</p>
      * 
@@ -291,6 +294,14 @@ public class GetSmsSignResponseBody extends TeaModel {
         return this.signCode;
     }
 
+    public GetSmsSignResponseBody setSignIspRegisterDetailList(java.util.List<GetSmsSignResponseBodySignIspRegisterDetailList> signIspRegisterDetailList) {
+        this.signIspRegisterDetailList = signIspRegisterDetailList;
+        return this;
+    }
+    public java.util.List<GetSmsSignResponseBodySignIspRegisterDetailList> getSignIspRegisterDetailList() {
+        return this.signIspRegisterDetailList;
+    }
+
     public GetSmsSignResponseBody setSignName(String signName) {
         this.signName = signName;
         return this;
@@ -369,6 +380,88 @@ public class GetSmsSignResponseBody extends TeaModel {
         }
         public String getRejectInfo() {
             return this.rejectInfo;
+        }
+
+    }
+
+    public static class GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons extends TeaModel {
+        @NameInMap("ReasonCode")
+        public String reasonCode;
+
+        @NameInMap("ReasonDescList")
+        public java.util.List<String> reasonDescList;
+
+        public static GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons build(java.util.Map<String, ?> map) throws Exception {
+            GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons self = new GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons setReasonCode(String reasonCode) {
+            this.reasonCode = reasonCode;
+            return this;
+        }
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        public GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons setReasonDescList(java.util.List<String> reasonDescList) {
+            this.reasonDescList = reasonDescList;
+            return this;
+        }
+        public java.util.List<String> getReasonDescList() {
+            return this.reasonDescList;
+        }
+
+    }
+
+    public static class GetSmsSignResponseBodySignIspRegisterDetailList extends TeaModel {
+        @NameInMap("OperatorCode")
+        public String operatorCode;
+
+        @NameInMap("OperatorCompleteTime")
+        public String operatorCompleteTime;
+
+        @NameInMap("RegisterStatus")
+        public Integer registerStatus;
+
+        @NameInMap("RegisterStatusReasons")
+        public java.util.List<GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons> registerStatusReasons;
+
+        public static GetSmsSignResponseBodySignIspRegisterDetailList build(java.util.Map<String, ?> map) throws Exception {
+            GetSmsSignResponseBodySignIspRegisterDetailList self = new GetSmsSignResponseBodySignIspRegisterDetailList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSmsSignResponseBodySignIspRegisterDetailList setOperatorCode(String operatorCode) {
+            this.operatorCode = operatorCode;
+            return this;
+        }
+        public String getOperatorCode() {
+            return this.operatorCode;
+        }
+
+        public GetSmsSignResponseBodySignIspRegisterDetailList setOperatorCompleteTime(String operatorCompleteTime) {
+            this.operatorCompleteTime = operatorCompleteTime;
+            return this;
+        }
+        public String getOperatorCompleteTime() {
+            return this.operatorCompleteTime;
+        }
+
+        public GetSmsSignResponseBodySignIspRegisterDetailList setRegisterStatus(Integer registerStatus) {
+            this.registerStatus = registerStatus;
+            return this;
+        }
+        public Integer getRegisterStatus() {
+            return this.registerStatus;
+        }
+
+        public GetSmsSignResponseBodySignIspRegisterDetailList setRegisterStatusReasons(java.util.List<GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons> registerStatusReasons) {
+            this.registerStatusReasons = registerStatusReasons;
+            return this;
+        }
+        public java.util.List<GetSmsSignResponseBodySignIspRegisterDetailListRegisterStatusReasons> getRegisterStatusReasons() {
+            return this.registerStatusReasons;
         }
 
     }
