@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MachineGroup extends TeaModel {
+    @NameInMap("Cpu")
+    public Long cpu;
+
     @NameInMap("CreatorID")
     public String creatorID;
 
@@ -38,12 +41,24 @@ public class MachineGroup extends TeaModel {
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
+    @NameInMap("Gpu")
+    public Long gpu;
+
+    @NameInMap("GpuMemory")
+    public Long gpuMemory;
+
+    @NameInMap("GpuType")
+    public String gpuType;
+
     /**
      * <strong>example:</strong>
      * <p>mg1</p>
      */
     @NameInMap("MachineGroupID")
     public String machineGroupID;
+
+    @NameInMap("Memory")
+    public Long memory;
 
     @NameInMap("OrderInstanceId")
     public String orderInstanceId;
@@ -66,6 +81,9 @@ public class MachineGroup extends TeaModel {
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    @NameInMap("ResourceType")
+    public String resourceType;
+
     @NameInMap("Status")
     public String status;
 
@@ -75,6 +93,14 @@ public class MachineGroup extends TeaModel {
     public static MachineGroup build(java.util.Map<String, ?> map) throws Exception {
         MachineGroup self = new MachineGroup();
         return TeaModel.build(map, self);
+    }
+
+    public MachineGroup setCpu(Long cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+    public Long getCpu() {
+        return this.cpu;
     }
 
     public MachineGroup setCreatorID(String creatorID) {
@@ -157,12 +183,44 @@ public class MachineGroup extends TeaModel {
         return this.gmtStartedTime;
     }
 
+    public MachineGroup setGpu(Long gpu) {
+        this.gpu = gpu;
+        return this;
+    }
+    public Long getGpu() {
+        return this.gpu;
+    }
+
+    public MachineGroup setGpuMemory(Long gpuMemory) {
+        this.gpuMemory = gpuMemory;
+        return this;
+    }
+    public Long getGpuMemory() {
+        return this.gpuMemory;
+    }
+
+    public MachineGroup setGpuType(String gpuType) {
+        this.gpuType = gpuType;
+        return this;
+    }
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
     public MachineGroup setMachineGroupID(String machineGroupID) {
         this.machineGroupID = machineGroupID;
         return this;
     }
     public String getMachineGroupID() {
         return this.machineGroupID;
+    }
+
+    public MachineGroup setMemory(Long memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Long getMemory() {
+        return this.memory;
     }
 
     public MachineGroup setOrderInstanceId(String orderInstanceId) {
@@ -219,6 +277,14 @@ public class MachineGroup extends TeaModel {
     }
     public String getResourceGroupID() {
         return this.resourceGroupID;
+    }
+
+    public MachineGroup setResourceType(String resourceType) {
+        this.resourceType = resourceType;
+        return this;
+    }
+    public String getResourceType() {
+        return this.resourceType;
     }
 
     public MachineGroup setStatus(String status) {

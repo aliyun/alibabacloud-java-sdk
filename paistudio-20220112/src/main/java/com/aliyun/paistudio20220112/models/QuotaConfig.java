@@ -30,11 +30,17 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("EnableSubQuotaPreemption")
     public Boolean enableSubQuotaPreemption;
 
+    @NameInMap("EniCacheConfig")
+    public EniCacheConfig eniCacheConfig;
+
     @NameInMap("OversoldUsageInfo")
     public OversoldUsageConfig oversoldUsageInfo;
 
     @NameInMap("ResourceSpecs")
     public java.util.List<WorkspaceSpecs> resourceSpecs;
+
+    @NameInMap("SandboxCacheConfig")
+    public SandboxCacheConfig sandboxCacheConfig;
 
     @NameInMap("SelfQuotaPreemptionConfig")
     public SelfQuotaPreemptionConfig selfQuotaPreemptionConfig;
@@ -108,6 +114,14 @@ public class QuotaConfig extends TeaModel {
         return this.enableSubQuotaPreemption;
     }
 
+    public QuotaConfig setEniCacheConfig(EniCacheConfig eniCacheConfig) {
+        this.eniCacheConfig = eniCacheConfig;
+        return this;
+    }
+    public EniCacheConfig getEniCacheConfig() {
+        return this.eniCacheConfig;
+    }
+
     public QuotaConfig setOversoldUsageInfo(OversoldUsageConfig oversoldUsageInfo) {
         this.oversoldUsageInfo = oversoldUsageInfo;
         return this;
@@ -122,6 +136,14 @@ public class QuotaConfig extends TeaModel {
     }
     public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
+    }
+
+    public QuotaConfig setSandboxCacheConfig(SandboxCacheConfig sandboxCacheConfig) {
+        this.sandboxCacheConfig = sandboxCacheConfig;
+        return this;
+    }
+    public SandboxCacheConfig getSandboxCacheConfig() {
+        return this.sandboxCacheConfig;
     }
 
     public QuotaConfig setSelfQuotaPreemptionConfig(SelfQuotaPreemptionConfig selfQuotaPreemptionConfig) {

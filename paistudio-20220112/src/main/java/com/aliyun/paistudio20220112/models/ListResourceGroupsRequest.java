@@ -39,6 +39,9 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ResourceGroupIDs")
+    public String resourceGroupIDs;
+
     /**
      * <strong>example:</strong>
      * <p>Lingjun</p>
@@ -110,6 +113,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourceGroupsRequest setResourceGroupIDs(String resourceGroupIDs) {
+        this.resourceGroupIDs = resourceGroupIDs;
+        return this;
+    }
+    public String getResourceGroupIDs() {
+        return this.resourceGroupIDs;
     }
 
     public ListResourceGroupsRequest setResourceType(String resourceType) {
