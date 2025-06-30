@@ -9,6 +9,17 @@
 - Update API UpgradeVersion: add request parameters FastMode.
 
 
+2025-06-30 Version: 1.0.1
+- Update API ModifyCu: add request parameters FastMode.
+- Update API ModifyCu: add request parameters PromotionOptionNo.
+- Update API ModifyDiskNumber: add request parameters FastMode.
+- Update API ModifyDiskNumber: add request parameters PromotionOptionNo.
+- Update API ModifyDiskPerformanceLevel: add request parameters PromotionOptionNo.
+- Update API ModifyDiskSize: add request parameters PromotionOptionNo.
+- Update API ModifyNodeNumber: add request parameters PromotionOptionNo.
+- Update API UpgradeVersion: add request parameters FastMode.
+
+
 2024-12-30 Version: 1.0.0
 - Generated java 2022-10-19 for starrocks.
 
