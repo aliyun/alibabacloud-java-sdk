@@ -622,16 +622,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.transformationRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transformationRules, "TransformationRules", "json");
         }
 
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationDataSourceSettingsShrink)) {
+            body.put("DestinationDataSourceSettings", request.destinationDataSourceSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.destinationDataSourceType)) {
+            body.put("DestinationDataSourceType", request.destinationDataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobName)) {
+            body.put("JobName", request.jobName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobSettingsShrink)) {
+            body.put("JobSettings", request.jobSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobType)) {
+            body.put("JobType", request.jobType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationType)) {
+            body.put("MigrationType", request.migrationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSettingsShrink)) {
+            body.put("ResourceSettings", request.resourceSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDataSourceSettingsShrink)) {
+            body.put("SourceDataSourceSettings", request.sourceDataSourceSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceDataSourceType)) {
+            body.put("SourceDataSourceType", request.sourceDataSourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableMappingsShrink)) {
+            body.put("TableMappings", request.tableMappingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transformationRulesShrink)) {
+            body.put("TransformationRules", request.transformationRulesShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "CreateDIJob"),
             new TeaPair("version", "2024-05-18"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
@@ -11398,16 +11454,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.transformationRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.transformationRules, "TransformationRules", "json");
         }
 
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            query.put("Id", request.id);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DIJobId)) {
+            body.put("DIJobId", request.DIJobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobSettingsShrink)) {
+            body.put("JobSettings", request.jobSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
+            body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceSettingsShrink)) {
+            body.put("ResourceSettings", request.resourceSettingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableMappingsShrink)) {
+            body.put("TableMappings", request.tableMappingsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transformationRulesShrink)) {
+            body.put("TransformationRules", request.transformationRulesShrink);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UpdateDIJob"),
             new TeaPair("version", "2024-05-18"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),

@@ -4,138 +4,67 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class CreateDIJobShrinkRequest extends TeaModel {
-    /**
-     * <p>The description of the synchronization task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>The description of the synchronization task.</p>
-     */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The settings of the destination. Only a single destination is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationDataSourceSettings")
     public String destinationDataSourceSettingsShrink;
 
     /**
-     * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB for MySQL, Kafka, and Hive.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>Hologres</p>
      */
     @NameInMap("DestinationDataSourceType")
     public String destinationDataSourceType;
 
-    /**
-     * <p>This parameter is deprecated and is replaced by the Name parameter.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mysql_to_holo_sync_8772</p>
-     */
     @NameInMap("JobName")
     @Deprecated
     public String jobName;
 
-    /**
-     * <p>The settings for the dimension of the synchronization task. The settings include processing policies for DDL messages, policies for data type mappings between source fields and destination fields, and runtime parameters of the synchronization task.</p>
-     */
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
-    /**
-     * <p>The type of the task. This parameter is optional. Valid values:</p>
-     * <ul>
-     * <li>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
-     * <li>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
-     * <li>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>DatabaseRealtimeMigration</p>
-     */
     @NameInMap("JobType")
     public String jobType;
 
     /**
-     * <p>The synchronization type. Valid values:</p>
-     * <ul>
-     * <li>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</li>
-     * <li>RealtimeIncremental: real-time incremental synchronization of data in a single table</li>
-     * <li>Full: full batch synchronization of data in an entire database</li>
-     * <li>OfflineIncremental: batch incremental synchronization of data in an entire database</li>
-     * <li>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</li>
-     * </ul>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>FullAndRealtimeIncremental</p>
      */
     @NameInMap("MigrationType")
     public String migrationType;
 
-    /**
-     * <p>The name of the synchronization task.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mysql_to_holo_sync_8772</p>
-     */
     @NameInMap("Name")
     public String name;
 
-    /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
-     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>10000</p>
-     */
     @NameInMap("ProjectId")
     public Long projectId;
 
     /**
-     * <p>The resource settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceSettings")
     public String resourceSettingsShrink;
 
     /**
-     * <p>The settings of the source. Only a single source is supported.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceDataSourceSettings")
     public String sourceDataSourceSettingsShrink;
 
     /**
-     * <p>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, Redshift, Hive, SQL Server, Doris, and ClickHouse.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>MySQL</p>
      */
     @NameInMap("SourceDataSourceType")
     public String sourceDataSourceType;
 
     /**
-     * <p>The list of mappings between rules used to select synchronization objects in the source and transformation rules applied to the selected synchronization objects. Each entry in the list displays a mapping between a rule used to select synchronization objects and a transformation rule applied to the selected synchronization objects.</p>
-     * <blockquote>
-     * <p> [ { &quot;SourceObjectSelectionRules&quot;:[ { &quot;ObjectType&quot;:&quot;Database&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;biz_db&quot; }, { &quot;ObjectType&quot;:&quot;Schema&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;s1&quot; }, { &quot;ObjectType&quot;:&quot;Table&quot;, &quot;Action&quot;:&quot;Include&quot;, &quot;ExpressionType&quot;:&quot;Exact&quot;, &quot;Expression&quot;:&quot;table1&quot; } ], &quot;TransformationRuleNames&quot;:[ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot; } ] } ]</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TableMappings")
     public String tableMappingsShrink;
 
-    /**
-     * <p>The list of transformation rules for objects involved in the synchronization task.</p>
-     * <blockquote>
-     * <p> [ { &quot;RuleName&quot;:&quot;my_database_rename_rule&quot;, &quot;RuleActionType&quot;:&quot;Rename&quot;, &quot;RuleTargetType&quot;:&quot;Schema&quot;, &quot;RuleExpression&quot;:&quot;{&quot;expression&quot;:&quot;${srcDatasoureName}_${srcDatabaseName}&quot;}&quot; } ]</p>
-     * </blockquote>
-     */
     @NameInMap("TransformationRules")
     public String transformationRulesShrink;
 
