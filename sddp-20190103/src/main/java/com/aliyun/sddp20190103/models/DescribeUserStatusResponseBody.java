@@ -45,7 +45,7 @@ public class DescribeUserStatusResponseBody extends TeaModel {
          * <p>The AccessKey ID of the current account.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4G67HRBzNRmMhfyv****</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;

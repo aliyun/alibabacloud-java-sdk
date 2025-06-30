@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScanOssObjectV1ResponseBody extends TeaModel {
     /**
+     * <p>The ID of the identification task that is returned after the identification task is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>268</p>
      */
@@ -12,6 +14,8 @@ public class ScanOssObjectV1ResponseBody extends TeaModel {
     public Long id;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7C3AC882-E5A8-4855-BE77-B6837B695EF1</p>
      */

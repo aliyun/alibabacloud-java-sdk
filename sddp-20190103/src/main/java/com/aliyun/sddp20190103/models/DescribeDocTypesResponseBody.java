@@ -4,10 +4,15 @@ package com.aliyun.sddp20190103.models;
 import com.aliyun.tea.*;
 
 public class DescribeDocTypesResponseBody extends TeaModel {
+    /**
+     * <p>A list of OSS object types.</p>
+     */
     @NameInMap("DocTypeList")
     public java.util.List<DescribeDocTypesResponseBodyDocTypeList> docTypeList;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>769FB3C1-F4C9-4******</p>
      */
@@ -37,6 +42,8 @@ public class DescribeDocTypesResponseBody extends TeaModel {
 
     public static class DescribeDocTypesResponseBodyDocTypeList extends TeaModel {
         /**
+         * <p>The code of the object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>100001</p>
          */
@@ -44,6 +51,8 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         public Long code;
 
         /**
+         * <p>The ID of the object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -51,6 +60,8 @@ public class DescribeDocTypesResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The name of the object type.</p>
+         * 
          * <strong>example:</strong>
          * <p>C/C++ Source Code</p>
          */

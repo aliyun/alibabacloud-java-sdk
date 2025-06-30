@@ -5,16 +5,31 @@ import com.aliyun.tea.*;
 
 public class DescribeCategoryTemplateListRequest extends TeaModel {
     /**
+     * <p>Page number for paginated queries. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("FeatureType")
     public Integer featureType;
 
     /**
+     * <p>Set the language type for the request and response messages, default is <strong>zh_cn</strong>.
+     * Values:</p>
+     * <ul>
+     * <li><strong>zh_cn</strong>: Chinese (Simplified)</li>
+     * <li><strong>en_us</strong>: English (United States)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh_cn</p>
      */
@@ -22,6 +37,8 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>When performing a paginated query, set the number of items per page. Default value is <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +46,14 @@ public class DescribeCategoryTemplateListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>API call scenario, default is <strong>null</strong>.
+     * Values:</p>
+     * <ul>
+     * <li><strong>null</strong>: Old version</li>
+     * <li><strong>0</strong>: Old version</li>
+     * <li><strong>1</strong>: New version</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */

@@ -14,7 +14,7 @@ public class DescribeColumnsResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The columns.</p>
+     * <p>The data in the columns of the table.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeColumnsResponseBodyItems> items;
@@ -162,6 +162,12 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("DataType")
         public String dataType;
 
+        /**
+         * <p>The type of the database engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
+         */
         @NameInMap("EngineType")
         public String engineType;
 
@@ -192,6 +198,17 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("InstanceName")
         public String instanceName;
 
+        /**
+         * <p>The column encryption status. Valid values:</p>
+         * <ul>
+         * <li><strong>-1</strong>: unencrypted</li>
+         * <li><strong>1</strong>: encrypted</li>
+         * <li><strong>2</strong>: encryption failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("MaskingStatus")
         public Integer maskingStatus;
 
@@ -251,6 +268,26 @@ public class DescribeColumnsResponseBody extends TeaModel {
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The ID of the service to which the data object belongs. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: MaxCompute</li>
+         * <li><strong>2</strong>: Object Storage Service (OSS)</li>
+         * <li><strong>3</strong>: AnalyticDB for MySQL</li>
+         * <li><strong>4</strong>: Tablestore (OTS)</li>
+         * <li><strong>5</strong>: ApsaraDB RDS</li>
+         * <li><strong>6</strong>: self-managed database</li>
+         * <li><strong>7</strong>: PolarDB for Xscale (PolarDB-X)</li>
+         * <li><strong>8</strong>: PolarDB</li>
+         * <li><strong>9</strong>: AnalyticDB for PostgreSQL</li>
+         * <li><strong>10</strong>: ApsaraDB for OceanBase</li>
+         * <li><strong>11</strong>: ApsaraDB for MongoDB</li>
+         * <li><strong>25</strong>: ApsaraDB for Redis</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ProductId")
         public Long productId;
 

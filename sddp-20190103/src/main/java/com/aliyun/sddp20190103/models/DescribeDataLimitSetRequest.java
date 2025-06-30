@@ -36,6 +36,9 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     @NameInMap("ParentId")
     public String parentId;
 
+    @NameInMap("RegionType")
+    public String regionType;
+
     /**
      * <p>The type of service to which the data asset belongs. Valid values:</p>
      * <ul>
@@ -79,6 +82,14 @@ public class DescribeDataLimitSetRequest extends TeaModel {
     }
     public String getParentId() {
         return this.parentId;
+    }
+
+    public DescribeDataLimitSetRequest setRegionType(String regionType) {
+        this.regionType = regionType;
+        return this;
+    }
+    public String getRegionType() {
+        return this.regionType;
     }
 
     public DescribeDataLimitSetRequest setResourceType(Integer resourceType) {

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class DescribeParentInstanceResponseBody extends TeaModel {
     /**
+     * <p>When performing a paginated query, set the current page number. Default value: <strong>1</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <p>The assets.</p>
+     */
     @NameInMap("Items")
     public java.util.List<DescribeParentInstanceResponseBodyItems> items;
 
     /**
+     * <p>When performing a paginated query, set the maximum number of data asset instances displayed per page. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -22,6 +29,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Request ID of the result.</p>
+     * 
      * <strong>example:</strong>
      * <p>ACEF9334-BB50-525D-8CF3-6CF504E4D1B3</p>
      */
@@ -29,6 +38,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of data items in the result.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -82,6 +93,12 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
 
     public static class DescribeParentInstanceResponseBodyItems extends TeaModel {
         /**
+         * <p>Audit authorization status. The values are as follows:</p>
+         * <ul>
+         * <li><strong>1</strong>: Authorized</li>
+         * <li><strong>0</strong>: Unauthorized</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -89,16 +106,30 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public Integer auditStatus;
 
         /**
+         * <p>Authorization status of the data asset instance.</p>
+         * <ul>
+         * <li><strong>0</strong>: Unauthorized</li>
+         * <li><strong>1</strong>: Authorized</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("AuthStatus")
         public Integer authStatus;
 
+        /**
+         * <p>Instance authorization time, in milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1719882941000</p>
+         */
         @NameInMap("AuthTime")
         public Long authTime;
 
         /**
+         * <p>Instance status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Running</p>
          */
@@ -106,6 +137,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String clusterStatus;
 
         /**
+         * <p>Connection node type, valid only for MongoDB assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>Primary</p>
          */
@@ -113,6 +146,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String connectNode;
 
         /**
+         * <p>Number of databases under the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -120,6 +155,15 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String dbNum;
 
         /**
+         * <p>The engine type. Valid values:</p>
+         * <ul>
+         * <li><strong>MySQL</strong></li>
+         * <li><strong>MariaDB</strong></li>
+         * <li><strong>Oracle</strong></li>
+         * <li><strong>PostgreSQL</strong></li>
+         * <li><strong>SQLServer</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>MySQL</p>
          */
@@ -127,6 +171,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String engineType;
 
         /**
+         * <p>Description of the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>instance description</p>
          */
@@ -134,13 +180,17 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String instanceDescription;
 
         /**
+         * <p>Instance ID.</p>
+         * 
          * <strong>example:</strong>
-         * <p>rm-2h066mht2vz</p>
+         * <p>rm-*******t2vz</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
         /**
+         * <p>Instance space size, valid only for OSS assets. Unit: bytes.</p>
+         * 
          * <strong>example:</strong>
          * <p>409600</p>
          */
@@ -148,26 +198,69 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public Long instanceSize;
 
         /**
+         * <p>Region name. The values are as follows:</p>
+         * <ul>
+         * <li><strong>China (Hangzhou)</strong></li>
+         * <li><strong>China (Shanghai)</strong></li>
+         * <li><strong>China (Beijing)</strong></li>
+         * <li><strong>China (Zhangjiakou)</strong></li>
+         * <li><strong>China (Shenzhen)</strong></li>
+         * <li><strong>China (Guangzhou)</strong></li>
+         * <li><strong>China (Hong Kong)</strong></li>
+         * <li><strong>Singapore</strong></li>
+         * <li><strong>US (Silicon Valley)</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
+        /**
+         * <p>Member account ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**********8103</p>
+         */
         @NameInMap("MemberAccount")
         public Long memberAccount;
 
         /**
+         * <p>Identifier for the authorized asset. For structured data, it is identified by <code>instanceID.databaseName</code>.</p>
+         * 
          * <strong>example:</strong>
-         * <p>rm-uf6b9897shxxx.test</p>
+         * <p>rm-******xxx.**st</p>
          */
         @NameInMap("ParentId")
         public String parentId;
 
+        /**
+         * <p>The region in which the asset resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
+         * <p>Asset type name. The values are as follows:</p>
+         * <ul>
+         * <li><strong>MaxCompute</strong></li>
+         * <li><strong>OSS</strong></li>
+         * <li><strong>ADB-MYSQL</strong></li>
+         * <li><strong>TableStore</strong></li>
+         * <li><strong>RDS</strong></li>
+         * <li><strong>SelfDB</strong></li>
+         * <li><strong>PolarDB-X</strong></li>
+         * <li><strong>PolarDB</strong></li>
+         * <li><strong>ADB-PG</strong></li>
+         * <li><strong>OceanBase</strong></li>
+         * <li><strong>MongoDB</strong></li>
+         * <li><strong>Redis</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>RDS</p>
          */
@@ -175,6 +268,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>Supported connection nodes, separated by commas.</p>
+         * 
          * <strong>example:</strong>
          * <p>Primary,Secondary</p>
          */
@@ -182,13 +277,17 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String supportConnectNodes;
 
         /**
+         * <p>Tenant ID, valid only for OceanBase assets.</p>
+         * 
          * <strong>example:</strong>
-         * <p>HBJWDSBE-zh_CN</p>
+         * <p>HB***-zh_CN</p>
          */
         @NameInMap("TenantId")
         public String tenantId;
 
         /**
+         * <p>Tenant name, valid only for OceanBase assets.</p>
+         * 
          * <strong>example:</strong>
          * <p>user1</p>
          */
@@ -196,6 +295,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String tenantName;
 
         /**
+         * <p>Number of unconnected databases under the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -203,6 +304,8 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public String unConnectDbCount;
 
         /**
+         * <p>Reason for not supporting one-click authorization.</p>
+         * 
          * <strong>example:</strong>
          * <p>engine type not support</p>
          */
