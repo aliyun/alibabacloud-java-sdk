@@ -44,6 +44,9 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SimpleUserGroupId")
+    public String simpleUserGroupId;
+
     @NameInMap("UserGroupName")
     public String userGroupName;
 
@@ -93,6 +96,14 @@ public class AddUserToDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public AddUserToDesktopGroupRequest setSimpleUserGroupId(String simpleUserGroupId) {
+        this.simpleUserGroupId = simpleUserGroupId;
+        return this;
+    }
+    public String getSimpleUserGroupId() {
+        return this.simpleUserGroupId;
     }
 
     public AddUserToDesktopGroupRequest setUserGroupName(String userGroupName) {

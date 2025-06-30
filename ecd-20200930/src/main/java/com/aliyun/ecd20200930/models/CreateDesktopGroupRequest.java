@@ -568,6 +568,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("SessionType")
     public String sessionType;
 
+    @NameInMap("SimpleUserGroupId")
+    public String simpleUserGroupId;
+
     /**
      * <p>The ID of the automatic snapshot policy.</p>
      * 
@@ -1056,6 +1059,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getSessionType() {
         return this.sessionType;
+    }
+
+    public CreateDesktopGroupRequest setSimpleUserGroupId(String simpleUserGroupId) {
+        this.simpleUserGroupId = simpleUserGroupId;
+        return this;
+    }
+    public String getSimpleUserGroupId() {
+        return this.simpleUserGroupId;
     }
 
     public CreateDesktopGroupRequest setSnapshotPolicyId(String snapshotPolicyId) {

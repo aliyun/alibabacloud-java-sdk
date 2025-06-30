@@ -633,6 +633,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ResetType")
         public Long resetType;
 
+        @NameInMap("SimpleUserGroupId")
+        public String simpleUserGroupId;
+
         /**
          * <p>The status of the cloud computer share.</p>
          * <p>Valid values:</p>
@@ -1074,6 +1077,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public Long getResetType() {
             return this.resetType;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setSimpleUserGroupId(String simpleUserGroupId) {
+            this.simpleUserGroupId = simpleUserGroupId;
+            return this;
+        }
+        public String getSimpleUserGroupId() {
+            return this.simpleUserGroupId;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setStatus(Integer status) {

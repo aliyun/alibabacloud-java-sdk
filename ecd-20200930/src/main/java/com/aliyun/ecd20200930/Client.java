@@ -306,6 +306,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.simpleUserGroupId)) {
+            query.put("SimpleUserGroupId", request.simpleUserGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {
             query.put("UserGroupName", request.userGroupName);
         }
@@ -3158,6 +3162,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sessionType)) {
             query.put("SessionType", request.sessionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.simpleUserGroupId)) {
+            query.put("SimpleUserGroupId", request.simpleUserGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotPolicyId)) {
@@ -6553,6 +6561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopGroupName", request.desktopGroupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.desktopType)) {
+            query.put("DesktopType", request.desktopType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endUserIds)) {
             query.put("EndUserIds", request.endUserIds);
         }
@@ -7487,6 +7499,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询EIP监控</p>
+     * 
      * @param request DescribeFlowMetricRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeFlowMetricResponse
@@ -7540,6 +7555,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询EIP监控</p>
+     * 
      * @param request DescribeFlowMetricRequest
      * @return DescribeFlowMetricResponse
      */
@@ -15366,6 +15384,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.simpleUserGroupId)) {
+            query.put("SimpleUserGroupId", request.simpleUserGroupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userGroupName)) {

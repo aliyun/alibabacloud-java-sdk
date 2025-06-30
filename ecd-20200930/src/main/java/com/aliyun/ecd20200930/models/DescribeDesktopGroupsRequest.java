@@ -34,6 +34,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     @NameInMap("DesktopGroupName")
     public String desktopGroupName;
 
+    @NameInMap("DesktopType")
+    public String desktopType;
+
     /**
      * <p>The IDs of the users who can access the cloud computer share.</p>
      */
@@ -250,6 +253,14 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     }
     public String getDesktopGroupName() {
         return this.desktopGroupName;
+    }
+
+    public DescribeDesktopGroupsRequest setDesktopType(String desktopType) {
+        this.desktopType = desktopType;
+        return this;
+    }
+    public String getDesktopType() {
+        return this.desktopType;
     }
 
     public DescribeDesktopGroupsRequest setEndUserIds(java.util.List<String> endUserIds) {

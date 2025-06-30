@@ -35,6 +35,9 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("SimpleUserGroupId")
+    public String simpleUserGroupId;
+
     @NameInMap("UserGroupName")
     public String userGroupName;
 
@@ -76,6 +79,14 @@ public class RemoveUserFromDesktopGroupRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public RemoveUserFromDesktopGroupRequest setSimpleUserGroupId(String simpleUserGroupId) {
+        this.simpleUserGroupId = simpleUserGroupId;
+        return this;
+    }
+    public String getSimpleUserGroupId() {
+        return this.simpleUserGroupId;
     }
 
     public RemoveUserFromDesktopGroupRequest setUserGroupName(String userGroupName) {
