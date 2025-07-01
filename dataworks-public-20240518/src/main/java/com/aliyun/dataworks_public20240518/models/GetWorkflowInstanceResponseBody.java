@@ -188,6 +188,9 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         @NameInMap("WorkflowId")
         public Long workflowId;
 
+        @NameInMap("WorkflowParameters")
+        public String workflowParameters;
+
         public static GetWorkflowInstanceResponseBodyWorkflowInstance build(java.util.Map<String, ?> map) throws Exception {
             GetWorkflowInstanceResponseBodyWorkflowInstance self = new GetWorkflowInstanceResponseBodyWorkflowInstance();
             return TeaModel.build(map, self);
@@ -303,6 +306,14 @@ public class GetWorkflowInstanceResponseBody extends TeaModel {
         }
         public Long getWorkflowId() {
             return this.workflowId;
+        }
+
+        public GetWorkflowInstanceResponseBodyWorkflowInstance setWorkflowParameters(String workflowParameters) {
+            this.workflowParameters = workflowParameters;
+            return this;
+        }
+        public String getWorkflowParameters() {
+            return this.workflowParameters;
         }
 
     }

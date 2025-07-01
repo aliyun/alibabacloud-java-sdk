@@ -177,6 +177,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @NameInMap("WorkflowId")
         public Long workflowId;
 
+        @NameInMap("WorkflowParameters")
+        public String workflowParameters;
+
         public static ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances build(java.util.Map<String, ?> map) throws Exception {
             ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances self = new ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances();
             return TeaModel.build(map, self);
@@ -292,6 +295,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         }
         public Long getWorkflowId() {
             return this.workflowId;
+        }
+
+        public ListWorkflowInstancesResponseBodyPagingInfoWorkflowInstances setWorkflowParameters(String workflowParameters) {
+            this.workflowParameters = workflowParameters;
+            return this;
+        }
+        public String getWorkflowParameters() {
+            return this.workflowParameters;
         }
 
     }
