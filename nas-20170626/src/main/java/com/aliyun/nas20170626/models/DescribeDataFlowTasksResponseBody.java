@@ -394,6 +394,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @NameInMap("FsPath")
         public String fsPath;
 
+        @NameInMap("Includes")
+        public String includes;
+
         /**
          * <p>The initiator of the data flow task. Valid values:</p>
          * <ul>
@@ -625,6 +628,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
         public String getFsPath() {
             return this.fsPath;
+        }
+
+        public DescribeDataFlowTasksResponseBodyTaskInfoTask setIncludes(String includes) {
+            this.includes = includes;
+            return this;
+        }
+        public String getIncludes() {
+            return this.includes;
         }
 
         public DescribeDataFlowTasksResponseBodyTaskInfoTask setOriginator(String originator) {

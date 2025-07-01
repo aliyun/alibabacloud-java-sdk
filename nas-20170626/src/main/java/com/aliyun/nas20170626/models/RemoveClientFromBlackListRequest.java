@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveClientFromBlackListRequest extends TeaModel {
     /**
+     * <p>The IP address of a client to remove from the blacklist.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class RemoveClientFromBlackListRequest extends TeaModel {
     public String clientIP;
 
     /**
+     * <p>This parameter ensures the idempotency of each request. A ClientToken is generated for each client. Make sure that each ClientToken is unique between different requests. The parameter can be a maximum of 64 characters in length and contain only ASCII characters.</p>
+     * <p>For more information, see <a href="https://www.alibabacloud.com/help/doc-detail/25693.htm">How to ensure idempotence</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +26,7 @@ public class RemoveClientFromBlackListRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The ID of the file system.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +36,7 @@ public class RemoveClientFromBlackListRequest extends TeaModel {
     public String fileSystemId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the region where the file system resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
     /**
-     * <p>The details about the files or directories.</p>
+     * <p>The details about the file or directory.</p>
      */
     @NameInMap("Entry")
     public GetDirectoryOrFilePropertiesResponseBodyEntry entry;
@@ -53,7 +53,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         public String ATime;
 
         /**
-         * <p>The time when the raw data was modified.</p>
+         * <p>The time when the metadata was modified.</p>
          * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * <p>This parameter is returned only if the value of the Type parameter is File.</p>
          * 
@@ -145,12 +145,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         public Long size;
 
         /**
-         * <p>The storage type of the file.</p>
+         * <p>The storage class of the file.</p>
          * <p>This parameter is returned only if the value of the Type parameter is File.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li>standard: General-purpose NAS file system</li>
-         * <li>InfrequentAccess: IA storage medium</li>
+         * <li>InfrequentAccess: the IA storage class.</li>
          * </ul>
          * 
          * <strong>example:</strong>

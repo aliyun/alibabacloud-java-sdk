@@ -85,9 +85,11 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
     public static class DescribeFilesetsResponseBodyEntriesEntrieQuota extends TeaModel {
         /**
-         * <p>The limit of the file quantity of the quota. Valid values:</p>
-         * <p>Minimum value: 10000.</p>
-         * <p>Maximum value: 10000000000.</p>
+         * <p>The file quantity quota. Valid values:</p>
+         * <ul>
+         * <li>Minimum value: 10000.</li>
+         * <li>Maximum value: 10000000000.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -96,10 +98,11 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         public Long fileCountLimit;
 
         /**
-         * <p>The limit of the quota capacity. Unit: bytes.</p>
-         * <p>Minimum value: 10737418240 (10 GiB).</p>
-         * <p>Maximum value: 1073741824000 (1024000 GiB).</p>
-         * <p>Step size: 1073741824 (1 GiB).</p>
+         * <p>The capacity quota. Unit: bytes.</p>
+         * <ul>
+         * <li>Minimum value: 10737418240 (10 GiB).</li>
+         * <li>Step size: 1073741824 (1 GiB).</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10737418240</p>
@@ -215,7 +218,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         /**
          * <p>The quota information.</p>
          * <blockquote>
-         * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+         * <p> Only CPFS for Lingjun V2.7.0 and later support this parameter.</p>
          * </blockquote>
          */
         @NameInMap("Quota")

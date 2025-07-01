@@ -173,6 +173,9 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    @NameInMap("Includes")
+    public String includes;
+
     /**
      * <p>If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.</p>
      * 
@@ -284,6 +287,14 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     }
     public String getFileSystemId() {
         return this.fileSystemId;
+    }
+
+    public CreateDataFlowTaskRequest setIncludes(String includes) {
+        this.includes = includes;
+        return this;
+    }
+    public String getIncludes() {
+        return this.includes;
     }
 
     public CreateDataFlowTaskRequest setSrcTaskId(String srcTaskId) {

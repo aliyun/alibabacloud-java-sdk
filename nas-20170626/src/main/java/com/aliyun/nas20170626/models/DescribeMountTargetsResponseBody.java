@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMountTargetsResponseBody extends TeaModel {
     /**
-     * <p>The information about mount targets.</p>
+     * <p>The queried mount targets.</p>
      */
     @NameInMap("MountTargets")
     public DescribeMountTargetsResponseBodyMountTargets mountTargets;
@@ -169,6 +169,78 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag extends TeaModel {
+        /**
+         * <p>The tag key. Limits:</p>
+         * <ul>
+         * <li>The tag key cannot be null or an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The key value cannot start with aliyun or acs:.</li>
+         * <li>The key value cannot contain http:// or https://.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nastest</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot contain http:// or https://.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mounttargettest</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag self = new DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class DescribeMountTargetsResponseBodyMountTargetsMountTargetTags extends TeaModel {
+        @NameInMap("Tag")
+        public java.util.List<DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag> tag;
+
+        public static DescribeMountTargetsResponseBodyMountTargetsMountTargetTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMountTargetsResponseBodyMountTargetsMountTargetTags self = new DescribeMountTargetsResponseBodyMountTargetsMountTargetTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetTags setTag(java.util.List<DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<DescribeMountTargetsResponseBodyMountTargetsMountTargetTagsTag> getTag() {
+            return this.tag;
+        }
+
+    }
+
     public static class DescribeMountTargetsResponseBodyMountTargetsMountTarget extends TeaModel {
         /**
          * <p>The name of the permission group that is attached to the mount target.</p>
@@ -189,7 +261,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
          * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
          * 
          * <strong>example:</strong>
-         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
+         * <p>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("DualStackMountTargetDomain")
         public String dualStackMountTargetDomain;
@@ -211,7 +283,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
          * <p>The IPv4 domain name of the mount target.</p>
          * 
          * <strong>example:</strong>
-         * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
+         * <p>1ca404****-w****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         @NameInMap("MountTargetDomain")
         public String mountTargetDomain;
@@ -245,6 +317,12 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>An array of tags. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</p>
+         */
+        @NameInMap("Tags")
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetTags tags;
 
         /**
          * <p>The ID of the virtual private cloud (VPC).</p>
@@ -323,6 +401,14 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeMountTargetsResponseBodyMountTargetsMountTarget setTags(DescribeMountTargetsResponseBodyMountTargetsMountTargetTags tags) {
+            this.tags = tags;
+            return this;
+        }
+        public DescribeMountTargetsResponseBodyMountTargetsMountTargetTags getTags() {
+            return this.tags;
         }
 
         public DescribeMountTargetsResponseBodyMountTargetsMountTarget setVpcId(String vpcId) {

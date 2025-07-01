@@ -21,7 +21,7 @@ public class SetFilesetQuotaRequest extends TeaModel {
      * <p>Specifies whether to perform a dry run. The dry run checks parameter validity and prerequisites. The dry run does not delete the specified quota or incur fees.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
+     * <li>true: performs only a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the HTTP status code 200 is returned.</li>
      * <li>false (default): performs a dry run and sends the request. If the request passes the dry run, the quota is deleted.</li>
      * </ul>
      * 
@@ -65,11 +65,10 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public String fsetId;
 
     /**
-     * <p>The limit of the total capacity of the quota. Unit: bytes.</p>
+     * <p>The total capacity of the quota. Unit: bytes.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li>Minimum value: 10737418240 (10 GiB).</li>
-     * <li>Maximum value: 1073741824000 (1024000 GiB).</li>
      * <li>Step size: 1073741824 (1 GiB).</li>
      * </ul>
      * 

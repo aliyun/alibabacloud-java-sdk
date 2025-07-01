@@ -1023,6 +1023,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("VscTarget")
+        public String vscTarget;
+
         /**
          * <p>A collection of vSwitch IDs.</p>
          */
@@ -1273,6 +1276,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeFileSystemsResponseBodyFileSystemsFileSystem setVscTarget(String vscTarget) {
+            this.vscTarget = vscTarget;
+            return this;
+        }
+        public String getVscTarget() {
+            return this.vscTarget;
         }
 
         public DescribeFileSystemsResponseBodyFileSystemsFileSystem setVswIds(DescribeFileSystemsResponseBodyFileSystemsFileSystemVswIds vswIds) {

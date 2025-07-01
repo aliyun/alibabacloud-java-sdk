@@ -46,9 +46,34 @@ public class DescribeFilesetsRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>The condition by which the results are sorted. Valid values:</p>
+     * <ul>
+     * <li>FileCountLimit: the file quantity quota</li>
+     * <li>SizeLimit: the capacity quota</li>
+     * <li>FileCountUsage: the usage of the file quantity quota</li>
+     * <li>SpaceUsage: the capacity usage</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FileCountLimit</p>
+     */
     @NameInMap("OrderByField")
     public String orderByField;
 
+    /**
+     * <p>The order in which you want to sort the results. Valid values:</p>
+     * <ul>
+     * <li>asc (default): ascending order</li>
+     * <li>desc: descending order</li>
+     * </ul>
+     * <blockquote>
+     * <p> This parameter takes effect only if you specify the OrderByField parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
@@ -134,7 +159,7 @@ public class DescribeFilesetsRequest extends TeaModel {
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>fset-12345678,fset-12345679</p>
+         * <p>fset-1902718ea0ae****,fset-3212718ea0ae****</p>
          */
         @NameInMap("Value")
         public String value;

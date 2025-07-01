@@ -34,7 +34,6 @@ public class ModifyLifecyclePolicyRequest extends TeaModel {
      * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
      * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>DEFAULT_ATIME_14</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RemoveClientFromBlackListResponseBody extends TeaModel {
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>A70BEE5D-76D3-49FB-B58F-1F398211****</p>
      */

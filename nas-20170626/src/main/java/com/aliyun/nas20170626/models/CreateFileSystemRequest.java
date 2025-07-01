@@ -105,8 +105,8 @@ public class CreateFileSystemRequest extends TeaModel {
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>Extreme NAS file system: All regions support KMS-managed keys.</li>
-     * <li>General-purpose NAS file system: KMS-managed keys are supported in the following regions: China (Chengdu), China (Qingdao), China (Hohhot), China (Ulanqab), China (Heyuan), China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Shenzhen), China (Guangzhou), China (Hong Kong), Japan (Tokyo), Philippines (Manila), Thailand (Bangkok), Malaysia (Kuala Lumpur), US (Silicon Valley), Indonesia (Jakarta), UK (London), Singapore, US (Virginia), Germany (Frankfurt),  and China East 1 Finance.</li>
+     * <li>Extreme NAS file systems: All regions except China East 1 Finance support KMS-managed keys.</li>
+     * <li>General-purpose NAS file systems: All regions support KMS-managed keys.</li>
      * </ul>
      * </blockquote>
      * 
@@ -135,7 +135,7 @@ public class CreateFileSystemRequest extends TeaModel {
     public String fileSystemType;
 
     /**
-     * <p>The ID of the KMS-managed key.</p>
+     * <p>The ID of the KMS key.</p>
      * <p>This parameter is required only if the EncryptType parameter is set to 2.</p>
      * 
      * <strong>example:</strong>
@@ -170,9 +170,9 @@ public class CreateFileSystemRequest extends TeaModel {
 
     /**
      * <p>The snapshot ID.</p>
-     * <p>This parameter is available only for Extreme NAS file systems.</p>
+     * <p>This parameter is available only for advanced Extreme NAS file systems.</p>
      * <blockquote>
-     * <p>You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.</p>
+     * <p> You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -196,7 +196,14 @@ public class CreateFileSystemRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>An array of tags.</p>
+     * <p>You can specify up to 20 tags. If you specify multiple tags, each tag key must be unique.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<CreateFileSystemRequestTag> tag;
+
+    /**
+     * <p>The vSwitch ID.</p>
      * <p>This parameter is reserved and does not take effect. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
@@ -350,6 +357,14 @@ public class CreateFileSystemRequest extends TeaModel {
         return this.storageType;
     }
 
+    public CreateFileSystemRequest setTag(java.util.List<CreateFileSystemRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateFileSystemRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateFileSystemRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -372,6 +387,67 @@ public class CreateFileSystemRequest extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateFileSystemRequestTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The tag key cannot be null or an empty string.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>nastest</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value.</p>
+         * <p>Limits:</p>
+         * <ul>
+         * <li>The tag value cannot be null or an empty string.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>testValue</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateFileSystemRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateFileSystemRequestTag self = new CreateFileSystemRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateFileSystemRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateFileSystemRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

@@ -11,7 +11,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
+     * <p>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("DualStackMountTargetDomain")
     public String dualStackMountTargetDomain;
@@ -38,7 +38,7 @@ public class DescribeMountTargetsRequest extends TeaModel {
      * <p>The domain name of the mount target.</p>
      * 
      * <strong>example:</strong>
-     * <p>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</p>
+     * <p>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</p>
      */
     @NameInMap("MountTargetDomain")
     public String mountTargetDomain;
