@@ -1764,6 +1764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("prefix", request.prefix);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.runtime)) {
             query.put("runtime", request.runtime);
         }

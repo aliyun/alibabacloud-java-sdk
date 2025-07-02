@@ -102,6 +102,10 @@ public class UpdateFunctionInput extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MCP_SSE</p>
+     */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
 

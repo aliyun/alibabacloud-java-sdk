@@ -66,6 +66,9 @@ public class ListFunctionsRequest extends TeaModel {
     @NameInMap("prefix")
     public String prefix;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The runtime of the functions to retrieve.</p>
      * 
@@ -140,6 +143,14 @@ public class ListFunctionsRequest extends TeaModel {
     }
     public String getPrefix() {
         return this.prefix;
+    }
+
+    public ListFunctionsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public ListFunctionsRequest setRuntime(String runtime) {

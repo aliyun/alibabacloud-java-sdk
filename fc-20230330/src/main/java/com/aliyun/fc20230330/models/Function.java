@@ -162,6 +162,9 @@ public class Function extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <strong>example:</strong>
      * <p>acs:ram::188077086902****:role/fc-test</p>
@@ -176,6 +179,10 @@ public class Function extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MCP_SSE</p>
+     */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
 
@@ -459,6 +466,14 @@ public class Function extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public Function setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public Function setRole(String role) {

@@ -103,6 +103,9 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("ossMountConfig")
     public OSSMountConfig ossMountConfig;
 
+    @NameInMap("resourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <strong>example:</strong>
      * <p>acs:ram::188077086902****:role/fc-test</p>
@@ -119,6 +122,10 @@ public class CreateFunctionInput extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MCP_SSE</p>
+     */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
 
@@ -309,6 +316,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public OSSMountConfig getOssMountConfig() {
         return this.ossMountConfig;
+    }
+
+    public CreateFunctionInput setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreateFunctionInput setRole(String role) {
