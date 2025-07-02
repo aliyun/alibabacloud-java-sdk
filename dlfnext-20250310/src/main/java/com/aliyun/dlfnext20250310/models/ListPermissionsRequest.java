@@ -11,6 +11,9 @@ public class ListPermissionsRequest extends TeaModel {
     @NameInMap("database")
     public String database;
 
+    @NameInMap("function")
+    public String function;
+
     /**
      * <strong>example:</strong>
      * <p>1000</p>
@@ -48,6 +51,9 @@ public class ListPermissionsRequest extends TeaModel {
     @NameInMap("table")
     public String table;
 
+    @NameInMap("view")
+    public String view;
+
     public static ListPermissionsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListPermissionsRequest self = new ListPermissionsRequest();
         return TeaModel.build(map, self);
@@ -59,6 +65,14 @@ public class ListPermissionsRequest extends TeaModel {
     }
     public String getDatabase() {
         return this.database;
+    }
+
+    public ListPermissionsRequest setFunction(String function) {
+        this.function = function;
+        return this;
+    }
+    public String getFunction() {
+        return this.function;
     }
 
     public ListPermissionsRequest setMaxResults(Integer maxResults) {
@@ -99,6 +113,14 @@ public class ListPermissionsRequest extends TeaModel {
     }
     public String getTable() {
         return this.table;
+    }
+
+    public ListPermissionsRequest setView(String view) {
+        this.view = view;
+        return this;
+    }
+    public String getView() {
+        return this.view;
     }
 
 }

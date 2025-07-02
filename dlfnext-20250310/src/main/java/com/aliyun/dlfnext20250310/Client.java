@@ -950,6 +950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("database", request.database);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.function)) {
+            query.put("function", request.function);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("maxResults", request.maxResults);
         }
@@ -968,6 +972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.table)) {
             query.put("table", request.table);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.view)) {
+            query.put("view", request.view);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

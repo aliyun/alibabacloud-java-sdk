@@ -7,8 +7,14 @@ public class Permission extends TeaModel {
     @NameInMap("access")
     public String access;
 
+    @NameInMap("columns")
+    public PermissionColumns columns;
+
     @NameInMap("database")
     public String database;
+
+    @NameInMap("function")
+    public String function;
 
     @NameInMap("principal")
     public String principal;
@@ -18,6 +24,9 @@ public class Permission extends TeaModel {
 
     @NameInMap("table")
     public String table;
+
+    @NameInMap("view")
+    public String view;
 
     public static Permission build(java.util.Map<String, ?> map) throws Exception {
         Permission self = new Permission();
@@ -32,12 +41,28 @@ public class Permission extends TeaModel {
         return this.access;
     }
 
+    public Permission setColumns(PermissionColumns columns) {
+        this.columns = columns;
+        return this;
+    }
+    public PermissionColumns getColumns() {
+        return this.columns;
+    }
+
     public Permission setDatabase(String database) {
         this.database = database;
         return this;
     }
     public String getDatabase() {
         return this.database;
+    }
+
+    public Permission setFunction(String function) {
+        this.function = function;
+        return this;
+    }
+    public String getFunction() {
+        return this.function;
     }
 
     public Permission setPrincipal(String principal) {
@@ -62,6 +87,44 @@ public class Permission extends TeaModel {
     }
     public String getTable() {
         return this.table;
+    }
+
+    public Permission setView(String view) {
+        this.view = view;
+        return this;
+    }
+    public String getView() {
+        return this.view;
+    }
+
+    public static class PermissionColumns extends TeaModel {
+        @NameInMap("columnNames")
+        public java.util.List<String> columnNames;
+
+        @NameInMap("excludedColumnNames")
+        public java.util.List<String> excludedColumnNames;
+
+        public static PermissionColumns build(java.util.Map<String, ?> map) throws Exception {
+            PermissionColumns self = new PermissionColumns();
+            return TeaModel.build(map, self);
+        }
+
+        public PermissionColumns setColumnNames(java.util.List<String> columnNames) {
+            this.columnNames = columnNames;
+            return this;
+        }
+        public java.util.List<String> getColumnNames() {
+            return this.columnNames;
+        }
+
+        public PermissionColumns setExcludedColumnNames(java.util.List<String> excludedColumnNames) {
+            this.excludedColumnNames = excludedColumnNames;
+            return this;
+        }
+        public java.util.List<String> getExcludedColumnNames() {
+            return this.excludedColumnNames;
+        }
+
     }
 
 }
