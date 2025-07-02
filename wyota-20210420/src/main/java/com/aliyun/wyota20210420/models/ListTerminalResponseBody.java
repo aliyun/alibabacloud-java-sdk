@@ -219,6 +219,7 @@ public class ListTerminalResponseBody extends TeaModel {
             return this.ipv4;
         }
 
+        @Deprecated
         public ListTerminalResponseBodyData setLastLoginUser(String lastLoginUser) {
             this.lastLoginUser = lastLoginUser;
             return this;

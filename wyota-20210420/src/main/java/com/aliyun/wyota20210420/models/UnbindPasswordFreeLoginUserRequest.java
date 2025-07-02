@@ -4,6 +4,9 @@ package com.aliyun.wyota20210420.models;
 import com.aliyun.tea.*;
 
 public class UnbindPasswordFreeLoginUserRequest extends TeaModel {
+    @NameInMap("MainBizType")
+    public String mainBizType;
+
     @NameInMap("SerialNumber")
     public String serialNumber;
 
@@ -13,6 +16,14 @@ public class UnbindPasswordFreeLoginUserRequest extends TeaModel {
     public static UnbindPasswordFreeLoginUserRequest build(java.util.Map<String, ?> map) throws Exception {
         UnbindPasswordFreeLoginUserRequest self = new UnbindPasswordFreeLoginUserRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UnbindPasswordFreeLoginUserRequest setMainBizType(String mainBizType) {
+        this.mainBizType = mainBizType;
+        return this;
+    }
+    public String getMainBizType() {
+        return this.mainBizType;
     }
 
     public UnbindPasswordFreeLoginUserRequest setSerialNumber(String serialNumber) {

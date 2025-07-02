@@ -120,6 +120,9 @@ public class GetDeviceOtaInfoResponseBody extends TeaModel {
         @NameInMap("VersionType")
         public String versionType;
 
+        @NameInMap("WyForceUpgrade")
+        public Boolean wyForceUpgrade;
+
         public static GetDeviceOtaInfoResponseBodyDataVersion build(java.util.Map<String, ?> map) throws Exception {
             GetDeviceOtaInfoResponseBodyDataVersion self = new GetDeviceOtaInfoResponseBodyDataVersion();
             return TeaModel.build(map, self);
@@ -299,6 +302,14 @@ public class GetDeviceOtaInfoResponseBody extends TeaModel {
         }
         public String getVersionType() {
             return this.versionType;
+        }
+
+        public GetDeviceOtaInfoResponseBodyDataVersion setWyForceUpgrade(Boolean wyForceUpgrade) {
+            this.wyForceUpgrade = wyForceUpgrade;
+            return this;
+        }
+        public Boolean getWyForceUpgrade() {
+            return this.wyForceUpgrade;
         }
 
     }

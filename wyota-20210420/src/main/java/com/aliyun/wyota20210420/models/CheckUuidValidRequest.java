@@ -19,6 +19,9 @@ public class CheckUuidValidRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("ClientVersion")
+    public String clientVersion;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -28,11 +31,20 @@ public class CheckUuidValidRequest extends TeaModel {
     @NameInMap("EtherMac")
     public String etherMac;
 
+    @NameInMap("LoginRegionId")
+    public String loginRegionId;
+
+    @NameInMap("LoginToken")
+    public String loginToken;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("SerialNo")
     public String serialNo;
+
+    @NameInMap("SessionId")
+    public String sessionId;
 
     /**
      * <p>This parameter is required.</p>
@@ -83,6 +95,14 @@ public class CheckUuidValidRequest extends TeaModel {
         return this.clientId;
     }
 
+    public CheckUuidValidRequest setClientVersion(String clientVersion) {
+        this.clientVersion = clientVersion;
+        return this;
+    }
+    public String getClientVersion() {
+        return this.clientVersion;
+    }
+
     public CheckUuidValidRequest setCustomId(String customId) {
         this.customId = customId;
         return this;
@@ -99,12 +119,36 @@ public class CheckUuidValidRequest extends TeaModel {
         return this.etherMac;
     }
 
+    public CheckUuidValidRequest setLoginRegionId(String loginRegionId) {
+        this.loginRegionId = loginRegionId;
+        return this;
+    }
+    public String getLoginRegionId() {
+        return this.loginRegionId;
+    }
+
+    public CheckUuidValidRequest setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
+        return this;
+    }
+    public String getLoginToken() {
+        return this.loginToken;
+    }
+
     public CheckUuidValidRequest setSerialNo(String serialNo) {
         this.serialNo = serialNo;
         return this;
     }
     public String getSerialNo() {
         return this.serialNo;
+    }
+
+    public CheckUuidValidRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public CheckUuidValidRequest setUuid(String uuid) {

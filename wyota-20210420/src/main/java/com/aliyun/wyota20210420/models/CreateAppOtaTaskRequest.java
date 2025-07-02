@@ -46,6 +46,9 @@ public class CreateAppOtaTaskRequest extends TeaModel {
     @NameInMap("TenantId")
     public String tenantId;
 
+    @NameInMap("TenantIdList")
+    public java.util.List<String> tenantIdList;
+
     public static CreateAppOtaTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppOtaTaskRequest self = new CreateAppOtaTaskRequest();
         return TeaModel.build(map, self);
@@ -161,6 +164,14 @@ public class CreateAppOtaTaskRequest extends TeaModel {
     }
     public String getTenantId() {
         return this.tenantId;
+    }
+
+    public CreateAppOtaTaskRequest setTenantIdList(java.util.List<String> tenantIdList) {
+        this.tenantIdList = tenantIdList;
+        return this;
+    }
+    public java.util.List<String> getTenantIdList() {
+        return this.tenantIdList;
     }
 
 }

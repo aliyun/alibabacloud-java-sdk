@@ -7,6 +7,9 @@ public class AddTerminalsRequest extends TeaModel {
     @NameInMap("AddTerminalParams")
     public java.util.List<AddTerminalsRequestAddTerminalParams> addTerminalParams;
 
+    @NameInMap("MainBizType")
+    public String mainBizType;
+
     public static AddTerminalsRequest build(java.util.Map<String, ?> map) throws Exception {
         AddTerminalsRequest self = new AddTerminalsRequest();
         return TeaModel.build(map, self);
@@ -18,6 +21,14 @@ public class AddTerminalsRequest extends TeaModel {
     }
     public java.util.List<AddTerminalsRequestAddTerminalParams> getAddTerminalParams() {
         return this.addTerminalParams;
+    }
+
+    public AddTerminalsRequest setMainBizType(String mainBizType) {
+        this.mainBizType = mainBizType;
+        return this;
+    }
+    public String getMainBizType() {
+        return this.mainBizType;
     }
 
     public static class AddTerminalsRequestAddTerminalParams extends TeaModel {

@@ -16,6 +16,12 @@ public class DescribeAppOtaVersionRequest extends TeaModel {
     @NameInMap("Creator")
     public String creator;
 
+    @NameInMap("NullChannel")
+    public Boolean nullChannel;
+
+    @NameInMap("OtaType")
+    public Integer otaType;
+
     @NameInMap("Project")
     public String project;
 
@@ -60,6 +66,22 @@ public class DescribeAppOtaVersionRequest extends TeaModel {
     }
     public String getCreator() {
         return this.creator;
+    }
+
+    public DescribeAppOtaVersionRequest setNullChannel(Boolean nullChannel) {
+        this.nullChannel = nullChannel;
+        return this;
+    }
+    public Boolean getNullChannel() {
+        return this.nullChannel;
+    }
+
+    public DescribeAppOtaVersionRequest setOtaType(Integer otaType) {
+        this.otaType = otaType;
+        return this;
+    }
+    public Integer getOtaType() {
+        return this.otaType;
     }
 
     public DescribeAppOtaVersionRequest setProject(String project) {

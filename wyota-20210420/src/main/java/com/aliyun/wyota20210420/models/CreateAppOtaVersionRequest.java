@@ -37,6 +37,9 @@ public class CreateAppOtaVersionRequest extends TeaModel {
     @NameInMap("Project")
     public String project;
 
+    @NameInMap("RelationVersionUids")
+    public java.util.List<String> relationVersionUids;
+
     @NameInMap("ReleaseNote")
     public String releaseNote;
 
@@ -152,6 +155,14 @@ public class CreateAppOtaVersionRequest extends TeaModel {
     }
     public String getProject() {
         return this.project;
+    }
+
+    public CreateAppOtaVersionRequest setRelationVersionUids(java.util.List<String> relationVersionUids) {
+        this.relationVersionUids = relationVersionUids;
+        return this;
+    }
+    public java.util.List<String> getRelationVersionUids() {
+        return this.relationVersionUids;
     }
 
     public CreateAppOtaVersionRequest setReleaseNote(String releaseNote) {

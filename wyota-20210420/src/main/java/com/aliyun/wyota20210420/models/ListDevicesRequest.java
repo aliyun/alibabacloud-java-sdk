@@ -37,6 +37,9 @@ public class ListDevicesRequest extends TeaModel {
     @NameInMap("LabelId")
     public String labelId;
 
+    @NameInMap("LastLoginUser")
+    public String lastLoginUser;
+
     @NameInMap("LocationInfo")
     public String locationInfo;
 
@@ -149,6 +152,14 @@ public class ListDevicesRequest extends TeaModel {
     }
     public String getLabelId() {
         return this.labelId;
+    }
+
+    public ListDevicesRequest setLastLoginUser(String lastLoginUser) {
+        this.lastLoginUser = lastLoginUser;
+        return this;
+    }
+    public String getLastLoginUser() {
+        return this.lastLoginUser;
     }
 
     public ListDevicesRequest setLocationInfo(String locationInfo) {

@@ -54,12 +54,23 @@ public class RegisterDeviceResponseBody extends TeaModel {
     }
 
     public static class RegisterDeviceResponseBodyData extends TeaModel {
+        @NameInMap("NewUpgrade")
+        public Boolean newUpgrade;
+
         @NameInMap("Uuid")
         public String uuid;
 
         public static RegisterDeviceResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             RegisterDeviceResponseBodyData self = new RegisterDeviceResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public RegisterDeviceResponseBodyData setNewUpgrade(Boolean newUpgrade) {
+            this.newUpgrade = newUpgrade;
+            return this;
+        }
+        public Boolean getNewUpgrade() {
+            return this.newUpgrade;
         }
 
         public RegisterDeviceResponseBodyData setUuid(String uuid) {

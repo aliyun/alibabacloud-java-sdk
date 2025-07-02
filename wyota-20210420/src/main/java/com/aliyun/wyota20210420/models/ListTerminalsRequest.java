@@ -7,6 +7,9 @@ public class ListTerminalsRequest extends TeaModel {
     @NameInMap("InManage")
     public Boolean inManage;
 
+    @NameInMap("MainBizType")
+    public String mainBizType;
+
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -58,6 +61,14 @@ public class ListTerminalsRequest extends TeaModel {
     }
     public Boolean getInManage() {
         return this.inManage;
+    }
+
+    public ListTerminalsRequest setMainBizType(String mainBizType) {
+        this.mainBizType = mainBizType;
+        return this;
+    }
+    public String getMainBizType() {
+        return this.mainBizType;
     }
 
     public ListTerminalsRequest setMaxResults(Integer maxResults) {

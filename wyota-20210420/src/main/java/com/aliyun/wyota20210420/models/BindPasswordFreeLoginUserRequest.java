@@ -7,6 +7,9 @@ public class BindPasswordFreeLoginUserRequest extends TeaModel {
     @NameInMap("EndUserId")
     public String endUserId;
 
+    @NameInMap("MainBizType")
+    public String mainBizType;
+
     @NameInMap("SerialNumber")
     public String serialNumber;
 
@@ -24,6 +27,14 @@ public class BindPasswordFreeLoginUserRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public BindPasswordFreeLoginUserRequest setMainBizType(String mainBizType) {
+        this.mainBizType = mainBizType;
+        return this;
+    }
+    public String getMainBizType() {
+        return this.mainBizType;
     }
 
     public BindPasswordFreeLoginUserRequest setSerialNumber(String serialNumber) {

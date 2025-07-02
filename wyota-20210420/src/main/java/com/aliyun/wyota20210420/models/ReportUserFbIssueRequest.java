@@ -7,6 +7,9 @@ public class ReportUserFbIssueRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("ClientAppVersion")
+    public String clientAppVersion;
+
     @NameInMap("ClientId")
     public String clientId;
 
@@ -90,6 +93,14 @@ public class ReportUserFbIssueRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public ReportUserFbIssueRequest setClientAppVersion(String clientAppVersion) {
+        this.clientAppVersion = clientAppVersion;
+        return this;
+    }
+    public String getClientAppVersion() {
+        return this.clientAppVersion;
     }
 
     public ReportUserFbIssueRequest setClientId(String clientId) {
