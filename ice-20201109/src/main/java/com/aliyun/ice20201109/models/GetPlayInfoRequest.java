@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetPlayInfoRequest extends TeaModel {
+    @NameInMap("AuthTimeout")
+    public Long authTimeout;
+
     /**
      * <p>The input URL that you specified for the media asset when you registered the media asset. For more information, see <a href="https://help.aliyun.com/document_detail/441152.html">RegisterMediaInfo</a>.</p>
      * <blockquote>
@@ -28,6 +31,14 @@ public class GetPlayInfoRequest extends TeaModel {
     public static GetPlayInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPlayInfoRequest self = new GetPlayInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetPlayInfoRequest setAuthTimeout(Long authTimeout) {
+        this.authTimeout = authTimeout;
+        return this;
+    }
+    public Long getAuthTimeout() {
+        return this.authTimeout;
     }
 
     public GetPlayInfoRequest setInputURL(String inputURL) {

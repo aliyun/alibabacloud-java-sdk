@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitHighlightExtractionJobRequest extends TeaModel {
     /**
+     * <p>The client token used to ensure the idempotency of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class SubmitHighlightExtractionJobRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The input configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;MediaArray&quot;: [{
@@ -35,6 +39,8 @@ public class SubmitHighlightExtractionJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
+     * <p>The output configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;NeedExport&quot;: true,
@@ -49,6 +55,9 @@ public class SubmitHighlightExtractionJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

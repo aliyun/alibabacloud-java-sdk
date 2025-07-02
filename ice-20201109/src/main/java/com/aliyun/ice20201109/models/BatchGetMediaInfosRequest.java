@@ -15,6 +15,9 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     @NameInMap("AdditionType")
     public String additionType;
 
+    @NameInMap("AuthTimeout")
+    public Long authTimeout;
+
     /**
      * <p>The IDs of the media assets that you want to query. Separate the IDs with commas (,).</p>
      * 
@@ -35,6 +38,14 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     }
     public String getAdditionType() {
         return this.additionType;
+    }
+
+    public BatchGetMediaInfosRequest setAuthTimeout(Long authTimeout) {
+        this.authTimeout = authTimeout;
+        return this;
+    }
+    public Long getAuthTimeout() {
+        return this.authTimeout;
     }
 
     public BatchGetMediaInfosRequest setMediaIds(String mediaIds) {

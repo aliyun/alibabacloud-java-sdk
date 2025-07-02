@@ -101,9 +101,21 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         @NameInMap("DestHost")
         public String destHost;
 
+        /**
+         * <p>The ID of the flow from MediaConnect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>81-9693-40dc-bbab-db5e49</strong></strong></strong></p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The output name of the MediaConnect flow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFlowOutputName</p>
+         */
         @NameInMap("FlowOutputName")
         public String flowOutputName;
 

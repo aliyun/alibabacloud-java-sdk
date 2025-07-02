@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     /**
+     * <p>The editing configuration. For detailed parameters, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;MediaConfig&quot;: {
@@ -20,6 +22,8 @@ public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
+     * <p>The input configuration. For detailed parameters, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;MediaArray&quot;: [
@@ -32,6 +36,8 @@ public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
+     * <p>The output configuration. For detailed parameters, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig</a>.</p>
+     * 
      * <strong>example:</strong>
      * <p>{
      *   &quot;MediaURL&quot;: &quot;<a href="http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_%7Bindex%7D.mp4">http://xxx.oss-cn-shanghai.aliyuncs.com/xxx_{index}.mp4</a>&quot;,
@@ -43,6 +49,9 @@ public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     @NameInMap("OutputConfig")
     public String outputConfig;
 
+    /**
+     * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
+     */
     @NameInMap("UserData")
     public String userData;
 

@@ -78,14 +78,26 @@ public class UpdateMediaLiveInputRequest extends TeaModel {
     }
 
     public static class UpdateMediaLiveInputRequestInputSettings extends TeaModel {
+        /**
+         * <p>The ID of the flow from MediaConnect. This parameter is required when Type is set to MEDIA_CONNECT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong><strong><strong>81-9693-40dc-bbab-db5e49</strong></strong></strong></p>
+         */
         @NameInMap("FlowId")
         public String flowId;
 
+        /**
+         * <p>The output name of the MediaConnect flow. This parameter is required when Type is set to MEDIA_CONNECT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>myFlowOutputName</p>
+         */
         @NameInMap("FlowOutputName")
         public String flowOutputName;
 
         /**
-         * <p>The source URL where the stream is pulled from. This parameter is required for PULL inputs.</p>
+         * <p>The source URL from which the stream is pulled. This parameter is required for PULL inputs.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://domain/app/stream</p>

@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class ListMediaBasicInfosRequest extends TeaModel {
+    @NameInMap("AuthTimeout")
+    public Long authTimeout;
+
     /**
      * <p>The business type of the media asset. Valid values:</p>
      * <p>\- subtitles</p>
@@ -130,6 +133,14 @@ public class ListMediaBasicInfosRequest extends TeaModel {
     public static ListMediaBasicInfosRequest build(java.util.Map<String, ?> map) throws Exception {
         ListMediaBasicInfosRequest self = new ListMediaBasicInfosRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListMediaBasicInfosRequest setAuthTimeout(Long authTimeout) {
+        this.authTimeout = authTimeout;
+        return this;
+    }
+    public Long getAuthTimeout() {
+        return this.authTimeout;
     }
 
     public ListMediaBasicInfosRequest setBusinessType(String businessType) {

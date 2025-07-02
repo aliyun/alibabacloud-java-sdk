@@ -804,6 +804,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AdditionType", request.additionType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.authTimeout)) {
+            query.put("AuthTimeout", request.authTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mediaIds)) {
             query.put("MediaIds", request.mediaIds);
         }
@@ -7725,6 +7729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMediaInfoResponse getMediaInfoWithOptions(GetMediaInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authTimeout)) {
+            query.put("AuthTimeout", request.authTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputURL)) {
             query.put("InputURL", request.inputURL);
         }
@@ -8163,6 +8171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPlayInfoResponse getPlayInfoWithOptions(GetPlayInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authTimeout)) {
+            query.put("AuthTimeout", request.authTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputURL)) {
             query.put("InputURL", request.inputURL);
         }
@@ -9398,12 +9410,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAIAgentPhoneNumberResponse listAIAgentPhoneNumberWithOptions(ListAIAgentPhoneNumberRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.number)) {
+            query.put("Number", request.number);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -11071,6 +11091,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListMediaBasicInfosResponse listMediaBasicInfosWithOptions(ListMediaBasicInfosRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authTimeout)) {
+            query.put("AuthTimeout", request.authTimeout);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessType)) {
             query.put("BusinessType", request.businessType);
         }
@@ -15318,6 +15342,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Config", request.configShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.imsAIAgentFreeObCall)) {
+            query.put("ImsAIAgentFreeObCall", request.imsAIAgentFreeObCall);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
             query.put("SessionId", request.sessionId);
         }
@@ -16685,7 +16713,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交高光提取任务</p>
+     * <p>Submits a highlight extraction task.</p>
      * 
      * @param request SubmitHighlightExtractionJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16731,7 +16759,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交高光提取任务</p>
+     * <p>Submits a highlight extraction task.</p>
      * 
      * @param request SubmitHighlightExtractionJobRequest
      * @return SubmitHighlightExtractionJobResponse
@@ -17693,7 +17721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交高燃混剪任务</p>
+     * <p>Submits a task to automatically recognize the highlight segments in the video input and compile them into a dramatic and engaging clip.</p>
      * 
      * @param request SubmitScreenMediaHighlightsJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17739,7 +17767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>提交高燃混剪任务</p>
+     * <p>Submits a task to automatically recognize the highlight segments in the video input and compile them into a dramatic and engaging clip.</p>
      * 
      * @param request SubmitScreenMediaHighlightsJobRequest
      * @return SubmitScreenMediaHighlightsJobResponse

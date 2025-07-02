@@ -34,6 +34,9 @@ public class StartAIAgentOutboundCallShrinkRequest extends TeaModel {
     @NameInMap("Config")
     public String configShrink;
 
+    @NameInMap("ImsAIAgentFreeObCall")
+    public String imsAIAgentFreeObCall;
+
     /**
      * <strong>example:</strong>
      * <p>f213fbc005e4f309379701645f4****</p>
@@ -79,6 +82,14 @@ public class StartAIAgentOutboundCallShrinkRequest extends TeaModel {
     }
     public String getConfigShrink() {
         return this.configShrink;
+    }
+
+    public StartAIAgentOutboundCallShrinkRequest setImsAIAgentFreeObCall(String imsAIAgentFreeObCall) {
+        this.imsAIAgentFreeObCall = imsAIAgentFreeObCall;
+        return this;
+    }
+    public String getImsAIAgentFreeObCall() {
+        return this.imsAIAgentFreeObCall;
     }
 
     public StartAIAgentOutboundCallShrinkRequest setSessionId(String sessionId) {

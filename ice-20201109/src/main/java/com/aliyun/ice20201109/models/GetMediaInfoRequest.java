@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetMediaInfoRequest extends TeaModel {
+    @NameInMap("AuthTimeout")
+    public Long authTimeout;
+
     /**
      * <p>The input URL of the media asset in another service. The URL must be registered in the IMS content library and bound to the ID of the media asset in IMS.</p>
      * <ul>
@@ -56,6 +59,14 @@ public class GetMediaInfoRequest extends TeaModel {
     public static GetMediaInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMediaInfoRequest self = new GetMediaInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetMediaInfoRequest setAuthTimeout(Long authTimeout) {
+        this.authTimeout = authTimeout;
+        return this;
+    }
+    public Long getAuthTimeout() {
+        return this.authTimeout;
     }
 
     public GetMediaInfoRequest setInputURL(String inputURL) {

@@ -13,6 +13,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     @NameInMap("Greeting")
     public String greeting;
 
+    @NameInMap("GreetingDelay")
+    public Integer greetingDelay;
+
     @NameInMap("InterruptConfig")
     public AIAgentOutboundCallConfigInterruptConfig interruptConfig;
 
@@ -52,6 +55,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
     public String getGreeting() {
         return this.greeting;
+    }
+
+    public AIAgentOutboundCallConfig setGreetingDelay(Integer greetingDelay) {
+        this.greetingDelay = greetingDelay;
+        return this;
+    }
+    public Integer getGreetingDelay() {
+        return this.greetingDelay;
     }
 
     public AIAgentOutboundCallConfig setInterruptConfig(AIAgentOutboundCallConfigInterruptConfig interruptConfig) {
@@ -96,6 +107,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        @NameInMap("CustomParams")
+        public String customParams;
+
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
@@ -126,6 +140,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
         public Integer getAsrMaxSilence() {
             return this.asrMaxSilence;
+        }
+
+        public AIAgentOutboundCallConfigAsrConfig setCustomParams(String customParams) {
+            this.customParams = customParams;
+            return this;
+        }
+        public String getCustomParams() {
+            return this.customParams;
         }
 
         public AIAgentOutboundCallConfigAsrConfig setVadLevel(Integer vadLevel) {
@@ -250,7 +272,51 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
     }
 
+    public static class AIAgentOutboundCallConfigTtsConfigPronunciationRules extends TeaModel {
+        @NameInMap("Pronunciation")
+        public String pronunciation;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Word")
+        public String word;
+
+        public static AIAgentOutboundCallConfigTtsConfigPronunciationRules build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigTtsConfigPronunciationRules self = new AIAgentOutboundCallConfigTtsConfigPronunciationRules();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigTtsConfigPronunciationRules setPronunciation(String pronunciation) {
+            this.pronunciation = pronunciation;
+            return this;
+        }
+        public String getPronunciation() {
+            return this.pronunciation;
+        }
+
+        public AIAgentOutboundCallConfigTtsConfigPronunciationRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public AIAgentOutboundCallConfigTtsConfigPronunciationRules setWord(String word) {
+            this.word = word;
+            return this;
+        }
+        public String getWord() {
+            return this.word;
+        }
+
+    }
+
     public static class AIAgentOutboundCallConfigTtsConfig extends TeaModel {
+        @NameInMap("PronunciationRules")
+        public java.util.List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> pronunciationRules;
+
         @NameInMap("VoiceId")
         public String voiceId;
 
@@ -260,6 +326,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         public static AIAgentOutboundCallConfigTtsConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentOutboundCallConfigTtsConfig self = new AIAgentOutboundCallConfigTtsConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigTtsConfig setPronunciationRules(java.util.List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> pronunciationRules) {
+            this.pronunciationRules = pronunciationRules;
+            return this;
+        }
+        public java.util.List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> getPronunciationRules() {
+            return this.pronunciationRules;
         }
 
         public AIAgentOutboundCallConfigTtsConfig setVoiceId(String voiceId) {
@@ -281,12 +355,34 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
 
     public static class AIAgentOutboundCallConfigTurnDetectionConfig extends TeaModel {
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("SemanticWaitDuration")
+        public Integer semanticWaitDuration;
+
         @NameInMap("TurnEndWords")
         public java.util.List<String> turnEndWords;
 
         public static AIAgentOutboundCallConfigTurnDetectionConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentOutboundCallConfigTurnDetectionConfig self = new AIAgentOutboundCallConfigTurnDetectionConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigTurnDetectionConfig setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public AIAgentOutboundCallConfigTurnDetectionConfig setSemanticWaitDuration(Integer semanticWaitDuration) {
+            this.semanticWaitDuration = semanticWaitDuration;
+            return this;
+        }
+        public Integer getSemanticWaitDuration() {
+            return this.semanticWaitDuration;
         }
 
         public AIAgentOutboundCallConfigTurnDetectionConfig setTurnEndWords(java.util.List<String> turnEndWords) {

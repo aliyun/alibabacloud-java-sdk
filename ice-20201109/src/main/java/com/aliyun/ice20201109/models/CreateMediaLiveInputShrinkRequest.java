@@ -31,7 +31,7 @@ public class CreateMediaLiveInputShrinkRequest extends TeaModel {
     public String securityGroupIdsShrink;
 
     /**
-     * <p>The input type. Valid values: RTMP_PUSH, RTMP_PULL, SRT_PUSH, and SRT_PULL.</p>
+     * <p>The input type. Valid values: RTMP_PUSH, RTMP_PULL, SRT_PUSH, SRT_PULL, and MEDIA_CONNECT.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

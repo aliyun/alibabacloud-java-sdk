@@ -36,6 +36,9 @@ public class GetProjectExportJobResponseBody extends TeaModel {
     }
 
     public static class GetProjectExportJobResponseBodyProjectExportJobExportResult extends TeaModel {
+        @NameInMap("ProjectUrl")
+        public String projectUrl;
+
         /**
          * <strong>example:</strong>
          * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;Type&quot;:&quot;Video&quot;,&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;,&quot;MediaURL&quot;:&quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4%22,%22TimelineIn%22:0.0,%22TimelineOut%22:5.0,%22In%22:0.0,%22Out%22:5.0,%22Speed%22:1.0,%22Duration%22:5.0,%22VirginDuration%22:13.334,%22Height%22:1.0,%22Width%22:1.0,%22X%22:0.0,%22Y%22:0.0%7D%5D%7D%5D%7D">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4&quot;,&quot;TimelineIn&quot;:0.0,&quot;TimelineOut&quot;:5.0,&quot;In&quot;:0.0,&quot;Out&quot;:5.0,&quot;Speed&quot;:1.0,&quot;Duration&quot;:5.0,&quot;VirginDuration&quot;:13.334,&quot;Height&quot;:1.0,&quot;Width&quot;:1.0,&quot;X&quot;:0.0,&quot;Y&quot;:0.0}]}]}</a></p>
@@ -46,6 +49,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         public static GetProjectExportJobResponseBodyProjectExportJobExportResult build(java.util.Map<String, ?> map) throws Exception {
             GetProjectExportJobResponseBodyProjectExportJobExportResult self = new GetProjectExportJobResponseBodyProjectExportJobExportResult();
             return TeaModel.build(map, self);
+        }
+
+        public GetProjectExportJobResponseBodyProjectExportJobExportResult setProjectUrl(String projectUrl) {
+            this.projectUrl = projectUrl;
+            return this;
+        }
+        public String getProjectUrl() {
+            return this.projectUrl;
         }
 
         public GetProjectExportJobResponseBodyProjectExportJobExportResult setTimeline(String timeline) {

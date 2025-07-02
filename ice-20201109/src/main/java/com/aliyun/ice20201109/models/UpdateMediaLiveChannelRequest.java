@@ -1041,7 +1041,12 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettings extends TeaModel {
         /**
-         * <p>The height of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</p>
+         * <p>The height of the output. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</li>
+         * <li>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -1074,11 +1079,27 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         @NameInMap("VideoCodecSetting")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSetting videoCodecSetting;
 
+        /**
+         * <p>The video transcoding method. Valid values:</p>
+         * <ul>
+         * <li>NORMAL: regular transcoding</li>
+         * <li>NBHD: Narrowband HD™ transcoding</li>
+         * </ul>
+         * <p>If not specified, regular transcoding is used by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("VideoCodecType")
         public String videoCodecType;
 
         /**
-         * <p>The width of the output. Valid values: 0 to 2000. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</p>
+         * <p>The width of the output. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</li>
+         * <li>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1280</p>

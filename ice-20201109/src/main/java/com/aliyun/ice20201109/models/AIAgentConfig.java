@@ -52,6 +52,9 @@ public class AIAgentConfig extends TeaModel {
     @NameInMap("UserOnlineTimeout")
     public Integer userOnlineTimeout;
 
+    @NameInMap("VcrConfig")
+    public AIAgentConfigVcrConfig vcrConfig;
+
     @NameInMap("VoiceprintConfig")
     public AIAgentConfigVoiceprintConfig voiceprintConfig;
 
@@ -197,6 +200,14 @@ public class AIAgentConfig extends TeaModel {
         return this.userOnlineTimeout;
     }
 
+    public AIAgentConfig setVcrConfig(AIAgentConfigVcrConfig vcrConfig) {
+        this.vcrConfig = vcrConfig;
+        return this;
+    }
+    public AIAgentConfigVcrConfig getVcrConfig() {
+        return this.vcrConfig;
+    }
+
     public AIAgentConfig setVoiceprintConfig(AIAgentConfigVoiceprintConfig voiceprintConfig) {
         this.voiceprintConfig = voiceprintConfig;
         return this;
@@ -239,6 +250,9 @@ public class AIAgentConfig extends TeaModel {
         @NameInMap("AsrMaxSilence")
         public Integer asrMaxSilence;
 
+        @NameInMap("CustomParams")
+        public String customParams;
+
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
@@ -269,6 +283,14 @@ public class AIAgentConfig extends TeaModel {
         }
         public Integer getAsrMaxSilence() {
             return this.asrMaxSilence;
+        }
+
+        public AIAgentConfigAsrConfig setCustomParams(String customParams) {
+            this.customParams = customParams;
+            return this;
+        }
+        public String getCustomParams() {
+            return this.customParams;
         }
 
         public AIAgentConfigAsrConfig setVadLevel(Integer vadLevel) {
@@ -412,7 +434,51 @@ public class AIAgentConfig extends TeaModel {
 
     }
 
+    public static class AIAgentConfigTtsConfigPronunciationRules extends TeaModel {
+        @NameInMap("Pronunciation")
+        public String pronunciation;
+
+        @NameInMap("Type")
+        public String type;
+
+        @NameInMap("Word")
+        public String word;
+
+        public static AIAgentConfigTtsConfigPronunciationRules build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigTtsConfigPronunciationRules self = new AIAgentConfigTtsConfigPronunciationRules();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigTtsConfigPronunciationRules setPronunciation(String pronunciation) {
+            this.pronunciation = pronunciation;
+            return this;
+        }
+        public String getPronunciation() {
+            return this.pronunciation;
+        }
+
+        public AIAgentConfigTtsConfigPronunciationRules setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+        public AIAgentConfigTtsConfigPronunciationRules setWord(String word) {
+            this.word = word;
+            return this;
+        }
+        public String getWord() {
+            return this.word;
+        }
+
+    }
+
     public static class AIAgentConfigTtsConfig extends TeaModel {
+        @NameInMap("PronunciationRules")
+        public java.util.List<AIAgentConfigTtsConfigPronunciationRules> pronunciationRules;
+
         @NameInMap("VoiceId")
         public String voiceId;
 
@@ -422,6 +488,14 @@ public class AIAgentConfig extends TeaModel {
         public static AIAgentConfigTtsConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigTtsConfig self = new AIAgentConfigTtsConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigTtsConfig setPronunciationRules(java.util.List<AIAgentConfigTtsConfigPronunciationRules> pronunciationRules) {
+            this.pronunciationRules = pronunciationRules;
+            return this;
+        }
+        public java.util.List<AIAgentConfigTtsConfigPronunciationRules> getPronunciationRules() {
+            return this.pronunciationRules;
         }
 
         public AIAgentConfigTtsConfig setVoiceId(String voiceId) {
@@ -443,6 +517,12 @@ public class AIAgentConfig extends TeaModel {
     }
 
     public static class AIAgentConfigTurnDetectionConfig extends TeaModel {
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("SemanticWaitDuration")
+        public Integer semanticWaitDuration;
+
         @NameInMap("TurnEndWords")
         public java.util.List<String> turnEndWords;
 
@@ -451,12 +531,208 @@ public class AIAgentConfig extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AIAgentConfigTurnDetectionConfig setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public AIAgentConfigTurnDetectionConfig setSemanticWaitDuration(Integer semanticWaitDuration) {
+            this.semanticWaitDuration = semanticWaitDuration;
+            return this;
+        }
+        public Integer getSemanticWaitDuration() {
+            return this.semanticWaitDuration;
+        }
+
         public AIAgentConfigTurnDetectionConfig setTurnEndWords(java.util.List<String> turnEndWords) {
             this.turnEndWords = turnEndWords;
             return this;
         }
         public java.util.List<String> getTurnEndWords() {
             return this.turnEndWords;
+        }
+
+    }
+
+    public static class AIAgentConfigVcrConfigEquipment extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static AIAgentConfigVcrConfigEquipment build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfigEquipment self = new AIAgentConfigVcrConfigEquipment();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfigEquipment setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class AIAgentConfigVcrConfigHeadMotion extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static AIAgentConfigVcrConfigHeadMotion build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfigHeadMotion self = new AIAgentConfigVcrConfigHeadMotion();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfigHeadMotion setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class AIAgentConfigVcrConfigInvalidFrameMotion extends TeaModel {
+        @NameInMap("CallbackDelay")
+        public Integer callbackDelay;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static AIAgentConfigVcrConfigInvalidFrameMotion build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfigInvalidFrameMotion self = new AIAgentConfigVcrConfigInvalidFrameMotion();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfigInvalidFrameMotion setCallbackDelay(Integer callbackDelay) {
+            this.callbackDelay = callbackDelay;
+            return this;
+        }
+        public Integer getCallbackDelay() {
+            return this.callbackDelay;
+        }
+
+        public AIAgentConfigVcrConfigInvalidFrameMotion setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class AIAgentConfigVcrConfigPeopleCount extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static AIAgentConfigVcrConfigPeopleCount build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfigPeopleCount self = new AIAgentConfigVcrConfigPeopleCount();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfigPeopleCount setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class AIAgentConfigVcrConfigStillFrameMotion extends TeaModel {
+        @NameInMap("CallbackDelay")
+        public Integer callbackDelay;
+
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static AIAgentConfigVcrConfigStillFrameMotion build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfigStillFrameMotion self = new AIAgentConfigVcrConfigStillFrameMotion();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfigStillFrameMotion setCallbackDelay(Integer callbackDelay) {
+            this.callbackDelay = callbackDelay;
+            return this;
+        }
+        public Integer getCallbackDelay() {
+            return this.callbackDelay;
+        }
+
+        public AIAgentConfigVcrConfigStillFrameMotion setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
+    public static class AIAgentConfigVcrConfig extends TeaModel {
+        @NameInMap("Equipment")
+        public AIAgentConfigVcrConfigEquipment equipment;
+
+        @NameInMap("HeadMotion")
+        public AIAgentConfigVcrConfigHeadMotion headMotion;
+
+        @NameInMap("InvalidFrameMotion")
+        public AIAgentConfigVcrConfigInvalidFrameMotion invalidFrameMotion;
+
+        @NameInMap("PeopleCount")
+        public AIAgentConfigVcrConfigPeopleCount peopleCount;
+
+        @NameInMap("StillFrameMotion")
+        public AIAgentConfigVcrConfigStillFrameMotion stillFrameMotion;
+
+        public static AIAgentConfigVcrConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfig self = new AIAgentConfigVcrConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfig setEquipment(AIAgentConfigVcrConfigEquipment equipment) {
+            this.equipment = equipment;
+            return this;
+        }
+        public AIAgentConfigVcrConfigEquipment getEquipment() {
+            return this.equipment;
+        }
+
+        public AIAgentConfigVcrConfig setHeadMotion(AIAgentConfigVcrConfigHeadMotion headMotion) {
+            this.headMotion = headMotion;
+            return this;
+        }
+        public AIAgentConfigVcrConfigHeadMotion getHeadMotion() {
+            return this.headMotion;
+        }
+
+        public AIAgentConfigVcrConfig setInvalidFrameMotion(AIAgentConfigVcrConfigInvalidFrameMotion invalidFrameMotion) {
+            this.invalidFrameMotion = invalidFrameMotion;
+            return this;
+        }
+        public AIAgentConfigVcrConfigInvalidFrameMotion getInvalidFrameMotion() {
+            return this.invalidFrameMotion;
+        }
+
+        public AIAgentConfigVcrConfig setPeopleCount(AIAgentConfigVcrConfigPeopleCount peopleCount) {
+            this.peopleCount = peopleCount;
+            return this;
+        }
+        public AIAgentConfigVcrConfigPeopleCount getPeopleCount() {
+            return this.peopleCount;
+        }
+
+        public AIAgentConfigVcrConfig setStillFrameMotion(AIAgentConfigVcrConfigStillFrameMotion stillFrameMotion) {
+            this.stillFrameMotion = stillFrameMotion;
+            return this;
+        }
+        public AIAgentConfigVcrConfigStillFrameMotion getStillFrameMotion() {
+            return this.stillFrameMotion;
         }
 
     }
