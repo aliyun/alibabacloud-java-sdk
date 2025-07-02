@@ -56,12 +56,10 @@ public class CreateImageRequest extends TeaModel {
     public String targetOSSRegionId;
 
     /**
-     * <p>创建镜像是否包含数据盘。</p>
+     * <p>Specifies whether to include data disk snapshots in the custom image.</p>
      * 
      * <strong>example:</strong>
-     * <p>取值
-     * true：附带数据盘
-     * false：默认值，不附带数据盘</p>
+     * <p>Value true false (default)</p>
      */
     @NameInMap("WithDataDisks")
     public Boolean withDataDisks;

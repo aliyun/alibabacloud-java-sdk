@@ -112,7 +112,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     public static class DescribeNetworksResponseBodyNetworksNetworkTagsTag extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -137,7 +137,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
         public String tagValue;
 
         /**
-         * <p>标签值。</p>
+         * <p>The bandwidth.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

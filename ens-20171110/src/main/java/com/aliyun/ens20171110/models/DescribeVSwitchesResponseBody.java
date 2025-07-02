@@ -93,7 +93,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
 
     public static class DescribeVSwitchesResponseBodyVSwitchesVSwitchTagsTag extends TeaModel {
         /**
-         * <p>标签键。</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -118,7 +118,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         public String tagValue;
 
         /**
-         * <p>标签值。</p>
+         * <p>The request error rate.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -1037,6 +1037,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageId", request.imageId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceBillingCycle)) {
+            query.put("InstanceBillingCycle", request.instanceBillingCycle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
             query.put("InstanceType", request.instanceType);
         }

@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     /**
      * <p>Details of the EIPs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;106.14.194.193\&quot;]</p>
      */
     @NameInMap("EipAddresses")
     public DescribeEnsEipAddressesResponseBodyEipAddresses eipAddresses;
@@ -92,37 +95,17 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddressTagsTag extends TeaModel {
-        /**
-         * <p>标签键</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestKey</p>
-         */
         @NameInMap("TagKey")
         @Deprecated
         public String tagKey;
 
-        /**
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("TagValue")
         @Deprecated
         public String tagValue;
 
-        /**
-         * <p>标签值。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>TestValue</p>
-         */
         @NameInMap("Value")
         public String value;
 
@@ -187,167 +170,48 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     }
 
     public static class DescribeEnsEipAddressesResponseBodyEipAddressesEipAddress extends TeaModel {
-        /**
-         * <p>The ID of the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>eip-5sainglpw7qfem3icir4s****</p>
-         */
         @NameInMap("AllocationId")
         public String allocationId;
 
-        /**
-         * <p>The time when the EIP was created.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1624885274000</p>
-         */
         @NameInMap("AllocationTime")
         public String allocationTime;
 
-        /**
-         * <p>The peak bandwidth of the EIP. Default value: 5. Valid values: <strong>5</strong> to <strong>10000</strong>. Unit: Mbit/s.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
-         */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
-        /**
-         * <p>The billing method of the EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>PrePaid</strong>: subscription.</li>
-         * <li><strong>PostPaid</strong>: pay-as-you-go</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>PostPaid</p>
-         */
         @NameInMap("ChargeType")
         public String chargeType;
 
-        /**
-         * <p>The description of the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>example</p>
-         */
         @NameInMap("Description")
         public String description;
 
-        /**
-         * <p>The ID of the ENS node.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-xian-telecom</p>
-         */
         @NameInMap("EnsRegionId")
         public String ensRegionId;
 
-        /**
-         * <p>The ID of the instance that is associated with the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>lb-5sc3kum2e0sz34wbqrws9****</p>
-         */
         @NameInMap("InstanceId")
         public String instanceId;
 
-        /**
-         * <p>The type of the instance that is associated with the EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>EnsInstance</strong>: ENS instance in a VPC</li>
-         * <li><strong>SlbInstance</strong>: SLB instance</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SlbInstance</p>
-         */
         @NameInMap("InstanceType")
         public String instanceType;
 
-        /**
-         * <p>The metering method of the EIP.</p>
-         * <ul>
-         * <li><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth</li>
-         * <li><strong>PayByBandwidth</strong>: Pay by bandwidth</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>95BandwidthByMonth</p>
-         */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
-        /**
-         * <p>The EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>10.10.10</p>
-         */
         @NameInMap("IpAddress")
         public String ipAddress;
 
-        /**
-         * <p>The running status of the EIP. This parameter is returned if the EIP is a secondary EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>Stopped</strong></li>
-         * <li><strong>Running</strong></li>
-         * <li><strong>Starting</strong></li>
-         * <li><strong>Stopping</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Stopped</p>
-         */
         @NameInMap("IpStatus")
         public String ipStatus;
 
-        /**
-         * <p>The Internet service provider (ISP). Valid values:</p>
-         * <ul>
-         * <li><strong>cmcc</strong>: China Mobile</li>
-         * <li><strong>unicom</strong>: China Unicom</li>
-         * <li><strong>telecom</strong>: China Telecom</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cmcc</p>
-         */
         @NameInMap("Isp")
         public String isp;
 
-        /**
-         * <p>The name of the EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test</p>
-         */
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>Indicates whether the EIP is a secondary EIP.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("Standby")
         public Boolean standby;
 
-        /**
-         * <p>The status of the EIP. Valid values:</p>
-         * <ul>
-         * <li><strong>Associating</strong></li>
-         * <li><strong>Unassociating</strong></li>
-         * <li><strong>InUse</strong></li>
-         * <li><strong>Available</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>Available</p>
-         */
         @NameInMap("Status")
         public String status;
 

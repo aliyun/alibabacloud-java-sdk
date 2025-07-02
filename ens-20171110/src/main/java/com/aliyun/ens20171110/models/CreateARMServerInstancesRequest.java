@@ -81,6 +81,9 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("InstanceBillingCycle")
+    public String instanceBillingCycle;
+
     /**
      * <p>The specification of the Android in Container (AIC) instance. Examples:</p>
      * <ul>
@@ -152,7 +155,6 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
      * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -167,7 +169,6 @@ public class CreateARMServerInstancesRequest extends TeaModel {
      * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
      * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -291,6 +292,14 @@ public class CreateARMServerInstancesRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public CreateARMServerInstancesRequest setInstanceBillingCycle(String instanceBillingCycle) {
+        this.instanceBillingCycle = instanceBillingCycle;
+        return this;
+    }
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     public CreateARMServerInstancesRequest setInstanceType(String instanceType) {
