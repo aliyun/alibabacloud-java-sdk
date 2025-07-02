@@ -2,6 +2,10 @@
 - Update API ListFunctions: add request parameters resourceGroupId.
 
 
+2025-07-02 Version: 4.3.6
+- Update API ListFunctions: add request parameters resourceGroupId.
+
+
 2025-04-24 Version: 4.3.5
 - Generated java 2023-03-30 for FC.
 
