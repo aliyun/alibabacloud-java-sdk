@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIpamPoolAllocationResponseBody extends TeaModel {
     /**
+     * <p>The custom reserved CIDR block.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.1.0/24</p>
      */
@@ -12,6 +14,8 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
     public String cidr;
 
     /**
+     * <p>The ID of the custom reserved CIDR block.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-pool-alloc-112za33e4****</p>
      */
@@ -19,6 +23,8 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
     public String ipamPoolAllocationId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>CE9CDAE5-341E-5D0B-AC8A-2BAC707D3EB2</p>
      */
@@ -26,6 +32,8 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The source CIDR block.</p>
+     * 
      * <strong>example:</strong>
      * <p>192.168.0.0/16</p>
      */

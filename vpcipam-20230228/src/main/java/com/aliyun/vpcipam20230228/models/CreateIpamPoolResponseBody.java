@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIpamPoolResponseBody extends TeaModel {
     /**
+     * <p>The ID of the IPAM pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-pool-6rcq3tobayc20t****</p>
      */
@@ -12,6 +14,8 @@ public class CreateIpamPoolResponseBody extends TeaModel {
     public String ipamPoolId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
      */

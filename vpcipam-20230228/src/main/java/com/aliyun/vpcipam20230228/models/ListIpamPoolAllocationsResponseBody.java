@@ -4,13 +4,24 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamPoolAllocationsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The IDs of the instances to which CIDR blocks are allocated from the IPAM pool.</p>
+     */
     @NameInMap("IpamPoolAllocations")
     public java.util.List<ListIpamPoolAllocationsResponseBodyIpamPoolAllocations> ipamPoolAllocations;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -18,6 +29,12 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -25,6 +42,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3748DEFF-68BE-5EED-9937-7C1D0C21BAB4</p>
      */
@@ -32,6 +51,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -93,6 +114,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
 
     public static class ListIpamPoolAllocationsResponseBodyIpamPoolAllocations extends TeaModel {
         /**
+         * <p>The allocated CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
          */
@@ -100,26 +123,44 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String cidr;
 
         /**
+         * <p>The time when the instance was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-05-19T08:59:18Z</p>
          */
         @NameInMap("CreationTime")
         public String creationTime;
 
+        /**
+         * <p>The description of the allocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
+         */
         @NameInMap("IpamPoolAllocationDescription")
         public String ipamPoolAllocationDescription;
 
         /**
+         * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-pool-alloc-112za33e4****</p>
          */
         @NameInMap("IpamPoolAllocationId")
         public String ipamPoolAllocationId;
 
+        /**
+         * <p>The name of the allocation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test name</p>
+         */
         @NameInMap("IpamPoolAllocationName")
         public String ipamPoolAllocationName;
 
         /**
+         * <p>The ID of the IPAM pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
@@ -127,6 +168,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String ipamPoolId;
 
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -134,6 +177,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource to which the CIDR block is allocated.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp16qjewdsunr41m1****</p>
          */
@@ -141,6 +186,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>132193271328****</p>
          */
@@ -148,6 +195,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public Long resourceOwnerId;
 
         /**
+         * <p>The effective region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -155,6 +204,13 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
+         * <p>The type of the resource to which the CIDR block is allocated. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>IpamPool</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -162,6 +218,8 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The source CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
          */
@@ -169,6 +227,12 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         public String sourceCidr;
 
         /**
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Created</p>
          */

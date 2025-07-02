@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListIpamsResponseBody extends TeaModel {
     /**
+     * <p>The number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -163,6 +165,8 @@ public class ListIpamsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>Default resource discovery association ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-res-disco-assoc-jt5fac8twugdbbgip****</p>
          */
@@ -170,6 +174,8 @@ public class ListIpamsResponseBody extends TeaModel {
         public String defaultResourceDiscoveryAssociationId;
 
         /**
+         * <p>Default resource discovery instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
          */
@@ -261,6 +267,8 @@ public class ListIpamsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>Number of resource discovery associations.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

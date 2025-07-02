@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIpamPoolAllocationRequest extends TeaModel {
     /**
+     * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,10 @@ public class GetIpamPoolAllocationRequest extends TeaModel {
     public String ipamPoolAllocationId;
 
     /**
+     * <p>The region of the IPAM pool.</p>
+     * <blockquote>
+     * <p> If the IPAM pool to which CIDR allocation belongs has the region attribute, this parameter is the region of the IPAM pool. If not, this parameter is the IPAM managed region.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

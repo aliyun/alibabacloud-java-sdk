@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListIpamResourceCidrsRequest extends TeaModel {
     /**
+     * <p>The ID of the IPAM pool.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>IpamScopeId</strong> and <strong>IpamPoolId</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ipam-pool-6rcq3tobayc20t****</p>
      */
@@ -12,6 +17,11 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     public String ipamPoolId;
 
     /**
+     * <p>The ID of the IPAM scope.</p>
+     * <blockquote>
+     * <p> You must specify at least one of <strong>IpamScopeId</strong> and <strong>IpamPoolId</strong>.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ipam-scope-glfmcyldpm8lsy****</p>
      */
@@ -19,6 +29,8 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     public String ipamScopeId;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +38,12 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -33,6 +51,8 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the region where the IPAM instance is hosted.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,6 +62,8 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vpc-bp16qjewdsunr41m1****</p>
      */
@@ -52,12 +74,24 @@ public class ListIpamResourceCidrsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The type of resource. Valid values:</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>VSwitch</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The VPC ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-bp1fjfnrg3av6zb9e****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

@@ -4,13 +4,24 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamScopesResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The IPAM scopes.</p>
+     */
     @NameInMap("IpamScopes")
     public java.util.List<ListIpamScopesResponseBodyIpamScopes> ipamScopes;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -18,6 +29,12 @@ public class ListIpamScopesResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -25,6 +42,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8859C501-97E7-53D4-B94B-2A9E16003B22</p>
      */
@@ -32,6 +51,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -93,6 +114,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
 
     public static class ListIpamScopesResponseBodyIpamScopesTags extends TeaModel {
         /**
+         * <p>The tag key.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -100,6 +123,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -131,6 +156,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
 
     public static class ListIpamScopesResponseBodyIpamScopes extends TeaModel {
         /**
+         * <p>The time when the IPAM scope was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2022-04-18T03:12:37Z</p>
          */
@@ -138,6 +165,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The ID of the IPAM.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-ccxbnsbhew0d6t****</p>
          */
@@ -145,6 +174,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String ipamId;
 
         /**
+         * <p>The description of the IPAM scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>test description</p>
          */
@@ -152,6 +183,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String ipamScopeDescription;
 
         /**
+         * <p>The ID of the IPAM scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-scope-glfmcyldpm8lsy****</p>
          */
@@ -159,6 +192,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String ipamScopeId;
 
         /**
+         * <p>The name of the IPAM scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -166,6 +201,12 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String ipamScopeName;
 
         /**
+         * <p>The type of the IPAM scope. Valid values:</p>
+         * <ul>
+         * <li><strong>public</strong></li>
+         * <li><strong>private</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>private</p>
          */
@@ -173,6 +214,12 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public String ipamScopeType;
 
         /**
+         * <p>Indicates whether the scope is the default scope. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -180,6 +227,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
+         * <p>The Alibaba Cloud account that owns the IPAM scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>1210123456******</p>
          */
@@ -187,6 +236,8 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public Long ownerId;
 
         /**
+         * <p>The number of pools in the IPAM scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -194,22 +245,41 @@ public class ListIpamScopesResponseBody extends TeaModel {
         public Integer poolCount;
 
         /**
+         * <p>The region ID of the IPAM.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
+        /**
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
+         * <p>The status of the IPAM scope. Valid values:</p>
+         * <ul>
+         * <li><strong>Creating</strong></li>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleting</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag list.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<ListIpamScopesResponseBodyIpamScopesTags> tags;
 

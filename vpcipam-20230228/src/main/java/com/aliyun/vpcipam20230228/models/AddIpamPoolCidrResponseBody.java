@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddIpamPoolCidrResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>558BC336-8B88-53B0-B4AD-980EE900AB01</p>
      */

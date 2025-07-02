@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DissociateIpamResourceDiscoveryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86137597-443F-5B66-B9B6-8514E0C50B8F</p>
      */

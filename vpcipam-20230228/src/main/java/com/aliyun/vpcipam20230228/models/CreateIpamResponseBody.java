@@ -4,13 +4,27 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class CreateIpamResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the default resource discovery association.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipam-res-disco-assoc-jt5fac8twugdbbgip****</p>
+     */
     @NameInMap("DefaultResourceDiscoveryAssociationId")
     public String defaultResourceDiscoveryAssociationId;
 
+    /**
+     * <p>The ID of the default resource discovery instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
+     */
     @NameInMap("DefaultResourceDiscoveryId")
     public String defaultResourceDiscoveryId;
 
     /**
+     * <p>The ID of the IPAM.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-ccxbnsbhew0d6t****</p>
      */
@@ -18,6 +32,8 @@ public class CreateIpamResponseBody extends TeaModel {
     public String ipamId;
 
     /**
+     * <p>The default private scope created by the system after the IPAM is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-scope-8wiontzmiy6cg0****</p>
      */
@@ -25,6 +41,8 @@ public class CreateIpamResponseBody extends TeaModel {
     public String privateDefaultScopeId;
 
     /**
+     * <p>The default public scope created by the system after the IPAM is created.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-scope-r5c5c7bmym1brc****</p>
      */
@@ -32,12 +50,20 @@ public class CreateIpamResponseBody extends TeaModel {
     public String publicDefaultScopeId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ED8D006-F706-4D23-88ED-E11ED39DCAC0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of discovered resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ResourceDiscoveryAssociationCount")
     public Integer resourceDiscoveryAssociationCount;
 

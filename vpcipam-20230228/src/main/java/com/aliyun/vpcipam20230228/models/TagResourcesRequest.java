@@ -11,6 +11,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The region ID of the resource.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +21,7 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The IDs of the resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
@@ -32,6 +34,12 @@ public class TagResourcesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>IPAM</strong></li>
+     * <li><strong>IPAMSCOPE</strong></li>
+     * <li><strong>IPAMPOOL</strong></li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,6 +49,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The tags to add to the resources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -117,6 +126,9 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -124,6 +136,9 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
          */

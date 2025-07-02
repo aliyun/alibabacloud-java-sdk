@@ -5,16 +5,24 @@ import com.aliyun.tea.*;
 
 public class ListIpamScopesRequest extends TeaModel {
     /**
+     * <p>The ID of the IPAM.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-ccxbnsbhew0d6t****</p>
      */
     @NameInMap("IpamId")
     public String ipamId;
 
+    /**
+     * <p>The IDs of IPAM scopes.</p>
+     */
     @NameInMap("IpamScopeIds")
     public java.util.List<String> ipamScopeIds;
 
     /**
+     * <p>The name of the IPAM scope.</p>
+     * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -22,6 +30,12 @@ public class ListIpamScopesRequest extends TeaModel {
     public String ipamScopeName;
 
     /**
+     * <p>The type of the IPAM scope. Valid values:</p>
+     * <ul>
+     * <li><strong>public</strong></li>
+     * <li><strong>private</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>private</p>
      */
@@ -29,6 +43,8 @@ public class ListIpamScopesRequest extends TeaModel {
     public String ipamScopeType;
 
     /**
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +52,12 @@ public class ListIpamScopesRequest extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -49,6 +71,7 @@ public class ListIpamScopesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the IPAM instance is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,6 +81,8 @@ public class ListIpamScopesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The resource group ID of the IPAM scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2sermdd6****</p>
      */
@@ -70,6 +95,9 @@ public class ListIpamScopesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag list.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListIpamScopesRequestTags> tags;
 
@@ -184,6 +212,9 @@ public class ListIpamScopesRequest extends TeaModel {
 
     public static class ListIpamScopesRequestTags extends TeaModel {
         /**
+         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -191,6 +222,9 @@ public class ListIpamScopesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
          */

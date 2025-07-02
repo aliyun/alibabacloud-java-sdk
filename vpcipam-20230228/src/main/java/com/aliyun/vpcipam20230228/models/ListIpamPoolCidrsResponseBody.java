@@ -4,13 +4,24 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamPoolCidrsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The IDs of IPAM pools.</p>
+     */
     @NameInMap("IpamPoolCidrs")
     public java.util.List<ListIpamPoolCidrsResponseBodyIpamPoolCidrs> ipamPoolCidrs;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -18,6 +29,12 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -25,6 +42,8 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9E7CCB95-62E0-534D-9B9A-71F27E8B71B1</p>
      */
@@ -32,6 +51,8 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -93,6 +114,8 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
 
     public static class ListIpamPoolCidrsResponseBodyIpamPoolCidrs extends TeaModel {
         /**
+         * <p>The provisioned CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
          */
@@ -100,6 +123,8 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         public String cidr;
 
         /**
+         * <p>The ID of the IPAM pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
@@ -107,6 +132,12 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         public String ipamPoolId;
 
         /**
+         * <p>The status of the CIDR block provisioned to the IPAM pool. Valid values:</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Created</p>
          */

@@ -4,13 +4,24 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamResourceCidrsResponseBody extends TeaModel {
+    /**
+     * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The list of resources in the IPAM pool.</p>
+     */
     @NameInMap("IpamResourceCidrs")
     public java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrs> ipamResourceCidrs;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -18,6 +29,12 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -25,6 +42,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>49A9DE56-B68C-5FFC-BC06-509D086F287C</p>
      */
@@ -32,6 +51,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries returned.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -91,13 +112,72 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail extends TeaModel {
+        @NameInMap("FreeIpCount")
+        public String freeIpCount;
+
+        @NameInMap("TotalIpCount")
+        public String totalIpCount;
+
+        @NameInMap("UsedIpCount")
+        public String usedIpCount;
+
+        public static ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail build(java.util.Map<String, ?> map) throws Exception {
+            ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail self = new ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail setFreeIpCount(String freeIpCount) {
+            this.freeIpCount = freeIpCount;
+            return this;
+        }
+        public String getFreeIpCount() {
+            return this.freeIpCount;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail setTotalIpCount(String totalIpCount) {
+            this.totalIpCount = totalIpCount;
+            return this;
+        }
+        public String getTotalIpCount() {
+            return this.totalIpCount;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail setUsedIpCount(String usedIpCount) {
+            this.usedIpCount = usedIpCount;
+            return this;
+        }
+        public String getUsedIpCount() {
+            return this.usedIpCount;
+        }
+
+    }
+
     public static class ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail extends TeaModel {
+        /**
+         * <p>The CIDR that overlaps with the current resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
+         */
         @NameInMap("OverlapResourceCidr")
         public String overlapResourceCidr;
 
+        /**
+         * <p>Instance ID that overlaps with the current resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-aq3fjgnig5av6jb8d****</p>
+         */
         @NameInMap("OverlapResourceId")
         public String overlapResourceId;
 
+        /**
+         * <p>The region of instance that overlaps with the current resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("OverlapResourceRegion")
         public String overlapResourceRegion;
 
@@ -134,6 +214,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
 
     public static class ListIpamResourceCidrsResponseBodyIpamResourceCidrs extends TeaModel {
         /**
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * 
          * <strong>example:</strong>
          * <p>132193271328****</p>
          */
@@ -141,6 +223,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public Long aliUid;
 
         /**
+         * <p>The CIDR block of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.0/32</p>
          */
@@ -148,13 +232,26 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String cidr;
 
         /**
+         * <p>The compliance status of the resource.</p>
+         * <ul>
+         * <li><strong>Compliant</strong></li>
+         * <li><strong>Noncompliant</strong></li>
+         * <li><strong>Ignored</strong> Ignored resources are not monitored.</li>
+         * <li><strong>Unmanaged</strong>: The resource does not have a CIDR block allocated from the IPAM pool. IPAM does not monitor whether the CIDR block of the resource meets the allocation rules of the IP address pool.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Compliant</p>
          */
         @NameInMap("ComplianceStatus")
         public String complianceStatus;
 
+        @NameInMap("IpCountDetail")
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail ipCountDetail;
+
         /**
+         * <p>The IP usage that is displayed in decimal form.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -162,6 +259,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String ipUsage;
 
         /**
+         * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-pool-alloc-112za33e4****</p>
          */
@@ -169,6 +268,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String ipamAllocationId;
 
         /**
+         * <p>The ID of the IPAM.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-uq5dcfc2eqhpf4****</p>
          */
@@ -176,6 +277,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String ipamId;
 
         /**
+         * <p>The ID of the IPAM pool.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-pool-6rcq3tobayc20t***</p>
          */
@@ -183,6 +286,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String ipamPoolId;
 
         /**
+         * <p>The ID of the IPAM scope.</p>
+         * 
          * <strong>example:</strong>
          * <p>ipam-scope-glfmcyldpm8lsy****</p>
          */
@@ -190,16 +295,33 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String ipamScopeId;
 
         /**
+         * <p>The management status of the resource.</p>
+         * <ul>
+         * <li><strong>Managed</strong>: The resource has a CIDR block allocated from an IPAM pool. IPAM is monitoring whether the allocated CIDR block overlaps with other CIDR blocks and whether the allocated CIDR block meets the allocation rules.</li>
+         * <li><strong>Unmanaged</strong>: The resource does not have a CIDR block allocated from the IPAM pool. IPAM is monitoring whether the resource has CIDR blocks that meet the allocation rules. Monitor whether CIDR blocks overlap with each other.</li>
+         * <li><strong>Ignored</strong>: The resource is not monitored. Ignored resources are not monitored. If you ignore a resource, CIDR blocks allocated to the resource are returned to the IPAM pool and will not be automatically allocated to the resource (if automatic allocation rules are specified).</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Managed</p>
          */
         @NameInMap("ManagementStatus")
         public String managementStatus;
 
+        /**
+         * <p>List of resources that overlap with the current resource.</p>
+         */
         @NameInMap("OverlapDetail")
         public java.util.List<ListIpamResourceCidrsResponseBodyIpamResourceCidrsOverlapDetail> overlapDetail;
 
         /**
+         * <p>The overlapping status of the resource.</p>
+         * <ul>
+         * <li><strong>Nonoverlapping</strong></li>
+         * <li><strong>Overlapping</strong></li>
+         * <li><strong>Ignored</strong> Ignored resources are not monitored.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Nonoverlapping</p>
          */
@@ -207,6 +329,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String overlapStatus;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc-bp16qjewdsunr41m1****</p>
          */
@@ -214,6 +338,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>132193271328****</p>
          */
@@ -221,6 +347,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public Long resourceOwnerId;
 
         /**
+         * <p>The effective region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -228,6 +356,12 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String resourceRegionId;
 
         /**
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VSwitch</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VPC</p>
          */
@@ -235,6 +369,8 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The source CIDR block.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
          */
@@ -242,12 +378,24 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         public String sourceCidr;
 
         /**
+         * <p>The status of the resource in the IPAM pool. Valid values:</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Created</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1fjfnrg3av6zb9e****</p>
+         */
         @NameInMap("VpcId")
         public String vpcId;
 
@@ -278,6 +426,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
         public String getComplianceStatus() {
             return this.complianceStatus;
+        }
+
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrs setIpCountDetail(ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail ipCountDetail) {
+            this.ipCountDetail = ipCountDetail;
+            return this;
+        }
+        public ListIpamResourceCidrsResponseBodyIpamResourceCidrsIpCountDetail getIpCountDetail() {
+            return this.ipCountDetail;
         }
 
         public ListIpamResourceCidrsResponseBodyIpamResourceCidrs setIpUsage(String ipUsage) {

@@ -27,6 +27,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <strong>CreateIpamPool</strong> operation to create an IPAM pool.</p>
+     * <ul>
+     * <li>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</li>
+     * <li>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</li>
+     * <li>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</li>
+     * <li>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</li>
+     * <li>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</li>
+     * <li>You can provision at most 50 CIDR blocks to each pool.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request AddIpamPoolCidrRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddIpamPoolCidrResponse
@@ -68,15 +82,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AddIpamPoolCidrResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AddIpamPoolCidrResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddIpamPoolCidrResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you provision a CIDR block, make sure that an IPAM pool is created. You can call the <strong>CreateIpamPool</strong> operation to create an IPAM pool.</p>
+     * <ul>
+     * <li>If no CIDR block is provisioned to a parent pool, you cannot provision CIDR blocks to its subpools.</li>
+     * <li>If a CIDR block is provisioned to a parent pool, you can provision CIDR blocks to its subpools and the CIDR blocks must be subsets of the CIDR block provisioned to the parent pool.</li>
+     * <li>If a CIDR block is provisioned to a parent pool and allocations are created, CIDR blocks provisioned to its subpools cannot overlap with existing allocated CIDR blocks.</li>
+     * <li>You can provision CIDR blocks to a pool only in the region where the IPAM is hosted.</li>
+     * <li>CIDR blocks provisioned to an IPAM pool cannot overlap with the CIDR blocks provisioned to other pools in the same scope.</li>
+     * <li>You can provision at most 50 CIDR blocks to each pool.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Provisions a CIDR block to an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request AddIpamPoolCidrRequest
      * @return AddIpamPoolCidrResponse
      */
@@ -86,8 +109,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关联资源发现和IPAM实例。</p>
+     * <p>Associates resource discovery with an IPAM instance.</p>
      * 
      * @param request AssociateIpamResourceDiscoveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -146,17 +172,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateIpamResourceDiscoveryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AssociateIpamResourceDiscoveryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssociateIpamResourceDiscoveryResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  The specified resource discovery instance can only be associated with one IPAM instance and associations cannot be duplicated.</p>
+     * 
      * <b>summary</b> : 
-     * <p>关联资源发现和IPAM实例。</p>
+     * <p>Associates resource discovery with an IPAM instance.</p>
      * 
      * @param request AssociateIpamResourceDiscoveryRequest
      * @return AssociateIpamResourceDiscoveryResponse
@@ -167,6 +191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the resource group of an IPAM resource.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ChangeResourceGroupResponse
@@ -220,15 +247,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ChangeResourceGroupResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ChangeResourceGroupResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Changes the resource group of an IPAM resource.</p>
+     * 
      * @param request ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -238,8 +263,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can create only one IPAM with each Alibaba Cloud account in each region.</li>
+     * <li>Only IPv4 IP addresses can be allocated.</li>
+     * <li>When you create an IPAM instance:<ul>
+     * <li>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</li>
+     * <li>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建IPAM实例。</p>
+     * <p>Creates an IP Address Manager (IPAM).</p>
      * 
      * @param request CreateIpamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -310,17 +346,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIpamResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can create only one IPAM with each Alibaba Cloud account in each region.</li>
+     * <li>Only IPv4 IP addresses can be allocated.</li>
+     * <li>When you create an IPAM instance:<ul>
+     * <li>If there is no custom resource discovery in the region, the system creates a default resource discovery associated with the IPAM instance.</li>
+     * <li>If there is a custom resource discovery in the region, the system converts it to a default resource discovery and associates it with the IPAM instance.</li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建IPAM实例。</p>
+     * <p>Creates an IP Address Manager (IPAM).</p>
      * 
      * @param request CreateIpamRequest
      * @return CreateIpamResponse
@@ -331,6 +373,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request CreateIpamPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIpamPoolResponse
@@ -428,15 +473,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamPoolResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIpamPoolResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamPoolResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request CreateIpamPoolRequest
      * @return CreateIpamPoolResponse
      */
@@ -446,6 +489,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <strong>CreateIpamPool</strong> to create an IPAM pool and call <strong>AddIpamPoolCidr</strong> to add CIDR blocks to the pool.</p>
+     * <ul>
+     * <li>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</li>
+     * <li>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</li>
+     * <li>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request CreateIpamPoolAllocationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIpamPoolAllocationResponse
@@ -499,15 +553,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamPoolAllocationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIpamPoolAllocationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamPoolAllocationResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Before you reserve a custom CIDR block, make sure that an IPAM pool is created and CIDR blocks are added to the pool. You can call <strong>CreateIpamPool</strong> to create an IPAM pool and call <strong>AddIpamPoolCidr</strong> to add CIDR blocks to the pool.</p>
+     * <ul>
+     * <li>When you specify Cidr or CidrMask to reserve a custom CIDR block, the mask must fall within the range specified by the IPAM pool.</li>
+     * <li>If the IPAM pool has the region attribute, you must reserve a custom CIDR block in the region to which the IPAM pool belongs.</li>
+     * <li>The custom CIDR block that you want to reserve cannot overlap with existing CIDR blocks created from the IPAM pool.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Reserves a custom CIDR block from an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request CreateIpamPoolAllocationRequest
      * @return CreateIpamPoolAllocationResponse
      */
@@ -517,8 +577,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</p>
+     * <ul>
+     * <li>You can create only custom resource discovery instances.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义类型资源发现。</p>
+     * <p>Creates a custom resource discovery instance.</p>
      * 
      * @param request CreateIpamResourceDiscoveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -589,17 +655,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamResourceDiscoveryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIpamResourceDiscoveryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamResourceDiscoveryResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Each Alibaba Cloud account can create only one resource discovery instance in each region.</p>
+     * <ul>
+     * <li>You can create only custom resource discovery instances.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建自定义类型资源发现。</p>
+     * <p>Creates a custom resource discovery instance.</p>
      * 
      * @param request CreateIpamResourceDiscoveryRequest
      * @return CreateIpamResourceDiscoveryResponse
@@ -610,6 +677,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a public scope and private scope to respectively manage public and private IP addresses.</p>
+     * 
      * @param request CreateIpamScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateIpamScopeResponse
@@ -683,15 +753,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamScopeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateIpamScopeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIpamScopeResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates a public scope and private scope to respectively manage public and private IP addresses.</p>
+     * 
      * @param request CreateIpamScopeRequest
      * @return CreateIpamScopeResponse
      */
@@ -701,6 +769,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Prerequisites</h2>
+     * <ul>
+     * <li>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <strong>DeleteIpamPool</strong> to delete IPAM pools.</li>
+     * <li>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <strong>DeleteIpamScope</strong> to delete IPAM scopes.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IP Address Manager (IPAM).</p>
+     * 
      * @param request DeleteIpamRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpamResponse
@@ -754,15 +832,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIpamResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <h2><a href="#"></a>Prerequisites</h2>
+     * <ul>
+     * <li>Before you delete an IPAM, make sure that all IPAM pools of the IPAM are deleted. You can call <strong>DeleteIpamPool</strong> to delete IPAM pools.</li>
+     * <li>Before you delete an IPAM, make sure that all IPAM scopes of the IPAM are deleted. You can call <strong>DeleteIpamScope</strong> to delete IPAM scopes.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IP Address Manager (IPAM).</p>
+     * 
      * @param request DeleteIpamRequest
      * @return DeleteIpamResponse
      */
@@ -772,6 +855,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</li>
+     * <li>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</li>
+     * <li>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IP Address Manager (IPAM) scope.</p>
+     * 
      * @param request DeleteIpamPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpamPoolResponse
@@ -825,15 +919,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamPoolResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIpamPoolResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamPoolResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>Before you delete a parent pool, make sure that all subpools of the parent pool are deleted.</li>
+     * <li>If an effective region is specified for a parent pool and IP addresses are allocated from the parent pool, you cannot delete the parent pool.</li>
+     * <li>If an effective region is specified for a subpool and IP addresses are allocated from the subpool, you cannot delete the subpool.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IP Address Manager (IPAM) scope.</p>
+     * 
      * @param request DeleteIpamPoolRequest
      * @return DeleteIpamPoolResponse
      */
@@ -843,6 +943,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request DeleteIpamPoolAllocationRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpamPoolAllocationResponse
@@ -880,15 +983,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamPoolAllocationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIpamPoolAllocationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamPoolAllocationResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes a custom reserved CIDR block from an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request DeleteIpamPoolAllocationRequest
      * @return DeleteIpamPoolAllocationResponse
      */
@@ -898,6 +999,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</p>
+     * <ul>
+     * <li>If CIDR blocks are provisioned only to the parent pool, directly delete them.</li>
+     * <li>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</li>
+     * <li>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request DeleteIpamPoolCidrRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpamPoolCidrResponse
@@ -939,15 +1051,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamPoolCidrResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIpamPoolCidrResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamPoolCidrResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If CIDR blocks are provisioned to a parent pool and its subpools, you must first delete the CIDR blocks provisioned to the subpools before you delete the ones provisioned to the parent pool.</p>
+     * <ul>
+     * <li>If CIDR blocks are provisioned only to the parent pool, directly delete them.</li>
+     * <li>If CIDR blocks are allocated from provisioned ones, you must first delete the allocated CIDR blocks before you delete the provisioned ones.</li>
+     * <li>You can delete CIDR blocks provisioned to an IPAM pool only in the region where the IPAM is hosted.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes a CIDR block provisioned to an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request DeleteIpamPoolCidrRequest
      * @return DeleteIpamPoolCidrResponse
      */
@@ -957,8 +1075,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a resource discovery instance is shared, it cannot be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义类型的资源发现。</p>
+     * <p>Deletes a custom resource discovery instance.</p>
      * 
      * @param request DeleteIpamResourceDiscoveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1013,17 +1134,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamResourceDiscoveryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIpamResourceDiscoveryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamResourceDiscoveryResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  If a resource discovery instance is shared, it cannot be deleted.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除自定义类型的资源发现。</p>
+     * <p>Deletes a custom resource discovery instance.</p>
      * 
      * @param request DeleteIpamResourceDiscoveryRequest
      * @return DeleteIpamResourceDiscoveryResponse
@@ -1034,6 +1153,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>You cannot delete the private scope and public scope created by the system.</li>
+     * <li>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <strong>DeleteIpamPool</strong> to delete IPAM pools.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IP Address Manager (IPAM) scope.</p>
+     * 
      * @param request DeleteIpamScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteIpamScopeResponse
@@ -1087,15 +1216,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamScopeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteIpamScopeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIpamScopeResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>You cannot delete the private scope and public scope created by the system.</li>
+     * <li>Before you delete an IPAM scope, make sure that all pools within the scope are deleted. You can call <strong>DeleteIpamPool</strong> to delete IPAM pools.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an IP Address Manager (IPAM) scope.</p>
+     * 
      * @param request DeleteIpamScopeRequest
      * @return DeleteIpamScopeResponse
      */
@@ -1106,7 +1240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>解关联资源发现和IPAM实例。</p>
+     * <p>Disassociates resource discovery and IPAM instances.</p>
      * 
      * @param request DissociateIpamResourceDiscoveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1165,17 +1299,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateIpamResourceDiscoveryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DissociateIpamResourceDiscoveryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DissociateIpamResourceDiscoveryResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>解关联资源发现和IPAM实例。</p>
+     * <p>Disassociates resource discovery and IPAM instances.</p>
      * 
      * @param request DissociateIpamResourceDiscoveryRequest
      * @return DissociateIpamResourceDiscoveryResponse
@@ -1187,7 +1316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定IPAM地址池CIDR分配的信息</p>
+     * <p>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</p>
      * 
      * @param request GetIpamPoolAllocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1210,17 +1339,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetIpamPoolAllocationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetIpamPoolAllocationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIpamPoolAllocationResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查询指定IPAM地址池CIDR分配的信息</p>
+     * <p>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</p>
      * 
      * @param request GetIpamPoolAllocationRequest
      * @return GetIpamPoolAllocationResponse
@@ -1232,7 +1356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取地址池可用CIDR。</p>
+     * <p>Gets the available CIDR blocks of the IPAM pool.</p>
      * 
      * @param request GetIpamPoolNextAvailableCidrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1255,17 +1379,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetIpamPoolNextAvailableCidrResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetIpamPoolNextAvailableCidrResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIpamPoolNextAvailableCidrResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>获取地址池可用CIDR。</p>
+     * <p>Gets the available CIDR blocks of the IPAM pool.</p>
      * 
      * @param request GetIpamPoolNextAvailableCidrRequest
      * @return GetIpamPoolNextAvailableCidrResponse
@@ -1277,7 +1396,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询IPAM功能的开通状态。</p>
+     * <p>Queries whether IP Address Manager (IPAM) is activated.</p>
      * 
      * @param request GetVpcIpamServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1324,17 +1443,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetVpcIpamServiceStatusResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetVpcIpamServiceStatusResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetVpcIpamServiceStatusResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查询IPAM功能的开通状态。</p>
+     * <p>Queries whether IP Address Manager (IPAM) is activated.</p>
      * 
      * @param request GetVpcIpamServiceStatusRequest
      * @return GetVpcIpamServiceStatusResponse
@@ -1345,6 +1459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries discovered resources.</p>
+     * 
      * @param request ListIpamDiscoveredResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamDiscoveredResourceResponse
@@ -1390,15 +1507,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamDiscoveredResourceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamDiscoveredResourceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamDiscoveredResourceResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries discovered resources.</p>
+     * 
      * @param request ListIpamDiscoveredResourceRequest
      * @return ListIpamDiscoveredResourceResponse
      */
@@ -1408,6 +1523,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request ListIpamPoolAllocationsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamPoolAllocationsResponse
@@ -1457,15 +1575,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamPoolAllocationsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamPoolAllocationsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamPoolAllocationsResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries CIDR block allocations of an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request ListIpamPoolAllocationsRequest
      * @return ListIpamPoolAllocationsResponse
      */
@@ -1475,6 +1591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request ListIpamPoolCidrsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamPoolCidrsResponse
@@ -1516,15 +1635,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamPoolCidrsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamPoolCidrsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamPoolCidrsResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries CIDR blocks provisioned to an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request ListIpamPoolCidrsRequest
      * @return ListIpamPoolCidrsResponse
      */
@@ -1534,6 +1651,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries IP Address Manager (IPAM) pools.</p>
+     * 
      * @param request ListIpamPoolsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamPoolsResponse
@@ -1615,15 +1735,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamPoolsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamPoolsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamPoolsResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries IP Address Manager (IPAM) pools.</p>
+     * 
      * @param request ListIpamPoolsRequest
      * @return ListIpamPoolsResponse
      */
@@ -1633,6 +1751,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries resources in an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request ListIpamResourceCidrsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamResourceCidrsResponse
@@ -1690,15 +1811,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceCidrsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamResourceCidrsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceCidrsResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries resources in an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request ListIpamResourceCidrsRequest
      * @return ListIpamResourceCidrsResponse
      */
@@ -1709,7 +1828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询ipam资源发现实例</p>
+     * <p>Queries IPAM resource discovery instances.</p>
      * 
      * @param request ListIpamResourceDiscoveriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1784,17 +1903,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceDiscoveriesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamResourceDiscoveriesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceDiscoveriesResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查询ipam资源发现实例</p>
+     * <p>Queries IPAM resource discovery instances.</p>
      * 
      * @param request ListIpamResourceDiscoveriesRequest
      * @return ListIpamResourceDiscoveriesResponse
@@ -1806,7 +1920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看资源发现和IPAM的关联关系。</p>
+     * <p>Queries the association between resource discovery and IPAM.</p>
      * 
      * @param request ListIpamResourceDiscoveryAssociationsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1865,17 +1979,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceDiscoveryAssociationsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamResourceDiscoveryAssociationsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamResourceDiscoveryAssociationsResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>查看资源发现和IPAM的关联关系。</p>
+     * <p>Queries the association between resource discovery and IPAM.</p>
      * 
      * @param request ListIpamResourceDiscoveryAssociationsRequest
      * @return ListIpamResourceDiscoveryAssociationsResponse
@@ -1886,6 +1995,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries IP Address Manager (IPAM) scopes.</p>
+     * 
      * @param request ListIpamScopesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListIpamScopesResponse
@@ -1959,15 +2071,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamScopesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamScopesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamScopesResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries IP Address Manager (IPAM) scopes.</p>
+     * 
      * @param request ListIpamScopesRequest
      * @return ListIpamScopesResponse
      */
@@ -2045,12 +2155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListIpamsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIpamsResponse());
     }
 
     /**
@@ -2066,8 +2171,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> in the request to specify the object that you want to query.</li>
+     * <li><strong>Tag.N</strong> is a resource tag that consists of a key-value pair. If you specify only <strong>Tag.N.Key</strong>, all tag values that are associated with the specified key are returned. If you specify only <strong>Tag.N.Value</strong>, an error message is returned.</li>
+     * <li>If you specify <strong>Tag.N</strong> and <strong>ResourceId.N</strong> to filter tags, <strong>ResourceId.N</strong> must match all specified key-value pairs.</li>
+     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源标签列表</p>
+     * <p>Queries a list of resource tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2130,17 +2244,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <ul>
+     * <li>You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong> in the request to specify the object that you want to query.</li>
+     * <li><strong>Tag.N</strong> is a resource tag that consists of a key-value pair. If you specify only <strong>Tag.N.Key</strong>, all tag values that are associated with the specified key are returned. If you specify only <strong>Tag.N.Value</strong>, an error message is returned.</li>
+     * <li>If you specify <strong>Tag.N</strong> and <strong>ResourceId.N</strong> to filter tags, <strong>ResourceId.N</strong> must match all specified key-value pairs.</li>
+     * <li>If you specify multiple key-value pairs, resources that contain these key-value pairs are returned.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>查询资源标签列表</p>
+     * <p>Queries a list of resource tags.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -2152,7 +2270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>开通IPAM功能。</p>
+     * <p>Activates IP Address Manager (IPAM).</p>
      * 
      * @param request OpenVpcIpamServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2199,17 +2317,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new OpenVpcIpamServiceResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new OpenVpcIpamServiceResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenVpcIpamServiceResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>开通IPAM功能。</p>
+     * <p>Activates IP Address Manager (IPAM).</p>
      * 
      * @param request OpenVpcIpamServiceRequest
      * @return OpenVpcIpamServiceResponse
@@ -2220,8 +2333,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</p>
+     * <ul>
+     * <li>Each tag key that is added to an instance must be unique.</li>
+     * <li>You cannot create tags without adding them to instances. All tags must be added to instances.</li>
+     * <li>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>为资源实例绑定资源标签</p>
+     * <p>Adds a tag to a resource.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2276,17 +2398,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Usage notes</h3>
+     * <p>Tags are used to classify instances. Each tag consists of a key-value pair. Before you use tags, take note of the following items:</p>
+     * <ul>
+     * <li>Each tag key that is added to an instance must be unique.</li>
+     * <li>You cannot create tags without adding them to instances. All tags must be added to instances.</li>
+     * <li>You can add at most 20 tags to each instance. Before you add a tag to an instance, the system automatically checks the number of existing tags. An error message is returned if the maximum number of tags is reached.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>为资源实例绑定资源标签</p>
+     * <p>Adds a tag to a resource.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -2298,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>为资源解绑资源标签</p>
+     * <p>Removes a tag from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2357,17 +2483,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>为资源解绑资源标签</p>
+     * <p>Removes a tag from a resource.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -2379,7 +2500,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新ipam</p>
+     * <p>Updates an IP Address Manager (IPAM).</p>
      * 
      * @param request UpdateIpamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2450,17 +2571,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIpamResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>更新ipam</p>
+     * <p>Updates an IP Address Manager (IPAM).</p>
      * 
      * @param request UpdateIpamRequest
      * @return UpdateIpamResponse
@@ -2471,6 +2587,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the basic information about an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request UpdateIpamPoolRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateIpamPoolResponse
@@ -2552,15 +2671,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamPoolResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIpamPoolResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamPoolResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the basic information about an IP Address Manager (IPAM) pool.</p>
+     * 
      * @param request UpdateIpamPoolRequest
      * @return UpdateIpamPoolResponse
      */
@@ -2571,7 +2688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更新IPAM地址池分配信息</p>
+     * <p>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</p>
      * 
      * @param request UpdateIpamPoolAllocationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2618,17 +2735,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamPoolAllocationResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIpamPoolAllocationResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamPoolAllocationResponse());
     }
 
     /**
      * <b>summary</b> : 
-     * <p>更新IPAM地址池分配信息</p>
+     * <p>Modifies CIDR block allocations of an IP Address Manager (IPAM) pool.</p>
      * 
      * @param request UpdateIpamPoolAllocationRequest
      * @return UpdateIpamPoolAllocationResponse
@@ -2639,8 +2751,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can add or remove effective regions only for custom resource discovery instances.</p>
+     * <ul>
+     * <li>When removing effective regions from a resource discovery instance, the managed region cannot be included.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新自定义类型资源发现。</p>
+     * <p>Modifies a resource discovery instance.</p>
      * 
      * @param request UpdateIpamResourceDiscoveryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2711,17 +2829,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamResourceDiscoveryResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIpamResourceDiscoveryResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamResourceDiscoveryResponse());
     }
 
     /**
+     * <b>description</b> :
+     * <p>  You can add or remove effective regions only for custom resource discovery instances.</p>
+     * <ul>
+     * <li>When removing effective regions from a resource discovery instance, the managed region cannot be included.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新自定义类型资源发现。</p>
+     * <p>Modifies a resource discovery instance.</p>
      * 
      * @param request UpdateIpamResourceDiscoveryRequest
      * @return UpdateIpamResourceDiscoveryResponse
@@ -2732,6 +2851,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the basic information about an IP Address Manager (IPAM) scope.</p>
+     * 
      * @param request UpdateIpamScopeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateIpamScopeResponse
@@ -2793,15 +2915,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamScopeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UpdateIpamScopeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIpamScopeResponse());
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Modifies the basic information about an IP Address Manager (IPAM) scope.</p>
+     * 
      * @param request UpdateIpamScopeRequest
      * @return UpdateIpamScopeResponse
      */

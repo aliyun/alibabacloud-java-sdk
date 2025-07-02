@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateIpamResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>F4650E33-895C-53F0-9CD5-D1338F322DE8</p>
      */

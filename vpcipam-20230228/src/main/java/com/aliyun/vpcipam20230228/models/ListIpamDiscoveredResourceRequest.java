@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIpamDiscoveredResourceRequest extends TeaModel {
     /**
+     * <p>The ID of the resource discovery instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListIpamDiscoveredResourceRequest extends TeaModel {
     public String ipamResourceDiscoveryId;
 
     /**
+     * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -21,6 +24,12 @@ public class ListIpamDiscoveredResourceRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first request.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -28,6 +37,8 @@ public class ListIpamDiscoveredResourceRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the managed region of the IPAM pool.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,7 @@ public class ListIpamDiscoveredResourceRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The region where resource discovery is performed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,6 +58,12 @@ public class ListIpamDiscoveredResourceRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><strong>VPC</strong></li>
+     * <li><strong>VSwitch</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */

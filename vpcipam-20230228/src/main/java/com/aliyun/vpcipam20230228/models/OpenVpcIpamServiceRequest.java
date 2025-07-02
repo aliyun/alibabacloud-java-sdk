@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class OpenVpcIpamServiceRequest extends TeaModel {
     /**
+     * <p>Client token, used to ensure the idempotence of requests.</p>
+     * <p>Generate a unique value for this parameter from your client to ensure it is unique across different requests. ClientToken supports only ASCII characters.</p>
+     * <blockquote>
+     * <p>If not specified, the system automatically uses the RequestId of the API request as the ClientToken identifier. The RequestId may differ for each API request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -18,6 +24,7 @@ public class OpenVpcIpamServiceRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the IPAM instance is hosted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

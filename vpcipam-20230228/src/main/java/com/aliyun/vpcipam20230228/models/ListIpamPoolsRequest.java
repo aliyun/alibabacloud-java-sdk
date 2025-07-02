@@ -4,10 +4,16 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamPoolsRequest extends TeaModel {
+    /**
+     * <p>The IDs of IPAM pools. Valid values of N: 1 to 100. A maximum of 100 IPAM pools can be queried at a time.</p>
+     */
     @NameInMap("IpamPoolIds")
     public java.util.List<String> ipamPoolIds;
 
     /**
+     * <p>The name of the IPAM pool. You can enter at most 20 names.</p>
+     * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -15,16 +21,26 @@ public class ListIpamPoolsRequest extends TeaModel {
     public String ipamPoolName;
 
     /**
+     * <p>The ID of the IPAM scope.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-scope-glfmcyldpm8lsy****</p>
      */
     @NameInMap("IpamScopeId")
     public String ipamScopeId;
 
+    /**
+     * <p>Whether it is a shared pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsShared")
     public Boolean isShared;
 
     /**
+     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -32,6 +48,12 @@ public class ListIpamPoolsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If NextToken is empty, no next page exists.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -45,6 +67,8 @@ public class ListIpamPoolsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The effective region of the IPAM pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -52,6 +76,7 @@ public class ListIpamPoolsRequest extends TeaModel {
     public String poolRegionId;
 
     /**
+     * <p>The ID of the region where the IPAM instance is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,6 +86,8 @@ public class ListIpamPoolsRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group to which the IPAM pool belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2sermdd6****</p>
      */
@@ -74,12 +101,17 @@ public class ListIpamPoolsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The ID of the source IPAM pool.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-pool-lfnwi4jok1ss0g****</p>
      */
     @NameInMap("SourceIpamPoolId")
     public String sourceIpamPoolId;
 
+    /**
+     * <p>The tag information.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListIpamPoolsRequestTags> tags;
 
@@ -210,6 +242,9 @@ public class ListIpamPoolsRequest extends TeaModel {
 
     public static class ListIpamPoolsRequestTags extends TeaModel {
         /**
+         * <p>The tag key. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -217,6 +252,9 @@ public class ListIpamPoolsRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value. You can specify at most 20 tag values. It can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It must start with a letter and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
          */

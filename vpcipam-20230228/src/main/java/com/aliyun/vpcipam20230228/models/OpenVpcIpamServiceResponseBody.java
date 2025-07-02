@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class OpenVpcIpamServiceResponseBody extends TeaModel {
     /**
+     * <p>Status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class OpenVpcIpamServiceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Information returned upon successful IPAM activation.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -19,6 +23,8 @@ public class OpenVpcIpamServiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3F814C37-B032-5477-AF5A-2925D0593CD4</p>
      */

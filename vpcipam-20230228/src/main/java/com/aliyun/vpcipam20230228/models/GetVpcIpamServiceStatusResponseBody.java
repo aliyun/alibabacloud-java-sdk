@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetVpcIpamServiceStatusResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether IPAM is activated.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +18,8 @@ public class GetVpcIpamServiceStatusResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2FEE9FFF-57EE-5832-BE88-9308352F3B68</p>
      */

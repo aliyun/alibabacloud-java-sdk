@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateIpamResourceDiscoveryResponseBody extends TeaModel {
     /**
+     * <p>The ID of the instance for resource discovery.</p>
+     * 
      * <strong>example:</strong>
      * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
      */
@@ -12,6 +14,8 @@ public class CreateIpamResourceDiscoveryResponseBody extends TeaModel {
     public String ipamResourceDiscoveryId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
      */

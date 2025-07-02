@@ -4,20 +4,34 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamResourceDiscoveriesRequest extends TeaModel {
+    /**
+     * <p>The IDs of resource discovery instances. Valid values of N: 1 to 100. A maximum of 100 resource discoveries can be queried at a time.</p>
+     */
     @NameInMap("IpamResourceDiscoveryIds")
     public java.util.List<String> ipamResourceDiscoveryIds;
 
     /**
+     * <p>The name of the resource discovery.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("IpamResourceDiscoveryName")
     public String ipamResourceDiscoveryName;
 
+    /**
+     * <p>Whether it is a shared resource discovery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsShared")
     public Boolean isShared;
 
     /**
+     * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -25,6 +39,12 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, it indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
@@ -38,6 +58,7 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where you want to query resource discovery. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +68,8 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>The ID of the resource group that resource discovery belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-aek2sermdd6****</p>
      */
@@ -59,10 +82,22 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The tag.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<ListIpamResourceDiscoveriesRequestTags> tags;
 
     /**
+     * <p>The type of resource discovery.</p>
+     * <blockquote>
+     * <p>Supported types:</p>
+     * <ul>
+     * <li>system: default resource discovery created by the system.</li>
+     * <li>custom: custom resource discovery created by users.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>system</p>
      */
@@ -180,6 +215,9 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
 
     public static class ListIpamResourceDiscoveriesRequestTags extends TeaModel {
         /**
+         * <p>The key of the tag. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+         * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
          */
@@ -187,6 +225,9 @@ public class ListIpamResourceDiscoveriesRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The value of the tag. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
          */

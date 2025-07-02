@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteIpamResourceDiscoveryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9F8315CB-560E-5F1E-B069-6E44B440CAF8</p>
      */
