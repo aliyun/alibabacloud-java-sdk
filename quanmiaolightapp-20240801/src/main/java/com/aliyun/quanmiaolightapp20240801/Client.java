@@ -299,6 +299,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取作业批改结果</p>
+     * 
+     * @param request GetEssayCorrectionTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEssayCorrectionTaskResponse
+     */
+    public GetEssayCorrectionTaskResponse getEssayCorrectionTaskWithOptions(String workspaceId, GetEssayCorrectionTaskRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("taskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEssayCorrectionTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/getEssayCorrectionTask"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEssayCorrectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取作业批改结果</p>
+     * 
+     * @param request GetEssayCorrectionTaskRequest
+     * @return GetEssayCorrectionTaskResponse
+     */
+    public GetEssayCorrectionTaskResponse getEssayCorrectionTask(String workspaceId, GetEssayCorrectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getEssayCorrectionTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取挖掘分析任务结果</p>
      * 
      * @param request GetTagMiningAnalysisTaskRequest
@@ -684,6 +731,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runEnterpriseVocAnalysisWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作业批改</p>
+     * 
+     * @param request RunEssayCorrectionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunEssayCorrectionResponse
+     */
+    public RunEssayCorrectionResponse runEssayCorrectionWithOptions(String workspaceId, RunEssayCorrectionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.answer)) {
+            body.put("answer", request.answer);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.grade)) {
+            body.put("grade", request.grade);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherReviewPoints)) {
+            body.put("otherReviewPoints", request.otherReviewPoints);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            body.put("question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
+            body.put("subject", request.subject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalScore)) {
+            body.put("totalScore", request.totalScore);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunEssayCorrection"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/runEssayCorrection"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunEssayCorrectionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作业批改</p>
+     * 
+     * @param request RunEssayCorrectionRequest
+     * @return RunEssayCorrectionResponse
+     */
+    public RunEssayCorrectionResponse runEssayCorrection(String workspaceId, RunEssayCorrectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runEssayCorrectionWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1079,6 +1197,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.runNetworkContentAuditWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作业批改</p>
+     * 
+     * @param request RunOcrParseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunOcrParseResponse
+     */
+    public RunOcrParseResponse runOcrParseWithOptions(String workspaceId, RunOcrParseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKey)) {
+            body.put("fileKey", request.fileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("url", request.url);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunOcrParse"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/runOcrParse"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunOcrParseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>作业批改</p>
+     * 
+     * @param request RunOcrParseRequest
+     * @return RunOcrParseResponse
+     */
+    public RunOcrParseResponse runOcrParse(String workspaceId, RunOcrParseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.runOcrParseWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
@@ -1711,6 +1884,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.submitEnterpriseVocAnalysisTaskWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交批改任务</p>
+     * 
+     * @param tmpReq SubmitEssayCorrectionTaskRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitEssayCorrectionTaskResponse
+     */
+    public SubmitEssayCorrectionTaskResponse submitEssayCorrectionTaskWithOptions(String workspaceId, SubmitEssayCorrectionTaskRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitEssayCorrectionTaskShrinkRequest request = new SubmitEssayCorrectionTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tasks)) {
+            request.tasksShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tasks, "tasks", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.grade)) {
+            body.put("grade", request.grade);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelId)) {
+            body.put("modelId", request.modelId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.otherReviewPoints)) {
+            body.put("otherReviewPoints", request.otherReviewPoints);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.question)) {
+            body.put("question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subject)) {
+            body.put("subject", request.subject);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tasksShrink)) {
+            body.put("tasks", request.tasksShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalScore)) {
+            body.put("totalScore", request.totalScore);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitEssayCorrectionTask"),
+            new TeaPair("version", "2024-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/quanmiao/lightapp/submitEssayCorrectionTask"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitEssayCorrectionTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交批改任务</p>
+     * 
+     * @param request SubmitEssayCorrectionTaskRequest
+     * @return SubmitEssayCorrectionTaskResponse
+     */
+    public SubmitEssayCorrectionTaskResponse submitEssayCorrectionTask(String workspaceId, SubmitEssayCorrectionTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.submitEssayCorrectionTaskWithOptions(workspaceId, request, headers, runtime);
     }
 
     /**
