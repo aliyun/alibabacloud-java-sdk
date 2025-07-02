@@ -7161,6 +7161,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取闪信模板列表</p>
+     * 
      * @param request ListFlashSmsTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListFlashSmsTemplatesResponse
@@ -7198,6 +7201,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取闪信模板列表</p>
+     * 
      * @param request ListFlashSmsTemplatesRequest
      * @return ListFlashSmsTemplatesResponse
      */

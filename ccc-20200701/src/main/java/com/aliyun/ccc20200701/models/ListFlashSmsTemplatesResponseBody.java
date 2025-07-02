@@ -88,6 +88,9 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListFlashSmsTemplatesResponseBodyData extends TeaModel {
+        @NameInMap("TemplateDetails")
+        public String templateDetails;
+
         /**
          * <strong>example:</strong>
          * <p>1715*****38</p>
@@ -101,6 +104,14 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         public static ListFlashSmsTemplatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListFlashSmsTemplatesResponseBodyData self = new ListFlashSmsTemplatesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListFlashSmsTemplatesResponseBodyData setTemplateDetails(String templateDetails) {
+            this.templateDetails = templateDetails;
+            return this;
+        }
+        public String getTemplateDetails() {
+            return this.templateDetails;
         }
 
         public ListFlashSmsTemplatesResponseBodyData setTemplateId(String templateId) {
