@@ -18,7 +18,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The dataset information.</p>
      */
     @NameInMap("Result")
     public QueryDatasetInfoResponseBodyResult result;
@@ -262,6 +262,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>Expression for the flattened calculation dimensions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_expression</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>true</p>
          */
@@ -278,6 +283,8 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String factColumn;
 
         /**
+         * <p>The description of the field.</p>
+         * 
          * <strong>example:</strong>
          * <p>hhhh</p>
          */
@@ -530,6 +537,11 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String expression;
 
         /**
+         * <p>Expression for flattened computation metrics.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example_expression</p>
+         * 
          * <strong>if can be null:</strong>
          * <p>true</p>
          */
@@ -550,8 +562,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String factColumn;
 
         /**
+         * <p>The description of the field.</p>
+         * 
          * <strong>example:</strong>
-         * <p>hhhh</p>
+         * <p>asadsda</p>
          */
         @NameInMap("FieldDescription")
         public String fieldDescription;
@@ -703,7 +717,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String datasetName;
 
         /**
-         * <p>If it is a custom SQL table, this is the specific SQL.</p>
+         * <p>A list of all dimensions in the dataset.</p>
          */
         @NameInMap("DimensionList")
         public java.util.List<QueryDatasetInfoResponseBodyResultDimensionList> dimensionList;
@@ -764,11 +778,21 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         public String gmtModify;
 
         /**
-         * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+         * <p>A list of all measures for the dataset.</p>
          */
         @NameInMap("MeasureList")
         public java.util.List<QueryDatasetInfoResponseBodyResultMeasureList> measureList;
 
+        /**
+         * <p>Whether to enable extraction acceleration. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("OpenOfflineAcceleration")
         public Boolean openOfflineAcceleration;
 

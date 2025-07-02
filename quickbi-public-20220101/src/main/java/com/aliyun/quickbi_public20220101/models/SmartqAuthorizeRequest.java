@@ -4,6 +4,12 @@ package com.aliyun.quickbi_public20220101.models;
 import com.aliyun.tea.*;
 
 public class SmartqAuthorizeRequest extends TeaModel {
+    /**
+     * <p>Array of dataset IDs, separated by English commas. <notice>This parameter will be converted to the corresponding question resource ID for authorization. Therefore, if the input cubeId does not correspond to any question resource, an error indicating that the question resource does not exist will be reported. Please ensure the correctness of the cubeId.</notice></p>
+     * 
+     * <strong>example:</strong>
+     * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
+     */
     @NameInMap("CubeIds")
     public String cubeIds;
 

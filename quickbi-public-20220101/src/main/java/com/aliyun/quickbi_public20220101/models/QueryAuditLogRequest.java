@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryAuditLogRequest extends TeaModel {
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AccessSourceFlag")
+    public String accessSourceFlag;
+
+    /**
      * <p>End date of the query, format (&quot;yyyyMMdd&quot;).</p>
      * <p>This parameter is required.</p>
      * 
@@ -68,6 +75,13 @@ public class QueryAuditLogRequest extends TeaModel {
     public String startDate;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("UserAccessDevice")
+    public String userAccessDevice;
+
+    /**
      * <p>Workspace ID, the ID of the workspace to which the logs to be queried belong.</p>
      * 
      * <strong>example:</strong>
@@ -79,6 +93,14 @@ public class QueryAuditLogRequest extends TeaModel {
     public static QueryAuditLogRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryAuditLogRequest self = new QueryAuditLogRequest();
         return TeaModel.build(map, self);
+    }
+
+    public QueryAuditLogRequest setAccessSourceFlag(String accessSourceFlag) {
+        this.accessSourceFlag = accessSourceFlag;
+        return this;
+    }
+    public String getAccessSourceFlag() {
+        return this.accessSourceFlag;
     }
 
     public QueryAuditLogRequest setEndDate(String endDate) {
@@ -127,6 +149,14 @@ public class QueryAuditLogRequest extends TeaModel {
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public QueryAuditLogRequest setUserAccessDevice(String userAccessDevice) {
+        this.userAccessDevice = userAccessDevice;
+        return this;
+    }
+    public String getUserAccessDevice() {
+        return this.userAccessDevice;
     }
 
     public QueryAuditLogRequest setWorkspaceId(String workspaceId) {

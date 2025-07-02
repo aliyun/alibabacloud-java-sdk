@@ -3027,6 +3027,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryAuditLogResponse queryAuditLogWithOptions(QueryAuditLogRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessSourceFlag)) {
+            query.put("AccessSourceFlag", request.accessSourceFlag);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endDate)) {
             query.put("EndDate", request.endDate);
         }
@@ -3049,6 +3053,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startDate)) {
             query.put("StartDate", request.startDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userAccessDevice)) {
+            query.put("UserAccessDevice", request.userAccessDevice);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -3616,11 +3624,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the table is a custom SQL table. Valid values:</p>
-     * <ul>
-     * <li>true: custom SQL table</li>
-     * <li>false: non-custom SQL table</li>
-     * </ul>
+     * <p>Indicates whether the table is a custom SQL table. Valid values:
+     * \*   true: custom SQL table
+     * \*   false: non-custom SQL table</p>
      * 
      * @param request QueryDatasetInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3652,11 +3658,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Indicates whether the table is a custom SQL table. Valid values:</p>
-     * <ul>
-     * <li>true: custom SQL table</li>
-     * <li>false: non-custom SQL table</li>
-     * </ul>
+     * <p>Indicates whether the table is a custom SQL table. Valid values:
+     * \*   true: custom SQL table
+     * \*   false: non-custom SQL table</p>
      * 
      * @param request QueryDatasetInfoRequest
      * @return QueryDatasetInfoResponse
@@ -5293,7 +5297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch Management of Smart Q\&amp;A Authorizations</p>
+     * <p>Batch Management of Smart Q\\\&amp;A Authorizations</p>
      * 
      * @param request SmartqAuthorizeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5348,7 +5352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</p>
      * 
      * <b>summary</b> : 
-     * <p>Batch Management of Smart Q\&amp;A Authorizations</p>
+     * <p>Batch Management of Smart Q\\\&amp;A Authorizations</p>
      * 
      * @param request SmartqAuthorizeRequest
      * @return SmartqAuthorizeResponse
