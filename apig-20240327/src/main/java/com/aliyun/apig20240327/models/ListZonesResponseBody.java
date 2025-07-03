@@ -75,6 +75,9 @@ public class ListZonesResponseBody extends TeaModel {
     }
 
     public static class ListZonesResponseBodyDataItems extends TeaModel {
+        @NameInMap("supportQat")
+        public String supportQat;
+
         /**
          * <p>可用区ID。</p>
          * 
@@ -87,6 +90,14 @@ public class ListZonesResponseBody extends TeaModel {
         public static ListZonesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListZonesResponseBodyDataItems self = new ListZonesResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListZonesResponseBodyDataItems setSupportQat(String supportQat) {
+            this.supportQat = supportQat;
+            return this;
+        }
+        public String getSupportQat() {
+            return this.supportQat;
         }
 
         public ListZonesResponseBodyDataItems setZoneId(String zoneId) {
