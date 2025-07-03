@@ -395,6 +395,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StorageType")
+        public String storageType;
+
         /**
          * <strong>example:</strong>
          * <p>40658534400</p>
@@ -741,6 +744,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstances setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeDBInstancesResponseBodyDBInstances setStorageUsed(Long storageUsed) {
