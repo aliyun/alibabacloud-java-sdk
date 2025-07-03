@@ -522,13 +522,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查询托管侧镜像详情。</p>
      * 
-     * @param request GetImageRequest
+     * @param tmpReq GetImageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetImageResponse
      */
-    public GetImageResponse getImageWithOptions(GetImageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetImageResponse getImageWithOptions(GetImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetImageShrinkRequest request = new GetImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.additionalRegionIds)) {
+            request.additionalRegionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.additionalRegionIds, "AdditionalRegionIds", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalRegionIdsShrink)) {
+            query.put("AdditionalRegionIds", request.additionalRegionIdsShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageCategory)) {
             query.put("ImageCategory", request.imageCategory);
         }

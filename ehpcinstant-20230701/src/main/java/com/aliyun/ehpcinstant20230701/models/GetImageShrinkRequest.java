@@ -3,9 +3,9 @@ package com.aliyun.ehpcinstant20230701.models;
 
 import com.aliyun.tea.*;
 
-public class GetImageRequest extends TeaModel {
+public class GetImageShrinkRequest extends TeaModel {
     @NameInMap("AdditionalRegionIds")
-    public java.util.List<String> additionalRegionIds;
+    public String additionalRegionIdsShrink;
 
     @NameInMap("ImageCategory")
     public String imageCategory;
@@ -20,20 +20,20 @@ public class GetImageRequest extends TeaModel {
     @NameInMap("ImageType")
     public String imageType;
 
-    public static GetImageRequest build(java.util.Map<String, ?> map) throws Exception {
-        GetImageRequest self = new GetImageRequest();
+    public static GetImageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetImageShrinkRequest self = new GetImageShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public GetImageRequest setAdditionalRegionIds(java.util.List<String> additionalRegionIds) {
-        this.additionalRegionIds = additionalRegionIds;
+    public GetImageShrinkRequest setAdditionalRegionIdsShrink(String additionalRegionIdsShrink) {
+        this.additionalRegionIdsShrink = additionalRegionIdsShrink;
         return this;
     }
-    public java.util.List<String> getAdditionalRegionIds() {
-        return this.additionalRegionIds;
+    public String getAdditionalRegionIdsShrink() {
+        return this.additionalRegionIdsShrink;
     }
 
-    public GetImageRequest setImageCategory(String imageCategory) {
+    public GetImageShrinkRequest setImageCategory(String imageCategory) {
         this.imageCategory = imageCategory;
         return this;
     }
@@ -41,7 +41,7 @@ public class GetImageRequest extends TeaModel {
         return this.imageCategory;
     }
 
-    public GetImageRequest setImageId(String imageId) {
+    public GetImageShrinkRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -49,7 +49,7 @@ public class GetImageRequest extends TeaModel {
         return this.imageId;
     }
 
-    public GetImageRequest setImageType(String imageType) {
+    public GetImageShrinkRequest setImageType(String imageType) {
         this.imageType = imageType;
         return this;
     }

@@ -65,6 +65,47 @@ public class GetImageResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class GetImageResponseBodyImageAdditionalRegionsInfo extends TeaModel {
+        @NameInMap("ImageId")
+        public String imageId;
+
+        @NameInMap("RegionId")
+        public String regionId;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static GetImageResponseBodyImageAdditionalRegionsInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetImageResponseBodyImageAdditionalRegionsInfo self = new GetImageResponseBodyImageAdditionalRegionsInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetImageResponseBodyImageAdditionalRegionsInfo setImageId(String imageId) {
+            this.imageId = imageId;
+            return this;
+        }
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        public GetImageResponseBodyImageAdditionalRegionsInfo setRegionId(String regionId) {
+            this.regionId = regionId;
+            return this;
+        }
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public GetImageResponseBodyImageAdditionalRegionsInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class GetImageResponseBodyImageContainerImageSpecRegistryCredential extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -340,6 +381,9 @@ public class GetImageResponseBody extends TeaModel {
     }
 
     public static class GetImageResponseBodyImage extends TeaModel {
+        @NameInMap("AdditionalRegionsInfo")
+        public java.util.List<GetImageResponseBodyImageAdditionalRegionsInfo> additionalRegionsInfo;
+
         @NameInMap("AppId")
         public String appId;
 
@@ -398,6 +442,14 @@ public class GetImageResponseBody extends TeaModel {
         public static GetImageResponseBodyImage build(java.util.Map<String, ?> map) throws Exception {
             GetImageResponseBodyImage self = new GetImageResponseBodyImage();
             return TeaModel.build(map, self);
+        }
+
+        public GetImageResponseBodyImage setAdditionalRegionsInfo(java.util.List<GetImageResponseBodyImageAdditionalRegionsInfo> additionalRegionsInfo) {
+            this.additionalRegionsInfo = additionalRegionsInfo;
+            return this;
+        }
+        public java.util.List<GetImageResponseBodyImageAdditionalRegionsInfo> getAdditionalRegionsInfo() {
+            return this.additionalRegionsInfo;
         }
 
         public GetImageResponseBodyImage setAppId(String appId) {
