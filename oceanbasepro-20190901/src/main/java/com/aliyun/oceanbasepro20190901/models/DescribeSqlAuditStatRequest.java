@@ -18,6 +18,9 @@ public class DescribeSqlAuditStatRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("OperatorType")
+    public String operatorType;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,6 +68,14 @@ public class DescribeSqlAuditStatRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeSqlAuditStatRequest setOperatorType(String operatorType) {
+        this.operatorType = operatorType;
+        return this;
+    }
+    public String getOperatorType() {
+        return this.operatorType;
     }
 
     public DescribeSqlAuditStatRequest setPageNumber(Integer pageNumber) {

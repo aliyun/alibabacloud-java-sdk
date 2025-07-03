@@ -25,6 +25,13 @@ public class ModifyTenantResourceRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
+    @NameInMap("Iops")
+    public String iops;
+
+    /**
      * <p>The size of the log disk allocated to the tenant, in GB.</p>
      * 
      * <strong>example:</strong>
@@ -82,6 +89,14 @@ public class ModifyTenantResourceRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyTenantResourceRequest setIops(String iops) {
+        this.iops = iops;
+        return this;
+    }
+    public String getIops() {
+        return this.iops;
     }
 
     public ModifyTenantResourceRequest setLogDisk(Long logDisk) {

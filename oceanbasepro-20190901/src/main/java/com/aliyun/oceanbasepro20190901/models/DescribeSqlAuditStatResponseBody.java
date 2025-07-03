@@ -16,6 +16,9 @@ public class DescribeSqlAuditStatResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static DescribeSqlAuditStatResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeSqlAuditStatResponseBody self = new DescribeSqlAuditStatResponseBody();
         return TeaModel.build(map, self);
@@ -35,6 +38,14 @@ public class DescribeSqlAuditStatResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeSqlAuditStatResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeSqlAuditStatResponseBodyData extends TeaModel {

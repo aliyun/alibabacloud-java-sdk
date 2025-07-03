@@ -47,6 +47,9 @@ public class DescribeMetricsDataRequest extends TeaModel {
     @NameInMap("Limit")
     public String limit;
 
+    @NameInMap("MetricScope")
+    public String metricScope;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -125,6 +128,14 @@ public class DescribeMetricsDataRequest extends TeaModel {
     }
     public String getLimit() {
         return this.limit;
+    }
+
+    public DescribeMetricsDataRequest setMetricScope(String metricScope) {
+        this.metricScope = metricScope;
+        return this;
+    }
+    public String getMetricScope() {
+        return this.metricScope;
     }
 
     public DescribeMetricsDataRequest setMetrics(String metrics) {

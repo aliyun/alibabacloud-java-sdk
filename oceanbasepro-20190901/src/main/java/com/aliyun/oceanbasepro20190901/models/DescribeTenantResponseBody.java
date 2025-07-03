@@ -1573,6 +1573,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("Iops")
+        public Integer iops;
+
+        /**
          * <p>Indicates whether the table name is case-sensitive. Valid values: </p>
          * <ul>
          * <li><strong>1</strong>: The table name is case-insensitive. </li>
@@ -1952,6 +1959,14 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeTenantResponseBodyTenant setIops(Integer iops) {
+            this.iops = iops;
+            return this;
+        }
+        public Integer getIops() {
+            return this.iops;
         }
 
         public DescribeTenantResponseBodyTenant setLowerCaseTableNames(Integer lowerCaseTableNames) {

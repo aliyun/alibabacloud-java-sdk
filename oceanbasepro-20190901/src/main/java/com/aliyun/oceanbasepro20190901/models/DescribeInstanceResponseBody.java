@@ -1585,6 +1585,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public String instanceRole;
 
         /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("Iops")
+        public Integer iops;
+
+        /**
          * <p>Indicates whether the OBServer version is the latest.</p>
          * 
          * <strong>example:</strong>
@@ -2010,6 +2017,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
         public String getInstanceRole() {
             return this.instanceRole;
+        }
+
+        public DescribeInstanceResponseBodyInstance setIops(Integer iops) {
+            this.iops = iops;
+            return this;
+        }
+        public Integer getIops() {
+            return this.iops;
         }
 
         public DescribeInstanceResponseBodyInstance setIsLatestObVersion(Boolean isLatestObVersion) {

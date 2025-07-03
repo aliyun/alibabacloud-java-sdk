@@ -3222,6 +3222,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.metricScope)) {
+            body.put("MetricScope", request.metricScope);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.replicaType)) {
             body.put("ReplicaType", request.replicaType);
         }
@@ -5203,6 +5207,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operatorType)) {
+            body.put("OperatorType", request.operatorType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -7433,6 +7441,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iops)) {
+            body.put("Iops", request.iops);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logDisk)) {

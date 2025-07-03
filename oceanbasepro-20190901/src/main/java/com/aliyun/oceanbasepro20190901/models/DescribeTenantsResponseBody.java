@@ -143,6 +143,13 @@ public class DescribeTenantsResponseBody extends TeaModel {
         public Boolean enableReadOnlyReplica;
 
         /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("Iops")
+        public Integer iops;
+
+        /**
          * <p>The total memory size of the tenant, in GB.</p>
          * 
          * <strong>example:</strong>
@@ -329,6 +336,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
         }
         public Boolean getEnableReadOnlyReplica() {
             return this.enableReadOnlyReplica;
+        }
+
+        public DescribeTenantsResponseBodyTenants setIops(Integer iops) {
+            this.iops = iops;
+            return this;
+        }
+        public Integer getIops() {
+            return this.iops;
         }
 
         public DescribeTenantsResponseBodyTenants setMem(Integer mem) {

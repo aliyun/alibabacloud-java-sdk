@@ -887,6 +887,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
+        @NameInMap("Iops")
+        public Integer iops;
+
+        /**
          * <p>The time period in UTC for the daily routine maintenance of the cluster.</p>
          * 
          * <strong>example:</strong>
@@ -1222,6 +1229,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeInstancesResponseBodyInstances setIops(Integer iops) {
+            this.iops = iops;
+            return this;
+        }
+        public Integer getIops() {
+            return this.iops;
         }
 
         public DescribeInstancesResponseBodyInstances setMaintainTime(String maintainTime) {
