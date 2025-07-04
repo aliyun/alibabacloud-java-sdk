@@ -261,6 +261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExecutorIds", request.executorIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.jobScheduler)) {
+            query.put("JobScheduler", request.jobScheduler);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobSpecShrink)) {
             query.put("JobSpec", request.jobSpecShrink);
         }

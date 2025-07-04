@@ -7,6 +7,9 @@ public class DeleteJobsRequest extends TeaModel {
     @NameInMap("ExecutorIds")
     public java.util.List<String> executorIds;
 
+    @NameInMap("JobScheduler")
+    public String jobScheduler;
+
     @NameInMap("JobSpec")
     public java.util.List<DeleteJobsRequestJobSpec> jobSpec;
 
@@ -21,6 +24,14 @@ public class DeleteJobsRequest extends TeaModel {
     }
     public java.util.List<String> getExecutorIds() {
         return this.executorIds;
+    }
+
+    public DeleteJobsRequest setJobScheduler(String jobScheduler) {
+        this.jobScheduler = jobScheduler;
+        return this;
+    }
+    public String getJobScheduler() {
+        return this.jobScheduler;
     }
 
     public DeleteJobsRequest setJobSpec(java.util.List<DeleteJobsRequestJobSpec> jobSpec) {

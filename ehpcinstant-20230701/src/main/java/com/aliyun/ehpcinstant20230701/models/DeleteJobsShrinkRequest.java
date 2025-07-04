@@ -7,6 +7,9 @@ public class DeleteJobsShrinkRequest extends TeaModel {
     @NameInMap("ExecutorIds")
     public String executorIdsShrink;
 
+    @NameInMap("JobScheduler")
+    public String jobScheduler;
+
     @NameInMap("JobSpec")
     public String jobSpecShrink;
 
@@ -21,6 +24,14 @@ public class DeleteJobsShrinkRequest extends TeaModel {
     }
     public String getExecutorIdsShrink() {
         return this.executorIdsShrink;
+    }
+
+    public DeleteJobsShrinkRequest setJobScheduler(String jobScheduler) {
+        this.jobScheduler = jobScheduler;
+        return this;
+    }
+    public String getJobScheduler() {
+        return this.jobScheduler;
     }
 
     public DeleteJobsShrinkRequest setJobSpecShrink(String jobSpecShrink) {
