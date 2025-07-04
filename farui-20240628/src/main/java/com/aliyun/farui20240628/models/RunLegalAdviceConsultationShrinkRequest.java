@@ -14,6 +14,9 @@ public class RunLegalAdviceConsultationShrinkRequest extends TeaModel {
     @NameInMap("assistant")
     public String assistantShrink;
 
+    @NameInMap("extra")
+    public String extraShrink;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,6 +46,14 @@ public class RunLegalAdviceConsultationShrinkRequest extends TeaModel {
     }
     public String getAssistantShrink() {
         return this.assistantShrink;
+    }
+
+    public RunLegalAdviceConsultationShrinkRequest setExtraShrink(String extraShrink) {
+        this.extraShrink = extraShrink;
+        return this;
+    }
+    public String getExtraShrink() {
+        return this.extraShrink;
     }
 
     public RunLegalAdviceConsultationShrinkRequest setStream(Boolean stream) {

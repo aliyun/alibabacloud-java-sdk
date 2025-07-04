@@ -14,6 +14,9 @@ public class RunLegalAdviceConsultationRequest extends TeaModel {
     @NameInMap("assistant")
     public RunLegalAdviceConsultationRequestAssistant assistant;
 
+    @NameInMap("extra")
+    public RunLegalAdviceConsultationRequestExtra extra;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,6 +46,14 @@ public class RunLegalAdviceConsultationRequest extends TeaModel {
     }
     public RunLegalAdviceConsultationRequestAssistant getAssistant() {
         return this.assistant;
+    }
+
+    public RunLegalAdviceConsultationRequest setExtra(RunLegalAdviceConsultationRequestExtra extra) {
+        this.extra = extra;
+        return this;
+    }
+    public RunLegalAdviceConsultationRequestExtra getExtra() {
+        return this.extra;
     }
 
     public RunLegalAdviceConsultationRequest setStream(Boolean stream) {
@@ -121,6 +132,36 @@ public class RunLegalAdviceConsultationRequest extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+    }
+
+    public static class RunLegalAdviceConsultationRequestExtra extends TeaModel {
+        @NameInMap("deepThink")
+        public Boolean deepThink;
+
+        @NameInMap("onlineSearch")
+        public Boolean onlineSearch;
+
+        public static RunLegalAdviceConsultationRequestExtra build(java.util.Map<String, ?> map) throws Exception {
+            RunLegalAdviceConsultationRequestExtra self = new RunLegalAdviceConsultationRequestExtra();
+            return TeaModel.build(map, self);
+        }
+
+        public RunLegalAdviceConsultationRequestExtra setDeepThink(Boolean deepThink) {
+            this.deepThink = deepThink;
+            return this;
+        }
+        public Boolean getDeepThink() {
+            return this.deepThink;
+        }
+
+        public RunLegalAdviceConsultationRequestExtra setOnlineSearch(Boolean onlineSearch) {
+            this.onlineSearch = onlineSearch;
+            return this;
+        }
+        public Boolean getOnlineSearch() {
+            return this.onlineSearch;
         }
 
     }

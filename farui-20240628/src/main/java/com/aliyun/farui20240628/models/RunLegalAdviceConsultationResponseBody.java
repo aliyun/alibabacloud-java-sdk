@@ -44,6 +44,12 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
     @NameInMap("Usage")
     public RunLegalAdviceConsultationResponseBodyUsage usage;
 
+    @NameInMap("contents")
+    public String contents;
+
+    @NameInMap("extra")
+    public String extra;
+
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -118,6 +124,22 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
     }
     public RunLegalAdviceConsultationResponseBodyUsage getUsage() {
         return this.usage;
+    }
+
+    public RunLegalAdviceConsultationResponseBody setContents(String contents) {
+        this.contents = contents;
+        return this;
+    }
+    public String getContents() {
+        return this.contents;
+    }
+
+    public RunLegalAdviceConsultationResponseBody setExtra(String extra) {
+        this.extra = extra;
+        return this;
+    }
+    public String getExtra() {
+        return this.extra;
     }
 
     public RunLegalAdviceConsultationResponseBody setHttpStatusCode(String httpStatusCode) {
