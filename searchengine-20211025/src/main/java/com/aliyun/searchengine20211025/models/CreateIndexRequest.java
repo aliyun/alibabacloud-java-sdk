@@ -522,6 +522,9 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("saroConfig")
         public CreateIndexRequestDataSourceInfoSaroConfig saroConfig;
 
+        @NameInMap("scene")
+        public String scene;
+
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
@@ -604,6 +607,14 @@ public class CreateIndexRequest extends TeaModel {
         }
         public CreateIndexRequestDataSourceInfoSaroConfig getSaroConfig() {
             return this.saroConfig;
+        }
+
+        public CreateIndexRequestDataSourceInfo setScene(String scene) {
+            this.scene = scene;
+            return this;
+        }
+        public String getScene() {
+            return this.scene;
         }
 
         public CreateIndexRequestDataSourceInfo setType(String type) {

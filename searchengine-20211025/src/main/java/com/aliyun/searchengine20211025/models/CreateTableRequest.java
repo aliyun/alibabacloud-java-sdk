@@ -67,6 +67,9 @@ public class CreateTableRequest extends TeaModel {
     @NameInMap("rawSchema")
     public String rawSchema;
 
+    @NameInMap("scene")
+    public String scene;
+
     /**
      * <p>The index schema.</p>
      */
@@ -153,6 +156,14 @@ public class CreateTableRequest extends TeaModel {
     }
     public String getRawSchema() {
         return this.rawSchema;
+    }
+
+    public CreateTableRequest setScene(String scene) {
+        this.scene = scene;
+        return this;
+    }
+    public String getScene() {
+        return this.scene;
     }
 
     public CreateTableRequest setVectorIndex(java.util.List<CreateTableRequestVectorIndex> vectorIndex) {

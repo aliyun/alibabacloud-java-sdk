@@ -919,6 +919,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("rawSchema", request.rawSchema);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.scene)) {
+            body.put("scene", request.scene);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vectorIndex)) {
             body.put("vectorIndex", request.vectorIndex);
         }
