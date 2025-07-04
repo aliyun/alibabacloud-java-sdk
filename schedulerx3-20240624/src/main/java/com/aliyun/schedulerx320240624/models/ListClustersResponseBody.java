@@ -209,6 +209,9 @@ public class ListClustersResponseBody extends TeaModel {
         @NameInMap("Status")
         public Integer status;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         @NameInMap("VSwitches")
         public java.util.List<ListClustersResponseBodyDataRecordsVSwitches> vSwitches;
 
@@ -331,6 +334,14 @@ public class ListClustersResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListClustersResponseBodyDataRecords setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public ListClustersResponseBodyDataRecords setVSwitches(java.util.List<ListClustersResponseBodyDataRecordsVSwitches> vSwitches) {

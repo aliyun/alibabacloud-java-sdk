@@ -31,6 +31,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateClusterRequestTag> tag;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -76,6 +79,14 @@ public class CreateClusterRequest extends TeaModel {
         return this.engineType;
     }
 
+    public CreateClusterRequest setTag(java.util.List<CreateClusterRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateClusterRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateClusterRequest setVSwitches(java.util.List<CreateClusterRequestVSwitches> vSwitches) {
         this.vSwitches = vSwitches;
         return this;
@@ -90,6 +101,36 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class CreateClusterRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateClusterRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestTag self = new CreateClusterRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateClusterRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
     public static class CreateClusterRequestVSwitches extends TeaModel {

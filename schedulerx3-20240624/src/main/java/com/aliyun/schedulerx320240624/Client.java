@@ -106,6 +106,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.vSwitchesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitches, "VSwitches", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
             body.put("ClusterName", request.clusterName);
@@ -128,6 +133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -688,6 +694,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询任务的线程堆栈</p>
+     * 
+     * @param request GetJobExecutionThreadDumpRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetJobExecutionThreadDumpResponse
+     */
+    public GetJobExecutionThreadDumpResponse getJobExecutionThreadDumpWithOptions(GetJobExecutionThreadDumpRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetJobExecutionThreadDump"),
+            new TeaPair("version", "2024-06-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetJobExecutionThreadDumpResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询任务的线程堆栈</p>
+     * 
+     * @param request GetJobExecutionThreadDumpRequest
+     * @return GetJobExecutionThreadDumpResponse
+     */
+    public GetJobExecutionThreadDumpResponse getJobExecutionThreadDump(GetJobExecutionThreadDumpRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getJobExecutionThreadDumpWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询日志</p>
      * 
      * @param request GetLogRequest
@@ -724,6 +770,46 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetLogResponse getLog(GetLogRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getLogWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询事件</p>
+     * 
+     * @param request GetLogEventRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLogEventResponse
+     */
+    public GetLogEventResponse getLogEventWithOptions(GetLogEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLogEvent"),
+            new TeaPair("version", "2024-06-24"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLogEventResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询事件</p>
+     * 
+     * @param request GetLogEventRequest
+     * @return GetLogEventResponse
+     */
+    public GetLogEventResponse getLogEvent(GetLogEventRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLogEventWithOptions(request, runtime);
     }
 
     /**
@@ -919,6 +1005,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取应用列表</p>
+     * 
      * @param request ListAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListAppsResponse
@@ -944,6 +1033,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取应用列表</p>
+     * 
      * @param request ListAppsRequest
      * @return ListAppsResponse
      */

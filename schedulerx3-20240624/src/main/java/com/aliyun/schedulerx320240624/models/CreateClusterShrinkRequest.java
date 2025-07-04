@@ -31,6 +31,9 @@ public class CreateClusterShrinkRequest extends TeaModel {
     @NameInMap("EngineType")
     public String engineType;
 
+    @NameInMap("Tag")
+    public java.util.List<CreateClusterShrinkRequestTag> tag;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -76,6 +79,14 @@ public class CreateClusterShrinkRequest extends TeaModel {
         return this.engineType;
     }
 
+    public CreateClusterShrinkRequest setTag(java.util.List<CreateClusterShrinkRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateClusterShrinkRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateClusterShrinkRequest setVSwitchesShrink(String vSwitchesShrink) {
         this.vSwitchesShrink = vSwitchesShrink;
         return this;
@@ -90,6 +101,36 @@ public class CreateClusterShrinkRequest extends TeaModel {
     }
     public String getVpcId() {
         return this.vpcId;
+    }
+
+    public static class CreateClusterShrinkRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateClusterShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterShrinkRequestTag self = new CreateClusterShrinkRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterShrinkRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateClusterShrinkRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
