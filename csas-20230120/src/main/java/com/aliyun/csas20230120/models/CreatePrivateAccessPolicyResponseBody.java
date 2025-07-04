@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreatePrivateAccessPolicyResponseBody extends TeaModel {
     /**
+     * <p>The ID of the private access policy.</p>
+     * 
      * <strong>example:</strong>
      * <p>pa-policy-867ef4007c8a****</p>
      */
@@ -12,6 +14,8 @@ public class CreatePrivateAccessPolicyResponseBody extends TeaModel {
     public String policyId;
 
     /**
+     * <p>The ID of the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>EFE7EBB2-449D-5BBB-B381-CA7839BC1649</p>
      */

@@ -631,8 +631,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, up to 500 private access policies can be created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网访问策略</p>
+     * <p>Create Private Access Policy</p>
      * 
      * @param request CreatePrivateAccessPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -732,8 +735,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, up to 500 private access policies can be created.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建内网访问策略</p>
+     * <p>Create Private Access Policy</p>
      * 
      * @param request CreatePrivateAccessPolicyRequest
      * @return CreatePrivateAccessPolicyResponse
@@ -3756,7 +3762,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ListPrivateAccessApplicationsResponse listPrivateAccessApplicationsWithOptions(ListPrivateAccessApplicationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessModes)) {
+            query.put("AccessModes", request.accessModes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.address)) {
+            query.put("Address", request.address);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationIds)) {
+            query.put("ApplicationIds", request.applicationIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.connectorId)) {
+            query.put("ConnectorId", request.connectorId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.currentPage)) {
+            query.put("CurrentPage", request.currentPage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagId)) {
+            query.put("TagId", request.tagId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3765,7 +3811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-01-20"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),
