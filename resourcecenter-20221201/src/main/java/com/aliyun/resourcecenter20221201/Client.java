@@ -71,8 +71,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</li>
+     * <li>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建投递渠道</p>
+     * <p>Creates a single-account delivery channel.</p>
      * 
      * @param request CreateDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -119,8 +127,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</li>
+     * <li>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建投递渠道</p>
+     * <p>Creates a single-account delivery channel.</p>
      * 
      * @param request CreateDeliveryChannelRequest
      * @return CreateDeliveryChannelResponse
@@ -179,8 +195,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建多账号投递渠道</p>
+     * <p>Creates a multi-account delivery channel.</p>
      * 
      * @param request CreateMultiAccountDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -227,8 +251,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>创建多账号投递渠道</p>
+     * <p>Creates a multi-account delivery channel.</p>
      * 
      * @param request CreateMultiAccountDeliveryChannelRequest
      * @return CreateMultiAccountDeliveryChannelResponse
@@ -292,7 +324,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除投递渠道</p>
+     * <p>Deletes a single-account delivery channel.</p>
      * 
      * @param request DeleteDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -324,7 +356,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除投递渠道</p>
+     * <p>Deletes a single-account delivery channel.</p>
      * 
      * @param request DeleteDeliveryChannelRequest
      * @return DeleteDeliveryChannelResponse
@@ -380,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除多账号投递渠道</p>
+     * <p>Deletes a multi-account delivery channel.</p>
      * 
      * @param request DeleteMultiAccountDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -412,7 +444,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除多账号投递渠道</p>
+     * <p>Deletes a multi-account delivery channel.</p>
      * 
      * @param request DeleteMultiAccountDeliveryChannelRequest
      * @return DeleteMultiAccountDeliveryChannelResponse
@@ -756,7 +788,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询投递渠道</p>
+     * <p>Queries the information about a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -788,7 +820,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询投递渠道</p>
+     * <p>Queries the information about a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelRequest
      * @return GetDeliveryChannelResponse
@@ -800,7 +832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询投递渠道统计信息</p>
+     * <p>Queries the statistics on a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -832,7 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询投递渠道统计信息</p>
+     * <p>Queries the statistics on a single-account delivery channel.</p>
      * 
      * @param request GetDeliveryChannelStatisticsRequest
      * @return GetDeliveryChannelStatisticsResponse
@@ -888,7 +920,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号投递渠道</p>
+     * <p>Queries the information about a multi-account delivery channel.</p>
      * 
      * @param request GetMultiAccountDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -920,7 +952,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号投递渠道</p>
+     * <p>Queries the information about a multi-account delivery channel.</p>
      * 
      * @param request GetMultiAccountDeliveryChannelRequest
      * @return GetMultiAccountDeliveryChannelResponse
@@ -932,7 +964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号投递渠道统计信息</p>
+     * <p>Queries the statistics on a multi-account delivery channel.</p>
      * 
      * @param request GetMultiAccountDeliveryChannelStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -964,7 +996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询多账号投递渠道统计信息</p>
+     * <p>Queries the statistics on a multi-account delivery channel.</p>
      * 
      * @param request GetMultiAccountDeliveryChannelStatisticsRequest
      * @return GetMultiAccountDeliveryChannelStatisticsResponse
@@ -1062,6 +1094,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMultiAccountResourceConfigurationResponse getMultiAccountResourceConfiguration(GetMultiAccountResourceConfigurationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getMultiAccountResourceConfigurationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取多账号资源数量</p>
+     * 
+     * @param request GetMultiAccountResourceCountsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetMultiAccountResourceCountsResponse
+     */
+    public GetMultiAccountResourceCountsResponse getMultiAccountResourceCountsWithOptions(GetMultiAccountResourceCountsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByKey)) {
+            query.put("GroupByKey", request.groupByKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
+            query.put("Scope", request.scope);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetMultiAccountResourceCounts"),
+            new TeaPair("version", "2022-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetMultiAccountResourceCountsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取多账号资源数量</p>
+     * 
+     * @param request GetMultiAccountResourceCountsRequest
+     * @return GetMultiAccountResourceCountsResponse
+     */
+    public GetMultiAccountResourceCountsResponse getMultiAccountResourceCounts(GetMultiAccountResourceCountsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getMultiAccountResourceCountsWithOptions(request, runtime);
     }
 
     /**
@@ -1244,7 +1328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出投递渠道</p>
+     * <p>Queries a list of single-account delivery channels.</p>
      * 
      * @param request ListDeliveryChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1280,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出投递渠道</p>
+     * <p>Queries a list of single-account delivery channels.</p>
      * 
      * @param request ListDeliveryChannelsRequest
      * @return ListDeliveryChannelsResponse
@@ -1374,7 +1458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出多账号投递渠道</p>
+     * <p>Queries a list of multi-account delivery channels.</p>
      * 
      * @param request ListMultiAccountDeliveryChannelsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1410,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>列出多账号投递渠道</p>
+     * <p>Queries a list of multi-account delivery channels.</p>
      * 
      * @param request ListMultiAccountDeliveryChannelsRequest
      * @return ListMultiAccountDeliveryChannelsResponse
@@ -2139,8 +2223,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新投递渠道</p>
+     * <p>Updates a single-account delivery channel.</p>
      * 
      * @param request UpdateDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2191,8 +2283,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新投递渠道</p>
+     * <p>Updates a single-account delivery channel.</p>
      * 
      * @param request UpdateDeliveryChannelRequest
      * @return UpdateDeliveryChannelResponse
@@ -2251,8 +2351,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新多账号投递渠道</p>
+     * <p>Updates a multi-account delivery channel.</p>
      * 
      * @param request UpdateMultiAccountDeliveryChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2303,8 +2411,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>更新多账号投递渠道</p>
+     * <p>Updates a multi-account delivery channel.</p>
      * 
      * @param request UpdateMultiAccountDeliveryChannelRequest
      * @return UpdateMultiAccountDeliveryChannelResponse

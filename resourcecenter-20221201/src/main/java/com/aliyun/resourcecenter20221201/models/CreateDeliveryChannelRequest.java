@@ -4,16 +4,21 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class CreateDeliveryChannelRequest extends TeaModel {
+    /**
+     * <p>The description of the delivery channel.</p>
+     */
     @NameInMap("DeliveryChannelDescription")
     public String deliveryChannelDescription;
 
     /**
+     * <p>The effective scope of the delivery channel.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeliveryChannelFilter")
     public CreateDeliveryChannelRequestDeliveryChannelFilter deliveryChannelFilter;
 
     /**
+     * <p>The name of the delivery channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,9 +27,15 @@ public class CreateDeliveryChannelRequest extends TeaModel {
     @NameInMap("DeliveryChannelName")
     public String deliveryChannelName;
 
+    /**
+     * <p>The configurations for delivery of resource configuration change events.</p>
+     */
     @NameInMap("ResourceChangeDelivery")
     public CreateDeliveryChannelRequestResourceChangeDelivery resourceChangeDelivery;
 
+    /**
+     * <p>The configurations for delivery of scheduled resource snapshots.</p>
+     */
     @NameInMap("ResourceSnapshotDelivery")
     public CreateDeliveryChannelRequestResourceSnapshotDelivery resourceSnapshotDelivery;
 
@@ -74,6 +85,13 @@ public class CreateDeliveryChannelRequest extends TeaModel {
     }
 
     public static class CreateDeliveryChannelRequestDeliveryChannelFilter extends TeaModel {
+        /**
+         * <p>An array of effective resource types for the delivery channel.</p>
+         * <ul>
+         * <li>Example: [&quot;ACS::VPC::VPC&quot;, &quot;ACS::ECS::Instance&quot;].</li>
+         * <li>If you want to deliver items of all resource types supported by Resource Center, set this parameter to [&quot;ALL&quot;].</li>
+         * </ul>
+         */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
 
@@ -93,6 +111,16 @@ public class CreateDeliveryChannelRequest extends TeaModel {
     }
 
     public static class CreateDeliveryChannelRequestResourceChangeDeliverySlsProperties extends TeaModel {
+        /**
+         * <p>The ARN of the destination to which large files are delivered.</p>
+         * <ul>
+         * <li>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object.</li>
+         * <li>You need to set this parameter to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</p>
+         */
         @NameInMap("OversizedDataOssTargetArn")
         public String oversizedDataOssTargetArn;
 
@@ -112,13 +140,32 @@ public class CreateDeliveryChannelRequest extends TeaModel {
     }
 
     public static class CreateDeliveryChannelRequestResourceChangeDelivery extends TeaModel {
+        /**
+         * <p>The Simple Log Service configurations.</p>
+         */
         @NameInMap("SlsProperties")
         public CreateDeliveryChannelRequestResourceChangeDeliverySlsProperties slsProperties;
 
+        /**
+         * <p>The ARN of the delivery destination.</p>
+         * <ul>
+         * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+         * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a Logstore whose name is prefixed with resourcecenter-.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</p>
+         */
         @NameInMap("TargetArn")
         public String targetArn;
 
         /**
+         * <p>The type of the delivery destination.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>SLS</code></li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>SLS</p>
          */
@@ -157,6 +204,17 @@ public class CreateDeliveryChannelRequest extends TeaModel {
     }
 
     public static class CreateDeliveryChannelRequestResourceSnapshotDeliverySlsProperties extends TeaModel {
+        /**
+         * <p>The ARN of the destination to which large files are delivered.</p>
+         * <ul>
+         * <li>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object.</li>
+         * <li>You need to set this parameter to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+         * <li>This parameter takes effect only if you use custom delivery for scheduled resource snapshots. You do not need to configure this parameter if you use standard delivery for scheduled resource snapshots.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</p>
+         */
         @NameInMap("OversizedDataOssTargetArn")
         public String oversizedDataOssTargetArn;
 
@@ -177,6 +235,8 @@ public class CreateDeliveryChannelRequest extends TeaModel {
 
     public static class CreateDeliveryChannelRequestResourceSnapshotDelivery extends TeaModel {
         /**
+         * <p>The custom expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>select * from resources limit 100;</p>
          */
@@ -184,19 +244,41 @@ public class CreateDeliveryChannelRequest extends TeaModel {
         public String customExpression;
 
         /**
+         * <p>The delivery time.</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00Z</p>
          */
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
+        /**
+         * <p>The Simple Log Service configurations.</p>
+         */
         @NameInMap("SlsProperties")
         public CreateDeliveryChannelRequestResourceSnapshotDeliverySlsProperties slsProperties;
 
+        /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the delivery destination.</p>
+         * <ul>
+         * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+         * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a Logstore whose name is prefixed with resourcecenter-.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</p>
+         */
         @NameInMap("TargetArn")
         public String targetArn;
 
         /**
+         * <p>The type of the delivery destination.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><code>OSS</code> for standard delivery</li>
+         * <li><code>OSS</code> or <code>SLS</code> for custom delivery</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */

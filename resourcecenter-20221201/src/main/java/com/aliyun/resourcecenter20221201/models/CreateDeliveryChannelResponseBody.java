@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDeliveryChannelResponseBody extends TeaModel {
     /**
+     * <p>The ID of the delivery channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-0bzhsqpnk***</p>
      */
@@ -12,6 +14,8 @@ public class CreateDeliveryChannelResponseBody extends TeaModel {
     public String deliveryChannelId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>42A89312-0616-591E-B614-07BC87D3D***</p>
      */

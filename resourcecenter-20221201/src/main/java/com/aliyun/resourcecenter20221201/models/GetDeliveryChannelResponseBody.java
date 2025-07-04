@@ -4,13 +4,21 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetDeliveryChannelResponseBody extends TeaModel {
+    /**
+     * <p>The description of the delivery channel.</p>
+     */
     @NameInMap("DeliveryChannelDescription")
     public String deliveryChannelDescription;
 
+    /**
+     * <p>The effective scope of the delivery channel.</p>
+     */
     @NameInMap("DeliveryChannelFilter")
     public GetDeliveryChannelResponseBodyDeliveryChannelFilter deliveryChannelFilter;
 
     /**
+     * <p>The ID of the delivery channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-6q79dm4o9***</p>
      */
@@ -18,6 +26,8 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     public String deliveryChannelId;
 
     /**
+     * <p>The name of the delivery channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-delivery-channel</p>
      */
@@ -25,15 +35,23 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     public String deliveryChannelName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17502A1B-7026-5551-8E1C-CCABD0CBC***</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The configurations for delivery of resource configuration change events.</p>
+     */
     @NameInMap("ResourceChangeDelivery")
     public GetDeliveryChannelResponseBodyResourceChangeDelivery resourceChangeDelivery;
 
+    /**
+     * <p>The configurations for delivery of scheduled resource snapshots.</p>
+     */
     @NameInMap("ResourceSnapshotDelivery")
     public GetDeliveryChannelResponseBodyResourceSnapshotDelivery resourceSnapshotDelivery;
 
@@ -99,6 +117,9 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     }
 
     public static class GetDeliveryChannelResponseBodyDeliveryChannelFilter extends TeaModel {
+        /**
+         * <p>The effective resource types of the delivery channel.</p>
+         */
         @NameInMap("ResourceTypes")
         public java.util.List<String> resourceTypes;
 
@@ -119,6 +140,8 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties extends TeaModel {
         /**
+         * <p>The Alibaba Cloud Resource Name (ARN) of the destination to which large files are delivered.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
          */
@@ -141,10 +164,15 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
     }
 
     public static class GetDeliveryChannelResponseBodyResourceChangeDelivery extends TeaModel {
+        /**
+         * <p>The Simple Log Service configurations.</p>
+         */
         @NameInMap("SlsProperties")
         public GetDeliveryChannelResponseBodyResourceChangeDeliverySlsProperties slsProperties;
 
         /**
+         * <p>The ARN of the delivery destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:log:cn-hangzhou: 1911422487776***:project/delivery/logstore/resourcecenter-sls</p>
          */
@@ -152,6 +180,8 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public String targetArn;
 
         /**
+         * <p>The type of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>SLS</p>
          */
@@ -191,6 +221,8 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties extends TeaModel {
         /**
+         * <p>The ARN of the destination to which large files are delivered.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
          */
@@ -214,6 +246,8 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
 
     public static class GetDeliveryChannelResponseBodyResourceSnapshotDelivery extends TeaModel {
         /**
+         * <p>The custom expression.</p>
+         * 
          * <strong>example:</strong>
          * <p>select * from resources limit 100;</p>
          */
@@ -221,16 +255,23 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public String customExpression;
 
         /**
+         * <p>The delivery time.</p>
+         * 
          * <strong>example:</strong>
          * <p>09:00Z</p>
          */
         @NameInMap("DeliveryTime")
         public String deliveryTime;
 
+        /**
+         * <p>The Simple Log Service configurations.</p>
+         */
         @NameInMap("SlsProperties")
         public GetDeliveryChannelResponseBodyResourceSnapshotDeliverySlsProperties slsProperties;
 
         /**
+         * <p>The ARN of the delivery destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
          */
@@ -238,6 +279,8 @@ public class GetDeliveryChannelResponseBody extends TeaModel {
         public String targetArn;
 
         /**
+         * <p>The type of the destination.</p>
+         * 
          * <strong>example:</strong>
          * <p>OSS</p>
          */

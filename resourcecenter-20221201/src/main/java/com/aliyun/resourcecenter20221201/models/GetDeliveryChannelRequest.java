@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDeliveryChannelRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-6q79dm4o9***</p>
      */

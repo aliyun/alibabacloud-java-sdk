@@ -4,10 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class ListDeliveryChannelsResponseBody extends TeaModel {
+    /**
+     * <p>The delivery channels.</p>
+     */
     @NameInMap("DeliveryChannels")
     public java.util.List<ListDeliveryChannelsResponseBodyDeliveryChannels> deliveryChannels;
 
     /**
+     * <p>The maximum number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -15,6 +20,7 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +30,8 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>17502A1B-7026-5551-8E1C-CCABD0CBC***</p>
      */
@@ -69,16 +77,23 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
 
     public static class ListDeliveryChannelsResponseBodyDeliveryChannels extends TeaModel {
         /**
+         * <p>The time when the delivery channel was created.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-06-20T08:46:29Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of the delivery channel.</p>
+         */
         @NameInMap("DeliveryChannelDescription")
         public String deliveryChannelDescription;
 
         /**
+         * <p>The ID of the delivery channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>dc-4m6ffpkgu***</p>
          */
@@ -86,6 +101,8 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
         public String deliveryChannelId;
 
         /**
+         * <p>The name of the delivery channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-delivery-channel</p>
          */

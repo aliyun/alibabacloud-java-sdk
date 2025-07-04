@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMultiAccountDeliveryChannelRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,10 +4,15 @@ package com.aliyun.resourcecenter20221201.models;
 import com.aliyun.tea.*;
 
 public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaModel {
+    /**
+     * <p>The statistics on the delivery channel.</p>
+     */
     @NameInMap("DeliveryChannelStatistics")
     public GetMultiAccountDeliveryChannelStatisticsResponseBodyDeliveryChannelStatistics deliveryChannelStatistics;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>80DF0610-504C-56D7-BDCF-7C92FD687***</p>
      */
@@ -37,6 +42,8 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
 
     public static class GetMultiAccountDeliveryChannelStatisticsResponseBodyDeliveryChannelStatistics extends TeaModel {
         /**
+         * <p>The ID of the delivery channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>dc-6q79dm4o9***</p>
          */
@@ -44,6 +51,8 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
         public String deliveryChannelId;
 
         /**
+         * <p>The name of the delivery channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-multi-account-delivery</p>
          */
@@ -51,6 +60,8 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
         public String deliveryChannelName;
 
         /**
+         * <p>The last delivery time of resource configuration change events.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-03T16:05:15Z</p>
          */
@@ -58,6 +69,8 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
         public String latestChangeDeliveryTime;
 
         /**
+         * <p>The last delivery time of scheduled resource snapshots.</p>
+         * 
          * <strong>example:</strong>
          * <p>2025-06-03T16:00:00Z</p>
          */

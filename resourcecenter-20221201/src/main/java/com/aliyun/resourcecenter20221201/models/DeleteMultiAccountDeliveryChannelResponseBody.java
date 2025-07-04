@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteMultiAccountDeliveryChannelResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3C5CDBF6-4DB7-53E9-ADDC-5919E3FAC***</p>
      */

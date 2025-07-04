@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateMultiAccountDeliveryChannelResponseBody extends TeaModel {
     /**
+     * <p>The ID of the delivery channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>dc-6q79dm4o9***</p>
      */
@@ -12,6 +14,8 @@ public class CreateMultiAccountDeliveryChannelResponseBody extends TeaModel {
     public String deliveryChannelId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>994BFEFE-4BB5-5A27-8917-4583DEEF2***</p>
      */
