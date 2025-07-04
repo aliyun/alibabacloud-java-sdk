@@ -28,6 +28,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>地址核验</p>
+     * 
+     * @param request AddressVerifyIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddressVerifyIntlResponse
+     */
+    public AddressVerifyIntlResponse addressVerifyIntlWithOptions(AddressVerifyIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addressType)) {
+            query.put("AddressType", request.addressType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultCity)) {
+            query.put("DefaultCity", request.defaultCity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultCountry)) {
+            query.put("DefaultCountry", request.defaultCountry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultDistrict)) {
+            query.put("DefaultDistrict", request.defaultDistrict);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultProvince)) {
+            query.put("DefaultProvince", request.defaultProvince);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latitude)) {
+            query.put("Latitude", request.latitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.longitude)) {
+            query.put("Longitude", request.longitude);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
+            query.put("VerifyType", request.verifyType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddressVerifyIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddressVerifyIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>地址核验</p>
+     * 
+     * @param request AddressVerifyIntlRequest
+     * @return AddressVerifyIntlResponse
+     */
+    public AddressVerifyIntlResponse addressVerifyIntl(AddressVerifyIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addressVerifyIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>银行卡核验</p>
      * 
      * @param request BankMetaVerifyIntlRequest
