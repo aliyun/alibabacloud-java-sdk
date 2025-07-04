@@ -11345,6 +11345,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Area", request.area);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.consistencyHash)) {
+            query.put("ConsistencyHash", request.consistencyHash);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.l2Preload)) {
             query.put("L2Preload", request.l2Preload);
         }
@@ -11788,10 +11792,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
             query.put("DomainName", request.domainName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
-            query.put("Env", request.env);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {

@@ -1,3 +1,8 @@
+2025-07-04 Version: 7.0.0
+- Update API PushObjectCache: add request parameters ConsistencyHash.
+- Update API SetCdnDomainSSLCertificate: delete request parameters Env.
+
+
 2025-06-17 Version: 6.0.0
 - Support API DeleteCustomDomainSampleRate.
 - Update API DescribeCdnService: add response parameters Body.ChangingDynamicBillingType.

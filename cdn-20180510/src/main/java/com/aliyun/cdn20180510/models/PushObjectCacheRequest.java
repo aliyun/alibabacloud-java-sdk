@@ -23,6 +23,9 @@ public class PushObjectCacheRequest extends TeaModel {
     @NameInMap("Area")
     public String area;
 
+    @NameInMap("ConsistencyHash")
+    public Boolean consistencyHash;
+
     /**
      * <p>Specifies whether to prefetch content to L2 points of presence (POPs). Valid values:</p>
      * <ul>
@@ -92,6 +95,14 @@ public class PushObjectCacheRequest extends TeaModel {
     }
     public String getArea() {
         return this.area;
+    }
+
+    public PushObjectCacheRequest setConsistencyHash(Boolean consistencyHash) {
+        this.consistencyHash = consistencyHash;
+        return this;
+    }
+    public Boolean getConsistencyHash() {
+        return this.consistencyHash;
     }
 
     public PushObjectCacheRequest setL2Preload(Boolean l2Preload) {
