@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     /**
-     * <p>The method that is used to verify the identities of clients. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+     * <p>The method that is used to verify the instance. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      * <ul>
      * <li><strong>cert</strong></li>
      * <li><strong>prefer</strong></li>
@@ -42,7 +42,8 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String clientCACert;
 
     /**
-     * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. This parameter is not supported now.</p>
+     * <p>The time when the public key of the CA that issues client certificates expires. This parameter is supported only when the instance runs PostgreSQL with cloud disks. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
+     * <p>This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -71,9 +72,9 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>Indicates whether the forceful SSL encryption feature is enabled. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</p>
+     * <p>Indicates whether the <a href="https://help.aliyun.com/document_detail/95715.html">forceful SSL encryption</a> feature is enabled. This parameter is supported only for RDS for SQL Server instances.</p>
      * <ul>
-     * <li><strong>1</strong>: enabled</li>
+     * <li><strong>1</strong>: The feature is enabled.</li>
      * <li><strong>0</strong>: The feature is disabled.</li>
      * </ul>
      * 
@@ -84,11 +85,11 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String forceEncryption;
 
     /**
-     * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks. Valid values:</p>
+     * <p>The status of the SSL link. This parameter is supported only when the instance runs PostgreSQL with cloud disks.</p>
      * <ul>
-     * <li><strong>success</strong></li>
-     * <li><strong>setting</strong></li>
-     * <li><strong>failed</strong></li>
+     * <li><strong>success</strong>: The SSL link is successfully configured.</li>
+     * <li><strong>setting</strong>: The SSL link is being configured.</li>
+     * <li><strong>failed</strong>: The SSL link failed to be configured.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,20 +132,19 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the server certificate needs to be updated.</p>
+     * <p>Indicates whether the SSL certificate needs to be updated. Valid values:</p>
+     * <blockquote>
+     * <p> An SSL certificate remains valid for one year. Before the used SSL certificate expires, you must update the validity period of the SSL certificate. If you do not update the validity period of the SSL certificate, your application or client that uses encrypted network connections cannot connect to your RDS instance.</p>
+     * </blockquote>
+     * <p><strong>RDS instances that run MySQL and SQL Server</strong></p>
      * <ul>
-     * <li><p>Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
-     * <ul>
-     * <li><strong>No</strong></li>
-     * <li><strong>Yes</strong></li>
+     * <li><strong>No</strong>: The SSL certificate does not need to be updated.</li>
+     * <li><strong>Yes</strong>: The SSL certificate needs to be updated.</li>
      * </ul>
-     * </li>
-     * <li><p>Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
+     * <p><strong>RDS instances that run PostgreSQL</strong></p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
-     * </ul>
-     * </li>
+     * <li><strong>0</strong>: The SSL certificate does not need to be updated.</li>
+     * <li><strong>1</strong>: The SSL certificate needs to be updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -187,20 +187,16 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLCreateTime;
 
     /**
-     * <p>Indicates whether SSL encryption is enabled.</p>
+     * <p>Indicates whether SSL encryption is enabled. Valid values:</p>
+     * <p><strong>RDS instances that run MySQL and SQL Server</strong></p>
      * <ul>
-     * <li><p>Valid values for ApsaraDB RDS for MySQL instances and ApsaraDB RDS for SQL Server instances:</p>
-     * <ul>
-     * <li><strong>Yes</strong></li>
-     * <li><strong>No</strong></li>
+     * <li><strong>Yes</strong>: SSL encryption is enabled.</li>
+     * <li><strong>No</strong>: SSL encryption is disabled.</li>
      * </ul>
-     * </li>
-     * <li><p>Valid values for ApsaraDB RDS for PostgreSQL instances:</p>
+     * <p><strong>RDS instances that run PostgreSQL</strong></p>
      * <ul>
-     * <li><strong>on</strong>: enabled</li>
-     * <li><strong>off</strong>: disabled</li>
-     * </ul>
-     * </li>
+     * <li><strong>on</strong>: SSL encryption is enabled.</li>
+     * <li><strong>off</strong>: SSL encryption is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -210,7 +206,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String SSLEnabled;
 
     /**
-     * <p>The time when the server certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The time when the SSL certificate expires. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format and must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-10-11T08:16:43Z</p>
@@ -248,7 +244,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
     public String serverKey;
 
     /**
-     * <p>The minimum Transport Layer Security (TLS) version. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances. For more information, see <a href="https://help.aliyun.com/document_detail/95715.html">Configure the SSL encryption feature</a>.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/95715.html">minimum Transport Layer Security (TLS) version</a>. Valid values: 1.0, 1.1, and 1.2. This parameter is supported only for ApsaraDB RDS for SQL Server instances.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1</p>

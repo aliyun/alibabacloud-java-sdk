@@ -50,6 +50,9 @@ public class DescribeRCDisksRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The list of the tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeRCDisksRequestTag> tag;
 
@@ -107,9 +110,21 @@ public class DescribeRCDisksRequest extends TeaModel {
     }
 
     public static class DescribeRCDisksRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag. The tag key <strong>cannot be</strong> an empty string or a duplicate value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag. The tag value <strong>can be</strong> an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
+         */
         @NameInMap("Value")
         public String value;
 

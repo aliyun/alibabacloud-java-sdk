@@ -70,6 +70,9 @@ public class RunRCInstancesRequest extends TeaModel {
     @NameInMap("DataDisk")
     public java.util.List<RunRCInstancesRequestDataDisk> dataDisk;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The deployment set ID.</p>
      * 
@@ -366,6 +369,14 @@ public class RunRCInstancesRequest extends TeaModel {
     }
     public java.util.List<RunRCInstancesRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public RunRCInstancesRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public RunRCInstancesRequest setDeploymentSetId(String deploymentSetId) {

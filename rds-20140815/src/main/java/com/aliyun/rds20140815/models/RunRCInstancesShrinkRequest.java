@@ -70,6 +70,9 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     @NameInMap("DataDisk")
     public String dataDiskShrink;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The deployment set ID.</p>
      * 
@@ -366,6 +369,14 @@ public class RunRCInstancesShrinkRequest extends TeaModel {
     }
     public String getDataDiskShrink() {
         return this.dataDiskShrink;
+    }
+
+    public RunRCInstancesShrinkRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public RunRCInstancesShrinkRequest setDeploymentSetId(String deploymentSetId) {

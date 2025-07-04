@@ -338,6 +338,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
+        @NameInMap("NodeType")
+        public String nodeType;
+
         @NameInMap("PublicIp")
         public String publicIp;
 
@@ -531,6 +534,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
         public Integer getMemory() {
             return this.memory;
+        }
+
+        public DescribeRCInstancesResponseBodyRCInstances setNodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+        public String getNodeType() {
+            return this.nodeType;
         }
 
         public DescribeRCInstancesResponseBodyRCInstances setPublicIp(String publicIp) {

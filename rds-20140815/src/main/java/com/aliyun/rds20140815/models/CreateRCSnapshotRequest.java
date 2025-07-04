@@ -51,6 +51,9 @@ public class CreateRCSnapshotRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The retention period of the snapshot. Valid values: 1 to 65536. Unit: days. The snapshot is automatically released when its retention period expires.</p>
      * <p>By default, this parameter is left empty, which specifies that the snapshot is not automatically released.</p>
@@ -60,6 +63,9 @@ public class CreateRCSnapshotRequest extends TeaModel {
      */
     @NameInMap("RetentionDays")
     public Integer retentionDays;
+
+    @NameInMap("Tag")
+    public java.util.List<CreateRCSnapshotRequestTag> tag;
 
     /**
      * <p>This parameter has been deprecated.</p>
@@ -115,6 +121,14 @@ public class CreateRCSnapshotRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateRCSnapshotRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public CreateRCSnapshotRequest setRetentionDays(Integer retentionDays) {
         this.retentionDays = retentionDays;
         return this;
@@ -123,12 +137,50 @@ public class CreateRCSnapshotRequest extends TeaModel {
         return this.retentionDays;
     }
 
+    public CreateRCSnapshotRequest setTag(java.util.List<CreateRCSnapshotRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<CreateRCSnapshotRequestTag> getTag() {
+        return this.tag;
+    }
+
     public CreateRCSnapshotRequest setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateRCSnapshotRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateRCSnapshotRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateRCSnapshotRequestTag self = new CreateRCSnapshotRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRCSnapshotRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateRCSnapshotRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

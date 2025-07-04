@@ -105,7 +105,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public String DBProxyInstanceType;
 
     /**
-     * <p>Internal parameters, no need to pay attention.</p>
+     * <p>An internal parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>18</p>
@@ -114,7 +114,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
     public String DBProxyKindCode;
 
     /**
-     * <p>The proxy node list.</p>
+     * <p>The proxy nodes.</p>
      */
     @NameInMap("DBProxyNodes")
     public DescribeDBProxyResponseBodyDBProxyNodes DBProxyNodes;
@@ -521,7 +521,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
 
     public static class DescribeDBProxyResponseBodyDBProxyNodesDBProxyNodes extends TeaModel {
         /**
-         * <p>The number of cpu cores for the node.</p>
+         * <p>The number of CPU cores of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -530,7 +530,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String cpuCores;
 
         /**
-         * <p>The proxy node id.</p>
+         * <p>The ID of the proxy node.</p>
          * 
          * <strong>example:</strong>
          * <p>pn-xxxxxxx01</p>
@@ -539,7 +539,7 @@ public class DescribeDBProxyResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The id of the availability zone where the node is located.</p>
+         * <p>The ID of the zone in which the node is deployed.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-c</p>

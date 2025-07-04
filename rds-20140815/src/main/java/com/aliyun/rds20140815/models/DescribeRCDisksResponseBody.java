@@ -92,9 +92,21 @@ public class DescribeRCDisksResponseBody extends TeaModel {
     }
 
     public static class DescribeRCDisksResponseBodyDisksTag extends TeaModel {
+        /**
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testkey1</p>
+         */
         @NameInMap("TagKey")
         public String tagKey;
 
+        /**
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testvalue1</p>
+         */
         @NameInMap("TagValue")
         public String tagValue;
 
@@ -364,6 +376,9 @@ public class DescribeRCDisksResponseBody extends TeaModel {
         @NameInMap("StorageSetId")
         public String storageSetId;
 
+        /**
+         * <p>The list of tags.</p>
+         */
         @NameInMap("Tag")
         public java.util.List<DescribeRCDisksResponseBodyDisksTag> tag;
 

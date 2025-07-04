@@ -67,6 +67,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("DedicatedHostAttribute")
     public DescribeRCInstanceAttributeResponseBodyDedicatedHostAttribute dedicatedHostAttribute;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The ID of the deployment set.</p>
      * 
@@ -130,6 +133,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
+
+    @NameInMap("Gpu")
+    public Integer gpu;
+
+    @NameInMap("GpuTypes")
+    public String gpuTypes;
 
     /**
      * <p>The instance hostname.</p>
@@ -276,6 +285,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("Memory")
     public Integer memory;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
     /**
      * <p>The reasons why the instance is locked.</p>
      */
@@ -362,6 +374,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     @NameInMap("Tags")
     public DescribeRCInstanceAttributeResponseBodyTags tags;
+
+    @NameInMap("UserData")
+    public String userData;
 
     /**
      * <p>The virtual LAN (VLAN) ID of the instance.</p>
@@ -470,6 +485,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         return this.dedicatedHostAttribute;
     }
 
+    public DescribeRCInstanceAttributeResponseBody setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
     public DescribeRCInstanceAttributeResponseBody setDeploymentSetId(String deploymentSetId) {
         this.deploymentSetId = deploymentSetId;
         return this;
@@ -524,6 +547,22 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setGpu(Integer gpu) {
+        this.gpu = gpu;
+        return this;
+    }
+    public Integer getGpu() {
+        return this.gpu;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setGpuTypes(String gpuTypes) {
+        this.gpuTypes = gpuTypes;
+        return this;
+    }
+    public String getGpuTypes() {
+        return this.gpuTypes;
     }
 
     public DescribeRCInstanceAttributeResponseBody setHostName(String hostName) {
@@ -646,6 +685,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         return this.memory;
     }
 
+    public DescribeRCInstanceAttributeResponseBody setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
     public DescribeRCInstanceAttributeResponseBody setOperationLocks(DescribeRCInstanceAttributeResponseBodyOperationLocks operationLocks) {
         this.operationLocks = operationLocks;
         return this;
@@ -740,6 +787,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
     public DescribeRCInstanceAttributeResponseBodyTags getTags() {
         return this.tags;
+    }
+
+    public DescribeRCInstanceAttributeResponseBody setUserData(String userData) {
+        this.userData = userData;
+        return this;
+    }
+    public String getUserData() {
+        return this.userData;
     }
 
     public DescribeRCInstanceAttributeResponseBody setVlanId(String vlanId) {

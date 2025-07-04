@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     /**
-     * <p>The consistency read timeout period. Unit: milliseconds. Default value: <strong>10</strong> Unit: milliseconds. Valid values: <strong>0 to 60000</strong></p>
+     * <p>The timeout period for consistency reads. Unit: milliseconds. Default value: <strong>10</strong>. Valid values: <strong>0</strong> to <strong>60000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

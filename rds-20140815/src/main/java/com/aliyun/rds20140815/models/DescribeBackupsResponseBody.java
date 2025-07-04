@@ -394,6 +394,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("EngineVersion")
         public String engineVersion;
 
+        @NameInMap("ExpectExpireTime")
+        public String expectExpireTime;
+
         /**
          * <p>The ID of the instance that generates the backup set. This parameter is used to indicate whether the instance that generates the backup set is a primary instance or a secondary instance.</p>
          * 
@@ -614,6 +617,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setExpectExpireTime(String expectExpireTime) {
+            this.expectExpireTime = expectExpireTime;
+            return this;
+        }
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setHostInstanceID(String hostInstanceID) {

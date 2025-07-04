@@ -212,6 +212,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         @NameInMap("DBInstanceStorage")
         public Integer DBInstanceStorage;
 
+        @NameInMap("DBInstanceStorageType")
+        public String DBInstanceStorageType;
+
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
@@ -589,6 +592,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         }
         public Integer getDBInstanceStorage() {
             return this.DBInstanceStorage;
+        }
+
+        public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute setDBInstanceStorageType(String DBInstanceStorageType) {
+            this.DBInstanceStorageType = DBInstanceStorageType;
+            return this;
+        }
+        public String getDBInstanceStorageType() {
+            return this.DBInstanceStorageType;
         }
 
         public DescribeDBInstancesAsCsvResponseBodyItemsDBInstanceAttribute setDBInstanceType(String DBInstanceType) {

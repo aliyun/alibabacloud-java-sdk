@@ -27,6 +27,9 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("BackupMethod")
     public String backupMethod;
 
+    @NameInMap("BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+
     /**
      * <p>The backup policy. Valid values:</p>
      * <ul>
@@ -99,6 +102,14 @@ public class CreateBackupRequest extends TeaModel {
     }
     public String getBackupMethod() {
         return this.backupMethod;
+    }
+
+    public CreateBackupRequest setBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    public Long getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     public CreateBackupRequest setBackupStrategy(String backupStrategy) {

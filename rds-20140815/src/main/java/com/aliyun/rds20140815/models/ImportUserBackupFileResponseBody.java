@@ -9,6 +9,9 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>b-n8tpg24c6i0v********</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("BackupId")
     public String backupId;

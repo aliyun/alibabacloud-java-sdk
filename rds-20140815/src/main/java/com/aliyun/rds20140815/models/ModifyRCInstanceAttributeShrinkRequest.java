@@ -1,0 +1,165 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.rds20140815.models;
+
+import com.aliyun.tea.*;
+
+public class ModifyRCInstanceAttributeShrinkRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the release protection feature.</li>
+     * <li><strong>false</strong> (default): does not enable the release protection feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
+    /**
+     * <p>The hostname of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testHost1</p>
+     */
+    @NameInMap("HostName")
+    public String hostName;
+
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-uf62br2491p5l****</p>
+     */
+    @NameInMap("InstanceId")
+    public String instanceId;
+
+    @NameInMap("InstanceIds")
+    public String instanceIdsShrink;
+
+    /**
+     * <p>The new password of the instance.</p>
+     * <ul>
+     * <li>The value must be 8 to 30 characters in length.</li>
+     * <li>The value must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include <code>()</code> ~ ! @ # $ % ^ &amp; \* - _ + = \`</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2F9e9@a69c!e18b569c8</p>
+     */
+    @NameInMap("Password")
+    public String password;
+
+    /**
+     * <p>Specifies whether to restart the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("Reboot")
+    public Boolean reboot;
+
+    /**
+     * <p>The region ID of the instance. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The ID of the security group to which the instance is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf6av412xaxixu****</p>
+     */
+    @NameInMap("SecurityGroupId")
+    public String securityGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    public String securityGroupIdsShrink;
+
+    public static ModifyRCInstanceAttributeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyRCInstanceAttributeShrinkRequest self = new ModifyRCInstanceAttributeShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setHostName(String hostName) {
+        this.hostName = hostName;
+        return this;
+    }
+    public String getHostName() {
+        return this.hostName;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setInstanceId(String instanceId) {
+        this.instanceId = instanceId;
+        return this;
+    }
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {
+        this.instanceIdsShrink = instanceIdsShrink;
+        return this;
+    }
+    public String getInstanceIdsShrink() {
+        return this.instanceIdsShrink;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+    public String getPassword() {
+        return this.password;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setReboot(Boolean reboot) {
+        this.reboot = reboot;
+        return this;
+    }
+    public Boolean getReboot() {
+        return this.reboot;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+        return this;
+    }
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    public ModifyRCInstanceAttributeShrinkRequest setSecurityGroupIdsShrink(String securityGroupIdsShrink) {
+        this.securityGroupIdsShrink = securityGroupIdsShrink;
+        return this;
+    }
+    public String getSecurityGroupIdsShrink() {
+        return this.securityGroupIdsShrink;
+    }
+
+}

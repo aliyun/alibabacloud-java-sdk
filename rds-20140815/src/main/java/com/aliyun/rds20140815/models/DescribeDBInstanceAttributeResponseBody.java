@@ -598,9 +598,21 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("BabelfishConfig")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeBabelfishConfig babelfishConfig;
 
+        /**
+         * <p>This is a reserved parameter and is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("BlueGreenDeploymentName")
         public String blueGreenDeploymentName;
 
+        /**
+         * <p>This is a reserved parameter and is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("BlueInstanceName")
         public String blueInstanceName;
 
@@ -682,7 +694,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String collation;
 
         /**
-         * <p>The storage compression mode.</p>
+         * <p>The storage compression mode of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>on, off</p>
@@ -699,6 +711,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("CompressionRatio")
         public String compressionRatio;
 
+        /**
+         * <p>This is a reserved parameter and is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("ComputeBurstEnabled")
         public Boolean computeBurstEnabled;
 
@@ -994,6 +1012,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("GeneralGroupName")
         public String generalGroupName;
 
+        /**
+         * <p>This is a reserved parameter and is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("GreenInstanceName")
         public String greenInstanceName;
 
@@ -1171,7 +1195,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          * <p>The OptimizedWritesInfo parameter contains the following fields:</p>
          * <ul>
          * <li><strong>optimized_writes</strong>: indicates whether the 16K atomic write feature is enabled for the current instance.</li>
-         * <li><strong>init_optimized_writes</strong>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for specific instances in the console.</li>
+         * <li><strong>init_optimized_writes</strong>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for the instance in the console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1235,6 +1259,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ReadOnlyDBInstanceIds")
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttributeReadOnlyDBInstanceIds readOnlyDBInstanceIds;
 
+        /**
+         * <p>This is a reserved parameter and is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
+         */
         @NameInMap("ReadOnlyStatus")
         public String readOnlyStatus;
 
@@ -1313,7 +1343,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String superPermissionMode;
 
         /**
-         * <p>Indicates whether the storage compression mode can be enabled for the instance.</p>
+         * <p>Indicates whether storage compression can be enabled for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>true, false</p>

@@ -247,6 +247,9 @@ public class DescribeDBInstancesRequest extends TeaModel {
     @NameInMap("PayType")
     public String payType;
 
+    @NameInMap("QueryAutoRenewal")
+    public Boolean queryAutoRenewal;
+
     /**
      * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -513,6 +516,14 @@ public class DescribeDBInstancesRequest extends TeaModel {
     }
     public String getPayType() {
         return this.payType;
+    }
+
+    public DescribeDBInstancesRequest setQueryAutoRenewal(Boolean queryAutoRenewal) {
+        this.queryAutoRenewal = queryAutoRenewal;
+        return this;
+    }
+    public Boolean getQueryAutoRenewal() {
+        return this.queryAutoRenewal;
     }
 
     public DescribeDBInstancesRequest setRegionId(String regionId) {

@@ -5,6 +5,19 @@ import com.aliyun.tea.*;
 
 public class ModifyRCInstanceAttributeRequest extends TeaModel {
     /**
+     * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enables the release protection feature.</li>
+     * <li><strong>false</strong> (default): does not enable the release protection feature.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
+    /**
      * <p>The hostname of the instance.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +34,9 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
      */
     @NameInMap("InstanceId")
     public String instanceId;
+
+    @NameInMap("InstanceIds")
+    public java.util.List<String> instanceIds;
 
     /**
      * <p>The new password of the instance.</p>
@@ -57,12 +73,29 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ID of the security group to which the instance is added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-uf6av412xaxixu****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
+
+    @NameInMap("SecurityGroupIds")
+    public java.util.List<String> securityGroupIds;
 
     public static ModifyRCInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRCInstanceAttributeRequest self = new ModifyRCInstanceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyRCInstanceAttributeRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public ModifyRCInstanceAttributeRequest setHostName(String hostName) {
@@ -79,6 +112,14 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public ModifyRCInstanceAttributeRequest setInstanceIds(java.util.List<String> instanceIds) {
+        this.instanceIds = instanceIds;
+        return this;
+    }
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     public ModifyRCInstanceAttributeRequest setPassword(String password) {
@@ -111,6 +152,14 @@ public class ModifyRCInstanceAttributeRequest extends TeaModel {
     }
     public String getSecurityGroupId() {
         return this.securityGroupId;
+    }
+
+    public ModifyRCInstanceAttributeRequest setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+        this.securityGroupIds = securityGroupIds;
+        return this;
+    }
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
     }
 
 }

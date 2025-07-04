@@ -13,6 +13,9 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MaxDisksResults")
+    public Long maxDisksResults;
+
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
 
@@ -36,6 +39,14 @@ public class DescribeRCInstanceAttributeRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeRCInstanceAttributeRequest setMaxDisksResults(Long maxDisksResults) {
+        this.maxDisksResults = maxDisksResults;
+        return this;
+    }
+    public Long getMaxDisksResults() {
+        return this.maxDisksResults;
     }
 
     public DescribeRCInstanceAttributeRequest setPrivateIpAddress(String privateIpAddress) {

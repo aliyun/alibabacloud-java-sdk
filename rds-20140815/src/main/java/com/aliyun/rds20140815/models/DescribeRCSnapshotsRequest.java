@@ -51,6 +51,9 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     @NameInMap("SnapshotIds")
     public String snapshotIds;
 
+    @NameInMap("Tag")
+    public java.util.List<DescribeRCSnapshotsRequestTag> tag;
+
     public static DescribeRCSnapshotsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeRCSnapshotsRequest self = new DescribeRCSnapshotsRequest();
         return TeaModel.build(map, self);
@@ -94,6 +97,44 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     }
     public String getSnapshotIds() {
         return this.snapshotIds;
+    }
+
+    public DescribeRCSnapshotsRequest setTag(java.util.List<DescribeRCSnapshotsRequestTag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<DescribeRCSnapshotsRequestTag> getTag() {
+        return this.tag;
+    }
+
+    public static class DescribeRCSnapshotsRequestTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeRCSnapshotsRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRCSnapshotsRequestTag self = new DescribeRCSnapshotsRequestTag();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRCSnapshotsRequestTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeRCSnapshotsRequestTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

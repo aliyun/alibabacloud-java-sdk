@@ -17,14 +17,12 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
      * <p>Specifies whether to enable the auto-renewal feature. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
-     * </ul>
-     * <blockquote>
-     * </blockquote>
+     * <li><strong>false</strong><blockquote>
      * <ul>
-     * <li><p>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</p>
-     * </li>
-     * <li><p>All strings except <strong>true</strong> are considered <strong>false</strong>.</p>
+     * <li>This parameter is valid only when you change the billing method from pay-as-you-go to subscription.</li>
+     * <li>All strings except <strong>true</strong> are considered <strong>false</strong>.</li>
+     * </ul>
+     * </blockquote>
      * </li>
      * </ul>
      * 
@@ -59,7 +57,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The custom client token that is used to ensure the idempotence of the request.</p>
      * <blockquote>
-     * <p> The value can contain ASCII characters and can be up to 64 characters in length.</p>
+     * <p>The value can contain ASCII characters and can be up to 64 characters in length.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,11 +86,6 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
 
     /**
      * <p>The reserved parameter. This parameter is not supported.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>PrePaid</li>
-     * <li>PostPaid</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -137,11 +130,11 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
      * <p>The renewal cycle of the instance. Valid values:</p>
      * <ul>
      * <li><strong>Year</strong></li>
-     * <li><strong>Month</strong></li>
-     * </ul>
-     * <blockquote>
-     * <p> This parameter must be specified if you set the PayType parameter to <strong>Prepaid</strong>.</p>
+     * <li><strong>Month</strong><blockquote>
+     * <p>This parameter must be specified if you set the PayType parameter to <strong>Prepaid</strong>.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -174,11 +167,11 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance.</p>
      * <ul>
-     * <li>**If you set the <strong><strong>Period</strong></strong> parameter to **Year, the value of the UsedTime parameter ranges from 1 to 5.</li>
-     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from 1 to 11.</li>
+     * <li>If you set the <strong>Period</strong> parameter to <strong>Year</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of the <strong>UsedTime</strong> parameter ranges from <strong>1</strong> to <strong>11</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p> If you set the PayType parameter to <strong>Prepaid</strong>, you must also specify this parameter.</p>
+     * <p>If you set the <strong>PayType</strong> parameter to <strong>Prepaid</strong>, you must specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

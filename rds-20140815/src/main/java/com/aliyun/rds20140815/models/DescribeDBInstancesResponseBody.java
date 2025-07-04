@@ -159,6 +159,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeDBInstancesResponseBodyItemsDBInstance extends TeaModel {
+        @NameInMap("AutoRenewal")
+        public Boolean autoRenewal;
+
         @NameInMap("BlueGreenDeploymentName")
         public String blueGreenDeploymentName;
 
@@ -715,6 +718,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public static DescribeDBInstancesResponseBodyItemsDBInstance build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBInstancesResponseBodyItemsDBInstance self = new DescribeDBInstancesResponseBodyItemsDBInstance();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstancesResponseBodyItemsDBInstance setAutoRenewal(Boolean autoRenewal) {
+            this.autoRenewal = autoRenewal;
+            return this;
+        }
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
         }
 
         public DescribeDBInstancesResponseBodyItemsDBInstance setBlueGreenDeploymentName(String blueGreenDeploymentName) {

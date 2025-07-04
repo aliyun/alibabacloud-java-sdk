@@ -12,7 +12,6 @@ public class ImportUserBackupFileRequest extends TeaModel {
      * <li><strong>Object</strong>: The path of the full backup file that is stored as an object in the OSS bucket. You can call the <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> operation to query the path of the object.</li>
      * <li><strong>Location</strong>: The ID of the region in which the OSS bucket is located. You can call the <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> operation to query the region of the bucket.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</p>
@@ -22,13 +21,15 @@ public class ImportUserBackupFileRequest extends TeaModel {
 
     /**
      * <p>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
     @NameInMap("BucketRegion")
     public String bucketRegion;
+
+    @NameInMap("BuildReplication")
+    public Boolean buildReplication;
 
     /**
      * <p>The description of the full backup file.</p>
@@ -56,6 +57,16 @@ public class ImportUserBackupFileRequest extends TeaModel {
      */
     @NameInMap("EngineVersion")
     public String engineVersion;
+
+    @NameInMap("MasterInfo")
+    public String masterInfo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
+    @NameInMap("Mode")
+    public String mode;
 
     @NameInMap("OwnerId")
     public Long ownerId;
@@ -115,6 +126,9 @@ public class ImportUserBackupFileRequest extends TeaModel {
     @NameInMap("Retention")
     public Integer retention;
 
+    @NameInMap("SourceInfo")
+    public String sourceInfo;
+
     /**
      * <p>The zone ID. You can call the DescribeRegions operation to query the zone ID.</p>
      * <blockquote>
@@ -151,6 +165,14 @@ public class ImportUserBackupFileRequest extends TeaModel {
         return this.bucketRegion;
     }
 
+    public ImportUserBackupFileRequest setBuildReplication(Boolean buildReplication) {
+        this.buildReplication = buildReplication;
+        return this;
+    }
+    public Boolean getBuildReplication() {
+        return this.buildReplication;
+    }
+
     public ImportUserBackupFileRequest setComment(String comment) {
         this.comment = comment;
         return this;
@@ -173,6 +195,22 @@ public class ImportUserBackupFileRequest extends TeaModel {
     }
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    public ImportUserBackupFileRequest setMasterInfo(String masterInfo) {
+        this.masterInfo = masterInfo;
+        return this;
+    }
+    public String getMasterInfo() {
+        return this.masterInfo;
+    }
+
+    public ImportUserBackupFileRequest setMode(String mode) {
+        this.mode = mode;
+        return this;
+    }
+    public String getMode() {
+        return this.mode;
     }
 
     public ImportUserBackupFileRequest setOwnerId(Long ownerId) {
@@ -229,6 +267,14 @@ public class ImportUserBackupFileRequest extends TeaModel {
     }
     public Integer getRetention() {
         return this.retention;
+    }
+
+    public ImportUserBackupFileRequest setSourceInfo(String sourceInfo) {
+        this.sourceInfo = sourceInfo;
+        return this;
+    }
+    public String getSourceInfo() {
+        return this.sourceInfo;
     }
 
     public ImportUserBackupFileRequest setZoneId(String zoneId) {
