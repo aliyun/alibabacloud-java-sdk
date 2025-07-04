@@ -18,6 +18,9 @@ public class RunCommandRequest extends TeaModel {
     @NameInMap("CommandContent")
     public String commandContent;
 
+    @NameInMap("CommandRole")
+    public String commandRole;
+
     /**
      * <p>The encoding mode of the command content. Valid values:</p>
      * <ul>
@@ -94,6 +97,14 @@ public class RunCommandRequest extends TeaModel {
     }
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    public RunCommandRequest setCommandRole(String commandRole) {
+        this.commandRole = commandRole;
+        return this;
+    }
+    public String getCommandRole() {
+        return this.commandRole;
     }
 
     public RunCommandRequest setContentEncoding(String contentEncoding) {

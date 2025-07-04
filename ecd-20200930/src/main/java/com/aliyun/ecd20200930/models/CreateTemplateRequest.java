@@ -4,12 +4,21 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class CreateTemplateRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("BizType")
     public String bizType;
+
+    @NameInMap("ChargeType")
+    public String chargeType;
 
     @NameInMap("DataDiskList")
     public java.util.List<CreateTemplateRequestDataDiskList> dataDiskList;
@@ -31,12 +40,21 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
     /**
      * <strong>example:</strong>
      * <p>pg-8hlryfn331******</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
+
+    @NameInMap("PostPaidAfterUsedUp")
+    public Boolean postPaidAfterUsedUp;
 
     /**
      * <strong>example:</strong>
@@ -88,9 +106,28 @@ public class CreateTemplateRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    @NameInMap("UserDuration")
+    public Integer userDuration;
+
     public static CreateTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTemplateRequest self = new CreateTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateTemplateRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public CreateTemplateRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     public CreateTemplateRequest setBizType(String bizType) {
@@ -99,6 +136,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public CreateTemplateRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public CreateTemplateRequest setDataDiskList(java.util.List<CreateTemplateRequestDataDiskList> dataDiskList) {
@@ -133,12 +178,36 @@ public class CreateTemplateRequest extends TeaModel {
         return this.imageId;
     }
 
+    public CreateTemplateRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public CreateTemplateRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
     public CreateTemplateRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public CreateTemplateRequest setPostPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
+        this.postPaidAfterUsedUp = postPaidAfterUsedUp;
+        return this;
+    }
+    public Boolean getPostPaidAfterUsedUp() {
+        return this.postPaidAfterUsedUp;
     }
 
     public CreateTemplateRequest setProductType(String productType) {
@@ -211,6 +280,14 @@ public class CreateTemplateRequest extends TeaModel {
     }
     public String getTimerGroupId() {
         return this.timerGroupId;
+    }
+
+    public CreateTemplateRequest setUserDuration(Integer userDuration) {
+        this.userDuration = userDuration;
+        return this;
+    }
+    public Integer getUserDuration() {
+        return this.userDuration;
     }
 
     public static class CreateTemplateRequestDataDiskList extends TeaModel {

@@ -405,6 +405,15 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatesResponseBodyData extends TeaModel {
+        @NameInMap("AutoPay")
+        public Boolean autoPay;
+
+        @NameInMap("AutoRenew")
+        public Boolean autoRenew;
+
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         @NameInMap("DataDiskList")
         public java.util.List<DescribeTemplatesResponseBodyDataDataDiskList> dataDiskList;
 
@@ -446,12 +455,21 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("ImageType")
         public String imageType;
 
+        @NameInMap("Period")
+        public Integer period;
+
+        @NameInMap("PeriodUnit")
+        public String periodUnit;
+
         /**
          * <strong>example:</strong>
          * <p>pg-0caoeogkhz*****</p>
          */
         @NameInMap("PolicyGroupId")
         public String policyGroupId;
+
+        @NameInMap("PostPaidAfterUsedUp")
+        public Boolean postPaidAfterUsedUp;
 
         /**
          * <strong>example:</strong>
@@ -521,9 +539,36 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @NameInMap("TimerGroupId")
         public String timerGroupId;
 
+        @NameInMap("UserDuration")
+        public String userDuration;
+
         public static DescribeTemplatesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeTemplatesResponseBodyData self = new DescribeTemplatesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTemplatesResponseBodyData setAutoPay(Boolean autoPay) {
+            this.autoPay = autoPay;
+            return this;
+        }
+        public Boolean getAutoPay() {
+            return this.autoPay;
+        }
+
+        public DescribeTemplatesResponseBodyData setAutoRenew(Boolean autoRenew) {
+            this.autoRenew = autoRenew;
+            return this;
+        }
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        public DescribeTemplatesResponseBodyData setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         public DescribeTemplatesResponseBodyData setDataDiskList(java.util.List<DescribeTemplatesResponseBodyDataDataDiskList> dataDiskList) {
@@ -582,12 +627,36 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.imageType;
         }
 
+        public DescribeTemplatesResponseBodyData setPeriod(Integer period) {
+            this.period = period;
+            return this;
+        }
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        public DescribeTemplatesResponseBodyData setPeriodUnit(String periodUnit) {
+            this.periodUnit = periodUnit;
+            return this;
+        }
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
         public DescribeTemplatesResponseBodyData setPolicyGroupId(String policyGroupId) {
             this.policyGroupId = policyGroupId;
             return this;
         }
         public String getPolicyGroupId() {
             return this.policyGroupId;
+        }
+
+        public DescribeTemplatesResponseBodyData setPostPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
+            this.postPaidAfterUsedUp = postPaidAfterUsedUp;
+            return this;
+        }
+        public Boolean getPostPaidAfterUsedUp() {
+            return this.postPaidAfterUsedUp;
         }
 
         public DescribeTemplatesResponseBodyData setProductType(String productType) {
@@ -684,6 +753,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
         public String getTimerGroupId() {
             return this.timerGroupId;
+        }
+
+        public DescribeTemplatesResponseBodyData setUserDuration(String userDuration) {
+            this.userDuration = userDuration;
+            return this;
+        }
+        public String getUserDuration() {
+            return this.userDuration;
         }
 
     }

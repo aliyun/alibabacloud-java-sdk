@@ -4,6 +4,15 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class ModifyTemplateRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    @NameInMap("ChargeType")
+    public String chargeType;
+
     /**
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -25,12 +34,21 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("Period")
+    public Integer period;
+
+    @NameInMap("PeriodUnit")
+    public String periodUnit;
+
     /**
      * <strong>example:</strong>
      * <p>pg-gx2x1dhsmthe9****</p>
      */
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
+
+    @NameInMap("PostPaidAfterUsedUp")
+    public Boolean postPaidAfterUsedUp;
 
     @NameInMap("RegionConfigList")
     public java.util.List<ModifyTemplateRequestRegionConfigList> regionConfigList;
@@ -81,9 +99,36 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("TimerGroupId")
     public String timerGroupId;
 
+    @NameInMap("UserDuration")
+    public Integer userDuration;
+
     public static ModifyTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyTemplateRequest self = new ModifyTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyTemplateRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ModifyTemplateRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public ModifyTemplateRequest setChargeType(String chargeType) {
+        this.chargeType = chargeType;
+        return this;
+    }
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     public ModifyTemplateRequest setDefaultLanguage(String defaultLanguage) {
@@ -110,12 +155,36 @@ public class ModifyTemplateRequest extends TeaModel {
         return this.imageId;
     }
 
+    public ModifyTemplateRequest setPeriod(Integer period) {
+        this.period = period;
+        return this;
+    }
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    public ModifyTemplateRequest setPeriodUnit(String periodUnit) {
+        this.periodUnit = periodUnit;
+        return this;
+    }
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
     public ModifyTemplateRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public ModifyTemplateRequest setPostPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
+        this.postPaidAfterUsedUp = postPaidAfterUsedUp;
+        return this;
+    }
+    public Boolean getPostPaidAfterUsedUp() {
+        return this.postPaidAfterUsedUp;
     }
 
     public ModifyTemplateRequest setRegionConfigList(java.util.List<ModifyTemplateRequestRegionConfigList> regionConfigList) {
@@ -188,6 +257,14 @@ public class ModifyTemplateRequest extends TeaModel {
     }
     public String getTimerGroupId() {
         return this.timerGroupId;
+    }
+
+    public ModifyTemplateRequest setUserDuration(Integer userDuration) {
+        this.userDuration = userDuration;
+        return this;
+    }
+    public Integer getUserDuration() {
+        return this.userDuration;
     }
 
     public static class ModifyTemplateRequestRegionConfigList extends TeaModel {

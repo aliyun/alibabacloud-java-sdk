@@ -4396,8 +4396,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateTemplateResponse createTemplateWithOptions(CreateTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("AutoRenew", request.autoRenew);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
             body.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            body.put("ChargeType", request.chargeType);
         }
 
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
@@ -4417,8 +4429,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ImageId", request.imageId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            body.put("PeriodUnit", request.periodUnit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             body.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postPaidAfterUsedUp)) {
+            body.put("PostPaidAfterUsedUp", request.postPaidAfterUsedUp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productType)) {
@@ -4455,6 +4479,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timerGroupId)) {
             body.put("TimerGroupId", request.timerGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDuration)) {
+            body.put("UserDuration", request.userDuration);
         }
 
         body = TeaConverter.merge(Object.class,
@@ -14754,12 +14782,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ModifyTemplateResponse modifyTemplateWithOptions(ModifyTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.siteConfigList)) {
-            query.put("SiteConfigList", request.siteConfigList);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("AutoPay", request.autoPay);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            body.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.chargeType)) {
+            body.put("ChargeType", request.chargeType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguage)) {
             body.put("DefaultLanguage", request.defaultLanguage);
         }
@@ -14772,8 +14807,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ImageId", request.imageId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.periodUnit)) {
+            body.put("PeriodUnit", request.periodUnit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.policyGroupId)) {
             body.put("PolicyGroupId", request.policyGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.postPaidAfterUsedUp)) {
+            body.put("PostPaidAfterUsedUp", request.postPaidAfterUsedUp);
         }
 
         java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
@@ -14787,6 +14834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceTagList)) {
             bodyFlat.put("ResourceTagList", request.resourceTagList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteConfigList)) {
+            bodyFlat.put("SiteConfigList", request.siteConfigList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.systemDiskPerformanceLevel)) {
@@ -14809,12 +14860,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TimerGroupId", request.timerGroupId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.userDuration)) {
+            body.put("UserDuration", request.userDuration);
+        }
+
         body = TeaConverter.merge(Object.class,
             body,
             com.aliyun.openapiutil.Client.query(bodyFlat)
         );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -16031,6 +16085,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.commandContent)) {
             query.put("CommandContent", request.commandContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.commandRole)) {
+            query.put("CommandRole", request.commandRole);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.contentEncoding)) {
