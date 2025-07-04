@@ -140,6 +140,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("Instances")
         public Integer instances;
 
+        @NameInMap("IsStateful")
+        public Boolean isStateful;
+
         /**
          * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
          * <ul>
@@ -293,6 +296,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Integer getInstances() {
             return this.instances;
+        }
+
+        public GetApplicationResponseBodyApplication setIsStateful(Boolean isStateful) {
+            this.isStateful = isStateful;
+            return this;
+        }
+        public Boolean getIsStateful() {
+            return this.isStateful;
         }
 
         public GetApplicationResponseBodyApplication setMem(Integer mem) {

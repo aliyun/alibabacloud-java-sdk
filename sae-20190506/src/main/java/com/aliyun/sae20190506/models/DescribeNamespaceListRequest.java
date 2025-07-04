@@ -18,10 +18,10 @@ public class DescribeNamespaceListRequest extends TeaModel {
     public Boolean containCustom;
 
     /**
-     * <p>Specifies whether to exclude hybrid cloud namespaces from the result. Valid values:</p>
+     * <p>Indicates whether hybrid cloud namespaces are excluded. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The system excludes hybrid cloud namespaces from the result.</li>
-     * <li><strong>false</strong>: The system does not exclude hybrid cloud namespaces from the result.</li>
+     * <li><strong>true</strong>: Hybrid cloud namespaces are excluded.</li>
+     * <li><strong>false</strong>: Hybrid cloud namespaces are included.</li>
      * </ul>
      * 
      * <strong>example:</strong>

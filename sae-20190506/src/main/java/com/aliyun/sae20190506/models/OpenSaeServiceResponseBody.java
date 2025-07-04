@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OpenSaeServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the order.</p>
+     * <p>PushEvent</p>
      * 
      * <strong>example:</strong>
      * <p>20485646575****</p>
@@ -14,7 +14,7 @@ public class OpenSaeServiceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>enableWAF</p>
      * 
      * <strong>example:</strong>
      * <p>559B4247-C41C-4D9E-B866-B55D378B****</p>

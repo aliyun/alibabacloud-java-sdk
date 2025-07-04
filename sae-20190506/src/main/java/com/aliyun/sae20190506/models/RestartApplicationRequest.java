@@ -14,6 +14,16 @@ public class RestartApplicationRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>Specifies whether to automatically enable an auto scaling policy for the application. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disabled</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoEnableApplicationScalingRule")
     public Boolean autoEnableApplicationScalingRule;
 

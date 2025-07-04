@@ -126,7 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cn-shanghai</p>
+     * <p>Starts multiple applications at a time.</p>
      * 
      * @param request BatchStartApplicationsRequest
      * @param headers map
@@ -168,7 +168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cn-shanghai</p>
+     * <p>Starts multiple applications at a time.</p>
      * 
      * @param request BatchStartApplicationsRequest
      * @return BatchStartApplicationsResponse
@@ -181,7 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops multiple applications at a time.</p>
+     * <p>Stop applications in batches.</p>
      * 
      * @param request BatchStopApplicationsRequest
      * @param headers map
@@ -223,7 +223,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops multiple applications at a time.</p>
+     * <p>Stop applications in batches.</p>
      * 
      * @param request BatchStopApplicationsRequest
      * @return BatchStopApplicationsResponse
@@ -414,6 +414,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an application.</p>
+     * 
      * @param tmpReq CreateApplicationRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -500,6 +503,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableNewArms", request.enableNewArms);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePrometheus)) {
+            query.put("EnablePrometheus", request.enablePrometheus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
             query.put("Envs", request.envs);
         }
@@ -514,6 +521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageUrl)) {
             query.put("ImageUrl", request.imageUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isStateful)) {
+            query.put("IsStateful", request.isStateful);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.jarStartArgs)) {
@@ -757,6 +768,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Creates an application.</p>
+     * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
      */
@@ -1626,7 +1640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Null</p>
+     * <p>Creates a Secret in a namespace.</p>
      * 
      * @param tmpReq CreateSecretRequest
      * @param headers map
@@ -1678,7 +1692,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Null</p>
+     * <p>Creates a Secret in a namespace.</p>
      * 
      * @param request CreateSecretRequest
      * @return CreateSecretResponse
@@ -2587,6 +2601,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EnableNewArms", request.enableNewArms);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePrometheus)) {
+            query.put("EnablePrometheus", request.enablePrometheus);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.envs)) {
             query.put("Envs", request.envs);
         }
@@ -2971,6 +2989,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the instance groups of an application.</p>
+     * 
      * @param request DescribeApplicationGroupsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -3010,6 +3031,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the instance groups of an application.</p>
+     * 
      * @param request DescribeApplicationGroupsRequest
      * @return DescribeApplicationGroupsResponse
      */
@@ -3072,7 +3096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries application instances.</p>
+     * <p>Queries a list of application instances.</p>
      * 
      * @param request DescribeApplicationInstancesRequest
      * @param headers map
@@ -3130,7 +3154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries application instances.</p>
+     * <p>Queries a list of application instances.</p>
      * 
      * @param request DescribeApplicationInstancesRequest
      * @return DescribeApplicationInstancesResponse
@@ -4071,6 +4095,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the information about resources in a namespace.</p>
+     * 
      * @param request DescribeNamespaceResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4106,6 +4133,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Query the information about resources in a namespace.</p>
+     * 
      * @param request DescribeNamespaceResourcesRequest
      * @return DescribeNamespaceResourcesResponse
      */
@@ -5790,6 +5820,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FieldValue", request.fieldValue);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isStateful)) {
+            query.put("IsStateful", request.isStateful);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
         }
@@ -6930,7 +6964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Activates the Serverless App Engine (SAE) service for free.</p>
+     * <p>Activates Serverless App Engine (SAE) for free.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6961,7 +6995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Activates the Serverless App Engine (SAE) service for free.</p>
+     * <p>Activates Serverless App Engine (SAE) for free.</p>
      * @return OpenSaeServiceResponse
      */
     public OpenSaeServiceResponse openSaeService() throws Exception {
@@ -7073,7 +7107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reduces capacity by instance IDs.</p>
+     * <p>Scales in an application based on instance IDs.</p>
      * 
      * @param request ReduceApplicationCapacityByInstanceIdsRequest
      * @param headers map
@@ -7111,7 +7145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reduces capacity by instance IDs.</p>
+     * <p>Scales in an application based on instance IDs.</p>
      * 
      * @param request ReduceApplicationCapacityByInstanceIdsRequest
      * @return ReduceApplicationCapacityByInstanceIdsResponse
@@ -7124,7 +7158,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales an application.</p>
+     * <p>Rescale an application.</p>
      * 
      * @param request RescaleApplicationRequest
      * @param headers map
@@ -7174,7 +7208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Scales an application.</p>
+     * <p>Rescale an application.</p>
      * 
      * @param request RescaleApplicationRequest
      * @return RescaleApplicationResponse
@@ -7539,7 +7573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
+     * <p>Stops an application.</p>
      * 
      * @param request StopApplicationRequest
      * @param headers map
@@ -7573,7 +7607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>0099b7be-5f5b-4512-a7fc-56049ef1\<em>\</em>\<em>\</em></p>
+     * <p>Stops an application.</p>
      * 
      * @param request StopApplicationRequest
      * @return StopApplicationResponse
@@ -7639,7 +7673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suspends a job.</p>
+     * <p>Suspends one or more jobs.</p>
      * 
      * @param request SuspendJobRequest
      * @param headers map
@@ -7677,7 +7711,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Suspends a job.</p>
+     * <p>Suspends one or more jobs.</p>
      * 
      * @param request SuspendJobRequest
      * @return SuspendJobResponse
@@ -7690,7 +7724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cn-beijing</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -7736,7 +7770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>cn-beijing</p>
+     * <p>Adds tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -7862,6 +7896,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -7909,6 +7946,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Removes tags from resources.</p>
+     * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
      */

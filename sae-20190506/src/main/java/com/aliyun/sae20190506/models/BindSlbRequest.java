@@ -23,6 +23,16 @@ public class BindSlbRequest extends TeaModel {
     @NameInMap("Internet")
     public String internet;
 
+    /**
+     * <p>The billing method of an Internet-facing SLB instance. The following billing methods are supported:</p>
+     * <ul>
+     * <li><strong>PayBySpec</strong>: Pay-by-specification.</li>
+     * <li><strong>PayByCLCU</strong>: Pay-by-CLCU.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayBySpec</p>
+     */
     @NameInMap("InternetSlbChargeType")
     public String internetSlbChargeType;
 
@@ -44,6 +54,16 @@ public class BindSlbRequest extends TeaModel {
     @NameInMap("Intranet")
     public String intranet;
 
+    /**
+     * <p>The billing method of an Internal-facing SLB instance. The following billing methods are supported:</p>
+     * <ul>
+     * <li><strong>PayBySpec</strong>: Pay-by-specification.</li>
+     * <li><strong>PayByCLCU</strong>: Pay-by-CLCU.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>PayBySpec</p>
+     */
     @NameInMap("IntranetSlbChargeType")
     public String intranetSlbChargeType;
 

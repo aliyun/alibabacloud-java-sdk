@@ -20,7 +20,7 @@ public class DescribeNamespaceListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The namespaces.</p>
+     * <p>The list of namespaces.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeNamespaceListResponseBodyData> data;

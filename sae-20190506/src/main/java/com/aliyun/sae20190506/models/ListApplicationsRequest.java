@@ -60,6 +60,9 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("FieldValue")
     public String fieldValue;
 
+    @NameInMap("IsStateful")
+    public String isStateful;
+
     /**
      * <p>1</p>
      * 
@@ -152,6 +155,14 @@ public class ListApplicationsRequest extends TeaModel {
     }
     public String getFieldValue() {
         return this.fieldValue;
+    }
+
+    public ListApplicationsRequest setIsStateful(String isStateful) {
+        this.isStateful = isStateful;
+        return this;
+    }
+    public String getIsStateful() {
+        return this.isStateful;
     }
 
     public ListApplicationsRequest setNamespaceId(String namespaceId) {

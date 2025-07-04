@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class BatchStopApplicationsRequest extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The ID of the application that you want to stop.</p>
+     * <blockquote>
+     * <p>If you want to stop multiple applications at the same time, separate the IDs with commas (,).</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ebf491f0-c1a5-45e2-b2c4-710dbe2a****</p>

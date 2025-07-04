@@ -15,7 +15,11 @@ public class SuspendJobRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Specifies whether to suspend the job template.</p>
+     * <p>Start or suspend a job template.</p>
+     * <ul>
+     * <li>true: Start a job template.</li>
+     * <li>false: Suspend a job template.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

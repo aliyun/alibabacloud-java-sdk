@@ -33,6 +33,12 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    /**
+     * <p>The ID of the application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo-faaca66c-5959-45cc-b3bf-d26093b2e9c0******</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -45,6 +51,10 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>85750d48-6cfc-4dbf-8ea0-840397******</p>
+     */
     @NameInMap("PipelineId")
     public String pipelineId;
 

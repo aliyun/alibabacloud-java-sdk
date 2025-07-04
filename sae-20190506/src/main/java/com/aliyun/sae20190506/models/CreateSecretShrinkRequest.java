@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecretShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateSecretShrinkRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The Secret data.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecretData")

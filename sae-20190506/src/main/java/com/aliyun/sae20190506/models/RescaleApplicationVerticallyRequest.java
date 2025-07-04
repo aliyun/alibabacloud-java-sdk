@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RescaleApplicationVerticallyRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>The app ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The destination CPU specification. Unit: millicore.</p>
+     * <p>Target CPU specification. Unit: millicore.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,17 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Cpu")
     public String cpu;
 
+    /**
+     * <p>The disk size. Unit: GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("DiskSize")
     public String diskSize;
 
     /**
-     * <p>The destination memory size. Unit: MB.</p>
+     * <p>Target memory specification. Unit: MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,12 +43,30 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <p>Enable application scale rules automatically.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("autoEnableApplicationScalingRule")
     public Boolean autoEnableApplicationScalingRule;
 
+    /**
+     * <p>The ratio of minimum ready instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
+     */
     @NameInMap("minReadyInstanceRatio")
     public Integer minReadyInstanceRatio;
 
+    /**
+     * <p>Minimum ready instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("minReadyInstances")
     public Integer minReadyInstances;
 

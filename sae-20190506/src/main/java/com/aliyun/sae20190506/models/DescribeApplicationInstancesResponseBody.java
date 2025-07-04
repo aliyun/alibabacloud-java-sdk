@@ -20,7 +20,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The details of the application instances.</p>
+     * <p>The details of the application instance.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationInstancesResponseBodyData data;
@@ -137,12 +137,30 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus extends TeaModel {
+        /**
+         * <p>The ID of the sidecar container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sidecar-test-01</p>
+         */
         @NameInMap("ContainerId")
         public String containerId;
 
+        /**
+         * <p>The status of the container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("ContainerStatus")
         public String containerStatus;
 
+        /**
+         * <p>The URL of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>registry.cn-beijing.aliyuncs.com/sae-dev-test/******</p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
@@ -187,6 +205,10 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("CreateTimeStamp")
         public Long createTimeStamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>False</p>
+         */
         @NameInMap("DebugStatus")
         public Boolean debugStatus;
 
@@ -297,6 +319,12 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The status of the main container.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("MainContainerStatus")
         public String mainContainerStatus;
 
@@ -309,12 +337,25 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         @NameInMap("PackageVersion")
         public String packageVersion;
 
+        /**
+         * <p>The status of the sidecar container.</p>
+         */
         @NameInMap("SidecarContainersStatus")
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstancesSidecarContainersStatus> sidecarContainersStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1750061980000</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
+        /**
+         * <p>If the health check of an application instance fails, the detailed failure cause or error message is returned. If the health check of an application instance passes, no response is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Null</p>
+         */
         @NameInMap("UnhealthyMessage")
         public String unhealthyMessage;
 
@@ -481,7 +522,7 @@ public class DescribeApplicationInstancesResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The list of application instances.</p>
+         * <p>The application instances.</p>
          */
         @NameInMap("Instances")
         public java.util.List<DescribeApplicationInstancesResponseBodyDataInstances> instances;

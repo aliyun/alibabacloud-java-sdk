@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecretRequest extends TeaModel {
     /**
+     * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CreateSecretRequest extends TeaModel {
     public String namespaceId;
 
     /**
+     * <p>The Secret data.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecretData")
@@ -76,7 +78,13 @@ public class CreateSecretRequest extends TeaModel {
 
     public static class CreateSecretRequestSecretData extends TeaModel {
         /**
+         * <p>The information about the key-value pairs of the Secret. This parameter is required. The following formats are supported:</p>
+         * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
+         * <p>k specifies a key and v specifies a value.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;.dockerconfigjson&quot;:&quot;eyJhdXRocyI6eyJyZWdpc3RyeS12cGMuY24tYmVpamluZy5hbGl5dW5jcy5jb20iOnsidXNlcm5hbWUiOiJ1c2VybmFtZSIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJhdXRoIjoiZFhObGNtNWhiV1U2Y0dGemMzZHZjbVE9In0sInJlZ2lzdHJ5LmNuLWJlaWppbmcuYWxpeXVuY3MuY29tIjp7InVzZXJuYW1lIjoidXNlcm5hbWUiLCJwYXNzd29yZCI6InBhc3N3b3JkIiwiYXV0aCI6ImRYTmxjbTVoYldVNmNHRnpjM2R2Y21RPSJ9fX0=&quot;}</p>
          */
         @NameInMap("SecretData")
         public String secretData;

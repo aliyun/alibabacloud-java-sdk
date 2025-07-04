@@ -123,6 +123,18 @@ public class DeployApplicationRequest extends TeaModel {
     public String configMapMountDesc;
 
     /**
+     * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
+     * <ul>
+     * <li><strong>500</strong></li>
+     * <li><strong>1000</strong></li>
+     * <li><strong>2000</strong></li>
+     * <li><strong>4000</strong></li>
+     * <li><strong>8000</strong></li>
+     * <li><strong>12000</strong></li>
+     * <li><strong>16000</strong></li>
+     * <li><strong>32000</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -143,6 +155,14 @@ public class DeployApplicationRequest extends TeaModel {
     public String customHostAlias;
 
     /**
+     * <p>Custom image type. To it to empty string to use pre-built image.</p>
+     * <ul>
+     * <li><p>internet: Public network image</p>
+     * </li>
+     * <li><p>intranet: Private network image</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>internet</p>
      */
@@ -163,6 +183,15 @@ public class DeployApplicationRequest extends TeaModel {
     public String deploy;
 
     /**
+     * <p>The version of .NET</p>
+     * <ul>
+     * <li>.NET 3.1</li>
+     * <li>.NET 5.0</li>
+     * <li>.NET 6.0</li>
+     * <li>.NET 7.0</li>
+     * <li>.NET 8.0</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>.NET 3.1</p>
      */
@@ -192,6 +221,10 @@ public class DeployApplicationRequest extends TeaModel {
     public String enableAhas;
 
     /**
+     * <p>Enable CPU Burst.</p>
+     * <p>true: enable</p>
+     * <p>false: disable</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -212,13 +245,28 @@ public class DeployApplicationRequest extends TeaModel {
     public Boolean enableGreyTagRoute;
 
     /**
+     * <p>Enable new ARMS features.</p>
+     * <ul>
+     * <li><p>true: enable</p>
+     * </li>
+     * <li><p>false: disable</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableNewArms")
     public Boolean enableNewArms;
 
+    @NameInMap("EnablePrometheus")
+    public Boolean enablePrometheus;
+
     /**
+     * <p>Enable Sidecar resource isolation.</p>
+     * <p>true: enable</p>
+     * <p>false: disable</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -239,6 +287,14 @@ public class DeployApplicationRequest extends TeaModel {
      * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</li>
      * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
      * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
+     * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
+     * </ul>
+     * </li>
+     * <li><p>Reference secret dictionary</p>
+     * <ul>
+     * <li><strong>name</strong>: the name of the environment variable. You can reference one or all keys. If you want to reference all keys, specify <code>sae-sys-secret-all-&lt;Secret dictionary name&gt;</code>. Example: <code>sae-sys-secret-all-test1</code>.</li>
+     * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>secretRef</code>.</li>
+     * <li><strong>secretId</strong>: the secret dictionary ID.</li>
      * <li><strong>key</strong>: the key. If you want to reference all keys, do not configure this parameter.</li>
      * </ul>
      * </li>
@@ -271,6 +327,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>Initialize container configuration.</p>
+     */
     @NameInMap("InitContainersConfig")
     public java.util.List<InitContainerConfig> initContainersConfig;
 
@@ -354,6 +413,20 @@ public class DeployApplicationRequest extends TeaModel {
     public String liveness;
 
     /**
+     * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
+     * <ul>
+     * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
+     * <li>This parameter is set to <strong>2048</strong> if the Cpu parameter is set to 500, 1000, or 2000.</li>
+     * <li>This parameter is set to <strong>4096</strong> if the Cpu parameter is set to 1000, 2000, or 4000.</li>
+     * <li>This parameter is set to <strong>8192</strong> if the Cpu parameter is set to 2000, 4000, or 8,000.</li>
+     * <li>This parameter is set to <strong>12288</strong> if the Cpu parameter is set to 12000.</li>
+     * <li>This parameter is set to <strong>16384</strong> if the Cpu parameter is set to 4000, 8000, or 16000.</li>
+     * <li>This parameter is set to <strong>24576</strong> if the Cpu parameter is set to 12000.</li>
+     * <li>This parameter is set to <strong>32768</strong> if the Cpu parameter is set to 16000.</li>
+     * <li>This parameter is set to <strong>65536</strong> if the Cpu parameter is set to 8000, 16000, or 32000.</li>
+     * <li>This parameter is set to <strong>131072</strong> if the Cpu parameter is set to 32000.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1024</p>
      */
@@ -375,6 +448,16 @@ public class DeployApplicationRequest extends TeaModel {
     public String microRegistration;
 
     /**
+     * <p>Select the edition of Nacos.</p>
+     * <ul>
+     * <li><p>0: SAE built-in Nacos. Unable to get the configuration of SAE built-in Nacos.</p>
+     * </li>
+     * <li><p>1: Self-built Nacos from users.</p>
+     * </li>
+     * <li><p>2: MSE enterprise Nacos.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</p>
      */
@@ -382,6 +465,30 @@ public class DeployApplicationRequest extends TeaModel {
     public String microRegistrationConfig;
 
     /**
+     * <p>Configure Microservices Governance</p>
+     * <p>Whether to enable microservices governance (enable):</p>
+     * <ul>
+     * <li>true: Enable</li>
+     * <li>false: Disable</li>
+     * </ul>
+     * <p>Configure lossless online/offline deployment (mseLosslessRule):</p>
+     * <p>delayTime: Delay duration (unit: seconds)</p>
+     * <p>enable: Whether to enable lossless deployment</p>
+     * <ul>
+     * <li><p>true: Enable</p>
+     * </li>
+     * <li><p>false: Disable</p>
+     * </li>
+     * </ul>
+     * <p>notice: Whether to enable notifications</p>
+     * <ul>
+     * <li><p>true: Enable</p>
+     * </li>
+     * <li><p>false: Disable</p>
+     * </li>
+     * </ul>
+     * <p>warmupTime: Small-traffic warm-up duration (unit: seconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;enable&quot;: true,&quot;mseLosslessRule&quot;: {&quot;delayTime&quot;: 0,&quot;enable&quot;: false,&quot;notice&quot;: false,&quot;warmupTime&quot;: 120}}</p>
      */
@@ -464,6 +571,16 @@ public class DeployApplicationRequest extends TeaModel {
     public String nasId;
 
     /**
+     * <p>SAE edition.</p>
+     * <ul>
+     * <li><p>lite: the lightweight edition.</p>
+     * </li>
+     * <li><p>std: the standard edition.</p>
+     * </li>
+     * <li><p>pro: the professional edition.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>pro</p>
      */
@@ -524,6 +641,28 @@ public class DeployApplicationRequest extends TeaModel {
     public String ossMountDescs;
 
     /**
+     * <p>The package type.</p>
+     * <p>When using Java, FatJar, War and Image are supported.
+     * When using Python, PythonZip and Image are supported.
+     * When using PHP, the followings are supported:</p>
+     * <ul>
+     * <li>PhpZip</li>
+     * <li>IMAGE_PHP_5_4</li>
+     * <li>IMAGE_PHP_5_4_ALPINE</li>
+     * <li>IMAGE_PHP_5_5</li>
+     * <li>IMAGE_PHP_5_5_ALPINE</li>
+     * <li>IMAGE_PHP_5_6</li>
+     * <li>IMAGE_PHP_5_6_ALPINE</li>
+     * <li>IMAGE_PHP_7_0</li>
+     * <li>IMAGE_PHP_7_0_ALPINE</li>
+     * <li>IMAGE_PHP_7_1</li>
+     * <li>IMAGE_PHP_7_1_ALPINE</li>
+     * <li>IMAGE_PHP_7_2</li>
+     * <li>IMAGE_PHP_7_2_ALPINE</li>
+     * <li>IMAGE_PHP_7_3</li>
+     * <li>IMAGE_PHP_7_3_ALPINE</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FatJar</p>
      */
@@ -549,6 +688,8 @@ public class DeployApplicationRequest extends TeaModel {
     public String packageVersion;
 
     /**
+     * <p>The dependent PHP version of PHP package. Image is not supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>PHP-FPM 7.0</p>
      */
@@ -646,6 +787,8 @@ public class DeployApplicationRequest extends TeaModel {
     public String readiness;
 
     /**
+     * <p>The number of instances.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -653,6 +796,17 @@ public class DeployApplicationRequest extends TeaModel {
     public Integer replicas;
 
     /**
+     * <p>Secret Mount Description
+     * Use the secret dictionaries created in the Namespace Secret Dictionary page to inject information into containers. Parameter descriptions are as follows:</p>
+     * <ul>
+     * <li><p>secretId: Secret instance ID. Obtain via the ListSecrets interface.</p>
+     * </li>
+     * <li><p>key: Key-value pair. Note: Set the parameter sae-sys-secret-all to mount all keys.</p>
+     * </li>
+     * <li><p>mountPath: Mount path.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>[{“secretId&quot;:10,”key&quot;:&quot;test&quot;,&quot;mountPath&quot;:&quot;/tmp&quot;}]</p>
      */
@@ -660,6 +814,8 @@ public class DeployApplicationRequest extends TeaModel {
     public String secretMountDesc;
 
     /**
+     * <p>Security group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>sg-wz969ngg2e49q5i4****</p>
      */
@@ -667,6 +823,8 @@ public class DeployApplicationRequest extends TeaModel {
     public String securityGroupId;
 
     /**
+     * <p>The gray-release tag of the application.</p>
+     * 
      * <strong>example:</strong>
      * <p>{\&quot;alicloud.service.tag\&quot;:\&quot;g1\&quot;}</p>
      */
@@ -705,12 +863,42 @@ public class DeployApplicationRequest extends TeaModel {
     public String slsConfigs;
 
     /**
+     * <p>Check Failure: Indicates that the application failed to start. The system will report the exception and automatically restart it.</p>
+     * <p>Note: </p>
+     * <p>Supports exec, httpGet, and tcpSocket methods. For specific examples, see Liveness Parameters.
+     * Only one method can be selected for health checks.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat /home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</p>
      */
     @NameInMap("StartupProbe")
     public String startupProbe;
 
+    /**
+     * <p>Configure K8s Service-based Service Registration/Discovery and Full-Chain Grayscale Capabilities</p>
+     * <ul>
+     * <li><p>enable: Whether to enable full-link grayscale based on K8s Service (set to &quot;true&quot; to enable; set to &quot;false&quot; to disable).</p>
+     * </li>
+     * <li><p>namespaceId: Namespace ID</p>
+     * </li>
+     * <li><p>portAndProtocol: Listener port and protocol. Format: {&quot;Port:Protocol Type&quot;:&quot;Container Port&quot;}</p>
+     * </li>
+     * <li><p>portProtocols: Define service ports and protocols
+     * port: Port
+     * protocol: Protocol
+     * targetPort: Container port</p>
+     * </li>
+     * <li><p>pvtzDiscoveryName: Service discovery name</p>
+     * </li>
+     * <li><p>serviceId: Service ID</p>
+     * </li>
+     * <li><p>serviceName: Service name</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;enable\&quot;:\&quot;false\&quot;,\&quot;namespaceId\&quot;:\&quot;cn-beijing:test\&quot;,\&quot;portAndProtocol\&quot;:{\&quot;2000:TCP\&quot;:\&quot;18081\&quot;},\&quot;portProtocols\&quot;:[{\&quot;port\&quot;:2000,\&quot;protocol\&quot;:\&quot;TCP\&quot;,\&quot;targetPort\&quot;:18081}],\&quot;pvtzDiscoveryName\&quot;:\&quot;cn-beijing-1421801774382676\&quot;,\&quot;serviceId\&quot;:\&quot;3513\&quot;,\&quot;serviceName\&quot;:\&quot;demo-gray.test\&quot;}</p>
+     */
     @NameInMap("SwimlanePvtzDiscoverySvc")
     public String swimlanePvtzDiscoverySvc;
 
@@ -777,6 +965,8 @@ public class DeployApplicationRequest extends TeaModel {
     public String updateStrategy;
 
     /**
+     * <p>The ID of the vSwitch, where the EIP of the application instances resides. The vSwitch must reside in the VPC above.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-bp12mw1f8k3jgygk9****</p>
      */
@@ -969,6 +1159,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public Boolean getEnableNewArms() {
         return this.enableNewArms;
+    }
+
+    public DeployApplicationRequest setEnablePrometheus(Boolean enablePrometheus) {
+        this.enablePrometheus = enablePrometheus;
+        return this;
+    }
+    public Boolean getEnablePrometheus() {
+        return this.enablePrometheus;
     }
 
     public DeployApplicationRequest setEnableSidecarResourceIsolated(Boolean enableSidecarResourceIsolated) {

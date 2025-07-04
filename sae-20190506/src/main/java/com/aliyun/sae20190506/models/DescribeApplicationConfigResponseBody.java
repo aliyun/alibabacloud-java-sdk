@@ -957,6 +957,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("EnableNewArms")
         public Boolean enableNewArms;
 
+        @NameInMap("EnablePrometheus")
+        public Boolean enablePrometheus;
+
         /**
          * <p>The environment variables. Variable description:</p>
          * <ul>
@@ -994,6 +997,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @NameInMap("InitContainersConfig")
         public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> initContainersConfig;
+
+        @NameInMap("IsStateful")
+        public Boolean isStateful;
 
         /**
          * <p>The arguments in the JAR package. The arguments are used to start the application container. The default startup command is <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code>.</p>
@@ -1763,6 +1769,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.enableNewArms;
         }
 
+        public DescribeApplicationConfigResponseBodyData setEnablePrometheus(Boolean enablePrometheus) {
+            this.enablePrometheus = enablePrometheus;
+            return this;
+        }
+        public Boolean getEnablePrometheus() {
+            return this.enablePrometheus;
+        }
+
         public DescribeApplicationConfigResponseBodyData setEnvs(String envs) {
             this.envs = envs;
             return this;
@@ -1809,6 +1823,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public java.util.List<DescribeApplicationConfigResponseBodyDataInitContainersConfig> getInitContainersConfig() {
             return this.initContainersConfig;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setIsStateful(Boolean isStateful) {
+            this.isStateful = isStateful;
+            return this;
+        }
+        public Boolean getIsStateful() {
+            return this.isStateful;
         }
 
         public DescribeApplicationConfigResponseBodyData setJarStartArgs(String jarStartArgs) {
