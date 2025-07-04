@@ -236,6 +236,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>cs.aliyun.com</p>
      */
     @NameInMap("custom_san")
+    @Deprecated
     public String customSan;
 
     /**
@@ -275,6 +276,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("enable_rrsa")
+    @Deprecated
     public Boolean enableRrsa;
 
     /**
@@ -302,6 +304,9 @@ public class CreateClusterRequest extends TeaModel {
      */
     @NameInMap("endpoint_public_access")
     public Boolean endpointPublicAccess;
+
+    @NameInMap("extra_sans")
+    public java.util.List<String> extraSans;
 
     /**
      * <p>[<strong>Deprecated</strong>] When you configure a node pool, you cannot add existing nodes to the cluster. If you want to add existing nodes, you must first create a node pool and then call the <a href="https://help.aliyun.com/document_detail/2667920.html">AttachInstancesToNodePool</a> operation.</p>
@@ -849,6 +854,9 @@ public class CreateClusterRequest extends TeaModel {
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 
+    @NameInMap("rrsa_config")
+    public CreateClusterRequestRrsaConfig rrsaConfig;
+
     /**
      * <p>The container runtime. The default container runtime is Docker. containerd and Sandboxed-Container are also supported.</p>
      * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
@@ -1369,6 +1377,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.cpuPolicy;
     }
 
+    @Deprecated
     public CreateClusterRequest setCustomSan(String customSan) {
         this.customSan = customSan;
         return this;
@@ -1394,6 +1403,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.disableRollback;
     }
 
+    @Deprecated
     public CreateClusterRequest setEnableRrsa(Boolean enableRrsa) {
         this.enableRrsa = enableRrsa;
         return this;
@@ -1416,6 +1426,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public Boolean getEndpointPublicAccess() {
         return this.endpointPublicAccess;
+    }
+
+    public CreateClusterRequest setExtraSans(java.util.List<String> extraSans) {
+        this.extraSans = extraSans;
+        return this;
+    }
+    public java.util.List<String> getExtraSans() {
+        return this.extraSans;
     }
 
     @Deprecated
@@ -1795,6 +1813,14 @@ public class CreateClusterRequest extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public CreateClusterRequest setRrsaConfig(CreateClusterRequestRrsaConfig rrsaConfig) {
+        this.rrsaConfig = rrsaConfig;
+        return this;
+    }
+    public CreateClusterRequestRrsaConfig getRrsaConfig() {
+        return this.rrsaConfig;
     }
 
     public CreateClusterRequest setRuntime(Runtime runtime) {
@@ -2589,6 +2615,25 @@ public class CreateClusterRequest extends TeaModel {
         }
         public CreateClusterRequestOperationPolicyClusterAutoUpgrade getClusterAutoUpgrade() {
             return this.clusterAutoUpgrade;
+        }
+
+    }
+
+    public static class CreateClusterRequestRrsaConfig extends TeaModel {
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        public static CreateClusterRequestRrsaConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestRrsaConfig self = new CreateClusterRequestRrsaConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestRrsaConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
         }
 
     }
