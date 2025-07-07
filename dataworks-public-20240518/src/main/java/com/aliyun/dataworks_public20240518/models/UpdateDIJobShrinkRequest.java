@@ -4,6 +4,12 @@ package com.aliyun.dataworks_public20240518.models;
 import com.aliyun.tea.*;
 
 public class UpdateDIJobShrinkRequest extends TeaModel {
+    /**
+     * <p>This parameter is deprecated. Use the Id parameter instead.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11588</p>
+     */
     @NameInMap("DIJobId")
     @Deprecated
     public Long DIJobId;
@@ -23,6 +29,13 @@ public class UpdateDIJobShrinkRequest extends TeaModel {
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
+    /**
+     * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 

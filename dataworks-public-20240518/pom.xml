@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>dataworks_public20240518</artifactId>
-  <version>7.2.3</version>
+  <version>7.2.5</version>
   <packaging>jar</packaging>
   <name>dataworks_public20240518</name>
   <description>Alibaba Cloud dataworks-public (20240518) SDK for Java
@@ -82,6 +82,16 @@
       <groupId>com.aliyun</groupId>
       <artifactId>tea-fileform</artifactId>
       <version>0.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-xml</artifactId>
+      <version>0.1.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>credentials-java</artifactId>
+      <version>1.0.2</version>
     </dependency>
   </dependencies>
   <build>

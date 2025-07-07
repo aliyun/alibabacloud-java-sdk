@@ -14,11 +14,21 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String destinationDataSourceSettingsShrink;
 
     /**
+     * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB for MySQL, Kafka, and Hive.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hologres</p>
      */
     @NameInMap("DestinationDataSourceType")
     public String destinationDataSourceType;
 
+    /**
+     * <p>This parameter is deprecated and is replaced by the Name parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_to_holo_sync_8772</p>
+     */
     @NameInMap("JobName")
     @Deprecated
     public String jobName;
@@ -26,18 +36,53 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     @NameInMap("JobSettings")
     public String jobSettingsShrink;
 
+    /**
+     * <p>The type of the task. This parameter is optional. Valid values:</p>
+     * <ul>
+     * <li>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
+     * <li>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
+     * <li>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DatabaseRealtimeMigration</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
     /**
+     * <p>The synchronization type. Valid values:</p>
+     * <ul>
+     * <li>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</li>
+     * <li>RealtimeIncremental: real-time incremental synchronization of data in a single table</li>
+     * <li>Full: full batch synchronization of data in an entire database</li>
+     * <li>OfflineIncremental: batch incremental synchronization of data in an entire database</li>
+     * <li>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</li>
+     * </ul>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FullAndRealtimeIncremental</p>
      */
     @NameInMap("MigrationType")
     public String migrationType;
 
+    /**
+     * <p>The name of the synchronization task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql_to_holo_sync_8772</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("ProjectId")
     public Long projectId;
 
@@ -54,7 +99,11 @@ public class CreateDIJobShrinkRequest extends TeaModel {
     public String sourceDataSourceSettingsShrink;
 
     /**
+     * <p>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, Redshift, Hive, SQL Server, Doris, and ClickHouse.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL</p>
      */
     @NameInMap("SourceDataSourceType")
     public String sourceDataSourceType;
