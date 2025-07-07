@@ -4,6 +4,12 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class GetSmartHandleJobResponseBody extends TeaModel {
+    @NameInMap("ErrorCode")
+    public String errorCode;
+
+    @NameInMap("ErrorMessage")
+    public String errorMessage;
+
     /**
      * <p>The job ID.</p>
      * 
@@ -71,6 +77,22 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     public static GetSmartHandleJobResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetSmartHandleJobResponseBody self = new GetSmartHandleJobResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetSmartHandleJobResponseBody setErrorCode(String errorCode) {
+        this.errorCode = errorCode;
+        return this;
+    }
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    public GetSmartHandleJobResponseBody setErrorMessage(String errorMessage) {
+        this.errorMessage = errorMessage;
+        return this;
+    }
+    public String getErrorMessage() {
+        return this.errorMessage;
     }
 
     public GetSmartHandleJobResponseBody setJobId(String jobId) {

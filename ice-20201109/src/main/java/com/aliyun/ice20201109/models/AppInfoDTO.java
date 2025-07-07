@@ -14,11 +14,20 @@ public class AppInfoDTO extends TeaModel {
     @NameInMap("AppType")
     public Integer appType;
 
+    @NameInMap("CreationTime")
+    public String creationTime;
+
     @NameInMap("GmtCreate")
     public String gmtCreate;
 
+    @NameInMap("GmtModified")
+    public String gmtModified;
+
     @NameInMap("ItemId")
     public String itemId;
+
+    @NameInMap("ModificationTime")
+    public String modificationTime;
 
     @NameInMap("Platforms")
     public java.util.List<AppInfoDTOPlatforms> platforms;
@@ -47,6 +56,14 @@ public class AppInfoDTO extends TeaModel {
         return this.appType;
     }
 
+    public AppInfoDTO setCreationTime(String creationTime) {
+        this.creationTime = creationTime;
+        return this;
+    }
+    public String getCreationTime() {
+        return this.creationTime;
+    }
+
     public AppInfoDTO setGmtCreate(String gmtCreate) {
         this.gmtCreate = gmtCreate;
         return this;
@@ -55,12 +72,28 @@ public class AppInfoDTO extends TeaModel {
         return this.gmtCreate;
     }
 
+    public AppInfoDTO setGmtModified(String gmtModified) {
+        this.gmtModified = gmtModified;
+        return this;
+    }
+    public String getGmtModified() {
+        return this.gmtModified;
+    }
+
     public AppInfoDTO setItemId(String itemId) {
         this.itemId = itemId;
         return this;
     }
     public String getItemId() {
         return this.itemId;
+    }
+
+    public AppInfoDTO setModificationTime(String modificationTime) {
+        this.modificationTime = modificationTime;
+        return this;
+    }
+    public String getModificationTime() {
+        return this.modificationTime;
     }
 
     public AppInfoDTO setPlatforms(java.util.List<AppInfoDTOPlatforms> platforms) {
