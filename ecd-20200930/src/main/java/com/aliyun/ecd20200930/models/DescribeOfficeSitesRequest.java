@@ -158,6 +158,9 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("VpcId")
+    public String vpcId;
+
     public static DescribeOfficeSitesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeOfficeSitesRequest self = new DescribeOfficeSitesRequest();
         return TeaModel.build(map, self);
@@ -217,6 +220,14 @@ public class DescribeOfficeSitesRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeOfficeSitesRequest setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+        return this;
+    }
+    public String getVpcId() {
+        return this.vpcId;
     }
 
 }

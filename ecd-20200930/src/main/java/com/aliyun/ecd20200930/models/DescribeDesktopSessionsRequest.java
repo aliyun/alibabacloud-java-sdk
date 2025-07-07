@@ -92,6 +92,9 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
+
     /**
      * <p>The state of the session.</p>
      * <p>Valid values:</p>
@@ -214,6 +217,14 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public DescribeDesktopSessionsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribeDesktopSessionsRequest setSessionStatus(String sessionStatus) {

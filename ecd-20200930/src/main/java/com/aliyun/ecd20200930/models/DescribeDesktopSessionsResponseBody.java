@@ -57,6 +57,36 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDesktopSessionsResponseBodySessionsResourceGroups extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static DescribeDesktopSessionsResponseBodySessionsResourceGroups build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopSessionsResponseBodySessionsResourceGroups self = new DescribeDesktopSessionsResponseBodySessionsResourceGroups();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopSessionsResponseBodySessionsResourceGroups setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public DescribeDesktopSessionsResponseBodySessionsResourceGroups setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeDesktopSessionsResponseBodySessions extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
@@ -184,6 +214,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
          */
         @NameInMap("ProtocolType")
         public String protocolType;
+
+        @NameInMap("ResourceGroups")
+        public java.util.List<DescribeDesktopSessionsResponseBodySessionsResourceGroups> resourceGroups;
 
         /**
          * <p>The end time of the session.</p>
@@ -358,6 +391,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
         public String getProtocolType() {
             return this.protocolType;
+        }
+
+        public DescribeDesktopSessionsResponseBodySessions setResourceGroups(java.util.List<DescribeDesktopSessionsResponseBodySessionsResourceGroups> resourceGroups) {
+            this.resourceGroups = resourceGroups;
+            return this;
+        }
+        public java.util.List<DescribeDesktopSessionsResponseBodySessionsResourceGroups> getResourceGroups() {
+            return this.resourceGroups;
         }
 
         public DescribeDesktopSessionsResponseBodySessions setSessionEndTime(String sessionEndTime) {

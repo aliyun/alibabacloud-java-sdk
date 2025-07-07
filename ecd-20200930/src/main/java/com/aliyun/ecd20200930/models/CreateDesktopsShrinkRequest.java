@@ -264,6 +264,9 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     @NameInMap("PromotionId")
     public String promotionId;
 
+    @NameInMap("QosRuleId")
+    public String qosRuleId;
+
     /**
      * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -581,6 +584,14 @@ public class CreateDesktopsShrinkRequest extends TeaModel {
     }
     public String getPromotionId() {
         return this.promotionId;
+    }
+
+    public CreateDesktopsShrinkRequest setQosRuleId(String qosRuleId) {
+        this.qosRuleId = qosRuleId;
+        return this;
+    }
+    public String getQosRuleId() {
+        return this.qosRuleId;
     }
 
     public CreateDesktopsShrinkRequest setRegionId(String regionId) {
