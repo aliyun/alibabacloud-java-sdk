@@ -132,6 +132,176 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建Livy compute</p>
+     * 
+     * @param request CreateLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLivyComputeResponse
+     */
+    public CreateLivyComputeResponse createLivyComputeWithOptions(String workspaceBizId, CreateLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            body.put("authType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStartConfiguration)) {
+            body.put("autoStartConfiguration", request.autoStartConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopConfiguration)) {
+            body.put("autoStopConfiguration", request.autoStopConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuLimit)) {
+            body.put("cpuLimit", request.cpuLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {
+            body.put("displayReleaseVersion", request.displayReleaseVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePublic)) {
+            body.put("enablePublic", request.enablePublic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            body.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fusion)) {
+            body.put("fusion", request.fusion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livyServerConf)) {
+            body.put("livyServerConf", request.livyServerConf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livyVersion)) {
+            body.put("livyVersion", request.livyVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryLimit)) {
+            body.put("memoryLimit", request.memoryLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkName)) {
+            body.put("networkName", request.networkName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
+            body.put("queueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseVersion)) {
+            body.put("releaseVersion", request.releaseVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Livy compute</p>
+     * 
+     * @param request CreateLivyComputeRequest
+     * @return CreateLivyComputeResponse
+     */
+    public CreateLivyComputeResponse createLivyCompute(String workspaceBizId, CreateLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createLivyComputeWithOptions(workspaceBizId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Livy Compute的token</p>
+     * 
+     * @param request CreateLivyComputeTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLivyComputeTokenResponse
+     */
+    public CreateLivyComputeTokenResponse createLivyComputeTokenWithOptions(String workspaceBizId, String livyComputeId, CreateLivyComputeTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoExpireConfiguration)) {
+            body.put("autoExpireConfiguration", request.autoExpireConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLivyComputeToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/token"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLivyComputeTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Livy Compute的token</p>
+     * 
+     * @param request CreateLivyComputeTokenRequest
+     * @return CreateLivyComputeTokenResponse
+     */
+    public CreateLivyComputeTokenResponse createLivyComputeToken(String workspaceBizId, String livyComputeId, CreateLivyComputeTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Creates a workflow.</p>
      * 
      * @param tmpReq CreateProcessDefinitionWithScheduleRequest
@@ -540,6 +710,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除livy compute</p>
+     * 
+     * @param request DeleteLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLivyComputeResponse
+     */
+    public DeleteLivyComputeResponse deleteLivyComputeWithOptions(String workspaceBizId, String livyComputeId, DeleteLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除livy compute</p>
+     * 
+     * @param request DeleteLivyComputeRequest
+     * @return DeleteLivyComputeResponse
+     */
+    public DeleteLivyComputeResponse deleteLivyCompute(String workspaceBizId, String livyComputeId, DeleteLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Livy Compute的token</p>
+     * 
+     * @param request DeleteLivyComputeTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteLivyComputeTokenResponse
+     */
+    public DeleteLivyComputeTokenResponse deleteLivyComputeTokenWithOptions(String workspaceBizId, String livyComputeId, String tokenId, DeleteLivyComputeTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteLivyComputeToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/token/" + com.aliyun.openapiutil.Client.getEncodeParam(tokenId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteLivyComputeTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除Livy Compute的token</p>
+     * 
+     * @param request DeleteLivyComputeTokenRequest
+     * @return DeleteLivyComputeTokenResponse
+     */
+    public DeleteLivyComputeTokenResponse deleteLivyComputeToken(String workspaceBizId, String livyComputeId, String tokenId, DeleteLivyComputeTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the queue of a workspace.</p>
      * 
      * @param request EditWorkspaceQueueRequest
@@ -754,6 +1018,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取livy compute</p>
+     * 
+     * @param request GetLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLivyComputeResponse
+     */
+    public GetLivyComputeResponse getLivyComputeWithOptions(String workspaceBizId, String livyComputeId, GetLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取livy compute</p>
+     * 
+     * @param request GetLivyComputeRequest
+     * @return GetLivyComputeResponse
+     */
+    public GetLivyComputeResponse getLivyCompute(String workspaceBizId, String livyComputeId, GetLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取livy compute token</p>
+     * 
+     * @param request GetLivyComputeTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLivyComputeTokenResponse
+     */
+    public GetLivyComputeTokenResponse getLivyComputeTokenWithOptions(String workspaceBizId, String livyComputeId, String tokenId, GetLivyComputeTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLivyComputeToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/token/" + com.aliyun.openapiutil.Client.getEncodeParam(tokenId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLivyComputeTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取livy compute token</p>
+     * 
+     * @param request GetLivyComputeTokenRequest
+     * @return GetLivyComputeTokenResponse
+     */
+    public GetLivyComputeTokenResponse getLivyComputeToken(String workspaceBizId, String livyComputeId, String tokenId, GetLivyComputeTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
     }
 
     /**
@@ -1254,6 +1612,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>列出livy compute</p>
+     * 
+     * @param request ListLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLivyComputeResponse
+     */
+    public ListLivyComputeResponse listLivyComputeWithOptions(String workspaceBizId, ListLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出livy compute</p>
+     * 
+     * @param request ListLivyComputeRequest
+     * @return ListLivyComputeResponse
+     */
+    public ListLivyComputeResponse listLivyCompute(String workspaceBizId, ListLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listLivyComputeWithOptions(workspaceBizId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出livy compute token</p>
+     * 
+     * @param request ListLivyComputeTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListLivyComputeTokenResponse
+     */
+    public ListLivyComputeTokenResponse listLivyComputeTokenWithOptions(String workspaceBizId, String livyComputeId, ListLivyComputeTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListLivyComputeToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/token"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListLivyComputeTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列出livy compute token</p>
+     * 
+     * @param request ListLivyComputeTokenRequest
+     * @return ListLivyComputeTokenResponse
+     */
+    public ListLivyComputeTokenResponse listLivyComputeToken(String workspaceBizId, String livyComputeId, ListLivyComputeTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Get Log Content</p>
      * 
      * @param request ListLogContentsRequest
@@ -1571,6 +2027,67 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新Livy Compute的token</p>
+     * 
+     * @param request RefreshLivyComputeTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RefreshLivyComputeTokenResponse
+     */
+    public RefreshLivyComputeTokenResponse refreshLivyComputeTokenWithOptions(String workspaceBizId, String livyComputeId, String tokenId, RefreshLivyComputeTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoExpireConfiguration)) {
+            body.put("autoExpireConfiguration", request.autoExpireConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RefreshLivyComputeToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/token/" + com.aliyun.openapiutil.Client.getEncodeParam(tokenId) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RefreshLivyComputeTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Livy Compute的token</p>
+     * 
+     * @param request RefreshLivyComputeTokenRequest
+     * @return RefreshLivyComputeTokenResponse
+     */
+    public RefreshLivyComputeTokenResponse refreshLivyComputeToken(String workspaceBizId, String livyComputeId, String tokenId, RefreshLivyComputeTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.refreshLivyComputeTokenWithOptions(workspaceBizId, livyComputeId, tokenId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Starts a Spark job.</p>
      * 
      * @param request StartJobRunRequest
@@ -1664,6 +2181,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startJobRunWithOptions(workspaceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动livy compute</p>
+     * 
+     * @param request StartLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartLivyComputeResponse
+     */
+    public StartLivyComputeResponse startLivyComputeWithOptions(String workspaceBizId, String livyComputeId, StartLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/start"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动livy compute</p>
+     * 
+     * @param request StartLivyComputeRequest
+     * @return StartLivyComputeResponse
+     */
+    public StartLivyComputeResponse startLivyCompute(String workspaceBizId, String livyComputeId, StartLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
     }
 
     /**
@@ -1812,6 +2376,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>停止livy compute</p>
+     * 
+     * @param request StopLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StopLivyComputeResponse
+     */
+    public StopLivyComputeResponse stopLivyComputeWithOptions(String workspaceBizId, String livyComputeId, StopLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StopLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + "/stop"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StopLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>停止livy compute</p>
+     * 
+     * @param request StopLivyComputeRequest
+     * @return StopLivyComputeResponse
+     */
+    public StopLivyComputeResponse stopLivyCompute(String workspaceBizId, String livyComputeId, StopLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.stopLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Stops a session.</p>
      * 
      * @param request StopSessionClusterRequest
@@ -1912,6 +2523,115 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.terminateSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新livy compute</p>
+     * 
+     * @param request UpdateLivyComputeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLivyComputeResponse
+     */
+    public UpdateLivyComputeResponse updateLivyComputeWithOptions(String workspaceBizId, String livyComputeId, UpdateLivyComputeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authType)) {
+            body.put("authType", request.authType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStartConfiguration)) {
+            body.put("autoStartConfiguration", request.autoStartConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoStopConfiguration)) {
+            body.put("autoStopConfiguration", request.autoStopConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cpuLimit)) {
+            body.put("cpuLimit", request.cpuLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayReleaseVersion)) {
+            body.put("displayReleaseVersion", request.displayReleaseVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enablePublic)) {
+            body.put("enablePublic", request.enablePublic);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            body.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fusion)) {
+            body.put("fusion", request.fusion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livyServerConf)) {
+            body.put("livyServerConf", request.livyServerConf);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.livyVersion)) {
+            body.put("livyVersion", request.livyVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memoryLimit)) {
+            body.put("memoryLimit", request.memoryLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkName)) {
+            body.put("networkName", request.networkName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
+            body.put("queueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseVersion)) {
+            body.put("releaseVersion", request.releaseVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLivyCompute"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/interactive/v1/workspace/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceBizId) + "/livycompute/" + com.aliyun.openapiutil.Client.getEncodeParam(livyComputeId) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLivyComputeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新livy compute</p>
+     * 
+     * @param request UpdateLivyComputeRequest
+     * @return UpdateLivyComputeResponse
+     */
+    public UpdateLivyComputeResponse updateLivyCompute(String workspaceBizId, String livyComputeId, UpdateLivyComputeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateLivyComputeWithOptions(workspaceBizId, livyComputeId, request, headers, runtime);
     }
 
     /**

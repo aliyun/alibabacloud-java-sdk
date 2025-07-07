@@ -301,7 +301,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         public Long submitTime;
 
         /**
-         * <p>The tags.</p>
+         * <p>The tags of the job.</p>
          */
         @NameInMap("tags")
         public java.util.List<Tag> tags;

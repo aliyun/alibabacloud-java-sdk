@@ -11,10 +11,10 @@ public class CreateSessionClusterRequest extends TeaModel {
     public java.util.List<CreateSessionClusterRequestApplicationConfigs> applicationConfigs;
 
     /**
-     * <p>The automatic startup configuration.</p>
+     * <p>Specifies whether to enable automatic startup.</p>
      * <ul>
-     * <li></li>
-     * <li></li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      */
     @NameInMap("autoStartConfiguration")

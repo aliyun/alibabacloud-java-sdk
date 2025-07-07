@@ -14,7 +14,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The session.</p>
+     * <p>The session object.</p>
      */
     @NameInMap("sessionCluster")
     public GetSessionClusterResponseBodySessionCluster sessionCluster;
