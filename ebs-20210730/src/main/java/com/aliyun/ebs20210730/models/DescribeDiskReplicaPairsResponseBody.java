@@ -218,6 +218,9 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
 
+        @NameInMap("EnableRtc")
+        public Boolean enableRtc;
+
         /**
          * <p>The time when the replication pair expires. The value of this parameter is a timestamp. Unit: seconds.</p>
          * 
@@ -478,6 +481,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         }
         public String getDestinationZoneId() {
             return this.destinationZoneId;
+        }
+
+        public DescribeDiskReplicaPairsResponseBodyReplicaPairs setEnableRtc(Boolean enableRtc) {
+            this.enableRtc = enableRtc;
+            return this;
+        }
+        public Boolean getEnableRtc() {
+            return this.enableRtc;
         }
 
         public DescribeDiskReplicaPairsResponseBodyReplicaPairs setExpiredTime(Long expiredTime) {

@@ -546,6 +546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DestinationZoneId", request.destinationZoneId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRtc)) {
+            query.put("EnableRtc", request.enableRtc);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             query.put("GroupName", request.groupName);
         }
@@ -661,6 +665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
             query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRtc)) {
+            query.put("EnableRtc", request.enableRtc);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pairName)) {
@@ -1968,14 +1976,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</p>
+     * <p>Query single metric monitoring information</p>
      * 
-     * @param request DescribeMetricDataRequest
+     * @param tmpReq DescribeMetricDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMetricDataResponse
      */
-    public DescribeMetricDataResponse describeMetricDataWithOptions(DescribeMetricDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeMetricDataResponse describeMetricDataWithOptions(DescribeMetricDataRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeMetricDataShrinkRequest request = new DescribeMetricDataShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.groupByLabels)) {
+            request.groupByLabelsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupByLabels, "GroupByLabels", "simple");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.aggreOps)) {
             query.put("AggreOps", request.aggreOps);
@@ -1991,6 +2005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupByLabelsShrink)) {
+            query.put("GroupByLabels", request.groupByLabelsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.metricName)) {
@@ -2028,7 +2046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics about a metric of Elastic Block Storage (EBS) disks.</p>
+     * <p>Query single metric monitoring information</p>
      * 
      * @param request DescribeMetricDataRequest
      * @return DescribeMetricDataResponse
@@ -2654,10 +2672,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
-            body.put("AppName", request.appName);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             body.put("RegionId", request.regionId);
         }
@@ -2868,6 +2882,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRtc)) {
+            query.put("EnableRtc", request.enableRtc);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             query.put("GroupName", request.groupName);
         }
@@ -2948,6 +2966,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRtc)) {
+            query.put("EnableRtc", request.enableRtc);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pairName)) {

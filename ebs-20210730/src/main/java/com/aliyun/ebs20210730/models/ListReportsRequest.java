@@ -8,15 +8,6 @@ public class ListReportsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>App name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>App1</p>
-     */
-    @NameInMap("AppName")
-    public String appName;
-
-    /**
      * <p>Maximum number of items for Token-based pagination.</p>
      * 
      * <strong>example:</strong>
@@ -72,14 +63,6 @@ public class ListReportsRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
-    }
-
-    public ListReportsRequest setAppName(String appName) {
-        this.appName = appName;
-        return this;
-    }
-    public String getAppName() {
-        return this.appName;
     }
 
     public ListReportsRequest setMaxResults(Integer maxResults) {

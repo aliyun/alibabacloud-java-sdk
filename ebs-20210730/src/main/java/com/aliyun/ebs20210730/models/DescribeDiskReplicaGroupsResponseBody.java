@@ -187,6 +187,9 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @NameInMap("DestinationZoneId")
         public String destinationZoneId;
 
+        @NameInMap("EnableRtc")
+        public Boolean enableRtc;
+
         /**
          * <p>The name of the replication pair-consistent group.</p>
          * 
@@ -384,6 +387,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         }
         public String getDestinationZoneId() {
             return this.destinationZoneId;
+        }
+
+        public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setEnableRtc(Boolean enableRtc) {
+            this.enableRtc = enableRtc;
+            return this;
+        }
+        public Boolean getEnableRtc() {
+            return this.enableRtc;
         }
 
         public DescribeDiskReplicaGroupsResponseBodyReplicaGroups setGroupName(String groupName) {

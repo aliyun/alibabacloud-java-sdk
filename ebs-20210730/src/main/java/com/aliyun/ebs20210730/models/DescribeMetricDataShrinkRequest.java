@@ -3,7 +3,7 @@ package com.aliyun.ebs20210730.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeMetricDataRequest extends TeaModel {
+public class DescribeMetricDataShrinkRequest extends TeaModel {
     /**
      * <p>Aggregation method over time. Possible values include:</p>
      * <ul>
@@ -67,7 +67,7 @@ public class DescribeMetricDataRequest extends TeaModel {
     public String endTime;
 
     @NameInMap("GroupByLabels")
-    public java.util.List<String> groupByLabels;
+    public String groupByLabelsShrink;
 
     /**
      * <p>Metric name. Possible values include:</p>
@@ -122,12 +122,12 @@ public class DescribeMetricDataRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
-    public static DescribeMetricDataRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeMetricDataRequest self = new DescribeMetricDataRequest();
+    public static DescribeMetricDataShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeMetricDataShrinkRequest self = new DescribeMetricDataShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeMetricDataRequest setAggreOps(String aggreOps) {
+    public DescribeMetricDataShrinkRequest setAggreOps(String aggreOps) {
         this.aggreOps = aggreOps;
         return this;
     }
@@ -135,7 +135,7 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.aggreOps;
     }
 
-    public DescribeMetricDataRequest setAggreOverLineOps(String aggreOverLineOps) {
+    public DescribeMetricDataShrinkRequest setAggreOverLineOps(String aggreOverLineOps) {
         this.aggreOverLineOps = aggreOverLineOps;
         return this;
     }
@@ -143,7 +143,7 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.aggreOverLineOps;
     }
 
-    public DescribeMetricDataRequest setDimensions(String dimensions) {
+    public DescribeMetricDataShrinkRequest setDimensions(String dimensions) {
         this.dimensions = dimensions;
         return this;
     }
@@ -151,7 +151,7 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.dimensions;
     }
 
-    public DescribeMetricDataRequest setEndTime(String endTime) {
+    public DescribeMetricDataShrinkRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
@@ -159,15 +159,15 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.endTime;
     }
 
-    public DescribeMetricDataRequest setGroupByLabels(java.util.List<String> groupByLabels) {
-        this.groupByLabels = groupByLabels;
+    public DescribeMetricDataShrinkRequest setGroupByLabelsShrink(String groupByLabelsShrink) {
+        this.groupByLabelsShrink = groupByLabelsShrink;
         return this;
     }
-    public java.util.List<String> getGroupByLabels() {
-        return this.groupByLabels;
+    public String getGroupByLabelsShrink() {
+        return this.groupByLabelsShrink;
     }
 
-    public DescribeMetricDataRequest setMetricName(String metricName) {
+    public DescribeMetricDataShrinkRequest setMetricName(String metricName) {
         this.metricName = metricName;
         return this;
     }
@@ -175,7 +175,7 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.metricName;
     }
 
-    public DescribeMetricDataRequest setPeriod(Integer period) {
+    public DescribeMetricDataShrinkRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
@@ -183,7 +183,7 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.period;
     }
 
-    public DescribeMetricDataRequest setRegionId(String regionId) {
+    public DescribeMetricDataShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -191,7 +191,7 @@ public class DescribeMetricDataRequest extends TeaModel {
         return this.regionId;
     }
 
-    public DescribeMetricDataRequest setStartTime(String startTime) {
+    public DescribeMetricDataShrinkRequest setStartTime(String startTime) {
         this.startTime = startTime;
         return this;
     }

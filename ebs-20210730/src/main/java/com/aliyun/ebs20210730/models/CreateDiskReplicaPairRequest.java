@@ -93,6 +93,9 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
+    @NameInMap("EnableRtc")
+    public Boolean enableRtc;
+
     /**
      * <p>The name of the replication pair. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</p>
      * 
@@ -240,6 +243,14 @@ public class CreateDiskReplicaPairRequest extends TeaModel {
     }
     public String getDiskId() {
         return this.diskId;
+    }
+
+    public CreateDiskReplicaPairRequest setEnableRtc(Boolean enableRtc) {
+        this.enableRtc = enableRtc;
+        return this;
+    }
+    public Boolean getEnableRtc() {
+        return this.enableRtc;
     }
 
     public CreateDiskReplicaPairRequest setPairName(String pairName) {

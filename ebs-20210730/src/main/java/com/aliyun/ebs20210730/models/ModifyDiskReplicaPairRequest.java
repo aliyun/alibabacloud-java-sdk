@@ -34,6 +34,9 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EnableRtc")
+    public Boolean enableRtc;
+
     /**
      * <p>The name of the replication pair.</p>
      * 
@@ -99,6 +102,14 @@ public class ModifyDiskReplicaPairRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyDiskReplicaPairRequest setEnableRtc(Boolean enableRtc) {
+        this.enableRtc = enableRtc;
+        return this;
+    }
+    public Boolean getEnableRtc() {
+        return this.enableRtc;
     }
 
     public ModifyDiskReplicaPairRequest setPairName(String pairName) {

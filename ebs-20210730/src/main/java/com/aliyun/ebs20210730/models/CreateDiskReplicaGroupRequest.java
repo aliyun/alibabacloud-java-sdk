@@ -54,6 +54,9 @@ public class CreateDiskReplicaGroupRequest extends TeaModel {
     @NameInMap("DestinationZoneId")
     public String destinationZoneId;
 
+    @NameInMap("EnableRtc")
+    public Boolean enableRtc;
+
     /**
      * <p>The name of the replication pair-consistent group. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
      * 
@@ -150,6 +153,14 @@ public class CreateDiskReplicaGroupRequest extends TeaModel {
     }
     public String getDestinationZoneId() {
         return this.destinationZoneId;
+    }
+
+    public CreateDiskReplicaGroupRequest setEnableRtc(Boolean enableRtc) {
+        this.enableRtc = enableRtc;
+        return this;
+    }
+    public Boolean getEnableRtc() {
+        return this.enableRtc;
     }
 
     public CreateDiskReplicaGroupRequest setGroupName(String groupName) {
