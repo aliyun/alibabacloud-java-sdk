@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteOnlineEvalTaskResponseBody extends TeaModel {
     /**
+     * <p>Internal error code. Set only when the response is in error.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInputParams</p>
      */
@@ -12,6 +14,8 @@ public class DeleteOnlineEvalTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response error message. Set only when the response is in error.</p>
+     * 
      * <strong>example:</strong>
      * <p>task id is empty</p>
      */
@@ -19,7 +23,7 @@ public class DeleteOnlineEvalTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6A87228C-969A-1381-98CF-AE07AE630FA5</p>

@@ -3,7 +3,7 @@ package com.aliyun.paillmtrace20240311.models;
 
 import com.aliyun.tea.*;
 
-public class ListTracesDatasResponseBody extends TeaModel {
+public class ListEvalResultsResponseBody extends TeaModel {
     /**
      * <p>The internal error code. This parameter is returned only when an error occurs.</p>
      * 
@@ -14,16 +14,22 @@ public class ListTracesDatasResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The evaluation results.</p>
+     */
+    @NameInMap("EvaluationResults")
+    public java.util.List<String> evaluationResults;
+
+    /**
      * <p>The error message. This parameter is returned only when an error occurs.</p>
      * 
      * <strong>example:</strong>
-     * <p>failed to get trace data</p>
+     * <p>cannot get data back.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>POP request id</p>
+     * <p>The ID of the POP request.</p>
      * 
      * <strong>example:</strong>
      * <p>6A87228C-969A-1381-98CF-AE07AE630FA5</p>
@@ -32,7 +38,7 @@ public class ListTracesDatasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of traces that meet the condition.</p>
+     * <p>The total number of results that meet the condition.</p>
      * 
      * <strong>example:</strong>
      * <p>22</p>
@@ -40,18 +46,12 @@ public class ListTracesDatasResponseBody extends TeaModel {
     @NameInMap("TotalCount")
     public Integer totalCount;
 
-    /**
-     * <p>The JSON array with each element being a trace\&quot;s JSON string. Length of the array is equal to or less than the page size parameter value.</p>
-     */
-    @NameInMap("Traces")
-    public java.util.List<?> traces;
-
-    public static ListTracesDatasResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListTracesDatasResponseBody self = new ListTracesDatasResponseBody();
+    public static ListEvalResultsResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ListEvalResultsResponseBody self = new ListEvalResultsResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListTracesDatasResponseBody setCode(String code) {
+    public ListEvalResultsResponseBody setCode(String code) {
         this.code = code;
         return this;
     }
@@ -59,7 +59,15 @@ public class ListTracesDatasResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListTracesDatasResponseBody setMessage(String message) {
+    public ListEvalResultsResponseBody setEvaluationResults(java.util.List<String> evaluationResults) {
+        this.evaluationResults = evaluationResults;
+        return this;
+    }
+    public java.util.List<String> getEvaluationResults() {
+        return this.evaluationResults;
+    }
+
+    public ListEvalResultsResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -67,7 +75,7 @@ public class ListTracesDatasResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListTracesDatasResponseBody setRequestId(String requestId) {
+    public ListEvalResultsResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -75,20 +83,12 @@ public class ListTracesDatasResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListTracesDatasResponseBody setTotalCount(Integer totalCount) {
+    public ListEvalResultsResponseBody setTotalCount(Integer totalCount) {
         this.totalCount = totalCount;
         return this;
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public ListTracesDatasResponseBody setTraces(java.util.List<?> traces) {
-        this.traces = traces;
-        return this;
-    }
-    public java.util.List<?> getTraces() {
-        return this.traces;
     }
 
 }

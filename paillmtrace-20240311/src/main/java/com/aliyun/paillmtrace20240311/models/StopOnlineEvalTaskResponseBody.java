@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class StopOnlineEvalTaskResponseBody extends TeaModel {
     /**
+     * <p>Internal error code. Set only when the response is in error.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInputParams</p>
      */
@@ -12,6 +14,8 @@ public class StopOnlineEvalTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response error message. Set only when the response is in error.</p>
+     * 
      * <strong>example:</strong>
      * <p>task id is empty</p>
      */
@@ -19,7 +23,7 @@ public class StopOnlineEvalTaskResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the POP request</p>
+     * <p>ID of the POP request</p>
      * 
      * <strong>example:</strong>
      * <p>31E5FBC2-792D-5B5C-A5EB-3019984ABFC8</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOnlineEvalTaskResponseBody extends TeaModel {
     /**
+     * <p>The internal error code. This parameter is returned only when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInputParams</p>
      */
@@ -12,6 +14,8 @@ public class CreateOnlineEvalTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message. This parameter is returned only when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>EvaluationConfig.Answer.SpanName is required.</p>
      */
@@ -28,6 +32,8 @@ public class CreateOnlineEvalTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the created trace evaluation task.</p>
+     * 
      * <strong>example:</strong>
      * <p>711ef9112343286810abbfce04e161ee</p>
      */

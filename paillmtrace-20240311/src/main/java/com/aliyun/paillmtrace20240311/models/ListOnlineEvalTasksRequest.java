@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListOnlineEvalTasksRequest extends TeaModel {
     /**
+     * <p>Search keyword. It will match on fields such as task name, application name (appName), task description, and evaluation metric name.</p>
+     * 
      * <strong>example:</strong>
      * <p>foo</p>
      */
@@ -12,6 +14,8 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     public String keyword;
 
     /**
+     * <p>The UTC end time of the search time range</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-04-07 13:24:25
      * 2025-04-07</p>
@@ -20,6 +24,8 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     public String maxTime;
 
     /**
+     * <p>The UTC start time of the search time range</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-04-05 13:24:25
      * 2025-04-05</p>
@@ -28,6 +34,8 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     public String minTime;
 
     /**
+     * <p>The current page number. Value range: integers greater than 0. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -35,6 +43,8 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>Page size, default is 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>50</p>
      */

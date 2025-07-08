@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateOnlineEvalTaskResponseBody extends TeaModel {
     /**
+     * <p>The internal error code. This parameter is returned only when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInputParams</p>
      */
@@ -12,6 +14,8 @@ public class UpdateOnlineEvalTaskResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message. This parameter is returned only when an error occurs.</p>
+     * 
      * <strong>example:</strong>
      * <p>cannot modify a stopped task</p>
      */

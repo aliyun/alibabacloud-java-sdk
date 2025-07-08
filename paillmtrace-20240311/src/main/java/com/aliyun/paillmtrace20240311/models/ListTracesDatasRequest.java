@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTracesDatasRequest extends TeaModel {
     /**
+     * <p>The value of the attributes.service.app.user_id field in the trace record. It can contain upper and lower case letters, digits, dot (.), hyphen (-), and underscore (_). It is empty by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>end-user.12345</p>
      */
     @NameInMap("EndUserId")
     public String endUserId;
 
+    /**
+     * <p>Other filter parameters</p>
+     */
     @NameInMap("Filters")
     public java.util.List<ListTracesDatasRequestFilters> filters;
 
     /**
+     * <p>Whether to return only trace records containing spans with a non-empty events. Example: Suppose a trace has 3 spans. If this parameter is True, this trace meets the condition when any one of the 3 spans has a non-empty events. The default value is False. The events is not used for filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -22,6 +29,8 @@ public class ListTracesDatasRequest extends TeaModel {
     public Boolean hasEvents;
 
     /**
+     * <p>Whether to return only trace records containing spans with a non-empty statusMessage. Example: Suppose a trace has 3 spans. If this parameter is True, this trace meets the condition when any one of the 3 spans has a non-empty statusMessage. The default value is False. The statusMessage is not used for filtering.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -29,13 +38,20 @@ public class ListTracesDatasRequest extends TeaModel {
     public Boolean hasStatusMessage;
 
     /**
+     * <p>The value of the resources.service.app.name field in the trace record. It can contain upper and lower case letters, digits, dot (.), hyphen (-), and underscore (_). Must be an exact match. It is empty by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>My.super_LLM-app2</p>
      */
     @NameInMap("LlmAppName")
     public String llmAppName;
 
+    @NameInMap("MaxDuration")
+    public Float maxDuration;
+
     /**
+     * <p>The upper limit of the search time range, in UTC format (YYYY-mm-dd or YYYY-MM-DD HH:mm:ss). By default, the value is (current time +10 minutes)</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-31
      * 2024-12-31 23:59:59</p>
@@ -43,7 +59,11 @@ public class ListTracesDatasRequest extends TeaModel {
     @NameInMap("MaxTime")
     public String maxTime;
 
+    @NameInMap("MinDuration")
+    public Float minDuration;
+
     /**
+     * <p>The lower limit of the search time range, in UTC format (YYYY-mm-dd or YYYY-MM-DD HH:mm:ss). By default, the value is (current time - 2 days).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +74,8 @@ public class ListTracesDatasRequest extends TeaModel {
     public String minTime;
 
     /**
+     * <p>Whether the returned JSON data can be directly converted to OpenTelemetry TracesData protobuf object. Default value: False. JSON data that is compatible with OpenTelemetry is more complex. Such data is generally not required unless you want to generate a protobuf object of OpenTelemetry.</p>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -64,6 +86,8 @@ public class ListTracesDatasRequest extends TeaModel {
     public String ownerId;
 
     /**
+     * <p>The value of the resources.service.owner.sub_id field in the trace record. It can contain upper and lower case letters, digits, dot (.), hyphen (-), and underscore (_). It is empty by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -71,6 +95,8 @@ public class ListTracesDatasRequest extends TeaModel {
     public String ownerSubId;
 
     /**
+     * <p>The page number. Page starts from page 1. Default value: 1</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -78,24 +104,63 @@ public class ListTracesDatasRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The field used to sort the returned results. Valid values: StartTime and Duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>StartTime
+     * Duration</p>
+     */
     @NameInMap("SortBy")
     public String sortBy;
 
+    /**
+     * <p>The sorting order. Valid values:</p>
+     * <ul>
+     * <li><strong>ASC</strong></li>
+     * <li><strong>DESC</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>DESC
+     * ASC</p>
+     */
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    /**
+     * <p>The list of span IDs. Each trace record contains one or more spans.</p>
+     */
     @NameInMap("SpanIds")
     public java.util.List<String> spanIds;
 
+    @NameInMap("SpanName")
+    public String spanName;
+
+    /**
+     * <p>The list of trace IDs.</p>
+     */
     @NameInMap("TraceIds")
     public java.util.List<String> traceIds;
 
+    /**
+     * <p>The content simplification method for returned trace data to reduce the data volume.</p>
+     * <p>REMOVE_EMBEDDING: Removes all embedding array contents.</p>
+     * <p>ROOT_ONLY: Returns only the root span for each trace, with the root span content also having the REMOVE_EMBEDDING applied.</p>
+     * <p>Blank: Maintains the original data without simplification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REMOVE_EMBEDDING
+     * ROOT_ONLY</p>
+     */
     @NameInMap("TraceReduceMethod")
     public String traceReduceMethod;
 
@@ -144,12 +209,28 @@ public class ListTracesDatasRequest extends TeaModel {
         return this.llmAppName;
     }
 
+    public ListTracesDatasRequest setMaxDuration(Float maxDuration) {
+        this.maxDuration = maxDuration;
+        return this;
+    }
+    public Float getMaxDuration() {
+        return this.maxDuration;
+    }
+
     public ListTracesDatasRequest setMaxTime(String maxTime) {
         this.maxTime = maxTime;
         return this;
     }
     public String getMaxTime() {
         return this.maxTime;
+    }
+
+    public ListTracesDatasRequest setMinDuration(Float minDuration) {
+        this.minDuration = minDuration;
+        return this;
+    }
+    public Float getMinDuration() {
+        return this.minDuration;
     }
 
     public ListTracesDatasRequest setMinTime(String minTime) {
@@ -224,6 +305,14 @@ public class ListTracesDatasRequest extends TeaModel {
         return this.spanIds;
     }
 
+    public ListTracesDatasRequest setSpanName(String spanName) {
+        this.spanName = spanName;
+        return this;
+    }
+    public String getSpanName() {
+        return this.spanName;
+    }
+
     public ListTracesDatasRequest setTraceIds(java.util.List<String> traceIds) {
         this.traceIds = traceIds;
         return this;
@@ -241,12 +330,56 @@ public class ListTracesDatasRequest extends TeaModel {
     }
 
     public static class ListTracesDatasRequestFilters extends TeaModel {
+        /**
+         * <p>The name of the filter parameter, case-insensitive. Supported parameters: \&quot;serviceid\&quot;, \&quot;servicename\&quot;, \&quot;input\&quot;, \&quot;output\&quot;, \&quot;status\&quot;, \&quot;tracetype\&quot;, and \&quot;tracename\&quot;.</p>
+         * <p>The otel span attributes corresponding to the parameters:</p>
+         * <p>serviceid: resources.service.id</p>
+         * <p>servicename: resources.service.name</p>
+         * <p>input: attributes.input.value</p>
+         * <p>output: attributes.output.value</p>
+         * <p>status: statusCode</p>
+         * <p>tracetype: the attributes.gen_ai.span.kind of span whose parentSpanId is 0</p>
+         * <p>tracename: the spanName of span whose parentSpanId is 0</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Status</li>
+         * <li>SpanName</li>
+         * <li>Input</li>
+         * <li>TraceType</li>
+         * <li>SpanType</li>
+         * <li>ServiceName</li>
+         * <li>Output</li>
+         * <li>TraceName</li>
+         * <li>ServiceId</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>output</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The parameter operator. Case-insensitive. Supported operators: \&quot;=\&quot;, \&quot;contains\&quot;, and \&quot;startswith\&quot;.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>contains</li>
+         * <li>\=</li>
+         * <li>startsWith</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>contains</p>
+         */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>The value of the filter parameter. For the contains operation, it is case-sensitive. For other operations, it is case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cretain filter string</p>
+         */
         @NameInMap("Value")
         public String value;
 

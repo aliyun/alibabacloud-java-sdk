@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个在线评估任务</p>
+     * <p>Creates a trace evaluation task. The system will sample some data from the user\&quot;s trace data based on the task\&quot;s configuration. Then, an LLM is used to evaluate the performance of these traces, and the evaluation results are recorded.</p>
      * 
      * @param tmpReq CreateOnlineEvalTaskRequest
      * @param headers map
@@ -68,7 +68,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建一个在线评估任务</p>
+     * <p>Creates a trace evaluation task. The system will sample some data from the user\&quot;s trace data based on the task\&quot;s configuration. Then, an LLM is used to evaluate the performance of these traces, and the evaluation results are recorded.</p>
      * 
      * @param request CreateOnlineEvalTaskRequest
      * @return CreateOnlineEvalTaskResponse
@@ -118,7 +118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个在线评估任务</p>
+     * <p>Delete an online evaluation task</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -144,7 +144,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除一个在线评估任务</p>
+     * <p>Delete an online evaluation task</p>
      * @return DeleteOnlineEvalTaskResponse
      */
     public DeleteOnlineEvalTaskResponse deleteOnlineEvalTask(String TaskId) throws Exception {
@@ -155,7 +155,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于traceId创建和执行评估任务</p>
+     * <p>Evaluates a specified piece of trace data.</p>
      * 
      * @param request EvaluateTraceRequest
      * @param headers map
@@ -209,7 +209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>基于traceId创建和执行评估任务</p>
+     * <p>Evaluates a specified piece of trace data.</p>
      * 
      * @param request EvaluateTraceRequest
      * @return EvaluateTraceResponse
@@ -222,7 +222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用于评估的prompt templates内容</p>
+     * <p>Get the content of prompt templates used for evaluation</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -248,7 +248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取用于评估的prompt templates内容</p>
+     * <p>Get the content of prompt templates used for evaluation</p>
      * @return GetEvaluationTemplatesResponse
      */
     public GetEvaluationTemplatesResponse getEvaluationTemplates() throws Exception {
@@ -259,7 +259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一个在线评估任务的详情</p>
+     * <p>Get the details of an online evaluation task</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -285,7 +285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取一个在线评估任务的详情</p>
+     * <p>Get the details of an online evaluation task</p>
      * @return GetOnlineEvalTaskResponse
      */
     public GetOnlineEvalTaskResponse getOnlineEvalTask(String TaskId) throws Exception {
@@ -370,7 +370,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看符合条件的在线评估任务的结果</p>
+     * <p>Obtains the list of results for trace evaluation. This API is used together with EvaluateTrace. EvaluateTrace starts the evaluation. ListEvalResults obtains the results.</p>
+     * 
+     * @param tmpReq ListEvalResultsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListEvalResultsResponse
+     */
+    public ListEvalResultsResponse listEvalResultsWithOptions(ListEvalResultsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListEvalResultsShrinkRequest request = new ListEvalResultsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.recordIds)) {
+            request.recordIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.recordIds, "RecordIds", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.evaluationId)) {
+            query.put("EvaluationId", request.evaluationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            query.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recordIdsShrink)) {
+            query.put("RecordIds", request.recordIdsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListEvalResults"),
+            new TeaPair("version", "2024-03-11"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/PAILLMTrace/eval/results"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListEvalResultsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Obtains the list of results for trace evaluation. This API is used together with EvaluateTrace. EvaluateTrace starts the evaluation. ListEvalResults obtains the results.</p>
+     * 
+     * @param request ListEvalResultsRequest
+     * @return ListEvalResultsResponse
+     */
+    public ListEvalResultsResponse listEvalResults(ListEvalResultsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listEvalResultsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>List the results of online evaluation tasks that meet the criteria</p>
      * 
      * @param tmpReq ListOnlineEvalTaskResultsRequest
      * @param headers map
@@ -426,7 +495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看符合条件的在线评估任务的结果</p>
+     * <p>List the results of online evaluation tasks that meet the criteria</p>
      * 
      * @param request ListOnlineEvalTaskResultsRequest
      * @return ListOnlineEvalTaskResultsResponse
@@ -439,7 +508,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看符合条件的在线评估任务</p>
+     * <p>View online evaluation tasks that meet the criteria</p>
      * 
      * @param request ListOnlineEvalTasksRequest
      * @param headers map
@@ -489,7 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查看符合条件的在线评估任务</p>
+     * <p>View online evaluation tasks that meet the criteria</p>
      * 
      * @param request ListOnlineEvalTasksRequest
      * @return ListOnlineEvalTasksResponse
@@ -502,7 +571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从trace日志中list出符合条件的trace数据。</p>
+     * <p>Obtains a list of trace data based on specified criteria.</p>
      * 
      * @param tmpReq ListTracesDatasRequest
      * @param headers map
@@ -546,8 +615,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("LlmAppName", request.llmAppName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxDuration)) {
+            query.put("MaxDuration", request.maxDuration);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxTime)) {
             query.put("MaxTime", request.maxTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minDuration)) {
+            query.put("MinDuration", request.minDuration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.minTime)) {
@@ -586,6 +663,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("SpanIds", request.spanIdsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.spanName)) {
+            query.put("SpanName", request.spanName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.traceIdsShrink)) {
             query.put("TraceIds", request.traceIdsShrink);
         }
@@ -614,7 +695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>从trace日志中list出符合条件的trace数据。</p>
+     * <p>Obtains a list of trace data based on specified criteria.</p>
      * 
      * @param request ListTracesDatasRequest
      * @return ListTracesDatasResponse
@@ -627,7 +708,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止一个在线评估任务的执行</p>
+     * <p>Stop the execution of an online evaluation task</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -653,7 +734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>停止一个在线评估任务的执行</p>
+     * <p>Stop the execution of an online evaluation task</p>
      * @return StopOnlineEvalTaskResponse
      */
     public StopOnlineEvalTaskResponse stopOnlineEvalTask(String TaskId) throws Exception {
@@ -664,7 +745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改一个在线评估任务的配置</p>
+     * <p>Changes the configuration of a trace evaluation task.</p>
      * 
      * @param request UpdateOnlineEvalTaskRequest
      * @param headers map
@@ -734,7 +815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>更改一个在线评估任务的配置</p>
+     * <p>Changes the configuration of a trace evaluation task.</p>
      * 
      * @param request UpdateOnlineEvalTaskRequest
      * @return UpdateOnlineEvalTaskResponse

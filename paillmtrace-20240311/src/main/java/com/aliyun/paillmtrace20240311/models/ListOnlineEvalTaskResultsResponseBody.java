@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListOnlineEvalTaskResultsResponseBody extends TeaModel {
     /**
+     * <p>Internal error code. Set only when the response has an error.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInputParams</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>List of evaluation results.</p>
+     */
     @NameInMap("EvaluationResults")
     public java.util.List<String> evaluationResults;
 
     /**
+     * <p>Response error message. Set only when the response has an error.</p>
+     * 
      * <strong>example:</strong>
      * <p>must provide trace_id(s) or eval_id</p>
      */
@@ -22,7 +29,7 @@ public class ListOnlineEvalTaskResultsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>22BA9A5A-E3D8-5B4C-90FC-F33F6E5853F8</p>
@@ -31,6 +38,8 @@ public class ListOnlineEvalTaskResultsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Total number of evaluation results that meet the criteria.</p>
+     * 
      * <strong>example:</strong>
      * <p>123</p>
      */

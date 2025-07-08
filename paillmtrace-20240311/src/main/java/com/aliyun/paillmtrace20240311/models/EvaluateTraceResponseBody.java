@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EvaluateTraceResponseBody extends TeaModel {
     /**
+     * <p>The internal error code. This parameter is returned if an exception occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>InvalidInputParams</p>
      */
@@ -12,6 +14,8 @@ public class EvaluateTraceResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>the task ID of the evaluation task to which the trace belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>6000043e103011f0922edec44617e03c</p>
      */
@@ -19,6 +23,8 @@ public class EvaluateTraceResponseBody extends TeaModel {
     public String evaluationId;
 
     /**
+     * <p>The error message. This parameter is returned if an exception occurred.</p>
+     * 
      * <strong>example:</strong>
      * <p>eval_request missing dataset id or times</p>
      */

@@ -4,6 +4,9 @@ package com.aliyun.paillmtrace20240311.models;
 import com.aliyun.tea.*;
 
 public class CreateOnlineEvalTaskShrinkRequest extends TeaModel {
+    /**
+     * <p>The request data.</p>
+     */
     @NameInMap("body")
     public String bodyShrink;
 

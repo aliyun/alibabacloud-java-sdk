@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetEvaluationTemplatesResponseBody extends TeaModel {
     /**
+     * <p>Internal error code. Set only when the response has an error.</p>
+     * 
      * <strong>example:</strong>
      * <p>ExecutionFailure</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A series of templates used internally by the evaluation system to construct LLM interaction information.</p>
+     */
     @NameInMap("EvaluationTemplates")
     public java.util.List<?> evaluationTemplates;
 
     /**
+     * <p>Response error message. Set only when the response has an error.</p>
+     * 
      * <strong>example:</strong>
      * <p>cannot get data back.</p>
      */
@@ -22,7 +29,7 @@ public class GetEvaluationTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>6A87228C-969A-1381-98CF-AE07AE630FA5</p>
