@@ -2621,6 +2621,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("analysisTool", request.analysisTool);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.analysisParams)) {
+            body.put("analysis_params", request.analysisParams);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
             body.put("channel", request.channel);
         }
@@ -2629,8 +2633,28 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("comms", request.comms);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createdBy)) {
+            body.put("created_by", request.createdBy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instance)) {
             body.put("instance", request.instance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            body.put("instance_type", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iterationFunc)) {
+            body.put("iteration_func", request.iterationFunc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iterationMod)) {
+            body.put("iteration_mod", request.iterationMod);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.iterationRange)) {
+            body.put("iteration_range", request.iterationRange);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pids)) {
@@ -2643,6 +2667,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
             body.put("timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("uid", request.uid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2674,6 +2702,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startAIAnalysisWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看AI Infra差分分析结果</p>
+     * 
+     * @param request StartAIDiffAnalysisRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return StartAIDiffAnalysisResponse
+     */
+    public StartAIDiffAnalysisResponse startAIDiffAnalysisWithOptions(StartAIDiffAnalysisRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.task1)) {
+            body.put("task1", request.task1);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.task2)) {
+            body.put("task2", request.task2);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "StartAIDiffAnalysis"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/appObserv/aiAnalysis/diffAnalysis"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new StartAIDiffAnalysisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看AI Infra差分分析结果</p>
+     * 
+     * @param request StartAIDiffAnalysisRequest
+     * @return StartAIDiffAnalysisResponse
+     */
+    public StartAIDiffAnalysisResponse startAIDiffAnalysis(StartAIDiffAnalysisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.startAIDiffAnalysisWithOptions(request, headers, runtime);
     }
 
     /**
