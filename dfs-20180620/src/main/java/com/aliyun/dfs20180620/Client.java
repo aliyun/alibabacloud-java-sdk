@@ -119,6 +119,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>批量挂载VSC挂载点</p>
+     * 
+     * @param tmpReq AttachVscToMountPointsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachVscToMountPointsResponse
+     */
+    public AttachVscToMountPointsResponse attachVscToMountPointsWithOptions(AttachVscToMountPointsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AttachVscToMountPointsShrinkRequest request = new AttachVscToMountPointsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attachInfos)) {
+            request.attachInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attachInfos, "AttachInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachInfosShrink)) {
+            query.put("AttachInfos", request.attachInfosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
+            query.put("InputRegionId", request.inputRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useAssumeRoleChkServerPerm)) {
+            query.put("UseAssumeRoleChkServerPerm", request.useAssumeRoleChkServerPerm);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachVscToMountPoints"),
+            new TeaPair("version", "2018-06-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachVscToMountPointsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量挂载VSC挂载点</p>
+     * 
+     * @param request AttachVscToMountPointsRequest
+     * @return AttachVscToMountPointsResponse
+     */
+    public AttachVscToMountPointsResponse attachVscToMountPoints(AttachVscToMountPointsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachVscToMountPointsWithOptions(request, runtime);
+    }
+
+    /**
      * @param request BindVscMountPointAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return BindVscMountPointAliasResponse
@@ -930,6 +988,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteVscMountPointResponse deleteVscMountPoint(DeleteVscMountPointRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteVscMountPointWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量挂载VSC挂载点</p>
+     * 
+     * @param tmpReq DescribeMountPointsVscAttachInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMountPointsVscAttachInfoResponse
+     */
+    public DescribeMountPointsVscAttachInfoResponse describeMountPointsVscAttachInfoWithOptions(DescribeMountPointsVscAttachInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeMountPointsVscAttachInfoShrinkRequest request = new DescribeMountPointsVscAttachInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.queryInfos)) {
+            request.queryInfosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.queryInfos, "QueryInfos", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
+            query.put("InputRegionId", request.inputRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.queryInfosShrink)) {
+            query.put("QueryInfos", request.queryInfosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useAssumeRoleChkServerPerm)) {
+            query.put("UseAssumeRoleChkServerPerm", request.useAssumeRoleChkServerPerm);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMountPointsVscAttachInfo"),
+            new TeaPair("version", "2018-06-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMountPointsVscAttachInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>批量挂载VSC挂载点</p>
+     * 
+     * @param request DescribeMountPointsVscAttachInfoRequest
+     * @return DescribeMountPointsVscAttachInfoResponse
+     */
+    public DescribeMountPointsVscAttachInfoResponse describeMountPointsVscAttachInfo(DescribeMountPointsVscAttachInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMountPointsVscAttachInfoWithOptions(request, runtime);
     }
 
     /**
