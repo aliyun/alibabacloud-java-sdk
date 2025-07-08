@@ -140,6 +140,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("PhoneCount")
     public Integer phoneCount;
 
+    @NameInMap("PhoneDataVolume")
+    public Integer phoneDataVolume;
+
     /**
      * <p>The resolution height. Unit: pixel.</p>
      * 
@@ -180,6 +183,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
      */
     @NameInMap("ServerType")
     public String serverType;
+
+    @NameInMap("StreamMode")
+    public Integer streamMode;
 
     /**
      * <p>The resource tags.</p>
@@ -305,6 +311,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
         return this.phoneCount;
     }
 
+    public CreateCloudPhoneNodeShrinkRequest setPhoneDataVolume(Integer phoneDataVolume) {
+        this.phoneDataVolume = phoneDataVolume;
+        return this;
+    }
+    public Integer getPhoneDataVolume() {
+        return this.phoneDataVolume;
+    }
+
     public CreateCloudPhoneNodeShrinkRequest setResolutionHeight(Integer resolutionHeight) {
         this.resolutionHeight = resolutionHeight;
         return this;
@@ -335,6 +349,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public String getServerType() {
         return this.serverType;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setStreamMode(Integer streamMode) {
+        this.streamMode = streamMode;
+        return this;
+    }
+    public Integer getStreamMode() {
+        return this.streamMode;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setTag(java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag) {

@@ -728,6 +728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PhoneCount", request.phoneCount);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneDataVolume)) {
+            query.put("PhoneDataVolume", request.phoneDataVolume);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resolutionHeight)) {
             query.put("ResolutionHeight", request.resolutionHeight);
         }
@@ -742,6 +746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serverType)) {
             query.put("ServerType", request.serverType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamMode)) {
+            query.put("StreamMode", request.streamMode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
@@ -2055,6 +2063,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询指定监控项的最新监控数据</p>
+     * 
+     * @param request DescribeMetricLastRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMetricLastResponse
+     */
+    public DescribeMetricLastResponse describeMetricLastWithOptions(DescribeMetricLastRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            body.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.length)) {
+            body.put("Length", request.length);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.metricNames)) {
+            body.put("MetricNames", request.metricNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.period)) {
+            body.put("Period", request.period);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            body.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMetricLast"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMetricLastResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定监控项的最新监控数据</p>
+     * 
+     * @param request DescribeMetricLastRequest
+     * @return DescribeMetricLastResponse
+     */
+    public DescribeMetricLastResponse describeMetricLast(DescribeMetricLastRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMetricLastWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query available regions.</p>
      * 
      * @param request DescribeRegionsRequest
@@ -2352,6 +2428,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisconnectAndroidInstanceResponse disconnectAndroidInstanceWithOptions(DisconnectAndroidInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endUserId)) {
+            query.put("EndUserId", request.endUserId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
             query.put("InstanceIds", request.instanceIds);
         }
@@ -3063,7 +3143,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public ModifyCloudPhoneNodeResponse modifyCloudPhoneNodeWithOptions(ModifyCloudPhoneNodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.newNodeName)) {
+            query.put("NewNodeName", request.newNodeName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeId)) {
+            query.put("NodeId", request.nodeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamMode)) {
+            query.put("StreamMode", request.streamMode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -3072,7 +3164,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("version", "2023-09-30"),
             new TeaPair("protocol", "HTTPS"),
             new TeaPair("pathname", "/"),
-            new TeaPair("method", "GET"),
+            new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
             new TeaPair("reqBodyType", "formData"),

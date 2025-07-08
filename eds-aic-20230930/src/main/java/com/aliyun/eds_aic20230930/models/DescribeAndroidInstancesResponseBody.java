@@ -582,6 +582,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        @NameInMap("StreamMode")
+        public Integer streamMode;
+
         /**
          * <p>The tags.</p>
          */
@@ -885,6 +888,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getSessionStatus() {
             return this.sessionStatus;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setStreamMode(Integer streamMode) {
+            this.streamMode = streamMode;
+            return this;
+        }
+        public Integer getStreamMode() {
+            return this.streamMode;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setTags(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags) {

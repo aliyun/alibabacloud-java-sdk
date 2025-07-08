@@ -22,6 +22,9 @@ public class ModifyCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("NodeId")
     public String nodeId;
 
+    @NameInMap("StreamMode")
+    public Integer streamMode;
+
     public static ModifyCloudPhoneNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyCloudPhoneNodeRequest self = new ModifyCloudPhoneNodeRequest();
         return TeaModel.build(map, self);
@@ -41,6 +44,14 @@ public class ModifyCloudPhoneNodeRequest extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
+    }
+
+    public ModifyCloudPhoneNodeRequest setStreamMode(Integer streamMode) {
+        this.streamMode = streamMode;
+        return this;
+    }
+    public Integer getStreamMode() {
+        return this.streamMode;
     }
 
 }
