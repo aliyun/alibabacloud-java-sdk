@@ -93,6 +93,9 @@ public class DescribeAICImagesResponseBody extends TeaModel {
     }
 
     public static class DescribeAICImagesResponseBodyImages extends TeaModel {
+        @NameInMap("AndroidVersion")
+        public String androidVersion;
+
         /**
          * <p>The time when the image was created.</p>
          * 
@@ -150,6 +153,14 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         public static DescribeAICImagesResponseBodyImages build(java.util.Map<String, ?> map) throws Exception {
             DescribeAICImagesResponseBodyImages self = new DescribeAICImagesResponseBodyImages();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAICImagesResponseBodyImages setAndroidVersion(String androidVersion) {
+            this.androidVersion = androidVersion;
+            return this;
+        }
+        public String getAndroidVersion() {
+            return this.androidVersion;
         }
 
         public DescribeAICImagesResponseBodyImages setCreationTime(String creationTime) {
