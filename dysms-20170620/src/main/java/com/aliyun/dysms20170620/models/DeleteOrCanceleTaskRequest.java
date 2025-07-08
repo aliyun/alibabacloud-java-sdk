@@ -1,0 +1,89 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dysms20170620.models;
+
+import com.aliyun.tea.*;
+
+public class DeleteOrCanceleTaskRequest extends TeaModel {
+    @NameInMap("IsDeleted")
+    public Integer isDeleted;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ProdCode")
+    public String prodCode;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
+    @NameInMap("Status")
+    public String status;
+
+    @NameInMap("TaskId")
+    public Long taskId;
+
+    public static DeleteOrCanceleTaskRequest build(java.util.Map<String, ?> map) throws Exception {
+        DeleteOrCanceleTaskRequest self = new DeleteOrCanceleTaskRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public DeleteOrCanceleTaskRequest setIsDeleted(Integer isDeleted) {
+        this.isDeleted = isDeleted;
+        return this;
+    }
+    public Integer getIsDeleted() {
+        return this.isDeleted;
+    }
+
+    public DeleteOrCanceleTaskRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public DeleteOrCanceleTaskRequest setProdCode(String prodCode) {
+        this.prodCode = prodCode;
+        return this;
+    }
+    public String getProdCode() {
+        return this.prodCode;
+    }
+
+    public DeleteOrCanceleTaskRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public DeleteOrCanceleTaskRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    public DeleteOrCanceleTaskRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
+    }
+
+    public DeleteOrCanceleTaskRequest setTaskId(Long taskId) {
+        this.taskId = taskId;
+        return this;
+    }
+    public Long getTaskId() {
+        return this.taskId;
+    }
+
+}

@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dysms20170620.models;
+
+import com.aliyun.tea.*;
+
+public class SendSmsTestNewResponseBody extends TeaModel {
+    @NameInMap("Code")
+    public String code;
+
+    @NameInMap("Msg")
+    public String msg;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static SendSmsTestNewResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SendSmsTestNewResponseBody self = new SendSmsTestNewResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public SendSmsTestNewResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public SendSmsTestNewResponseBody setMsg(String msg) {
+        this.msg = msg;
+        return this;
+    }
+    public String getMsg() {
+        return this.msg;
+    }
+
+    public SendSmsTestNewResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+}
