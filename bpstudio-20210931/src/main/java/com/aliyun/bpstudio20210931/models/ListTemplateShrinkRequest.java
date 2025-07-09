@@ -3,7 +3,7 @@ package com.aliyun.bpstudio20210931.models;
 
 import com.aliyun.tea.*;
 
-public class ListTemplateRequest extends TeaModel {
+public class ListTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The keyword that is used to search for templates.</p>
      * 
@@ -59,7 +59,7 @@ public class ListTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     @NameInMap("Tag")
-    public java.util.List<ListTemplateRequestTag> tag;
+    public String tagShrink;
 
     /**
      * <p>The tag that you want to use to query templates.</p>
@@ -80,12 +80,12 @@ public class ListTemplateRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
-    public static ListTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
-        ListTemplateRequest self = new ListTemplateRequest();
+    public static ListTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListTemplateShrinkRequest self = new ListTemplateShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ListTemplateRequest setKeyword(String keyword) {
+    public ListTemplateShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -93,7 +93,7 @@ public class ListTemplateRequest extends TeaModel {
         return this.keyword;
     }
 
-    public ListTemplateRequest setMaxResults(Integer maxResults) {
+    public ListTemplateShrinkRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -101,7 +101,7 @@ public class ListTemplateRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public ListTemplateRequest setNextToken(Integer nextToken) {
+    public ListTemplateShrinkRequest setNextToken(Integer nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -109,7 +109,7 @@ public class ListTemplateRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public ListTemplateRequest setOrderType(Long orderType) {
+    public ListTemplateShrinkRequest setOrderType(Long orderType) {
         this.orderType = orderType;
         return this;
     }
@@ -117,7 +117,7 @@ public class ListTemplateRequest extends TeaModel {
         return this.orderType;
     }
 
-    public ListTemplateRequest setResourceGroupId(String resourceGroupId) {
+    public ListTemplateShrinkRequest setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -125,15 +125,15 @@ public class ListTemplateRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public ListTemplateRequest setTag(java.util.List<ListTemplateRequestTag> tag) {
-        this.tag = tag;
+    public ListTemplateShrinkRequest setTagShrink(String tagShrink) {
+        this.tagShrink = tagShrink;
         return this;
     }
-    public java.util.List<ListTemplateRequestTag> getTag() {
-        return this.tag;
+    public String getTagShrink() {
+        return this.tagShrink;
     }
 
-    public ListTemplateRequest setTagList(Integer tagList) {
+    public ListTemplateShrinkRequest setTagList(Integer tagList) {
         this.tagList = tagList;
         return this;
     }
@@ -141,42 +141,12 @@ public class ListTemplateRequest extends TeaModel {
         return this.tagList;
     }
 
-    public ListTemplateRequest setType(String type) {
+    public ListTemplateShrinkRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
-    }
-
-    public static class ListTemplateRequestTag extends TeaModel {
-        @NameInMap("Key")
-        public String key;
-
-        @NameInMap("Value")
-        public String value;
-
-        public static ListTemplateRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            ListTemplateRequestTag self = new ListTemplateRequestTag();
-            return TeaModel.build(map, self);
-        }
-
-        public ListTemplateRequestTag setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListTemplateRequestTag setValue(String value) {
-            this.value = value;
-            return this;
-        }
-        public String getValue() {
-            return this.value;
-        }
-
     }
 
 }

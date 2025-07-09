@@ -1265,12 +1265,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries templates, including information such as the template name, architecture image URL, and URL of the serialized architecture image file.</p>
      * 
-     * @param request ListTemplateRequest
+     * @param tmpReq ListTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ListTemplateResponse
      */
-    public ListTemplateResponse listTemplateWithOptions(ListTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ListTemplateResponse listTemplateWithOptions(ListTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListTemplateShrinkRequest request = new ListTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "Tag", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             body.put("Keyword", request.keyword);
@@ -1290,6 +1296,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
             body.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            body.put("Tag", request.tagShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tagList)) {
