@@ -206,9 +206,6 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
-        /**
-         * <p>This parameter is required.</p>
-         */
         @NameInMap("WordWeights")
         public java.util.List<CreateAppAgentTemplateRequestAsrConfigWordWeights> wordWeights;
 
