@@ -14,13 +14,13 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     public Integer backupRetentionPeriod;
 
     /**
-     * <p>Enables or disables the data flashback feature for the instance. Valid values:</p>
+     * <p>Specifies whether to enable the data flashback feature for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: enables the data flashback feature. You must also enable AOF persistence by setting <code>appendonly</code> to <code>yes</code> in the parameter settings of the instance. Then, you can use the data flashback feature.</li>
+     * <li><strong>1</strong>: enables the data flashback feature. You must also enable append-only file (AOF) persistence by setting <code>appendonly</code> to <code>yes</code> in the parameter settings of the instance. Then, you can use the data flashback feature.</li>
      * <li><strong>0</strong> (default): disables the data flashback feature.</li>
      * </ul>
      * <blockquote>
-     * <p> This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/443784.html">Data flashback</a>.</p>
+     * <p> This parameter is available only for Tair (Enterprise Edition) DRAM-based and persistent memory-optimized instances. For more information, see <a href="https://help.aliyun.com/document_detail/148479.html">Data flashback</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

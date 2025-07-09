@@ -70,17 +70,25 @@ public class DescribePriceRequest extends TeaModel {
     public Boolean forceUpgrade;
 
     /**
-     * <p>The instance type.</p>
-     * <p><strong>To view the instance type, perform the following steps:</strong></p>
+     * <p>The instance type.**** <strong>To view the instance type, perform the following steps:</strong></p>
      * <ol>
-     * <li>In the <a href="https://help.aliyun.com/document_detail/26350.html">Overview</a> topic, click the link in the <strong>Reference</strong> column corresponding to the instance type that you want to view.</li>
-     * <li>In the instance type table of the page that appears, find the instance type in the <strong>InstanceClass</strong> column.</li>
+     * <li>In the <a href="https://help.aliyun.com/document_detail/26350.html">Instance specifications</a> topic, click the link in the <strong>References for instance specifications</strong> column corresponding to the instance type that you want to view.</li>
+     * <li>In the instance type table of the specification documentation, find the instance type in the <strong>InstanceClass</strong> column.</li>
      * </ol>
-     * <p>When you query cloud-native cluster instances, you must set this parameter to one of the following values and use the Instances parameter to specify the instance type that you want to query.</p>
+     * <blockquote>
+     * <p> If you want to query new instances, in addition to key parameters, you must also specify at least the following parameters:</p>
+     * </blockquote>
      * <ul>
-     * <li>ApsaraDB for Redis cluster instances: redis.cluster.sharding.common.ce</li>
-     * <li>Tair DRAM-based cluster instances: tair.rdb.cluster.sharding.common</li>
-     * <li>Tair persistent memory-based cluster instances: tair.scm.cluster.sharding.common.ce</li>
+     * <li><p>To query a classic instance, specify this parameter.</p>
+     * </li>
+     * <li><p>To query a cloud-native standard instance, specify this parameter.</p>
+     * </li>
+     * <li><p>To query a cloud-native cluster instance, specify this parameter and the <strong>ShardCount</strong> parameter.</p>
+     * </li>
+     * <li><p>To query a cloud-native read/write splitting instance, specify this parameter and the <strong>Instances</strong> parameter.</p>
+     * </li>
+     * <li><p>To query multiple instances of different specifications or to query a Tair ESSD-based instance that has a custom storage type and storage capacity, specify the Instances parameter. In this case, you do not need to specify the InstanceClass parameter.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +110,7 @@ public class DescribePriceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A JSON string that contains information about one or more cloud-native cluster instances. For more information, see the &quot;Additional description of the Instances parameter&quot; section of this topic.</p>
+     * <p>If you want to query cloud-native read/write splitting instances, Tair ESSD-based instances, or instances of different specifications, you must specify this parameter as a JSON string. For more information, see the <strong>Additional description of the Instances parameter</strong> section.</p>
      * 
      * <strong>example:</strong>
      * <p>Instances=[{&quot;RegionId&quot;: &quot;cn-hangzhou&quot;,&quot;ZoneId&quot;: &quot;cn-hangzhou-b&quot;,&quot;InstanceClass&quot;: &quot;redis.master.small.default&quot;,&quot;Period&quot;: &quot;1&quot;,&quot;Quantity&quot;: &quot;1&quot;,&quot;Capacity&quot;: &quot;4096&quot;}]</p>
@@ -159,7 +167,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The subscription duration. Unit: months. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
+     * <p>The subscription duration. Unit: month. Valid values: <strong>1</strong>, 2, 3, 4, 5, 6, 7, 8, <strong>9</strong>, <strong>12</strong>, <strong>24</strong>, and <strong>36</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -177,7 +185,7 @@ public class DescribePriceRequest extends TeaModel {
     public Long quantity;
 
     /**
-     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/473763.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -195,7 +203,7 @@ public class DescribePriceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</p>
+     * <p>The number of data shards in the cloud-native cluster instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -204,7 +212,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer shardCount;
 
     /**
-     * <p>The zone ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the most recent zone list.</p>
+     * <p>The zone ID. You can call the <a href="https://help.aliyun.com/document_detail/473764.html">DescribeZones</a> operation to query the zone ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-e</p>

@@ -35,8 +35,9 @@ public class ModifyInstanceVpcAuthModeRequest extends TeaModel {
      * <li><strong>Open</strong>: disables password-free access.</li>
      * <li><strong>Close</strong>: enables password-free access.</li>
      * </ul>
-     * <p>**</p>
-     * <p><strong>Description</strong> Default value: <strong>Open</strong>.</p>
+     * <blockquote>
+     * <p> Default value: <strong>Open</strong>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

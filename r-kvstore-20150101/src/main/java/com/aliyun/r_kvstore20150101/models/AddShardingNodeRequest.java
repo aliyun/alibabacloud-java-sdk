@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddShardingNodeRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that you have sufficient balance within your account.</li>
-     * <li><strong>false</strong>: disables automatic payment. In this case, you must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Renewal</a>.</li>
+     * <li><strong>true</strong>: enables auto-renewal. Make sure that your account has sufficient balance.</li>
+     * <li><strong>false</strong>: disables auto-renewal. You must manually renew the instance in the console before the instance expires. For more information, see <a href="https://help.aliyun.com/document_detail/26352.html">Instance renewal</a>.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is <strong>true</strong>.</p>
+     * <p> Default value: <strong>true</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

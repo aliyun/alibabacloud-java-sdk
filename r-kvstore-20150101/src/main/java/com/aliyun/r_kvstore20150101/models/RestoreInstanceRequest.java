@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestoreInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a> operation to query the IDs of backup files.</p>
+     * <p>The ID of the backup file. You can call the <a href="https://help.aliyun.com/document_detail/473823.html">DescribeBackups</a>operation to query the IDs of backup files.</p>
      * 
      * <strong>example:</strong>
      * <p>78241****</p>

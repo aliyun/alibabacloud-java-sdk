@@ -120,6 +120,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("ComputeUnitNum")
+        public Integer computeUnitNum;
+
         @NameInMap("CreateTime")
         public String createTime;
 
@@ -144,8 +147,11 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
-        @NameInMap("ModuleName")
-        public String moduleName;
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("ModelServiceNum")
+        public Integer modelServiceNum;
 
         @NameInMap("NetworkType")
         public String networkType;
@@ -156,17 +162,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("ReserveGpuNum")
-        public Integer reserveGpuNum;
-
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         @NameInMap("Tags")
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTags tags;
 
-        @NameInMap("UsedGpuNum")
-        public Integer usedGpuNum;
+        @NameInMap("VNodeName")
+        public String VNodeName;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -196,6 +199,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setComputeUnitNum(Integer computeUnitNum) {
+            this.computeUnitNum = computeUnitNum;
+            return this;
+        }
+        public Integer getComputeUnitNum() {
+            return this.computeUnitNum;
         }
 
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setCreateTime(String createTime) {
@@ -262,12 +273,20 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             return this.instanceType;
         }
 
-        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setModuleName(String moduleName) {
-            this.moduleName = moduleName;
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setModel(String model) {
+            this.model = model;
             return this;
         }
-        public String getModuleName() {
-            return this.moduleName;
+        public String getModel() {
+            return this.model;
+        }
+
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setModelServiceNum(Integer modelServiceNum) {
+            this.modelServiceNum = modelServiceNum;
+            return this;
+        }
+        public Integer getModelServiceNum() {
+            return this.modelServiceNum;
         }
 
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setNetworkType(String networkType) {
@@ -294,14 +313,6 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             return this.regionId;
         }
 
-        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setReserveGpuNum(Integer reserveGpuNum) {
-            this.reserveGpuNum = reserveGpuNum;
-            return this;
-        }
-        public Integer getReserveGpuNum() {
-            return this.reserveGpuNum;
-        }
-
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
@@ -318,12 +329,12 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             return this.tags;
         }
 
-        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setUsedGpuNum(Integer usedGpuNum) {
-            this.usedGpuNum = usedGpuNum;
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setVNodeName(String VNodeName) {
+            this.VNodeName = VNodeName;
             return this;
         }
-        public Integer getUsedGpuNum() {
-            return this.usedGpuNum;
+        public String getVNodeName() {
+            return this.VNodeName;
         }
 
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setVSwitchId(String vSwitchId) {

@@ -3,7 +3,7 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeTasksResponse extends TeaModel {
+public class ModifyBackupExpireTimeResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class DescribeTasksResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public DescribeTasksResponseBody body;
+    public ModifyBackupExpireTimeResponseBody body;
 
-    public static DescribeTasksResponse build(java.util.Map<String, ?> map) throws Exception {
-        DescribeTasksResponse self = new DescribeTasksResponse();
+    public static ModifyBackupExpireTimeResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyBackupExpireTimeResponse self = new ModifyBackupExpireTimeResponse();
         return TeaModel.build(map, self);
     }
 
-    public DescribeTasksResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyBackupExpireTimeResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class DescribeTasksResponse extends TeaModel {
         return this.headers;
     }
 
-    public DescribeTasksResponse setStatusCode(Integer statusCode) {
+    public ModifyBackupExpireTimeResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class DescribeTasksResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public DescribeTasksResponse setBody(DescribeTasksResponseBody body) {
+    public ModifyBackupExpireTimeResponse setBody(ModifyBackupExpireTimeResponseBody body) {
         this.body = body;
         return this;
     }
-    public DescribeTasksResponseBody getBody() {
+    public ModifyBackupExpireTimeResponseBody getBody() {
         return this.body;
     }
 

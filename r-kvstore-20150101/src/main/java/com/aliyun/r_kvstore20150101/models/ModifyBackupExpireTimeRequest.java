@@ -3,12 +3,24 @@ package com.aliyun.r_kvstore20150101.models;
 
 import com.aliyun.tea.*;
 
-public class CreateBackupRequest extends TeaModel {
-    @NameInMap("BackupRetentionPeriod")
-    public Long backupRetentionPeriod;
+public class ModifyBackupExpireTimeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>521****66</p>
+     */
+    @NameInMap("BackupId")
+    public String backupId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2025-07-06T07:25:57Z</p>
+     */
+    @NameInMap("ExpectExpireTime")
+    public String expectExpireTime;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,23 +41,28 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    @NameInMap("SecurityToken")
-    public String securityToken;
-
-    public static CreateBackupRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateBackupRequest self = new CreateBackupRequest();
+    public static ModifyBackupExpireTimeRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyBackupExpireTimeRequest self = new ModifyBackupExpireTimeRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateBackupRequest setBackupRetentionPeriod(Long backupRetentionPeriod) {
-        this.backupRetentionPeriod = backupRetentionPeriod;
+    public ModifyBackupExpireTimeRequest setBackupId(String backupId) {
+        this.backupId = backupId;
         return this;
     }
-    public Long getBackupRetentionPeriod() {
-        return this.backupRetentionPeriod;
+    public String getBackupId() {
+        return this.backupId;
     }
 
-    public CreateBackupRequest setInstanceId(String instanceId) {
+    public ModifyBackupExpireTimeRequest setExpectExpireTime(String expectExpireTime) {
+        this.expectExpireTime = expectExpireTime;
+        return this;
+    }
+    public String getExpectExpireTime() {
+        return this.expectExpireTime;
+    }
+
+    public ModifyBackupExpireTimeRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -53,7 +70,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateBackupRequest setOwnerAccount(String ownerAccount) {
+    public ModifyBackupExpireTimeRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -61,7 +78,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public CreateBackupRequest setOwnerId(Long ownerId) {
+    public ModifyBackupExpireTimeRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -69,7 +86,7 @@ public class CreateBackupRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateBackupRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyBackupExpireTimeRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -77,20 +94,12 @@ public class CreateBackupRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public CreateBackupRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyBackupExpireTimeRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public CreateBackupRequest setSecurityToken(String securityToken) {
-        this.securityToken = securityToken;
-        return this;
-    }
-    public String getSecurityToken() {
-        return this.securityToken;
     }
 
 }

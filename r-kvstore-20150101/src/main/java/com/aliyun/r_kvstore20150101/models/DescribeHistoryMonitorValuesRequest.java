@@ -28,7 +28,14 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The interval at which to collect monitoring data. Unit: minutes. Set the value to <code>01m</code>.</p>
+     * <p>This parameter is deprecated. Set the value to <code>01m</code>.</p>
+     * <p>The <strong>interval at which a query is performed</strong> is automatically determined based on the start time and end time of the query. For example, if the query time range is less than or equal to 10 minutes, data is aggregated at a frequency of every 5 seconds and the results are returned at 5-second intervals.</p>
+     * <blockquote>
+     * <ul>
+     * <li>The query result is aligned with the data aggregation frequency. If the specified StartTime value does not coincide with a point in time for data aggregation, the system returns the latest point in time for data aggregation as the first point in time. For example, if you set the StartTime parameter to 2022-01-20T12:01:48Z, the first point in time returned is 2022-01-20T12:01:45Z.</li>
+     * <li>If the number of data shards is greater than or equal to 32, the minimum data aggregation frequency is 1 minute.</li>
+     * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,13 +58,11 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
      * </ul>
      * <p>For more information about monitoring metrics and their descriptions, see <a href="https://www.alibabacloud.com/help/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis#monitorKeys-note">Additional description of MonitorKeys</a>.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned.</p>
-     * </li>
-     * <li><p>To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.</p>
-     * </li>
+     * <li>This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned.</li>
+     * <li>To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>memoryUsage</p>
@@ -68,7 +73,7 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     /**
      * <p>The ID of the node in the instance. You can set this parameter to query the data of a specified node.</p>
      * <ul>
-     * <li><p>This parameter is available only for read/write splitting or cluster instances of ApsaraDB for Redis.</p>
+     * <li><p>This parameter is available only for read/write splitting or cluster instances of Tair.</p>
      * </li>
      * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/473786.html">DescribeLogicInstanceTopology</a> operation to query node IDs.</p>
      * </li>
@@ -116,6 +121,9 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
      */
     @NameInMap("StartTime")
     public String startTime;
+
+    @NameInMap("Type")
+    public String type;
 
     public static DescribeHistoryMonitorValuesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeHistoryMonitorValuesRequest self = new DescribeHistoryMonitorValuesRequest();
@@ -216,6 +224,14 @@ public class DescribeHistoryMonitorValuesRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeHistoryMonitorValuesRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

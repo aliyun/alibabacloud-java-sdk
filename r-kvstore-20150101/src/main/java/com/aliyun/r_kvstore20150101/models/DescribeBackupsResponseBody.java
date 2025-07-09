@@ -11,7 +11,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public DescribeBackupsResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>Details of the backup files.</p>
+     * <p>The queried backup sets.</p>
      */
     @NameInMap("Backups")
     public DescribeBackupsResponseBodyBackups backups;
@@ -329,7 +329,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         /**
          * <p>The internal download URL of the backup file.</p>
          * <blockquote>
-         * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+         * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the Tair instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the Tair instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -425,6 +425,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         @NameInMap("EngineVersion")
         public String engineVersion;
+
+        @NameInMap("ExpectExpireTime")
+        public String expectExpireTime;
 
         /**
          * <p>The node ID.</p>
@@ -554,6 +557,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getEngineVersion() {
             return this.engineVersion;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setExpectExpireTime(String expectExpireTime) {
+            this.expectExpireTime = expectExpireTime;
+            return this;
+        }
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setNodeInstanceId(String nodeInstanceId) {

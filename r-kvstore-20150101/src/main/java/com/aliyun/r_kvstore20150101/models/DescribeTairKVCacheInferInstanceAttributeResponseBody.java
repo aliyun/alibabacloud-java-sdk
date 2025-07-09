@@ -87,6 +87,9 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @NameInMap("ChargeType")
         public String chargeType;
 
+        @NameInMap("ComputeUnitNum")
+        public Integer computeUnitNum;
+
         @NameInMap("ConnectionString")
         public String connectionString;
 
@@ -117,6 +120,12 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @NameInMap("IsOrderCompleted")
         public String isOrderCompleted;
 
+        @NameInMap("Model")
+        public String model;
+
+        @NameInMap("ModelServiceNum")
+        public Integer modelServiceNum;
+
         @NameInMap("NetworkType")
         public String networkType;
 
@@ -126,14 +135,8 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @NameInMap("RegionId")
         public String regionId;
 
-        @NameInMap("ReserveGpuNum")
-        public Integer reserveGpuNum;
-
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
-
-        @NameInMap("SecurityGroupId")
-        public String securityGroupId;
 
         @NameInMap("Storage")
         public Long storage;
@@ -172,6 +175,14 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         }
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setComputeUnitNum(Integer computeUnitNum) {
+            this.computeUnitNum = computeUnitNum;
+            return this;
+        }
+        public Integer getComputeUnitNum() {
+            return this.computeUnitNum;
         }
 
         public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setConnectionString(String connectionString) {
@@ -254,6 +265,22 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             return this.isOrderCompleted;
         }
 
+        public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setModelServiceNum(Integer modelServiceNum) {
+            this.modelServiceNum = modelServiceNum;
+            return this;
+        }
+        public Integer getModelServiceNum() {
+            return this.modelServiceNum;
+        }
+
         public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setNetworkType(String networkType) {
             this.networkType = networkType;
             return this;
@@ -278,28 +305,12 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             return this.regionId;
         }
 
-        public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setReserveGpuNum(Integer reserveGpuNum) {
-            this.reserveGpuNum = reserveGpuNum;
-            return this;
-        }
-        public Integer getReserveGpuNum() {
-            return this.reserveGpuNum;
-        }
-
         public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
         public String getResourceGroupId() {
             return this.resourceGroupId;
-        }
-
-        public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setSecurityGroupId(String securityGroupId) {
-            this.securityGroupId = securityGroupId;
-            return this;
-        }
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         public DescribeTairKVCacheInferInstanceAttributeResponseBodyInstancesDBInstanceAttribute setStorage(Long storage) {

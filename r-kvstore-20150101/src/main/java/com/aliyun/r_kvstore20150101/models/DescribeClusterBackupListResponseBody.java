@@ -476,6 +476,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         @NameInMap("ClusterBackupStatus")
         public String clusterBackupStatus;
 
+        @NameInMap("ExpectExpireTime")
+        public String expectExpireTime;
+
         /**
          * <p>Indicates whether the backup set is valid. A value of 0 indicates that shard-level backups failed or have not been completed.</p>
          * 
@@ -562,6 +565,14 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
         public String getClusterBackupStatus() {
             return this.clusterBackupStatus;
+        }
+
+        public DescribeClusterBackupListResponseBodyClusterBackups setExpectExpireTime(String expectExpireTime) {
+            this.expectExpireTime = expectExpireTime;
+            return this;
+        }
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
         }
 
         public DescribeClusterBackupListResponseBodyClusterBackups setIsAvail(Integer isAvail) {

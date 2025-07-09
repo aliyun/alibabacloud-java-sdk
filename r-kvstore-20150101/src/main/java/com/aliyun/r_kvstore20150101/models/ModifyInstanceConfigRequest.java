@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
     /**
-     * <p>The instance parameter settings that you want to modify. Specify this parameter in the JSON format. The new value of a parameter overwrites the original value.</p>
-     * <p>**</p>
-     * <p><strong>Description</strong> For more information, see <a href="https://help.aliyun.com/document_detail/259681.html">Supported parameters</a>.</p>
+     * <p>需修改的实例参数，格式为JSON，修改后的值会覆盖原来的值。例如您只希望修改<strong>maxmemory-policy</strong>参数为<strong>noeviction</strong>，您可以传入<code>{&quot;maxmemory-policy&quot;:&quot;noeviction&quot;}</code>。</p>
+     * <blockquote>
+     * <p>关于各参数的详细说明，请参见<a href="https://help.aliyun.com/document_detail/259681.html">参数说明</a>。</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>{&quot;maxmemory-policy&quot;:&quot;volatile-lru&quot;,&quot;zset-max-ziplist-entries&quot;:128,&quot;zset-max-ziplist-value&quot;:64,&quot;hash-max-ziplist-entries&quot;:512,&quot;set-max-intset-entries&quot;:512}</p>
@@ -16,7 +17,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>实例ID。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +33,14 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The Sentinel-compatible mode, which is applicable to non-cluster instances. For more information about the parameter, see the relevant documentation.</p>
+     * <p>哨兵兼容模式，适用于非集群实例。取值说明：</p>
+     * <ul>
+     * <li><strong>no</strong>（默认）：未开启</li>
+     * <li><strong>yes</strong>：开启<blockquote>
+     * <p>更多信息请参见<a href="https://help.aliyun.com/document_detail/178911.html">Sentinel兼容模式</a>。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>yes</p>
@@ -41,7 +49,11 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramNoLooseSentinelEnabled;
 
     /**
-     * <p>Specifies whether to allow Sentinel commands to be run without requiring a password when the Sentinel mode is enabled. Valid values: Valid values: yes and no. Default value: no. After you set this parameter to yes, you can run Sentinel commands in a virtual private cloud (VPC) without the need to enable the password-free access feature.</p>
+     * <p>开启哨兵模式时，是否允许免密执行Sentinel相关命令，取值说明：</p>
+     * <ul>
+     * <li><strong>no</strong>（默认）：关闭。</li>
+     * <li><strong>yes</strong>：开启。开启后，可以在任意连接上免密执行Sentinel命令以及使用SENTINEL命令监听+switch-master通道。</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -50,7 +62,13 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeAccess;
 
     /**
-     * <p>After you enable the Sentinel mode and set the ParamNoLooseSentinelPasswordFreeAccess parameter to yes, you can use this parameter to specify an additional list of commands that can be run without requiring a password. By default, this parameter is empty. After you configure this parameter, you can run the specified commands without a password on any connection. Proceed with caution. The commands must be written in lowercase letters. Separate multiple commands with commas (,).</p>
+     * <p>启用哨兵模式及ParamNoLooseSentinelPasswordFreeAccess参数后，可通过本参数添加额外的免密命令列表（默认为空）。</p>
+     * <blockquote>
+     * <ul>
+     * <li>设置后可在任意连接上无需密码执行对应命令，请谨慎操作。</li>
+     * <li>命令需使用小写字母，多个命令以英文逗号(,)分隔。</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -59,10 +77,10 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramNoLooseSentinelPasswordFreeCommands;
 
     /**
-     * <p>The synchronization mode.</p>
+     * <p>同步模式：</p>
      * <ul>
-     * <li><strong>semisync</strong></li>
-     * <li><strong>async</strong></li>
+     * <li><strong>async</strong>（默认）：异步</li>
+     * <li><strong>semisync</strong>：半同步</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,16 +90,29 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String paramReplMode;
 
     /**
-     * <p>The degradation threshold time of the semi-synchronous replication mode. This parameter is required only when semi-synchronous replication is enabled. Unit: milliseconds. Valid values: 10 to 60000.</p>
+     * <p>半同步模式的降级阈值。仅半同步支持配置该参数，单位为ms，取值范围为10~60000，默认为500。</p>
+     * <blockquote>
+     * <ul>
+     * <li>当同步延迟超出该阈值时，同步模式会自动转为异步，当同步延迟消除后，同步模式会自动转换为半同步。</li>
+     * <li>仅Tair企业版实例支持，该功能公测中。</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <hr>
+     * <p>500</p>
      */
     @NameInMap("ParamSemisyncReplTimeout")
     public String paramSemisyncReplTimeout;
 
     /**
-     * <p>The Sentinel-compatible mode, which is applicable to cluster instances in proxy mode or read/write splitting instances. For more information about the parameter, see the relevant documentation.</p>
+     * <p>哨兵兼容模式，适用于集群架构代理连接模式或读写分离架构的实例，取值说明：</p>
+     * <ul>
+     * <li><strong>0</strong>（默认）：未开启</li>
+     * <li><strong>1</strong>：开启<blockquote>
+     * <p>更多信息请参见<a href="https://help.aliyun.com/document_detail/178911.html">Sentinel兼容模式</a>。</p>
+     * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
