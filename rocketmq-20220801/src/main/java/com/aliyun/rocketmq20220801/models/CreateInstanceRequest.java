@@ -614,7 +614,6 @@ public class CreateInstanceRequest extends TeaModel {
 
         /**
          * <p>The computing specification that specifies the messaging transactions per second (TPS) of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/444715.html">Instance editions</a>.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq.s2.2xlarge</p>
