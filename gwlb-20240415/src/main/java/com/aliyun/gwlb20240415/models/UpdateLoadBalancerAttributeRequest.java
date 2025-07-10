@@ -50,6 +50,16 @@ public class UpdateLoadBalancerAttributeRequest extends TeaModel {
     @NameInMap("LoadBalancerName")
     public String loadBalancerName;
 
+    /**
+     * <p>Specifies the traffic processing mode. Valid values:</p>
+     * <ul>
+     * <li><strong>LoadBalance</strong>: load balancing mode. In this mode, GWLB forwards traffic to backend servers.</li>
+     * <li><strong>ByPass</strong>: bypass mode. GWLB returns traffic directly to the GWLB endpoint instead of forwarding the traffic to backend servers.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LoadBalance</p>
+     */
     @NameInMap("TrafficMode")
     public String trafficMode;
 

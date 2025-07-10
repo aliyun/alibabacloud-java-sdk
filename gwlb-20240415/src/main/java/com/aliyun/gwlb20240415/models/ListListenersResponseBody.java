@@ -195,6 +195,15 @@ public class ListListenersResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<ListListenersResponseBodyListenersTags> tags;
 
+        /**
+         * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>350</p>
+         */
+        @NameInMap("TcpIdleTimeout")
+        public Integer tcpIdleTimeout;
+
         public static ListListenersResponseBodyListeners build(java.util.Map<String, ?> map) throws Exception {
             ListListenersResponseBodyListeners self = new ListListenersResponseBodyListeners();
             return TeaModel.build(map, self);
@@ -246,6 +255,14 @@ public class ListListenersResponseBody extends TeaModel {
         }
         public java.util.List<ListListenersResponseBodyListenersTags> getTags() {
             return this.tags;
+        }
+
+        public ListListenersResponseBodyListeners setTcpIdleTimeout(Integer tcpIdleTimeout) {
+            this.tcpIdleTimeout = tcpIdleTimeout;
+            return this;
+        }
+        public Integer getTcpIdleTimeout() {
+            return this.tcpIdleTimeout;
         }
 
     }

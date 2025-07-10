@@ -96,6 +96,16 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<GetLoadBalancerAttributeResponseBodyTags> tags;
 
+    /**
+     * <p>Traffic processing mode. Valid values:</p>
+     * <ul>
+     * <li><strong>LoadBalance</strong>: load balancing mode. GWLB forwards traffic to backend servers.</li>
+     * <li><strong>ByPass</strong>: bypass mode. GWLB directly returns traffic to the GWLB endpoint without forwarding it to the backend servers.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LoadBalance</p>
+     */
     @NameInMap("TrafficMode")
     public String trafficMode;
 

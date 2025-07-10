@@ -459,6 +459,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("ServerCount")
         public Integer serverCount;
 
+        /**
+         * <p>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</p>
+         * <ul>
+         * <li><strong>NoRebalance</strong>: GWLB continues to forward requests over existing connections to the unhealthy backend server.</li>
+         * <li><strong>Rebalance</strong>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NoRebalance</p>
+         */
         @NameInMap("ServerFailoverMode")
         public String serverFailoverMode;
 

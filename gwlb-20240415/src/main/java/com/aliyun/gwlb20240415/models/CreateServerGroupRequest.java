@@ -37,15 +37,15 @@ public class CreateServerGroupRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The configurations of the health check feature.</p>
+     * <p>The health check configurations.</p>
      */
     @NameInMap("HealthCheckConfig")
     public CreateServerGroupRequestHealthCheckConfig healthCheckConfig;
 
     /**
-     * <p>The backend protocol. Valid values:</p>
+     * <p>The backend protocol. Valid value:</p>
      * <ul>
-     * <li><strong>GENEVE</strong>(default)</li>
+     * <li><strong>GENEVE</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,6 +77,16 @@ public class CreateServerGroupRequest extends TeaModel {
     @NameInMap("Scheduler")
     public String scheduler;
 
+    /**
+     * <p>Specifies how GWLB processes requests over existing connections when a backend server is not running as expected. Valid values:</p>
+     * <ul>
+     * <li><strong>NoRebalance</strong> (default): GWLB continues to forward requests over existing connections to the unavailable backend server.</li>
+     * <li><strong>Rebalance</strong>: GWLB forwards requests over existing connections to the remaining healthy backend servers.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>NoRebalance</p>
+     */
     @NameInMap("ServerFailoverMode")
     public String serverFailoverMode;
 
@@ -91,10 +101,10 @@ public class CreateServerGroupRequest extends TeaModel {
     public String serverGroupName;
 
     /**
-     * <p>The type of server group. Valid values:</p>
+     * <p>The type of the server group. Valid values:</p>
      * <ul>
-     * <li><strong>Instance</strong> (default): allows you to specify servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-     * <li><strong>Ip</strong>: allows you to add servers of by specifying IP addresses.</li>
+     * <li><strong>Instance</strong> (default): allows you to specify resources of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+     * <li><strong>Ip</strong>: allows you to add servers by specifying their IP addresses.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -275,7 +285,7 @@ public class CreateServerGroupRequest extends TeaModel {
 
     public static class CreateServerGroupRequestHealthCheckConfig extends TeaModel {
         /**
-         * <p>The backend server port that is used for health checks.</p>
+         * <p>The backend server port used for health checks.</p>
          * <p>Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
          * <p>Default value: <strong>80</strong>.</p>
          * 
@@ -286,8 +296,8 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The maximum timeout period of a health check response.</p>
-         * <p>Unit: seconds</p>
+         * <p>The maximum timeout period for a health check response.</p>
+         * <p>Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>300</strong>.</p>
          * <p>Default value: <strong>5</strong>.</p>
          * 
@@ -298,13 +308,13 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckConnectTimeout;
 
         /**
-         * <p>The domain name that you want to use for health checks. Valid values:</p>
+         * <p>The domain name used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>$SERVER_IP</strong> (default): the private IP address of a backend server.</li>
          * <li><strong>domain</strong>: a domain name. The domain name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), and periods (.).</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -314,7 +324,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckDomain;
 
         /**
-         * <p>Specifies whether to enable the health check feature. Valid values:</p>
+         * <p>Specifies whether to enable health checks. Valid values:</p>
          * <ul>
          * <li><strong>true</strong> (default)</li>
          * <li><strong>false</strong></li>
@@ -334,7 +344,7 @@ public class CreateServerGroupRequest extends TeaModel {
 
         /**
          * <p>The interval at which health checks are performed.</p>
-         * <p>Unit: seconds</p>
+         * <p>Unit: seconds.</p>
          * <p>Valid values: <strong>1</strong> to <strong>50</strong>.</p>
          * <p>Default value: <strong>10</strong>.</p>
          * 
@@ -345,11 +355,11 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthCheckInterval;
 
         /**
-         * <p>The URL that is used for health checks.</p>
-         * <p>The URL must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: _ ; ~ ! ( ) \* [ ] @ $ ^ : \&quot; , + =</p>
-         * <p>The URL must start with a forward slash (/).</p>
+         * <p>The path used for health checks.</p>
+         * <p>It must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&amp;). The URL can also contain the following extended characters: _ ; ~ ! ( ) \* [ ] @ $ ^ : \&quot; , + =</p>
+         * <p>It must start with a forward slash (/).</p>
          * <blockquote>
-         * <p>This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckProtocol</strong> to <strong>HTTP</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -359,10 +369,10 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckPath;
 
         /**
-         * <p>The protocol that is used for health checks. Valid values:</p>
+         * <p>The protocol used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>TCP</strong> (default): GWLB performs TCP health checks by sending SYN packets to a backend server to check whether the port of the backend server is available to receive requests.</li>
-         * <li><strong>HTTP</strong>: GWLB performs HTTP health checks to check whether backend servers are healthy by sending HEAD or GET requests which simulate access from browsers.</li>
+         * <li><strong>HTTP</strong>: GWLB performs HTTP health checks to check whether backend servers are healthy by sending GET requests which simulate access from browsers.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -372,7 +382,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public String healthCheckProtocol;
 
         /**
-         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health status changes from <strong>fail</strong> to <strong>success</strong>.</p>
+         * <p>The number of times that an unhealthy backend server must consecutively pass health checks before it is declared healthy. In this case, the health check status of the backend server changes from <strong>fail</strong> to <strong>success</strong>.</p>
          * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * <p>Default value: <strong>2</strong>.</p>
          * 
@@ -383,7 +393,7 @@ public class CreateServerGroupRequest extends TeaModel {
         public Integer healthyThreshold;
 
         /**
-         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health status changes from <strong>success</strong> to <strong>fail</strong>.</p>
+         * <p>The number of times that a healthy backend server must consecutively fail health checks before it is declared unhealthy. In this case, the health check status of the backend server changes from <strong>success</strong> to <strong>fail</strong>.</p>
          * <p>Valid values: <strong>2</strong> to <strong>10</strong>.</p>
          * <p>Default value: <strong>2</strong>.</p>
          * 

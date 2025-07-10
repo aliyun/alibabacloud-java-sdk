@@ -66,6 +66,17 @@ public class CreateListenerRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateListenerRequestTag> tag;
 
+    /**
+     * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+     * <p>Default value: <strong>350</strong>.</p>
+     * <p>Valid values: <strong>60</strong> to <strong>6000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>350</p>
+     */
+    @NameInMap("TcpIdleTimeout")
+    public Integer tcpIdleTimeout;
+
     public static CreateListenerRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateListenerRequest self = new CreateListenerRequest();
         return TeaModel.build(map, self);
@@ -117,6 +128,14 @@ public class CreateListenerRequest extends TeaModel {
     }
     public java.util.List<CreateListenerRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateListenerRequest setTcpIdleTimeout(Integer tcpIdleTimeout) {
+        this.tcpIdleTimeout = tcpIdleTimeout;
+        return this;
+    }
+    public Integer getTcpIdleTimeout() {
+        return this.tcpIdleTimeout;
     }
 
     public static class CreateListenerRequestTag extends TeaModel {

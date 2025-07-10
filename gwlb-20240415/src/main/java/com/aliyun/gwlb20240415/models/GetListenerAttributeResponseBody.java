@@ -80,6 +80,15 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     @NameInMap("Tags")
     public java.util.List<GetListenerAttributeResponseBodyTags> tags;
 
+    /**
+     * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>350</p>
+     */
+    @NameInMap("TcpIdleTimeout")
+    public Integer tcpIdleTimeout;
+
     public static GetListenerAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetListenerAttributeResponseBody self = new GetListenerAttributeResponseBody();
         return TeaModel.build(map, self);
@@ -147,6 +156,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
     }
     public java.util.List<GetListenerAttributeResponseBodyTags> getTags() {
         return this.tags;
+    }
+
+    public GetListenerAttributeResponseBody setTcpIdleTimeout(Integer tcpIdleTimeout) {
+        this.tcpIdleTimeout = tcpIdleTimeout;
+        return this;
+    }
+    public Integer getTcpIdleTimeout() {
+        return this.tcpIdleTimeout;
     }
 
     public static class GetListenerAttributeResponseBodyTags extends TeaModel {

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListLoadBalancersRequest extends TeaModel {
     /**
-     * <p>The IP version. Valid values:</p>
+     * <p>The IP version of the NLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>Ipv4</strong>: IPv4</li>
+     * <li><strong>Ipv4</strong></li>
      * </ul>
      * <p>Enumeration values:</p>
      * <ul>
      * <li>IPv4: IPv4</li>
-     * <li>DualStack: DualStack</li>
+     * <li>DualStack: dual-stack</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,6 +107,16 @@ public class ListLoadBalancersRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<ListLoadBalancersRequestTag> tag;
 
+    /**
+     * <p>Specifies the traffic processing mode. Valid values:</p>
+     * <ul>
+     * <li><strong>LoadBalance</strong>: load balancing mode. GWLB continues to forward traffic to backend servers.</li>
+     * <li><strong>ByPass</strong>: bypass mode. GWLB directly returns traffic to the GWLB endpoint without forwarding it to the backend servers.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>LoadBalance</p>
+     */
     @NameInMap("TrafficMode")
     public String trafficMode;
 

@@ -55,6 +55,16 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     @NameInMap("ServerGroupId")
     public String serverGroupId;
 
+    /**
+     * <p>The timeout period of an idle TCP connection. Unit: seconds.</p>
+     * <p>Valid values: <strong>60</strong> to <strong>6000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>350</p>
+     */
+    @NameInMap("TcpIdleTimeout")
+    public Integer tcpIdleTimeout;
+
     public static UpdateListenerAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateListenerAttributeRequest self = new UpdateListenerAttributeRequest();
         return TeaModel.build(map, self);
@@ -98,6 +108,14 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     }
     public String getServerGroupId() {
         return this.serverGroupId;
+    }
+
+    public UpdateListenerAttributeRequest setTcpIdleTimeout(Integer tcpIdleTimeout) {
+        this.tcpIdleTimeout = tcpIdleTimeout;
+        return this;
+    }
+    public Integer getTcpIdleTimeout() {
+        return this.tcpIdleTimeout;
     }
 
 }

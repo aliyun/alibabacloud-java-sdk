@@ -54,8 +54,8 @@ public class ListServerGroupsRequest extends TeaModel {
     /**
      * <p>The server group type. Valid values:</p>
      * <ul>
-     * <li><strong>Instance</strong>: allows you to specify servers of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
-     * <li><strong>Ip</strong>: allows you to add servers of by specifying IP addresses.</li>
+     * <li><strong>Instance</strong>: allows you to specify resources of the <strong>Ecs</strong>, <strong>Eni</strong>, or <strong>Eci</strong> type.</li>
+     * <li><strong>Ip</strong>: allows you to add servers by specifying IP addresses.</li>
      * </ul>
      * 
      * <strong>example:</strong>
