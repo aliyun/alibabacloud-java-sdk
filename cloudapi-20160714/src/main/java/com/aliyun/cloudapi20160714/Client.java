@@ -10802,6 +10802,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.disabled)) {
+            query.put("Disabled", request.disabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
             query.put("Extend", request.extend);
         }

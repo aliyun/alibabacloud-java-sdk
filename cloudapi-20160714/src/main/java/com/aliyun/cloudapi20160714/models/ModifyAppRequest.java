@@ -34,6 +34,9 @@ public class ModifyAppRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Disabled")
+    public Boolean disabled;
+
     /**
      * <p>扩展信息</p>
      * 
@@ -82,6 +85,14 @@ public class ModifyAppRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyAppRequest setDisabled(Boolean disabled) {
+        this.disabled = disabled;
+        return this;
+    }
+    public Boolean getDisabled() {
+        return this.disabled;
     }
 
     public ModifyAppRequest setExtend(String extend) {

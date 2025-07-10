@@ -40,6 +40,9 @@ public class DescribeAppResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("Disabled")
+    public Boolean disabled;
+
     /**
      * <p>扩展信息</p>
      * 
@@ -102,6 +105,14 @@ public class DescribeAppResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public DescribeAppResponseBody setDisabled(Boolean disabled) {
+        this.disabled = disabled;
+        return this;
+    }
+    public Boolean getDisabled() {
+        return this.disabled;
     }
 
     public DescribeAppResponseBody setExtend(String extend) {
