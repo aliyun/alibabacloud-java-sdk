@@ -445,6 +445,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("DataId")
         public String dataId;
 
+        @NameInMap("DetectedLanguage")
+        public String detectedLanguage;
+
         @NameInMap("ManualTaskId")
         public String manualTaskId;
 
@@ -487,6 +490,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @NameInMap("SensitiveResult")
         public java.util.List<TextModerationPlusResponseBodyDataSensitiveResult> sensitiveResult;
 
+        @NameInMap("TranslatedContent")
+        public String translatedContent;
+
         public static TextModerationPlusResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             TextModerationPlusResponseBodyData self = new TextModerationPlusResponseBodyData();
             return TeaModel.build(map, self);
@@ -522,6 +528,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public String getDataId() {
             return this.dataId;
+        }
+
+        public TextModerationPlusResponseBodyData setDetectedLanguage(String detectedLanguage) {
+            this.detectedLanguage = detectedLanguage;
+            return this;
+        }
+        public String getDetectedLanguage() {
+            return this.detectedLanguage;
         }
 
         public TextModerationPlusResponseBodyData setManualTaskId(String manualTaskId) {
@@ -570,6 +584,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
         public java.util.List<TextModerationPlusResponseBodyDataSensitiveResult> getSensitiveResult() {
             return this.sensitiveResult;
+        }
+
+        public TextModerationPlusResponseBodyData setTranslatedContent(String translatedContent) {
+            this.translatedContent = translatedContent;
+            return this;
+        }
+        public String getTranslatedContent() {
+            return this.translatedContent;
         }
 
     }
