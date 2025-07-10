@@ -99,6 +99,15 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
          * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
@@ -185,6 +194,14 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+        public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public ListConfigRuleEvaluationResultsResponseBodyEvaluationResultsEvaluationResultListEvaluationResultIdentifierEvaluationResultQualifier setResourceId(String resourceId) {
