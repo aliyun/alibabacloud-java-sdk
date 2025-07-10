@@ -34,6 +34,12 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("DateOfExpiry")
     public String dateOfExpiry;
 
+    @NameInMap("DocName")
+    public String docName;
+
+    @NameInMap("DocNo")
+    public String docNo;
+
     @NameInMap("DocPageConfig")
     public String docPageConfigShrink;
 
@@ -245,6 +251,22 @@ public class InitializeShrinkRequest extends TeaModel {
     }
     public String getDateOfExpiry() {
         return this.dateOfExpiry;
+    }
+
+    public InitializeShrinkRequest setDocName(String docName) {
+        this.docName = docName;
+        return this;
+    }
+    public String getDocName() {
+        return this.docName;
+    }
+
+    public InitializeShrinkRequest setDocNo(String docNo) {
+        this.docNo = docNo;
+        return this;
+    }
+    public String getDocNo() {
+        return this.docNo;
     }
 
     public InitializeShrinkRequest setDocPageConfigShrink(String docPageConfigShrink) {

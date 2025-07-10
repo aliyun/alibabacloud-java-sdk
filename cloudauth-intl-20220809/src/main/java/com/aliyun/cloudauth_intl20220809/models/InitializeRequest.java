@@ -34,6 +34,12 @@ public class InitializeRequest extends TeaModel {
     @NameInMap("DateOfExpiry")
     public String dateOfExpiry;
 
+    @NameInMap("DocName")
+    public String docName;
+
+    @NameInMap("DocNo")
+    public String docNo;
+
     @NameInMap("DocPageConfig")
     public java.util.List<String> docPageConfig;
 
@@ -245,6 +251,22 @@ public class InitializeRequest extends TeaModel {
     }
     public String getDateOfExpiry() {
         return this.dateOfExpiry;
+    }
+
+    public InitializeRequest setDocName(String docName) {
+        this.docName = docName;
+        return this;
+    }
+    public String getDocName() {
+        return this.docName;
+    }
+
+    public InitializeRequest setDocNo(String docNo) {
+        this.docNo = docNo;
+        return this;
+    }
+    public String getDocNo() {
+        return this.docNo;
     }
 
     public InitializeRequest setDocPageConfig(java.util.List<String> docPageConfig) {
