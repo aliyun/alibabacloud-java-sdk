@@ -109,6 +109,12 @@ public class ListCloudAppsResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("PkgFormat")
+        public String pkgFormat;
+
+        @NameInMap("PkgType")
+        public String pkgType;
+
         /**
          * <strong>example:</strong>
          * <p>Success</p>
@@ -172,6 +178,22 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListCloudAppsResponseBodyCloudApps setPkgFormat(String pkgFormat) {
+            this.pkgFormat = pkgFormat;
+            return this;
+        }
+        public String getPkgFormat() {
+            return this.pkgFormat;
+        }
+
+        public ListCloudAppsResponseBodyCloudApps setPkgType(String pkgType) {
+            this.pkgType = pkgType;
+            return this;
+        }
+        public String getPkgType() {
+            return this.pkgType;
         }
 
         public ListCloudAppsResponseBodyCloudApps setStatus(String status) {

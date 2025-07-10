@@ -14,6 +14,9 @@ public class ListRenderingDataPackagesRequest extends TeaModel {
     @NameInMap("DataPackageId")
     public String dataPackageId;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -34,6 +37,9 @@ public class ListRenderingDataPackagesRequest extends TeaModel {
      */
     @NameInMap("Size")
     public Integer size;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     /**
      * <strong>example:</strong>
@@ -63,6 +69,14 @@ public class ListRenderingDataPackagesRequest extends TeaModel {
         return this.dataPackageId;
     }
 
+    public ListRenderingDataPackagesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public ListRenderingDataPackagesRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -85,6 +99,14 @@ public class ListRenderingDataPackagesRequest extends TeaModel {
     }
     public Integer getSize() {
         return this.size;
+    }
+
+    public ListRenderingDataPackagesRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public ListRenderingDataPackagesRequest setStatus(String status) {

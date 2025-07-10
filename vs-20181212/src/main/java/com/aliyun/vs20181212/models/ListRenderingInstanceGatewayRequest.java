@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingInstanceGatewayRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>render-xxx</p>
@@ -32,9 +35,20 @@ public class ListRenderingInstanceGatewayRequest extends TeaModel {
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListRenderingInstanceGatewayRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRenderingInstanceGatewayRequest self = new ListRenderingInstanceGatewayRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRenderingInstanceGatewayRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListRenderingInstanceGatewayRequest setGatewayInstanceId(String gatewayInstanceId) {
@@ -67,6 +81,14 @@ public class ListRenderingInstanceGatewayRequest extends TeaModel {
     }
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
+    }
+
+    public ListRenderingInstanceGatewayRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

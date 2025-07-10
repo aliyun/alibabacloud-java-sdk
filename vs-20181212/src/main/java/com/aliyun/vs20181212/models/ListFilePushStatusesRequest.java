@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListFilePushStatusesRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
@@ -39,9 +42,20 @@ public class ListFilePushStatusesRequest extends TeaModel {
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListFilePushStatusesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFilePushStatusesRequest self = new ListFilePushStatusesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListFilePushStatusesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListFilePushStatusesRequest setFileId(String fileId) {
@@ -82,6 +96,14 @@ public class ListFilePushStatusesRequest extends TeaModel {
     }
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
+    }
+
+    public ListFilePushStatusesRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

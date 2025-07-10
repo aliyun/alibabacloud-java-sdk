@@ -43,6 +43,12 @@ public class UploadCloudAppRequest extends TeaModel {
     @NameInMap("Md5")
     public String md5;
 
+    @NameInMap("PkgFormat")
+    public String pkgFormat;
+
+    @NameInMap("PkgType")
+    public String pkgType;
+
     public static UploadCloudAppRequest build(java.util.Map<String, ?> map) throws Exception {
         UploadCloudAppRequest self = new UploadCloudAppRequest();
         return TeaModel.build(map, self);
@@ -86,6 +92,22 @@ public class UploadCloudAppRequest extends TeaModel {
     }
     public String getMd5() {
         return this.md5;
+    }
+
+    public UploadCloudAppRequest setPkgFormat(String pkgFormat) {
+        this.pkgFormat = pkgFormat;
+        return this;
+    }
+    public String getPkgFormat() {
+        return this.pkgFormat;
+    }
+
+    public UploadCloudAppRequest setPkgType(String pkgType) {
+        this.pkgType = pkgType;
+        return this;
+    }
+    public String getPkgType() {
+        return this.pkgType;
     }
 
 }

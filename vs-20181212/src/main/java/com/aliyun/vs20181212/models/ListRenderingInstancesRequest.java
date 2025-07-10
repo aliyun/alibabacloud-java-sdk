@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingInstancesRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,12 +35,23 @@ public class ListRenderingInstancesRequest extends TeaModel {
     @NameInMap("RenderingSpec")
     public String renderingSpec;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     @NameInMap("StorageSize")
     public Integer storageSize;
 
     public static ListRenderingInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRenderingInstancesRequest self = new ListRenderingInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRenderingInstancesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListRenderingInstancesRequest setPageNumber(Integer pageNumber) {
@@ -70,6 +84,14 @@ public class ListRenderingInstancesRequest extends TeaModel {
     }
     public String getRenderingSpec() {
         return this.renderingSpec;
+    }
+
+    public ListRenderingInstancesRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public ListRenderingInstancesRequest setStorageSize(Integer storageSize) {

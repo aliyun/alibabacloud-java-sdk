@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class ListRenderingProjectsRequest extends TeaModel {
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,9 +35,20 @@ public class ListRenderingProjectsRequest extends TeaModel {
     @NameInMap("ProjectName")
     public String projectName;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     public static ListRenderingProjectsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListRenderingProjectsRequest self = new ListRenderingProjectsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListRenderingProjectsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListRenderingProjectsRequest setPageNumber(Integer pageNumber) {
@@ -67,6 +81,14 @@ public class ListRenderingProjectsRequest extends TeaModel {
     }
     public String getProjectName() {
         return this.projectName;
+    }
+
+    public ListRenderingProjectsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

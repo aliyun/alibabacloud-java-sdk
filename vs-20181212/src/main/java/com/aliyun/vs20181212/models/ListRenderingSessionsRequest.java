@@ -18,6 +18,9 @@ public class ListRenderingSessionsRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,6 +54,9 @@ public class ListRenderingSessionsRequest extends TeaModel {
     @NameInMap("SessionId")
     public String sessionId;
 
+    @NameInMap("StartTime")
+    public String startTime;
+
     /**
      * <strong>example:</strong>
      * <p>SessionStarting</p>
@@ -77,6 +83,14 @@ public class ListRenderingSessionsRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public ListRenderingSessionsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public ListRenderingSessionsRequest setPageNumber(Integer pageNumber) {
@@ -117,6 +131,14 @@ public class ListRenderingSessionsRequest extends TeaModel {
     }
     public String getSessionId() {
         return this.sessionId;
+    }
+
+    public ListRenderingSessionsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
     public ListRenderingSessionsRequest setState(String state) {

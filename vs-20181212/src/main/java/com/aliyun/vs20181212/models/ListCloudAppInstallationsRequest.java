@@ -25,6 +25,9 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,12 +42,18 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("ProjectId")
+    public String projectId;
+
     /**
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("RenderingInstanceId")
     public String renderingInstanceId;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static ListCloudAppInstallationsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudAppInstallationsRequest self = new ListCloudAppInstallationsRequest();
@@ -75,6 +84,14 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
         return this.appVersion;
     }
 
+    public ListCloudAppInstallationsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public ListCloudAppInstallationsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -91,12 +108,28 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
         return this.pageSize;
     }
 
+    public ListCloudAppInstallationsRequest setProjectId(String projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public String getProjectId() {
+        return this.projectId;
+    }
+
     public ListCloudAppInstallationsRequest setRenderingInstanceId(String renderingInstanceId) {
         this.renderingInstanceId = renderingInstanceId;
         return this;
     }
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
+    }
+
+    public ListCloudAppInstallationsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

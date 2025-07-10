@@ -27,6 +27,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @NameInMap("Hostname")
     public String hostname;
 
+    @NameInMap("InternalIp")
+    public String internalIp;
+
     @NameInMap("Isp")
     public String isp;
 
@@ -102,6 +105,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
     public String getHostname() {
         return this.hostname;
+    }
+
+    public DescribeRenderingInstanceResponseBody setInternalIp(String internalIp) {
+        this.internalIp = internalIp;
+        return this;
+    }
+    public String getInternalIp() {
+        return this.internalIp;
     }
 
     public DescribeRenderingInstanceResponseBody setIsp(String isp) {

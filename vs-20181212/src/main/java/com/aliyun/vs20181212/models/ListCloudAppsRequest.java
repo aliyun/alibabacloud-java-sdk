@@ -25,6 +25,9 @@ public class ListCloudAppsRequest extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    @NameInMap("EndTime")
+    public String endTime;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,6 +41,12 @@ public class ListCloudAppsRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Long pageSize;
+
+    @NameInMap("PkgType")
+    public String pkgType;
+
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static ListCloudAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListCloudAppsRequest self = new ListCloudAppsRequest();
@@ -68,6 +77,14 @@ public class ListCloudAppsRequest extends TeaModel {
         return this.appVersion;
     }
 
+    public ListCloudAppsRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
     public ListCloudAppsRequest setPageNumber(Long pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -82,6 +99,22 @@ public class ListCloudAppsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCloudAppsRequest setPkgType(String pkgType) {
+        this.pkgType = pkgType;
+        return this;
+    }
+    public String getPkgType() {
+        return this.pkgType;
+    }
+
+    public ListCloudAppsRequest setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
     }
 
 }

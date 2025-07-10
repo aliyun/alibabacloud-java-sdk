@@ -3,7 +3,7 @@ package com.aliyun.vs20181212.models;
 
 import com.aliyun.tea.*;
 
-public class InstallCloudAppRequest extends TeaModel {
+public class InstallCloudAppShrinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -30,14 +30,14 @@ public class InstallCloudAppRequest extends TeaModel {
     public String renderingInstanceId;
 
     @NameInMap("RenderingInstanceIds")
-    public java.util.List<String> renderingInstanceIds;
+    public String renderingInstanceIdsShrink;
 
-    public static InstallCloudAppRequest build(java.util.Map<String, ?> map) throws Exception {
-        InstallCloudAppRequest self = new InstallCloudAppRequest();
+    public static InstallCloudAppShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        InstallCloudAppShrinkRequest self = new InstallCloudAppShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public InstallCloudAppRequest setAppId(String appId) {
+    public InstallCloudAppShrinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -45,7 +45,7 @@ public class InstallCloudAppRequest extends TeaModel {
         return this.appId;
     }
 
-    public InstallCloudAppRequest setPageNumber(Integer pageNumber) {
+    public InstallCloudAppShrinkRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
     }
@@ -53,7 +53,7 @@ public class InstallCloudAppRequest extends TeaModel {
         return this.pageNumber;
     }
 
-    public InstallCloudAppRequest setPageSize(Integer pageSize) {
+    public InstallCloudAppShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -61,7 +61,7 @@ public class InstallCloudAppRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public InstallCloudAppRequest setProjectId(String projectId) {
+    public InstallCloudAppShrinkRequest setProjectId(String projectId) {
         this.projectId = projectId;
         return this;
     }
@@ -69,7 +69,7 @@ public class InstallCloudAppRequest extends TeaModel {
         return this.projectId;
     }
 
-    public InstallCloudAppRequest setRenderingInstanceId(String renderingInstanceId) {
+    public InstallCloudAppShrinkRequest setRenderingInstanceId(String renderingInstanceId) {
         this.renderingInstanceId = renderingInstanceId;
         return this;
     }
@@ -77,12 +77,12 @@ public class InstallCloudAppRequest extends TeaModel {
         return this.renderingInstanceId;
     }
 
-    public InstallCloudAppRequest setRenderingInstanceIds(java.util.List<String> renderingInstanceIds) {
-        this.renderingInstanceIds = renderingInstanceIds;
+    public InstallCloudAppShrinkRequest setRenderingInstanceIdsShrink(String renderingInstanceIdsShrink) {
+        this.renderingInstanceIdsShrink = renderingInstanceIdsShrink;
         return this;
     }
-    public java.util.List<String> getRenderingInstanceIds() {
-        return this.renderingInstanceIds;
+    public String getRenderingInstanceIdsShrink() {
+        return this.renderingInstanceIdsShrink;
     }
 
 }
