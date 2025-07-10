@@ -109,6 +109,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryMode)) {
+            query.put("DeliveryMode", request.deliveryMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {
             query.put("Endpoints", request.endpointsShrink);
         }
@@ -174,6 +182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantRateLimitPolicy)) {
+            request.tenantRateLimitPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.delaySeconds)) {
             query.put("DelaySeconds", request.delaySeconds);
@@ -205,6 +217,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantRateLimitPolicyShrink)) {
+            query.put("TenantRateLimitPolicy", request.tenantRateLimitPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.visibilityTimeout)) {
@@ -960,6 +976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantRateLimitPolicy)) {
+            request.tenantRateLimitPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.delaySeconds)) {
             query.put("DelaySeconds", request.delaySeconds);
@@ -987,6 +1007,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.queueName)) {
             query.put("QueueName", request.queueName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantRateLimitPolicyShrink)) {
+            query.put("TenantRateLimitPolicy", request.tenantRateLimitPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.visibilityTimeout)) {
@@ -1038,6 +1062,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantRateLimitPolicy)) {
+            request.tenantRateLimitPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dlqPolicyShrink)) {
             query.put("DlqPolicy", request.dlqPolicyShrink);
@@ -1049,6 +1077,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.subscriptionName)) {
             query.put("SubscriptionName", request.subscriptionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantRateLimitPolicyShrink)) {
+            query.put("TenantRateLimitPolicy", request.tenantRateLimitPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {
@@ -1152,13 +1184,41 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.dlqPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dlqPolicy, "DlqPolicy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dmAttributes)) {
+            request.dmAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dmAttributes, "DmAttributes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dysmsAttributes)) {
+            request.dysmsAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dysmsAttributes, "DysmsAttributes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.kafkaAttributes)) {
+            request.kafkaAttributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.kafkaAttributes, "KafkaAttributes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tenantRateLimitPolicy)) {
+            request.tenantRateLimitPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tenantRateLimitPolicy, "TenantRateLimitPolicy", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.dlqPolicyShrink)) {
             query.put("DlqPolicy", request.dlqPolicyShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.dmAttributesShrink)) {
+            query.put("DmAttributes", request.dmAttributesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dysmsAttributesShrink)) {
+            query.put("DysmsAttributes", request.dysmsAttributesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endpoint)) {
             query.put("Endpoint", request.endpoint);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.kafkaAttributesShrink)) {
+            query.put("KafkaAttributes", request.kafkaAttributesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.messageTag)) {
@@ -1183,6 +1243,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.subscriptionName)) {
             query.put("SubscriptionName", request.subscriptionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantRateLimitPolicyShrink)) {
+            query.put("TenantRateLimitPolicy", request.tenantRateLimitPolicyShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topicName)) {

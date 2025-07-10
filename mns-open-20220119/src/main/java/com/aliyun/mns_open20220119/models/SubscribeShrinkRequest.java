@@ -10,6 +10,12 @@ public class SubscribeShrinkRequest extends TeaModel {
     @NameInMap("DlqPolicy")
     public String dlqPolicyShrink;
 
+    @NameInMap("DmAttributes")
+    public String dmAttributesShrink;
+
+    @NameInMap("DysmsAttributes")
+    public String dysmsAttributesShrink;
+
     /**
      * <p>The receiver endpoint. The format of the endpoint varies based on the terminal type.</p>
      * <ul>
@@ -26,6 +32,9 @@ public class SubscribeShrinkRequest extends TeaModel {
      */
     @NameInMap("Endpoint")
     public String endpoint;
+
+    @NameInMap("KafkaAttributes")
+    public String kafkaAttributesShrink;
 
     /**
      * <p>The tag that is used to filter messages. Only messages that have the same tag can be pushed. Set the value to a string of no more than 16 characters.</p>
@@ -94,6 +103,9 @@ public class SubscribeShrinkRequest extends TeaModel {
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    @NameInMap("TenantRateLimitPolicy")
+    public String tenantRateLimitPolicyShrink;
+
     /**
      * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
@@ -117,12 +129,36 @@ public class SubscribeShrinkRequest extends TeaModel {
         return this.dlqPolicyShrink;
     }
 
+    public SubscribeShrinkRequest setDmAttributesShrink(String dmAttributesShrink) {
+        this.dmAttributesShrink = dmAttributesShrink;
+        return this;
+    }
+    public String getDmAttributesShrink() {
+        return this.dmAttributesShrink;
+    }
+
+    public SubscribeShrinkRequest setDysmsAttributesShrink(String dysmsAttributesShrink) {
+        this.dysmsAttributesShrink = dysmsAttributesShrink;
+        return this;
+    }
+    public String getDysmsAttributesShrink() {
+        return this.dysmsAttributesShrink;
+    }
+
     public SubscribeShrinkRequest setEndpoint(String endpoint) {
         this.endpoint = endpoint;
         return this;
     }
     public String getEndpoint() {
         return this.endpoint;
+    }
+
+    public SubscribeShrinkRequest setKafkaAttributesShrink(String kafkaAttributesShrink) {
+        this.kafkaAttributesShrink = kafkaAttributesShrink;
+        return this;
+    }
+    public String getKafkaAttributesShrink() {
+        return this.kafkaAttributesShrink;
     }
 
     public SubscribeShrinkRequest setMessageTag(String messageTag) {
@@ -171,6 +207,14 @@ public class SubscribeShrinkRequest extends TeaModel {
     }
     public String getSubscriptionName() {
         return this.subscriptionName;
+    }
+
+    public SubscribeShrinkRequest setTenantRateLimitPolicyShrink(String tenantRateLimitPolicyShrink) {
+        this.tenantRateLimitPolicyShrink = tenantRateLimitPolicyShrink;
+        return this;
+    }
+    public String getTenantRateLimitPolicyShrink() {
+        return this.tenantRateLimitPolicyShrink;
     }
 
     public SubscribeShrinkRequest setTopicName(String topicName) {

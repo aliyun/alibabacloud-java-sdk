@@ -69,6 +69,9 @@ public class SetQueueAttributesShrinkRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    @NameInMap("TenantRateLimitPolicy")
+    public String tenantRateLimitPolicyShrink;
+
     /**
      * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
      * 
@@ -137,6 +140,14 @@ public class SetQueueAttributesShrinkRequest extends TeaModel {
     }
     public String getQueueName() {
         return this.queueName;
+    }
+
+    public SetQueueAttributesShrinkRequest setTenantRateLimitPolicyShrink(String tenantRateLimitPolicyShrink) {
+        this.tenantRateLimitPolicyShrink = tenantRateLimitPolicyShrink;
+        return this;
+    }
+    public String getTenantRateLimitPolicyShrink() {
+        return this.tenantRateLimitPolicyShrink;
     }
 
     public SetQueueAttributesShrinkRequest setVisibilityTimeout(Long visibilityTimeout) {

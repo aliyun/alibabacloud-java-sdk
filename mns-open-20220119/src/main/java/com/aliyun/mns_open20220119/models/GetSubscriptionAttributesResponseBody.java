@@ -150,6 +150,36 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
 
     }
 
+    public static class GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceivesPerSecond")
+        public Integer maxReceivesPerSecond;
+
+        public static GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy self = new GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy setMaxReceivesPerSecond(Integer maxReceivesPerSecond) {
+            this.maxReceivesPerSecond = maxReceivesPerSecond;
+            return this;
+        }
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
+        }
+
+    }
+
     public static class GetSubscriptionAttributesResponseBodyData extends TeaModel {
         /**
          * <p>The time when the subscription was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
@@ -228,6 +258,9 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
          */
         @NameInMap("SubscriptionName")
         public String subscriptionName;
+
+        @NameInMap("TenantRateLimitPolicy")
+        public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy;
 
         /**
          * <p>The name of the topic.</p>
@@ -314,6 +347,14 @@ public class GetSubscriptionAttributesResponseBody extends TeaModel {
         }
         public String getSubscriptionName() {
             return this.subscriptionName;
+        }
+
+        public GetSubscriptionAttributesResponseBodyData setTenantRateLimitPolicy(GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy) {
+            this.tenantRateLimitPolicy = tenantRateLimitPolicy;
+            return this;
+        }
+        public GetSubscriptionAttributesResponseBodyDataTenantRateLimitPolicy getTenantRateLimitPolicy() {
+            return this.tenantRateLimitPolicy;
         }
 
         public GetSubscriptionAttributesResponseBodyData setTopicName(String topicName) {

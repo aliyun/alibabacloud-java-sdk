@@ -33,6 +33,9 @@ public class SetSubscriptionAttributesRequest extends TeaModel {
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    @NameInMap("TenantRateLimitPolicy")
+    public SetSubscriptionAttributesRequestTenantRateLimitPolicy tenantRateLimitPolicy;
+
     /**
      * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
@@ -70,6 +73,14 @@ public class SetSubscriptionAttributesRequest extends TeaModel {
     }
     public String getSubscriptionName() {
         return this.subscriptionName;
+    }
+
+    public SetSubscriptionAttributesRequest setTenantRateLimitPolicy(SetSubscriptionAttributesRequestTenantRateLimitPolicy tenantRateLimitPolicy) {
+        this.tenantRateLimitPolicy = tenantRateLimitPolicy;
+        return this;
+    }
+    public SetSubscriptionAttributesRequestTenantRateLimitPolicy getTenantRateLimitPolicy() {
+        return this.tenantRateLimitPolicy;
     }
 
     public SetSubscriptionAttributesRequest setTopicName(String topicName) {
@@ -118,6 +129,36 @@ public class SetSubscriptionAttributesRequest extends TeaModel {
         }
         public Boolean getEnabled() {
             return this.enabled;
+        }
+
+    }
+
+    public static class SetSubscriptionAttributesRequestTenantRateLimitPolicy extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceivesPerSecond")
+        public Integer maxReceivesPerSecond;
+
+        public static SetSubscriptionAttributesRequestTenantRateLimitPolicy build(java.util.Map<String, ?> map) throws Exception {
+            SetSubscriptionAttributesRequestTenantRateLimitPolicy self = new SetSubscriptionAttributesRequestTenantRateLimitPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public SetSubscriptionAttributesRequestTenantRateLimitPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public SetSubscriptionAttributesRequestTenantRateLimitPolicy setMaxReceivesPerSecond(Integer maxReceivesPerSecond) {
+            this.maxReceivesPerSecond = maxReceivesPerSecond;
+            return this;
+        }
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
         }
 
     }

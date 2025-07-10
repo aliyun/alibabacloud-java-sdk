@@ -209,6 +209,36 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     }
 
+    public static class GetQueueAttributesResponseBodyDataTenantRateLimitPolicy extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceivesPerSecond")
+        public Integer maxReceivesPerSecond;
+
+        public static GetQueueAttributesResponseBodyDataTenantRateLimitPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetQueueAttributesResponseBodyDataTenantRateLimitPolicy self = new GetQueueAttributesResponseBodyDataTenantRateLimitPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetQueueAttributesResponseBodyDataTenantRateLimitPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public GetQueueAttributesResponseBodyDataTenantRateLimitPolicy setMaxReceivesPerSecond(Integer maxReceivesPerSecond) {
+            this.maxReceivesPerSecond = maxReceivesPerSecond;
+            return this;
+        }
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
+        }
+
+    }
+
     public static class GetQueueAttributesResponseBodyData extends TeaModel {
         /**
          * <p>The total number of messages that are in the Active state in the queue. The value is an approximate value. Default value: 0. We recommend that you do not use the return value and that you call CloudMonitor API operations to query the metric value.</p>
@@ -324,6 +354,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
          */
         @NameInMap("Tags")
         public java.util.List<GetQueueAttributesResponseBodyDataTags> tags;
+
+        @NameInMap("TenantRateLimitPolicy")
+        public GetQueueAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy;
 
         /**
          * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
@@ -441,6 +474,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
         public java.util.List<GetQueueAttributesResponseBodyDataTags> getTags() {
             return this.tags;
+        }
+
+        public GetQueueAttributesResponseBodyData setTenantRateLimitPolicy(GetQueueAttributesResponseBodyDataTenantRateLimitPolicy tenantRateLimitPolicy) {
+            this.tenantRateLimitPolicy = tenantRateLimitPolicy;
+            return this;
+        }
+        public GetQueueAttributesResponseBodyDataTenantRateLimitPolicy getTenantRateLimitPolicy() {
+            return this.tenantRateLimitPolicy;
         }
 
         public GetQueueAttributesResponseBodyData setVisibilityTimeout(Long visibilityTimeout) {

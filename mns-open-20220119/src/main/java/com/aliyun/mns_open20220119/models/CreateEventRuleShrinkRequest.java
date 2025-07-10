@@ -4,6 +4,12 @@ package com.aliyun.mns_open20220119.models;
 import com.aliyun.tea.*;
 
 public class CreateEventRuleShrinkRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    @NameInMap("DeliveryMode")
+    public String deliveryMode;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -43,6 +49,22 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
     public static CreateEventRuleShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEventRuleShrinkRequest self = new CreateEventRuleShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEventRuleShrinkRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
+    }
+
+    public CreateEventRuleShrinkRequest setDeliveryMode(String deliveryMode) {
+        this.deliveryMode = deliveryMode;
+        return this;
+    }
+    public String getDeliveryMode() {
+        return this.deliveryMode;
     }
 
     public CreateEventRuleShrinkRequest setEndpointsShrink(String endpointsShrink) {

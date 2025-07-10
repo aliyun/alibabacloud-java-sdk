@@ -69,6 +69,9 @@ public class SetQueueAttributesRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    @NameInMap("TenantRateLimitPolicy")
+    public SetQueueAttributesRequestTenantRateLimitPolicy tenantRateLimitPolicy;
+
     /**
      * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
      * 
@@ -139,6 +142,14 @@ public class SetQueueAttributesRequest extends TeaModel {
         return this.queueName;
     }
 
+    public SetQueueAttributesRequest setTenantRateLimitPolicy(SetQueueAttributesRequestTenantRateLimitPolicy tenantRateLimitPolicy) {
+        this.tenantRateLimitPolicy = tenantRateLimitPolicy;
+        return this;
+    }
+    public SetQueueAttributesRequestTenantRateLimitPolicy getTenantRateLimitPolicy() {
+        return this.tenantRateLimitPolicy;
+    }
+
     public SetQueueAttributesRequest setVisibilityTimeout(Long visibilityTimeout) {
         this.visibilityTimeout = visibilityTimeout;
         return this;
@@ -202,6 +213,36 @@ public class SetQueueAttributesRequest extends TeaModel {
         }
         public Integer getMaxReceiveCount() {
             return this.maxReceiveCount;
+        }
+
+    }
+
+    public static class SetQueueAttributesRequestTenantRateLimitPolicy extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceivesPerSecond")
+        public Integer maxReceivesPerSecond;
+
+        public static SetQueueAttributesRequestTenantRateLimitPolicy build(java.util.Map<String, ?> map) throws Exception {
+            SetQueueAttributesRequestTenantRateLimitPolicy self = new SetQueueAttributesRequestTenantRateLimitPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public SetQueueAttributesRequestTenantRateLimitPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public SetQueueAttributesRequestTenantRateLimitPolicy setMaxReceivesPerSecond(Integer maxReceivesPerSecond) {
+            this.maxReceivesPerSecond = maxReceivesPerSecond;
+            return this;
+        }
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
         }
 
     }

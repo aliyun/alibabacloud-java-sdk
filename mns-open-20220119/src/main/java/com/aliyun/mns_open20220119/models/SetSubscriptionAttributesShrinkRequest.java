@@ -33,6 +33,9 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     @NameInMap("SubscriptionName")
     public String subscriptionName;
 
+    @NameInMap("TenantRateLimitPolicy")
+    public String tenantRateLimitPolicyShrink;
+
     /**
      * <p>The name of the topic.</p>
      * <p>This parameter is required.</p>
@@ -70,6 +73,14 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     }
     public String getSubscriptionName() {
         return this.subscriptionName;
+    }
+
+    public SetSubscriptionAttributesShrinkRequest setTenantRateLimitPolicyShrink(String tenantRateLimitPolicyShrink) {
+        this.tenantRateLimitPolicyShrink = tenantRateLimitPolicyShrink;
+        return this;
+    }
+    public String getTenantRateLimitPolicyShrink() {
+        return this.tenantRateLimitPolicyShrink;
     }
 
     public SetSubscriptionAttributesShrinkRequest setTopicName(String topicName) {

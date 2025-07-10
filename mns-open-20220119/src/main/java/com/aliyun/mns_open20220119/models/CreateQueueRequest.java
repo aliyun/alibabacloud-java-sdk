@@ -76,6 +76,9 @@ public class CreateQueueRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateQueueRequestTag> tag;
 
+    @NameInMap("TenantRateLimitPolicy")
+    public CreateQueueRequestTenantRateLimitPolicy tenantRateLimitPolicy;
+
     /**
      * <p>The duration for which a message stays in the Inactive state after the message is received from the queue. Valid values: 1 to 43200. Unit: seconds. Default value: 30.</p>
      * 
@@ -152,6 +155,14 @@ public class CreateQueueRequest extends TeaModel {
     }
     public java.util.List<CreateQueueRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateQueueRequest setTenantRateLimitPolicy(CreateQueueRequestTenantRateLimitPolicy tenantRateLimitPolicy) {
+        this.tenantRateLimitPolicy = tenantRateLimitPolicy;
+        return this;
+    }
+    public CreateQueueRequestTenantRateLimitPolicy getTenantRateLimitPolicy() {
+        return this.tenantRateLimitPolicy;
     }
 
     public CreateQueueRequest setVisibilityTimeout(Long visibilityTimeout) {
@@ -259,6 +270,36 @@ public class CreateQueueRequest extends TeaModel {
         }
         public String getValue() {
             return this.value;
+        }
+
+    }
+
+    public static class CreateQueueRequestTenantRateLimitPolicy extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        @NameInMap("MaxReceivesPerSecond")
+        public Integer maxReceivesPerSecond;
+
+        public static CreateQueueRequestTenantRateLimitPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateQueueRequestTenantRateLimitPolicy self = new CreateQueueRequestTenantRateLimitPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateQueueRequestTenantRateLimitPolicy setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public CreateQueueRequestTenantRateLimitPolicy setMaxReceivesPerSecond(Integer maxReceivesPerSecond) {
+            this.maxReceivesPerSecond = maxReceivesPerSecond;
+            return this;
+        }
+        public Integer getMaxReceivesPerSecond() {
+            return this.maxReceivesPerSecond;
         }
 
     }
