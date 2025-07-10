@@ -3,7 +3,7 @@ package com.aliyun.appstream_center20210901.models;
 
 import com.aliyun.tea.*;
 
-public class RenewAppInstanceGroupRequest extends TeaModel {
+public class RenewAppInstanceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The ID of the delivery group.</p>
      * <p>This parameter is required.</p>
@@ -91,14 +91,14 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
     public String renewMode;
 
     @NameInMap("RenewNodes")
-    public java.util.List<String> renewNodes;
+    public String renewNodesShrink;
 
-    public static RenewAppInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        RenewAppInstanceGroupRequest self = new RenewAppInstanceGroupRequest();
+    public static RenewAppInstanceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        RenewAppInstanceGroupShrinkRequest self = new RenewAppInstanceGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public RenewAppInstanceGroupRequest setAppInstanceGroupId(String appInstanceGroupId) {
+    public RenewAppInstanceGroupShrinkRequest setAppInstanceGroupId(String appInstanceGroupId) {
         this.appInstanceGroupId = appInstanceGroupId;
         return this;
     }
@@ -106,7 +106,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.appInstanceGroupId;
     }
 
-    public RenewAppInstanceGroupRequest setAutoPay(Boolean autoPay) {
+    public RenewAppInstanceGroupShrinkRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
     }
@@ -114,7 +114,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public RenewAppInstanceGroupRequest setPeriod(Integer period) {
+    public RenewAppInstanceGroupShrinkRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
@@ -122,7 +122,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.period;
     }
 
-    public RenewAppInstanceGroupRequest setPeriodUnit(String periodUnit) {
+    public RenewAppInstanceGroupShrinkRequest setPeriodUnit(String periodUnit) {
         this.periodUnit = periodUnit;
         return this;
     }
@@ -130,7 +130,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public RenewAppInstanceGroupRequest setProductType(String productType) {
+    public RenewAppInstanceGroupShrinkRequest setProductType(String productType) {
         this.productType = productType;
         return this;
     }
@@ -138,7 +138,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.productType;
     }
 
-    public RenewAppInstanceGroupRequest setPromotionId(String promotionId) {
+    public RenewAppInstanceGroupShrinkRequest setPromotionId(String promotionId) {
         this.promotionId = promotionId;
         return this;
     }
@@ -146,7 +146,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.promotionId;
     }
 
-    public RenewAppInstanceGroupRequest setRenewAmount(Integer renewAmount) {
+    public RenewAppInstanceGroupShrinkRequest setRenewAmount(Integer renewAmount) {
         this.renewAmount = renewAmount;
         return this;
     }
@@ -154,7 +154,7 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.renewAmount;
     }
 
-    public RenewAppInstanceGroupRequest setRenewMode(String renewMode) {
+    public RenewAppInstanceGroupShrinkRequest setRenewMode(String renewMode) {
         this.renewMode = renewMode;
         return this;
     }
@@ -162,12 +162,12 @@ public class RenewAppInstanceGroupRequest extends TeaModel {
         return this.renewMode;
     }
 
-    public RenewAppInstanceGroupRequest setRenewNodes(java.util.List<String> renewNodes) {
-        this.renewNodes = renewNodes;
+    public RenewAppInstanceGroupShrinkRequest setRenewNodesShrink(String renewNodesShrink) {
+        this.renewNodesShrink = renewNodesShrink;
         return this;
     }
-    public java.util.List<String> getRenewNodes() {
-        return this.renewNodes;
+    public String getRenewNodesShrink() {
+        return this.renewNodesShrink;
     }
 
 }

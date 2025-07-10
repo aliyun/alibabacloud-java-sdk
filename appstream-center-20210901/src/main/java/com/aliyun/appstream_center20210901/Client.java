@@ -2053,12 +2053,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Renews a delivery group.</p>
      * 
-     * @param request RenewAppInstanceGroupRequest
+     * @param tmpReq RenewAppInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return RenewAppInstanceGroupResponse
      */
-    public RenewAppInstanceGroupResponse renewAppInstanceGroupWithOptions(RenewAppInstanceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public RenewAppInstanceGroupResponse renewAppInstanceGroupWithOptions(RenewAppInstanceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RenewAppInstanceGroupShrinkRequest request = new RenewAppInstanceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.renewNodes)) {
+            request.renewNodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.renewNodes, "RenewNodes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appInstanceGroupId)) {
             query.put("AppInstanceGroupId", request.appInstanceGroupId);
@@ -2082,6 +2088,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.promotionId)) {
             query.put("PromotionId", request.promotionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewAmount)) {
+            query.put("RenewAmount", request.renewAmount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewMode)) {
+            query.put("RenewMode", request.renewMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renewNodesShrink)) {
+            query.put("RenewNodes", request.renewNodesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
