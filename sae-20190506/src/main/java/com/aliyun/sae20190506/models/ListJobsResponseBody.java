@@ -288,6 +288,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Failed")
         public Long failed;
 
+        @NameInMap("ImageUrl")
+        public String imageUrl;
+
         /**
          * <p>Indicates whether the latest change order was executed. Valid values:</p>
          * <ul>
@@ -459,6 +462,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Long getFailed() {
             return this.failed;
+        }
+
+        public ListJobsResponseBodyDataApplications setImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+        public String getImageUrl() {
+            return this.imageUrl;
         }
 
         public ListJobsResponseBodyDataApplications setLastChangeorderState(String lastChangeorderState) {
