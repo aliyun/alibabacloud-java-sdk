@@ -128,6 +128,7 @@ public class EnrichRequest extends TeaModel {
 
         /**
          * <p>arrival city code (capitalized)</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>MFM</p>
@@ -164,6 +165,7 @@ public class EnrichRequest extends TeaModel {
 
         /**
          * <p>departure city code (capitalized)</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>SHA</p>
@@ -173,6 +175,7 @@ public class EnrichRequest extends TeaModel {
 
         /**
          * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-03-10 07:55:00</p>
