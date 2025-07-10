@@ -685,6 +685,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("StatusDetail")
         public String statusDetail;
 
+        @NameInMap("SupportTrialToPrivate")
+        public Boolean supportTrialToPrivate;
+
         /**
          * <p>The custom tags.</p>
          */
@@ -888,6 +891,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
         public String getStatusDetail() {
             return this.statusDetail;
+        }
+
+        public ListServiceInstancesResponseBodyServiceInstances setSupportTrialToPrivate(Boolean supportTrialToPrivate) {
+            this.supportTrialToPrivate = supportTrialToPrivate;
+            return this;
+        }
+        public Boolean getSupportTrialToPrivate() {
+            return this.supportTrialToPrivate;
         }
 
         public ListServiceInstancesResponseBodyServiceInstances setTags(java.util.List<ListServiceInstancesResponseBodyServiceInstancesTags> tags) {

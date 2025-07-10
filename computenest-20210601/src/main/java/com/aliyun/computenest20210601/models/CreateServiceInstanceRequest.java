@@ -140,6 +140,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    @NameInMap("ServiceInstanceId")
+    public String serviceInstanceId;
+
     /**
      * <p>The service version.</p>
      * 
@@ -302,6 +305,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public CreateServiceInstanceRequest setServiceInstanceId(String serviceInstanceId) {
+        this.serviceInstanceId = serviceInstanceId;
+        return this;
+    }
+    public String getServiceInstanceId() {
+        return this.serviceInstanceId;
     }
 
     public CreateServiceInstanceRequest setServiceVersion(String serviceVersion) {
