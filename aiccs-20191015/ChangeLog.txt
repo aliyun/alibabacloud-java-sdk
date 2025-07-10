@@ -1,3 +1,8 @@
+2025-07-10 Version: 2.5.1
+- Update API CreateAiCallTask: add request parameters TaskCps.
+- Update API LlmSmartCall: add request parameters CustomerLineCode.
+
+
 2025-06-05 Version: 2.5.0
 - Support API QueryConversationDetailInfo.
 

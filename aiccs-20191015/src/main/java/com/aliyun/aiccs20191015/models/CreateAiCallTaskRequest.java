@@ -68,6 +68,13 @@ public class CreateAiCallTaskRequest extends TeaModel {
     public String startType;
 
     /**
+     * <strong>example:</strong>
+     * <p>75</p>
+     */
+    @NameInMap("TaskCps")
+    public Long taskCps;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -183,6 +190,14 @@ public class CreateAiCallTaskRequest extends TeaModel {
     }
     public String getStartType() {
         return this.startType;
+    }
+
+    public CreateAiCallTaskRequest setTaskCps(Long taskCps) {
+        this.taskCps = taskCps;
+        return this;
+    }
+    public Long getTaskCps() {
+        return this.taskCps;
     }
 
     public CreateAiCallTaskRequest setTaskName(String taskName) {

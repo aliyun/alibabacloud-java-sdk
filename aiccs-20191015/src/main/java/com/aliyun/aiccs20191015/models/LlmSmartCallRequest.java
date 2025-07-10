@@ -32,6 +32,9 @@ public class LlmSmartCallRequest extends TeaModel {
     @NameInMap("CallerNumber")
     public String callerNumber;
 
+    @NameInMap("CustomerLineCode")
+    public String customerLineCode;
+
     @NameInMap("Extension")
     public String extension;
 
@@ -95,6 +98,14 @@ public class LlmSmartCallRequest extends TeaModel {
     }
     public String getCallerNumber() {
         return this.callerNumber;
+    }
+
+    public LlmSmartCallRequest setCustomerLineCode(String customerLineCode) {
+        this.customerLineCode = customerLineCode;
+        return this;
+    }
+    public String getCustomerLineCode() {
+        return this.customerLineCode;
     }
 
     public LlmSmartCallRequest setExtension(String extension) {

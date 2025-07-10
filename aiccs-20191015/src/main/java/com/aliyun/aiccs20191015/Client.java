@@ -956,6 +956,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("StartType", request.startType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskCps)) {
+            query.put("TaskCps", request.taskCps);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
             query.put("TaskName", request.taskName);
         }
@@ -6375,6 +6379,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.callerNumber)) {
             query.put("CallerNumber", request.callerNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customerLineCode)) {
+            query.put("CustomerLineCode", request.customerLineCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.extension)) {
