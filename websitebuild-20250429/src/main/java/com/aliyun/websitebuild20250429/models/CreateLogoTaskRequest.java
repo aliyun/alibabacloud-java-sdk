@@ -4,6 +4,9 @@ package com.aliyun.websitebuild20250429.models;
 import com.aliyun.tea.*;
 
 public class CreateLogoTaskRequest extends TeaModel {
+    @NameInMap("LogoVersion")
+    public String logoVersion;
+
     @NameInMap("NegativePrompt")
     public String negativePrompt;
 
@@ -17,16 +20,17 @@ public class CreateLogoTaskRequest extends TeaModel {
     @NameInMap("Prompt")
     public String prompt;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1.0.2</p>
-     */
-    @NameInMap("Version")
-    public String version;
-
     public static CreateLogoTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLogoTaskRequest self = new CreateLogoTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLogoTaskRequest setLogoVersion(String logoVersion) {
+        this.logoVersion = logoVersion;
+        return this;
+    }
+    public String getLogoVersion() {
+        return this.logoVersion;
     }
 
     public CreateLogoTaskRequest setNegativePrompt(String negativePrompt) {
@@ -51,14 +55,6 @@ public class CreateLogoTaskRequest extends TeaModel {
     }
     public String getPrompt() {
         return this.prompt;
-    }
-
-    public CreateLogoTaskRequest setVersion(String version) {
-        this.version = version;
-        return this;
-    }
-    public String getVersion() {
-        return this.version;
     }
 
 }

@@ -37,6 +37,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLogoTaskResponse createLogoTaskWithOptions(CreateLogoTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.logoVersion)) {
+            query.put("LogoVersion", request.logoVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.negativePrompt)) {
             query.put("NegativePrompt", request.negativePrompt);
         }
@@ -47,10 +51,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
             query.put("Prompt", request.prompt);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
-            query.put("Version", request.version);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
