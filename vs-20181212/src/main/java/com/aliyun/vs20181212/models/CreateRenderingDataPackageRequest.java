@@ -14,6 +14,9 @@ public class CreateRenderingDataPackageRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("InstanceBillingCycle")
+    public String instanceBillingCycle;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -42,6 +45,14 @@ public class CreateRenderingDataPackageRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateRenderingDataPackageRequest setInstanceBillingCycle(String instanceBillingCycle) {
+        this.instanceBillingCycle = instanceBillingCycle;
+        return this;
+    }
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
     }
 
     public CreateRenderingDataPackageRequest setRenderingInstanceId(String renderingInstanceId) {

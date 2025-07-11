@@ -1822,6 +1822,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceBillingCycle)) {
+            query.put("InstanceBillingCycle", request.instanceBillingCycle);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
             query.put("RenderingInstanceId", request.renderingInstanceId);
         }
