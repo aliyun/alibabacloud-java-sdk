@@ -64,7 +64,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
          * <p>100</p>
          */
         @NameInMap("Ndv")
-        public Float ndv;
+        public Double ndv;
 
         public static DescribeSQLTuningAdvicesResponseBodyDataColumns build(java.util.Map<String, ?> map) throws Exception {
             DescribeSQLTuningAdvicesResponseBodyDataColumns self = new DescribeSQLTuningAdvicesResponseBodyDataColumns();
@@ -95,11 +95,11 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             return this.minValue;
         }
 
-        public DescribeSQLTuningAdvicesResponseBodyDataColumns setNdv(Float ndv) {
+        public DescribeSQLTuningAdvicesResponseBodyDataColumns setNdv(Double ndv) {
             this.ndv = ndv;
             return this;
         }
-        public Float getNdv() {
+        public Double getNdv() {
             return this.ndv;
         }
 

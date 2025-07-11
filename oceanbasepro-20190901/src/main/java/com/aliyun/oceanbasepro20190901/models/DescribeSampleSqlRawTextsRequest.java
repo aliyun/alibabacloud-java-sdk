@@ -37,7 +37,7 @@ public class DescribeSampleSqlRawTextsRequest extends TeaModel {
      * <p>20</p>
      */
     @NameInMap("Limit")
-    public String limit;
+    public Integer limit;
 
     /**
      * <p>SQL ID。</p>
@@ -109,11 +109,11 @@ public class DescribeSampleSqlRawTextsRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public DescribeSampleSqlRawTextsRequest setLimit(String limit) {
+    public DescribeSampleSqlRawTextsRequest setLimit(Integer limit) {
         this.limit = limit;
         return this;
     }
-    public String getLimit() {
+    public Integer getLimit() {
         return this.limit;
     }
 

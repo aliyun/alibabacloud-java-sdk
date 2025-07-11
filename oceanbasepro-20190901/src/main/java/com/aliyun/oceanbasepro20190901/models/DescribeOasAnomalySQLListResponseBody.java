@@ -101,7 +101,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>25</p>
          */
         @NameInMap("AvgLogicalReads")
-        public Float avgLogicalReads;
+        public Double avgLogicalReads;
 
         /**
          * <p>The average number of retries.</p>
@@ -110,7 +110,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>4</p>
          */
         @NameInMap("AvgRetryCount")
-        public Float avgRetryCount;
+        public Double avgRetryCount;
 
         /**
          * <p>The total CPU time.</p>
@@ -220,7 +220,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>11452126.36</p>
          */
         @NameInMap("SumElapsedTime")
-        public String sumElapsedTime;
+        public Double sumElapsedTime;
 
         /**
          * <p>The total number of retries.</p>
@@ -229,7 +229,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>6</p>
          */
         @NameInMap("SumRetryCount")
-        public Float sumRetryCount;
+        public Double sumRetryCount;
 
         /**
          * <p>The username.</p>
@@ -277,19 +277,19 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             return this.avgGetPlanTime;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyDataSqlList setAvgLogicalReads(Float avgLogicalReads) {
+        public DescribeOasAnomalySQLListResponseBodyDataSqlList setAvgLogicalReads(Double avgLogicalReads) {
             this.avgLogicalReads = avgLogicalReads;
             return this;
         }
-        public Float getAvgLogicalReads() {
+        public Double getAvgLogicalReads() {
             return this.avgLogicalReads;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyDataSqlList setAvgRetryCount(Float avgRetryCount) {
+        public DescribeOasAnomalySQLListResponseBodyDataSqlList setAvgRetryCount(Double avgRetryCount) {
             this.avgRetryCount = avgRetryCount;
             return this;
         }
-        public Float getAvgRetryCount() {
+        public Double getAvgRetryCount() {
             return this.avgRetryCount;
         }
 
@@ -381,19 +381,19 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             return this.sumDbTime;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyDataSqlList setSumElapsedTime(String sumElapsedTime) {
+        public DescribeOasAnomalySQLListResponseBodyDataSqlList setSumElapsedTime(Double sumElapsedTime) {
             this.sumElapsedTime = sumElapsedTime;
             return this;
         }
-        public String getSumElapsedTime() {
+        public Double getSumElapsedTime() {
             return this.sumElapsedTime;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyDataSqlList setSumRetryCount(Float sumRetryCount) {
+        public DescribeOasAnomalySQLListResponseBodyDataSqlList setSumRetryCount(Double sumRetryCount) {
             this.sumRetryCount = sumRetryCount;
             return this;
         }
-        public Float getSumRetryCount() {
+        public Double getSumRetryCount() {
             return this.sumRetryCount;
         }
 
@@ -451,7 +451,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>25</p>
          */
         @NameInMap("AvgLogicalReads")
-        public Float avgLogicalReads;
+        public Double avgLogicalReads;
 
         /**
          * <p>The average number of retries.</p>
@@ -460,7 +460,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>4</p>
          */
         @NameInMap("AvgRetryCount")
-        public Float avgRetryCount;
+        public Double avgRetryCount;
 
         /**
          * <p>CPU time of the suspicious SQL.</p>
@@ -522,7 +522,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>2023-04-12T04:38:38Z</p>
          */
         @NameInMap("LastExecutedTime")
-        public Double lastExecutedTime;
+        public String lastExecutedTime;
 
         /**
          * <p>Risk level.</p>
@@ -579,7 +579,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>11452126.36</p>
          */
         @NameInMap("SumElapsedTime")
-        public String sumElapsedTime;
+        public Double sumElapsedTime;
 
         /**
          * <p>The total number of retries.</p>
@@ -588,7 +588,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
          * <p>6</p>
          */
         @NameInMap("SumRetryCount")
-        public Float sumRetryCount;
+        public Double sumRetryCount;
 
         /**
          * <p>Username.</p>
@@ -636,19 +636,19 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             return this.avgGetPlanTime;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyData setAvgLogicalReads(Float avgLogicalReads) {
+        public DescribeOasAnomalySQLListResponseBodyData setAvgLogicalReads(Double avgLogicalReads) {
             this.avgLogicalReads = avgLogicalReads;
             return this;
         }
-        public Float getAvgLogicalReads() {
+        public Double getAvgLogicalReads() {
             return this.avgLogicalReads;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyData setAvgRetryCount(Float avgRetryCount) {
+        public DescribeOasAnomalySQLListResponseBodyData setAvgRetryCount(Double avgRetryCount) {
             this.avgRetryCount = avgRetryCount;
             return this;
         }
-        public Float getAvgRetryCount() {
+        public Double getAvgRetryCount() {
             return this.avgRetryCount;
         }
 
@@ -700,11 +700,11 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             return this.executions;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyData setLastExecutedTime(Double lastExecutedTime) {
+        public DescribeOasAnomalySQLListResponseBodyData setLastExecutedTime(String lastExecutedTime) {
             this.lastExecutedTime = lastExecutedTime;
             return this;
         }
-        public Double getLastExecutedTime() {
+        public String getLastExecutedTime() {
             return this.lastExecutedTime;
         }
 
@@ -756,19 +756,19 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             return this.sumDbTime;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyData setSumElapsedTime(String sumElapsedTime) {
+        public DescribeOasAnomalySQLListResponseBodyData setSumElapsedTime(Double sumElapsedTime) {
             this.sumElapsedTime = sumElapsedTime;
             return this;
         }
-        public String getSumElapsedTime() {
+        public Double getSumElapsedTime() {
             return this.sumElapsedTime;
         }
 
-        public DescribeOasAnomalySQLListResponseBodyData setSumRetryCount(Float sumRetryCount) {
+        public DescribeOasAnomalySQLListResponseBodyData setSumRetryCount(Double sumRetryCount) {
             this.sumRetryCount = sumRetryCount;
             return this;
         }
-        public Float getSumRetryCount() {
+        public Double getSumRetryCount() {
             return this.sumRetryCount;
         }
 

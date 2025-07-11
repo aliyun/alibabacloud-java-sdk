@@ -180,7 +180,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         public Long executions;
 
         @NameInMap("FailCount")
-        public Double failCount;
+        public Long failCount;
 
         @NameInMap("FailPercentage")
         public Double failPercentage;
@@ -222,13 +222,13 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         public Double missPlanPercentage;
 
         @NameInMap("MissPlans")
-        public Double missPlans;
+        public Long missPlans;
 
         @NameInMap("RemotePlanPercentage")
         public Double remotePlanPercentage;
 
         @NameInMap("RemotePlans")
-        public Double remotePlans;
+        public Long remotePlans;
 
         @NameInMap("RetCode4012Count")
         public Long retCode4012Count;
@@ -252,7 +252,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         public Long retCode6002Count;
 
         @NameInMap("RetryCount")
-        public Double retryCount;
+        public Long retryCount;
 
         @NameInMap("RpcCount")
         public Double rpcCount;
@@ -598,11 +598,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.executions;
         }
 
-        public DescribeOasTopSQLListResponseBodyDataSqlList setFailCount(Double failCount) {
+        public DescribeOasTopSQLListResponseBodyDataSqlList setFailCount(Long failCount) {
             this.failCount = failCount;
             return this;
         }
-        public Double getFailCount() {
+        public Long getFailCount() {
             return this.failCount;
         }
 
@@ -710,11 +710,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.missPlanPercentage;
         }
 
-        public DescribeOasTopSQLListResponseBodyDataSqlList setMissPlans(Double missPlans) {
+        public DescribeOasTopSQLListResponseBodyDataSqlList setMissPlans(Long missPlans) {
             this.missPlans = missPlans;
             return this;
         }
-        public Double getMissPlans() {
+        public Long getMissPlans() {
             return this.missPlans;
         }
 
@@ -726,11 +726,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.remotePlanPercentage;
         }
 
-        public DescribeOasTopSQLListResponseBodyDataSqlList setRemotePlans(Double remotePlans) {
+        public DescribeOasTopSQLListResponseBodyDataSqlList setRemotePlans(Long remotePlans) {
             this.remotePlans = remotePlans;
             return this;
         }
-        public Double getRemotePlans() {
+        public Long getRemotePlans() {
             return this.remotePlans;
         }
 
@@ -790,11 +790,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.retCode6002Count;
         }
 
-        public DescribeOasTopSQLListResponseBodyDataSqlList setRetryCount(Double retryCount) {
+        public DescribeOasTopSQLListResponseBodyDataSqlList setRetryCount(Long retryCount) {
             this.retryCount = retryCount;
             return this;
         }
-        public Double getRetryCount() {
+        public Long getRetryCount() {
             return this.retryCount;
         }
 
@@ -1268,7 +1268,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          * <p>0</p>
          */
         @NameInMap("FailCount")
-        public Double failCount;
+        public Long failCount;
 
         /**
          * <p>Error percentage during the execution period.</p>
@@ -1397,10 +1397,10 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          * <p>0</p>
          */
         @NameInMap("MissPlans")
-        public Double missPlans;
+        public Long missPlans;
 
         @NameInMap("ObDbId")
-        public String obDbId;
+        public Long obDbId;
 
         /**
          * <p>Remote plan percentage during the execution period.</p>
@@ -1418,7 +1418,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          * <p>0</p>
          */
         @NameInMap("RemotePlans")
-        public Double remotePlans;
+        public Long remotePlans;
 
         /**
          * <p>Number of occurrences of the code 4012 during the execution period.</p>
@@ -1490,7 +1490,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          * <p>0</p>
          */
         @NameInMap("RetryCount")
-        public Double retryCount;
+        public Long retryCount;
 
         /**
          * <p>RPC count during the execution period.</p>
@@ -1948,11 +1948,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.executions;
         }
 
-        public DescribeOasTopSQLListResponseBodyData setFailCount(Double failCount) {
+        public DescribeOasTopSQLListResponseBodyData setFailCount(Long failCount) {
             this.failCount = failCount;
             return this;
         }
-        public Double getFailCount() {
+        public Long getFailCount() {
             return this.failCount;
         }
 
@@ -2068,19 +2068,19 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.missPlanPercentage;
         }
 
-        public DescribeOasTopSQLListResponseBodyData setMissPlans(Double missPlans) {
+        public DescribeOasTopSQLListResponseBodyData setMissPlans(Long missPlans) {
             this.missPlans = missPlans;
             return this;
         }
-        public Double getMissPlans() {
+        public Long getMissPlans() {
             return this.missPlans;
         }
 
-        public DescribeOasTopSQLListResponseBodyData setObDbId(String obDbId) {
+        public DescribeOasTopSQLListResponseBodyData setObDbId(Long obDbId) {
             this.obDbId = obDbId;
             return this;
         }
-        public String getObDbId() {
+        public Long getObDbId() {
             return this.obDbId;
         }
 
@@ -2092,11 +2092,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.remotePlanPercentage;
         }
 
-        public DescribeOasTopSQLListResponseBodyData setRemotePlans(Double remotePlans) {
+        public DescribeOasTopSQLListResponseBodyData setRemotePlans(Long remotePlans) {
             this.remotePlans = remotePlans;
             return this;
         }
-        public Double getRemotePlans() {
+        public Long getRemotePlans() {
             return this.remotePlans;
         }
 
@@ -2156,11 +2156,11 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             return this.retCode6002Count;
         }
 
-        public DescribeOasTopSQLListResponseBodyData setRetryCount(Double retryCount) {
+        public DescribeOasTopSQLListResponseBodyData setRetryCount(Long retryCount) {
             this.retryCount = retryCount;
             return this;
         }
-        public Double getRetryCount() {
+        public Long getRetryCount() {
             return this.retryCount;
         }
 

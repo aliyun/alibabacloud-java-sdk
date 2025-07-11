@@ -54,13 +54,13 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         public String database;
 
         @NameInMap("DynamicSql")
-        public String dynamicSql;
+        public Boolean dynamicSql;
 
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
         @NameInMap("PlanId")
-        public String planId;
+        public Long planId;
 
         @NameInMap("ProxySessId")
         public String proxySessId;
@@ -126,11 +126,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.database;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setDynamicSql(String dynamicSql) {
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setDynamicSql(Boolean dynamicSql) {
             this.dynamicSql = dynamicSql;
             return this;
         }
-        public String getDynamicSql() {
+        public Boolean getDynamicSql() {
             return this.dynamicSql;
         }
 
@@ -142,11 +142,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.executeTime;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setPlanId(String planId) {
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList setPlanId(Long planId) {
             this.planId = planId;
             return this;
         }
-        public String getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -237,18 +237,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DynamicSql")
-        public String dynamicSql;
+        public Boolean dynamicSql;
 
         @NameInMap("ExecuteTime")
         public Long executeTime;
 
         @NameInMap("PlanId")
-        public String planId;
+        public Long planId;
 
         @NameInMap("ProcessSqlList")
         public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlListsProcessSqlList> processSqlList;
@@ -317,11 +313,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.database;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setDynamicSql(String dynamicSql) {
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setDynamicSql(Boolean dynamicSql) {
             this.dynamicSql = dynamicSql;
             return this;
         }
-        public String getDynamicSql() {
+        public Boolean getDynamicSql() {
             return this.dynamicSql;
         }
 
@@ -333,11 +329,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.executeTime;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setPlanId(String planId) {
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists setPlanId(Long planId) {
             this.planId = planId;
             return this;
         }
-        public String getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -463,12 +459,8 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         @NameInMap("Database")
         public String database;
 
-        /**
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
         @NameInMap("DynamicSql")
-        public String dynamicSql;
+        public Boolean dynamicSql;
 
         /**
          * <p>The definition of this parameter varies based on whether the SQL statement is executed.</p>
@@ -490,7 +482,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
          * <p>1898</p>
          */
         @NameInMap("PlanId")
-        public String planId;
+        public Long planId;
 
         @NameInMap("ProcessSqlLists")
         public java.util.List<DescribeProcessStatsCompositionResponseBodyDataAllProcessListProcessSqlLists> processSqlLists;
@@ -616,11 +608,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.database;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setDynamicSql(String dynamicSql) {
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setDynamicSql(Boolean dynamicSql) {
             this.dynamicSql = dynamicSql;
             return this;
         }
-        public String getDynamicSql() {
+        public Boolean getDynamicSql() {
             return this.dynamicSql;
         }
 
@@ -632,11 +624,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.executeTime;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setPlanId(String planId) {
+        public DescribeProcessStatsCompositionResponseBodyDataAllProcessList setPlanId(Long planId) {
             this.planId = planId;
             return this;
         }
-        public String getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -1016,7 +1008,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
          * <p>60</p>
          */
         @NameInMap("ActiveSessionCount")
-        public Integer activeSessionCount;
+        public Long activeSessionCount;
 
         /**
          * <p>The details of all sessions.</p>
@@ -1031,7 +1023,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
          * <p>30</p>
          */
         @NameInMap("IdleSessionCount")
-        public Integer idleSessionCount;
+        public Long idleSessionCount;
 
         /**
          * <p>The version of OceanBase Database.</p>
@@ -1055,18 +1047,18 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
          * <p>100</p>
          */
         @NameInMap("TotalSessionCount")
-        public Integer totalSessionCount;
+        public Long totalSessionCount;
 
         public static DescribeProcessStatsCompositionResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeProcessStatsCompositionResponseBodyData self = new DescribeProcessStatsCompositionResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public DescribeProcessStatsCompositionResponseBodyData setActiveSessionCount(Integer activeSessionCount) {
+        public DescribeProcessStatsCompositionResponseBodyData setActiveSessionCount(Long activeSessionCount) {
             this.activeSessionCount = activeSessionCount;
             return this;
         }
-        public Integer getActiveSessionCount() {
+        public Long getActiveSessionCount() {
             return this.activeSessionCount;
         }
 
@@ -1078,11 +1070,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.allProcessList;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyData setIdleSessionCount(Integer idleSessionCount) {
+        public DescribeProcessStatsCompositionResponseBodyData setIdleSessionCount(Long idleSessionCount) {
             this.idleSessionCount = idleSessionCount;
             return this;
         }
-        public Integer getIdleSessionCount() {
+        public Long getIdleSessionCount() {
             return this.idleSessionCount;
         }
 
@@ -1102,11 +1094,11 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return this.sessionStatistics;
         }
 
-        public DescribeProcessStatsCompositionResponseBodyData setTotalSessionCount(Integer totalSessionCount) {
+        public DescribeProcessStatsCompositionResponseBodyData setTotalSessionCount(Long totalSessionCount) {
             this.totalSessionCount = totalSessionCount;
             return this;
         }
-        public Integer getTotalSessionCount() {
+        public Long getTotalSessionCount() {
             return this.totalSessionCount;
         }
 
