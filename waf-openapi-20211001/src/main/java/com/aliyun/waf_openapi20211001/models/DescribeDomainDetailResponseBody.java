@@ -28,6 +28,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     @NameInMap("Domain")
     public String domain;
 
+    @NameInMap("DomainId")
+    public String domainId;
+
     /**
      * <p>The configurations of the listeners.</p>
      */
@@ -78,7 +81,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("Status")
-    public Long status;
+    public Integer status;
 
     public static DescribeDomainDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeDomainDetailResponseBody self = new DescribeDomainDetailResponseBody();
@@ -107,6 +110,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DescribeDomainDetailResponseBody setDomainId(String domainId) {
+        this.domainId = domainId;
+        return this;
+    }
+    public String getDomainId() {
+        return this.domainId;
     }
 
     public DescribeDomainDetailResponseBody setListen(DescribeDomainDetailResponseBodyListen listen) {
@@ -149,11 +160,11 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         return this.SM2CertDetail;
     }
 
-    public DescribeDomainDetailResponseBody setStatus(Long status) {
+    public DescribeDomainDetailResponseBody setStatus(Integer status) {
         this.status = status;
         return this;
     }
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.status;
     }
 

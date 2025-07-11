@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeDomainDetailRequest extends TeaModel {
     /**
      * <p>The domain name that you want to query.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
      */
     @NameInMap("Domain")
     public String domain;
+
+    @NameInMap("DomainId")
+    public String domainId;
 
     /**
      * <p>The ID of the WAF instance.</p>
@@ -51,6 +53,14 @@ public class DescribeDomainDetailRequest extends TeaModel {
     }
     public String getDomain() {
         return this.domain;
+    }
+
+    public DescribeDomainDetailRequest setDomainId(String domainId) {
+        this.domainId = domainId;
+        return this;
+    }
+    public String getDomainId() {
+        return this.domainId;
     }
 
     public DescribeDomainDetailRequest setInstanceId(String instanceId) {

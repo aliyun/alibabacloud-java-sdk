@@ -19,7 +19,6 @@ public class DeleteDomainRequest extends TeaModel {
 
     /**
      * <p>The domain name that you want to delete.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>

@@ -204,6 +204,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("DomainId")
+        public String domainId;
+
         /**
          * <p>The configurations of the listeners.</p>
          */
@@ -262,6 +265,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public DescribeDomainsResponseBodyDomains setDomainId(String domainId) {
+            this.domainId = domainId;
+            return this;
+        }
+        public String getDomainId() {
+            return this.domainId;
         }
 
         public DescribeDomainsResponseBodyDomains setListenPorts(DescribeDomainsResponseBodyDomainsListenPorts listenPorts) {
