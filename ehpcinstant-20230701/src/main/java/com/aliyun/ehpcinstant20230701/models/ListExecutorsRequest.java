@@ -54,6 +54,9 @@ public class ListExecutorsRequest extends TeaModel {
         @NameInMap("ExecutorIds")
         public java.util.List<String> executorIds;
 
+        @NameInMap("Image")
+        public String image;
+
         @NameInMap("IpAddresses")
         public java.util.List<String> ipAddresses;
 
@@ -81,6 +84,9 @@ public class ListExecutorsRequest extends TeaModel {
         @NameInMap("TimeCreatedBefore")
         public Integer timeCreatedBefore;
 
+        @NameInMap("VswitchId")
+        public String vswitchId;
+
         public static ListExecutorsRequestFilter build(java.util.Map<String, ?> map) throws Exception {
             ListExecutorsRequestFilter self = new ListExecutorsRequestFilter();
             return TeaModel.build(map, self);
@@ -92,6 +98,14 @@ public class ListExecutorsRequest extends TeaModel {
         }
         public java.util.List<String> getExecutorIds() {
             return this.executorIds;
+        }
+
+        public ListExecutorsRequestFilter setImage(String image) {
+            this.image = image;
+            return this;
+        }
+        public String getImage() {
+            return this.image;
         }
 
         public ListExecutorsRequestFilter setIpAddresses(java.util.List<String> ipAddresses) {
@@ -132,6 +146,14 @@ public class ListExecutorsRequest extends TeaModel {
         }
         public Integer getTimeCreatedBefore() {
             return this.timeCreatedBefore;
+        }
+
+        public ListExecutorsRequestFilter setVswitchId(String vswitchId) {
+            this.vswitchId = vswitchId;
+            return this;
+        }
+        public String getVswitchId() {
+            return this.vswitchId;
         }
 
     }
