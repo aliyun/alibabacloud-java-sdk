@@ -146,7 +146,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public java.util.Map<String, ?> authInternationalRateEligibility;
 
         /**
-         * <p>The ID of the business platform.</p>
+         * <p>The business ID.</p>
          * 
          * <strong>example:</strong>
          * <p>19293988***</p>
@@ -155,7 +155,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String businessId;
 
         /**
-         * <p>The name of the business platform.</p>
+         * <p>The business name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
@@ -182,6 +182,8 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <p>The Marketing Messaging Lite status.</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */

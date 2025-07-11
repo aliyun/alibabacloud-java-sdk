@@ -3,7 +3,7 @@ package com.aliyun.cams20200606.models;
 
 import com.aliyun.tea.*;
 
-public class BeeBotChatResponse extends TeaModel {
+public class FlowUnbindPhoneResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class BeeBotChatResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public BeeBotChatResponseBody body;
+    public FlowUnbindPhoneResponseBody body;
 
-    public static BeeBotChatResponse build(java.util.Map<String, ?> map) throws Exception {
-        BeeBotChatResponse self = new BeeBotChatResponse();
+    public static FlowUnbindPhoneResponse build(java.util.Map<String, ?> map) throws Exception {
+        FlowUnbindPhoneResponse self = new FlowUnbindPhoneResponse();
         return TeaModel.build(map, self);
     }
 
-    public BeeBotChatResponse setHeaders(java.util.Map<String, String> headers) {
+    public FlowUnbindPhoneResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class BeeBotChatResponse extends TeaModel {
         return this.headers;
     }
 
-    public BeeBotChatResponse setStatusCode(Integer statusCode) {
+    public FlowUnbindPhoneResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class BeeBotChatResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public BeeBotChatResponse setBody(BeeBotChatResponseBody body) {
+    public FlowUnbindPhoneResponse setBody(FlowUnbindPhoneResponseBody body) {
         this.body = body;
         return this;
     }
-    public BeeBotChatResponseBody getBody() {
+    public FlowUnbindPhoneResponseBody getBody() {
         return this.body;
     }
 

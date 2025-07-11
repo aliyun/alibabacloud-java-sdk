@@ -27,7 +27,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of the templates.</p>
+     * <p>The message templates.</p>
      */
     @NameInMap("ListTemplate")
     public java.util.List<ListChatappTemplateResponseBodyListTemplate> listTemplate;
@@ -51,6 +51,12 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -58,7 +64,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -129,11 +135,11 @@ public class ListChatappTemplateResponseBody extends TeaModel {
 
     public static class ListChatappTemplateResponseBodyListTemplate extends TeaModel {
         /**
-         * <p>The review state of the message template. Valid values:</p>
+         * <p>The review state of the template. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The message template is approved.</li>
-         * <li><strong>fail</strong>: The message template is rejected.</li>
-         * <li><strong>auditing</strong>: The message template is being reviewed.</li>
+         * <li><strong>pass</strong>: The template is approved.</li>
+         * <li><strong>fail</strong>: The template is rejected.</li>
+         * <li><strong>auditing</strong>: The template is being reviewed.</li>
          * <li><strong>unaudit</strong>: The review is suspended.</li>
          * </ul>
          * 
@@ -144,23 +150,23 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public String auditStatus;
 
         /**
-         * <p>The category of the WhatsApp template. Valid values:</p>
+         * <p>The category of the WhatsApp message template. Valid values:</p>
          * <ul>
-         * <li><strong>UTILITY</strong>: utility template</li>
-         * <li><strong>MARKETING</strong>: marketing template</li>
-         * <li><strong>AUTHENTICATION</strong>: authentication template</li>
+         * <li><strong>UTILITY</strong></li>
+         * <li><strong>MARKETING</strong></li>
+         * <li><strong>AUTHENTICATION</strong></li>
          * </ul>
          * <p>The category of the Viber template. Valid values:</p>
          * <ul>
          * <li><strong>text</strong>: template that contains only text</li>
-         * <li><strong>image</strong>: template that contains only an image</li>
-         * <li><strong>text_image_button</strong>: template that contains text, an image, and a button</li>
-         * <li><strong>text_button</strong>: template that contains text and a button</li>
-         * <li><strong>document</strong>: template that contains only a document</li>
-         * <li><strong>video</strong>: template that contains only a video</li>
-         * <li><strong>text_video</strong>: template that contains text and a video</li>
-         * <li><strong>text_video_button</strong>: template that contains text, a video, and a button</li>
-         * <li><strong>text_image</strong>: template that contains text and an image</li>
+         * <li><strong>image</strong>: template that contains only images</li>
+         * <li><strong>text_image_button</strong>: template that contains text, images, and buttons</li>
+         * <li><strong>text_button</strong>: template that contains text and buttons</li>
+         * <li><strong>document</strong>: template that contains only documents</li>
+         * <li><strong>video</strong>: template that contains only videos</li>
+         * <li><strong>text_video</strong>: template that contains text and videos</li>
+         * <li><strong>text_video_button</strong>: template that contains text, videos, and buttons</li>
+         * <li><strong>text_image</strong>: template that contains text and images</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +194,7 @@ public class ListChatappTemplateResponseBody extends TeaModel {
         public Long lastUpdateTime;
 
         /**
-         * <p>The reason for the review failure.</p>
+         * <p>The reason why the template was rejected.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

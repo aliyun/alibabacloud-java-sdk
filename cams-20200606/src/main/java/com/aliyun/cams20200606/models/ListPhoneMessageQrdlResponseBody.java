@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListPhoneMessageQrdlResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>If OK is returned, the request was successful.</p>
      * 
@@ -40,6 +43,14 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     public static ListPhoneMessageQrdlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListPhoneMessageQrdlResponseBody self = new ListPhoneMessageQrdlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListPhoneMessageQrdlResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public ListPhoneMessageQrdlResponseBody setCode(String code) {

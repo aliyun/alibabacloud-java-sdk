@@ -4,6 +4,12 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
+    /**
+     * <p>The details about the access denial.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
@@ -30,7 +36,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Details of the phone numbers.</p>
+     * <p>The phone numbers.</p>
      */
     @NameInMap("PhoneNumbers")
     public java.util.List<ChatappSyncPhoneNumberResponseBodyPhoneNumbers> phoneNumbers;
@@ -45,6 +51,12 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -106,7 +118,14 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
 
     public static class ChatappSyncPhoneNumberResponseBodyPhoneNumbers extends TeaModel {
         /**
-         * <p>The verification status.</p>
+         * <p>The verification state of the phone number.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>REVOKED: The review application is revoked.</li>
+         * <li>MORE_INFORMATION_REQUESTED: More information needs to be provided.</li>
+         * <li>VERIFIED: The phone number passes the verification.</li>
+         * <li>REJECTED: The phone number fails to pass the verification.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VERIFIED</p>
@@ -115,6 +134,8 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
+         * <p>Indicates whether it is a WhatsApp Official Business Account (OBA).</p>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -158,7 +179,13 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>The quality rating of the phone number. Valid values: GREEN, YELLOW, and RED.</p>
+         * <p>The quality rating of the phone number.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RED</li>
+         * <li>YELLOW</li>
+         * <li>GREEN</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>GREEN</p>
@@ -167,7 +194,21 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String qualityRating;
 
         /**
-         * <p>The status of the phone number.</p>
+         * <p>The state of the phone number.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>MIGRATED</li>
+         * <li>FLAGGED</li>
+         * <li>DISCONNECTED</li>
+         * <li>UNVERIFIED</li>
+         * <li>BANNED</li>
+         * <li>RATE_LIMITED</li>
+         * <li>PENDING</li>
+         * <li>CONNECTED</li>
+         * <li>UNKNOWN</li>
+         * <li>DELETED</li>
+         * <li>RESTRICTED</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PENDING</p>
@@ -194,7 +235,7 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
         public String statusQueue;
 
         /**
-         * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
+         * <p>The URL that receives the MO messages.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.alibaba.com/inbound">https://www.alibaba.com/inbound</a></p>

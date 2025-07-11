@@ -51,6 +51,12 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -113,6 +119,13 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
     public static class QueryChatappPhoneNumbersResponseBodyPhoneNumbers extends TeaModel {
         /**
          * <p>The verification status of the phone number.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>REVOKED: The review application is revoked.</li>
+         * <li>MORE_INFORMATION_REQUESTED: More information needs to be provided.</li>
+         * <li>VERIFIED: The phone number passes the verification.</li>
+         * <li>REJECTED: The phone number fails to pass the verification.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VERIFIED</p>
@@ -121,6 +134,8 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String codeVerificationStatus;
 
         /**
+         * <p>Indicates whether it is a WhatsApp Official Business Account (OBA).</p>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -146,7 +161,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String messagingLimitTier;
 
         /**
-         * <p>The status of the business name.</p>
+         * <p>The review status of the name.</p>
          * 
          * <strong>example:</strong>
          * <p>Approval</p>
@@ -155,7 +170,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String nameStatus;
 
         /**
-         * <p>The review status of the new business name.</p>
+         * <p>The review status of the new display name of the enterprise.</p>
          * 
          * <strong>example:</strong>
          * <p>Approval</p>
@@ -176,10 +191,10 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
          * <p>The quality rating of the phone number.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>RED</li>
-         * <li>YELLOW</li>
-         * <li>UNKNOWN</li>
-         * <li>GREEN</li>
+         * <li>RED: low</li>
+         * <li>YELLOW: medium</li>
+         * <li>UNKNOWN: unknown</li>
+         * <li>GREEN: high</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +227,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
+         * <p>The URL that receives the status reports.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ali.com/status">https://ali.com/status</a></p>
@@ -230,7 +245,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String statusQueue;
 
         /**
-         * <p>The callback URL to which MO messages are sent by using HTTP callbacks.</p>
+         * <p>The URL that receives the MO messages.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://ali.com/inbound">https://ali.com/inbound</a></p>
@@ -239,7 +254,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String upCallbackUrl;
 
         /**
-         * <p>The mobile originated (MO) message notification queue.</p>
+         * <p>The mobile originated (MO) message queue.</p>
          * 
          * <strong>example:</strong>
          * <p>Alicom-Queue-****-ChatAppInbound</p>
@@ -248,7 +263,7 @@ public class QueryChatappPhoneNumbersResponseBody extends TeaModel {
         public String upQueue;
 
         /**
-         * <p>The name of the company with which the phone number is associated.</p>
+         * <p>The display name of the enterprise to which the phone number belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba</p>
