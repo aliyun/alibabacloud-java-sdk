@@ -41,6 +41,9 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
     }
 
     public static class DescribeHybridCloudClusterRuleResponseBodyClusterRule extends TeaModel {
+        @NameInMap("ClusterRuleResourceId")
+        public String clusterRuleResourceId;
+
         /**
          * <p>The configuration of the rule.</p>
          * 
@@ -78,6 +81,14 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         public static DescribeHybridCloudClusterRuleResponseBodyClusterRule build(java.util.Map<String, ?> map) throws Exception {
             DescribeHybridCloudClusterRuleResponseBodyClusterRule self = new DescribeHybridCloudClusterRuleResponseBodyClusterRule();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHybridCloudClusterRuleResponseBodyClusterRule setClusterRuleResourceId(String clusterRuleResourceId) {
+            this.clusterRuleResourceId = clusterRuleResourceId;
+            return this;
+        }
+        public String getClusterRuleResourceId() {
+            return this.clusterRuleResourceId;
         }
 
         public DescribeHybridCloudClusterRuleResponseBodyClusterRule setRuleConfig(String ruleConfig) {

@@ -6,13 +6,15 @@ import com.aliyun.tea.*;
 public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     /**
      * <p>The ID of the hybrid cloud cluster.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1018</p>
      */
     @NameInMap("ClusterId")
     public Long clusterId;
+
+    @NameInMap("ClusterRuleResourceId")
+    public String clusterRuleResourceId;
 
     /**
      * <p>The ID of the WAF instance.</p>
@@ -64,7 +66,6 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
      * <li><strong>on</strong>: enables the rule.</li>
      * <li><strong>off</strong>: disables the rule.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>on</p>
@@ -77,7 +78,6 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
      * <ul>
      * <li><strong>pullin</strong>: The traffic redirection rule.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>pullin</p>
@@ -96,6 +96,14 @@ public class ModifyHybridCloudClusterRuleRequest extends TeaModel {
     }
     public Long getClusterId() {
         return this.clusterId;
+    }
+
+    public ModifyHybridCloudClusterRuleRequest setClusterRuleResourceId(String clusterRuleResourceId) {
+        this.clusterRuleResourceId = clusterRuleResourceId;
+        return this;
+    }
+    public String getClusterRuleResourceId() {
+        return this.clusterRuleResourceId;
     }
 
     public ModifyHybridCloudClusterRuleRequest setInstanceId(String instanceId) {
