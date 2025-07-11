@@ -364,6 +364,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @NameInMap("EndUserNames")
         public java.util.List<String> endUserNames;
 
+        @NameInMap("ExpiredTime")
+        public String expiredTime;
+
         /**
          * <p>The image version.</p>
          * 
@@ -592,6 +595,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         }
         public java.util.List<String> getEndUserNames() {
             return this.endUserNames;
+        }
+
+        public DescribeDesktopsInGroupResponseBodyPaidDesktops setExpiredTime(String expiredTime) {
+            this.expiredTime = expiredTime;
+            return this;
+        }
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         public DescribeDesktopsInGroupResponseBodyPaidDesktops setFotaVersion(String fotaVersion) {

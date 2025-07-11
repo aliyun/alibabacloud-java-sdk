@@ -347,6 +347,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        @NameInMap("ExpiredTimes")
+        public java.util.List<String> expiredTimes;
+
         /**
          * <p>The number of GPUs.</p>
          * 
@@ -869,6 +872,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        public DescribeDesktopGroupsResponseBodyDesktopGroups setExpiredTimes(java.util.List<String> expiredTimes) {
+            this.expiredTimes = expiredTimes;
+            return this;
+        }
+        public java.util.List<String> getExpiredTimes() {
+            return this.expiredTimes;
         }
 
         public DescribeDesktopGroupsResponseBodyDesktopGroups setGpuCount(Float gpuCount) {

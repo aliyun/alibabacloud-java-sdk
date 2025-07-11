@@ -93,6 +93,9 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     @NameInMap("ConnectDuration")
     public Long connectDuration;
 
+    @NameInMap("DeleteDuration")
+    public Long deleteDuration;
+
     /**
      * <p>The ID of the cloud computer share.</p>
      * <p>This parameter is required.</p>
@@ -360,6 +363,14 @@ public class ModifyDesktopGroupRequest extends TeaModel {
     }
     public Long getConnectDuration() {
         return this.connectDuration;
+    }
+
+    public ModifyDesktopGroupRequest setDeleteDuration(Long deleteDuration) {
+        this.deleteDuration = deleteDuration;
+        return this;
+    }
+    public Long getDeleteDuration() {
+        return this.deleteDuration;
     }
 
     public ModifyDesktopGroupRequest setDesktopGroupId(String desktopGroupId) {

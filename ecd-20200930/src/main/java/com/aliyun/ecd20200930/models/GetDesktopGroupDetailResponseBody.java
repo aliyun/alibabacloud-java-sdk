@@ -445,6 +445,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
+        @NameInMap("ExpiredTimes")
+        public java.util.List<String> expiredTimes;
+
         /**
          * <p>The number of vGPUs.</p>
          * 
@@ -584,6 +587,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @NameInMap("OfficeSiteType")
         public String officeSiteType;
 
+        @NameInMap("OsType")
+        public String osType;
+
         /**
          * <p>The ID of the cloud computer template.</p>
          * 
@@ -670,6 +676,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         @NameInMap("ProfileFollowSwitch")
         public Boolean profileFollowSwitch;
+
+        @NameInMap("ProtocolType")
+        public String protocolType;
 
         /**
          * <p>The threshold for the ratio of connected sessions, which triggers automatic scaling of cloud computers within the multi-session many-to-many share. To calculate the ratio of connected sessions, use the following formula:</p>
@@ -916,6 +925,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.expiredTime;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setExpiredTimes(java.util.List<String> expiredTimes) {
+            this.expiredTimes = expiredTimes;
+            return this;
+        }
+        public java.util.List<String> getExpiredTimes() {
+            return this.expiredTimes;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setGpuCount(Float gpuCount) {
             this.gpuCount = gpuCount;
             return this;
@@ -1028,6 +1045,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             return this.officeSiteType;
         }
 
+        public GetDesktopGroupDetailResponseBodyDesktops setOsType(String osType) {
+            this.osType = osType;
+            return this;
+        }
+        public String getOsType() {
+            return this.osType;
+        }
+
         public GetDesktopGroupDetailResponseBodyDesktops setOwnBundleId(String ownBundleId) {
             this.ownBundleId = ownBundleId;
             return this;
@@ -1098,6 +1123,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
         public Boolean getProfileFollowSwitch() {
             return this.profileFollowSwitch;
+        }
+
+        public GetDesktopGroupDetailResponseBodyDesktops setProtocolType(String protocolType) {
+            this.protocolType = protocolType;
+            return this;
+        }
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         public GetDesktopGroupDetailResponseBodyDesktops setRatioThreshold(Float ratioThreshold) {

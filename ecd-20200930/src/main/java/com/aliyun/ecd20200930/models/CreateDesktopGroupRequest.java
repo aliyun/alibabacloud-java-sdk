@@ -228,6 +228,9 @@ public class CreateDesktopGroupRequest extends TeaModel {
     @NameInMap("DefaultLanguage")
     public String defaultLanguage;
 
+    @NameInMap("DeleteDuration")
+    public Long deleteDuration;
+
     /**
      * <p>The name of the shared group. The name can be up to 30 characters in length and can contain letters, digits, colons (:), underscores (_), periods (.), and hyphens (-). It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
@@ -827,6 +830,14 @@ public class CreateDesktopGroupRequest extends TeaModel {
     }
     public String getDefaultLanguage() {
         return this.defaultLanguage;
+    }
+
+    public CreateDesktopGroupRequest setDeleteDuration(Long deleteDuration) {
+        this.deleteDuration = deleteDuration;
+        return this;
+    }
+    public Long getDeleteDuration() {
+        return this.deleteDuration;
     }
 
     public CreateDesktopGroupRequest setDesktopGroupName(String desktopGroupName) {
