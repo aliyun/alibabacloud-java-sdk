@@ -3,7 +3,7 @@ package com.aliyun.schedulerx320240624.models;
 
 import com.aliyun.tea.*;
 
-public class ListAppsResponseBody extends TeaModel {
+public class GetAppResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,18 +17,18 @@ public class ListAppsResponseBody extends TeaModel {
      * </ul>
      */
     @NameInMap("Data")
-    public ListAppsResponseBodyData data;
+    public GetAppResponseBodyData data;
 
     /**
      * <strong>example:</strong>
-     * <p>Parameter error: content is null.</p>
+     * <p>Not found: appName not found.</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
      * <strong>example:</strong>
-     * <p>2C3E52FF-CBE9-5C0E-8252-37ACFF1F5EFF</p>
+     * <p>D0DE9C33-992A-580B-89C4-B609A292748D</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,12 +40,12 @@ public class ListAppsResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    public static ListAppsResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ListAppsResponseBody self = new ListAppsResponseBody();
+    public static GetAppResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetAppResponseBody self = new GetAppResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ListAppsResponseBody setCode(Integer code) {
+    public GetAppResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -53,15 +53,15 @@ public class ListAppsResponseBody extends TeaModel {
         return this.code;
     }
 
-    public ListAppsResponseBody setData(ListAppsResponseBodyData data) {
+    public GetAppResponseBody setData(GetAppResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public ListAppsResponseBodyData getData() {
+    public GetAppResponseBodyData getData() {
         return this.data;
     }
 
-    public ListAppsResponseBody setMessage(String message) {
+    public GetAppResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -69,7 +69,7 @@ public class ListAppsResponseBody extends TeaModel {
         return this.message;
     }
 
-    public ListAppsResponseBody setRequestId(String requestId) {
+    public GetAppResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -77,7 +77,7 @@ public class ListAppsResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public ListAppsResponseBody setSuccess(Boolean success) {
+    public GetAppResponseBody setSuccess(Boolean success) {
         this.success = success;
         return this;
     }
@@ -85,9 +85,9 @@ public class ListAppsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class ListAppsResponseBodyDataRecords extends TeaModel {
+    public static class GetAppResponseBodyData extends TeaModel {
         /**
-         * <p>AccessToken</p>
+         * <p>AccessToken。</p>
          * 
          * <strong>example:</strong>
          * <p>2f4ddeab8e344ed68e0402cf9b8502ffv3</p>
@@ -104,7 +104,7 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1827811800555555</p>
+         * <p>18582193685027xx</p>
          */
         @NameInMap("Creator")
         public String creator;
@@ -118,21 +118,21 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>2</p>
          */
         @NameInMap("ExecutorNum")
         public Long executorNum;
 
         /**
          * <strong>example:</strong>
-         * <p>43885</p>
+         * <p>3402</p>
          */
         @NameInMap("Id")
         public Long id;
 
         /**
          * <strong>example:</strong>
-         * <p>10</p>
+         * <p>100</p>
          */
         @NameInMap("JobNum")
         public Integer jobNum;
@@ -142,7 +142,7 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p><a href="http://28.5.128.3:80">http://28.5.128.3:80</a></p>
+         * <p><a href="http://28.***.***.3:80">http://28.***.***.3:80</a></p>
          */
         @NameInMap("Leader")
         public String leader;
@@ -166,17 +166,17 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>1827811800555555</p>
+         * <p>18582193685027xx</p>
          */
         @NameInMap("Updater")
         public String updater;
 
-        public static ListAppsResponseBodyDataRecords build(java.util.Map<String, ?> map) throws Exception {
-            ListAppsResponseBodyDataRecords self = new ListAppsResponseBodyDataRecords();
+        public static GetAppResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetAppResponseBodyData self = new GetAppResponseBodyData();
             return TeaModel.build(map, self);
         }
 
-        public ListAppsResponseBodyDataRecords setAccessToken(String accessToken) {
+        public GetAppResponseBodyData setAccessToken(String accessToken) {
             this.accessToken = accessToken;
             return this;
         }
@@ -184,7 +184,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.accessToken;
         }
 
-        public ListAppsResponseBodyDataRecords setAppName(String appName) {
+        public GetAppResponseBodyData setAppName(String appName) {
             this.appName = appName;
             return this;
         }
@@ -192,7 +192,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.appName;
         }
 
-        public ListAppsResponseBodyDataRecords setCreator(String creator) {
+        public GetAppResponseBodyData setCreator(String creator) {
             this.creator = creator;
             return this;
         }
@@ -200,7 +200,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.creator;
         }
 
-        public ListAppsResponseBodyDataRecords setEnableLog(Boolean enableLog) {
+        public GetAppResponseBodyData setEnableLog(Boolean enableLog) {
             this.enableLog = enableLog;
             return this;
         }
@@ -208,7 +208,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.enableLog;
         }
 
-        public ListAppsResponseBodyDataRecords setExecutorNum(Long executorNum) {
+        public GetAppResponseBodyData setExecutorNum(Long executorNum) {
             this.executorNum = executorNum;
             return this;
         }
@@ -216,7 +216,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.executorNum;
         }
 
-        public ListAppsResponseBodyDataRecords setId(Long id) {
+        public GetAppResponseBodyData setId(Long id) {
             this.id = id;
             return this;
         }
@@ -224,7 +224,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.id;
         }
 
-        public ListAppsResponseBodyDataRecords setJobNum(Integer jobNum) {
+        public GetAppResponseBodyData setJobNum(Integer jobNum) {
             this.jobNum = jobNum;
             return this;
         }
@@ -232,7 +232,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.jobNum;
         }
 
-        public ListAppsResponseBodyDataRecords setLabelRouteStrategy(Integer labelRouteStrategy) {
+        public GetAppResponseBodyData setLabelRouteStrategy(Integer labelRouteStrategy) {
             this.labelRouteStrategy = labelRouteStrategy;
             return this;
         }
@@ -240,7 +240,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.labelRouteStrategy;
         }
 
-        public ListAppsResponseBodyDataRecords setLeader(String leader) {
+        public GetAppResponseBodyData setLeader(String leader) {
             this.leader = leader;
             return this;
         }
@@ -248,7 +248,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.leader;
         }
 
-        public ListAppsResponseBodyDataRecords setMaxConcurrency(Integer maxConcurrency) {
+        public GetAppResponseBodyData setMaxConcurrency(Integer maxConcurrency) {
             this.maxConcurrency = maxConcurrency;
             return this;
         }
@@ -256,7 +256,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.maxConcurrency;
         }
 
-        public ListAppsResponseBodyDataRecords setMaxJobs(Integer maxJobs) {
+        public GetAppResponseBodyData setMaxJobs(Integer maxJobs) {
             this.maxJobs = maxJobs;
             return this;
         }
@@ -264,7 +264,7 @@ public class ListAppsResponseBody extends TeaModel {
             return this.maxJobs;
         }
 
-        public ListAppsResponseBodyDataRecords setTitle(String title) {
+        public GetAppResponseBodyData setTitle(String title) {
             this.title = title;
             return this;
         }
@@ -272,81 +272,12 @@ public class ListAppsResponseBody extends TeaModel {
             return this.title;
         }
 
-        public ListAppsResponseBodyDataRecords setUpdater(String updater) {
+        public GetAppResponseBodyData setUpdater(String updater) {
             this.updater = updater;
             return this;
         }
         public String getUpdater() {
             return this.updater;
-        }
-
-    }
-
-    public static class ListAppsResponseBodyData extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("PageNumber")
-        public Integer pageNumber;
-
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        @NameInMap("PageSize")
-        public Integer pageSize;
-
-        /**
-         * <ul>
-         * <li></li>
-         * </ul>
-         */
-        @NameInMap("Records")
-        public java.util.List<ListAppsResponseBodyDataRecords> records;
-
-        /**
-         * <strong>example:</strong>
-         * <p>10</p>
-         */
-        @NameInMap("Total")
-        public Integer total;
-
-        public static ListAppsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            ListAppsResponseBodyData self = new ListAppsResponseBodyData();
-            return TeaModel.build(map, self);
-        }
-
-        public ListAppsResponseBodyData setPageNumber(Integer pageNumber) {
-            this.pageNumber = pageNumber;
-            return this;
-        }
-        public Integer getPageNumber() {
-            return this.pageNumber;
-        }
-
-        public ListAppsResponseBodyData setPageSize(Integer pageSize) {
-            this.pageSize = pageSize;
-            return this;
-        }
-        public Integer getPageSize() {
-            return this.pageSize;
-        }
-
-        public ListAppsResponseBodyData setRecords(java.util.List<ListAppsResponseBodyDataRecords> records) {
-            this.records = records;
-            return this;
-        }
-        public java.util.List<ListAppsResponseBodyDataRecords> getRecords() {
-            return this.records;
-        }
-
-        public ListAppsResponseBodyData setTotal(Integer total) {
-            this.total = total;
-            return this;
-        }
-        public Integer getTotal() {
-            return this.total;
         }
 
     }

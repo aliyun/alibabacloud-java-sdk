@@ -36,6 +36,9 @@ public class CreateAppRequest extends TeaModel {
     @NameInMap("EnableLog")
     public Boolean enableLog;
 
+    @NameInMap("LabelRouteStrategy")
+    public Integer labelRouteStrategy;
+
     /**
      * <strong>example:</strong>
      * <p>10</p>
@@ -84,6 +87,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public Boolean getEnableLog() {
         return this.enableLog;
+    }
+
+    public CreateAppRequest setLabelRouteStrategy(Integer labelRouteStrategy) {
+        this.labelRouteStrategy = labelRouteStrategy;
+        return this;
+    }
+    public Integer getLabelRouteStrategy() {
+        return this.labelRouteStrategy;
     }
 
     public CreateAppRequest setMaxConcurrency(Integer maxConcurrency) {
