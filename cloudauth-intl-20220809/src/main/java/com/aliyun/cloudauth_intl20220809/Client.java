@@ -1562,6 +1562,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>客户端连接保持</p>
+     * 
+     * @param request KeepaliveIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return KeepaliveIntlResponse
+     */
+    public KeepaliveIntlResponse keepaliveIntlWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "KeepaliveIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new KeepaliveIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>客户端连接保持</p>
+     * @return KeepaliveIntlResponse
+     */
+    public KeepaliveIntlResponse keepaliveIntl() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.keepaliveIntlWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>手机号三要素国际版接口</p>
      * 
      * @param request Mobile3MetaVerifyIntlRequest
