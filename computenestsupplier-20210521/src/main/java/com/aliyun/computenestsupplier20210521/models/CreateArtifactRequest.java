@@ -463,6 +463,9 @@ public class CreateArtifactRequest extends TeaModel {
         @NameInMap("DockerfilePath")
         public String dockerfilePath;
 
+        @NameInMap("EnableGpu")
+        public Boolean enableGpu;
+
         /**
          * <p>The region ID where the source mirror image is located.</p>
          * <blockquote>
@@ -553,6 +556,14 @@ public class CreateArtifactRequest extends TeaModel {
         }
         public String getDockerfilePath() {
             return this.dockerfilePath;
+        }
+
+        public CreateArtifactRequestArtifactBuildProperty setEnableGpu(Boolean enableGpu) {
+            this.enableGpu = enableGpu;
+            return this;
+        }
+        public Boolean getEnableGpu() {
+            return this.enableGpu;
         }
 
         public CreateArtifactRequestArtifactBuildProperty setRegionId(String regionId) {

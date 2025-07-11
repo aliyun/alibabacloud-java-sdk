@@ -382,6 +382,9 @@ public class UpdateArtifactRequest extends TeaModel {
         @NameInMap("DockerfilePath")
         public String dockerfilePath;
 
+        @NameInMap("EnableGpu")
+        public Boolean enableGpu;
+
         /**
          * <p>The region ID where the source mirror image is located.</p>
          * <blockquote>
@@ -425,6 +428,9 @@ public class UpdateArtifactRequest extends TeaModel {
          */
         @NameInMap("SourceImageId")
         public String sourceImageId;
+
+        @NameInMap("SystemDiskSize")
+        public Long systemDiskSize;
 
         public static UpdateArtifactRequestArtifactBuildProperty build(java.util.Map<String, ?> map) throws Exception {
             UpdateArtifactRequestArtifactBuildProperty self = new UpdateArtifactRequestArtifactBuildProperty();
@@ -471,6 +477,14 @@ public class UpdateArtifactRequest extends TeaModel {
             return this.dockerfilePath;
         }
 
+        public UpdateArtifactRequestArtifactBuildProperty setEnableGpu(Boolean enableGpu) {
+            this.enableGpu = enableGpu;
+            return this;
+        }
+        public Boolean getEnableGpu() {
+            return this.enableGpu;
+        }
+
         public UpdateArtifactRequestArtifactBuildProperty setRegionId(String regionId) {
             this.regionId = regionId;
             return this;
@@ -493,6 +507,14 @@ public class UpdateArtifactRequest extends TeaModel {
         }
         public String getSourceImageId() {
             return this.sourceImageId;
+        }
+
+        public UpdateArtifactRequestArtifactBuildProperty setSystemDiskSize(Long systemDiskSize) {
+            this.systemDiskSize = systemDiskSize;
+            return this;
+        }
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
         }
 
     }
