@@ -4048,10 +4048,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</p>
      * 
+     * @deprecated OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
+     * 
      * @param request QueryReadableResourcesListByUserIdRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryReadableResourcesListByUserIdResponse
      */
+    @Deprecated
+    // Deprecated
     public QueryReadableResourcesListByUserIdResponse queryReadableResourcesListByUserIdWithOptions(QueryReadableResourcesListByUserIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -4080,12 +4084,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries the list of works that a user has the permission to view, including the statements that are authorized to share in a space.</p>
      * 
+     * @deprecated OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.
+     * 
      * @param request QueryReadableResourcesListByUserIdRequest
      * @return QueryReadableResourcesListByUserIdResponse
      */
+    @Deprecated
+    // Deprecated
     public QueryReadableResourcesListByUserIdResponse queryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryReadableResourcesListByUserIdWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户有权查看的作品列表(新)</p>
+     * 
+     * @param request QueryReadableResourcesListByUserIdV2Request
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryReadableResourcesListByUserIdV2Response
+     */
+    public QueryReadableResourcesListByUserIdV2Response queryReadableResourcesListByUserIdV2WithOptions(QueryReadableResourcesListByUserIdV2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workType)) {
+            query.put("WorkType", request.workType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryReadableResourcesListByUserIdV2"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryReadableResourcesListByUserIdV2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户有权查看的作品列表(新)</p>
+     * 
+     * @param request QueryReadableResourcesListByUserIdV2Request
+     * @return QueryReadableResourcesListByUserIdV2Response
+     */
+    public QueryReadableResourcesListByUserIdV2Response queryReadableResourcesListByUserIdV2(QueryReadableResourcesListByUserIdV2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryReadableResourcesListByUserIdV2WithOptions(request, runtime);
     }
 
     /**
