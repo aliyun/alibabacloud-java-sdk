@@ -11596,6 +11596,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取文件下载地址</p>
+     * 
+     * @param request ListTransferFilesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTransferFilesResponse
+     */
+    public ListTransferFilesResponse listTransferFilesWithOptions(ListTransferFilesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTransferFiles"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTransferFilesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取文件下载地址</p>
+     * 
+     * @param request ListTransferFilesRequest
+     * @return ListTransferFilesResponse
+     */
+    public ListTransferFilesResponse listTransferFiles(ListTransferFilesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTransferFilesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Obtains the organizational units (OUs) of an Active Directory (AD) domain that is connected to an enterprise AD office network (formerly workspace).</p>
      * 
      * @param request ListUserAdOrganizationUnitsRequest
@@ -17109,6 +17161,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.tagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文件传输审批回调</p>
+     * 
+     * @param request TransferTaskApprovalCallbackRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferTaskApprovalCallbackResponse
+     */
+    public TransferTaskApprovalCallbackResponse transferTaskApprovalCallbackWithOptions(TransferTaskApprovalCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
+            query.put("OssBucketName", request.ossBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketRegionId)) {
+            query.put("OssBucketRegionId", request.ossBucketRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.result)) {
+            query.put("Result", request.result);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TransferTaskApprovalCallback"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TransferTaskApprovalCallbackResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>文件传输审批回调</p>
+     * 
+     * @param request TransferTaskApprovalCallbackRequest
+     * @return TransferTaskApprovalCallbackResponse
+     */
+    public TransferTaskApprovalCallbackResponse transferTaskApprovalCallback(TransferTaskApprovalCallbackRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.transferTaskApprovalCallbackWithOptions(request, runtime);
     }
 
     /**
