@@ -4,10 +4,15 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListUserClusterTypesResponseBody extends TeaModel {
+    /**
+     * <p>The list of cluster types. Number of elements in the array: 1 to 100.</p>
+     */
     @NameInMap("ClusterTypes")
     public java.util.List<ListUserClusterTypesResponseBodyClusterTypes> clusterTypes;
 
     /**
+     * <p>NextToken for the next page. Include this value when requesting the next page.</p>
+     * 
      * <strong>example:</strong>
      * <p>3a6b93229825ac667104463b56790c91</p>
      */
@@ -54,6 +59,8 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
 
     public static class ListUserClusterTypesResponseBodyClusterTypes extends TeaModel {
         /**
+         * <p>The access type of cluster type</p>
+         * 
          * <strong>example:</strong>
          * <p>Public</p>
          */
@@ -61,6 +68,8 @@ public class ListUserClusterTypesResponseBody extends TeaModel {
         public String accessType;
 
         /**
+         * <p>The name of cluster type</p>
+         * 
          * <strong>example:</strong>
          * <p>AckEdgePro</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExtendClusterRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>Cluster ID</p>
      * 
      * <strong>example:</strong>
      * <p>i15b480fbd2fcdbc2869cd80</p>
@@ -14,7 +14,7 @@ public class ExtendClusterRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+     * <p>Whether to allow skipping failed node tasks, default value is False</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -23,19 +23,19 @@ public class ExtendClusterRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The combined policies for assigning IP addresses: Only one policy type can be selected for each policy, and multiple policies can be combined.</p>
+     * <p>IP allocation combination policy: Each policy can only choose one type, and multiple policies can be combined</p>
      */
     @NameInMap("IpAllocationPolicy")
     public java.util.List<ExtendClusterRequestIpAllocationPolicy> ipAllocationPolicy;
 
     /**
-     * <p>The node groups.</p>
+     * <p>Node Groups</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<ExtendClusterRequestNodeGroups> nodeGroups;
 
     /**
-     * <p>The ID of the zone to which the vSwitch belongs.</p>
+     * <p>VSwitch availability zone ID</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai-b</p>
@@ -44,7 +44,7 @@ public class ExtendClusterRequest extends TeaModel {
     public String vSwitchZoneId;
 
     /**
-     * <p>The subnets of the cluster.</p>
+     * <p>List of cluster subnets</p>
      */
     @NameInMap("VpdSubnets")
     public java.util.List<String> vpdSubnets;
@@ -104,7 +104,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyBondPolicyBonds extends TeaModel {
         /**
-         * <p>The bond name.</p>
+         * <p>Bond name</p>
          * 
          * <strong>example:</strong>
          * <p>Bond0</p>
@@ -113,7 +113,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cluster subnet from which the IP address originates.</p>
+         * <p>IP source cluster subnet</p>
          * 
          * <strong>example:</strong>
          * <p>subnet-3od2fe</p>
@@ -146,7 +146,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyBondPolicy extends TeaModel {
         /**
-         * <p>The default bond subnet for the cluster.</p>
+         * <p>Default bond cluster subnet</p>
          * 
          * <strong>example:</strong>
          * <p>subnet-3od2fe</p>
@@ -155,7 +155,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String bondDefaultSubnet;
 
         /**
-         * <p>The bonds.</p>
+         * <p>Bond information</p>
          */
         @NameInMap("Bonds")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyBondPolicyBonds> bonds;
@@ -185,7 +185,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds extends TeaModel {
         /**
-         * <p>The bond name.</p>
+         * <p>Bond name</p>
          * 
          * <strong>example:</strong>
          * <p>Bond0</p>
@@ -194,7 +194,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cluster subnet from which the IP address originates.</p>
+         * <p>IP source cluster subnet</p>
          * 
          * <strong>example:</strong>
          * <p>subnet-fdo3dv</p>
@@ -227,13 +227,13 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyMachineTypePolicy extends TeaModel {
         /**
-         * <p>The bonds.</p>
+         * <p>Bond information</p>
          */
         @NameInMap("Bonds")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicyBonds> bonds;
 
         /**
-         * <p>The instance type.</p>
+         * <p>Machine type</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
@@ -266,7 +266,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyNodePolicyBonds extends TeaModel {
         /**
-         * <p>The bond name.</p>
+         * <p>Bond name</p>
          * 
          * <strong>example:</strong>
          * <p>Bond0</p>
@@ -275,7 +275,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cluster subnet from which the IP address originates.</p>
+         * <p>IP source cluster subnet</p>
          * 
          * <strong>example:</strong>
          * <p>subnet-fdo3dv</p>
@@ -308,22 +308,22 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicyNodePolicy extends TeaModel {
         /**
-         * <p>The bonds.</p>
+         * <p>Bond information</p>
          */
         @NameInMap("Bonds")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicyBonds> bonds;
 
         /**
-         * <p>The hostname.</p>
+         * <p>Hostname</p>
          * 
          * <strong>example:</strong>
-         * <p>i22c11282.eu95sqa</p>
+         * <p>a100-xa5dza28-0085</p>
          */
         @NameInMap("Hostname")
         public String hostname;
 
         /**
-         * <p>The node ID.</p>
+         * <p>Node ID</p>
          * 
          * <strong>example:</strong>
          * <p>i-3fdodw2</p>
@@ -364,19 +364,19 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestIpAllocationPolicy extends TeaModel {
         /**
-         * <p>The bond policy that you specify the cluster subnet ID based on the bond name.</p>
+         * <p>Specify the cluster subnet ID based on the bond name</p>
          */
         @NameInMap("BondPolicy")
         public ExtendClusterRequestIpAllocationPolicyBondPolicy bondPolicy;
 
         /**
-         * <p>The allocation policies for the instance type.</p>
+         * <p>Machine type allocation policy</p>
          */
         @NameInMap("MachineTypePolicy")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyMachineTypePolicy> machineTypePolicy;
 
         /**
-         * <p>The node allocation policies.</p>
+         * <p>Node allocation policy</p>
          */
         @NameInMap("NodePolicy")
         public java.util.List<ExtendClusterRequestIpAllocationPolicyNodePolicy> nodePolicy;
@@ -414,19 +414,19 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroupsNodeTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>Node tag key</p>
          * 
          * <strong>example:</strong>
-         * <p>my_key</p>
+         * <p>key_my</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>Node tag value</p>
          * 
          * <strong>example:</strong>
-         * <p>my_value</p>
+         * <p>value_my</p>
          */
         @NameInMap("Value")
         public String value;
@@ -455,15 +455,39 @@ public class ExtendClusterRequest extends TeaModel {
     }
 
     public static class ExtendClusterRequestNodeGroupsNodesDataDisk extends TeaModel {
+        /**
+         * <p>Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Whether the data disk is deleted with the node</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DeleteWithNode")
         public Boolean deleteWithNode;
 
+        /**
+         * <p>Data Disk Performance Level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>Disk Size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -507,11 +531,14 @@ public class ExtendClusterRequest extends TeaModel {
     }
 
     public static class ExtendClusterRequestNodeGroupsNodes extends TeaModel {
+        /**
+         * <p>Data Disk Specifications</p>
+         */
         @NameInMap("DataDisk")
         public java.util.List<ExtendClusterRequestNodeGroupsNodesDataDisk> dataDisk;
 
         /**
-         * <p>The hostname.</p>
+         * <p>Hostname</p>
          * 
          * <strong>example:</strong>
          * <p>d044d220-33fd-11ed-86a6</p>
@@ -520,7 +547,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The logon password.</p>
+         * <p>Login Password</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -529,7 +556,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>The node ID.</p>
+         * <p>Node ID</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2zdpy601</p>
@@ -538,7 +565,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>VSwitch ID</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp169pi5fj151rrms4sia</p>
@@ -547,7 +574,7 @@ public class ExtendClusterRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
@@ -612,7 +639,7 @@ public class ExtendClusterRequest extends TeaModel {
 
     public static class ExtendClusterRequestNodeGroups extends TeaModel {
         /**
-         * <p>The number of nodes to be purchased. Valid values: 0 to 500. If you set the value of the Amount parameter to 0, you do not want to purchase nodes and scale out the cluster by using existing nodes. If you set the value of the Amount parameter to a value ranging from 1 to 500, you want to purchase a certain number of nodes for cluster scale-out. Default value: 0.</p>
+         * <p>Number of nodes to purchase. Range: 0<del>500. If the Amount parameter is set to 0, it means no new nodes will be purchased and existing nodes will be used for scaling. If the Amount parameter is set to 1</del>500, it means a certain number of nodes will be purchased and used for scaling. Default value: 0</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -621,7 +648,7 @@ public class ExtendClusterRequest extends TeaModel {
         public Long amount;
 
         /**
-         * <p>Specifies whether to enable auto-renewal for the purchased nodes. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PrePaid. Valid values: true and false. Default value: False.</p>
+         * <p>Whether to automatically renew the purchased nodes. This parameter takes effect when the Amount parameter is not 0 and the ChargeType is set to PrePaid. Valid values: True (auto-renewal); False (no auto-renewal). Default value: False</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -630,7 +657,7 @@ public class ExtendClusterRequest extends TeaModel {
         public Boolean autoRenew;
 
         /**
-         * <p>The billing method of the node. This parameter does not take effect if you set the Amount parameter to 0. Valid values: PrePaid (subscription) and PostPaid (pay-as-you-go). Default value: PrePaid.</p>
+         * <p>Payment method for the nodes. When the Amount parameter is set to 0, this parameter does not take effect. Valid values: PrePaid (Subscription); PostPaid (Pay-As-You-Go). Default value: PrePaid.</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -639,22 +666,22 @@ public class ExtendClusterRequest extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The hostname for the purchased node. This parameter does not take effect if you set the Amount parameter to 0.</p>
+         * <p>Set the hostnames for the purchased nodes. This parameter does not take effect when the Amount parameter is set to 0.</p>
          */
         @NameInMap("Hostnames")
         public java.util.List<String> hostnames;
 
         /**
-         * <p>The logon password of the purchased node. This parameter does not take effect if you set the Amount parameter to 0.</p>
+         * <p>Set the login password for the purchased nodes. This parameter is not effective when the Amount parameter is set to 0.</p>
          * 
          * <strong>example:</strong>
-         * <p>Addk(*78</p>
+         * <p>skkO(*89Y</p>
          */
         @NameInMap("LoginPassword")
         public String loginPassword;
 
         /**
-         * <p>The node group ID.</p>
+         * <p>Node Group ID</p>
          * 
          * <strong>example:</strong>
          * <p>i16d4883a46cbadeb4bc9</p>
@@ -663,19 +690,19 @@ public class ExtendClusterRequest extends TeaModel {
         public String nodeGroupId;
 
         /**
-         * <p>The tags.</p>
+         * <p>Node tags</p>
          */
         @NameInMap("NodeTag")
         public java.util.List<ExtendClusterRequestNodeGroupsNodeTag> nodeTag;
 
         /**
-         * <p>The nodes.</p>
+         * <p>List of Nodes</p>
          */
         @NameInMap("Nodes")
         public java.util.List<ExtendClusterRequestNodeGroupsNodes> nodes;
 
         /**
-         * <p>The duration of the purchased node. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PrePaid.</p>
+         * <p>Duration of the node purchase (in months). Valid values: 1, 6, 12, 24, 36, 48. This parameter takes effect when the Amount parameter is not 0 and the ChargeType is set to PrePaid.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -684,7 +711,7 @@ public class ExtendClusterRequest extends TeaModel {
         public Long period;
 
         /**
-         * <p>The user data.</p>
+         * <p>Custom Data</p>
          * 
          * <strong>example:</strong>
          * <p>#!/bin/sh
@@ -694,25 +721,25 @@ public class ExtendClusterRequest extends TeaModel {
         public String userData;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>VSwitch ID</p>
          * 
          * <strong>example:</strong>
-         * <p>vsw-0jly2d537ejphyq6h13ke</p>
+         * <p>vsw-uf65m8xqjgy55xj9jw92n</p>
          */
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
-         * <p>vpc-zq1econyv63tvyci5hefw</p>
+         * <p>vpc-0jl3b0c0ukydlfezr13n6</p>
          */
         @NameInMap("VpcId")
         public String vpcId;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>Zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>

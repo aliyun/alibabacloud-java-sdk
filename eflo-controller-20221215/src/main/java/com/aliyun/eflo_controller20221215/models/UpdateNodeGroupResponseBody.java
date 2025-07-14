@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeGroupResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
@@ -14,10 +14,10 @@ public class UpdateNodeGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>Task ID</p>
      * 
      * <strong>example:</strong>
-     * <p>i15374011238111706</p>
+     * <p>i154273451745372344629</p>
      */
     @NameInMap("TaskId")
     public String taskId;

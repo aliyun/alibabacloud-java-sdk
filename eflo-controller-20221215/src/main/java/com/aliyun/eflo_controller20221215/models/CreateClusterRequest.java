@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The cluster description.</p>
+     * <p>Cluster description</p>
      * 
      * <strong>example:</strong>
      * <p>Cluster description</p>
@@ -14,7 +14,7 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterDescription;
 
     /**
-     * <p>The cluster name.</p>
+     * <p>Cluster name</p>
      * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
@@ -23,7 +23,7 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The cluster type.</p>
+     * <p>Cluster type</p>
      * 
      * <strong>example:</strong>
      * <p>Lite</p>
@@ -32,13 +32,13 @@ public class CreateClusterRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The components (software instance).</p>
+     * <p>Components (software instances)</p>
      */
     @NameInMap("Components")
     public java.util.List<CreateClusterRequestComponents> components;
 
     /**
-     * <p>The cluster number.</p>
+     * <p>Cluster number</p>
      * 
      * <strong>example:</strong>
      * <p>A1</p>
@@ -47,7 +47,7 @@ public class CreateClusterRequest extends TeaModel {
     public String hpnZone;
 
     /**
-     * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+     * <p>Whether to allow skipping failed nodes, the default value is False</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -56,25 +56,25 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean ignoreFailedNodeTasks;
 
     /**
-     * <p>The network information.</p>
+     * <p>Network information</p>
      */
     @NameInMap("Networks")
     public CreateClusterRequestNetworks networks;
 
     /**
-     * <p>The node vSwitch.</p>
+     * <p>Node VSwitches</p>
      */
     @NameInMap("NimizVSwitches")
     public java.util.List<String> nimizVSwitches;
 
     /**
-     * <p>The node groups.</p>
+     * <p>Node group list</p>
      */
     @NameInMap("NodeGroups")
     public java.util.List<CreateClusterRequestNodeGroups> nodeGroups;
 
     /**
-     * <p>Specifies whether the elastic network interface (ENI) supports the Jumbo Frames feature.</p>
+     * <p>Whether the network interface supports jumbo frames</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -83,7 +83,7 @@ public class CreateClusterRequest extends TeaModel {
     public Boolean openEniJumboFrame;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>Resource group ID</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2xdkc6icwfha</p>
@@ -92,7 +92,7 @@ public class CreateClusterRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource tags.</p>
+     * <p>Resource tags</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateClusterRequestTag> tag;
@@ -200,7 +200,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestComponentsComponentConfig extends TeaModel {
         /**
-         * <p>The basic parameters of the component.</p>
+         * <p>Basic component parameters</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -237,7 +237,7 @@ public class CreateClusterRequest extends TeaModel {
         public Object basicArgs;
 
         /**
-         * <p>The node pool configurations, which are used to establish the mappings between node groups and node pools. This parameter is required when ComponentType is set to ACKEdge. Otherwise, this parameter is left empty.</p>
+         * <p>Node pool configuration, used to establish the correspondence between node groups and node pools. Required when ComponentType is &quot;ACKEdge&quot;, otherwise it can be empty.</p>
          */
         @NameInMap("NodeUnits")
         public java.util.List<?> nodeUnits;
@@ -267,18 +267,13 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestComponents extends TeaModel {
         /**
-         * <p>The component configurations.</p>
+         * <p>Component configuration</p>
          */
         @NameInMap("ComponentConfig")
         public CreateClusterRequestComponentsComponentConfig componentConfig;
 
         /**
-         * <p>The component type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>ARMS</li>
-         * <li>ACKEdge</li>
-         * </ul>
+         * <p>Component type</p>
          * 
          * <strong>example:</strong>
          * <p>ACKEdge</p>
@@ -311,7 +306,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds extends TeaModel {
         /**
-         * <p>The bond name.</p>
+         * <p>Bond name</p>
          * 
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -320,7 +315,7 @@ public class CreateClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cluster subnet from which the IP address originates.</p>
+         * <p>IP source subnet for the cluster</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
@@ -353,7 +348,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicyBondPolicy extends TeaModel {
         /**
-         * <p>The default bond subnet for the cluster.</p>
+         * <p>Default bond subnet for the cluster</p>
          * 
          * <strong>example:</strong>
          * <p>172.168.0.0/24</p>
@@ -362,7 +357,7 @@ public class CreateClusterRequest extends TeaModel {
         public String bondDefaultSubnet;
 
         /**
-         * <p>The bond information.</p>
+         * <p>Bond information</p>
          */
         @NameInMap("Bonds")
         public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyBondPolicyBonds> bonds;
@@ -392,7 +387,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds extends TeaModel {
         /**
-         * <p>The bond name.</p>
+         * <p>Bond name</p>
          * 
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -401,7 +396,7 @@ public class CreateClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cluster subnet from which the IP address originates.</p>
+         * <p>IP source subnet for the cluster</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
@@ -434,13 +429,13 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy extends TeaModel {
         /**
-         * <p>The bond information.</p>
+         * <p>Bond information</p>
          */
         @NameInMap("Bonds")
         public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicyBonds> bonds;
 
         /**
-         * <p>The instance type.</p>
+         * <p>Machine type</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga8n</p>
@@ -473,7 +468,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds extends TeaModel {
         /**
-         * <p>The bond name.</p>
+         * <p>Bond name</p>
          * 
          * <strong>example:</strong>
          * <p>bond0</p>
@@ -482,7 +477,7 @@ public class CreateClusterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The cluster subnet from which the IP address originates.</p>
+         * <p>IP source subnet for the cluster</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -515,13 +510,13 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicyNodePolicy extends TeaModel {
         /**
-         * <p>The bond information.</p>
+         * <p>Bond information</p>
          */
         @NameInMap("Bonds")
         public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicyBonds> bonds;
 
         /**
-         * <p>The node ID.</p>
+         * <p>Node ID</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-2r42vq62001</p>
@@ -554,19 +549,19 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksIpAllocationPolicy extends TeaModel {
         /**
-         * <p>The bond policy.</p>
+         * <p>Bond policy</p>
          */
         @NameInMap("BondPolicy")
         public CreateClusterRequestNetworksIpAllocationPolicyBondPolicy bondPolicy;
 
         /**
-         * <p>The allocation policy for the instance type.</p>
+         * <p>Machine type allocation policy</p>
          */
         @NameInMap("MachineTypePolicy")
         public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyMachineTypePolicy> machineTypePolicy;
 
         /**
-         * <p>The node allocation policy.</p>
+         * <p>Node allocation policy</p>
          */
         @NameInMap("NodePolicy")
         public java.util.List<CreateClusterRequestNetworksIpAllocationPolicyNodePolicy> nodePolicy;
@@ -604,7 +599,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksNewVpdInfoVpdSubnets extends TeaModel {
         /**
-         * <p>The subnet CIDR block.</p>
+         * <p>Subnet CIDR</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.1.8/24</p>
@@ -613,7 +608,7 @@ public class CreateClusterRequest extends TeaModel {
         public String subnetCidr;
 
         /**
-         * <p>The subnet type.</p>
+         * <p>Subnet type</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.2.8/24</p>
@@ -622,7 +617,7 @@ public class CreateClusterRequest extends TeaModel {
         public String subnetType;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>Zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-wulanchabu-b</p>
@@ -663,7 +658,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksNewVpdInfo extends TeaModel {
         /**
-         * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+         * <p>Cloud Enterprise Network ID</p>
          * 
          * <strong>example:</strong>
          * <p>cen-1gb1eftc5qp2ao75fo</p>
@@ -672,7 +667,7 @@ public class CreateClusterRequest extends TeaModel {
         public String cenId;
 
         /**
-         * <p>The CIDR block for Cloud Link.</p>
+         * <p>Cloud link CIDR</p>
          * 
          * <strong>example:</strong>
          * <p>172.16.0.0/24</p>
@@ -681,7 +676,7 @@ public class CreateClusterRequest extends TeaModel {
         public String cloudLinkCidr;
 
         /**
-         * <p>The Cloud Link ID.</p>
+         * <p>Cloud link ID</p>
          * 
          * <strong>example:</strong>
          * <p>vcc-cn-c4dtycm5i08</p>
@@ -690,7 +685,7 @@ public class CreateClusterRequest extends TeaModel {
         public String cloudLinkId;
 
         /**
-         * <p>The VPC.</p>
+         * <p>Virtual Private Cloud (VPC)</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jl2x45apm6odc2c10h25</p>
@@ -699,7 +694,7 @@ public class CreateClusterRequest extends TeaModel {
         public String monitorVpcId;
 
         /**
-         * <p>The vSwitch.</p>
+         * <p>VPC switch</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-0jl2w3ffbghkss0x2foff</p>
@@ -708,7 +703,7 @@ public class CreateClusterRequest extends TeaModel {
         public String monitorVswitchId;
 
         /**
-         * <p>The CIDR block for the cluster.</p>
+         * <p>Cluster network segment</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.0.0/16</p>
@@ -717,7 +712,7 @@ public class CreateClusterRequest extends TeaModel {
         public String vpdCidr;
 
         /**
-         * <p>The cluster subnet.</p>
+         * <p>Cluster subnets</p>
          */
         @NameInMap("VpdSubnets")
         public java.util.List<CreateClusterRequestNetworksNewVpdInfoVpdSubnets> vpdSubnets;
@@ -787,7 +782,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworksVpdInfo extends TeaModel {
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpd-vfuz6ejv</p>
@@ -796,7 +791,7 @@ public class CreateClusterRequest extends TeaModel {
         public String vpdId;
 
         /**
-         * <p>The IDs of the subnets for a cluster.</p>
+         * <p>List of cluster subnet IDs</p>
          */
         @NameInMap("VpdSubnets")
         public java.util.List<String> vpdSubnets;
@@ -826,19 +821,19 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNetworks extends TeaModel {
         /**
-         * <p>The IP allocation policy.</p>
+         * <p>IP allocation policy</p>
          */
         @NameInMap("IpAllocationPolicy")
         public java.util.List<CreateClusterRequestNetworksIpAllocationPolicy> ipAllocationPolicy;
 
         /**
-         * <p>The virtual private domain (VPD) configuration information.</p>
+         * <p>Vpd configuration information</p>
          */
         @NameInMap("NewVpdInfo")
         public CreateClusterRequestNetworksNewVpdInfo newVpdInfo;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>Security group ID</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp1d3dvbh9by7j5rujax</p>
@@ -847,7 +842,7 @@ public class CreateClusterRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The IP version.</p>
+         * <p>IP version</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -856,7 +851,7 @@ public class CreateClusterRequest extends TeaModel {
         public String tailIpVersion;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>VSwitch ID</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-asjdfklj</p>
@@ -865,7 +860,7 @@ public class CreateClusterRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>VSwitch Zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-b</p>
@@ -874,7 +869,7 @@ public class CreateClusterRequest extends TeaModel {
         public String vSwitchZoneId;
 
         /**
-         * <p>The VPC ID.</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jl36lqzmc06qogy0t5ll</p>
@@ -883,7 +878,7 @@ public class CreateClusterRequest extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The VPD information.</p>
+         * <p>Reuse VPD information</p>
          */
         @NameInMap("VpdInfo")
         public CreateClusterRequestNetworksVpdInfo vpdInfo;
@@ -960,15 +955,39 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroupsNodesDataDisk extends TeaModel {
+        /**
+         * <p>Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>Whether the data disk is deleted with the node when it is unsubscribed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DeleteWithNode")
         public Boolean deleteWithNode;
 
+        /**
+         * <p>Data disk performance level</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PL0</p>
+         */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        /**
+         * <p>Disk size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Size")
         public Integer size;
 
@@ -1012,11 +1031,14 @@ public class CreateClusterRequest extends TeaModel {
     }
 
     public static class CreateClusterRequestNodeGroupsNodes extends TeaModel {
+        /**
+         * <p>Data disk specifications.</p>
+         */
         @NameInMap("DataDisk")
         public java.util.List<CreateClusterRequestNodeGroupsNodesDataDisk> dataDisk;
 
         /**
-         * <p>The hostname.</p>
+         * <p>Hostname</p>
          * 
          * <strong>example:</strong>
          * <p>8d13b784-17a9-11ed-bc7b-acde48001122</p>
@@ -1025,7 +1047,7 @@ public class CreateClusterRequest extends TeaModel {
         public String hostname;
 
         /**
-         * <p>The logon password.</p>
+         * <p>Login password</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -1034,7 +1056,7 @@ public class CreateClusterRequest extends TeaModel {
         public String loginPassword;
 
         /**
-         * <p>The node ID.</p>
+         * <p>Node ID</p>
          * 
          * <strong>example:</strong>
          * <p>e01poc-cn-i7m2wnivf0d</p>
@@ -1043,7 +1065,7 @@ public class CreateClusterRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>VSwitch ID</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp169pi5fj151rrms4sia</p>
@@ -1052,7 +1074,7 @@ public class CreateClusterRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>VPC ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
@@ -1117,9 +1139,9 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNodeGroupsSystemDisk extends TeaModel {
         /**
-         * <p>The disk category. Valid values:</p>
+         * <p>Disk type. The value range is:</p>
          * <ul>
-         * <li>cloud_essd</li>
+         * <li>cloud_essd: ESSD disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1129,10 +1151,10 @@ public class CreateClusterRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+         * <p>When creating an ESSD disk as the system disk, set the performance level of the disk. The value range is:</p>
          * <ul>
-         * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-         * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+         * <li>PL0: Maximum random read/write IOPS for a single disk is 10,000.</li>
+         * <li>PL1: Maximum random read/write IOPS for a single disk is 50,000.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1142,10 +1164,10 @@ public class CreateClusterRequest extends TeaModel {
         public String performanceLevel;
 
         /**
-         * <p>Unit: GB</p>
+         * <p>Unit: GB.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>9999</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -1183,16 +1205,16 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestNodeGroups extends TeaModel {
         /**
-         * <p>Specifies whether to support file system mounting.</p>
+         * <p>Whether to support file system mounting</p>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>true</p>
          */
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;
 
         /**
-         * <p>The system image ID.</p>
+         * <p>System image ID</p>
          * 
          * <strong>example:</strong>
          * <p>i190297201634099844192</p>
@@ -1201,19 +1223,25 @@ public class CreateClusterRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The name of the AccessKey pair.</p>
+         * <p>Key pair name.</p>
          * 
          * <strong>example:</strong>
-         * <p>sc-key</p>
+         * <p>test-keypair</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        /**
+         * <p>Login password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Password</p>
+         */
         @NameInMap("LoginPassword")
         public String loginPassword;
 
         /**
-         * <p>The instance type.</p>
+         * <p>Machine type</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>
@@ -1222,7 +1250,7 @@ public class CreateClusterRequest extends TeaModel {
         public String machineType;
 
         /**
-         * <p>The node group description.</p>
+         * <p>Node group description</p>
          * 
          * <strong>example:</strong>
          * <p>Node group description</p>
@@ -1231,7 +1259,7 @@ public class CreateClusterRequest extends TeaModel {
         public String nodeGroupDescription;
 
         /**
-         * <p>The node group name.</p>
+         * <p>Node group name</p>
          * 
          * <strong>example:</strong>
          * <p>emr-default</p>
@@ -1240,19 +1268,19 @@ public class CreateClusterRequest extends TeaModel {
         public String nodeGroupName;
 
         /**
-         * <p>The nodes.</p>
+         * <p>Node list</p>
          */
         @NameInMap("Nodes")
         public java.util.List<CreateClusterRequestNodeGroupsNodes> nodes;
 
         /**
-         * <p>The system disk information.</p>
+         * <p>System disk information</p>
          */
         @NameInMap("SystemDisk")
         public CreateClusterRequestNodeGroupsSystemDisk systemDisk;
 
         /**
-         * <p>The user data of the instance. The user data must be Base64-encoded. The raw data can be up to 16 KB in size.</p>
+         * <p>Instance custom data. It needs to be encoded in Base64, and the original data should not exceed 16 KB.</p>
          * 
          * <strong>example:</strong>
          * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -1261,7 +1289,16 @@ public class CreateClusterRequest extends TeaModel {
         public String userData;
 
         /**
-         * <p>The zone ID.</p>
+         * <p>Whether to enable gpu virtualization or not</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("VirtualGpuEnabled")
+        public Boolean virtualGpuEnabled;
+
+        /**
+         * <p>Zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-i</p>
@@ -1354,6 +1391,14 @@ public class CreateClusterRequest extends TeaModel {
             return this.userData;
         }
 
+        public CreateClusterRequestNodeGroups setVirtualGpuEnabled(Boolean virtualGpuEnabled) {
+            this.virtualGpuEnabled = virtualGpuEnabled;
+            return this;
+        }
+        public Boolean getVirtualGpuEnabled() {
+            return this.virtualGpuEnabled;
+        }
+
         public CreateClusterRequestNodeGroups setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;
@@ -1366,7 +1411,7 @@ public class CreateClusterRequest extends TeaModel {
 
     public static class CreateClusterRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>Key</p>
          * 
          * <strong>example:</strong>
          * <p>env-name</p>
@@ -1375,7 +1420,7 @@ public class CreateClusterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>Value</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>

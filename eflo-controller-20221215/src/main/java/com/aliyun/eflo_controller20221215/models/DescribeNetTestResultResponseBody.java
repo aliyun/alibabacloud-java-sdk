@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeNetTestResultResponseBody extends TeaModel {
     /**
+     * <p>The cluster ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i119982311660892626523</p>
      */
@@ -12,26 +14,38 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The cluster name.</p>
+     * 
      * <strong>example:</strong>
      * <p>Standard_Cluster</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
+    /**
+     * <p>Specify when NetTestType is CommTest.</p>
+     */
     @NameInMap("CommTest")
     public DescribeNetTestResultResponseBodyCommTest commTest;
 
     /**
+     * <p>create time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-15T10:25:42+08:00</p>
      */
     @NameInMap("CreationTime")
     public String creationTime;
 
+    /**
+     * <p>Fill in when the network test type is a delay test.</p>
+     */
     @NameInMap("DelayTest")
     public DescribeNetTestResultResponseBodyDelayTest delayTest;
 
     /**
+     * <p>finish time</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-16T02:04Z</p>
      */
@@ -39,6 +53,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String finishedTime;
 
     /**
+     * <p>The type of the network test.</p>
+     * 
      * <strong>example:</strong>
      * <p>DelayTest</p>
      */
@@ -46,6 +62,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String netTestType;
 
     /**
+     * <p>Test port number.</p>
+     * 
      * <strong>example:</strong>
      * <p>23604</p>
      */
@@ -53,6 +71,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String port;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
      */
@@ -60,6 +80,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>result detail</p>
+     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -67,11 +89,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String resultDetial;
 
     /**
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * </ul>
+     * <p>status of session</p>
      * 
      * <strong>example:</strong>
      * <p>Failed</p>
@@ -80,12 +98,17 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the test task. The unique identifier of a network test task.</p>
+     * 
      * <strong>example:</strong>
      * <p>af35ce53-7c35-4277-834a-fbf49c316a96</p>
      */
     @NameInMap("TestId")
     public String testId;
 
+    /**
+     * <p>Fill in when the network test type is a traffic test.</p>
+     */
     @NameInMap("TrafficTest")
     public DescribeNetTestResultResponseBodyTrafficTest trafficTest;
 
@@ -200,6 +223,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyCommTestHosts extends TeaModel {
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>169.253.253.15</p>
          */
@@ -207,6 +232,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>i111670831721110797708</p>
          */
@@ -214,6 +241,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>VBw</p>
          */
@@ -253,16 +282,23 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyCommTest extends TeaModel {
         /**
+         * <p>Number of GPUs</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("GPUNum")
         public String GPUNum;
 
+        /**
+         * <p>All hosts infomation</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<DescribeNetTestResultResponseBodyCommTestHosts> hosts;
 
         /**
+         * <p>The communication library model.</p>
+         * 
          * <strong>example:</strong>
          * <p>intention_v4</p>
          */
@@ -270,6 +306,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The CommTest type, which can be ACCL or NCCL.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACCL</p>
          */
@@ -317,6 +355,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyDelayTestHosts extends TeaModel {
         /**
+         * <p>The bonding of network interface card.</p>
+         * 
          * <strong>example:</strong>
          * <p>bond1</p>
          */
@@ -324,6 +364,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String bond;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>125.210.225.48</p>
          */
@@ -331,6 +373,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-bcd3u1aee06</p>
          */
@@ -338,6 +382,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>NQU</p>
          */
@@ -384,6 +430,9 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     }
 
     public static class DescribeNetTestResultResponseBodyDelayTest extends TeaModel {
+        /**
+         * <p>All hosts infomation</p>
+         */
         @NameInMap("Hosts")
         public java.util.List<DescribeNetTestResultResponseBodyDelayTestHosts> hosts;
 
@@ -404,6 +453,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyTrafficTestClients extends TeaModel {
         /**
+         * <p>Network interface bond port</p>
+         * 
          * <strong>example:</strong>
          * <p>bond1</p>
          */
@@ -411,6 +462,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String bond;
 
         /**
+         * <p>IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
          */
@@ -418,6 +471,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-20s41p6cx01</p>
          */
@@ -425,6 +480,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The name of the service.</p>
+         * 
          * <strong>example:</strong>
          * <p>xMv</p>
          */
@@ -472,6 +529,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
 
     public static class DescribeNetTestResultResponseBodyTrafficTestServers extends TeaModel {
         /**
+         * <p>Network interface bond port</p>
+         * 
          * <strong>example:</strong>
          * <p>bond1</p>
          */
@@ -479,6 +538,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String bond;
 
         /**
+         * <p>The IP address.</p>
+         * 
          * <strong>example:</strong>
          * <p>47.121.110.190</p>
          */
@@ -486,6 +547,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String IP;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>e01-cn-wwo3etaqu0b</p>
          */
@@ -493,6 +556,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>Service name.</p>
+         * 
          * <strong>example:</strong>
          * <p>xMv</p>
          */
@@ -539,10 +604,15 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
     }
 
     public static class DescribeNetTestResultResponseBodyTrafficTest extends TeaModel {
+        /**
+         * <p>All clients information</p>
+         */
         @NameInMap("Clients")
         public java.util.List<DescribeNetTestResultResponseBodyTrafficTestClients> clients;
 
         /**
+         * <p>Call duration, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -550,6 +620,9 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public Long duration;
 
         /**
+         * <p>When the protocol is RDMA, fill in True/False,
+         * when the protocol is TCP, this field is empty.</p>
+         * 
          * <strong>example:</strong>
          * <p>False</p>
          */
@@ -557,6 +630,8 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String GDR;
 
         /**
+         * <p>Network protocol, either RDMA or TCP.</p>
+         * 
          * <strong>example:</strong>
          * <p>TCP</p>
          */
@@ -564,16 +639,23 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         public String protocol;
 
         /**
+         * <p>When the protocol is TCP, fill in the number of concurrent connections; when the protocol is RDMA, fill in the configured QP value.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("QP")
         public Long QP;
 
+        /**
+         * <p>Servers infomation.</p>
+         */
         @NameInMap("Servers")
         public java.util.List<DescribeNetTestResultResponseBodyTrafficTestServers> servers;
 
         /**
+         * <p>Traffic model, either MTON or Fullmesh.</p>
+         * 
          * <strong>example:</strong>
          * <p>Fullmesh</p>
          */

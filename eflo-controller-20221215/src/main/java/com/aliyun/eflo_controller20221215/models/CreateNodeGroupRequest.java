@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeGroupRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>Cluster ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,11 +15,18 @@ public class CreateNodeGroupRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>Node ID.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroup")
     public CreateNodeGroupRequestNodeGroup nodeGroup;
 
+    /**
+     * <p>Node information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;NodeUnitId\&quot;:\&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f\&quot;,\&quot;ResourceGroupId\&quot;:\&quot;\&quot;,\&quot;MaxNodes\&quot;:0,\&quot;NodeUnitName\&quot;:\&quot;asi_cn-serverless-sale_e01-lingjun-psale\&quot;}</p>
+     */
     @NameInMap("NodeUnit")
     public java.util.Map<String, ?> nodeUnit;
 
@@ -54,31 +61,35 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     public static class CreateNodeGroupRequestNodeGroupSystemDisk extends TeaModel {
         /**
+         * <p>Disk type. Value range:</p>
          * <ul>
-         * <li></li>
+         * <li>cloud_essd: ESSD cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cloud_essd</p>
+         * <p>clou_essd</p>
          */
         @NameInMap("Category")
         public String category;
 
         /**
+         * <p>When creating an ESSD cloud disk as a system disk, set the performance level of the cloud disk. Value range:</p>
          * <ul>
-         * <li></li>
-         * <li></li>
+         * <li>PL0: Maximum random read/write IOPS per disk 10,000.</li>
+         * <li>PL1: Maximum random read/write IOPS per disk 50,000.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>PL!</p>
+         * <p>PL1</p>
          */
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
         /**
+         * <p>Unit: GB.</p>
+         * 
          * <strong>example:</strong>
-         * <p>250</p>
+         * <p>1000</p>
          */
         @NameInMap("Size")
         public Integer size;
@@ -116,6 +127,7 @@ public class CreateNodeGroupRequest extends TeaModel {
 
     public static class CreateNodeGroupRequestNodeGroup extends TeaModel {
         /**
+         * <p>Availability Zone</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,15 +137,16 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String az;
 
         /**
-         * <p>Indicates whether file storage mounting is supported.</p>
+         * <p>Whether file storage mounting is supported</p>
          * 
          * <strong>example:</strong>
-         * <p>False</p>
+         * <p>true</p>
          */
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;
 
         /**
+         * <p>Image ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,17 +156,25 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String imageId;
 
         /**
+         * <p>Key pair name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test-keypair</p>
          */
         @NameInMap("KeyPairName")
         public String keyPairName;
 
+        /**
+         * <p>Password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-LoginPassword</p>
+         */
         @NameInMap("LoginPassword")
         public String loginPassword;
 
         /**
-         * <p>The instance type.</p>
+         * <p>Machine type</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,6 +184,8 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String machineType;
 
         /**
+         * <p>Node group description</p>
+         * 
          * <strong>example:</strong>
          * <p>describe for node group</p>
          */
@@ -170,6 +193,7 @@ public class CreateNodeGroupRequest extends TeaModel {
         public String nodeGroupDescription;
 
         /**
+         * <p>Node group name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,10 +202,15 @@ public class CreateNodeGroupRequest extends TeaModel {
         @NameInMap("NodeGroupName")
         public String nodeGroupName;
 
+        /**
+         * <p>Details of the node system disk configuration.</p>
+         */
         @NameInMap("SystemDisk")
         public CreateNodeGroupRequestNodeGroupSystemDisk systemDisk;
 
         /**
+         * <p>User-defined data</p>
+         * 
          * <strong>example:</strong>
          * <p>#!/bin/bash
          * uptime
@@ -189,6 +218,15 @@ public class CreateNodeGroupRequest extends TeaModel {
          */
         @NameInMap("UserData")
         public String userData;
+
+        /**
+         * <p>Whether to enable gpu virtualization or not</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("VirtualGpuEnabled")
+        public Boolean virtualGpuEnabled;
 
         public static CreateNodeGroupRequestNodeGroup build(java.util.Map<String, ?> map) throws Exception {
             CreateNodeGroupRequestNodeGroup self = new CreateNodeGroupRequestNodeGroup();
@@ -273,6 +311,14 @@ public class CreateNodeGroupRequest extends TeaModel {
         }
         public String getUserData() {
             return this.userData;
+        }
+
+        public CreateNodeGroupRequestNodeGroup setVirtualGpuEnabled(Boolean virtualGpuEnabled) {
+            this.virtualGpuEnabled = virtualGpuEnabled;
+            return this;
+        }
+        public Boolean getVirtualGpuEnabled() {
+            return this.virtualGpuEnabled;
         }
 
     }

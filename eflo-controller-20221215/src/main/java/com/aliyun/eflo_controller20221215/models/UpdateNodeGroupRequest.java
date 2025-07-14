@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNodeGroupRequest extends TeaModel {
     /**
-     * <p>Whether file storage mounting is supported.</p>
+     * <p>Whether file storage mounting is supported</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -14,31 +14,34 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public Boolean fileSystemMountEnabled;
 
     /**
-     * <p>The default image ID of the node group. if you do not set this parameter, the image ID will not change.</p>
+     * <p>The default image ID of the node group. If not set, it will not change.</p>
      * 
      * <strong>example:</strong>
-     * <p>i123847249284734</p>
+     * <p>i1232142432432</p>
      */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
-     * <p>The name of the key pair.</p>
+     * <p>Key pair name.</p>
      * 
      * <strong>example:</strong>
-     * <p>sc-key</p>
+     * <p>test</p>
      */
     @NameInMap("KeyPairName")
     public String keyPairName;
 
     /**
-     * <p>节点组内机器的登录密码</p>
+     * <p>Login password for machines within the node group</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LoginPassword</p>
      */
     @NameInMap("LoginPassword")
     public String loginPassword;
 
     /**
-     * <p>The node group name</p>
+     * <p>Node group name</p>
      * 
      * <strong>example:</strong>
      * <p>test-update</p>
@@ -47,7 +50,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public String newNodeGroupName;
 
     /**
-     * <p>The node group ID.</p>
+     * <p>Node group ID</p>
      * 
      * <strong>example:</strong>
      * <p>i120021051733814190732</p>
@@ -56,7 +59,7 @@ public class UpdateNodeGroupRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>The custom script.</p>
+     * <p>User-defined script</p>
      * 
      * <strong>example:</strong>
      * <p>#!/bin/bash

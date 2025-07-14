@@ -167,6 +167,15 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
+         * <p>Whether to enable gpu virtualization or not</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("VirtualGpuEnabled")
+        public Boolean virtualGpuEnabled;
+
+        /**
          * <p>The zone ID.</p>
          * 
          * <strong>example:</strong>
@@ -274,6 +283,14 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
         public String getUpdateTime() {
             return this.updateTime;
+        }
+
+        public ListNodeGroupsResponseBodyGroups setVirtualGpuEnabled(Boolean virtualGpuEnabled) {
+            this.virtualGpuEnabled = virtualGpuEnabled;
+            return this;
+        }
+        public Boolean getVirtualGpuEnabled() {
+            return this.virtualGpuEnabled;
         }
 
         public ListNodeGroupsResponseBodyGroups setZoneId(String zoneId) {

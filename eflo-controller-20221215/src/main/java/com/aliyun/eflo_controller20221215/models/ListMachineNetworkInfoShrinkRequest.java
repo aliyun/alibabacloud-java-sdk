@@ -4,6 +4,9 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListMachineNetworkInfoShrinkRequest extends TeaModel {
+    /**
+     * <p>hpn information of machine</p>
+     */
     @NameInMap("MachineHpnInfo")
     public String machineHpnInfoShrink;
 

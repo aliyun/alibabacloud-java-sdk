@@ -4,6 +4,9 @@ package com.aliyun.eflo_controller20221215.models;
 import com.aliyun.tea.*;
 
 public class ListMachineNetworkInfoResponseBody extends TeaModel {
+    /**
+     * <p>machine network infomation</p>
+     */
     @NameInMap("MachineNetworkInfo")
     public java.util.List<ListMachineNetworkInfoResponseBodyMachineNetworkInfo> machineNetworkInfo;
 
@@ -39,6 +42,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
 
     public static class ListMachineNetworkInfoResponseBodyMachineNetworkInfo extends TeaModel {
         /**
+         * <p>Network of cluster</p>
+         * 
          * <strong>example:</strong>
          * <p>vpc/acl</p>
          */
@@ -46,6 +51,18 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String clusterNet;
 
         /**
+         * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
+         * <ul>
+         * <li>true: The Jumbo Frame feature is enabled for the instance.</li>
+         * <li>false: The Jumbo Frame feature is disabled for the instance.</li>
+         * </ul>
+         * <p>Take note of the following items:</p>
+         * <ul>
+         * <li>The instance must be in the Running (<code>Running</code>) or Stopped (<code>Stopped</code>) state.</li>
+         * <li>The instance must reside in a VPC.</li>
+         * <li>After the Jumbo Frames feature is enabled, the MTU value of the instance is set to 8500. After the Jumbo Frames feature is disabled, the MTU value of the instance is set to 1500. You can enable the Jumbo Frames feature only for specific instance types. For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">Jumbo Frames</a>.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -53,6 +70,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public Boolean enableJumboFrame;
 
         /**
+         * <p>HPN zone</p>
+         * 
          * <strong>example:</strong>
          * <p>B1</p>
          */
@@ -60,6 +79,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <p>Specifies whether dpu machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -67,6 +88,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public Boolean isDpuMode;
 
         /**
+         * <p>The type of machine.</p>
+         * 
          * <strong>example:</strong>
          * <p>efg1.nvga8n</p>
          */
@@ -74,6 +97,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String machineType;
 
         /**
+         * <p>Network architecture</p>
+         * 
          * <strong>example:</strong>
          * <p>XX-7.0</p>
          */
@@ -81,6 +106,8 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         public String netArch;
 
         /**
+         * <p>The ID of the region in which the application is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */
