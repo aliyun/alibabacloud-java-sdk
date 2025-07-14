@@ -71,6 +71,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建外呼任务</p>
+     * 
      * @param request AssignJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AssignJobsResponse
@@ -128,6 +131,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建外呼任务</p>
+     * 
      * @param request AssignJobsRequest
      * @return AssignJobsResponse
      */
@@ -4184,6 +4190,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetEmptyNumberNoMoreCallsInfo</p>
+     * 
      * @param request GetEmptyNumberNoMoreCallsInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetEmptyNumberNoMoreCallsInfoResponse
@@ -4217,6 +4226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetEmptyNumberNoMoreCallsInfo</p>
+     * 
      * @param request GetEmptyNumberNoMoreCallsInfoRequest
      * @return GetEmptyNumberNoMoreCallsInfoResponse
      */
@@ -4286,6 +4298,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMaxAttemptsPerDay</p>
+     * 
      * @param request GetMaxAttemptsPerDayRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetMaxAttemptsPerDayResponse
@@ -4319,6 +4334,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetMaxAttemptsPerDay</p>
+     * 
      * @param request GetMaxAttemptsPerDayRequest
      * @return GetMaxAttemptsPerDayResponse
      */
@@ -4402,6 +4420,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetSummaryInfo</p>
+     * 
      * @param request GetSummaryInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetSummaryInfoResponse
@@ -4431,6 +4452,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetSummaryInfo</p>
+     * 
      * @param request GetSummaryInfoRequest
      * @return GetSummaryInfoResponse
      */
@@ -4474,6 +4498,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetVersion</p>
+     * 
      * @param request GetVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetVersionResponse
@@ -4495,6 +4522,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetVersion</p>
      * @return GetVersionResponse
      */
     public GetVersionResponse getVersion() throws Exception {
@@ -7411,6 +7440,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取外呼任务结果信息</p>
+     * 
      * @param request QueryJobsWithResultRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryJobsWithResultResponse
@@ -7488,6 +7520,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取外呼任务结果信息</p>
+     * 
      * @param request QueryJobsWithResultRequest
      * @return QueryJobsWithResultResponse
      */
@@ -8163,6 +8198,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>外呼历史查询</p>
+     * 
      * @param request SearchTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SearchTaskResponse
@@ -8188,6 +8226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>外呼历史查询</p>
+     * 
      * @param request SearchTaskRequest
      * @return SearchTaskResponse
      */

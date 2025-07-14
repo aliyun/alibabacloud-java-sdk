@@ -1,3 +1,9 @@
+2025-07-14 Version: 1.2.1
+- Update API CreateTaskExportTask: add request parameters CallingNumber.
+- Update API SearchTask: add request parameters CallingNumber.
+- Update API SearchTask: add response parameters Body.SearchTaskInfoList.$.CallingNumber.
+
+
 2025-06-12 Version: 1.2.0
 - Support API CreateBeebotIntent.
 - Support API CreateBeebotIntentLgf.

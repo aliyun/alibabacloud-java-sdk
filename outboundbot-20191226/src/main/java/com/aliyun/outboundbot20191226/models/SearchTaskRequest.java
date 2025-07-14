@@ -39,6 +39,9 @@ public class SearchTaskRequest extends TeaModel {
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    @NameInMap("CallingNumber")
+    public String callingNumber;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -202,6 +205,14 @@ public class SearchTaskRequest extends TeaModel {
     }
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    public SearchTaskRequest setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
+        return this;
+    }
+    public String getCallingNumber() {
+        return this.callingNumber;
     }
 
     public SearchTaskRequest setInstanceId(String instanceId) {

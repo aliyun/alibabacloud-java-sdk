@@ -39,6 +39,9 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    @NameInMap("CallingNumber")
+    public String callingNumber;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -223,6 +226,14 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     }
     public String getCalledNumber() {
         return this.calledNumber;
+    }
+
+    public CreateTaskExportTaskRequest setCallingNumber(String callingNumber) {
+        this.callingNumber = callingNumber;
+        return this;
+    }
+    public String getCallingNumber() {
+        return this.callingNumber;
     }
 
     public CreateTaskExportTaskRequest setHasAnswered(Boolean hasAnswered) {

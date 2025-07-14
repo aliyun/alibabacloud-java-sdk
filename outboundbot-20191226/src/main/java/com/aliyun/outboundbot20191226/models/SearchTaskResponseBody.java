@@ -173,6 +173,9 @@ public class SearchTaskResponseBody extends TeaModel {
         @NameInMap("CalledNumber")
         public String calledNumber;
 
+        @NameInMap("CallingNumber")
+        public String callingNumber;
+
         /**
          * <strong>example:</strong>
          * <p>[{&quot;code&quot;:&quot;OutboundCallError.SipCodeError&quot;, &quot;params&quot;:[{&quot;key&quot;:&quot;SipCode&quot;,&quot;value&quot;:&quot;500&quot;}]}]</p>
@@ -364,6 +367,14 @@ public class SearchTaskResponseBody extends TeaModel {
         }
         public String getCalledNumber() {
             return this.calledNumber;
+        }
+
+        public SearchTaskResponseBodySearchTaskInfoList setCallingNumber(String callingNumber) {
+            this.callingNumber = callingNumber;
+            return this;
+        }
+        public String getCallingNumber() {
+            return this.callingNumber;
         }
 
         public SearchTaskResponseBodySearchTaskInfoList setDialException(String dialException) {
