@@ -733,15 +733,32 @@ public class ListIngressesResponseBody extends TeaModel {
     }
 
     public static class ListIngressesResponseBodyData extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
         /**
          * <p>The list of routing rules.</p>
          */
         @NameInMap("IngressList")
         public java.util.List<ListIngressesResponseBodyDataIngressList> ingressList;
 
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalSize")
+        public Integer totalSize;
+
         public static ListIngressesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListIngressesResponseBodyData self = new ListIngressesResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListIngressesResponseBodyData setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
         }
 
         public ListIngressesResponseBodyData setIngressList(java.util.List<ListIngressesResponseBodyDataIngressList> ingressList) {
@@ -750,6 +767,22 @@ public class ListIngressesResponseBody extends TeaModel {
         }
         public java.util.List<ListIngressesResponseBodyDataIngressList> getIngressList() {
             return this.ingressList;
+        }
+
+        public ListIngressesResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public ListIngressesResponseBodyData setTotalSize(Integer totalSize) {
+            this.totalSize = totalSize;
+            return this;
+        }
+        public Integer getTotalSize() {
+            return this.totalSize;
         }
 
     }

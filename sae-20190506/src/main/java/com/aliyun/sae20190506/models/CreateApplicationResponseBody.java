@@ -36,7 +36,11 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The returned message. Valid values:</p>
+     * <ul>
+     * <li>If the request was successful, a success message is returned.</li>
+     * <li>If the request failed, an error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>

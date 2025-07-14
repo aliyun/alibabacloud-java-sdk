@@ -31,6 +31,9 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
      * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
      * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -150,6 +153,12 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("EphemeralStorage")
         public Float ephemeralStorage;
 
@@ -195,6 +204,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
 
     public static class QueryResourceStaticsResponseBodyDataSummary extends TeaModel {
         /**
+         * <p>The usage of active vCPU. Unit: Core*min.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -210,12 +221,28 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         @NameInMap("Cpu")
         public Float cpu;
 
+        /**
+         * <p>The CU usage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2312145</p>
+         */
         @NameInMap("Cu")
         public Float cu;
 
+        /**
+         * <p>The storage size of the temporary storage space. Unit: GiB.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("EphemeralStorage")
         public Float ephemeralStorage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>c8g1</p>
+         */
         @NameInMap("GpuA10")
         public Float gpuA10;
 
@@ -223,6 +250,8 @@ public class QueryResourceStaticsResponseBody extends TeaModel {
         public Float gpuPpu810e;
 
         /**
+         * <p>The usage of idle CPU. Unit: Core*min.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
