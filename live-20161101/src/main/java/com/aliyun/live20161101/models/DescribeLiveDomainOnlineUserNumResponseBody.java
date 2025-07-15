@@ -4,15 +4,36 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
+    /**
+     * <p>The information about the streams.</p>
+     */
     @NameInMap("OnlineUserInfo")
     public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfo onlineUserInfo;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3A3A8C3D-F8B2-4FBF-9319-771A11B855FA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of streams.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("StreamCount")
     public Integer streamCount;
 
+    /**
+     * <p>The total number of online users at the specified point in time for all the live streams under the main streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserCount")
     public Integer userCount;
 
@@ -54,9 +75,21 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfoInfosInfo extends TeaModel {
+        /**
+         * <p>The transcoding template. A value of origin indicates that the stream is a source stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>origin</p>
+         */
         @NameInMap("TranscodeTemplate")
         public String transcodeTemplate;
 
+        /**
+         * <p>The number of online users for the stream, which can be a source stream or transcoded stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UserNumber")
         public Long userNumber;
 
@@ -103,9 +136,18 @@ public class DescribeLiveDomainOnlineUserNumResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfo extends TeaModel {
+        /**
+         * <p>The statistics on the stream.</p>
+         */
         @NameInMap("Infos")
         public DescribeLiveDomainOnlineUserNumResponseBodyOnlineUserInfoLiveStreamOnlineUserNumInfoInfos infos;
 
+        /**
+         * <p>The name of the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://example.com/test/liveStream****_3_1</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 

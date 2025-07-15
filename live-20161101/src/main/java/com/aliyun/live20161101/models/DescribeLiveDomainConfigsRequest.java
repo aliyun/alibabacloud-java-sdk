@@ -4,9 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainConfigsRequest extends TeaModel {
+    /**
+     * <p>The ingest domain or streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The names of the features. Separate multiple features with commas (,). For more information, see the <strong>Features specified by the Functions parameter</strong> section in this topic.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>set_req_host_header,set_hashkey_args</p>
+     */
     @NameInMap("FunctionNames")
     public String functionNames;
 

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateMessageAppResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public UpdateMessageAppResponseBodyResult result;
 
@@ -32,6 +41,16 @@ public class UpdateMessageAppResponseBody extends TeaModel {
     }
 
     public static class UpdateMessageAppResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the update is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The update is successful.</li>
+         * <li>false: The update failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

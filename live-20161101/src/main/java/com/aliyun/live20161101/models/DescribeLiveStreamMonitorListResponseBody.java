@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
+    /**
+     * <p>The list of monitoring sessions.</p>
+     */
     @NameInMap("LiveStreamMonitorList")
     public java.util.List<DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList> liveStreamMonitorList;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2234baba-a586-46ea-8bd4-c8f7891abcdef</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The number of monitoring sessions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,15 +58,39 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListLayoutConfig extends TeaModel {
+        /**
+         * <p>The fill type. Set this value to none.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("FillMode")
         public String fillMode;
 
+        /**
+         * <p>The position of the layer, in the format of [unk][x,y][unk]. The values of x and y need to be normalized.</p>
+         */
         @NameInMap("PositionNormalized")
         public java.util.List<Float> positionNormalized;
 
+        /**
+         * <p>The reference position of the element. Valid values:</p>
+         * <ul>
+         * <li>topLeft</li>
+         * <li>topRight</li>
+         * <li>bottomLeft</li>
+         * <li>bottomRight</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>topLeft</p>
+         */
         @NameInMap("PositionRefer")
         public String positionRefer;
 
+        /**
+         * <p>The size of the layer. Unit: bytes.</p>
+         */
         @NameInMap("SizeNormalized")
         public java.util.List<Float> sizeNormalized;
 
@@ -95,6 +134,12 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListPlayConfig extends TeaModel {
+        /**
+         * <p>The volume. Valid values: 0 to 1. The value is rounded to two decimal places.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.50</p>
+         */
         @NameInMap("VolumeRate")
         public Float volumeRate;
 
@@ -114,21 +159,51 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList extends TeaModel {
+        /**
+         * <p>The index.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The URL of the input stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
+         */
         @NameInMap("InputUrl")
         public String inputUrl;
 
+        /**
+         * <p>The layout information.</p>
+         */
         @NameInMap("LayoutConfig")
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListLayoutConfig layoutConfig;
 
+        /**
+         * <p>The layout ID, which must start from 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LayoutId")
         public Integer layoutId;
 
+        /**
+         * <p>The playback configurations.</p>
+         */
         @NameInMap("PlayConfig")
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputListPlayConfig playConfig;
 
+        /**
+         * <p>The display name of the monitored stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monitorStream****</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
@@ -188,9 +263,21 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListOutputUrls extends TeaModel {
+        /**
+         * <p>The output URL in the Flash Video (FLV) format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****.flv">http://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****.flv</a></p>
+         */
         @NameInMap("FlvUrl")
         public String flvUrl;
 
+        /**
+         * <p>The output URL in the Real-Time Messaging Protocol (RTMP) format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://demo.aliyundoc.com/monitor/445409ec-7eaa-461d-8f29-4bec2eb9****</p>
+         */
         @NameInMap("RtmpUrl")
         public String rtmpUrl;
 
@@ -218,36 +305,143 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList extends TeaModel {
+        /**
+         * <p>The audio source in the layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("AudioFrom")
         public Integer audioFrom;
 
+        /**
+         * <p>The callback URL that sends monitoring alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
+         */
+        @NameInMap("CallbackUrl")
+        public String callbackUrl;
+
+        /**
+         * <p>The URL of the DingTalk chatbot.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7a7d404056eee1f2fd944ace9bcfc361dc6448583e1d3d3baa">https://oapi.dingtalk.com/robot/send?access_token=7a7d404056eee1f2fd944ace9bcfc361dc6448583e1d3d3baa</a>****</p>
+         */
+        @NameInMap("DingTalkWebHookUrl")
+        public String dingTalkWebHookUrl;
+
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The list of monitored input streams.</p>
+         */
         @NameInMap("InputList")
         public java.util.List<DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList> inputList;
 
+        /**
+         * <p>The monitoring alert thresholds. The following fields are included:</p>
+         * <ul>
+         * <li>fpsLowThres: the video frame rate alert threshold. The value is a floating-point number.</li>
+         * <li>brHighThres: the audio/video bitrate alert threshold. The value is a floating-point number.</li>
+         * <li>eofDurationThresSec: the interruption duration alert threshold. The value is a floating-point number.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{\&quot;fpsLowThres\&quot;: 0.6,\&quot;brLowThres\&quot;: 1.1,\&quot;eofDurationThresSec\&quot;: 10}&quot;</p>
+         */
+        @NameInMap("MonitorConfig")
+        public String monitorConfig;
+
+        /**
+         * <p>The ID of the monitoring session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
+         */
         @NameInMap("MonitorId")
         public String monitorId;
 
+        /**
+         * <p>The name of the monitoring session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveMonito****</p>
+         */
         @NameInMap("MonitorName")
         public String monitorName;
 
+        /**
+         * <p>The output resolution template. Valid values:</p>
+         * <ul>
+         * <li><strong>lp_ld</strong>: low definition</li>
+         * <li><strong>lp_sd</strong>: standard definition</li>
+         * <li><strong>lp_hd</strong>: high definition</li>
+         * <li><strong>lp_ud</strong>: ultra-high definition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>lp_ud</p>
+         */
         @NameInMap("OutputTemplate")
         public String outputTemplate;
 
+        /**
+         * <p>The output URLs.</p>
+         */
         @NameInMap("OutputUrls")
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListOutputUrls outputUrls;
 
+        /**
+         * <p>The ID of the region. Valid values:</p>
+         * <ul>
+         * <li>cn-shanghai: China (Shanghai)</li>
+         * <li>cn-beijing: China (Beijing)</li>
+         * <li>ap-southeast-1: Singapore</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The start time of live monitoring. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 
+        /**
+         * <p>The status of the monitoring session. Valid values:</p>
+         * <ul>
+         * <li>1: Monitoring</li>
+         * <li>0: Unmonitored</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
+        /**
+         * <p>The end time of live monitoring. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-01-11T12:00:00Z</p>
+         */
         @NameInMap("StopTime")
         public String stopTime;
 
@@ -264,6 +458,22 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
             return this.audioFrom;
         }
 
+        public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList setCallbackUrl(String callbackUrl) {
+            this.callbackUrl = callbackUrl;
+            return this;
+        }
+        public String getCallbackUrl() {
+            return this.callbackUrl;
+        }
+
+        public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList setDingTalkWebHookUrl(String dingTalkWebHookUrl) {
+            this.dingTalkWebHookUrl = dingTalkWebHookUrl;
+            return this;
+        }
+        public String getDingTalkWebHookUrl() {
+            return this.dingTalkWebHookUrl;
+        }
+
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList setDomain(String domain) {
             this.domain = domain;
             return this;
@@ -278,6 +488,14 @@ public class DescribeLiveStreamMonitorListResponseBody extends TeaModel {
         }
         public java.util.List<DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorListInputList> getInputList() {
             return this.inputList;
+        }
+
+        public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList setMonitorConfig(String monitorConfig) {
+            this.monitorConfig = monitorConfig;
+            return this;
+        }
+        public String getMonitorConfig() {
+            return this.monitorConfig;
         }
 
         public DescribeLiveStreamMonitorListResponseBodyLiveStreamMonitorList setMonitorId(String monitorId) {

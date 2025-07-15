@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DynamicUpdateWaterMarkStreamRuleResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BE9407FF-F897-4DBD-338D-98A750AD805F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

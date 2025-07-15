@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
+    /**
+     * <p>The verification information.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeDomainWithIntegrityResponseBodyContent> content;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +41,24 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainWithIntegrityResponseBodyContent extends TeaModel {
+        /**
+         * <p>The column names.</p>
+         */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>The table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1637825700000</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The subpoints.</p>
+         */
         @NameInMap("Points")
         public java.util.List<String> points;
 

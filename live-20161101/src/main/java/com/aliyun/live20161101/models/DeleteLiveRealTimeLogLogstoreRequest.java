@@ -4,17 +4,41 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRealTimeLogLogstoreRequest extends TeaModel {
+    /**
+     * <p>The name of the Logstore to which log entries are delivered.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>logstore_example</p>
+     */
     @NameInMap("Logstore")
     public String logstore;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>project_example</p>
+     */
     @NameInMap("Project")
     public String project;
 
+    /**
+     * <p>The ID of the region where the Log Service project is deployed.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("Region")
     public String region;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DeleteLiveRealTimeLogLogstoreRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteLiveRealTimeLogLogstoreRequest self = new DeleteLiveRealTimeLogLogstoreRequest();
@@ -51,6 +75,14 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends TeaModel {
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public DeleteLiveRealTimeLogLogstoreRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

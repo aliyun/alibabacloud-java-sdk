@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SendMessageToGroupUsersResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public SendMessageToGroupUsersResponseBodyResult result;
 
@@ -32,6 +41,12 @@ public class SendMessageToGroupUsersResponseBody extends TeaModel {
     }
 
     public static class SendMessageToGroupUsersResponseBodyResult extends TeaModel {
+        /**
+         * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hp***</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 

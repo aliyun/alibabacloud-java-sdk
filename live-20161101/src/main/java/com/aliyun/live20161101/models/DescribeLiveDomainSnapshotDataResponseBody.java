@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainSnapshotDataResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-B913-E0AC3D31693F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The daily statistics on the number of snapshots.</p>
+     */
     @NameInMap("SnapshotDataInfos")
     public DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfos snapshotDataInfos;
 
@@ -32,9 +41,21 @@ public class DescribeLiveDomainSnapshotDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainSnapshotDataResponseBodySnapshotDataInfosSnapshotDataInfo extends TeaModel {
+        /**
+         * <p>The date.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20180209</p>
+         */
         @NameInMap("Date")
         public String date;
 
+        /**
+         * <p>The total number of snapshots that were captured on the day.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveUserTagsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6B0256B6-2442-5BEF-B8D6-A0C28A801DFC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tags")
     public java.util.List<DescribeLiveUserTagsResponseBodyTags> tags;
 
@@ -32,9 +41,18 @@ public class DescribeLiveUserTagsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveUserTagsResponseBodyTags extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key1</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         */
         @NameInMap("Value")
         public java.util.List<String> value;
 

@@ -4,30 +4,90 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class HotLiveRtcStreamRequest extends TeaModel {
+    /**
+     * <p>The name of the application to which the live stream belongs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>app</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The audio MSID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rts audio</p>
+     */
     @NameInMap("AudioMsid")
     public String audioMsid;
 
+    /**
+     * <p>The duration for which the prefetch connection is maintained. Unit: milliseconds. Default value: 0, which specifies that the prefetch connection is always maintained.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ConnectionTimeout")
     public String connectionTimeout;
 
+    /**
+     * <p>The streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The custom period after which a timeout event is triggered. Unit: milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
     @NameInMap("MediaTimeout")
     public String mediaTimeout;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The code of the region in which the live stream is prefetched. For more information, see the following tables that list available region codes.</p>
+     * <blockquote>
+     * <p> Region codes include provincial codes for China and country codes for all countries.</p>
+     * </blockquote>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZHJ</p>
+     */
     @NameInMap("RegionCode")
     public String regionCode;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The name of the live stream that you want to prefetch.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>stream</p>
+     */
     @NameInMap("StreamName")
     public String streamName;
 
+    /**
+     * <p>The video MSID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rts video</p>
+     */
     @NameInMap("VideoMsid")
     public String videoMsid;
 
@@ -90,6 +150,14 @@ public class HotLiveRtcStreamRequest extends TeaModel {
     }
     public String getRegionCode() {
         return this.regionCode;
+    }
+
+    public HotLiveRtcStreamRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public HotLiveRtcStreamRequest setStreamName(String streamName) {

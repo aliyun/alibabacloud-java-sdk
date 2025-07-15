@@ -4,12 +4,28 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeShowListResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>****Details of the episode list.</p>
+     * <p>Show indicates the information about a specific episode. For more information, see the <strong>Show</strong> parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ShowList[Show1, Show2, Show3...]</p>
+     */
     @NameInMap("ShowList")
     public String showList;
 
+    /**
+     * <p>The information about the episode list.</p>
+     */
     @NameInMap("ShowListInfo")
     public DescribeShowListResponseBodyShowListInfo showListInfo;
 
@@ -43,15 +59,36 @@ public class DescribeShowListResponseBody extends TeaModel {
     }
 
     public static class DescribeShowListResponseBodyShowListInfoShowListShowResourceInfo extends TeaModel {
+        /**
+         * <p>The custom type label.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("LiveInputType")
         public Integer liveInputType;
 
+        /**
+         * <p>The ID of the video-on-demand (VOD) file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>The type of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vod</p>
+         */
         @NameInMap("ResourceType")
         public String resourceType;
 
+        /**
+         * <p>The URL of the resource.</p>
+         */
         @NameInMap("ResourceUrl")
         public String resourceUrl;
 
@@ -95,18 +132,46 @@ public class DescribeShowListResponseBody extends TeaModel {
     }
 
     public static class DescribeShowListResponseBodyShowListInfoShowListShow extends TeaModel {
+        /**
+         * <p>The duration of the episode. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>The number of times the episode repeats after the first playback is complete.</p>
+         * <p>For example, if you set the value to 0, the episode is to be played once. If you set the value to 1, the episode is to be played twice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("RepeatTimes")
         public Integer repeatTimes;
 
+        /**
+         * <p>The resource information.</p>
+         */
         @NameInMap("ResourceInfo")
         public DescribeShowListResponseBodyShowListInfoShowListShowResourceInfo resourceInfo;
 
+        /**
+         * <p>The ID of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
+         */
         @NameInMap("ShowId")
         public String showId;
 
+        /**
+         * <p>The name of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveShow****</p>
+         */
         @NameInMap("ShowName")
         public String showName;
 
@@ -177,27 +242,83 @@ public class DescribeShowListResponseBody extends TeaModel {
     }
 
     public static class DescribeShowListResponseBodyShowListInfo extends TeaModel {
+        /**
+         * <p>The background of the episode list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;MaterialId\&quot;:\&quot;a2b8e671-2fe5-4642-a2ec-bf93880e****\&quot;,\&quot;resourceType\&quot;:\&quot;VOD\&quot;}</p>
+         */
+        @NameInMap("Background")
+        public String background;
+
+        /**
+         * <p>The ID of the episode that is playing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
+         */
         @NameInMap("CurrentShowId")
         public String currentShowId;
 
+        /**
+         * <p>The episode of the highest priority.</p>
+         * <blockquote>
+         * <p>You can configure this parameter only before the episode list starts playing.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
+         */
         @NameInMap("HighPriorityShowId")
         public String highPriorityShowId;
 
+        /**
+         * <p>The time at which the episode of the highest priority is played. Format: yyyy-MM-dd\&quot;T\&quot;HH:mm:ss.</p>
+         * <blockquote>
+         * <p>You can configure this parameter only before the episode list starts playing. After you configure this parameter, when the specified point in time is reached, any episode that is playing stops and the episode of the highest priority in the episode list starts to play.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-11-23T12:30:00</p>
+         */
         @NameInMap("HighPriorityShowStartTime")
         public String highPriorityShowStartTime;
 
+        /**
+         * <p>The episodes in the episode list.</p>
+         */
         @NameInMap("ShowList")
         public DescribeShowListResponseBodyShowListInfoShowList showList;
 
+        /**
+         * <p>The number of additional times the episode list is played by default. The value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ShowListRepeatTimes")
         public Integer showListRepeatTimes;
 
+        /**
+         * <p>The number of additional times the episode list is played.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("TotalShowListRepeatTimes")
         public Integer totalShowListRepeatTimes;
 
         public static DescribeShowListResponseBodyShowListInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeShowListResponseBodyShowListInfo self = new DescribeShowListResponseBodyShowListInfo();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeShowListResponseBodyShowListInfo setBackground(String background) {
+            this.background = background;
+            return this;
+        }
+        public String getBackground() {
+            return this.background;
         }
 
         public DescribeShowListResponseBodyShowListInfo setCurrentShowId(String currentShowId) {

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateListResponseBody extends TeaModel {
+    /**
+     * <p>The details.</p>
+     */
     @NameInMap("CertificateListModel")
     public DescribeLiveCertificateListResponseBodyCertificateListModel certificateListModel;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,57 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveCertificateListResponseBodyCertificateListModelCertListCert extends TeaModel {
+        /**
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("CertId")
         public Long certId;
 
+        /**
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cert-****</p>
+         */
         @NameInMap("CertName")
         public String certName;
 
+        /**
+         * <p>The Common Name (CN) attribute of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.net</p>
+         */
         @NameInMap("Common")
         public String common;
 
+        /**
+         * <p>The fingerprint of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Fingerprint")
         public String fingerprint;
 
+        /**
+         * <p>The certificate authority (CA) that issued the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The time when the certificate was issued. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1512388659</p>
+         */
         @NameInMap("LastTime")
         public Long lastTime;
 
@@ -125,9 +170,18 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveCertificateListResponseBodyCertificateListModel extends TeaModel {
+        /**
+         * <p>The certificates.</p>
+         */
         @NameInMap("CertList")
         public DescribeLiveCertificateListResponseBodyCertificateListModelCertList certList;
 
+        /**
+         * <p>The number of certificates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Count")
         public Integer count;
 

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class GetMessageTokenResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public GetMessageTokenResponseBodyResult result;
 
@@ -32,12 +41,30 @@ public class GetMessageTokenResponseBody extends TeaModel {
     }
 
     public static class GetMessageTokenResponseBodyResult extends TeaModel {
+        /**
+         * <p>The token used to establish a persistent connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth_cloud_key:***-b0YY5Gy6Q</p>
+         */
         @NameInMap("AccessToken")
         public String accessToken;
 
+        /**
+         * <p>Indicates how long until the token expires. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400000</p>
+         */
         @NameInMap("AccessTokenExpiredTime")
         public Long accessTokenExpiredTime;
 
+        /**
+         * <p>The updated token. If a token expires, you can call RefreshToken to obtain a new token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth_cloud_key:****-Q62xggOTdgk3gw=</p>
+         */
         @NameInMap("RefreshToken")
         public String refreshToken;
 

@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveAudioAuditConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

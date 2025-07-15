@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SendLikeResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public SendLikeResponseBodyResult result;
 
@@ -32,6 +41,12 @@ public class SendLikeResponseBody extends TeaModel {
     }
 
     public static class SendLikeResponseBodyResult extends TeaModel {
+        /**
+         * <p>The number of likes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("LikeCount")
         public Integer likeCount;
 

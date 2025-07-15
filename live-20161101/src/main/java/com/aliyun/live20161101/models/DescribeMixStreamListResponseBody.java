@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeMixStreamListResponseBody extends TeaModel {
+    /**
+     * <p>Details about the stream mixing tasks.</p>
+     */
     @NameInMap("MixStreamList")
     public java.util.List<DescribeMixStreamListResponseBodyMixStreamList> mixStreamList;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC1E78D3-FA8B-4457-DEE2-6093E1232254</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,30 +58,84 @@ public class DescribeMixStreamListResponseBody extends TeaModel {
     }
 
     public static class DescribeMixStreamListResponseBodyMixStreamList extends TeaModel {
+        /**
+         * <p>The name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The time when the stream mixing task was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-17T08:39:14Z</p>
+         */
         @NameInMap("GmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>The time when the stream mixing task was modified. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-09-17T08:39:15Z</p>
+         */
         @NameInMap("GmtModified")
         public String gmtModified;
 
+        /**
+         * <p>The number of input streams.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("InputStreamNumber")
         public Integer inputStreamNumber;
 
+        /**
+         * <p>The ID of the layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>USERDEFINED</p>
+         */
         @NameInMap("LayoutId")
         public String layoutId;
 
+        /**
+         * <p>The stream mixing template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lp_ld</p>
+         */
         @NameInMap("MixStreamTemplate")
         public String mixStreamTemplate;
 
+        /**
+         * <p>The ID of the stream mixing task. You can specify this parameter in a request to delete the steam mixing task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aaf9a50f-c460-3a9b-f180-38dd8f05****</p>
+         */
         @NameInMap("MixstreamId")
         public String mixstreamId;
 
+        /**
+         * <p>The name of the output stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 

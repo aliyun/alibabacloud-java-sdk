@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the episodes.</p>
+     */
     @NameInMap("ItemIds")
     public AddCasterEpisodeGroupResponseBodyItemIds itemIds;
 
+    /**
+     * <p>The ID of the episode list that was added. Record the ID as it can be used to manage the program being added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68X****</p>
+     */
     @NameInMap("ProgramId")
     public String programId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

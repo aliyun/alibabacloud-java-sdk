@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class RestartCasterResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6EBD1AC4-C34D-4AE1-963E-B688A228BE31</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveDomainResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>94E3559F-7B6A-4A5E-AFFD-44E2A208A249</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

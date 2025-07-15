@@ -4,21 +4,54 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidth data returned at each interval.</p>
+     */
     @NameInMap("BpsDataPerInterval")
     public DescribeLiveDomainBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
+    /**
+     * <p>The time granularity of the query. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T09:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T08:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,15 +109,39 @@ public class DescribeLiveDomainBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111</p>
+         */
         @NameInMap("BpsValue")
         public String bpsValue;
 
+        /**
+         * <p>The bandwidth over HTTP. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11286111</p>
+         */
         @NameInMap("HttpBpsValue")
         public String httpBpsValue;
 
+        /**
+         * <p>The bandwidth over HTTPS. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("HttpsBpsValue")
         public String httpsBpsValue;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T08:00:05Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

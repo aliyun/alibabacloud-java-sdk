@@ -4,6 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectNotifyConfigRequest extends TeaModel {
+    /**
+     * <p>The main streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

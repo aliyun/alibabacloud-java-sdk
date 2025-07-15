@@ -4,9 +4,22 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterLayoutResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the layout.</p>
+     * <p>Record the ID as it can be used to manage the layout being created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>
+     */
     @NameInMap("LayoutId")
     public String layoutId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

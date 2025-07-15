@@ -4,6 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMessageAppRequest extends TeaModel {
+    /**
+     * <p>The ID of the interactive messaging application that you want to delete. You can specify only one ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VKL3***</p>
+     */
     @NameInMap("AppId")
     public String appId;
 

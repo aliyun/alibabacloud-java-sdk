@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateListRequest extends TeaModel {
+    /**
+     * <p>The ingest domain or streaming domain. Separate multiple domain names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com,example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

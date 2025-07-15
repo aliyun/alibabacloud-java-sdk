@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeStudioLayoutsResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5c6a2a0d-f228-4a64-af62-20e91b9676b3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The layout information.</p>
+     */
     @NameInMap("StudioLayouts")
     public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayouts> studioLayouts;
 
+    /**
+     * <p>The total number of layouts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Total")
     public Integer total;
 
@@ -43,15 +58,39 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsBgImageConfig extends TeaModel {
+        /**
+         * <p>The unique ID of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k12kj31****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The URL of the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.org">http://example.org</a></p>
+         */
         @NameInMap("ImageUrl")
         public String imageUrl;
 
+        /**
+         * <p>The position ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RV01</p>
+         */
         @NameInMap("LocationId")
         public String locationId;
 
+        /**
+         * <p>The ID of the material in ApsaraVideo VOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfas9df89asd8f9****</p>
+         */
         @NameInMap("MaterialId")
         public String materialId;
 
@@ -95,9 +134,21 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsCommonConfig extends TeaModel {
+        /**
+         * <p>The ID of the channel that is bound to the video resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RV01</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <p>The ID of the video resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfasdfasdfasdfa****</p>
+         */
         @NameInMap("VideoResourceId")
         public String videoResourceId;
 
@@ -125,9 +176,25 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsLayerOrderConfigList extends TeaModel {
+        /**
+         * <p>The unique ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k12kj31****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The type of the resource. Valid values:</p>
+         * <ul>
+         * <li><strong>background</strong>: background material</li>
+         * <li><strong>media</strong>: multimedia material</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>media</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -155,33 +222,90 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsMediaInputConfigList extends TeaModel {
+        /**
+         * <p>The ID of the channel that is bound to the video resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RV01</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <p>The fill type. Default value: none.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>none</p>
+         */
         @NameInMap("FillMode")
         public String fillMode;
 
+        /**
+         * <p>The normalized value of the material height. The value indicates the ratio of the material height to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
         @NameInMap("HeightNormalized")
         public Float heightNormalized;
 
+        /**
+         * <p>The unique ID of the multimedia material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k12kj31****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The ID of the image in ApsaraVideo VOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lkajsdfsa8fd89asd8****</p>
+         */
         @NameInMap("ImageMaterialId")
         public String imageMaterialId;
 
+        /**
+         * <p>The sequence number of the multimedia material. This parameter is displayed on the frontend but not used in the operation logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>The normalized value of the position of the material, in the format of [unk][x,y][unk]. Valid values of x and y: <strong>0 to 1</strong>. For example, [unk][0.1,0.2][unk] indicates that the material is horizontally offset by 10% and vertically offset by 20% towards the upper-left corner.</p>
+         */
         @NameInMap("PositionNormalized")
         public java.util.List<Float> positionNormalized;
 
+        /**
+         * <p>The coordinate origin for the material. Default value: topLeft. topLeft indicates that the upper-left corner is used as the coordinate origin.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>topLeft</p>
+         */
         @NameInMap("PositionRefer")
         public String positionRefer;
 
+        /**
+         * <p>The ID of the video resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfasdfasdfasdfa****</p>
+         */
         @NameInMap("VideoResourceId")
         public String videoResourceId;
 
+        /**
+         * <p>The normalized value of the material width. The value indicates the ratio of the material width to the width of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
         @NameInMap("WidthNormalized")
         public Float widthNormalized;
 
@@ -273,9 +397,21 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigListAudioConfig extends TeaModel {
+        /**
+         * <p>The corresponding channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ValidChannel")
         public String validChannel;
 
+        /**
+         * <p>The volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("VolumeRate")
         public Float volumeRate;
 
@@ -303,36 +439,109 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigList extends TeaModel {
+        /**
+         * <p>The audio configurations.</p>
+         */
         @NameInMap("AudioConfig")
         public DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigListAudioConfig audioConfig;
 
+        /**
+         * <p>The ID of the channel that is bound to the video resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RV01</p>
+         */
         @NameInMap("ChannelId")
         public String channelId;
 
+        /**
+         * <p>The color gamut for chroma key. Valid values:</p>
+         * <ul>
+         * <li><strong>blue</strong></li>
+         * <li><strong>green</strong></li>
+         * <li><strong>auto</strong>: automatic recognition</li>
+         * <li><strong>complex</strong>: background replacement</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>green</p>
+         */
         @NameInMap("Color")
         public String color;
 
+        /**
+         * <p>The normalized value of the height. The value indicates the ratio of the height of the keyed portrait to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.4</p>
+         */
         @NameInMap("HeightNormalized")
         public Float heightNormalized;
 
+        /**
+         * <p>The unique ID of the chroma key source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>k12kj31****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The sequence number of the chroma key source. This parameter is displayed on the frontend but not used in the operation logic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Integer index;
 
+        /**
+         * <p>Indicates whether only audio exists.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("OnlyAudio")
         public Boolean onlyAudio;
 
+        /**
+         * <p>The portrait type. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: half body</li>
+         * <li><strong>1</strong>: full body</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PortraitType")
         public Integer portraitType;
 
+        /**
+         * <p>The x-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("PositionX")
         public String positionX;
 
+        /**
+         * <p>The y-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.2</p>
+         */
         @NameInMap("PositionY")
         public String positionY;
 
+        /**
+         * <p>The ID of the video resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfasdfasdfasdfa****</p>
+         */
         @NameInMap("VideoResourceId")
         public String videoResourceId;
 
@@ -432,27 +641,64 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     }
 
     public static class DescribeStudioLayoutsResponseBodyStudioLayouts extends TeaModel {
+        /**
+         * <p>The background material configurations.</p>
+         */
         @NameInMap("BgImageConfig")
         public DescribeStudioLayoutsResponseBodyStudioLayoutsBgImageConfig bgImageConfig;
 
+        /**
+         * <p>The common layout configurations. This parameter is returned only for a common layout.</p>
+         */
         @NameInMap("CommonConfig")
         public DescribeStudioLayoutsResponseBodyStudioLayoutsCommonConfig commonConfig;
 
+        /**
+         * <p>The layer sorting configurations.</p>
+         */
         @NameInMap("LayerOrderConfigList")
         public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayoutsLayerOrderConfigList> layerOrderConfigList;
 
+        /**
+         * <p>The ID of the layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
+         */
         @NameInMap("LayoutId")
         public String layoutId;
 
+        /**
+         * <p>The name of the layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试布局</p>
+         */
         @NameInMap("LayoutName")
         public String layoutName;
 
+        /**
+         * <p>The type of the layout. Valid values:</p>
+         * <ul>
+         * <li><strong>common</strong></li>
+         * <li><strong>studio</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>studio</p>
+         */
         @NameInMap("LayoutType")
         public String layoutType;
 
+        /**
+         * <p>The multimedia input configurations.</p>
+         */
         @NameInMap("MediaInputConfigList")
         public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayoutsMediaInputConfigList> mediaInputConfigList;
 
+        /**
+         * <p>The input configurations for chroma key.</p>
+         */
         @NameInMap("ScreenInputConfigList")
         public java.util.List<DescribeStudioLayoutsResponseBodyStudioLayoutsScreenInputConfigList> screenInputConfigList;
 

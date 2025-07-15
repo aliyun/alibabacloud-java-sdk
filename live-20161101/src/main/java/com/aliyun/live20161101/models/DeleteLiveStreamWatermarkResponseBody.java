@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveStreamWatermarkResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5c6a2a0df228-4a64-af62-20e91b******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

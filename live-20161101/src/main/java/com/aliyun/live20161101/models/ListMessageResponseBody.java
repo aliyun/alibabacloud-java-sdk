@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListMessageResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public ListMessageResponseBodyResult result;
 
@@ -32,18 +41,48 @@ public class ListMessageResponseBody extends TeaModel {
     }
 
     public static class ListMessageResponseBodyResultMessageList extends TeaModel {
+        /**
+         * <p>The message body. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <p>The ID of the message group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE35-****-T95F</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The ID of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qt***</p>
+         */
         @NameInMap("MessageId")
         public String messageId;
 
+        /**
+         * <p>The ID of the user who sent the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yi***</p>
+         */
         @NameInMap("SenderId")
         public String senderId;
 
+        /**
+         * <p>The type of the message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10002</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -95,9 +134,22 @@ public class ListMessageResponseBody extends TeaModel {
     }
 
     public static class ListMessageResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <ul>
+         * <li>true: The current page is followed by another page.</li>
+         * <li>false: The current page is not followed by another page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>Details about the messages.</p>
+         */
         @NameInMap("MessageList")
         public java.util.List<ListMessageResponseBodyResultMessageList> messageList;
 

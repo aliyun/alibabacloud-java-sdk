@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The domain names.</p>
+     */
     @NameInMap("Content")
     public ListLiveRealtimeLogDeliveryDomainsResponseBodyContent content;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>95D5B69F-8AEC-419B-8F3A-612B35032B0D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,25 @@ public class ListLiveRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
     }
 
     public static class ListLiveRealtimeLogDeliveryDomainsResponseBodyContentDomains extends TeaModel {
+        /**
+         * <p>The streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The status of real-time log delivery. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong>: enabled</li>
+         * <li><strong>offline</strong>: disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
+         */
         @NameInMap("Status")
         public String status;
 

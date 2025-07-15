@@ -1,0 +1,356 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.live20161101.models;
+
+import com.aliyun.tea.*;
+
+public class AddLiveAISubtitleRequest extends TeaModel {
+    /**
+     * <p>The background color of the subtitles, which is an RGBA value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0xFF0000</p>
+     */
+    @NameInMap("BgColor")
+    public String bgColor;
+
+    /**
+     * <p>The background size of the subtitles. Valid values: [0,1].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.09</p>
+     */
+    @NameInMap("BgWidthNormalized")
+    public Float bgWidthNormalized;
+
+    /**
+     * <p>The font weight. Valid values: [0,1].</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.05</p>
+     */
+    @NameInMap("BorderWidthNormalized")
+    public Float borderWidthNormalized;
+
+    /**
+     * <p>The subtitle template that you copy. Set the value to the name of the subtitle template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sub01</p>
+     */
+    @NameInMap("CopyFrom")
+    public String copyFrom;
+
+    /**
+     * <p>The custom description of the subtitle template. The description can be up to 128 characters in length and can contain letters, digits, and special characters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>live AI subtitle template</p>
+     */
+    @NameInMap("Description")
+    public String description;
+
+    /**
+     * <p>The target language. Valid values:</p>
+     * <ul>
+     * <li>en-US: English </li>
+     * <li>zh-CN: Chinese </li>
+     * <li>es-ES: Spanish </li>
+     * <li>ru-RU: Russian</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
+    @NameInMap("DstLanguage")
+    public String dstLanguage;
+
+    /**
+     * <p>The font color, which is an RGBA value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0xFFFFFF</p>
+     */
+    @NameInMap("FontColor")
+    public String fontColor;
+
+    /**
+     * <p>The font. Valid values:</p>
+     * <ul>
+     * <li>KaiTi (default)</li>
+     * <li>AlibabaPuHuiTi-Regular</li>
+     * <li>AlibabaPuHuiTi-Bold</li>
+     * <li>AlibabaPuHuiTi-Light</li>
+     * <li>NotoSansHans-Regular</li>
+     * <li>NotoSansHans-Bold</li>
+     * <li>NotoSansHans-Light</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>KaiTi</p>
+     */
+    @NameInMap("FontName")
+    public String fontName;
+
+    /**
+     * <p>The font size. Valid values: [0,1].</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.037</p>
+     */
+    @NameInMap("FontSizeNormalized")
+    public Float fontSizeNormalized;
+
+    /**
+     * <p>The preview height. Unit: pixels.
+     * The following specifications of preview width × preview height are supported: </p>
+     * <ul>
+     * <li>Landscape low definition 360p (640×360) </li>
+     * <li>Portrait low definition 360p (360×640)</li>
+     * <li>Landscape standard definition 480p (854×480)</li>
+     * <li>Portrait standard definition 480p (480×854)</li>
+     * <li>Landscape high definition 720p (1280×720)</li>
+     * <li>Portrait high definition 720p (720×1280)</li>
+     * <li>Landscape ultra-high definition 1080p (1920×1080)</li>
+     * <li>Portrait ultra-high definition 1080p (1080×1920)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>720</p>
+     */
+    @NameInMap("Height")
+    public String height;
+
+    /**
+     * <p>The number of displayed lines.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("MaxLines")
+    public Integer maxLines;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <p>The position of the subtitles. The value is a pair of coordinates for which the origin of the x and y axes is the lower-left corner of the screen.</p>
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("PositionNormalized")
+    public java.util.List<Float> positionNormalized;
+
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>Specifies whether to display the source language. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ShowSourceLan")
+    public Boolean showSourceLan;
+
+    /**
+     * <p>The source language. Valid values:</p>
+     * <ul>
+     * <li>en-US: English </li>
+     * <li>zh-CN: Chinese </li>
+     * <li>ru-RU: Russian</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
+    @NameInMap("SrcLanguage")
+    public String srcLanguage;
+
+    /**
+     * <p>The name of the subtitle template. The name can contain only digits, letters, and hyphens (-). The name cannot start with a hyphen.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sub01</p>
+     */
+    @NameInMap("SubtitleName")
+    public String subtitleName;
+
+    /**
+     * <p>The preview width. Unit: pixels.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1280</p>
+     */
+    @NameInMap("Width")
+    public String width;
+
+    /**
+     * <p>The number of words displayed per line. Valid values: integers from 1 to 500.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
+    @NameInMap("WordPerLine")
+    public Integer wordPerLine;
+
+    public static AddLiveAISubtitleRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddLiveAISubtitleRequest self = new AddLiveAISubtitleRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public AddLiveAISubtitleRequest setBgColor(String bgColor) {
+        this.bgColor = bgColor;
+        return this;
+    }
+    public String getBgColor() {
+        return this.bgColor;
+    }
+
+    public AddLiveAISubtitleRequest setBgWidthNormalized(Float bgWidthNormalized) {
+        this.bgWidthNormalized = bgWidthNormalized;
+        return this;
+    }
+    public Float getBgWidthNormalized() {
+        return this.bgWidthNormalized;
+    }
+
+    public AddLiveAISubtitleRequest setBorderWidthNormalized(Float borderWidthNormalized) {
+        this.borderWidthNormalized = borderWidthNormalized;
+        return this;
+    }
+    public Float getBorderWidthNormalized() {
+        return this.borderWidthNormalized;
+    }
+
+    public AddLiveAISubtitleRequest setCopyFrom(String copyFrom) {
+        this.copyFrom = copyFrom;
+        return this;
+    }
+    public String getCopyFrom() {
+        return this.copyFrom;
+    }
+
+    public AddLiveAISubtitleRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
+    }
+
+    public AddLiveAISubtitleRequest setDstLanguage(String dstLanguage) {
+        this.dstLanguage = dstLanguage;
+        return this;
+    }
+    public String getDstLanguage() {
+        return this.dstLanguage;
+    }
+
+    public AddLiveAISubtitleRequest setFontColor(String fontColor) {
+        this.fontColor = fontColor;
+        return this;
+    }
+    public String getFontColor() {
+        return this.fontColor;
+    }
+
+    public AddLiveAISubtitleRequest setFontName(String fontName) {
+        this.fontName = fontName;
+        return this;
+    }
+    public String getFontName() {
+        return this.fontName;
+    }
+
+    public AddLiveAISubtitleRequest setFontSizeNormalized(Float fontSizeNormalized) {
+        this.fontSizeNormalized = fontSizeNormalized;
+        return this;
+    }
+    public Float getFontSizeNormalized() {
+        return this.fontSizeNormalized;
+    }
+
+    public AddLiveAISubtitleRequest setHeight(String height) {
+        this.height = height;
+        return this;
+    }
+    public String getHeight() {
+        return this.height;
+    }
+
+    public AddLiveAISubtitleRequest setMaxLines(Integer maxLines) {
+        this.maxLines = maxLines;
+        return this;
+    }
+    public Integer getMaxLines() {
+        return this.maxLines;
+    }
+
+    public AddLiveAISubtitleRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public AddLiveAISubtitleRequest setPositionNormalized(java.util.List<Float> positionNormalized) {
+        this.positionNormalized = positionNormalized;
+        return this;
+    }
+    public java.util.List<Float> getPositionNormalized() {
+        return this.positionNormalized;
+    }
+
+    public AddLiveAISubtitleRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public AddLiveAISubtitleRequest setShowSourceLan(Boolean showSourceLan) {
+        this.showSourceLan = showSourceLan;
+        return this;
+    }
+    public Boolean getShowSourceLan() {
+        return this.showSourceLan;
+    }
+
+    public AddLiveAISubtitleRequest setSrcLanguage(String srcLanguage) {
+        this.srcLanguage = srcLanguage;
+        return this;
+    }
+    public String getSrcLanguage() {
+        return this.srcLanguage;
+    }
+
+    public AddLiveAISubtitleRequest setSubtitleName(String subtitleName) {
+        this.subtitleName = subtitleName;
+        return this;
+    }
+    public String getSubtitleName() {
+        return this.subtitleName;
+    }
+
+    public AddLiveAISubtitleRequest setWidth(String width) {
+        this.width = width;
+        return this;
+    }
+    public String getWidth() {
+        return this.width;
+    }
+
+    public AddLiveAISubtitleRequest setWordPerLine(Integer wordPerLine) {
+        this.wordPerLine = wordPerLine;
+        return this;
+    }
+    public Integer getWordPerLine() {
+        return this.wordPerLine;
+    }
+
+}

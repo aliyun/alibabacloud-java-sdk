@@ -4,15 +4,34 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateMessageAppRequest extends TeaModel {
+    /**
+     * <p>The configurations of the application.</p>
+     */
     @NameInMap("AppConfig")
     public java.util.Map<String, String> appConfig;
 
+    /**
+     * <p>The ID of the interactive messaging application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VKL3***</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The name of the interactive messaging application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testApp</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The extended field.</p>
+     */
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;
 

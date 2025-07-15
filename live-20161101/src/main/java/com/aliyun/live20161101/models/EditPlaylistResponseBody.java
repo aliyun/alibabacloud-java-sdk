@@ -4,15 +4,36 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class EditPlaylistResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the production studio. You can use the ID as a request parameter in the API operation that is used to configure callbacks or add a virtual studio layout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0e94d1f4-1a65-445c-9dcf-de8b3b8d****</p>
+     */
     @NameInMap("CasterId")
     public String casterId;
 
+    /**
+     * <p>The information about the episodes.</p>
+     */
     @NameInMap("Items")
     public EditPlaylistResponseBodyItems items;
 
+    /**
+     * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to delete the episode list, query the information about the episode list, start the episode list, or stop the episode list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
+     */
     @NameInMap("ProgramId")
     public String programId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5c6a2a0d-f228-4a64-af62-20e91b96****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +75,21 @@ public class EditPlaylistResponseBody extends TeaModel {
     }
 
     public static class EditPlaylistResponseBodyItemsFailedItems extends TeaModel {
+        /**
+         * <p>The ID of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <p>The name of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item2</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
@@ -84,9 +117,21 @@ public class EditPlaylistResponseBody extends TeaModel {
     }
 
     public static class EditPlaylistResponseBodyItemsSuccessItems extends TeaModel {
+        /**
+         * <p>The ID of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
+         */
         @NameInMap("ItemId")
         public String itemId;
 
+        /**
+         * <p>The name of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>item1</p>
+         */
         @NameInMap("ItemName")
         public String itemName;
 
@@ -114,9 +159,15 @@ public class EditPlaylistResponseBody extends TeaModel {
     }
 
     public static class EditPlaylistResponseBodyItems extends TeaModel {
+        /**
+         * <p>The episodes that failed to be added.</p>
+         */
         @NameInMap("FailedItems")
         public java.util.List<EditPlaylistResponseBodyItemsFailedItems> failedItems;
 
+        /**
+         * <p>The episodes that were added.</p>
+         */
         @NameInMap("SuccessItems")
         public java.util.List<EditPlaylistResponseBodyItemsSuccessItems> successItems;
 

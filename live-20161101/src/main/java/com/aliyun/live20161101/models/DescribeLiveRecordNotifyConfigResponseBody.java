@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
+    /**
+     * <p>The configuration of callbacks for live stream recording.</p>
+     */
     @NameInMap("LiveRecordNotifyConfig")
     public DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig liveRecordNotifyConfig;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,43 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveRecordNotifyConfigResponseBodyLiveRecordNotifyConfig extends TeaModel {
+        /**
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Indicates whether recording status callbacks are enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("NeedStatusNotify")
         public Boolean needStatusNotify;
 
+        /**
+         * <p>The recording callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://learn.aliyundoc.com/examplecallback.action">http://learn.aliyundoc.com/examplecallback.action</a></p>
+         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
+        /**
+         * <p>The callback URL for on-demand recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://guide.aliyundoc.com/ondemandcallback.action">http://guide.aliyundoc.com/ondemandcallback.action</a></p>
+         */
         @NameInMap("OnDemandUrl")
         public String onDemandUrl;
 

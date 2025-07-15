@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
+    /**
+     * <p>The number of historical online users for the live stream.</p>
+     */
     @NameInMap("LiveStreamUserNumInfos")
     public DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfos liveStreamUserNumInfos;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F5FF8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamHistoryUserNumResponseBodyLiveStreamUserNumInfosLiveStreamUserNumInfo extends TeaModel {
+        /**
+         * <p>The time when the stream started. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-20T06:20:00Z</p>
+         */
         @NameInMap("StreamTime")
         public String streamTime;
 
+        /**
+         * <p>The number of users at the current point in time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("UserNum")
         public String userNum;
 

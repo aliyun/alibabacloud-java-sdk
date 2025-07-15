@@ -4,9 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateMixStreamResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the stream mixing task. You can specify this parameter in a request to delete the stream mixing task or query stream mixing tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5b2a046e-74d7-385e-d2d7-8a5b87e4****</p>
+     */
     @NameInMap("MixStreamId")
     public String mixStreamId;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A8CDDFF-0121-4ABB-DA60-AEF095A8W34F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

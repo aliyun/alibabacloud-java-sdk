@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.live20161101.models;
+
+import com.aliyun.tea.*;
+
+public class RemoveTerminalsResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public RemoveTerminalsResponseBody body;
+
+    public static RemoveTerminalsResponse build(java.util.Map<String, ?> map) throws Exception {
+        RemoveTerminalsResponse self = new RemoveTerminalsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public RemoveTerminalsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public RemoveTerminalsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public RemoveTerminalsResponse setBody(RemoveTerminalsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public RemoveTerminalsResponseBody getBody() {
+        return this.body;
+    }
+
+}

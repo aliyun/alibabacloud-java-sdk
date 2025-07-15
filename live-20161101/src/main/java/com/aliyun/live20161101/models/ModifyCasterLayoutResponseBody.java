@@ -4,9 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterLayoutResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the layout. You can use this ID to query information about the layout.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>
+     */
     @NameInMap("LayoutId")
     public String layoutId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

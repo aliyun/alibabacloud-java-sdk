@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveRecordVodConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40A4F36D-A7CC-473A-88E7-154F92242566</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

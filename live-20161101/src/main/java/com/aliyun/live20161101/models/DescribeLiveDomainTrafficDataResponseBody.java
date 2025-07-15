@@ -4,21 +4,54 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The time granularity of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T15:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T14:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The network traffic data that was collected at each interval.</p>
+     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -76,15 +109,39 @@ public class DescribeLiveDomainTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The traffic over HTTP. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("HttpTrafficValue")
         public String httpTrafficValue;
 
+        /**
+         * <p>The traffic over HTTPS. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>454680793</p>
+         */
         @NameInMap("HttpsTrafficValue")
         public String httpsTrafficValue;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T15:00:05Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The total traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>454680793</p>
+         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
+    /**
+     * <p>The callback configuration.</p>
+     */
     @NameInMap("LiveDetectNotifyConfig")
     public DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig liveDetectNotifyConfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,21 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDetectNotifyConfigResponseBodyLiveDetectNotifyConfig extends TeaModel {
+        /**
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://aliyundoc.com">http://aliyundoc.com</a></p>
+         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 

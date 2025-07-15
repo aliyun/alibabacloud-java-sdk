@@ -4,33 +4,110 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveUserDomainsRequest extends TeaModel {
+    /**
+     * <p>The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li>If you set LiveDomainType to liveVideo and leave this parameter empty, the streaming domains are queried. - If you set LiveDomainType to liveEdge and leave this parameter empty, the ingest domains are queried.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>*.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The search mode. Valid values:</p>
+     * <ul>
+     * <li><strong>fuzzy_match</strong> (default): fuzzy match</li>
+     * <li><strong>pre_match</strong>: prefix match</li>
+     * <li><strong>suf_match</strong>: suffix match</li>
+     * <li><strong>full_match</strong>: exact match</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>fuzzy_match</p>
+     */
     @NameInMap("DomainSearchType")
     public String domainSearchType;
 
+    /**
+     * <p>The status of the domain name. Valid values:</p>
+     * <ul>
+     * <li><strong>online</strong></li>
+     * <li><strong>offline</strong></li>
+     * <li><strong>configuring</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
+     */
     @NameInMap("DomainStatus")
     public String domainStatus;
 
+    /**
+     * <p>The type of the domain name. Valid values:</p>
+     * <ul>
+     * <li><strong>liveVideo</strong>: streaming domain</li>
+     * <li><strong>liveEdge</strong>: ingest domain</li>
+     * </ul>
+     * <blockquote>
+     * <p> If you leave this parameter empty, all ingest domains and streaming domains within your Alibaba Cloud account are queried by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>liveVideo</p>
+     */
     @NameInMap("LiveDomainType")
     public String liveDomainType;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Valid values: <strong>1 to 100000</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
+    /**
+     * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the region in which the domain name resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("RegionName")
     public String regionName;
+
+    /**
+     * <p>The ID of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-aek2egyoep3jp7a</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeLiveUserDomainsRequestTag> tag;
 
@@ -103,6 +180,14 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
         return this.regionName;
     }
 
+    public DescribeLiveUserDomainsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
     public DescribeLiveUserDomainsRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
@@ -120,9 +205,21 @@ public class DescribeLiveUserDomainsRequest extends TeaModel {
     }
 
     public static class DescribeLiveUserDomainsRequestTag extends TeaModel {
+        /**
+         * <p>The key of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestKey</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <p>The value of the tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestValue</p>
+         */
         @NameInMap("Value")
         public String value;
 

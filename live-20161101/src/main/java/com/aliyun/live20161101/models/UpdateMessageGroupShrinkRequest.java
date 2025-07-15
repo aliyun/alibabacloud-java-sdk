@@ -4,12 +4,29 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateMessageGroupShrinkRequest extends TeaModel {
+    /**
+     * <p>The ID of the interactive messaging application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VKL3***</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The extended field.</p>
+     */
     @NameInMap("Extension")
     public String extensionShrink;
 
+    /**
+     * <p>The ID of the message group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE35-****-T95F</p>
+     */
     @NameInMap("GroupId")
     public String groupId;
 

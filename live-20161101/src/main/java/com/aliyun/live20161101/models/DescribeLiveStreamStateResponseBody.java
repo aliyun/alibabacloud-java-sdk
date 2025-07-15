@@ -4,12 +4,38 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamStateResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CE6CD79D-0A98-1F22-A15F-FADA74DF2729</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The status of the stream. Valid values:</p>
+     * <ul>
+     * <li>online: The stream is being ingested.</li>
+     * <li>offline: The stream is offline. This may be caused by failed or completed stream ingest. For the specific reason, check the stream ingest callback. This operation does not provide detailed information.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>online</p>
+     */
     @NameInMap("StreamState")
     public String streamState;
 
+    /**
+     * <p>The mode of the stream. Valid values:</p>
+     * <ul>
+     * <li>push: stream ingest</li>
+     * <li>pull: triggered stream pulling</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>push</p>
+     */
     @NameInMap("Type")
     public String type;
 

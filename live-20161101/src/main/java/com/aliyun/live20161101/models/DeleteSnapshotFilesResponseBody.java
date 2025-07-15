@@ -4,15 +4,36 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteSnapshotFilesResponseBody extends TeaModel {
+    /**
+     * <p>The number of snapshots that failed to be deleted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FailureCount")
     public Integer failureCount;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>90F60327-ABEC-5A93-BF1F-****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The information about the snapshots.</p>
+     */
     @NameInMap("SnapshotDeleteInfoList")
     public DeleteSnapshotFilesResponseBodySnapshotDeleteInfoList snapshotDeleteInfoList;
 
+    /**
+     * <p>The number of successful screenshot deletions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SuccessCount")
     public Integer successCount;
 
@@ -54,9 +75,25 @@ public class DeleteSnapshotFilesResponseBody extends TeaModel {
     }
 
     public static class DeleteSnapshotFilesResponseBodySnapshotDeleteInfoListSnapshotDeleteInfo extends TeaModel {
+        /**
+         * <p>The timestamp when the snapshot was captured. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1653641526637</p>
+         */
         @NameInMap("CreateTimestamp")
         public Long createTimestamp;
 
+        /**
+         * <p>The processing result of the snapshot. Valid values:</p>
+         * <ul>
+         * <li><strong>OK</strong>: The snapshot was deleted.</li>
+         * <li><strong>FileNotFound</strong>: The snapshot was not found.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
+         */
         @NameInMap("Message")
         public String message;
 

@@ -4,6 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateDetailRequest extends TeaModel {
+    /**
+     * <p>The name of the certificate.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cert-****</p>
+     */
     @NameInMap("CertName")
     public String certName;
 

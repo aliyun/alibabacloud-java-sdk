@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListMessageGroupUserByIdResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Result")
     public ListMessageGroupUserByIdResponseBodyResult result;
 
@@ -32,21 +41,62 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupUserByIdResponseBodyResultUserList extends TeaModel {
+        /**
+         * <p>Indicates whether the user is muted. Valid values:</p>
+         * <ul>
+         * <li>true: The user is muted.</li>
+         * <li>false: The user is not muted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsMute")
         public Boolean isMute;
 
+        /**
+         * <p>The type of the mute. Valid values:</p>
+         * <ul>
+         * <li>group: All members in the message group are muted.</li>
+         * <li>user: Specific members in the message group are muted.</li>
+         * </ul>
+         */
         @NameInMap("MuteBy")
         public java.util.List<String> muteBy;
 
+        /**
+         * <p>The URL of the profile picture of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;<a href="http://www.aliyundoc.com/xxyy.png">http://www.aliyundoc.com/xxyy.png</a>&quot;</p>
+         */
         @NameInMap("UserAvatar")
         public String userAvatar;
 
+        /**
+         * <p>The custom information about the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12e</p>
+         */
         @NameInMap("UserExtension")
         public String userExtension;
 
+        /**
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad***</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
+        /**
+         * <p>The nickname of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxyy</p>
+         */
         @NameInMap("UserNick")
         public String userNick;
 
@@ -106,12 +156,31 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupUserByIdResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The total number of users returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>The list of users.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<ListMessageGroupUserByIdResponseBodyResultUserList> userList;
 

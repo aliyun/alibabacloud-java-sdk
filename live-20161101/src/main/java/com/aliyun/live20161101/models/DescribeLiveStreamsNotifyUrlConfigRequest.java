@@ -4,11 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsNotifyUrlConfigRequest extends TeaModel {
+    /**
+     * <p>The ingest domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static DescribeLiveStreamsNotifyUrlConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveStreamsNotifyUrlConfigRequest self = new DescribeLiveStreamsNotifyUrlConfigRequest();
@@ -29,6 +39,14 @@ public class DescribeLiveStreamsNotifyUrlConfigRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DescribeLiveStreamsNotifyUrlConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

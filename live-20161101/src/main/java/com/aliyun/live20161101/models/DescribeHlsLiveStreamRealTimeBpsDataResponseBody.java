@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>17C16B18-D3EA-4809-9CC3-8A2CBE14BC7B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The timestamp for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-08-08T00:00:00Z</p>
+     */
     @NameInMap("Time")
     public String time;
 
+    /**
+     * <p>The usage data.</p>
+     */
     @NameInMap("UsageData")
     public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData> usageData;
 
@@ -43,12 +58,30 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfosInfos extends TeaModel {
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11440.88</p>
+         */
         @NameInMap("DownFlow")
         public Float downFlow;
 
+        /**
+         * <p>The number of online users.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Online")
         public Float online;
 
+        /**
+         * <p>The bitrate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1028</p>
+         */
         @NameInMap("Rate")
         public String rate;
 
@@ -84,9 +117,18 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos extends TeaModel {
+        /**
+         * <p>The statistics on the HLS stream.</p>
+         */
         @NameInMap("Infos")
         public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfosInfos> infos;
 
+        /**
+         * <p>The name of the stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/live/sport.m3u8</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
@@ -114,9 +156,18 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageData extends TeaModel {
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Details about the statistics on each HLS stream under the domain name.</p>
+         */
         @NameInMap("StreamInfos")
         public java.util.List<DescribeHlsLiveStreamRealTimeBpsDataResponseBodyUsageDataStreamInfos> streamInfos;
 

@@ -4,21 +4,54 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
+    /**
+     * <p>The bandwidth data that was collected at each interval.</p>
+     */
     @NameInMap("BpsDataPerInterval")
     public DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerInterval bpsDataPerInterval;
 
+    /**
+     * <p>The time granularity of the query.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The ingest domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T21:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T20:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +109,21 @@ public class DescribeLiveDomainPushBpsDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainPushBpsDataResponseBodyBpsDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The bandwidth. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11288111</p>
+         */
         @NameInMap("BpsValue")
         public String bpsValue;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

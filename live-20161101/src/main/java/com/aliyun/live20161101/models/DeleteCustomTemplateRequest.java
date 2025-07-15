@@ -7,6 +7,16 @@ public class DeleteCustomTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The name of the template that you want to delete. The value is a string.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestTemplate</p>
+     */
     @NameInMap("Template")
     public String template;
 
@@ -21,6 +31,14 @@ public class DeleteCustomTemplateRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public DeleteCustomTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DeleteCustomTemplateRequest setTemplate(String template) {

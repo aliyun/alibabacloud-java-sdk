@@ -4,18 +4,45 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
+    /**
+     * <p>The configurations.</p>
+     */
     @NameInMap("LiveRecordVodConfigs")
     public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigs liveRecordVodConfigs;
 
+    /**
+     * <p>The page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The total number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("Total")
     public String total;
 
@@ -65,27 +92,104 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig extends TeaModel {
+        /**
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>Indicates whether automatic merging is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>ON</strong></li>
+         * <li><strong>OFF</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ON</p>
+         */
         @NameInMap("AutoCompose")
         public String autoCompose;
 
+        /**
+         * <p>The ID of the transcoding template group that was used to automatically merge the VOD files created from the live streams.</p>
+         * <blockquote>
+         * <p> This parameter is returned if the value of the AutoCompose parameter is ON.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>dadfcaadde****</p>
+         */
         @NameInMap("ComposeVodTranscodeGroupId")
         public String composeVodTranscodeGroupId;
 
+        /**
+         * <p>The time when the live stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T17:37:00Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The recording cycle. Unit: seconds. Default value: <strong>3600</strong>. Valid values: <strong>300 to 21600</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>360</p>
+         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
+        /**
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Indicates whether on-demand recording is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong> (default): On-demand recording is disabled.</li>
+         * <li><strong>1</strong>: On-demand recording is enabled by using the HTTP callback method.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("OnDemand")
+        public Integer onDemand;
+
+        /**
+         * <p>The storage location.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>****-tjptr2vatm.oss-cn-shanghai.aliyuncs.com</p>
+         */
+        @NameInMap("StorageLocation")
+        public String storageLocation;
+
+        /**
+         * <p>The name of the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
+        /**
+         * <p>The ID of the transcoding template group in ApsaraVideo VOD.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e2d796d3bb5fd8049d32bff62f94****</p>
+         */
         @NameInMap("VodTranscodeGroupId")
         public String vodTranscodeGroupId;
 
@@ -140,6 +244,22 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setOnDemand(Integer onDemand) {
+            this.onDemand = onDemand;
+            return this;
+        }
+        public Integer getOnDemand() {
+            return this.onDemand;
+        }
+
+        public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setStorageLocation(String storageLocation) {
+            this.storageLocation = storageLocation;
+            return this;
+        }
+        public String getStorageLocation() {
+            return this.storageLocation;
         }
 
         public DescribeLiveRecordVodConfigsResponseBodyLiveRecordVodConfigsLiveRecordVodConfig setStreamName(String streamName) {

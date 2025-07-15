@@ -7,6 +7,15 @@ public class GetAllCustomTemplatesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The ID of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>25346073170691****</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
@@ -21,6 +30,14 @@ public class GetAllCustomTemplatesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetAllCustomTemplatesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetAllCustomTemplatesRequest setUserId(String userId) {

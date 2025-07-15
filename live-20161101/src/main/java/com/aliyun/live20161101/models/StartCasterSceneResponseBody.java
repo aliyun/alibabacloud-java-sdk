@@ -4,9 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StartCasterSceneResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF60DB6A-7FD6-426E-9288-122CC1A52FA7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The streaming URL of the scene. It is used for playback, but not for stream relay.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://live/caster/example.org">http://live/caster/example.org</a></p>
+     */
     @NameInMap("StreamUrl")
     public String streamUrl;
 

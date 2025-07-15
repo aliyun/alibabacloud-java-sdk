@@ -7,9 +7,23 @@ public class DeleteLiveDomainMappingRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The streaming domain. The type of the domain name is <strong>liveVideo</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("PullDomain")
     public String pullDomain;
 
+    /**
+     * <p>The ingest domain. The type of the domain name is <strong>liveEdge</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("PushDomain")
     public String pushDomain;
 

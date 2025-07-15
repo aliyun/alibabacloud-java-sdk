@@ -4,18 +4,45 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRTSNativeSDKFirstFrameCostResponseBody extends TeaModel {
+    /**
+     * <p>The time granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The end of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10T21:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The average latency of first frames at each interval. Unit: milliseconds.</p>
+     */
     @NameInMap("FirstFrameCostData")
     public java.util.List<DescribeRTSNativeSDKFirstFrameCostResponseBodyFirstFrameCostData> firstFrameCostData;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BC858082-736F-4A25-867B-E5B67C85ACF7</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10T20:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,21 +92,57 @@ public class DescribeRTSNativeSDKFirstFrameCostResponseBody extends TeaModel {
     }
 
     public static class DescribeRTSNativeSDKFirstFrameCostResponseBodyFirstFrameCostData extends TeaModel {
+        /**
+         * <p>The time elapsed from initialization to connection establishment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("Connected")
         public String connected;
 
+        /**
+         * <p>The time elapsed from connection establishment to subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>89</p>
+         */
         @NameInMap("FinishGetStreamInfo")
         public String finishGetStreamInfo;
 
+        /**
+         * <p>The time elapsed from first packet processing to display of the first frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
         @NameInMap("FirstFrameComplete")
         public String firstFrameComplete;
 
+        /**
+         * <p>The time elapsed from subscription to first packet processing.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>132</p>
+         */
         @NameInMap("FirstPacket")
         public String firstPacket;
 
+        /**
+         * <p>The time consumed by initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1100</p>
+         */
         @NameInMap("Initialized")
         public String initialized;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

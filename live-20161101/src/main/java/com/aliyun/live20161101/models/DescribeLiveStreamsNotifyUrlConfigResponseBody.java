@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
+    /**
+     * <p>The callback configuration.</p>
+     */
     @NameInMap("LiveStreamsNotifyConfig")
     public DescribeLiveStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig liveStreamsNotifyConfig;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>40A4F36D-A7CC-473A-88E7-154F92242566</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,52 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig extends TeaModel {
+        /**
+         * <p>The ingest domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>Exception event callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException">https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException</a></p>
+         */
+        @NameInMap("ExceptionNotifyUrl")
+        public String exceptionNotifyUrl;
+
+        /**
+         * <p>The authentication key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
         @NameInMap("NotifyAuthKey")
         public String notifyAuthKey;
 
+        /**
+         * <p>Indicates whether callback authentication is enabled. Valid values:</p>
+         * <ul>
+         * <li>yes</li>
+         * <li>no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
+         */
         @NameInMap("NotifyReqAuth")
         public String notifyReqAuth;
 
+        /**
+         * <p>The callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
+         */
         @NameInMap("NotifyUrl")
         public String notifyUrl;
 
@@ -55,6 +101,14 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
         }
         public String getDomainName() {
             return this.domainName;
+        }
+
+        public DescribeLiveStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setExceptionNotifyUrl(String exceptionNotifyUrl) {
+            this.exceptionNotifyUrl = exceptionNotifyUrl;
+            return this;
+        }
+        public String getExceptionNotifyUrl() {
+            return this.exceptionNotifyUrl;
         }
 
         public DescribeLiveStreamsNotifyUrlConfigResponseBodyLiveStreamsNotifyConfig setNotifyAuthKey(String notifyAuthKey) {

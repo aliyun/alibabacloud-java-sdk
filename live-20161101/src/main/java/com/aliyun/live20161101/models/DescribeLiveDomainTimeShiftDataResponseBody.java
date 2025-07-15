@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8AE1CB3A-6510-442E-A6B9-EF03D05B3E09</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The time shifting usage data that was collected for each time interval.</p>
+     */
     @NameInMap("TimeShiftData")
     public DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftData timeShiftData;
 
@@ -32,12 +41,30 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainTimeShiftDataResponseBodyTimeShiftDataDataModule extends TeaModel {
+        /**
+         * <p>The storage used for time shifting. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1664165660</p>
+         */
         @NameInMap("Size")
         public String size;
 
+        /**
+         * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-03T00:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The type of time shifting. Examples: HLS_D1 and HLS_D7.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HLS_D7</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,21 +4,54 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the entries returned. Unit: seconds</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com,example.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T15:01:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The traffic that was collected at each interval.</p>
+     */
     @NameInMap("RealTimeTrafficDataPerInterval")
     public DescribeLiveDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A666D44F-19D6-490E-97CF-1A64AB962C57</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2015-12-10T15:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,9 +109,21 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
     }
 
     public static class DescribeLiveDomainRealTimeTrafficDataResponseBodyRealTimeTrafficDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T15:01:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Value")
         public String value;
 

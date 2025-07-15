@@ -4,27 +4,109 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class SetLiveStreamDelayConfigRequest extends TeaModel {
+    /**
+     * <p>The streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The latency of FLV-based playback. Unit: seconds.</p>
+     * <blockquote>
+     * <p> If this parameter is left empty, the latency is set to a value corresponding to the FlvLevel parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("FlvDelay")
     public Integer flvDelay;
 
+    /**
+     * <p>The latency level of FLV-based playback. Ignore this parameter if the FlvDelay parameter is configured.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>short</strong> (default): The latency is 4 seconds.</li>
+     * <li><strong>medium</strong>: The latency is 8 seconds.</li>
+     * <li><strong>long</strong>: The latency is 16 seconds.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If both the FlvDelay and FlvLevel parameters are left empty, FlvLevel is set to <strong>short</strong> by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>medium</p>
+     */
     @NameInMap("FlvLevel")
     public String flvLevel;
 
+    /**
+     * <p>The latency of HLS-based playback. Unit: seconds.</p>
+     * <blockquote>
+     * <p> If this parameter is left empty, the latency is set to a value corresponding to the HlsLevel parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("HlsDelay")
     public Integer hlsDelay;
 
+    /**
+     * <p>The latency level of HLS-based playback. Ignore this parameter if the HlsDelay parameter is configured.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>short</strong>: The latency is 3 seconds. This is the default value.</li>
+     * <li><strong>medium</strong>: The latency is 6 seconds.</li>
+     * <li><strong>long</strong>: The latency is 15 seconds.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If both the HlsDelay and HlsLevel parameters are left empty, HlsLevel is set to <strong>short</strong> by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>short</p>
+     */
     @NameInMap("HlsLevel")
     public String hlsLevel;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The latency of RTMP-based playback. Unit: seconds.</p>
+     * <blockquote>
+     * <p> If this parameter is left empty, the latency is set to a value corresponding to the RtmpLevel parameter.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("RtmpDelay")
     public Integer rtmpDelay;
 
+    /**
+     * <p>The latency level of RTMP-based playback. Ignore this parameter if the RtmpDelay parameter is configured.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>short</strong> (default): The latency is 4 seconds.</li>
+     * <li><strong>medium</strong>: The latency is 8 seconds.</li>
+     * <li><strong>long</strong>: The latency is 16 seconds.</li>
+     * </ul>
+     * <blockquote>
+     * <p> If both the RtmpDelay and RtmpLevel parameters are left empty, RtmpLevel is set to <strong>short</strong> by default.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>short</p>
+     */
     @NameInMap("RtmpLevel")
     public String rtmpLevel;
 
@@ -79,6 +161,14 @@ public class SetLiveStreamDelayConfigRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public SetLiveStreamDelayConfigRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public SetLiveStreamDelayConfigRequest setRtmpDelay(Integer rtmpDelay) {

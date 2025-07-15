@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamRecordContentResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     */
     @NameInMap("RecordContentInfoList")
     public DescribeLiveStreamRecordContentResponseBodyRecordContentInfoList recordContentInfoList;
 
+    /**
+     * <p>The end of the time range to query. The time range that is specified by the StartTime and EndTime parameters cannot exceed 4 days. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>62136AE6-7793-45ED-B14A-60D19A9486D3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,21 +41,57 @@ public class DescribeLiveStreamRecordContentResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamRecordContentResponseBodyRecordContentInfoListRecordContentInfo extends TeaModel {
+        /**
+         * <p>The beginning of the time range for which the recordings were queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Duration")
         public Float duration;
 
+        /**
+         * <p>The recordings.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T07:46:00Z</p>
+         */
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>The recording length. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveBucket****</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <p>The naming rule of recordings in OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-oss-****.aliyuncs.com</p>
+         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <p>The name of the Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{Date}/{UnixTimestamp}_{Sequence}</p>
+         */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
+        /**
+         * <p>The end of the time range for which the recordings were queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T07:36:00Z</p>
+         */
         @NameInMap("StartTime")
         public String startTime;
 

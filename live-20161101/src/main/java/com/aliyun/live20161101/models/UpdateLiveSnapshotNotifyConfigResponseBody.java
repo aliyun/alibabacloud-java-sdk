@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveSnapshotNotifyConfigResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A3136B58-5876-5A93-83CA-B562781981A0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

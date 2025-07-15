@@ -4,9 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class VerifyLiveDomainOwnerResponseBody extends TeaModel {
+    /**
+     * <p>The verification information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>verify_dffeb6610035dcb77b413******</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1BA6D7CE-55F1-5926-8764-F8663473AD0D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListMessageGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public ListMessageGroupResponseBodyResult result;
 
@@ -32,21 +41,54 @@ public class ListMessageGroupResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupResponseBodyResultGroupList extends TeaModel {
+        /**
+         * <p>The ID of the interactive messaging application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VKL3***</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The time when the message group was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1502280113</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The ID of the creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as****hs</p>
+         */
         @NameInMap("CreatorId")
         public String creatorId;
 
+        /**
+         * <p>The extended field.</p>
+         */
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
+        /**
+         * <p>The ID of the message group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE35-****-T95F</p>
+         */
         @NameInMap("GroupId")
         public String groupId;
 
+        /**
+         * <p>The status of the message group. The default value is <strong>1</strong>, which indicates that the status of the message group is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -106,12 +148,31 @@ public class ListMessageGroupResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupResponseBodyResult extends TeaModel {
+        /**
+         * <p>The list of message groups.</p>
+         */
         @NameInMap("GroupList")
         public java.util.List<ListMessageGroupResponseBodyResultGroupList> groupList;
 
+        /**
+         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <ul>
+         * <li>true: The current page is followed by another page.</li>
+         * <li>false: The current page is not followed by another page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The total number of message groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterVideoResourceResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CF60DB6A-7FD6-426E-9288-122C*******</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

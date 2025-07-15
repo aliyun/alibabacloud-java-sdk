@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainFrameRateAndBitRateDataResponseBody extends TeaModel {
+    /**
+     * <p>The frame rates and bitrates of the live streams that were queried.</p>
+     */
     @NameInMap("FrameRateAndBitRateInfos")
     public DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfos frameRateAndBitRateInfos;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C3F2C2C4-59BB-4B62-81FF-345BE557E3E3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +41,39 @@ public class DescribeLiveDomainFrameRateAndBitRateDataResponseBody extends TeaMo
     }
 
     public static class DescribeLiveDomainFrameRateAndBitRateDataResponseBodyFrameRateAndBitRateInfosFrameRateAndBitRateInfo extends TeaModel {
+        /**
+         * <p>The audio frame rate of the live stream. Unit: FPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42.9</p>
+         */
         @NameInMap("AudioFrameRate")
         public Float audioFrameRate;
 
+        /**
+         * <p>The bitrate of the live stream. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30693.96</p>
+         */
         @NameInMap("BitRate")
         public Float bitRate;
 
+        /**
+         * <p>The URL of the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://demo.aliyundoc.com/test/liveStream****_3_4</p>
+         */
         @NameInMap("StreamUrl")
         public String streamUrl;
 
+        /**
+         * <p>The video frame rate of the live stream. Unit: frames per second (FPS).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>24.9</p>
+         */
         @NameInMap("VideoFrameRate")
         public Float videoFrameRate;
 

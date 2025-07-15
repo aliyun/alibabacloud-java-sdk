@@ -4,9 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class UpdateLiveDetectNotifyConfigRequest extends TeaModel {
+    /**
+     * <p>The main streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The callback URL that is used to receive callback notifications about violations, such as pornographic content, detected in live streams.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://guide.aliyundoc.com/examplecallback.action">http://guide.aliyundoc.com/examplecallback.action</a></p>
+     */
     @NameInMap("NotifyUrl")
     public String notifyUrl;
 

@@ -4,6 +4,12 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateCustomTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0D715397-2E66-4AE1-694h-C546628AD145</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

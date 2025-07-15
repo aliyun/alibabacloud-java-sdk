@@ -4,12 +4,30 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteCasterComponentResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the production studio. You can use the ID as a request parameter in the API operation that is called to query the components in the production studio, add an episode list to the production studio, or modify a component in the production studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a2b8e671-2fe5-4642-a2ec-bf93880****</p>
+     */
     @NameInMap("CasterId")
     public String casterId;
 
+    /**
+     * <p>The component ID. You can use the ID as a request parameter in the API operation that is called to query the component in the production studio or modify the component in the production studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>
+     */
     @NameInMap("ComponentId")
     public String componentId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

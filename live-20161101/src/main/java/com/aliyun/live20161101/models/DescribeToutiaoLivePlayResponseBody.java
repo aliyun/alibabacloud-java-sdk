@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
+    /**
+     * <p>The information about the live stream.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeToutiaoLivePlayResponseBodyContent> content;
 
+    /**
+     * <p>The description of the response status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,24 +58,66 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
     }
 
     public static class DescribeToutiaoLivePlayResponseBodyContent extends TeaModel {
+        /**
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
+         */
         @NameInMap("App")
         public String app;
 
+        /**
+         * <p>The bandwidth. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0801239013671875</p>
+         */
         @NameInMap("Bandwidth")
         public Float bandwidth;
 
+        /**
+         * <p>The Content Delivery Network (CDN) name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali</p>
+         */
         @NameInMap("CdnName")
         public String cdnName;
 
+        /**
+         * <p>The streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of viewers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>452</p>
+         */
         @NameInMap("PlayNum")
         public Long playNum;
 
+        /**
+         * <p>The name of the live stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
+        /**
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1625484600</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

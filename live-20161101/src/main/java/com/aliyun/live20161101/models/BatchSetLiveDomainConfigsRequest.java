@@ -4,9 +4,24 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class BatchSetLiveDomainConfigsRequest extends TeaModel {
+    /**
+     * <p>The domain names that you want to batch configure. Supported domain names include ingest domains, main streaming domains, and sub-streaming domains. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com,example.aliyundoc.com,example.com</p>
+     */
     @NameInMap("DomainNames")
     public String domainNames;
 
+    /**
+     * <p>The list of features.</p>
+     * <p>Some features, such as <code>filetype_based_ttl_set</code>, support multiple configuration records. To update one of the configuration records, use <code>configId</code> to identify the record. For more information, see <strong>Format of the Functions parameter</strong> and <strong>Features specified by the Functions parameter</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;functionArgs&quot;:[{&quot;argName&quot;:&quot;file_type&quot;,&quot;argValue&quot;:&quot;jpg&quot;},{&quot;argName&quot;:&quot;ttl&quot;,&quot;argValue&quot;:&quot;18&quot;},{&quot;argName&quot;:&quot;weight&quot;,&quot;argValue&quot;:&quot;30&quot;}],&quot;functionName&quot;:&quot;filetype_based_ttl_set&quot;,&quot;configId&quot;:506***}]</p>
+     */
     @NameInMap("Functions")
     public String functions;
 

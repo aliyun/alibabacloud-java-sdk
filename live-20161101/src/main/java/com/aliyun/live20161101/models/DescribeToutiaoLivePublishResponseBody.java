@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
+    /**
+     * <p>The stream ingest details.</p>
+     */
     @NameInMap("Content")
     public java.util.List<DescribeToutiaoLivePublishResponseBodyContent> content;
 
+    /**
+     * <p>The description of the response status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,30 +58,84 @@ public class DescribeToutiaoLivePublishResponseBody extends TeaModel {
     }
 
     public static class DescribeToutiaoLivePublishResponseBodyContent extends TeaModel {
+        /**
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
+         */
         @NameInMap("App")
         public String app;
 
+        /**
+         * <p>The bitrate. Unit: bit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>261587</p>
+         */
         @NameInMap("Bitrate")
         public Float bitrate;
 
+        /**
+         * <p>The bitrate difference.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BwDiff")
         public Float bwDiff;
 
+        /**
+         * <p>The name of the content delivery network (CDN) service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali</p>
+         */
         @NameInMap("CdnName")
         public String cdnName;
 
+        /**
+         * <p>The ingest domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The number of dropped frames.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Flr")
         public Float flr;
 
+        /**
+         * <p>The frame rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>74.4</p>
+         */
         @NameInMap("Fps")
         public Float fps;
 
+        /**
+         * <p>The name of the ingested stream.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
+         */
         @NameInMap("StreamName")
         public String streamName;
 
+        /**
+         * <p>The timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1624358970</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 

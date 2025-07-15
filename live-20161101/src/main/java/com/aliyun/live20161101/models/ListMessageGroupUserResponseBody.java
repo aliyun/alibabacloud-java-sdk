@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListMessageGroupUserResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public ListMessageGroupUserResponseBodyResult result;
 
@@ -32,9 +41,21 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupUserResponseBodyResultUserList extends TeaModel {
+        /**
+         * <p>The time when the user joined the message group. The value is a UTC timestamp.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("JoinTime")
         public Long joinTime;
 
+        /**
+         * <p>The ID of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de1<strong>a0,hu</strong>9</p>
+         */
         @NameInMap("UserId")
         public String userId;
 
@@ -62,12 +83,31 @@ public class ListMessageGroupUserResponseBody extends TeaModel {
     }
 
     public static class ListMessageGroupUserResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <ul>
+         * <li>true: The current page is followed by another page.</li>
+         * <li>false: The current page is not followed by another page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The total number of users in the message group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("Total")
         public Integer total;
 
+        /**
+         * <p>Details about the users.</p>
+         */
         @NameInMap("UserList")
         public java.util.List<ListMessageGroupUserResponseBodyResultUserList> userList;
 

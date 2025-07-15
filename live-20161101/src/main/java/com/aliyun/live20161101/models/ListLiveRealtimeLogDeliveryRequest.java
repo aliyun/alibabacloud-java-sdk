@@ -4,11 +4,20 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListLiveRealtimeLogDeliveryRequest extends TeaModel {
+    /**
+     * <p>This parameter has no practical significance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("LiveOpenapiReserve")
     public String liveOpenapiReserve;
 
     @NameInMap("OwnerId")
     public Long ownerId;
+
+    @NameInMap("RegionId")
+    public String regionId;
 
     public static ListLiveRealtimeLogDeliveryRequest build(java.util.Map<String, ?> map) throws Exception {
         ListLiveRealtimeLogDeliveryRequest self = new ListLiveRealtimeLogDeliveryRequest();
@@ -29,6 +38,14 @@ public class ListLiveRealtimeLogDeliveryRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public ListLiveRealtimeLogDeliveryRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

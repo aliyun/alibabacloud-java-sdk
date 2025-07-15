@@ -4,9 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class BatchDeleteLiveDomainConfigsRequest extends TeaModel {
+    /**
+     * <p>The ingest domain or streaming domain. Separate multiple domain names with commas (,).</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com,example.aliyundoc.com,example.com</p>
+     */
     @NameInMap("DomainNames")
     public String domainNames;
 
+    /**
+     * <p>The names of the features. Separate multiple features with commas (,). For more information, see <strong>Features specified by the Functions parameter</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>referer_white_list_set,ip_black_list_set</p>
+     */
     @NameInMap("FunctionNames")
     public String functionNames;
 

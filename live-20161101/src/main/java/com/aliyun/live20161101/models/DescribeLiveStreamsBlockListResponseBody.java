@@ -4,24 +4,63 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
+    /**
+     * <p>The main streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("PageNum")
     public Integer pageNum;
 
+    /**
+     * <p>The number of entries returned per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9D855EC8-CF71-4615-B164-F7DFCB23B41D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The complete URL of each live stream.</p>
+     */
     @NameInMap("StreamUrls")
     public DescribeLiveStreamsBlockListResponseBodyStreamUrls streamUrls;
 
+    /**
+     * <p>The total number of live stream URLs that meet the specified conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11</p>
+     */
     @NameInMap("TotalNum")
     public Integer totalNum;
 
+    /**
+     * <p>The total number of returned pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("TotalPage")
     public Integer totalPage;
 

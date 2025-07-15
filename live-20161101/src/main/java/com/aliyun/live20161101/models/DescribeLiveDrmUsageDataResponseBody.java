@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The usage of the DRM encryption service at each time interval.</p>
+     */
     @NameInMap("DrmUsageData")
     public DescribeLiveDrmUsageDataResponseBodyDrmUsageData drmUsageData;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91FC2D9D-B042-4634-8A5C-7B8E7482C22D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +41,48 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDrmUsageDataResponseBodyDrmUsageDataDataModule extends TeaModel {
+        /**
+         * <p>The number of times DRM-encrypted live streams are requested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The domain name. If the value of SplitBy includes domain, the returned data is grouped by domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The DRM type. If the value of SplitBy includes drm_type, the returned data is grouped by DRM type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Widevine</p>
+         */
         @NameInMap("DrmType")
         public String drmType;
 
+        /**
+         * <p>The ID of the region. If the value of SplitBy includes region, the returned data is grouped by region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("Region")
         public String region;
 
+        /**
+         * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-01T16:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 

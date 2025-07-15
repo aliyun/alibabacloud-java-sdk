@@ -4,21 +4,55 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveRecordVodConfigsRequest extends TeaModel {
+    /**
+     * <p>The name of the application to which the live stream belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liveApp****</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The main streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    /**
+     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PageNum")
     public Long pageNum;
 
+    /**
+     * <p>The number of entries per page. Default value: <strong>10</strong>. Valid values: <strong>5 to 100</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The name of the live stream.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liveStream****</p>
+     */
     @NameInMap("StreamName")
     public String streamName;
 
@@ -65,6 +99,14 @@ public class DescribeLiveRecordVodConfigsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeLiveRecordVodConfigsRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public DescribeLiveRecordVodConfigsRequest setStreamName(String streamName) {

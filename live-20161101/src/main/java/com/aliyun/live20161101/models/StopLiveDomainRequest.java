@@ -4,6 +4,13 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class StopLiveDomainRequest extends TeaModel {
+    /**
+     * <p>The streaming domain or ingest domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

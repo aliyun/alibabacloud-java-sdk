@@ -4,18 +4,45 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
+    /**
+     * <p>The time granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The end of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10T21:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The number of error status codes at each interval.</p>
+     */
     @NameInMap("PlayFailStatus")
     public java.util.List<DescribeRTSNativeSDKPlayFailStatusResponseBodyPlayFailStatus> playFailStatus;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10T20:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -65,24 +92,66 @@ public class DescribeRTSNativeSDKPlayFailStatusResponseBody extends TeaModel {
     }
 
     public static class DescribeRTSNativeSDKPlayFailStatusResponseBodyPlayFailStatus extends TeaModel {
+        /**
+         * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The status code that indicates failed DNS resolution.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("V20001")
         public String v20001;
 
+        /**
+         * <p>The status code that indicates failed authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("V20002")
         public String v20002;
 
+        /**
+         * <p>The status code that indicates a connection signaling timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("V20011")
         public String v20011;
 
+        /**
+         * <p>The status code that indicates a subscription signaling error.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("V20012")
         public String v20012;
 
+        /**
+         * <p>The status code indicating that the stream to subscribe to does not exist.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("V20013")
         public String v20013;
 
+        /**
+         * <p>The status code that indicates a media packet collection timeout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
+         */
         @NameInMap("V20052")
         public String v20052;
 

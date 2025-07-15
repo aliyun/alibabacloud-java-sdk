@@ -4,57 +4,212 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterConfigResponseBody extends TeaModel {
+    /**
+     * <p>The configuration for automatic switchover to the standby resource. The <code>eofThres</code> field specifies the duration after which the production studio automatically switches to the standby resource if a stream interruption occurs. Unit: seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;eofThres&quot;:3}</p>
+     */
+    @NameInMap("AutoSwitchUrgentConfig")
+    public String autoSwitchUrgentConfig;
+
+    /**
+     * <p>Indicates whether the production studio automatically switches to the standby resource in case of a stream interruption.</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("AutoSwitchUrgentOn")
+    public String autoSwitchUrgentOn;
+
+    /**
+     * <p>The callback URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://learn.aliyundoc.com/callBackLive">http://learn.aliyundoc.com/callBackLive</a></p>
+     */
     @NameInMap("CallbackUrl")
     public String callbackUrl;
 
+    /**
+     * <p>The ID of the production studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
+     */
     @NameInMap("CasterId")
     public String casterId;
 
+    /**
+     * <p>The name of the production studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>coco-caster10</p>
+     */
     @NameInMap("CasterName")
     public String casterName;
 
+    /**
+     * <p>Indicates whether channels are enabled for the production studio. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: Channels are disabled.</li>
+     * <li><strong>1</strong>: Channels are enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ChannelEnable")
     public Integer channelEnable;
 
+    /**
+     * <p>Indicates whether stream delay is enabled. Unit: seconds.</p>
+     * <ul>
+     * <li><strong>0</strong>: Stream delay is disabled.</li>
+     * <li><strong>A value greater than 0</strong>: Stream delay is enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Delay")
     public Float delay;
 
+    /**
+     * <p>The main streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>Indicates whether the carousel playback feature is enabled. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: The carousel playback feature is disabled.</li>
+     * <li><strong>1</strong>: The carousel playback feature is enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("ProgramEffect")
     public Integer programEffect;
 
+    /**
+     * <p>The name of the playlist for carousel playback.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>program_name</p>
+     */
     @NameInMap("ProgramName")
     public String programName;
 
+    /**
+     * <p>The recording configuration. If this parameter is empty, the recording feature is disabled.</p>
+     */
     @NameInMap("RecordConfig")
     public DescribeCasterConfigResponseBodyRecordConfig recordConfig;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97df6b7f-3490-47d2-ac50-8833e1b64597</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The custom stream redirect URL.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp://sophon-developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
+     */
     @NameInMap("SideOutputUrl")
     public String sideOutputUrl;
 
+    /**
+     * <p>The list of custom stream redirect URLs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp://sophon-developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
+     */
     @NameInMap("SideOutputUrlList")
     public String sideOutputUrlList;
 
+    /**
+     * <p>The storage configuration.</p>
+     */
     @NameInMap("SyncGroupsConfig")
     public DescribeCasterConfigResponseBodySyncGroupsConfig syncGroupsConfig;
 
+    /**
+     * <p>The transcoding configuration.</p>
+     */
     @NameInMap("TranscodeConfig")
     public DescribeCasterConfigResponseBodyTranscodeConfig transcodeConfig;
 
+    /**
+     * <p>Prepared broadcast image media asset ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a089175eb5f4427684fc0715159a****</p>
+     */
+    @NameInMap("UrgentImageId")
+    public String urgentImageId;
+
+    /**
+     * <p>URL of the standby image material.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://learn.aliyundoc.com/AppName/image.jpg">http://learn.aliyundoc.com/AppName/image.jpg</a></p>
+     */
+    @NameInMap("UrgentImageUrl")
+    public String urgentImageUrl;
+
+    /**
+     * <p>The URL of the standby live stream.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rtmp://demo.aliyundoc.com</p>
+     */
     @NameInMap("UrgentLiveStreamUrl")
     public String urgentLiveStreamUrl;
 
+    /**
+     * <p>The ID of the material that is used as the standby video from the media library.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98646538-bcf9-4aef-bd4a-e6bb76588****</p>
+     */
     @NameInMap("UrgentMaterialId")
     public String urgentMaterialId;
 
     public static DescribeCasterConfigResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCasterConfigResponseBody self = new DescribeCasterConfigResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCasterConfigResponseBody setAutoSwitchUrgentConfig(String autoSwitchUrgentConfig) {
+        this.autoSwitchUrgentConfig = autoSwitchUrgentConfig;
+        return this;
+    }
+    public String getAutoSwitchUrgentConfig() {
+        return this.autoSwitchUrgentConfig;
+    }
+
+    public DescribeCasterConfigResponseBody setAutoSwitchUrgentOn(String autoSwitchUrgentOn) {
+        this.autoSwitchUrgentOn = autoSwitchUrgentOn;
+        return this;
+    }
+    public String getAutoSwitchUrgentOn() {
+        return this.autoSwitchUrgentOn;
     }
 
     public DescribeCasterConfigResponseBody setCallbackUrl(String callbackUrl) {
@@ -169,6 +324,22 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         return this.transcodeConfig;
     }
 
+    public DescribeCasterConfigResponseBody setUrgentImageId(String urgentImageId) {
+        this.urgentImageId = urgentImageId;
+        return this;
+    }
+    public String getUrgentImageId() {
+        return this.urgentImageId;
+    }
+
+    public DescribeCasterConfigResponseBody setUrgentImageUrl(String urgentImageUrl) {
+        this.urgentImageUrl = urgentImageUrl;
+        return this;
+    }
+    public String getUrgentImageUrl() {
+        return this.urgentImageUrl;
+    }
+
     public DescribeCasterConfigResponseBody setUrgentLiveStreamUrl(String urgentLiveStreamUrl) {
         this.urgentLiveStreamUrl = urgentLiveStreamUrl;
         return this;
@@ -186,15 +357,39 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterConfigResponseBodyRecordConfigRecordFormatRecordFormat extends TeaModel {
+        /**
+         * <p>The length of the recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
+         */
         @NameInMap("CycleDuration")
         public Integer cycleDuration;
 
+        /**
+         * <p>The format of the recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>M3U8</p>
+         */
         @NameInMap("Format")
         public String format;
 
+        /**
+         * <p>The name of the recording.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{liveApp****}/{liveStream****}</p>
+         */
         @NameInMap("OssObjectPrefix")
         public String ossObjectPrefix;
 
+        /**
+         * <p>The name of the segment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{liveApp****}/{liveStream****}/{UnixTimestamp****}</p>
+         */
         @NameInMap("SliceOssObjectPrefix")
         public String sliceOssObjectPrefix;
 
@@ -257,18 +452,56 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterConfigResponseBodyRecordConfig extends TeaModel {
+        /**
+         * <p>On-demand recording. Values:</p>
+         * <ul>
+         * <li>0: Off. </li>
+         * <li>1: Via HTTP callback. </li>
+         * <li>2: Parse streaming parameters for on-demand recording. </li>
+         * <li>7: Default to not record.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("OnDemand")
+        public Integer onDemand;
+
+        /**
+         * <p>The OSS bucket for storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveBucket****</p>
+         */
         @NameInMap("OssBucket")
         public String ossBucket;
 
+        /**
+         * <p>The Object Storage Service (OSS) endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-shanghai.aliyundoc.com</p>
+         */
         @NameInMap("OssEndpoint")
         public String ossEndpoint;
 
+        /**
+         * <p>The recording configuration.</p>
+         */
         @NameInMap("RecordFormat")
         public DescribeCasterConfigResponseBodyRecordConfigRecordFormat recordFormat;
 
         public static DescribeCasterConfigResponseBodyRecordConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeCasterConfigResponseBodyRecordConfig self = new DescribeCasterConfigResponseBodyRecordConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterConfigResponseBodyRecordConfig setOnDemand(Integer onDemand) {
+            this.onDemand = onDemand;
+            return this;
+        }
+        public Integer getOnDemand() {
+            return this.onDemand;
         }
 
         public DescribeCasterConfigResponseBodyRecordConfig setOssBucket(String ossBucket) {
@@ -317,12 +550,32 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroup extends TeaModel {
+        /**
+         * <p>The ID of the resource in the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28768383240243****</p>
+         */
         @NameInMap("HostResourceId")
         public String hostResourceId;
 
+        /**
+         * <p>The cache mode of the Static Page Caching policy. Valid values:</p>
+         * <ul>
+         * <li>0: standard mode</li>
+         * <li>1: force mode</li>
+         * <li>2: no cache</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Mode")
         public Integer mode;
 
+        /**
+         * <p>The IDs of the resources for which you want to modify the resource group. The number of resource IDs is 1 to 50.</p>
+         */
         @NameInMap("ResourceIds")
         public DescribeCasterConfigResponseBodySyncGroupsConfigSyncGroupResourceIds resourceIds;
 
@@ -376,6 +629,104 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo extends TeaModel {
+        /**
+         * <p>The video bitrate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
+        @NameInMap("bitrate")
+        public Integer bitrate;
+
+        /**
+         * <p>The video frame rate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
+        @NameInMap("fps")
+        public Integer fps;
+
+        /**
+         * <p>The video height. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>720</p>
+         */
+        @NameInMap("height")
+        public Integer height;
+
+        /**
+         * <p>The video width. Unit: pixels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
+        @NameInMap("width")
+        public Integer width;
+
+        public static DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo self = new DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo setBitrate(Integer bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public Integer getBitrate() {
+            return this.bitrate;
+        }
+
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo setFps(Integer fps) {
+            this.fps = fps;
+            return this;
+        }
+        public Integer getFps() {
+            return this.fps;
+        }
+
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo setHeight(Integer height) {
+            this.height = height;
+            return this;
+        }
+        public Integer getHeight() {
+            return this.height;
+        }
+
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo setWidth(Integer width) {
+            this.width = width;
+            return this;
+        }
+        public Integer getWidth() {
+            return this.width;
+        }
+
+    }
+
+    public static class DescribeCasterConfigResponseBodyTranscodeConfigCustomParams extends TeaModel {
+        /**
+         * <p>The video parameters.</p>
+         */
+        @NameInMap("video")
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo video;
+
+        public static DescribeCasterConfigResponseBodyTranscodeConfigCustomParams build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCasterConfigResponseBodyTranscodeConfigCustomParams self = new DescribeCasterConfigResponseBodyTranscodeConfigCustomParams();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParams setVideo(DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo video) {
+            this.video = video;
+            return this;
+        }
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParamsVideo getVideo() {
+            return this.video;
+        }
+
+    }
+
     public static class DescribeCasterConfigResponseBodyTranscodeConfigLiveTemplateIds extends TeaModel {
         @NameInMap("LocationId")
         public java.util.List<String> locationId;
@@ -396,9 +747,34 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterConfigResponseBodyTranscodeConfig extends TeaModel {
+        /**
+         * <p>The transcoding template of the production studio. Valid values:</p>
+         * <ul>
+         * <li><strong>lp_ld</strong>: low definition</li>
+         * <li><strong>lp_sd</strong>: standard definition</li>
+         * <li><strong>lp_hd</strong>: high definition</li>
+         * <li><strong>lp_ud</strong>: ultra high definition</li>
+         * <li><strong>lp_ld_v</strong>: low definition (portrait mode)</li>
+         * <li><strong>lp_sd_v</strong>: standard definition (portrait mode)</li>
+         * <li><strong>lp_hd_v</strong>: high definition (portrait mode)</li>
+         * <li><strong>lp_ud_v</strong>: ultra high definition (portrait mode)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>lp_hd</p>
+         */
         @NameInMap("CasterTemplate")
         public String casterTemplate;
 
+        /**
+         * <p>The custom settings.</p>
+         */
+        @NameInMap("CustomParams")
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParams customParams;
+
+        /**
+         * <p>The transcoding setting for live streams.</p>
+         */
         @NameInMap("LiveTemplateIds")
         public DescribeCasterConfigResponseBodyTranscodeConfigLiveTemplateIds liveTemplateIds;
 
@@ -413,6 +789,14 @@ public class DescribeCasterConfigResponseBody extends TeaModel {
         }
         public String getCasterTemplate() {
             return this.casterTemplate;
+        }
+
+        public DescribeCasterConfigResponseBodyTranscodeConfig setCustomParams(DescribeCasterConfigResponseBodyTranscodeConfigCustomParams customParams) {
+            this.customParams = customParams;
+            return this;
+        }
+        public DescribeCasterConfigResponseBodyTranscodeConfigCustomParams getCustomParams() {
+            return this.customParams;
         }
 
         public DescribeCasterConfigResponseBodyTranscodeConfig setLiveTemplateIds(DescribeCasterConfigResponseBodyTranscodeConfigLiveTemplateIds liveTemplateIds) {

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CancelMuteAllGroupUserResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public CancelMuteAllGroupUserResponseBodyResult result;
 
@@ -32,6 +41,16 @@ public class CancelMuteAllGroupUserResponseBody extends TeaModel {
     }
 
     public static class CancelMuteAllGroupUserResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the cancellation was successful, with values:</p>
+         * <ul>
+         * <li>true: Success. </li>
+         * <li>false: Not successful.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

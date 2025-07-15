@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainMappingResponseBody extends TeaModel {
+    /**
+     * <p>The mappings of the queried domain name.</p>
+     */
     @NameInMap("LiveDomainModels")
     public DescribeLiveDomainMappingResponseBodyLiveDomainModels liveDomainModels;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F6CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +41,26 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainMappingResponseBodyLiveDomainModelsLiveDomainModel extends TeaModel {
+        /**
+         * <p>The domain name to which the queried domain name is mapped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
+         */
         @NameInMap("DomainName")
         public String domainName;
 
+        /**
+         * <p>The type of the queried domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>vhost</strong>: main streaming domain</li>
+         * <li><strong>publish</strong>: ingest domain</li>
+         * <li><strong>play</strong>: sub-streaming domain</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>play</p>
+         */
         @NameInMap("Type")
         public String type;
 

@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteMessageAppResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public DeleteMessageAppResponseBodyResult result;
 
@@ -32,6 +41,16 @@ public class DeleteMessageAppResponseBody extends TeaModel {
     }
 
     public static class DeleteMessageAppResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the application was deleted. Valid values:</p>
+         * <ul>
+         * <li>true: The application was deleted.</li>
+         * <li>false: The application failed to be deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

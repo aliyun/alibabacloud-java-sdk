@@ -1,0 +1,122 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.live20161101.models;
+
+import com.aliyun.tea.*;
+
+public class MuteGroupUserRequest extends TeaModel {
+    /**
+     * <p>The ID of the interactive messaging application.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>VKL3***</p>
+     */
+    @NameInMap("AppId")
+    public String appId;
+
+    /**
+     * <p>The mode in which system messages are broadcasted. Valid values:</p>
+     * <ul>
+     * <li>0: specifies that system messages are not broadcasted. This is the default value.</li>
+     * <li>1: specifies that system messages are broadcasted to specified users.</li>
+     * <li>2: specifies that system messages are broadcasted to the message group.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
+    @NameInMap("BroadCastType")
+    public Integer broadCastType;
+
+    /**
+     * <p>The ID of the message group.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE35-****-T95F</p>
+     */
+    @NameInMap("GroupId")
+    public String groupId;
+
+    /**
+     * <p>The duration of the mute. Unit: seconds.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter or set the value to 0, the default duration of 86,400 seconds is used.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
+    @NameInMap("MuteTime")
+    public Integer muteTime;
+
+    /**
+     * <p>Details about the mute.</p>
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("MuteUserList")
+    public java.util.List<String> muteUserList;
+
+    /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de1**a0</p>
+     */
+    @NameInMap("OperatorUserId")
+    public String operatorUserId;
+
+    public static MuteGroupUserRequest build(java.util.Map<String, ?> map) throws Exception {
+        MuteGroupUserRequest self = new MuteGroupUserRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public MuteGroupUserRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public MuteGroupUserRequest setBroadCastType(Integer broadCastType) {
+        this.broadCastType = broadCastType;
+        return this;
+    }
+    public Integer getBroadCastType() {
+        return this.broadCastType;
+    }
+
+    public MuteGroupUserRequest setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    public MuteGroupUserRequest setMuteTime(Integer muteTime) {
+        this.muteTime = muteTime;
+        return this;
+    }
+    public Integer getMuteTime() {
+        return this.muteTime;
+    }
+
+    public MuteGroupUserRequest setMuteUserList(java.util.List<String> muteUserList) {
+        this.muteUserList = muteUserList;
+        return this;
+    }
+    public java.util.List<String> getMuteUserList() {
+        return this.muteUserList;
+    }
+
+    public MuteGroupUserRequest setOperatorUserId(String operatorUserId) {
+        this.operatorUserId = operatorUserId;
+        return this;
+    }
+    public String getOperatorUserId() {
+        return this.operatorUserId;
+    }
+
+}

@@ -4,21 +4,54 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
+    /**
+     * <p>The time granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The ingest domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo.aliyundoc.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T21:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2017-12-10T20:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The traffic data that was collected at each interval.</p>
+     */
     @NameInMap("TrafficDataPerInterval")
     public DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerInterval trafficDataPerInterval;
 
@@ -76,9 +109,21 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainPushTrafficDataResponseBodyTrafficDataPerIntervalDataModule extends TeaModel {
+        /**
+         * <p>The timestamp of the data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:05:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The traffic. Unit: bytes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1288111</p>
+         */
         @NameInMap("TrafficValue")
         public String trafficValue;
 

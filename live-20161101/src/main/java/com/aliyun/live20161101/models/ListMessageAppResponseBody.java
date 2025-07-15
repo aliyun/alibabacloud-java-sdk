@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ListMessageAppResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public ListMessageAppResponseBodyResult result;
 
@@ -32,21 +41,51 @@ public class ListMessageAppResponseBody extends TeaModel {
     }
 
     public static class ListMessageAppResponseBodyResultAppList extends TeaModel {
+        /**
+         * <p>The configurations of the application.</p>
+         */
         @NameInMap("AppConfig")
         public java.util.Map<String, String> appConfig;
 
+        /**
+         * <p>The ID of the interactive messaging application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VKL3***</p>
+         */
         @NameInMap("AppId")
         public String appId;
 
+        /**
+         * <p>The name of the interactive messaging application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("AppName")
         public String appName;
 
+        /**
+         * <p>The time when the interactive messaging application was created. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>502280113</p>
+         */
         @NameInMap("CreateTime")
         public Long createTime;
 
+        /**
+         * <p>The extended field.</p>
+         */
         @NameInMap("Extension")
         public java.util.Map<String, String> extension;
 
+        /**
+         * <p>The status of the interactive message application. A value of <strong>1</strong> indicates that the application is normal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Status")
         public Integer status;
 
@@ -106,12 +145,31 @@ public class ListMessageAppResponseBody extends TeaModel {
     }
 
     public static class ListMessageAppResponseBodyResult extends TeaModel {
+        /**
+         * <p>Details about the applications.</p>
+         */
         @NameInMap("AppList")
         public java.util.List<ListMessageAppResponseBodyResultAppList> appList;
 
+        /**
+         * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+         * <ul>
+         * <li>true: The current page is followed by another page.</li>
+         * <li>false: The current page is not followed by another page.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The total number of interactive message applications.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
+         */
         @NameInMap("Total")
         public Integer total;
 

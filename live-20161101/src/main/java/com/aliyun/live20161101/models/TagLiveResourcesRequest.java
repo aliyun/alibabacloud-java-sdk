@@ -7,12 +7,31 @@ public class TagLiveResourcesRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The type of the resources. Set the value to <strong>DOMAIN</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DOMAIN</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<TagLiveResourcesRequestTag> tag;
 
@@ -27,6 +46,14 @@ public class TagLiveResourcesRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public TagLiveResourcesRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public TagLiveResourcesRequest setResourceId(java.util.List<String> resourceId) {
@@ -54,9 +81,19 @@ public class TagLiveResourcesRequest extends TeaModel {
     }
 
     public static class TagLiveResourcesRequestTag extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
+         */
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>product</p>
+         */
         @NameInMap("Value")
         public String value;
 

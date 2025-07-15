@@ -4,12 +4,27 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddCasterEpisodeGroupContentResponseBody extends TeaModel {
+    /**
+     * <p>The IDs of the episodes.</p>
+     */
     @NameInMap("ItemIds")
     public AddCasterEpisodeGroupContentResponseBodyItemIds itemIds;
 
+    /**
+     * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to create or add episodes, remove episodes, query episodes, edit an episode list, delete an episode list, query the information about an episode list, start playing an episode list, or stop playing an episode list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68X****</p>
+     */
     @NameInMap("ProgramId")
     public String programId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

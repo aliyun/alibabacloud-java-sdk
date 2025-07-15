@@ -4,9 +4,21 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class ModifyCasterComponentResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the component. You can use the ID as a request parameter in the API operation that is called to query components in a production studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>05ab713c-676e-49c0-96ce-cc408da1****</p>
+     */
     @NameInMap("ComponentId")
     public String componentId;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

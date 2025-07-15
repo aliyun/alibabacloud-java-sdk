@@ -7,6 +7,16 @@ public class GetCustomTemplateRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
+    @NameInMap("RegionId")
+    public String regionId;
+
+    /**
+     * <p>The name of the custom template that you want to query. The value is a string.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestTemplate</p>
+     */
     @NameInMap("Template")
     public String template;
 
@@ -21,6 +31,14 @@ public class GetCustomTemplateRequest extends TeaModel {
     }
     public Long getOwnerId() {
         return this.ownerId;
+    }
+
+    public GetCustomTemplateRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
     public GetCustomTemplateRequest setTemplate(String template) {

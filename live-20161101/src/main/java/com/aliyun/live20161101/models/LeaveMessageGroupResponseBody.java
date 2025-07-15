@@ -4,9 +4,18 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class LeaveMessageGroupResponseBody extends TeaModel {
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-****-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The returned result.</p>
+     */
     @NameInMap("Result")
     public LeaveMessageGroupResponseBodyResult result;
 
@@ -32,6 +41,16 @@ public class LeaveMessageGroupResponseBody extends TeaModel {
     }
 
     public static class LeaveMessageGroupResponseBodyResult extends TeaModel {
+        /**
+         * <p>Indicates whether the user left the message group. Valid values:</p>
+         * <ul>
+         * <li>true: The user left the message group.</li>
+         * <li>false: The user failed to leave the message group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

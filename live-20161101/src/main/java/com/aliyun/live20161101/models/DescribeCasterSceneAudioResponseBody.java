@@ -4,18 +4,43 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeCasterSceneAudioResponseBody extends TeaModel {
+    /**
+     * <p>The configurations of the audio layers.</p>
+     */
     @NameInMap("AudioLayers")
     public DescribeCasterSceneAudioResponseBodyAudioLayers audioLayers;
 
+    /**
+     * <p>The ID of the production studio. You can specify the ID in a request to start a scene in the production studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>97df6b7f-3490-47d2-ac50-88338765****</p>
+     */
     @NameInMap("CasterId")
     public String casterId;
 
+    /**
+     * <p>The audio mode. By default, the audio follows video (AFV) mode is used. Valid values:</p>
+     * <ul>
+     * <li><strong>0</strong>: the audio mixing mode</li>
+     * <li><strong>1</strong>: the AFV mode</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("FollowEnable")
     public Integer followEnable;
 
     @NameInMap("MixList")
     public DescribeCasterSceneAudioResponseBodyMixList mixList;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>98745637-3490-47d2-ac50-883387567098</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -65,12 +90,35 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
     }
 
     public static class DescribeCasterSceneAudioResponseBodyAudioLayersAudioLayer extends TeaModel {
+        /**
+         * <p>The fixed delay of the audio layer. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("FixedDelayDuration")
         public Integer fixedDelayDuration;
 
+        /**
+         * <p>The sound channel type of the audio layer. Valid values:</p>
+         * <ul>
+         * <li><strong>left</strong>: the left channel</li>
+         * <li><strong>right</strong>: the right channel</li>
+         * <li><strong>all</strong> (default): both the left and right channels</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("ValidChannel")
         public String validChannel;
 
+        /**
+         * <p>The volume of the audio layer.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("VolumeRate")
         public Float volumeRate;
 

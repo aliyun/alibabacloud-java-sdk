@@ -4,18 +4,45 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
+    /**
+     * <p>The time granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>300</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The end of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10T21:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range for which the data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-12-10T20:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
+    /**
+     * <p>The total number of playbacks and the number of successful playbacks at each interval.</p>
+     */
     @NameInMap("VvData")
     public java.util.List<DescribeRTSNativeSDKVvDataResponseBodyVvData> vvData;
 
@@ -65,12 +92,30 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeRTSNativeSDKVvDataResponseBodyVvData extends TeaModel {
+        /**
+         * <p>The timestamp of the returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The number of successful playbacks within the period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
         @NameInMap("VvSuccess")
         public String vvSuccess;
 
+        /**
+         * <p>The total number of playbacks within the period of time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("VvTotal")
         public String vvTotal;
 

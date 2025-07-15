@@ -4,15 +4,50 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
+    /**
+     * <p>The end of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-10T21:00:00Z</p>
+     */
+    @NameInMap("EndTime")
+    public String endTime;
+
+    /**
+     * <p>The recording data that was collected for each interval.</p>
+     */
     @NameInMap("RecordUsageData")
     public DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageData recordUsageData;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4B460F8B-993C-4F48-B98A-910811DEBFEB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
+
+    /**
+     * <p>The beginning of the time range during which data was queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-10T20:00:00Z</p>
+     */
+    @NameInMap("StartTime")
+    public String startTime;
 
     public static DescribeLiveDomainRecordUsageDataResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeLiveDomainRecordUsageDataResponseBody self = new DescribeLiveDomainRecordUsageDataResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeLiveDomainRecordUsageDataResponseBody setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
     }
 
     public DescribeLiveDomainRecordUsageDataResponseBody setRecordUsageData(DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageData recordUsageData) {
@@ -31,19 +66,66 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public DescribeLiveDomainRecordUsageDataResponseBody setStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static class DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageDataDataModule extends TeaModel {
+        /**
+         * <p>The number of peak channels.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The main streaming domain. This parameter is returned if the value of the request parameter SplitBy contains <code>domain</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
         @NameInMap("Domain")
         public String domain;
 
+        /**
+         * <p>The recording length. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3560</p>
+         */
         @NameInMap("Duration")
         public Long duration;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        @NameInMap("Region")
+        public String region;
+
+        /**
+         * <p>The time when recording started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-10T20:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The recording file type. This parameter is returned if the value of the request parameter SplitBy contains <code>record_fmt</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MP4</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -74,6 +156,14 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         }
         public Long getDuration() {
             return this.duration;
+        }
+
+        public DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageDataDataModule setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
         }
 
         public DescribeLiveDomainRecordUsageDataResponseBodyRecordUsageDataDataModule setTimeStamp(String timeStamp) {

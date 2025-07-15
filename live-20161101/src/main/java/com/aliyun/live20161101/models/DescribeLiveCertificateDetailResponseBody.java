@@ -4,15 +4,39 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
+    /**
+     * <p>The content of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-----BEGIN CERTIFICATE-----****-----END CERTIFICATE-----</p>
+     */
     @NameInMap("Cert")
     public String cert;
 
+    /**
+     * <p>The ID of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>23451111</p>
+     */
     @NameInMap("CertId")
     public Long certId;
 
+    /**
+     * <p>The name of the certificate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cert-****</p>
+     */
     @NameInMap("CertName")
     public String certName;
 
+    /**
+     * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C7C69682-7F88-40DD-A198-10D0309E439B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

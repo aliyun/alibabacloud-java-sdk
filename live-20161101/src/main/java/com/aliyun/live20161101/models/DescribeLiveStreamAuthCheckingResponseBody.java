@@ -4,12 +4,34 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
+    /**
+     * <p>The error message for failed authentication.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>INVALID AUTH_KEY</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16F08B4E-14FD-5D72-AB2F-BAFA4C4D57F1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the signed URL is valid. Valid values:</p>
+     * <ul>
+     * <li>pass: valid.</li>
+     * <li>false: invalid.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pass</p>
+     */
     @NameInMap("Status")
     public String status;
 

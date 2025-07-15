@@ -4,21 +4,54 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
+    /**
+     * <p>The time interval between the entries returned. Unit: seconds. Default value: 3600.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3600</p>
+     */
     @NameInMap("DataInterval")
     public String dataInterval;
 
+    /**
+     * <p>The streaming domain.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-20T16:00:00Z</p>
+     */
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The data of PVs and UVs.</p>
+     */
     @NameInMap("PvUvDataInfos")
     public DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfos pvUvDataInfos;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-03-17T16:00:00Z</p>
+     */
     @NameInMap("StartTime")
     public String startTime;
 
@@ -76,12 +109,30 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveDomainPvUvDataResponseBodyPvUvDataInfosPvUvDataInfo extends TeaModel {
+        /**
+         * <p>The number of PVs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3036</p>
+         */
         @NameInMap("PV")
         public String PV;
 
+        /**
+         * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-19T16:00:00Z</p>
+         */
         @NameInMap("TimeStamp")
         public String timeStamp;
 
+        /**
+         * <p>The number of UVs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("UV")
         public String UV;
 

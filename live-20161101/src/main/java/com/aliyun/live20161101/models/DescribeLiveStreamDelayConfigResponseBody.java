@@ -4,15 +4,30 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
+    /**
+     * <p>The latency of FLV-based playback.</p>
+     */
     @NameInMap("LiveStreamFlvDelayConfig")
     public DescribeLiveStreamDelayConfigResponseBodyLiveStreamFlvDelayConfig liveStreamFlvDelayConfig;
 
+    /**
+     * <p>The latency of HLS-based playback.</p>
+     */
     @NameInMap("LiveStreamHlsDelayConfig")
     public DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig liveStreamHlsDelayConfig;
 
+    /**
+     * <p>The latency of RTMP-based playback.</p>
+     */
     @NameInMap("LiveStreamRtmpDelayConfig")
     public DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig liveStreamRtmpDelayConfig;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>785C9CB0-EB8A-4912-BBF2-966BEFD32DC3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,9 +69,26 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamFlvDelayConfig extends TeaModel {
+        /**
+         * <p>The playback latency. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>The latency level. Valid values:</p>
+         * <ul>
+         * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
+         * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
+         * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -84,9 +116,26 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamHlsDelayConfig extends TeaModel {
+        /**
+         * <p>The playback latency. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>The latency level. Valid values:</p>
+         * <ul>
+         * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
+         * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
+         * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>short</p>
+         */
         @NameInMap("Level")
         public String level;
 
@@ -114,9 +163,26 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeLiveStreamDelayConfigResponseBodyLiveStreamRtmpDelayConfig extends TeaModel {
+        /**
+         * <p>The playback latency. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>The latency level. Valid values:</p>
+         * <ul>
+         * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
+         * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
+         * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>short</p>
+         */
         @NameInMap("Level")
         public String level;
 

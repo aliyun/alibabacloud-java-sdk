@@ -4,9 +4,23 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotDetectPornConfigRequest extends TeaModel {
+    /**
+     * <p>The name of the application to which the live stream belongs. You can call the <a href="https://help.aliyun.com/document_detail/2847918.html">DescribeLiveSnapshotDetectPornConfig</a> operation to query the application name.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>liveApp****</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The main streaming domain.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example.com</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 

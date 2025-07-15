@@ -4,12 +4,25 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class CreateMessageAppRequest extends TeaModel {
+    /**
+     * <p>The configurations of the application.</p>
+     */
     @NameInMap("AppConfig")
     public java.util.Map<String, String> appConfig;
 
+    /**
+     * <p>The name of the interactive message application. The name must be 2 to 16 characters in length.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The extended fields.</p>
+     */
     @NameInMap("Extension")
     public java.util.Map<String, String> extension;
 
