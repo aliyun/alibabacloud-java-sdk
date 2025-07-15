@@ -28,6 +28,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>添加审核自定义词库记录</p>
+     * 
+     * @param request AddAuditTermsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddAuditTermsResponse
+     */
+    public AddAuditTermsResponse addAuditTermsWithOptions(AddAuditTermsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suggestWord)) {
+            body.put("SuggestWord", request.suggestWord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.termsDesc)) {
+            body.put("TermsDesc", request.termsDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddAuditTerms"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddAuditTermsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>添加审核自定义词库记录</p>
+     * 
+     * @param request AddAuditTermsRequest
+     * @return AddAuditTermsResponse
+     */
+    public AddAuditTermsResponse addAuditTerms(AddAuditTermsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addAuditTermsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>添加文档到数据集</p>
      * 
      * @param tmpReq AddDatasetDocumentRequest
@@ -704,6 +760,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除指定的词库记录</p>
+     * 
+     * @param tmpReq DeleteAuditTermsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAuditTermsResponse
+     */
+    public DeleteAuditTermsResponse deleteAuditTermsWithOptions(DeleteAuditTermsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DeleteAuditTermsShrinkRequest request = new DeleteAuditTermsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.idList)) {
+            request.idListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.idList, "IdList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.idListShrink)) {
+            body.put("IdList", request.idListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAuditTerms"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAuditTermsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定的词库记录</p>
+     * 
+     * @param request DeleteAuditTermsRequest
+     * @return DeleteAuditTermsResponse
+     */
+    public DeleteAuditTermsResponse deleteAuditTerms(DeleteAuditTermsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAuditTermsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除自定义文本</p>
      * 
      * @param request DeleteCustomTextRequest
@@ -1280,6 +1390,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>编辑审核自定义词库记录</p>
+     * 
+     * @param request EditAuditTermsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EditAuditTermsResponse
+     */
+    public EditAuditTermsResponse editAuditTermsWithOptions(EditAuditTermsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
+            body.put("Id", request.id);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.suggestWord)) {
+            body.put("SuggestWord", request.suggestWord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.termsDesc)) {
+            body.put("TermsDesc", request.termsDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EditAuditTerms"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EditAuditTermsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>编辑审核自定义词库记录</p>
+     * 
+     * @param request EditAuditTermsRequest
+     * @return EditAuditTermsResponse
+     */
+    public EditAuditTermsResponse editAuditTerms(EditAuditTermsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.editAuditTermsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>导出企业VOC分析任务明细列表</p>
      * 
      * @param tmpReq ExportAnalysisTagDetailByTaskIdRequest
@@ -1688,6 +1858,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取词库导出任务结果</p>
+     * 
+     * @param request FetchExportTermsTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchExportTermsTaskResponse
+     */
+    public FetchExportTermsTaskResponse fetchExportTermsTaskWithOptions(FetchExportTermsTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchExportTermsTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchExportTermsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取词库导出任务结果</p>
+     * 
+     * @param request FetchExportTermsTaskRequest
+     * @return FetchExportTermsTaskResponse
+     */
+    public FetchExportTermsTaskResponse fetchExportTermsTask(FetchExportTermsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.fetchExportTermsTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取异步导出文档任务结果</p>
      * 
      * @param request FetchExportWordTaskRequest
@@ -1794,6 +2012,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public FetchImageTaskResponse fetchImageTask(FetchImageTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.fetchImageTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取导入词库任务结果</p>
+     * 
+     * @param request FetchImportTermsTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FetchImportTermsTaskResponse
+     */
+    public FetchImportTermsTaskResponse fetchImportTermsTaskWithOptions(FetchImportTermsTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FetchImportTermsTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FetchImportTermsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取导入词库任务结果</p>
+     * 
+     * @param request FetchImportTermsTaskRequest
+     * @return FetchImportTermsTaskResponse
+     */
+    public FetchImportTermsTaskResponse fetchImportTermsTask(FetchImportTermsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.fetchImportTermsTaskWithOptions(request, runtime);
     }
 
     /**
@@ -3874,6 +4140,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListAuditContentErrorTypesResponse listAuditContentErrorTypes(ListAuditContentErrorTypesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listAuditContentErrorTypesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取词库列表</p>
+     * 
+     * @param request ListAuditTermsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAuditTermsResponse
+     */
+    public ListAuditTermsResponse listAuditTermsWithOptions(ListAuditTermsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAuditTerms"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAuditTermsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取词库列表</p>
+     * 
+     * @param request ListAuditTermsRequest
+     * @return ListAuditTermsResponse
+     */
+    public ListAuditTermsResponse listAuditTerms(ListAuditTermsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAuditTermsWithOptions(request, runtime);
     }
 
     /**
@@ -9022,6 +9340,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitEnterpriseVocAnalysisTaskResponse submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitEnterpriseVocAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出词库任务</p>
+     * 
+     * @param request SubmitExportTermsTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitExportTermsTaskResponse
+     */
+    public SubmitExportTermsTaskResponse submitExportTermsTaskWithOptions(SubmitExportTermsTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitExportTermsTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitExportTermsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出词库任务</p>
+     * 
+     * @param request SubmitExportTermsTaskRequest
+     * @return SubmitExportTermsTaskResponse
+     */
+    public SubmitExportTermsTaskResponse submitExportTermsTask(SubmitExportTermsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitExportTermsTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交导入自定义词库任务</p>
+     * 
+     * @param request SubmitImportTermsTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitImportTermsTaskResponse
+     */
+    public SubmitImportTermsTaskResponse submitImportTermsTaskWithOptions(SubmitImportTermsTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKey)) {
+            body.put("FileKey", request.fileKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitImportTermsTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitImportTermsTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交导入自定义词库任务</p>
+     * 
+     * @param request SubmitImportTermsTaskRequest
+     * @return SubmitImportTermsTaskResponse
+     */
+    public SubmitImportTermsTaskResponse submitImportTermsTask(SubmitImportTermsTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitImportTermsTaskWithOptions(request, runtime);
     }
 
     /**
