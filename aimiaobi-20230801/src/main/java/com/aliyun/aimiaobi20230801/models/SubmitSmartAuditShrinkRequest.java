@@ -17,6 +17,9 @@ public class SubmitSmartAuditShrinkRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    @NameInMap("imageUrls")
+    public String imageUrlsShrink;
+
     public static SubmitSmartAuditShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmartAuditShrinkRequest self = new SubmitSmartAuditShrinkRequest();
         return TeaModel.build(map, self);
@@ -44,6 +47,14 @@ public class SubmitSmartAuditShrinkRequest extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public SubmitSmartAuditShrinkRequest setImageUrlsShrink(String imageUrlsShrink) {
+        this.imageUrlsShrink = imageUrlsShrink;
+        return this;
+    }
+    public String getImageUrlsShrink() {
+        return this.imageUrlsShrink;
     }
 
 }

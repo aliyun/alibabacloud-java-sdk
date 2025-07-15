@@ -13,6 +13,9 @@ public class RunExpandContentRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("Prompt")
+    public String prompt;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class RunExpandContentRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public RunExpandContentRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
     }
 
     public RunExpandContentRequest setWorkspaceId(String workspaceId) {

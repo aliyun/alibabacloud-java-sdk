@@ -6271,6 +6271,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -7311,6 +7315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Content", request.content);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -7485,6 +7493,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.referenceDataShrink)) {
             body.put("ReferenceData", request.referenceDataShrink);
         }
@@ -7945,6 +7957,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             body.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -9450,6 +9466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.subCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subCodes, "SubCodes", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.imageUrls)) {
+            request.imageUrlsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageUrls, "imageUrls", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.subCodesShrink)) {
             body.put("SubCodes", request.subCodesShrink);
@@ -9461,6 +9481,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrlsShrink)) {
+            body.put("imageUrls", request.imageUrlsShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -13,6 +13,9 @@ public class RunTextPolishingRequest extends TeaModel {
     @NameInMap("Content")
     public String content;
 
+    @NameInMap("Prompt")
+    public String prompt;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -33,6 +36,14 @@ public class RunTextPolishingRequest extends TeaModel {
     }
     public String getContent() {
         return this.content;
+    }
+
+    public RunTextPolishingRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
     }
 
     public RunTextPolishingRequest setWorkspaceId(String workspaceId) {

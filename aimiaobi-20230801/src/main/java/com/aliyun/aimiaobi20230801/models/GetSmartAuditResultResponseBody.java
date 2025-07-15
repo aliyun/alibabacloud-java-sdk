@@ -162,6 +162,9 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         @NameInMap("SubClassDesc")
         public String subClassDesc;
 
+        @NameInMap("Url")
+        public String url;
+
         public static GetSmartAuditResultResponseBodyDataErrorItemDetails build(java.util.Map<String, ?> map) throws Exception {
             GetSmartAuditResultResponseBodyDataErrorItemDetails self = new GetSmartAuditResultResponseBodyDataErrorItemDetails();
             return TeaModel.build(map, self);
@@ -261,6 +264,14 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         }
         public String getSubClassDesc() {
             return this.subClassDesc;
+        }
+
+        public GetSmartAuditResultResponseBodyDataErrorItemDetails setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
         }
 
     }

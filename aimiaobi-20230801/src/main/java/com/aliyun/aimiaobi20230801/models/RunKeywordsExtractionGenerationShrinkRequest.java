@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class RunKeywordsExtractionGenerationShrinkRequest extends TeaModel {
+    @NameInMap("Prompt")
+    public String prompt;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -29,6 +32,14 @@ public class RunKeywordsExtractionGenerationShrinkRequest extends TeaModel {
     public static RunKeywordsExtractionGenerationShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         RunKeywordsExtractionGenerationShrinkRequest self = new RunKeywordsExtractionGenerationShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunKeywordsExtractionGenerationShrinkRequest setPrompt(String prompt) {
+        this.prompt = prompt;
+        return this;
+    }
+    public String getPrompt() {
+        return this.prompt;
     }
 
     public RunKeywordsExtractionGenerationShrinkRequest setReferenceDataShrink(String referenceDataShrink) {
