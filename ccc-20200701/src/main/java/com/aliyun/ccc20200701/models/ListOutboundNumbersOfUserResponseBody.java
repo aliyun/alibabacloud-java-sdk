@@ -91,10 +91,18 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         public String provider;
 
         @NameInMap("ProviderCode")
+        @Deprecated
         public String providerCode;
 
         @NameInMap("ProviderDisplayName")
+        @Deprecated
         public String providerDisplayName;
+
+        @NameInMap("ProviderShortName")
+        public String providerShortName;
+
+        @NameInMap("ProviderType")
+        public String providerType;
 
         @NameInMap("Province")
         public String province;
@@ -128,6 +136,7 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             return this.provider;
         }
 
+        @Deprecated
         public ListOutboundNumbersOfUserResponseBodyDataList setProviderCode(String providerCode) {
             this.providerCode = providerCode;
             return this;
@@ -136,12 +145,29 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             return this.providerCode;
         }
 
+        @Deprecated
         public ListOutboundNumbersOfUserResponseBodyDataList setProviderDisplayName(String providerDisplayName) {
             this.providerDisplayName = providerDisplayName;
             return this;
         }
         public String getProviderDisplayName() {
             return this.providerDisplayName;
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyDataList setProviderShortName(String providerShortName) {
+            this.providerShortName = providerShortName;
+            return this;
+        }
+        public String getProviderShortName() {
+            return this.providerShortName;
+        }
+
+        public ListOutboundNumbersOfUserResponseBodyDataList setProviderType(String providerType) {
+            this.providerType = providerType;
+            return this;
+        }
+        public String getProviderType() {
+            return this.providerType;
         }
 
         public ListOutboundNumbersOfUserResponseBodyDataList setProvince(String province) {

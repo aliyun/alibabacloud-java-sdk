@@ -593,6 +593,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @NameInMap("OffsiteAgentOriginatorNumbers")
         public String offsiteAgentOriginatorNumbers;
 
+        @NameInMap("OffsiteAgentReleaseReason")
+        public String offsiteAgentReleaseReason;
+
         @NameInMap("OutsideNumberReleaseReason")
         public String outsideNumberReleaseReason;
 
@@ -702,6 +705,12 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
          */
         @NameInMap("TransferCount")
         public Long transferCount;
+
+        @NameInMap("VoicebotDestinationNumber")
+        public String voicebotDestinationNumber;
+
+        @NameInMap("VoicebotOriginatorNumber")
+        public String voicebotOriginatorNumber;
 
         /**
          * <strong>example:</strong>
@@ -1019,6 +1028,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             return this.offsiteAgentOriginatorNumbers;
         }
 
+        public ListCallDetailRecordsV2ResponseBodyDataList setOffsiteAgentReleaseReason(String offsiteAgentReleaseReason) {
+            this.offsiteAgentReleaseReason = offsiteAgentReleaseReason;
+            return this;
+        }
+        public String getOffsiteAgentReleaseReason() {
+            return this.offsiteAgentReleaseReason;
+        }
+
         public ListCallDetailRecordsV2ResponseBodyDataList setOutsideNumberReleaseReason(String outsideNumberReleaseReason) {
             this.outsideNumberReleaseReason = outsideNumberReleaseReason;
             return this;
@@ -1161,6 +1178,22 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
         public Long getTransferCount() {
             return this.transferCount;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setVoicebotDestinationNumber(String voicebotDestinationNumber) {
+            this.voicebotDestinationNumber = voicebotDestinationNumber;
+            return this;
+        }
+        public String getVoicebotDestinationNumber() {
+            return this.voicebotDestinationNumber;
+        }
+
+        public ListCallDetailRecordsV2ResponseBodyDataList setVoicebotOriginatorNumber(String voicebotOriginatorNumber) {
+            this.voicebotOriginatorNumber = voicebotOriginatorNumber;
+            return this;
+        }
+        public String getVoicebotOriginatorNumber() {
+            return this.voicebotOriginatorNumber;
         }
 
         public ListCallDetailRecordsV2ResponseBodyDataList setWaitTime(Long waitTime) {
