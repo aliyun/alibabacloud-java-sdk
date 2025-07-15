@@ -14,6 +14,9 @@ public class UpdateApplicationGroupShrinkRequest extends TeaModel {
     @NameInMap("ApplicationName")
     public String applicationName;
 
+    @NameInMap("DeployedRevisionId")
+    public String deployedRevisionId;
+
     /**
      * <p>The name of the application group.</p>
      * <p>This parameter is required.</p>
@@ -71,6 +74,14 @@ public class UpdateApplicationGroupShrinkRequest extends TeaModel {
     }
     public String getApplicationName() {
         return this.applicationName;
+    }
+
+    public UpdateApplicationGroupShrinkRequest setDeployedRevisionId(String deployedRevisionId) {
+        this.deployedRevisionId = deployedRevisionId;
+        return this;
+    }
+    public String getDeployedRevisionId() {
+        return this.deployedRevisionId;
     }
 
     public UpdateApplicationGroupShrinkRequest setName(String name) {

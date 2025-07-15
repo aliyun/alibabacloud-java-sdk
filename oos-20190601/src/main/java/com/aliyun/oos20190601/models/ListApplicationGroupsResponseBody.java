@@ -122,6 +122,9 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         @NameInMap("DeployRegionId")
         public String deployRegionId;
 
+        @NameInMap("DeployedRevisionIds")
+        public String deployedRevisionIds;
+
         /**
          * <p>The description of the application group.</p>
          * 
@@ -234,6 +237,14 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
         public String getDeployRegionId() {
             return this.deployRegionId;
+        }
+
+        public ListApplicationGroupsResponseBodyApplicationGroups setDeployedRevisionIds(String deployedRevisionIds) {
+            this.deployedRevisionIds = deployedRevisionIds;
+            return this;
+        }
+        public String getDeployedRevisionIds() {
+            return this.deployedRevisionIds;
         }
 
         public ListApplicationGroupsResponseBodyApplicationGroups setDescription(String description) {

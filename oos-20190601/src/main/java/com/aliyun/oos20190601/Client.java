@@ -5019,6 +5019,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ApplicationName", request.applicationName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.deployedRevisionId)) {
+            query.put("DeployedRevisionId", request.deployedRevisionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
         }
