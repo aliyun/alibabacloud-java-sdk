@@ -357,6 +357,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("AuthorizedUserId")
         public String authorizedUserId;
 
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("BandwidthPackageType")
+        public String bandwidthPackageType;
+
         /**
          * <p>The ID of the bound user.</p>
          * 
@@ -392,6 +398,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @NameInMap("DisplayConfig")
         public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig displayConfig;
+
+        @NameInMap("DownBandwidthLimit")
+        public Integer downBandwidthLimit;
 
         /**
          * <p>The cause of the instance data backup failure or restoration failure.</p>
@@ -487,6 +496,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         @NameInMap("NetworkInterfaceIpv6Address")
         public String networkInterfaceIpv6Address;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         /**
          * <p>The office network ID.</p>
@@ -591,6 +603,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags;
 
+        @NameInMap("UpBandwidthLimit")
+        public Integer upBandwidthLimit;
+
         @NameInMap("VSwitchId")
         public String vSwitchId;
 
@@ -674,6 +689,22 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.authorizedUserId;
         }
 
+        public DescribeAndroidInstancesResponseBodyInstanceModel setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setBandwidthPackageType(String bandwidthPackageType) {
+            this.bandwidthPackageType = bandwidthPackageType;
+            return this;
+        }
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
+        }
+
         public DescribeAndroidInstancesResponseBodyInstanceModel setBindUserId(String bindUserId) {
             this.bindUserId = bindUserId;
             return this;
@@ -712,6 +743,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public DescribeAndroidInstancesResponseBodyInstanceModelDisplayConfig getDisplayConfig() {
             return this.displayConfig;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setDownBandwidthLimit(Integer downBandwidthLimit) {
+            this.downBandwidthLimit = downBandwidthLimit;
+            return this;
+        }
+        public Integer getDownBandwidthLimit() {
+            return this.downBandwidthLimit;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setErrorCode(String errorCode) {
@@ -800,6 +839,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getNetworkInterfaceIpv6Address() {
             return this.networkInterfaceIpv6Address;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setOfficeSiteId(String officeSiteId) {
@@ -904,6 +951,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> getTags() {
             return this.tags;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setUpBandwidthLimit(Integer upBandwidthLimit) {
+            this.upBandwidthLimit = upBandwidthLimit;
+            return this;
+        }
+        public Integer getUpBandwidthLimit() {
+            return this.upBandwidthLimit;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setVSwitchId(String vSwitchId) {

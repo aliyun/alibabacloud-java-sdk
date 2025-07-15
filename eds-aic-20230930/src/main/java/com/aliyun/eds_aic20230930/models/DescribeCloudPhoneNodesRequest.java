@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodesRequest extends TeaModel {
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -89,6 +92,14 @@ public class DescribeCloudPhoneNodesRequest extends TeaModel {
     public static DescribeCloudPhoneNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCloudPhoneNodesRequest self = new DescribeCloudPhoneNodesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCloudPhoneNodesRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
     }
 
     public DescribeCloudPhoneNodesRequest setBizRegionId(String bizRegionId) {

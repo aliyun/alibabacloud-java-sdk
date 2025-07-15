@@ -679,6 +679,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.displayConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.displayConfig, "DisplayConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.networkInfo)) {
+            request.networkInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.networkInfo, "NetworkInfo", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
@@ -686,6 +690,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageId)) {
+            query.put("BandwidthPackageId", request.bandwidthPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageType)) {
+            query.put("BandwidthPackageType", request.bandwidthPackageType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
@@ -700,6 +712,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Count", request.count);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.downBandwidthLimit)) {
+            query.put("DownBandwidthLimit", request.downBandwidthLimit);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imageId)) {
             query.put("ImageId", request.imageId);
         }
@@ -710,6 +726,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.networkId)) {
             query.put("NetworkId", request.networkId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInfoShrink)) {
+            query.put("NetworkInfo", request.networkInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nodeName)) {
@@ -754,6 +778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upBandwidthLimit)) {
+            query.put("UpBandwidthLimit", request.upBandwidthLimit);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
@@ -1552,6 +1580,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("OfficeSiteIds", request.officeSiteIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.privateIpAddress)) {
+            query.put("PrivateIpAddress", request.privateIpAddress);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.qosRuleIds)) {
             query.put("QosRuleIds", request.qosRuleIds);
         }
@@ -1782,6 +1814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeCloudPhoneNodesResponse describeCloudPhoneNodesWithOptions(DescribeCloudPhoneNodesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageId)) {
+            query.put("BandwidthPackageId", request.bandwidthPackageId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             query.put("BizRegionId", request.bizRegionId);
         }
@@ -2992,8 +3028,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceId", request.androidInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.downBandwidthLimit)) {
+            query.put("DownBandwidthLimit", request.downBandwidthLimit);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceIds)) {
+            query.put("InstanceIds", request.instanceIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.newAndroidInstanceName)) {
             query.put("NewAndroidInstanceName", request.newAndroidInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upBandwidthLimit)) {
+            query.put("UpBandwidthLimit", request.upBandwidthLimit);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

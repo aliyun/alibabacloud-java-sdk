@@ -32,6 +32,12 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
+
+    @NameInMap("BandwidthPackageType")
+    public String bandwidthPackageType;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -62,6 +68,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
 
     @NameInMap("DisplayConfig")
     public String displayConfigShrink;
+
+    @NameInMap("DownBandwidthLimit")
+    public Integer downBandwidthLimit;
 
     /**
      * <p>The image ID.</p>
@@ -94,6 +103,12 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
      */
     @NameInMap("NetworkId")
     public String networkId;
+
+    @NameInMap("NetworkInfo")
+    public String networkInfoShrink;
+
+    @NameInMap("NetworkType")
+    public String networkType;
 
     /**
      * <p>The name of the cloud phone matrix.</p>
@@ -193,6 +208,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> tag;
 
+    @NameInMap("UpBandwidthLimit")
+    public Integer upBandwidthLimit;
+
     /**
      * <p>The vSwitch ID.</p>
      * 
@@ -221,6 +239,22 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setBandwidthPackageType(String bandwidthPackageType) {
+        this.bandwidthPackageType = bandwidthPackageType;
+        return this;
+    }
+    public String getBandwidthPackageType() {
+        return this.bandwidthPackageType;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setBizRegionId(String bizRegionId) {
@@ -255,6 +289,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
         return this.displayConfigShrink;
     }
 
+    public CreateCloudPhoneNodeShrinkRequest setDownBandwidthLimit(Integer downBandwidthLimit) {
+        this.downBandwidthLimit = downBandwidthLimit;
+        return this;
+    }
+    public Integer getDownBandwidthLimit() {
+        return this.downBandwidthLimit;
+    }
+
     public CreateCloudPhoneNodeShrinkRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -277,6 +319,22 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setNetworkInfoShrink(String networkInfoShrink) {
+        this.networkInfoShrink = networkInfoShrink;
+        return this;
+    }
+    public String getNetworkInfoShrink() {
+        return this.networkInfoShrink;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setNodeName(String nodeName) {
@@ -365,6 +423,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public java.util.List<CreateCloudPhoneNodeShrinkRequestTag> getTag() {
         return this.tag;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setUpBandwidthLimit(Integer upBandwidthLimit) {
+        this.upBandwidthLimit = upBandwidthLimit;
+        return this;
+    }
+    public Integer getUpBandwidthLimit() {
+        return this.upBandwidthLimit;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setVSwitchId(String vSwitchId) {

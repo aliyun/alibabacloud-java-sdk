@@ -120,6 +120,9 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     @NameInMap("OfficeSiteIds")
     public java.util.List<String> officeSiteIds;
 
+    @NameInMap("PrivateIpAddress")
+    public String privateIpAddress;
+
     @NameInMap("QosRuleIds")
     public java.util.List<String> qosRuleIds;
 
@@ -293,6 +296,14 @@ public class DescribeAndroidInstancesRequest extends TeaModel {
     }
     public java.util.List<String> getOfficeSiteIds() {
         return this.officeSiteIds;
+    }
+
+    public DescribeAndroidInstancesRequest setPrivateIpAddress(String privateIpAddress) {
+        this.privateIpAddress = privateIpAddress;
+        return this;
+    }
+    public String getPrivateIpAddress() {
+        return this.privateIpAddress;
     }
 
     public DescribeAndroidInstancesRequest setQosRuleIds(java.util.List<String> qosRuleIds) {

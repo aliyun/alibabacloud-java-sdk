@@ -32,6 +32,12 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("AutoRenew")
     public Boolean autoRenew;
 
+    @NameInMap("BandwidthPackageId")
+    public String bandwidthPackageId;
+
+    @NameInMap("BandwidthPackageType")
+    public String bandwidthPackageType;
+
     /**
      * <p>The region ID.</p>
      * <p>This parameter is required.</p>
@@ -62,6 +68,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
 
     @NameInMap("DisplayConfig")
     public CreateCloudPhoneNodeRequestDisplayConfig displayConfig;
+
+    @NameInMap("DownBandwidthLimit")
+    public Integer downBandwidthLimit;
 
     /**
      * <p>The image ID.</p>
@@ -94,6 +103,12 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
      */
     @NameInMap("NetworkId")
     public String networkId;
+
+    @NameInMap("NetworkInfo")
+    public CreateCloudPhoneNodeRequestNetworkInfo networkInfo;
+
+    @NameInMap("NetworkType")
+    public String networkType;
 
     /**
      * <p>The name of the cloud phone matrix.</p>
@@ -193,6 +208,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("Tag")
     public java.util.List<CreateCloudPhoneNodeRequestTag> tag;
 
+    @NameInMap("UpBandwidthLimit")
+    public Integer upBandwidthLimit;
+
     /**
      * <p>The vSwitch ID.</p>
      * 
@@ -221,6 +239,22 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     }
     public Boolean getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateCloudPhoneNodeRequest setBandwidthPackageId(String bandwidthPackageId) {
+        this.bandwidthPackageId = bandwidthPackageId;
+        return this;
+    }
+    public String getBandwidthPackageId() {
+        return this.bandwidthPackageId;
+    }
+
+    public CreateCloudPhoneNodeRequest setBandwidthPackageType(String bandwidthPackageType) {
+        this.bandwidthPackageType = bandwidthPackageType;
+        return this;
+    }
+    public String getBandwidthPackageType() {
+        return this.bandwidthPackageType;
     }
 
     public CreateCloudPhoneNodeRequest setBizRegionId(String bizRegionId) {
@@ -255,6 +289,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.displayConfig;
     }
 
+    public CreateCloudPhoneNodeRequest setDownBandwidthLimit(Integer downBandwidthLimit) {
+        this.downBandwidthLimit = downBandwidthLimit;
+        return this;
+    }
+    public Integer getDownBandwidthLimit() {
+        return this.downBandwidthLimit;
+    }
+
     public CreateCloudPhoneNodeRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -277,6 +319,22 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
     }
     public String getNetworkId() {
         return this.networkId;
+    }
+
+    public CreateCloudPhoneNodeRequest setNetworkInfo(CreateCloudPhoneNodeRequestNetworkInfo networkInfo) {
+        this.networkInfo = networkInfo;
+        return this;
+    }
+    public CreateCloudPhoneNodeRequestNetworkInfo getNetworkInfo() {
+        return this.networkInfo;
+    }
+
+    public CreateCloudPhoneNodeRequest setNetworkType(String networkType) {
+        this.networkType = networkType;
+        return this;
+    }
+    public String getNetworkType() {
+        return this.networkType;
     }
 
     public CreateCloudPhoneNodeRequest setNodeName(String nodeName) {
@@ -367,6 +425,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         return this.tag;
     }
 
+    public CreateCloudPhoneNodeRequest setUpBandwidthLimit(Integer upBandwidthLimit) {
+        this.upBandwidthLimit = upBandwidthLimit;
+        return this;
+    }
+    public Integer getUpBandwidthLimit() {
+        return this.upBandwidthLimit;
+    }
+
     public CreateCloudPhoneNodeRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
@@ -412,6 +478,80 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         }
         public String getLockResolution() {
             return this.lockResolution;
+        }
+
+    }
+
+    public static class CreateCloudPhoneNodeRequestNetworkInfo extends TeaModel {
+        @NameInMap("BandwidthPackageName")
+        public String bandwidthPackageName;
+
+        @NameInMap("CidrBlock")
+        public String cidrBlock;
+
+        @NameInMap("InternetChargeType")
+        public String internetChargeType;
+
+        @NameInMap("IpRatio")
+        public Integer ipRatio;
+
+        @NameInMap("Isp")
+        public String isp;
+
+        @NameInMap("LimitedBandwidth")
+        public Integer limitedBandwidth;
+
+        public static CreateCloudPhoneNodeRequestNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudPhoneNodeRequestNetworkInfo self = new CreateCloudPhoneNodeRequestNetworkInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setBandwidthPackageName(String bandwidthPackageName) {
+            this.bandwidthPackageName = bandwidthPackageName;
+            return this;
+        }
+        public String getBandwidthPackageName() {
+            return this.bandwidthPackageName;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setCidrBlock(String cidrBlock) {
+            this.cidrBlock = cidrBlock;
+            return this;
+        }
+        public String getCidrBlock() {
+            return this.cidrBlock;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setInternetChargeType(String internetChargeType) {
+            this.internetChargeType = internetChargeType;
+            return this;
+        }
+        public String getInternetChargeType() {
+            return this.internetChargeType;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setIpRatio(Integer ipRatio) {
+            this.ipRatio = ipRatio;
+            return this;
+        }
+        public Integer getIpRatio() {
+            return this.ipRatio;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setLimitedBandwidth(Integer limitedBandwidth) {
+            this.limitedBandwidth = limitedBandwidth;
+            return this;
+        }
+        public Integer getLimitedBandwidth() {
+            return this.limitedBandwidth;
         }
 
     }

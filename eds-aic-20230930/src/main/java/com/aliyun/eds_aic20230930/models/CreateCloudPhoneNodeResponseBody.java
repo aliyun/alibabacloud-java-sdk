@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class CreateCloudPhoneNodeResponseBody extends TeaModel {
+    @NameInMap("NetworkPackageOrderModel")
+    public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel networkPackageOrderModel;
+
     /**
      * <p>The cloud phone matrixes.</p>
      */
@@ -33,6 +36,14 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateCloudPhoneNodeResponseBody setNetworkPackageOrderModel(CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel networkPackageOrderModel) {
+        this.networkPackageOrderModel = networkPackageOrderModel;
+        return this;
+    }
+    public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel getNetworkPackageOrderModel() {
+        return this.networkPackageOrderModel;
+    }
+
     public CreateCloudPhoneNodeResponseBody setNodeInfos(java.util.List<CreateCloudPhoneNodeResponseBodyNodeInfos> nodeInfos) {
         this.nodeInfos = nodeInfos;
         return this;
@@ -55,6 +66,36 @@ public class CreateCloudPhoneNodeResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel extends TeaModel {
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("BandwidthPackageOrderId")
+        public String bandwidthPackageOrderId;
+
+        public static CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel build(java.util.Map<String, ?> map) throws Exception {
+            CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel self = new CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public CreateCloudPhoneNodeResponseBodyNetworkPackageOrderModel setBandwidthPackageOrderId(String bandwidthPackageOrderId) {
+            this.bandwidthPackageOrderId = bandwidthPackageOrderId;
+            return this;
+        }
+        public String getBandwidthPackageOrderId() {
+            return this.bandwidthPackageOrderId;
+        }
+
     }
 
     public static class CreateCloudPhoneNodeResponseBodyNodeInfos extends TeaModel {

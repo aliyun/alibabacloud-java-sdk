@@ -96,8 +96,17 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos extends TeaModel {
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("BandwidthPackageType")
+        public String bandwidthPackageType;
+
         @NameInMap("NetworkId")
         public String networkId;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         @NameInMap("VSwitchId")
         public String vSwitchId;
@@ -107,12 +116,36 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setBandwidthPackageType(String bandwidthPackageType) {
+            this.bandwidthPackageType = bandwidthPackageType;
+            return this;
+        }
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
+        }
+
         public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setNetworkId(String networkId) {
             this.networkId = networkId;
             return this;
         }
         public String getNetworkId() {
             return this.networkId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos setVSwitchId(String vSwitchId) {
@@ -156,6 +189,12 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudPhoneNodesResponseBodyNodeModel extends TeaModel {
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("BandwidthPackageType")
+        public String bandwidthPackageType;
+
         /**
          * <p>The billing method.</p>
          * 
@@ -224,6 +263,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         @NameInMap("NetworkInfos")
         public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> networkInfos;
+
+        @NameInMap("NetworkType")
+        public String networkType;
 
         /**
          * <p>The matrix ID.</p>
@@ -323,6 +365,22 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setBandwidthPackageType(String bandwidthPackageType) {
+            this.bandwidthPackageType = bandwidthPackageType;
+            return this;
+        }
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
+        }
+
         public DescribeCloudPhoneNodesResponseBodyNodeModel setChargeType(String chargeType) {
             this.chargeType = chargeType;
             return this;
@@ -393,6 +451,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos> getNetworkInfos() {
             return this.networkInfos;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setNodeId(String nodeId) {
