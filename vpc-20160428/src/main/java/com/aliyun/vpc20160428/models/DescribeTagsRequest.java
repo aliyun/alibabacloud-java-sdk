@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagsRequest extends TeaModel {
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

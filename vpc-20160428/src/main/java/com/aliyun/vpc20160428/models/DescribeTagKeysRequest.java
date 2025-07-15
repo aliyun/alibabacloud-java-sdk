@@ -14,7 +14,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 1 to 50. Default value: 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -52,6 +52,9 @@ public class DescribeTagKeysRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 

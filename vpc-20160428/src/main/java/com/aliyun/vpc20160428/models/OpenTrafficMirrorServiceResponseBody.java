@@ -14,7 +14,7 @@ public class OpenTrafficMirrorServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information returned after traffic mirroring is enabled.</p>
+     * <p>The information returned after traffic mirror is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

@@ -18,7 +18,7 @@ public class CreateHaVipRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the HAVIP.</p>
+     * <p>The description of the HaVip.</p>
      * <p>The description must be 1 to 255 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -28,8 +28,8 @@ public class CreateHaVipRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The IP address of the HAVIP.</p>
-     * <p>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HAVIP.</p>
+     * <p>The IP address of the HaVip.</p>
+     * <p>The specified IP address must be an idle IP address that falls within the CIDR block of the vSwitch. If this parameter is not set, an idle IP address from the CIDR block of the vSwitch is randomly assigned to the HaVip.</p>
      * 
      * <strong>example:</strong>
      * <p>192.XX.XX.10</p>
@@ -38,7 +38,7 @@ public class CreateHaVipRequest extends TeaModel {
     public String ipAddress;
 
     /**
-     * <p>The name of the HAVIP.</p>
+     * <p>The name of the HaVip.</p>
      * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateHaVipRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the HAVIP. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the HaVip. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class CreateHaVipRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the HAVIP belongs.</p>
+     * <p>The ID of the resource group to which the HaVip belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazb4ph6aiy****</p>
@@ -85,7 +85,7 @@ public class CreateHaVipRequest extends TeaModel {
     public java.util.List<CreateHaVipRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to which the HAVIP belongs.</p>
+     * <p>The ID of the vSwitch to which the HaVip belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

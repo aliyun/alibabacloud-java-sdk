@@ -96,6 +96,9 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     }
 
     public static class GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation extends TeaModel {
+        @NameInMap("CidrList")
+        public String cidrList;
+
         /**
          * <p>The ID of the Alibaba Cloud account to which the prefix list belongs.</p>
          * 
@@ -183,6 +186,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         public static GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation build(java.util.Map<String, ?> map) throws Exception {
             GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation self = new GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation();
             return TeaModel.build(map, self);
+        }
+
+        public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setCidrList(String cidrList) {
+            this.cidrList = cidrList;
+            return this;
+        }
+        public String getCidrList() {
+            return this.cidrList;
         }
 
         public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setOwnerId(String ownerId) {

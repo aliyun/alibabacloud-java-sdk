@@ -17,7 +17,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The number of the returned page. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the HAVIP.</p>
+     * <p>The region ID of the HaVip.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +46,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the HAVIP belongs.</p>
+     * <p>The ID of the resource group to which the HaVip belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -157,12 +157,12 @@ public class DescribeHaVipsRequest extends TeaModel {
          * <ul>
          * <li><strong>VpcId</strong>: virtual private cloud (VPC) ID</li>
          * <li><strong>VSwitchId</strong>: vSwitch ID</li>
-         * <li><strong>Status</strong>: HAVIP status</li>
-         * <li><strong>HaVipId</strong>: HAVIP ID</li>
-         * <li><strong>HaVipAddress</strong>: HAVIP IP address</li>
+         * <li><strong>Status</strong>: HaVip status</li>
+         * <li><strong>HaVipId</strong>: HaVip ID</li>
+         * <li><strong>HaVipAddress</strong>: HaVip IP address</li>
          * </ul>
          * <p>You can specify multiple values for each filter key. The logical operator among multiple values is OR. If one value is matched, the filter key is matched.</p>
-         * <p>The logical operator among multiple filter keys is AND. HAVIPs can be queried only if all filter keys are matched.</p>
+         * <p>The logical operator among multiple filter keys is AND. HaVips can be queried only if all filter keys are matched.</p>
          * 
          * <strong>example:</strong>
          * <p>HaVipId</p>

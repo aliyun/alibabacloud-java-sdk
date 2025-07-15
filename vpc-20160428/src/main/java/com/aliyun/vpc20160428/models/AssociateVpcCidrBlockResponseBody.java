@@ -4,9 +4,25 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockResponseBody extends TeaModel {
+    /**
+     * <p>The IPv4 CIDR block to be added.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.0.0/16</p>
+     */
     @NameInMap("CidrBlock")
     public String cidrBlock;
 
+    /**
+     * <p>The version of the IP address. Valid values:</p>
+     * <ul>
+     * <li><strong>IPV4</strong>: the IPv4 address.</li>
+     * <li><strong>IPV6</strong>: the IPv6 address.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>IPV4</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 

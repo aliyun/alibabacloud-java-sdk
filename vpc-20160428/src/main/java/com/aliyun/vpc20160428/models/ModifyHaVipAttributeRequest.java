@@ -18,7 +18,7 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the HAVIP.</p>
+     * <p>The description of the HaVip.</p>
      * <p>The description must be 1 to 255 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the HAVIP.</p>
+     * <p>The ID of the HaVip.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public String haVipId;
 
     /**
-     * <p>The name of the HAVIP.</p>
+     * <p>The name of the HaVip.</p>
      * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class ModifyHaVipAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ID of the region to which the HAVIP belongs.</p>
+     * <p>The ID of the region to which the HaVip belongs.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 

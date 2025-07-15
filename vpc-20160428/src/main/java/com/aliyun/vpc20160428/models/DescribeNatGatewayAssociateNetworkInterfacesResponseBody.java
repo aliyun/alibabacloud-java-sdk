@@ -195,6 +195,9 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         @NameInMap("ResourceType")
         public String resourceType;
 
+        @NameInMap("ResourceVpcId")
+        public String resourceVpcId;
+
         @NameInMap("TunnelIndex")
         public String tunnelIndex;
 
@@ -241,6 +244,14 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
         }
         public String getResourceType() {
             return this.resourceType;
+        }
+
+        public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface setResourceVpcId(String resourceVpcId) {
+            this.resourceVpcId = resourceVpcId;
+            return this;
+        }
+        public String getResourceVpcId() {
+            return this.resourceVpcId;
         }
 
         public DescribeNatGatewayAssociateNetworkInterfacesResponseBodyAssociateNetworkInterfacesAssociateNetworkInterface setTunnelIndex(String tunnelIndex) {

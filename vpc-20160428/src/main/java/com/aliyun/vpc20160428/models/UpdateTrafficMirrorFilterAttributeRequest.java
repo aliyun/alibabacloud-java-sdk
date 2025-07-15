@@ -38,7 +38,7 @@ public class UpdateTrafficMirrorFilterAttributeRequest extends TeaModel {
 
     /**
      * <p>The ID of the region to which the mirrored traffic belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirroring</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about regions that support traffic mirror, see <a href="https://help.aliyun.com/document_detail/207513.html">Overview of traffic mirror</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

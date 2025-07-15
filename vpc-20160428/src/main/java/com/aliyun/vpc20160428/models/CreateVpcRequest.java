@@ -7,8 +7,8 @@ public class CreateVpcRequest extends TeaModel {
     /**
      * <p>The CIDR block of the VPC.</p>
      * <ul>
-     * <li>You can specify one of the following CIDR blocks or their subsets as the primary IPv4 CIDR block of the VPC: 192.168.0.0/16, 172.16.0.0/12, and 10.0.0.0/8. These CIDR blocks are standard private CIDR blocks as defined by Request for Comments (RFC) documents. The subnet mask must be 8 to 28 bits in length.</li>
-     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, and their subnets as the primary IPv4 CIDR block of the VPC.</li>
+     * <li>We recommend using the private IPv4 address specified in RFC 1918 as the primary IPv4 CIDR block of the VPC with a recommended mask length of 16 to 28 bits. For example, 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.</li>
+     * <li>You can also use a custom CIDR block other than 100.64.0.0/10, 224.0.0.0/4, 127.0.0.0/8, 169.254.0.0/16, or their subnets as the primary IPv4 CIDR block.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,14 +53,24 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <p>Whether to enable the DNS hostname feature. Values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default): Not enabled. </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableDnsHostname")
     public Boolean enableDnsHostname;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <p>Indicates whether IPv6 is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default)</li>
-     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default): disabled.</li>
+     * <li><strong>true</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,6 +79,15 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("EnableIpv6")
     public Boolean enableIpv6;
 
+    /**
+     * <p>Allocate VPC from the IPAM address pool by inputting a mask.</p>
+     * <blockquote>
+     * <p>When creating a VPC with a specified IPAM address pool, at least one of the parameters CidrBlock or Ipv4CidrMask must be provided.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Ipv4CidrMask")
     public Integer ipv4CidrMask;
 
@@ -82,7 +101,7 @@ public class CreateVpcRequest extends TeaModel {
     public String ipv4IpamPoolId;
 
     /**
-     * <p>The IPv6 CIDR block of the VPC.</p>
+     * <p>The IPv6 CIDR block of the VPC. If you enable IPv6 for a VPC, the system allocates an IPv6 CIDR block. To specify an IPv6 CIDR block, you must call the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve the specified IPv6 CIDR block.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:0:6a::/56</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublishVpcRouteEntriesResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>980960B0-2969-40BF-8542-EBB34FD358AB</p>
      */

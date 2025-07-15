@@ -5,6 +5,14 @@ import com.aliyun.tea.*;
 
 public class PublishVpcRouteEntriesRequest extends TeaModel {
     /**
+     * <p>Indicates whether to perform a dry run of this request. Values:</p>
+     * <ul>
+     * <li><p><strong>true</strong>: Sends a check request without publishing the route. The checks include whether the AccessKey is valid, the authorization status of the RAM user, and if all required parameters are filled out. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
+     * </li>
+     * <li><p><strong>false</strong> (default): Sends a normal request. After passing the check, it returns a 2xx HTTP status code and directly queries the resource status.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -18,6 +26,8 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>The ID of the region where the instance is located. You can obtain the region ID by calling the DescribeRegions interface.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -30,10 +40,14 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>List of route entries to be published, supporting up to 50 routes at most.</p>
+     */
     @NameInMap("RouteEntries")
     public java.util.List<PublishVpcRouteEntriesRequestRouteEntries> routeEntries;
 
     /**
+     * <p>The ID of the target instance for route publication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,6 +57,7 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
     public String targetInstanceId;
 
     /**
+     * <p>The type of the target for route publication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -130,6 +145,7 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
 
     public static class PublishVpcRouteEntriesRequestRouteEntries extends TeaModel {
         /**
+         * <p>The destination CIDR block for the route entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -139,6 +155,7 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
         public String destinationCidrBlock;
 
         /**
+         * <p>The ID of the route table for the route entry.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

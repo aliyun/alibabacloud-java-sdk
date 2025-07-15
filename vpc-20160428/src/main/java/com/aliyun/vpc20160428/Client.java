@@ -1846,21 +1846,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</li>
-     * <li>The HAVIP and ECS instance must belong to the same vSwitch.</li>
-     * <li>You can associate an HAVIP with at most two ECS instances.</li>
+     * <li>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</li>
+     * <li>The HaVip and ECS instance must belong to the same vSwitch.</li>
+     * <li>You can associate an HaVip with at most two ECS instances.</li>
      * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Associating</strong> state, the HAVIP is being associated.</li>
-     * <li>If the HAVIP is in the <strong>InUse</strong> state, the HAVIP is associated.</li>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>If the HaVip is in the <strong>Associating</strong> state, the HaVip is being associated.</li>
+     * <li>If the HaVip is in the <strong>InUse</strong> state, the HaVip is associated.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HaVip within the specified period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a high-availability virtual IP address (HAVIP) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
+     * <p>Associates a high-availability virtual IP address (HaVip) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
      * 
      * @param request AssociateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1926,21 +1926,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HAVIP with the ENI of the ECS instance.</li>
-     * <li>The HAVIP and ECS instance must belong to the same vSwitch.</li>
-     * <li>You can associate an HAVIP with at most two ECS instances.</li>
+     * <li>An HaVip immediately takes effect after it is associated. You do not need to restart the ECS instance. However, you must associate the HaVip with the ENI of the ECS instance.</li>
+     * <li>The HaVip and ECS instance must belong to the same vSwitch.</li>
+     * <li>You can associate an HaVip with at most two ECS instances.</li>
      * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Associating</strong> state, the HAVIP is being associated.</li>
-     * <li>If the HAVIP is in the <strong>InUse</strong> state, the HAVIP is associated.</li>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li>The <strong>AssociateHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>If the HaVip is in the <strong>Associating</strong> state, the HaVip is being associated.</li>
+     * <li>If the HaVip is in the <strong>InUse</strong> state, the HaVip is associated.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>AssociateHaVip</strong> operation to associate an HaVip within the specified period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a high-availability virtual IP address (HAVIP) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
+     * <p>Associates a high-availability virtual IP address (HaVip) with an Elastic Compute Service (ECS) instance or an elastic network interface (ENI).</p>
      * 
      * @param request AssociateHaVipRequest
      * @return AssociateHaVipResponse
@@ -3402,10 +3402,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Converts a NAT service plan to an Internet Shared Bandwidth instance.</p>
      * 
+     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated
+     * 
      * @param request ConvertBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ConvertBandwidthPackageResponse
      */
+    @Deprecated
+    // Deprecated
     public ConvertBandwidthPackageResponse convertBandwidthPackageWithOptions(ConvertBandwidthPackageRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
@@ -3466,9 +3470,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Converts a NAT service plan to an Internet Shared Bandwidth instance.</p>
      * 
+     * @deprecated OpenAPI ConvertBandwidthPackage is deprecated
+     * 
      * @param request ConvertBandwidthPackageRequest
      * @return ConvertBandwidthPackageResponse
      */
+    @Deprecated
+    // Deprecated
     public ConvertBandwidthPackageResponse convertBandwidthPackage(ConvertBandwidthPackageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.convertBandwidthPackageWithOptions(request, runtime);
@@ -5290,12 +5298,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</p>
      * <ul>
-     * <li>If the HAVIP is in the <strong>Creating</strong> state, the HAVIP is being created.</li>
-     * <li>If the HAVIP is in the <strong>Available</strong> state, the HAVIP is created.</li>
+     * <li>If the HaVip is in the <strong>Creating</strong> state, the HaVip is being created.</li>
+     * <li>If the HaVip is in the <strong>Available</strong> state, the HaVip is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a high-availability virtual IP address (HAVIP).</p>
+     * <p>Creates a high-availability virtual IP address (HaVip).</p>
      * 
      * @param request CreateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5373,12 +5381,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>CreateHaVip</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of the task:</p>
      * <ul>
-     * <li>If the HAVIP is in the <strong>Creating</strong> state, the HAVIP is being created.</li>
-     * <li>If the HAVIP is in the <strong>Available</strong> state, the HAVIP is created.</li>
+     * <li>If the HaVip is in the <strong>Creating</strong> state, the HaVip is being created.</li>
+     * <li>If the HaVip is in the <strong>Available</strong> state, the HaVip is created.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a high-availability virtual IP address (HAVIP).</p>
+     * <p>Creates a high-availability virtual IP address (HaVip).</p>
      * 
      * @param request CreateHaVipRequest
      * @return CreateHaVipResponse
@@ -8003,7 +8011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a filter for traffic mirroring.</p>
+     * <p>Creates a filter for traffic mirror.</p>
      * 
      * @param request CreateTrafficMirrorFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8090,7 +8098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a filter for traffic mirroring.</p>
+     * <p>Creates a filter for traffic mirror.</p>
      * 
      * @param request CreateTrafficMirrorFilterRequest
      * @return CreateTrafficMirrorFilterResponse
@@ -8110,7 +8118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an inbound or outbound rule for traffic mirroring.</p>
+     * <p>Creates an inbound or outbound rule for traffic mirror.</p>
      * 
      * @param request CreateTrafficMirrorFilterRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8186,7 +8194,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an inbound or outbound rule for traffic mirroring.</p>
+     * <p>Creates an inbound or outbound rule for traffic mirror.</p>
      * 
      * @param request CreateTrafficMirrorFilterRulesRequest
      * @return CreateTrafficMirrorFilterRulesResponse
@@ -11418,19 +11426,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following rules:</p>
      * <ul>
-     * <li>You can delete only HAVIPs that are in the Available state.</li>
-     * <li>Make sure that no route points to the HAVIP that you want to delete.</li>
-     * <li>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</li>
-     * <li>The <strong>DeleteHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Deleting</strong> state, the HAVIP is being deleted.</li>
-     * <li>If you cannot query the HAVIP, the HAVIP is deleted.</li>
+     * <li>The HaVip must be in the available state before it can be deleted.</li>
+     * <li>Make sure that no routes are destined for the HaVip.</li>
+     * <li>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</li>
+     * <li><strong>DeleteHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>The <strong>Deleting</strong> state indicates the HaVip is being deleted.</li>
+     * <li>If no HaVip is found, the HaVip is deleted.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete the same HaVip.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a high-availability virtual IP address (HAVIP).</p>
+     * <p>Deletes a high-availability virtual IP address (HaVip).</p>
      * 
      * @param request DeleteHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11488,19 +11496,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following rules:</p>
      * <ul>
-     * <li>You can delete only HAVIPs that are in the Available state.</li>
-     * <li>Make sure that no route points to the HAVIP that you want to delete.</li>
-     * <li>Make sure that no elastic IP address (EIP) is associated with the HAVIP that you want to delete.</li>
-     * <li>The <strong>DeleteHaVip</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Deleting</strong> state, the HAVIP is being deleted.</li>
-     * <li>If you cannot query the HAVIP, the HAVIP is deleted.</li>
+     * <li>The HaVip must be in the available state before it can be deleted.</li>
+     * <li>Make sure that no routes are destined for the HaVip.</li>
+     * <li>Make sure that no elastic IP addresses (EIPs) are associated with the HaVip.</li>
+     * <li><strong>DeleteHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID while deleting the HaVip in the background. Call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>The <strong>Deleting</strong> state indicates the HaVip is being deleted.</li>
+     * <li>If no HaVip is found, the HaVip is deleted.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>DeleteHaVip</strong> operation to delete the same HaVip.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a high-availability virtual IP address (HAVIP).</p>
+     * <p>Deletes a high-availability virtual IP address (HaVip).</p>
      * 
      * @param request DeleteHaVipRequest
      * @return DeleteHaVipResponse
@@ -13474,7 +13482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a filter of traffic mirroring.</p>
+     * <p>Deletes a filter of traffic mirror.</p>
      * 
      * @param request DeleteTrafficMirrorFilterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13542,7 +13550,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a filter of traffic mirroring.</p>
+     * <p>Deletes a filter of traffic mirror.</p>
      * 
      * @param request DeleteTrafficMirrorFilterRequest
      * @return DeleteTrafficMirrorFilterResponse
@@ -13562,7 +13570,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an inbound or outbound rule of a filter for traffic mirroring.</p>
+     * <p>Deletes an inbound or outbound rule of a filter for traffic mirror.</p>
      * 
      * @param request DeleteTrafficMirrorFilterRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13634,7 +13642,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an inbound or outbound rule of a filter for traffic mirroring.</p>
+     * <p>Deletes an inbound or outbound rule of a filter for traffic mirror.</p>
      * 
      * @param request DeleteTrafficMirrorFilterRulesRequest
      * @return DeleteTrafficMirrorFilterRulesResponse
@@ -13736,7 +13744,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</li>
      * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
      * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
      * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
@@ -13806,7 +13814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>Before you delete a vSwitch, you must first release or remove all virtual private cloud (VPC) resources, including vSwitches, instances, router interfaces, and high-availability virtual IP addresses (HaVips).</li>
      * <li>You can delete only vSwitches that are in the <strong>Available</strong> state.</li>
      * <li>You cannot delete a vSwitch from a VPC where a vSwitch or a route is being created or deleted.</li>
      * <li><strong>DeleteVSwitch</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/94567.html">DescribeVSwitchAttributes</a> operation to query the status of the task:<ul>
@@ -14174,7 +14182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</li>
      * <li>You can delete only a VPC that is in the <strong>Available</strong> state.</li>
      * <li>The <strong>DeleteVpc</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<ul>
      * <li>If the VPC is in the <strong>Deleting</strong> state, the VPC is being deleted.</li>
@@ -14251,7 +14259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
-     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HAVIPs).</li>
+     * <li>Before you delete a VPC, make sure that all resources deployed in the VPC are released or removed, such as vSwitches, instances, and high-availability virtual IP addresses (HaVips).</li>
      * <li>You can delete only a VPC that is in the <strong>Available</strong> state.</li>
      * <li>The <strong>DeleteVpc</strong> operation is asynchronous. After you send the request, the system returns a request ID. However, the operation is still being performed in the system background. You can call the <a href="https://help.aliyun.com/document_detail/94565.html">DescribeVpcAttribute</a> operation to query the status of a VPC:<ul>
      * <li>If the VPC is in the <strong>Deleting</strong> state, the VPC is being deleted.</li>
@@ -16804,7 +16812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries HAVIPs in a region.</p>
+     * <p>Queries HaVips in a region.</p>
      * 
      * @param request DescribeHaVipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16872,7 +16880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries HAVIPs in a region.</p>
+     * <p>Queries HaVips in a region.</p>
      * 
      * @param request DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
@@ -19366,7 +19374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标签键列表。</p>
+     * <p>Queries tag keys.</p>
      * 
      * @param request DescribeTagKeysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19434,7 +19442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询标签键列表。</p>
+     * <p>Queries tag keys.</p>
      * 
      * @param request DescribeTagKeysRequest
      * @return DescribeTagKeysResponse
@@ -22662,7 +22670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the traffic mirroring feature.</p>
+     * <p>Queries the status of the traffic mirror feature.</p>
      * 
      * @param request GetTrafficMirrorServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22718,7 +22726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status of the traffic mirroring feature.</p>
+     * <p>Queries the status of the traffic mirror feature.</p>
      * 
      * @param request GetTrafficMirrorServiceStatusRequest
      * @return GetTrafficMirrorServiceStatusResponse
@@ -24640,7 +24648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries filters for traffic mirroring.</p>
+     * <p>Queries filters for traffic mirror.</p>
      * 
      * @param request ListTrafficMirrorFiltersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24712,7 +24720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries filters for traffic mirroring.</p>
+     * <p>Queries filters for traffic mirror.</p>
      * 
      * @param request ListTrafficMirrorFiltersRequest
      * @return ListTrafficMirrorFiltersResponse
@@ -25172,7 +25180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询路由发布情况</p>
+     * <p>Queries advertised routes.</p>
      * 
      * @param request ListVpcPublishedRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25248,7 +25256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询路由发布情况</p>
+     * <p>Queries advertised routes.</p>
      * 
      * @param request ListVpcPublishedRouteEntriesRequest
      * @return ListVpcPublishedRouteEntriesResponse
@@ -26964,7 +26972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HAVIP within the specified periods of time.</p>
+     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HaVip within the specified periods of time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a high-availability virtual IP address (HaVip).</p>
      * 
      * @param request ModifyHaVipAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27028,7 +27039,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HAVIP within the specified periods of time.</p>
+     * <p>You cannot repeatedly call the <strong>ModifyHaVipAttribute</strong> operation to modify the name and description of an HaVip within the specified periods of time.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the name and description of a high-availability virtual IP address (HaVip).</p>
      * 
      * @param request ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
@@ -31081,10 +31095,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can enable traffic mirroring for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirroring for one region within the specified period of time.</p>
+     * <p>You can enable traffic mirror for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirror for one region within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables traffic mirroring.</p>
+     * <p>Enables traffic mirror.</p>
      * 
      * @param request OpenTrafficMirrorServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31141,10 +31155,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
-     * <p>You can enable traffic mirroring for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirroring for one region within the specified period of time.</p>
+     * <p>You can enable traffic mirror for different regions. You cannot repeatedly call the <strong>OpenTrafficMirrorService</strong> operation to enable traffic mirror for one region within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables traffic mirroring.</p>
+     * <p>Enables traffic mirror.</p>
      * 
      * @param request OpenTrafficMirrorServiceRequest
      * @return OpenTrafficMirrorServiceResponse
@@ -31156,7 +31170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布VPC路由</p>
+     * <p>Advertises VPC routes to an external component.</p>
      * 
      * @param request PublishVpcRouteEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31224,7 +31238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>发布VPC路由</p>
+     * <p>Advertises VPC routes to an external component.</p>
      * 
      * @param request PublishVpcRouteEntriesRequest
      * @return PublishVpcRouteEntriesResponse
@@ -33376,17 +33390,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
      * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Unassociating</strong> state, the HAVIP is being disassociated.</li>
-     * <li>If the HAVIP is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HAVIP is disassociated.</li>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>If the HaVip is in the <strong>Unassociating</strong> state, the HaVip is being disassociated.</li>
+     * <li>If the HaVip is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HaVip is disassociated.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HaVip within the specified period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a high-availability virtual IP address (HAVIP) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</p>
+     * <p>Disassociates a high-availability virtual IP address (HaVip) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</p>
      * 
      * @param request UnassociateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33458,17 +33472,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>When you call this operation, take note of the following limits:</p>
      * <ul>
      * <li>The ECS instance must be in the <strong>Running</strong> or <strong>Stopped</strong> state.</li>
-     * <li>The HAVIP must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
-     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the <strong>Unassociating</strong> state, the HAVIP is being disassociated.</li>
-     * <li>If the HAVIP is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HAVIP is disassociated.</li>
+     * <li>The HaVip must be in the <strong>Available</strong> or <strong>InUse</strong> state.</li>
+     * <li><strong>UnassociateHaVip</strong> is an asynchronous operation. After a request is sent, the system returns a request ID and an instance ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/114611.html">DescribeHaVips</a> operation to query the status of an HaVip:<ul>
+     * <li>If the HaVip is in the <strong>Unassociating</strong> state, the HaVip is being disassociated.</li>
+     * <li>If the HaVip is in the <strong>Inuse</strong> or <strong>Available</strong> state, the HaVip is disassociated.</li>
      * </ul>
      * </li>
-     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HAVIP within the specified period of time.</li>
+     * <li>You cannot repeatedly call the <strong>UnassociateHaVip</strong> operation to disassociate an HaVip within the specified period of time.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Disassociates a high-availability virtual IP address (HAVIP) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</p>
+     * <p>Disassociates a high-availability virtual IP address (HaVip) from an Elastic Compute Service (ECS) in a virtual private cloud (VPC) or from an elastic network interface (ENI).</p>
      * 
      * @param request UnassociateHaVipRequest
      * @return UnassociateHaVipResponse
@@ -34716,10 +34730,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</p>
+     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a filter for traffic mirroring.</p>
+     * <p>Modifies the configuration of a filter for traffic mirror.</p>
      * 
      * @param request UpdateTrafficMirrorFilterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34787,10 +34801,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirroring within the specified period of time.</p>
+     * <p>You cannot repeatedly call the <strong>UpdateTrafficMirrorFilterAttribute</strong> operation to modify the configuration of a filter for traffic mirror within the specified period of time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a filter for traffic mirroring.</p>
+     * <p>Modifies the configuration of a filter for traffic mirror.</p>
      * 
      * @param request UpdateTrafficMirrorFilterAttributeRequest
      * @return UpdateTrafficMirrorFilterAttributeResponse

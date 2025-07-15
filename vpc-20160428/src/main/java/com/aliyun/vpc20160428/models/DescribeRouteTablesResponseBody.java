@@ -118,7 +118,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
          * <p>The type of the next hop. Valid values:</p>
          * <ul>
          * <li><strong>Instance</strong>: an ECS instance</li>
-         * <li><strong>HaVip</strong>: an HAVIP</li>
+         * <li><strong>HaVip</strong>: an HaVip</li>
          * <li><strong>VpnGateway</strong>: a VPN gateway</li>
          * <li><strong>NatGateway</strong>: a NAT gateway</li>
          * <li><strong>NetworkInterface</strong>: a secondary ENI</li>
@@ -236,7 +236,7 @@ public class DescribeRouteTablesResponseBody extends TeaModel {
          * <p>The type of the next hop. Valid values:</p>
          * <ul>
          * <li><strong>Instance</strong> (default): an Elastic Compute Service (ECS) instance</li>
-         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+         * <li><strong>HaVip</strong>: a high-availability virtual IP address (HaVip).</li>
          * <li><strong>VpnGateway</strong>: a VPN gateway</li>
          * <li><strong>NatGateway</strong>: a NAT gateway</li>
          * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI)</li>

@@ -54,7 +54,7 @@ public class DescribeRouteEntryListRequest extends TeaModel {
      * <p>The next hop type. Valid values:</p>
      * <ul>
      * <li><strong>Instance</strong>: an Elastic Compute Service (ECS) instance. This is the default value.</li>
-     * <li><strong>HaVip</strong>: a high-availability virtual IP address (HAVIP).</li>
+     * <li><strong>HaVip</strong>: a high-availability virtual IP address (HaVip).</li>
      * <li><strong>VpnGateway</strong>: a VPN gateway.</li>
      * <li><strong>NatGateway</strong>: a NAT gateway.</li>
      * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI).</li>
