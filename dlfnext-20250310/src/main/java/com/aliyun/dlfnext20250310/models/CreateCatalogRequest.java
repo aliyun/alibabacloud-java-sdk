@@ -11,9 +11,6 @@ public class CreateCatalogRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    @NameInMap("optimizationConfig")
-    public java.util.Map<String, String> optimizationConfig;
-
     @NameInMap("options")
     public java.util.Map<String, String> options;
 
@@ -31,14 +28,6 @@ public class CreateCatalogRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public CreateCatalogRequest setOptimizationConfig(java.util.Map<String, String> optimizationConfig) {
-        this.optimizationConfig = optimizationConfig;
-        return this;
-    }
-    public java.util.Map<String, String> getOptimizationConfig() {
-        return this.optimizationConfig;
     }
 
     public CreateCatalogRequest setOptions(java.util.Map<String, String> options) {

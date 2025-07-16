@@ -10,6 +10,9 @@ public class CatalogSummary extends TeaModel {
     @NameInMap("databaseCount")
     public MoMValues databaseCount;
 
+    @NameInMap("fileAccessCountMonthly")
+    public Long fileAccessCountMonthly;
+
     /**
      * <p>Update date of the statistics</p>
      */
@@ -50,6 +53,14 @@ public class CatalogSummary extends TeaModel {
     }
     public MoMValues getDatabaseCount() {
         return this.databaseCount;
+    }
+
+    public CatalogSummary setFileAccessCountMonthly(Long fileAccessCountMonthly) {
+        this.fileAccessCountMonthly = fileAccessCountMonthly;
+        return this;
+    }
+    public Long getFileAccessCountMonthly() {
+        return this.fileAccessCountMonthly;
     }
 
     public CatalogSummary setGeneratedDate(String generatedDate) {

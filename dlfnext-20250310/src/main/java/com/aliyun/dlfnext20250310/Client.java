@@ -187,10 +187,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("name", request.name);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.optimizationConfig)) {
-            body.put("optimizationConfig", request.optimizationConfig);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.options)) {
             body.put("options", request.options);
         }

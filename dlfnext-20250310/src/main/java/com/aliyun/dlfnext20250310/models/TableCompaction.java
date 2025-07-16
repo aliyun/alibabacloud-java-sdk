@@ -7,6 +7,9 @@ public class TableCompaction extends TeaModel {
     @NameInMap("catalogId")
     public String catalogId;
 
+    @NameInMap("cuUsage")
+    public Double cuUsage;
+
     @NameInMap("lastCompactedFileTime")
     public Long lastCompactedFileTime;
 
@@ -27,6 +30,14 @@ public class TableCompaction extends TeaModel {
     }
     public String getCatalogId() {
         return this.catalogId;
+    }
+
+    public TableCompaction setCuUsage(Double cuUsage) {
+        this.cuUsage = cuUsage;
+        return this;
+    }
+    public Double getCuUsage() {
+        return this.cuUsage;
     }
 
     public TableCompaction setLastCompactedFileTime(Long lastCompactedFileTime) {

@@ -9,7 +9,7 @@ public class ListRoleUsersRequest extends TeaModel {
      * <p>10</p>
      */
     @NameInMap("maxResults")
-    public String maxResults;
+    public Integer maxResults;
 
     /**
      * <strong>example:</strong>
@@ -30,11 +30,11 @@ public class ListRoleUsersRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public ListRoleUsersRequest setMaxResults(String maxResults) {
+    public ListRoleUsersRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
     }
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 

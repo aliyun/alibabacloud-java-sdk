@@ -11,6 +11,12 @@ public class CatalogSummaryTrend extends TeaModel {
     public java.util.List<DateSummary> apiVisitCount;
 
     /**
+     * <p>file access count trends</p>
+     */
+    @NameInMap("fileAccessCount")
+    public java.util.List<DateSummary> fileAccessCount;
+
+    /**
      * <p>Table count trends</p>
      */
     @NameInMap("throughput")
@@ -45,6 +51,14 @@ public class CatalogSummaryTrend extends TeaModel {
     }
     public java.util.List<DateSummary> getApiVisitCount() {
         return this.apiVisitCount;
+    }
+
+    public CatalogSummaryTrend setFileAccessCount(java.util.List<DateSummary> fileAccessCount) {
+        this.fileAccessCount = fileAccessCount;
+        return this;
+    }
+    public java.util.List<DateSummary> getFileAccessCount() {
+        return this.fileAccessCount;
     }
 
     public CatalogSummaryTrend setThroughput(java.util.List<DateSummary> throughput) {
