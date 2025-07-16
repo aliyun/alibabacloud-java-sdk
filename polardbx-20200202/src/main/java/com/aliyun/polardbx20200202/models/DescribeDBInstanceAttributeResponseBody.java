@@ -337,6 +337,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ConnectionString")
         public String connectionString;
 
+        @NameInMap("CpuType")
+        public String cpuType;
+
         /**
          * <strong>example:</strong>
          * <p>2021-08-31T08:56:25.000+0000</p>
@@ -699,6 +702,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setCpuType(String cpuType) {
+            this.cpuType = cpuType;
+            return this;
+        }
+        public String getCpuType() {
+            return this.cpuType;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setCreateTime(String createTime) {
