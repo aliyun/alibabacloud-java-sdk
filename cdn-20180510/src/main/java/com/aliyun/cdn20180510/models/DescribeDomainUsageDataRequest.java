@@ -98,6 +98,9 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     @NameInMap("Interval")
     public String interval;
 
+    @NameInMap("ServiceType")
+    public String serviceType;
+
     /**
      * <p>The beginning of the time range to query.</p>
      * <p>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
@@ -177,6 +180,14 @@ public class DescribeDomainUsageDataRequest extends TeaModel {
     }
     public String getInterval() {
         return this.interval;
+    }
+
+    public DescribeDomainUsageDataRequest setServiceType(String serviceType) {
+        this.serviceType = serviceType;
+        return this;
+    }
+    public String getServiceType() {
+        return this.serviceType;
     }
 
     public DescribeDomainUsageDataRequest setStartTime(String startTime) {

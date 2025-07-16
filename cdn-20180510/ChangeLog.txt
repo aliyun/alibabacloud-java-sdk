@@ -1,3 +1,7 @@
+2025-07-16 Version: 7.0.1
+- Update API DescribeDomainUsageData: add request parameters ServiceType.
+
+
 2025-07-04 Version: 7.0.0
 - Update API PushObjectCache: add request parameters ConsistencyHash.
 - Update API SetCdnDomainSSLCertificate: delete request parameters Env.
