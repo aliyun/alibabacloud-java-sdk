@@ -127,6 +127,55 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType extends TeaModel {
+        @NameInMap("AvailableInstanceCapacity")
+        public Integer availableInstanceCapacity;
+
+        @NameInMap("InstanceType")
+        public String instanceType;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType setAvailableInstanceCapacity(Integer availableInstanceCapacity) {
+            this.availableInstanceCapacity = availableInstanceCapacity;
+            return this;
+        }
+        public Integer getAvailableInstanceCapacity() {
+            return this.availableInstanceCapacity;
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+    }
+
+    public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes extends TeaModel {
+        @NameInMap("AvailableInstanceType")
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType> availableInstanceType;
+
+        public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes setAvailableInstanceType(java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType> availableInstanceType) {
+            this.availableInstanceType = availableInstanceType;
+            return this;
+        }
+        public java.util.List<DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypesAvailableInstanceType> getAvailableInstanceType() {
+            return this.availableInstanceType;
+        }
+
+    }
+
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacitySocketCapacitiesSocketCapacity extends TeaModel {
         /**
          * <p>The amount of available memory. Unit: GiB.</p>
@@ -240,6 +289,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
     }
 
     public static class DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity extends TeaModel {
+        @NameInMap("AvailableInstanceTypes")
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes availableInstanceTypes;
+
         /**
          * <p>The amount of available space on the local disks. Unit: GiB</p>
          * 
@@ -330,6 +382,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public static DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity build(java.util.Map<String, ?> map) throws Exception {
             DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity self = new DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setAvailableInstanceTypes(DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes availableInstanceTypes) {
+            this.availableInstanceTypes = availableInstanceTypes;
+            return this;
+        }
+        public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacityAvailableInstanceTypes getAvailableInstanceTypes() {
+            return this.availableInstanceTypes;
         }
 
         public DescribeDedicatedHostsResponseBodyDedicatedHostsDedicatedHostCapacity setAvailableLocalStorage(Integer availableLocalStorage) {

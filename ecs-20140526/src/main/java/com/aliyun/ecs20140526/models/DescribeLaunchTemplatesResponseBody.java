@@ -11,7 +11,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public DescribeLaunchTemplatesResponseBodyLaunchTemplateSets launchTemplateSets;
 
     /**
-     * <p>The total number of launch templates.</p>
+     * <p>The page number of the returned page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE12CBA</p>
@@ -38,7 +38,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the launch templates.</p>
+     * <p>The total number of launch templates.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
 
     public static class DescribeLaunchTemplatesResponseBodyLaunchTemplateSetsLaunchTemplateSetTagsTag extends TeaModel {
         /**
-         * <p>The tag value of the launch template.</p>
+         * <p>The tag key of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -102,7 +102,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag key of the launch template.</p>
+         * <p>The tag value of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -173,7 +173,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String createdBy;
 
         /**
-         * <p>The time when the launch template was modified.</p>
+         * <p>The default version number of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -182,7 +182,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public Long defaultVersionNumber;
 
         /**
-         * <p>The tags of the launch template.</p>
+         * <p>The latest version number of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -191,7 +191,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public Long latestVersionNumber;
 
         /**
-         * <p>The time when the launch template was created.</p>
+         * <p>The ID of the launch template.</p>
          * 
          * <strong>example:</strong>
          * <p>lt-m5e3ofjr1zn1aw7q****</p>
@@ -200,7 +200,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String launchTemplateId;
 
         /**
-         * <p>The default version number of the launch template.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>wd-152630748****</p>
@@ -219,7 +219,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The creator of the launch template.</p>
+         * <p>The ID of the resource group to which the launch template belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4p****</p>

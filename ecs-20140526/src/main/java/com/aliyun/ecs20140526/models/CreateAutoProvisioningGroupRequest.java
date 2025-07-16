@@ -1213,6 +1213,36 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
 
     }
 
+    public static class CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions extends TeaModel {
+        @NameInMap("DedicatedHostClusterId")
+        public String dedicatedHostClusterId;
+
+        @NameInMap("DedicatedHostId")
+        public String dedicatedHostId;
+
+        public static CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions build(java.util.Map<String, ?> map) throws Exception {
+            CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions self = new CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions setDedicatedHostClusterId(String dedicatedHostClusterId) {
+            this.dedicatedHostClusterId = dedicatedHostClusterId;
+            return this;
+        }
+        public String getDedicatedHostClusterId() {
+            return this.dedicatedHostClusterId;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions setDedicatedHostId(String dedicatedHostId) {
+            this.dedicatedHostId = dedicatedHostId;
+            return this;
+        }
+        public String getDedicatedHostId() {
+            return this.dedicatedHostId;
+        }
+
+    }
+
     public static class CreateAutoProvisioningGroupRequestLaunchConfiguration extends TeaModel {
         /**
          * <blockquote>
@@ -1622,6 +1652,9 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         @NameInMap("PeriodUnit")
         public String periodUnit;
 
+        @NameInMap("SchedulerOptions")
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions schedulerOptions;
+
         /**
          * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values: Valid values:</p>
          * <ul>
@@ -1950,6 +1983,14 @@ public class CreateAutoProvisioningGroupRequest extends TeaModel {
         }
         public String getPeriodUnit() {
             return this.periodUnit;
+        }
+
+        public CreateAutoProvisioningGroupRequestLaunchConfiguration setSchedulerOptions(CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions schedulerOptions) {
+            this.schedulerOptions = schedulerOptions;
+            return this;
+        }
+        public CreateAutoProvisioningGroupRequestLaunchConfigurationSchedulerOptions getSchedulerOptions() {
+            return this.schedulerOptions;
         }
 
         public CreateAutoProvisioningGroupRequestLaunchConfiguration setSpotDuration(Integer spotDuration) {

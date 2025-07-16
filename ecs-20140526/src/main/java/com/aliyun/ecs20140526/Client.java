@@ -12608,6 +12608,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.queryInventory)) {
+            query.put("QueryInventory", request.queryInventory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -19448,7 +19452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeRouteTables is deprecated
+     * <b>summary</b> : 
+     * <p>查询路由表信息列表</p>
+     * 
+     * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.
      * 
      * @param request DescribeRouteTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19525,7 +19532,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeRouteTables is deprecated
+     * <b>summary</b> : 
+     * <p>查询路由表信息列表</p>
+     * 
+     * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.
      * 
      * @param request DescribeRouteTablesRequest
      * @return DescribeRouteTablesResponse
@@ -21742,7 +21752,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVRouters is deprecated
+     * <b>summary</b> : 
+     * <p>查询路由器列表</p>
+     * 
+     * @deprecated OpenAPI DescribeVRouters is deprecated, please use Vpc::2016-04-28::DescribeVRouters instead.
      * 
      * @param request DescribeVRoutersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21803,7 +21816,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVRouters is deprecated
+     * <b>summary</b> : 
+     * <p>查询路由器列表</p>
+     * 
+     * @deprecated OpenAPI DescribeVRouters is deprecated, please use Vpc::2016-04-28::DescribeVRouters instead.
      * 
      * @param request DescribeVRoutersRequest
      * @return DescribeVRoutersResponse

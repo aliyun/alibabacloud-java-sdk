@@ -100,6 +100,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("QueryInventory")
+    public Boolean queryInventory;
+
     /**
      * <p>The region ID of the dedicated host. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
@@ -264,6 +267,14 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDedicatedHostsRequest setQueryInventory(Boolean queryInventory) {
+        this.queryInventory = queryInventory;
+        return this;
+    }
+    public Boolean getQueryInventory() {
+        return this.queryInventory;
     }
 
     public DescribeDedicatedHostsRequest setRegionId(String regionId) {

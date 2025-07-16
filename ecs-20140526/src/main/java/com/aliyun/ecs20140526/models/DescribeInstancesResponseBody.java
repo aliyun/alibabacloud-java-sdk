@@ -138,6 +138,25 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstancesResponseBodyInstancesInstanceClockOptions extends TeaModel {
+        @NameInMap("PtpStatus")
+        public String ptpStatus;
+
+        public static DescribeInstancesResponseBodyInstancesInstanceClockOptions build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstancesResponseBodyInstancesInstanceClockOptions self = new DescribeInstancesResponseBodyInstancesInstanceClockOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstanceClockOptions setPtpStatus(String ptpStatus) {
+            this.ptpStatus = ptpStatus;
+            return this;
+        }
+        public String getPtpStatus() {
+            return this.ptpStatus;
+        }
+
+    }
+
     public static class DescribeInstancesResponseBodyInstancesInstanceCpuOptions extends TeaModel {
         /**
          * <p>The number of physical CPU cores.</p>
@@ -1456,6 +1475,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("AutoReleaseTime")
         public String autoReleaseTime;
 
+        @NameInMap("ClockOptions")
+        public DescribeInstancesResponseBodyInstancesInstanceClockOptions clockOptions;
+
         /**
          * <p>The ID of the cluster to which the instance belongs.</p>
          * <blockquote>
@@ -2076,6 +2098,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getAutoReleaseTime() {
             return this.autoReleaseTime;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setClockOptions(DescribeInstancesResponseBodyInstancesInstanceClockOptions clockOptions) {
+            this.clockOptions = clockOptions;
+            return this;
+        }
+        public DescribeInstancesResponseBodyInstancesInstanceClockOptions getClockOptions() {
+            return this.clockOptions;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setClusterId(String clusterId) {
