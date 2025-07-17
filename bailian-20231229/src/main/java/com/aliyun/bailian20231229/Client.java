@@ -177,6 +177,83 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>将已授权OSS Bucket中的文件添加到百炼应用数据</p>
+     * 
+     * @param tmpReq AddFilesFromAuthorizedOssRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddFilesFromAuthorizedOssResponse
+     */
+    public AddFilesFromAuthorizedOssResponse addFilesFromAuthorizedOssWithOptions(String WorkspaceId, AddFilesFromAuthorizedOssRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddFilesFromAuthorizedOssShrinkRequest request = new AddFilesFromAuthorizedOssShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.fileDetails)) {
+            request.fileDetailsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.fileDetails, "FileDetails", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryId)) {
+            body.put("CategoryId", request.categoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.categoryType)) {
+            body.put("CategoryType", request.categoryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileDetailsShrink)) {
+            body.put("FileDetails", request.fileDetailsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
+            body.put("OssBucketName", request.ossBucketName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossRegionId)) {
+            body.put("OssRegionId", request.ossRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddFilesFromAuthorizedOss"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/datacenter/file/fromoss"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddFilesFromAuthorizedOssResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>将已授权OSS Bucket中的文件添加到百炼应用数据</p>
+     * 
+     * @param request AddFilesFromAuthorizedOssRequest
+     * @return AddFilesFromAuthorizedOssResponse
+     */
+    public AddFilesFromAuthorizedOssResponse addFilesFromAuthorizedOss(String WorkspaceId, AddFilesFromAuthorizedOssRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.addFilesFromAuthorizedOssWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
      * <ul>
