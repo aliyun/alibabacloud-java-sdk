@@ -112,8 +112,29 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @NameInMap("AppUuid")
         public String appUuid;
 
+        @NameInMap("CreatedTime")
+        public String createdTime;
+
+        @NameInMap("Edition")
+        public String edition;
+
+        @NameInMap("EnterpriseInternetUrl")
+        public String enterpriseInternetUrl;
+
+        @NameInMap("EnterpriseIntranetUrl")
+        public String enterpriseIntranetUrl;
+
         @NameInMap("InstanceId")
         public String instanceId;
+
+        @NameInMap("InternetUrl")
+        public String internetUrl;
+
+        @NameInMap("IntranetUrl")
+        public String intranetUrl;
+
+        @NameInMap("MajorVersion")
+        public String majorVersion;
 
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
@@ -143,12 +164,68 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             return this.appUuid;
         }
 
+        public ListDifyInstancesResponseBodyRootData setCreatedTime(String createdTime) {
+            this.createdTime = createdTime;
+            return this;
+        }
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setEdition(String edition) {
+            this.edition = edition;
+            return this;
+        }
+        public String getEdition() {
+            return this.edition;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setEnterpriseInternetUrl(String enterpriseInternetUrl) {
+            this.enterpriseInternetUrl = enterpriseInternetUrl;
+            return this;
+        }
+        public String getEnterpriseInternetUrl() {
+            return this.enterpriseInternetUrl;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setEnterpriseIntranetUrl(String enterpriseIntranetUrl) {
+            this.enterpriseIntranetUrl = enterpriseIntranetUrl;
+            return this;
+        }
+        public String getEnterpriseIntranetUrl() {
+            return this.enterpriseIntranetUrl;
+        }
+
         public ListDifyInstancesResponseBodyRootData setInstanceId(String instanceId) {
             this.instanceId = instanceId;
             return this;
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setInternetUrl(String internetUrl) {
+            this.internetUrl = internetUrl;
+            return this;
+        }
+        public String getInternetUrl() {
+            return this.internetUrl;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setIntranetUrl(String intranetUrl) {
+            this.intranetUrl = intranetUrl;
+            return this;
+        }
+        public String getIntranetUrl() {
+            return this.intranetUrl;
+        }
+
+        public ListDifyInstancesResponseBodyRootData setMajorVersion(String majorVersion) {
+            this.majorVersion = majorVersion;
+            return this;
+        }
+        public String getMajorVersion() {
+            return this.majorVersion;
         }
 
         public ListDifyInstancesResponseBodyRootData setSecurityGroupId(String securityGroupId) {

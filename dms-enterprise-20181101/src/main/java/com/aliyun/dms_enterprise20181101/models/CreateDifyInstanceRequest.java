@@ -7,6 +7,9 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("AdbpgInstanceMode")
     public String adbpgInstanceMode;
 
+    @NameInMap("BackupVSwitchId")
+    public String backupVSwitchId;
+
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -49,6 +52,16 @@ public class CreateDifyInstanceRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Community</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    @NameInMap("EnableExtraEndpoint")
+    public Boolean enableExtraEndpoint;
+
     @NameInMap("GpuNodeSpec")
     public String gpuNodeSpec;
 
@@ -75,6 +88,9 @@ public class CreateDifyInstanceRequest extends TeaModel {
 
     @NameInMap("KvStoreType")
     public String kvStoreType;
+
+    @NameInMap("MajorVersion")
+    public String majorVersion;
 
     @NameInMap("ModelId")
     public String modelId;
@@ -201,6 +217,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
         return this.adbpgInstanceMode;
     }
 
+    public CreateDifyInstanceRequest setBackupVSwitchId(String backupVSwitchId) {
+        this.backupVSwitchId = backupVSwitchId;
+        return this;
+    }
+    public String getBackupVSwitchId() {
+        return this.backupVSwitchId;
+    }
+
     public CreateDifyInstanceRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -305,6 +329,22 @@ public class CreateDifyInstanceRequest extends TeaModel {
         return this.dryRun;
     }
 
+    public CreateDifyInstanceRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
+    }
+
+    public CreateDifyInstanceRequest setEnableExtraEndpoint(Boolean enableExtraEndpoint) {
+        this.enableExtraEndpoint = enableExtraEndpoint;
+        return this;
+    }
+    public Boolean getEnableExtraEndpoint() {
+        return this.enableExtraEndpoint;
+    }
+
     public CreateDifyInstanceRequest setGpuNodeSpec(String gpuNodeSpec) {
         this.gpuNodeSpec = gpuNodeSpec;
         return this;
@@ -375,6 +415,14 @@ public class CreateDifyInstanceRequest extends TeaModel {
     }
     public String getKvStoreType() {
         return this.kvStoreType;
+    }
+
+    public CreateDifyInstanceRequest setMajorVersion(String majorVersion) {
+        this.majorVersion = majorVersion;
+        return this;
+    }
+    public String getMajorVersion() {
+        return this.majorVersion;
     }
 
     public CreateDifyInstanceRequest setModelId(String modelId) {

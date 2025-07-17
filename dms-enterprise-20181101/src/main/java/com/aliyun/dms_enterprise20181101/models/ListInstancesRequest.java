@@ -91,6 +91,9 @@ public class ListInstancesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Region")
+    public String region;
+
     /**
      * <p>The keyword that is used to search for database instances.</p>
      * 
@@ -168,6 +171,14 @@ public class ListInstancesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListInstancesRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
     public ListInstancesRequest setSearchKey(String searchKey) {
