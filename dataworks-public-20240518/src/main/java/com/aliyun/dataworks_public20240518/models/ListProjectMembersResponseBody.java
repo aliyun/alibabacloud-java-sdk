@@ -141,6 +141,9 @@ public class ListProjectMembersResponseBody extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        @NameInMap("UserName")
+        public String userName;
+
         public static ListProjectMembersResponseBodyPagingInfoProjectMembers build(java.util.Map<String, ?> map) throws Exception {
             ListProjectMembersResponseBodyPagingInfoProjectMembers self = new ListProjectMembersResponseBodyPagingInfoProjectMembers();
             return TeaModel.build(map, self);
@@ -176,6 +179,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public ListProjectMembersResponseBodyPagingInfoProjectMembers setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
     }

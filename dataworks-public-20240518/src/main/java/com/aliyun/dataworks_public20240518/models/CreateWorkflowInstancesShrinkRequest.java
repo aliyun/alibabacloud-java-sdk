@@ -106,7 +106,7 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     public Long workflowId;
 
     /**
-     * <p>The workflow parameters. The priority of workflow parameters is higher than that of task parameters. You can call the GetTask operation to obtain the format of the workflow parameters by querying the Parameters parameter.</p>
+     * <p>The workflow parameters. This parameter takes effect only when you set the <code>WorkflowId</code> parameter to a value other than 1. If your workflow is an auto triggered workflow, configure this parameter in the key=value format. The parameters that you configure in this parameter have a lower priority than task parameters. If your workflow is a manually triggered workflow, configure this parameter in the JSON format. The parameters that you configure in this parameter have a higher priority than task parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{ 

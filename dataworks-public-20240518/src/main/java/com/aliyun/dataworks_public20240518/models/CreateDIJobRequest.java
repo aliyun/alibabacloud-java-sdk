@@ -37,11 +37,11 @@ public class CreateDIJobRequest extends TeaModel {
     public CreateDIJobRequestJobSettings jobSettings;
 
     /**
-     * <p>The type of the task. This parameter is optional. Valid values:</p>
+     * <p>The type of the synchronization task. Valid values:</p>
      * <ul>
-     * <li>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
-     * <li>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
-     * <li>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</li>
+     * <li>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases in the source.</li>
+     * <li>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases in the source.</li>
+     * <li>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize data only in a single table in the source.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class CreateDIJobRequest extends TeaModel {
     /**
      * <p>The synchronization type. Valid values:</p>
      * <ul>
-     * <li>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</li>
-     * <li>RealtimeIncremental: real-time incremental synchronization of data in a single table</li>
-     * <li>Full: full batch synchronization of data in an entire database</li>
-     * <li>OfflineIncremental: batch incremental synchronization of data in an entire database</li>
-     * <li>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</li>
+     * <li>FullAndRealtimeIncremental</li>
+     * <li>RealtimeIncremental</li>
+     * <li>Full</li>
+     * <li>OfflineIncremental</li>
+     * <li>FullAndOfflineIncremental</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -77,7 +77,7 @@ public class CreateDIJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+     * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
      * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
      * 
      * <strong>example:</strong>
