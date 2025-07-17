@@ -4,7 +4,11 @@ package com.aliyun.paifeaturestore20230621.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
+    @NameInMap("FeatureDBInfo")
+    public GetInstanceResponseBodyFeatureDBInfo featureDBInfo;
+
     @NameInMap("FeatureDBInstanceInfo")
+    @Deprecated
     public GetInstanceResponseBodyFeatureDBInstanceInfo featureDBInstanceInfo;
 
     /**
@@ -68,6 +72,15 @@ public class GetInstanceResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public GetInstanceResponseBody setFeatureDBInfo(GetInstanceResponseBodyFeatureDBInfo featureDBInfo) {
+        this.featureDBInfo = featureDBInfo;
+        return this;
+    }
+    public GetInstanceResponseBodyFeatureDBInfo getFeatureDBInfo() {
+        return this.featureDBInfo;
+    }
+
+    @Deprecated
     public GetInstanceResponseBody setFeatureDBInstanceInfo(GetInstanceResponseBodyFeatureDBInstanceInfo featureDBInstanceInfo) {
         this.featureDBInstanceInfo = featureDBInstanceInfo;
         return this;
@@ -138,6 +151,25 @@ public class GetInstanceResponseBody extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public static class GetInstanceResponseBodyFeatureDBInfo extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static GetInstanceResponseBodyFeatureDBInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceResponseBodyFeatureDBInfo self = new GetInstanceResponseBodyFeatureDBInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceResponseBodyFeatureDBInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
     }
 
     public static class GetInstanceResponseBodyFeatureDBInstanceInfo extends TeaModel {

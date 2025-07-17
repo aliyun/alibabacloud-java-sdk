@@ -50,6 +50,25 @@ public class ListInstancesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListInstancesResponseBodyInstancesFeatureDBInfo extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static ListInstancesResponseBodyInstancesFeatureDBInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListInstancesResponseBodyInstancesFeatureDBInfo self = new ListInstancesResponseBodyInstancesFeatureDBInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListInstancesResponseBodyInstancesFeatureDBInfo setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
     public static class ListInstancesResponseBodyInstancesFeatureDBInstanceInfo extends TeaModel {
         @NameInMap("Status")
         public String status;
@@ -70,7 +89,11 @@ public class ListInstancesResponseBody extends TeaModel {
     }
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
+        @NameInMap("FeatureDBInfo")
+        public ListInstancesResponseBodyInstancesFeatureDBInfo featureDBInfo;
+
         @NameInMap("FeatureDBInstanceInfo")
+        @Deprecated
         public ListInstancesResponseBodyInstancesFeatureDBInstanceInfo featureDBInstanceInfo;
 
         /**
@@ -120,6 +143,15 @@ public class ListInstancesResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public ListInstancesResponseBodyInstances setFeatureDBInfo(ListInstancesResponseBodyInstancesFeatureDBInfo featureDBInfo) {
+            this.featureDBInfo = featureDBInfo;
+            return this;
+        }
+        public ListInstancesResponseBodyInstancesFeatureDBInfo getFeatureDBInfo() {
+            return this.featureDBInfo;
+        }
+
+        @Deprecated
         public ListInstancesResponseBodyInstances setFeatureDBInstanceInfo(ListInstancesResponseBodyInstancesFeatureDBInstanceInfo featureDBInstanceInfo) {
             this.featureDBInstanceInfo = featureDBInstanceInfo;
             return this;
