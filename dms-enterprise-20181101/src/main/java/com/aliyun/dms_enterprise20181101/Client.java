@@ -5965,6 +5965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Question", request.question);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tableNames)) {
+            query.put("TableNames", request.tableNames);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));

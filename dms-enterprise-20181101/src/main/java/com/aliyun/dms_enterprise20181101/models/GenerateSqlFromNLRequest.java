@@ -47,6 +47,13 @@ public class GenerateSqlFromNLRequest extends TeaModel {
     @NameInMap("Question")
     public String question;
 
+    /**
+     * <strong>example:</strong>
+     * <p>users,orders</p>
+     */
+    @NameInMap("TableNames")
+    public String tableNames;
+
     public static GenerateSqlFromNLRequest build(java.util.Map<String, ?> map) throws Exception {
         GenerateSqlFromNLRequest self = new GenerateSqlFromNLRequest();
         return TeaModel.build(map, self);
@@ -98,6 +105,14 @@ public class GenerateSqlFromNLRequest extends TeaModel {
     }
     public String getQuestion() {
         return this.question;
+    }
+
+    public GenerateSqlFromNLRequest setTableNames(String tableNames) {
+        this.tableNames = tableNames;
+        return this;
+    }
+    public String getTableNames() {
+        return this.tableNames;
     }
 
 }
