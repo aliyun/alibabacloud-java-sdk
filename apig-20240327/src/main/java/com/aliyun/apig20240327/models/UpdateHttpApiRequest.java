@@ -65,6 +65,9 @@ public class UpdateHttpApiRequest extends TeaModel {
     @NameInMap("protocols")
     public java.util.List<String> protocols;
 
+    @NameInMap("removeBasePathOnForward")
+    public Boolean removeBasePathOnForward;
+
     /**
      * <p>The versioning configurations.</p>
      */
@@ -154,6 +157,14 @@ public class UpdateHttpApiRequest extends TeaModel {
     }
     public java.util.List<String> getProtocols() {
         return this.protocols;
+    }
+
+    public UpdateHttpApiRequest setRemoveBasePathOnForward(Boolean removeBasePathOnForward) {
+        this.removeBasePathOnForward = removeBasePathOnForward;
+        return this;
+    }
+    public Boolean getRemoveBasePathOnForward() {
+        return this.removeBasePathOnForward;
     }
 
     public UpdateHttpApiRequest setVersionConfig(HttpApiVersionConfig versionConfig) {

@@ -58,6 +58,9 @@ public class CreateHttpApiRequest extends TeaModel {
     @NameInMap("ingressConfig")
     public CreateHttpApiRequestIngressConfig ingressConfig;
 
+    @NameInMap("modelCategory")
+    public String modelCategory;
+
     /**
      * <p>The API name.</p>
      * <p>This parameter is required.</p>
@@ -73,6 +76,9 @@ public class CreateHttpApiRequest extends TeaModel {
      */
     @NameInMap("protocols")
     public java.util.List<String> protocols;
+
+    @NameInMap("removeBasePathOnForward")
+    public Boolean removeBasePathOnForward;
 
     /**
      * <p>The resource group ID.</p>
@@ -173,6 +179,14 @@ public class CreateHttpApiRequest extends TeaModel {
         return this.ingressConfig;
     }
 
+    public CreateHttpApiRequest setModelCategory(String modelCategory) {
+        this.modelCategory = modelCategory;
+        return this;
+    }
+    public String getModelCategory() {
+        return this.modelCategory;
+    }
+
     public CreateHttpApiRequest setName(String name) {
         this.name = name;
         return this;
@@ -187,6 +201,14 @@ public class CreateHttpApiRequest extends TeaModel {
     }
     public java.util.List<String> getProtocols() {
         return this.protocols;
+    }
+
+    public CreateHttpApiRequest setRemoveBasePathOnForward(Boolean removeBasePathOnForward) {
+        this.removeBasePathOnForward = removeBasePathOnForward;
+        return this;
+    }
+    public Boolean getRemoveBasePathOnForward() {
+        return this.removeBasePathOnForward;
     }
 
     public CreateHttpApiRequest setResourceGroupId(String resourceGroupId) {
