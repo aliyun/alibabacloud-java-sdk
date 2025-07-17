@@ -61,6 +61,12 @@ public class ListAlertsRequest extends TeaModel {
     @NameInMap("IntegrationType")
     public String integrationType;
 
+    /**
+     * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Alice</p>
+     */
     @NameInMap("Owner")
     public String owner;
 

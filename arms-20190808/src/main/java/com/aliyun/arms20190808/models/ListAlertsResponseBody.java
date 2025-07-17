@@ -4,11 +4,17 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
+    /**
+     * <p>The returned error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alert.manager.error.code.signature.invalid</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The information about the array object.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("PageBean")
     public ListAlertsResponseBodyPageBean pageBean;
@@ -396,6 +402,12 @@ public class ListAlertsResponseBody extends TeaModel {
     }
 
     public static class ListAlertsResponseBodyPageBeanListAlerts extends TeaModel {
+        /**
+         * <p>Time to claim the alarm.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("AcknowledgeTime")
         public Long acknowledgeTime;
 
@@ -438,6 +450,12 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The description of a event execution status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[Notification Strategy: ARMS Front-end Alarm]\nPage Indicator Page Name: Home JS Error Number Average in the last 5 minutes &gt;= 1.0 times, current value 1.0000 times\n</p>
+         */
         @NameInMap("Describe")
         public String describe;
 
@@ -459,15 +477,39 @@ public class ListAlertsResponseBody extends TeaModel {
         @NameInMap("DispatchRuleName")
         public String dispatchRuleName;
 
+        /**
+         * <p>Alarm handler.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
+         */
         @NameInMap("Handler")
         public String handler;
 
+        /**
+         * <p>The contact card of an instant messaging app.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test Robot</p>
+         */
         @NameInMap("NotifyRobots")
         public String notifyRobots;
 
+        /**
+         * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
+         */
         @NameInMap("Owner")
         public String owner;
 
+        /**
+         * <p>Alarm recovery time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("RecoverTime")
         public Long recoverTime;
 
@@ -640,7 +682,7 @@ public class ListAlertsResponseBody extends TeaModel {
 
     public static class ListAlertsResponseBodyPageBean extends TeaModel {
         /**
-         * <p>The alerts for which the alert sending history is queried.</p>
+         * <p>The queried alert notification history records.</p>
          */
         @NameInMap("ListAlerts")
         public java.util.List<ListAlertsResponseBodyPageBeanListAlerts> listAlerts;

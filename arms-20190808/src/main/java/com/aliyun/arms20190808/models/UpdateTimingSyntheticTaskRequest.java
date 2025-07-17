@@ -361,11 +361,17 @@ public class UpdateTimingSyntheticTaskRequest extends TeaModel {
     public static class UpdateTimingSyntheticTaskRequestCommonSettingCustomPrometheusSetting extends TeaModel {
         /**
          * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A reserved parameter.</p>
          */
         @NameInMap("PrometheusClusterId")
         public String prometheusClusterId;
 
         /**
+         * <p>A reserved parameter.</p>
+         * 
+         * <strong>example:</strong>
          * <p>A reserved parameter.</p>
          */
         @NameInMap("PrometheusClusterRegion")

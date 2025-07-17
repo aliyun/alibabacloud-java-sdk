@@ -14,7 +14,7 @@ public class CreateEnvPodMonitorRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The YAML configuration string of the PodMonitor.</p>
+     * <p>The YAML configuration snippet for PodMonitor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

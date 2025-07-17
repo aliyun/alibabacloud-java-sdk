@@ -23,6 +23,12 @@ public class DeleteRumAppRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-finance-1</p>
+     */
     @NameInMap("RealRegionId")
     public String realRegionId;
 

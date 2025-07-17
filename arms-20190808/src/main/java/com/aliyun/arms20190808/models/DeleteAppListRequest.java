@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppListRequest extends TeaModel {
     /**
-     * <p>The PIDs of the applications monitored by ARMS Application Monitoring.</p>
+     * <p>The list of PIDs for the applications monitored by Application Monitoring.</p>
      */
     @NameInMap("Pids")
     public java.util.List<String> pids;

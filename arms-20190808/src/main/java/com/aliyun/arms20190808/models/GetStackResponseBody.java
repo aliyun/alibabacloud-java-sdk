@@ -14,7 +14,7 @@ public class GetStackResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information of the method stack.</p>
+     * <p>The method stack details.</p>
      */
     @NameInMap("StackInfo")
     public java.util.List<GetStackResponseBodyStackInfo> stackInfo;
@@ -93,7 +93,7 @@ public class GetStackResponseBody extends TeaModel {
         public String api;
 
         /**
-         * <p>Number of repeated method calls.</p>
+         * <p>The number of times the method is called.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchTracesByPageResponseBody extends TeaModel {
     /**
-     * <p>The returned struct.</p>
+     * <p>The struct returned.</p>
      */
     @NameInMap("PageBean")
     public SearchTracesByPageResponseBodyPageBean pageBean;
@@ -77,6 +77,12 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The span ID of the trace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be3d6dcf5750e***</p>
+         */
         @NameInMap("SpanID")
         public String spanID;
 

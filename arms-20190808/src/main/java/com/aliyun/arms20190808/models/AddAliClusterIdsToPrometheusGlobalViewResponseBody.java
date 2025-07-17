@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel {
     /**
-     * <p>Status code. 200 is success, other status codes are exceptions.</p>
+     * <p>The status code. The HTTP 200 status code indicates a successful request, while others indicate error conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
     public AddAliClusterIdsToPrometheusGlobalViewResponseBodyData data;
 
     /**
-     * <p>Returns a hint message for the result.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

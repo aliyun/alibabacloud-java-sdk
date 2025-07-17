@@ -23,7 +23,7 @@ public class DeleteAppListResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error message returned when the request parameters are invalid.</p>
+     * <p>The error message returned for invalid request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;Deletion of application successful&quot;</p>

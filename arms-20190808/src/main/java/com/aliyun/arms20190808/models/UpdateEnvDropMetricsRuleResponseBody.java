@@ -3,10 +3,8 @@ package com.aliyun.arms20190808.models;
 
 import com.aliyun.tea.*;
 
-public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
+public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
     /**
-     * <p>The status code. The status code 200 indicates a successful request, whereas others indicate a failed request.</p>
-     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -14,17 +12,13 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response parameters in the JSON format.</p>
-     * 
      * <strong>example:</strong>
-     * <p>{&quot;Success&quot;:true,&quot;Msg&quot;:&quot;OK&quot;}</p>
+     * <p>success</p>
      */
     @NameInMap("Data")
     public String data;
 
     /**
-     * <p>The supplemental message providing additional context about the response.</p>
-     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -32,20 +26,20 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. You can use the ID to query logs and troubleshoot issues.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>337B8F7E-0A64-5768-9225-E9B3CF******</p>
+     * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DeletePrometheusGlobalViewResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DeletePrometheusGlobalViewResponseBody self = new DeletePrometheusGlobalViewResponseBody();
+    public static UpdateEnvDropMetricsRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateEnvDropMetricsRuleResponseBody self = new UpdateEnvDropMetricsRuleResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DeletePrometheusGlobalViewResponseBody setCode(Integer code) {
+    public UpdateEnvDropMetricsRuleResponseBody setCode(Integer code) {
         this.code = code;
         return this;
     }
@@ -53,7 +47,7 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         return this.code;
     }
 
-    public DeletePrometheusGlobalViewResponseBody setData(String data) {
+    public UpdateEnvDropMetricsRuleResponseBody setData(String data) {
         this.data = data;
         return this;
     }
@@ -61,7 +55,7 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         return this.data;
     }
 
-    public DeletePrometheusGlobalViewResponseBody setMessage(String message) {
+    public UpdateEnvDropMetricsRuleResponseBody setMessage(String message) {
         this.message = message;
         return this;
     }
@@ -69,7 +63,7 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         return this.message;
     }
 
-    public DeletePrometheusGlobalViewResponseBody setRequestId(String requestId) {
+    public UpdateEnvDropMetricsRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

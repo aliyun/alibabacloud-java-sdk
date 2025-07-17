@@ -4,6 +4,12 @@ package com.aliyun.arms20190808.models;
 import com.aliyun.tea.*;
 
 public class UpdateRumAppRequest extends TeaModel {
+    /**
+     * <p>The application configurations in the JSON format. This parameter is deprecated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;apiRequestOfH5&quot;:300,&quot;apiRequestOfOriginal&quot;:500,&quot;coldStart&quot;:5000,&quot;hotStart&quot;:3000,&quot;staticResourceLoad&quot;:300,&quot;stutter&quot;:1000,&quot;viewLoadOfH5&quot;:1000,&quot;viewLoadOfOriginal&quot;:2000}</p>
+     */
     @NameInMap("AppConfig")
     public String appConfig;
 
@@ -72,7 +78,7 @@ public class UpdateRumAppRequest extends TeaModel {
     public String pid;
 
     /**
-     * <p>Backend application deployment area (used in end-to-end link scenarios).</p>
+     * <p>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

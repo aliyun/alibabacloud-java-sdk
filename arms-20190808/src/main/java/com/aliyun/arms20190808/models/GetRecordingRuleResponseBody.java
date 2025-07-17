@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecordingRuleResponseBody extends TeaModel {
     /**
-     * <p>Status code. 200 is success, other status codes are exceptions.</p>
+     * <p>The status code. The status code 200 indicates a successful request, whereas others indicate a failed request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class GetRecordingRuleResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Returns a hint message for the result.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

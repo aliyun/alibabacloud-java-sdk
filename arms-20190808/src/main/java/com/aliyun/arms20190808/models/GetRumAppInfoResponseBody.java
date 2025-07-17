@@ -167,6 +167,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
     public static class GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig extends TeaModel {
         /**
+         * <p>Sampling rate: between (0, 1000], a thousandth.</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -174,6 +176,8 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public Integer samplingRate;
 
         /**
+         * <p>Sampling type, currently only session random sampling is supported, that is, fixed transmission: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -210,6 +214,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @NameInMap("moduleConfig")
         public GetRumAppInfoResponseBodyDataBonreeSDKConfigModuleConfig moduleConfig;
 
+        /**
+         * <p>Sampling configuration.</p>
+         */
         @NameInMap("samplingConfig")
         public GetRumAppInfoResponseBodyDataBonreeSDKConfigSamplingConfig samplingConfig;
 
@@ -373,6 +380,12 @@ public class GetRumAppInfoResponseBody extends TeaModel {
     }
 
     public static class GetRumAppInfoResponseBodyData extends TeaModel {
+        /**
+         * <p>The application configurations in the JSON format. This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;apiRequestOfH5&quot;:300,&quot;apiRequestOfOriginal&quot;:500,&quot;coldStart&quot;:5000,&quot;hotStart&quot;:3000,&quot;staticResourceLoad&quot;:300,&quot;stutter&quot;:1000,&quot;viewLoadOfH5&quot;:1000,&quot;viewLoadOfOriginal&quot;:2000}</p>
+         */
         @NameInMap("AppConfig")
         public String appConfig;
 
@@ -429,6 +442,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
         /**
          * <p>The description of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Portal home page.</p>
          */
         @NameInMap("Description")
         public String description;

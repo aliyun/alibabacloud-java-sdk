@@ -31,6 +31,12 @@ public class GetRumAppsRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The application type. Currently, supported application types include: web, mini program, Android, iOS, Windows, macOS, and HarmonyOS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
@@ -58,9 +64,6 @@ public class GetRumAppsRequest extends TeaModel {
      */
     @NameInMap("Tags")
     public java.util.List<GetRumAppsRequestTags> tags;
-
-    @NameInMap("Workspace")
-    public String workspace;
 
     public static GetRumAppsRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumAppsRequest self = new GetRumAppsRequest();
@@ -121,14 +124,6 @@ public class GetRumAppsRequest extends TeaModel {
     }
     public java.util.List<GetRumAppsRequestTags> getTags() {
         return this.tags;
-    }
-
-    public GetRumAppsRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
     public static class GetRumAppsRequestTags extends TeaModel {

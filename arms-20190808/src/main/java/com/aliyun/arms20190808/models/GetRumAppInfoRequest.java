@@ -33,15 +33,6 @@ public class GetRumAppInfoRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
-    /**
-     * <p>The workspace. Specify this parameter value only in Cloud Monitor 2.0.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>default</p>
-     */
-    @NameInMap("Workspace")
-    public String workspace;
-
     public static GetRumAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumAppInfoRequest self = new GetRumAppInfoRequest();
         return TeaModel.build(map, self);
@@ -69,14 +60,6 @@ public class GetRumAppInfoRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
-    }
-
-    public GetRumAppInfoRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
 }

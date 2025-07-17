@@ -500,6 +500,12 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @NameInMap("FeatureStatus")
         public DescribeEnvironmentFeatureResponseBodyDataFeatureStatus featureStatus;
 
+        /**
+         * <p>The feature configurations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("config")
         public String config;
 

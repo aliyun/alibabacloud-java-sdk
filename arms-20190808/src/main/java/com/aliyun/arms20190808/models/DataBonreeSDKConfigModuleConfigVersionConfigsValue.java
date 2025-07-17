@@ -21,6 +21,9 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
 
     /**
      * <p>The description of the version configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("description")
     public String description;

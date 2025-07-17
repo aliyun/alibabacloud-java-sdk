@@ -19,6 +19,12 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryCommercialUsageResponseBodyData data;
 
+    /**
+     * <p>The HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 

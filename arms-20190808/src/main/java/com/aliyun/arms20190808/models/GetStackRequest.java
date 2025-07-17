@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStackRequest extends TeaModel {
     /**
-     * <p>The end time of the call method.</p>
+     * <p>The exit timestamp of the method call. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1653641800</p>
@@ -43,7 +43,7 @@ public class GetStackRequest extends TeaModel {
     public String rpcID;
 
     /**
-     * <p>Span ID. You can get it from the <strong>Trace Explorer</strong> page of the ARMS console.</p>
+     * <p>The span ID of the trace. It is displayed on the Trace Explorer page in the ARMS console.</p>
      * 
      * <strong>example:</strong>
      * <p>88c32dfa4b******</p>
@@ -52,7 +52,7 @@ public class GetStackRequest extends TeaModel {
     public String spanID;
 
     /**
-     * <p>The start time of the call method.</p>
+     * <p>The entry timestamp of the method call. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1653555396</p>
@@ -61,7 +61,7 @@ public class GetStackRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The trace ID. You can log on to the Application Real-Time Monitoring Service (ARMS) console and obtain the trace ID on the <strong>Trace Query</strong> page.</p>
+     * <p>The trace ID. It is displayed on the <strong>Trace Explorer</strong> page in the Application Real-Time Monitoring Service (ARMS) console.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

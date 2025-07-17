@@ -37,6 +37,12 @@ public class GetRumExceptionStackRequest extends TeaModel {
     @NameInMap("ExceptionThreadId")
     public String exceptionThreadId;
 
+    /**
+     * <p>Extra information about iOS symbol tables. You can leave this parameter empty.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GraphicsServices:system/GraphicsServices/85419099-269B-336D-86B4-0D52D0FF6923/GraphicsServices;WebCore:system/WebCore/BF44A3F4-85D4-38C8-BF26-197F06ADE273/WebCore</p>
+     */
     @NameInMap("ExtraInfo")
     public String extraInfo;
 
@@ -60,11 +66,13 @@ public class GetRumExceptionStackRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The file type. Valid values:</p>
+     * <p>The parsing type. Valid values:</p>
      * <ul>
-     * <li>source-map: SourceMap files</li>
-     * <li>mapping: symbol table files for Android</li>
-     * <li>dsym: dSYM files for iOS</li>
+     * <li>js: Parses JavaScript errors.</li>
+     * <li>sym: Parses PC errors.</li>
+     * <li>har: Parses HarmonyOS errors.</li>
+     * <li>dSYM: Parses iOS errors.</li>
+     * <li>so: Parses Android errors.</li>
      * </ul>
      * 
      * <strong>example:</strong>

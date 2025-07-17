@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDashboardsByNameResponseBody extends TeaModel {
     /**
-     * <p>Status Code. Description 200 indicates success.</p>
+     * <p>The status code. The HTTP 200 status code indicates a successful request, while others indicate error conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class ListDashboardsByNameResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>Returns a hint message for the result.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

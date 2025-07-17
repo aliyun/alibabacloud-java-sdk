@@ -31,6 +31,12 @@ public class GetRumAppsShrinkRequest extends TeaModel {
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>The application type. Currently, supported application types include: web, mini program, Android, iOS, Windows, macOS, and HarmonyOS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>web</p>
+     */
     @NameInMap("AppType")
     public String appType;
 
@@ -58,9 +64,6 @@ public class GetRumAppsShrinkRequest extends TeaModel {
      */
     @NameInMap("Tags")
     public String tagsShrink;
-
-    @NameInMap("Workspace")
-    public String workspace;
 
     public static GetRumAppsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumAppsShrinkRequest self = new GetRumAppsShrinkRequest();
@@ -121,14 +124,6 @@ public class GetRumAppsShrinkRequest extends TeaModel {
     }
     public String getTagsShrink() {
         return this.tagsShrink;
-    }
-
-    public GetRumAppsShrinkRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
 }

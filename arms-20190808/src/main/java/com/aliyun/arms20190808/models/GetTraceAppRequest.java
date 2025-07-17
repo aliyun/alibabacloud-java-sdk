@@ -25,7 +25,7 @@ public class GetTraceAppRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>标签。</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetTraceAppRequestTags> tags;
@@ -61,7 +61,7 @@ public class GetTraceAppRequest extends TeaModel {
 
     public static class GetTraceAppRequestTags extends TeaModel {
         /**
-         * <p>标签的键（key）。</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -70,7 +70,7 @@ public class GetTraceAppRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>标签的值（value）。</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

@@ -77,6 +77,12 @@ public class SearchTracesResponseBody extends TeaModel {
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>Span ID. You can get it from the <strong>Trace Explorer</strong> page of the ARMS console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>be3d6dcf5750e***</p>
+         */
         @NameInMap("SpanID")
         public String spanID;
 

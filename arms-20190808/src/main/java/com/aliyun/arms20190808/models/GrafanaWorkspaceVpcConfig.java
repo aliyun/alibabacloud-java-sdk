@@ -30,6 +30,13 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>192.168.0.0/24</p>
+     */
+    @NameInMap("ipSections")
+    public String ipSections;
+
+    /**
+     * <strong>example:</strong>
      * <p>北京VPC-A通道</p>
      */
     @NameInMap("name")
@@ -105,6 +112,14 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
     }
     public String getInstallStatus() {
         return this.installStatus;
+    }
+
+    public GrafanaWorkspaceVpcConfig setIpSections(String ipSections) {
+        this.ipSections = ipSections;
+        return this;
+    }
+    public String getIpSections() {
+        return this.ipSections;
     }
 
     public GrafanaWorkspaceVpcConfig setName(String name) {

@@ -14,7 +14,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response parameters.</p>
      */
     @NameInMap("Data")
     public GetPrometheusInstanceResponseBodyData data;
@@ -233,7 +233,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String enableAuthToken;
 
         /**
-         * <p>The extra information.</p>
+         * <p>The extra information. This parameter is returned only for console requests.</p>
          */
         @NameInMap("ExtraInfo")
         public java.util.Map<String, String> extraInfo;
@@ -264,6 +264,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         @NameInMap("HttpApiIntraUrl")
         public String httpApiIntraUrl;
+
+        @NameInMap("OpenTelemetryInterUrl")
+        public String openTelemetryInterUrl;
+
+        @NameInMap("OpenTelemetryIntraUrl")
+        public String openTelemetryIntraUrl;
 
         /**
          * <p>The billing method. Valid values:</p>
@@ -435,7 +441,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The version.</p>
+         * <p>Version</p>
          * 
          * <strong>example:</strong>
          * <p>V1</p>
@@ -583,6 +589,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
         public String getHttpApiIntraUrl() {
             return this.httpApiIntraUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setOpenTelemetryInterUrl(String openTelemetryInterUrl) {
+            this.openTelemetryInterUrl = openTelemetryInterUrl;
+            return this;
+        }
+        public String getOpenTelemetryInterUrl() {
+            return this.openTelemetryInterUrl;
+        }
+
+        public GetPrometheusInstanceResponseBodyData setOpenTelemetryIntraUrl(String openTelemetryIntraUrl) {
+            this.openTelemetryIntraUrl = openTelemetryIntraUrl;
+            return this;
+        }
+        public String getOpenTelemetryIntraUrl() {
+            return this.openTelemetryIntraUrl;
         }
 
         public GetPrometheusInstanceResponseBodyData setPaymentType(String paymentType) {

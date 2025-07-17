@@ -41,7 +41,7 @@ public class GetAlertRulesRequest extends TeaModel {
      * <li>PAUSED</li>
      * </ul>
      * <blockquote>
-     * <p> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
+     * <p> The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class GetAlertRulesRequest extends TeaModel {
     public String alertStatus;
 
     /**
-     * <p>The type of the alert rule. This parameter is required for the new version of Alert Management.</p>
+     * <p>The type of the alert rule. This parameter is required for the new version of Alert Management. Valid values:</p>
      * <ul>
      * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
      * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>

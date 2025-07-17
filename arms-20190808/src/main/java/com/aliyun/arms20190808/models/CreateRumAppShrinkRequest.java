@@ -32,6 +32,12 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The language used by the client.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>java</p>
+     */
     @NameInMap("Language")
     public String language;
 
@@ -53,6 +59,12 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     @NameInMap("PackageName")
     public String packageName;
 
+    /**
+     * <p>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-finance-1</p>
+     */
     @NameInMap("RealRegionId")
     public String realRegionId;
 
@@ -99,9 +111,6 @@ public class CreateRumAppShrinkRequest extends TeaModel {
      */
     @NameInMap("Tag")
     public String tagShrink;
-
-    @NameInMap("Workspace")
-    public String workspace;
 
     public static CreateRumAppShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRumAppShrinkRequest self = new CreateRumAppShrinkRequest();
@@ -202,14 +211,6 @@ public class CreateRumAppShrinkRequest extends TeaModel {
     }
     public String getTagShrink() {
         return this.tagShrink;
-    }
-
-    public CreateRumAppShrinkRequest setWorkspace(String workspace) {
-        this.workspace = workspace;
-        return this;
-    }
-    public String getWorkspace() {
-        return this.workspace;
     }
 
 }

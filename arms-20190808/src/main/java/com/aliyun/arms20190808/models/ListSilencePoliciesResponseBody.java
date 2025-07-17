@@ -130,6 +130,12 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     }
 
     public static class ListSilencePoliciesResponseBodyPageBeanSilencePolicies extends TeaModel {
+        /**
+         * <p>The effective type. Valid values: PERMANENT: The policy is effective permanently. CYCLE_EFFECT: The policy is effective cyclically. CUSTOM_TIME: The policy is effective during a custom time period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PERMANENT</p>
+         */
         @NameInMap("EffectiveTimeType")
         public String effectiveTimeType;
 
@@ -166,9 +172,21 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         @NameInMap("State")
         public String state;
 
+        /**
+         * <p>The effective time. Valid values: WEEK: weekly DAY: daily</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEEK</p>
+         */
         @NameInMap("TimePeriod")
         public String timePeriod;
 
+        /**
+         * <p>Effective period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;endTime&quot;:&quot;00:00&quot;,&quot;endWeek&quot;:&quot;7&quot;,&quot;startTime&quot;:&quot;00:00&quot;,&quot;startWeek&quot;:&quot;1&quot;}]</p>
+         */
         @NameInMap("TimeSlots")
         public String timeSlots;
 
