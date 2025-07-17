@@ -38,9 +38,9 @@ public class DescribeAlarmsRequest extends TeaModel {
     /**
      * <p>The metric type. Valid values:</p>
      * <ul>
-     * <li>system: system metrics of CloudMonitor</li>
-     * <li>custom: custom metrics that are reported to CloudMonitor.</li>
-     * <li>hybrid: metrics of Hybrid Cloud Monitoring.</li>
+     * <li>system: a system metric of CloudMonitor</li>
+     * <li>custom: a custom metric that is reported to CloudMonitor.</li>
+     * <li>hybrid: a metric of Hybrid Cloud Monitoring.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeAlarmsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: 50.</p>
+     * <p>The number of entries per page. Valid values: 1 to 50.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>

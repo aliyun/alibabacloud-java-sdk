@@ -989,8 +989,11 @@ public class CreateScalingGroupRequest extends TeaModel {
         /**
          * <p>The cost comparison method. Valid values:</p>
          * <ul>
-         * <li>PricePerUnit: compares costs based on unit price divided by instance capacities (weights). The capacity of an instance in a scaling group is determined by the weight of the instance type used. If no weight is set, the capacity defaults to 1.</li>
-         * <li>PricePerVCpu: compares costs based on unit price divided by the number of vCPUs.</li>
+         * <li><p>PricePerUnit: Prices are compared based on the price per instance capacity.</p>
+         * <p>Capacity is determined by the weights assigned to instance types in the scaling group. If no weight is specified, a default weight of 1 is used, meaning each instance is assigned a capacity of 1.</p>
+         * </li>
+         * <li><p>PricePerVCpu: Prices are compared based on the price per vCPU.</p>
+         * </li>
          * </ul>
          * <p>Default value: PricePerUnit.</p>
          * 

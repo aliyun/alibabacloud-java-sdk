@@ -52,6 +52,9 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ExecutionMode")
+    public String executionMode;
+
     /**
      * <p>The context of the lifecycle hook.</p>
      */
@@ -144,6 +147,14 @@ public class ScaleWithAdjustmentRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public ScaleWithAdjustmentRequest setExecutionMode(String executionMode) {
+        this.executionMode = executionMode;
+        return this;
+    }
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     public ScaleWithAdjustmentRequest setLifecycleHookContext(ScaleWithAdjustmentRequestLifecycleHookContext lifecycleHookContext) {

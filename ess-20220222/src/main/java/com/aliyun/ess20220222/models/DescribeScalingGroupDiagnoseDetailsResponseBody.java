@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
     /**
-     * <p>Details of the diagnostic report.</p>
+     * <p>The diagnostic reports.</p>
      */
     @NameInMap("Details")
     public java.util.List<DescribeScalingGroupDiagnoseDetailsResponseBodyDetails> details;
@@ -42,17 +42,17 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
 
     public static class DescribeScalingGroupDiagnoseDetailsResponseBodyDetails extends TeaModel {
         /**
-         * <p>Item type for diagnostics. Possible values:</p>
+         * <p>The type of the diagnostic item. Valid values:</p>
          * <ul>
-         * <li>AccountArrearage: Checks if the user\&quot;s account is in arrears.</li>
-         * <li>AccountNotEnoughBalance: Checks the account balance.</li>
-         * <li>ElasticStrength: Checks the inventory health of instance types corresponding to the scaling group configuration.</li>
-         * <li>VSwitch: Checks if the switch is available, for example, whether it has been deleted.</li>
-         * <li>SecurityGroup: Checks if the security group is available, for example, whether it has been deleted.</li>
-         * <li>KeyPair: Checks if the key pair is available, for example, whether it has been deleted.</li>
-         * <li>SlbBackendServerQuota: Checks if the number of ECS instances mounted to the default SLB group and virtual server group exceeds the quota.</li>
-         * <li>AlbBackendServerQuota: Checks if the number of ECS instances mounted to the ALB group exceeds the quota.</li>
-         * <li>NlbBackendServerQuota: Checks if the number of ECS instances mounted to the NLB group exceeds the quota.</li>
+         * <li>AccountArrearage: Checks whether your Alibaba Cloud account has overdue payments.</li>
+         * <li>AccountNotEnoughBalance: Checks whether the balance of your Alibaba Cloud account is sufficient.</li>
+         * <li>ElasticStrength: Checks whether the instance types that are specified in the scaling configuration are sufficient.</li>
+         * <li>VSwitch: Checks whether the vSwitch is available. If the specified vSwitch is deleted, specify an existing vSwitch for the scaling group.</li>
+         * <li>SecurityGroup: Checks whether the security group is available. If the specified security group is deleted, specify an existing security group for the scaling group.</li>
+         * <li>KeyPair: Checks whether the key pair is available. If the specified key pair is deleted, specify another key pair for the scaling group.</li>
+         * <li>SlbBackendServerQuota: Checks whether the number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</li>
+         * <li>AlbBackendServerQuota: Checks whether the number of ECS instances that are attached to the ALB instances of the scaling group has reached the upper limit.</li>
+         * <li>NlbBackendServerQuota: Checks whether the number of ECS instances that are attached to the NLB instances of the scaling group has reached the upper limit.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -62,26 +62,17 @@ public class DescribeScalingGroupDiagnoseDetailsResponseBody extends TeaModel {
         public String diagnoseType;
 
         /**
-         * <p>Error code of the diagnostic item. Possible values:</p>
+         * <p>The error code of the diagnostic item. Valid values:</p>
          * <ul>
-         * <li><p>VSwitchIdNotFound: The VSwitch does not exist.</p>
-         * </li>
-         * <li><p>SecurityGroupNotFound: The security group does not exist.</p>
-         * </li>
-         * <li><p>KeyPairNotFound: The key pair does not exist.</p>
-         * </li>
-         * <li><p>SlbBackendServerQuotaExceeded: The number of ECS instances mounted on the backend of the SLB default group and virtual server group exceeds the quota.</p>
-         * </li>
-         * <li><p>AlbBackendServerQuotaExceeded: The number of ECS instances mounted on the backend of the ALB group exceeds the quota.</p>
-         * </li>
-         * <li><p>NlbBackendServerQuotaExceeded: The number of ECS instances mounted on the backend of the NLB group exceeds the quota.</p>
-         * </li>
-         * <li><p>AccountArrearage: The account is in arrears.</p>
-         * </li>
-         * <li><p>AccountNotEnoughBalance: The account balance is insufficient.</p>
-         * </li>
-         * <li><p>ElasticStrengthAlert: The inventory health is poor.</p>
-         * </li>
+         * <li>VSwitchIdNotFound: The vSwitch does not exist.</li>
+         * <li>SecurityGroupNotFound: The security group does not exist.</li>
+         * <li>KeyPairNotFound: The key pair does not exist.</li>
+         * <li>SlbBackendServerQuotaExceeded: The number of ECS instances that are added to the default server group and the vServer groups of the SLB instances associated with the scaling group has reached the upper limit.</li>
+         * <li>AlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the ALB instances of the scaling group has reached the upper limit.</li>
+         * <li>NlbBackendServerQuotaExceeded: The number of ECS instances that are attached to the NLB instances of the scaling group has reached the upper limit.</li>
+         * <li>AccountArrearage: Your account has an overdue payment.</li>
+         * <li>AccountNotEnoughBalance: The balance of your Alibaba Cloud account is insufficient.</li>
+         * <li>ElasticStrengthAlert: The inventory levels are lower than required.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -562,6 +562,10 @@ public class CreateScalingRuleRequest extends TeaModel {
     }
 
     public static class CreateScalingRuleRequestAlarmOptions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("Period")
         public Integer period;
 

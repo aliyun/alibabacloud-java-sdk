@@ -245,7 +245,7 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
 
     /**
      * <p>The instance types. If you specify InstanceTypes, InstanceType is ignored.</p>
-     * <p>Auto Scaling creates instances based on the priorities of the instance types. If Auto Scaling cannot create instances by using the instance type that has the highest priority, Auto Scaling creates instances by using the instance type that has the next highest priority.</p>
+     * <p>Auto Scaling creates instances based on a priority list of instance types. If it fails to create instances using the highest-priority type, it automatically moves to the next type in the priority order.</p>
      */
     @NameInMap("InstanceTypes")
     public java.util.List<String> instanceTypes;
@@ -400,6 +400,13 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The resource pools used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. When you specify this parameter, take note of the following items:</p>
+     * <ul>
+     * <li>This parameter takes effect only when you create pay-as-you-go instances.</li>
+     * <li>If you specify this parameter, you cannot specify PrivatePoolOptions.MatchCriteria or PrivatePoolOptions.Id.</li>
+     * </ul>
+     */
     @NameInMap("ResourcePoolOptions")
     public CreateScalingConfigurationShrinkRequestResourcePoolOptions resourcePoolOptions;
 
@@ -2322,10 +2329,21 @@ public class CreateScalingConfigurationShrinkRequest extends TeaModel {
     }
 
     public static class CreateScalingConfigurationShrinkRequestResourcePoolOptions extends TeaModel {
+        /**
+         * <p>The IDs of private pools. The ID of a private pool is the same as the ID of the elasticity assurance or capacity reservation that is associated with the private pool. You can specify the IDs of only targeted private pools for this parameter.</p>
+         */
         @NameInMap("PrivatePoolIds")
         public java.util.List<String> privatePoolIds;
 
         /**
+         * <p>The resource pool used for instance creation, which can be the public pool or a private pool associated with any active elasticity assurance or capacity reservation. Valid values:</p>
+         * <ul>
+         * <li>PrivatePoolFirst: prioritizes private pools. When this option is set along with ResourcePoolOptions.PrivatePoolIds, the specified private pools are used first. If you leave ResourcePoolOptions.PrivatePoolIds empty or if the specified private pools lack sufficient capacity, the system will automatically use available open private pools instead. If no matching private pools are available, the system defaults to the public pool.</li>
+         * <li>PrivatePoolOnly: uses only private pools. If you set this value, you must specify ResourcePoolOptions.PrivatePoolIds. If the specified private pools lack sufficient capacity, instance creation will fail.</li>
+         * <li>None: uses no resource pools.</li>
+         * </ul>
+         * <p>Default value: None.</p>
+         * 
          * <strong>example:</strong>
          * <p>PrivatePoolFirst</p>
          */

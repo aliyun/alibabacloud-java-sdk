@@ -42,7 +42,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
      * <p>The name series of elastic container instances. Naming conventions:</p>
      * <ul>
      * <li>The name must be 2 to 128 characters in length.</li>
-     * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</li>
+     * <li>The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class ModifyEciScalingConfigurationRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is unavailable.</p>
+     * <p> This parameter is unavailable for use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

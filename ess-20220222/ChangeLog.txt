@@ -1,3 +1,8 @@
+2025-07-17 Version: 1.9.14
+- Update API ScaleWithAdjustment: add request parameters ExecutionMode.
+- Update API ScaleWithAdjustment: add response parameters Body.PlanResult.
+
+
 2025-05-08 Version: 1.9.13
 - Update API ScaleWithAdjustment: add request parameters ParallelTask.
 
