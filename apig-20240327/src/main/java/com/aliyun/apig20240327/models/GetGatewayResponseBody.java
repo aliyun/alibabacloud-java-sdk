@@ -694,6 +694,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @NameInMap("gatewayType")
         public String gatewayType;
 
+        @NameInMap("isp")
+        public String isp;
+
         /**
          * <p>The ingress addresses of the instance.</p>
          */
@@ -875,6 +878,14 @@ public class GetGatewayResponseBody extends TeaModel {
         }
         public String getGatewayType() {
             return this.gatewayType;
+        }
+
+        public GetGatewayResponseBodyData setIsp(String isp) {
+            this.isp = isp;
+            return this;
+        }
+        public String getIsp() {
+            return this.isp;
         }
 
         public GetGatewayResponseBodyData setLoadBalancers(java.util.List<GetGatewayResponseBodyDataLoadBalancers> loadBalancers) {
