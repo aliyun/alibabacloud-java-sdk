@@ -38,6 +38,9 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SessionManagerConfig")
+    public ModifyCloudAssistantSettingsRequestSessionManagerConfig sessionManagerConfig;
+
     /**
      * <p>The Cloud Assistant feature. Valid values:</p>
      * <ul>
@@ -118,6 +121,14 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyCloudAssistantSettingsRequest setSessionManagerConfig(ModifyCloudAssistantSettingsRequestSessionManagerConfig sessionManagerConfig) {
+        this.sessionManagerConfig = sessionManagerConfig;
+        return this;
+    }
+    public ModifyCloudAssistantSettingsRequestSessionManagerConfig getSessionManagerConfig() {
+        return this.sessionManagerConfig;
     }
 
     public ModifyCloudAssistantSettingsRequest setSettingType(String settingType) {
@@ -320,6 +331,25 @@ public class ModifyCloudAssistantSettingsRequest extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+    }
+
+    public static class ModifyCloudAssistantSettingsRequestSessionManagerConfig extends TeaModel {
+        @NameInMap("SessionManagerEnabled")
+        public Boolean sessionManagerEnabled;
+
+        public static ModifyCloudAssistantSettingsRequestSessionManagerConfig build(java.util.Map<String, ?> map) throws Exception {
+            ModifyCloudAssistantSettingsRequestSessionManagerConfig self = new ModifyCloudAssistantSettingsRequestSessionManagerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyCloudAssistantSettingsRequestSessionManagerConfig setSessionManagerEnabled(Boolean sessionManagerEnabled) {
+            this.sessionManagerEnabled = sessionManagerEnabled;
+            return this;
+        }
+        public Boolean getSessionManagerEnabled() {
+            return this.sessionManagerEnabled;
         }
 
     }

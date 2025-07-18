@@ -25049,6 +25049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.ossDeliveryConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.ossDeliveryConfig, "OssDeliveryConfig", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sessionManagerConfig)) {
+            request.sessionManagerConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sessionManagerConfig, "SessionManagerConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.slsDeliveryConfig)) {
             request.slsDeliveryConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.slsDeliveryConfig, "SlsDeliveryConfig", "json");
         }
@@ -25080,6 +25084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
             query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionManagerConfigShrink)) {
+            query.put("SessionManagerConfig", request.sessionManagerConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.settingType)) {

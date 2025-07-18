@@ -25,6 +25,9 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    @NameInMap("SessionManagerConfig")
+    public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig sessionManagerConfig;
+
     /**
      * <p>The configurations for delivering items to Simple Log Service.</p>
      */
@@ -58,6 +61,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public DescribeCloudAssistantSettingsResponseBody setSessionManagerConfig(DescribeCloudAssistantSettingsResponseBodySessionManagerConfig sessionManagerConfig) {
+        this.sessionManagerConfig = sessionManagerConfig;
+        return this;
+    }
+    public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig getSessionManagerConfig() {
+        return this.sessionManagerConfig;
     }
 
     public DescribeCloudAssistantSettingsResponseBody setSlsDeliveryConfigs(DescribeCloudAssistantSettingsResponseBodySlsDeliveryConfigs slsDeliveryConfigs) {
@@ -298,6 +309,25 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeCloudAssistantSettingsResponseBodyOssDeliveryConfigsOssDeliveryConfig> getOssDeliveryConfig() {
             return this.ossDeliveryConfig;
+        }
+
+    }
+
+    public static class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig extends TeaModel {
+        @NameInMap("SessionManagerEnabled")
+        public Boolean sessionManagerEnabled;
+
+        public static DescribeCloudAssistantSettingsResponseBodySessionManagerConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudAssistantSettingsResponseBodySessionManagerConfig self = new DescribeCloudAssistantSettingsResponseBodySessionManagerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig setSessionManagerEnabled(Boolean sessionManagerEnabled) {
+            this.sessionManagerEnabled = sessionManagerEnabled;
+            return this;
+        }
+        public Boolean getSessionManagerEnabled() {
+            return this.sessionManagerEnabled;
         }
 
     }
