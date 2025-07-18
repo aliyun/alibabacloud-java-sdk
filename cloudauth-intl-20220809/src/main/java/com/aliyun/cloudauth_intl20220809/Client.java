@@ -167,8 +167,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Verification of bank card elements, including: two-element verification (name + bank card number), three-element verification (name + ID number + bank card number), and four-element verification (name + ID number + phone number + bank card number) for consistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>银行卡核验</p>
+     * <p>Bank Card Verification</p>
      * 
      * @param request BankMetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -231,8 +234,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Verification of bank card elements, including: two-element verification (name + bank card number), three-element verification (name + ID number + bank card number), and four-element verification (name + ID number + phone number + bank card number) for consistency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>银行卡核验</p>
+     * <p>Bank Card Verification</p>
      * 
      * @param request BankMetaVerifyIntlRequest
      * @return BankMetaVerifyIntlResponse
@@ -801,6 +807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DocOcrMaxResponse docOcrMaxWithOptions(DocOcrMaxRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docPage)) {
+            body.put("DocPage", request.docPage);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
             body.put("DocType", request.docType);
         }
@@ -1592,6 +1602,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public KeepaliveIntlResponse keepaliveIntl() throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.keepaliveIntlWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手机号二要素核验API</p>
+     * 
+     * @param request Mobile2MetaVerifyIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return Mobile2MetaVerifyIntlResponse
+     */
+    public Mobile2MetaVerifyIntlResponse mobile2MetaVerifyIntlWithOptions(Mobile2MetaVerifyIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            body.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paramType)) {
+            body.put("ParamType", request.paramType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            body.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userName)) {
+            body.put("UserName", request.userName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "Mobile2MetaVerifyIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new Mobile2MetaVerifyIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>手机号二要素核验API</p>
+     * 
+     * @param request Mobile2MetaVerifyIntlRequest
+     * @return Mobile2MetaVerifyIntlResponse
+     */
+    public Mobile2MetaVerifyIntlResponse mobile2MetaVerifyIntl(Mobile2MetaVerifyIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.mobile2MetaVerifyIntlWithOptions(request, runtime);
     }
 
     /**

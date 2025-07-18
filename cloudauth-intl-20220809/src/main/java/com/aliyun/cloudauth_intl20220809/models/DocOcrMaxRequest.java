@@ -4,6 +4,9 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrMaxRequest extends TeaModel {
+    @NameInMap("DocPage")
+    public String docPage;
+
     /**
      * <strong>example:</strong>
      * <p>CNSSC01</p>
@@ -83,6 +86,14 @@ public class DocOcrMaxRequest extends TeaModel {
     public static DocOcrMaxRequest build(java.util.Map<String, ?> map) throws Exception {
         DocOcrMaxRequest self = new DocOcrMaxRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DocOcrMaxRequest setDocPage(String docPage) {
+        this.docPage = docPage;
+        return this;
+    }
+    public String getDocPage() {
+        return this.docPage;
     }
 
     public DocOcrMaxRequest setDocType(String docType) {
