@@ -4,6 +4,12 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
+    @NameInMap("AutoscalerEnabled")
+    public Boolean autoscalerEnabled;
+
+    @NameInMap("CronscalerEnabled")
+    public Boolean cronscalerEnabled;
+
     /**
      * <p>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</p>
      * 
@@ -91,6 +97,9 @@ public class ListServicesRequest extends TeaModel {
 
     @NameInMap("ResourceAliasName")
     public String resourceAliasName;
+
+    @NameInMap("ResourceBurstable")
+    public Boolean resourceBurstable;
 
     @NameInMap("ResourceId")
     public String resourceId;
@@ -352,6 +361,22 @@ public class ListServicesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListServicesRequest setAutoscalerEnabled(Boolean autoscalerEnabled) {
+        this.autoscalerEnabled = autoscalerEnabled;
+        return this;
+    }
+    public Boolean getAutoscalerEnabled() {
+        return this.autoscalerEnabled;
+    }
+
+    public ListServicesRequest setCronscalerEnabled(Boolean cronscalerEnabled) {
+        this.cronscalerEnabled = cronscalerEnabled;
+        return this;
+    }
+    public Boolean getCronscalerEnabled() {
+        return this.cronscalerEnabled;
+    }
+
     public ListServicesRequest setFilter(String filter) {
         this.filter = filter;
         return this;
@@ -438,6 +463,14 @@ public class ListServicesRequest extends TeaModel {
     }
     public String getResourceAliasName() {
         return this.resourceAliasName;
+    }
+
+    public ListServicesRequest setResourceBurstable(Boolean resourceBurstable) {
+        this.resourceBurstable = resourceBurstable;
+        return this;
+    }
+    public Boolean getResourceBurstable() {
+        return this.resourceBurstable;
     }
 
     public ListServicesRequest setResourceId(String resourceId) {

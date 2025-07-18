@@ -14,7 +14,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The list of VPC peers.</p>
+     * <p>The VPC peers.</p>
      */
     @NameInMap("PeerVpcList")
     public java.util.List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList> peerVpcList;
@@ -112,7 +112,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
     public static class ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcList extends TeaModel {
         /**
-         * <p>The ID of the VPC peers.</p>
+         * <p>The IDs of the VPC peers.</p>
          */
         @NameInMap("PeerVpcs")
         public java.util.List<ListGatewayIntranetLinkedVpcPeerResponseBodyPeerVpcListPeerVpcs> peerVpcs;

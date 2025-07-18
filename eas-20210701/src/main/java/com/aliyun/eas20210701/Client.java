@@ -3727,6 +3727,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoscalerEnabled)) {
+            query.put("AutoscalerEnabled", request.autoscalerEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cronscalerEnabled)) {
+            query.put("CronscalerEnabled", request.cronscalerEnabled);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
         }
@@ -3769,6 +3777,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceAliasName)) {
             query.put("ResourceAliasName", request.resourceAliasName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceBurstable)) {
+            query.put("ResourceBurstable", request.resourceBurstable);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {

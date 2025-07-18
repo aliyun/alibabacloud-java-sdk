@@ -10,17 +10,41 @@ public class Resource extends TeaModel {
     @NameInMap("CpuCount")
     public Integer cpuCount;
 
+    @NameInMap("CpuUsed")
+    public Integer cpuUsed;
+
     @NameInMap("CreateTime")
     public String createTime;
 
     @NameInMap("ExtraData")
     public java.util.Map<String, ?> extraData;
 
+    @NameInMap("Features")
+    public java.util.List<String> features;
+
     @NameInMap("GpuCount")
     public Integer gpuCount;
 
+    @NameInMap("GpuUsed")
+    public Float gpuUsed;
+
     @NameInMap("InstanceCount")
     public Integer instanceCount;
+
+    @NameInMap("InstanceMaxAllocatableCPU")
+    public Integer instanceMaxAllocatableCPU;
+
+    @NameInMap("InstanceMaxAllocatableGPU")
+    public Float instanceMaxAllocatableGPU;
+
+    @NameInMap("InstanceMaxAllocatableMemory")
+    public Integer instanceMaxAllocatableMemory;
+
+    @NameInMap("Memory")
+    public Integer memory;
+
+    @NameInMap("MemoryUsed")
+    public Integer memoryUsed;
 
     @NameInMap("Message")
     public String message;
@@ -70,6 +94,14 @@ public class Resource extends TeaModel {
         return this.cpuCount;
     }
 
+    public Resource setCpuUsed(Integer cpuUsed) {
+        this.cpuUsed = cpuUsed;
+        return this;
+    }
+    public Integer getCpuUsed() {
+        return this.cpuUsed;
+    }
+
     public Resource setCreateTime(String createTime) {
         this.createTime = createTime;
         return this;
@@ -86,6 +118,14 @@ public class Resource extends TeaModel {
         return this.extraData;
     }
 
+    public Resource setFeatures(java.util.List<String> features) {
+        this.features = features;
+        return this;
+    }
+    public java.util.List<String> getFeatures() {
+        return this.features;
+    }
+
     public Resource setGpuCount(Integer gpuCount) {
         this.gpuCount = gpuCount;
         return this;
@@ -94,12 +134,60 @@ public class Resource extends TeaModel {
         return this.gpuCount;
     }
 
+    public Resource setGpuUsed(Float gpuUsed) {
+        this.gpuUsed = gpuUsed;
+        return this;
+    }
+    public Float getGpuUsed() {
+        return this.gpuUsed;
+    }
+
     public Resource setInstanceCount(Integer instanceCount) {
         this.instanceCount = instanceCount;
         return this;
     }
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    public Resource setInstanceMaxAllocatableCPU(Integer instanceMaxAllocatableCPU) {
+        this.instanceMaxAllocatableCPU = instanceMaxAllocatableCPU;
+        return this;
+    }
+    public Integer getInstanceMaxAllocatableCPU() {
+        return this.instanceMaxAllocatableCPU;
+    }
+
+    public Resource setInstanceMaxAllocatableGPU(Float instanceMaxAllocatableGPU) {
+        this.instanceMaxAllocatableGPU = instanceMaxAllocatableGPU;
+        return this;
+    }
+    public Float getInstanceMaxAllocatableGPU() {
+        return this.instanceMaxAllocatableGPU;
+    }
+
+    public Resource setInstanceMaxAllocatableMemory(Integer instanceMaxAllocatableMemory) {
+        this.instanceMaxAllocatableMemory = instanceMaxAllocatableMemory;
+        return this;
+    }
+    public Integer getInstanceMaxAllocatableMemory() {
+        return this.instanceMaxAllocatableMemory;
+    }
+
+    public Resource setMemory(Integer memory) {
+        this.memory = memory;
+        return this;
+    }
+    public Integer getMemory() {
+        return this.memory;
+    }
+
+    public Resource setMemoryUsed(Integer memoryUsed) {
+        this.memoryUsed = memoryUsed;
+        return this;
+    }
+    public Integer getMemoryUsed() {
+        return this.memoryUsed;
     }
 
     public Resource setMessage(String message) {

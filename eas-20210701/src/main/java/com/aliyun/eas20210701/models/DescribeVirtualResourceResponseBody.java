@@ -22,6 +22,9 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @NameInMap("DisableSpotProtectionPeriod")
     public Boolean disableSpotProtectionPeriod;
 
+    @NameInMap("Features")
+    public java.util.List<String> features;
+
     /**
      * <p>The ID of the request.</p>
      * 
@@ -92,6 +95,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     }
     public Boolean getDisableSpotProtectionPeriod() {
         return this.disableSpotProtectionPeriod;
+    }
+
+    public DescribeVirtualResourceResponseBody setFeatures(java.util.List<String> features) {
+        this.features = features;
+        return this;
+    }
+    public java.util.List<String> getFeatures() {
+        return this.features;
     }
 
     public DescribeVirtualResourceResponseBody setRequestId(String requestId) {

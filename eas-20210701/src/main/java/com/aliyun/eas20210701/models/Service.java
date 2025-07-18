@@ -19,6 +19,9 @@ public class Service extends TeaModel {
     @NameInMap("AppVersion")
     public String appVersion;
 
+    @NameInMap("AutoscalerEnabled")
+    public Boolean autoscalerEnabled;
+
     @NameInMap("CallerUid")
     public String callerUid;
 
@@ -28,11 +31,20 @@ public class Service extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    @NameInMap("CronscalerEnabled")
+    public Boolean cronscalerEnabled;
+
     @NameInMap("CurrentVersion")
     public Integer currentVersion;
 
     @NameInMap("ExtraData")
     public String extraData;
+
+    @NameInMap("GPUCorePercentage")
+    public Integer GPUCorePercentage;
+
+    @NameInMap("GPUMemory")
+    public Integer GPUMemory;
 
     @NameInMap("Gateway")
     public String gateway;
@@ -42,6 +54,9 @@ public class Service extends TeaModel {
 
     @NameInMap("Image")
     public String image;
+
+    @NameInMap("InstanceCountInResource")
+    public ServiceInstanceCountInResource instanceCountInResource;
 
     @NameInMap("InternetEndpoint")
     public String internetEndpoint;
@@ -87,6 +102,9 @@ public class Service extends TeaModel {
 
     @NameInMap("ResourceAlias")
     public String resourceAlias;
+
+    @NameInMap("ResourceBurstable")
+    public Boolean resourceBurstable;
 
     @NameInMap("Role")
     public String role;
@@ -187,6 +205,14 @@ public class Service extends TeaModel {
         return this.appVersion;
     }
 
+    public Service setAutoscalerEnabled(Boolean autoscalerEnabled) {
+        this.autoscalerEnabled = autoscalerEnabled;
+        return this;
+    }
+    public Boolean getAutoscalerEnabled() {
+        return this.autoscalerEnabled;
+    }
+
     public Service setCallerUid(String callerUid) {
         this.callerUid = callerUid;
         return this;
@@ -211,6 +237,14 @@ public class Service extends TeaModel {
         return this.createTime;
     }
 
+    public Service setCronscalerEnabled(Boolean cronscalerEnabled) {
+        this.cronscalerEnabled = cronscalerEnabled;
+        return this;
+    }
+    public Boolean getCronscalerEnabled() {
+        return this.cronscalerEnabled;
+    }
+
     public Service setCurrentVersion(Integer currentVersion) {
         this.currentVersion = currentVersion;
         return this;
@@ -225,6 +259,22 @@ public class Service extends TeaModel {
     }
     public String getExtraData() {
         return this.extraData;
+    }
+
+    public Service setGPUCorePercentage(Integer GPUCorePercentage) {
+        this.GPUCorePercentage = GPUCorePercentage;
+        return this;
+    }
+    public Integer getGPUCorePercentage() {
+        return this.GPUCorePercentage;
+    }
+
+    public Service setGPUMemory(Integer GPUMemory) {
+        this.GPUMemory = GPUMemory;
+        return this;
+    }
+    public Integer getGPUMemory() {
+        return this.GPUMemory;
     }
 
     public Service setGateway(String gateway) {
@@ -249,6 +299,14 @@ public class Service extends TeaModel {
     }
     public String getImage() {
         return this.image;
+    }
+
+    public Service setInstanceCountInResource(ServiceInstanceCountInResource instanceCountInResource) {
+        this.instanceCountInResource = instanceCountInResource;
+        return this;
+    }
+    public ServiceInstanceCountInResource getInstanceCountInResource() {
+        return this.instanceCountInResource;
     }
 
     public Service setInternetEndpoint(String internetEndpoint) {
@@ -369,6 +427,14 @@ public class Service extends TeaModel {
     }
     public String getResourceAlias() {
         return this.resourceAlias;
+    }
+
+    public Service setResourceBurstable(Boolean resourceBurstable) {
+        this.resourceBurstable = resourceBurstable;
+        return this;
+    }
+    public Boolean getResourceBurstable() {
+        return this.resourceBurstable;
     }
 
     public Service setRole(String role) {
@@ -513,6 +579,47 @@ public class Service extends TeaModel {
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class ServiceInstanceCountInResource extends TeaModel {
+        @NameInMap("Dedicated")
+        public Integer dedicated;
+
+        @NameInMap("Public")
+        public Integer _public;
+
+        @NameInMap("Quota")
+        public Integer quota;
+
+        public static ServiceInstanceCountInResource build(java.util.Map<String, ?> map) throws Exception {
+            ServiceInstanceCountInResource self = new ServiceInstanceCountInResource();
+            return TeaModel.build(map, self);
+        }
+
+        public ServiceInstanceCountInResource setDedicated(Integer dedicated) {
+            this.dedicated = dedicated;
+            return this;
+        }
+        public Integer getDedicated() {
+            return this.dedicated;
+        }
+
+        public ServiceInstanceCountInResource set_public(Integer _public) {
+            this._public = _public;
+            return this;
+        }
+        public Integer get_public() {
+            return this._public;
+        }
+
+        public ServiceInstanceCountInResource setQuota(Integer quota) {
+            this.quota = quota;
+            return this;
+        }
+        public Integer getQuota() {
+            return this.quota;
+        }
+
     }
 
     public static class ServiceLabels extends TeaModel {

@@ -49,6 +49,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @NameInMap("ExtraData")
     public String extraData;
 
+    @NameInMap("Features")
+    public java.util.List<String> features;
+
     /**
      * <p>The total number of GPUs.</p>
      * 
@@ -75,6 +78,15 @@ public class DescribeResourceResponseBody extends TeaModel {
      */
     @NameInMap("InstanceCount")
     public Integer instanceCount;
+
+    @NameInMap("InstanceMaxAllocatableCPU")
+    public Integer instanceMaxAllocatableCPU;
+
+    @NameInMap("InstanceMaxAllocatableGPU")
+    public Float instanceMaxAllocatableGPU;
+
+    @NameInMap("InstanceMaxAllocatableMemory")
+    public Integer instanceMaxAllocatableMemory;
 
     /**
      * <p>The total memory size. Unit: MB.</p>
@@ -233,6 +245,14 @@ public class DescribeResourceResponseBody extends TeaModel {
         return this.extraData;
     }
 
+    public DescribeResourceResponseBody setFeatures(java.util.List<String> features) {
+        this.features = features;
+        return this;
+    }
+    public java.util.List<String> getFeatures() {
+        return this.features;
+    }
+
     public DescribeResourceResponseBody setGpuCount(Integer gpuCount) {
         this.gpuCount = gpuCount;
         return this;
@@ -255,6 +275,30 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    public DescribeResourceResponseBody setInstanceMaxAllocatableCPU(Integer instanceMaxAllocatableCPU) {
+        this.instanceMaxAllocatableCPU = instanceMaxAllocatableCPU;
+        return this;
+    }
+    public Integer getInstanceMaxAllocatableCPU() {
+        return this.instanceMaxAllocatableCPU;
+    }
+
+    public DescribeResourceResponseBody setInstanceMaxAllocatableGPU(Float instanceMaxAllocatableGPU) {
+        this.instanceMaxAllocatableGPU = instanceMaxAllocatableGPU;
+        return this;
+    }
+    public Float getInstanceMaxAllocatableGPU() {
+        return this.instanceMaxAllocatableGPU;
+    }
+
+    public DescribeResourceResponseBody setInstanceMaxAllocatableMemory(Integer instanceMaxAllocatableMemory) {
+        this.instanceMaxAllocatableMemory = instanceMaxAllocatableMemory;
+        return this;
+    }
+    public Integer getInstanceMaxAllocatableMemory() {
+        return this.instanceMaxAllocatableMemory;
     }
 
     public DescribeResourceResponseBody setMemory(Integer memory) {
