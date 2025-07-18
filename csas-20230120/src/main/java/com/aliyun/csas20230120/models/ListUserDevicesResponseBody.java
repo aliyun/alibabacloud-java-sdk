@@ -240,6 +240,21 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @NameInMap("SharingStatus")
         public Boolean sharingStatus;
 
+        @NameInMap("SnBaseBoard")
+        public String snBaseBoard;
+
+        @NameInMap("SnBios")
+        public String snBios;
+
+        @NameInMap("SnDiskDrive")
+        public String snDiskDrive;
+
+        @NameInMap("SnProcessor")
+        public String snProcessor;
+
+        @NameInMap("SnSystem")
+        public String snSystem;
+
         /**
          * <strong>example:</strong>
          * <p>11.49.XX.XX</p>
@@ -463,6 +478,46 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
         public Boolean getSharingStatus() {
             return this.sharingStatus;
+        }
+
+        public ListUserDevicesResponseBodyDevices setSnBaseBoard(String snBaseBoard) {
+            this.snBaseBoard = snBaseBoard;
+            return this;
+        }
+        public String getSnBaseBoard() {
+            return this.snBaseBoard;
+        }
+
+        public ListUserDevicesResponseBodyDevices setSnBios(String snBios) {
+            this.snBios = snBios;
+            return this;
+        }
+        public String getSnBios() {
+            return this.snBios;
+        }
+
+        public ListUserDevicesResponseBodyDevices setSnDiskDrive(String snDiskDrive) {
+            this.snDiskDrive = snDiskDrive;
+            return this;
+        }
+        public String getSnDiskDrive() {
+            return this.snDiskDrive;
+        }
+
+        public ListUserDevicesResponseBodyDevices setSnProcessor(String snProcessor) {
+            this.snProcessor = snProcessor;
+            return this;
+        }
+        public String getSnProcessor() {
+            return this.snProcessor;
+        }
+
+        public ListUserDevicesResponseBodyDevices setSnSystem(String snSystem) {
+            this.snSystem = snSystem;
+            return this;
+        }
+        public String getSnSystem() {
+            return this.snSystem;
         }
 
         public ListUserDevicesResponseBodyDevices setSrcIP(String srcIP) {
