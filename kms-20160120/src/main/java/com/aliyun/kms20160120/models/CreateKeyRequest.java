@@ -52,6 +52,9 @@ public class CreateKeyRequest extends TeaModel {
     @NameInMap("KeySpec")
     public String keySpec;
 
+    @NameInMap("KeyStorageMechanism")
+    public String keyStorageMechanism;
+
     /**
      * <p>The usage of the key. Valid values:</p>
      * <ul>
@@ -175,6 +178,14 @@ public class CreateKeyRequest extends TeaModel {
     }
     public String getKeySpec() {
         return this.keySpec;
+    }
+
+    public CreateKeyRequest setKeyStorageMechanism(String keyStorageMechanism) {
+        this.keyStorageMechanism = keyStorageMechanism;
+        return this;
+    }
+    public String getKeyStorageMechanism() {
+        return this.keyStorageMechanism;
     }
 
     public CreateKeyRequest setKeyUsage(String keyUsage) {

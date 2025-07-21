@@ -154,6 +154,9 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @NameInMap("CaCertificateChainPem")
         public String caCertificateChainPem;
 
+        @NameInMap("ChargeType")
+        public String chargeType;
+
         /**
          * <p>The time when the KMS instance is created.</p>
          * 
@@ -198,6 +201,9 @@ public class GetKmsInstanceResponseBody extends TeaModel {
          */
         @NameInMap("KeyNum")
         public Long keyNum;
+
+        @NameInMap("ProductVersion")
+        public String productVersion;
 
         /**
          * <p>The number of secrets that can be created for the KMS instance.</p>
@@ -299,6 +305,14 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             return this.caCertificateChainPem;
         }
 
+        public GetKmsInstanceResponseBodyKmsInstance setChargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
+        public String getChargeType() {
+            return this.chargeType;
+        }
+
         public GetKmsInstanceResponseBodyKmsInstance setCreateTime(String createTime) {
             this.createTime = createTime;
             return this;
@@ -337,6 +351,14 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         }
         public Long getKeyNum() {
             return this.keyNum;
+        }
+
+        public GetKmsInstanceResponseBodyKmsInstance setProductVersion(String productVersion) {
+            this.productVersion = productVersion;
+            return this;
+        }
+        public String getProductVersion() {
+            return this.productVersion;
         }
 
         public GetKmsInstanceResponseBodyKmsInstance setSecretNum(String secretNum) {
