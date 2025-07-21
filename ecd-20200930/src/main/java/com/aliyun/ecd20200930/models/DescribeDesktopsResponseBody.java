@@ -893,6 +893,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<DescribeDesktopsResponseBodyDesktopsDisks> disks;
 
+        @NameInMap("DomainType")
+        public String domainType;
+
         /**
          * <p>The number of times for which the cloud desktop can be downgraded.</p>
          * 
@@ -1473,6 +1476,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeDesktopsResponseBodyDesktopsDisks> getDisks() {
             return this.disks;
+        }
+
+        public DescribeDesktopsResponseBodyDesktops setDomainType(String domainType) {
+            this.domainType = domainType;
+            return this;
+        }
+        public String getDomainType() {
+            return this.domainType;
         }
 
         public DescribeDesktopsResponseBodyDesktops setDowngradeQuota(Long downgradeQuota) {

@@ -2723,6 +2723,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>The list of teams of a cloud disk in Cloud Drive Service is synchronized from the Organization tab in the Elastic Desktop Service (EDS) console. You can choose Users &gt; Manager User &gt; User &gt; Organization in the console. If you want to authorize a user to use a team space, you must move the user to the corresponding organization. After you move the user, the user can view the menu bar of the team space on a Cloud Drive Service client.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Authorizes a user to use a team space.</p>
+     * 
+     * @param request CreateCloudDriveGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCloudDriveGroupResponse
+     */
+    public CreateCloudDriveGroupResponse createCloudDriveGroupWithOptions(CreateCloudDriveGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.adminUserIds)) {
+            query.put("AdminUserIds", request.adminUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cdsId)) {
+            query.put("CdsId", request.cdsId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.totalSize)) {
+            query.put("TotalSize", request.totalSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCloudDriveGroup"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCloudDriveGroupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>The list of teams of a cloud disk in Cloud Drive Service is synchronized from the Organization tab in the Elastic Desktop Service (EDS) console. You can choose Users &gt; Manager User &gt; User &gt; Organization in the console. If you want to authorize a user to use a team space, you must move the user to the corresponding organization. After you move the user, the user can view the menu bar of the team space on a Cloud Drive Service client.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Authorizes a user to use a team space.</p>
+     * 
+     * @param request CreateCloudDriveGroupRequest
+     * @return CreateCloudDriveGroupResponse
+     */
+    public CreateCloudDriveGroupResponse createCloudDriveGroup(CreateCloudDriveGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createCloudDriveGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</p>
      * 
      * <b>summary</b> : 
@@ -3701,6 +3767,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateDriveResponse createDrive(CreateDriveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createDriveWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建无影数据报表导出任务</p>
+     * 
+     * @param request CreateEcdReportTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateEcdReportTaskResponse
+     */
+    public CreateEcdReportTaskResponse createEcdReportTaskWithOptions(CreateEcdReportTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterList)) {
+            query.put("FilterList", request.filterList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.langType)) {
+            query.put("LangType", request.langType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reportFileName)) {
+            query.put("ReportFileName", request.reportFileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subType)) {
+            query.put("SubType", request.subType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateEcdReportTask"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateEcdReportTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建无影数据报表导出任务</p>
+     * 
+     * @param request CreateEcdReportTaskRequest
+     * @return CreateEcdReportTaskResponse
+     */
+    public CreateEcdReportTaskResponse createEcdReportTask(CreateEcdReportTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createEcdReportTaskWithOptions(request, runtime);
     }
 
     /**
@@ -7728,6 +7854,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDrivesResponse describeDrives(DescribeDrivesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDrivesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据报表导出任务列表</p>
+     * 
+     * @param request DescribeEcdReportTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeEcdReportTasksResponse
+     */
+    public DescribeEcdReportTasksResponse describeEcdReportTasksWithOptions(DescribeEcdReportTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subType)) {
+            query.put("SubType", request.subType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            query.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskType)) {
+            query.put("TaskType", request.taskType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeEcdReportTasks"),
+            new TeaPair("version", "2020-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeEcdReportTasksResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询数据报表导出任务列表</p>
+     * 
+     * @param request DescribeEcdReportTasksRequest
+     * @return DescribeEcdReportTasksResponse
+     */
+    public DescribeEcdReportTasksResponse describeEcdReportTasks(DescribeEcdReportTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeEcdReportTasksWithOptions(request, runtime);
     }
 
     /**
