@@ -8,7 +8,7 @@ public class QueryMailAddressByParamRequest extends TeaModel {
      * <p>Email address, length 1-60, supports numbers, letters, ., -, @.</p>
      * 
      * <strong>example:</strong>
-     * <p>账号+@+域名</p>
+     * <p><a href="mailto:sender@example.com">sender@example.com</a></p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
@@ -41,7 +41,7 @@ public class QueryMailAddressByParamRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Type of sending address. Values:</p>
+     * <p>Sending address type. Values:</p>
      * <ul>
      * <li>batch: bulk email</li>
      * <li>trigger: triggered email</li>

@@ -40,7 +40,7 @@ public class BatchSendMailRequest extends TeaModel {
     public String clickTrace;
 
     /**
-     * <p>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields need to start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</p>
+     * <p>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields must start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -52,6 +52,12 @@ public class BatchSendMailRequest extends TeaModel {
     @NameInMap("Headers")
     public String headers;
 
+    /**
+     * <p>dedicated IP pool ID. Users who have purchased an dedicated IP can use this parameter to specify the outgoing IP for this send operation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xxx</p>
+     */
     @NameInMap("IpPoolId")
     public String ipPoolId;
 
@@ -59,7 +65,7 @@ public class BatchSendMailRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The name of the recipient list that has been created and uploaded. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</p>
+     * <p>The name of the recipient list that has been created and uploaded with recipients. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +108,7 @@ public class BatchSendMailRequest extends TeaModel {
     public String tagName;
 
     /**
-     * <p>The name of a pre-created and approved template.</p>
+     * <p>The name of the template that has been created and approved in advance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,13 +118,13 @@ public class BatchSendMailRequest extends TeaModel {
     public String templateName;
 
     /**
-     * <p>Filter level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
+     * <p>Filtering level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
      * <ul>
      * <li>disabled: No filtering</li>
-     * <li>default: Use the default strategy, bulk addresses use sender address level filtering</li>
-     * <li>mailfrom: Sender address level filtering</li>
-     * <li>mailfrom_domain: Sender domain level filtering</li>
-     * <li>edm_id: Account level filtering</li>
+     * <li>default: Use the default strategy, bulk addresses use sender address-level filtering</li>
+     * <li>mailfrom: Sender address-level filtering</li>
+     * <li>mailfrom_domain: Sender domain-level filtering</li>
+     * <li>edm_id: Account-level filtering</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,14 +134,14 @@ public class BatchSendMailRequest extends TeaModel {
     public String unSubscribeFilterLevel;
 
     /**
-     * <p>Type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
+     * <p>The type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
      * <ul>
-     * <li>disabled: Not generated</li>
-     * <li>default: Use the default strategy: Generate an unsubscribe link when sending from a bulk email address to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
+     * <li>disabled: Do not generate</li>
+     * <li>default: Use the default strategy: Generate an unsubscribe link when a bulk-type sending address sends to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
      * &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;,
      * &quot;outlook&quot;, &quot;ymail.com&quot;, etc.</li>
-     * <li>zh-cn: Generated, for future content preparation</li>
-     * <li>en-us: Generated, for future content preparation</li>
+     * <li>zh-cn: Generate, for future content preparation</li>
+     * <li>en-us: Generate, for future content preparation</li>
      * </ul>
      * 
      * <strong>example:</strong>

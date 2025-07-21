@@ -8,7 +8,7 @@ public class BatchSendMailResponseBody extends TeaModel {
      * <p>Event ID</p>
      * 
      * <strong>example:</strong>
-     * <p>600000136562052858</p>
+     * <p>xxx</p>
      */
     @NameInMap("EnvId")
     public String envId;

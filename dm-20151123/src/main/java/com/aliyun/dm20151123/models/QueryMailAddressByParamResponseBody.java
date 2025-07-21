@@ -41,7 +41,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>List of mail addresses</p>
+     * <p>List of sending addresses</p>
      */
     @NameInMap("data")
     public QueryMailAddressByParamResponseBodyData data;
@@ -96,7 +96,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
          * <p>Sending address</p>
          * 
          * <strong>example:</strong>
-         * <p>账户+@+域名</p>
+         * <p><a href="mailto:sender@example.com">sender@example.com</a></p>
          */
         @NameInMap("AccountName")
         public String accountName;
@@ -147,7 +147,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String domainStatus;
 
         /**
-         * <p>Mail address ID</p>
+         * <p>Sending address ID</p>
          * 
          * <strong>example:</strong>
          * <p>12122</p>
@@ -192,7 +192,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         public String replyStatus;
 
         /**
-         * <p>Type of sending address. Values:</p>
+         * <p>Sending address type. Values:</p>
          * <ul>
          * <li>batch: bulk email</li>
          * <li>trigger: triggered email</li>
