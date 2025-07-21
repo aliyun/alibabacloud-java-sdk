@@ -5,24 +5,31 @@ import com.aliyun.tea.*;
 
 public class GetPhoneNumberVerificationStatusRequest extends TeaModel {
     /**
-     * <p>The space ID of the user under the ISV account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>229393838****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
-     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>8613900001234</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static GetPhoneNumberVerificationStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPhoneNumberVerificationStatusRequest self = new GetPhoneNumberVerificationStatusRequest();
@@ -37,12 +44,36 @@ public class GetPhoneNumberVerificationStatusRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public GetPhoneNumberVerificationStatusRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public GetPhoneNumberVerificationStatusRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public GetPhoneNumberVerificationStatusRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetPhoneNumberVerificationStatusRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

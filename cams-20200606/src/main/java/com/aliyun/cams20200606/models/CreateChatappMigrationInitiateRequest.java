@@ -34,6 +34,15 @@ public class CreateChatappMigrationInitiateRequest extends TeaModel {
     @NameInMap("MobileNumber")
     public String mobileNumber;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static CreateChatappMigrationInitiateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateChatappMigrationInitiateRequest self = new CreateChatappMigrationInitiateRequest();
         return TeaModel.build(map, self);
@@ -61,6 +70,30 @@ public class CreateChatappMigrationInitiateRequest extends TeaModel {
     }
     public String getMobileNumber() {
         return this.mobileNumber;
+    }
+
+    public CreateChatappMigrationInitiateRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public CreateChatappMigrationInitiateRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreateChatappMigrationInitiateRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

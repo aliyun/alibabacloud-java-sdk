@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class PublishFlowResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>If OK is returned, the request was successful.</p>
      * 
@@ -34,6 +37,14 @@ public class PublishFlowResponseBody extends TeaModel {
     public static PublishFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         PublishFlowResponseBody self = new PublishFlowResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public PublishFlowResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public PublishFlowResponseBody setCode(String code) {

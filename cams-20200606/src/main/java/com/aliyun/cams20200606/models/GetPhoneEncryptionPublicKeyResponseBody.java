@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The response code.</p>
      * <ul>
@@ -44,6 +47,14 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     public static GetPhoneEncryptionPublicKeyResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPhoneEncryptionPublicKeyResponseBody self = new GetPhoneEncryptionPublicKeyResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetPhoneEncryptionPublicKeyResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetPhoneEncryptionPublicKeyResponseBody setCode(String code) {

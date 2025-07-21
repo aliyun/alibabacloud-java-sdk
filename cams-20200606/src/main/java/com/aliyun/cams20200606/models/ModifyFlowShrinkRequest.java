@@ -5,39 +5,42 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowShrinkRequest extends TeaModel {
     /**
-     * <p>The information about the categories of the Flow.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Categories")
     public String categoriesShrink;
 
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>9493884</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The Flow ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>2938838</p>
+     * <p>示例值</p>
      */
     @NameInMap("FlowId")
     public String flowId;
 
     /**
-     * <p>The name of the Flow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowName")
     public String flowName;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ModifyFlowShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyFlowShrinkRequest self = new ModifyFlowShrinkRequest();
@@ -74,6 +77,30 @@ public class ModifyFlowShrinkRequest extends TeaModel {
     }
     public String getFlowName() {
         return this.flowName;
+    }
+
+    public ModifyFlowShrinkRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public ModifyFlowShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ModifyFlowShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeleteFlowResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>If OK is returned, the request was successful.</p>
      * 
@@ -34,6 +37,14 @@ public class DeleteFlowResponseBody extends TeaModel {
     public static DeleteFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteFlowResponseBody self = new DeleteFlowResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteFlowResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeleteFlowResponseBody setCode(String code) {

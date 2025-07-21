@@ -5,29 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetPermissionByCodeShrinkRequest extends TeaModel {
     /**
-     * <p>Authorize code information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Code")
     public String code;
 
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>393847477</p>
+     * <p>示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
-    /**
-     * <p>The permissions.</p>
-     */
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Permissions")
     public String permissionsShrink;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static GetPermissionByCodeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         GetPermissionByCodeShrinkRequest self = new GetPermissionByCodeShrinkRequest();
@@ -50,12 +53,36 @@ public class GetPermissionByCodeShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public GetPermissionByCodeShrinkRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public GetPermissionByCodeShrinkRequest setPermissionsShrink(String permissionsShrink) {
         this.permissionsShrink = permissionsShrink;
         return this;
     }
     public String getPermissionsShrink() {
         return this.permissionsShrink;
+    }
+
+    public GetPermissionByCodeShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetPermissionByCodeShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

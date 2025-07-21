@@ -14,6 +14,9 @@ public class ChatappMigrationVerifiedRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The phone number.</p>
      * <p>This parameter is required.</p>
@@ -23,6 +26,12 @@ public class ChatappMigrationVerifiedRequest extends TeaModel {
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>The verification code.</p>
@@ -47,12 +56,36 @@ public class ChatappMigrationVerifiedRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public ChatappMigrationVerifiedRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ChatappMigrationVerifiedRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public ChatappMigrationVerifiedRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ChatappMigrationVerifiedRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public ChatappMigrationVerifiedRequest setVerifyCode(String verifyCode) {

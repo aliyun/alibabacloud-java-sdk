@@ -22,6 +22,15 @@ public class EnableWhatsappROIMetricRequest extends TeaModel {
     @NameInMap("IsvCode")
     public String isvCode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static EnableWhatsappROIMetricRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableWhatsappROIMetricRequest self = new EnableWhatsappROIMetricRequest();
         return TeaModel.build(map, self);
@@ -41,6 +50,30 @@ public class EnableWhatsappROIMetricRequest extends TeaModel {
     }
     public String getIsvCode() {
         return this.isvCode;
+    }
+
+    public EnableWhatsappROIMetricRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public EnableWhatsappROIMetricRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public EnableWhatsappROIMetricRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

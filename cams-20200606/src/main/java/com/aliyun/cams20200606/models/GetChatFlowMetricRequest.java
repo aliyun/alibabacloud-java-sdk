@@ -59,6 +59,9 @@ public class GetChatFlowMetricRequest extends TeaModel {
     @NameInMap("MetricName")
     public String metricName;
 
+    @NameInMap("MetricParam")
+    public java.util.Map<String, ?> metricParam;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -128,6 +131,14 @@ public class GetChatFlowMetricRequest extends TeaModel {
     }
     public String getMetricName() {
         return this.metricName;
+    }
+
+    public GetChatFlowMetricRequest setMetricParam(java.util.Map<String, ?> metricParam) {
+        this.metricParam = metricParam;
+        return this;
+    }
+    public java.util.Map<String, ?> getMetricParam() {
+        return this.metricParam;
     }
 
     public GetChatFlowMetricRequest setOwnerId(Long ownerId) {

@@ -59,6 +59,9 @@ public class GetChatFlowMetricShrinkRequest extends TeaModel {
     @NameInMap("MetricName")
     public String metricName;
 
+    @NameInMap("MetricParam")
+    public String metricParamShrink;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -128,6 +131,14 @@ public class GetChatFlowMetricShrinkRequest extends TeaModel {
     }
     public String getMetricName() {
         return this.metricName;
+    }
+
+    public GetChatFlowMetricShrinkRequest setMetricParamShrink(String metricParamShrink) {
+        this.metricParamShrink = metricParamShrink;
+        return this;
+    }
+    public String getMetricParamShrink() {
+        return this.metricParamShrink;
     }
 
     public GetChatFlowMetricShrinkRequest setOwnerId(Long ownerId) {

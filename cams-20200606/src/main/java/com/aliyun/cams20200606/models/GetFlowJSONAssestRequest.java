@@ -5,23 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetFlowJSONAssestRequest extends TeaModel {
     /**
-     * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>83883873</p>
+     * <p>示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The Flow ID.</p>
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FlowId")
     public String flowId;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static GetFlowJSONAssestRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFlowJSONAssestRequest self = new GetFlowJSONAssestRequest();
@@ -42,6 +46,30 @@ public class GetFlowJSONAssestRequest extends TeaModel {
     }
     public String getFlowId() {
         return this.flowId;
+    }
+
+    public GetFlowJSONAssestRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetFlowJSONAssestRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetFlowJSONAssestRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

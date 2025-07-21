@@ -46,6 +46,9 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
     @NameInMap("IsvCode")
     public String isvCode;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>The business phone number.</p>
      * 
@@ -54,6 +57,12 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>The beginning of the time range to query.</p>
@@ -102,12 +111,36 @@ public class GetChatappPhoneNumberMetricRequest extends TeaModel {
         return this.isvCode;
     }
 
+    public GetChatappPhoneNumberMetricRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public GetChatappPhoneNumberMetricRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public GetChatappPhoneNumberMetricRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetChatappPhoneNumberMetricRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public GetChatappPhoneNumberMetricRequest setStart(Long start) {

@@ -27,6 +27,9 @@ public class UpdateAccountWebhookRequest extends TeaModel {
     @NameInMap("HttpFlag")
     public String httpFlag;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:</p>
      * <ul>
@@ -39,6 +42,12 @@ public class UpdateAccountWebhookRequest extends TeaModel {
      */
     @NameInMap("QueueFlag")
     public String queueFlag;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>The callback URL to which status reports are sent by using HTTP callbacks.</p>
@@ -70,12 +79,36 @@ public class UpdateAccountWebhookRequest extends TeaModel {
         return this.httpFlag;
     }
 
+    public UpdateAccountWebhookRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public UpdateAccountWebhookRequest setQueueFlag(String queueFlag) {
         this.queueFlag = queueFlag;
         return this;
     }
     public String getQueueFlag() {
         return this.queueFlag;
+    }
+
+    public UpdateAccountWebhookRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UpdateAccountWebhookRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public UpdateAccountWebhookRequest setStatusCallbackUrl(String statusCallbackUrl) {

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeletePhoneMessageQrdlResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The response code.</p>
      * <ul>
@@ -38,6 +41,14 @@ public class DeletePhoneMessageQrdlResponseBody extends TeaModel {
     public static DeletePhoneMessageQrdlResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeletePhoneMessageQrdlResponseBody self = new DeletePhoneMessageQrdlResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeletePhoneMessageQrdlResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeletePhoneMessageQrdlResponseBody setCode(String code) {

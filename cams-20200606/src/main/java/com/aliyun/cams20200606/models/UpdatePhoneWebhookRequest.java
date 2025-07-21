@@ -27,6 +27,9 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     @NameInMap("HttpFlag")
     public String httpFlag;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>phone number.</p>
      * <p>This parameter is required.</p>
@@ -49,6 +52,12 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
      */
     @NameInMap("QueueFlag")
     public String queueFlag;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     /**
      * <p>HTTP status report interface callback address.</p>
@@ -89,6 +98,14 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
         return this.httpFlag;
     }
 
+    public UpdatePhoneWebhookRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public UpdatePhoneWebhookRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -103,6 +120,22 @@ public class UpdatePhoneWebhookRequest extends TeaModel {
     }
     public String getQueueFlag() {
         return this.queueFlag;
+    }
+
+    public UpdatePhoneWebhookRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UpdatePhoneWebhookRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public UpdatePhoneWebhookRequest setStatusCallbackUrl(String statusCallbackUrl) {

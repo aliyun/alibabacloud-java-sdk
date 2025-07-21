@@ -77,6 +77,15 @@ public class SubmitIsvCustomerTermsRequest extends TeaModel {
     @NameInMap("OfficeAddress")
     public String officeAddress;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     public static SubmitIsvCustomerTermsRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitIsvCustomerTermsRequest self = new SubmitIsvCustomerTermsRequest();
         return TeaModel.build(map, self);
@@ -136,6 +145,30 @@ public class SubmitIsvCustomerTermsRequest extends TeaModel {
     }
     public String getOfficeAddress() {
         return this.officeAddress;
+    }
+
+    public SubmitIsvCustomerTermsRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public SubmitIsvCustomerTermsRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SubmitIsvCustomerTermsRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

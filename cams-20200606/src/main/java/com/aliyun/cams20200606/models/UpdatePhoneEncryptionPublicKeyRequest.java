@@ -5,41 +5,38 @@ import com.aliyun.tea.*;
 
 public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
     /**
-     * <p>SpaceId/instanceId of ISV sub clients.</p>
-     * 
      * <strong>example:</strong>
-     * <p>399382882</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>Encrypt the public key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>-----BEGIN PUBLIC KEY-----
-     * AAA
-     * BBB
-     * CCC
-     * DDD
-     * EEE
-     * FFF
-     * GGG
-     * -----END PUBLIC KEY-----</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("EncryptionPublicKey")
     public String encryptionPublicKey;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
-     * <p>The phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>86138000</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static UpdatePhoneEncryptionPublicKeyRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdatePhoneEncryptionPublicKeyRequest self = new UpdatePhoneEncryptionPublicKeyRequest();
@@ -62,12 +59,36 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends TeaModel {
         return this.encryptionPublicKey;
     }
 
+    public UpdatePhoneEncryptionPublicKeyRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public UpdatePhoneEncryptionPublicKeyRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public UpdatePhoneEncryptionPublicKeyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public UpdatePhoneEncryptionPublicKeyRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class GetPermissionByCodeResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The response code.</p>
      * <ul>
@@ -38,6 +41,14 @@ public class GetPermissionByCodeResponseBody extends TeaModel {
     public static GetPermissionByCodeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetPermissionByCodeResponseBody self = new GetPermissionByCodeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetPermissionByCodeResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public GetPermissionByCodeResponseBody setCode(String code) {

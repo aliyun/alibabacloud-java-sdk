@@ -5,43 +5,47 @@ import com.aliyun.tea.*;
 
 public class CreatePhoneMessageQrdlRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>838833</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>Produce QR code image format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>PNG</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("GenerateQrImage")
     public String generateQrImage;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
-     * <p>The phone number. Add the country code before the phone number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>861380000</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
     /**
-     * <p>Message content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("PrefilledMessage")
     public String prefilledMessage;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static CreatePhoneMessageQrdlRequest build(java.util.Map<String, ?> map) throws Exception {
         CreatePhoneMessageQrdlRequest self = new CreatePhoneMessageQrdlRequest();
@@ -64,6 +68,14 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
         return this.generateQrImage;
     }
 
+    public CreatePhoneMessageQrdlRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public CreatePhoneMessageQrdlRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
@@ -78,6 +90,22 @@ public class CreatePhoneMessageQrdlRequest extends TeaModel {
     }
     public String getPrefilledMessage() {
         return this.prefilledMessage;
+    }
+
+    public CreatePhoneMessageQrdlRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public CreatePhoneMessageQrdlRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

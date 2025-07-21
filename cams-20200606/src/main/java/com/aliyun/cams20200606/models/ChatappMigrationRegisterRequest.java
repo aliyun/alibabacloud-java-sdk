@@ -14,6 +14,9 @@ public class ChatappMigrationRegisterRequest extends TeaModel {
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     /**
      * <p>phone number.</p>
      * <p>This parameter is required.</p>
@@ -23,6 +26,12 @@ public class ChatappMigrationRegisterRequest extends TeaModel {
      */
     @NameInMap("PhoneNumber")
     public String phoneNumber;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ChatappMigrationRegisterRequest build(java.util.Map<String, ?> map) throws Exception {
         ChatappMigrationRegisterRequest self = new ChatappMigrationRegisterRequest();
@@ -37,12 +46,36 @@ public class ChatappMigrationRegisterRequest extends TeaModel {
         return this.custSpaceId;
     }
 
+    public ChatappMigrationRegisterRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ChatappMigrationRegisterRequest setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
         return this;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public ChatappMigrationRegisterRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ChatappMigrationRegisterRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
 }

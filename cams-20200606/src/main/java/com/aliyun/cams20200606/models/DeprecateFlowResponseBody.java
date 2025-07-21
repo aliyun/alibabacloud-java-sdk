@@ -4,6 +4,9 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class DeprecateFlowResponseBody extends TeaModel {
+    @NameInMap("AccessDeniedDetail")
+    public String accessDeniedDetail;
+
     /**
      * <p>The result returns OK as normal.</p>
      * 
@@ -34,6 +37,14 @@ public class DeprecateFlowResponseBody extends TeaModel {
     public static DeprecateFlowResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeprecateFlowResponseBody self = new DeprecateFlowResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeprecateFlowResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+        this.accessDeniedDetail = accessDeniedDetail;
+        return this;
+    }
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     public DeprecateFlowResponseBody setCode(String code) {

@@ -5,28 +5,30 @@ import com.aliyun.tea.*;
 
 public class ListFlowRequest extends TeaModel {
     /**
-     * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>99948484</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</p>
-     * 
      * <strong>example:</strong>
-     * <p>flow_001</p>
+     * <p>示例值</p>
      */
     @NameInMap("FlowName")
     public String flowName;
 
-    /**
-     * <p>The returned pages.</p>
-     */
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
     @NameInMap("Page")
     public ListFlowRequestPage page;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
 
     public static ListFlowRequest build(java.util.Map<String, ?> map) throws Exception {
         ListFlowRequest self = new ListFlowRequest();
@@ -49,6 +51,14 @@ public class ListFlowRequest extends TeaModel {
         return this.flowName;
     }
 
+    public ListFlowRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public ListFlowRequest setPage(ListFlowRequestPage page) {
         this.page = page;
         return this;
@@ -57,22 +67,26 @@ public class ListFlowRequest extends TeaModel {
         return this.page;
     }
 
+    public ListFlowRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public ListFlowRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static class ListFlowRequestPage extends TeaModel {
-        /**
-         * <p>The page number.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
         @NameInMap("Index")
         public Integer index;
 
-        /**
-         * <p>The number of entries per page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>20</p>
-         */
         @NameInMap("Size")
         public Integer size;
 

@@ -4,34 +4,57 @@ package com.aliyun.cams20200606.models;
 import com.aliyun.tea.*;
 
 public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
+    /**
+     * <p>Access denied details.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
     /**
+     * <p>Error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Returned data list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<java.util.Map<String, ?>> data;
 
     /**
+     * <p>Error message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值示例值</p>
+     * <p>无</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值示例值</p>
+     * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful. Values:</p>
+     * <ul>
+     * <li><p>true: Success.</p>
+     * </li>
+     * <li><p>false: Failure.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -5,26 +5,33 @@ import com.aliyun.tea.*;
 
 public class IsvGetAppIdRequest extends TeaModel {
     /**
-     * <p>The permission.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>whatsapp_business_messaging: sending permission on WhatsApp messages</li>
-     * <li>ads_management: management permission on advertisements</li>
-     * <li>catalog_management: management permission on catalogs</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>catalog_management</p>
+     * <p>示例值示例值示例值</p>
+     */
+    @NameInMap("IntlVersion")
+    public String intlVersion;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Permissions")
     public String permissions;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
-     * <p>The type of the app. Valid value: WHATSAPP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>WHATSAPP</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Type")
     public String type;
@@ -34,12 +41,44 @@ public class IsvGetAppIdRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public IsvGetAppIdRequest setIntlVersion(String intlVersion) {
+        this.intlVersion = intlVersion;
+        return this;
+    }
+    public String getIntlVersion() {
+        return this.intlVersion;
+    }
+
+    public IsvGetAppIdRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public IsvGetAppIdRequest setPermissions(String permissions) {
         this.permissions = permissions;
         return this;
     }
     public String getPermissions() {
         return this.permissions;
+    }
+
+    public IsvGetAppIdRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public IsvGetAppIdRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public IsvGetAppIdRequest setType(String type) {

@@ -55,6 +55,15 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     @NameInMap("Language")
     public String language;
 
+    @NameInMap("OwnerId")
+    public Long ownerId;
+
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
      * <p>The beginning of the time range to query.</p>
      * <p>This parameter is required.</p>
@@ -132,6 +141,30 @@ public class GetChatappTemplateMetricRequest extends TeaModel {
     }
     public String getLanguage() {
         return this.language;
+    }
+
+    public GetChatappTemplateMetricRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    public GetChatappTemplateMetricRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public GetChatappTemplateMetricRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public GetChatappTemplateMetricRequest setStart(Long start) {
