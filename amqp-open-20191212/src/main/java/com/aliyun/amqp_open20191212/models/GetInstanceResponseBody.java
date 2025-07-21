@@ -80,6 +80,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        @NameInMap("Edition")
+        public String edition;
+
         @NameInMap("EncryptedInstance")
         public Boolean encryptedInstance;
 
@@ -170,6 +173,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
+        @NameInMap("ProvisionedCapacity")
+        public Integer provisionedCapacity;
+
         /**
          * <strong>example:</strong>
          * <p>xxx.cn-hangzhou.xxx.net.mq.amqp.aliyuncs.com</p>
@@ -237,6 +243,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getClassicEndpoint() {
             return this.classicEndpoint;
+        }
+
+        public GetInstanceResponseBodyData setEdition(String edition) {
+            this.edition = edition;
+            return this;
+        }
+        public String getEdition() {
+            return this.edition;
         }
 
         public GetInstanceResponseBodyData setEncryptedInstance(Boolean encryptedInstance) {
@@ -349,6 +363,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getPrivateEndpoint() {
             return this.privateEndpoint;
+        }
+
+        public GetInstanceResponseBodyData setProvisionedCapacity(Integer provisionedCapacity) {
+            this.provisionedCapacity = provisionedCapacity;
+            return this;
+        }
+        public Integer getProvisionedCapacity() {
+            return this.provisionedCapacity;
         }
 
         public GetInstanceResponseBodyData setPublicEndpoint(String publicEndpoint) {

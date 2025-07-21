@@ -101,6 +101,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("ClassicEndpoint")
         public String classicEndpoint;
 
+        @NameInMap("Edition")
+        public String edition;
+
         /**
          * <p>Indicates whether the encryption at rest feature is enabled for the instance.</p>
          * 
@@ -227,6 +230,9 @@ public class ListInstancesResponseBody extends TeaModel {
         @NameInMap("PrivateEndpoint")
         public String privateEndpoint;
 
+        @NameInMap("ProvisionedCapacity")
+        public Integer provisionedCapacity;
+
         /**
          * <p>The public endpoint of the instance.</p>
          * 
@@ -306,6 +312,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getClassicEndpoint() {
             return this.classicEndpoint;
+        }
+
+        public ListInstancesResponseBodyDataInstances setEdition(String edition) {
+            this.edition = edition;
+            return this;
+        }
+        public String getEdition() {
+            return this.edition;
         }
 
         public ListInstancesResponseBodyDataInstances setEncryptedInstance(Boolean encryptedInstance) {
@@ -410,6 +424,14 @@ public class ListInstancesResponseBody extends TeaModel {
         }
         public String getPrivateEndpoint() {
             return this.privateEndpoint;
+        }
+
+        public ListInstancesResponseBodyDataInstances setProvisionedCapacity(Integer provisionedCapacity) {
+            this.provisionedCapacity = provisionedCapacity;
+            return this;
+        }
+        public Integer getProvisionedCapacity() {
+            return this.provisionedCapacity;
         }
 
         public ListInstancesResponseBodyDataInstances setPublicEndpoint(String publicEndpoint) {
