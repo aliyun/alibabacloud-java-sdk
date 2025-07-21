@@ -31,6 +31,9 @@ public class CheckUuidValidRequest extends TeaModel {
     @NameInMap("EtherMac")
     public String etherMac;
 
+    @NameInMap("HostOsInfo")
+    public String hostOsInfo;
+
     @NameInMap("LoginRegionId")
     public String loginRegionId;
 
@@ -117,6 +120,14 @@ public class CheckUuidValidRequest extends TeaModel {
     }
     public String getEtherMac() {
         return this.etherMac;
+    }
+
+    public CheckUuidValidRequest setHostOsInfo(String hostOsInfo) {
+        this.hostOsInfo = hostOsInfo;
+        return this;
+    }
+    public String getHostOsInfo() {
+        return this.hostOsInfo;
     }
 
     public CheckUuidValidRequest setLoginRegionId(String loginRegionId) {

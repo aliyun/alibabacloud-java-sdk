@@ -4,6 +4,9 @@ package com.aliyun.wyota20210420.models;
 import com.aliyun.tea.*;
 
 public class GetFbOssConfigRequest extends TeaModel {
+    @NameInMap("AreaSite")
+    public String areaSite;
+
     @NameInMap("DirPrefix")
     public String dirPrefix;
 
@@ -16,6 +19,14 @@ public class GetFbOssConfigRequest extends TeaModel {
     public static GetFbOssConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFbOssConfigRequest self = new GetFbOssConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetFbOssConfigRequest setAreaSite(String areaSite) {
+        this.areaSite = areaSite;
+        return this;
+    }
+    public String getAreaSite() {
+        return this.areaSite;
     }
 
     public GetFbOssConfigRequest setDirPrefix(String dirPrefix) {

@@ -775,6 +775,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("EtherMac", request.etherMac);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hostOsInfo)) {
+            body.put("HostOsInfo", request.hostOsInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.loginRegionId)) {
             body.put("LoginRegionId", request.loginRegionId);
         }
@@ -2181,6 +2185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetFbOssConfigResponse getFbOssConfigWithOptions(GetFbOssConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.areaSite)) {
+            body.put("AreaSite", request.areaSite);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dirPrefix)) {
             body.put("DirPrefix", request.dirPrefix);
         }
@@ -3822,8 +3830,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("FileList", request.fileListShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isSubstituteReport)) {
+            body.put("IsSubstituteReport", request.isSubstituteReport);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.issueLabel)) {
             body.put("IssueLabel", request.issueLabel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginRegionId)) {
+            body.put("LoginRegionId", request.loginRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginToken)) {
+            body.put("LoginToken", request.loginToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.occurTime)) {
@@ -3836,6 +3856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reservedB)) {
             body.put("ReservedB", request.reservedB);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            body.put("SessionId", request.sessionId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.telNo)) {

@@ -49,8 +49,17 @@ public class ReportUserFbIssueRequest extends TeaModel {
     @NameInMap("FileList")
     public java.util.List<ReportUserFbIssueRequestFileList> fileList;
 
+    @NameInMap("IsSubstituteReport")
+    public Boolean isSubstituteReport;
+
     @NameInMap("IssueLabel")
     public String issueLabel;
+
+    @NameInMap("LoginRegionId")
+    public String loginRegionId;
+
+    @NameInMap("LoginToken")
+    public String loginToken;
 
     @NameInMap("OccurTime")
     public Long occurTime;
@@ -60,6 +69,9 @@ public class ReportUserFbIssueRequest extends TeaModel {
 
     @NameInMap("ReservedB")
     public String reservedB;
+
+    @NameInMap("SessionId")
+    public String sessionId;
 
     @NameInMap("TelNo")
     public String telNo;
@@ -207,12 +219,36 @@ public class ReportUserFbIssueRequest extends TeaModel {
         return this.fileList;
     }
 
+    public ReportUserFbIssueRequest setIsSubstituteReport(Boolean isSubstituteReport) {
+        this.isSubstituteReport = isSubstituteReport;
+        return this;
+    }
+    public Boolean getIsSubstituteReport() {
+        return this.isSubstituteReport;
+    }
+
     public ReportUserFbIssueRequest setIssueLabel(String issueLabel) {
         this.issueLabel = issueLabel;
         return this;
     }
     public String getIssueLabel() {
         return this.issueLabel;
+    }
+
+    public ReportUserFbIssueRequest setLoginRegionId(String loginRegionId) {
+        this.loginRegionId = loginRegionId;
+        return this;
+    }
+    public String getLoginRegionId() {
+        return this.loginRegionId;
+    }
+
+    public ReportUserFbIssueRequest setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
+        return this;
+    }
+    public String getLoginToken() {
+        return this.loginToken;
     }
 
     public ReportUserFbIssueRequest setOccurTime(Long occurTime) {
@@ -237,6 +273,14 @@ public class ReportUserFbIssueRequest extends TeaModel {
     }
     public String getReservedB() {
         return this.reservedB;
+    }
+
+    public ReportUserFbIssueRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public ReportUserFbIssueRequest setTelNo(String telNo) {
