@@ -18,6 +18,13 @@ public class Service extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>StartExecution</p>
+     */
+    @NameInMap("expressType")
+    public String expressType;
+
+    /**
+     * <strong>example:</strong>
      * <p>gw-xxxx</p>
      */
     @NameInMap("gatewayId")
@@ -35,6 +42,9 @@ public class Service extends TeaModel {
 
     @NameInMap("healthStatus")
     public String healthStatus;
+
+    @NameInMap("labelDetails")
+    public LabelDetail labelDetails;
 
     @NameInMap("name")
     public String name;
@@ -115,6 +125,14 @@ public class Service extends TeaModel {
         return this.createTimestamp;
     }
 
+    public Service setExpressType(String expressType) {
+        this.expressType = expressType;
+        return this;
+    }
+    public String getExpressType() {
+        return this.expressType;
+    }
+
     public Service setGatewayId(String gatewayId) {
         this.gatewayId = gatewayId;
         return this;
@@ -145,6 +163,14 @@ public class Service extends TeaModel {
     }
     public String getHealthStatus() {
         return this.healthStatus;
+    }
+
+    public Service setLabelDetails(LabelDetail labelDetails) {
+        this.labelDetails = labelDetails;
+        return this;
+    }
+    public LabelDetail getLabelDetails() {
+        return this.labelDetails;
     }
 
     public Service setName(String name) {
