@@ -1522,6 +1522,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查看表详情列表</p>
      * 
+     * @param request ListTableDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTableDetailsResponse
+     */
+    public ListTableDetailsResponse listTableDetailsWithOptions(String catalogId, String database, ListTableDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableNamePattern)) {
+            query.put("tableNamePattern", request.tableNamePattern);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTableDetails"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/table-details"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTableDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表详情列表</p>
+     * 
+     * @param request ListTableDetailsRequest
+     * @return ListTableDetailsResponse
+     */
+    public ListTableDetailsResponse listTableDetails(String catalogId, String database, ListTableDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listTableDetailsWithOptions(catalogId, database, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表详情列表</p>
+     * 
      * @param request ListTablesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
