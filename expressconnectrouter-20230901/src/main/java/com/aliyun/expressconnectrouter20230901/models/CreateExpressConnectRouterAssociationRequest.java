@@ -10,6 +10,18 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("AllowedPrefixes")
     public java.util.List<String> allowedPrefixes;
 
+    /**
+     * <p>The route prefix mode. Valid values:</p>
+     * <ul>
+     * <li><p><strong>MatchMode</strong>: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</p>
+     * </li>
+     * <li><p><strong>IncrementalMode</strong>: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</p>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MatchMode</p>
+     */
     @NameInMap("AllowedPrefixesMode")
     public String allowedPrefixesMode;
 
@@ -58,6 +70,12 @@ public class CreateExpressConnectRouterAssociationRequest extends TeaModel {
     @NameInMap("CreateAttachment")
     public Boolean createAttachment;
 
+    /**
+     * <p>The information about the associated resource. It must be 0 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 

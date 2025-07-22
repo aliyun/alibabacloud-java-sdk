@@ -4,6 +4,16 @@ package com.aliyun.expressconnectrouter20230901.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceGrantedToExpressConnectRouterRequest extends TeaModel {
+    /**
+     * <p>The type of the user account. Valid values:</p>
+     * <ul>
+     * <li><strong>sub</strong>: a Resource Access Management (RAM) user.</li>
+     * <li><strong>parent</strong>: an Alibaba Cloud account.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>OTHER</p>
+     */
     @NameInMap("CallerType")
     public String callerType;
 

@@ -231,6 +231,12 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         @NameInMap("EcrId")
         public String ecrId;
 
+        /**
+         * <p>The ID of the Alibaba Cloud account that owns the ECR to which you want to grant permissions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1456408190545060</p>
+         */
         @NameInMap("EcrOwnerAliUid")
         public String ecrOwnerAliUid;
 

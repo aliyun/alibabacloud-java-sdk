@@ -59,6 +59,12 @@ public class AttachExpressConnectRouterChildInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The description of the sub-instance. It must be 0 to 128 characters in length.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Description")
     public String description;
 

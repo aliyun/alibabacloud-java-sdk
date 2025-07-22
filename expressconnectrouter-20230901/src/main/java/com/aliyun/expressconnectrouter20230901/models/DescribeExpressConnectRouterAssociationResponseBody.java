@@ -228,6 +228,16 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         @NameInMap("AllowedPrefixes")
         public java.util.List<String> allowedPrefixes;
 
+        /**
+         * <p>The prefix route mode. Valid values:</p>
+         * <ul>
+         * <li>MatchMode</li>
+         * <li>IncrementalMode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MatchMode</p>
+         */
         @NameInMap("AllowedPrefixesMode")
         public String allowedPrefixesMode;
 
@@ -262,6 +272,12 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         @NameInMap("CenId")
         public String cenId;
 
+        /**
+         * <p>The description of the associated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("Description")
         public String description;
 

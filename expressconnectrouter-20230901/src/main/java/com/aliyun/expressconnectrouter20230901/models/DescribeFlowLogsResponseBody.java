@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowLogsResponseBody extends TeaModel {
     /**
+     * <p>The queried information about the request denial.</p>
+     * 
      * <strong>example:</strong>
      * <p>Authentication is failed for ****</p>
      */
@@ -12,6 +14,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
+     * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The dynamic error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>IllegalParamFormat.EcrId</p>
      */
@@ -26,16 +32,26 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
+     * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+     * <blockquote>
+     * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>The param format of EcrId **** is illegal.</p>
      */
     @NameInMap("DynamicMessage")
     public String dynamicMessage;
 
+    /**
+     * <p>The information about the flow logs.</p>
+     */
     @NameInMap("FlowLogs")
     public java.util.List<DescribeFlowLogsResponseBodyFlowLogs> flowLogs;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -43,6 +59,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -50,6 +68,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The returned message.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -57,6 +77,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</p>
      */
@@ -64,6 +90,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
      */
@@ -71,6 +99,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>True</strong></li>
+     * <li><strong>False</strong></li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>True</p>
      */
@@ -78,6 +112,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records that meet the query conditions.</p>
+     * 
      * <strong>example:</strong>
      * <p>11</p>
      */
@@ -187,6 +223,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     public static class DescribeFlowLogsResponseBodyFlowLogsTags extends TeaModel {
         /**
+         * <p>The key of tag N of the instance. The tag key cannot be an empty string.</p>
+         * <blockquote>
+         * <p>It can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>TagKey</p>
          */
@@ -194,6 +235,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String key;
 
         /**
+         * <p>The tag value.</p>
+         * <blockquote>
+         * <p>It can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. The tag value can be an empty string.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>TagValue</p>
          */
@@ -225,6 +271,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     public static class DescribeFlowLogsResponseBodyFlowLogs extends TeaModel {
         /**
+         * <p>The time when the flow log was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-09-21T04:20Z</p>
          */
@@ -232,6 +280,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
+         * <p>The description of the flow log.</p>
+         * 
          * <strong>example:</strong>
          * <p>myFlowlog</p>
          */
@@ -239,6 +289,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The ECR ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecr-h4cop1khw98*****</p>
          */
@@ -246,6 +298,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String ecrId;
 
         /**
+         * <p>The ID of the flow log.</p>
+         * 
          * <strong>example:</strong>
          * <p>flowlog-leypqehtgtia2*****</p>
          */
@@ -253,6 +307,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String flowLogId;
 
         /**
+         * <p>The name of the flow log.</p>
+         * 
          * <strong>example:</strong>
          * <p>myFlowlog</p>
          */
@@ -260,6 +316,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String flowLogName;
 
         /**
+         * <p>The ID of the network instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>vbr-9dpty76irpf4u15*****</p>
          */
@@ -267,6 +325,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The type of the network instance. Valid values:</p>
+         * <ul>
+         * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>VBR</p>
          */
@@ -274,6 +337,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
+         * <p>The time window for collecting log data. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><strong>60</strong></li>
+         * <li><strong>600</strong></li>
+         * </ul>
+         * <p>Default value: <strong>600</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>600</p>
          */
@@ -281,6 +351,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public Integer interval;
 
         /**
+         * <p>The Logstore that stores the captured traffic data.</p>
+         * 
          * <strong>example:</strong>
          * <p>FlowLogStore</p>
          */
@@ -288,6 +360,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
+         * <p>The name of the project that stores the captured traffic data.</p>
+         * 
          * <strong>example:</strong>
          * <p>FlowLogProject</p>
          */
@@ -295,6 +369,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String projectName;
 
         /**
+         * <p>The region ID of the flow log.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -302,6 +378,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The ID of the resource group to which the ECR belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>rg-aekzb3xwrexc4ry</p>
          */
@@ -309,6 +387,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
+         * <p>The sampling proportion. Valid values:</p>
+         * <ul>
+         * <li><strong>1:4096</strong></li>
+         * <li><strong>1:2048</strong></li>
+         * <li><strong>1:1024</strong></li>
+         * </ul>
+         * <p>Default value: <strong>1:4096</strong>.</p>
+         * 
          * <strong>example:</strong>
          * <p>1:4096</p>
          */
@@ -316,6 +402,8 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String samplingRate;
 
         /**
+         * <p>The ID of the region where Log Service is deployed.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -323,12 +411,23 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String slsRegionId;
 
         /**
+         * <p>The status of the flow log. Valid values:</p>
+         * <ul>
+         * <li><p><strong>Active</strong></p>
+         * </li>
+         * <li><p><strong>Inactive</strong></p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Active</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The tag key.</p>
+         */
         @NameInMap("Tags")
         public java.util.List<DescribeFlowLogsResponseBodyFlowLogsTags> tags;
 

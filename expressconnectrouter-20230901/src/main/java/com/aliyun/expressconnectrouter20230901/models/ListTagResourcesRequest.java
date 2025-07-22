@@ -44,8 +44,8 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
-     * <p>You can bind up to 20 tags to an ECR.</p>
+     * <p>The tag.</p>
+     * <p>You can specify at most 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;

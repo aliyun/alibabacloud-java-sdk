@@ -49,7 +49,7 @@ public class DescribeExpressConnectRouterRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the ECR.</p>
+     * <p>The name of the ECR. The name must be 0 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

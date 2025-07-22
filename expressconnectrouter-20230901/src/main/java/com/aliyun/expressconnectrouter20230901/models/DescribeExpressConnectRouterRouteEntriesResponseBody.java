@@ -93,7 +93,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
     public String requestId;
 
     /**
-     * <p>The route entries.</p>
+     * <p>The routes.</p>
      */
     @NameInMap("RouteEntriesList")
     public java.util.List<DescribeExpressConnectRouterRouteEntriesResponseBodyRouteEntriesList> routeEntriesList;
@@ -249,6 +249,17 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         @NameInMap("DestinationCidrBlock")
         public String destinationCidrBlock;
 
+        /**
+         * <p>The MED value of the BGP route, which is used between the ECR and the transit router.</p>
+         * <ul>
+         * <li>You can set the MED value to 2000. In this case, the transit router and the ECR are used as default paths.</li>
+         * <li>If a non-default path is used, the MED value is empty.</li>
+         * <li>You can set the MED value to 2000 only for one object associated with a transit router of a CEN instance.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("Med")
         public Long med;
 

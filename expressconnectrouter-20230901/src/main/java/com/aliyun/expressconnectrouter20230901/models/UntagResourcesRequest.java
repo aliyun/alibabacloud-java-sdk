@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. This parameter is valid only when the TagKey.N parameter is not specified. Valid values:</p>
+     * <p>Specifies whether to remove all tags. This parameter is valid only when the <strong>TagKey</strong> parameter is not specified. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
      * </ul>
-     * <p>Default value: false.</p>
+     * <blockquote>
+     * <p> You must specify one of <strong>TagKey</strong> and <strong>All</strong>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>false</p>

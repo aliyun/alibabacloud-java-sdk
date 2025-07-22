@@ -29,6 +29,9 @@ public class CreateExpressConnectRouterRequest extends TeaModel {
 
     /**
      * <p>The description of the ECR.</p>
+     * <blockquote>
+     * <p> The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -51,6 +54,9 @@ public class CreateExpressConnectRouterRequest extends TeaModel {
 
     /**
      * <p>The name of the ECR.</p>
+     * <blockquote>
+     * <p> The name must be 0 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>test</p>
