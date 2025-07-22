@@ -157,6 +157,9 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         @NameInMap("CostCenterUpdateTime")
         public String costCenterUpdateTime;
 
+        @NameInMap("InstanceId")
+        public String instanceId;
+
         /**
          * <strong>example:</strong>
          * <p>1234567812345678</p>
@@ -325,6 +328,14 @@ public class QueryCostCenterResourceResponseBody extends TeaModel {
         }
         public String getCostCenterUpdateTime() {
             return this.costCenterUpdateTime;
+        }
+
+        public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public QueryCostCenterResourceResponseBodyCostCenterResourceDtoList setOwnerAccountId(Long ownerAccountId) {
