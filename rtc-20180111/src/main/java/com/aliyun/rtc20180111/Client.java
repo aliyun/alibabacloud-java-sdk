@@ -5600,7 +5600,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.layoutSpecifiedUsersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.layoutSpecifiedUsers, "LayoutSpecifiedUsers", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.singleStreamingRecord)) {
+            request.singleStreamingRecordShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.singleStreamingRecord, "SingleStreamingRecord", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.annotation)) {
+            query.put("Annotation", request.annotation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
@@ -5637,6 +5645,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Panes", request.panes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.recordMode)) {
+            query.put("RecordMode", request.recordMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionColor)) {
             query.put("RegionColor", request.regionColor);
         }
@@ -5647,6 +5659,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.showDefaultBackgroundOnMute)) {
             query.put("ShowDefaultBackgroundOnMute", request.showDefaultBackgroundOnMute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.singleStreamingRecordShrink)) {
+            query.put("SingleStreamingRecord", request.singleStreamingRecordShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWithoutChannel)) {
+            query.put("StartWithoutChannel", request.startWithoutChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startWithoutChannelWaitTime)) {
+            query.put("StartWithoutChannelWaitTime", request.startWithoutChannelWaitTime);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.storageConfig)) {
@@ -5990,6 +6014,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.annotation)) {
+            query.put("Annotation", request.annotation);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
@@ -6036,6 +6064,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.showDefaultBackgroundOnMute)) {
             query.put("ShowDefaultBackgroundOnMute", request.showDefaultBackgroundOnMute);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specMixedUserList)) {
+            query.put("SpecMixedUserList", request.specMixedUserList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startWithoutChannel)) {
@@ -7108,6 +7140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionColor)) {
             query.put("RegionColor", request.regionColor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.specMixedUserList)) {
+            query.put("SpecMixedUserList", request.specMixedUserList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {

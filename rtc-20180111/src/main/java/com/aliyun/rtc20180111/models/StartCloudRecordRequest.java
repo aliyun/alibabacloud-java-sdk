@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartCloudRecordRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>disable</p>
+     */
+    @NameInMap("Annotation")
+    public String annotation;
+
+    /**
      * <p>appId</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +59,9 @@ public class StartCloudRecordRequest extends TeaModel {
     @NameInMap("Panes")
     public java.util.List<StartCloudRecordRequestPanes> panes;
 
+    @NameInMap("RecordMode")
+    public Integer recordMode;
+
     @NameInMap("RegionColor")
     public StartCloudRecordRequestRegionColor regionColor;
 
@@ -60,6 +70,19 @@ public class StartCloudRecordRequest extends TeaModel {
 
     @NameInMap("ShowDefaultBackgroundOnMute")
     public Boolean showDefaultBackgroundOnMute;
+
+    @NameInMap("SingleStreamingRecord")
+    public StartCloudRecordRequestSingleStreamingRecord singleStreamingRecord;
+
+    @NameInMap("StartWithoutChannel")
+    public Boolean startWithoutChannel;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("StartWithoutChannelWaitTime")
+    public Integer startWithoutChannelWaitTime;
 
     /**
      * <p>storageConfig</p>
@@ -96,6 +119,14 @@ public class StartCloudRecordRequest extends TeaModel {
     public static StartCloudRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         StartCloudRecordRequest self = new StartCloudRecordRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartCloudRecordRequest setAnnotation(String annotation) {
+        this.annotation = annotation;
+        return this;
+    }
+    public String getAnnotation() {
+        return this.annotation;
     }
 
     public StartCloudRecordRequest setAppId(String appId) {
@@ -170,6 +201,14 @@ public class StartCloudRecordRequest extends TeaModel {
         return this.panes;
     }
 
+    public StartCloudRecordRequest setRecordMode(Integer recordMode) {
+        this.recordMode = recordMode;
+        return this;
+    }
+    public Integer getRecordMode() {
+        return this.recordMode;
+    }
+
     public StartCloudRecordRequest setRegionColor(StartCloudRecordRequestRegionColor regionColor) {
         this.regionColor = regionColor;
         return this;
@@ -192,6 +231,30 @@ public class StartCloudRecordRequest extends TeaModel {
     }
     public Boolean getShowDefaultBackgroundOnMute() {
         return this.showDefaultBackgroundOnMute;
+    }
+
+    public StartCloudRecordRequest setSingleStreamingRecord(StartCloudRecordRequestSingleStreamingRecord singleStreamingRecord) {
+        this.singleStreamingRecord = singleStreamingRecord;
+        return this;
+    }
+    public StartCloudRecordRequestSingleStreamingRecord getSingleStreamingRecord() {
+        return this.singleStreamingRecord;
+    }
+
+    public StartCloudRecordRequest setStartWithoutChannel(Boolean startWithoutChannel) {
+        this.startWithoutChannel = startWithoutChannel;
+        return this;
+    }
+    public Boolean getStartWithoutChannel() {
+        return this.startWithoutChannel;
+    }
+
+    public StartCloudRecordRequest setStartWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
+        this.startWithoutChannelWaitTime = startWithoutChannelWaitTime;
+        return this;
+    }
+    public Integer getStartWithoutChannelWaitTime() {
+        return this.startWithoutChannelWaitTime;
     }
 
     public StartCloudRecordRequest setStorageConfig(StartCloudRecordRequestStorageConfig storageConfig) {
@@ -1708,6 +1771,161 @@ public class StartCloudRecordRequest extends TeaModel {
         }
         public Integer getR() {
             return this.r;
+        }
+
+    }
+
+    public static class StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Ids")
+        public java.util.List<String> ids;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("StreamType")
+        public String streamType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>white</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams self = new StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams setIds(java.util.List<String> ids) {
+            this.ids = ids;
+            return this;
+        }
+        public java.util.List<String> getIds() {
+            return this.ids;
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams setStreamType(String streamType) {
+            this.streamType = streamType;
+            return this;
+        }
+        public String getStreamType() {
+            return this.streamType;
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio extends TeaModel {
+        @NameInMap("Bitrate")
+        public Integer bitrate;
+
+        @NameInMap("Codec")
+        public String codec;
+
+        @NameInMap("SampleRate")
+        public Integer sampleRate;
+
+        public static StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio self = new StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio setBitrate(Integer bitrate) {
+            this.bitrate = bitrate;
+            return this;
+        }
+        public Integer getBitrate() {
+            return this.bitrate;
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio setCodec(String codec) {
+            this.codec = codec;
+            return this;
+        }
+        public String getCodec() {
+            return this.codec;
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio setSampleRate(Integer sampleRate) {
+            this.sampleRate = sampleRate;
+            return this;
+        }
+        public Integer getSampleRate() {
+            return this.sampleRate;
+        }
+
+    }
+
+    public static class StartCloudRecordRequestSingleStreamingRecordTranscodingParameters extends TeaModel {
+        @NameInMap("Audio")
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio audio;
+
+        @NameInMap("Container")
+        public String container;
+
+        public static StartCloudRecordRequestSingleStreamingRecordTranscodingParameters build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestSingleStreamingRecordTranscodingParameters self = new StartCloudRecordRequestSingleStreamingRecordTranscodingParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParameters setAudio(StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio audio) {
+            this.audio = audio;
+            return this;
+        }
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParametersAudio getAudio() {
+            return this.audio;
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParameters setContainer(String container) {
+            this.container = container;
+            return this;
+        }
+        public String getContainer() {
+            return this.container;
+        }
+
+    }
+
+    public static class StartCloudRecordRequestSingleStreamingRecord extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("SpecifiedStreams")
+        public java.util.List<StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams> specifiedStreams;
+
+        @NameInMap("TranscodingParameters")
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParameters transcodingParameters;
+
+        public static StartCloudRecordRequestSingleStreamingRecord build(java.util.Map<String, ?> map) throws Exception {
+            StartCloudRecordRequestSingleStreamingRecord self = new StartCloudRecordRequestSingleStreamingRecord();
+            return TeaModel.build(map, self);
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecord setSpecifiedStreams(java.util.List<StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams> specifiedStreams) {
+            this.specifiedStreams = specifiedStreams;
+            return this;
+        }
+        public java.util.List<StartCloudRecordRequestSingleStreamingRecordSpecifiedStreams> getSpecifiedStreams() {
+            return this.specifiedStreams;
+        }
+
+        public StartCloudRecordRequestSingleStreamingRecord setTranscodingParameters(StartCloudRecordRequestSingleStreamingRecordTranscodingParameters transcodingParameters) {
+            this.transcodingParameters = transcodingParameters;
+            return this;
+        }
+        public StartCloudRecordRequestSingleStreamingRecordTranscodingParameters getTranscodingParameters() {
+            return this.transcodingParameters;
         }
 
     }

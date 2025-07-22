@@ -50,6 +50,9 @@ public class UpdateStreamingOutRequest extends TeaModel {
     @NameInMap("RegionColor")
     public UpdateStreamingOutRequestRegionColor regionColor;
 
+    @NameInMap("SpecMixedUserList")
+    public java.util.List<String> specMixedUserList;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -154,6 +157,14 @@ public class UpdateStreamingOutRequest extends TeaModel {
     }
     public UpdateStreamingOutRequestRegionColor getRegionColor() {
         return this.regionColor;
+    }
+
+    public UpdateStreamingOutRequest setSpecMixedUserList(java.util.List<String> specMixedUserList) {
+        this.specMixedUserList = specMixedUserList;
+        return this;
+    }
+    public java.util.List<String> getSpecMixedUserList() {
+        return this.specMixedUserList;
     }
 
     public UpdateStreamingOutRequest setTaskId(String taskId) {

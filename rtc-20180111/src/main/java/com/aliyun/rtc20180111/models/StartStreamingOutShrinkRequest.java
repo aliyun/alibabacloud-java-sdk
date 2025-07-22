@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartStreamingOutShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>disable</p>
+     */
+    @NameInMap("Annotation")
+    public String annotation;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,6 +63,9 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     @NameInMap("ShowDefaultBackgroundOnMute")
     public Boolean showDefaultBackgroundOnMute;
 
+    @NameInMap("SpecMixedUserList")
+    public java.util.List<String> specMixedUserList;
+
     @NameInMap("StartWithoutChannel")
     public Boolean startWithoutChannel;
 
@@ -100,6 +110,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     public static StartStreamingOutShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         StartStreamingOutShrinkRequest self = new StartStreamingOutShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartStreamingOutShrinkRequest setAnnotation(String annotation) {
+        this.annotation = annotation;
+        return this;
+    }
+    public String getAnnotation() {
+        return this.annotation;
     }
 
     public StartStreamingOutShrinkRequest setAppId(String appId) {
@@ -196,6 +214,14 @@ public class StartStreamingOutShrinkRequest extends TeaModel {
     }
     public Boolean getShowDefaultBackgroundOnMute() {
         return this.showDefaultBackgroundOnMute;
+    }
+
+    public StartStreamingOutShrinkRequest setSpecMixedUserList(java.util.List<String> specMixedUserList) {
+        this.specMixedUserList = specMixedUserList;
+        return this;
+    }
+    public java.util.List<String> getSpecMixedUserList() {
+        return this.specMixedUserList;
     }
 
     public StartStreamingOutShrinkRequest setStartWithoutChannel(Boolean startWithoutChannel) {

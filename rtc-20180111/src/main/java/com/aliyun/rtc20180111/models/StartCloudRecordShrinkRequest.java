@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartCloudRecordShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>disable</p>
+     */
+    @NameInMap("Annotation")
+    public String annotation;
+
+    /**
      * <p>appId</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,6 +59,9 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     @NameInMap("Panes")
     public java.util.List<StartCloudRecordShrinkRequestPanes> panes;
 
+    @NameInMap("RecordMode")
+    public Integer recordMode;
+
     @NameInMap("RegionColor")
     public StartCloudRecordShrinkRequestRegionColor regionColor;
 
@@ -60,6 +70,19 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
 
     @NameInMap("ShowDefaultBackgroundOnMute")
     public Boolean showDefaultBackgroundOnMute;
+
+    @NameInMap("SingleStreamingRecord")
+    public String singleStreamingRecordShrink;
+
+    @NameInMap("StartWithoutChannel")
+    public Boolean startWithoutChannel;
+
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
+    @NameInMap("StartWithoutChannelWaitTime")
+    public Integer startWithoutChannelWaitTime;
 
     /**
      * <p>storageConfig</p>
@@ -96,6 +119,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     public static StartCloudRecordShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         StartCloudRecordShrinkRequest self = new StartCloudRecordShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public StartCloudRecordShrinkRequest setAnnotation(String annotation) {
+        this.annotation = annotation;
+        return this;
+    }
+    public String getAnnotation() {
+        return this.annotation;
     }
 
     public StartCloudRecordShrinkRequest setAppId(String appId) {
@@ -170,6 +201,14 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
         return this.panes;
     }
 
+    public StartCloudRecordShrinkRequest setRecordMode(Integer recordMode) {
+        this.recordMode = recordMode;
+        return this;
+    }
+    public Integer getRecordMode() {
+        return this.recordMode;
+    }
+
     public StartCloudRecordShrinkRequest setRegionColor(StartCloudRecordShrinkRequestRegionColor regionColor) {
         this.regionColor = regionColor;
         return this;
@@ -192,6 +231,30 @@ public class StartCloudRecordShrinkRequest extends TeaModel {
     }
     public Boolean getShowDefaultBackgroundOnMute() {
         return this.showDefaultBackgroundOnMute;
+    }
+
+    public StartCloudRecordShrinkRequest setSingleStreamingRecordShrink(String singleStreamingRecordShrink) {
+        this.singleStreamingRecordShrink = singleStreamingRecordShrink;
+        return this;
+    }
+    public String getSingleStreamingRecordShrink() {
+        return this.singleStreamingRecordShrink;
+    }
+
+    public StartCloudRecordShrinkRequest setStartWithoutChannel(Boolean startWithoutChannel) {
+        this.startWithoutChannel = startWithoutChannel;
+        return this;
+    }
+    public Boolean getStartWithoutChannel() {
+        return this.startWithoutChannel;
+    }
+
+    public StartCloudRecordShrinkRequest setStartWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
+        this.startWithoutChannelWaitTime = startWithoutChannelWaitTime;
+        return this;
+    }
+    public Integer getStartWithoutChannelWaitTime() {
+        return this.startWithoutChannelWaitTime;
     }
 
     public StartCloudRecordShrinkRequest setStorageConfig(StartCloudRecordShrinkRequestStorageConfig storageConfig) {
