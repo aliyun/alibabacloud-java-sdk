@@ -116,6 +116,9 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         @NameInMap("RegDate")
         public String regDate;
 
+        @NameInMap("Registrar")
+        public String registrar;
+
         @NameInMap("RenewPrice")
         public Double renewPrice;
 
@@ -382,6 +385,14 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         }
         public String getRegDate() {
             return this.regDate;
+        }
+
+        public QueryExportDomainExpireSnatchsResponseBodyData setRegistrar(String registrar) {
+            this.registrar = registrar;
+            return this;
+        }
+        public String getRegistrar() {
+            return this.registrar;
         }
 
         public QueryExportDomainExpireSnatchsResponseBodyData setRenewPrice(Double renewPrice) {
