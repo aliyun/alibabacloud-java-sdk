@@ -95,7 +95,6 @@ public class CreateNetworkPackageRequest extends TeaModel {
 
     /**
      * <p>The office network ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-363353****</p>
