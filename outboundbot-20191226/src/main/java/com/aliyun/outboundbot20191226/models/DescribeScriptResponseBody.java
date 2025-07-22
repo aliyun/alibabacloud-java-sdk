@@ -124,6 +124,9 @@ public class DescribeScriptResponseBody extends TeaModel {
         @NameInMap("FcRegion")
         public String fcRegion;
 
+        @NameInMap("SupportBeebotPrompts")
+        public Boolean supportBeebotPrompts;
+
         public static DescribeScriptResponseBodyScriptNluProfile build(java.util.Map<String, ?> map) throws Exception {
             DescribeScriptResponseBodyScriptNluProfile self = new DescribeScriptResponseBodyScriptNluProfile();
             return TeaModel.build(map, self);
@@ -151,6 +154,14 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
         public String getFcRegion() {
             return this.fcRegion;
+        }
+
+        public DescribeScriptResponseBodyScriptNluProfile setSupportBeebotPrompts(Boolean supportBeebotPrompts) {
+            this.supportBeebotPrompts = supportBeebotPrompts;
+            return this;
+        }
+        public Boolean getSupportBeebotPrompts() {
+            return this.supportBeebotPrompts;
         }
 
     }

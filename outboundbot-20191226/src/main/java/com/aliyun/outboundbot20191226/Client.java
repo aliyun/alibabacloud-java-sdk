@@ -143,6 +143,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>异步创建外呼任务</p>
+     * 
+     * @param tmpReq AssignJobsAsyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AssignJobsAsyncResponse
+     */
+    public AssignJobsAsyncResponse assignJobsAsyncWithOptions(AssignJobsAsyncRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AssignJobsAsyncShrinkRequest request = new AssignJobsAsyncShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.callingNumber)) {
+            request.callingNumberShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.callingNumber, "CallingNumber", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobsJson)) {
+            request.jobsJsonShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobsJson, "JobsJson", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.callingNumberShrink)) {
+            body.put("CallingNumber", request.callingNumberShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobGroupId)) {
+            body.put("JobGroupId", request.jobGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobsJsonShrink)) {
+            body.put("JobsJson", request.jobsJsonShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyJson)) {
+            body.put("StrategyJson", request.strategyJson);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AssignJobsAsync"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AssignJobsAsyncResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>异步创建外呼任务</p>
+     * 
+     * @param request AssignJobsAsyncRequest
+     * @return AssignJobsAsyncResponse
+     */
+    public AssignJobsAsyncResponse assignJobsAsync(AssignJobsAsyncRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.assignJobsAsyncWithOptions(request, runtime);
+    }
+
+    /**
      * @param request CancelJobsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CancelJobsResponse
@@ -3918,6 +3988,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAsrServerInfoResponse getAsrServerInfo(GetAsrServerInfoRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAsrServerInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取异步外呼任务上传结果</p>
+     * 
+     * @param request GetAssignJobsAsyncResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAssignJobsAsyncResultResponse
+     */
+    public GetAssignJobsAsyncResultResponse getAssignJobsAsyncResultWithOptions(GetAssignJobsAsyncResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.asyncTaskId)) {
+            query.put("AsyncTaskId", request.asyncTaskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAssignJobsAsyncResult"),
+            new TeaPair("version", "2019-12-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAssignJobsAsyncResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取异步外呼任务上传结果</p>
+     * 
+     * @param request GetAssignJobsAsyncResultRequest
+     * @return GetAssignJobsAsyncResultResponse
+     */
+    public GetAssignJobsAsyncResultResponse getAssignJobsAsyncResult(GetAssignJobsAsyncResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getAssignJobsAsyncResultWithOptions(request, runtime);
     }
 
     /**
