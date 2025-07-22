@@ -171,6 +171,9 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         @NameInMap("LogicRead")
         public Long logicRead;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
         /**
          * <p>The execution time. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
@@ -342,6 +345,14 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         }
         public Long getLogicRead() {
             return this.logicRead;
+        }
+
+        public GetDasSQLLogHotDataResponseBodyDataList setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         public GetDasSQLLogHotDataResponseBodyDataList setOriginTime(String originTime) {
