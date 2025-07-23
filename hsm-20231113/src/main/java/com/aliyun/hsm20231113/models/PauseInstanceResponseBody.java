@@ -3,7 +3,7 @@ package com.aliyun.hsm20231113.models;
 
 import com.aliyun.tea.*;
 
-public class ConfigClusterSubnetResponseBody extends TeaModel {
+public class PauseInstanceResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
@@ -13,12 +13,12 @@ public class ConfigClusterSubnetResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ConfigClusterSubnetResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ConfigClusterSubnetResponseBody self = new ConfigClusterSubnetResponseBody();
+    public static PauseInstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        PauseInstanceResponseBody self = new PauseInstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ConfigClusterSubnetResponseBody setRequestId(String requestId) {
+    public PauseInstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

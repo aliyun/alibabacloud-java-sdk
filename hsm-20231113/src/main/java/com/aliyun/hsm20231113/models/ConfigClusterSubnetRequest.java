@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConfigClusterSubnetRequest extends TeaModel {
     /**
+     * <p>The ID of the cluster. You can call the ListCluster operation to obtain cluster IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class ConfigClusterSubnetRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The ID of the region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,12 +25,14 @@ public class ConfigClusterSubnetRequest extends TeaModel {
     public String regionId;
 
     /**
+     * <p>A list of vSwitches that are associated with the cluster. Note: You must include all vSwitches that you want to associate with the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
     /**
+     * <p>The ID of the virtual private cloud (VPC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

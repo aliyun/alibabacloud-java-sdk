@@ -3,22 +3,22 @@ package com.aliyun.hsm20231113.models;
 
 import com.aliyun.tea.*;
 
-public class ConfigClusterSubnetResponseBody extends TeaModel {
+public class ConfigAuditLogResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>4C467B38-3910-447D-87BC-AC049366F216</p>
+     * <p>42B118FB-16A6-56FB-B877-D58637EEC6AF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ConfigClusterSubnetResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ConfigClusterSubnetResponseBody self = new ConfigClusterSubnetResponseBody();
+    public static ConfigAuditLogResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ConfigAuditLogResponseBody self = new ConfigAuditLogResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ConfigClusterSubnetResponseBody setRequestId(String requestId) {
+    public ConfigAuditLogResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
