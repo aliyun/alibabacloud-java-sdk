@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCloudAccessResponseBody extends TeaModel {
     /**
-     * <p>The list of the AccessKey pairs.</p>
+     * <p>The query results.</p>
      */
     @NameInMap("CloudAccessList")
     public java.util.List<ListCloudAccessResponseBodyCloudAccessList> cloudAccessList;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The default value is the current page. If CurrentPage is not specified, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of revoked certificates per page. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. If ShowSize is not specified, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class ListCloudAccessResponseBody extends TeaModel {
 
     public static class ListCloudAccessResponseBodyCloudAccessList extends TeaModel {
         /**
-         * <p>The AccessKey ID used to access the cloud service.</p>
+         * <p>The ID of the primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>888</p>
@@ -111,16 +111,16 @@ public class ListCloudAccessResponseBody extends TeaModel {
         public String cloudName;
 
         /**
-         * <p>The AccessKey secret used to access the cloud service.</p>
+         * <p>The AccessKey ID that is used to access cloud resources.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4G5KAZCJQqdwPBAXXXX</p>
+         * <p>AAAqdwPBA****</p>
          */
         @NameInMap("SecretId")
         public String secretId;
 
         /**
-         * <p>The status of the service.</p>
+         * <p>The service status. The value normal indicates that the service runs as expected.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

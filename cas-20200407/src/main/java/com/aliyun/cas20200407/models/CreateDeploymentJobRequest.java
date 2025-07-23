@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentJobRequest extends TeaModel {
     /**
-     * <p>The certificate IDs.</p>
+     * <p>The ID of the certificate. Separate multiple certificate IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the IDs of certificates from the <strong>CertificateId</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String certIds;
 
     /**
-     * <p>The contact IDs.</p>
+     * <p>The ID of the contact. Separate multiple contact IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712221.html">ListContact</a> operation to obtain the IDs of contacts from the <strong>ContactId</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,11 +25,11 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String contactIds;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The type of the deployment task.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>cloud</li>
-     * <li>user</li>
+     * <li>cloud: multi-cloud deployment task.</li>
+     * <li>user: cloud service deployment task. This type of task does not support cloud servers.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -50,7 +50,7 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The resource IDs.</p>
+     * <p>The ID of the cloud resource. Separate multiple resource IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a> operation to obtain the IDs of cloud resources from the <strong>Id</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>The time when the task was scheduled.</p>
+     * <p>The time when the task starts. The value is a UNIX timestamp. If you do not specify this parameter, the system immediately starts the task after the task is in the pending state.</p>
      * 
      * <strong>example:</strong>
      * <p>1706613560008</p>

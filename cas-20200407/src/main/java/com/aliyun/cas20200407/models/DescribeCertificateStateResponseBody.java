@@ -4,6 +4,9 @@ package com.aliyun.cas20200407.models;
 import com.aliyun.tea.*;
 
 public class DescribeCertificateStateResponseBody extends TeaModel {
+    @NameInMap("CertId")
+    public String certId;
+
     /**
      * <p>The content of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see <a href="https://help.aliyun.com/document_detail/42214.html">What formats are used for mainstream digital certificates?</a></p>
      * <blockquote>
@@ -161,6 +164,14 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     public static DescribeCertificateStateResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeCertificateStateResponseBody self = new DescribeCertificateStateResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeCertificateStateResponseBody setCertId(String certId) {
+        this.certId = certId;
+        return this;
+    }
+    public String getCertId() {
+        return this.certId;
     }
 
     public DescribeCertificateStateResponseBody setCertificate(String certificate) {
