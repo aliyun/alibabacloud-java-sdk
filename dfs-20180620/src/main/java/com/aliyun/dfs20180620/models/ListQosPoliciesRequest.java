@@ -16,6 +16,12 @@ public class ListQosPoliciesRequest extends TeaModel {
     @NameInMap("InputRegionId")
     public String inputRegionId;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     public static ListQosPoliciesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQosPoliciesRequest self = new ListQosPoliciesRequest();
         return TeaModel.build(map, self);
@@ -43,6 +49,22 @@ public class ListQosPoliciesRequest extends TeaModel {
     }
     public String getInputRegionId() {
         return this.inputRegionId;
+    }
+
+    public ListQosPoliciesRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListQosPoliciesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
 }

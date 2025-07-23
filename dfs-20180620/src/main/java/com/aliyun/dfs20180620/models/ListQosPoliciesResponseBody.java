@@ -4,6 +4,12 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class ListQosPoliciesResponseBody extends TeaModel {
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("QosPolicies")
     public java.util.List<ListQosPoliciesResponseBodyQosPolicies> qosPolicies;
 
@@ -13,6 +19,22 @@ public class ListQosPoliciesResponseBody extends TeaModel {
     public static ListQosPoliciesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListQosPoliciesResponseBody self = new ListQosPoliciesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListQosPoliciesResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListQosPoliciesResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListQosPoliciesResponseBody setQosPolicies(java.util.List<ListQosPoliciesResponseBodyQosPolicies> qosPolicies) {
@@ -55,6 +77,9 @@ public class ListQosPoliciesResponseBody extends TeaModel {
 
         @NameInMap("QosPolicyId")
         public String qosPolicyId;
+
+        @NameInMap("ReqTags")
+        public String reqTags;
 
         @NameInMap("ZoneIds")
         public String zoneIds;
@@ -126,6 +151,14 @@ public class ListQosPoliciesResponseBody extends TeaModel {
         }
         public String getQosPolicyId() {
             return this.qosPolicyId;
+        }
+
+        public ListQosPoliciesResponseBodyQosPolicies setReqTags(String reqTags) {
+            this.reqTags = reqTags;
+            return this;
+        }
+        public String getReqTags() {
+            return this.reqTags;
         }
 
         public ListQosPoliciesResponseBodyQosPolicies setZoneIds(String zoneIds) {

@@ -4,6 +4,12 @@ package com.aliyun.dfs20180620.models;
 import com.aliyun.tea.*;
 
 public class DeleteQosPolicyRequest extends TeaModel {
+    @NameInMap("FederationId")
+    public String federationId;
+
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -19,6 +25,22 @@ public class DeleteQosPolicyRequest extends TeaModel {
     public static DeleteQosPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteQosPolicyRequest self = new DeleteQosPolicyRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteQosPolicyRequest setFederationId(String federationId) {
+        this.federationId = federationId;
+        return this;
+    }
+    public String getFederationId() {
+        return this.federationId;
+    }
+
+    public DeleteQosPolicyRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public DeleteQosPolicyRequest setInputRegionId(String inputRegionId) {

@@ -502,6 +502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.flowIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.flowIds, "FlowIds", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.reqTags)) {
+            request.reqTagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.reqTags, "ReqTags", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.zoneIds)) {
             request.zoneIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.zoneIds, "ZoneIds", "json");
         }
@@ -537,6 +541,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxMetaQps)) {
             query.put("MaxMetaQps", request.maxMetaQps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reqTagsShrink)) {
+            query.put("ReqTags", request.reqTagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.zoneIdsShrink)) {
@@ -861,6 +869,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteQosPolicyResponse deleteQosPolicyWithOptions(DeleteQosPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.federationId)) {
+            query.put("FederationId", request.federationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
             query.put("InputRegionId", request.inputRegionId);
         }
@@ -1583,8 +1599,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FederationId", request.federationId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
             query.put("InputRegionId", request.inputRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1757,6 +1785,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
             query.put("InputRegionId", request.inputRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2073,6 +2109,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ModifyQosPolicy</p>
+     * 
      * @param request ModifyQosPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyQosPolicyResponse
@@ -2082,6 +2121,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.federationId)) {
+            query.put("FederationId", request.federationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileSystemId)) {
+            query.put("FileSystemId", request.fileSystemId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.inputRegionId)) {
@@ -2122,6 +2169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ModifyQosPolicy</p>
+     * 
      * @param request ModifyQosPolicyRequest
      * @return ModifyQosPolicyResponse
      */

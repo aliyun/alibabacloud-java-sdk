@@ -7,6 +7,12 @@ public class ListFederationsResponseBody extends TeaModel {
     @NameInMap("Federations")
     public java.util.List<ListFederationsResponseBodyFederations> federations;
 
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
     @NameInMap("RequestId")
     public String requestId;
 
@@ -21,6 +27,22 @@ public class ListFederationsResponseBody extends TeaModel {
     }
     public java.util.List<ListFederationsResponseBodyFederations> getFederations() {
         return this.federations;
+    }
+
+    public ListFederationsResponseBody setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public ListFederationsResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public ListFederationsResponseBody setRequestId(String requestId) {

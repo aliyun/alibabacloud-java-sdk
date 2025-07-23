@@ -31,6 +31,9 @@ public class CreateQosPolicyRequest extends TeaModel {
     @NameInMap("MaxMetaQps")
     public Long maxMetaQps;
 
+    @NameInMap("ReqTags")
+    public java.util.List<String> reqTags;
+
     @NameInMap("ZoneIds")
     public java.util.List<String> zoneIds;
 
@@ -101,6 +104,14 @@ public class CreateQosPolicyRequest extends TeaModel {
     }
     public Long getMaxMetaQps() {
         return this.maxMetaQps;
+    }
+
+    public CreateQosPolicyRequest setReqTags(java.util.List<String> reqTags) {
+        this.reqTags = reqTags;
+        return this;
+    }
+    public java.util.List<String> getReqTags() {
+        return this.reqTags;
     }
 
     public CreateQosPolicyRequest setZoneIds(java.util.List<String> zoneIds) {

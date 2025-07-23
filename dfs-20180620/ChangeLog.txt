@@ -1,3 +1,21 @@
+2025-07-23 Version: 2.1.1
+- Update API CreateQosPolicy: add request parameters ReqTags.
+- Update API DeleteQosPolicy: add request parameters FederationId.
+- Update API DeleteQosPolicy: add request parameters FileSystemId.
+- Update API ListFederations: add request parameters FileSystemId.
+- Update API ListFederations: add request parameters MaxResults.
+- Update API ListFederations: add request parameters NextToken.
+- Update API ListFederations: add response parameters Body.MaxResults.
+- Update API ListFederations: add response parameters Body.NextToken.
+- Update API ListQosPolicies: add request parameters MaxResults.
+- Update API ListQosPolicies: add request parameters NextToken.
+- Update API ListQosPolicies: add response parameters Body.MaxResults.
+- Update API ListQosPolicies: add response parameters Body.NextToken.
+- Update API ListQosPolicies: add response parameters Body.QosPolicies.$.ReqTags.
+- Update API ModifyQosPolicy: add request parameters FederationId.
+- Update API ModifyQosPolicy: add request parameters FileSystemId.
+
+
 2025-07-08 Version: 2.1.0
 - Support API AttachVscToMountPoints.
 - Support API DescribeMountPointsVscAttachInfo.

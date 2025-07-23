@@ -7,6 +7,12 @@ public class ModifyQosPolicyRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("FederationId")
+    public String federationId;
+
+    @NameInMap("FileSystemId")
+    public String fileSystemId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -39,6 +45,22 @@ public class ModifyQosPolicyRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public ModifyQosPolicyRequest setFederationId(String federationId) {
+        this.federationId = federationId;
+        return this;
+    }
+    public String getFederationId() {
+        return this.federationId;
+    }
+
+    public ModifyQosPolicyRequest setFileSystemId(String fileSystemId) {
+        this.fileSystemId = fileSystemId;
+        return this;
+    }
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     public ModifyQosPolicyRequest setInputRegionId(String inputRegionId) {

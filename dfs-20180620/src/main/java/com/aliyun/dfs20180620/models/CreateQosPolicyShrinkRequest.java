@@ -31,6 +31,9 @@ public class CreateQosPolicyShrinkRequest extends TeaModel {
     @NameInMap("MaxMetaQps")
     public Long maxMetaQps;
 
+    @NameInMap("ReqTags")
+    public String reqTagsShrink;
+
     @NameInMap("ZoneIds")
     public String zoneIdsShrink;
 
@@ -101,6 +104,14 @@ public class CreateQosPolicyShrinkRequest extends TeaModel {
     }
     public Long getMaxMetaQps() {
         return this.maxMetaQps;
+    }
+
+    public CreateQosPolicyShrinkRequest setReqTagsShrink(String reqTagsShrink) {
+        this.reqTagsShrink = reqTagsShrink;
+        return this;
+    }
+    public String getReqTagsShrink() {
+        return this.reqTagsShrink;
     }
 
     public CreateQosPolicyShrinkRequest setZoneIdsShrink(String zoneIdsShrink) {
