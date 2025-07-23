@@ -7,6 +7,9 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("checkAfterDataComplete")
     public Boolean checkAfterDataComplete;
 
+    @NameInMap("dimensions")
+    public java.util.List<java.util.Map<String, String>> dimensions;
+
     @NameInMap("duration")
     public Long duration;
 
@@ -19,11 +22,20 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("groupFieldList")
     public java.util.List<String> groupFieldList;
 
+    @NameInMap("groupId")
+    public String groupId;
+
     @NameInMap("groupType")
     public String groupType;
 
+    @NameInMap("namespace")
+    public String namespace;
+
     @NameInMap("queries")
     public java.util.List<AlertRuleQueryQueries> queries;
+
+    @NameInMap("relationType")
+    public String relationType;
 
     @NameInMap("secondJoin")
     public AlertRuleSlsQueryJoin secondJoin;
@@ -46,6 +58,14 @@ public class AlertRuleQuery extends TeaModel {
     }
     public Boolean getCheckAfterDataComplete() {
         return this.checkAfterDataComplete;
+    }
+
+    public AlertRuleQuery setDimensions(java.util.List<java.util.Map<String, String>> dimensions) {
+        this.dimensions = dimensions;
+        return this;
+    }
+    public java.util.List<java.util.Map<String, String>> getDimensions() {
+        return this.dimensions;
     }
 
     public AlertRuleQuery setDuration(Long duration) {
@@ -80,6 +100,14 @@ public class AlertRuleQuery extends TeaModel {
         return this.groupFieldList;
     }
 
+    public AlertRuleQuery setGroupId(String groupId) {
+        this.groupId = groupId;
+        return this;
+    }
+    public String getGroupId() {
+        return this.groupId;
+    }
+
     public AlertRuleQuery setGroupType(String groupType) {
         this.groupType = groupType;
         return this;
@@ -88,12 +116,28 @@ public class AlertRuleQuery extends TeaModel {
         return this.groupType;
     }
 
+    public AlertRuleQuery setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
+    }
+
     public AlertRuleQuery setQueries(java.util.List<AlertRuleQueryQueries> queries) {
         this.queries = queries;
         return this;
     }
     public java.util.List<AlertRuleQueryQueries> getQueries() {
         return this.queries;
+    }
+
+    public AlertRuleQuery setRelationType(String relationType) {
+        this.relationType = relationType;
+        return this;
+    }
+    public String getRelationType() {
+        return this.relationType;
     }
 
     public AlertRuleQuery setSecondJoin(AlertRuleSlsQueryJoin secondJoin) {

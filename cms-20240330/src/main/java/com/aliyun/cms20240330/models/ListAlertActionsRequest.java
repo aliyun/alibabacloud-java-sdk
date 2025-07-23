@@ -7,15 +7,31 @@ public class ListAlertActionsRequest extends TeaModel {
     @NameInMap("alertActionIds")
     public java.util.List<String> alertActionIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>testName</p>
+     */
     @NameInMap("alertActionName")
     public String alertActionName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>FC</p>
+     */
     @NameInMap("type")
     public String type;
 

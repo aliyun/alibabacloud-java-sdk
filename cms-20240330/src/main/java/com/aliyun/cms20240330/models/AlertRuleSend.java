@@ -10,6 +10,9 @@ public class AlertRuleSend extends TeaModel {
     @NameInMap("notification")
     public AlertRuleNotification notification;
 
+    @NameInMap("sendToArms")
+    public Boolean sendToArms;
+
     public static AlertRuleSend build(java.util.Map<String, ?> map) throws Exception {
         AlertRuleSend self = new AlertRuleSend();
         return TeaModel.build(map, self);
@@ -29,6 +32,14 @@ public class AlertRuleSend extends TeaModel {
     }
     public AlertRuleNotification getNotification() {
         return this.notification;
+    }
+
+    public AlertRuleSend setSendToArms(Boolean sendToArms) {
+        this.sendToArms = sendToArms;
+        return this;
+    }
+    public Boolean getSendToArms() {
+        return this.sendToArms;
     }
 
 }
