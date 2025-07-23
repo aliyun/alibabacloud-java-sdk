@@ -229,4 +229,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.operateAppServiceForPartnerWithOptions(request, runtime);
     }
+
+    /**
+     * <b>summary</b> : 
+     * <p>合作伙伴同步应用实例</p>
+     * 
+     * @param tmpReq SyncAppInstanceForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SyncAppInstanceForPartnerResponse
+     */
+    public SyncAppInstanceForPartnerResponse syncAppInstanceForPartnerWithOptions(SyncAppInstanceForPartnerRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SyncAppInstanceForPartnerShrinkRequest request = new SyncAppInstanceForPartnerShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.appInstance)) {
+            request.appInstanceShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.appInstance, "AppInstance", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appInstanceShrink)) {
+            query.put("AppInstance", request.appInstanceShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventType)) {
+            query.put("EventType", request.eventType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
+            query.put("Operator", request.operator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceBizId)) {
+            query.put("SourceBizId", request.sourceBizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
+            query.put("SourceType", request.sourceType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SyncAppInstanceForPartner"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SyncAppInstanceForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>合作伙伴同步应用实例</p>
+     * 
+     * @param request SyncAppInstanceForPartnerRequest
+     * @return SyncAppInstanceForPartnerResponse
+     */
+    public SyncAppInstanceForPartnerResponse syncAppInstanceForPartner(SyncAppInstanceForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.syncAppInstanceForPartnerWithOptions(request, runtime);
+    }
 }
