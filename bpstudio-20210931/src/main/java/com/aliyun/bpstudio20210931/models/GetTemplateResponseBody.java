@@ -180,6 +180,9 @@ public class GetTemplateResponseBody extends TeaModel {
         @NameInMap("Description")
         public String description;
 
+        @NameInMap("DocumentUrl")
+        public String documentUrl;
+
         /**
          * <p>The path to the template schema image file</p>
          * 
@@ -241,6 +244,14 @@ public class GetTemplateResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetTemplateResponseBodyData setDocumentUrl(String documentUrl) {
+            this.documentUrl = documentUrl;
+            return this;
+        }
+        public String getDocumentUrl() {
+            return this.documentUrl;
         }
 
         public GetTemplateResponseBodyData setImageURL(String imageURL) {

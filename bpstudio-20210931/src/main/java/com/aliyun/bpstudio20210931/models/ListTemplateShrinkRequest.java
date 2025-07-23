@@ -68,6 +68,7 @@ public class ListTemplateShrinkRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("TagList")
+    @Deprecated
     public Integer tagList;
 
     /**
@@ -133,6 +134,7 @@ public class ListTemplateShrinkRequest extends TeaModel {
         return this.tagShrink;
     }
 
+    @Deprecated
     public ListTemplateShrinkRequest setTagList(Integer tagList) {
         this.tagList = tagList;
         return this;

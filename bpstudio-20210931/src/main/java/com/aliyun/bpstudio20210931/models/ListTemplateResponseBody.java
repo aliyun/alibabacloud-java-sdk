@@ -108,6 +108,36 @@ public class ListTemplateResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListTemplateResponseBodyDataTag extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListTemplateResponseBodyDataTag build(java.util.Map<String, ?> map) throws Exception {
+            ListTemplateResponseBodyDataTag self = new ListTemplateResponseBodyDataTag();
+            return TeaModel.build(map, self);
+        }
+
+        public ListTemplateResponseBodyDataTag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListTemplateResponseBodyDataTag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListTemplateResponseBodyData extends TeaModel {
         /**
          * <p>The time when the template was created.</p>
@@ -117,6 +147,12 @@ public class ListTemplateResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public String createTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("DocumentUrl")
+        public String documentUrl;
 
         /**
          * <p>The URL of the architecture image.</p>
@@ -145,6 +181,9 @@ public class ListTemplateResponseBody extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("Tag")
+        public java.util.List<ListTemplateResponseBodyDataTag> tag;
+
         /**
          * <p>The ID of the tag that is added to the template.</p>
          * 
@@ -152,6 +191,7 @@ public class ListTemplateResponseBody extends TeaModel {
          * <p>1</p>
          */
         @NameInMap("TagId")
+        @Deprecated
         public Integer tagId;
 
         /**
@@ -161,6 +201,7 @@ public class ListTemplateResponseBody extends TeaModel {
          * <p>Official template</p>
          */
         @NameInMap("TagName")
+        @Deprecated
         public String tagName;
 
         /**
@@ -183,6 +224,22 @@ public class ListTemplateResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public ListTemplateResponseBodyData setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public ListTemplateResponseBodyData setDocumentUrl(String documentUrl) {
+            this.documentUrl = documentUrl;
+            return this;
+        }
+        public String getDocumentUrl() {
+            return this.documentUrl;
         }
 
         public ListTemplateResponseBodyData setImageURL(String imageURL) {
@@ -209,6 +266,15 @@ public class ListTemplateResponseBody extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public ListTemplateResponseBodyData setTag(java.util.List<ListTemplateResponseBodyDataTag> tag) {
+            this.tag = tag;
+            return this;
+        }
+        public java.util.List<ListTemplateResponseBodyDataTag> getTag() {
+            return this.tag;
+        }
+
+        @Deprecated
         public ListTemplateResponseBodyData setTagId(Integer tagId) {
             this.tagId = tagId;
             return this;
@@ -217,6 +283,7 @@ public class ListTemplateResponseBody extends TeaModel {
             return this.tagId;
         }
 
+        @Deprecated
         public ListTemplateResponseBodyData setTagName(String tagName) {
             this.tagName = tagName;
             return this;
