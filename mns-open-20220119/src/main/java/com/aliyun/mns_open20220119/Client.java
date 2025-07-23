@@ -96,6 +96,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateEventRuleShrinkRequest request = new CreateEventRuleShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.endpoint)) {
+            request.endpointShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoint, "Endpoint", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.endpoints)) {
             request.endpointsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.endpoints, "Endpoints", "json");
         }
@@ -115,6 +119,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.deliveryMode)) {
             query.put("DeliveryMode", request.deliveryMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointShrink)) {
+            query.put("Endpoint", request.endpointShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.endpointsShrink)) {

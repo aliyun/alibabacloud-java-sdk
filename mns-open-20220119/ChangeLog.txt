@@ -1,3 +1,7 @@
+2025-07-23 Version: 1.3.3
+- Update API CreateEventRule: add request parameters Endpoint.
+
+
 2025-07-10 Version: 1.3.2
 - Update API CreateEventRule: add request parameters ClientToken.
 - Update API CreateEventRule: add request parameters DeliveryMode.

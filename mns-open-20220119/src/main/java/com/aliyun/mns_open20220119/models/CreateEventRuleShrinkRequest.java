@@ -10,9 +10,9 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
     @NameInMap("DeliveryMode")
     public String deliveryMode;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("Endpoint")
+    public String endpointShrink;
+
     @NameInMap("Endpoints")
     public String endpointsShrink;
 
@@ -65,6 +65,14 @@ public class CreateEventRuleShrinkRequest extends TeaModel {
     }
     public String getDeliveryMode() {
         return this.deliveryMode;
+    }
+
+    public CreateEventRuleShrinkRequest setEndpointShrink(String endpointShrink) {
+        this.endpointShrink = endpointShrink;
+        return this;
+    }
+    public String getEndpointShrink() {
+        return this.endpointShrink;
     }
 
     public CreateEventRuleShrinkRequest setEndpointsShrink(String endpointsShrink) {

@@ -10,9 +10,9 @@ public class CreateEventRuleRequest extends TeaModel {
     @NameInMap("DeliveryMode")
     public String deliveryMode;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
+    @NameInMap("Endpoint")
+    public CreateEventRuleRequestEndpoint endpoint;
+
     @NameInMap("Endpoints")
     public java.util.List<CreateEventRuleRequestEndpoints> endpoints;
 
@@ -67,6 +67,14 @@ public class CreateEventRuleRequest extends TeaModel {
         return this.deliveryMode;
     }
 
+    public CreateEventRuleRequest setEndpoint(CreateEventRuleRequestEndpoint endpoint) {
+        this.endpoint = endpoint;
+        return this;
+    }
+    public CreateEventRuleRequestEndpoint getEndpoint() {
+        return this.endpoint;
+    }
+
     public CreateEventRuleRequest setEndpoints(java.util.List<CreateEventRuleRequestEndpoints> endpoints) {
         this.endpoints = endpoints;
         return this;
@@ -107,10 +115,38 @@ public class CreateEventRuleRequest extends TeaModel {
         return this.ruleName;
     }
 
+    public static class CreateEventRuleRequestEndpoint extends TeaModel {
+        @NameInMap("EndpointType")
+        public String endpointType;
+
+        @NameInMap("EndpointValue")
+        public String endpointValue;
+
+        public static CreateEventRuleRequestEndpoint build(java.util.Map<String, ?> map) throws Exception {
+            CreateEventRuleRequestEndpoint self = new CreateEventRuleRequestEndpoint();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateEventRuleRequestEndpoint setEndpointType(String endpointType) {
+            this.endpointType = endpointType;
+            return this;
+        }
+        public String getEndpointType() {
+            return this.endpointType;
+        }
+
+        public CreateEventRuleRequestEndpoint setEndpointValue(String endpointValue) {
+            this.endpointValue = endpointValue;
+            return this;
+        }
+        public String getEndpointValue() {
+            return this.endpointValue;
+        }
+
+    }
+
     public static class CreateEventRuleRequestEndpoints extends TeaModel {
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>http</p>
          */
@@ -118,8 +154,6 @@ public class CreateEventRuleRequest extends TeaModel {
         public String endpointType;
 
         /**
-         * <p>This parameter is required.</p>
-         * 
          * <strong>example:</strong>
          * <p>test-xxx-queue</p>
          */
