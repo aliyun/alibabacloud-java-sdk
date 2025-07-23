@@ -11,12 +11,18 @@ public class UpdateAppModeRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("AppIds")
+    public String appIds;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableIdle")
     public Boolean enableIdle;
+
+    @NameInMap("NamespaceId")
+    public String namespaceId;
 
     public static UpdateAppModeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateAppModeRequest self = new UpdateAppModeRequest();
@@ -31,12 +37,28 @@ public class UpdateAppModeRequest extends TeaModel {
         return this.appId;
     }
 
+    public UpdateAppModeRequest setAppIds(String appIds) {
+        this.appIds = appIds;
+        return this;
+    }
+    public String getAppIds() {
+        return this.appIds;
+    }
+
     public UpdateAppModeRequest setEnableIdle(Boolean enableIdle) {
         this.enableIdle = enableIdle;
         return this;
     }
     public Boolean getEnableIdle() {
         return this.enableIdle;
+    }
+
+    public UpdateAppModeRequest setNamespaceId(String namespaceId) {
+        this.namespaceId = namespaceId;
+        return this;
+    }
+    public String getNamespaceId() {
+        return this.namespaceId;
     }
 
 }

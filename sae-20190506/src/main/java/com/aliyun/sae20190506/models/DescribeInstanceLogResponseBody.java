@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceLogResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the log of the instance was obtained. Valid values:</p>
+     * <p>The interface state or POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: indicates that the log was obtained.</li>
-     * <li><strong>false</strong>: indicates that the log could not be obtained.</li>
+     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
+     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
+     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
+     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +20,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code.</p>
-     * <ul>
-     * <li>The <strong>ErrorCode</strong> parameter is not returned when the request succeeds.</li>
-     * <li>The <strong>ErrorCode</strong> parameter is returned when the request fails. For more information, see <strong>Error codes</strong> in this topic.</li>
-     * </ul>
+     * <p>The information of instance logs.</p>
      * 
      * <strong>example:</strong>
      * <p>hello\nsae\n</p>
@@ -31,19 +29,24 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>Error code.</p>
      * <ul>
-     * <li><strong>2xx</strong>: indicates that the request was successful.</li>
-     * <li><strong>3xx</strong>: indicates that the request was redirected.</li>
-     * <li><strong>4xx</strong>: indicates that the request was invalid.</li>
-     * <li><strong>5xx</strong>: indicates that a server error occurred.</li>
+     * <li><p>No error code returned if the request succeeded.</p>
+     * </li>
+     * <li><p>Error code returned if the request failed. Refer to error code list below for details.</p>
+     * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Null</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace.</p>
+     * <p>The returned message.</p>
+     * <p>success is returned when the request succeeds.
+     * An error code is returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -52,11 +55,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned message.</p>
-     * <ul>
-     * <li><strong>success</strong> is returned when the request succeeds.</li>
-     * <li>An error code is returned when the request fails.</li>
-     * </ul>
+     * <p>Request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -65,6 +64,14 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the logs of the instance is obtained.</p>
+     * <ul>
+     * <li><p>true: logs obtained.</p>
+     * </li>
+     * <li><p>false: failed to obtain logs.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -72,7 +79,7 @@ public class DescribeInstanceLogResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The log of the instance.</p>
+     * <p>Trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

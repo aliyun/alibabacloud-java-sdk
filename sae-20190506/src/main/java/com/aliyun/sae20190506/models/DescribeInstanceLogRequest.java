@@ -14,7 +14,7 @@ public class DescribeInstanceLogRequest extends TeaModel {
     public String containerId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
