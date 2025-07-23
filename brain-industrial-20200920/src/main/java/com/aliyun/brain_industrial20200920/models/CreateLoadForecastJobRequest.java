@@ -4,6 +4,9 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class CreateLoadForecastJobRequest extends TeaModel {
+    @NameInMap("BusinessKey")
+    public String businessKey;
+
     /**
      * <strong>example:</strong>
      * <p>electricityMeter</p>
@@ -59,6 +62,14 @@ public class CreateLoadForecastJobRequest extends TeaModel {
     public static CreateLoadForecastJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateLoadForecastJobRequest self = new CreateLoadForecastJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateLoadForecastJobRequest setBusinessKey(String businessKey) {
+        this.businessKey = businessKey;
+        return this;
+    }
+    public String getBusinessKey() {
+        return this.businessKey;
     }
 
     public CreateLoadForecastJobRequest setDeviceType(String deviceType) {

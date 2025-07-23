@@ -4,6 +4,9 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class CreateEssOptJobShrinkRequest extends TeaModel {
+    @NameInMap("BusinessKey")
+    public String businessKey;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,6 +64,14 @@ public class CreateEssOptJobShrinkRequest extends TeaModel {
     public static CreateEssOptJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateEssOptJobShrinkRequest self = new CreateEssOptJobShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateEssOptJobShrinkRequest setBusinessKey(String businessKey) {
+        this.businessKey = businessKey;
+        return this;
+    }
+    public String getBusinessKey() {
+        return this.businessKey;
     }
 
     public CreateEssOptJobShrinkRequest setDuration(Integer duration) {
