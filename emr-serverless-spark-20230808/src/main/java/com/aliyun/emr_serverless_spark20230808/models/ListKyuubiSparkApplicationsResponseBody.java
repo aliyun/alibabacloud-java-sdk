@@ -128,6 +128,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @NameInMap("endTime")
         public String endTime;
 
+        @NameInMap("latestSqlStatementStatus")
+        public String latestSqlStatementStatus;
+
         /**
          * <p>The total amount of memory allocated to the job multiplied by the running duration (seconds).</p>
          * 
@@ -219,6 +222,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public ListKyuubiSparkApplicationsResponseBodyApplications setLatestSqlStatementStatus(String latestSqlStatementStatus) {
+            this.latestSqlStatementStatus = latestSqlStatementStatus;
+            return this;
+        }
+        public String getLatestSqlStatementStatus() {
+            return this.latestSqlStatementStatus;
         }
 
         public ListKyuubiSparkApplicationsResponseBodyApplications setMbSeconds(Long mbSeconds) {

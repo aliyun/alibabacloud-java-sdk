@@ -278,6 +278,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @NameInMap("autoStopConfiguration")
         public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration autoStopConfiguration;
 
+        @NameInMap("connectionToken")
+        public String connectionToken;
+
         /**
          * <p>The version of the Spark engine.</p>
          * 
@@ -489,6 +492,14 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
         public ListSessionClustersResponseBodySessionClustersAutoStopConfiguration getAutoStopConfiguration() {
             return this.autoStopConfiguration;
+        }
+
+        public ListSessionClustersResponseBodySessionClusters setConnectionToken(String connectionToken) {
+            this.connectionToken = connectionToken;
+            return this;
+        }
+        public String getConnectionToken() {
+            return this.connectionToken;
         }
 
         public ListSessionClustersResponseBodySessionClusters setDisplayReleaseVersion(String displayReleaseVersion) {
