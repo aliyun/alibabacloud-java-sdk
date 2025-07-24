@@ -86,6 +86,12 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        /**
+         * <p>Cause of the connection failure. This parameter is returned only when the Status parameter is Failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The Session Manager is closed normally.</p>
+         */
         @NameInMap("FailedDetail")
         public String failedDetail;
 
@@ -112,8 +118,6 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
          * <ul>
          * <li>Connecting: The connection is being established.</li>
          * <li>Connected: The connection is established.</li>
-         * <li>Disconnected: The connection is disconnected.</li>
-         * <li>Terminating: The session is being terminated.</li>
          * <li>Terminated: The session is terminated.</li>
          * <li>Failed: The connection failed.</li>
          * </ul>

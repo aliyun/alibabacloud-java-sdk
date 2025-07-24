@@ -206,6 +206,9 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
     }
 
     public static class DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet extends TeaModel {
+        @NameInMap("AccountId")
+        public Long accountId;
+
         /**
          * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>
          */
@@ -314,6 +317,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         public static DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet build(java.util.Map<String, ?> map) throws Exception {
             DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet self = new DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setAccountId(Long accountId) {
+            this.accountId = accountId;
+            return this;
+        }
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         public DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSet setCapacities(DescribeDeploymentSetsResponseBodyDeploymentSetsDeploymentSetCapacities capacities) {

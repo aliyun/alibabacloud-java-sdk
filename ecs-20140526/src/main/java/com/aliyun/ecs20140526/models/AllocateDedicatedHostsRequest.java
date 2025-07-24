@@ -8,9 +8,9 @@ public class AllocateDedicatedHostsRequest extends TeaModel {
     public AllocateDedicatedHostsRequestNetworkAttributes networkAttributes;
 
     /**
-     * <p>The policy used to migrate the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
+     * <p>The policy for migrating the instances deployed on the dedicated host when the dedicated host fails or needs to be repaired online. Valid values:</p>
      * <ul>
-     * <li><p>Migrate: The instances are migrated to another physical server and restarted.</p>
+     * <li><p>Migrate: The instances are migrated to another physical machine and then restarted.</p>
      * <p>If cloud disks are attached to the dedicated host, the default value is Migrate.</p>
      * </li>
      * <li><p>Stop: The instances are stopped. If the dedicated host cannot be repaired, the instances are migrated to another physical machine and then restarted.</p>

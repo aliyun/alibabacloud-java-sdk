@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDedicatedHostsResponseBody extends TeaModel {
     /**
-     * <p>Details about the dedicated hosts.</p>
+     * <p>Details about the DDH.</p>
      */
     @NameInMap("DedicatedHosts")
     public DescribeDedicatedHostsResponseBodyDedicatedHosts dedicatedHosts;
@@ -868,7 +868,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         public Integer cores;
 
         /**
-         * <p>The CPU overcommit ratio.Valid values: 1 to 5.</p>
+         * <p>The CPU overcommit ratio. Valid values: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

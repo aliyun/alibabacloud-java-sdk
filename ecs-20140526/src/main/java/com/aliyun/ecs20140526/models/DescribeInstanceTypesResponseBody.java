@@ -58,9 +58,21 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributesAttribute extends TeaModel {
+        /**
+         * <p>The name of the attribute.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VirtualIntelSpeedSelectTechnologySupport</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The attribute value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -107,6 +119,16 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock extends TeaModel {
+        /**
+         * <p>Whether PTP is supported. Possible values:</p>
+         * <ul>
+         * <li>supported</li>
+         * <li>unsupported</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>unsupported</p>
+         */
         @NameInMap("PtpSupport")
         public String ptpSupport;
 
@@ -366,6 +388,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceType extends TeaModel {
+        /**
+         * <p>The list of specification attributes.</p>
+         */
         @NameInMap("Attributes")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeAttributes attributes;
 
@@ -378,6 +403,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("BaselineCredit")
         public Integer baselineCredit;
 
+        /**
+         * <p>The clock supported by the specification.</p>
+         */
         @NameInMap("Clock")
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeClock clock;
 
@@ -717,6 +745,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          * <li>true</li>
          * <li>false</li>
          * </ul>
+         * <blockquote>
+         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>true</p>

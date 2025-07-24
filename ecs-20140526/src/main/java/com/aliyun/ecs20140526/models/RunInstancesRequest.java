@@ -157,8 +157,11 @@ public class RunInstancesRequest extends TeaModel {
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
 
     /**
-     * <p>The ID of the dedicated host on which to create the instance. Spot instances cannot be created on dedicated hosts. If you specify <code>DedicatedHostId</code>, <code>SpotStrategy</code> and <code>SpotPriceLimit</code> are ignored.</p>
+     * <p>The ID of the dedicated host.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> operation to query the list of dedicated host IDs.</p>
+     * <blockquote>
+     * <p>Spot instances cannot be created on dedicated hosts. If you specify DedicatedHostId, SpotStrategy and SpotPriceLimit are automatically ignored.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>dh-bp67acfmxazb4p****</p>
@@ -740,12 +743,22 @@ public class RunInstancesRequest extends TeaModel {
     public java.util.List<String> securityGroupIds;
 
     /**
-     * <p>The protection period of the spot instance. Unit: hours. Default value: 1. Valid values:</p>
+     * <p>The protection period of the spot instance. Unit: hours. Valid values:</p>
      * <ul>
      * <li>1: After a spot instance is created, Alibaba Cloud ensures that the instance is not automatically released within 1 hour. After the 1-hour protection period ends, the system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
-     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance runs for 1 hour. The system compares the bid price with the market price and checks the resource inventory to determine whether to retain or release the instance.</li>
+     * <li>0: After a spot instance is created, Alibaba Cloud does not ensure that the instance can run for one hour. The system compares the biding price with the market prices and checks the resource inventory to determine whether to retain or release the instance.</li>
      * </ul>
-     * <p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released. The spot instance is billed by second. We recommend that you specify an appropriate protection period based on your business requirements.</p>
+     * <p>Default value: 1.</p>
+     * <blockquote>
+     * </blockquote>
+     * <ul>
+     * <li><p>You can set this parameter only to 0 or 1.</p>
+     * </li>
+     * <li><p>The spot instance is billed by second. Specify an appropriate protection period.</p>
+     * </li>
+     * <li><p>Alibaba Cloud sends an ECS system event to notify you 5 minutes before the instance is released.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -1511,8 +1524,7 @@ public class RunInstancesRequest extends TeaModel {
 
     public static class RunInstancesRequestCpuOptions extends TeaModel {
         /**
-         * <p>The number of CPU cores. This parameter cannot be specified but only uses its default value.</p>
-         * <p>For information about the default value, see <a href="https://help.aliyun.com/document_detail/145895.html">Customize CPU options</a>.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -2503,8 +2515,8 @@ public class RunInstancesRequest extends TeaModel {
         /**
          * <p>Specifies whether to release ENI N when the associated instance is released. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: releases the ENI when the associated instance is released.</li>
+         * <li>false: retains the ENI when the associated instance is released.</li>
          * </ul>
          * <p>Default value: true.</p>
          * <blockquote>
@@ -2533,10 +2545,10 @@ public class RunInstancesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The type of ENI N. The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
+         * <p>The type of ENI N. The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>Primary</li>
+         * <li>Primary: the primary ENI</li>
          * <li>Secondary</li>
          * </ul>
          * <p>Default value: Secondary.</p>
@@ -2577,7 +2589,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The index of the network card for ENI N.</p>
          * <p>Take note of the following items:</p>
          * <ul>
-         * <li>You can specify network card indexes only for instances of specific instance types.</li>
+         * <li>You can specify NIC indexes only for instances of specific instance types.</li>
          * <li>If you set NetworkInterface.N.InstanceType to Primary, you can set NetworkInterface.N.NetworkCardIndex only to 0 for instance types that support network cards.</li>
          * <li>If you set NetworkInterface.N.InstanceType to Secondary or leave NetworkInterface.N.InstanceType empty, you can specify NetworkInterface.N.NetworkCardIndex based on instance types if the instance types support network cards. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a>.</li>
          * </ul>
@@ -2589,7 +2601,7 @@ public class RunInstancesRequest extends TeaModel {
         public Integer networkCardIndex;
 
         /**
-         * <p>The ID of ENI N to attach to the instance.</p>
+         * <p>The ID of the ENI to attach to the instance.</p>
          * <p>If you specify this parameter, you must set <code>Amount</code> to 1.</p>
          * <blockquote>
          * <p> This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot specify other ENI creation parameters.</p>
@@ -2665,7 +2677,7 @@ public class RunInstancesRequest extends TeaModel {
          * <ul>
          * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
          * <li>The value of this parameter cannot exceed the maximum number of queues allowed per ENI.</li>
-         * <li>The total number of queues for all ENIs on an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
+         * <li>The total number of queues for all ENIs of an instance cannot exceed the queue quota for the instance type. To query the maximum number of queues per ENI and the queue quota for an instance type, you can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation and check the <code>MaximumQueueNumberPerEni</code> and <code>TotalEniQueueQuantity</code> values in the response.</li>
          * <li>If you specify this parameter and set <code>NetworkInterface.N.InstanceType</code> to <code>Primary</code>, you cannot specify <code>NetworkInterfaceQueueNumber</code>.</li>
          * </ul>
          * 
@@ -2712,7 +2724,7 @@ public class RunInstancesRequest extends TeaModel {
          * <ul>
          * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
          * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>SecurityGroupId</code> and you cannot specify <code>SecurityGroupId</code>, <code>SecurityGroupIds.N</code>, or <code>NetworkInterface.N.SecurityGroupIds.N</code>.</li>
-         * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Secondary</code> or left empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
+         * <li>If you set <code>NetworkInterface.N.InstanceType</code> to <code>Secondary</code> or leave NetworkInterface.N.InstanceType empty, you do not need to specify this parameter. The default value is the ID of the security group to which to assign the instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2725,7 +2737,7 @@ public class RunInstancesRequest extends TeaModel {
          * <p>The IDs of security groups to which to assign ENI N.</p>
          * <ul>
          * <li>The value of the first N in this parameter cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
-         * <li>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see the <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a> section of the &quot;Limits&quot; topic.</li>
+         * <li>The second N in this parameter indicates that one or more security group IDs can be specified. The valid values of the second N vary based on the maximum number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
          * </ul>
          * <p>Take note of the following items:</p>
          * <ul>
@@ -2740,8 +2752,14 @@ public class RunInstancesRequest extends TeaModel {
         public java.util.List<String> securityGroupIds;
 
         /**
+         * <p>Specifies whether to enable the source and destination IP address check feature. We recommend that you enable the feature to improve network security. Valid value:</p>
+         * <ul>
+         * <li>true: enables the performance burst feature for the system disk.</li>
+         * <li>false: disables the performance burst feature for the data disk.</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * <blockquote>
-         * <p> This parameter is in invitational preview and is not publicly available.</p>
+         * <p> This feature is available only in some regions. Before you use this method, read <a href="https://help.aliyun.com/document_detail/2863210.html">Source and destination IP address check</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2770,7 +2788,7 @@ public class RunInstancesRequest extends TeaModel {
 
         /**
          * <p>The ID of the vSwitch to which to connect ENI N.</p>
-         * <p>Take note of the following items:</p>
+         * <p>When you specify this parameter, take note of the following items:</p>
          * <ul>
          * <li>The value of N cannot exceed the maximum number of ENIs per instance that the instance type supports. For the maximum number of ENIs per instance that an instance type supports, see <a href="https://help.aliyun.com/document_detail/25378.html">Overview of instance families</a> or call the <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> operation.</li>
          * <li>If <code>NetworkInterface.N.InstanceType</code> is set to <code>Primary</code>, you must specify this parameter. In this case, this parameter is equivalent to <code>VSwitchId</code>. You cannot specify both NetworkInterface.N.VSwitchId and <code>VSwitchId</code> in the same request.</li>

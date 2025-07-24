@@ -14,7 +14,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostClusterId;
 
     /**
-     * <p>The IDs of dedicated hosts. You can specify up to 100 dedicated host IDs in a single request. Separate the IDs with commas (,).</p>
+     * <p>The list of DDH IDs. You can specify up to 100 deployment set IDs in each request. Separate the deployment set IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;dh-bp165p6xk2tlw61e****&quot;, &quot;dh-bp1f9vxmno7emy96****&quot;]</p>
@@ -32,7 +32,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostName;
 
     /**
-     * <p>The dedicated host type. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of dedicated host types.</p>
+     * <p>The type of the DDH. You can call the <a href="https://help.aliyun.com/document_detail/134240.html">DescribeDedicatedHostTypes</a> operation to query the most recent list of DDH types.</p>
      * 
      * <strong>example:</strong>
      * <p>ddh.g5</p>
@@ -80,8 +80,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Default value: 1.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. You can use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -90,9 +91,9 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10.</p>
+     * <blockquote>
+     * <p> This parameter will be removed in the future. You can use NextToken and MaxResults for a paged query.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -132,10 +133,19 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to display socket information. Valid values:</p>
+     * <p>Specifies whether to display socket information. You can view the remaining resources (vCPUs, memory usage, remaining resources, and total resources) based on the capacity information of the socket dimension. Then you can determine whether ECS instances of the corresponding specifications can be created. Valid values:</p>
      * <ul>
-     * <li>true</li>
+     * <li>true Only some DDHs support the information about resources in the socket dimension. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export information about DDHs</a>.</li>
      * <li>false</li>
+     * </ul>
+     * <blockquote>
+     * <p> Each DDH generally has two CPUs, and each CPU corresponds to Socket 0 and Socket 1. To maximize the performance of an ECS instance on a DDH, ECS instances are not created across sockets.</p>
+     * </blockquote>
+     * <ul>
+     * <li><p>If one socket has available computing resources for creating the ECS instance, creation succeeds.</p>
+     * </li>
+     * <li><p>If not, creation fails even if the combined available resources of both sockets are sufficient. Although the remaining resources of the two sockets on the DDH are larger than the ECS instance type, the ECS instance cannot be created.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,7 +172,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tags of the dedicated host.</p>
+     * <p>The list of tags. The list length ranges from 0 to 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeDedicatedHostsRequestTag> tag;
@@ -343,7 +353,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
 
     public static class DescribeDedicatedHostsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N of the dedicated host. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <p>The key of tag N of the DDH. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -352,7 +362,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N of the dedicated host. Valid values of N: 1 to 20. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of tag N of the DDH. You can specify empty strings as tag values. The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
