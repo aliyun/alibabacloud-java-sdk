@@ -13,6 +13,9 @@ public class UnifiedSearchInput extends TeaModel {
     @NameInMap("engineType")
     public String engineType;
 
+    @NameInMap("location")
+    public String location;
+
     @NameInMap("query")
     public String query;
 
@@ -46,6 +49,14 @@ public class UnifiedSearchInput extends TeaModel {
     }
     public String getEngineType() {
         return this.engineType;
+    }
+
+    public UnifiedSearchInput setLocation(String location) {
+        this.location = location;
+        return this;
+    }
+    public String getLocation() {
+        return this.location;
     }
 
     public UnifiedSearchInput setQuery(String query) {
