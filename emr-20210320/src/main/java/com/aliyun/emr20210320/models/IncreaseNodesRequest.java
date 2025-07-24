@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class IncreaseNodesRequest extends TeaModel {
     /**
-     * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
+     * <p>The application configurations. Number of elements in the array: 1 to 1,000.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -51,7 +51,7 @@ public class IncreaseNodesRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.</p>
+     * <p>The number of nodes to add.Valid values: 1 to 500.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,6 +100,9 @@ public class IncreaseNodesRequest extends TeaModel {
      */
     @NameInMap("PaymentDurationUnit")
     public String paymentDurationUnit;
+
+    @NameInMap("Promotions")
+    public java.util.List<Promotion> promotions;
 
     /**
      * <p>The ID of the region in which you want to create the instance.</p>
@@ -186,6 +189,14 @@ public class IncreaseNodesRequest extends TeaModel {
     }
     public String getPaymentDurationUnit() {
         return this.paymentDurationUnit;
+    }
+
+    public IncreaseNodesRequest setPromotions(java.util.List<Promotion> promotions) {
+        this.promotions = promotions;
+        return this;
+    }
+    public java.util.List<Promotion> getPromotions() {
+        return this.promotions;
     }
 
     public IncreaseNodesRequest setRegionId(String regionId) {

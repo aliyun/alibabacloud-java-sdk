@@ -97,7 +97,7 @@ public class ListNodesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of tags to be bound.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;

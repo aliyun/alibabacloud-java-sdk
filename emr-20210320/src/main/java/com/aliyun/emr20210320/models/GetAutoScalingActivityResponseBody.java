@@ -147,6 +147,12 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         @NameInMap("OperationId")
         public String operationId;
 
+        /**
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTO</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

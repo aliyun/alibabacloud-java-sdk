@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClustersRequest extends TeaModel {
     /**
-     * <p>The IDs of the clusters. You can specify a maximum of 100 items.</p>
+     * <p>The cluster IDs. Number of elements in the array: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -23,7 +23,7 @@ public class ListClustersRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The states of clusters. You can specify a maximum of 100 items.</p>
+     * <p>The states of the clusters. Number of elements in the array: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;HADOOP&quot;]</p>
@@ -32,7 +32,7 @@ public class ListClustersRequest extends TeaModel {
     public java.util.List<String> clusterStates;
 
     /**
-     * <p>The types of the clusters. You can specify a maximum of 100 items.</p>
+     * <p>The list of cluster types. Number of elements in the array: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;c-b933c5aac8fe****&quot;]</p>
@@ -69,34 +69,6 @@ public class ListClustersRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>cn-qingdao</li>
-     * <li>cn-beijing</li>
-     * <li>cn-zhangjiakou</li>
-     * <li>cn-huhehaote</li>
-     * <li>cn-hangzhou</li>
-     * <li>cn-shanghai</li>
-     * <li>cn-shenzhen</li>
-     * <li>cn-chengdu</li>
-     * <li>cn-hongkong</li>
-     * <li>cn-wulanchabu</li>
-     * <li>cn-heyuan-acdr-1</li>
-     * <li>cn-qingdao-acdr-ut-1</li>
-     * <li>ap-northeast-1</li>
-     * <li>ap-southeast-1</li>
-     * <li>ap-southeast-2</li>
-     * <li>ap-southeast-3</li>
-     * <li>ap-southeast-5</li>
-     * <li>ap-south-1</li>
-     * <li>us-east-1</li>
-     * <li>us-west-1</li>
-     * <li>me-east-1</li>
-     * <li>me-central-1</li>
-     * <li>eu-central-1</li>
-     * <li>eu-west-1</li>
-     * <li>cn-north-2-gov-1</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,7 +87,7 @@ public class ListClustersRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags. Number of elements in the array: 1 to 20.</p>
+     * <p>The tag list. Number of elements in the array: 1 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;PayAsYouGo&quot;]</p>

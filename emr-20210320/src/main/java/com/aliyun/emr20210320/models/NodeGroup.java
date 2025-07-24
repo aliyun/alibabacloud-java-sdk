@@ -14,6 +14,13 @@ public class NodeGroup extends TeaModel {
     public java.util.List<String> additionalSecurityGroupIds;
 
     /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("CompensateWithOnDemand")
+    public Boolean compensateWithOnDemand;
+
+    /**
      * <p>成本优化模式配置。</p>
      */
     @NameInMap("CostOptimizedConfig")
@@ -227,6 +234,14 @@ public class NodeGroup extends TeaModel {
     }
     public java.util.List<String> getAdditionalSecurityGroupIds() {
         return this.additionalSecurityGroupIds;
+    }
+
+    public NodeGroup setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+        this.compensateWithOnDemand = compensateWithOnDemand;
+        return this;
+    }
+    public Boolean getCompensateWithOnDemand() {
+        return this.compensateWithOnDemand;
     }
 
     public NodeGroup setCostOptimizedConfig(CostOptimizedConfig costOptimizedConfig) {

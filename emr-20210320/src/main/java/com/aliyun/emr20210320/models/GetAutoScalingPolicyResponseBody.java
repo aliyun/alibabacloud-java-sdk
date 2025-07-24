@@ -14,7 +14,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the auto scaling policy.</p>
+     * <p>The auto scaling policy.</p>
      */
     @NameInMap("ScalingPolicy")
     public ScalingPolicy scalingPolicy;

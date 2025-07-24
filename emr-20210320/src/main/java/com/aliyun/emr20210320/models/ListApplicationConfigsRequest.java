@@ -33,7 +33,7 @@ public class ListApplicationConfigsRequest extends TeaModel {
     public String configFileName;
 
     /**
-     * <p>The name of the configuration item.</p>
+     * <p>The key of the configuration item.</p>
      * 
      * <strong>example:</strong>
      * <p>dfs.replication</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     /**
-     * <p>The response parameters.</p>
+     * <p>The data returned.</p>
      */
     @NameInMap("Data")
     public java.util.List<Data> data;
@@ -317,7 +317,7 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
          * <p>The unit of the metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>dat</p>
+         * <p>day</p>
          */
         @NameInMap("Unit")
         public String unit;

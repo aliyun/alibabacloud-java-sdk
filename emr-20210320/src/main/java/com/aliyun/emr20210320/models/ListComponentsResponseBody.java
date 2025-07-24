@@ -29,7 +29,7 @@ public class ListComponentsResponseBody extends TeaModel {
      * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
-     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     * <p>FFAC608A-5DC3-174F-93C6-9F88CA6D5875</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -93,7 +93,7 @@ public class ListComponentsResponseBody extends TeaModel {
          * <p>应用名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>HDFS</p>
+         * <p>KNOX</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
@@ -108,13 +108,16 @@ public class ListComponentsResponseBody extends TeaModel {
          * <p>组件名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>DataNode</p>
+         * <p>KNOX</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
 
         /**
          * <p>命名空间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>“”</p>
          */
         @NameInMap("Namespace")
         public String namespace;

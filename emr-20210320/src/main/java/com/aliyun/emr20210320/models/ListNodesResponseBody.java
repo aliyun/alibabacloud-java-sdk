@@ -23,7 +23,7 @@ public class ListNodesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Details about nodes.</p>
+     * <p>The node list.</p>
      */
     @NameInMap("Nodes")
     public java.util.List<Node> nodes;

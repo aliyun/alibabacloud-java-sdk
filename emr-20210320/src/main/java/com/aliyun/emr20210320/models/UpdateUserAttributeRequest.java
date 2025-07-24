@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserAttributeRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateUserAttributeRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>用户备注。</p>
+     * <p>The remarks of the user.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,7 +24,7 @@ public class UpdateUserAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>用户密码。</p>
+     * <p>The user password.</p>
      * 
      * <strong>example:</strong>
      * <p>1234</p>
@@ -33,7 +33,7 @@ public class UpdateUserAttributeRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateUserAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>用户ID。</p>
+     * <p>The user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>125046002175****</p>
@@ -53,6 +53,8 @@ public class UpdateUserAttributeRequest extends TeaModel {
     public String userId;
 
     /**
+     * <p>The username.</p>
+     * 
      * <strong>example:</strong>
      * <p>yun****</p>
      */

@@ -11,14 +11,14 @@ public class RunClusterRequest extends TeaModel {
     public java.util.List<ApplicationConfig> applicationConfigs;
 
     /**
-     * <p>The services. Number of elements in the array: 1 to 100.</p>
+     * <p>The list of services. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public java.util.List<Application> applications;
 
     /**
-     * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
+     * <p>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
@@ -98,13 +98,13 @@ public class RunClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The attributes of all ECS instances.</p>
+     * <p>The node attributes. The basic attributes of all ECS nodes in the cluster.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+     * <p>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroups")
@@ -123,6 +123,9 @@ public class RunClusterRequest extends TeaModel {
      */
     @NameInMap("PaymentType")
     public String paymentType;
+
+    @NameInMap("Promotions")
+    public java.util.List<Promotion> promotions;
 
     /**
      * <p>The region ID.</p>
@@ -167,13 +170,13 @@ public class RunClusterRequest extends TeaModel {
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
+     * <p>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tags. Number of elements in the array: 0 to 20.</p>
+     * <p>The tag. Number of elements in the array: 0 to 20.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tag> tags;
@@ -277,6 +280,14 @@ public class RunClusterRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public RunClusterRequest setPromotions(java.util.List<Promotion> promotions) {
+        this.promotions = promotions;
+        return this;
+    }
+    public java.util.List<Promotion> getPromotions() {
+        return this.promotions;
     }
 
     public RunClusterRequest setRegionId(String regionId) {

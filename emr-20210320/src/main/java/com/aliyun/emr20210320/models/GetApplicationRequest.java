@@ -19,7 +19,7 @@ public class GetApplicationRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>c-b933c5aac8fe****</p>
+     * <p>c-e6a9d46e92675****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;

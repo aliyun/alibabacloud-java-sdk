@@ -16,6 +16,13 @@ public class NodeGroupConfig extends TeaModel {
     @NameInMap("AutoScalingPolicy")
     public AutoScalingPolicy autoScalingPolicy;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("CompensateWithOnDemand")
+    public Boolean compensateWithOnDemand;
+
     @NameInMap("ComponentTags")
     public java.util.List<String> componentTags;
 
@@ -222,6 +229,14 @@ public class NodeGroupConfig extends TeaModel {
     }
     public AutoScalingPolicy getAutoScalingPolicy() {
         return this.autoScalingPolicy;
+    }
+
+    public NodeGroupConfig setCompensateWithOnDemand(Boolean compensateWithOnDemand) {
+        this.compensateWithOnDemand = compensateWithOnDemand;
+        return this;
+    }
+    public Boolean getCompensateWithOnDemand() {
+        return this.compensateWithOnDemand;
     }
 
     public NodeGroupConfig setComponentTags(java.util.List<String> componentTags) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterCloneMetaResponseBody extends TeaModel {
     /**
-     * <p>The metadata of the cluster that you want to clone.</p>
+     * <p>Cluster clone metadata.</p>
      */
     @NameInMap("ClusterCloneMeta")
     public ClusterCloneMeta clusterCloneMeta;
@@ -337,13 +337,13 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public java.util.List<ApplicationConfig> applicationConfigs;
 
         /**
-         * <p>The services.</p>
+         * <p>The cluster applications.</p>
          */
         @NameInMap("Applications")
         public java.util.List<Application> applications;
 
         /**
-         * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
+         * <p>An array of bootstrap scripts. The number of elements in the array: 1 to 10.</p>
          */
         @NameInMap("BootstrapScripts")
         public java.util.List<Script> bootstrapScripts;
@@ -444,6 +444,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
          * <li>False</li>
          * <li>True</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         @NameInMap("ExistCloneConfig")
         public Boolean existCloneConfig;
@@ -455,7 +458,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public NodeAttributes nodeAttributes;
 
         /**
-         * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+         * <p>The node groups. The number of elements in the array: 1 to 100.</p>
          */
         @NameInMap("NodeGroups")
         public java.util.List<NodeGroup> nodeGroups;
@@ -526,7 +529,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         public SubscriptionConfig subscriptionConfig;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of cluster tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<Tag> tags;

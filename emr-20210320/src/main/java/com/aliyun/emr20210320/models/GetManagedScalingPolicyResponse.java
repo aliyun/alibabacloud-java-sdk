@@ -3,7 +3,7 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class GetDoctorHDFSUGIResponse extends TeaModel {
+public class GetManagedScalingPolicyResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class GetDoctorHDFSUGIResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public GetDoctorHDFSUGIResponseBody body;
+    public GetManagedScalingPolicyResponseBody body;
 
-    public static GetDoctorHDFSUGIResponse build(java.util.Map<String, ?> map) throws Exception {
-        GetDoctorHDFSUGIResponse self = new GetDoctorHDFSUGIResponse();
+    public static GetManagedScalingPolicyResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetManagedScalingPolicyResponse self = new GetManagedScalingPolicyResponse();
         return TeaModel.build(map, self);
     }
 
-    public GetDoctorHDFSUGIResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetManagedScalingPolicyResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class GetDoctorHDFSUGIResponse extends TeaModel {
         return this.headers;
     }
 
-    public GetDoctorHDFSUGIResponse setStatusCode(Integer statusCode) {
+    public GetManagedScalingPolicyResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class GetDoctorHDFSUGIResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public GetDoctorHDFSUGIResponse setBody(GetDoctorHDFSUGIResponseBody body) {
+    public GetManagedScalingPolicyResponse setBody(GetManagedScalingPolicyResponseBody body) {
         this.body = body;
         return this;
     }
-    public GetDoctorHDFSUGIResponseBody getBody() {
+    public GetManagedScalingPolicyResponseBody getBody() {
         return this.body;
     }
 

@@ -39,14 +39,14 @@ public class CreateScriptRequest extends TeaModel {
     public String scriptType;
 
     /**
-     * <p>The common scripts or bootstrap actions.</p>
+     * <p>The list of scripts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Scripts")
     public java.util.List<Script> scripts;
 
     /**
-     * <p>The timeout period for manually running a common script. You cannot specify the timeout period for a bootstrap action.</p>
+     * <p>The timeout period for a manual execution script. You cannot specify a timeout period for a bootstrap action.</p>
      */
     @NameInMap("TimeoutSecs")
     public String timeoutSecs;

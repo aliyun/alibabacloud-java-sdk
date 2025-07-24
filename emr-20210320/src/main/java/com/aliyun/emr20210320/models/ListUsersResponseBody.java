@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListUsersResponseBody extends TeaModel {
     /**
+     * <p>Indicates whether the user is an admin user. Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>False</p>
      */
@@ -13,7 +19,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Boolean isAdmin;
 
     /**
-     * <p>本次请求所返回的最大记录条数。</p>
+     * <p>The maximum number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -22,7 +28,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -31,7 +37,7 @@ public class ListUsersResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -40,7 +46,7 @@ public class ListUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>本次请求条件下的数据总量。</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -49,7 +55,7 @@ public class ListUsersResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>用户列表。</p>
+     * <p>The users.</p>
      */
     @NameInMap("Users")
     public java.util.List<Users> users;
@@ -110,7 +116,7 @@ public class ListUsersResponseBody extends TeaModel {
 
     public static class Users extends TeaModel {
         /**
-         * <p>创建时间。</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1509338726362</p>
@@ -119,7 +125,7 @@ public class ListUsersResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>备注。</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>添加test用户</p>
@@ -128,7 +134,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Keytab内容Base64编码。</p>
+         * <p>The Base64-encoded content of the keytab file.</p>
          * 
          * <strong>example:</strong>
          * <p>DBEDASDF==</p>
@@ -137,8 +143,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String keytabHex;
 
         /**
-         * <p>LDAP链接。
-         * ldap://emr-header-1.cluster-50018****:10389</p>
+         * <p>The Lightweight Directory Access Protocol (LDAP) link.</p>
          * 
          * <strong>example:</strong>
          * <p>ldap://master-1-1.c-c6ce2d16d118****.cn-hangzhou.emr.aliyuncs.com:10389</p>
@@ -147,7 +152,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String ldapUrl;
 
         /**
-         * <p>用户ID。</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>125046002175****</p>
@@ -156,8 +161,7 @@ public class ListUsersResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>用户名称。
-         * test</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>yun****</p>

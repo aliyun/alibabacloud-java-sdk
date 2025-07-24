@@ -8,7 +8,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>应用名称列表。</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;HDFS&quot;]</p>
+     * <p>c-b933c5aac8fe****</p>
      */
     @NameInMap("ApplicationNames")
     public java.util.List<String> applicationNames;
@@ -18,7 +18,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>c-b933c5aac8fe****</p>
+     * <p>C-8CFEBCCFFEF5****</p>
      */
     @NameInMap("ClusterId")
     public String clusterId;
@@ -27,7 +27,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>组件名称列表。</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;DataNode&quot;]</p>
+     * <p>[&quot;HDFS&quot;]</p>
      */
     @NameInMap("ComponentNames")
     public java.util.List<String> componentNames;
@@ -43,7 +43,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>一次获取的最大记录数。取值范围：1~100。</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>10</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -52,7 +52,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>标记当前开始读取的位置，置空表示从头开始。</p>
      * 
      * <strong>example:</strong>
-     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+     * <p>“”</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -61,7 +61,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>节点ID列表。</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;i-bp1cudc25w2bfwl5****&quot;]</p>
+     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
      */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
@@ -70,7 +70,7 @@ public class ListComponentInstancesRequest extends TeaModel {
      * <p>节点名称列表。</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;core1-1&quot;]</p>
+     * <p>20</p>
      */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
@@ -84,6 +84,13 @@ public class ListComponentInstancesRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
+    @NameInMap("ZoneId")
+    public String zoneId;
 
     public static ListComponentInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListComponentInstancesRequest self = new ListComponentInstancesRequest();
@@ -160,6 +167,14 @@ public class ListComponentInstancesRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListComponentInstancesRequest setZoneId(String zoneId) {
+        this.zoneId = zoneId;
+        return this;
+    }
+    public String getZoneId() {
+        return this.zoneId;
     }
 
 }

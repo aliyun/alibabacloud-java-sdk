@@ -11,7 +11,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
      * <p>本次请求所返回的最大记录条数。</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>2</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
@@ -20,7 +20,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
      * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
      * 
      * <strong>example:</strong>
-     * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+     * <p>“”</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,7 +29,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
      * <p>请求ID。</p>
      * 
      * <strong>example:</strong>
-     * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+     * <p>7345241A-014C-17D2-A3AC-C72771188F46</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,7 +38,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
      * <p>本次请求条件下的数据总量。</p>
      * 
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>2</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,7 +93,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>应用名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>HDFS</p>
+         * <p>KNOX</p>
          */
         @NameInMap("ApplicationName")
         public String applicationName;
@@ -143,6 +143,9 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <li>STOPPED：已停止</li>
          * <li>STOP_FAILED：停止失败</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>STARTED</p>
          */
         @NameInMap("ComponentInstanceState")
         public String componentInstanceState;
@@ -151,7 +154,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>组件名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>DataNode</p>
+         * <p>KNOX</p>
          */
         @NameInMap("ComponentName")
         public String componentName;
@@ -190,7 +193,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>节点ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>i-bp1cudc25w2bfwl5****</p>
+         * <p>i-bp17yy050pxo01m2****</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
@@ -199,10 +202,17 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>节点名称。</p>
          * 
          * <strong>example:</strong>
-         * <p>core1-1</p>
+         * <p>emr-worker-1</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-i</p>
+         */
+        @NameInMap("ZoneId")
+        public String zoneId;
 
         public static ComponentInstances build(java.util.Map<String, ?> map) throws Exception {
             ComponentInstances self = new ComponentInstances();
@@ -279,6 +289,14 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         }
         public String getNodeName() {
             return this.nodeName;
+        }
+
+        public ComponentInstances setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

@@ -48,7 +48,7 @@ public class CreateApiTemplateRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DATALAKE模板</p>
+     * <p>DATALAKE template</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

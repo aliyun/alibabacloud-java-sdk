@@ -69,7 +69,7 @@ public class ListScriptsRequest extends TeaModel {
     public String scriptType;
 
     /**
-     * <p>The status of the script. Only common scripts are supported.</p>
+     * <p>The script status list.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

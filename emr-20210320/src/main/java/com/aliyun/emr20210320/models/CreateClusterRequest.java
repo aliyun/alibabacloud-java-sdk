@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClusterRequest extends TeaModel {
     /**
-     * <p>The application configurations. Number of elements in the array: 1 to 1000.</p>
+     * <p>The service configurations. Number of elements in the array: 1 to 1,000.</p>
      */
     @NameInMap("ApplicationConfigs")
     public java.util.List<ApplicationConfig> applicationConfigs;
@@ -18,7 +18,7 @@ public class CreateClusterRequest extends TeaModel {
     public java.util.List<Application> applications;
 
     /**
-     * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
+     * <p>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public java.util.List<Script> bootstrapScripts;
@@ -98,14 +98,14 @@ public class CreateClusterRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The attributes of all ECS instances.</p>
+     * <p>The node attributes. The basic attributes of all ECS nodes in the cluster.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeAttributes")
     public NodeAttributes nodeAttributes;
 
     /**
-     * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+     * <p>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class CreateClusterRequest extends TeaModel {
     public SubscriptionConfig subscriptionConfig;
 
     /**
-     * <p>The tags. Number of elements in the array: 0 to 20.</p>
+     * <p>The tag. Number of elements in the array: 0 to 20.</p>
      * 
      * <strong>example:</strong>
      * <p>A7D960FA-6DBA-5E07-8746-A63E3E4D****</p>

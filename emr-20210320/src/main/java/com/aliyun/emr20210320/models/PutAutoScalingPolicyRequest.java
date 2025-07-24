@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutAutoScalingPolicyRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class PutAutoScalingPolicyRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The maximum and minimum numbers of nodes in a node group.</p>
+     * <p>The constraints on the maximum and minimum numbers of nodes in a node group.</p>
      */
     @NameInMap("Constraints")
     public ScalingConstraints constraints;
 
     /**
-     * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+     * <p>The ID of the node group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class PutAutoScalingPolicyRequest extends TeaModel {
     public String nodeGroupId;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class PutAutoScalingPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The auto scaling rules. Number of elements in the array: 0 to 100.</p>
+     * <p>The description list of auto scaling rules. Number of elements in the array: 0 to 100.</p>
      */
     @NameInMap("ScalingRules")
     public java.util.List<ScalingRule> scalingRules;

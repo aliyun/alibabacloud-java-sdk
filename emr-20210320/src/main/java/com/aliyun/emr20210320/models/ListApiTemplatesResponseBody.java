@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListApiTemplatesResponseBody extends TeaModel {
     /**
-     * <p>The API operation templates.</p>
+     * <p>The array of API templates.</p>
      */
     @NameInMap("ApiTemplates")
     @Deprecated

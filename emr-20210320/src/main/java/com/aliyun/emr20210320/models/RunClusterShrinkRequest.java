@@ -11,14 +11,14 @@ public class RunClusterShrinkRequest extends TeaModel {
     public String applicationConfigsShrink;
 
     /**
-     * <p>The services. Number of elements in the array: 1 to 100.</p>
+     * <p>The list of services. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Applications")
     public String applicationsShrink;
 
     /**
-     * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
+     * <p>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</p>
      */
     @NameInMap("BootstrapScripts")
     public String bootstrapScriptsShrink;
@@ -98,13 +98,13 @@ public class RunClusterShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The attributes of all ECS instances.</p>
+     * <p>The node attributes. The basic attributes of all ECS nodes in the cluster.</p>
      */
     @NameInMap("NodeAttributes")
     public String nodeAttributesShrink;
 
     /**
-     * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+     * <p>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("NodeGroups")
@@ -123,6 +123,9 @@ public class RunClusterShrinkRequest extends TeaModel {
      */
     @NameInMap("PaymentType")
     public String paymentType;
+
+    @NameInMap("Promotions")
+    public String promotionsShrink;
 
     /**
      * <p>The region ID.</p>
@@ -167,13 +170,13 @@ public class RunClusterShrinkRequest extends TeaModel {
     public String securityMode;
 
     /**
-     * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
+     * <p>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</p>
      */
     @NameInMap("SubscriptionConfig")
     public String subscriptionConfigShrink;
 
     /**
-     * <p>The tags. Number of elements in the array: 0 to 20.</p>
+     * <p>The tag. Number of elements in the array: 0 to 20.</p>
      */
     @NameInMap("Tags")
     public String tagsShrink;
@@ -277,6 +280,14 @@ public class RunClusterShrinkRequest extends TeaModel {
     }
     public String getPaymentType() {
         return this.paymentType;
+    }
+
+    public RunClusterShrinkRequest setPromotionsShrink(String promotionsShrink) {
+        this.promotionsShrink = promotionsShrink;
+        return this;
+    }
+    public String getPromotionsShrink() {
+        return this.promotionsShrink;
     }
 
     public RunClusterShrinkRequest setRegionId(String regionId) {

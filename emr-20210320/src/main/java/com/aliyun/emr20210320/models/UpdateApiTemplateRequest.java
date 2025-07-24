@@ -25,7 +25,7 @@ public class UpdateApiTemplateRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>区域ID。</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class UpdateApiTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>资源组ID。</p>
+     * <p>Resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzabjyop****</p>
@@ -44,7 +44,7 @@ public class UpdateApiTemplateRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>集群模板id。</p>
+     * <p>Template ID (it is recommended to use the parameter TemplateId).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,11 +54,11 @@ public class UpdateApiTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>集群模板名字。</p>
+     * <p>The name of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DATALAKE模板</p>
+     * <p>datalakeTest1</p>
      */
     @NameInMap("TemplateName")
     public String templateName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUsersShrinkRequest extends TeaModel {
     /**
-     * <p>集群ID。</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,7 @@ public class DeleteUsersShrinkRequest extends TeaModel {
     public String clusterId;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +24,9 @@ public class DeleteUsersShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The usernames. Number of elements in the array: 0 to 10.</p>
+     */
     @NameInMap("UserNames")
     public String userNamesShrink;
 

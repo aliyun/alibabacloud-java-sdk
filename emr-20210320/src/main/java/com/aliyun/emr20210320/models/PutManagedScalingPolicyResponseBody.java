@@ -3,7 +3,7 @@ package com.aliyun.emr20210320.models;
 
 import com.aliyun.tea.*;
 
-public class PutAutoScalingPolicyResponseBody extends TeaModel {
+public class PutManagedScalingPolicyResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
@@ -13,12 +13,12 @@ public class PutAutoScalingPolicyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static PutAutoScalingPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        PutAutoScalingPolicyResponseBody self = new PutAutoScalingPolicyResponseBody();
+    public static PutManagedScalingPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        PutManagedScalingPolicyResponseBody self = new PutManagedScalingPolicyResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public PutAutoScalingPolicyResponseBody setRequestId(String requestId) {
+    public PutManagedScalingPolicyResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

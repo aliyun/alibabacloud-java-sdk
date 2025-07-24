@@ -3827,7 +3827,7 @@ public class ListDoctorHiveDatabasesResponseBody extends TeaModel {
         public TinyFileRatio tinyFileRatio;
 
         /**
-         * <p>The daily incremental of the total data volume.</p>
+         * <p>The daily increment of the total data volume.</p>
          */
         @NameInMap("TotalDataDayGrowthSize")
         public TotalDataDayGrowthSize totalDataDayGrowthSize;
