@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetVpcPrefixListAssociationsRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return in each call. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

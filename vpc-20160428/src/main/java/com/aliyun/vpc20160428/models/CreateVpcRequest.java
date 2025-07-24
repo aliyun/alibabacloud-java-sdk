@@ -109,6 +109,12 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
+    @NameInMap("Ipv6CidrMask")
+    public Integer ipv6CidrMask;
+
+    @NameInMap("Ipv6IpamPoolId")
+    public String ipv6IpamPoolId;
+
     /**
      * <p>The type of the IPv6 CIDR block of the VPC. Valid values:</p>
      * <ul>
@@ -261,6 +267,22 @@ public class CreateVpcRequest extends TeaModel {
     }
     public String getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
+    }
+
+    public CreateVpcRequest setIpv6CidrMask(Integer ipv6CidrMask) {
+        this.ipv6CidrMask = ipv6CidrMask;
+        return this;
+    }
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
+    }
+
+    public CreateVpcRequest setIpv6IpamPoolId(String ipv6IpamPoolId) {
+        this.ipv6IpamPoolId = ipv6IpamPoolId;
+        return this;
+    }
+    public String getIpv6IpamPoolId() {
+        return this.ipv6IpamPoolId;
     }
 
     public CreateVpcRequest setIpv6Isp(String ipv6Isp) {

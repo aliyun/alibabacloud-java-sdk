@@ -38,6 +38,9 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("IpamPoolId")
     public String ipamPoolId;
 
+    @NameInMap("Ipv6CidrMask")
+    public Integer ipv6CidrMask;
+
     /**
      * <p>The type of the IPv6 CIDR block. Valid values:</p>
      * <ul>
@@ -65,7 +68,6 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC to which you want to add a secondary CIDR block.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>ch-hangzhou</p>
@@ -149,6 +151,14 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     }
     public String getIpamPoolId() {
         return this.ipamPoolId;
+    }
+
+    public AssociateVpcCidrBlockRequest setIpv6CidrMask(Integer ipv6CidrMask) {
+        this.ipv6CidrMask = ipv6CidrMask;
+        return this;
+    }
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
     }
 
     public AssociateVpcCidrBlockRequest setIpv6Isp(String ipv6Isp) {

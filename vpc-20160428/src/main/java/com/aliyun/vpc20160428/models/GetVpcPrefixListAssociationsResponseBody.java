@@ -96,6 +96,12 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     }
 
     public static class GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation extends TeaModel {
+        /**
+         * <p>List of CIDR addresses where the prefix list is effective in the currently associated resources.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
+         */
         @NameInMap("CidrList")
         public String cidrList;
 

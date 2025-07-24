@@ -2478,6 +2478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IpamPoolId", request.ipamPoolId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6CidrMask)) {
+            query.put("Ipv6CidrMask", request.ipv6CidrMask);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6Isp)) {
             query.put("Ipv6Isp", request.ipv6Isp);
         }
@@ -9083,6 +9087,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6CidrBlock)) {
             query.put("Ipv6CidrBlock", request.ipv6CidrBlock);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6CidrMask)) {
+            query.put("Ipv6CidrMask", request.ipv6CidrMask);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6IpamPoolId)) {
+            query.put("Ipv6IpamPoolId", request.ipv6IpamPoolId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipv6Isp)) {
