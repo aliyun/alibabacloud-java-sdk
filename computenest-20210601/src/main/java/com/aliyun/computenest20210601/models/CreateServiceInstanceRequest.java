@@ -140,6 +140,12 @@ public class CreateServiceInstanceRequest extends TeaModel {
     @NameInMap("ServiceId")
     public String serviceId;
 
+    /**
+     * <p>The trial service instance id witch you want to convert to formal</p>
+     * 
+     * <strong>example:</strong>
+     * <p>si-d32fbcef30664721b785</p>
+     */
     @NameInMap("ServiceInstanceId")
     public String serviceInstanceId;
 
@@ -422,6 +428,9 @@ public class CreateServiceInstanceRequest extends TeaModel {
         @NameInMap("PayPeriodUnit")
         public String payPeriodUnit;
 
+        @NameInMap("QuotationId")
+        public String quotationId;
+
         public static CreateServiceInstanceRequestCommodity build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceInstanceRequestCommodity self = new CreateServiceInstanceRequestCommodity();
             return TeaModel.build(map, self);
@@ -465,6 +474,14 @@ public class CreateServiceInstanceRequest extends TeaModel {
         }
         public String getPayPeriodUnit() {
             return this.payPeriodUnit;
+        }
+
+        public CreateServiceInstanceRequestCommodity setQuotationId(String quotationId) {
+            this.quotationId = quotationId;
+            return this;
+        }
+        public String getQuotationId() {
+            return this.quotationId;
         }
 
     }

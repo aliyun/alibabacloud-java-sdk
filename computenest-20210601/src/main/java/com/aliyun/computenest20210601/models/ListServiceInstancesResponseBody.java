@@ -32,7 +32,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the service instances.</p>
+     * <p>The information about service instances.</p>
      */
     @NameInMap("ServiceInstances")
     public java.util.List<ListServiceInstancesResponseBodyServiceInstances> serviceInstances;
@@ -170,7 +170,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          * <p>The description of the service.</p>
          * 
          * <strong>example:</strong>
-         * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
+         * <p>WordPress is a free and open-source website content management system (CMS).</p>
          */
         @NameInMap("ShortDescription")
         public String shortDescription;
@@ -685,6 +685,12 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @NameInMap("StatusDetail")
         public String statusDetail;
 
+        /**
+         * <p>Is it supported to convert from trial to formal</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SupportTrialToPrivate")
         public Boolean supportTrialToPrivate;
 
@@ -698,7 +704,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>模板1</p>
+         * <p>Single ECS</p>
          */
         @NameInMap("TemplateName")
         public String templateName;

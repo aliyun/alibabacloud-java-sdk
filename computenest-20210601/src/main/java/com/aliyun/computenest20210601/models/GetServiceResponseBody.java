@@ -31,6 +31,9 @@ public class GetServiceResponseBody extends TeaModel {
     @NameInMap("Commodity")
     public GetServiceResponseBodyCommodity commodity;
 
+    /**
+     * <p>Compliance check metadata.</p>
+     */
     @NameInMap("ComplianceMetadata")
     public GetServiceResponseBodyComplianceMetadata complianceMetadata;
 
@@ -1009,6 +1012,9 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     public static class GetServiceResponseBodyComplianceMetadata extends TeaModel {
+        /**
+         * <p>The compliance pack list.</p>
+         */
         @NameInMap("CompliancePacks")
         public java.util.List<String> compliancePacks;
 

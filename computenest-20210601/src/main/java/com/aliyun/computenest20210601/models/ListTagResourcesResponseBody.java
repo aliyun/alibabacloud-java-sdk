@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of resources that have tags.</p>
+     * <p>The collection of details about resources and tags, such as resource IDs, resource types, and tag key-value pairs.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<ListTagResourcesResponseBodyTagResources> tagResources;
@@ -72,7 +72,8 @@ public class ListTagResourcesResponseBody extends TeaModel {
          * <ul>
          * <li>service: service</li>
          * <li>serviceinstance: service instance</li>
-         * <li>artifact: artifact</li>
+         * <li>artifact: deployment package</li>
+         * <li>dataset: dataset</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -82,7 +83,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -91,7 +92,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The values of the tags.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>major</p>

@@ -14,7 +14,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the services.</p>
+     * <p>The information about the cloud services.</p>
      */
     @NameInMap("ServiceProvisions")
     public java.util.List<GetServiceProvisionsResponseBodyServiceProvisions> serviceProvisions;
@@ -41,12 +41,30 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
     }
 
     public static class GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions extends TeaModel {
+        /**
+         * <p>Commodity Code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_postpaid_public_cn</p>
+         */
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>Product activation link.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn">https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn</a></p>
+         */
         @NameInMap("EnableURL")
         public String enableURL;
 
+        /**
+         * <p>Cloud service activation status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Disabled</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -294,6 +312,9 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         @NameInMap("AutoEnableService")
         public Boolean autoEnableService;
 
+        /**
+         * <p>Product details. Some services (such as ACS) involve the activation of multiple products</p>
+         */
         @NameInMap("CommodityProvisions")
         public java.util.List<GetServiceProvisionsResponseBodyServiceProvisionsCommodityProvisions> commodityProvisions;
 

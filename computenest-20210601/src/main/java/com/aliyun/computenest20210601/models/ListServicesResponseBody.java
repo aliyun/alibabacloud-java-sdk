@@ -135,9 +135,21 @@ public class ListServicesResponseBody extends TeaModel {
     }
 
     public static class ListServicesResponseBodyServicesServiceInfosSoftwares extends TeaModel {
+        /**
+         * <p>The name of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wordpress</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The version of the software.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6.0.1</p>
+         */
         @NameInMap("Version")
         public String version;
 
@@ -205,6 +217,9 @@ public class ListServicesResponseBody extends TeaModel {
         @NameInMap("ShortDescription")
         public String shortDescription;
 
+        /**
+         * <p>Service software information.</p>
+         */
         @NameInMap("Softwares")
         public java.util.List<ListServicesResponseBodyServicesServiceInfosSoftwares> softwares;
 
@@ -383,7 +398,7 @@ public class ListServicesResponseBody extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The information about the service.</p>
+         * <p>The service information.</p>
          */
         @NameInMap("ServiceInfos")
         public java.util.List<ListServicesResponseBodyServicesServiceInfos> serviceInfos;

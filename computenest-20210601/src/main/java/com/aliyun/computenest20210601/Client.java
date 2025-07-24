@@ -944,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计算巢查询服务是否开通</p>
+     * <p>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</p>
      * 
      * @param tmpReq GetServiceProvisionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1002,7 +1002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>计算巢查询服务是否开通</p>
+     * <p>Queries the information about the activation status and Resource Access Management (RAM) roles of the cloud services required by a service.</p>
      * 
      * @param request GetServiceProvisionsRequest
      * @return GetServiceProvisionsResponse

@@ -231,6 +231,9 @@ public class GetServiceEstimateCostRequest extends TeaModel {
         @NameInMap("PayPeriodUnit")
         public String payPeriodUnit;
 
+        @NameInMap("QuotationId")
+        public String quotationId;
+
         public static GetServiceEstimateCostRequestCommodity build(java.util.Map<String, ?> map) throws Exception {
             GetServiceEstimateCostRequestCommodity self = new GetServiceEstimateCostRequestCommodity();
             return TeaModel.build(map, self);
@@ -258,6 +261,14 @@ public class GetServiceEstimateCostRequest extends TeaModel {
         }
         public String getPayPeriodUnit() {
             return this.payPeriodUnit;
+        }
+
+        public GetServiceEstimateCostRequestCommodity setQuotationId(String quotationId) {
+            this.quotationId = quotationId;
+            return this;
+        }
+        public String getQuotationId() {
+            return this.quotationId;
         }
 
     }

@@ -236,7 +236,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     public String resources;
 
     /**
-     * <p>The information about the cloud service.</p>
+     * <p>The service details.</p>
      */
     @NameInMap("Service")
     public GetServiceInstanceResponseBodyService service;
@@ -315,6 +315,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @NameInMap("SupplierUid")
     public Long supplierUid;
 
+    /**
+     * <p>Is it supported to convert from trial to private</p>
+     */
     @NameInMap("SupportTrialToPrivate")
     public Boolean supportTrialToPrivate;
 
@@ -1132,10 +1135,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>Operation info.</p>
+         * <p>Parameters related to O\&amp;M operations, including configuration change, prometheus, and log configurations.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;国内版&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;套餐变配&quot;,&quot;Description&quot;:&quot;套餐变配&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;参数变配&quot;,&quot;Description&quot;:&quot;参数变配&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}]}</p>
+         * <p>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;Chinese mainland version&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;Change Plan&quot;,&quot;Description&quot;:&quot;Change Plan&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;Parameter configuration change&quot;,&quot;Description&quot;:&quot;Parameter configuration change&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}}</p>
          */
         @NameInMap("OperationMetadata")
         public String operationMetadata;
@@ -1247,6 +1250,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The metadata about the upgrade.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;Description\&quot;:\&quot;Allowed Upgrade 11\&quot;,\&quot;SupportRollback\&quot;:true,\&quot;SupportUpgradeFromVersions\&quot;:[],\&quot;UpgradeComponents\&quot;:[\&quot;Configuration\&quot;,\&quot;Resource\&quot;]}</p>
          */
         @NameInMap("UpgradeMetadata")
         public String upgradeMetadata;
