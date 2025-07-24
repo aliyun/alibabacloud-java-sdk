@@ -241,6 +241,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AsyncCreateClipsTimeLineResponse asyncCreateClipsTimeLineWithOptions(AsyncCreateClipsTimeLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalContent)) {
+            body.put("AdditionalContent", request.additionalContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.customContent)) {
+            body.put("CustomContent", request.customContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.noRefVideo)) {
+            body.put("NoRefVideo", request.noRefVideo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.processPrompt)) {
             body.put("ProcessPrompt", request.processPrompt);
         }
@@ -356,6 +368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         AsyncUploadVideoShrinkRequest request = new AsyncUploadVideoShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.referenceVideo)) {
+            request.referenceVideoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.referenceVideo, "ReferenceVideo", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceVideos)) {
             request.sourceVideosShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceVideos, "SourceVideos", "json");
         }
@@ -365,8 +381,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AnlysisPrompt", request.anlysisPrompt);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.referenceVideoShrink)) {
+            body.put("ReferenceVideo", request.referenceVideoShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceVideosShrink)) {
             body.put("SourceVideos", request.sourceVideosShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.splitInterval)) {
+            body.put("SplitInterval", request.splitInterval);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {

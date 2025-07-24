@@ -4,6 +4,15 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class AsyncCreateClipsTimeLineRequest extends TeaModel {
+    @NameInMap("AdditionalContent")
+    public String additionalContent;
+
+    @NameInMap("CustomContent")
+    public String customContent;
+
+    @NameInMap("NoRefVideo")
+    public Boolean noRefVideo;
+
     @NameInMap("ProcessPrompt")
     public String processPrompt;
 
@@ -28,6 +37,30 @@ public class AsyncCreateClipsTimeLineRequest extends TeaModel {
     public static AsyncCreateClipsTimeLineRequest build(java.util.Map<String, ?> map) throws Exception {
         AsyncCreateClipsTimeLineRequest self = new AsyncCreateClipsTimeLineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AsyncCreateClipsTimeLineRequest setAdditionalContent(String additionalContent) {
+        this.additionalContent = additionalContent;
+        return this;
+    }
+    public String getAdditionalContent() {
+        return this.additionalContent;
+    }
+
+    public AsyncCreateClipsTimeLineRequest setCustomContent(String customContent) {
+        this.customContent = customContent;
+        return this;
+    }
+    public String getCustomContent() {
+        return this.customContent;
+    }
+
+    public AsyncCreateClipsTimeLineRequest setNoRefVideo(Boolean noRefVideo) {
+        this.noRefVideo = noRefVideo;
+        return this;
+    }
+    public Boolean getNoRefVideo() {
+        return this.noRefVideo;
     }
 
     public AsyncCreateClipsTimeLineRequest setProcessPrompt(String processPrompt) {

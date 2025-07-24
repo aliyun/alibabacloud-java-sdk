@@ -7,11 +7,17 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
     @NameInMap("AnlysisPrompt")
     public String anlysisPrompt;
 
+    @NameInMap("ReferenceVideo")
+    public String referenceVideoShrink;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceVideos")
     public String sourceVideosShrink;
+
+    @NameInMap("SplitInterval")
+    public Integer splitInterval;
 
     /**
      * <p>This parameter is required.</p>
@@ -35,12 +41,28 @@ public class AsyncUploadVideoShrinkRequest extends TeaModel {
         return this.anlysisPrompt;
     }
 
+    public AsyncUploadVideoShrinkRequest setReferenceVideoShrink(String referenceVideoShrink) {
+        this.referenceVideoShrink = referenceVideoShrink;
+        return this;
+    }
+    public String getReferenceVideoShrink() {
+        return this.referenceVideoShrink;
+    }
+
     public AsyncUploadVideoShrinkRequest setSourceVideosShrink(String sourceVideosShrink) {
         this.sourceVideosShrink = sourceVideosShrink;
         return this;
     }
     public String getSourceVideosShrink() {
         return this.sourceVideosShrink;
+    }
+
+    public AsyncUploadVideoShrinkRequest setSplitInterval(Integer splitInterval) {
+        this.splitInterval = splitInterval;
+        return this;
+    }
+    public Integer getSplitInterval() {
+        return this.splitInterval;
     }
 
     public AsyncUploadVideoShrinkRequest setWorkspaceId(String workspaceId) {

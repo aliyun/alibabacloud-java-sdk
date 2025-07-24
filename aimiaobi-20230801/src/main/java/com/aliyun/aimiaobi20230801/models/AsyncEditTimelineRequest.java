@@ -78,8 +78,14 @@ public class AsyncEditTimelineRequest extends TeaModel {
         @NameInMap("In")
         public Integer in;
 
+        @NameInMap("InEx")
+        public Float inEx;
+
         @NameInMap("Out")
         public Integer out;
+
+        @NameInMap("OutEx")
+        public Float outEx;
 
         @NameInMap("VideoId")
         public String videoId;
@@ -116,12 +122,28 @@ public class AsyncEditTimelineRequest extends TeaModel {
             return this.in;
         }
 
+        public AsyncEditTimelineRequestTimelinesClips setInEx(Float inEx) {
+            this.inEx = inEx;
+            return this;
+        }
+        public Float getInEx() {
+            return this.inEx;
+        }
+
         public AsyncEditTimelineRequestTimelinesClips setOut(Integer out) {
             this.out = out;
             return this;
         }
         public Integer getOut() {
             return this.out;
+        }
+
+        public AsyncEditTimelineRequestTimelinesClips setOutEx(Float outEx) {
+            this.outEx = outEx;
+            return this;
+        }
+        public Float getOutEx() {
+            return this.outEx;
         }
 
         public AsyncEditTimelineRequestTimelinesClips setVideoId(String videoId) {

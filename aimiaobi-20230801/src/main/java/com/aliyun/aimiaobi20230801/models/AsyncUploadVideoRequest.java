@@ -7,11 +7,17 @@ public class AsyncUploadVideoRequest extends TeaModel {
     @NameInMap("AnlysisPrompt")
     public String anlysisPrompt;
 
+    @NameInMap("ReferenceVideo")
+    public AsyncUploadVideoRequestReferenceVideo referenceVideo;
+
     /**
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceVideos")
     public java.util.List<AsyncUploadVideoRequestSourceVideos> sourceVideos;
+
+    @NameInMap("SplitInterval")
+    public Integer splitInterval;
 
     /**
      * <p>This parameter is required.</p>
@@ -35,6 +41,14 @@ public class AsyncUploadVideoRequest extends TeaModel {
         return this.anlysisPrompt;
     }
 
+    public AsyncUploadVideoRequest setReferenceVideo(AsyncUploadVideoRequestReferenceVideo referenceVideo) {
+        this.referenceVideo = referenceVideo;
+        return this;
+    }
+    public AsyncUploadVideoRequestReferenceVideo getReferenceVideo() {
+        return this.referenceVideo;
+    }
+
     public AsyncUploadVideoRequest setSourceVideos(java.util.List<AsyncUploadVideoRequestSourceVideos> sourceVideos) {
         this.sourceVideos = sourceVideos;
         return this;
@@ -43,12 +57,61 @@ public class AsyncUploadVideoRequest extends TeaModel {
         return this.sourceVideos;
     }
 
+    public AsyncUploadVideoRequest setSplitInterval(Integer splitInterval) {
+        this.splitInterval = splitInterval;
+        return this;
+    }
+    public Integer getSplitInterval() {
+        return this.splitInterval;
+    }
+
     public AsyncUploadVideoRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    public static class AsyncUploadVideoRequestReferenceVideo extends TeaModel {
+        @NameInMap("VideoExtraInfo")
+        public String videoExtraInfo;
+
+        @NameInMap("VideoName")
+        public String videoName;
+
+        @NameInMap("VideoUrl")
+        public String videoUrl;
+
+        public static AsyncUploadVideoRequestReferenceVideo build(java.util.Map<String, ?> map) throws Exception {
+            AsyncUploadVideoRequestReferenceVideo self = new AsyncUploadVideoRequestReferenceVideo();
+            return TeaModel.build(map, self);
+        }
+
+        public AsyncUploadVideoRequestReferenceVideo setVideoExtraInfo(String videoExtraInfo) {
+            this.videoExtraInfo = videoExtraInfo;
+            return this;
+        }
+        public String getVideoExtraInfo() {
+            return this.videoExtraInfo;
+        }
+
+        public AsyncUploadVideoRequestReferenceVideo setVideoName(String videoName) {
+            this.videoName = videoName;
+            return this;
+        }
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        public AsyncUploadVideoRequestReferenceVideo setVideoUrl(String videoUrl) {
+            this.videoUrl = videoUrl;
+            return this;
+        }
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
     }
 
     public static class AsyncUploadVideoRequestSourceVideos extends TeaModel {

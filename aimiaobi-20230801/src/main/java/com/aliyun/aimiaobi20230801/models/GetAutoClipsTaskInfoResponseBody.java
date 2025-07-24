@@ -179,12 +179,18 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @NameInMap("In")
         public Integer in;
 
+        @NameInMap("InEx")
+        public Float inEx;
+
         /**
          * <strong>example:</strong>
          * <p>5</p>
          */
         @NameInMap("Out")
         public Integer out;
+
+        @NameInMap("OutEx")
+        public Float outEx;
 
         /**
          * <strong>example:</strong>
@@ -229,12 +235,28 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             return this.in;
         }
 
+        public GetAutoClipsTaskInfoResponseBodyDataTimelinesClips setInEx(Float inEx) {
+            this.inEx = inEx;
+            return this;
+        }
+        public Float getInEx() {
+            return this.inEx;
+        }
+
         public GetAutoClipsTaskInfoResponseBodyDataTimelinesClips setOut(Integer out) {
             this.out = out;
             return this;
         }
         public Integer getOut() {
             return this.out;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyDataTimelinesClips setOutEx(Float outEx) {
+            this.outEx = outEx;
+            return this;
+        }
+        public Float getOutEx() {
+            return this.outEx;
         }
 
         public GetAutoClipsTaskInfoResponseBodyDataTimelinesClips setVideoId(String videoId) {
@@ -306,6 +328,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
 
         @NameInMap("Content")
         public String content;
+
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
 
         @NameInMap("MediaCloudTimeline")
         public String mediaCloudTimeline;
@@ -390,6 +415,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
         public String getContent() {
             return this.content;
+        }
+
+        public GetAutoClipsTaskInfoResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public GetAutoClipsTaskInfoResponseBodyData setMediaCloudTimeline(String mediaCloudTimeline) {
