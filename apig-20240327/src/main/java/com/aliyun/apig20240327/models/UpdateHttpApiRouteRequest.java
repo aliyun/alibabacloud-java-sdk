@@ -43,6 +43,12 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     @NameInMap("match")
     public HttpRouteMatch match;
 
+    @NameInMap("mcpRouteConfig")
+    public UpdateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig;
+
+    @NameInMap("name")
+    public String name;
+
     public static UpdateHttpApiRouteRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateHttpApiRouteRequest self = new UpdateHttpApiRouteRequest();
         return TeaModel.build(map, self);
@@ -94,6 +100,22 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     }
     public HttpRouteMatch getMatch() {
         return this.match;
+    }
+
+    public UpdateHttpApiRouteRequest setMcpRouteConfig(UpdateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig) {
+        this.mcpRouteConfig = mcpRouteConfig;
+        return this;
+    }
+    public UpdateHttpApiRouteRequestMcpRouteConfig getMcpRouteConfig() {
+        return this.mcpRouteConfig;
+    }
+
+    public UpdateHttpApiRouteRequest setName(String name) {
+        this.name = name;
+        return this;
+    }
+    public String getName() {
+        return this.name;
     }
 
     public static class UpdateHttpApiRouteRequestBackendConfigServices extends TeaModel {
@@ -235,6 +257,47 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         }
         public java.util.List<UpdateHttpApiRouteRequestBackendConfigServices> getServices() {
             return this.services;
+        }
+
+    }
+
+    public static class UpdateHttpApiRouteRequestMcpRouteConfig extends TeaModel {
+        @NameInMap("exposedUriPath")
+        public String exposedUriPath;
+
+        @NameInMap("mcpStatisticsEnable")
+        public Boolean mcpStatisticsEnable;
+
+        @NameInMap("protocol")
+        public String protocol;
+
+        public static UpdateHttpApiRouteRequestMcpRouteConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateHttpApiRouteRequestMcpRouteConfig self = new UpdateHttpApiRouteRequestMcpRouteConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateHttpApiRouteRequestMcpRouteConfig setExposedUriPath(String exposedUriPath) {
+            this.exposedUriPath = exposedUriPath;
+            return this;
+        }
+        public String getExposedUriPath() {
+            return this.exposedUriPath;
+        }
+
+        public UpdateHttpApiRouteRequestMcpRouteConfig setMcpStatisticsEnable(Boolean mcpStatisticsEnable) {
+            this.mcpStatisticsEnable = mcpStatisticsEnable;
+            return this;
+        }
+        public Boolean getMcpStatisticsEnable() {
+            return this.mcpStatisticsEnable;
+        }
+
+        public UpdateHttpApiRouteRequestMcpRouteConfig setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
         }
 
     }

@@ -33,6 +33,9 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
         @NameInMap("environmentId")
         public String environmentId;
 
+        @NameInMap("parentResourceId")
+        public String parentResourceId;
+
         /**
          * <p>The resource ID.</p>
          * 
@@ -41,6 +44,9 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
          */
         @NameInMap("resourceId")
         public String resourceId;
+
+        @NameInMap("resources")
+        public java.util.List<String> resources;
 
         public static CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier build(java.util.Map<String, ?> map) throws Exception {
             CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier self = new CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier();
@@ -55,12 +61,28 @@ public class CreateConsumerAuthorizationRulesRequest extends TeaModel {
             return this.environmentId;
         }
 
+        public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier setParentResourceId(String parentResourceId) {
+            this.parentResourceId = parentResourceId;
+            return this;
+        }
+        public String getParentResourceId() {
+            return this.parentResourceId;
+        }
+
         public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier setResourceId(String resourceId) {
             this.resourceId = resourceId;
             return this;
         }
         public String getResourceId() {
             return this.resourceId;
+        }
+
+        public CreateConsumerAuthorizationRulesRequestAuthorizationRulesResourceIdentifier setResources(java.util.List<String> resources) {
+            this.resources = resources;
+            return this;
+        }
+        public java.util.List<String> getResources() {
+            return this.resources;
         }
 
     }

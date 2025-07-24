@@ -1819,6 +1819,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("pluginId", request.pluginId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.routeId)) {
+            query.put("routeId", request.routeId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.source)) {
             query.put("source", request.source);
         }
@@ -3480,6 +3484,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("resourceType", request.resourceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceTypes)) {
+            query.put("resourceTypes", request.resourceTypes);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
@@ -4170,6 +4178,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.match)) {
             body.put("match", request.match);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpRouteConfig)) {
+            body.put("mcpRouteConfig", request.mcpRouteConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

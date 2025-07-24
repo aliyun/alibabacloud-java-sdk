@@ -94,6 +94,9 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     @NameInMap("resourceType")
     public String resourceType;
 
+    @NameInMap("resourceTypes")
+    public String resourceTypes;
+
     public static QueryConsumerAuthorizationRulesRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConsumerAuthorizationRulesRequest self = new QueryConsumerAuthorizationRulesRequest();
         return TeaModel.build(map, self);
@@ -177,6 +180,14 @@ public class QueryConsumerAuthorizationRulesRequest extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public QueryConsumerAuthorizationRulesRequest setResourceTypes(String resourceTypes) {
+        this.resourceTypes = resourceTypes;
+        return this;
+    }
+    public String getResourceTypes() {
+        return this.resourceTypes;
     }
 
 }

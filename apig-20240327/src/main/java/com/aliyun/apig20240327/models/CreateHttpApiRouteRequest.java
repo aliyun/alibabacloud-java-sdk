@@ -270,6 +270,9 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         @NameInMap("exposedUriPath")
         public String exposedUriPath;
 
+        @NameInMap("mcpStatisticsEnable")
+        public Boolean mcpStatisticsEnable;
+
         @NameInMap("protocol")
         public String protocol;
 
@@ -284,6 +287,14 @@ public class CreateHttpApiRouteRequest extends TeaModel {
         }
         public String getExposedUriPath() {
             return this.exposedUriPath;
+        }
+
+        public CreateHttpApiRouteRequestMcpRouteConfig setMcpStatisticsEnable(Boolean mcpStatisticsEnable) {
+            this.mcpStatisticsEnable = mcpStatisticsEnable;
+            return this;
+        }
+        public Boolean getMcpStatisticsEnable() {
+            return this.mcpStatisticsEnable;
         }
 
         public CreateHttpApiRouteRequestMcpRouteConfig setProtocol(String protocol) {

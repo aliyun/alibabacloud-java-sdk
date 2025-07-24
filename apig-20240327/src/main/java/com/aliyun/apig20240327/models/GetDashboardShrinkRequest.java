@@ -53,6 +53,9 @@ public class GetDashboardShrinkRequest extends TeaModel {
     @NameInMap("pluginId")
     public String pluginId;
 
+    @NameInMap("routeId")
+    public String routeId;
+
     /**
      * <p>The dashboard source. Valid values:</p>
      * <ul>
@@ -119,6 +122,14 @@ public class GetDashboardShrinkRequest extends TeaModel {
     }
     public String getPluginId() {
         return this.pluginId;
+    }
+
+    public GetDashboardShrinkRequest setRouteId(String routeId) {
+        this.routeId = routeId;
+        return this;
+    }
+    public String getRouteId() {
+        return this.routeId;
     }
 
     public GetDashboardShrinkRequest setSource(String source) {
