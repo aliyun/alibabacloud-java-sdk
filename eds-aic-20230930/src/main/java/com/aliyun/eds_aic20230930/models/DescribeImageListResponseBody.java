@@ -74,6 +74,36 @@ public class DescribeImageListResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeImageListResponseBodyDataImageBizTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeImageListResponseBodyDataImageBizTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageListResponseBodyDataImageBizTags self = new DescribeImageListResponseBodyDataImageBizTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageListResponseBodyDataImageBizTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeImageListResponseBodyDataImageBizTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeImageListResponseBodyData extends TeaModel {
         /**
          * <p>The ID of the Alibaba Cloud account.</p>
@@ -110,6 +140,9 @@ public class DescribeImageListResponseBody extends TeaModel {
          */
         @NameInMap("GmtModified")
         public String gmtModified;
+
+        @NameInMap("ImageBizTags")
+        public java.util.List<DescribeImageListResponseBodyDataImageBizTags> imageBizTags;
 
         /**
          * <p>The ID of the image.</p>
@@ -252,6 +285,14 @@ public class DescribeImageListResponseBody extends TeaModel {
         }
         public String getGmtModified() {
             return this.gmtModified;
+        }
+
+        public DescribeImageListResponseBodyData setImageBizTags(java.util.List<DescribeImageListResponseBodyDataImageBizTags> imageBizTags) {
+            this.imageBizTags = imageBizTags;
+            return this;
+        }
+        public java.util.List<DescribeImageListResponseBodyDataImageBizTags> getImageBizTags() {
+            return this.imageBizTags;
         }
 
         public DescribeImageListResponseBodyData setImageId(String imageId) {

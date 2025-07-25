@@ -1934,8 +1934,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeImageListResponse describeImageListWithOptions(DescribeImageListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageBizTags)) {
+            query.put("ImageBizTags", request.imageBizTags);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imagePackageType)) {
             query.put("ImagePackageType", request.imagePackageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();

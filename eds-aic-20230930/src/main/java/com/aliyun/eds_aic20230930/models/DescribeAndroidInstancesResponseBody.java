@@ -104,6 +104,36 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAndroidInstancesResponseBodyInstanceModelBizTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAndroidInstancesResponseBodyInstanceModelBizTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstancesResponseBodyInstanceModelBizTags self = new DescribeAndroidInstancesResponseBodyInstanceModelBizTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelBizTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModelBizTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeAndroidInstancesResponseBodyInstanceModelDisks extends TeaModel {
         /**
          * <p>The disk size. Unit: GB.</p>
@@ -372,6 +402,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("BindUserId")
         public String bindUserId;
 
+        @NameInMap("BizTags")
+        public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> bizTags;
+
         /**
          * <p>The billing method of the instance.</p>
          * 
@@ -580,6 +613,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("RenderingType")
         public String renderingType;
 
+        @NameInMap("ServerType")
+        public String serverType;
+
         /**
          * <p>The session status.</p>
          * <p>Valid values:</p>
@@ -711,6 +747,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getBindUserId() {
             return this.bindUserId;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setBizTags(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> bizTags) {
+            this.bizTags = bizTags;
+            return this;
+        }
+        public java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelBizTags> getBizTags() {
+            return this.bizTags;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setChargeType(String chargeType) {
@@ -927,6 +971,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getRenderingType() {
             return this.renderingType;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setServerType(String serverType) {
+            this.serverType = serverType;
+            return this;
+        }
+        public String getServerType() {
+            return this.serverType;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setSessionStatus(String sessionStatus) {

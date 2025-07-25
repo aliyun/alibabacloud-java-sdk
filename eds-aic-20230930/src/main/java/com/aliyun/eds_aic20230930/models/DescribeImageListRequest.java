@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeImageListRequest extends TeaModel {
+    @NameInMap("ImageBizTags")
+    public java.util.List<DescribeImageListRequestImageBizTags> imageBizTags;
+
     /**
      * <p>The ID of the image.</p>
      * 
@@ -45,6 +48,9 @@ public class DescribeImageListRequest extends TeaModel {
      */
     @NameInMap("ImageType")
     public String imageType;
+
+    @NameInMap("InstanceType")
+    public String instanceType;
 
     /**
      * <p>The number of entries per page. Valid values: 1 to 100. Default value: 20.</p>
@@ -89,6 +95,14 @@ public class DescribeImageListRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeImageListRequest setImageBizTags(java.util.List<DescribeImageListRequestImageBizTags> imageBizTags) {
+        this.imageBizTags = imageBizTags;
+        return this;
+    }
+    public java.util.List<DescribeImageListRequestImageBizTags> getImageBizTags() {
+        return this.imageBizTags;
+    }
+
     public DescribeImageListRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
@@ -121,6 +135,14 @@ public class DescribeImageListRequest extends TeaModel {
         return this.imageType;
     }
 
+    public DescribeImageListRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
     public DescribeImageListRequest setMaxResults(Integer maxResults) {
         this.maxResults = maxResults;
         return this;
@@ -143,6 +165,36 @@ public class DescribeImageListRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public static class DescribeImageListRequestImageBizTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeImageListRequestImageBizTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeImageListRequestImageBizTags self = new DescribeImageListRequestImageBizTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeImageListRequestImageBizTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeImageListRequestImageBizTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

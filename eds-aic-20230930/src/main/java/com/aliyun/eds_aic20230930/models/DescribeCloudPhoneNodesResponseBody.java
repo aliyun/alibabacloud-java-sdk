@@ -95,6 +95,36 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeCloudPhoneNodesResponseBodyNodeModelBizTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeCloudPhoneNodesResponseBodyNodeModelBizTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeCloudPhoneNodesResponseBodyNodeModelBizTags self = new DescribeCloudPhoneNodesResponseBodyNodeModelBizTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelBizTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModelBizTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeCloudPhoneNodesResponseBodyNodeModelNetworkInfos extends TeaModel {
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
@@ -194,6 +224,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
+
+        @NameInMap("BizTags")
+        public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelBizTags> bizTags;
 
         /**
          * <p>The billing method.</p>
@@ -379,6 +412,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public String getBandwidthPackageType() {
             return this.bandwidthPackageType;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setBizTags(java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelBizTags> bizTags) {
+            this.bizTags = bizTags;
+            return this;
+        }
+        public java.util.List<DescribeCloudPhoneNodesResponseBodyNodeModelBizTags> getBizTags() {
+            return this.bizTags;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setChargeType(String chargeType) {
