@@ -250,6 +250,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建用电负荷预测任务，历史数据来自文件url</p>
+     * 
+     * @param request CreateLoadForecastByFileUrlJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateLoadForecastByFileUrlJobResponse
+     */
+    public CreateLoadForecastByFileUrlJobResponse createLoadForecastByFileUrlJobWithOptions(CreateLoadForecastByFileUrlJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessKey)) {
+            body.put("BusinessKey", request.businessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            body.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.freq)) {
+            body.put("Freq", request.freq);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyUrl)) {
+            body.put("HistoryUrl", request.historyUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            body.put("ModelVersion", request.modelVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runDate)) {
+            body.put("RunDate", request.runDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemType)) {
+            body.put("SystemType", request.systemType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeColumn)) {
+            body.put("TimeColumn", request.timeColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
+            body.put("TimeZone", request.timeZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valueColumn)) {
+            body.put("ValueColumn", request.valueColumn);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateLoadForecastByFileUrlJob"),
+            new TeaPair("version", "2020-09-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateLoadForecastByFileUrlJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建用电负荷预测任务，历史数据来自文件url</p>
+     * 
+     * @param request CreateLoadForecastByFileUrlJobRequest
+     * @return CreateLoadForecastByFileUrlJobResponse
+     */
+    public CreateLoadForecastByFileUrlJobResponse createLoadForecastByFileUrlJob(CreateLoadForecastByFileUrlJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createLoadForecastByFileUrlJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建用电负荷预测任务</p>
      * 
      * @param tmpReq CreateLoadForecastJobRequest
@@ -328,6 +412,100 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateLoadForecastJobResponse createLoadForecastJob(CreateLoadForecastJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLoadForecastJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建发电功率预测任务，历史数据来自文件url</p>
+     * 
+     * @param tmpReq CreatePowerForecastByFileUrlJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePowerForecastByFileUrlJobResponse
+     */
+    public CreatePowerForecastByFileUrlJobResponse createPowerForecastByFileUrlJobWithOptions(CreatePowerForecastByFileUrlJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePowerForecastByFileUrlJobShrinkRequest request = new CreatePowerForecastByFileUrlJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.location)) {
+            request.locationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.location, "Location", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessKey)) {
+            body.put("BusinessKey", request.businessKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceType)) {
+            body.put("DeviceType", request.deviceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            body.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.freq)) {
+            body.put("Freq", request.freq);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.historyUrl)) {
+            body.put("HistoryUrl", request.historyUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.locationShrink)) {
+            body.put("Location", request.locationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modelVersion)) {
+            body.put("ModelVersion", request.modelVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.runDate)) {
+            body.put("RunDate", request.runDate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemType)) {
+            body.put("SystemType", request.systemType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeColumn)) {
+            body.put("TimeColumn", request.timeColumn);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeZone)) {
+            body.put("TimeZone", request.timeZone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.valueColumn)) {
+            body.put("ValueColumn", request.valueColumn);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePowerForecastByFileUrlJob"),
+            new TeaPair("version", "2020-09-20"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePowerForecastByFileUrlJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建发电功率预测任务，历史数据来自文件url</p>
+     * 
+     * @param request CreatePowerForecastByFileUrlJobRequest
+     * @return CreatePowerForecastByFileUrlJobResponse
+     */
+    public CreatePowerForecastByFileUrlJobResponse createPowerForecastByFileUrlJob(CreatePowerForecastByFileUrlJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPowerForecastByFileUrlJobWithOptions(request, runtime);
     }
 
     /**
