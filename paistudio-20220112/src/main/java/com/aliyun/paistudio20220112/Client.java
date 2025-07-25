@@ -1982,6 +1982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListQuotasResponse listQuotasWithOptions(ListQuotasRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.hasResource)) {
+            query.put("HasResource", request.hasResource);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.labels)) {
             query.put("Labels", request.labels);
         }
@@ -2178,6 +2182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.computingResourceProvider)) {
             query.put("ComputingResourceProvider", request.computingResourceProvider);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hasResource)) {
+            query.put("HasResource", request.hasResource);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

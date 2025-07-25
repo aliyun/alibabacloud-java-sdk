@@ -11,6 +11,9 @@ public class ListResourceGroupsRequest extends TeaModel {
     @NameInMap("ComputingResourceProvider")
     public String computingResourceProvider;
 
+    @NameInMap("HasResource")
+    public Boolean hasResource;
+
     /**
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
@@ -81,6 +84,14 @@ public class ListResourceGroupsRequest extends TeaModel {
     }
     public String getComputingResourceProvider() {
         return this.computingResourceProvider;
+    }
+
+    public ListResourceGroupsRequest setHasResource(Boolean hasResource) {
+        this.hasResource = hasResource;
+        return this;
+    }
+    public Boolean getHasResource() {
+        return this.hasResource;
     }
 
     public ListResourceGroupsRequest setName(String name) {

@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ListQuotasRequest extends TeaModel {
+    @NameInMap("HasResource")
+    public String hasResource;
+
     /**
      * <strong>example:</strong>
      * <p>official=true,gpu=false</p>
@@ -93,6 +96,14 @@ public class ListQuotasRequest extends TeaModel {
     public static ListQuotasRequest build(java.util.Map<String, ?> map) throws Exception {
         ListQuotasRequest self = new ListQuotasRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListQuotasRequest setHasResource(String hasResource) {
+        this.hasResource = hasResource;
+        return this;
+    }
+    public String getHasResource() {
+        return this.hasResource;
     }
 
     public ListQuotasRequest setLabels(String labels) {
