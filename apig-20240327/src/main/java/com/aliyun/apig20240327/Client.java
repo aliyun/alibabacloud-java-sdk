@@ -3214,12 +3214,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPolicyClassesResponse listPolicyClassesWithOptions(ListPolicyClassesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceId)) {
+            query.put("attachResourceId", request.attachResourceId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.attachResourceType)) {
             query.put("attachResourceType", request.attachResourceType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

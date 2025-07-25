@@ -4,6 +4,9 @@ package com.aliyun.apig20240327.models;
 import com.aliyun.tea.*;
 
 public class ListPolicyClassesRequest extends TeaModel {
+    @NameInMap("attachResourceId")
+    public String attachResourceId;
+
     /**
      * <p>Types of attachment points supported by the policy.</p>
      * <ul>
@@ -35,6 +38,9 @@ public class ListPolicyClassesRequest extends TeaModel {
      */
     @NameInMap("direction")
     public String direction;
+
+    @NameInMap("gatewayId")
+    public String gatewayId;
 
     /**
      * <p>Page number, default is 1.</p>
@@ -68,6 +74,14 @@ public class ListPolicyClassesRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListPolicyClassesRequest setAttachResourceId(String attachResourceId) {
+        this.attachResourceId = attachResourceId;
+        return this;
+    }
+    public String getAttachResourceId() {
+        return this.attachResourceId;
+    }
+
     public ListPolicyClassesRequest setAttachResourceType(String attachResourceType) {
         this.attachResourceType = attachResourceType;
         return this;
@@ -82,6 +96,14 @@ public class ListPolicyClassesRequest extends TeaModel {
     }
     public String getDirection() {
         return this.direction;
+    }
+
+    public ListPolicyClassesRequest setGatewayId(String gatewayId) {
+        this.gatewayId = gatewayId;
+        return this;
+    }
+    public String getGatewayId() {
+        return this.gatewayId;
     }
 
     public ListPolicyClassesRequest setPageNumber(Integer pageNumber) {
