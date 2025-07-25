@@ -64,6 +64,9 @@ public class GetAlertRulesRequest extends TeaModel {
     @NameInMap("AlertType")
     public String alertType;
 
+    @NameInMap("BizRegionId")
+    public String bizRegionId;
+
     /**
      * <p>The ID of the monitored cluster.</p>
      * 
@@ -153,6 +156,14 @@ public class GetAlertRulesRequest extends TeaModel {
     }
     public String getAlertType() {
         return this.alertType;
+    }
+
+    public GetAlertRulesRequest setBizRegionId(String bizRegionId) {
+        this.bizRegionId = bizRegionId;
+        return this;
+    }
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     public GetAlertRulesRequest setClusterId(String clusterId) {

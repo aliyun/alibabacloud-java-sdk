@@ -6393,6 +6393,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AlertType", request.alertType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
+            query.put("BizRegionId", request.bizRegionId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             query.put("ClusterId", request.clusterId);
         }
