@@ -63,7 +63,7 @@ public class CreateIpamResourceDiscoveryRequest extends TeaModel {
     /**
      * <p>The request region.</p>
      * <blockquote>
-     * <p> The request region is the managed region of the resource discovery instance.</p>
+     * <p> The request region is the hosted region of the resource discovery instance.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

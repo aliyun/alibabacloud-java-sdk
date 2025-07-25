@@ -4,6 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class AddIpamPoolCidrResponseBody extends TeaModel {
+    @NameInMap("Cidr")
+    public String cidr;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -16,6 +19,14 @@ public class AddIpamPoolCidrResponseBody extends TeaModel {
     public static AddIpamPoolCidrResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddIpamPoolCidrResponseBody self = new AddIpamPoolCidrResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddIpamPoolCidrResponseBody setCidr(String cidr) {
+        this.cidr = cidr;
+        return this;
+    }
+    public String getCidr() {
+        return this.cidr;
     }
 
     public AddIpamPoolCidrResponseBody setRequestId(String requestId) {

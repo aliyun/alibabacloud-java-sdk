@@ -4,6 +4,9 @@ package com.aliyun.vpcipam20230228.models;
 import com.aliyun.tea.*;
 
 public class ListIpamPoolsRequest extends TeaModel {
+    @NameInMap("IpVersion")
+    public String ipVersion;
+
     /**
      * <p>The IDs of IPAM pools. Valid values of N: 1 to 100. A maximum of 100 IPAM pools can be queried at a time.</p>
      */
@@ -28,6 +31,9 @@ public class ListIpamPoolsRequest extends TeaModel {
      */
     @NameInMap("IpamScopeId")
     public String ipamScopeId;
+
+    @NameInMap("Ipv6Isp")
+    public String ipv6Isp;
 
     /**
      * <p>Whether it is a shared pool.</p>
@@ -120,6 +126,14 @@ public class ListIpamPoolsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListIpamPoolsRequest setIpVersion(String ipVersion) {
+        this.ipVersion = ipVersion;
+        return this;
+    }
+    public String getIpVersion() {
+        return this.ipVersion;
+    }
+
     public ListIpamPoolsRequest setIpamPoolIds(java.util.List<String> ipamPoolIds) {
         this.ipamPoolIds = ipamPoolIds;
         return this;
@@ -142,6 +156,14 @@ public class ListIpamPoolsRequest extends TeaModel {
     }
     public String getIpamScopeId() {
         return this.ipamScopeId;
+    }
+
+    public ListIpamPoolsRequest setIpv6Isp(String ipv6Isp) {
+        this.ipv6Isp = ipv6Isp;
+        return this;
+    }
+    public String getIpv6Isp() {
+        return this.ipv6Isp;
     }
 
     public ListIpamPoolsRequest setIsShared(Boolean isShared) {

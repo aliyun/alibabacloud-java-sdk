@@ -9,7 +9,6 @@ public class AddIpamPoolCidrRequest extends TeaModel {
      * <blockquote>
      * <p> Only IPv4 CIDR blocks are supported.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.1.0/24</p>
@@ -51,6 +50,9 @@ public class AddIpamPoolCidrRequest extends TeaModel {
      */
     @NameInMap("IpamPoolId")
     public String ipamPoolId;
+
+    @NameInMap("NetmaskLength")
+    public Integer netmaskLength;
 
     /**
      * <p>The ID of the region where the IPAM instance is hosted.</p>
@@ -98,6 +100,14 @@ public class AddIpamPoolCidrRequest extends TeaModel {
     }
     public String getIpamPoolId() {
         return this.ipamPoolId;
+    }
+
+    public AddIpamPoolCidrRequest setNetmaskLength(Integer netmaskLength) {
+        this.netmaskLength = netmaskLength;
+        return this;
+    }
+    public Integer getNetmaskLength() {
+        return this.netmaskLength;
     }
 
     public AddIpamPoolCidrRequest setRegionId(String regionId) {

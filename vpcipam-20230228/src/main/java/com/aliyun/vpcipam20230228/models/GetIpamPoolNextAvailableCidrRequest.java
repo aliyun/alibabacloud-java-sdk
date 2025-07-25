@@ -53,7 +53,7 @@ public class GetIpamPoolNextAvailableCidrRequest extends TeaModel {
     /**
      * <p>The region of the IPAM pool.</p>
      * <blockquote>
-     * <p> If the IPAM pool has the region attribute, this parameter is set to the effective region of the IPAM pool. If not, this is set to the managed region.</p>
+     * <p> If the IPAM pool has the region attribute, this parameter is set to the effective region of the IPAM pool. If not, this is set to the hosted region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

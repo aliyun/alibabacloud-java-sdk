@@ -107,6 +107,9 @@ public class CreateIpamPoolRequest extends TeaModel {
     @NameInMap("IpamScopeId")
     public String ipamScopeId;
 
+    @NameInMap("Ipv6Isp")
+    public String ipv6Isp;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -248,6 +251,14 @@ public class CreateIpamPoolRequest extends TeaModel {
     }
     public String getIpamScopeId() {
         return this.ipamScopeId;
+    }
+
+    public CreateIpamPoolRequest setIpv6Isp(String ipv6Isp) {
+        this.ipv6Isp = ipv6Isp;
+        return this;
+    }
+    public String getIpv6Isp() {
+        return this.ipv6Isp;
     }
 
     public CreateIpamPoolRequest setOwnerAccount(String ownerAccount) {

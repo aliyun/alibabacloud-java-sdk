@@ -64,6 +64,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IpamPoolId", request.ipamPoolId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.netmaskLength)) {
+            query.put("NetmaskLength", request.netmaskLength);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -421,6 +425,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipamScopeId)) {
             query.put("IpamScopeId", request.ipamScopeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Isp)) {
+            query.put("Ipv6Isp", request.ipv6Isp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
@@ -1661,6 +1669,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListIpamPoolsResponse listIpamPoolsWithOptions(ListIpamPoolsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ipVersion)) {
+            query.put("IpVersion", request.ipVersion);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipamPoolIds)) {
             query.put("IpamPoolIds", request.ipamPoolIds);
         }
@@ -1671,6 +1683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.ipamScopeId)) {
             query.put("IpamScopeId", request.ipamScopeId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv6Isp)) {
+            query.put("Ipv6Isp", request.ipv6Isp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isShared)) {
@@ -2754,7 +2770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  You can add or remove effective regions only for custom resource discovery instances.</p>
      * <ul>
-     * <li>When removing effective regions from a resource discovery instance, the managed region cannot be included.</li>
+     * <li>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2836,7 +2852,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p>  You can add or remove effective regions only for custom resource discovery instances.</p>
      * <ul>
-     * <li>When removing effective regions from a resource discovery instance, the managed region cannot be included.</li>
+     * <li>When removing effective regions from a resource discovery instance, the hosted region cannot be included.</li>
      * </ul>
      * 
      * <b>summary</b> : 

@@ -292,6 +292,9 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         @NameInMap("IpamScopeType")
         public String ipamScopeType;
 
+        @NameInMap("Ipv6Isp")
+        public String ipv6Isp;
+
         /**
          * <p>Whether it is a shared pool.</p>
          * 
@@ -492,6 +495,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
         public String getIpamScopeType() {
             return this.ipamScopeType;
+        }
+
+        public ListIpamPoolsResponseBodyIpamPools setIpv6Isp(String ipv6Isp) {
+            this.ipv6Isp = ipv6Isp;
+            return this;
+        }
+        public String getIpv6Isp() {
+            return this.ipv6Isp;
         }
 
         public ListIpamPoolsResponseBodyIpamPools setIsShared(Boolean isShared) {
