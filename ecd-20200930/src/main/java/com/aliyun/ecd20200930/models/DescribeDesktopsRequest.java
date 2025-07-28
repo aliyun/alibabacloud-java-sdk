@@ -166,6 +166,9 @@ public class DescribeDesktopsRequest extends TeaModel {
     @NameInMap("ImageId")
     public java.util.List<String> imageId;
 
+    @NameInMap("IncludeAutoSnapshotPolicy")
+    public Boolean includeAutoSnapshotPolicy;
+
     /**
      * <p>The flag that is used to manage the cloud desktops.</p>
      * 
@@ -498,6 +501,14 @@ public class DescribeDesktopsRequest extends TeaModel {
     }
     public java.util.List<String> getImageId() {
         return this.imageId;
+    }
+
+    public DescribeDesktopsRequest setIncludeAutoSnapshotPolicy(Boolean includeAutoSnapshotPolicy) {
+        this.includeAutoSnapshotPolicy = includeAutoSnapshotPolicy;
+        return this;
+    }
+    public Boolean getIncludeAutoSnapshotPolicy() {
+        return this.includeAutoSnapshotPolicy;
     }
 
     public DescribeDesktopsRequest setManagementFlag(String managementFlag) {

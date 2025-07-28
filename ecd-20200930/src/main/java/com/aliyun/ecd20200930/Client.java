@@ -8315,6 +8315,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageId", request.imageId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeAutoSnapshotPolicy)) {
+            query.put("IncludeAutoSnapshotPolicy", request.includeAutoSnapshotPolicy);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.managementFlag)) {
             query.put("ManagementFlag", request.managementFlag);
         }
