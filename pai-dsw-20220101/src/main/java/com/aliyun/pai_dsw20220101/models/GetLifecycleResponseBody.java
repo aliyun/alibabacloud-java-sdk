@@ -177,6 +177,9 @@ public class GetLifecycleResponseBody extends TeaModel {
         @NameInMap("GmtEndTime")
         public String gmtEndTime;
 
+        @NameInMap("LifecycleId")
+        public String lifecycleId;
+
         public static GetLifecycleResponseBodyLifecycle build(java.util.Map<String, ?> map) throws Exception {
             GetLifecycleResponseBodyLifecycle self = new GetLifecycleResponseBodyLifecycle();
             return TeaModel.build(map, self);
@@ -220,6 +223,14 @@ public class GetLifecycleResponseBody extends TeaModel {
         }
         public String getGmtEndTime() {
             return this.gmtEndTime;
+        }
+
+        public GetLifecycleResponseBodyLifecycle setLifecycleId(String lifecycleId) {
+            this.lifecycleId = lifecycleId;
+            return this;
+        }
+        public String getLifecycleId() {
+            return this.lifecycleId;
         }
 
     }
