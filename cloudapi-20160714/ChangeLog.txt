@@ -1,3 +1,7 @@
+2025-07-28 Version: 3.14.7
+- Update API DescribeInstances: add request parameters InstanceType.
+
+
 2025-07-10 Version: 3.14.5
 - Update API DescribeApp: add response parameters Body.Disabled.
 - Update API DescribeAppAttributes: add response parameters Body.Apps.$.Disabled.

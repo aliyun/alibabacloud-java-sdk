@@ -22,6 +22,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("InstanceType")
+    public String instanceType;
+
     /**
      * <p>The language in which you want the description of the system policy to be returned. Valid values:</p>
      * <ul>
@@ -64,6 +67,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeInstancesRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public DescribeInstancesRequest setLanguage(String language) {
