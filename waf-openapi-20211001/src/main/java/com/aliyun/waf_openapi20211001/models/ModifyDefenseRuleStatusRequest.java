@@ -4,6 +4,9 @@ package com.aliyun.waf_openapi20211001.models;
 import com.aliyun.tea.*;
 
 public class ModifyDefenseRuleStatusRequest extends TeaModel {
+    @NameInMap("DefenseType")
+    public String defenseType;
+
     /**
      * <p>The ID of the Web Application Firewall (WAF) instance.</p>
      * <blockquote>
@@ -65,7 +68,6 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
 
     /**
      * <p>The ID of the protection rule template to which the protection rule whose status you want to change belongs.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>7239</p>
@@ -76,6 +78,14 @@ public class ModifyDefenseRuleStatusRequest extends TeaModel {
     public static ModifyDefenseRuleStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDefenseRuleStatusRequest self = new ModifyDefenseRuleStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDefenseRuleStatusRequest setDefenseType(String defenseType) {
+        this.defenseType = defenseType;
+        return this;
+    }
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     public ModifyDefenseRuleStatusRequest setInstanceId(String instanceId) {

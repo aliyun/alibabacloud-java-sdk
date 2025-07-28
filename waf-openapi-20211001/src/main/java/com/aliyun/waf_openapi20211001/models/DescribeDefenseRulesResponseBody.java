@@ -107,6 +107,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        @NameInMap("DefenseType")
+        public String defenseType;
+
         @NameInMap("Description")
         public String description;
 
@@ -209,6 +212,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
         public String getDefenseScene() {
             return this.defenseScene;
+        }
+
+        public DescribeDefenseRulesResponseBodyRules setDefenseType(String defenseType) {
+            this.defenseType = defenseType;
+            return this;
+        }
+        public String getDefenseType() {
+            return this.defenseType;
         }
 
         public DescribeDefenseRulesResponseBodyRules setDescription(String description) {

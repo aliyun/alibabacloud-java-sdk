@@ -25,6 +25,9 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     @NameInMap("Resources")
     public java.util.List<String> resources;
 
+    @NameInMap("TemplateId")
+    public Long templateId;
+
     @NameInMap("TotalCount")
     public Integer totalCount;
 
@@ -63,6 +66,14 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     }
     public java.util.List<String> getResources() {
         return this.resources;
+    }
+
+    public DescribeTemplateResourcesResponseBody setTemplateId(Long templateId) {
+        this.templateId = templateId;
+        return this;
+    }
+    public Long getTemplateId() {
+        return this.templateId;
     }
 
     public DescribeTemplateResourcesResponseBody setTotalCount(Integer totalCount) {

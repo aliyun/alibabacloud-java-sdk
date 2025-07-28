@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class ModifyDefenseRuleRequest extends TeaModel {
     /**
      * <p>The scenario in which you want to use the protection rule. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>waf_group</p>

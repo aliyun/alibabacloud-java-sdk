@@ -72,6 +72,9 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         @NameInMap("DefenseScene")
         public String defenseScene;
 
+        @NameInMap("DefenseType")
+        public String defenseType;
+
         /**
          * <p>The most recent time when the protection rule was modified.</p>
          * 
@@ -151,6 +154,14 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         }
         public String getDefenseScene() {
             return this.defenseScene;
+        }
+
+        public DescribeDefenseRuleResponseBodyRule setDefenseType(String defenseType) {
+            this.defenseType = defenseType;
+            return this;
+        }
+        public String getDefenseType() {
+            return this.defenseType;
         }
 
         public DescribeDefenseRuleResponseBodyRule setGmtModified(Long gmtModified) {
