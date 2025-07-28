@@ -183,6 +183,9 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         @NameInMap("CreatorType")
         public String creatorType;
 
+        @NameInMap("DnsCategory")
+        public String dnsCategory;
+
         /**
          * <p>The IPv4 CIDR blocks.</p>
          */
@@ -265,6 +268,14 @@ public class DescribeCustomLinesResponseBody extends TeaModel {
         }
         public String getCreatorType() {
             return this.creatorType;
+        }
+
+        public DescribeCustomLinesResponseBodyCustomLinesCustomLine setDnsCategory(String dnsCategory) {
+            this.dnsCategory = dnsCategory;
+            return this;
+        }
+        public String getDnsCategory() {
+            return this.dnsCategory;
         }
 
         public DescribeCustomLinesResponseBodyCustomLinesCustomLine setIpv4s(DescribeCustomLinesResponseBodyCustomLinesCustomLineIpv4s ipv4s) {

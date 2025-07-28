@@ -4,6 +4,9 @@ package com.aliyun.pvtz20180101.models;
 import com.aliyun.tea.*;
 
 public class UpdateCustomLineRequest extends TeaModel {
+    @NameInMap("DnsCategory")
+    public String dnsCategory;
+
     /**
      * <p>The IPv4 CIDR blocks.</p>
      * <p>This parameter is required.</p>
@@ -39,6 +42,14 @@ public class UpdateCustomLineRequest extends TeaModel {
     public static UpdateCustomLineRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCustomLineRequest self = new UpdateCustomLineRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCustomLineRequest setDnsCategory(String dnsCategory) {
+        this.dnsCategory = dnsCategory;
+        return this;
+    }
+    public String getDnsCategory() {
+        return this.dnsCategory;
     }
 
     public UpdateCustomLineRequest setIpv4s(java.util.List<String> ipv4s) {

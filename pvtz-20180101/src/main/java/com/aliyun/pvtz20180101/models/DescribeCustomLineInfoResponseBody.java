@@ -59,6 +59,9 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     @NameInMap("CreatorType")
     public String creatorType;
 
+    @NameInMap("Dnscategory")
+    public String dnscategory;
+
     /**
      * <p>The IPv4 CIDR blocks.</p>
      */
@@ -150,6 +153,14 @@ public class DescribeCustomLineInfoResponseBody extends TeaModel {
     }
     public String getCreatorType() {
         return this.creatorType;
+    }
+
+    public DescribeCustomLineInfoResponseBody setDnscategory(String dnscategory) {
+        this.dnscategory = dnscategory;
+        return this;
+    }
+    public String getDnscategory() {
+        return this.dnscategory;
     }
 
     public DescribeCustomLineInfoResponseBody setIpv4s(java.util.List<String> ipv4s) {

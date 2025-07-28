@@ -2655,6 +2655,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateCustomLineResponse updateCustomLineWithOptions(UpdateCustomLineRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dnsCategory)) {
+            query.put("DnsCategory", request.dnsCategory);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ipv4s)) {
             query.put("Ipv4s", request.ipv4s);
         }
