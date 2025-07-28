@@ -784,6 +784,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("UpBandwidthLimit", request.upBandwidthLimit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.useTemplate)) {
+            query.put("UseTemplate", request.useTemplate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchId)) {
             query.put("VSwitchId", request.vSwitchId);
         }
@@ -1081,6 +1085,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateScreenshotResponse createScreenshot(CreateScreenshotRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createScreenshotWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建系统属性模板</p>
+     * 
+     * @param tmpReq CreateSystemPropertyTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSystemPropertyTemplateResponse
+     */
+    public CreateSystemPropertyTemplateResponse createSystemPropertyTemplateWithOptions(CreateSystemPropertyTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateSystemPropertyTemplateShrinkRequest request = new CreateSystemPropertyTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.systemPropertyInfo)) {
+            request.systemPropertyInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.systemPropertyInfo, "SystemPropertyInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuto)) {
+            query.put("EnableAuto", request.enableAuto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            query.put("FilePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemPropertyInfoShrink)) {
+            query.put("SystemPropertyInfo", request.systemPropertyInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSystemPropertyTemplate"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSystemPropertyTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建系统属性模板</p>
+     * 
+     * @param request CreateSystemPropertyTemplateRequest
+     * @return CreateSystemPropertyTemplateResponse
+     */
+    public CreateSystemPropertyTemplateResponse createSystemPropertyTemplate(CreateSystemPropertyTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSystemPropertyTemplateWithOptions(request, runtime);
     }
 
     /**
@@ -1427,6 +1493,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePolicyGroupResponse deletePolicyGroup(DeletePolicyGroupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolicyGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除系统属性模板</p>
+     * 
+     * @param request DeleteSystemPropertyTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSystemPropertyTemplatesResponse
+     */
+    public DeleteSystemPropertyTemplatesResponse deleteSystemPropertyTemplatesWithOptions(DeleteSystemPropertyTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateIds)) {
+            query.put("TemplateIds", request.templateIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSystemPropertyTemplates"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSystemPropertyTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除系统属性模板</p>
+     * 
+     * @param request DeleteSystemPropertyTemplatesRequest
+     * @return DeleteSystemPropertyTemplatesResponse
+     */
+    public DeleteSystemPropertyTemplatesResponse deleteSystemPropertyTemplates(DeleteSystemPropertyTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteSystemPropertyTemplatesWithOptions(request, runtime);
     }
 
     /**
@@ -2294,6 +2404,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询系统属性模板</p>
+     * 
+     * @param request DescribeSystemPropertyTemplatesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSystemPropertyTemplatesResponse
+     */
+    public DescribeSystemPropertyTemplatesResponse describeSystemPropertyTemplatesWithOptions(DescribeSystemPropertyTemplatesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateIds)) {
+            query.put("TemplateIds", request.templateIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSystemPropertyTemplates"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSystemPropertyTemplatesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询系统属性模板</p>
+     * 
+     * @param request DescribeSystemPropertyTemplatesRequest
+     * @return DescribeSystemPropertyTemplatesResponse
+     */
+    public DescribeSystemPropertyTemplatesResponse describeSystemPropertyTemplates(DescribeSystemPropertyTemplatesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSystemPropertyTemplatesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call the DescribeTasks operation to query the tasks created for one or more cloud phone instances.</p>
      * <ul>
@@ -2847,6 +3013,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateCoordinationCodeResponse generateCoordinationCode(GenerateCoordinationCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateCoordinationCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取属性模板信息</p>
+     * 
+     * @param request GetInstancePropertiesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetInstancePropertiesResponse
+     */
+    public GetInstancePropertiesResponse getInstancePropertiesWithOptions(GetInstancePropertiesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetInstanceProperties"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetInstancePropertiesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取属性模板信息</p>
+     * 
+     * @param request GetInstancePropertiesRequest
+     * @return GetInstancePropertiesResponse
+     */
+    public GetInstancePropertiesResponse getInstanceProperties(GetInstancePropertiesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getInstancePropertiesWithOptions(request, runtime);
     }
 
     /**
@@ -3502,6 +3712,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改属性模板</p>
+     * 
+     * @param tmpReq ModifySystemPropertyTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifySystemPropertyTemplateResponse
+     */
+    public ModifySystemPropertyTemplateResponse modifySystemPropertyTemplateWithOptions(ModifySystemPropertyTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifySystemPropertyTemplateShrinkRequest request = new ModifySystemPropertyTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.systemPropertyInfo)) {
+            request.systemPropertyInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.systemPropertyInfo, "SystemPropertyInfo", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuto)) {
+            query.put("EnableAuto", request.enableAuto);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filePath)) {
+            query.put("FilePath", request.filePath);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.systemPropertyInfoShrink)) {
+            query.put("SystemPropertyInfo", request.systemPropertyInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifySystemPropertyTemplate"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifySystemPropertyTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改属性模板</p>
+     * 
+     * @param request ModifySystemPropertyTemplateRequest
+     * @return ModifySystemPropertyTemplateResponse
+     */
+    public ModifySystemPropertyTemplateResponse modifySystemPropertyTemplate(ModifySystemPropertyTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifySystemPropertyTemplateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation runs asynchronously. To check the operation result, visit the Task Center. To retrieve task details, call the <a href="~~DescribeTasks~~">DescribeTasks</a> operation.</p>
      * 
@@ -3987,6 +4263,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SendFileResponse sendFile(SendFileRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.sendFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发送属性模板</p>
+     * 
+     * @param request SendSystemPropertyTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendSystemPropertyTemplateResponse
+     */
+    public SendSystemPropertyTemplateResponse sendSystemPropertyTemplateWithOptions(SendSystemPropertyTemplateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateIds)) {
+            query.put("TemplateIds", request.templateIds);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendSystemPropertyTemplate"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendSystemPropertyTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发送属性模板</p>
+     * 
+     * @param request SendSystemPropertyTemplateRequest
+     * @return SendSystemPropertyTemplateResponse
+     */
+    public SendSystemPropertyTemplateResponse sendSystemPropertyTemplate(SendSystemPropertyTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendSystemPropertyTemplateWithOptions(request, runtime);
     }
 
     /**

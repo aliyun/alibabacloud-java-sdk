@@ -211,6 +211,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("UpBandwidthLimit")
     public Integer upBandwidthLimit;
 
+    @NameInMap("UseTemplate")
+    public String useTemplate;
+
     /**
      * <p>The vSwitch ID.</p>
      * 
@@ -431,6 +434,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public Integer getUpBandwidthLimit() {
         return this.upBandwidthLimit;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setUseTemplate(String useTemplate) {
+        this.useTemplate = useTemplate;
+        return this;
+    }
+    public String getUseTemplate() {
+        return this.useTemplate;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setVSwitchId(String vSwitchId) {
