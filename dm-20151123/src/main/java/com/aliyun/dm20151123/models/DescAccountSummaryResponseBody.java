@@ -50,6 +50,13 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     public Integer enableTimes;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("IpChannelType")
+    public String ipChannelType;
+
+    /**
      * <p>Number of sending addresses</p>
      * 
      * <strong>example:</strong>
@@ -213,6 +220,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     }
     public Integer getEnableTimes() {
         return this.enableTimes;
+    }
+
+    public DescAccountSummaryResponseBody setIpChannelType(String ipChannelType) {
+        this.ipChannelType = ipChannelType;
+        return this;
+    }
+    public String getIpChannelType() {
+        return this.ipChannelType;
     }
 
     public DescAccountSummaryResponseBody setMailAddresses(Integer mailAddresses) {
