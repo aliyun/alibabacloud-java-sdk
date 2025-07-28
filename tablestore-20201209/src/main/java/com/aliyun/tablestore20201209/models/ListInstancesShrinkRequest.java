@@ -47,7 +47,7 @@ public class ListInstancesShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The instance status.</p>
+     * <p>The status of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -55,6 +55,9 @@ public class ListInstancesShrinkRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The tags of the instance.</p>
+     */
     @NameInMap("Tag")
     public String tagShrink;
 

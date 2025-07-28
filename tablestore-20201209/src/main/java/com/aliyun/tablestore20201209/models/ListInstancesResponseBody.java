@@ -125,11 +125,11 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceSpecification;
 
         /**
-         * <p>The instance status.</p>
+         * <p>The status of the instance.</p>
          * <ul>
-         * <li>normal: The instance works as expected.</li>
+         * <li>normal: The instance runs as expected.</li>
          * <li>forbidden: The instance is disabled.</li>
-         * <li>deleting: The instance is being deleted.</li>
+         * <li>Deleting: The instance is being released.</li>
          * </ul>
          * 
          * <strong>example:</strong>

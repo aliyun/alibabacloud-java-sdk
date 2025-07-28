@@ -26,6 +26,7 @@ public class CreateInstanceRequest extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("DisableReplication")
+    @Deprecated
     public Boolean disableReplication;
 
     /**
@@ -148,6 +149,7 @@ public class CreateInstanceRequest extends TeaModel {
         return this.clusterType;
     }
 
+    @Deprecated
     public CreateInstanceRequest setDisableReplication(Boolean disableReplication) {
         this.disableReplication = disableReplication;
         return this;
