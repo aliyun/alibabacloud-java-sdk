@@ -586,6 +586,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>报备列表查询</p>
+     * 
+     * @param request PageDemandPlanWithDemandInfoRequest
+     * @param headers PageDemandPlanWithDemandInfoHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PageDemandPlanWithDemandInfoResponse
+     */
+    public PageDemandPlanWithDemandInfoResponse pageDemandPlanWithDemandInfoWithOptions(PageDemandPlanWithDemandInfoRequest request, PageDemandPlanWithDemandInfoHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalStatus)) {
+            body.put("approvalStatus", request.approvalStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeEnd)) {
+            body.put("createTimeEnd", request.createTimeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.createTimeStart)) {
+            body.put("createTimeStart", request.createTimeStart);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.creatorStaffId)) {
+            body.put("creatorStaffId", request.creatorStaffId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.demandDeliveryStatus)) {
+            body.put("demandDeliveryStatus", request.demandDeliveryStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.demandId)) {
+            body.put("demandId", request.demandId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.demandPlanId)) {
+            body.put("demandPlanId", request.demandPlanId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.demandPlanStatus)) {
+            body.put("demandPlanStatus", request.demandPlanStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operator)) {
+            body.put("operator", request.operator);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            body.put("pageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roCode)) {
+            body.put("roCode", request.roCode);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.yunUserId)) {
+            realHeaders.put("Yun-User-Id", com.aliyun.teautil.Common.toJSONString(headers.yunUserId));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PageDemandPlanWithDemandInfo"),
+            new TeaPair("version", "2021-12-17"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/demand/getDemandPlanList"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PageDemandPlanWithDemandInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>报备列表查询</p>
+     * 
+     * @param request PageDemandPlanWithDemandInfoRequest
+     * @return PageDemandPlanWithDemandInfoResponse
+     */
+    public PageDemandPlanWithDemandInfoResponse pageDemandPlanWithDemandInfo(PageDemandPlanWithDemandInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        PageDemandPlanWithDemandInfoHeaders headers = new PageDemandPlanWithDemandInfoHeaders();
+        return this.pageDemandPlanWithDemandInfoWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ecs资源方案</p>
      * 
      * @param request PushResourcePlanRequest
