@@ -2184,6 +2184,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSnapshotPolicyId)) {
+            query.put("autoSnapshotPolicyId", request.autoSnapshotPolicyId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.diskIds)) {
             query.put("diskIds", request.diskIds);
         }
@@ -11253,6 +11257,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeAutoProvisioningGroupsResponse describeAutoProvisioningGroups(DescribeAutoProvisioningGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeAutoProvisioningGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自动快照策略的关联关系</p>
+     * 
+     * @param request DescribeAutoSnapshotPolicyAssociationsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeAutoSnapshotPolicyAssociationsResponse
+     */
+    public DescribeAutoSnapshotPolicyAssociationsResponse describeAutoSnapshotPolicyAssociationsWithOptions(DescribeAutoSnapshotPolicyAssociationsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSnapshotPolicyId)) {
+            query.put("AutoSnapshotPolicyId", request.autoSnapshotPolicyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskId)) {
+            query.put("DiskId", request.diskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeAutoSnapshotPolicyAssociations"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeAutoSnapshotPolicyAssociationsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询自动快照策略的关联关系</p>
+     * 
+     * @param request DescribeAutoSnapshotPolicyAssociationsRequest
+     * @return DescribeAutoSnapshotPolicyAssociationsResponse
+     */
+    public DescribeAutoSnapshotPolicyAssociationsResponse describeAutoSnapshotPolicyAssociations(DescribeAutoSnapshotPolicyAssociationsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeAutoSnapshotPolicyAssociationsWithOptions(request, runtime);
     }
 
     /**
@@ -27893,6 +27973,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceMetadataOptionsResponse modifyInstanceMetadataOptions(ModifyInstanceMetadataOptionsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceMetadataOptionsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例网络选项</p>
+     * 
+     * @param request ModifyInstanceNetworkOptionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceNetworkOptionsResponse
+     */
+    public ModifyInstanceNetworkOptionsResponse modifyInstanceNetworkOptionsWithOptions(ModifyInstanceNetworkOptionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthWeighting)) {
+            query.put("BandwidthWeighting", request.bandwidthWeighting);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceNetworkOptions"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceNetworkOptionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例网络选项</p>
+     * 
+     * @param request ModifyInstanceNetworkOptionsRequest
+     * @return ModifyInstanceNetworkOptionsResponse
+     */
+    public ModifyInstanceNetworkOptionsResponse modifyInstanceNetworkOptions(ModifyInstanceNetworkOptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceNetworkOptionsWithOptions(request, runtime);
     }
 
     /**

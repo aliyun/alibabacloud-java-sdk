@@ -31,6 +31,9 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("autoSnapshotPolicyId")
+    public String autoSnapshotPolicyId;
+
     /**
      * <p>The IDs of the disks for which you want to disable the automatic snapshot policy. To disable the automatic snapshot policy for multiple disks, you can set this parameter to a JSON array that consists of multiple disk IDs, such as [&quot;dxxxxxxxxx&quot;, &quot;dyyyyyyyyy&quot;, … &quot;dzzzzzzzzz&quot;]. Separate the disk IDs with commas (,).</p>
      * <p>This parameter is required.</p>
@@ -78,6 +81,14 @@ public class CancelAutoSnapshotPolicyRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CancelAutoSnapshotPolicyRequest setAutoSnapshotPolicyId(String autoSnapshotPolicyId) {
+        this.autoSnapshotPolicyId = autoSnapshotPolicyId;
+        return this;
+    }
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
     }
 
     public CancelAutoSnapshotPolicyRequest setDiskIds(String diskIds) {

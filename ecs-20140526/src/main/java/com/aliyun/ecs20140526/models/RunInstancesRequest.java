@@ -2953,6 +2953,9 @@ public class RunInstancesRequest extends TeaModel {
     }
 
     public static class RunInstancesRequestNetworkOptions extends TeaModel {
+        @NameInMap("BandwidthWeighting")
+        public String bandwidthWeighting;
+
         /**
          * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>
          * <ul>
@@ -2976,6 +2979,14 @@ public class RunInstancesRequest extends TeaModel {
         public static RunInstancesRequestNetworkOptions build(java.util.Map<String, ?> map) throws Exception {
             RunInstancesRequestNetworkOptions self = new RunInstancesRequestNetworkOptions();
             return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestNetworkOptions setBandwidthWeighting(String bandwidthWeighting) {
+            this.bandwidthWeighting = bandwidthWeighting;
+            return this;
+        }
+        public String getBandwidthWeighting() {
+            return this.bandwidthWeighting;
         }
 
         public RunInstancesRequestNetworkOptions setEnableJumboFrame(Boolean enableJumboFrame) {

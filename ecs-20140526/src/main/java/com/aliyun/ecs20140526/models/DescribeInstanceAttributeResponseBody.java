@@ -769,6 +769,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceAttributeResponseBodyNetworkOptions extends TeaModel {
+        @NameInMap("BandwidthWeighting")
+        public String bandwidthWeighting;
+
         @NameInMap("EnableJumboFrame")
         public Boolean enableJumboFrame;
 
@@ -778,6 +781,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         public static DescribeInstanceAttributeResponseBodyNetworkOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceAttributeResponseBodyNetworkOptions self = new DescribeInstanceAttributeResponseBodyNetworkOptions();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceAttributeResponseBodyNetworkOptions setBandwidthWeighting(String bandwidthWeighting) {
+            this.bandwidthWeighting = bandwidthWeighting;
+            return this;
+        }
+        public String getBandwidthWeighting() {
+            return this.bandwidthWeighting;
         }
 
         public DescribeInstanceAttributeResponseBodyNetworkOptions setEnableJumboFrame(Boolean enableJumboFrame) {
