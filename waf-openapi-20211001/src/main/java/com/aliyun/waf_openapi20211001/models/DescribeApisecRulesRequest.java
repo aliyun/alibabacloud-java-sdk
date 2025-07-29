@@ -17,6 +17,9 @@ public class DescribeApisecRulesRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("Lang")
+    public String lang;
+
     /**
      * <p>The level of the policy.</p>
      * <p>If Type is set to risk or event, you can set this parameter to one of the following values:</p>
@@ -146,6 +149,14 @@ public class DescribeApisecRulesRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public DescribeApisecRulesRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public DescribeApisecRulesRequest setLevel(String level) {

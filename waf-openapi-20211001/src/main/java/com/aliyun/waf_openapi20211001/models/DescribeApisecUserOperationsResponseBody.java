@@ -82,6 +82,9 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         @NameInMap("ObjectId")
         public String objectId;
 
+        @NameInMap("OperationSource")
+        public String operationSource;
+
         /**
          * <p>The time at which the operation was performed. The value is a UNIX timestamp displayed in UTC. Unit: seconds.</p>
          * 
@@ -163,6 +166,14 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         }
         public String getObjectId() {
             return this.objectId;
+        }
+
+        public DescribeApisecUserOperationsResponseBodyData setOperationSource(String operationSource) {
+            this.operationSource = operationSource;
+            return this;
+        }
+        public String getOperationSource() {
+            return this.operationSource;
         }
 
         public DescribeApisecUserOperationsResponseBodyData setTime(Long time) {

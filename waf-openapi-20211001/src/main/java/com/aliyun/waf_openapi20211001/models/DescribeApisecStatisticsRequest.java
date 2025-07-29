@@ -16,6 +16,9 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     @NameInMap("ClusterId")
     public String clusterId;
 
+    @NameInMap("EndTime")
+    public Long endTime;
+
     /**
      * <p>The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:</p>
      * <ul>
@@ -52,6 +55,9 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     @NameInMap("ResourceManagerResourceGroupId")
     public String resourceManagerResourceGroupId;
 
+    @NameInMap("StartTime")
+    public Long startTime;
+
     /**
      * <p>The type of the statistics. Valid values:</p>
      * <ul>
@@ -65,6 +71,9 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     @NameInMap("Type")
     public String type;
 
+    @NameInMap("UserStatusList")
+    public java.util.List<String> userStatusList;
+
     public static DescribeApisecStatisticsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeApisecStatisticsRequest self = new DescribeApisecStatisticsRequest();
         return TeaModel.build(map, self);
@@ -76,6 +85,14 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
     }
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    public DescribeApisecStatisticsRequest setEndTime(Long endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     public DescribeApisecStatisticsRequest setInstanceId(String instanceId) {
@@ -102,12 +119,28 @@ public class DescribeApisecStatisticsRequest extends TeaModel {
         return this.resourceManagerResourceGroupId;
     }
 
+    public DescribeApisecStatisticsRequest setStartTime(Long startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
     public DescribeApisecStatisticsRequest setType(String type) {
         this.type = type;
         return this;
     }
     public String getType() {
         return this.type;
+    }
+
+    public DescribeApisecStatisticsRequest setUserStatusList(java.util.List<String> userStatusList) {
+        this.userStatusList = userStatusList;
+        return this;
+    }
+    public java.util.List<String> getUserStatusList() {
+        return this.userStatusList;
     }
 
 }

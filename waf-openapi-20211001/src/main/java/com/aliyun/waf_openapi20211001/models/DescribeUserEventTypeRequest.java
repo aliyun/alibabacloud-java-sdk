@@ -69,6 +69,9 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("UserStatusList")
+    public java.util.List<String> userStatusList;
+
     public static DescribeUserEventTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserEventTypeRequest self = new DescribeUserEventTypeRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class DescribeUserEventTypeRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeUserEventTypeRequest setUserStatusList(java.util.List<String> userStatusList) {
+        this.userStatusList = userStatusList;
+        return this;
+    }
+    public java.util.List<String> getUserStatusList() {
+        return this.userStatusList;
     }
 
 }

@@ -122,6 +122,12 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         @NameInMap("Medium")
         public Long medium;
 
+        @NameInMap("NotFixed")
+        public Long notFixed;
+
+        @NameInMap("SystemFixed")
+        public Long systemFixed;
+
         /**
          * <p>The number of events to be confirmed.</p>
          * 
@@ -139,6 +145,9 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
          */
         @NameInMap("ToBeFixed")
         public Long toBeFixed;
+
+        @NameInMap("ToBeVerified")
+        public Long toBeVerified;
 
         /**
          * <p>The number of new high-risk events today.</p>
@@ -262,6 +271,22 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             return this.medium;
         }
 
+        public DescribeApisecStatisticsResponseBodyData setNotFixed(Long notFixed) {
+            this.notFixed = notFixed;
+            return this;
+        }
+        public Long getNotFixed() {
+            return this.notFixed;
+        }
+
+        public DescribeApisecStatisticsResponseBodyData setSystemFixed(Long systemFixed) {
+            this.systemFixed = systemFixed;
+            return this;
+        }
+        public Long getSystemFixed() {
+            return this.systemFixed;
+        }
+
         public DescribeApisecStatisticsResponseBodyData setToBeConfirmed(Long toBeConfirmed) {
             this.toBeConfirmed = toBeConfirmed;
             return this;
@@ -276,6 +301,14 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         }
         public Long getToBeFixed() {
             return this.toBeFixed;
+        }
+
+        public DescribeApisecStatisticsResponseBodyData setToBeVerified(Long toBeVerified) {
+            this.toBeVerified = toBeVerified;
+            return this;
+        }
+        public Long getToBeVerified() {
+            return this.toBeVerified;
         }
 
         public DescribeApisecStatisticsResponseBodyData setTodayHigh(String todayHigh) {

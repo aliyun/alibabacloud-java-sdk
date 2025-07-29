@@ -69,6 +69,9 @@ public class DescribeUserAbnormalTypeRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("UserStatusList")
+    public java.util.List<String> userStatusList;
+
     public static DescribeUserAbnormalTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeUserAbnormalTypeRequest self = new DescribeUserAbnormalTypeRequest();
         return TeaModel.build(map, self);
@@ -120,6 +123,14 @@ public class DescribeUserAbnormalTypeRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeUserAbnormalTypeRequest setUserStatusList(java.util.List<String> userStatusList) {
+        this.userStatusList = userStatusList;
+        return this;
+    }
+    public java.util.List<String> getUserStatusList() {
+        return this.userStatusList;
     }
 
 }
