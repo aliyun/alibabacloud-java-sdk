@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class RunVideoAnalysisRequest extends TeaModel {
+    @NameInMap("autoRoleRecognitionVideoUrl")
+    public String autoRoleRecognitionVideoUrl;
+
     @NameInMap("excludeGenerateOptions")
     public java.util.List<String> excludeGenerateOptions;
 
@@ -99,6 +102,14 @@ public class RunVideoAnalysisRequest extends TeaModel {
     public static RunVideoAnalysisRequest build(java.util.Map<String, ?> map) throws Exception {
         RunVideoAnalysisRequest self = new RunVideoAnalysisRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunVideoAnalysisRequest setAutoRoleRecognitionVideoUrl(String autoRoleRecognitionVideoUrl) {
+        this.autoRoleRecognitionVideoUrl = autoRoleRecognitionVideoUrl;
+        return this;
+    }
+    public String getAutoRoleRecognitionVideoUrl() {
+        return this.autoRoleRecognitionVideoUrl;
     }
 
     public RunVideoAnalysisRequest setExcludeGenerateOptions(java.util.List<String> excludeGenerateOptions) {
@@ -445,12 +456,48 @@ public class RunVideoAnalysisRequest extends TeaModel {
 
     }
 
+    public static class RunVideoAnalysisRequestVideoRolesTimeIntervals extends TeaModel {
+        @NameInMap("endTime")
+        public Long endTime;
+
+        @NameInMap("startTime")
+        public Long startTime;
+
+        public static RunVideoAnalysisRequestVideoRolesTimeIntervals build(java.util.Map<String, ?> map) throws Exception {
+            RunVideoAnalysisRequestVideoRolesTimeIntervals self = new RunVideoAnalysisRequestVideoRolesTimeIntervals();
+            return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisRequestVideoRolesTimeIntervals setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public RunVideoAnalysisRequestVideoRolesTimeIntervals setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class RunVideoAnalysisRequestVideoRoles extends TeaModel {
+        @NameInMap("isAutoRecognition")
+        public Boolean isAutoRecognition;
+
         @NameInMap("roleInfo")
         public String roleInfo;
 
         @NameInMap("roleName")
         public String roleName;
+
+        @NameInMap("timeIntervals")
+        public java.util.List<RunVideoAnalysisRequestVideoRolesTimeIntervals> timeIntervals;
 
         @NameInMap("urls")
         public java.util.List<String> urls;
@@ -458,6 +505,14 @@ public class RunVideoAnalysisRequest extends TeaModel {
         public static RunVideoAnalysisRequestVideoRoles build(java.util.Map<String, ?> map) throws Exception {
             RunVideoAnalysisRequestVideoRoles self = new RunVideoAnalysisRequestVideoRoles();
             return TeaModel.build(map, self);
+        }
+
+        public RunVideoAnalysisRequestVideoRoles setIsAutoRecognition(Boolean isAutoRecognition) {
+            this.isAutoRecognition = isAutoRecognition;
+            return this;
+        }
+        public Boolean getIsAutoRecognition() {
+            return this.isAutoRecognition;
         }
 
         public RunVideoAnalysisRequestVideoRoles setRoleInfo(String roleInfo) {
@@ -474,6 +529,14 @@ public class RunVideoAnalysisRequest extends TeaModel {
         }
         public String getRoleName() {
             return this.roleName;
+        }
+
+        public RunVideoAnalysisRequestVideoRoles setTimeIntervals(java.util.List<RunVideoAnalysisRequestVideoRolesTimeIntervals> timeIntervals) {
+            this.timeIntervals = timeIntervals;
+            return this;
+        }
+        public java.util.List<RunVideoAnalysisRequestVideoRolesTimeIntervals> getTimeIntervals() {
+            return this.timeIntervals;
         }
 
         public RunVideoAnalysisRequestVideoRoles setUrls(java.util.List<String> urls) {

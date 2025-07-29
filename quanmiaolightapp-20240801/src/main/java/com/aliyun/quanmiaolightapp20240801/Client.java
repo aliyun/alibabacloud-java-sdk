@@ -1674,6 +1674,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRoleRecognitionVideoUrl)) {
+            body.put("autoRoleRecognitionVideoUrl", request.autoRoleRecognitionVideoUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.excludeGenerateOptionsShrink)) {
             body.put("excludeGenerateOptions", request.excludeGenerateOptionsShrink);
         }
@@ -2090,6 +2094,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRoleRecognitionVideoUrl)) {
+            body.put("autoRoleRecognitionVideoUrl", request.autoRoleRecognitionVideoUrl);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deduplicationId)) {
             body.put("deduplicationId", request.deduplicationId);
         }

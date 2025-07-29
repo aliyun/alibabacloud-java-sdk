@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskRequest extends TeaModel {
+    @NameInMap("autoRoleRecognitionVideoUrl")
+    public String autoRoleRecognitionVideoUrl;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,6 +101,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskRequest self = new SubmitVideoAnalysisTaskRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskRequest setAutoRoleRecognitionVideoUrl(String autoRoleRecognitionVideoUrl) {
+        this.autoRoleRecognitionVideoUrl = autoRoleRecognitionVideoUrl;
+        return this;
+    }
+    public String getAutoRoleRecognitionVideoUrl() {
+        return this.autoRoleRecognitionVideoUrl;
     }
 
     public SubmitVideoAnalysisTaskRequest setDeduplicationId(String deduplicationId) {
@@ -448,12 +459,48 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
 
     }
 
+    public static class SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals extends TeaModel {
+        @NameInMap("endTime")
+        public Long endTime;
+
+        @NameInMap("startTime")
+        public Long startTime;
+
+        public static SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals build(java.util.Map<String, ?> map) throws Exception {
+            SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals self = new SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+    }
+
     public static class SubmitVideoAnalysisTaskRequestVideoRoles extends TeaModel {
+        @NameInMap("isAutoRecognition")
+        public Boolean isAutoRecognition;
+
         @NameInMap("roleInfo")
         public String roleInfo;
 
         @NameInMap("roleName")
         public String roleName;
+
+        @NameInMap("timeIntervals")
+        public java.util.List<SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals> timeIntervals;
 
         @NameInMap("urls")
         public java.util.List<String> urls;
@@ -461,6 +508,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
         public static SubmitVideoAnalysisTaskRequestVideoRoles build(java.util.Map<String, ?> map) throws Exception {
             SubmitVideoAnalysisTaskRequestVideoRoles self = new SubmitVideoAnalysisTaskRequestVideoRoles();
             return TeaModel.build(map, self);
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoRoles setIsAutoRecognition(Boolean isAutoRecognition) {
+            this.isAutoRecognition = isAutoRecognition;
+            return this;
+        }
+        public Boolean getIsAutoRecognition() {
+            return this.isAutoRecognition;
         }
 
         public SubmitVideoAnalysisTaskRequestVideoRoles setRoleInfo(String roleInfo) {
@@ -477,6 +532,14 @@ public class SubmitVideoAnalysisTaskRequest extends TeaModel {
         }
         public String getRoleName() {
             return this.roleName;
+        }
+
+        public SubmitVideoAnalysisTaskRequestVideoRoles setTimeIntervals(java.util.List<SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals> timeIntervals) {
+            this.timeIntervals = timeIntervals;
+            return this;
+        }
+        public java.util.List<SubmitVideoAnalysisTaskRequestVideoRolesTimeIntervals> getTimeIntervals() {
+            return this.timeIntervals;
         }
 
         public SubmitVideoAnalysisTaskRequestVideoRoles setUrls(java.util.List<String> urls) {

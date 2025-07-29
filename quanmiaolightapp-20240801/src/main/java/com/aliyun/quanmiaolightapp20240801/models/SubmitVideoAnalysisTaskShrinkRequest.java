@@ -4,6 +4,9 @@ package com.aliyun.quanmiaolightapp20240801.models;
 import com.aliyun.tea.*;
 
 public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
+    @NameInMap("autoRoleRecognitionVideoUrl")
+    public String autoRoleRecognitionVideoUrl;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,6 +101,14 @@ public class SubmitVideoAnalysisTaskShrinkRequest extends TeaModel {
     public static SubmitVideoAnalysisTaskShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitVideoAnalysisTaskShrinkRequest self = new SubmitVideoAnalysisTaskShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitVideoAnalysisTaskShrinkRequest setAutoRoleRecognitionVideoUrl(String autoRoleRecognitionVideoUrl) {
+        this.autoRoleRecognitionVideoUrl = autoRoleRecognitionVideoUrl;
+        return this;
+    }
+    public String getAutoRoleRecognitionVideoUrl() {
+        return this.autoRoleRecognitionVideoUrl;
     }
 
     public SubmitVideoAnalysisTaskShrinkRequest setDeduplicationId(String deduplicationId) {

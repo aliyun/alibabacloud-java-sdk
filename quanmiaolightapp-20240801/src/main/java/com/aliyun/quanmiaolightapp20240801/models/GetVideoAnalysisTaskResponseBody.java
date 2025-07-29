@@ -953,6 +953,140 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
 
     }
 
+    public static class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals extends TeaModel {
+        @NameInMap("endTime")
+        public Long endTime;
+
+        @NameInMap("startTime")
+        public Long startTime;
+
+        @NameInMap("timestamp")
+        public Long timestamp;
+
+        @NameInMap("url")
+        public String url;
+
+        public static GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals build(java.util.Map<String, ?> map) throws Exception {
+            GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals self = new GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals setEndTime(Long endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+        public Long getEndTime() {
+            return this.endTime;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals setStartTime(Long startTime) {
+            this.startTime = startTime;
+            return this;
+        }
+        public Long getStartTime() {
+            return this.startTime;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals setTimestamp(Long timestamp) {
+            this.timestamp = timestamp;
+            return this;
+        }
+        public Long getTimestamp() {
+            return this.timestamp;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
+    }
+
+    public static class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles extends TeaModel {
+        @NameInMap("isAutoRecognition")
+        public Boolean isAutoRecognition;
+
+        @NameInMap("ratio")
+        public Float ratio;
+
+        @NameInMap("roleInfo")
+        public String roleInfo;
+
+        @NameInMap("roleName")
+        public String roleName;
+
+        @NameInMap("timeIntervals")
+        public java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals> timeIntervals;
+
+        public static GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles build(java.util.Map<String, ?> map) throws Exception {
+            GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles self = new GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles setIsAutoRecognition(Boolean isAutoRecognition) {
+            this.isAutoRecognition = isAutoRecognition;
+            return this;
+        }
+        public Boolean getIsAutoRecognition() {
+            return this.isAutoRecognition;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles setRatio(Float ratio) {
+            this.ratio = ratio;
+            return this;
+        }
+        public Float getRatio() {
+            return this.ratio;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles setRoleInfo(String roleInfo) {
+            this.roleInfo = roleInfo;
+            return this;
+        }
+        public String getRoleInfo() {
+            return this.roleInfo;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles setRoleName(String roleName) {
+            this.roleName = roleName;
+            return this;
+        }
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles setTimeIntervals(java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals> timeIntervals) {
+            this.timeIntervals = timeIntervals;
+            return this;
+        }
+        public java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRolesTimeIntervals> getTimeIntervals() {
+            return this.timeIntervals;
+        }
+
+    }
+
+    public static class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult extends TeaModel {
+        @NameInMap("videoRoles")
+        public java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles> videoRoles;
+
+        public static GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult build(java.util.Map<String, ?> map) throws Exception {
+            GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult self = new GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult();
+            return TeaModel.build(map, self);
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult setVideoRoles(java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles> videoRoles) {
+            this.videoRoles = videoRoles;
+            return this;
+        }
+        public java.util.List<GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResultVideoRoles> getVideoRoles() {
+            return this.videoRoles;
+        }
+
+    }
+
     public static class GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoTitleGenerateResultUsage extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -1074,6 +1208,9 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         @NameInMap("videoMindMappingGenerateResult")
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoMindMappingGenerateResult videoMindMappingGenerateResult;
 
+        @NameInMap("videoRoleRecognitionResult")
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult videoRoleRecognitionResult;
+
         @NameInMap("videoTitleGenerateResult")
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoTitleGenerateResult videoTitleGenerateResult;
 
@@ -1128,6 +1265,14 @@ public class GetVideoAnalysisTaskResponseBody extends TeaModel {
         }
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoMindMappingGenerateResult getVideoMindMappingGenerateResult() {
             return this.videoMindMappingGenerateResult;
+        }
+
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutput setVideoRoleRecognitionResult(GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult videoRoleRecognitionResult) {
+            this.videoRoleRecognitionResult = videoRoleRecognitionResult;
+            return this;
+        }
+        public GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoRoleRecognitionResult getVideoRoleRecognitionResult() {
+            return this.videoRoleRecognitionResult;
         }
 
         public GetVideoAnalysisTaskResponseBodyDataPayloadOutput setVideoTitleGenerateResult(GetVideoAnalysisTaskResponseBodyDataPayloadOutputVideoTitleGenerateResult videoTitleGenerateResult) {
