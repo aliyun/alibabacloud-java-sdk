@@ -256,7 +256,7 @@ public class DescribeCastersResponseBody extends TeaModel {
          * <p>rg-aekzw******</p>
          */
         @NameInMap("ResourceGroupId")
-        public Integer resourceGroupId;
+        public String resourceGroupId;
 
         /**
          * <p>The time when the production studio was started. This parameter is returned if the production studio is in the streaming status.</p>
@@ -387,11 +387,11 @@ public class DescribeCastersResponseBody extends TeaModel {
             return this.purchaseTime;
         }
 
-        public DescribeCastersResponseBodyCasterListCaster setResourceGroupId(Integer resourceGroupId) {
+        public DescribeCastersResponseBodyCasterListCaster setResourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-        public Integer getResourceGroupId() {
+        public String getResourceGroupId() {
             return this.resourceGroupId;
         }
 

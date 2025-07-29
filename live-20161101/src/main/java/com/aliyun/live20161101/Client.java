@@ -19044,6 +19044,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询指定域名流粒度批量数据</p>
+     * 
+     * @param request DescribeLiveUserStreamMetricDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeLiveUserStreamMetricDataResponse
+     */
+    public DescribeLiveUserStreamMetricDataResponse describeLiveUserStreamMetricDataWithOptions(DescribeLiveUserStreamMetricDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
+            query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamName)) {
+            query.put("StreamName", request.streamName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeLiveUserStreamMetricData"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeLiveUserStreamMetricDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定域名流粒度批量数据</p>
+     * 
+     * @param request DescribeLiveUserStreamMetricDataRequest
+     * @return DescribeLiveUserStreamMetricDataResponse
+     */
+    public DescribeLiveUserStreamMetricDataResponse describeLiveUserStreamMetricData(DescribeLiveUserStreamMetricDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeLiveUserStreamMetricDataWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DescribeLiveUserTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeLiveUserTagsResponse
