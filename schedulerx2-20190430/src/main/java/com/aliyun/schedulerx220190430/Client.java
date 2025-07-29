@@ -2114,6 +2114,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>同步任务</p>
+     * 
+     * @param tmpReq ManageSchedulerxJobSyncRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ManageSchedulerxJobSyncResponse
+     */
+    public ManageSchedulerxJobSyncResponse manageSchedulerxJobSyncWithOptions(ManageSchedulerxJobSyncRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ManageSchedulerxJobSyncShrinkRequest request = new ManageSchedulerxJobSyncShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.jobIdList)) {
+            request.jobIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.jobIdList, "JobIdList", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.jobIdListShrink)) {
+            body.put("JobIdList", request.jobIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceSource)) {
+            body.put("NamespaceSource", request.namespaceSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalGroupId)) {
+            body.put("OriginalGroupId", request.originalGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalNamespace)) {
+            body.put("OriginalNamespace", request.originalNamespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            body.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetGroupId)) {
+            body.put("TargetGroupId", request.targetGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetNamespace)) {
+            body.put("TargetNamespace", request.targetNamespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ManageSchedulerxJobSync"),
+            new TeaPair("version", "2019-04-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ManageSchedulerxJobSyncResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>同步任务</p>
+     * 
+     * @param request ManageSchedulerxJobSyncRequest
+     * @return ManageSchedulerxJobSyncResponse
+     */
+    public ManageSchedulerxJobSyncResponse manageSchedulerxJobSync(ManageSchedulerxJobSyncRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.manageSchedulerxJobSyncWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取机器详细信息</p>
      * 
      * @param request ReadSchedulerxDesignateDetailRequest
