@@ -60,6 +60,9 @@ public class DescribeModificationPriceRequest extends TeaModel {
     @NameInMap("InstanceType")
     public String instanceType;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     /**
      * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</p>
      * <p>This parameter is required.</p>
@@ -139,6 +142,14 @@ public class DescribeModificationPriceRequest extends TeaModel {
     }
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    public DescribeModificationPriceRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public DescribeModificationPriceRequest setRegionId(String regionId) {
