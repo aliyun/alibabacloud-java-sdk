@@ -1354,6 +1354,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        @NameInMap("instance_metadata_options")
+        public InstanceMetadataOptions instanceMetadataOptions;
+
         /**
          * <p>The instance properties.</p>
          */
@@ -1824,6 +1827,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyScalingGroup setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+            this.instanceMetadataOptions = instanceMetadataOptions;
+            return this;
+        }
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyScalingGroup setInstancePatterns(java.util.List<InstancePatterns> instancePatterns) {

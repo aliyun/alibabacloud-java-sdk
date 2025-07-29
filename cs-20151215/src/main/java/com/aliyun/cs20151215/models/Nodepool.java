@@ -996,6 +996,9 @@ public class Nodepool extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        @NameInMap("instance_metadata_options")
+        public InstanceMetadataOptions instanceMetadataOptions;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -1269,6 +1272,14 @@ public class Nodepool extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public NodepoolScalingGroup setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+            this.instanceMetadataOptions = instanceMetadataOptions;
+            return this;
+        }
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         public NodepoolScalingGroup setInstanceTypes(java.util.List<String> instanceTypes) {

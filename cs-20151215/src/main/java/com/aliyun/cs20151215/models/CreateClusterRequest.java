@@ -2210,6 +2210,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("image_type")
         public String imageType;
 
+        @NameInMap("instance_metadata_options")
+        public InstanceMetadataOptions instanceMetadataOptions;
+
         /**
          * <p>The instance types of the nodes.</p>
          */
@@ -2418,6 +2421,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public String getImageType() {
             return this.imageType;
+        }
+
+        public CreateClusterRequestControlPlaneConfig setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+            this.instanceMetadataOptions = instanceMetadataOptions;
+            return this;
+        }
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         public CreateClusterRequestControlPlaneConfig setInstanceTypes(java.util.List<String> instanceTypes) {

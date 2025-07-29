@@ -1501,6 +1501,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         @NameInMap("instance_charge_type")
         public String instanceChargeType;
 
+        @NameInMap("instance_metadata_options")
+        public InstanceMetadataOptions instanceMetadataOptions;
+
         /**
          * <p>The instance attributes.</p>
          */
@@ -1987,6 +1990,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         }
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        public CreateClusterNodePoolRequestScalingGroup setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+            this.instanceMetadataOptions = instanceMetadataOptions;
+            return this;
+        }
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         public CreateClusterNodePoolRequestScalingGroup setInstancePatterns(java.util.List<InstancePatterns> instancePatterns) {

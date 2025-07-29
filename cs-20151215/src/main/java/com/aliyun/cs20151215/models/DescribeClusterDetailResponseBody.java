@@ -826,6 +826,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         @NameInMap("image_type")
         public String imageType;
 
+        @NameInMap("instance_metadata_options")
+        public InstanceMetadataOptions instanceMetadataOptions;
+
         /**
          * <p>The instance types of the nodes.</p>
          */
@@ -1025,6 +1028,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
         public String getImageType() {
             return this.imageType;
+        }
+
+        public DescribeClusterDetailResponseBodyControlPlaneConfig setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+            this.instanceMetadataOptions = instanceMetadataOptions;
+            return this;
+        }
+        public InstanceMetadataOptions getInstanceMetadataOptions() {
+            return this.instanceMetadataOptions;
         }
 
         public DescribeClusterDetailResponseBodyControlPlaneConfig setInstanceTypes(java.util.List<String> instanceTypes) {
