@@ -441,6 +441,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.documentIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentIds, "DocumentIds", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tableIds)) {
+            request.tableIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tableIds, "TableIds", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.metaExtractColumns)) {
             request.metaExtractColumnsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.metaExtractColumns, "metaExtractColumns", "json");
         }
@@ -458,6 +462,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Columns", request.columnsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createIndexType)) {
+            query.put("CreateIndexType", request.createIndexType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dataSourceShrink)) {
             query.put("DataSource", request.dataSourceShrink);
         }
@@ -472,6 +480,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.embeddingModelName)) {
             query.put("EmbeddingModelName", request.embeddingModelName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableRewrite)) {
+            query.put("EnableRewrite", request.enableRewrite);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
@@ -512,6 +524,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.structureType)) {
             query.put("StructureType", request.structureType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableIdsShrink)) {
+            query.put("TableIds", request.tableIdsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.chunkMode)) {
@@ -2077,6 +2093,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.documentIdsShrink)) {
             query.put("DocumentIds", request.documentIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableHeaders)) {
+            query.put("EnableHeaders", request.enableHeaders);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {

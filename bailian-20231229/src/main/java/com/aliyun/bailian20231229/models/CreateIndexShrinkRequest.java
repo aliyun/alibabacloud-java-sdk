@@ -26,6 +26,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("Columns")
     public String columnsShrink;
 
+    @NameInMap("CreateIndexType")
+    public String createIndexType;
+
     /**
      * <blockquote>
      * <p> This parameter is not available. Do not specify this parameter.</p>
@@ -58,6 +61,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
      */
     @NameInMap("EmbeddingModelName")
     public String embeddingModelName;
+
+    @NameInMap("EnableRewrite")
+    public Boolean enableRewrite;
 
     /**
      * <p>The name of the knowledge base. The name must be 1 to 20 characters in length and can contain characters classified as letter in Unicode, including English letters, Chinese characters, digits, among others. The name can also contain colons (:), underscores (_), periods (.), and hyphens (-).</p>
@@ -199,6 +205,9 @@ public class CreateIndexShrinkRequest extends TeaModel {
     @NameInMap("StructureType")
     public String structureType;
 
+    @NameInMap("TableIds")
+    public String tableIdsShrink;
+
     @NameInMap("chunkMode")
     public String chunkMode;
 
@@ -237,6 +246,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
         return this.columnsShrink;
     }
 
+    public CreateIndexShrinkRequest setCreateIndexType(String createIndexType) {
+        this.createIndexType = createIndexType;
+        return this;
+    }
+    public String getCreateIndexType() {
+        return this.createIndexType;
+    }
+
     public CreateIndexShrinkRequest setDataSourceShrink(String dataSourceShrink) {
         this.dataSourceShrink = dataSourceShrink;
         return this;
@@ -267,6 +284,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getEmbeddingModelName() {
         return this.embeddingModelName;
+    }
+
+    public CreateIndexShrinkRequest setEnableRewrite(Boolean enableRewrite) {
+        this.enableRewrite = enableRewrite;
+        return this;
+    }
+    public Boolean getEnableRewrite() {
+        return this.enableRewrite;
     }
 
     public CreateIndexShrinkRequest setName(String name) {
@@ -347,6 +372,14 @@ public class CreateIndexShrinkRequest extends TeaModel {
     }
     public String getStructureType() {
         return this.structureType;
+    }
+
+    public CreateIndexShrinkRequest setTableIdsShrink(String tableIdsShrink) {
+        this.tableIdsShrink = tableIdsShrink;
+        return this;
+    }
+    public String getTableIdsShrink() {
+        return this.tableIdsShrink;
     }
 
     public CreateIndexShrinkRequest setChunkMode(String chunkMode) {

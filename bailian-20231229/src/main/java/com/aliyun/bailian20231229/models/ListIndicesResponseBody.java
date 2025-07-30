@@ -122,6 +122,9 @@ public class ListIndicesResponseBody extends TeaModel {
         @NameInMap("ChunkSize")
         public Integer chunkSize;
 
+        @NameInMap("ConfgModel")
+        public String confgModel;
+
         /**
          * <p>The description of the knowledge base.</p>
          * 
@@ -148,6 +151,9 @@ public class ListIndicesResponseBody extends TeaModel {
          */
         @NameInMap("EmbeddingModelName")
         public String embeddingModelName;
+
+        @NameInMap("EnableRewrite")
+        public Boolean enableRewrite;
 
         /**
          * <p>The primary key ID of the knowledge base, which is the <code>Data.Id</code> parameter returned by the <a href="https://www.alibabacloud.com/help/en/model-studio/developer-reference/api-bailian-2023-12-29-createindex">CreateIndex</a> operation.</p>
@@ -294,6 +300,14 @@ public class ListIndicesResponseBody extends TeaModel {
             return this.chunkSize;
         }
 
+        public ListIndicesResponseBodyDataIndices setConfgModel(String confgModel) {
+            this.confgModel = confgModel;
+            return this;
+        }
+        public String getConfgModel() {
+            return this.confgModel;
+        }
+
         public ListIndicesResponseBodyDataIndices setDescription(String description) {
             this.description = description;
             return this;
@@ -316,6 +330,14 @@ public class ListIndicesResponseBody extends TeaModel {
         }
         public String getEmbeddingModelName() {
             return this.embeddingModelName;
+        }
+
+        public ListIndicesResponseBodyDataIndices setEnableRewrite(Boolean enableRewrite) {
+            this.enableRewrite = enableRewrite;
+            return this;
+        }
+        public Boolean getEnableRewrite() {
+            return this.enableRewrite;
         }
 
         public ListIndicesResponseBodyDataIndices setId(String id) {
