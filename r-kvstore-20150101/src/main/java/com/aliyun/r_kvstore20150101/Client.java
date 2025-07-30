@@ -17,7 +17,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("cn-shanghai", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-heyuan", "r-kvstore.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "r-kvstore.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "r-kvstore.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "r-kvstore.aliyuncs.com"),

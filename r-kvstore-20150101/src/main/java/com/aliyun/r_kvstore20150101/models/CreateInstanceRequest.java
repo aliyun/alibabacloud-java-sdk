@@ -89,7 +89,7 @@ public class CreateInstanceRequest extends TeaModel {
     public Long capacity;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription</li>
      * <li><strong>PostPaid</strong> (default): pay-as-you-go</li>
@@ -142,9 +142,9 @@ public class CreateInstanceRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails the dry run, an error code is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>true</strong>: performs a dry run and does not create the instance. The system prechecks the request parameters, request format, service limits, and available resources. If the request fails to pass the precheck, an error message is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
      * <li><strong>false</strong>: performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
      * </ul>
      * 
@@ -184,11 +184,13 @@ public class CreateInstanceRequest extends TeaModel {
      * <li><strong>false</strong> (default): does not use the new instance as the first child instance.</li>
      * </ul>
      * <blockquote>
-     * <ul>
-     * <li>If you want to create a Tair DRAM-based instance that runs Redis 5.0, you must set this parameter to <strong>true</strong>.</li>
-     * <li>This parameter is available only on the China site (aliyun.com).</li>
-     * </ul>
      * </blockquote>
+     * <ul>
+     * <li><p>If you want to create a Tair DRAM-based instance that runs Redis 5.0, you must set this parameter to <strong>true</strong>.</p>
+     * </li>
+     * <li><p>This parameter is available only on the China site (aliyun.com).</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -248,7 +250,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The network type. Valid values:</p>
+     * <p>The network type. Valid value:</p>
      * <ul>
      * <li><strong>VPC</strong> (default)</li>
      * </ul>
@@ -430,7 +432,7 @@ public class CreateInstanceRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The number of shards. This parameter is applicable only to cloud-native cluster instances. You can use this parameter to customize the number of shards.</p>
+     * <p>The number of shards. This parameter applies only to cloud-native cluster instances.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
