@@ -248,6 +248,9 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         @NameInMap("MasterDbInstanceZoneId")
         public String masterDbInstanceZoneId;
 
+        @NameInMap("MasterEngineArchType")
+        public Integer masterEngineArchType;
+
         /**
          * <strong>example:</strong>
          * <p>rg-aekzq276dmnaxqa</p>
@@ -353,6 +356,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
         public String getMasterDbInstanceZoneId() {
             return this.masterDbInstanceZoneId;
+        }
+
+        public DescribeGadInstancesResponseBodyInstancesInstances setMasterEngineArchType(Integer masterEngineArchType) {
+            this.masterEngineArchType = masterEngineArchType;
+            return this;
+        }
+        public Integer getMasterEngineArchType() {
+            return this.masterEngineArchType;
         }
 
         public DescribeGadInstancesResponseBodyInstancesInstances setResourceGroupId(String resourceGroupId) {

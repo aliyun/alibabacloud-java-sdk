@@ -11,6 +11,18 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("MasterDatabaseName")
+    public String masterDatabaseName;
+
+    @NameInMap("MasterEngineArchType")
+    public String masterEngineArchType;
+
+    @NameInMap("MasterShardAccountName")
+    public String masterShardAccountName;
+
+    @NameInMap("MasterShardAccountPassword")
+    public String masterShardAccountPassword;
+
     @NameInMap("OwnerId")
     public String ownerId;
 
@@ -28,6 +40,9 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("SlaveDatabaseName")
+    public String slaveDatabaseName;
+
     /**
      * <strong>example:</strong>
      * <p>rm-bp17562h64****</p>
@@ -42,6 +57,9 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     @NameInMap("SlaveDbInstanceRegion")
     public String slaveDbInstanceRegion;
 
+    @NameInMap("SlaveEngineArchType")
+    public String slaveEngineArchType;
+
     public static PreCheckCreateGadOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         PreCheckCreateGadOrderRequest self = new PreCheckCreateGadOrderRequest();
         return TeaModel.build(map, self);
@@ -53,6 +71,38 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public PreCheckCreateGadOrderRequest setMasterDatabaseName(String masterDatabaseName) {
+        this.masterDatabaseName = masterDatabaseName;
+        return this;
+    }
+    public String getMasterDatabaseName() {
+        return this.masterDatabaseName;
+    }
+
+    public PreCheckCreateGadOrderRequest setMasterEngineArchType(String masterEngineArchType) {
+        this.masterEngineArchType = masterEngineArchType;
+        return this;
+    }
+    public String getMasterEngineArchType() {
+        return this.masterEngineArchType;
+    }
+
+    public PreCheckCreateGadOrderRequest setMasterShardAccountName(String masterShardAccountName) {
+        this.masterShardAccountName = masterShardAccountName;
+        return this;
+    }
+    public String getMasterShardAccountName() {
+        return this.masterShardAccountName;
+    }
+
+    public PreCheckCreateGadOrderRequest setMasterShardAccountPassword(String masterShardAccountPassword) {
+        this.masterShardAccountPassword = masterShardAccountPassword;
+        return this;
+    }
+    public String getMasterShardAccountPassword() {
+        return this.masterShardAccountPassword;
     }
 
     public PreCheckCreateGadOrderRequest setOwnerId(String ownerId) {
@@ -79,6 +129,14 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public PreCheckCreateGadOrderRequest setSlaveDatabaseName(String slaveDatabaseName) {
+        this.slaveDatabaseName = slaveDatabaseName;
+        return this;
+    }
+    public String getSlaveDatabaseName() {
+        return this.slaveDatabaseName;
+    }
+
     public PreCheckCreateGadOrderRequest setSlaveDbInstanceId(String slaveDbInstanceId) {
         this.slaveDbInstanceId = slaveDbInstanceId;
         return this;
@@ -93,6 +151,14 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     }
     public String getSlaveDbInstanceRegion() {
         return this.slaveDbInstanceRegion;
+    }
+
+    public PreCheckCreateGadOrderRequest setSlaveEngineArchType(String slaveEngineArchType) {
+        this.slaveEngineArchType = slaveEngineArchType;
+        return this;
+    }
+    public String getSlaveEngineArchType() {
+        return this.slaveEngineArchType;
     }
 
 }

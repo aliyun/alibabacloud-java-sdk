@@ -4,6 +4,9 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGadInstancesRequest extends TeaModel {
+    @NameInMap("DbEngineTypes")
+    public String dbEngineTypes;
+
     /**
      * <strong>example:</strong>
      * <p>test</p>
@@ -51,6 +54,14 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public static DescribeGadInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGadInstancesRequest self = new DescribeGadInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeGadInstancesRequest setDbEngineTypes(String dbEngineTypes) {
+        this.dbEngineTypes = dbEngineTypes;
+        return this;
+    }
+    public String getDbEngineTypes() {
+        return this.dbEngineTypes;
     }
 
     public DescribeGadInstancesRequest setInstanceName(String instanceName) {
