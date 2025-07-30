@@ -211,8 +211,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The workspace ID. Obtain a list of TensorBoard instances based on the workspace ID. 
-     * &lt;props=&quot;china&quot;&gt;For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. Obtain a list of TensorBoard instances based on the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>380</p>

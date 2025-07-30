@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateTensorboardRequest extends TeaModel {
     /**
-     * <p>The visibility of the job. Valid values:</p>
+     * <p>The job visibility. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: The configuration is public in the workspace.</li>
-     * <li>PRIVATE: The configuration is visible only to you and the administrator of the workspace.</li>
+     * <li>PUBLIC: Visible to all members in the workspace.</li>
+     * <li>PRIVATE: Visible only to you and the administrator of the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,8 +27,7 @@ public class CreateTensorboardRequest extends TeaModel {
     public Long cpu;
 
     /**
-     * <p>The dataset ID. 
-     * &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/457222.html">ListDatasets</a> to get the dataset ID.</p>
+     * <p>The dataset ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-xxxxxxxx</p>
@@ -65,7 +64,7 @@ public class CreateTensorboardRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The job ID. Call <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to get the job ID.</p>
+     * <p>The job ID. For more information about how to query the job ID, see <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-mtl37ge7gkvdz</p>
@@ -114,8 +113,8 @@ public class CreateTensorboardRequest extends TeaModel {
     public String priority;
 
     /**
-     * <p>The resource quota ID. This parameter is required when you create a TensorBoard job by using a resource quota. &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/2628071.html">ListQuotas</a> to get the quota ID. 
-     * This feature is currently limited to whitelisted users. If you need to use this feature, contact us.</p>
+     * <p>The resource quota ID. This parameter is required when you create a TensorBoard job by using a resource quota.</p>
+     * <p>This feature is currently limited to whitelisted users. If you need to use this feature, contact us.</p>
      * 
      * <strong>example:</strong>
      * <p>quota12345</p>
@@ -172,7 +171,7 @@ public class CreateTensorboardRequest extends TeaModel {
     public TensorboardSpec tensorboardSpec;
 
     /**
-     * <p>The dataset URI.</p>
+     * <p>The dataset URI:</p>
      * <ul>
      * <li>Value format when DataSourceType is set to OSS: <code>oss://[oss-bucket].[endpoint]/[path]</code>.</li>
      * <li>Value format when DataSourceType is set to NAS:<code>nas://[nas-filesystem-id].[region]/[path]</code>.</li>
@@ -185,8 +184,7 @@ public class CreateTensorboardRequest extends TeaModel {
     public String uri;
 
     /**
-     * <p>The workspace ID. 
-     * &lt;props=&quot;china&quot;&gt;Call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123***</p>

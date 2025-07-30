@@ -156,7 +156,7 @@ public class GetJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The node configurations of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
+     * <p>The node configuration of the job, which is <strong>JobSpecs</strong> in the CreateJob operation.</p>
      */
     @NameInMap("JobSpecs")
     public java.util.List<JobSpec> jobSpecs;
@@ -249,7 +249,7 @@ public class GetJobResponseBody extends TeaModel {
     public String restartTimes;
 
     /**
-     * <p>The settings of the additional parameters of the job.</p>
+     * <p>The additional parameter configurations of the job.</p>
      */
     @NameInMap("Settings")
     public JobSettings settings;

@@ -8,7 +8,7 @@ public class ServiceSpec extends TeaModel {
     public Integer defaultPort;
 
     @NameInMap("ExtraPorts")
-    public Integer extraPorts;
+    public java.util.List<Integer> extraPorts;
 
     @NameInMap("ServiceMode")
     public String serviceMode;
@@ -26,11 +26,11 @@ public class ServiceSpec extends TeaModel {
         return this.defaultPort;
     }
 
-    public ServiceSpec setExtraPorts(Integer extraPorts) {
+    public ServiceSpec setExtraPorts(java.util.List<Integer> extraPorts) {
         this.extraPorts = extraPorts;
         return this;
     }
-    public Integer getExtraPorts() {
+    public java.util.List<Integer> getExtraPorts() {
         return this.extraPorts;
     }
 

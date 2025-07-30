@@ -80,7 +80,7 @@ public class CreateJobRequest extends TeaModel {
     public Long jobMaxRunningTimeMinutes;
 
     /**
-     * <p>The configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.****</p>
+     * <p><strong>JobSpecs</strong> describes the configurations for job running, such as the image address, startup command, node resource declaration, and number of replicas.</p>
      * <p>A DLC job consists of different types of nodes. If nodes of the same type have exactly the same configuration, the configuration is called JobSpec. <strong>JobSpecs</strong> specifies the configurations of all types of nodes. The value is of the array type.</p>
      * <p>This parameter is required.</p>
      */
@@ -99,7 +99,7 @@ public class CreateJobRequest extends TeaModel {
      * <li>SlurmJob</li>
      * <li>RayJob</li>
      * </ul>
-     * <p>Valid values for each job type:</p>
+     * <p>Valid values and corresponding frameworks:</p>
      * <ul>
      * <li>OneFlowJob: OneFlow.</li>
      * <li>PyTorchJob: PyTorch.</li>
@@ -130,7 +130,7 @@ public class CreateJobRequest extends TeaModel {
     /**
      * <p>The priority of the job. Default value: 1. Valid values: 1 to 9.</p>
      * <ul>
-     * <li>1: the lowest priority.</li>
+     * <li>1 is the lowest priority.</li>
      * <li>9: the highest priority.</li>
      * </ul>
      * 
@@ -474,6 +474,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("DataSourceVersion")
         public String dataSourceVersion;
 
+        @NameInMap("EnableCache")
+        public Boolean enableCache;
+
         @NameInMap("MountAccess")
         public String mountAccess;
 
@@ -529,6 +532,14 @@ public class CreateJobRequest extends TeaModel {
             return this.dataSourceVersion;
         }
 
+        public CreateJobRequestDataSources setEnableCache(Boolean enableCache) {
+            this.enableCache = enableCache;
+            return this;
+        }
+        public Boolean getEnableCache() {
+            return this.enableCache;
+        }
+
         public CreateJobRequestDataSources setMountAccess(String mountAccess) {
             this.mountAccess = mountAccess;
             return this;
@@ -568,7 +579,7 @@ public class CreateJobRequest extends TeaModel {
          * <p>The default route. Default value: false. Valid values:</p>
          * <ul>
          * <li>eth0: The default network interface is used to access the Internet through the public gateway.</li>
-         * <li>eth1: The user\&quot;s Elastic Network Interface is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
+         * <li>eth1: The user\&quot;s elastic network interface (ENI) is used to access the Internet through the private gateway. For more information about the configuration method, see <a href="https://help.aliyun.com/document_detail/2525343.html">Enable Internet access for a DSW instance by using a private Internet NAT gateway</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
