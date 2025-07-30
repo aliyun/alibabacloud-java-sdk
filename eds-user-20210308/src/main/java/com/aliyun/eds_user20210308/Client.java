@@ -236,6 +236,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             query.put("GroupName", request.groupName);
         }
@@ -614,8 +618,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.solutionId)) {
@@ -674,8 +690,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GroupName", request.groupName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.solutionId)) {
             query.put("SolutionId", request.solutionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferFileNeedApproval)) {
+            query.put("TransferFileNeedApproval", request.transferFileNeedApproval);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -970,20 +998,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Filter", request.filter);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.filterWithAssignedResourceShrink)) {
-            query.put("FilterWithAssignedResource", request.filterWithAssignedResourceShrink);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
             query.put("NextToken", request.nextToken);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
-            query.put("Status", request.status);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -997,6 +1017,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.excludeEndUserIds)) {
             body.put("ExcludeEndUserIds", request.excludeEndUserIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeGroupId)) {
+            body.put("ExcludeGroupId", request.excludeGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterWithAssignedResourceShrink)) {
+            body.put("FilterWithAssignedResource", request.filterWithAssignedResourceShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.filterWithAssignedResourcesShrink)) {
@@ -1021,6 +1049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.solutionId)) {
             body.put("SolutionId", request.solutionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("Status", request.status);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1430,6 +1462,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyGroupResponse modifyGroupWithOptions(ModifyGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }
@@ -1710,6 +1746,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupIds)) {
+            query.put("GroupIds", request.groupIds);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

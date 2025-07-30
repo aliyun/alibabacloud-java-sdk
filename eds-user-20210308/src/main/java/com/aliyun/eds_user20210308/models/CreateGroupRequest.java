@@ -11,6 +11,9 @@ public class CreateGroupRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    @NameInMap("Description")
+    public String description;
+
     @NameInMap("GroupName")
     public String groupName;
 
@@ -39,6 +42,14 @@ public class CreateGroupRequest extends TeaModel {
     }
     public String getBizType() {
         return this.bizType;
+    }
+
+    public CreateGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public CreateGroupRequest setGroupName(String groupName) {

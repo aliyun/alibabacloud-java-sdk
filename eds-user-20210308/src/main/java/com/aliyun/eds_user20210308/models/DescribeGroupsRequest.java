@@ -21,12 +21,21 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <strong>example:</strong>
      * <p>co-0esnf80jab***</p>
      */
     @NameInMap("SolutionId")
     public String solutionId;
+
+    @NameInMap("TransferFileNeedApproval")
+    public Boolean transferFileNeedApproval;
 
     public static DescribeGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeGroupsRequest self = new DescribeGroupsRequest();
@@ -57,12 +66,36 @@ public class DescribeGroupsRequest extends TeaModel {
         return this.groupName;
     }
 
+    public DescribeGroupsRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public DescribeGroupsRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
     public DescribeGroupsRequest setSolutionId(String solutionId) {
         this.solutionId = solutionId;
         return this;
     }
     public String getSolutionId() {
         return this.solutionId;
+    }
+
+    public DescribeGroupsRequest setTransferFileNeedApproval(Boolean transferFileNeedApproval) {
+        this.transferFileNeedApproval = transferFileNeedApproval;
+        return this;
+    }
+    public Boolean getTransferFileNeedApproval() {
+        return this.transferFileNeedApproval;
     }
 
 }

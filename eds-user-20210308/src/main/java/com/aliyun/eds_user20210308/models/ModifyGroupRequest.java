@@ -4,6 +4,9 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ModifyGroupRequest extends TeaModel {
+    @NameInMap("Description")
+    public String description;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -22,6 +25,14 @@ public class ModifyGroupRequest extends TeaModel {
     public static ModifyGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyGroupRequest self = new ModifyGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyGroupRequest setDescription(String description) {
+        this.description = description;
+        return this;
+    }
+    public String getDescription() {
+        return this.description;
     }
 
     public ModifyGroupRequest setGroupId(String groupId) {

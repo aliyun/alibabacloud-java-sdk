@@ -7,6 +7,9 @@ public class DescribeGroupUserResponseBody extends TeaModel {
     @NameInMap("Groups")
     public java.util.List<DescribeGroupUserResponseBodyGroups> groups;
 
+    @NameInMap("NextToken")
+    public String nextToken;
+
     /**
      * <strong>example:</strong>
      * <p>AA8D67CB-345D-5CDA-986E-FFAC7D0****</p>
@@ -28,6 +31,14 @@ public class DescribeGroupUserResponseBody extends TeaModel {
     }
     public java.util.List<DescribeGroupUserResponseBodyGroups> getGroups() {
         return this.groups;
+    }
+
+    public DescribeGroupUserResponseBody setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeGroupUserResponseBody setRequestId(String requestId) {
@@ -159,6 +170,9 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         @NameInMap("Phone")
         public String phone;
 
+        @NameInMap("Remark")
+        public String remark;
+
         public static DescribeGroupUserResponseBodyUsers build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupUserResponseBodyUsers self = new DescribeGroupUserResponseBodyUsers();
             return TeaModel.build(map, self);
@@ -234,6 +248,14 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         }
         public String getPhone() {
             return this.phone;
+        }
+
+        public DescribeGroupUserResponseBodyUsers setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
     }

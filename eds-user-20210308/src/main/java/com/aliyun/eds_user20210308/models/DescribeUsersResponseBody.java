@@ -229,6 +229,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @NameInMap("Email")
         public String email;
 
+        @NameInMap("EnableAdminAccess")
+        public Boolean enableAdminAccess;
+
         /**
          * <p>The username of the convenience user.</p>
          * 
@@ -422,6 +425,14 @@ public class DescribeUsersResponseBody extends TeaModel {
         }
         public String getEmail() {
             return this.email;
+        }
+
+        public DescribeUsersResponseBodyUsers setEnableAdminAccess(Boolean enableAdminAccess) {
+            this.enableAdminAccess = enableAdminAccess;
+            return this;
+        }
+        public Boolean getEnableAdminAccess() {
+            return this.enableAdminAccess;
         }
 
         public DescribeUsersResponseBodyUsers setEndUserId(String endUserId) {

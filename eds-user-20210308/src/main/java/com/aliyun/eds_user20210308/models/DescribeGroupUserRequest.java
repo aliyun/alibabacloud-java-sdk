@@ -11,12 +11,21 @@ public class DescribeGroupUserRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    @NameInMap("Filter")
+    public String filter;
+
     /**
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
+
+    @NameInMap("MaxResults")
+    public Integer maxResults;
+
+    @NameInMap("NextToken")
+    public String nextToken;
 
     /**
      * <strong>example:</strong>
@@ -38,12 +47,36 @@ public class DescribeGroupUserRequest extends TeaModel {
         return this.bizType;
     }
 
+    public DescribeGroupUserRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
+    }
+
     public DescribeGroupUserRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public DescribeGroupUserRequest setMaxResults(Integer maxResults) {
+        this.maxResults = maxResults;
+        return this;
+    }
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    public DescribeGroupUserRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     public DescribeGroupUserRequest setSolutionId(String solutionId) {

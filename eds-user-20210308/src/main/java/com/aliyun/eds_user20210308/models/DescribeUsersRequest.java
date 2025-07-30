@@ -19,6 +19,9 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
 
+    @NameInMap("ExcludeGroupId")
+    public String excludeGroupId;
+
     /**
      * <p>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (\*) are supported. For example, if you set this parameter to <code>a*m</code>, usernames or email addresses that start with <code>a</code> and end with <code>m</code> are returned.</p>
      * 
@@ -114,6 +117,14 @@ public class DescribeUsersRequest extends TeaModel {
     }
     public java.util.List<String> getExcludeEndUserIds() {
         return this.excludeEndUserIds;
+    }
+
+    public DescribeUsersRequest setExcludeGroupId(String excludeGroupId) {
+        this.excludeGroupId = excludeGroupId;
+        return this;
+    }
+    public String getExcludeGroupId() {
+        return this.excludeGroupId;
     }
 
     public DescribeUsersRequest setFilter(String filter) {

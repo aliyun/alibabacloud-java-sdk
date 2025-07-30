@@ -11,6 +11,9 @@ public class RemoveGroupRequest extends TeaModel {
     @NameInMap("GroupId")
     public String groupId;
 
+    @NameInMap("GroupIds")
+    public java.util.List<String> groupIds;
+
     public static RemoveGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         RemoveGroupRequest self = new RemoveGroupRequest();
         return TeaModel.build(map, self);
@@ -22,6 +25,14 @@ public class RemoveGroupRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public RemoveGroupRequest setGroupIds(java.util.List<String> groupIds) {
+        this.groupIds = groupIds;
+        return this;
+    }
+    public java.util.List<String> getGroupIds() {
+        return this.groupIds;
     }
 
 }
