@@ -46,6 +46,12 @@ public class ListApplicationsRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Used to determine whether M2M client identity is enabled.</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -71,6 +77,12 @@ public class ListApplicationsRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>Used to determine whether the ResourceServer capability is enabled.</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -78,6 +90,13 @@ public class ListApplicationsRequest extends TeaModel {
     public String resourceServerStatus;
 
     /**
+     * <p>SSO type.</p>
+     * <ul>
+     * <li>oidc</li>
+     * <li>saml2</li>
+     * <li>oauth2/m2m</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>oauth2/m2m</p>
      */

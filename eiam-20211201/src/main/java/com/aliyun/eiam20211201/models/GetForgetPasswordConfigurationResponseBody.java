@@ -42,7 +42,7 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
 
     public static class GetForgetPasswordConfigurationResponseBodyOpenForgetPasswordConfiguration extends TeaModel {
         /**
-         * <p>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</p>
+         * <p>The authentication channels. Valid values:<br>email<br>sms<br>totp<br>web_authn</p>
          */
         @NameInMap("AuthenticationChannels")
         public java.util.List<String> authenticationChannels;
@@ -75,7 +75,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         public Boolean enableSms;
 
         /**
-         * <p>表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+         * <p>The status of the forgot password feature. Valid values: enabled and disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         @NameInMap("ForgetPasswordStatus")
         public String forgetPasswordStatus;

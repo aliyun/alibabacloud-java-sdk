@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDomainResponseBody extends TeaModel {
     /**
+     * <p>Domain ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dm_mtohn6mltdz3ibtly2rxvnvxxx</p>
      */
@@ -12,6 +14,8 @@ public class CreateDomainResponseBody extends TeaModel {
     public String domainId;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */

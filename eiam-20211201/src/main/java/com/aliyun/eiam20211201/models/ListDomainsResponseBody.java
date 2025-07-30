@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListDomainsResponseBody extends TeaModel {
+    /**
+     * <p>The information about the domain names.</p>
+     */
     @NameInMap("Domains")
     public java.util.List<ListDomainsResponseBodyDomains> domains;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,10 @@ public class ListDomainsResponseBody extends TeaModel {
 
     public static class ListDomainsResponseBodyDomainsFiling extends TeaModel {
         /**
-         * <p>域名关联的备案号, 长度最大限制64。</p>
+         * <p>The ICP number associated with the domain name. Both the entity ICP number and website ICP number are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Zhexx-xxxxxx</p>
          */
         @NameInMap("IcpNumber")
         public String icpNumber;
@@ -59,7 +67,7 @@ public class ListDomainsResponseBody extends TeaModel {
 
     public static class ListDomainsResponseBodyDomains extends TeaModel {
         /**
-         * <p>域名创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -68,7 +76,7 @@ public class ListDomainsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>是否默认域名。true表示实例默认域名，false表示非默认域名</p>
+         * <p>Indicates whether the domain name is the default domain.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -77,7 +85,7 @@ public class ListDomainsResponseBody extends TeaModel {
         public Boolean defaultDomain;
 
         /**
-         * <p>域名。</p>
+         * <p>The domain.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.example.com">www.example.com</a></p>
@@ -86,7 +94,7 @@ public class ListDomainsResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>域名ID。</p>
+         * <p>The domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dm_examplexxxxx</p>
@@ -95,7 +103,11 @@ public class ListDomainsResponseBody extends TeaModel {
         public String domainId;
 
         /**
-         * <p>域名类型。枚举取值:system_init(系统初始化)、user_custom(用户自定义)。</p>
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li>system_init: an initial domain name.</li>
+         * <li>user_custom: a custom domain name.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>system_init</p>
@@ -104,13 +116,13 @@ public class ListDomainsResponseBody extends TeaModel {
         public String domainType;
 
         /**
-         * <p>域名备案信息。</p>
+         * <p>The information about the Internet content provider (ICP) filing of the domain name.</p>
          */
         @NameInMap("Filing")
         public ListDomainsResponseBodyDomainsFiling filing;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -119,7 +131,11 @@ public class ListDomainsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>域名锁定状态。枚举取值:unlock(正常)、lockByLicense(因License限制不可用)。</p>
+         * <p>Indicates whether the domain name is locked. Valid values:</p>
+         * <ul>
+         * <li>unlock</li>
+         * <li>lockByLicense</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>unlock</p>
@@ -128,7 +144,7 @@ public class ListDomainsResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>域名最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

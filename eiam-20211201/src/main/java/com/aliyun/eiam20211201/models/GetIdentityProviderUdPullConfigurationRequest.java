@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>Identity provider ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

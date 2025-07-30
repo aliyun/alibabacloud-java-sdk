@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetDomainResponseBody extends TeaModel {
+    /**
+     * <p>The domain name.</p>
+     */
     @NameInMap("Domain")
     public GetDomainResponseBodyDomain domain;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,8 @@ public class GetDomainResponseBody extends TeaModel {
 
     public static class GetDomainResponseBodyDomainFiling extends TeaModel {
         /**
-         * <p>域名关联的备案号, 长度最大限制64。</p>
+         * <p><notice>The ICP filing number is only applicable for services in the China region.  For non-China regions, no validation or display of this record number will be performed.</notice>
+         * The ICP filing number associated with the domain name, with a maximum length of 64 characters.</p>
          */
         @NameInMap("IcpNumber")
         public String icpNumber;
@@ -59,7 +65,7 @@ public class GetDomainResponseBody extends TeaModel {
 
     public static class GetDomainResponseBodyDomain extends TeaModel {
         /**
-         * <p>域名创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The start time when the change order was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -68,7 +74,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>是否默认域名。true表示实例默认域名，false表示非默认域名</p>
+         * <p>Whether it is the default domain.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -77,7 +83,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Boolean defaultDomain;
 
         /**
-         * <p>域名。</p>
+         * <p>The domain.</p>
          * 
          * <strong>example:</strong>
          * <p>login.example.com</p>
@@ -86,7 +92,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>域名ID。</p>
+         * <p>Domain ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dm_examplexxxxx</p>
@@ -95,7 +101,11 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainId;
 
         /**
-         * <p>域名类型。枚举取值:system_init(系统初始化)、user_custom(用户自定义)。</p>
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>system_init</strong>: Initialize domain</li>
+         * <li><strong>user_custom</strong>: user custom domain</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>system_init</p>
@@ -104,13 +114,13 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainType;
 
         /**
-         * <p>域名备案信息。</p>
+         * <p>Domain registration information.</p>
          */
         @NameInMap("Filing")
         public GetDomainResponseBodyDomainFiling filing;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -119,7 +129,11 @@ public class GetDomainResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>域名锁定状态。枚举取值:unlock(正常)、lockByLicense(因License限制不可用)。</p>
+         * <p>The lock status of the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>Unlock</strong>: The instance is normal.</li>
+         * <li><strong>lockByLicense</strong>: Not available due to license restrictions.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>unlock</p>
@@ -128,7 +142,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>域名最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The time when the service was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>

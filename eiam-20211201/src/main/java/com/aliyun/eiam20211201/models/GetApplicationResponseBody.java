@@ -94,6 +94,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ApplicationTemplateId")
         public String applicationTemplateId;
 
+        /**
+         * <p>Application visibility</p>
+         */
         @NameInMap("ApplicationVisibility")
         public java.util.List<String> applicationVisibility;
 
@@ -127,6 +130,9 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         @NameInMap("CreateTime")
         public Long createTime;
+
+        @NameInMap("CustomSubjectStatus")
+        public String customSubjectStatus;
 
         /**
          * <p>The description of the application.</p>
@@ -169,6 +175,12 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("LogoUrl")
         public String logoUrl;
 
+        /**
+         * <p>M2M client status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
+         */
         @NameInMap("M2MClientStatus")
         public String m2MClientStatus;
 
@@ -181,9 +193,21 @@ public class GetApplicationResponseBody extends TeaModel {
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
 
+        /**
+         * <p>Unique identifier of the resource server</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://www.example.com">https://www.example.com</a></p>
+         */
         @NameInMap("ResourceServerIdentifier")
         public String resourceServerIdentifier;
 
+        /**
+         * <p>Resource server status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled	enabled</p>
+         */
         @NameInMap("ResourceServerStatus")
         public String resourceServerStatus;
 
@@ -306,6 +330,14 @@ public class GetApplicationResponseBody extends TeaModel {
         }
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        public GetApplicationResponseBodyApplication setCustomSubjectStatus(String customSubjectStatus) {
+            this.customSubjectStatus = customSubjectStatus;
+            return this;
+        }
+        public String getCustomSubjectStatus() {
+            return this.customSubjectStatus;
         }
 
         public GetApplicationResponseBodyApplication setDescription(String description) {

@@ -90,7 +90,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         public String applicationSourceType;
 
         /**
-         * <p>应用模板ID</p>
+         * <p>The application template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apt_xxx_xxx</p>
          */
         @NameInMap("ApplicationTemplateId")
         public String applicationTemplateId;
@@ -126,12 +129,16 @@ public class ListApplicationsResponseBody extends TeaModel {
          * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
          * <ul>
          * <li>sso: The application supports SSO.</li>
+         * <li>slo: The application supports SLO.</li>
          * <li>provision: The application supports account synchronization.</li>
          * <li>api_invoke: The application supports custom APIs.</li>
+         * <li>m2m_client: The application supports M2M Client.</li>
+         * <li>resource_server: The application supports Resource Server.</li>
+         * <li>other: undertake.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;sso&quot;, &quot;provision&quot;]</p>
+         * <p>[&quot;sso&quot;,&quot;slo&quot;, &quot;provision&quot;,&quot;api_invoke&quot;, &quot;m2m_client&quot;,&quot;resource_server&quot;,&quot;other&quot;]</p>
          */
         @NameInMap("Features")
         public String features;
@@ -154,9 +161,6 @@ public class ListApplicationsResponseBody extends TeaModel {
         @NameInMap("LogoUrl")
         public String logoUrl;
 
-        @NameInMap("M2MClientStatus")
-        public String m2MClientStatus;
-
         /**
          * <p>The service code of the cloud service that manages the application template.</p>
          * 
@@ -165,12 +169,6 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         @NameInMap("ManagedServiceCode")
         public String managedServiceCode;
-
-        @NameInMap("ResourceServerIdentifier")
-        public String resourceServerIdentifier;
-
-        @NameInMap("ResourceServerStatus")
-        public String resourceServerStatus;
 
         /**
          * <p>Indicates whether the application template is managed by a cloud service.</p>
@@ -186,6 +184,7 @@ public class ListApplicationsResponseBody extends TeaModel {
          * <ul>
          * <li>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</li>
          * <li>oidc: the OpenID Connect (OIDC) protocol.</li>
+         * <li>oauth2/m2m: the OAuth2.0  protocol M2M.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,8 +196,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         /**
          * <p>The status of the application. Valid values:</p>
          * <ul>
-         * <li>Enabled: The application is enabled.</li>
-         * <li>Disabled: The application is disabled.</li>
+         * <li>enabled: The application is enabled.</li>
+         * <li>disabled: The application is disabled.</li>
+         * <li>deleted: The application is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -301,36 +301,12 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.logoUrl;
         }
 
-        public ListApplicationsResponseBodyApplications setM2MClientStatus(String m2MClientStatus) {
-            this.m2MClientStatus = m2MClientStatus;
-            return this;
-        }
-        public String getM2MClientStatus() {
-            return this.m2MClientStatus;
-        }
-
         public ListApplicationsResponseBodyApplications setManagedServiceCode(String managedServiceCode) {
             this.managedServiceCode = managedServiceCode;
             return this;
         }
         public String getManagedServiceCode() {
             return this.managedServiceCode;
-        }
-
-        public ListApplicationsResponseBodyApplications setResourceServerIdentifier(String resourceServerIdentifier) {
-            this.resourceServerIdentifier = resourceServerIdentifier;
-            return this;
-        }
-        public String getResourceServerIdentifier() {
-            return this.resourceServerIdentifier;
-        }
-
-        public ListApplicationsResponseBodyApplications setResourceServerStatus(String resourceServerStatus) {
-            this.resourceServerStatus = resourceServerStatus;
-            return this;
-        }
-        public String getResourceServerStatus() {
-            return this.resourceServerStatus;
         }
 
         public ListApplicationsResponseBodyApplications setServiceManaged(Boolean serviceManaged) {

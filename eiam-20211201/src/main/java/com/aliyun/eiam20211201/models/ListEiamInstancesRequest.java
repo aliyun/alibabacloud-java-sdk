@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEiamInstancesRequest extends TeaModel {
     /**
-     * <p>实例ID列表，支持0到100个</p>
+     * <p>The instance ID list.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>实例所属Region</p>
+     * <p>The region in which the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

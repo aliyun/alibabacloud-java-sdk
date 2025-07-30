@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListNetworkAccessPathsResponseBody extends TeaModel {
+    /**
+     * <p>Network access paths</p>
+     */
     @NameInMap("NetworkAccessPaths")
     public java.util.List<ListNetworkAccessPathsResponseBodyNetworkAccessPaths> networkAccessPaths;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
 
     public static class ListNetworkAccessPathsResponseBodyNetworkAccessPaths extends TeaModel {
         /**
-         * <p>专属网络端点访问路径创建时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -46,7 +51,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>实例ID。</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -55,7 +60,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>专属网络端点ID。</p>
+         * <p>Network access endpoint ID.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxx</p>
@@ -64,7 +69,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String networkAccessEndpointId;
 
         /**
-         * <p>专属网络端点访问路径ID。</p>
+         * <p>Network access path ID</p>
          * 
          * <strong>example:</strong>
          * <p>nap_examplexxx</p>
@@ -73,7 +78,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String networkAccessPathId;
 
         /**
-         * <p>专属网络端点访问路径使用的ENI ID。</p>
+         * <p>Network interface ID</p>
          * 
          * <strong>example:</strong>
          * <p>eni-examplexxx</p>
@@ -82,7 +87,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String networkInterfaceId;
 
         /**
-         * <p>专属网络端点访问路径使用的ENI私网地址。</p>
+         * <p>The private IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -91,7 +96,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String privateIpAddress;
 
         /**
-         * <p>专属网络端点访问路径状态。</p>
+         * <p>Network access path status</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -100,7 +105,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>专属网络端点访问路径最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1649830226000</p>
@@ -109,7 +114,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         public Long updateTime;
 
         /**
-         * <p>专属网络端点访问路径的ENI归属的交换机ID。</p>
+         * <p>The ID of a vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-examplexxx</p>

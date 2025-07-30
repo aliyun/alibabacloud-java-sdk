@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Inbound Synchronization Configuration Information</p>
+     */
     @NameInMap("UdPullConfiguration")
     public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration udPullConfiguration;
 
@@ -37,7 +42,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig extends TeaModel {
         /**
-         * <p>组成员标识</p>
+         * <p>Group Member Identifier</p>
          * 
          * <strong>example:</strong>
          * <p>group</p>
@@ -46,7 +51,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupMemberAttributeName;
 
         /**
-         * <p>组objectClass</p>
+         * <p>Group ObjectClass</p>
          * 
          * <strong>example:</strong>
          * <p>member</p>
@@ -55,7 +60,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupObjectClass;
 
         /**
-         * <p>组自定义Filter</p>
+         * <p>Group Custom Filter</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -64,7 +69,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>组织objectClass</p>
+         * <p>Organization ObjectClass</p>
          * 
          * <strong>example:</strong>
          * <p>ou,top</p>
@@ -73,7 +78,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String organizationUnitObjectClass;
 
         /**
-         * <p>用户objectClass</p>
+         * <p>User ObjectClass</p>
          * 
          * <strong>example:</strong>
          * <p>ou,top</p>
@@ -82,7 +87,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String userObjectClass;
 
         /**
-         * <p>用户自定义Filter</p>
+         * <p>User ObjectClass Custom Filter</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -147,16 +152,26 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig extends TeaModel {
         /**
+         * <p>Cron expression</p>
+         * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
          */
         @NameInMap("PeriodicSyncCron")
         public String periodicSyncCron;
 
+        /**
+         * <p>Execution time slots, for example 3,5, meaning the task runs once between 03:00–04:00 and once between 05:00–06:00.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[3,5]</p>
+         */
         @NameInMap("PeriodicSyncTimes")
         public Integer periodicSyncTimes;
 
         /**
+         * <p>type</p>
+         * 
          * <strong>example:</strong>
          * <p>cron</p>
          */
@@ -196,7 +211,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule extends TeaModel {
         /**
-         * <p>同步保护规则-删除组数量</p>
+         * <p>Group Deletion Threshold: If the number of deleted groups exceeds this value, the synchronization task will be terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -205,7 +220,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public Integer groupDeletedThreshold;
 
         /**
-         * <p>IDaaS EIAM 钉钉一方应用同步保护规则-删除组织数量</p>
+         * <p>Organization Deletion Threshold: If the number of deleted organizations exceeds this value, the synchronization task will be terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -214,7 +229,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public Integer organizationalUnitDeletedThreshold;
 
         /**
-         * <p>IDaaS EIAM 钉钉一方应用同步保护规则-删除账户数量</p>
+         * <p>Account Deletion Threshold: If the number of deleted users exceeds this value, the synchronization task will be terminated.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -255,13 +270,13 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig extends TeaModel {
         /**
-         * <p>同步来源节点</p>
+         * <p>Synchronization Source Node</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>同步目标节点</p>
+         * <p>Synchronization Target Node</p>
          * 
          * <strong>example:</strong>
          * <p>ou_asjdfhaskfhw213mnsj33sXXX</p>
@@ -294,7 +309,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
 
     public static class GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfiguration extends TeaModel {
         /**
-         * <p>组同步状态</p>
+         * <p>Group Synchronization Status
+         * Possible values:</p>
+         * <p>Disabled: disabled</p>
+         * <p>Enabled: enabled</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -303,7 +321,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String groupSyncStatus;
 
         /**
-         * <p>IDaaS EIAM 身份提供方ID</p>
+         * <p>Identity provider ID</p>
          * 
          * <strong>example:</strong>
          * <p>idp_my664lwkhpicbyzirog3xxxxx</p>
@@ -312,7 +330,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String identityProviderId;
 
         /**
-         * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+         * <p>Incremental Callback Status: Whether to process incremental callback data from the IdP</p>
          * 
          * <strong>example:</strong>
          * <p>enabled</p>
@@ -321,7 +339,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String incrementalCallbackStatus;
 
         /**
-         * <p>IDaaS EIAM 实例Id</p>
+         * <p>The ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -330,15 +348,22 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String instanceId;
 
         /**
-         * <p>ldap同步侧相关配置信息</p>
+         * <p>LDAP Synchronization Side Related Configuration Information</p>
          */
         @NameInMap("LdapUdPullConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationLdapUdPullConfig ldapUdPullConfig;
 
+        /**
+         * <p>Scheduled sync configuration</p>
+         */
         @NameInMap("PeriodicSyncConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPeriodicSyncConfig periodicSyncConfig;
 
         /**
+         * <p>Scheduled Validation Status: Whether to periodically validate data discrepancies between IDaaS and the Identity Provider. Possible values:</p>
+         * <p>Disabled: disabled</p>
+         * <p>Enabled: enabled</p>
+         * 
          * <strong>example:</strong>
          * <p>enabled</p>
          */
@@ -346,13 +371,13 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         public String periodicSyncStatus;
 
         /**
-         * <p>同步入用户映射字段配置列表</p>
+         * <p>Inbound Synchronization Protection Rule Configuration</p>
          */
         @NameInMap("PullProtectedRule")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationPullProtectedRule pullProtectedRule;
 
         /**
-         * <p>同步入配置信息</p>
+         * <p>Synchronization Scope Configuration Information</p>
          */
         @NameInMap("UdSyncScopeConfig")
         public GetIdentityProviderUdPullConfigurationResponseBodyUdPullConfigurationUdSyncScopeConfig udSyncScopeConfig;

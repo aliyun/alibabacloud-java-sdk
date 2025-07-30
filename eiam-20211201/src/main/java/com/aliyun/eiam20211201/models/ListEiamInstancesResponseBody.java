@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListEiamInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The instance list.</p>
+     */
     @NameInMap("Instances")
     public java.util.List<ListEiamInstancesResponseBodyInstances> instances;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,13 +42,16 @@ public class ListEiamInstancesResponseBody extends TeaModel {
 
     public static class ListEiamInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>实例描述信息</p>
+         * <p>The instance description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>instance test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>实例developer私网域名地址</p>
+         * <p>The private domain name of the instance Developer API.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-developerapi-cn.vpc-proxy.aliyuncs.com</p>
@@ -52,7 +60,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String developerAPIPrivateDomain;
 
         /**
-         * <p>实例developer公网域名地址</p>
+         * <p>The public domain of the instance Developer API.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-developerapi.cn-hangzhou.aliyuncs.com</p>
@@ -61,7 +69,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String developerAPIPublicDomain;
 
         /**
-         * <p>实例id</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>idaas_eypq6ljgyeuwmlw672sulxxxxx</p>
@@ -70,7 +78,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>实例状态，Pending(初始状态)、Creating(创建中)、Running(运行中)、Disabled(禁用)、CreateFailed(创建失败)</p>
+         * <p>The instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -79,7 +87,12 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>实例版本，EIAM2.0/ EIAM1.0</p>
+         * <p>The instance version.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>EIAM 2.0</li>
+         * <li>EIAM 1.0</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EIAM 2.0</p>
@@ -88,7 +101,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String instanceVersion;
 
         /**
-         * <p>实例openApi私网域名地址</p>
+         * <p>The private domain of the instance OpenAPI.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam-cn.vpc-proxy.aliyuncs.com</p>
@@ -97,7 +110,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String openAPIPrivateDomain;
 
         /**
-         * <p>实例openApi公网域名地址</p>
+         * <p>The public domain of the instance OpenAPI.</p>
          * 
          * <strong>example:</strong>
          * <p>eiam.cn-hangzhou.aliyuncs.com</p>
@@ -106,7 +119,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String openAPIPublicDomain;
 
         /**
-         * <p>实例域名地址</p>
+         * <p>The single sign-on (SSO) domain  of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx.aliyunidaas.com</p>
@@ -115,7 +128,7 @@ public class ListEiamInstancesResponseBody extends TeaModel {
         public String SSODomain;
 
         /**
-         * <p>实例的创建时间</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1677810869300</p>

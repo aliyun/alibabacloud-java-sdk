@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class GetDomainDnsChallengeResponseBody extends TeaModel {
+    /**
+     * <p>The DNS challenge records.</p>
+     */
     @NameInMap("DomainDnsChallenge")
     public GetDomainDnsChallengeResponseBodyDomainDnsChallenge domainDnsChallenge;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,7 +42,7 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
 
     public static class GetDomainDnsChallengeResponseBodyDomainDnsChallenge extends TeaModel {
         /**
-         * <p>DNS challenge名称。</p>
+         * <p>The name of the DNS challenge record.</p>
          * 
          * <strong>example:</strong>
          * <p>_idaas-challenge.${domain}</p>
@@ -46,7 +51,7 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
         public String dnsChallengeName;
 
         /**
-         * <p>DNS challenge值。</p>
+         * <p>The value of the DNS challenge record.</p>
          * 
          * <strong>example:</strong>
          * <p>exmple123xxx</p>
@@ -55,10 +60,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
         public String dnsChallengeValue;
 
         /**
-         * <p>DNS记录类型。</p>
+         * <p>The type of the DNS challenge record.</p>
          * 
          * <strong>example:</strong>
-         * <p>枚举，目前只支持TXT类型</p>
+         * <p>txt</p>
          */
         @NameInMap("DnsType")
         public String dnsType;

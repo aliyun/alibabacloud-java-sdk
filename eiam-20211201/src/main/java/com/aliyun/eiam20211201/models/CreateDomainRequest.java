@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDomainRequest extends TeaModel {
     /**
-     * <p>域名。最大长度限制255，格式由数字、字母、横线（-）点（.）组成;</p>
+     * <p>The domain name of the website.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class CreateDomainRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>备案信息参数。</p>
+     * <p>Registration information parameters.</p>
      */
     @NameInMap("Filing")
     public CreateDomainRequestFiling filing;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class CreateDomainRequest extends TeaModel {
 
     public static class CreateDomainRequestFiling extends TeaModel {
         /**
-         * <p>域名关联的备案号，长度最大限制64。</p>
+         * <p>Record number associated with the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>浙xx-xxxxxx</p>

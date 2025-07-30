@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOrganizationalUnitParentsRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListOrganizationalUnitParentsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>组织ID。</p>
+     * <p>The organization ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

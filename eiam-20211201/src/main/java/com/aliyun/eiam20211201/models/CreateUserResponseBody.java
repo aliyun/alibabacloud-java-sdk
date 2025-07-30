@@ -14,7 +14,7 @@ public class CreateUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the account.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

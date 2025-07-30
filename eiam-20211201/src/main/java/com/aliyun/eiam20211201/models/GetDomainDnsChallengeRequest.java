@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDomainDnsChallengeRequest extends TeaModel {
     /**
-     * <p>域名。</p>
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetDomainDnsChallengeRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

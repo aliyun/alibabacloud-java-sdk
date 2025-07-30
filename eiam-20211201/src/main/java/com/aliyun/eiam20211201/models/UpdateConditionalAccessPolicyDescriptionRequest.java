@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateConditionalAccessPolicyDescriptionRequest extends TeaModel {
     /**
+     * <p>Idp client token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-examplexxx</p>
+     */
+    @NameInMap("ClientToken")
+    public String clientToken;
+
+    /**
      * <p>Conditional Access Policy ID</p>
      * <p>This parameter is required.</p>
      * 
@@ -37,6 +46,14 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends TeaModel {
     public static UpdateConditionalAccessPolicyDescriptionRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateConditionalAccessPolicyDescriptionRequest self = new UpdateConditionalAccessPolicyDescriptionRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateConditionalAccessPolicyDescriptionRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateConditionalAccessPolicyDescriptionRequest setConditionalAccessPolicyId(String conditionalAccessPolicyId) {

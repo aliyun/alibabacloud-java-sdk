@@ -97,7 +97,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         public String organizationalUnitId;
 
         /**
-         * <p>组织名称。</p>
+         * <p>The Name of the organizational unit.</p>
          * 
          * <strong>example:</strong>
          * <p>test_organizationalUnit_name</p>

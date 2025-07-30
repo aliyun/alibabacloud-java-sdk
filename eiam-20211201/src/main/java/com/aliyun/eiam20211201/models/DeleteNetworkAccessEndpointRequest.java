@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkAccessEndpointRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteNetworkAccessEndpointRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>专属网络端点ID。</p>
+     * <p>Network Access Endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

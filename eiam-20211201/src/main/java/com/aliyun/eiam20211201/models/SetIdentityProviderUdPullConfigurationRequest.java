@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     /**
-     * <p>组同步状态</p>
+     * <p>Group synchronization status.</p>
      * 
      * <strong>example:</strong>
      * <p>disabled</p>
@@ -14,7 +14,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String groupSyncStatus;
 
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>Identity provider ID</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+     * <p>Incremental callback status, whether to process incremental callback data from IdP.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String incrementalCallbackStatus;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,15 +44,20 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>ldap同步侧相关配置信息</p>
+     * <p>Ldap ud pull config</p>
      */
     @NameInMap("LdapUdPullConfig")
     public SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig ldapUdPullConfig;
 
+    /**
+     * <p>Periodic synchronize config</p>
+     */
     @NameInMap("PeriodicSyncConfig")
     public SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig periodicSyncConfig;
 
     /**
+     * <p>Periodic synchronize status</p>
+     * 
      * <strong>example:</strong>
      * <p>disabled</p>
      */
@@ -60,13 +65,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
     public String periodicSyncStatus;
 
     /**
-     * <p>同步入保护规则,根据IdP的type做解析</p>
+     * <p>Synchronize protected rule</p>
      */
     @NameInMap("PullProtectedRule")
     public SetIdentityProviderUdPullConfigurationRequestPullProtectedRule pullProtectedRule;
 
     /**
-     * <p>同步入配置信息</p>
+     * <p>Synchronize configuration information.</p>
      */
     @NameInMap("UdSyncScopeConfig")
     public SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig udSyncScopeConfig;
@@ -150,25 +155,25 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestLdapUdPullConfig extends TeaModel {
         /**
-         * <p>组成员标识</p>
+         * <p>Group member attribute name</p>
          * 
          * <strong>example:</strong>
-         * <p>member</p>
+         * <p>memberxxx</p>
          */
         @NameInMap("GroupMemberAttributeName")
         public String groupMemberAttributeName;
 
         /**
-         * <p>组objectClass</p>
+         * <p>GroupObjectClass</p>
          * 
          * <strong>example:</strong>
-         * <p>group</p>
+         * <p>groupxxx</p>
          */
         @NameInMap("GroupObjectClass")
         public String groupObjectClass;
 
         /**
-         * <p>组自定义Filter</p>
+         * <p>GroupObjectClass custom filter</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -177,25 +182,25 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public String groupObjectClassCustomFilter;
 
         /**
-         * <p>组织ObjectClass</p>
+         * <p>OrganizationUnitObjectClass</p>
          * 
          * <strong>example:</strong>
-         * <p>organizationUnit,top</p>
+         * <p>organizationUnitxxx,top</p>
          */
         @NameInMap("OrganizationUnitObjectClass")
         public String organizationUnitObjectClass;
 
         /**
-         * <p>用户ObjectClass</p>
+         * <p>UserObjectClass</p>
          * 
          * <strong>example:</strong>
-         * <p>userPrincipalName, mail</p>
+         * <p>userPrincipalNamexxx, mail</p>
          */
         @NameInMap("UserObjectClass")
         public String userObjectClass;
 
         /**
-         * <p>用户自定义Filter</p>
+         * <p>UserObjectClass custom filter</p>
          * 
          * <strong>example:</strong>
          * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -260,16 +265,23 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestPeriodicSyncConfig extends TeaModel {
         /**
+         * <p>Periodic synchronize cron</p>
+         * 
          * <strong>example:</strong>
          * <p>0 45 1 * * ?</p>
          */
         @NameInMap("PeriodicSyncCron")
         public String periodicSyncCron;
 
+        /**
+         * <p>Periodic synchronize times</p>
+         */
         @NameInMap("PeriodicSyncTimes")
         public java.util.List<Integer> periodicSyncTimes;
 
         /**
+         * <p>Periodic synchronize type</p>
+         * 
          * <strong>example:</strong>
          * <p>cron</p>
          */
@@ -309,7 +321,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestPullProtectedRule extends TeaModel {
         /**
-         * <p>同步保护规则-删除组数量</p>
+         * <p>Group deleted threshold</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -318,7 +330,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer groupDeletedThreshold;
 
         /**
-         * <p>钉钉一方应用同步保护规则-删除组织数量</p>
+         * <p>OrganizationalUnit deleted threshold</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -327,7 +339,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
         public Integer organizationalUnitDeletedThreshold;
 
         /**
-         * <p>钉钉一方应用同步保护规则-删除账户数量</p>
+         * <p>User deleted threshold</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -368,13 +380,13 @@ public class SetIdentityProviderUdPullConfigurationRequest extends TeaModel {
 
     public static class SetIdentityProviderUdPullConfigurationRequestUdSyncScopeConfig extends TeaModel {
         /**
-         * <p>同步来源节点</p>
+         * <p>Synchronize source scopes</p>
          */
         @NameInMap("SourceScopes")
         public java.util.List<String> sourceScopes;
 
         /**
-         * <p>同步目标节点</p>
+         * <p>Synchronize target scope</p>
          * 
          * <strong>example:</strong>
          * <p>ou_asdaq1addsxzdq1XXX</p>

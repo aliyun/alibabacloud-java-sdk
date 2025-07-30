@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunSynchronizationJobRequest extends TeaModel {
     /**
+     * <p>Synchronization task description</p>
+     * 
      * <strong>example:</strong>
      * <p>描述</p>
      */
@@ -12,7 +14,7 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,14 +23,23 @@ public class RunSynchronizationJobRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Whether initialize password</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("PasswordInitialization")
     public Boolean passwordInitialization;
 
+    /**
+     * <p>Synchronization scope</p>
+     */
     @NameInMap("SynchronizationScopeConfig")
     public RunSynchronizationJobRequestSynchronizationScopeConfig synchronizationScopeConfig;
 
     /**
-     * <p>同步目标ID</p>
+     * <p>The ID of the synchronization destination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +49,11 @@ public class RunSynchronizationJobRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>同步目标类型</p>
+     * <p>The type of the synchronization destination. Valid values:</p>
+     * <ul>
+     * <li>identity_provider</li>
+     * <li>application</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,6 +62,9 @@ public class RunSynchronizationJobRequest extends TeaModel {
     @NameInMap("TargetType")
     public String targetType;
 
+    /**
+     * <p>User identity types</p>
+     */
     @NameInMap("UserIdentityTypes")
     public java.util.List<String> userIdentityTypes;
 
@@ -112,12 +130,21 @@ public class RunSynchronizationJobRequest extends TeaModel {
     }
 
     public static class RunSynchronizationJobRequestSynchronizationScopeConfig extends TeaModel {
+        /**
+         * <p>The group IDs.</p>
+         */
         @NameInMap("GroupIds")
         public java.util.List<String> groupIds;
 
+        /**
+         * <p>The IDs of organizational units.</p>
+         */
         @NameInMap("OrganizationalUnitIds")
         public java.util.List<String> organizationalUnitIds;
 
+        /**
+         * <p>UserIds</p>
+         */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
 

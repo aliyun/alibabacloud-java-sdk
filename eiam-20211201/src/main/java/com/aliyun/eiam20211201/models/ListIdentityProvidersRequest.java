@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIdentityProvidersRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>当前查询的列表页码，默认为1。</p>
+     * <p>The number of the page to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>当前查询的列表页码，默认为20。</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

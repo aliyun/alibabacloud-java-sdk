@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDomainProxyTokenRequest extends TeaModel {
     /**
-     * <p>域名ID。</p>
+     * <p>The ID of the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class EnableDomainProxyTokenRequest extends TeaModel {
     public String domainId;
 
     /**
-     * <p>域名代理Token ID。</p>
+     * <p>The ID of the proxy token of the domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class EnableDomainProxyTokenRequest extends TeaModel {
     public String domainProxyTokenId;
 
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

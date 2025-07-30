@@ -4,10 +4,15 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class ListEiamRegionsResponseBody extends TeaModel {
+    /**
+     * <p>The region list.</p>
+     */
     @NameInMap("Regions")
     public java.util.List<ListEiamRegionsResponseBodyRegions> regions;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -37,16 +42,16 @@ public class ListEiamRegionsResponseBody extends TeaModel {
 
     public static class ListEiamRegionsResponseBodyRegions extends TeaModel {
         /**
-         * <p>地域名称</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东1（杭州）</p>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("LocalName")
         public String localName;
 
         /**
-         * <p>地域ID</p>
+         * <p>The ID of the region in which the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

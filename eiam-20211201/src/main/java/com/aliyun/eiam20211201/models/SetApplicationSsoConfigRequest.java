@@ -14,6 +14,12 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>Idp client token.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>client-examplexxx</p>
+     */
     @NameInMap("ClientToken")
     public String clientToken;
 
@@ -56,7 +62,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     public SetApplicationSsoConfigRequestOidcSsoConfig oidcSsoConfig;
 
     /**
-     * <p>The Security Assertion Markup Language (SAML)-based single sign-on (SSO) configuration attributes of the application.</p>
+     * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application.</p>
      */
     @NameInMap("SamlSsoConfig")
     public SetApplicationSsoConfigRequestSamlSsoConfig samlSsoConfig;
@@ -133,7 +139,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public String claimName;
 
         /**
-         * <p>The expression that is used to generate the value of the claim.</p>
+         * <p>The expression that is used to calculate the value of the claim.</p>
          * 
          * <strong>example:</strong>
          * <p>user.dict.applicationRole</p>
@@ -199,7 +205,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public java.util.List<String> grantScopes;
 
         /**
-         * <p>The list of grant types that are supported for OIDC protocols.</p>
+         * <p>The authorization types that are supported for OIDC protocols.</p>
          * 
          * <strong>example:</strong>
          * <p>authorization_code</p>
@@ -217,7 +223,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public Long idTokenEffectiveTime;
 
         /**
-         * <p>The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+         * <p>The ID of the identity authentication source in password mode. Configure this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
          * 
          * <strong>example:</strong>
          * <p>ia_password</p>
@@ -226,7 +232,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public String passwordAuthenticationSourceId;
 
         /**
-         * <p>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+         * <p>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Configure this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -253,13 +259,13 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public Boolean pkceRequired;
 
         /**
-         * <p>The list of logout redirect URIs that are supported by the application.</p>
+         * <p>The logout redirect URIs that are supported by the application.</p>
          */
         @NameInMap("PostLogoutRedirectUris")
         public java.util.List<String> postLogoutRedirectUris;
 
         /**
-         * <p>The list of redirect URIs that are supported by the application.</p>
+         * <p>The redirect URIs that are supported by the application.</p>
          */
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
@@ -274,7 +280,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public Long refreshTokenEffective;
 
         /**
-         * <p>The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.</p>
+         * <p>The response types that are supported by the application. Configure this parameter when the value of the GrantTypes parameter includes the implicit mode.</p>
          * 
          * <strong>example:</strong>
          * <p>token id_token</p>
@@ -283,7 +289,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public java.util.List<String> responseTypes;
 
         /**
-         * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
+         * <p>The custom expression that is used to calculate the subject ID returned for the ID token.</p>
          * 
          * <strong>example:</strong>
          * <p>user.userid</p>
@@ -420,7 +426,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
     public static class SetApplicationSsoConfigRequestSamlSsoConfigAttributeStatements extends TeaModel {
         /**
-         * <p>The attribute name.</p>
+         * <p>The name of the attribute in the SAML assertion.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></p>
@@ -429,7 +435,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         public String attributeName;
 
         /**
-         * <p>The expression that is used to generate the value of the attribute.</p>
+         * <p>The expression that is used to generate the value of the attribute in the SAML assertion.</p>
          * 
          * <strong>example:</strong>
          * <p>user.username</p>
@@ -461,9 +467,21 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
     }
 
     public static class SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates extends TeaModel {
+        /**
+         * <p>RelayState displayName</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Ram</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>RelayState value</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example">https://example</a> .aliyun.com</p>
+         */
         @NameInMap("RelayState")
         public String relayState;
 
@@ -492,7 +510,7 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
     public static class SetApplicationSsoConfigRequestSamlSsoConfig extends TeaModel {
         /**
-         * <p>Specifies whether to calculate the signature for the assertion. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+         * <p>Specifies whether to calculate the signature for the assertion. You cannot set the ResponseSigned and AssertionSigned parameters to false at the same time. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -519,13 +537,26 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         @NameInMap("DefaultRelayState")
         public String defaultRelayState;
 
+        /**
+         * <p>IdP entityId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/">https://example.com/</a></p>
+         */
         @NameInMap("IdPEntityId")
         public String idPEntityId;
 
         /**
-         * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
+         * <p>The format of the NameID element in the SAML assertion. Valid values:</p>
          * <ul>
          * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</li>
+         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
+         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
+         * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. This is the default value.</li>
          * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
          * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
          * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
@@ -546,11 +577,14 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         @NameInMap("NameIdValueExpression")
         public String nameIdValueExpression;
 
+        /**
+         * <p>Optional relayStates</p>
+         */
         @NameInMap("OptionalRelayStates")
         public java.util.List<SetApplicationSsoConfigRequestSamlSsoConfigOptionalRelayStates> optionalRelayStates;
 
         /**
-         * <p>Specifies whether to calculate the signature for the response. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+         * <p>Specifies whether to calculate the signature for the response. You cannot set the ResponseSigned and AssertionSigned parameters to false at the same time. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -564,19 +598,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
 
         /**
          * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
-         * <p>Enumeration value:</p>
+         * <p>Valid value:</p>
          * <ul>
-         * <li><p>RSA-SHA256</p>
-         * <!-- -->
-         * 
-         * <p>:</p>
-         * <!-- -->
-         * 
-         * <p>the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm</p>
-         * <!-- -->
-         * 
-         * <p>.</p>
-         * </li>
+         * <li>RSA-SHA256: the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm.</li>
          * </ul>
          * 
          * <strong>example:</strong>

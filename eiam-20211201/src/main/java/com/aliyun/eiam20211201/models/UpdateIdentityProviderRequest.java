@@ -4,6 +4,9 @@ package com.aliyun.eiam20211201.models;
 import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>钉钉出基本信息</p>
      */
@@ -78,6 +81,14 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public static UpdateIdentityProviderRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateIdentityProviderRequest self = new UpdateIdentityProviderRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateIdentityProviderRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateIdentityProviderRequest setDingtalkAppConfig(UpdateIdentityProviderRequestDingtalkAppConfig dingtalkAppConfig) {
@@ -163,7 +174,6 @@ public class UpdateIdentityProviderRequest extends TeaModel {
     public static class UpdateIdentityProviderRequestDingtalkAppConfig extends TeaModel {
         /**
          * <p>钉钉一方应用的AppKey</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>49nyeaqumk7f</p>
@@ -173,13 +183,18 @@ public class UpdateIdentityProviderRequest extends TeaModel {
 
         /**
          * <p>钉钉一方应用的AppSecret</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>86nozWFL2CxgwnhKiXaG8dN4keLPkUNc5xxxx</p>
          */
         @NameInMap("AppSecret")
         public String appSecret;
+
+        @NameInMap("EncryptKey")
+        public String encryptKey;
+
+        @NameInMap("VerificationToken")
+        public String verificationToken;
 
         public static UpdateIdentityProviderRequestDingtalkAppConfig build(java.util.Map<String, ?> map) throws Exception {
             UpdateIdentityProviderRequestDingtalkAppConfig self = new UpdateIdentityProviderRequestDingtalkAppConfig();
@@ -200,6 +215,22 @@ public class UpdateIdentityProviderRequest extends TeaModel {
         }
         public String getAppSecret() {
             return this.appSecret;
+        }
+
+        public UpdateIdentityProviderRequestDingtalkAppConfig setEncryptKey(String encryptKey) {
+            this.encryptKey = encryptKey;
+            return this;
+        }
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        public UpdateIdentityProviderRequestDingtalkAppConfig setVerificationToken(String verificationToken) {
+            this.verificationToken = verificationToken;
+            return this;
+        }
+        public String getVerificationToken() {
+            return this.verificationToken;
         }
 
     }

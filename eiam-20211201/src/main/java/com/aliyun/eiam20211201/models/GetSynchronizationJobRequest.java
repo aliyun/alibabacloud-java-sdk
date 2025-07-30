@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSynchronizationJobRequest extends TeaModel {
     /**
-     * <p>IDaaS EIAM实例的ID。</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetSynchronizationJobRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>同步任务ID</p>
+     * <p>The ID of the synchronization job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

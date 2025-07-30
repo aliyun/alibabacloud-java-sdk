@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RunSynchronizationJobResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
      */
@@ -12,6 +14,8 @@ public class RunSynchronizationJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the synchronization job.</p>
+     * 
      * <strong>example:</strong>
      * <p>sync_0000347vjovtcf41li0fgsd98gn24q9nj9xxxxx</p>
      */

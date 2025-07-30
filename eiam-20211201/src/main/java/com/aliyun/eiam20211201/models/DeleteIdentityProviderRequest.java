@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteIdentityProviderRequest extends TeaModel {
     /**
-     * <p>IDaaS的身份提供方主键id</p>
+     * <p>Identity provider ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteIdentityProviderRequest extends TeaModel {
     public String identityProviderId;
 
     /**
-     * <p>IDaaS EIAM的实例id</p>
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
