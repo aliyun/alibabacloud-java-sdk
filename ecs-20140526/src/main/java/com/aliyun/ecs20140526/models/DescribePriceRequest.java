@@ -742,6 +742,9 @@ public class DescribePriceRequest extends TeaModel {
         @NameInMap("DedicatedHostId")
         public String dedicatedHostId;
 
+        @NameInMap("DeploymentSetStrategy")
+        public String deploymentSetStrategy;
+
         public static DescribePriceRequestSchedulerOptions build(java.util.Map<String, ?> map) throws Exception {
             DescribePriceRequestSchedulerOptions self = new DescribePriceRequestSchedulerOptions();
             return TeaModel.build(map, self);
@@ -753,6 +756,14 @@ public class DescribePriceRequest extends TeaModel {
         }
         public String getDedicatedHostId() {
             return this.dedicatedHostId;
+        }
+
+        public DescribePriceRequestSchedulerOptions setDeploymentSetStrategy(String deploymentSetStrategy) {
+            this.deploymentSetStrategy = deploymentSetStrategy;
+            return this;
+        }
+        public String getDeploymentSetStrategy() {
+            return this.deploymentSetStrategy;
         }
 
     }
