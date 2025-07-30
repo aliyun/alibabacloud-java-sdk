@@ -75,7 +75,7 @@ public class ListResourceGroupsShrinkRequest extends TeaModel {
     public String resourceGroupTypesShrink;
 
     /**
-     * <p>The fields used for sorting. Fields such as TriggerTime and StartedTime are supported. The value of this parameter is in the Sort field + Sort by (Desc/Asc) format. By default, results are sorted in ascending order. Valid values:</p>
+     * <p>The list of fields used for sorting. Fields such as TriggerTime and StartedTime are supported. You must configure this parameter in the Sorting field + Sort by (Desc/Asc). By default, results are sorted in ascending order. Valid values:</p>
      * <ul>
      * <li>Id (Desc/Asc): the resource group ID</li>
      * <li>Name (Desc/Asc): the name of the resource group</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeploymentPackageFilesResponseBody extends TeaModel {
     /**
-     * <p>The pagination information.</p>
+     * <p>The pagination details.</p>
      */
     @NameInMap("PagingInfo")
     public ListDeploymentPackageFilesResponseBodyPagingInfo pagingInfo;
@@ -222,16 +222,22 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         public String smokeTestStatus;
 
         /**
-         * <p>The status of the code for the file of the current version. Valid values:</p>
+         * <p>The status of the code file of the current version. Valid values:</p>
          * <ul>
-         * <li>10: committing</li>
-         * <li>11: committed to the development environment of the scheduling system</li>
-         * <li>20: review passed</li>
-         * <li>21: review failed</li>
-         * <li>80: deployment package creation succeeded</li>
-         * <li>100: deploying</li>
-         * <li>101: deployed to the production environment</li>
-         * <li>200: cancelled</li>
+         * <li>2: Commit check in progress.</li>
+         * <li>3: Commit check passed.</li>
+         * <li>4: Commit check failed.</li>
+         * <li>10: Committing.</li>
+         * <li>11: Committed.</li>
+         * <li>20: Approved.</li>
+         * <li>21: Rejected.</li>
+         * <li>22: Warning detected during checking.</li>
+         * <li>23: Under code review.</li>
+         * <li>24: Code review rejected.</li>
+         * <li>80: Deployment package created.</li>
+         * <li>100: Deploying.</li>
+         * <li>101: Deployed to the production environment.</li>
+         * <li>200: Cancelled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -419,7 +425,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
 
     public static class ListDeploymentPackageFilesResponseBodyPagingInfo extends TeaModel {
         /**
-         * <p>The details of the versions of the files to be deployed.</p>
+         * <p>The list of files pending deployment.</p>
          */
         @NameInMap("DeploymentPackageFiles")
         public java.util.List<ListDeploymentPackageFilesResponseBodyPagingInfoDeploymentPackageFiles> deploymentPackageFiles;

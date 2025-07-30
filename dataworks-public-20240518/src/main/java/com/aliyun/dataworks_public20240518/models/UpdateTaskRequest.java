@@ -78,7 +78,6 @@ public class UpdateTaskRequest extends TeaModel {
 
     /**
      * <p>The name.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>SQL node</p>
@@ -94,7 +93,6 @@ public class UpdateTaskRequest extends TeaModel {
 
     /**
      * <p>The account ID of the task owner.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -118,7 +116,6 @@ public class UpdateTaskRequest extends TeaModel {
      * <li>FailureAllowed: The task can be rerun only after it fails to run.</li>
      * <li>AllAllowed: The task can be rerun regardless of whether the task is successfully run or fails to run.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>AllAllowed</p>
@@ -137,7 +134,6 @@ public class UpdateTaskRequest extends TeaModel {
 
     /**
      * <p>The configurations of the runtime environment, such as the resource group information.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeResource")
     public UpdateTaskRequestRuntimeResource runtimeResource;
@@ -165,7 +161,6 @@ public class UpdateTaskRequest extends TeaModel {
 
     /**
      * <p>The trigger method.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("Trigger")
     public UpdateTaskRequestTrigger trigger;
@@ -654,7 +649,6 @@ public class UpdateTaskRequest extends TeaModel {
 
         /**
          * <p>The ID of the resource group for scheduling configured for task running.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>S_res_group_524258031846018_1684XXXXXXXXX</p>
@@ -826,7 +820,6 @@ public class UpdateTaskRequest extends TeaModel {
          * <li>Scheduler: scheduling cycle-based trigger</li>
          * <li>Manual: manual trigger</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Scheduler</p>

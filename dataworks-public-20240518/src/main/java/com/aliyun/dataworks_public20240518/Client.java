@@ -2738,6 +2738,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.periodsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.periods, "Periods", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoStartEnabled)) {
             body.put("AutoStartEnabled", request.autoStartEnabled);
@@ -2765,6 +2769,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             body.put("ProjectId", request.projectId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagCreationPolicy)) {
+            body.put("TagCreationPolicy", request.tagCreationPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            body.put("Tags", request.tagsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskParameters)) {

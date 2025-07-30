@@ -239,12 +239,12 @@ public class ListResourceGroupsResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>The type of the resource group. Valid values:</p>
+         * <p>Resource group types:</p>
          * <ul>
-         * <li>CommonV2: serverless resource group</li>
-         * <li>ExclusiveDataIntegration: exclusive resource group for Data Integration</li>
-         * <li>ExclusiveScheduler: exclusive resource group for scheduling</li>
-         * <li>ExclusiveDataService: exclusive resource group for DataService Studio</li>
+         * <li>CommonV2: Serverless resource group</li>
+         * <li>ExclusiveDataIntegration: Exclusive resource group for Data Integration</li>
+         * <li>ExclusiveScheduler: Exclusive resource group for scheduling</li>
+         * <li>ExclusiveDataService: Exclusive resource group for DataService Studio</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -67,6 +67,12 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("TagCreationPolicy")
+    public String tagCreationPolicy;
+
+    @NameInMap("Tags")
+    public java.util.List<CreateWorkflowInstancesRequestTags> tags;
+
     /**
      * <p>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</p>
      * 
@@ -176,6 +182,22 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public CreateWorkflowInstancesRequest setTagCreationPolicy(String tagCreationPolicy) {
+        this.tagCreationPolicy = tagCreationPolicy;
+        return this;
+    }
+    public String getTagCreationPolicy() {
+        return this.tagCreationPolicy;
+    }
+
+    public CreateWorkflowInstancesRequest setTags(java.util.List<CreateWorkflowInstancesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateWorkflowInstancesRequestTags> getTags() {
+        return this.tags;
     }
 
     public CreateWorkflowInstancesRequest setTaskParameters(String taskParameters) {
@@ -725,6 +747,36 @@ public class CreateWorkflowInstancesRequest extends TeaModel {
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+    }
+
+    public static class CreateWorkflowInstancesRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static CreateWorkflowInstancesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateWorkflowInstancesRequestTags self = new CreateWorkflowInstancesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWorkflowInstancesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public CreateWorkflowInstancesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
         }
 
     }

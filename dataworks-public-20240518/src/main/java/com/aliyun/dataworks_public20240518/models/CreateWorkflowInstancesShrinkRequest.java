@@ -67,6 +67,12 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     @NameInMap("ProjectId")
     public Long projectId;
 
+    @NameInMap("TagCreationPolicy")
+    public String tagCreationPolicy;
+
+    @NameInMap("Tags")
+    public String tagsShrink;
+
     /**
      * <p>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</p>
      * 
@@ -176,6 +182,22 @@ public class CreateWorkflowInstancesShrinkRequest extends TeaModel {
     }
     public Long getProjectId() {
         return this.projectId;
+    }
+
+    public CreateWorkflowInstancesShrinkRequest setTagCreationPolicy(String tagCreationPolicy) {
+        this.tagCreationPolicy = tagCreationPolicy;
+        return this;
+    }
+    public String getTagCreationPolicy() {
+        return this.tagCreationPolicy;
+    }
+
+    public CreateWorkflowInstancesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
     public CreateWorkflowInstancesShrinkRequest setTaskParameters(String taskParameters) {
