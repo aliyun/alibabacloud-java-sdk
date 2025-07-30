@@ -192,6 +192,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    @NameInMap("Serverless")
+    public Boolean serverless;
+
     /**
      * <p>The state of the instance. Valid values:</p>
      * <ul>
@@ -435,6 +438,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
+    public DescribeDBInstanceAttributeResponseBody setServerless(Boolean serverless) {
+        this.serverless = serverless;
+        return this;
+    }
+    public Boolean getServerless() {
+        return this.serverless;
+    }
+
     public DescribeDBInstanceAttributeResponseBody setStatus(String status) {
         this.status = status;
         return this;
@@ -526,6 +537,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ClusterBinding")
         public String clusterBinding;
 
+        @NameInMap("ClusterNodeCount")
+        public Integer clusterNodeCount;
+
+        @NameInMap("ClusterNodeType")
+        public String clusterNodeType;
+
         /**
          * <p>The number of CPU cores.</p>
          * 
@@ -616,6 +633,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("PerformanceLevel")
         public String performanceLevel;
 
+        @NameInMap("ScaleMax")
+        public Double scaleMax;
+
+        @NameInMap("ScaleMin")
+        public Double scaleMin;
+
         @NameInMap("ScalingRulesEnable")
         public Boolean scalingRulesEnable;
 
@@ -691,6 +714,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.clusterBinding;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setClusterNodeCount(Integer clusterNodeCount) {
+            this.clusterNodeCount = clusterNodeCount;
+            return this;
+        }
+        public Integer getClusterNodeCount() {
+            return this.clusterNodeCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setClusterNodeType(String clusterNodeType) {
+            this.clusterNodeType = clusterNodeType;
+            return this;
+        }
+        public String getClusterNodeType() {
+            return this.clusterNodeType;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyDBClusterList setCpuCores(Long cpuCores) {
             this.cpuCores = cpuCores;
             return this;
@@ -761,6 +800,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getPerformanceLevel() {
             return this.performanceLevel;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setScaleMax(Double scaleMax) {
+            this.scaleMax = scaleMax;
+            return this;
+        }
+        public Double getScaleMax() {
+            return this.scaleMax;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBClusterList setScaleMin(Double scaleMin) {
+            this.scaleMin = scaleMin;
+            return this;
+        }
+        public Double getScaleMin() {
+            return this.scaleMin;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBClusterList setScalingRulesEnable(Boolean scalingRulesEnable) {

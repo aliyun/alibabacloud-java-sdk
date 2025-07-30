@@ -50,6 +50,15 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("PricingRules")
+        public java.util.Map<String, String> pricingRules;
+
+        /**
+         * <p>The estimated refund amount when the subscription cluster of a subscription instance is changed to a pay-as-you-go cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-100</p>
+         */
         @NameInMap("RefundAmount")
         public String refundAmount;
 
@@ -73,6 +82,14 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public GetModifyBEClusterInquiryResponseBodyData setPricingRules(java.util.Map<String, String> pricingRules) {
+            this.pricingRules = pricingRules;
+            return this;
+        }
+        public java.util.Map<String, String> getPricingRules() {
+            return this.pricingRules;
         }
 
         public GetModifyBEClusterInquiryResponseBodyData setRefundAmount(String refundAmount) {

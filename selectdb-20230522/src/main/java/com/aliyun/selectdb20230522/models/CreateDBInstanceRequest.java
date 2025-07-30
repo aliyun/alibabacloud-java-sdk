@@ -4,6 +4,16 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to add the virtual private cloud (VPC) CIDR block to the IP address whitelist. Valid values:</p>
+     * <ul>
+     * <li>1: yes.</li>
+     * <li>0: no.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AddVPCIPs")
     public String addVPCIPs;
 
@@ -40,6 +50,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ClusterNodeCount")
+    public Integer clusterNodeCount;
+
+    @NameInMap("ClusterNodeType")
+    public String clusterNodeType;
+
     /**
      * <p>The instance endpoint.</p>
      * 
@@ -70,11 +86,6 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The deployment method of the instance.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>multi_az</li>
-     * <li>single_az</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>single_az</p>
@@ -152,6 +163,12 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
+
+    @NameInMap("ScaleMax")
+    public Double scaleMax;
+
+    @NameInMap("ScaleMin")
+    public Double scaleMin;
 
     /**
      * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
@@ -251,6 +268,22 @@ public class CreateDBInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
+    public CreateDBInstanceRequest setClusterNodeCount(Integer clusterNodeCount) {
+        this.clusterNodeCount = clusterNodeCount;
+        return this;
+    }
+    public Integer getClusterNodeCount() {
+        return this.clusterNodeCount;
+    }
+
+    public CreateDBInstanceRequest setClusterNodeType(String clusterNodeType) {
+        this.clusterNodeType = clusterNodeType;
+        return this;
+    }
+    public String getClusterNodeType() {
+        return this.clusterNodeType;
+    }
+
     public CreateDBInstanceRequest setConnectionString(String connectionString) {
         this.connectionString = connectionString;
         return this;
@@ -337,6 +370,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateDBInstanceRequest setScaleMax(Double scaleMax) {
+        this.scaleMax = scaleMax;
+        return this;
+    }
+    public Double getScaleMax() {
+        return this.scaleMax;
+    }
+
+    public CreateDBInstanceRequest setScaleMin(Double scaleMin) {
+        this.scaleMin = scaleMin;
+        return this;
+    }
+    public Double getScaleMin() {
+        return this.scaleMin;
     }
 
     public CreateDBInstanceRequest setSecurityIPList(String securityIPList) {

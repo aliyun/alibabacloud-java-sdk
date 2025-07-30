@@ -50,6 +50,9 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        @NameInMap("PricingRules")
+        public java.util.Map<String, String> pricingRules;
+
         /**
          * <p>The amount of money.</p>
          * 
@@ -70,6 +73,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyData setPricingRules(java.util.Map<String, String> pricingRules) {
+            this.pricingRules = pricingRules;
+            return this;
+        }
+        public java.util.Map<String, String> getPricingRules() {
+            return this.pricingRules;
         }
 
         public GetCreateBEClusterInquiryResponseBodyData setTradeAmount(String tradeAmount) {

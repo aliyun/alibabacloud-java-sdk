@@ -404,6 +404,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @NameInMap("ScaleReplica")
         public Long scaleReplica;
 
+        @NameInMap("Serverless")
+        public Boolean serverless;
+
         /**
          * <p>The state of the instance. Valid values:</p>
          * <ul>
@@ -739,6 +742,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public Long getScaleReplica() {
             return this.scaleReplica;
+        }
+
+        public DescribeDBInstancesResponseBodyItems setServerless(Boolean serverless) {
+            this.serverless = serverless;
+            return this;
+        }
+        public Boolean getServerless() {
+            return this.serverless;
         }
 
         public DescribeDBInstancesResponseBodyItems setStatus(String status) {

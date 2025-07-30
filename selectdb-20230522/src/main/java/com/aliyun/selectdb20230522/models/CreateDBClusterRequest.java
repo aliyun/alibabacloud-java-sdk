@@ -22,6 +22,12 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("ClusterNodeCount")
+    public Integer clusterNodeCount;
+
+    @NameInMap("ClusterNodeType")
+    public String clusterNodeType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -87,6 +93,12 @@ public class CreateDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ScaleMax")
+    public Double scaleMax;
+
+    @NameInMap("ScaleMin")
+    public Double scaleMin;
+
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -141,6 +153,22 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public CreateDBClusterRequest setClusterNodeCount(Integer clusterNodeCount) {
+        this.clusterNodeCount = clusterNodeCount;
+        return this;
+    }
+    public Integer getClusterNodeCount() {
+        return this.clusterNodeCount;
+    }
+
+    public CreateDBClusterRequest setClusterNodeType(String clusterNodeType) {
+        this.clusterNodeType = clusterNodeType;
+        return this;
+    }
+    public String getClusterNodeType() {
+        return this.clusterNodeType;
     }
 
     public CreateDBClusterRequest setDBClusterClass(String DBClusterClass) {
@@ -205,6 +233,22 @@ public class CreateDBClusterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public CreateDBClusterRequest setScaleMax(Double scaleMax) {
+        this.scaleMax = scaleMax;
+        return this;
+    }
+    public Double getScaleMax() {
+        return this.scaleMax;
+    }
+
+    public CreateDBClusterRequest setScaleMin(Double scaleMin) {
+        this.scaleMin = scaleMin;
+        return this;
+    }
+    public Double getScaleMin() {
+        return this.scaleMin;
     }
 
     public CreateDBClusterRequest setUsedTime(String usedTime) {

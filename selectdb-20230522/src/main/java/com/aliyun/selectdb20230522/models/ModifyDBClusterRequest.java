@@ -13,6 +13,12 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("CacheSize")
     public String cacheSize;
 
+    @NameInMap("ClusterNodeCount")
+    public Integer clusterNodeCount;
+
+    @NameInMap("ClusterNodeType")
+    public String clusterNodeType;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -61,6 +67,12 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("ScaleMax")
+    public Double scaleMax;
+
+    @NameInMap("ScaleMin")
+    public Double scaleMin;
+
     public static ModifyDBClusterRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterRequest self = new ModifyDBClusterRequest();
         return TeaModel.build(map, self);
@@ -72,6 +84,22 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getCacheSize() {
         return this.cacheSize;
+    }
+
+    public ModifyDBClusterRequest setClusterNodeCount(Integer clusterNodeCount) {
+        this.clusterNodeCount = clusterNodeCount;
+        return this;
+    }
+    public Integer getClusterNodeCount() {
+        return this.clusterNodeCount;
+    }
+
+    public ModifyDBClusterRequest setClusterNodeType(String clusterNodeType) {
+        this.clusterNodeType = clusterNodeType;
+        return this;
+    }
+    public String getClusterNodeType() {
+        return this.clusterNodeType;
     }
 
     public ModifyDBClusterRequest setDBClusterClass(String DBClusterClass) {
@@ -120,6 +148,22 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyDBClusterRequest setScaleMax(Double scaleMax) {
+        this.scaleMax = scaleMax;
+        return this;
+    }
+    public Double getScaleMax() {
+        return this.scaleMax;
+    }
+
+    public ModifyDBClusterRequest setScaleMin(Double scaleMin) {
+        this.scaleMin = scaleMin;
+        return this;
+    }
+    public Double getScaleMin() {
+        return this.scaleMin;
     }
 
 }

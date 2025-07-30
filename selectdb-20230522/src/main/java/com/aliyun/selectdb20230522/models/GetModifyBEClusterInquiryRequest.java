@@ -73,6 +73,12 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     @NameInMap("DbInstanceId")
     public String dbInstanceId;
 
+    /**
+     * <p>Specifies whether to change the billing method of the cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("ModifyClusterChargeType")
     public Boolean modifyClusterChargeType;
 
