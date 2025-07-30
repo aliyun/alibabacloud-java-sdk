@@ -981,15 +981,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Obtains logon credentials.</p>
      * 
-     * @param request GetLoginTokenRequest
+     * @param tmpReq GetLoginTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetLoginTokenResponse
      */
-    public GetLoginTokenResponse getLoginTokenWithOptions(GetLoginTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public GetLoginTokenResponse getLoginTokenWithOptions(GetLoginTokenRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetLoginTokenShrinkRequest request = new GetLoginTokenShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.availableFeatures)) {
+            request.availableFeaturesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.availableFeatures, "AvailableFeatures", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.authenticationCode)) {
             query.put("AuthenticationCode", request.authenticationCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.availableFeaturesShrink)) {
+            query.put("AvailableFeatures", request.availableFeaturesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientId)) {
