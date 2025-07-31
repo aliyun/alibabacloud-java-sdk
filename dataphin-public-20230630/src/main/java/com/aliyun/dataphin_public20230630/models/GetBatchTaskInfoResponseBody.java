@@ -482,6 +482,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>30231123</p>
+         */
+        @NameInMap("DevelopOwnerId")
+        public String developOwnerId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
+        @NameInMap("DevelopOwnerName")
+        public String developOwnerName;
+
+        /**
+         * <strong>example:</strong>
          * <p>12113111</p>
          */
         @NameInMap("FileId")
@@ -544,6 +558,20 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
          */
         @NameInMap("OperatorUserId")
         public String operatorUserId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30231123</p>
+         */
+        @NameInMap("OpsOwnerId")
+        public String opsOwnerId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>张三</p>
+         */
+        @NameInMap("OpsOwnerName")
+        public String opsOwnerName;
 
         /**
          * <strong>example:</strong>
@@ -687,6 +715,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
             return this.dataSourceSchema;
         }
 
+        public GetBatchTaskInfoResponseBodyTaskInfo setDevelopOwnerId(String developOwnerId) {
+            this.developOwnerId = developOwnerId;
+            return this;
+        }
+        public String getDevelopOwnerId() {
+            return this.developOwnerId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setDevelopOwnerName(String developOwnerName) {
+            this.developOwnerName = developOwnerName;
+            return this;
+        }
+        public String getDevelopOwnerName() {
+            return this.developOwnerName;
+        }
+
         public GetBatchTaskInfoResponseBodyTaskInfo setFileId(Long fileId) {
             this.fileId = fileId;
             return this;
@@ -773,6 +817,22 @@ public class GetBatchTaskInfoResponseBody extends TeaModel {
         }
         public String getOperatorUserId() {
             return this.operatorUserId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setOpsOwnerId(String opsOwnerId) {
+            this.opsOwnerId = opsOwnerId;
+            return this;
+        }
+        public String getOpsOwnerId() {
+            return this.opsOwnerId;
+        }
+
+        public GetBatchTaskInfoResponseBodyTaskInfo setOpsOwnerName(String opsOwnerName) {
+            this.opsOwnerName = opsOwnerName;
+            return this;
+        }
+        public String getOpsOwnerName() {
+            return this.opsOwnerName;
         }
 
         public GetBatchTaskInfoResponseBodyTaskInfo setOwnerName(String ownerName) {

@@ -63,6 +63,9 @@ public class ListInstancesRequest extends TeaModel {
         @NameInMap("BizUnitId")
         public Long bizUnitId;
 
+        @NameInMap("FlowId")
+        public String flowId;
+
         /**
          * <strong>example:</strong>
          * <p>2024-05-31</p>
@@ -178,6 +181,14 @@ public class ListInstancesRequest extends TeaModel {
         }
         public Long getBizUnitId() {
             return this.bizUnitId;
+        }
+
+        public ListInstancesRequestListQuery setFlowId(String flowId) {
+            this.flowId = flowId;
+            return this;
+        }
+        public String getFlowId() {
+            return this.flowId;
         }
 
         public ListInstancesRequestListQuery setMaxBizDate(String maxBizDate) {
