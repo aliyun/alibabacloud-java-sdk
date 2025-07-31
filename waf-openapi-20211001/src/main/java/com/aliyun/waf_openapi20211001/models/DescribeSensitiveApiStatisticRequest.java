@@ -102,6 +102,9 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("Type")
+    public String type;
+
     public static DescribeSensitiveApiStatisticRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSensitiveApiStatisticRequest self = new DescribeSensitiveApiStatisticRequest();
         return TeaModel.build(map, self);
@@ -177,6 +180,14 @@ public class DescribeSensitiveApiStatisticRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeSensitiveApiStatisticRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
