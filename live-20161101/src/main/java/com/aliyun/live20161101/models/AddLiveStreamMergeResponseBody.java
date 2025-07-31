@@ -4,6 +4,9 @@ package com.aliyun.live20161101.models;
 import com.aliyun.tea.*;
 
 public class AddLiveStreamMergeResponseBody extends TeaModel {
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -16,6 +19,14 @@ public class AddLiveStreamMergeResponseBody extends TeaModel {
     public static AddLiveStreamMergeResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AddLiveStreamMergeResponseBody self = new AddLiveStreamMergeResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public AddLiveStreamMergeResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public AddLiveStreamMergeResponseBody setRequestId(String requestId) {

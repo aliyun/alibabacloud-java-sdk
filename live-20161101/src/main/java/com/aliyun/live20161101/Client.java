@@ -2547,6 +2547,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InStreamName2", request.inStreamName2);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.liveMerger)) {
+            query.put("LiveMerger", request.liveMerger);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mergeParameters)) {
+            query.put("MergeParameters", request.mergeParameters);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
             query.put("OwnerId", request.ownerId);
         }

@@ -122,6 +122,12 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         @NameInMap("InStreamName2")
         public String inStreamName2;
 
+        @NameInMap("LiveMerger")
+        public String liveMerger;
+
+        @NameInMap("MergeParameters")
+        public String mergeParameters;
+
         /**
          * <p>The streaming protocol.</p>
          * 
@@ -233,6 +239,22 @@ public class DescribeLiveStreamMergeResponseBody extends TeaModel {
         }
         public String getInStreamName2() {
             return this.inStreamName2;
+        }
+
+        public DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge setLiveMerger(String liveMerger) {
+            this.liveMerger = liveMerger;
+            return this;
+        }
+        public String getLiveMerger() {
+            return this.liveMerger;
+        }
+
+        public DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge setMergeParameters(String mergeParameters) {
+            this.mergeParameters = mergeParameters;
+            return this;
+        }
+        public String getMergeParameters() {
+            return this.mergeParameters;
         }
 
         public DescribeLiveStreamMergeResponseBodyLiveStreamMergeListLiveStreamMerge setProtocol(String protocol) {

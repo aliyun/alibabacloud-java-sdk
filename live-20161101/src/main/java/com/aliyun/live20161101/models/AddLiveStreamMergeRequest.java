@@ -78,6 +78,12 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     @NameInMap("InStreamName2")
     public String inStreamName2;
 
+    @NameInMap("LiveMerger")
+    public String liveMerger;
+
+    @NameInMap("MergeParameters")
+    public String mergeParameters;
+
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -177,6 +183,22 @@ public class AddLiveStreamMergeRequest extends TeaModel {
     }
     public String getInStreamName2() {
         return this.inStreamName2;
+    }
+
+    public AddLiveStreamMergeRequest setLiveMerger(String liveMerger) {
+        this.liveMerger = liveMerger;
+        return this;
+    }
+    public String getLiveMerger() {
+        return this.liveMerger;
+    }
+
+    public AddLiveStreamMergeRequest setMergeParameters(String mergeParameters) {
+        this.mergeParameters = mergeParameters;
+        return this;
+    }
+    public String getMergeParameters() {
+        return this.mergeParameters;
     }
 
     public AddLiveStreamMergeRequest setOwnerId(Long ownerId) {
