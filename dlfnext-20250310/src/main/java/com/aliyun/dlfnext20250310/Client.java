@@ -951,6 +951,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查看iceberg数据库</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIcebergNamespaceResponse
+     */
+    public GetIcebergNamespaceResponse getIcebergNamespaceWithOptions(String catalogId, String namespace, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIcebergNamespace"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/iceberg/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIcebergNamespaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg数据库</p>
+     * @return GetIcebergNamespaceResponse
+     */
+    public GetIcebergNamespaceResponse getIcebergNamespace(String catalogId, String namespace) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIcebergNamespaceWithOptions(catalogId, namespace, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIcebergTableResponse
+     */
+    public GetIcebergTableResponse getIcebergTableWithOptions(String catalogId, String namespace, String table, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIcebergTable"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/iceberg/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIcebergTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表</p>
+     * @return GetIcebergTableResponse
+     */
+    public GetIcebergTableResponse getIcebergTable(String catalogId, String namespace, String table) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIcebergTableWithOptions(catalogId, namespace, table, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询 DLF 当前地域开通状态</p>
      * 
      * @param headers map
@@ -1368,6 +1442,167 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listDatabasesWithOptions(catalogId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg数据库列表</p>
+     * 
+     * @param request ListIcebergNamespaceDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIcebergNamespaceDetailsResponse
+     */
+    public ListIcebergNamespaceDetailsResponse listIcebergNamespaceDetailsWithOptions(String catalogId, ListIcebergNamespaceDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceNamePattern)) {
+            query.put("namespaceNamePattern", request.namespaceNamePattern);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIcebergNamespaceDetails"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/iceberg/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/namespace-details"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIcebergNamespaceDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg数据库列表</p>
+     * 
+     * @param request ListIcebergNamespaceDetailsRequest
+     * @return ListIcebergNamespaceDetailsResponse
+     */
+    public ListIcebergNamespaceDetailsResponse listIcebergNamespaceDetails(String catalogId, ListIcebergNamespaceDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIcebergNamespaceDetailsWithOptions(catalogId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg表快照列表</p>
+     * 
+     * @param request ListIcebergSnapshotsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIcebergSnapshotsResponse
+     */
+    public ListIcebergSnapshotsResponse listIcebergSnapshotsWithOptions(String catalogId, String namespace, String table, ListIcebergSnapshotsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIcebergSnapshots"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/iceberg/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/snapshots"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIcebergSnapshotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg表快照列表</p>
+     * 
+     * @param request ListIcebergSnapshotsRequest
+     * @return ListIcebergSnapshotsResponse
+     */
+    public ListIcebergSnapshotsResponse listIcebergSnapshots(String catalogId, String namespace, String table, ListIcebergSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIcebergSnapshotsWithOptions(catalogId, namespace, table, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg表详情列表</p>
+     * 
+     * @param request ListIcebergTableDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIcebergTableDetailsResponse
+     */
+    public ListIcebergTableDetailsResponse listIcebergTableDetailsWithOptions(String catalogId, String namespace, ListIcebergTableDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tableNamePattern)) {
+            query.put("tableNamePattern", request.tableNamePattern);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIcebergTableDetails"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/iceberg/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/namespaces/" + com.aliyun.openapiutil.Client.getEncodeParam(namespace) + "/table-details"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIcebergTableDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看iceberg表详情列表</p>
+     * 
+     * @param request ListIcebergTableDetailsRequest
+     * @return ListIcebergTableDetailsResponse
+     */
+    public ListIcebergTableDetailsResponse listIcebergTableDetails(String catalogId, String namespace, ListIcebergTableDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIcebergTableDetailsWithOptions(catalogId, namespace, request, headers, runtime);
     }
 
     /**
