@@ -5,16 +5,10 @@ import com.aliyun.tea.*;
 
 public class SendChatappMessageShrinkRequest extends TeaModel {
     /**
-     * <p>The channel type. Valid values:</p>
-     * <ul>
-     * <li><strong>whatsapp</strong></li>
-     * <li><strong>viber</strong></li>
-     * <li><strong>line</strong> (under development)</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>whatsapp</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("ChannelType")
     public String channelType;
@@ -53,162 +47,92 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>The ID of the reply message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>61851ccb2f1365b16aee****</p>
+     * <p>示例值</p>
      */
     @NameInMap("ContextMessageId")
     public String contextMessageId;
 
     /**
-     * <p>The space ID of the user.</p>
-     * 
      * <strong>example:</strong>
-     * <p>28251486512358****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("CustSpaceId")
     public String custSpaceId;
 
     /**
-     * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
-     * <blockquote>
-     * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
-     * <p>65921621816****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("CustWabaId")
-    @Deprecated
     public String custWabaId;
 
     /**
-     * <p>The content of the fallback message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>This is a fallback message.</p>
+     * <p>示例值</p>
      */
     @NameInMap("FallBackContent")
     public String fallBackContent;
 
-    /**
-     * <p>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the <strong>message fails to be sent</strong> or <strong>the message receipt that indicates the message is not delivered to clients</strong> is received. Unit: seconds. Valid values: 60 to 43200.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>120</p>
-     */
     @NameInMap("FallBackDuration")
     public Integer fallBackDuration;
 
     /**
-     * <p>The ID of the fallback policy. You can create a fallback policy and view the information in the Chat App Message Service console.</p>
-     * 
      * <strong>example:</strong>
-     * <p>S_000001</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("FallBackId")
     public String fallBackId;
 
     /**
-     * <p>The fallback rule. Valid values:</p>
-     * <ul>
-     * <li><strong>undelivered</strong>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</li>
-     * <li><strong>sentFailed</strong>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>undelivered</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("FallBackRule")
     public String fallBackRule;
 
-    /**
-     * <p>The Flow action.</p>
-     */
     @NameInMap("FlowAction")
     public String flowActionShrink;
 
     /**
-     * <p>The mobile phone number of the message sender.</p>
-     * <blockquote>
-     * <p> You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the Chat App Message Service console.</p>
-     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1360000****</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("From")
     public String from;
 
     /**
-     * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
-     * 
      * <strong>example:</strong>
-     * <p>skdi3kksloslikdkkdk</p>
+     * <p>示例值</p>
      */
     @NameInMap("IsvCode")
     public String isvCode;
 
     /**
-     * <p>The type of the Viber message. This parameter is required if ChannelType is set to viber. Valid values:</p>
-     * <ul>
-     * <li><strong>promotion</strong></li>
-     * <li><strong>transaction</strong></li>
-     * </ul>
-     * 
      * <strong>example:</strong>
-     * <p>promotion</p>
+     * <p>示例值</p>
      */
     @NameInMap("Label")
     public String label;
 
     /**
-     * <p>The language that is used in the message template. This parameter is required only if you set the Type parameter to <strong>template</strong>. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>en</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("Language")
     public String language;
 
     /**
-     * <p>The specific type of the message. This parameter is required only if you set the Type parameter to <strong>message</strong>.</p>
-     * <p><strong>Valid values of MessageType when you set the ChannelType parameter to whatsapp:</strong></p>
-     * <ul>
-     * <li><strong>text</strong>: a text message.</li>
-     * <li><strong>image</strong>: an image message.</li>
-     * <li><strong>video</strong>: a video message.</li>
-     * <li><strong>audio</strong>: an audio message.</li>
-     * <li><strong>document</strong>: a document message.</li>
-     * <li><strong>interactive</strong>: an interactive message.</li>
-     * <li><strong>contacts</strong>: a contact message.</li>
-     * <li><strong>location</strong>: a location message.</li>
-     * <li><strong>sticker</strong>: a sticker message.</li>
-     * <li><strong>reaction</strong>: a reaction message.</li>
-     * </ul>
-     * <p><strong>Valid values of MessageType when you set the ChannelType parameter to viber:</strong></p>
-     * <ul>
-     * <li><strong>text</strong>: a text message.</li>
-     * <li><strong>image</strong>: an image message.</li>
-     * <li><strong>video</strong>: a video message.</li>
-     * <li><strong>document</strong>: a document message.</li>
-     * <li><strong>text_button</strong>: a message that contains the text and button media objects.</li>
-     * <li><strong>text_image_button</strong>: a message that contains multiple media objects, including the text, image, and button.</li>
-     * <li><strong>text_video</strong>: a message that contains the text and video media objects.</li>
-     * <li><strong>text_video_button</strong>: a message that contains multiple media objects, including text, video, and button.</li>
-     * <li><strong>text_image</strong>: a message that contains the text and image media objects.</li>
-     * </ul>
-     * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/454530.html">Parameters of a message template</a>.</p>
-     * </blockquote>
-     * 
      * <strong>example:</strong>
-     * <p>text</p>
+     * <p>示例值</p>
      */
     @NameInMap("MessageType")
     public String messageType;
+
+    @NameInMap("OwnerId")
+    public Long ownerId;
 
     /**
      * <p>The payload of the button.</p>
@@ -219,95 +143,77 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     @NameInMap("Payload")
     public String payloadShrink;
 
-    /**
-     * <p>The information about the products included in the WhatsApp catalog message or multi-product message (MPM).</p>
-     */
     @NameInMap("ProductAction")
     public String productActionShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>individual</p>
+     */
     @NameInMap("RecipientType")
     public String recipientType;
 
+    @NameInMap("ResourceOwnerAccount")
+    public String resourceOwnerAccount;
+
+    @NameInMap("ResourceOwnerId")
+    public Long resourceOwnerId;
+
     /**
-     * <p>The tag information of the Viber message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>tag</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("Tag")
     public String tag;
 
     /**
-     * <p>The task ID.</p>
-     * 
      * <strong>example:</strong>
-     * <p>100000001</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The code of the message template. This parameter is required only if you set the Type parameter to <strong>template</strong>.</p>
-     * 
      * <strong>example:</strong>
-     * <p>744c4b5c79c9432497a075bdfca3****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("TemplateCode")
     public String templateCode;
 
     /**
-     * <p>The name of the message template.</p>
-     * 
      * <strong>example:</strong>
-     * <p>test_name</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("TemplateName")
     public String templateName;
 
-    /**
-     * <p>The variables of the message template.</p>
-     */
     @NameInMap("TemplateParams")
     public String templateParamsShrink;
 
     /**
-     * <p>The mobile phone number of the message receiver.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1390000****</p>
+     * <p>示例值示例值示例值</p>
      */
     @NameInMap("To")
     public String to;
 
     /**
-     * <p>The tracking data of the Viber message.</p>
-     * 
      * <strong>example:</strong>
-     * <p>tracking_id:123456</p>
+     * <p>示例值示例值</p>
      */
     @NameInMap("TrackingData")
     public String trackingData;
 
-    /**
-     * <p>The timeout period for sending the Viber message. Valid values: 30 to 1209600. Unit: seconds.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>50</p>
-     */
     @NameInMap("Ttl")
     public Integer ttl;
 
     /**
-     * <p>The message type. Valid values:</p>
-     * <ul>
-     * <li><strong>template</strong>: the template message. A template message is sent based on a template that is created and approved in the Chat App Message Service console. You can send template messages based on your business requirements.</li>
-     * <li><strong>message</strong>: the custom message. You can send a custom WhatsApp message to a user only within 24 hours after you receive the last message from the user. This limit does not apply to custom Viber messages.</li>
-     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>template</p>
+     * <p>示例值</p>
      */
     @NameInMap("Type")
     public String type;
@@ -349,7 +255,6 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
         return this.custSpaceId;
     }
 
-    @Deprecated
     public SendChatappMessageShrinkRequest setCustWabaId(String custWabaId) {
         this.custWabaId = custWabaId;
         return this;
@@ -438,6 +343,14 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
         return this.messageType;
     }
 
+    public SendChatappMessageShrinkRequest setOwnerId(Long ownerId) {
+        this.ownerId = ownerId;
+        return this;
+    }
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
     public SendChatappMessageShrinkRequest setPayloadShrink(String payloadShrink) {
         this.payloadShrink = payloadShrink;
         return this;
@@ -460,6 +373,22 @@ public class SendChatappMessageShrinkRequest extends TeaModel {
     }
     public String getRecipientType() {
         return this.recipientType;
+    }
+
+    public SendChatappMessageShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+        this.resourceOwnerAccount = resourceOwnerAccount;
+        return this;
+    }
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    public SendChatappMessageShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
+        this.resourceOwnerId = resourceOwnerId;
+        return this;
+    }
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     public SendChatappMessageShrinkRequest setTag(String tag) {

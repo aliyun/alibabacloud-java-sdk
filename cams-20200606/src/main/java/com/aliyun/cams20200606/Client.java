@@ -5868,77 +5868,89 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.senderListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.senderList, "SenderList", "json");
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
-            body.put("ChannelType", request.channelType);
+            query.put("ChannelType", request.channelType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
-            body.put("CustSpaceId", request.custSpaceId);
+            query.put("CustSpaceId", request.custSpaceId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
-            body.put("CustWabaId", request.custWabaId);
+            query.put("CustWabaId", request.custWabaId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
-            body.put("FallBackContent", request.fallBackContent);
+            query.put("FallBackContent", request.fallBackContent);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackDuration)) {
-            body.put("FallBackDuration", request.fallBackDuration);
+            query.put("FallBackDuration", request.fallBackDuration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
-            body.put("FallBackId", request.fallBackId);
+            query.put("FallBackId", request.fallBackId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.fallBackRule)) {
-            body.put("FallBackRule", request.fallBackRule);
+            query.put("FallBackRule", request.fallBackRule);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.from)) {
-            body.put("From", request.from);
+            query.put("From", request.from);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
-            body.put("IsvCode", request.isvCode);
+            query.put("IsvCode", request.isvCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.label)) {
-            body.put("Label", request.label);
+            query.put("Label", request.label);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.language)) {
-            body.put("Language", request.language);
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.senderListShrink)) {
-            body.put("SenderList", request.senderListShrink);
+            query.put("SenderList", request.senderListShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
-            body.put("Tag", request.tag);
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            body.put("TaskId", request.taskId);
+            query.put("TaskId", request.taskId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
-            body.put("TemplateCode", request.templateCode);
+            query.put("TemplateCode", request.templateCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
-            body.put("TemplateName", request.templateName);
+            query.put("TemplateName", request.templateName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
-            body.put("Ttl", request.ttl);
+            query.put("Ttl", request.ttl);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendChatappMassMessage"),
@@ -6002,118 +6014,128 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
+            query.put("ChannelType", request.channelType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.content)) {
             query.put("Content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contextMessageId)) {
+            query.put("ContextMessageId", request.contextMessageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
+            query.put("CustSpaceId", request.custSpaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
+            query.put("CustWabaId", request.custWabaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
+            query.put("FallBackContent", request.fallBackContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackDuration)) {
+            query.put("FallBackDuration", request.fallBackDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
+            query.put("FallBackId", request.fallBackId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallBackRule)) {
+            query.put("FallBackRule", request.fallBackRule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.flowActionShrink)) {
+            query.put("FlowAction", request.flowActionShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("From", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
+            query.put("IsvCode", request.isvCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            query.put("Label", request.label);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
+            query.put("MessageType", request.messageType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.payloadShrink)) {
             query.put("Payload", request.payloadShrink);
         }
 
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.channelType)) {
-            body.put("ChannelType", request.channelType);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.contextMessageId)) {
-            body.put("ContextMessageId", request.contextMessageId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.custSpaceId)) {
-            body.put("CustSpaceId", request.custSpaceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.custWabaId)) {
-            body.put("CustWabaId", request.custWabaId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fallBackContent)) {
-            body.put("FallBackContent", request.fallBackContent);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fallBackDuration)) {
-            body.put("FallBackDuration", request.fallBackDuration);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fallBackId)) {
-            body.put("FallBackId", request.fallBackId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.fallBackRule)) {
-            body.put("FallBackRule", request.fallBackRule);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.flowActionShrink)) {
-            body.put("FlowAction", request.flowActionShrink);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
-            body.put("From", request.from);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.isvCode)) {
-            body.put("IsvCode", request.isvCode);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
-            body.put("Label", request.label);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
-            body.put("Language", request.language);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.messageType)) {
-            body.put("MessageType", request.messageType);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.productActionShrink)) {
-            body.put("ProductAction", request.productActionShrink);
+            query.put("ProductAction", request.productActionShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.recipientType)) {
-            body.put("RecipientType", request.recipientType);
+            query.put("RecipientType", request.recipientType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
-            body.put("Tag", request.tag);
+            query.put("Tag", request.tag);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
-            body.put("TaskId", request.taskId);
+            query.put("TaskId", request.taskId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
-            body.put("TemplateCode", request.templateCode);
+            query.put("TemplateCode", request.templateCode);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
-            body.put("TemplateName", request.templateName);
+            query.put("TemplateName", request.templateName);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.templateParamsShrink)) {
-            body.put("TemplateParams", request.templateParamsShrink);
+            query.put("TemplateParams", request.templateParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.to)) {
-            body.put("To", request.to);
+            query.put("To", request.to);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.trackingData)) {
-            body.put("TrackingData", request.trackingData);
+            query.put("TrackingData", request.trackingData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ttl)) {
-            body.put("Ttl", request.ttl);
+            query.put("Ttl", request.ttl);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
-            body.put("Type", request.type);
+            query.put("Type", request.type);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "SendChatappMessage"),
