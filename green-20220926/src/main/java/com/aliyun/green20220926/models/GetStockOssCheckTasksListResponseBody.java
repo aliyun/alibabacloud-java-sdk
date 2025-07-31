@@ -144,6 +144,36 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
 
     }
 
+    public static class GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig extends TeaModel {
+        @NameInMap("FreezeRestorePath")
+        public String freezeRestorePath;
+
+        @NameInMap("FreezeType")
+        public String freezeType;
+
+        public static GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig self = new GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig setFreezeRestorePath(String freezeRestorePath) {
+            this.freezeRestorePath = freezeRestorePath;
+            return this;
+        }
+        public String getFreezeRestorePath() {
+            return this.freezeRestorePath;
+        }
+
+        public GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig setFreezeType(String freezeType) {
+            this.freezeType = freezeType;
+            return this;
+        }
+        public String getFreezeType() {
+            return this.freezeType;
+        }
+
+    }
+
     public static class GetStockOssCheckTasksListResponseBodyItemsConfig extends TeaModel {
         @NameInMap("CallbackId")
         public Long callbackId;
@@ -191,6 +221,9 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         @NameInMap("FreezeMediumRisk2")
         public Boolean freezeMediumRisk2;
 
+        @NameInMap("FreezeRestorePath")
+        public String freezeRestorePath;
+
         @NameInMap("FreezeType")
         public String freezeType;
 
@@ -210,6 +243,9 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
          */
         @NameInMap("Priority")
         public Integer priority;
+
+        @NameInMap("Referer")
+        public String referer;
 
         /**
          * <strong>example:</strong>
@@ -251,6 +287,9 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
          */
         @NameInMap("TaskCycle")
         public Integer taskCycle;
+
+        @NameInMap("UserFreezeConfig")
+        public GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig userFreezeConfig;
 
         public static GetStockOssCheckTasksListResponseBodyItemsConfig build(java.util.Map<String, ?> map) throws Exception {
             GetStockOssCheckTasksListResponseBodyItemsConfig self = new GetStockOssCheckTasksListResponseBodyItemsConfig();
@@ -337,6 +376,14 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
             return this.freezeMediumRisk2;
         }
 
+        public GetStockOssCheckTasksListResponseBodyItemsConfig setFreezeRestorePath(String freezeRestorePath) {
+            this.freezeRestorePath = freezeRestorePath;
+            return this;
+        }
+        public String getFreezeRestorePath() {
+            return this.freezeRestorePath;
+        }
+
         public GetStockOssCheckTasksListResponseBodyItemsConfig setFreezeType(String freezeType) {
             this.freezeType = freezeType;
             return this;
@@ -367,6 +414,14 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
         public Integer getPriority() {
             return this.priority;
+        }
+
+        public GetStockOssCheckTasksListResponseBodyItemsConfig setReferer(String referer) {
+            this.referer = referer;
+            return this;
+        }
+        public String getReferer() {
+            return this.referer;
         }
 
         public GetStockOssCheckTasksListResponseBodyItemsConfig setScanLimit(Long scanLimit) {
@@ -423,6 +478,14 @@ public class GetStockOssCheckTasksListResponseBody extends TeaModel {
         }
         public Integer getTaskCycle() {
             return this.taskCycle;
+        }
+
+        public GetStockOssCheckTasksListResponseBodyItemsConfig setUserFreezeConfig(GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig userFreezeConfig) {
+            this.userFreezeConfig = userFreezeConfig;
+            return this;
+        }
+        public GetStockOssCheckTasksListResponseBodyItemsConfigUserFreezeConfig getUserFreezeConfig() {
+            return this.userFreezeConfig;
         }
 
     }

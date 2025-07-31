@@ -4,6 +4,9 @@ package com.aliyun.green20220926.models;
 import com.aliyun.tea.*;
 
 public class GetFeatureConfigRequest extends TeaModel {
+    @NameInMap("Query")
+    public String query;
+
     /**
      * <p>Region ID</p>
      * 
@@ -43,6 +46,14 @@ public class GetFeatureConfigRequest extends TeaModel {
     public static GetFeatureConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetFeatureConfigRequest self = new GetFeatureConfigRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetFeatureConfigRequest setQuery(String query) {
+        this.query = query;
+        return this;
+    }
+    public String getQuery() {
+        return this.query;
     }
 
     public GetFeatureConfigRequest setRegionId(String regionId) {

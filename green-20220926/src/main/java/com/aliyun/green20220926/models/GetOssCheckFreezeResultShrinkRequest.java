@@ -3,7 +3,7 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class ExportResultShrinkRequest extends TeaModel {
+public class GetOssCheckFreezeResultShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -13,21 +13,28 @@ public class ExportResultShrinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2023-08-24 10:01:55</p>
+     * <p>2025-05-19 10:05:11</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>0</p>
+     */
+    @NameInMap("FinishNum")
+    public Long finishNum;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <strong>example:</strong>
-     * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
+     * <p>{\&quot;TaskId\&quot;:\&quot;P_O3SI0I\&quot;}</p>
      */
     @NameInMap("Query")
     public String query;
@@ -42,22 +49,26 @@ public class ExportResultShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sortShrink;
 
-    @NameInMap("Source")
-    public String source;
-
     /**
      * <strong>example:</strong>
-     * <p>2023-08-11 09:00:19</p>
+     * <p>2025-01-09 10:28:54</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
-    public static ExportResultShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        ExportResultShrinkRequest self = new ExportResultShrinkRequest();
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Status")
+    public Integer status;
+
+    public static GetOssCheckFreezeResultShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetOssCheckFreezeResultShrinkRequest self = new GetOssCheckFreezeResultShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExportResultShrinkRequest setCurrentPage(Integer currentPage) {
+    public GetOssCheckFreezeResultShrinkRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -65,7 +76,7 @@ public class ExportResultShrinkRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ExportResultShrinkRequest setEndDate(String endDate) {
+    public GetOssCheckFreezeResultShrinkRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -73,7 +84,15 @@ public class ExportResultShrinkRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ExportResultShrinkRequest setPageSize(Integer pageSize) {
+    public GetOssCheckFreezeResultShrinkRequest setFinishNum(Long finishNum) {
+        this.finishNum = finishNum;
+        return this;
+    }
+    public Long getFinishNum() {
+        return this.finishNum;
+    }
+
+    public GetOssCheckFreezeResultShrinkRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -81,7 +100,7 @@ public class ExportResultShrinkRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ExportResultShrinkRequest setQuery(String query) {
+    public GetOssCheckFreezeResultShrinkRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -89,7 +108,7 @@ public class ExportResultShrinkRequest extends TeaModel {
         return this.query;
     }
 
-    public ExportResultShrinkRequest setRegionId(String regionId) {
+    public GetOssCheckFreezeResultShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -97,7 +116,7 @@ public class ExportResultShrinkRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ExportResultShrinkRequest setSortShrink(String sortShrink) {
+    public GetOssCheckFreezeResultShrinkRequest setSortShrink(String sortShrink) {
         this.sortShrink = sortShrink;
         return this;
     }
@@ -105,20 +124,20 @@ public class ExportResultShrinkRequest extends TeaModel {
         return this.sortShrink;
     }
 
-    public ExportResultShrinkRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
-    }
-
-    public ExportResultShrinkRequest setStartDate(String startDate) {
+    public GetOssCheckFreezeResultShrinkRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public GetOssCheckFreezeResultShrinkRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

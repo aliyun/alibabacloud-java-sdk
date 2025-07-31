@@ -3,7 +3,7 @@ package com.aliyun.green20220926.models;
 
 import com.aliyun.tea.*;
 
-public class ExportResultRequest extends TeaModel {
+public class OssCheckResultListRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>1</p>
@@ -13,21 +13,28 @@ public class ExportResultRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>2023-08-24 10:01:55</p>
+     * <p>2023-10-21 16:08:38</p>
      */
     @NameInMap("EndDate")
     public String endDate;
 
     /**
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>55</p>
+     */
+    @NameInMap("FinishNum")
+    public Long finishNum;
+
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <strong>example:</strong>
-     * <p>{&quot;TaskId&quot;:&quot;P_11TL5T&quot;}</p>
+     * <p>{}</p>
      */
     @NameInMap("Query")
     public String query;
@@ -42,22 +49,26 @@ public class ExportResultRequest extends TeaModel {
     @NameInMap("Sort")
     public java.util.Map<String, String> sort;
 
-    @NameInMap("Source")
-    public String source;
-
     /**
      * <strong>example:</strong>
-     * <p>2023-08-11 09:00:19</p>
+     * <p>2023-08-21 16:08:38</p>
      */
     @NameInMap("StartDate")
     public String startDate;
 
-    public static ExportResultRequest build(java.util.Map<String, ?> map) throws Exception {
-        ExportResultRequest self = new ExportResultRequest();
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Status")
+    public Integer status;
+
+    public static OssCheckResultListRequest build(java.util.Map<String, ?> map) throws Exception {
+        OssCheckResultListRequest self = new OssCheckResultListRequest();
         return TeaModel.build(map, self);
     }
 
-    public ExportResultRequest setCurrentPage(Integer currentPage) {
+    public OssCheckResultListRequest setCurrentPage(Integer currentPage) {
         this.currentPage = currentPage;
         return this;
     }
@@ -65,7 +76,7 @@ public class ExportResultRequest extends TeaModel {
         return this.currentPage;
     }
 
-    public ExportResultRequest setEndDate(String endDate) {
+    public OssCheckResultListRequest setEndDate(String endDate) {
         this.endDate = endDate;
         return this;
     }
@@ -73,7 +84,15 @@ public class ExportResultRequest extends TeaModel {
         return this.endDate;
     }
 
-    public ExportResultRequest setPageSize(Integer pageSize) {
+    public OssCheckResultListRequest setFinishNum(Long finishNum) {
+        this.finishNum = finishNum;
+        return this;
+    }
+    public Long getFinishNum() {
+        return this.finishNum;
+    }
+
+    public OssCheckResultListRequest setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
         return this;
     }
@@ -81,7 +100,7 @@ public class ExportResultRequest extends TeaModel {
         return this.pageSize;
     }
 
-    public ExportResultRequest setQuery(String query) {
+    public OssCheckResultListRequest setQuery(String query) {
         this.query = query;
         return this;
     }
@@ -89,7 +108,7 @@ public class ExportResultRequest extends TeaModel {
         return this.query;
     }
 
-    public ExportResultRequest setRegionId(String regionId) {
+    public OssCheckResultListRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -97,7 +116,7 @@ public class ExportResultRequest extends TeaModel {
         return this.regionId;
     }
 
-    public ExportResultRequest setSort(java.util.Map<String, String> sort) {
+    public OssCheckResultListRequest setSort(java.util.Map<String, String> sort) {
         this.sort = sort;
         return this;
     }
@@ -105,20 +124,20 @@ public class ExportResultRequest extends TeaModel {
         return this.sort;
     }
 
-    public ExportResultRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
-    }
-
-    public ExportResultRequest setStartDate(String startDate) {
+    public OssCheckResultListRequest setStartDate(String startDate) {
         this.startDate = startDate;
         return this;
     }
     public String getStartDate() {
         return this.startDate;
+    }
+
+    public OssCheckResultListRequest setStatus(Integer status) {
+        this.status = status;
+        return this;
+    }
+    public Integer getStatus() {
+        return this.status;
     }
 
 }

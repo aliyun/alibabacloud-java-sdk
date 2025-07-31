@@ -61,6 +61,9 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     @NameInMap("FreezeMediumRisk2")
     public Boolean freezeMediumRisk2;
 
+    @NameInMap("FreezeRestorePath")
+    public String freezeRestorePath;
+
     @NameInMap("FreezeType")
     public String freezeType;
 
@@ -98,6 +101,9 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
      */
     @NameInMap("Priority")
     public Integer priority;
+
+    @NameInMap("Referer")
+    public String referer;
 
     /**
      * <strong>example:</strong>
@@ -251,6 +257,14 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
         return this.freezeMediumRisk2;
     }
 
+    public CreatStockOssCheckTaskRequest setFreezeRestorePath(String freezeRestorePath) {
+        this.freezeRestorePath = freezeRestorePath;
+        return this;
+    }
+    public String getFreezeRestorePath() {
+        return this.freezeRestorePath;
+    }
+
     public CreatStockOssCheckTaskRequest setFreezeType(String freezeType) {
         this.freezeType = freezeType;
         return this;
@@ -297,6 +311,14 @@ public class CreatStockOssCheckTaskRequest extends TeaModel {
     }
     public Integer getPriority() {
         return this.priority;
+    }
+
+    public CreatStockOssCheckTaskRequest setReferer(String referer) {
+        this.referer = referer;
+        return this;
+    }
+    public String getReferer() {
+        return this.referer;
     }
 
     public CreatStockOssCheckTaskRequest setRegionId(String regionId) {
