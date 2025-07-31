@@ -145,6 +145,9 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         @NameInMap("NotifyContent")
         public String notifyContent;
 
+        @NameInMap("NotifyResponse")
+        public String notifyResponse;
+
         /**
          * <p>The callback result. Valid values:</p>
          * <ul>
@@ -233,6 +236,14 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
         public String getNotifyContent() {
             return this.notifyContent;
+        }
+
+        public DescribeLiveStreamsNotifyRecordsResponseBodyNotifyRecordsInfoLiveStreamNotifyRecordsInfo setNotifyResponse(String notifyResponse) {
+            this.notifyResponse = notifyResponse;
+            return this;
+        }
+        public String getNotifyResponse() {
+            return this.notifyResponse;
         }
 
         public DescribeLiveStreamsNotifyRecordsResponseBodyNotifyRecordsInfoLiveStreamNotifyRecordsInfo setNotifyResult(String notifyResult) {
