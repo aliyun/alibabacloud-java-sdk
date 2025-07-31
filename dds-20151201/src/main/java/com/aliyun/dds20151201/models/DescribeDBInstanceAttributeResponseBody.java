@@ -818,6 +818,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ReadonlyReplicas")
         public Integer readonlyReplicas;
 
+        @NameInMap("ReplicaSetName")
+        public String replicaSetName;
+
         /**
          * <p>The status of the shard node. For more information, see <a href="https://help.aliyun.com/document_detail/63870.html">Instance states</a>.</p>
          * 
@@ -926,6 +929,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public Integer getReadonlyReplicas() {
             return this.readonlyReplicas;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setReplicaSetName(String replicaSetName) {
+            this.replicaSetName = replicaSetName;
+            return this;
+        }
+        public String getReplicaSetName() {
+            return this.replicaSetName;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstanceShardListShardAttribute setStatus(String status) {
@@ -1177,6 +1188,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("DestroyTime")
         public String destroyTime;
+
+        @NameInMap("DisasterRecoveryInfo")
+        public String disasterRecoveryInfo;
 
         /**
          * <p>Indicates whether disk encryption is enabled.</p>
@@ -1753,6 +1767,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getDestroyTime() {
             return this.destroyTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setDisasterRecoveryInfo(String disasterRecoveryInfo) {
+            this.disasterRecoveryInfo = disasterRecoveryInfo;
+            return this;
+        }
+        public String getDisasterRecoveryInfo() {
+            return this.disasterRecoveryInfo;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstancesDBInstance setEncrypted(Boolean encrypted) {

@@ -41,6 +41,9 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     @NameInMap("SSLAction")
     public String SSLAction;
 
+    @NameInMap("SwitchMode")
+    public String switchMode;
+
     public static ModifyDBInstanceSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBInstanceSSLRequest self = new ModifyDBInstanceSSLRequest();
         return TeaModel.build(map, self);
@@ -92,6 +95,14 @@ public class ModifyDBInstanceSSLRequest extends TeaModel {
     }
     public String getSSLAction() {
         return this.SSLAction;
+    }
+
+    public ModifyDBInstanceSSLRequest setSwitchMode(String switchMode) {
+        this.switchMode = switchMode;
+        return this;
+    }
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
 }

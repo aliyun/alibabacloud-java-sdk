@@ -77,6 +77,9 @@ public class ModifyParametersRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SwitchMode")
+    public String switchMode;
+
     public static ModifyParametersRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyParametersRequest self = new ModifyParametersRequest();
         return TeaModel.build(map, self);
@@ -152,6 +155,14 @@ public class ModifyParametersRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public ModifyParametersRequest setSwitchMode(String switchMode) {
+        this.switchMode = switchMode;
+        return this;
+    }
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
 }

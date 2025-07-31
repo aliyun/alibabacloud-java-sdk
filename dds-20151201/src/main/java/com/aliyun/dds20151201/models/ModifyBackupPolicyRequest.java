@@ -302,6 +302,9 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("PreferredBackupTime")
     public String preferredBackupTime;
 
+    @NameInMap("PreserveOneEachHour")
+    public Boolean preserveOneEachHour;
+
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
@@ -501,6 +504,14 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     }
     public String getPreferredBackupTime() {
         return this.preferredBackupTime;
+    }
+
+    public ModifyBackupPolicyRequest setPreserveOneEachHour(Boolean preserveOneEachHour) {
+        this.preserveOneEachHour = preserveOneEachHour;
+        return this;
+    }
+    public Boolean getPreserveOneEachHour() {
+        return this.preserveOneEachHour;
     }
 
     public ModifyBackupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {

@@ -20,6 +20,9 @@ public class CreateBackupRequest extends TeaModel {
     @NameInMap("BackupMethod")
     public String backupMethod;
 
+    @NameInMap("BackupRetentionPeriod")
+    public Long backupRetentionPeriod;
+
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
@@ -53,6 +56,14 @@ public class CreateBackupRequest extends TeaModel {
     }
     public String getBackupMethod() {
         return this.backupMethod;
+    }
+
+    public CreateBackupRequest setBackupRetentionPeriod(Long backupRetentionPeriod) {
+        this.backupRetentionPeriod = backupRetentionPeriod;
+        return this;
+    }
+    public Long getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     public CreateBackupRequest setDBInstanceId(String DBInstanceId) {

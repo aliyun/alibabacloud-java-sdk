@@ -166,21 +166,19 @@ public class DescribeAvailabilityZonesRequest extends TeaModel {
     public String storageSupport;
 
     /**
-     * <p>The disk type. Valid values:</p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li><strong>cloud_essd</strong>: PL1 Enterprise SSD (ESSD)</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
-     * <li><strong>dhg_local_ssd</strong>: local SSD</li>
+     * <li><strong>cloud_essd1</strong>: PL1 Enterprise SSDs (ESSDs)</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSDs</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSDs</li>
+     * <li><strong>local_ssd</strong>: local SSDs</li>
      * </ul>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <strong>cloud_essd1</strong> is used by default.</p>
-     * </li>
-     * <li><p>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <strong>local_ssd</strong> is used by default.</p>
-     * </li>
+     * <li>Instances that run MongoDB 4.4 or later only use cloud disks to store data. If you do not specify this parameter, the value <strong>cloud_essd1</strong> is used by default.</li>
+     * <li>Instances that run MongoDB 4.2 and earlier only use local disks to store data. If you do not specify this parameter, the value <strong>local_ssd</strong> is used by default.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>local_ssd</p>

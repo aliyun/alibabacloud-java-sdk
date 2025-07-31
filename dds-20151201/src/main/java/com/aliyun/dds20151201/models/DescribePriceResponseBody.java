@@ -756,6 +756,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("StandPrice")
         public Double standPrice;
 
+        @NameInMap("TotalCostAmount")
+        public Double totalCostAmount;
+
         /**
          * <p>The final price of the order.</p>
          * 
@@ -888,6 +891,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Double getStandPrice() {
             return this.standPrice;
+        }
+
+        public DescribePriceResponseBodyOrder setTotalCostAmount(Double totalCostAmount) {
+            this.totalCostAmount = totalCostAmount;
+            return this;
+        }
+        public Double getTotalCostAmount() {
+            return this.totalCostAmount;
         }
 
         public DescribePriceResponseBodyOrder setTradeAmount(String tradeAmount) {

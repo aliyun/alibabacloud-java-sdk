@@ -412,6 +412,9 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         @NameInMap("AttachLogStatus")
         public String attachLogStatus;
 
+        @NameInMap("BackupExpireTime")
+        public String backupExpireTime;
+
         /**
          * <p>The collection of the backup sets of each child node in a cluster backup set.</p>
          */
@@ -528,6 +531,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         }
         public String getAttachLogStatus() {
             return this.attachLogStatus;
+        }
+
+        public DescribeClusterBackupsResponseBodyClusterBackups setBackupExpireTime(String backupExpireTime) {
+            this.backupExpireTime = backupExpireTime;
+            return this;
+        }
+        public String getBackupExpireTime() {
+            return this.backupExpireTime;
         }
 
         public DescribeClusterBackupsResponseBodyClusterBackups setBackups(java.util.List<DescribeClusterBackupsResponseBodyClusterBackupsBackups> backups) {

@@ -121,6 +121,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupEndTime")
         public String backupEndTime;
 
+        @NameInMap("BackupExpireTime")
+        public String backupExpireTime;
+
         /**
          * <p>The ID of the backup set.</p>
          * 
@@ -294,6 +297,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupEndTime() {
             return this.backupEndTime;
+        }
+
+        public DescribeBackupsResponseBodyBackupsBackup setBackupExpireTime(String backupExpireTime) {
+            this.backupExpireTime = backupExpireTime;
+            return this;
+        }
+        public String getBackupExpireTime() {
+            return this.backupExpireTime;
         }
 
         public DescribeBackupsResponseBodyBackupsBackup setBackupId(String backupId) {

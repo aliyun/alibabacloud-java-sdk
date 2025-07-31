@@ -66,6 +66,9 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     @NameInMap("RoleARN")
     public String roleARN;
 
+    @NameInMap("SwitchMode")
+    public String switchMode;
+
     /**
      * <p>The TDE status. When the value of this parameter is set to <strong>Enabled</strong>, TDE is enabled.</p>
      * <blockquote>
@@ -146,6 +149,14 @@ public class ModifyDBInstanceTDERequest extends TeaModel {
     }
     public String getRoleARN() {
         return this.roleARN;
+    }
+
+    public ModifyDBInstanceTDERequest setSwitchMode(String switchMode) {
+        this.switchMode = switchMode;
+        return this;
+    }
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
     public ModifyDBInstanceTDERequest setTDEStatus(String TDEStatus) {

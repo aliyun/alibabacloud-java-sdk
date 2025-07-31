@@ -55,6 +55,9 @@ public class RestartNodeRequest extends TeaModel {
     @NameInMap("RoleId")
     public String roleId;
 
+    @NameInMap("SwitchMode")
+    public String switchMode;
+
     public static RestartNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         RestartNodeRequest self = new RestartNodeRequest();
         return TeaModel.build(map, self);
@@ -114,6 +117,14 @@ public class RestartNodeRequest extends TeaModel {
     }
     public String getRoleId() {
         return this.roleId;
+    }
+
+    public RestartNodeRequest setSwitchMode(String switchMode) {
+        this.switchMode = switchMode;
+        return this;
+    }
+    public String getSwitchMode() {
+        return this.switchMode;
     }
 
 }

@@ -201,6 +201,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @NameInMap("PreferredNextBackupTime")
     public String preferredNextBackupTime;
 
+    @NameInMap("PreserveOneEachHour")
+    public Boolean preserveOneEachHour;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -363,6 +366,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getPreferredNextBackupTime() {
         return this.preferredNextBackupTime;
+    }
+
+    public DescribeBackupPolicyResponseBody setPreserveOneEachHour(Boolean preserveOneEachHour) {
+        this.preserveOneEachHour = preserveOneEachHour;
+        return this;
+    }
+    public Boolean getPreserveOneEachHour() {
+        return this.preserveOneEachHour;
     }
 
     public DescribeBackupPolicyResponseBody setRequestId(String requestId) {
