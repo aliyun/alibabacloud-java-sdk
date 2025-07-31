@@ -125,6 +125,9 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     @NameInMap("Launcher")
     public String launcher;
 
+    @NameInMap("OssOutputDelivery")
+    public String ossOutputDelivery;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -352,6 +355,14 @@ public class InvokeCommandShrinkRequest extends TeaModel {
     }
     public String getLauncher() {
         return this.launcher;
+    }
+
+    public InvokeCommandShrinkRequest setOssOutputDelivery(String ossOutputDelivery) {
+        this.ossOutputDelivery = ossOutputDelivery;
+        return this;
+    }
+    public String getOssOutputDelivery() {
+        return this.ossOutputDelivery;
     }
 
     public InvokeCommandShrinkRequest setOwnerAccount(String ownerAccount) {

@@ -125,6 +125,9 @@ public class InvokeCommandRequest extends TeaModel {
     @NameInMap("Launcher")
     public String launcher;
 
+    @NameInMap("OssOutputDelivery")
+    public String ossOutputDelivery;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -352,6 +355,14 @@ public class InvokeCommandRequest extends TeaModel {
     }
     public String getLauncher() {
         return this.launcher;
+    }
+
+    public InvokeCommandRequest setOssOutputDelivery(String ossOutputDelivery) {
+        this.ossOutputDelivery = ossOutputDelivery;
+        return this;
+    }
+    public String getOssOutputDelivery() {
+        return this.ossOutputDelivery;
     }
 
     public InvokeCommandRequest setOwnerAccount(String ownerAccount) {

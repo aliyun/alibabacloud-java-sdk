@@ -213,6 +213,9 @@ public class RunCommandShrinkRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    @NameInMap("OssOutputDelivery")
+    public String ossOutputDelivery;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -493,6 +496,14 @@ public class RunCommandShrinkRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
+    }
+
+    public RunCommandShrinkRequest setOssOutputDelivery(String ossOutputDelivery) {
+        this.ossOutputDelivery = ossOutputDelivery;
+        return this;
+    }
+    public String getOssOutputDelivery() {
+        return this.ossOutputDelivery;
     }
 
     public RunCommandShrinkRequest setOwnerAccount(String ownerAccount) {

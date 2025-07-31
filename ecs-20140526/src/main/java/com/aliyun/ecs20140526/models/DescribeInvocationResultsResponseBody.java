@@ -331,6 +331,15 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @NameInMap("Launcher")
         public String launcher;
 
+        @NameInMap("OssOutputDelivery")
+        public String ossOutputDelivery;
+
+        @NameInMap("OssOutputStatus")
+        public String ossOutputStatus;
+
+        @NameInMap("OssOutputUri")
+        public String ossOutputUri;
+
         /**
          * <p>The command output.</p>
          * <ul>
@@ -510,6 +519,30 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
         public String getLauncher() {
             return this.launcher;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOssOutputDelivery(String ossOutputDelivery) {
+            this.ossOutputDelivery = ossOutputDelivery;
+            return this;
+        }
+        public String getOssOutputDelivery() {
+            return this.ossOutputDelivery;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOssOutputStatus(String ossOutputStatus) {
+            this.ossOutputStatus = ossOutputStatus;
+            return this;
+        }
+        public String getOssOutputStatus() {
+            return this.ossOutputStatus;
+        }
+
+        public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOssOutputUri(String ossOutputUri) {
+            this.ossOutputUri = ossOutputUri;
+            return this;
+        }
+        public String getOssOutputUri() {
+            return this.ossOutputUri;
         }
 
         public DescribeInvocationResultsResponseBodyInvocationInvocationResultsInvocationResult setOutput(String output) {

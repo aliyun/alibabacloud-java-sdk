@@ -136,7 +136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ActivateRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>ActivateRouterInterface</p>
+     * 
+     * @deprecated OpenAPI ActivateRouterInterface is deprecated, please use Vpc::2016-04-28::ActivateRouterInterface instead.
      * 
      * @param request ActivateRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -185,7 +188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ActivateRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>ActivateRouterInterface</p>
+     * 
+     * @deprecated OpenAPI ActivateRouterInterface is deprecated, please use Vpc::2016-04-28::ActivateRouterInterface instead.
      * 
      * @param request ActivateRouterInterfaceRequest
      * @return ActivateRouterInterfaceResponse
@@ -198,7 +204,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated
+     * <b>summary</b> : 
+     * <p>AddBandwidthPackageIps</p>
+     * 
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.
      * 
      * @param request AddBandwidthPackageIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -259,7 +268,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated
+     * <b>summary</b> : 
+     * <p>AddBandwidthPackageIps</p>
+     * 
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.
      * 
      * @param request AddBandwidthPackageIpsRequest
      * @return AddBandwidthPackageIpsResponse
@@ -529,6 +541,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation has been upgraded. We recommend that you do not use it. For information about the new version of this operation, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</p>
      * </blockquote>
      * 
+     * <b>summary</b> : 
+     * <p>AllocateEipAddress</p>
+     * 
      * @deprecated OpenAPI AllocateEipAddress is deprecated, please use Vpc::2016-04-28::AllocateEipAddress instead.
      * 
      * @param request AllocateEipAddressRequest
@@ -602,6 +617,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>This operation has been upgraded. We recommend that you do not use it. For information about the new version of this operation, see <a href="https://help.aliyun.com/document_detail/120192.html">AllocateEipAddress</a>.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>AllocateEipAddress</p>
      * 
      * @deprecated OpenAPI AllocateEipAddress is deprecated, please use Vpc::2016-04-28::AllocateEipAddress instead.
      * 
@@ -1014,6 +1032,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>AssociateEipAddress</p>
+     * 
      * @deprecated OpenAPI AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
      * 
      * @param request AssociateEipAddressRequest
@@ -1075,6 +1096,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>AssociateEipAddress</p>
+     * 
      * @deprecated OpenAPI AssociateEipAddress is deprecated, please use Vpc::2016-04-28::AssociateEipAddress instead.
      * 
      * @param request AssociateEipAddressRequest
@@ -1088,7 +1112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI AssociateHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>AssociateHaVip</p>
+     * 
+     * @deprecated OpenAPI AssociateHaVip is deprecated, please use Vpc::2016-04-28::AssociateHaVip instead.
      * 
      * @param request AssociateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1149,7 +1176,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI AssociateHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>AssociateHaVip</p>
+     * 
+     * @deprecated OpenAPI AssociateHaVip is deprecated, please use Vpc::2016-04-28::AssociateHaVip instead.
      * 
      * @param request AssociateHaVipRequest
      * @return AssociateHaVipResponse
@@ -2382,7 +2412,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CancelPhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>CancelPhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI CancelPhysicalConnection is deprecated, please use Vpc::2016-04-28::CancelPhysicalConnection instead.
      * 
      * @param request CancelPhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2443,7 +2476,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CancelPhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>CancelPhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI CancelPhysicalConnection is deprecated, please use Vpc::2016-04-28::CancelPhysicalConnection instead.
      * 
      * @param request CancelPhysicalConnectionRequest
      * @return CancelPhysicalConnectionResponse
@@ -2584,7 +2620,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ConnectRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>ConnectRouterInterface</p>
+     * 
+     * @deprecated OpenAPI ConnectRouterInterface is deprecated, please use Vpc::2016-04-28::ConnectRouterInterface instead.
      * 
      * @param request ConnectRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2633,7 +2672,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ConnectRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>ConnectRouterInterface</p>
+     * 
+     * @deprecated OpenAPI ConnectRouterInterface is deprecated, please use Vpc::2016-04-28::ConnectRouterInterface instead.
      * 
      * @param request ConnectRouterInterfaceRequest
      * @return ConnectRouterInterfaceResponse
@@ -4338,7 +4380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateForwardEntry is deprecated
+     * <b>summary</b> : 
+     * <p>CreateForwardEntry</p>
+     * 
+     * @deprecated OpenAPI CreateForwardEntry is deprecated, please use Vpc::2016-04-28::CreateForwardEntry instead.
      * 
      * @param request CreateForwardEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4411,7 +4456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateForwardEntry is deprecated
+     * <b>summary</b> : 
+     * <p>CreateForwardEntry</p>
+     * 
+     * @deprecated OpenAPI CreateForwardEntry is deprecated, please use Vpc::2016-04-28::CreateForwardEntry instead.
      * 
      * @param request CreateForwardEntryRequest
      * @return CreateForwardEntryResponse
@@ -4424,7 +4472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>CreateHaVip</p>
+     * 
+     * @deprecated OpenAPI CreateHaVip is deprecated, please use Vpc::2016-04-28::CreateHaVip instead.
      * 
      * @param request CreateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4489,7 +4540,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>CreateHaVip</p>
+     * 
+     * @deprecated OpenAPI CreateHaVip is deprecated, please use Vpc::2016-04-28::CreateHaVip instead.
      * 
      * @param request CreateHaVipRequest
      * @return CreateHaVipResponse
@@ -6028,7 +6082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateNatGateway is deprecated
+     * <b>summary</b> : 
+     * <p>CreateNatGateway</p>
+     * 
+     * @deprecated OpenAPI CreateNatGateway is deprecated, please use Vpc::2016-04-28::CreateNatGateway instead.
      * 
      * @param request CreateNatGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6097,7 +6154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateNatGateway is deprecated
+     * <b>summary</b> : 
+     * <p>CreateNatGateway</p>
+     * 
+     * @deprecated OpenAPI CreateNatGateway is deprecated, please use Vpc::2016-04-28::CreateNatGateway instead.
      * 
      * @param request CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
@@ -6410,7 +6470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreatePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>CreatePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI CreatePhysicalConnection is deprecated, please use Vpc::2016-04-28::CreatePhysicalConnection instead.
      * 
      * @param request CreatePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6511,7 +6574,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreatePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>CreatePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI CreatePhysicalConnection is deprecated, please use Vpc::2016-04-28::CreatePhysicalConnection instead.
      * 
      * @param request CreatePhysicalConnectionRequest
      * @return CreatePhysicalConnectionResponse
@@ -6740,7 +6806,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateRouteEntry is deprecated
+     * <b>summary</b> : 
+     * <p>CreateRouteEntry</p>
+     * 
+     * @deprecated OpenAPI CreateRouteEntry is deprecated, please use Vpc::2016-04-28::CreateRouteEntry instead.
      * 
      * @param request CreateRouteEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6813,7 +6882,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateRouteEntry is deprecated
+     * <b>summary</b> : 
+     * <p>CreateRouteEntry</p>
+     * 
+     * @deprecated OpenAPI CreateRouteEntry is deprecated, please use Vpc::2016-04-28::CreateRouteEntry instead.
      * 
      * @param request CreateRouteEntryRequest
      * @return CreateRouteEntryResponse
@@ -6826,7 +6898,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>CreateRouterInterface</p>
+     * 
+     * @deprecated OpenAPI CreateRouterInterface is deprecated, please use Vpc::2016-04-28::CreateRouterInterface instead.
      * 
      * @param request CreateRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6963,7 +7038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>CreateRouterInterface</p>
+     * 
+     * @deprecated OpenAPI CreateRouterInterface is deprecated, please use Vpc::2016-04-28::CreateRouterInterface instead.
      * 
      * @param request CreateRouterInterfaceRequest
      * @return CreateRouterInterfaceResponse
@@ -7664,6 +7742,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateVSwitch</p>
+     * 
      * @deprecated OpenAPI CreateVSwitch is deprecated, please use Vpc::2016-04-28::CreateVSwitch instead.
      * 
      * @param request CreateVSwitchRequest
@@ -7737,6 +7818,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateVSwitch</p>
+     * 
      * @deprecated OpenAPI CreateVSwitch is deprecated, please use Vpc::2016-04-28::CreateVSwitch instead.
      * 
      * @param request CreateVSwitchRequest
@@ -7750,7 +7834,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>CreateVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI CreateVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::CreateVirtualBorderRouter instead.
      * 
      * @param request CreateVirtualBorderRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7847,7 +7934,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI CreateVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>CreateVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI CreateVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::CreateVirtualBorderRouter instead.
      * 
      * @param request CreateVirtualBorderRouterRequest
      * @return CreateVirtualBorderRouterResponse
@@ -7860,6 +7950,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateVpc</p>
+     * 
      * @deprecated OpenAPI CreateVpc is deprecated, please use Vpc::2016-04-28::CreateVpc instead.
      * 
      * @param request CreateVpcRequest
@@ -7929,6 +8022,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateVpc</p>
+     * 
      * @deprecated OpenAPI CreateVpc is deprecated, please use Vpc::2016-04-28::CreateVpc instead.
      * 
      * @param request CreateVpcRequest
@@ -7942,7 +8038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeactivateRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>DeactivateRouterInterface</p>
+     * 
+     * @deprecated OpenAPI DeactivateRouterInterface is deprecated, please use Vpc::2016-04-28::DeactivateRouterInterface instead.
      * 
      * @param request DeactivateRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7991,7 +8090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeactivateRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>DeactivateRouterInterface</p>
+     * 
+     * @deprecated OpenAPI DeactivateRouterInterface is deprecated, please use Vpc::2016-04-28::DeactivateRouterInterface instead.
      * 
      * @param request DeactivateRouterInterfaceRequest
      * @return DeactivateRouterInterfaceResponse
@@ -8208,7 +8310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteBandwidthPackage</p>
+     * 
+     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.
      * 
      * @param request DeleteBandwidthPackageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8261,7 +8366,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteBandwidthPackage</p>
+     * 
+     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.
      * 
      * @param request DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
@@ -8656,7 +8764,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteForwardEntry is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteForwardEntry</p>
+     * 
+     * @deprecated OpenAPI DeleteForwardEntry is deprecated, please use Vpc::2016-04-28::DeleteForwardEntry instead.
      * 
      * @param request DeleteForwardEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8713,7 +8824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteForwardEntry is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteForwardEntry</p>
+     * 
+     * @deprecated OpenAPI DeleteForwardEntry is deprecated, please use Vpc::2016-04-28::DeleteForwardEntry instead.
      * 
      * @param request DeleteForwardEntryRequest
      * @return DeleteForwardEntryResponse
@@ -8726,7 +8840,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteHaVip</p>
+     * 
+     * @deprecated OpenAPI DeleteHaVip is deprecated, please use Vpc::2016-04-28::DeleteHaVip instead.
      * 
      * @param request DeleteHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8783,7 +8900,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteHaVip</p>
+     * 
+     * @deprecated OpenAPI DeleteHaVip is deprecated, please use Vpc::2016-04-28::DeleteHaVip instead.
      * 
      * @param request DeleteHaVipRequest
      * @return DeleteHaVipResponse
@@ -9566,7 +9686,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteNatGateway is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteNatGateway</p>
+     * 
+     * @deprecated OpenAPI DeleteNatGateway is deprecated, please use Vpc::2016-04-28::DeleteNatGateway instead.
      * 
      * @param request DeleteNatGatewayRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9619,7 +9742,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteNatGateway is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteNatGateway</p>
+     * 
+     * @deprecated OpenAPI DeleteNatGateway is deprecated, please use Vpc::2016-04-28::DeleteNatGateway instead.
      * 
      * @param request DeleteNatGatewayRequest
      * @return DeleteNatGatewayResponse
@@ -9820,7 +9946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeletePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>DeletePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI DeletePhysicalConnection is deprecated, please use Vpc::2016-04-28::DeletePhysicalConnection instead.
      * 
      * @param request DeletePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9877,7 +10006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeletePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>DeletePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI DeletePhysicalConnection is deprecated, please use Vpc::2016-04-28::DeletePhysicalConnection instead.
      * 
      * @param request DeletePhysicalConnectionRequest
      * @return DeletePhysicalConnectionResponse
@@ -10032,7 +10164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteRouteEntry is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteRouteEntry</p>
+     * 
+     * @deprecated OpenAPI DeleteRouteEntry is deprecated, please use Vpc::2016-04-28::DeleteRouteEntry instead.
      * 
      * @param request DeleteRouteEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10097,7 +10232,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteRouteEntry is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteRouteEntry</p>
+     * 
+     * @deprecated OpenAPI DeleteRouteEntry is deprecated, please use Vpc::2016-04-28::DeleteRouteEntry instead.
      * 
      * @param request DeleteRouteEntryRequest
      * @return DeleteRouteEntryResponse
@@ -10110,7 +10248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteRouterInterface</p>
+     * 
+     * @deprecated OpenAPI DeleteRouterInterface is deprecated, please use Vpc::2016-04-28::DeleteRouterInterface instead.
      * 
      * @param request DeleteRouterInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10171,7 +10312,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteRouterInterface is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteRouterInterface</p>
+     * 
+     * @deprecated OpenAPI DeleteRouterInterface is deprecated, please use Vpc::2016-04-28::DeleteRouterInterface instead.
      * 
      * @param request DeleteRouterInterfaceRequest
      * @return DeleteRouterInterfaceResponse
@@ -10482,6 +10626,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DeleteVSwitch</p>
+     * 
      * @deprecated OpenAPI DeleteVSwitch is deprecated, please use Vpc::2016-04-28::DeleteVSwitch instead.
      * 
      * @param request DeleteVSwitchRequest
@@ -10535,6 +10682,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DeleteVSwitch</p>
+     * 
      * @deprecated OpenAPI DeleteVSwitch is deprecated, please use Vpc::2016-04-28::DeleteVSwitch instead.
      * 
      * @param request DeleteVSwitchRequest
@@ -10548,7 +10698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI DeleteVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::DeleteVirtualBorderRouter instead.
      * 
      * @param request DeleteVirtualBorderRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10609,7 +10762,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DeleteVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>DeleteVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI DeleteVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::DeleteVirtualBorderRouter instead.
      * 
      * @param request DeleteVirtualBorderRouterRequest
      * @return DeleteVirtualBorderRouterResponse
@@ -10762,7 +10918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeAccessPoints is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeAccessPoints</p>
+     * 
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use Vpc::2016-04-28::DescribeAccessPoints instead.
      * 
      * @param request DescribeAccessPointsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10823,7 +10982,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeAccessPoints is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeAccessPoints</p>
+     * 
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use Vpc::2016-04-28::DescribeAccessPoints instead.
      * 
      * @param request DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
@@ -11694,7 +11856,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeBandwidthPackages</p>
+     * 
+     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.
      * 
      * @param request DescribeBandwidthPackagesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11759,7 +11924,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeBandwidthPackages</p>
+     * 
+     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.
      * 
      * @param request DescribeBandwidthPackagesRequest
      * @return DescribeBandwidthPackagesResponse
@@ -13692,6 +13860,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeEipAddresses</p>
+     * 
      * @deprecated OpenAPI DescribeEipAddresses is deprecated, please use Vpc::2016-04-28::DescribeEipAddresses instead.
      * 
      * @param request DescribeEipAddressesRequest
@@ -13785,6 +13956,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>DescribeEipAddresses</p>
+     * 
      * @deprecated OpenAPI DescribeEipAddresses is deprecated, please use Vpc::2016-04-28::DescribeEipAddresses instead.
      * 
      * @param request DescribeEipAddressesRequest
@@ -13798,7 +13972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeEipMonitorData is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeEipMonitorData</p>
+     * 
+     * @deprecated OpenAPI DescribeEipMonitorData is deprecated, please use Vpc::2016-04-28::DescribeEipMonitorData instead.
      * 
      * @param request DescribeEipMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13863,7 +14040,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeEipMonitorData is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeEipMonitorData</p>
+     * 
+     * @deprecated OpenAPI DescribeEipMonitorData is deprecated, please use Vpc::2016-04-28::DescribeEipMonitorData instead.
      * 
      * @param request DescribeEipMonitorDataRequest
      * @return DescribeEipMonitorDataResponse
@@ -14218,7 +14398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeForwardTableEntries is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeForwardTableEntries</p>
+     * 
+     * @deprecated OpenAPI DescribeForwardTableEntries is deprecated, please use Vpc::2016-04-28::DescribeForwardTableEntries instead.
      * 
      * @param request DescribeForwardTableEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14283,7 +14466,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeForwardTableEntries is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeForwardTableEntries</p>
+     * 
+     * @deprecated OpenAPI DescribeForwardTableEntries is deprecated, please use Vpc::2016-04-28::DescribeForwardTableEntries instead.
      * 
      * @param request DescribeForwardTableEntriesRequest
      * @return DescribeForwardTableEntriesResponse
@@ -14296,7 +14482,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeHaVips is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeHaVips</p>
+     * 
+     * @deprecated OpenAPI DescribeHaVips is deprecated, please use Vpc::2016-04-28::DescribeHaVips instead.
      * 
      * @param request DescribeHaVipsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14357,7 +14546,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeHaVips is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeHaVips</p>
+     * 
+     * @deprecated OpenAPI DescribeHaVips is deprecated, please use Vpc::2016-04-28::DescribeHaVips instead.
      * 
      * @param request DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
@@ -17568,7 +17760,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeNatGateways is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeNatGateways</p>
+     * 
+     * @deprecated OpenAPI DescribeNatGateways is deprecated, please use Vpc::2016-04-28::DescribeNatGateways instead.
      * 
      * @param request DescribeNatGatewaysRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17633,7 +17828,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeNatGateways is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeNatGateways</p>
+     * 
+     * @deprecated OpenAPI DescribeNatGateways is deprecated, please use Vpc::2016-04-28::DescribeNatGateways instead.
      * 
      * @param request DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse
@@ -17966,7 +18164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeNewProjectEipMonitorData is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeNewProjectEipMonitorData</p>
+     * 
+     * @deprecated OpenAPI DescribeNewProjectEipMonitorData is deprecated, please use Vpc::2016-04-28::DescribeEipMonitorData instead.
      * 
      * @param request DescribeNewProjectEipMonitorDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18031,7 +18232,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeNewProjectEipMonitorData is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeNewProjectEipMonitorData</p>
+     * 
+     * @deprecated OpenAPI DescribeNewProjectEipMonitorData is deprecated, please use Vpc::2016-04-28::DescribeEipMonitorData instead.
      * 
      * @param request DescribeNewProjectEipMonitorDataRequest
      * @return DescribeNewProjectEipMonitorDataResponse
@@ -18044,7 +18248,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribePhysicalConnections is deprecated
+     * <b>summary</b> : 
+     * <p>DescribePhysicalConnections</p>
+     * 
+     * @deprecated OpenAPI DescribePhysicalConnections is deprecated, please use Vpc::2016-04-28::DescribePhysicalConnections instead.
      * 
      * @param request DescribePhysicalConnectionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18113,7 +18320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribePhysicalConnections is deprecated
+     * <b>summary</b> : 
+     * <p>DescribePhysicalConnections</p>
+     * 
+     * @deprecated OpenAPI DescribePhysicalConnections is deprecated, please use Vpc::2016-04-28::DescribePhysicalConnections instead.
      * 
      * @param request DescribePhysicalConnectionsRequest
      * @return DescribePhysicalConnectionsResponse
@@ -19636,7 +19846,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeRouterInterfaces is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeRouterInterfaces</p>
+     * 
+     * @deprecated OpenAPI DescribeRouterInterfaces is deprecated, please use Vpc::2016-04-28::DescribeRouterInterfaces instead.
      * 
      * @param request DescribeRouterInterfacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19693,7 +19906,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeRouterInterfaces is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeRouterInterfaces</p>
+     * 
+     * @deprecated OpenAPI DescribeRouterInterfaces is deprecated, please use Vpc::2016-04-28::DescribeRouterInterfaces instead.
      * 
      * @param request DescribeRouterInterfacesRequest
      * @return DescribeRouterInterfacesResponse
@@ -21920,7 +22136,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVSwitches is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeVSwitches</p>
+     * 
+     * @deprecated OpenAPI DescribeVSwitches is deprecated, please use Vpc::2016-04-28::DescribeVSwitches instead.
      * 
      * @param request DescribeVSwitchesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21993,7 +22212,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVSwitches is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeVSwitches</p>
+     * 
+     * @deprecated OpenAPI DescribeVSwitches is deprecated, please use Vpc::2016-04-28::DescribeVSwitches instead.
      * 
      * @param request DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
@@ -22006,7 +22228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVirtualBorderRouters is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeVirtualBorderRouters</p>
+     * 
+     * @deprecated OpenAPI DescribeVirtualBorderRouters is deprecated, please use Vpc::2016-04-28::DescribeVirtualBorderRouters instead.
      * 
      * @param request DescribeVirtualBorderRoutersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22063,7 +22288,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVirtualBorderRouters is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeVirtualBorderRouters</p>
+     * 
+     * @deprecated OpenAPI DescribeVirtualBorderRouters is deprecated, please use Vpc::2016-04-28::DescribeVirtualBorderRouters instead.
      * 
      * @param request DescribeVirtualBorderRoutersRequest
      * @return DescribeVirtualBorderRoutersResponse
@@ -22076,7 +22304,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVirtualBorderRoutersForPhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI DescribeVirtualBorderRoutersForPhysicalConnection is deprecated, please use Vpc::2016-04-28::DescribeVirtualBorderRoutersForPhysicalConnection instead.
      * 
      * @param request DescribeVirtualBorderRoutersForPhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22137,7 +22368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVirtualBorderRoutersForPhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>DescribeVirtualBorderRoutersForPhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI DescribeVirtualBorderRoutersForPhysicalConnection is deprecated, please use Vpc::2016-04-28::DescribeVirtualBorderRoutersForPhysicalConnection instead.
      * 
      * @param request DescribeVirtualBorderRoutersForPhysicalConnectionRequest
      * @return DescribeVirtualBorderRoutersForPhysicalConnectionResponse
@@ -22972,7 +23206,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI EnablePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>EnablePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI EnablePhysicalConnection is deprecated, please use Vpc::2016-04-28::EnablePhysicalConnection instead.
      * 
      * @param request EnablePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23033,7 +23270,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI EnablePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>EnablePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI EnablePhysicalConnection is deprecated, please use Vpc::2016-04-28::EnablePhysicalConnection instead.
      * 
      * @param request EnablePhysicalConnectionRequest
      * @return EnablePhysicalConnectionResponse
@@ -24123,6 +24363,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Launcher", request.launcher);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ossOutputDelivery)) {
+            query.put("OssOutputDelivery", request.ossOutputDelivery);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -24950,7 +25194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyBandwidthPackageSpec</p>
+     * 
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.
      * 
      * @param request ModifyBandwidthPackageSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25007,7 +25254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyBandwidthPackageSpec</p>
+     * 
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.
      * 
      * @param request ModifyBandwidthPackageSpecRequest
      * @return ModifyBandwidthPackageSpecResponse
@@ -26394,7 +26644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyEipAddressAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyEipAddressAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyEipAddressAttribute is deprecated, please use Vpc::2016-04-28::ModifyEipAddressAttribute instead.
      * 
      * @param request ModifyEipAddressAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26451,7 +26704,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyEipAddressAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyEipAddressAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyEipAddressAttribute is deprecated, please use Vpc::2016-04-28::ModifyEipAddressAttribute instead.
      * 
      * @param request ModifyEipAddressAttributeRequest
      * @return ModifyEipAddressAttributeResponse
@@ -26620,7 +26876,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyForwardEntry is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyForwardEntry</p>
+     * 
+     * @deprecated OpenAPI ModifyForwardEntry is deprecated, please use Vpc::2016-04-28::ModifyForwardEntry instead.
      * 
      * @param request ModifyForwardEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26697,7 +26956,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyForwardEntry is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyForwardEntry</p>
+     * 
+     * @deprecated OpenAPI ModifyForwardEntry is deprecated, please use Vpc::2016-04-28::ModifyForwardEntry instead.
      * 
      * @param request ModifyForwardEntryRequest
      * @return ModifyForwardEntryResponse
@@ -26710,7 +26972,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyHaVipAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyHaVipAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyHaVipAttribute is deprecated, please use Vpc::2016-04-28::ModifyHaVipAttribute instead.
      * 
      * @param request ModifyHaVipAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26771,7 +27036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyHaVipAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyHaVipAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyHaVipAttribute is deprecated, please use Vpc::2016-04-28::ModifyHaVipAttribute instead.
      * 
      * @param request ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
@@ -28942,7 +29210,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyPhysicalConnectionAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyPhysicalConnectionAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyPhysicalConnectionAttribute is deprecated, please use Vpc::2016-04-28::ModifyPhysicalConnectionAttribute instead.
      * 
      * @param request ModifyPhysicalConnectionAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29039,7 +29310,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyPhysicalConnectionAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyPhysicalConnectionAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyPhysicalConnectionAttribute is deprecated, please use Vpc::2016-04-28::ModifyPhysicalConnectionAttribute instead.
      * 
      * @param request ModifyPhysicalConnectionAttributeRequest
      * @return ModifyPhysicalConnectionAttributeResponse
@@ -29716,7 +29990,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyRouterInterfaceAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyRouterInterfaceAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyRouterInterfaceAttribute is deprecated, please use Vpc::2016-04-28::ModifyRouterInterfaceAttribute instead.
      * 
      * @param request ModifyRouterInterfaceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29797,7 +30074,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyRouterInterfaceAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyRouterInterfaceAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyRouterInterfaceAttribute is deprecated, please use Vpc::2016-04-28::ModifyRouterInterfaceAttribute instead.
      * 
      * @param request ModifyRouterInterfaceAttributeRequest
      * @return ModifyRouterInterfaceAttributeResponse
@@ -29810,7 +30090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyRouterInterfaceSpec is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyRouterInterfaceSpec</p>
+     * 
+     * @deprecated OpenAPI ModifyRouterInterfaceSpec is deprecated, please use Vpc::2016-04-28::ModifyRouterInterfaceSpec instead.
      * 
      * @param request ModifyRouterInterfaceSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29875,7 +30158,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyRouterInterfaceSpec is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyRouterInterfaceSpec</p>
+     * 
+     * @deprecated OpenAPI ModifyRouterInterfaceSpec is deprecated, please use Vpc::2016-04-28::ModifyRouterInterfaceSpec instead.
      * 
      * @param request ModifyRouterInterfaceSpecRequest
      * @return ModifyRouterInterfaceSpecResponse
@@ -30814,7 +31100,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVRouterAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVRouterAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVRouterAttribute is deprecated, please use Vpc::2016-04-28::ModifyVRouterAttribute instead.
      * 
      * @param request ModifyVRouterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30875,7 +31164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVRouterAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVRouterAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVRouterAttribute is deprecated, please use Vpc::2016-04-28::ModifyVRouterAttribute instead.
      * 
      * @param request ModifyVRouterAttributeRequest
      * @return ModifyVRouterAttributeResponse
@@ -30888,7 +31180,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVSwitchAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVSwitchAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVSwitchAttribute is deprecated, please use Vpc::2016-04-28::ModifyVSwitchAttribute instead.
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30949,7 +31244,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVSwitchAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVSwitchAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVSwitchAttribute is deprecated, please use Vpc::2016-04-28::ModifyVSwitchAttribute instead.
      * 
      * @param request ModifyVSwitchAttributeRequest
      * @return ModifyVSwitchAttributeResponse
@@ -30962,7 +31260,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVirtualBorderRouterAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVirtualBorderRouterAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVirtualBorderRouterAttribute is deprecated, please use Vpc::2016-04-28::ModifyVirtualBorderRouterAttribute instead.
      * 
      * @param request ModifyVirtualBorderRouterAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31051,7 +31352,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVirtualBorderRouterAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVirtualBorderRouterAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVirtualBorderRouterAttribute is deprecated, please use Vpc::2016-04-28::ModifyVirtualBorderRouterAttribute instead.
      * 
      * @param request ModifyVirtualBorderRouterAttributeRequest
      * @return ModifyVirtualBorderRouterAttributeResponse
@@ -31064,7 +31368,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVpcAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVpcAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVpcAttribute is deprecated, please use Vpc::2016-04-28::ModifyVpcAttribute instead.
      * 
      * @param request ModifyVpcAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31133,7 +31440,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVpcAttribute is deprecated
+     * <b>summary</b> : 
+     * <p>ModifyVpcAttribute</p>
+     * 
+     * @deprecated OpenAPI ModifyVpcAttribute is deprecated, please use Vpc::2016-04-28::ModifyVpcAttribute instead.
      * 
      * @param request ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
@@ -31854,7 +32164,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI RecoverVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>RecoverVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI RecoverVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::RecoverVirtualBorderRouter instead.
      * 
      * @param request RecoverVirtualBorderRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31915,7 +32228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI RecoverVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>RecoverVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI RecoverVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::RecoverVirtualBorderRouter instead.
      * 
      * @param request RecoverVirtualBorderRouterRequest
      * @return RecoverVirtualBorderRouterResponse
@@ -32334,7 +32650,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ReleaseEipAddress is deprecated
+     * <b>summary</b> : 
+     * <p>ReleaseEipAddress</p>
+     * 
+     * @deprecated OpenAPI ReleaseEipAddress is deprecated, please use Vpc::2016-04-28::ReleaseEipAddress instead.
      * 
      * @param request ReleaseEipAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32387,7 +32706,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI ReleaseEipAddress is deprecated
+     * <b>summary</b> : 
+     * <p>ReleaseEipAddress</p>
+     * 
+     * @deprecated OpenAPI ReleaseEipAddress is deprecated, please use Vpc::2016-04-28::ReleaseEipAddress instead.
      * 
      * @param request ReleaseEipAddressRequest
      * @return ReleaseEipAddressResponse
@@ -32464,7 +32786,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated
+     * <b>summary</b> : 
+     * <p>RemoveBandwidthPackageIps</p>
+     * 
+     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.
      * 
      * @param request RemoveBandwidthPackageIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32525,7 +32850,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated
+     * <b>summary</b> : 
+     * <p>RemoveBandwidthPackageIps</p>
+     * 
+     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.
      * 
      * @param request RemoveBandwidthPackageIpsRequest
      * @return RemoveBandwidthPackageIpsResponse
@@ -34219,6 +34547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Name", request.name);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ossOutputDelivery)) {
+            query.put("OssOutputDelivery", request.ossOutputDelivery);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
             query.put("OwnerAccount", request.ownerAccount);
         }
@@ -35782,7 +36114,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI TerminatePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>TerminatePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI TerminatePhysicalConnection is deprecated, please use Vpc::2016-04-28::TerminatePhysicalConnection instead.
      * 
      * @param request TerminatePhysicalConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35843,7 +36178,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI TerminatePhysicalConnection is deprecated
+     * <b>summary</b> : 
+     * <p>TerminatePhysicalConnection</p>
+     * 
+     * @deprecated OpenAPI TerminatePhysicalConnection is deprecated, please use Vpc::2016-04-28::TerminatePhysicalConnection instead.
      * 
      * @param request TerminatePhysicalConnectionRequest
      * @return TerminatePhysicalConnectionResponse
@@ -35856,7 +36194,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI TerminateVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>TerminateVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI TerminateVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::TerminateVirtualBorderRouter instead.
      * 
      * @param request TerminateVirtualBorderRouterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35917,7 +36258,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI TerminateVirtualBorderRouter is deprecated
+     * <b>summary</b> : 
+     * <p>TerminateVirtualBorderRouter</p>
+     * 
+     * @deprecated OpenAPI TerminateVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::TerminateVirtualBorderRouter instead.
      * 
      * @param request TerminateVirtualBorderRouterRequest
      * @return TerminateVirtualBorderRouterResponse
@@ -36112,7 +36456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI UnassociateEipAddress is deprecated
+     * <b>summary</b> : 
+     * <p>UnassociateEipAddress</p>
+     * 
+     * @deprecated OpenAPI UnassociateEipAddress is deprecated, please use Vpc::2016-04-28::UnassociateEipAddress instead.
      * 
      * @param request UnassociateEipAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36173,7 +36520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI UnassociateEipAddress is deprecated
+     * <b>summary</b> : 
+     * <p>UnassociateEipAddress</p>
+     * 
+     * @deprecated OpenAPI UnassociateEipAddress is deprecated, please use Vpc::2016-04-28::UnassociateEipAddress instead.
      * 
      * @param request UnassociateEipAddressRequest
      * @return UnassociateEipAddressResponse
@@ -36186,7 +36536,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI UnassociateHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>UnassociateHaVip</p>
+     * 
+     * @deprecated OpenAPI UnassociateHaVip is deprecated, please use Vpc::2016-04-28::UnassociateHaVip instead.
      * 
      * @param request UnassociateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36251,7 +36604,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @deprecated OpenAPI UnassociateHaVip is deprecated
+     * <b>summary</b> : 
+     * <p>UnassociateHaVip</p>
+     * 
+     * @deprecated OpenAPI UnassociateHaVip is deprecated, please use Vpc::2016-04-28::UnassociateHaVip instead.
      * 
      * @param request UnassociateHaVipRequest
      * @return UnassociateHaVipResponse
