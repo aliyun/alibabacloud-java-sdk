@@ -36,6 +36,13 @@ public class SmsConversionRequest extends TeaModel {
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>The mobile phone number of the recipient. You must add the dialing code to the beginning of the mobile phone number.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/158400.html">Dialing codes</a>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8521245567****</p>
+     */
     @NameInMap("To")
     public String to;
 

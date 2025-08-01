@@ -55,6 +55,9 @@ public class SendMessageToGlobeRequest extends TeaModel {
     @NameInMap("To")
     public String to;
 
+    @NameInMap("Type")
+    public String type;
+
     /**
      * <p>The validity period of the message. Unit: seconds.</p>
      * 
@@ -107,6 +110,14 @@ public class SendMessageToGlobeRequest extends TeaModel {
     }
     public String getTo() {
         return this.to;
+    }
+
+    public SendMessageToGlobeRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public SendMessageToGlobeRequest setValidityPeriod(Long validityPeriod) {

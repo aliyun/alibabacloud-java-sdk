@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     /**
-     * <p>The list of mobile phone numbers that failed to receive the message.</p>
+     * <p>The list of the mobile phone numbers that failed to receive the messages.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;931520581****&quot;,&quot;931530581****&quot;]</p>
@@ -14,7 +14,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     public String failedList;
 
     /**
-     * <p>The sender ID returned.</p>
+     * <p>The sender ID that was returned. The API operation returns the sender ID that you have specified in the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>Alicloud321</p>
@@ -23,7 +23,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     public String from;
 
     /**
-     * <p>The ID of the message.</p>
+     * <p>The ID of the sent message.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;123****&quot;,&quot;124****&quot;]</p>
@@ -41,7 +41,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status code. If OK is returned, the request is successful. For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/error-codes">Error codes</a>.</p>
+     * <p>The HTTP status code. If OK is returned, the request is successful. For more information, see <a href="https://help.aliyun.com/document_detail/180674.html">Error codes</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -59,7 +59,7 @@ public class BatchSendMessageToGlobeResponseBody extends TeaModel {
     public String responseDescription;
 
     /**
-     * <p>The number of mobile phone numbers that received the message.</p>
+     * <p>The number of sent messages.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

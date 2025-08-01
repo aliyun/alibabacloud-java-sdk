@@ -36,14 +36,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</p>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</li>
-     * <li>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</li>
+     * <li>You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</li>
+     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a small number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</li>
+     * <li>To ensure that messages can be sent on time, call the <a href="https://help.aliyun.com/document_detail/406238.html">SendMessageToGlobe</a> operation.</li>
      * <li>In each request, you can send messages to up to 1,000 mobile phone numbers.</li>
      * </ul>
-     * <h3><a href="#qps-"></a>QPS limit</h3>
-     * <p>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</p>
@@ -102,14 +101,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</p>
+     * <h2>Usage notes</h2>
      * <ul>
-     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a limited number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature in the SMS console.</li>
-     * <li>For time-sensitive related messages, we recommend that you use the <a href="https://www.alibabacloud.com/help/en/sms/developer-reference/api-dysmsapi-2018-05-01-batchsendmessagetoglobe">SendMessageToGlobe</a> operation to ensure that messages are delivered on time.</li>
+     * <li>You cannot call the BatchSendMessageToGlobe operation to send messages to the Chinese mainland.</li>
+     * <li>You can call the BatchSendMessageToGlobe operation to send notifications and promotional messages to a small number of mobile phone numbers at a time. To send messages to a large number of mobile phone numbers at a time, use the mass messaging feature of the SMS console.</li>
+     * <li>To ensure that messages can be sent on time, call the <a href="https://help.aliyun.com/document_detail/406238.html">SendMessageToGlobe</a> operation.</li>
      * <li>In each request, you can send messages to up to 1,000 mobile phone numbers.</li>
      * </ul>
-     * <h3><a href="#qps-"></a>QPS limit</h3>
-     * <p>You can call this operation only once per second. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message to multiple recipients in countries or regions outside the Chinese mainland.</p>
@@ -240,10 +238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <h3><a href="#"></a></h3>
      * <p>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</p>
      * <h3><a href="#qps-"></a>QPS limit</h3>
-     * <p>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call this operation up to 2,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message to regions outside the Chinese mainland.</p>
@@ -275,6 +273,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("To", request.to);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.validityPeriod)) {
             query.put("ValidityPeriod", request.validityPeriod);
         }
@@ -298,10 +300,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
+     * <h3><a href="#"></a></h3>
      * <p>The SendMessageToGlobe API operation does not support message delivery to the Chinese mainland.</p>
      * <h3><a href="#qps-"></a>QPS limit</h3>
-     * <p>You can call this operation up to 30 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
+     * <p>You can call this operation up to 2,000 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Sends a message to regions outside the Chinese mainland.</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class BatchSendMessageToGlobeRequest extends TeaModel {
     /**
+     * <p>The ID of the delivery channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>sms-djnfjn344</p>
      */
@@ -12,7 +14,7 @@ public class BatchSendMessageToGlobeRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The mobile phone number of the sender. You can also specify a sender ID. The sender ID can contain both letters and digits. If it does, the ID must be between 1 to 11 characters in length. If the sender ID contains only digits, it must be 1 to 15 characters in length.</p>
+     * <p>The mobile phone number of the sender. You can specify the sender ID when you call the API operation. The sender ID can contain only digits and letters. If the sender ID contains letters, it can be a maximum of 11 characters in length. If the sender ID contains only digits, it can be a maximum of 15 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>Alicloud321</p>
@@ -40,8 +42,8 @@ public class BatchSendMessageToGlobeRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The mobile phone numbers to which the message is sent. You must add the dialing code to the beginning of each mobile phone number.</p>
-     * <p>For more information, see <a href="https://www.alibabacloud.com/help/en/short-message-service/latest/dialing-codes">Dialing codes</a>.</p>
+     * <p>The mobile phone number of the recipient. You must add the dialing code to the beginning of each mobile phone number.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/158400.html">Dialing codes</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +69,7 @@ public class BatchSendMessageToGlobeRequest extends TeaModel {
      * <p>The validity period of the message. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>600</p>
      */
     @NameInMap("ValidityPeriod")
     public Long validityPeriod;
