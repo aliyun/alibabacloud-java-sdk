@@ -10,6 +10,9 @@ public class CreateDemandPlanV2Request extends TeaModel {
     @NameInMap("accountId")
     public String accountId;
 
+    @NameInMap("demandType")
+    public String demandType;
+
     @NameInMap("description")
     public String description;
 
@@ -48,6 +51,14 @@ public class CreateDemandPlanV2Request extends TeaModel {
     }
     public String getAccountId() {
         return this.accountId;
+    }
+
+    public CreateDemandPlanV2Request setDemandType(String demandType) {
+        this.demandType = demandType;
+        return this;
+    }
+    public String getDemandType() {
+        return this.demandType;
     }
 
     public CreateDemandPlanV2Request setDescription(String description) {

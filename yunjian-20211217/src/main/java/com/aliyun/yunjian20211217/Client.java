@@ -44,6 +44,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("accountId", request.accountId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.demandType)) {
+            body.put("demandType", request.demandType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }
@@ -125,6 +129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountId)) {
             body.put("accountId", request.accountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.demandType)) {
+            body.put("demandType", request.demandType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
