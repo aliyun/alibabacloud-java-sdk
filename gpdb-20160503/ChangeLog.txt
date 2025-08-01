@@ -1,3 +1,17 @@
+2025-08-01 Version: 3.9.0
+- Support API CreateSupabaseProject.
+- Support API DeleteSupabaseProject.
+- Support API GetSupabaseProject.
+- Support API GetSupabaseProjectApiKeys.
+- Support API GetSupabaseProjectDashboardAccount.
+- Support API ListSupabaseProjects.
+- Support API ModifySupabaseProjectSecurityIps.
+- Support API ResetSupabaseProjectPassword.
+- Update API DescribeDocument: add response parameters Body.DocumentLoaderResultFileUrl.
+- Update API GetUploadDocumentJob: add response parameters Body.ChunkResult.DocumentLoaderResultFileUrl.
+- Update API UploadDocumentAsync: add request parameters VlEnhance.
+
+
 2025-06-17 Version: 3.7.2
 - Update API DescribeDBInstanceAttribute: add response parameters Body.Items.$.InstanceSpec.
 

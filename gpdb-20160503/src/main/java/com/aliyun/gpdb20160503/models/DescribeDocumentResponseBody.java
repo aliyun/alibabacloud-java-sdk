@@ -31,6 +31,9 @@ public class DescribeDocumentResponseBody extends TeaModel {
     @NameInMap("DocumentLoader")
     public String documentLoader;
 
+    @NameInMap("DocumentLoaderResultFileUrl")
+    public String documentLoaderResultFileUrl;
+
     /**
      * <p>File extension.</p>
      * 
@@ -179,6 +182,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
     }
     public String getDocumentLoader() {
         return this.documentLoader;
+    }
+
+    public DescribeDocumentResponseBody setDocumentLoaderResultFileUrl(String documentLoaderResultFileUrl) {
+        this.documentLoaderResultFileUrl = documentLoaderResultFileUrl;
+        return this;
+    }
+    public String getDocumentLoaderResultFileUrl() {
+        return this.documentLoaderResultFileUrl;
     }
 
     public DescribeDocumentResponseBody setFileExt(String fileExt) {

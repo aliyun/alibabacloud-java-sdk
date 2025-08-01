@@ -116,6 +116,9 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         @NameInMap("ChunkFileUrl")
         public String chunkFileUrl;
 
+        @NameInMap("DocumentLoaderResultFileUrl")
+        public String documentLoaderResultFileUrl;
+
         /**
          * <p>The URL of the file that does not contain metadata after chunking. The validity period of the URL is 2 hours. The file is in the TXT format. Each line is a chunk. The file can be easily used for embedding.</p>
          * 
@@ -136,6 +139,14 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
         public String getChunkFileUrl() {
             return this.chunkFileUrl;
+        }
+
+        public GetUploadDocumentJobResponseBodyChunkResult setDocumentLoaderResultFileUrl(String documentLoaderResultFileUrl) {
+            this.documentLoaderResultFileUrl = documentLoaderResultFileUrl;
+            return this;
+        }
+        public String getDocumentLoaderResultFileUrl() {
+            return this.documentLoaderResultFileUrl;
         }
 
         public GetUploadDocumentJobResponseBodyChunkResult setPlainChunkFileUrl(String plainChunkFileUrl) {

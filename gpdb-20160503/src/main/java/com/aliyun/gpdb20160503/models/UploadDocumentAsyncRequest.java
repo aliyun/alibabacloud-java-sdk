@@ -185,6 +185,9 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     @NameInMap("TextSplitterName")
     public String textSplitterName;
 
+    @NameInMap("VlEnhance")
+    public Boolean vlEnhance;
+
     /**
      * <p>Specifies whether to enable title enhancement.</p>
      * <blockquote>
@@ -320,6 +323,14 @@ public class UploadDocumentAsyncRequest extends TeaModel {
     }
     public String getTextSplitterName() {
         return this.textSplitterName;
+    }
+
+    public UploadDocumentAsyncRequest setVlEnhance(Boolean vlEnhance) {
+        this.vlEnhance = vlEnhance;
+        return this;
+    }
+    public Boolean getVlEnhance() {
+        return this.vlEnhance;
     }
 
     public UploadDocumentAsyncRequest setZhTitleEnhance(Boolean zhTitleEnhance) {
