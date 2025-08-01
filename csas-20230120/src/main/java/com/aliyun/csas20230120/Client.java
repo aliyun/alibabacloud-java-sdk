@@ -969,6 +969,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.imageControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageControl, "ImageControl", "json");
         }
 
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            query.put("comment", request.comment);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.height)) {
             body.put("Height", request.height);
@@ -1007,6 +1012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -1151,9 +1157,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.csvControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.csvControl, "CsvControl", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.imageExtractParamsOpenApi)) {
+            request.imageExtractParamsOpenApiShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageExtractParamsOpenApi, "ImageExtractParamsOpenApi", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.csvControlShrink)) {
             query.put("CsvControl", request.csvControlShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageExtractParamsOpenApiShrink)) {
+            query.put("ImageExtractParamsOpenApi", request.imageExtractParamsOpenApiShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.isClientEmbed)) {

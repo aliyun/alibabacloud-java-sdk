@@ -43,6 +43,9 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    @NameInMap("ImageExtractParamsOpenApi")
+    public CreateWmExtractTaskRequestImageExtractParamsOpenApi imageExtractParamsOpenApi;
+
     @NameInMap("IsClientEmbed")
     public Boolean isClientEmbed;
 
@@ -138,6 +141,14 @@ public class CreateWmExtractTaskRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public CreateWmExtractTaskRequest setImageExtractParamsOpenApi(CreateWmExtractTaskRequestImageExtractParamsOpenApi imageExtractParamsOpenApi) {
+        this.imageExtractParamsOpenApi = imageExtractParamsOpenApi;
+        return this;
+    }
+    public CreateWmExtractTaskRequestImageExtractParamsOpenApi getImageExtractParamsOpenApi() {
+        return this.imageExtractParamsOpenApi;
     }
 
     public CreateWmExtractTaskRequest setIsClientEmbed(Boolean isClientEmbed) {
@@ -286,6 +297,25 @@ public class CreateWmExtractTaskRequest extends TeaModel {
         }
         public String getTimeFormat() {
             return this.timeFormat;
+        }
+
+    }
+
+    public static class CreateWmExtractTaskRequestImageExtractParamsOpenApi extends TeaModel {
+        @NameInMap("SrcLogoBase64")
+        public String srcLogoBase64;
+
+        public static CreateWmExtractTaskRequestImageExtractParamsOpenApi build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmExtractTaskRequestImageExtractParamsOpenApi self = new CreateWmExtractTaskRequestImageExtractParamsOpenApi();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmExtractTaskRequestImageExtractParamsOpenApi setSrcLogoBase64(String srcLogoBase64) {
+            this.srcLogoBase64 = srcLogoBase64;
+            return this;
+        }
+        public String getSrcLogoBase64() {
+            return this.srcLogoBase64;
         }
 
     }

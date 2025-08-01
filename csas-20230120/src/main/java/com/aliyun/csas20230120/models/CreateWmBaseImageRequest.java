@@ -73,6 +73,9 @@ public class CreateWmBaseImageRequest extends TeaModel {
     @NameInMap("WmType")
     public String wmType;
 
+    @NameInMap("comment")
+    public String comment;
+
     public static CreateWmBaseImageRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWmBaseImageRequest self = new CreateWmBaseImageRequest();
         return TeaModel.build(map, self);
@@ -150,12 +153,78 @@ public class CreateWmBaseImageRequest extends TeaModel {
         return this.wmType;
     }
 
+    public CreateWmBaseImageRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
+    }
+
+    public static class CreateWmBaseImageRequestImageControlLogoVisibleControlMargin extends TeaModel {
+        @NameInMap("Bottom")
+        public Float bottom;
+
+        @NameInMap("Left")
+        public Float left;
+
+        @NameInMap("Right")
+        public Float right;
+
+        @NameInMap("Top")
+        public Float top;
+
+        public static CreateWmBaseImageRequestImageControlLogoVisibleControlMargin build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmBaseImageRequestImageControlLogoVisibleControlMargin self = new CreateWmBaseImageRequestImageControlLogoVisibleControlMargin();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin setBottom(Float bottom) {
+            this.bottom = bottom;
+            return this;
+        }
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin setLeft(Float left) {
+            this.left = left;
+            return this;
+        }
+        public Float getLeft() {
+            return this.left;
+        }
+
+        public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin setRight(Float right) {
+            this.right = right;
+            return this;
+        }
+        public Float getRight() {
+            return this.right;
+        }
+
+        public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin setTop(Float top) {
+            this.top = top;
+            return this;
+        }
+        public Float getTop() {
+            return this.top;
+        }
+
+    }
+
     public static class CreateWmBaseImageRequestImageControlLogoVisibleControl extends TeaModel {
         @NameInMap("Angle")
         public Long angle;
 
+        @NameInMap("Enhance")
+        public Boolean enhance;
+
         @NameInMap("LogoBase64")
         public String logoBase64;
+
+        @NameInMap("Margin")
+        public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin margin;
 
         @NameInMap("Mode")
         public String mode;
@@ -197,12 +266,28 @@ public class CreateWmBaseImageRequest extends TeaModel {
             return this.angle;
         }
 
+        public CreateWmBaseImageRequestImageControlLogoVisibleControl setEnhance(Boolean enhance) {
+            this.enhance = enhance;
+            return this;
+        }
+        public Boolean getEnhance() {
+            return this.enhance;
+        }
+
         public CreateWmBaseImageRequestImageControlLogoVisibleControl setLogoBase64(String logoBase64) {
             this.logoBase64 = logoBase64;
             return this;
         }
         public String getLogoBase64() {
             return this.logoBase64;
+        }
+
+        public CreateWmBaseImageRequestImageControlLogoVisibleControl setMargin(CreateWmBaseImageRequestImageControlLogoVisibleControlMargin margin) {
+            this.margin = margin;
+            return this;
+        }
+        public CreateWmBaseImageRequestImageControlLogoVisibleControlMargin getMargin() {
+            return this.margin;
         }
 
         public CreateWmBaseImageRequestImageControlLogoVisibleControl setMode(String mode) {
@@ -279,6 +364,58 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
     }
 
+    public static class CreateWmBaseImageRequestImageControlTextVisibleControlMargin extends TeaModel {
+        @NameInMap("Bottom")
+        public Float bottom;
+
+        @NameInMap("Left")
+        public Float left;
+
+        @NameInMap("Right")
+        public Float right;
+
+        @NameInMap("Top")
+        public Float top;
+
+        public static CreateWmBaseImageRequestImageControlTextVisibleControlMargin build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmBaseImageRequestImageControlTextVisibleControlMargin self = new CreateWmBaseImageRequestImageControlTextVisibleControlMargin();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmBaseImageRequestImageControlTextVisibleControlMargin setBottom(Float bottom) {
+            this.bottom = bottom;
+            return this;
+        }
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        public CreateWmBaseImageRequestImageControlTextVisibleControlMargin setLeft(Float left) {
+            this.left = left;
+            return this;
+        }
+        public Float getLeft() {
+            return this.left;
+        }
+
+        public CreateWmBaseImageRequestImageControlTextVisibleControlMargin setRight(Float right) {
+            this.right = right;
+            return this;
+        }
+        public Float getRight() {
+            return this.right;
+        }
+
+        public CreateWmBaseImageRequestImageControlTextVisibleControlMargin setTop(Float top) {
+            this.top = top;
+            return this;
+        }
+        public Float getTop() {
+            return this.top;
+        }
+
+    }
+
     public static class CreateWmBaseImageRequestImageControlTextVisibleControl extends TeaModel {
         @NameInMap("Angle")
         public Long angle;
@@ -288,6 +425,9 @@ public class CreateWmBaseImageRequest extends TeaModel {
 
         @NameInMap("FontSize")
         public Long fontSize;
+
+        @NameInMap("Margin")
+        public CreateWmBaseImageRequestImageControlTextVisibleControlMargin margin;
 
         @NameInMap("Mode")
         public String mode;
@@ -346,6 +486,14 @@ public class CreateWmBaseImageRequest extends TeaModel {
         }
         public Long getFontSize() {
             return this.fontSize;
+        }
+
+        public CreateWmBaseImageRequestImageControlTextVisibleControl setMargin(CreateWmBaseImageRequestImageControlTextVisibleControlMargin margin) {
+            this.margin = margin;
+            return this;
+        }
+        public CreateWmBaseImageRequestImageControlTextVisibleControlMargin getMargin() {
+            return this.margin;
         }
 
         public CreateWmBaseImageRequestImageControlTextVisibleControl setMode(String mode) {

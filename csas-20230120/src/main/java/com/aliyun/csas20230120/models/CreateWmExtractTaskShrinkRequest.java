@@ -43,6 +43,9 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    @NameInMap("ImageExtractParamsOpenApi")
+    public String imageExtractParamsOpenApiShrink;
+
     @NameInMap("IsClientEmbed")
     public Boolean isClientEmbed;
 
@@ -138,6 +141,14 @@ public class CreateWmExtractTaskShrinkRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public CreateWmExtractTaskShrinkRequest setImageExtractParamsOpenApiShrink(String imageExtractParamsOpenApiShrink) {
+        this.imageExtractParamsOpenApiShrink = imageExtractParamsOpenApiShrink;
+        return this;
+    }
+    public String getImageExtractParamsOpenApiShrink() {
+        return this.imageExtractParamsOpenApiShrink;
     }
 
     public CreateWmExtractTaskShrinkRequest setIsClientEmbed(Boolean isClientEmbed) {

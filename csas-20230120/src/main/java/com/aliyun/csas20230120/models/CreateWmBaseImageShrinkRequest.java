@@ -73,6 +73,9 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     @NameInMap("WmType")
     public String wmType;
 
+    @NameInMap("comment")
+    public String comment;
+
     public static CreateWmBaseImageShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateWmBaseImageShrinkRequest self = new CreateWmBaseImageShrinkRequest();
         return TeaModel.build(map, self);
@@ -148,6 +151,14 @@ public class CreateWmBaseImageShrinkRequest extends TeaModel {
     }
     public String getWmType() {
         return this.wmType;
+    }
+
+    public CreateWmBaseImageShrinkRequest setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
     }
 
 }
