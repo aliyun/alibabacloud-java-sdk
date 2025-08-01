@@ -232,6 +232,112 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>图片检索</p>
+     * 
+     * @param tmpReq SearchImageRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SearchImageResponse
+     */
+    public SearchImageResponse searchImageWithOptions(SearchImageRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SearchImageShrinkRequest request = new SearchImageShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "Tags", "simple");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.colorHex)) {
+            query.put("ColorHex", request.colorHex);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hasPerson)) {
+            query.put("HasPerson", request.hasPerson);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageCategory)) {
+            query.put("ImageCategory", request.imageCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageRatio)) {
+            query.put("ImageRatio", request.imageRatio);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxHeight)) {
+            query.put("MaxHeight", request.maxHeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxWidth)) {
+            query.put("MaxWidth", request.maxWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minHeight)) {
+            query.put("MinHeight", request.minHeight);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minWidth)) {
+            query.put("MinWidth", request.minWidth);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ossKey)) {
+            query.put("OssKey", request.ossKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.start)) {
+            query.put("Start", request.start);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("Tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SearchImage"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SearchImageResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>图片检索</p>
+     * 
+     * @param request SearchImageRequest
+     * @return SearchImageResponse
+     */
+    public SearchImageResponse searchImage(SearchImageRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.searchImageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>合作伙伴同步应用实例</p>
      * 
      * @param tmpReq SyncAppInstanceForPartnerRequest
