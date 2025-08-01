@@ -14,6 +14,12 @@ public class AsyncCreateClipsTaskResponseBody extends TeaModel {
     @NameInMap("Data")
     public AsyncCreateClipsTaskResponseBodyData data;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -22,6 +28,9 @@ public class AsyncCreateClipsTaskResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static AsyncCreateClipsTaskResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AsyncCreateClipsTaskResponseBody self = new AsyncCreateClipsTaskResponseBody();
@@ -44,12 +53,36 @@ public class AsyncCreateClipsTaskResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AsyncCreateClipsTaskResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public AsyncCreateClipsTaskResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public AsyncCreateClipsTaskResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AsyncCreateClipsTaskResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class AsyncCreateClipsTaskResponseBodyData extends TeaModel {

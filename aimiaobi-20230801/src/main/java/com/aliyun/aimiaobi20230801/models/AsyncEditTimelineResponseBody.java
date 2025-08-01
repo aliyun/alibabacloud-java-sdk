@@ -14,6 +14,12 @@ public class AsyncEditTimelineResponseBody extends TeaModel {
     @NameInMap("Data")
     public AsyncEditTimelineResponseBodyData data;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -22,6 +28,9 @@ public class AsyncEditTimelineResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static AsyncEditTimelineResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AsyncEditTimelineResponseBody self = new AsyncEditTimelineResponseBody();
@@ -44,12 +53,36 @@ public class AsyncEditTimelineResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AsyncEditTimelineResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public AsyncEditTimelineResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public AsyncEditTimelineResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AsyncEditTimelineResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class AsyncEditTimelineResponseBodyData extends TeaModel {

@@ -14,6 +14,12 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
     @NameInMap("Data")
     public AsyncUploadVideoResponseBodyData data;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -22,6 +28,9 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static AsyncUploadVideoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         AsyncUploadVideoResponseBody self = new AsyncUploadVideoResponseBody();
@@ -44,12 +53,36 @@ public class AsyncUploadVideoResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AsyncUploadVideoResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public AsyncUploadVideoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public AsyncUploadVideoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public AsyncUploadVideoResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class AsyncUploadVideoResponseBodyDataVideoInfos extends TeaModel {

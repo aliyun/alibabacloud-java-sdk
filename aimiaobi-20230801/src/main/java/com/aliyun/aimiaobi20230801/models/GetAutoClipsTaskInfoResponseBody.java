@@ -14,6 +14,12 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAutoClipsTaskInfoResponseBodyData data;
 
+    @NameInMap("HttpStatusCode")
+    public Integer httpStatusCode;
+
+    @NameInMap("Message")
+    public String message;
+
     /**
      * <p>Id of the request</p>
      * 
@@ -22,6 +28,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
      */
     @NameInMap("RequestId")
     public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
 
     public static GetAutoClipsTaskInfoResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetAutoClipsTaskInfoResponseBody self = new GetAutoClipsTaskInfoResponseBody();
@@ -44,12 +53,36 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         return this.data;
     }
 
+    public GetAutoClipsTaskInfoResponseBody setHttpStatusCode(Integer httpStatusCode) {
+        this.httpStatusCode = httpStatusCode;
+        return this;
+    }
+    public Integer getHttpStatusCode() {
+        return this.httpStatusCode;
+    }
+
+    public GetAutoClipsTaskInfoResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public GetAutoClipsTaskInfoResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public GetAutoClipsTaskInfoResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static class GetAutoClipsTaskInfoResponseBodyDataColorWords extends TeaModel {
