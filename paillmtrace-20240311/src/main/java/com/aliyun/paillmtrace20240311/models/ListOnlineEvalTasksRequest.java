@@ -51,6 +51,12 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SortBy")
+    public String sortBy;
+
+    @NameInMap("SortOrder")
+    public String sortOrder;
+
     public static ListOnlineEvalTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOnlineEvalTasksRequest self = new ListOnlineEvalTasksRequest();
         return TeaModel.build(map, self);
@@ -94,6 +100,22 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOnlineEvalTasksRequest setSortBy(String sortBy) {
+        this.sortBy = sortBy;
+        return this;
+    }
+    public String getSortBy() {
+        return this.sortBy;
+    }
+
+    public ListOnlineEvalTasksRequest setSortOrder(String sortOrder) {
+        this.sortOrder = sortOrder;
+        return this;
+    }
+    public String getSortOrder() {
+        return this.sortOrder;
     }
 
 }
