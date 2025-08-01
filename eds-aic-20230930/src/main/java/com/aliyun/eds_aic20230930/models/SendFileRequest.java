@@ -11,6 +11,9 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
+    @NameInMap("AutoInstall")
+    public Boolean autoInstall;
+
     /**
      * <p>The path to which you want to upload the pushed file in the cloud phone instance.</p>
      * <p>This parameter is required.</p>
@@ -79,6 +82,14 @@ public class SendFileRequest extends TeaModel {
     }
     public java.util.List<String> getAndroidInstanceIdList() {
         return this.androidInstanceIdList;
+    }
+
+    public SendFileRequest setAutoInstall(Boolean autoInstall) {
+        this.autoInstall = autoInstall;
+        return this;
+    }
+    public Boolean getAutoInstall() {
+        return this.autoInstall;
     }
 
     public SendFileRequest setSourceFilePath(String sourceFilePath) {

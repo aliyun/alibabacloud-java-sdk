@@ -3173,6 +3173,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>安装监控插件</p>
+     * 
+     * @param request InstallMonitorAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return InstallMonitorAgentResponse
+     */
+    public InstallMonitorAgentResponse installMonitorAgentWithOptions(InstallMonitorAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            body.put("SaleMode", request.saleMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "InstallMonitorAgent"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new InstallMonitorAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>安装监控插件</p>
+     * 
+     * @param request InstallMonitorAgentRequest
+     * @return InstallMonitorAgentResponse
+     */
+    public InstallMonitorAgentResponse installMonitorAgent(InstallMonitorAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.installMonitorAgentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries policies.</p>
      * 
      * @param request ListPolicyGroupsRequest
@@ -4213,6 +4261,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AndroidInstanceIdList", request.androidInstanceIdList);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.autoInstall)) {
+            query.put("AutoInstall", request.autoInstall);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.sourceFilePath)) {
             query.put("SourceFilePath", request.sourceFilePath);
         }
@@ -4541,6 +4593,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UninstallAppResponse uninstallApp(UninstallAppRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.uninstallAppWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>卸载监控插件</p>
+     * 
+     * @param request UninstallMonitorAgentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UninstallMonitorAgentResponse
+     */
+    public UninstallMonitorAgentResponse uninstallMonitorAgentWithOptions(UninstallMonitorAgentRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.androidInstanceIds)) {
+            body.put("AndroidInstanceIds", request.androidInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.saleMode)) {
+            body.put("SaleMode", request.saleMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UninstallMonitorAgent"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UninstallMonitorAgentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>卸载监控插件</p>
+     * 
+     * @param request UninstallMonitorAgentRequest
+     * @return UninstallMonitorAgentResponse
+     */
+    public UninstallMonitorAgentResponse uninstallMonitorAgent(UninstallMonitorAgentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.uninstallMonitorAgentWithOptions(request, runtime);
     }
 
     /**
