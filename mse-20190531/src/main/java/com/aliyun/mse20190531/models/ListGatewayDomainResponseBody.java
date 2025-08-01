@@ -137,6 +137,36 @@ public class ListGatewayDomainResponseBody extends TeaModel {
 
     }
 
+    public static class ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig extends TeaModel {
+        @NameInMap("ConfigType")
+        public String configType;
+
+        @NameInMap("TlsCipherSuites")
+        public java.util.List<String> tlsCipherSuites;
+
+        public static ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig build(java.util.Map<String, ?> map) throws Exception {
+            ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig self = new ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig setConfigType(String configType) {
+            this.configType = configType;
+            return this;
+        }
+        public String getConfigType() {
+            return this.configType;
+        }
+
+        public ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig setTlsCipherSuites(java.util.List<String> tlsCipherSuites) {
+            this.tlsCipherSuites = tlsCipherSuites;
+            return this;
+        }
+        public java.util.List<String> getTlsCipherSuites() {
+            return this.tlsCipherSuites;
+        }
+
+    }
+
     public static class ListGatewayDomainResponseBodyData extends TeaModel {
         /**
          * <p>The time when the certificate expires.</p>
@@ -258,6 +288,9 @@ public class ListGatewayDomainResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public Integer status;
+
+        @NameInMap("TlsCipherSuitesConfig")
+        public ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig tlsCipherSuitesConfig;
 
         /**
          * <p>The maximum version of Transport Layer Security (TLS).</p>
@@ -397,6 +430,14 @@ public class ListGatewayDomainResponseBody extends TeaModel {
         }
         public Integer getStatus() {
             return this.status;
+        }
+
+        public ListGatewayDomainResponseBodyData setTlsCipherSuitesConfig(ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig tlsCipherSuitesConfig) {
+            this.tlsCipherSuitesConfig = tlsCipherSuitesConfig;
+            return this;
+        }
+        public ListGatewayDomainResponseBodyDataTlsCipherSuitesConfig getTlsCipherSuitesConfig() {
+            return this.tlsCipherSuitesConfig;
         }
 
         public ListGatewayDomainResponseBodyData setTlsMax(String tlsMax) {

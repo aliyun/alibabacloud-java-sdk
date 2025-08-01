@@ -653,12 +653,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Associates a domain name with a gateway.</p>
      * 
-     * @param request AddGatewayDomainRequest
+     * @param tmpReq AddGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddGatewayDomainResponse
      */
-    public AddGatewayDomainResponse addGatewayDomainWithOptions(AddGatewayDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AddGatewayDomainResponse addGatewayDomainWithOptions(AddGatewayDomainRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddGatewayDomainShrinkRequest request = new AddGatewayDomainShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tlsCipherSuitesConfigJSON)) {
+            request.tlsCipherSuitesConfigJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -686,6 +692,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
             query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsCipherSuitesConfigJSONShrink)) {
+            query.put("TlsCipherSuitesConfigJSON", request.tlsCipherSuitesConfigJSONShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tlsMax)) {
@@ -3331,6 +3341,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePluginConfigResponse createPluginConfig(CreatePluginConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPluginConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建行为管理</p>
+     * 
+     * @param request CreateSentinelBlockFallbackDefinitionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSentinelBlockFallbackDefinitionResponse
+     */
+    public CreateSentinelBlockFallbackDefinitionResponse createSentinelBlockFallbackDefinitionWithOptions(CreateSentinelBlockFallbackDefinitionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
+            query.put("AppName", request.appName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fallbackBehavior)) {
+            query.put("FallbackBehavior", request.fallbackBehavior);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceClassification)) {
+            query.put("ResourceClassification", request.resourceClassification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scenario)) {
+            query.put("Scenario", request.scenario);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSentinelBlockFallbackDefinition"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSentinelBlockFallbackDefinitionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建行为管理</p>
+     * 
+     * @param request CreateSentinelBlockFallbackDefinitionRequest
+     * @return CreateSentinelBlockFallbackDefinitionResponse
+     */
+    public CreateSentinelBlockFallbackDefinitionResponse createSentinelBlockFallbackDefinition(CreateSentinelBlockFallbackDefinitionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createSentinelBlockFallbackDefinitionWithOptions(request, runtime);
     }
 
     /**
@@ -13885,12 +13979,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the information about the domain name associated with a gateway.</p>
      * 
-     * @param request UpdateGatewayDomainRequest
+     * @param tmpReq UpdateGatewayDomainRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateGatewayDomainResponse
      */
-    public UpdateGatewayDomainResponse updateGatewayDomainWithOptions(UpdateGatewayDomainRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateGatewayDomainResponse updateGatewayDomainWithOptions(UpdateGatewayDomainRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateGatewayDomainShrinkRequest request = new UpdateGatewayDomainShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tlsCipherSuitesConfigJSON)) {
+            request.tlsCipherSuitesConfigJSONShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tlsCipherSuitesConfigJSON, "TlsCipherSuitesConfigJSON", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
             query.put("AcceptLanguage", request.acceptLanguage);
@@ -13918,6 +14018,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.protocol)) {
             query.put("Protocol", request.protocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tlsCipherSuitesConfigJSONShrink)) {
+            query.put("TlsCipherSuitesConfigJSON", request.tlsCipherSuitesConfigJSONShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tlsMax)) {

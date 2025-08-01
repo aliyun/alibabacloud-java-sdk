@@ -3,7 +3,7 @@ package com.aliyun.mse20190531.models;
 
 import com.aliyun.tea.*;
 
-public class AddGatewayDomainRequest extends TeaModel {
+public class AddGatewayDomainShrinkRequest extends TeaModel {
     /**
      * <p>The language of the response. Valid values:</p>
      * <ul>
@@ -81,7 +81,7 @@ public class AddGatewayDomainRequest extends TeaModel {
     public String protocol;
 
     @NameInMap("TlsCipherSuitesConfigJSON")
-    public AddGatewayDomainRequestTlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON;
+    public String tlsCipherSuitesConfigJSONShrink;
 
     /**
      * <p>The maximum version of Transport Layer Security (TLS).</p>
@@ -101,12 +101,12 @@ public class AddGatewayDomainRequest extends TeaModel {
     @NameInMap("TlsMin")
     public String tlsMin;
 
-    public static AddGatewayDomainRequest build(java.util.Map<String, ?> map) throws Exception {
-        AddGatewayDomainRequest self = new AddGatewayDomainRequest();
+    public static AddGatewayDomainShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddGatewayDomainShrinkRequest self = new AddGatewayDomainShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddGatewayDomainRequest setAcceptLanguage(String acceptLanguage) {
+    public AddGatewayDomainShrinkRequest setAcceptLanguage(String acceptLanguage) {
         this.acceptLanguage = acceptLanguage;
         return this;
     }
@@ -114,7 +114,7 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.acceptLanguage;
     }
 
-    public AddGatewayDomainRequest setCertIdentifier(String certIdentifier) {
+    public AddGatewayDomainShrinkRequest setCertIdentifier(String certIdentifier) {
         this.certIdentifier = certIdentifier;
         return this;
     }
@@ -122,7 +122,7 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.certIdentifier;
     }
 
-    public AddGatewayDomainRequest setGatewayUniqueId(String gatewayUniqueId) {
+    public AddGatewayDomainShrinkRequest setGatewayUniqueId(String gatewayUniqueId) {
         this.gatewayUniqueId = gatewayUniqueId;
         return this;
     }
@@ -130,7 +130,7 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.gatewayUniqueId;
     }
 
-    public AddGatewayDomainRequest setHttp2(String http2) {
+    public AddGatewayDomainShrinkRequest setHttp2(String http2) {
         this.http2 = http2;
         return this;
     }
@@ -138,7 +138,7 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.http2;
     }
 
-    public AddGatewayDomainRequest setMustHttps(Boolean mustHttps) {
+    public AddGatewayDomainShrinkRequest setMustHttps(Boolean mustHttps) {
         this.mustHttps = mustHttps;
         return this;
     }
@@ -146,7 +146,7 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.mustHttps;
     }
 
-    public AddGatewayDomainRequest setName(String name) {
+    public AddGatewayDomainShrinkRequest setName(String name) {
         this.name = name;
         return this;
     }
@@ -154,7 +154,7 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.name;
     }
 
-    public AddGatewayDomainRequest setProtocol(String protocol) {
+    public AddGatewayDomainShrinkRequest setProtocol(String protocol) {
         this.protocol = protocol;
         return this;
     }
@@ -162,15 +162,15 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.protocol;
     }
 
-    public AddGatewayDomainRequest setTlsCipherSuitesConfigJSON(AddGatewayDomainRequestTlsCipherSuitesConfigJSON tlsCipherSuitesConfigJSON) {
-        this.tlsCipherSuitesConfigJSON = tlsCipherSuitesConfigJSON;
+    public AddGatewayDomainShrinkRequest setTlsCipherSuitesConfigJSONShrink(String tlsCipherSuitesConfigJSONShrink) {
+        this.tlsCipherSuitesConfigJSONShrink = tlsCipherSuitesConfigJSONShrink;
         return this;
     }
-    public AddGatewayDomainRequestTlsCipherSuitesConfigJSON getTlsCipherSuitesConfigJSON() {
-        return this.tlsCipherSuitesConfigJSON;
+    public String getTlsCipherSuitesConfigJSONShrink() {
+        return this.tlsCipherSuitesConfigJSONShrink;
     }
 
-    public AddGatewayDomainRequest setTlsMax(String tlsMax) {
+    public AddGatewayDomainShrinkRequest setTlsMax(String tlsMax) {
         this.tlsMax = tlsMax;
         return this;
     }
@@ -178,42 +178,12 @@ public class AddGatewayDomainRequest extends TeaModel {
         return this.tlsMax;
     }
 
-    public AddGatewayDomainRequest setTlsMin(String tlsMin) {
+    public AddGatewayDomainShrinkRequest setTlsMin(String tlsMin) {
         this.tlsMin = tlsMin;
         return this;
     }
     public String getTlsMin() {
         return this.tlsMin;
-    }
-
-    public static class AddGatewayDomainRequestTlsCipherSuitesConfigJSON extends TeaModel {
-        @NameInMap("ConfigType")
-        public String configType;
-
-        @NameInMap("TlsCipherSuites")
-        public java.util.List<String> tlsCipherSuites;
-
-        public static AddGatewayDomainRequestTlsCipherSuitesConfigJSON build(java.util.Map<String, ?> map) throws Exception {
-            AddGatewayDomainRequestTlsCipherSuitesConfigJSON self = new AddGatewayDomainRequestTlsCipherSuitesConfigJSON();
-            return TeaModel.build(map, self);
-        }
-
-        public AddGatewayDomainRequestTlsCipherSuitesConfigJSON setConfigType(String configType) {
-            this.configType = configType;
-            return this;
-        }
-        public String getConfigType() {
-            return this.configType;
-        }
-
-        public AddGatewayDomainRequestTlsCipherSuitesConfigJSON setTlsCipherSuites(java.util.List<String> tlsCipherSuites) {
-            this.tlsCipherSuites = tlsCipherSuites;
-            return this;
-        }
-        public java.util.List<String> getTlsCipherSuites() {
-            return this.tlsCipherSuites;
-        }
-
     }
 
 }
