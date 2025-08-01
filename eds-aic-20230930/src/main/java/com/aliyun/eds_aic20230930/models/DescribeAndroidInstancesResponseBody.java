@@ -613,6 +613,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("RenderingType")
         public String renderingType;
 
+        @NameInMap("ServerStatus")
+        public String serverStatus;
+
         @NameInMap("ServerType")
         public String serverType;
 
@@ -971,6 +974,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getRenderingType() {
             return this.renderingType;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setServerStatus(String serverStatus) {
+            this.serverStatus = serverStatus;
+            return this;
+        }
+        public String getServerStatus() {
+            return this.serverStatus;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setServerType(String serverType) {
