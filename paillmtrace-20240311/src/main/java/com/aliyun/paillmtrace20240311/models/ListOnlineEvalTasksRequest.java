@@ -4,6 +4,9 @@ package com.aliyun.paillmtrace20240311.models;
 import com.aliyun.tea.*;
 
 public class ListOnlineEvalTasksRequest extends TeaModel {
+    @NameInMap("AppName")
+    public String appName;
+
     /**
      * <p>Search keyword. It will match on fields such as task name, application name (appName), task description, and evaluation metric name.</p>
      * 
@@ -57,9 +60,20 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     @NameInMap("SortOrder")
     public String sortOrder;
 
+    @NameInMap("Status")
+    public String status;
+
     public static ListOnlineEvalTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListOnlineEvalTasksRequest self = new ListOnlineEvalTasksRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListOnlineEvalTasksRequest setAppName(String appName) {
+        this.appName = appName;
+        return this;
+    }
+    public String getAppName() {
+        return this.appName;
     }
 
     public ListOnlineEvalTasksRequest setKeyword(String keyword) {
@@ -116,6 +130,14 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     }
     public String getSortOrder() {
         return this.sortOrder;
+    }
+
+    public ListOnlineEvalTasksRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
 }
