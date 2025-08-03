@@ -25,6 +25,9 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     @NameInMap("end")
     public Float end;
 
+    @NameInMap("event")
+    public String event;
+
     /**
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
@@ -101,6 +104,14 @@ public class ListAbnormalyEventsRequest extends TeaModel {
     }
     public Float getEnd() {
         return this.end;
+    }
+
+    public ListAbnormalyEventsRequest setEvent(String event) {
+        this.event = event;
+        return this;
+    }
+    public String getEvent() {
+        return this.event;
     }
 
     public ListAbnormalyEventsRequest setInstance(String instance) {

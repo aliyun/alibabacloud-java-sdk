@@ -297,6 +297,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("instance", request.instance);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.level)) {
+            query.put("level", request.level);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
             query.put("namespace", request.namespace);
         }
@@ -1681,6 +1685,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.end)) {
             query.put("end", request.end);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.event)) {
+            query.put("event", request.event);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instance)) {

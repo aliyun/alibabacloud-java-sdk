@@ -51,6 +51,9 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
     }
 
     public static class GetAbnormalEventsCountResponseBodyData extends TeaModel {
+        @NameInMap("eventList")
+        public java.util.List<String> eventList;
+
         /**
          * <strong>example:</strong>
          * <p>health</p>
@@ -68,6 +71,14 @@ public class GetAbnormalEventsCountResponseBody extends TeaModel {
         public static GetAbnormalEventsCountResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetAbnormalEventsCountResponseBodyData self = new GetAbnormalEventsCountResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public GetAbnormalEventsCountResponseBodyData setEventList(java.util.List<String> eventList) {
+            this.eventList = eventList;
+            return this;
+        }
+        public java.util.List<String> getEventList() {
+            return this.eventList;
         }
 
         public GetAbnormalEventsCountResponseBodyData setType(String type) {

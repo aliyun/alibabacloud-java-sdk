@@ -19,13 +19,14 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     public Float end;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>i-wz9d00ut2ska3mlyhn6j</p>
      */
     @NameInMap("instance")
     public String instance;
+
+    @NameInMap("level")
+    public String level;
 
     /**
      * <strong>example:</strong>
@@ -78,6 +79,14 @@ public class GetAbnormalEventsCountRequest extends TeaModel {
     }
     public String getInstance() {
         return this.instance;
+    }
+
+    public GetAbnormalEventsCountRequest setLevel(String level) {
+        this.level = level;
+        return this;
+    }
+    public String getLevel() {
+        return this.level;
     }
 
     public GetAbnormalEventsCountRequest setNamespace(String namespace) {
