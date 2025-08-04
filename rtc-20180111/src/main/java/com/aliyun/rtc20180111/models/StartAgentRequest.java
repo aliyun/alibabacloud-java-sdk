@@ -115,6 +115,9 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("UserId")
         public String userId;
 
+        @NameInMap("UserInactivityTimeout")
+        public Integer userInactivityTimeout;
+
         public static StartAgentRequestRtcConfig build(java.util.Map<String, ?> map) throws Exception {
             StartAgentRequestRtcConfig self = new StartAgentRequestRtcConfig();
             return TeaModel.build(map, self);
@@ -134,6 +137,33 @@ public class StartAgentRequest extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public StartAgentRequestRtcConfig setUserInactivityTimeout(Integer userInactivityTimeout) {
+            this.userInactivityTimeout = userInactivityTimeout;
+            return this;
+        }
+        public Integer getUserInactivityTimeout() {
+            return this.userInactivityTimeout;
+        }
+
+    }
+
+    public static class StartAgentRequestVoiceChatConfigASRConfigVadConfig extends TeaModel {
+        @NameInMap("InterruptSpeechDuration")
+        public Integer interruptSpeechDuration;
+
+        public static StartAgentRequestVoiceChatConfigASRConfigVadConfig build(java.util.Map<String, ?> map) throws Exception {
+            StartAgentRequestVoiceChatConfigASRConfigVadConfig self = new StartAgentRequestVoiceChatConfigASRConfigVadConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public StartAgentRequestVoiceChatConfigASRConfigVadConfig setInterruptSpeechDuration(Integer interruptSpeechDuration) {
+            this.interruptSpeechDuration = interruptSpeechDuration;
+            return this;
+        }
+        public Integer getInterruptSpeechDuration() {
+            return this.interruptSpeechDuration;
         }
 
     }
@@ -162,6 +192,9 @@ public class StartAgentRequest extends TeaModel {
          */
         @NameInMap("SourceLanguage")
         public String sourceLanguage;
+
+        @NameInMap("VadConfig")
+        public StartAgentRequestVoiceChatConfigASRConfigVadConfig vadConfig;
 
         /**
          * <strong>example:</strong>
@@ -207,12 +240,83 @@ public class StartAgentRequest extends TeaModel {
             return this.sourceLanguage;
         }
 
+        public StartAgentRequestVoiceChatConfigASRConfig setVadConfig(StartAgentRequestVoiceChatConfigASRConfigVadConfig vadConfig) {
+            this.vadConfig = vadConfig;
+            return this;
+        }
+        public StartAgentRequestVoiceChatConfigASRConfigVadConfig getVadConfig() {
+            return this.vadConfig;
+        }
+
         public StartAgentRequestVoiceChatConfigASRConfig setVocabularyId(String vocabularyId) {
             this.vocabularyId = vocabularyId;
             return this;
         }
         public String getVocabularyId() {
             return this.vocabularyId;
+        }
+
+    }
+
+    public static class StartAgentRequestVoiceChatConfigAgentSilenceConfig extends TeaModel {
+        @NameInMap("AlertTimeout")
+        public Integer alertTimeout;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("Strategy")
+        public Integer strategy;
+
+        @NameInMap("WebhookTriggerTimeout")
+        public Integer webhookTriggerTimeout;
+
+        public static StartAgentRequestVoiceChatConfigAgentSilenceConfig build(java.util.Map<String, ?> map) throws Exception {
+            StartAgentRequestVoiceChatConfigAgentSilenceConfig self = new StartAgentRequestVoiceChatConfigAgentSilenceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig setAlertTimeout(Integer alertTimeout) {
+            this.alertTimeout = alertTimeout;
+            return this;
+        }
+        public Integer getAlertTimeout() {
+            return this.alertTimeout;
+        }
+
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig setStrategy(Integer strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public Integer getStrategy() {
+            return this.strategy;
+        }
+
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig setWebhookTriggerTimeout(Integer webhookTriggerTimeout) {
+            this.webhookTriggerTimeout = webhookTriggerTimeout;
+            return this;
+        }
+        public Integer getWebhookTriggerTimeout() {
+            return this.webhookTriggerTimeout;
         }
 
     }
@@ -224,6 +328,9 @@ public class StartAgentRequest extends TeaModel {
          */
         @NameInMap("ApiKey")
         public String apiKey;
+
+        @NameInMap("AppId")
+        public String appId;
 
         /**
          * <strong>example:</strong>
@@ -245,6 +352,9 @@ public class StartAgentRequest extends TeaModel {
          */
         @NameInMap("Model")
         public String model;
+
+        @NameInMap("Params")
+        public java.util.Map<String, ?> params;
 
         /**
          * <strong>example:</strong>
@@ -294,6 +404,14 @@ public class StartAgentRequest extends TeaModel {
             return this.apiKey;
         }
 
+        public StartAgentRequestVoiceChatConfigLLMConfig setAppId(String appId) {
+            this.appId = appId;
+            return this;
+        }
+        public String getAppId() {
+            return this.appId;
+        }
+
         public StartAgentRequestVoiceChatConfigLLMConfig setHistoryDepth(Integer historyDepth) {
             this.historyDepth = historyDepth;
             return this;
@@ -316,6 +434,14 @@ public class StartAgentRequest extends TeaModel {
         }
         public String getModel() {
             return this.model;
+        }
+
+        public StartAgentRequestVoiceChatConfigLLMConfig setParams(java.util.Map<String, ?> params) {
+            this.params = params;
+            return this;
+        }
+        public java.util.Map<String, ?> getParams() {
+            return this.params;
         }
 
         public StartAgentRequestVoiceChatConfigLLMConfig setPrompt(String prompt) {
@@ -488,6 +614,9 @@ public class StartAgentRequest extends TeaModel {
         @NameInMap("ASRConfig")
         public StartAgentRequestVoiceChatConfigASRConfig ASRConfig;
 
+        @NameInMap("AgentSilenceConfig")
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig agentSilenceConfig;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -522,6 +651,14 @@ public class StartAgentRequest extends TeaModel {
         }
         public StartAgentRequestVoiceChatConfigASRConfig getASRConfig() {
             return this.ASRConfig;
+        }
+
+        public StartAgentRequestVoiceChatConfig setAgentSilenceConfig(StartAgentRequestVoiceChatConfigAgentSilenceConfig agentSilenceConfig) {
+            this.agentSilenceConfig = agentSilenceConfig;
+            return this;
+        }
+        public StartAgentRequestVoiceChatConfigAgentSilenceConfig getAgentSilenceConfig() {
+            return this.agentSilenceConfig;
         }
 
         public StartAgentRequestVoiceChatConfig setChatMode(Integer chatMode) {

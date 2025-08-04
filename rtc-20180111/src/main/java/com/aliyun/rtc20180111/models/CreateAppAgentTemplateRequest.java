@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class CreateAppAgentTemplateRequest extends TeaModel {
+    @NameInMap("AgentSilenceConfig")
+    public CreateAppAgentTemplateRequestAgentSilenceConfig agentSilenceConfig;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -58,6 +61,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     public static CreateAppAgentTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAppAgentTemplateRequest self = new CreateAppAgentTemplateRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAppAgentTemplateRequest setAgentSilenceConfig(CreateAppAgentTemplateRequestAgentSilenceConfig agentSilenceConfig) {
+        this.agentSilenceConfig = agentSilenceConfig;
+        return this;
+    }
+    public CreateAppAgentTemplateRequestAgentSilenceConfig getAgentSilenceConfig() {
+        return this.agentSilenceConfig;
     }
 
     public CreateAppAgentTemplateRequest setAppId(String appId) {
@@ -130,6 +141,93 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     }
     public Integer getType() {
         return this.type;
+    }
+
+    public static class CreateAppAgentTemplateRequestAgentSilenceConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("AlertTimeout")
+        public Integer alertTimeout;
+
+        @NameInMap("Content")
+        public String content;
+
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("Strategy")
+        public Integer strategy;
+
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
+        @NameInMap("WebhookTriggerTimeout")
+        public Integer webhookTriggerTimeout;
+
+        public static CreateAppAgentTemplateRequestAgentSilenceConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppAgentTemplateRequestAgentSilenceConfig self = new CreateAppAgentTemplateRequestAgentSilenceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppAgentTemplateRequestAgentSilenceConfig setAlertTimeout(Integer alertTimeout) {
+            this.alertTimeout = alertTimeout;
+            return this;
+        }
+        public Integer getAlertTimeout() {
+            return this.alertTimeout;
+        }
+
+        public CreateAppAgentTemplateRequestAgentSilenceConfig setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public CreateAppAgentTemplateRequestAgentSilenceConfig setStrategy(Integer strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public Integer getStrategy() {
+            return this.strategy;
+        }
+
+        public CreateAppAgentTemplateRequestAgentSilenceConfig setWebhookTriggerTimeout(Integer webhookTriggerTimeout) {
+            this.webhookTriggerTimeout = webhookTriggerTimeout;
+            return this;
+        }
+        public Integer getWebhookTriggerTimeout() {
+            return this.webhookTriggerTimeout;
+        }
+
+    }
+
+    public static class CreateAppAgentTemplateRequestAsrConfigVadConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
+        @NameInMap("InterruptSpeechDuration")
+        public Integer interruptSpeechDuration;
+
+        public static CreateAppAgentTemplateRequestAsrConfigVadConfig build(java.util.Map<String, ?> map) throws Exception {
+            CreateAppAgentTemplateRequestAsrConfigVadConfig self = new CreateAppAgentTemplateRequestAsrConfigVadConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAppAgentTemplateRequestAsrConfigVadConfig setInterruptSpeechDuration(Integer interruptSpeechDuration) {
+            this.interruptSpeechDuration = interruptSpeechDuration;
+            return this;
+        }
+        public Integer getInterruptSpeechDuration() {
+            return this.interruptSpeechDuration;
+        }
+
     }
 
     public static class CreateAppAgentTemplateRequestAsrConfigWordWeights extends TeaModel {
@@ -206,6 +304,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("VadConfig")
+        public CreateAppAgentTemplateRequestAsrConfigVadConfig vadConfig;
+
         @NameInMap("WordWeights")
         public java.util.List<CreateAppAgentTemplateRequestAsrConfigWordWeights> wordWeights;
 
@@ -230,6 +331,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
             return this.name;
         }
 
+        public CreateAppAgentTemplateRequestAsrConfig setVadConfig(CreateAppAgentTemplateRequestAsrConfigVadConfig vadConfig) {
+            this.vadConfig = vadConfig;
+            return this;
+        }
+        public CreateAppAgentTemplateRequestAsrConfigVadConfig getVadConfig() {
+            return this.vadConfig;
+        }
+
         public CreateAppAgentTemplateRequestAsrConfig setWordWeights(java.util.List<CreateAppAgentTemplateRequestAsrConfigWordWeights> wordWeights) {
             this.wordWeights = wordWeights;
             return this;
@@ -241,6 +350,9 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
     }
 
     public static class CreateAppAgentTemplateRequestLlmConfig extends TeaModel {
+        @NameInMap("AgentAppId")
+        public String agentAppId;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -309,6 +421,14 @@ public class CreateAppAgentTemplateRequest extends TeaModel {
         public static CreateAppAgentTemplateRequestLlmConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateAppAgentTemplateRequestLlmConfig self = new CreateAppAgentTemplateRequestLlmConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateAppAgentTemplateRequestLlmConfig setAgentAppId(String agentAppId) {
+            this.agentAppId = agentAppId;
+            return this;
+        }
+        public String getAgentAppId() {
+            return this.agentAppId;
         }
 
         public CreateAppAgentTemplateRequestLlmConfig setApiKey(String apiKey) {

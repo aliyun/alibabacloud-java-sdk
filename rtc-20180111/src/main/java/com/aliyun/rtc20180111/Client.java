@@ -148,6 +148,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateAppAgentTemplateShrinkRequest request = new CreateAppAgentTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentSilenceConfig)) {
+            request.agentSilenceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentSilenceConfig, "AgentSilenceConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.asrConfig)) {
             request.asrConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.asrConfig, "AsrConfig", "json");
         }
@@ -161,6 +165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSilenceConfigShrink)) {
+            query.put("AgentSilenceConfig", request.agentSilenceConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }
@@ -4594,6 +4602,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyAppAgentTemplateShrinkRequest request = new ModifyAppAgentTemplateShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentSilenceConfig)) {
+            request.agentSilenceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentSilenceConfig, "AgentSilenceConfig", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.asrConfig)) {
             request.asrConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.asrConfig, "AsrConfig", "json");
         }
@@ -4607,6 +4619,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentSilenceConfigShrink)) {
+            query.put("AgentSilenceConfig", request.agentSilenceConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
         }

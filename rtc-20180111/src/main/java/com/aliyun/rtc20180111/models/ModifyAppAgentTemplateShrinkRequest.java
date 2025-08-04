@@ -4,6 +4,9 @@ package com.aliyun.rtc20180111.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
+    @NameInMap("AgentSilenceConfig")
+    public String agentSilenceConfigShrink;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -67,6 +70,14 @@ public class ModifyAppAgentTemplateShrinkRequest extends TeaModel {
     public static ModifyAppAgentTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyAppAgentTemplateShrinkRequest self = new ModifyAppAgentTemplateShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyAppAgentTemplateShrinkRequest setAgentSilenceConfigShrink(String agentSilenceConfigShrink) {
+        this.agentSilenceConfigShrink = agentSilenceConfigShrink;
+        return this;
+    }
+    public String getAgentSilenceConfigShrink() {
+        return this.agentSilenceConfigShrink;
     }
 
     public ModifyAppAgentTemplateShrinkRequest setAppId(String appId) {

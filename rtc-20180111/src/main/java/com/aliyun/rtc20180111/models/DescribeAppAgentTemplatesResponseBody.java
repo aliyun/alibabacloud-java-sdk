@@ -67,6 +67,77 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         return this.totalPage;
     }
 
+    public static class DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig extends TeaModel {
+        @NameInMap("AlertTimeout")
+        public Integer alertTimeout;
+
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("Strategy")
+        public Integer strategy;
+
+        @NameInMap("WebhookTriggerTimeout")
+        public Integer webhookTriggerTimeout;
+
+        public static DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig self = new DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig setAlertTimeout(Integer alertTimeout) {
+            this.alertTimeout = alertTimeout;
+            return this;
+        }
+        public Integer getAlertTimeout() {
+            return this.alertTimeout;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig setStrategy(Integer strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public Integer getStrategy() {
+            return this.strategy;
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig setWebhookTriggerTimeout(Integer webhookTriggerTimeout) {
+            this.webhookTriggerTimeout = webhookTriggerTimeout;
+            return this;
+        }
+        public Integer getWebhookTriggerTimeout() {
+            return this.webhookTriggerTimeout;
+        }
+
+    }
+
+    public static class DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig extends TeaModel {
+        @NameInMap("InterruptSpeechDuration")
+        public Integer interruptSpeechDuration;
+
+        public static DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig self = new DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig setInterruptSpeechDuration(Integer interruptSpeechDuration) {
+            this.interruptSpeechDuration = interruptSpeechDuration;
+            return this;
+        }
+        public Integer getInterruptSpeechDuration() {
+            return this.interruptSpeechDuration;
+        }
+
+    }
+
     public static class DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigWordWeights extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -127,6 +198,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        @NameInMap("VadConfig")
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig vadConfig;
+
         /**
          * <strong>example:</strong>
          * <p>ecfadace11114cf08a7f07aceee798ad</p>
@@ -158,6 +232,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
             return this.name;
         }
 
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig setVadConfig(DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig vadConfig) {
+            this.vadConfig = vadConfig;
+            return this;
+        }
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfigVadConfig getVadConfig() {
+            return this.vadConfig;
+        }
+
         public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig setVocabularyId(String vocabularyId) {
             this.vocabularyId = vocabularyId;
             return this;
@@ -177,6 +259,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig extends TeaModel {
+        @NameInMap("AgentAppId")
+        public String agentAppId;
+
         /**
          * <strong>example:</strong>
          * <p>qW8GpBOdHK/pv9gdUSVLvQ==</p>
@@ -246,6 +331,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         public static DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig self = new DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig setAgentAppId(String agentAppId) {
+            this.agentAppId = agentAppId;
+            return this;
+        }
+        public String getAgentAppId() {
+            return this.agentAppId;
         }
 
         public DescribeAppAgentTemplatesResponseBodyTemplatesLlmConfig setApiKey(String apiKey) {
@@ -470,6 +563,9 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppAgentTemplatesResponseBodyTemplates extends TeaModel {
+        @NameInMap("AgentSilenceConfig")
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig agentSilenceConfig;
+
         @NameInMap("AsrConfig")
         public DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig asrConfig;
 
@@ -531,6 +627,14 @@ public class DescribeAppAgentTemplatesResponseBody extends TeaModel {
         public static DescribeAppAgentTemplatesResponseBodyTemplates build(java.util.Map<String, ?> map) throws Exception {
             DescribeAppAgentTemplatesResponseBodyTemplates self = new DescribeAppAgentTemplatesResponseBodyTemplates();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeAppAgentTemplatesResponseBodyTemplates setAgentSilenceConfig(DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig agentSilenceConfig) {
+            this.agentSilenceConfig = agentSilenceConfig;
+            return this;
+        }
+        public DescribeAppAgentTemplatesResponseBodyTemplatesAgentSilenceConfig getAgentSilenceConfig() {
+            return this.agentSilenceConfig;
         }
 
         public DescribeAppAgentTemplatesResponseBodyTemplates setAsrConfig(DescribeAppAgentTemplatesResponseBodyTemplatesAsrConfig asrConfig) {
