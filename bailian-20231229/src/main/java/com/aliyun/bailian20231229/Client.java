@@ -1642,6 +1642,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询Index文件详情</p>
+     * 
+     * @param request ListIndexFileDetailsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIndexFileDetailsResponse
+     */
+    public ListIndexFileDetailsResponse listIndexFileDetailsWithOptions(String WorkspaceId, ListIndexFileDetailsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.documentName)) {
+            query.put("DocumentName", request.documentName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.documentStatus)) {
+            query.put("DocumentStatus", request.documentStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableNameLike)) {
+            query.put("EnableNameLike", request.enableNameLike);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.indexId)) {
+            query.put("IndexId", request.indexId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIndexFileDetails"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/index/list_index_file_detail"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIndexFileDetailsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询Index文件详情</p>
+     * 
+     * @param request ListIndexFileDetailsRequest
+     * @return ListIndexFileDetailsResponse
+     */
+    public ListIndexFileDetailsResponse listIndexFileDetails(String WorkspaceId, ListIndexFileDetailsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIndexFileDetailsWithOptions(WorkspaceId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This interface is idempotent.</p>
      * 
@@ -2361,6 +2428,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAndPublishAgentSelectiveWithOptions(workspaceId, appCode, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新切片信息</p>
+     * 
+     * @param request UpdateChunkRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateChunkResponse
+     */
+    public UpdateChunkResponse updateChunkWithOptions(String WorkspaceId, UpdateChunkRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.chunkId)) {
+            query.put("ChunkId", request.chunkId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dataId)) {
+            query.put("DataId", request.dataId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDisplayedChunkContent)) {
+            query.put("IsDisplayedChunkContent", request.isDisplayedChunkContent);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pipelineId)) {
+            query.put("PipelineId", request.pipelineId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.content)) {
+            query.put("content", request.content);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            query.put("title", request.title);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateChunk"),
+            new TeaPair("version", "2023-12-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/" + com.aliyun.openapiutil.Client.getEncodeParam(WorkspaceId) + "/chunk/update"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateChunkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新切片信息</p>
+     * 
+     * @param request UpdateChunkRequest
+     * @return UpdateChunkResponse
+     */
+    public UpdateChunkResponse updateChunk(String WorkspaceId, UpdateChunkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateChunkWithOptions(WorkspaceId, request, headers, runtime);
     }
 
     /**
