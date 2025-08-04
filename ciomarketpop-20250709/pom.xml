@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>ciomarketpop20250709</artifactId>
-  <version>1.0.0</version>
+  <version>1.1.0</version>
   <packaging>jar</packaging>
   <name>ciomarketpop20250709</name>
   <description>Alibaba Cloud CioMarketPop (20250709) SDK for Java
