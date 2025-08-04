@@ -7807,6 +7807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DesktopId", request.desktopId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needExtraInfo)) {
+            query.put("NeedExtraInfo", request.needExtraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }

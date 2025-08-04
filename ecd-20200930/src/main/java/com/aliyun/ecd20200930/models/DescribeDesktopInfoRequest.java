@@ -10,6 +10,9 @@ public class DescribeDesktopInfoRequest extends TeaModel {
     @NameInMap("DesktopId")
     public java.util.List<String> desktopId;
 
+    @NameInMap("NeedExtraInfo")
+    public Boolean needExtraInfo;
+
     /**
      * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
@@ -31,6 +34,14 @@ public class DescribeDesktopInfoRequest extends TeaModel {
     }
     public java.util.List<String> getDesktopId() {
         return this.desktopId;
+    }
+
+    public DescribeDesktopInfoRequest setNeedExtraInfo(Boolean needExtraInfo) {
+        this.needExtraInfo = needExtraInfo;
+        return this;
+    }
+    public Boolean getNeedExtraInfo() {
+        return this.needExtraInfo;
     }
 
     public DescribeDesktopInfoRequest setRegionId(String regionId) {
