@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmartAuditShrinkRequest extends TeaModel {
+    @NameInMap("ImageUrlList")
+    public String imageUrlListShrink;
+
     @NameInMap("SubCodes")
     public String subCodesShrink;
 
@@ -23,6 +26,14 @@ public class SubmitSmartAuditShrinkRequest extends TeaModel {
     public static SubmitSmartAuditShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmartAuditShrinkRequest self = new SubmitSmartAuditShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitSmartAuditShrinkRequest setImageUrlListShrink(String imageUrlListShrink) {
+        this.imageUrlListShrink = imageUrlListShrink;
+        return this;
+    }
+    public String getImageUrlListShrink() {
+        return this.imageUrlListShrink;
     }
 
     public SubmitSmartAuditShrinkRequest setSubCodesShrink(String subCodesShrink) {

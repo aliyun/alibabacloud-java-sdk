@@ -9814,6 +9814,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitSmartAuditShrinkRequest request = new SubmitSmartAuditShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.imageUrlList)) {
+            request.imageUrlListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageUrlList, "ImageUrlList", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.subCodes)) {
             request.subCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.subCodes, "SubCodes", "json");
         }
@@ -9823,6 +9827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.imageUrlListShrink)) {
+            body.put("ImageUrlList", request.imageUrlListShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.subCodesShrink)) {
             body.put("SubCodes", request.subCodesShrink);
         }

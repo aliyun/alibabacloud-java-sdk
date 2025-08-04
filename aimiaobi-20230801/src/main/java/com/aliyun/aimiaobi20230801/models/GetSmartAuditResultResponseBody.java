@@ -280,6 +280,9 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         @NameInMap("ErrorItemDetails")
         public java.util.List<GetSmartAuditResultResponseBodyDataErrorItemDetails> errorItemDetails;
 
+        @NameInMap("ErrorMessage")
+        public String errorMessage;
+
         /**
          * <strong>example:</strong>
          * <p>SUCCESSED</p>
@@ -298,6 +301,14 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         }
         public java.util.List<GetSmartAuditResultResponseBodyDataErrorItemDetails> getErrorItemDetails() {
             return this.errorItemDetails;
+        }
+
+        public GetSmartAuditResultResponseBodyData setErrorMessage(String errorMessage) {
+            this.errorMessage = errorMessage;
+            return this;
+        }
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public GetSmartAuditResultResponseBodyData setStatus(String status) {

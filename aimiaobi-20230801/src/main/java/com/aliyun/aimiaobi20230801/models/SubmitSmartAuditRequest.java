@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class SubmitSmartAuditRequest extends TeaModel {
+    @NameInMap("ImageUrlList")
+    public java.util.List<SubmitSmartAuditRequestImageUrlList> imageUrlList;
+
     @NameInMap("SubCodes")
     public java.util.List<String> subCodes;
 
@@ -23,6 +26,14 @@ public class SubmitSmartAuditRequest extends TeaModel {
     public static SubmitSmartAuditRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitSmartAuditRequest self = new SubmitSmartAuditRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitSmartAuditRequest setImageUrlList(java.util.List<SubmitSmartAuditRequestImageUrlList> imageUrlList) {
+        this.imageUrlList = imageUrlList;
+        return this;
+    }
+    public java.util.List<SubmitSmartAuditRequestImageUrlList> getImageUrlList() {
+        return this.imageUrlList;
     }
 
     public SubmitSmartAuditRequest setSubCodes(java.util.List<String> subCodes) {
@@ -55,6 +66,36 @@ public class SubmitSmartAuditRequest extends TeaModel {
     }
     public java.util.List<SubmitSmartAuditRequestImageUrls> getImageUrls() {
         return this.imageUrls;
+    }
+
+    public static class SubmitSmartAuditRequestImageUrlList extends TeaModel {
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Url")
+        public String url;
+
+        public static SubmitSmartAuditRequestImageUrlList build(java.util.Map<String, ?> map) throws Exception {
+            SubmitSmartAuditRequestImageUrlList self = new SubmitSmartAuditRequestImageUrlList();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitSmartAuditRequestImageUrlList setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public SubmitSmartAuditRequestImageUrlList setUrl(String url) {
+            this.url = url;
+            return this;
+        }
+        public String getUrl() {
+            return this.url;
+        }
+
     }
 
     public static class SubmitSmartAuditRequestImageUrls extends TeaModel {
