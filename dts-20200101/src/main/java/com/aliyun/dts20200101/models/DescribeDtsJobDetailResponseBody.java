@@ -353,6 +353,9 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     @NameInMap("HttpStatusCode")
     public Integer httpStatusCode;
 
+    @NameInMap("InitCheckpoint")
+    public String initCheckpoint;
+
     /**
      * <p>The type of the DTS task. Valid values:</p>
      * <ul>
@@ -868,6 +871,14 @@ public class DescribeDtsJobDetailResponseBody extends TeaModel {
     }
     public Integer getHttpStatusCode() {
         return this.httpStatusCode;
+    }
+
+    public DescribeDtsJobDetailResponseBody setInitCheckpoint(String initCheckpoint) {
+        this.initCheckpoint = initCheckpoint;
+        return this;
+    }
+    public String getInitCheckpoint() {
+        return this.initCheckpoint;
     }
 
     public DescribeDtsJobDetailResponseBody setJobType(String jobType) {
