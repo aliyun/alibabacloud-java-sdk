@@ -1670,6 +1670,106 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取专属ip的预热详情信息</p>
+     * 
+     * @param request GetDedicatedIpWarmUpDetailRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDedicatedIpWarmUpDetailResponse
+     */
+    public GetDedicatedIpWarmUpDetailResponse getDedicatedIpWarmUpDetailWithOptions(GetDedicatedIpWarmUpDetailRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
+            query.put("DedicatedIp", request.dedicatedIp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endDayMark)) {
+            query.put("EndDayMark", request.endDayMark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.esp)) {
+            query.put("Esp", request.esp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startDayMark)) {
+            query.put("StartDayMark", request.startDayMark);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDedicatedIpWarmUpDetail"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDedicatedIpWarmUpDetailResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取专属ip的预热详情信息</p>
+     * 
+     * @param request GetDedicatedIpWarmUpDetailRequest
+     * @return GetDedicatedIpWarmUpDetailResponse
+     */
+    public GetDedicatedIpWarmUpDetailResponse getDedicatedIpWarmUpDetail(GetDedicatedIpWarmUpDetailRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDedicatedIpWarmUpDetailWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取专属ip的预热信息</p>
+     * 
+     * @param request GetDedicatedIpWarmUpInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDedicatedIpWarmUpInfoResponse
+     */
+    public GetDedicatedIpWarmUpInfoResponse getDedicatedIpWarmUpInfoWithOptions(GetDedicatedIpWarmUpInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
+            query.put("DedicatedIp", request.dedicatedIp);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDedicatedIpWarmUpInfo"),
+            new TeaPair("version", "2015-11-23"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDedicatedIpWarmUpInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取专属ip的预热信息</p>
+     * 
+     * @param request GetDedicatedIpWarmUpInfoRequest
+     * @return GetDedicatedIpWarmUpInfoResponse
+     */
+    public GetDedicatedIpWarmUpInfoResponse getDedicatedIpWarmUpInfo(GetDedicatedIpWarmUpInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDedicatedIpWarmUpInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Get IP Protection Information</p>
      * 
      * @param request GetIpProtectionRequest

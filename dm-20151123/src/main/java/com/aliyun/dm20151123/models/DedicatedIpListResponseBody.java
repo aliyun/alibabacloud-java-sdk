@@ -127,6 +127,9 @@ public class DedicatedIpListResponseBody extends TeaModel {
         @NameInMap("HasSendMail")
         public Boolean hasSendMail;
 
+        @NameInMap("LastWarmUpTypeChangedTime")
+        public String lastWarmUpTypeChangedTime;
+
         public static DedicatedIpListResponseBodyIpsIpExt build(java.util.Map<String, ?> map) throws Exception {
             DedicatedIpListResponseBodyIpsIpExt self = new DedicatedIpListResponseBodyIpsIpExt();
             return TeaModel.build(map, self);
@@ -146,6 +149,14 @@ public class DedicatedIpListResponseBody extends TeaModel {
         }
         public Boolean getHasSendMail() {
             return this.hasSendMail;
+        }
+
+        public DedicatedIpListResponseBodyIpsIpExt setLastWarmUpTypeChangedTime(String lastWarmUpTypeChangedTime) {
+            this.lastWarmUpTypeChangedTime = lastWarmUpTypeChangedTime;
+            return this;
+        }
+        public String getLastWarmUpTypeChangedTime() {
+            return this.lastWarmUpTypeChangedTime;
         }
 
     }
