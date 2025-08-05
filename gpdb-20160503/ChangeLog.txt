@@ -1,3 +1,7 @@
+2025-08-05 Version: 3.9.1
+- Update API UploadDocumentAsync: add request parameters SplitterModel.
+
+
 2025-08-01 Version: 3.9.0
 - Support API CreateSupabaseProject.
 - Support API DeleteSupabaseProject.

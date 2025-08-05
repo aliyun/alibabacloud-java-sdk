@@ -170,6 +170,9 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     @NameInMap("Separators")
     public String separatorsShrink;
 
+    @NameInMap("SplitterModel")
+    public String splitterModel;
+
     /**
      * <p>The name of the splitter. Valid values:</p>
      * <ul>
@@ -315,6 +318,14 @@ public class UploadDocumentAsyncShrinkRequest extends TeaModel {
     }
     public String getSeparatorsShrink() {
         return this.separatorsShrink;
+    }
+
+    public UploadDocumentAsyncShrinkRequest setSplitterModel(String splitterModel) {
+        this.splitterModel = splitterModel;
+        return this;
+    }
+    public String getSplitterModel() {
+        return this.splitterModel;
     }
 
     public UploadDocumentAsyncShrinkRequest setTextSplitterName(String textSplitterName) {

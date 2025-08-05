@@ -170,6 +170,9 @@ public class UploadDocumentAsyncAdvanceRequest extends TeaModel {
     @NameInMap("Separators")
     public java.util.List<String> separators;
 
+    @NameInMap("SplitterModel")
+    public String splitterModel;
+
     /**
      * <p>The name of the splitter. Valid values:</p>
      * <ul>
@@ -315,6 +318,14 @@ public class UploadDocumentAsyncAdvanceRequest extends TeaModel {
     }
     public java.util.List<String> getSeparators() {
         return this.separators;
+    }
+
+    public UploadDocumentAsyncAdvanceRequest setSplitterModel(String splitterModel) {
+        this.splitterModel = splitterModel;
+        return this;
+    }
+    public String getSplitterModel() {
+        return this.splitterModel;
     }
 
     public UploadDocumentAsyncAdvanceRequest setTextSplitterName(String textSplitterName) {

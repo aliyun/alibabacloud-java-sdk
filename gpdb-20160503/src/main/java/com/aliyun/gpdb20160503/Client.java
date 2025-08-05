@@ -14172,6 +14172,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Separators", request.separatorsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.splitterModel)) {
+            body.put("SplitterModel", request.splitterModel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.textSplitterName)) {
             body.put("TextSplitterName", request.textSplitterName);
         }
