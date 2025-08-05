@@ -5,13 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventGroupRequest extends TeaModel {
     /**
-     * <p>The names of attacked applications. Set the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
+     * <p>The names of the attacked applications. Set the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
      */
     @NameInMap("AttackApp")
     public java.util.List<String> attackApp;
+
+    /**
+     * <p>A list of categories of attacked applications, expressed in the format [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;].</p>
+     */
+    @NameInMap("AttackAppCategory")
+    public java.util.List<String> attackAppCategory;
 
     /**
      * <p>The attack type of the intrusion events. Valid values:</p>
@@ -307,6 +313,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     }
     public java.util.List<String> getAttackApp() {
         return this.attackApp;
+    }
+
+    public DescribeRiskEventGroupRequest setAttackAppCategory(java.util.List<String> attackAppCategory) {
+        this.attackAppCategory = attackAppCategory;
+        return this;
+    }
+    public java.util.List<String> getAttackAppCategory() {
+        return this.attackAppCategory;
     }
 
     public DescribeRiskEventGroupRequest setAttackType(String attackType) {

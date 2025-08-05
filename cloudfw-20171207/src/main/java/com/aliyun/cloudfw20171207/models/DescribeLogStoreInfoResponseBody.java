@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeLogStoreInfoResponseBody extends TeaModel {
     /**
+     * <p>The name of the SLS LogStore in the log service.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxx-logstore</p>
      */
@@ -12,6 +14,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String logStoreName;
 
     /**
+     * <p>The Project name of the log service.</p>
+     * 
      * <strong>example:</strong>
      * <p>project-xxx-cn-hangzhou</p>
      */
@@ -19,16 +23,26 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String projectName;
 
     /**
+     * <p>Available log storage capacity. Unit: Byte.</p>
+     * 
      * <strong>example:</strong>
      * <p>50000000</p>
      */
     @NameInMap("Quota")
     public Long quota;
 
+    /**
+     * <p>The region ID for log delivery.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
+     * <p>The ID of this request.</p>
+     * 
      * <strong>example:</strong>
      * <p>C6C3B72B********E95FB0A161</p>
      */
@@ -36,6 +50,8 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Log storage duration. Unit: days.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -43,6 +59,11 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Integer ttl;
 
     /**
+     * <p>Used storage capacity. Unit: Byte.</p>
+     * <blockquote>
+     * <p>The statistics of the log service have a delay of approximately two hours.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */

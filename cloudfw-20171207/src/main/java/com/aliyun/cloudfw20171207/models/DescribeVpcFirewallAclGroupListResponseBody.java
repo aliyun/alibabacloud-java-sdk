@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     /**
-     * <p>The information about the policy groups.</p>
+     * <p>The information about the access control policy groups.</p>
      */
     @NameInMap("AclGroupList")
     public java.util.List<DescribeVpcFirewallAclGroupListResponseBodyAclGroupList> aclGroupList;
@@ -58,6 +58,16 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig extends TeaModel {
+        /**
+         * <p>Specifies Whether strict mode is enabled. Valid values:</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StrictMode")
         public Integer strictMode;
 
@@ -77,6 +87,9 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallAclGroupListResponseBodyAclGroupList extends TeaModel {
+        /**
+         * <p>ACL engine mode.</p>
+         */
         @NameInMap("AclConfig")
         public DescribeVpcFirewallAclGroupListResponseBodyAclGroupListAclConfig aclConfig;
 
@@ -121,10 +134,10 @@ public class DescribeVpcFirewallAclGroupListResponseBody extends TeaModel {
         public Integer aclRuleCount;
 
         /**
-         * <p>是否是默认防火墙。取值：</p>
+         * <p>Whether it is the default firewall. Values:</p>
          * <ul>
-         * <li><strong>true</strong>：是默认防火墙。</li>
-         * <li><strong>false</strong>：不是默认防火墙。</li>
+         * <li><strong>true</strong>: It is the default firewall.</li>
+         * <li><strong>false</strong>: It is not the default firewall.</li>
          * </ul>
          * 
          * <strong>example:</strong>

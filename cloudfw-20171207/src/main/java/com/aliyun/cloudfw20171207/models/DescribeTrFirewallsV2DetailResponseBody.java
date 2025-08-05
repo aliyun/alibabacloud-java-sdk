@@ -160,6 +160,12 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("TrAttachmentMasterCidr")
     public String trAttachmentMasterCidr;
 
+    /**
+     * <p>In automatic mode, the primary availability zone of the subnet in the firewall VPC used for connecting to TR.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-h</p>
+     */
     @NameInMap("TrAttachmentMasterZone")
     public String trAttachmentMasterZone;
 
@@ -172,6 +178,12 @@ public class DescribeTrFirewallsV2DetailResponseBody extends TeaModel {
     @NameInMap("TrAttachmentSlaveCidr")
     public String trAttachmentSlaveCidr;
 
+    /**
+     * <p>In automatic mode, the backup availability zone for the subnet used to connect TR in the firewall VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-i</p>
+     */
     @NameInMap("TrAttachmentSlaveZone")
     public String trAttachmentSlaveZone;
 

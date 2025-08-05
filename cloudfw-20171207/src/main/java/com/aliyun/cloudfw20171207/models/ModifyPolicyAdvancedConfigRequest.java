@@ -4,6 +4,9 @@ package com.aliyun.cloudfw20171207.models;
 import com.aliyun.tea.*;
 
 public class ModifyPolicyAdvancedConfigRequest extends TeaModel {
+    /**
+     * <p>The IP addresses. The versions of the IP addresses must be the same. You can specify a maximum of 100 IP addresses.</p>
+     */
     @NameInMap("Eips")
     public java.util.List<String> eips;
 

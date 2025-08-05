@@ -27,6 +27,12 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     @NameInMap("FirewallConfigureStatus")
     public String firewallConfigureStatus;
 
+    /**
+     * <p>The instance ID of the VPC firewall.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vfw-tr-5b202e7f0be64611****</p>
+     */
     @NameInMap("FirewallId")
     public String firewallId;
 

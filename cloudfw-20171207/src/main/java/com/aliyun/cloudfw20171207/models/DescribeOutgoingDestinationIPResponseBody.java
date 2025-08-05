@@ -138,6 +138,9 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
         @NameInMap("Port")
         public Integer port;
 
+        /**
+         * <p>List of reasons for failing to analyze the protocol when it is identified as Unknown.</p>
+         */
         @NameInMap("UnknownReason")
         public java.util.List<String> unknownReason;
 
@@ -445,7 +448,7 @@ public class DescribeOutgoingDestinationIPResponseBody extends TeaModel {
          * <p>Location name.</p>
          * 
          * <strong>example:</strong>
-         * <p>山东省青岛市</p>
+         * <p>Qingdao, Shandong</p>
          */
         @NameInMap("LocationName")
         public String locationName;

@@ -58,6 +58,16 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig extends TeaModel {
+        /**
+         * <p>Specifies whether to enable the strict mode. Valid values:</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StrictMode")
         public Integer strictMode;
 
@@ -508,6 +518,9 @@ public class DescribeVpcFirewallCenListResponseBody extends TeaModel {
     }
 
     public static class DescribeVpcFirewallCenListResponseBodyVpcFirewalls extends TeaModel {
+        /**
+         * <p>ACL engine mode.</p>
+         */
         @NameInMap("AclConfig")
         public DescribeVpcFirewallCenListResponseBodyVpcFirewallsAclConfig aclConfig;
 

@@ -30,6 +30,16 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public String currentPage;
 
+    /**
+     * <p>The source of traffic for statistics. Valid values:</p>
+     * <ul>
+     * <li><strong>internet</strong> (default): the Internet firewall.</li>
+     * <li><strong>nat</strong>: NAT firewalls.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>nat</p>
+     */
     @NameInMap("DataType")
     public String dataType;
 
@@ -52,6 +62,16 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>Specifies whether to collect statistics only on AI service access traffic. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong> (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsAITraffic")
     public String isAITraffic;
 
@@ -69,10 +89,10 @@ public class DescribeOutgoingDomainRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The method that is used to sort the results. Valid values:</p>
+     * <p>The method that you want to use to sort the query results. Valid values:</p>
      * <ul>
-     * <li><strong>asc</strong>: the ascending order.</li>
-     * <li><strong>desc</strong> (default): the descending order.</li>
+     * <li><strong>asc</strong></li>
+     * <li><strong>desc</strong> (default)</li>
      * </ul>
      * 
      * <strong>example:</strong>

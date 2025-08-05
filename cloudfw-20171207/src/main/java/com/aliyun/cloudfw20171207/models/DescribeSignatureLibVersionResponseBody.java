@@ -23,7 +23,7 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The information about the versions.</p>
+     * <p>The version information.</p>
      */
     @NameInMap("Version")
     public java.util.List<DescribeSignatureLibVersionResponseBodyVersion> version;
@@ -89,6 +89,12 @@ public class DescribeSignatureLibVersionResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1741067915</p>
+         */
         @NameInMap("UpdateTime")
         public Long updateTime;
 

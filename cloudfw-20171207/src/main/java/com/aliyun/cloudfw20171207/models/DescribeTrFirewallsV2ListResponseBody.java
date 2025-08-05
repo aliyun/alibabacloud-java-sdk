@@ -23,7 +23,7 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
     public String totalCount;
 
     /**
-     * <p>The information about the VPC firewalls.</p>
+     * <p>The VPC firewalls.</p>
      */
     @NameInMap("VpcTrFirewalls")
     public java.util.List<DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls> vpcTrFirewalls;
@@ -58,6 +58,16 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
     }
 
     public static class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsAclConfig extends TeaModel {
+        /**
+         * <p>Whether to enable strict mode</p>
+         * <ul>
+         * <li>1: Enable strict mode</li>
+         * <li>0: Disable strict mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StrictMode")
         public Integer strictMode;
 
@@ -360,6 +370,9 @@ public class DescribeTrFirewallsV2ListResponseBody extends TeaModel {
     }
 
     public static class DescribeTrFirewallsV2ListResponseBodyVpcTrFirewalls extends TeaModel {
+        /**
+         * <p>ACL engine mode.</p>
+         */
         @NameInMap("AclConfig")
         public DescribeTrFirewallsV2ListResponseBodyVpcTrFirewallsAclConfig aclConfig;
 
