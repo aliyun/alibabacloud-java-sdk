@@ -41,6 +41,13 @@ public class HttpApiDeployConfig extends TeaModel {
     @NameInMap("gatewayInfo")
     public GatewayInfo gatewayInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>API</p>
+     */
+    @NameInMap("gatewayType")
+    public String gatewayType;
+
     @NameInMap("mock")
     public HttpApiMockContract mock;
 
@@ -115,6 +122,14 @@ public class HttpApiDeployConfig extends TeaModel {
     }
     public GatewayInfo getGatewayInfo() {
         return this.gatewayInfo;
+    }
+
+    public HttpApiDeployConfig setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public HttpApiDeployConfig setMock(HttpApiMockContract mock) {

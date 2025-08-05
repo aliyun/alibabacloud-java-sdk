@@ -189,6 +189,81 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>CreateAndAttachPolicy</p>
+     * 
+     * @param request CreateAndAttachPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAndAttachPolicyResponse
+     */
+    public CreateAndAttachPolicyResponse createAndAttachPolicyWithOptions(CreateAndAttachPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceIds)) {
+            body.put("attachResourceIds", request.attachResourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceType)) {
+            body.put("attachResourceType", request.attachResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.className)) {
+            body.put("className", request.className);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            body.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAndAttachPolicy"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/policies"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAndAttachPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>CreateAndAttachPolicy</p>
+     * 
+     * @param request CreateAndAttachPolicyRequest
+     * @return CreateAndAttachPolicyResponse
+     */
+    public CreateAndAttachPolicyResponse createAndAttachPolicy(CreateAndAttachPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAndAttachPolicyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建消费者</p>
      * 
      * @param request CreateConsumerRequest
@@ -3204,6 +3279,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>ListPolicies</p>
+     * 
+     * @param request ListPoliciesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPoliciesResponse
+     */
+    public ListPoliciesResponse listPoliciesWithOptions(ListPoliciesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceId)) {
+            query.put("attachResourceId", request.attachResourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceType)) {
+            query.put("attachResourceType", request.attachResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            query.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            query.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withAttachments)) {
+            query.put("withAttachments", request.withAttachments);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.withSystemPolicy)) {
+            query.put("withSystemPolicy", request.withSystemPolicy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPolicies"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/policies"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>ListPolicies</p>
+     * 
+     * @param request ListPoliciesRequest
+     * @return ListPoliciesResponse
+     */
+    public ListPoliciesResponse listPolicies(ListPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPoliciesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>ListPolicyClasses</p>
      * 
      * @param request ListPolicyClassesRequest
@@ -3603,7 +3745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消部署HttpApi</p>
+     * <p>Unpublishes an HTTP API.</p>
      * 
      * @param request UndeployHttpApiRequest
      * @param headers map
@@ -3649,7 +3791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>取消部署HttpApi</p>
+     * <p>Unpublishes an HTTP API.</p>
      * 
      * @param request UndeployHttpApiRequest
      * @return UndeployHttpApiResponse
@@ -3658,6 +3800,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.undeployHttpApiWithOptions(httpApiId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateAndAttachPolicy</p>
+     * 
+     * @param request UpdateAndAttachPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAndAttachPolicyResponse
+     */
+    public UpdateAndAttachPolicyResponse updateAndAttachPolicyWithOptions(String policyId, UpdateAndAttachPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceIds)) {
+            body.put("attachResourceIds", request.attachResourceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.attachResourceType)) {
+            body.put("attachResourceType", request.attachResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.config)) {
+            body.put("config", request.config);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.environmentId)) {
+            body.put("environmentId", request.environmentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayId)) {
+            body.put("gatewayId", request.gatewayId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAndAttachPolicy"),
+            new TeaPair("version", "2024-03-27"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1/policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAndAttachPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>UpdateAndAttachPolicy</p>
+     * 
+     * @param request UpdateAndAttachPolicyRequest
+     * @return UpdateAndAttachPolicyResponse
+     */
+    public UpdateAndAttachPolicyResponse updateAndAttachPolicy(String policyId, UpdateAndAttachPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAndAttachPolicyWithOptions(policyId, request, headers, runtime);
     }
 
     /**

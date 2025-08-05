@@ -20,7 +20,7 @@ public class UndeployHttpApiRequest extends TeaModel {
     public String operationId;
 
     /**
-     * <p>Route ID. This must be provided when publishing the route of an HTTP API.</p>
+     * <p>The route ID. You must specify this parameter when you unpublish the route of an HTTP API.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-cr82undlhtgrle***</p>
