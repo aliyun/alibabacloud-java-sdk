@@ -263,24 +263,6 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy extends TeaModel {
         /**
-         * <p>The maximum timeout period for a retry.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>512</p>
-         */
-        @NameInMap("MaximumEventAgeInSeconds")
-        public Float maximumEventAgeInSeconds;
-
-        /**
-         * <p>The maximum number of retries.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>2</p>
-         */
-        @NameInMap("MaximumRetryAttempts")
-        public Float maximumRetryAttempts;
-
-        /**
          * <p>The retry policy. Valid values: BACKOFF_RETRY and EXPONENTIAL_DECAY_RETRY.</p>
          * 
          * <strong>example:</strong>
@@ -292,22 +274,6 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public static ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy build(java.util.Map<String, ?> map) throws Exception {
             ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy self = new ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy();
             return TeaModel.build(map, self);
-        }
-
-        public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy setMaximumEventAgeInSeconds(Float maximumEventAgeInSeconds) {
-            this.maximumEventAgeInSeconds = maximumEventAgeInSeconds;
-            return this;
-        }
-        public Float getMaximumEventAgeInSeconds() {
-            return this.maximumEventAgeInSeconds;
-        }
-
-        public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy setMaximumRetryAttempts(Float maximumRetryAttempts) {
-            this.maximumRetryAttempts = maximumRetryAttempts;
-            return this;
-        }
-        public Float getMaximumRetryAttempts() {
-            return this.maximumRetryAttempts;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsRunOptionsRetryStrategy setPushRetryStrategy(String pushRetryStrategy) {
