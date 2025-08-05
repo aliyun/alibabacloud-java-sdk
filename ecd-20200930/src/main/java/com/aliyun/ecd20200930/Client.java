@@ -16597,6 +16597,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("ChargeType", request.chargeType);
         }
 
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dataDiskList)) {
+            bodyFlat.put("DataDiskList", request.dataDiskList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.defaultLanguage)) {
             body.put("DefaultLanguage", request.defaultLanguage);
         }
@@ -16625,7 +16630,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PostPaidAfterUsedUp", request.postPaidAfterUsedUp);
         }
 
-        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.regionConfigList)) {
             bodyFlat.put("RegionConfigList", request.regionConfigList);
         }

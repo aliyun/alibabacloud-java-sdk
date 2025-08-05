@@ -13,6 +13,9 @@ public class ModifyTemplateRequest extends TeaModel {
     @NameInMap("ChargeType")
     public String chargeType;
 
+    @NameInMap("DataDiskList")
+    public java.util.List<ModifyTemplateRequestDataDiskList> dataDiskList;
+
     /**
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -129,6 +132,14 @@ public class ModifyTemplateRequest extends TeaModel {
     }
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    public ModifyTemplateRequest setDataDiskList(java.util.List<ModifyTemplateRequestDataDiskList> dataDiskList) {
+        this.dataDiskList = dataDiskList;
+        return this;
+    }
+    public java.util.List<ModifyTemplateRequestDataDiskList> getDataDiskList() {
+        return this.dataDiskList;
     }
 
     public ModifyTemplateRequest setDefaultLanguage(String defaultLanguage) {
@@ -265,6 +276,36 @@ public class ModifyTemplateRequest extends TeaModel {
     }
     public Integer getUserDuration() {
         return this.userDuration;
+    }
+
+    public static class ModifyTemplateRequestDataDiskList extends TeaModel {
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static ModifyTemplateRequestDataDiskList build(java.util.Map<String, ?> map) throws Exception {
+            ModifyTemplateRequestDataDiskList self = new ModifyTemplateRequestDataDiskList();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyTemplateRequestDataDiskList setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public ModifyTemplateRequestDataDiskList setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
     }
 
     public static class ModifyTemplateRequestRegionConfigList extends TeaModel {
