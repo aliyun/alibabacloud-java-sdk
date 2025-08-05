@@ -207,6 +207,15 @@ public class GetProjectResponseBody extends TeaModel {
     }
 
     public static class GetProjectResponseBodyDataPropertiesExternalProjectProperties extends TeaModel {
+        @NameInMap("externalCatalogId")
+        public String externalCatalogId;
+
+        @NameInMap("foreignServerName")
+        public String foreignServerName;
+
+        @NameInMap("foreignServerType")
+        public String foreignServerType;
+
         /**
          * <p>Indicates whether the external project is an external project for <a href="https://www.alibabacloud.com/help/zh/maxcompute/user-guide/lake-warehouse-integrated-2-0-use-guide">data lakehouse solution 2.0</a>.</p>
          * 
@@ -216,9 +225,39 @@ public class GetProjectResponseBody extends TeaModel {
         @NameInMap("isExternalCatalogBound")
         public String isExternalCatalogBound;
 
+        @NameInMap("tableFormat")
+        public String tableFormat;
+
+        @NameInMap("warehouse")
+        public String warehouse;
+
         public static GetProjectResponseBodyDataPropertiesExternalProjectProperties build(java.util.Map<String, ?> map) throws Exception {
             GetProjectResponseBodyDataPropertiesExternalProjectProperties self = new GetProjectResponseBodyDataPropertiesExternalProjectProperties();
             return TeaModel.build(map, self);
+        }
+
+        public GetProjectResponseBodyDataPropertiesExternalProjectProperties setExternalCatalogId(String externalCatalogId) {
+            this.externalCatalogId = externalCatalogId;
+            return this;
+        }
+        public String getExternalCatalogId() {
+            return this.externalCatalogId;
+        }
+
+        public GetProjectResponseBodyDataPropertiesExternalProjectProperties setForeignServerName(String foreignServerName) {
+            this.foreignServerName = foreignServerName;
+            return this;
+        }
+        public String getForeignServerName() {
+            return this.foreignServerName;
+        }
+
+        public GetProjectResponseBodyDataPropertiesExternalProjectProperties setForeignServerType(String foreignServerType) {
+            this.foreignServerType = foreignServerType;
+            return this;
+        }
+        public String getForeignServerType() {
+            return this.foreignServerType;
         }
 
         public GetProjectResponseBodyDataPropertiesExternalProjectProperties setIsExternalCatalogBound(String isExternalCatalogBound) {
@@ -227,6 +266,22 @@ public class GetProjectResponseBody extends TeaModel {
         }
         public String getIsExternalCatalogBound() {
             return this.isExternalCatalogBound;
+        }
+
+        public GetProjectResponseBodyDataPropertiesExternalProjectProperties setTableFormat(String tableFormat) {
+            this.tableFormat = tableFormat;
+            return this;
+        }
+        public String getTableFormat() {
+            return this.tableFormat;
+        }
+
+        public GetProjectResponseBodyDataPropertiesExternalProjectProperties setWarehouse(String warehouse) {
+            this.warehouse = warehouse;
+            return this;
+        }
+        public String getWarehouse() {
+            return this.warehouse;
         }
 
     }
