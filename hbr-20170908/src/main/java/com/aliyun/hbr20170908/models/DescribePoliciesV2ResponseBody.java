@@ -554,6 +554,9 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
     }
 
     public static class DescribePoliciesV2ResponseBodyPolicies extends TeaModel {
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         /**
          * <p>The time when the backup policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
          * 
@@ -630,6 +633,14 @@ public class DescribePoliciesV2ResponseBody extends TeaModel {
         public static DescribePoliciesV2ResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
             DescribePoliciesV2ResponseBodyPolicies self = new DescribePoliciesV2ResponseBodyPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public DescribePoliciesV2ResponseBodyPolicies setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribePoliciesV2ResponseBodyPolicies setCreatedTime(Long createdTime) {

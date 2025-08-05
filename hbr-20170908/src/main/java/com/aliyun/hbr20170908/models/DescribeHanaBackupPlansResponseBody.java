@@ -170,6 +170,9 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         @NameInMap("BackupType")
         public String backupType;
 
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         /**
          * <p>The ID of the SAP HANA instance.</p>
          * 
@@ -260,6 +263,14 @@ public class DescribeHanaBackupPlansResponseBody extends TeaModel {
         }
         public String getBackupType() {
             return this.backupType;
+        }
+
+        public DescribeHanaBackupPlansResponseBodyHanaBackupPlansHanaBackupPlan setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribeHanaBackupPlansResponseBodyHanaBackupPlansHanaBackupPlan setClusterId(String clusterId) {

@@ -654,6 +654,9 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         @NameInMap("Bucket")
         public String bucket;
 
+        @NameInMap("BusinessStatus")
+        public String businessStatus;
+
         /**
          * <p>The configurations of the incremental file synchronization. This parameter is returned only for data synchronization.</p>
          * 
@@ -1043,6 +1046,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
         public String getBucket() {
             return this.bucket;
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setBusinessStatus(String businessStatus) {
+            this.businessStatus = businessStatus;
+            return this;
+        }
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setChangeListPath(String changeListPath) {
