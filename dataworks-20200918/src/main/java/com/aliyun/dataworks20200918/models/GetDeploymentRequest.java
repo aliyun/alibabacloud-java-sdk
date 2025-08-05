@@ -1,0 +1,48 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks20200918.models;
+
+import com.aliyun.tea.*;
+
+public class GetDeploymentRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("DeploymentId")
+    public Long deploymentId;
+
+    @NameInMap("ProjectId")
+    public Long projectId;
+
+    @NameInMap("ProjectIdentifier")
+    public String projectIdentifier;
+
+    public static GetDeploymentRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetDeploymentRequest self = new GetDeploymentRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetDeploymentRequest setDeploymentId(Long deploymentId) {
+        this.deploymentId = deploymentId;
+        return this;
+    }
+    public Long getDeploymentId() {
+        return this.deploymentId;
+    }
+
+    public GetDeploymentRequest setProjectId(Long projectId) {
+        this.projectId = projectId;
+        return this;
+    }
+    public Long getProjectId() {
+        return this.projectId;
+    }
+
+    public GetDeploymentRequest setProjectIdentifier(String projectIdentifier) {
+        this.projectIdentifier = projectIdentifier;
+        return this;
+    }
+    public String getProjectIdentifier() {
+        return this.projectIdentifier;
+    }
+
+}

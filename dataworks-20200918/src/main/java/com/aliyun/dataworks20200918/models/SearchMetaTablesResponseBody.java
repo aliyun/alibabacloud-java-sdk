@@ -1,0 +1,215 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks20200918.models;
+
+import com.aliyun.tea.*;
+
+public class SearchMetaTablesResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public SearchMetaTablesResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static SearchMetaTablesResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        SearchMetaTablesResponseBody self = new SearchMetaTablesResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public SearchMetaTablesResponseBody setData(SearchMetaTablesResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public SearchMetaTablesResponseBodyData getData() {
+        return this.data;
+    }
+
+    public SearchMetaTablesResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class SearchMetaTablesResponseBodyDataDataEntityList extends TeaModel {
+        @NameInMap("ClusterId")
+        public String clusterId;
+
+        @NameInMap("Comment")
+        public String comment;
+
+        @NameInMap("DatabaseName")
+        public String databaseName;
+
+        @NameInMap("EntityType")
+        public Integer entityType;
+
+        @NameInMap("EnvType")
+        public Integer envType;
+
+        @NameInMap("OwnerId")
+        public String ownerId;
+
+        @NameInMap("ProjectId")
+        public Long projectId;
+
+        @NameInMap("ProjectName")
+        public String projectName;
+
+        @NameInMap("TableGuid")
+        public String tableGuid;
+
+        @NameInMap("TableName")
+        public String tableName;
+
+        @NameInMap("TenantId")
+        public Long tenantId;
+
+        public static SearchMetaTablesResponseBodyDataDataEntityList build(java.util.Map<String, ?> map) throws Exception {
+            SearchMetaTablesResponseBodyDataDataEntityList self = new SearchMetaTablesResponseBodyDataDataEntityList();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setClusterId(String clusterId) {
+            this.clusterId = clusterId;
+            return this;
+        }
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setComment(String comment) {
+            this.comment = comment;
+            return this;
+        }
+        public String getComment() {
+            return this.comment;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setDatabaseName(String databaseName) {
+            this.databaseName = databaseName;
+            return this;
+        }
+        public String getDatabaseName() {
+            return this.databaseName;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setEntityType(Integer entityType) {
+            this.entityType = entityType;
+            return this;
+        }
+        public Integer getEntityType() {
+            return this.entityType;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setEnvType(Integer envType) {
+            this.envType = envType;
+            return this;
+        }
+        public Integer getEnvType() {
+            return this.envType;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setOwnerId(String ownerId) {
+            this.ownerId = ownerId;
+            return this;
+        }
+        public String getOwnerId() {
+            return this.ownerId;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setProjectId(Long projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public Long getProjectId() {
+            return this.projectId;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setTableGuid(String tableGuid) {
+            this.tableGuid = tableGuid;
+            return this;
+        }
+        public String getTableGuid() {
+            return this.tableGuid;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setTableName(String tableName) {
+            this.tableName = tableName;
+            return this;
+        }
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public SearchMetaTablesResponseBodyDataDataEntityList setTenantId(Long tenantId) {
+            this.tenantId = tenantId;
+            return this;
+        }
+        public Long getTenantId() {
+            return this.tenantId;
+        }
+
+    }
+
+    public static class SearchMetaTablesResponseBodyData extends TeaModel {
+        @NameInMap("DataEntityList")
+        public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList;
+
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
+
+        public static SearchMetaTablesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            SearchMetaTablesResponseBodyData self = new SearchMetaTablesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public SearchMetaTablesResponseBodyData setDataEntityList(java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> dataEntityList) {
+            this.dataEntityList = dataEntityList;
+            return this;
+        }
+        public java.util.List<SearchMetaTablesResponseBodyDataDataEntityList> getDataEntityList() {
+            return this.dataEntityList;
+        }
+
+        public SearchMetaTablesResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public SearchMetaTablesResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
+        public SearchMetaTablesResponseBodyData setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
+    }
+
+}

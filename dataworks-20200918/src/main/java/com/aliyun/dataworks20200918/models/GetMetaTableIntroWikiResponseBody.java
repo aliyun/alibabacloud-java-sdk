@@ -1,0 +1,108 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks20200918.models;
+
+import com.aliyun.tea.*;
+
+public class GetMetaTableIntroWikiResponseBody extends TeaModel {
+    @NameInMap("Data")
+    public GetMetaTableIntroWikiResponseBodyData data;
+
+    @NameInMap("RequestId")
+    public String requestId;
+
+    public static GetMetaTableIntroWikiResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetMetaTableIntroWikiResponseBody self = new GetMetaTableIntroWikiResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public GetMetaTableIntroWikiResponseBody setData(GetMetaTableIntroWikiResponseBodyData data) {
+        this.data = data;
+        return this;
+    }
+    public GetMetaTableIntroWikiResponseBodyData getData() {
+        return this.data;
+    }
+
+    public GetMetaTableIntroWikiResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static class GetMetaTableIntroWikiResponseBodyData extends TeaModel {
+        @NameInMap("Content")
+        public String content;
+
+        @NameInMap("CreateTime")
+        public Long createTime;
+
+        @NameInMap("Creator")
+        public String creator;
+
+        @NameInMap("CreatorName")
+        public String creatorName;
+
+        @NameInMap("ModifiedTime")
+        public Long modifiedTime;
+
+        @NameInMap("Version")
+        public Long version;
+
+        public static GetMetaTableIntroWikiResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetMetaTableIntroWikiResponseBodyData self = new GetMetaTableIntroWikiResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMetaTableIntroWikiResponseBodyData setContent(String content) {
+            this.content = content;
+            return this;
+        }
+        public String getContent() {
+            return this.content;
+        }
+
+        public GetMetaTableIntroWikiResponseBodyData setCreateTime(Long createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetMetaTableIntroWikiResponseBodyData setCreator(String creator) {
+            this.creator = creator;
+            return this;
+        }
+        public String getCreator() {
+            return this.creator;
+        }
+
+        public GetMetaTableIntroWikiResponseBodyData setCreatorName(String creatorName) {
+            this.creatorName = creatorName;
+            return this;
+        }
+        public String getCreatorName() {
+            return this.creatorName;
+        }
+
+        public GetMetaTableIntroWikiResponseBodyData setModifiedTime(Long modifiedTime) {
+            this.modifiedTime = modifiedTime;
+            return this;
+        }
+        public Long getModifiedTime() {
+            return this.modifiedTime;
+        }
+
+        public GetMetaTableIntroWikiResponseBodyData setVersion(Long version) {
+            this.version = version;
+            return this;
+        }
+        public Long getVersion() {
+            return this.version;
+        }
+
+    }
+
+}

@@ -1,0 +1,34 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks20200918.models;
+
+import com.aliyun.tea.*;
+
+public class UpdateNodeOwnerResponseBody extends TeaModel {
+    @NameInMap("RequestId")
+    public String requestId;
+
+    @NameInMap("Success")
+    public Boolean success;
+
+    public static UpdateNodeOwnerResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateNodeOwnerResponseBody self = new UpdateNodeOwnerResponseBody();
+        return TeaModel.build(map, self);
+    }
+
+    public UpdateNodeOwnerResponseBody setRequestId(String requestId) {
+        this.requestId = requestId;
+        return this;
+    }
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public UpdateNodeOwnerResponseBody setSuccess(Boolean success) {
+        this.success = success;
+        return this;
+    }
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
+}

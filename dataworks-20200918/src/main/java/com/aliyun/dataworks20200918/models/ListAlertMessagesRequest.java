@@ -1,0 +1,123 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks20200918.models;
+
+import com.aliyun.tea.*;
+
+public class ListAlertMessagesRequest extends TeaModel {
+    @NameInMap("AlertMethods")
+    public String alertMethods;
+
+    @NameInMap("AlertRuleTypes")
+    public String alertRuleTypes;
+
+    @NameInMap("AlertUser")
+    public String alertUser;
+
+    @NameInMap("BaselineId")
+    public Long baselineId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("BeginTime")
+    public String beginTime;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("EndTime")
+    public String endTime;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("PageNumber")
+    public Integer pageNumber;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    @NameInMap("RemindId")
+    public Long remindId;
+
+    public static ListAlertMessagesRequest build(java.util.Map<String, ?> map) throws Exception {
+        ListAlertMessagesRequest self = new ListAlertMessagesRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public ListAlertMessagesRequest setAlertMethods(String alertMethods) {
+        this.alertMethods = alertMethods;
+        return this;
+    }
+    public String getAlertMethods() {
+        return this.alertMethods;
+    }
+
+    public ListAlertMessagesRequest setAlertRuleTypes(String alertRuleTypes) {
+        this.alertRuleTypes = alertRuleTypes;
+        return this;
+    }
+    public String getAlertRuleTypes() {
+        return this.alertRuleTypes;
+    }
+
+    public ListAlertMessagesRequest setAlertUser(String alertUser) {
+        this.alertUser = alertUser;
+        return this;
+    }
+    public String getAlertUser() {
+        return this.alertUser;
+    }
+
+    public ListAlertMessagesRequest setBaselineId(Long baselineId) {
+        this.baselineId = baselineId;
+        return this;
+    }
+    public Long getBaselineId() {
+        return this.baselineId;
+    }
+
+    public ListAlertMessagesRequest setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
+        return this;
+    }
+    public String getBeginTime() {
+        return this.beginTime;
+    }
+
+    public ListAlertMessagesRequest setEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    public String getEndTime() {
+        return this.endTime;
+    }
+
+    public ListAlertMessagesRequest setPageNumber(Integer pageNumber) {
+        this.pageNumber = pageNumber;
+        return this;
+    }
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    public ListAlertMessagesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    public ListAlertMessagesRequest setRemindId(Long remindId) {
+        this.remindId = remindId;
+        return this;
+    }
+    public Long getRemindId() {
+        return this.remindId;
+    }
+
+}

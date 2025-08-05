@@ -1,0 +1,26 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataworks20200918.models;
+
+import com.aliyun.tea.*;
+
+public class GetTopicInfluenceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("TopicId")
+    public Long topicId;
+
+    public static GetTopicInfluenceRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetTopicInfluenceRequest self = new GetTopicInfluenceRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public GetTopicInfluenceRequest setTopicId(Long topicId) {
+        this.topicId = topicId;
+        return this;
+    }
+    public Long getTopicId() {
+        return this.topicId;
+    }
+
+}
