@@ -223,6 +223,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateBusinessOpportunity</p>
+     * 
      * @param request CreateBusinessOpportunityRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateBusinessOpportunityResponse
@@ -268,6 +271,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>CreateBusinessOpportunity</p>
+     * 
      * @param request CreateBusinessOpportunityRequest
      * @return CreateBusinessOpportunityResponse
      */
@@ -365,6 +371,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GenerateUploadFilePolicy</p>
+     * 
      * @param request GenerateUploadFilePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GenerateUploadFilePolicyResponse
@@ -402,6 +411,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GenerateUploadFilePolicy</p>
+     * 
      * @param request GenerateUploadFilePolicyRequest
      * @return GenerateUploadFilePolicyResponse
      */
@@ -1076,6 +1088,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public QueryBagRemainingResponse queryBagRemaining(QueryBagRemainingRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.queryBagRemainingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询玄坛外呼语音文件</p>
+     * 
+     * @param request QueryCallRecordListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCallRecordListResponse
+     */
+    public QueryCallRecordListResponse queryCallRecordListWithOptions(QueryCallRecordListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillType)) {
+            query.put("SkillType", request.skillType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCallRecordList"),
+            new TeaPair("version", "2020-03-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCallRecordListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询玄坛外呼语音文件</p>
+     * 
+     * @param request QueryCallRecordListRequest
+     * @return QueryCallRecordListResponse
+     */
+    public QueryCallRecordListResponse queryCallRecordList(QueryCallRecordListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCallRecordListWithOptions(request, runtime);
     }
 
     /**
