@@ -249,6 +249,9 @@ public class DedicatedIpListResponseBody extends TeaModel {
         @NameInMap("WarmupType")
         public String warmupType;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DedicatedIpListResponseBodyIps build(java.util.Map<String, ?> map) throws Exception {
             DedicatedIpListResponseBodyIps self = new DedicatedIpListResponseBodyIps();
             return TeaModel.build(map, self);
@@ -332,6 +335,14 @@ public class DedicatedIpListResponseBody extends TeaModel {
         }
         public String getWarmupType() {
             return this.warmupType;
+        }
+
+        public DedicatedIpListResponseBodyIps setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }

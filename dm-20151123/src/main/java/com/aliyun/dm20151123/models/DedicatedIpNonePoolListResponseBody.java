@@ -59,6 +59,9 @@ public class DedicatedIpNonePoolListResponseBody extends TeaModel {
         @NameInMap("Ip")
         public String ip;
 
+        @NameInMap("ZoneId")
+        public String zoneId;
+
         public static DedicatedIpNonePoolListResponseBodyIps build(java.util.Map<String, ?> map) throws Exception {
             DedicatedIpNonePoolListResponseBodyIps self = new DedicatedIpNonePoolListResponseBodyIps();
             return TeaModel.build(map, self);
@@ -78,6 +81,14 @@ public class DedicatedIpNonePoolListResponseBody extends TeaModel {
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public DedicatedIpNonePoolListResponseBodyIps setZoneId(String zoneId) {
+            this.zoneId = zoneId;
+            return this;
+        }
+        public String getZoneId() {
+            return this.zoneId;
         }
 
     }
