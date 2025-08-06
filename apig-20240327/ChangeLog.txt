@@ -1,3 +1,6 @@
+2025-08-06 Version: 5.4.1
+- Generated java 2024-03-27 for APIG.
+
 2025-08-05 Version: 5.4.0
 - Support API CreateAndAttachPolicy.
 - Support API ListPolicies.
