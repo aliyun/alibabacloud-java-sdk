@@ -30,6 +30,9 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("NetworkAccessEndpointId")
+    public String networkAccessEndpointId;
+
     /**
      * <p>Specifies whether to synchronize the password in IDaaS user event callbacks. Valid values:</p>
      * <ul>
@@ -90,6 +93,14 @@ public class SetApplicationProvisioningConfigRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public SetApplicationProvisioningConfigRequest setNetworkAccessEndpointId(String networkAccessEndpointId) {
+        this.networkAccessEndpointId = networkAccessEndpointId;
+        return this;
+    }
+    public String getNetworkAccessEndpointId() {
+        return this.networkAccessEndpointId;
     }
 
     public SetApplicationProvisioningConfigRequest setProvisionPassword(Boolean provisionPassword) {

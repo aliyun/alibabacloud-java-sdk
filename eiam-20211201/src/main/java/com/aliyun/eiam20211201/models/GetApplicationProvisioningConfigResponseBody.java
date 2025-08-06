@@ -394,6 +394,9 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("NetworkAccessEndpointId")
+        public String networkAccessEndpointId;
+
         /**
          * <p>The public key endpoint for signature verification of the synchronization callback information.</p>
          * 
@@ -483,6 +486,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig setNetworkAccessEndpointId(String networkAccessEndpointId) {
+            this.networkAccessEndpointId = networkAccessEndpointId;
+            return this;
+        }
+        public String getNetworkAccessEndpointId() {
+            return this.networkAccessEndpointId;
         }
 
         public GetApplicationProvisioningConfigResponseBodyApplicationProvisioningConfig setProvisionJwksEndpoint(String provisionJwksEndpoint) {
