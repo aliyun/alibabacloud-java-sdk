@@ -137,6 +137,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    @NameInMap("ClockOptions")
+    public RunInstancesRequestClockOptions clockOptions;
+
     /**
      * <p>The performance mode of the burstable instance. Valid values:</p>
      * <ul>
@@ -1016,6 +1019,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public RunInstancesRequest setClockOptions(RunInstancesRequestClockOptions clockOptions) {
+        this.clockOptions = clockOptions;
+        return this;
+    }
+    public RunInstancesRequestClockOptions getClockOptions() {
+        return this.clockOptions;
     }
 
     public RunInstancesRequest setCreditSpecification(String creditSpecification) {
@@ -2123,6 +2134,25 @@ public class RunInstancesRequest extends TeaModel {
         }
         public String getRolearn() {
             return this.rolearn;
+        }
+
+    }
+
+    public static class RunInstancesRequestClockOptions extends TeaModel {
+        @NameInMap("PtpStatus")
+        public String ptpStatus;
+
+        public static RunInstancesRequestClockOptions build(java.util.Map<String, ?> map) throws Exception {
+            RunInstancesRequestClockOptions self = new RunInstancesRequestClockOptions();
+            return TeaModel.build(map, self);
+        }
+
+        public RunInstancesRequestClockOptions setPtpStatus(String ptpStatus) {
+            this.ptpStatus = ptpStatus;
+            return this;
+        }
+        public String getPtpStatus() {
+            return this.ptpStatus;
         }
 
     }

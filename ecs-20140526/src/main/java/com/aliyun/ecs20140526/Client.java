@@ -34811,6 +34811,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientToken", request.clientToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.clockOptions)) {
+            query.put("ClockOptions", request.clockOptions);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.creditSpecification)) {
             query.put("CreditSpecification", request.creditSpecification);
         }
