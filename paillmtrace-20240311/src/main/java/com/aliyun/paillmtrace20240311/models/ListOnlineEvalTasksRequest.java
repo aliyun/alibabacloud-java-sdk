@@ -54,6 +54,9 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SamplingMethod")
+    public String samplingMethod;
+
     @NameInMap("SortBy")
     public String sortBy;
 
@@ -114,6 +117,14 @@ public class ListOnlineEvalTasksRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListOnlineEvalTasksRequest setSamplingMethod(String samplingMethod) {
+        this.samplingMethod = samplingMethod;
+        return this;
+    }
+    public String getSamplingMethod() {
+        return this.samplingMethod;
     }
 
     public ListOnlineEvalTasksRequest setSortBy(String sortBy) {
