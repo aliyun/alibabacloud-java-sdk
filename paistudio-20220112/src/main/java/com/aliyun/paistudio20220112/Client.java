@@ -1800,6 +1800,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            query.put("PaymentType", request.paymentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.quotaId)) {
             query.put("QuotaId", request.quotaId);
         }

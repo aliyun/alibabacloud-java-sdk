@@ -90,6 +90,9 @@ public class ListNodesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("PaymentType")
+    public String paymentType;
+
     /**
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -236,6 +239,14 @@ public class ListNodesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListNodesRequest setPaymentType(String paymentType) {
+        this.paymentType = paymentType;
+        return this;
+    }
+    public String getPaymentType() {
+        return this.paymentType;
     }
 
     public ListNodesRequest setQuotaId(String quotaId) {

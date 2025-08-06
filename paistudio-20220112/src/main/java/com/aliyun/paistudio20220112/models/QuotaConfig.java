@@ -58,6 +58,9 @@ public class QuotaConfig extends TeaModel {
     @NameInMap("SupportRDMA")
     public Boolean supportRDMA;
 
+    @NameInMap("UseCase")
+    public String useCase;
+
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
@@ -176,6 +179,14 @@ public class QuotaConfig extends TeaModel {
     }
     public Boolean getSupportRDMA() {
         return this.supportRDMA;
+    }
+
+    public QuotaConfig setUseCase(String useCase) {
+        this.useCase = useCase;
+        return this;
+    }
+    public String getUseCase() {
+        return this.useCase;
     }
 
     public QuotaConfig setUserVpc(UserVpc userVpc) {
