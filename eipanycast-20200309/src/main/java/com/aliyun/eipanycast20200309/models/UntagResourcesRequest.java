@@ -6,20 +6,24 @@ import com.aliyun.tea.*;
 public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The resource ID. You can specify up to 20 resource IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to **ANYCASTEIPADDRESS**.</p>
+     * <p>The resource type. Set the value to <strong>ANYCASTEIPADDRESS</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANYCASTEIPADDRESS</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-     * <br>
-     * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain `http://` or `https://`.</p>
+     * <p>A tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

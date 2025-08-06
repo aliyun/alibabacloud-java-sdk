@@ -6,68 +6,90 @@ import com.aliyun.tea.*;
 public class AllocateAnycastEipAddressRequest extends TeaModel {
     /**
      * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **200** to **1000**.</p>
-     * <br>
-     * <p>Default value: **1000**.</p>
-     * <br>
-     * <p>> The maximum bandwidth is not a guaranteed service and is for reference only.</p>
+     * <p>Valid values: <strong>200</strong> to <strong>1000</strong>.</p>
+     * <p>Default value: <strong>1000</strong>.</p>
+     * <blockquote>
+     * <p>The maximum bandwidth is not a guaranteed service and is for reference only.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>The description of the Anycast EIP.</p>
-     * <br>
-     * <p>The description must be 0 to 256 characters in length and cannot start with `http://` or `https://`.</p>
+     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>docdesc</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
      * <p>The billing method of the Anycast EIP.</p>
-     * <br>
-     * <p>Set the value to **PostPaid**, which specifies the pay-as-you-go billing method.</p>
+     * <p>Set the value to <strong>PostPaid</strong>, which specifies the pay-as-you-go billing method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PostPaid</p>
      */
     @NameInMap("InstanceChargeType")
     public String instanceChargeType;
 
     /**
      * <p>The metering method of the Anycast EIP.</p>
-     * <br>
-     * <p>Set the value to **PayByTraffic**, which specifies the pay-by-data-transfer metering method.</p>
+     * <p>Set the value to <strong>PayByTraffic</strong>, which specifies the pay-by-data-transfer metering method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
     /**
      * <p>The name of the Anycast EIP.</p>
-     * <br>
-     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). It must start with a letter.</p>
+     * <p>The name must be 0 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). It must start with a letter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>doctest</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The ID of the resource group to which the instance belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-acfm3obzjukv53a</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
      * <p>The access area of the Anycast EIP.</p>
-     * <br>
-     * <p>Set the value to **international**, which specifies the areas outside the Chinese mainland.</p>
+     * <p>Set the value to <strong>international</strong>, which specifies the areas outside the Chinese mainland.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>international</p>
      */
     @NameInMap("ServiceLocation")
     public String serviceLocation;

@@ -12,12 +12,18 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
 
     /**
      * <p>The number of returned entries.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("Count")
     public String count;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -54,12 +60,18 @@ public class DescribeAnycastServerRegionsResponseBody extends TeaModel {
     public static class DescribeAnycastServerRegionsResponseBodyAnycastServerRegionList extends TeaModel {
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eu-west-1</p>
          */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
          * <p>The name of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eu-west-1-gb33-a01</p>
          */
         @NameInMap("RegionName")
         public String regionName;

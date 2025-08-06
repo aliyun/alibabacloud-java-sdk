@@ -12,21 +12,31 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
 
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If **NextToken** is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If <strong>NextToken</strong> is not empty, the value of NextToken can be used in the next request to retrieve a new page of results.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4EC47282-1B74-4534-BD0E-403F3EE64CAF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of entries returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -71,27 +81,40 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
     public static class ListAnycastEipAddressesResponseBodyAnycastListAnycastEipBindInfoList extends TeaModel {
         /**
          * <p>The ID of the cloud resource with which the Anycast EIP is associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-2zebb08phyczzawe****</p>
          */
         @NameInMap("BindInstanceId")
         public String bindInstanceId;
 
         /**
          * <p>The ID of the region where the cloud resource is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-west-1</p>
          */
         @NameInMap("BindInstanceRegionId")
         public String bindInstanceRegionId;
 
         /**
          * <p>The type of cloud resource with which the Anycast EIP is associated.</p>
-         * <br>
-         * <p>*   **SlbInstance**: an internal-facing Classic Load Balancer (CLB) instance deployed in a virtual private cloud (VPC). CLB is formerly known as Server Load Balancer (SLB).</p>
-         * <p>*   **NetworkInterface**: an elastic network interface (ENI).</p>
+         * <ul>
+         * <li><strong>SlbInstance</strong>: an internal-facing Classic Load Balancer (CLB) instance deployed in a virtual private cloud (VPC). CLB is formerly known as Server Load Balancer (SLB).</li>
+         * <li><strong>NetworkInterface</strong>: an elastic network interface (ENI).</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SlbInstance</p>
          */
         @NameInMap("BindInstanceType")
         public String bindInstanceType;
 
         /**
          * <p>The time when the Anycast EIP was associated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-23T01:37:38Z</p>
          */
         @NameInMap("BindTime")
         public String bindTime;
@@ -138,12 +161,18 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
     public static class ListAnycastEipAddressesResponseBodyAnycastListTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;
@@ -174,6 +203,9 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
     public static class ListAnycastEipAddressesResponseBodyAnycastList extends TeaModel {
         /**
          * <p>The ID of the account to which the Anycast EIP belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123440159596****</p>
          */
         @NameInMap("AliUid")
         public Long aliUid;
@@ -186,95 +218,137 @@ public class ListAnycastEipAddressesResponseBody extends TeaModel {
 
         /**
          * <p>The ID of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-2zeerraiwb7ujsxdc****</p>
          */
         @NameInMap("AnycastId")
         public String anycastId;
 
         /**
          * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         @NameInMap("Bandwidth")
         public Integer bandwidth;
 
         /**
          * <p>The service status of the Anycast EIP. Valid values:</p>
-         * <br>
-         * <p>*   **Normal**</p>
-         * <p>*   **FinancialLocked**</p>
+         * <ul>
+         * <li><strong>Normal</strong></li>
+         * <li><strong>FinancialLocked</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Normal</p>
          */
         @NameInMap("BusinessStatus")
         public String businessStatus;
 
         /**
          * <p>The time when the Anycast EIP was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-04-22T01:37:38Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The description of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docdesc</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
          * <p>The billing method of the Anycast EIP.</p>
-         * <br>
-         * <p>**PostPaid**: pay-as-you-go</p>
+         * <p><strong>PostPaid</strong>: pay-as-you-go</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PostPaid</p>
          */
         @NameInMap("InstanceChargeType")
         public String instanceChargeType;
 
         /**
          * <p>The metering method of the Anycast EIP.</p>
-         * <br>
-         * <p>**PayByTraffic**: pay-by-data-transfer</p>
+         * <p><strong>PayByTraffic</strong>: pay-by-data-transfer</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PayByTraffic</p>
          */
         @NameInMap("InternetChargeType")
         public String internetChargeType;
 
         /**
          * <p>The IP address of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>139.95.XX.XX</p>
          */
         @NameInMap("IpAddress")
         public String ipAddress;
 
         /**
          * <p>The name of the Anycast EIP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>docname</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzthsmwsnfuni</p>
+         */
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
         /**
          * <p>The access area of the Anycast EIP.</p>
-         * <br>
-         * <p>**international**: regions outside the Chinese mainland</p>
+         * <p><strong>international</strong>: regions outside the Chinese mainland</p>
+         * 
+         * <strong>example:</strong>
+         * <p>international</p>
          */
         @NameInMap("ServiceLocation")
         public String serviceLocation;
 
         /**
          * <p>Indicates whether the resource is created by the service account.</p>
-         * <br>
-         * <p>*   **0**: no</p>
-         * <p>*   **1**: yes</p>
+         * <ul>
+         * <li><strong>0</strong>: no</li>
+         * <li><strong>1</strong>: yes</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ServiceManaged")
         public Integer serviceManaged;
 
         /**
          * <p>The status of the Anycast EIP.</p>
-         * <br>
-         * <p>*   **Associating**</p>
-         * <p>*   **Unassociating**</p>
-         * <p>*   **Allocated**</p>
-         * <p>*   **Associated**</p>
-         * <p>*   **Modifying**</p>
-         * <p>*   **Releasing**</p>
-         * <p>*   **Released**</p>
+         * <ul>
+         * <li><strong>Associating</strong></li>
+         * <li><strong>Unassociating</strong></li>
+         * <li><strong>Allocated</strong></li>
+         * <li><strong>Associated</strong></li>
+         * <li><strong>Modifying</strong></li>
+         * <li><strong>Releasing</strong></li>
+         * <li><strong>Released</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Associating</p>
          */
         @NameInMap("Status")
         public String status;

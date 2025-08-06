@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource ID. You can specify at most 20 IDs.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to **ANYCASTEIPADDRESS**.</p>
+     * <p>The resource type. Set the value to <strong>ANYCASTEIPADDRESS</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANYCASTEIPADDRESS</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
      * <p>The tag information.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -54,20 +60,26 @@ public class TagResourcesRequest extends TeaModel {
     public static class TagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N to add to the resource. You must enter at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>> When you call this operation, **Tag.N.Key** is required.</p>
+         * <p>The tag key can be up to 128 characters in length and cannot start with acs: or aliyun. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>When you call this operation, <strong>Tag.N.Key</strong> is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N to add to the resource. You must enter at least one tag value and at most 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>> When you call this operation, **Tag.N.Value** is required.</p>
+         * <p>It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>When you call this operation, <strong>Tag.N.Value</strong> is required.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

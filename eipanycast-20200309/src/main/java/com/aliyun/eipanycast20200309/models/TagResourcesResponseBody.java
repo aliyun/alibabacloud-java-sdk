@@ -6,16 +6,20 @@ import com.aliyun.tea.*;
 public class TagResourcesResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C46FF5A8-C5F0-4024-8262-B16B639225A0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>Indicates whether the operation is successful. Valid values:</p>
-     * <br>
-     * <p>**true**</p>
-     * <br>
-     * <p>**false**</p>
+     * <p><strong>true</strong></p>
+     * <p><strong>false</strong></p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;

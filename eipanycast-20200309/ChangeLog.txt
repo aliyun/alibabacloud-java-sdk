@@ -1,3 +1,8 @@
+2025-08-06 Version: 1.2.0
+- Support API ChangeResourceGroup.
+- Update API DescribeAnycastEipAddress: add response parameters Body.ServiceManaged.
+
+
 2024-02-04 Version: 1.1.2
 - Generated java 2020-03-09 for Eipanycast.
 

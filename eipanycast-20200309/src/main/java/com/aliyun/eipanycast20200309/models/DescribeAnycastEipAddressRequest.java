@@ -6,22 +6,33 @@ import com.aliyun.tea.*;
 public class DescribeAnycastEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the Anycast EIP.</p>
-     * <br>
-     * <p>> You must specify **Ip** or **AnycastId**.</p>
+     * <blockquote>
+     * <p>You must specify <strong>Ip</strong> or <strong>AnycastId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>aeip-bp1ix34fralt4ykf3****</p>
      */
     @NameInMap("AnycastId")
     public String anycastId;
 
     /**
      * <p>The ID of the endpoint with which the Anycast EIP is associated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-2zebb08phyczzawe****</p>
      */
     @NameInMap("BindInstanceId")
     public String bindInstanceId;
 
     /**
      * <p>The IP address of the Anycast EIP.</p>
-     * <br>
-     * <p>> You must specify **Ip** or **AnycastId**.</p>
+     * <blockquote>
+     * <p>You must specify <strong>Ip</strong> or <strong>AnycastId</strong>.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>139.95.XX.XX</p>
      */
     @NameInMap("Ip")
     public String ip;

@@ -3,7 +3,7 @@ package com.aliyun.eipanycast20200309.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyAnycastEipAddressAttributeResponseBody extends TeaModel {
+public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
@@ -13,12 +13,12 @@ public class ModifyAnycastEipAddressAttributeResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static ModifyAnycastEipAddressAttributeResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        ModifyAnycastEipAddressAttributeResponseBody self = new ModifyAnycastEipAddressAttributeResponseBody();
+    public static ChangeResourceGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        ChangeResourceGroupResponseBody self = new ChangeResourceGroupResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public ModifyAnycastEipAddressAttributeResponseBody setRequestId(String requestId) {
+    public ChangeResourceGroupResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

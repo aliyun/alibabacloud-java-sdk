@@ -6,8 +6,10 @@ import com.aliyun.tea.*;
 public class DescribeAnycastPopLocationsRequest extends TeaModel {
     /**
      * <p>The access area of the Anycast elastic IP address (EIP).</p>
-     * <br>
-     * <p>Set the value to **international**, which specifies the areas outside the Chinese mainland.</p>
+     * <p>Set the value to <strong>international</strong>, which specifies the areas outside the Chinese mainland.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>international</p>
      */
     @NameInMap("ServiceLocation")
     public String serviceLocation;

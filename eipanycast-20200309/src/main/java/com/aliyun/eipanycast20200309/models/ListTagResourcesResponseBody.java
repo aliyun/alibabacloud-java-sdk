@@ -6,15 +6,22 @@ import com.aliyun.tea.*;
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If **NextToken** is empty, no next page exists.</p>
-     * <p>*   If a value is returned for **NextToken**, the value is the token that determines the start point of the next query.</p>
+     * <ul>
+     * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+     * <li>If a value is returned for <strong>NextToken</strong>, the value is the token that determines the start point of the next query.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -57,24 +64,36 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
          * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aeip-2zeerraiwb7ujsxdc****</p>
          */
         @NameInMap("ResourceId")
         public String resourceId;
 
         /**
-         * <p>The resource type. Only **ANYCASTEIPADDRESS** may be returned.</p>
+         * <p>The resource type. Only <strong>ANYCASTEIPADDRESS</strong> may be returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANYCASTEIPADDRESS</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The key of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("TagKey")
         public String tagKey;
 
         /**
          * <p>The value of tag N.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("TagValue")
         public String tagValue;

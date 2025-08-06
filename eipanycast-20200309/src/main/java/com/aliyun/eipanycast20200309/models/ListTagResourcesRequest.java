@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page. Valid values: **1** to **50**. Default value: **50**.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("MaxResults")
     public String maxResults;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <br>
-     * <p>*   If this is your first query or no next queries are to be sent, ignore this parameter.</p>
-     * <p>*   You must specify the token that is obtained from the previous query as the value of **NextToken**.</p>
+     * <ul>
+     * <li>If this is your first query or no next queries are to be sent, ignore this parameter.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -26,7 +33,11 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Set the value to **ANYCASTEIPADDRESS**.</p>
+     * <p>The resource type. Set the value to <strong>ANYCASTEIPADDRESS</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANYCASTEIPADDRESS</p>
      */
     @NameInMap("ResourceType")
     public String resourceType;
@@ -85,20 +96,26 @@ public class ListTagResourcesRequest extends TeaModel {
     public static class ListTagResourcesRequestTag extends TeaModel {
         /**
          * <p>The key of tag N. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <br>
-         * <p>The tag key can be a up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.</p>
-         * <br>
-         * <p>> You must specify **ResourceId.N** or **Tag.N** (**Tag.N.Key** or **Tag.N.Value**).</p>
+         * <p>The tag key can be a up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>
+         * <blockquote>
+         * <p>You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> or <strong>Tag.N.Value</strong>).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The value of tag N. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <br>
-         * <p>It can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.</p>
-         * <br>
-         * <p>> You must specify **ResourceId.N** or **Tag.N** (**Tag.N.Key** or **Tag.N.Value**).</p>
+         * <p>It can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <blockquote>
+         * <p>You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> or <strong>Tag.N.Value</strong>).</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
          */
         @NameInMap("Value")
         public String value;

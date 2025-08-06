@@ -6,14 +6,21 @@ import com.aliyun.tea.*;
 public class ModifyAnycastEipAddressSpecRequest extends TeaModel {
     /**
      * <p>The ID of the Anycast EIP.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aeip-bp1ix34fralt4ykf3****</p>
      */
     @NameInMap("AnycastId")
     public String anycastId;
 
     /**
      * <p>The maximum bandwidth of the Anycast EIP. Unit: Mbit/s.</p>
-     * <br>
-     * <p>Valid values: **200** to **1000**.</p>
+     * <p>Valid values: <strong>200</strong> to <strong>1000</strong>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
      */
     @NameInMap("Bandwidth")
     public String bandwidth;

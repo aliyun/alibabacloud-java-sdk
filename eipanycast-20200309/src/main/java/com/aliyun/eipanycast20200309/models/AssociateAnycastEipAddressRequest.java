@@ -6,81 +6,109 @@ import com.aliyun.tea.*;
 public class AssociateAnycastEipAddressRequest extends TeaModel {
     /**
      * <p>The ID of the Anycast EIP.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>aeip-bp1ix34fralt4ykf3****</p>
      */
     @NameInMap("AnycastId")
     public String anycastId;
 
     /**
      * <p>The association mode. Valid values:</p>
-     * <br>
-     * <p>*   **Default**: the default mode. In this mode, the endpoint to be associated serves as the default origin server.</p>
-     * <p>*   **Normal**: the standard mode. In this mode, the endpoint to be associated serves as a standard origin server.</p>
-     * <br>
-     * <p>> You can associate endpoints in multiple regions with an Anycast EIP. However, only one endpoint can serve as the default origin server. Others serve as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.\</p>
-     * <br>
-     * <br>
-     * <p>*   If this is your first time to associate an Anycast EIP with an endpoint, set the value to **Default**.</p>
-     * <p>*   If not, you can also set the value to **Default**, which specifies a new default origin server. In this case, the previous origin server functions as a standard origin server.</p>
+     * <ul>
+     * <li><strong>Default</strong>: the default mode. In this mode, the endpoint to be associated serves as the default origin server.</li>
+     * <li><strong>Normal</strong>: the standard mode. In this mode, the endpoint to be associated serves as a standard origin server.</li>
+     * </ul>
+     * <blockquote>
+     * <p>You can associate endpoints in multiple regions with an Anycast EIP. However, only one endpoint can serve as the default origin server. Others serve as standard origin servers. If you do not specify or add an access point, requests are forwarded to the default origin server.\</p>
+     * </blockquote>
+     * <ul>
+     * <li>If this is your first time to associate an Anycast EIP with an endpoint, set the value to <strong>Default</strong>.</li>
+     * <li>If not, you can also set the value to <strong>Default</strong>, which specifies a new default origin server. In this case, the previous origin server functions as a standard origin server.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("AssociationMode")
     public String associationMode;
 
     /**
      * <p>The ID of the endpoint with which you want to associate the Anycast EIP.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lb-d7oxbixhxv1uupnon****</p>
      */
     @NameInMap("BindInstanceId")
     public String bindInstanceId;
 
     /**
      * <p>The ID of the region where the endpoint is deployed.</p>
-     * <br>
-     * <p>You can associate Anycast EIPs only with endpoints in specific regions. You can call the [DescribeAnycastServerRegions](~~171939~~) operation to query the region IDs.</p>
+     * <p>You can associate Anycast EIPs only with endpoints in specific regions. You can call the <a href="https://help.aliyun.com/document_detail/171939.html">DescribeAnycastServerRegions</a> operation to query the region IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>us-west-1</p>
      */
     @NameInMap("BindInstanceRegionId")
     public String bindInstanceRegionId;
 
     /**
      * <p>The type of endpoint with which you want to associate the Anycast EIP. Valid values:</p>
-     * <br>
-     * <p>*   **SlbInstance**: internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)</p>
-     * <p>*   **NetworkInterface**: elastic network interface (ENI)</p>
+     * <ul>
+     * <li><strong>SlbInstance</strong>: internal-facing Server Load Balancer (SLB) instance that is deployed in a virtual private cloud (VPC)</li>
+     * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SlbInstance</p>
      */
     @NameInMap("BindInstanceType")
     public String bindInstanceType;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <br>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
-     * <br>
-     * <p>> If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>request ID</strong> as the <strong>client token</strong>. The <strong>request ID</strong> may be different for each request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
     /**
      * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <br>
-     * <p>*   **true**: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.</p>
-     * <p>*   **false**(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</p>
+     * <ul>
+     * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>(default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
      * <p>The information about the access points in associated access areas when you associate an Anycast EIP with an endpoint.</p>
-     * <br>
      * <p>If this is your first time to associate an Anycast EIP with an endpoint, ignore this parameter. The system automatically associates all access areas.</p>
-     * <br>
-     * <p>You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/171938.html">DescribeAnycastPopLocations</a> operation to query information about access points in supported access areas.</p>
      */
     @NameInMap("PopLocations")
     public java.util.List<AssociateAnycastEipAddressRequestPopLocations> popLocations;
 
     /**
      * <p>The secondary private IP address of the ENI with which you want to associate the Anycast EIP.</p>
-     * <br>
-     * <p>This parameter is valid only when you set **BindInstanceType** to **NetworkInterface**. If you do not set this parameter, the primary private IP address of the ENI is used.</p>
+     * <p>This parameter is valid only when you set <strong>BindInstanceType</strong> to <strong>NetworkInterface</strong>. If you do not set this parameter, the primary private IP address of the ENI is used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>192.168.XX.XX</p>
      */
     @NameInMap("PrivateIpAddress")
     public String privateIpAddress;
@@ -165,10 +193,11 @@ public class AssociateAnycastEipAddressRequest extends TeaModel {
     public static class AssociateAnycastEipAddressRequestPopLocations extends TeaModel {
         /**
          * <p>The information about the access points in associated access areas when you associate an Anycast EIP with an endpoint.</p>
-         * <br>
          * <p>If this is your first time to associate an Anycast EIP with an endpoint, ignore this parameter. The system automatically associates all access areas.</p>
-         * <br>
-         * <p>You can call the [DescribeAnycastPopLocations](~~171938~~) operation to query information about access points in supported access areas.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/171938.html">DescribeAnycastPopLocations</a> operation to query information about access points in supported access areas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>us-west-1-pop</p>
          */
         @NameInMap("PopLocation")
         public String popLocation;
