@@ -2879,6 +2879,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询事件流</p>
+     * 
+     * @param request UpdateEventStreamingBusinessOptionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateEventStreamingBusinessOptionResponse
+     */
+    public UpdateEventStreamingBusinessOptionResponse updateEventStreamingBusinessOptionWithOptions(UpdateEventStreamingBusinessOptionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.businessMode)) {
+            body.put("BusinessMode", request.businessMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventStreamingName)) {
+            body.put("EventStreamingName", request.eventStreamingName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxCapacityUnitCount)) {
+            body.put("MaxCapacityUnitCount", request.maxCapacityUnitCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minCapacityUnitCount)) {
+            body.put("MinCapacityUnitCount", request.minCapacityUnitCount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateEventStreamingBusinessOption"),
+            new TeaPair("version", "2020-04-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateEventStreamingBusinessOptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询事件流</p>
+     * 
+     * @param request UpdateEventStreamingBusinessOptionRequest
+     * @return UpdateEventStreamingBusinessOptionResponse
+     */
+    public UpdateEventStreamingBusinessOptionResponse updateEventStreamingBusinessOption(UpdateEventStreamingBusinessOptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateEventStreamingBusinessOptionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to update the configurations of an event rule.</p>
      * 
