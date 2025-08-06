@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.vod20170321.models;
+
+import com.aliyun.tea.*;
+
+public class DescribeFilterConfigsResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public DescribeFilterConfigsResponseBody body;
+
+    public static DescribeFilterConfigsResponse build(java.util.Map<String, ?> map) throws Exception {
+        DescribeFilterConfigsResponse self = new DescribeFilterConfigsResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public DescribeFilterConfigsResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public DescribeFilterConfigsResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public DescribeFilterConfigsResponse setBody(DescribeFilterConfigsResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public DescribeFilterConfigsResponseBody getBody() {
+        return this.body;
+    }
+
+}
