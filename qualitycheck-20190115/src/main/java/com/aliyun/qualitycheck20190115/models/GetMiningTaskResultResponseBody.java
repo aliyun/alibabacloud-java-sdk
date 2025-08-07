@@ -82,6 +82,36 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class GetMiningTaskResultResponseBodyDataFilePathList extends TeaModel {
+        @NameInMap("FileType")
+        public String fileType;
+
+        @NameInMap("FileUrl")
+        public String fileUrl;
+
+        public static GetMiningTaskResultResponseBodyDataFilePathList build(java.util.Map<String, ?> map) throws Exception {
+            GetMiningTaskResultResponseBodyDataFilePathList self = new GetMiningTaskResultResponseBodyDataFilePathList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetMiningTaskResultResponseBodyDataFilePathList setFileType(String fileType) {
+            this.fileType = fileType;
+            return this;
+        }
+        public String getFileType() {
+            return this.fileType;
+        }
+
+        public GetMiningTaskResultResponseBodyDataFilePathList setFileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+        public String getFileUrl() {
+            return this.fileUrl;
+        }
+
+    }
+
     public static class GetMiningTaskResultResponseBodyData extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -89,6 +119,9 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
          */
         @NameInMap("FilePath")
         public String filePath;
+
+        @NameInMap("FilePathList")
+        public java.util.List<GetMiningTaskResultResponseBodyDataFilePathList> filePathList;
 
         /**
          * <strong>example:</strong>
@@ -122,6 +155,14 @@ public class GetMiningTaskResultResponseBody extends TeaModel {
         }
         public String getFilePath() {
             return this.filePath;
+        }
+
+        public GetMiningTaskResultResponseBodyData setFilePathList(java.util.List<GetMiningTaskResultResponseBodyDataFilePathList> filePathList) {
+            this.filePathList = filePathList;
+            return this;
+        }
+        public java.util.List<GetMiningTaskResultResponseBodyDataFilePathList> getFilePathList() {
+            return this.filePathList;
         }
 
         public GetMiningTaskResultResponseBodyData setFilePathMd(String filePathMd) {
