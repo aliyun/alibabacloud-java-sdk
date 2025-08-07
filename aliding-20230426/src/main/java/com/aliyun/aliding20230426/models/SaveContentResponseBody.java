@@ -13,6 +13,9 @@ public class SaveContentResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    @NameInMap("result")
+    public String result;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,6 +34,14 @@ public class SaveContentResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public SaveContentResponseBody setResult(String result) {
+        this.result = result;
+        return this;
+    }
+    public String getResult() {
+        return this.result;
     }
 
     public SaveContentResponseBody setSuccess(Boolean success) {

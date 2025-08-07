@@ -67,6 +67,16 @@ public class CreateTodoTaskRequest extends TeaModel {
     @NameInMap("priority")
     public Integer priority;
 
+    @NameInMap("remindNotifyConfigs")
+    public CreateTodoTaskRequestRemindNotifyConfigs remindNotifyConfigs;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1754364432000</p>
+     */
+    @NameInMap("reminderTimeStamp")
+    public Long reminderTimeStamp;
+
     /**
      * <strong>example:</strong>
      * <p>isv_dingtalkTodo1</p>
@@ -190,6 +200,22 @@ public class CreateTodoTaskRequest extends TeaModel {
     }
     public Integer getPriority() {
         return this.priority;
+    }
+
+    public CreateTodoTaskRequest setRemindNotifyConfigs(CreateTodoTaskRequestRemindNotifyConfigs remindNotifyConfigs) {
+        this.remindNotifyConfigs = remindNotifyConfigs;
+        return this;
+    }
+    public CreateTodoTaskRequestRemindNotifyConfigs getRemindNotifyConfigs() {
+        return this.remindNotifyConfigs;
+    }
+
+    public CreateTodoTaskRequest setReminderTimeStamp(Long reminderTimeStamp) {
+        this.reminderTimeStamp = reminderTimeStamp;
+        return this;
+    }
+    public Long getReminderTimeStamp() {
+        return this.reminderTimeStamp;
     }
 
     public CreateTodoTaskRequest setSourceId(String sourceId) {
@@ -434,6 +460,20 @@ public class CreateTodoTaskRequest extends TeaModel {
         @NameInMap("dingNotify")
         public String dingNotify;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("sendAssistantChat")
+        public String sendAssistantChat;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("sendTodoApn")
+        public String sendTodoApn;
+
         public static CreateTodoTaskRequestNotifyConfigs build(java.util.Map<String, ?> map) throws Exception {
             CreateTodoTaskRequestNotifyConfigs self = new CreateTodoTaskRequestNotifyConfigs();
             return TeaModel.build(map, self);
@@ -445,6 +485,60 @@ public class CreateTodoTaskRequest extends TeaModel {
         }
         public String getDingNotify() {
             return this.dingNotify;
+        }
+
+        public CreateTodoTaskRequestNotifyConfigs setSendAssistantChat(String sendAssistantChat) {
+            this.sendAssistantChat = sendAssistantChat;
+            return this;
+        }
+        public String getSendAssistantChat() {
+            return this.sendAssistantChat;
+        }
+
+        public CreateTodoTaskRequestNotifyConfigs setSendTodoApn(String sendTodoApn) {
+            this.sendTodoApn = sendTodoApn;
+            return this;
+        }
+        public String getSendTodoApn() {
+            return this.sendTodoApn;
+        }
+
+    }
+
+    public static class CreateTodoTaskRequestRemindNotifyConfigs extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("dingNotify")
+        public String dingNotify;
+
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("sendTodoApn")
+        public String sendTodoApn;
+
+        public static CreateTodoTaskRequestRemindNotifyConfigs build(java.util.Map<String, ?> map) throws Exception {
+            CreateTodoTaskRequestRemindNotifyConfigs self = new CreateTodoTaskRequestRemindNotifyConfigs();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTodoTaskRequestRemindNotifyConfigs setDingNotify(String dingNotify) {
+            this.dingNotify = dingNotify;
+            return this;
+        }
+        public String getDingNotify() {
+            return this.dingNotify;
+        }
+
+        public CreateTodoTaskRequestRemindNotifyConfigs setSendTodoApn(String sendTodoApn) {
+            this.sendTodoApn = sendTodoApn;
+            return this;
+        }
+        public String getSendTodoApn() {
+            return this.sendTodoApn;
         }
 
     }

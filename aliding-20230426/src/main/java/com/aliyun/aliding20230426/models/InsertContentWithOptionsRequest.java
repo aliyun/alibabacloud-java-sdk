@@ -30,15 +30,6 @@ public class InsertContentWithOptionsRequest extends TeaModel {
     public Integer index;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>union_id</p>
-     */
-    @NameInMap("OperatorId")
-    public String operatorId;
-
-    /**
      * <strong>example:</strong>
      * <p>[0,0]</p>
      */
@@ -75,14 +66,6 @@ public class InsertContentWithOptionsRequest extends TeaModel {
     }
     public Integer getIndex() {
         return this.index;
-    }
-
-    public InsertContentWithOptionsRequest setOperatorId(String operatorId) {
-        this.operatorId = operatorId;
-        return this;
-    }
-    public String getOperatorId() {
-        return this.operatorId;
     }
 
     public InsertContentWithOptionsRequest setPath(java.util.List<Integer> path) {

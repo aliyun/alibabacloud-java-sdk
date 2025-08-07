@@ -1,3 +1,19 @@
+2025-08-07 Version: 2.43.0
+- Support API ChangeDingTalkId.
+- Support API CreateAlidingAssistant.
+- Support API DeleteAlidingAssistant.
+- Support API GetAlidingAssistantInfo.
+- Support API GetCardTemplate.
+- Support API InsertDropDownList.
+- Support API UpdateAlidingAssistant.
+- Update API CreateReport: add response parameters Body.result.
+- Update API CreateTodoTask: add request parameters remindNotifyConfigs.
+- Update API CreateTodoTask: add request parameters reminderTimeStamp.
+- Update API CreateTodoTask: add request parameters notifyConfigs.sendAssistantChat.
+- Update API CreateTodoTask: add request parameters notifyConfigs.sendTodoApn.
+- Update API SaveContent: add response parameters Body.result.
+
+
 2025-06-19 Version: 2.41.1
 - Update API CreateRun: add request parameters body.allowStructViewContent.
 - Update API CreateRun: add response parameters Body.messages.$.contentStruct.

@@ -67,6 +67,16 @@ public class CreateTodoTaskShrinkRequest extends TeaModel {
     @NameInMap("priority")
     public Integer priority;
 
+    @NameInMap("remindNotifyConfigs")
+    public String remindNotifyConfigsShrink;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1754364432000</p>
+     */
+    @NameInMap("reminderTimeStamp")
+    public Long reminderTimeStamp;
+
     /**
      * <strong>example:</strong>
      * <p>isv_dingtalkTodo1</p>
@@ -190,6 +200,22 @@ public class CreateTodoTaskShrinkRequest extends TeaModel {
     }
     public Integer getPriority() {
         return this.priority;
+    }
+
+    public CreateTodoTaskShrinkRequest setRemindNotifyConfigsShrink(String remindNotifyConfigsShrink) {
+        this.remindNotifyConfigsShrink = remindNotifyConfigsShrink;
+        return this;
+    }
+    public String getRemindNotifyConfigsShrink() {
+        return this.remindNotifyConfigsShrink;
+    }
+
+    public CreateTodoTaskShrinkRequest setReminderTimeStamp(Long reminderTimeStamp) {
+        this.reminderTimeStamp = reminderTimeStamp;
+        return this;
+    }
+    public Long getReminderTimeStamp() {
+        return this.reminderTimeStamp;
     }
 
     public CreateTodoTaskShrinkRequest setSourceId(String sourceId) {
