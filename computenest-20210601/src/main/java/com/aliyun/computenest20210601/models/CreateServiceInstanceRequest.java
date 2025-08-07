@@ -428,6 +428,12 @@ public class CreateServiceInstanceRequest extends TeaModel {
         @NameInMap("PayPeriodUnit")
         public String payPeriodUnit;
 
+        /**
+         * <p>privet offer Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-xxxx-xxxx-xxxx</p>
+         */
         @NameInMap("QuotationId")
         public String quotationId;
 

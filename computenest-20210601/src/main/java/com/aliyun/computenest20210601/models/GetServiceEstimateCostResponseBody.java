@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetServiceEstimateCostResponseBody extends TeaModel {
     /**
-     * <p>The estimated price.</p>
+     * <p>Alibaba Cloud Marketplace purchase order information.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;cmgj00059839\&quot;: {\&quot;Result\&quot;: {\&quot;InquiryType\&quot;: \&quot;Buy\&quot;, \&quot;Order\&quot;: {\&quot;Currency\&quot;: \&quot;CNY\&quot;, \&quot;DiscountAmount\&quot;: \&quot;0.0\&quot;, \&quot;TradeAmount\&quot;: \&quot;0.01\&quot;, \&quot;OriginalAmount\&quot;: \&quot;0.01\&quot;}}}}</p>

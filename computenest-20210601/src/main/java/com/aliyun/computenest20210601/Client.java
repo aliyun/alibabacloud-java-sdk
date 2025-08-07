@@ -269,6 +269,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create backup for Compute Nest instance</p>
+     * 
+     * @param request CreateBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateBackupResponse
+     */
+    public CreateBackupResponse createBackupWithOptions(CreateBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateBackup"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateBackupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create backup for Compute Nest instance</p>
+     * 
+     * @param request CreateBackupRequest
+     * @return CreateBackupResponse
+     */
+    public CreateBackupResponse createBackup(CreateBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createBackupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create restore task</p>
+     * 
+     * @param request CreateRestoreTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRestoreTaskResponse
+     */
+    public CreateRestoreTaskResponse createRestoreTaskWithOptions(CreateRestoreTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
+            query.put("BackupId", request.backupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceId)) {
+            query.put("ServiceInstanceId", request.serviceInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRestoreTask"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRestoreTaskResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Create restore task</p>
+     * 
+     * @param request CreateRestoreTaskRequest
+     * @return CreateRestoreTaskResponse
+     */
+    public CreateRestoreTaskResponse createRestoreTask(CreateRestoreTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRestoreTaskWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Creates and deploys a service instance.</p>
      * 
@@ -450,6 +562,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateServiceUsageResponse createServiceUsage(CreateServiceUsageRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createServiceUsageWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Compute Nest instance backups.</p>
+     * 
+     * @param request DeleteBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteBackupResponse
+     */
+    public DeleteBackupResponse deleteBackupWithOptions(DeleteBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
+            query.put("BackupId", request.backupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteBackup"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteBackupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Delete Compute Nest instance backups.</p>
+     * 
+     * @param request DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    public DeleteBackupResponse deleteBackup(DeleteBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteBackupWithOptions(request, runtime);
     }
 
     /**
@@ -662,6 +826,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GenerateServicePolicyResponse generateServicePolicy(GenerateServicePolicyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.generateServicePolicyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about backup task.</p>
+     * 
+     * @param request GetBackupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetBackupResponse
+     */
+    public GetBackupResponse getBackupWithOptions(GetBackupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.backupId)) {
+            query.put("BackupId", request.backupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetBackup"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetBackupResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about backup task.</p>
+     * 
+     * @param request GetBackupRequest
+     * @return GetBackupResponse
+     */
+    public GetBackupResponse getBackup(GetBackupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getBackupWithOptions(request, runtime);
     }
 
     /**
@@ -1141,6 +1357,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query and list Compute Nest instance backups</p>
+     * 
+     * @param request ListBackupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListBackupsResponse
+     */
+    public ListBackupsResponse listBackupsWithOptions(ListBackupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListBackups"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListBackupsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query and list Compute Nest instance backups</p>
+     * 
+     * @param request ListBackupsRequest
+     * @return ListBackupsResponse
+     */
+    public ListBackupsResponse listBackups(ListBackupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listBackupsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Query Permission Policy List</p>
      * 
@@ -1190,6 +1466,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListPoliciesResponse listPolicies(ListPoliciesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listPoliciesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query and list restore tasks</p>
+     * 
+     * @param request ListRestoreTasksRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRestoreTasksResponse
+     */
+    public ListRestoreTasksResponse listRestoreTasksWithOptions(ListRestoreTasksRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRestoreTasks"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRestoreTasksResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Please ensure that the service provider has enabled the configuration change feature and completed the change parameter settings.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Query and list restore tasks</p>
+     * 
+     * @param request ListRestoreTasksRequest
+     * @return ListRestoreTasksResponse
+     */
+    public ListRestoreTasksResponse listRestoreTasks(ListRestoreTasksRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRestoreTasksWithOptions(request, runtime);
     }
 
     /**

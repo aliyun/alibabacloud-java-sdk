@@ -200,7 +200,7 @@ public class GetServiceEstimateCostRequest extends TeaModel {
 
     public static class GetServiceEstimateCostRequestCommodity extends TeaModel {
         /**
-         * <p>优惠券ID</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>302070970220</p>
@@ -209,7 +209,7 @@ public class GetServiceEstimateCostRequest extends TeaModel {
         public String couponId;
 
         /**
-         * <p>The subscription duration.</p>
+         * <p>The subscription duration of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -231,6 +231,12 @@ public class GetServiceEstimateCostRequest extends TeaModel {
         @NameInMap("PayPeriodUnit")
         public String payPeriodUnit;
 
+        /**
+         * <p>Marketplace private offer Id</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17cde2e8-2f5d-xxxx-xxxx-5120dd215d66</p>
+         */
         @NameInMap("QuotationId")
         public String quotationId;
 
