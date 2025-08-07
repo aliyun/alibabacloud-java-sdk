@@ -7,15 +7,27 @@ public class QueryCallRecordListResponseBody extends TeaModel {
     @NameInMap("Data")
     public java.util.List<QueryCallRecordListResponseBodyData> data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>NoPermission</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6A603AA0-73BA-52B3-AC7D-0F846ECF7A9D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>True</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -65,18 +77,44 @@ public class QueryCallRecordListResponseBody extends TeaModel {
     }
 
     public static class QueryCallRecordListResponseBodyData extends TeaModel {
+        @NameInMap("ContactDisposition")
+        public String contactDisposition;
+
+        /**
+         * <strong>example:</strong>
+         * <p>40140</p>
+         */
         @NameInMap("Duration")
         public Integer duration;
 
+        /**
+         * <strong>example:</strong>
+         * <p>UPLOADED/SCRIPT/74974566-2b69-4389-9bf9-5d7b432f06ad/fa92ce53-6b5f-4b3d-807c-a46417c08f66_a4cc3a16-e365-42cb-87d8-7776f8b110a1.json</p>
+         */
         @NameInMap("SignatureUrl")
         public String signatureUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2025-06-07T02:08:00Z</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
+
+        @NameInMap("taskId")
+        public String taskId;
 
         public static QueryCallRecordListResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             QueryCallRecordListResponseBodyData self = new QueryCallRecordListResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public QueryCallRecordListResponseBodyData setContactDisposition(String contactDisposition) {
+            this.contactDisposition = contactDisposition;
+            return this;
+        }
+        public String getContactDisposition() {
+            return this.contactDisposition;
         }
 
         public QueryCallRecordListResponseBodyData setDuration(Integer duration) {
@@ -101,6 +139,14 @@ public class QueryCallRecordListResponseBody extends TeaModel {
         }
         public Long getStartTime() {
             return this.startTime;
+        }
+
+        public QueryCallRecordListResponseBodyData setTaskId(String taskId) {
+            this.taskId = taskId;
+            return this;
+        }
+        public String getTaskId() {
+            return this.taskId;
         }
 
     }

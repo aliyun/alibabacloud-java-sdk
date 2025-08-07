@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class QueryCallRecordListRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P20210928095324000002</p>
      */
     @NameInMap("BizId")
     public String bizId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>esp.bookkeeping</p>
      */
     @NameInMap("BizType")
     public String bizType;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SkillType")
     public Long skillType;
