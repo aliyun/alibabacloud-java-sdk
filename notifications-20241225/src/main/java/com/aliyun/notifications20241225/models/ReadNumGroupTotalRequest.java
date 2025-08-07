@@ -32,6 +32,9 @@ public class ReadNumGroupTotalRequest extends TeaModel {
     @NameInMap("TenantCode")
     public String tenantCode;
 
+    @NameInMap("Title")
+    public String title;
+
     @NameInMap("UidType")
     public String uidType;
 
@@ -102,6 +105,14 @@ public class ReadNumGroupTotalRequest extends TeaModel {
     }
     public String getTenantCode() {
         return this.tenantCode;
+    }
+
+    public ReadNumGroupTotalRequest setTitle(String title) {
+        this.title = title;
+        return this;
+    }
+    public String getTitle() {
+        return this.title;
     }
 
     public ReadNumGroupTotalRequest setUidType(String uidType) {

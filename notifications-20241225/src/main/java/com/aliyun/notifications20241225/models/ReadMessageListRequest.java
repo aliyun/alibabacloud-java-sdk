@@ -4,57 +4,165 @@ package com.aliyun.notifications20241225.models;
 import com.aliyun.tea.*;
 
 public class ReadMessageListRequest extends TeaModel {
+    /**
+     * <p>语言，默认为简体中文</p>
+     * 
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
     @NameInMap("AcceptLanguage")
     public String acceptLanguage;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("AppName")
     public String appName;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("BizName")
     public String bizName;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("CallerProtocol")
     public String callerProtocol;
 
+    /**
+     * <p>消息类目ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ClassId")
     public Long classId;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("ClientSource")
     public String clientSource;
 
+    /**
+     * <p>消息内容，用于模糊搜索</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;消息内容示例“</p>
+     */
     @NameInMap("Content")
     public String content;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("Cookies")
     public String cookies;
 
+    /**
+     * <p>栏位 nav代表控制台topbar</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("Loc")
     public String loc;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("NextToken")
     public String nextToken;
 
+    /**
+     * <p>分页查询页码</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Page")
     public Integer page;
 
+    /**
+     * <p>分页查询大小</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("SrcUrl")
     public String srcUrl;
 
+    /**
+     * <p>消息状态，已读为1，未读为0</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Status")
     public Integer status;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("TenantCode")
     public String tenantCode;
 
+    /**
+     * <p>消息标题，用于模糊搜索</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot;标题示例“</p>
+     */
     @NameInMap("Title")
     public String title;
 
+    /**
+     * <p>系统参数，无需填写</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/</p>
+     */
     @NameInMap("UidType")
     public String uidType;
 

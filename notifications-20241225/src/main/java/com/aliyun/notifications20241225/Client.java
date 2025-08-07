@@ -817,6 +817,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TenantCode", request.tenantCode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.title)) {
+            body.put("Title", request.title);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.uidType)) {
             body.put("UidType", request.uidType);
         }
