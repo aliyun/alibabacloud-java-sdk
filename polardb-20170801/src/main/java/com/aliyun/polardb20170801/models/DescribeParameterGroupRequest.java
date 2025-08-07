@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeParameterGroupRequest extends TeaModel {
+    @NameInMap("DBType")
+    public String DBType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -54,6 +57,14 @@ public class DescribeParameterGroupRequest extends TeaModel {
     public static DescribeParameterGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeParameterGroupRequest self = new DescribeParameterGroupRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeParameterGroupRequest setDBType(String DBType) {
+        this.DBType = DBType;
+        return this;
+    }
+    public String getDBType() {
+        return this.DBType;
     }
 
     public DescribeParameterGroupRequest setOwnerAccount(String ownerAccount) {
