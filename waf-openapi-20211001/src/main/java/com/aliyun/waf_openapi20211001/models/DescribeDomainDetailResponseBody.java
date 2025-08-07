@@ -703,16 +703,24 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeDomainDetailResponseBodyRedirect extends TeaModel {
+        @NameInMap("BackUpBackendList")
+        public java.util.List<String> backUpBackendList;
+
+        @NameInMap("BackendList")
+        public java.util.List<String> backendList;
+
         /**
          * <p>An array of addresses of origin servers.</p>
          */
         @NameInMap("Backends")
+        @Deprecated
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackends> backends;
 
         /**
          * <p>An array of HTTPS listener ports.</p>
          */
         @NameInMap("BackupBackends")
+        @Deprecated
         public java.util.List<DescribeDomainDetailResponseBodyRedirectBackupBackends> backupBackends;
 
         /**
@@ -865,6 +873,23 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DescribeDomainDetailResponseBodyRedirect setBackUpBackendList(java.util.List<String> backUpBackendList) {
+            this.backUpBackendList = backUpBackendList;
+            return this;
+        }
+        public java.util.List<String> getBackUpBackendList() {
+            return this.backUpBackendList;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setBackendList(java.util.List<String> backendList) {
+            this.backendList = backendList;
+            return this;
+        }
+        public java.util.List<String> getBackendList() {
+            return this.backendList;
+        }
+
+        @Deprecated
         public DescribeDomainDetailResponseBodyRedirect setBackends(java.util.List<DescribeDomainDetailResponseBodyRedirectBackends> backends) {
             this.backends = backends;
             return this;
@@ -873,6 +898,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             return this.backends;
         }
 
+        @Deprecated
         public DescribeDomainDetailResponseBodyRedirect setBackupBackends(java.util.List<DescribeDomainDetailResponseBodyRedirectBackupBackends> backupBackends) {
             this.backupBackends = backupBackends;
             return this;
