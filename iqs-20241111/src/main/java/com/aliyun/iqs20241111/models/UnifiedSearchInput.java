@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedSearchInput extends TeaModel {
+    @NameInMap("advancedParams")
+    public java.util.Map<String, ?> advancedParams;
+
     @NameInMap("category")
     public String category;
 
@@ -25,6 +28,14 @@ public class UnifiedSearchInput extends TeaModel {
     public static UnifiedSearchInput build(java.util.Map<String, ?> map) throws Exception {
         UnifiedSearchInput self = new UnifiedSearchInput();
         return TeaModel.build(map, self);
+    }
+
+    public UnifiedSearchInput setAdvancedParams(java.util.Map<String, ?> advancedParams) {
+        this.advancedParams = advancedParams;
+        return this;
+    }
+    public java.util.Map<String, ?> getAdvancedParams() {
+        return this.advancedParams;
     }
 
     public UnifiedSearchInput setCategory(String category) {

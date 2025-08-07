@@ -4,6 +4,9 @@ package com.aliyun.iqs20241111.models;
 import com.aliyun.tea.*;
 
 public class UnifiedPageItem extends TeaModel {
+    @NameInMap("hostAuthorityScore")
+    public Double hostAuthorityScore;
+
     @NameInMap("hostLogo")
     public String hostLogo;
 
@@ -44,6 +47,14 @@ public class UnifiedPageItem extends TeaModel {
     public static UnifiedPageItem build(java.util.Map<String, ?> map) throws Exception {
         UnifiedPageItem self = new UnifiedPageItem();
         return TeaModel.build(map, self);
+    }
+
+    public UnifiedPageItem setHostAuthorityScore(Double hostAuthorityScore) {
+        this.hostAuthorityScore = hostAuthorityScore;
+        return this;
+    }
+    public Double getHostAuthorityScore() {
+        return this.hostAuthorityScore;
     }
 
     public UnifiedPageItem setHostLogo(String hostLogo) {
