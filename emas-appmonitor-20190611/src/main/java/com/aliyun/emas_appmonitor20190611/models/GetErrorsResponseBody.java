@@ -111,6 +111,9 @@ public class GetErrorsResponseBody extends TeaModel {
         @NameInMap("Did")
         public String did;
 
+        @NameInMap("DigestHash")
+        public String digestHash;
+
         /**
          * <p>Utdid</p>
          * 
@@ -146,6 +149,14 @@ public class GetErrorsResponseBody extends TeaModel {
         }
         public String getDid() {
             return this.did;
+        }
+
+        public GetErrorsResponseBodyModelItems setDigestHash(String digestHash) {
+            this.digestHash = digestHash;
+            return this;
+        }
+        public String getDigestHash() {
+            return this.digestHash;
         }
 
         public GetErrorsResponseBodyModelItems setUtdid(String utdid) {

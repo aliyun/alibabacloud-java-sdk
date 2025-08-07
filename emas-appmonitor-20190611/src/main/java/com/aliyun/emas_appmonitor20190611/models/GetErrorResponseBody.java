@@ -1064,6 +1064,9 @@ public class GetErrorResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("StructuredStack")
+        public String structuredStack;
+
         /**
          * <strong>example:</strong>
          * <p>{\&quot;HandledCheckToday\&quot;: 0, \&quot;RiskCheckCnt\&quot;: 34, \&quot;RiskWarningCnt\&quot;: 57, \&quot;RiskDays\&quot;: 30, \&quot;HandledCheckTotal\&quot;: 5, \&quot;HandledDays\&quot;: 365}</p>
@@ -2199,6 +2202,14 @@ public class GetErrorResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetErrorResponseBodyModel setStructuredStack(String structuredStack) {
+            this.structuredStack = structuredStack;
+            return this;
+        }
+        public String getStructuredStack() {
+            return this.structuredStack;
         }
 
         public GetErrorResponseBodyModel setSummary(String summary) {

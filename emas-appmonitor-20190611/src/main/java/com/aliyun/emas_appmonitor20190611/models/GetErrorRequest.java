@@ -37,6 +37,9 @@ public class GetErrorRequest extends TeaModel {
     @NameInMap("Did")
     public String did;
 
+    @NameInMap("DigestHash")
+    public String digestHash;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -93,6 +96,14 @@ public class GetErrorRequest extends TeaModel {
     }
     public String getDid() {
         return this.did;
+    }
+
+    public GetErrorRequest setDigestHash(String digestHash) {
+        this.digestHash = digestHash;
+        return this;
+    }
+    public String getDigestHash() {
+        return this.digestHash;
     }
 
     public GetErrorRequest setForce(Boolean force) {

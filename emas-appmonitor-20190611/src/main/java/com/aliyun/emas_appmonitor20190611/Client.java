@@ -53,6 +53,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Did", request.did);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.digestHash)) {
+            body.put("DigestHash", request.digestHash);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.force)) {
             body.put("Force", request.force);
         }

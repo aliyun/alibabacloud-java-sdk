@@ -102,6 +102,18 @@ public class GetIssuesResponseBody extends TeaModel {
         @NameInMap("AffectedUserCount")
         public Integer affectedUserCount;
 
+        @NameInMap("AllocSizeMax")
+        public Long allocSizeMax;
+
+        @NameInMap("AllocSizePct50")
+        public Long allocSizePct50;
+
+        @NameInMap("AllocSizePct70")
+        public Long allocSizePct70;
+
+        @NameInMap("AllocSizePct90")
+        public Long allocSizePct90;
+
         /**
          * <strong>example:</strong>
          * <p>-3481243636390427020</p>
@@ -228,6 +240,38 @@ public class GetIssuesResponseBody extends TeaModel {
         }
         public Integer getAffectedUserCount() {
             return this.affectedUserCount;
+        }
+
+        public GetIssuesResponseBodyModelItems setAllocSizeMax(Long allocSizeMax) {
+            this.allocSizeMax = allocSizeMax;
+            return this;
+        }
+        public Long getAllocSizeMax() {
+            return this.allocSizeMax;
+        }
+
+        public GetIssuesResponseBodyModelItems setAllocSizePct50(Long allocSizePct50) {
+            this.allocSizePct50 = allocSizePct50;
+            return this;
+        }
+        public Long getAllocSizePct50() {
+            return this.allocSizePct50;
+        }
+
+        public GetIssuesResponseBodyModelItems setAllocSizePct70(Long allocSizePct70) {
+            this.allocSizePct70 = allocSizePct70;
+            return this;
+        }
+        public Long getAllocSizePct70() {
+            return this.allocSizePct70;
+        }
+
+        public GetIssuesResponseBodyModelItems setAllocSizePct90(Long allocSizePct90) {
+            this.allocSizePct90 = allocSizePct90;
+            return this;
+        }
+        public Long getAllocSizePct90() {
+            return this.allocSizePct90;
         }
 
         public GetIssuesResponseBodyModelItems setDigestHash(String digestHash) {

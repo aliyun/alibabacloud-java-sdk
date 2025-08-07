@@ -98,6 +98,18 @@ public class GetIssueResponseBody extends TeaModel {
         @NameInMap("AffectedVersions")
         public java.util.List<String> affectedVersions;
 
+        @NameInMap("AllocSizeMax")
+        public Long allocSizeMax;
+
+        @NameInMap("AllocSizePct50")
+        public Long allocSizePct50;
+
+        @NameInMap("AllocSizePct70")
+        public Long allocSizePct70;
+
+        @NameInMap("AllocSizePct90")
+        public Long allocSizePct90;
+
         /**
          * <strong>example:</strong>
          * <p>java.lang.NullPointerException: Attempt to invoke virtual method \&quot;java.lang.Object java.lang.ref.WeakReference.get()\&quot; on a null object reference
@@ -206,6 +218,9 @@ public class GetIssueResponseBody extends TeaModel {
         @NameInMap("ErrorType")
         public String errorType;
 
+        @NameInMap("EventTime")
+        public Long eventTime;
+
         /**
          * <strong>example:</strong>
          * <p>1.0.0</p>
@@ -279,6 +294,38 @@ public class GetIssueResponseBody extends TeaModel {
         }
         public java.util.List<String> getAffectedVersions() {
             return this.affectedVersions;
+        }
+
+        public GetIssueResponseBodyModel setAllocSizeMax(Long allocSizeMax) {
+            this.allocSizeMax = allocSizeMax;
+            return this;
+        }
+        public Long getAllocSizeMax() {
+            return this.allocSizeMax;
+        }
+
+        public GetIssueResponseBodyModel setAllocSizePct50(Long allocSizePct50) {
+            this.allocSizePct50 = allocSizePct50;
+            return this;
+        }
+        public Long getAllocSizePct50() {
+            return this.allocSizePct50;
+        }
+
+        public GetIssueResponseBodyModel setAllocSizePct70(Long allocSizePct70) {
+            this.allocSizePct70 = allocSizePct70;
+            return this;
+        }
+        public Long getAllocSizePct70() {
+            return this.allocSizePct70;
+        }
+
+        public GetIssueResponseBodyModel setAllocSizePct90(Long allocSizePct90) {
+            this.allocSizePct90 = allocSizePct90;
+            return this;
+        }
+        public Long getAllocSizePct90() {
+            return this.allocSizePct90;
         }
 
         public GetIssueResponseBodyModel setCruxStack(String cruxStack) {
@@ -399,6 +446,14 @@ public class GetIssueResponseBody extends TeaModel {
         }
         public String getErrorType() {
             return this.errorType;
+        }
+
+        public GetIssueResponseBodyModel setEventTime(Long eventTime) {
+            this.eventTime = eventTime;
+            return this;
+        }
+        public Long getEventTime() {
+            return this.eventTime;
         }
 
         public GetIssueResponseBodyModel setFirstVersion(String firstVersion) {
