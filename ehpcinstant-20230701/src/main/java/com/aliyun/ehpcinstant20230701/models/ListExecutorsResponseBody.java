@@ -117,6 +117,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("Disks")
         public java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> disks;
 
+        @NameInMap("InstanceType")
+        public String instanceType;
+
         @NameInMap("Memory")
         public Float memory;
 
@@ -139,6 +142,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
         public java.util.List<ListExecutorsResponseBodyExecutorsResourceDisks> getDisks() {
             return this.disks;
+        }
+
+        public ListExecutorsResponseBodyExecutorsResource setInstanceType(String instanceType) {
+            this.instanceType = instanceType;
+            return this;
+        }
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         public ListExecutorsResponseBodyExecutorsResource setMemory(Float memory) {
@@ -192,6 +203,9 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("ArrayIndex")
         public Integer arrayIndex;
 
+        @NameInMap("BlockDuration")
+        public Integer blockDuration;
+
         /**
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:10</p>
@@ -241,6 +255,9 @@ public class ListExecutorsResponseBody extends TeaModel {
          */
         @NameInMap("JobName")
         public String jobName;
+
+        @NameInMap("Preemptible")
+        public Boolean preemptible;
 
         @NameInMap("Resource")
         public ListExecutorsResponseBodyExecutorsResource resource;
@@ -300,6 +317,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
         public Integer getArrayIndex() {
             return this.arrayIndex;
+        }
+
+        public ListExecutorsResponseBodyExecutors setBlockDuration(Integer blockDuration) {
+            this.blockDuration = blockDuration;
+            return this;
+        }
+        public Integer getBlockDuration() {
+            return this.blockDuration;
         }
 
         public ListExecutorsResponseBodyExecutors setCreateTime(String createTime) {
@@ -380,6 +405,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
         public String getJobName() {
             return this.jobName;
+        }
+
+        public ListExecutorsResponseBodyExecutors setPreemptible(Boolean preemptible) {
+            this.preemptible = preemptible;
+            return this;
+        }
+        public Boolean getPreemptible() {
+            return this.preemptible;
         }
 
         public ListExecutorsResponseBodyExecutors setResource(ListExecutorsResponseBodyExecutorsResource resource) {

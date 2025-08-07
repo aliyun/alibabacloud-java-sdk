@@ -112,6 +112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateJobShrinkRequest request = new CreateJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.dependencyPolicy)) {
+            request.dependencyPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.dependencyPolicy, "DependencyPolicy", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.deploymentPolicy)) {
             request.deploymentPolicyShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deploymentPolicy, "DeploymentPolicy", "json");
         }
@@ -125,6 +129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.dependencyPolicyShrink)) {
+            query.put("DependencyPolicy", request.dependencyPolicyShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentPolicyShrink)) {
             query.put("DeploymentPolicy", request.deploymentPolicyShrink);
         }

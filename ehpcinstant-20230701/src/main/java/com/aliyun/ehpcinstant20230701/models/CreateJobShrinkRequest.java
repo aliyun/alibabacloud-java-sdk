@@ -4,6 +4,9 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class CreateJobShrinkRequest extends TeaModel {
+    @NameInMap("DependencyPolicy")
+    public String dependencyPolicyShrink;
+
     @NameInMap("DeploymentPolicy")
     public String deploymentPolicyShrink;
 
@@ -38,6 +41,14 @@ public class CreateJobShrinkRequest extends TeaModel {
     public static CreateJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobShrinkRequest self = new CreateJobShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateJobShrinkRequest setDependencyPolicyShrink(String dependencyPolicyShrink) {
+        this.dependencyPolicyShrink = dependencyPolicyShrink;
+        return this;
+    }
+    public String getDependencyPolicyShrink() {
+        return this.dependencyPolicyShrink;
     }
 
     public CreateJobShrinkRequest setDeploymentPolicyShrink(String deploymentPolicyShrink) {

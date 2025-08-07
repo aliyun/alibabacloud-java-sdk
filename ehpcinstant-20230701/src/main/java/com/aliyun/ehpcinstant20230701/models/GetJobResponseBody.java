@@ -35,6 +35,55 @@ public class GetJobResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetJobResponseBodyJobInfoDependencyPolicyJobDependency extends TeaModel {
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetJobResponseBodyJobInfoDependencyPolicyJobDependency build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoDependencyPolicyJobDependency self = new GetJobResponseBodyJobInfoDependencyPolicyJobDependency();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoDependencyPolicyJobDependency setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public GetJobResponseBodyJobInfoDependencyPolicyJobDependency setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetJobResponseBodyJobInfoDependencyPolicy extends TeaModel {
+        @NameInMap("JobDependency")
+        public java.util.List<GetJobResponseBodyJobInfoDependencyPolicyJobDependency> jobDependency;
+
+        public static GetJobResponseBodyJobInfoDependencyPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoDependencyPolicy self = new GetJobResponseBodyJobInfoDependencyPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoDependencyPolicy setJobDependency(java.util.List<GetJobResponseBodyJobInfoDependencyPolicyJobDependency> jobDependency) {
+            this.jobDependency = jobDependency;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyJobInfoDependencyPolicyJobDependency> getJobDependency() {
+            return this.jobDependency;
+        }
+
+    }
+
     public static class GetJobResponseBodyJobInfoDeploymentPolicyNetwork extends TeaModel {
         @NameInMap("EnableENIMapping")
         public Boolean enableENIMapping;
@@ -445,6 +494,66 @@ public class GetJobResponseBody extends TeaModel {
 
     }
 
+    public static class GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("ExitCode")
+        public Long exitCode;
+
+        public static GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions self = new GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions setExitCode(Long exitCode) {
+            this.exitCode = exitCode;
+            return this;
+        }
+        public Long getExitCode() {
+            return this.exitCode;
+        }
+
+    }
+
+    public static class GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy extends TeaModel {
+        @NameInMap("ExitCodeActions")
+        public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions> exitCodeActions;
+
+        @NameInMap("RetryCount")
+        public Integer retryCount;
+
+        public static GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy self = new GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy setExitCodeActions(java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions> exitCodeActions) {
+            this.exitCodeActions = exitCodeActions;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicyExitCodeActions> getExitCodeActions() {
+            return this.exitCodeActions;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy setRetryCount(Integer retryCount) {
+            this.retryCount = retryCount;
+            return this;
+        }
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+    }
+
     public static class GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -466,9 +575,6 @@ public class GetJobResponseBody extends TeaModel {
          */
         @NameInMap("Script")
         public String script;
-
-        @NameInMap("UserName")
-        public String userName;
 
         public static GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM build(java.util.Map<String, ?> map) throws Exception {
             GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM self = new GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM();
@@ -499,14 +605,6 @@ public class GetJobResponseBody extends TeaModel {
             return this.script;
         }
 
-        public GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutorVM setUserName(String userName) {
-            this.userName = userName;
-            return this;
-        }
-        public String getUserName() {
-            return this.userName;
-        }
-
     }
 
     public static class GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor extends TeaModel {
@@ -532,6 +630,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("Resource")
         public GetJobResponseBodyJobInfoTasksTaskSpecResource resource;
 
+        @NameInMap("RetryPolicy")
+        public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy retryPolicy;
+
         @NameInMap("TaskExecutor")
         public java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor> taskExecutor;
 
@@ -546,6 +647,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public GetJobResponseBodyJobInfoTasksTaskSpecResource getResource() {
             return this.resource;
+        }
+
+        public GetJobResponseBodyJobInfoTasksTaskSpec setRetryPolicy(GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy retryPolicy) {
+            this.retryPolicy = retryPolicy;
+            return this;
+        }
+        public GetJobResponseBodyJobInfoTasksTaskSpecRetryPolicy getRetryPolicy() {
+            return this.retryPolicy;
         }
 
         public GetJobResponseBodyJobInfoTasksTaskSpec setTaskExecutor(java.util.List<GetJobResponseBodyJobInfoTasksTaskSpecTaskExecutor> taskExecutor) {
@@ -640,6 +749,9 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DependencyPolicy")
+        public GetJobResponseBodyJobInfoDependencyPolicy dependencyPolicy;
+
         @NameInMap("DeploymentPolicy")
         public GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy;
 
@@ -710,6 +822,14 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        public GetJobResponseBodyJobInfo setDependencyPolicy(GetJobResponseBodyJobInfoDependencyPolicy dependencyPolicy) {
+            this.dependencyPolicy = dependencyPolicy;
+            return this;
+        }
+        public GetJobResponseBodyJobInfoDependencyPolicy getDependencyPolicy() {
+            return this.dependencyPolicy;
         }
 
         public GetJobResponseBodyJobInfo setDeploymentPolicy(GetJobResponseBodyJobInfoDeploymentPolicy deploymentPolicy) {

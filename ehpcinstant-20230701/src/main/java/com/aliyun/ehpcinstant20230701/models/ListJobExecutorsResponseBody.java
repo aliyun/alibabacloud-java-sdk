@@ -137,11 +137,17 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("Pending")
         public Integer pending;
 
+        @NameInMap("Restarting")
+        public Integer restarting;
+
         @NameInMap("Running")
         public Integer running;
 
         @NameInMap("Succeeded")
         public Integer succeeded;
+
+        @NameInMap("Suspended")
+        public Integer suspended;
 
         public static ListJobExecutorsResponseBodyExecutorStatus build(java.util.Map<String, ?> map) throws Exception {
             ListJobExecutorsResponseBodyExecutorStatus self = new ListJobExecutorsResponseBodyExecutorStatus();
@@ -188,6 +194,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
             return this.pending;
         }
 
+        public ListJobExecutorsResponseBodyExecutorStatus setRestarting(Integer restarting) {
+            this.restarting = restarting;
+            return this;
+        }
+        public Integer getRestarting() {
+            return this.restarting;
+        }
+
         public ListJobExecutorsResponseBodyExecutorStatus setRunning(Integer running) {
             this.running = running;
             return this;
@@ -202,6 +216,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
         public Integer getSucceeded() {
             return this.succeeded;
+        }
+
+        public ListJobExecutorsResponseBodyExecutorStatus setSuspended(Integer suspended) {
+            this.suspended = suspended;
+            return this;
+        }
+        public Integer getSuspended() {
+            return this.suspended;
         }
 
     }
@@ -244,6 +266,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         @NameInMap("ArrayIndex")
         public Integer arrayIndex;
 
+        @NameInMap("BlockDuration")
+        public Integer blockDuration;
+
         /**
          * <strong>example:</strong>
          * <p>2024-02-20 10:04:10</p>
@@ -272,6 +297,9 @@ public class ListJobExecutorsResponseBody extends TeaModel {
 
         @NameInMap("IpAddress")
         public java.util.List<String> ipAddress;
+
+        @NameInMap("Preemptible")
+        public Boolean preemptible;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -304,6 +332,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
         public Integer getArrayIndex() {
             return this.arrayIndex;
+        }
+
+        public ListJobExecutorsResponseBodyExecutors setBlockDuration(Integer blockDuration) {
+            this.blockDuration = blockDuration;
+            return this;
+        }
+        public Integer getBlockDuration() {
+            return this.blockDuration;
         }
 
         public ListJobExecutorsResponseBodyExecutors setCreateTime(String createTime) {
@@ -360,6 +396,14 @@ public class ListJobExecutorsResponseBody extends TeaModel {
         }
         public java.util.List<String> getIpAddress() {
             return this.ipAddress;
+        }
+
+        public ListJobExecutorsResponseBodyExecutors setPreemptible(Boolean preemptible) {
+            this.preemptible = preemptible;
+            return this;
+        }
+        public Boolean getPreemptible() {
+            return this.preemptible;
         }
 
         public ListJobExecutorsResponseBodyExecutors setStartTime(String startTime) {

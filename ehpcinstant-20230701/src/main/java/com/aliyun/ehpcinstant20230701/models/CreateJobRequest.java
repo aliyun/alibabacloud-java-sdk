@@ -4,6 +4,9 @@ package com.aliyun.ehpcinstant20230701.models;
 import com.aliyun.tea.*;
 
 public class CreateJobRequest extends TeaModel {
+    @NameInMap("DependencyPolicy")
+    public CreateJobRequestDependencyPolicy dependencyPolicy;
+
     @NameInMap("DeploymentPolicy")
     public CreateJobRequestDeploymentPolicy deploymentPolicy;
 
@@ -38,6 +41,14 @@ public class CreateJobRequest extends TeaModel {
     public static CreateJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateJobRequest self = new CreateJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateJobRequest setDependencyPolicy(CreateJobRequestDependencyPolicy dependencyPolicy) {
+        this.dependencyPolicy = dependencyPolicy;
+        return this;
+    }
+    public CreateJobRequestDependencyPolicy getDependencyPolicy() {
+        return this.dependencyPolicy;
     }
 
     public CreateJobRequest setDeploymentPolicy(CreateJobRequestDeploymentPolicy deploymentPolicy) {
@@ -86,6 +97,58 @@ public class CreateJobRequest extends TeaModel {
     }
     public java.util.List<CreateJobRequestTasks> getTasks() {
         return this.tasks;
+    }
+
+    public static class CreateJobRequestDependencyPolicyJobDependency extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("JobId")
+        public String jobId;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static CreateJobRequestDependencyPolicyJobDependency build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestDependencyPolicyJobDependency self = new CreateJobRequestDependencyPolicyJobDependency();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestDependencyPolicyJobDependency setJobId(String jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public String getJobId() {
+            return this.jobId;
+        }
+
+        public CreateJobRequestDependencyPolicyJobDependency setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class CreateJobRequestDependencyPolicy extends TeaModel {
+        @NameInMap("JobDependency")
+        public java.util.List<CreateJobRequestDependencyPolicyJobDependency> jobDependency;
+
+        public static CreateJobRequestDependencyPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestDependencyPolicy self = new CreateJobRequestDependencyPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestDependencyPolicy setJobDependency(java.util.List<CreateJobRequestDependencyPolicyJobDependency> jobDependency) {
+            this.jobDependency = jobDependency;
+            return this;
+        }
+        public java.util.List<CreateJobRequestDependencyPolicyJobDependency> getJobDependency() {
+            return this.jobDependency;
+        }
+
     }
 
     public static class CreateJobRequestDeploymentPolicyNetwork extends TeaModel {
@@ -452,6 +515,72 @@ public class CreateJobRequest extends TeaModel {
 
     }
 
+    public static class CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("Action")
+        public String action;
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        @NameInMap("ExitCode")
+        public Long exitCode;
+
+        public static CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions self = new CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions setExitCode(Long exitCode) {
+            this.exitCode = exitCode;
+            return this;
+        }
+        public Long getExitCode() {
+            return this.exitCode;
+        }
+
+    }
+
+    public static class CreateJobRequestTasksTaskSpecRetryPolicy extends TeaModel {
+        @NameInMap("ExitCodeActions")
+        public java.util.List<CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions> exitCodeActions;
+
+        @NameInMap("RetryCount")
+        public Integer retryCount;
+
+        public static CreateJobRequestTasksTaskSpecRetryPolicy build(java.util.Map<String, ?> map) throws Exception {
+            CreateJobRequestTasksTaskSpecRetryPolicy self = new CreateJobRequestTasksTaskSpecRetryPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateJobRequestTasksTaskSpecRetryPolicy setExitCodeActions(java.util.List<CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions> exitCodeActions) {
+            this.exitCodeActions = exitCodeActions;
+            return this;
+        }
+        public java.util.List<CreateJobRequestTasksTaskSpecRetryPolicyExitCodeActions> getExitCodeActions() {
+            return this.exitCodeActions;
+        }
+
+        public CreateJobRequestTasksTaskSpecRetryPolicy setRetryCount(Integer retryCount) {
+            this.retryCount = retryCount;
+            return this;
+        }
+        public Integer getRetryCount() {
+            return this.retryCount;
+        }
+
+    }
+
     public static class CreateJobRequestTasksTaskSpecTaskExecutorContainerEnvironmentVars extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -749,6 +878,9 @@ public class CreateJobRequest extends TeaModel {
         @NameInMap("Resource")
         public CreateJobRequestTasksTaskSpecResource resource;
 
+        @NameInMap("RetryPolicy")
+        public CreateJobRequestTasksTaskSpecRetryPolicy retryPolicy;
+
         /**
          * <p>This parameter is required.</p>
          */
@@ -769,6 +901,14 @@ public class CreateJobRequest extends TeaModel {
         }
         public CreateJobRequestTasksTaskSpecResource getResource() {
             return this.resource;
+        }
+
+        public CreateJobRequestTasksTaskSpec setRetryPolicy(CreateJobRequestTasksTaskSpecRetryPolicy retryPolicy) {
+            this.retryPolicy = retryPolicy;
+            return this;
+        }
+        public CreateJobRequestTasksTaskSpecRetryPolicy getRetryPolicy() {
+            return this.retryPolicy;
         }
 
         public CreateJobRequestTasksTaskSpec setTaskExecutor(java.util.List<CreateJobRequestTasksTaskSpecTaskExecutor> taskExecutor) {
