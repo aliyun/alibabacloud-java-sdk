@@ -4,6 +4,9 @@ package com.aliyun.devs20230714.models;
 import com.aliyun.tea.*;
 
 public class GitLabConfig extends TeaModel {
+    @NameInMap("isFixedIP")
+    public Boolean isFixedIP;
+
     /**
      * <strong>example:</strong>
      * <p>your-token</p>
@@ -21,6 +24,14 @@ public class GitLabConfig extends TeaModel {
     public static GitLabConfig build(java.util.Map<String, ?> map) throws Exception {
         GitLabConfig self = new GitLabConfig();
         return TeaModel.build(map, self);
+    }
+
+    public GitLabConfig setIsFixedIP(Boolean isFixedIP) {
+        this.isFixedIP = isFixedIP;
+        return this;
+    }
+    public Boolean getIsFixedIP() {
+        return this.isFixedIP;
     }
 
     public GitLabConfig setToken(String token) {

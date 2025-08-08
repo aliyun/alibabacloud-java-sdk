@@ -31,6 +31,9 @@ public class DeployCustomContainerInput extends TeaModel {
     @NameInMap("environmentVariables")
     public java.util.Map<String, ?> environmentVariables;
 
+    @NameInMap("featureGates")
+    public DeployCustomContainerInputFeatureGates featureGates;
+
     @NameInMap("gpuConfig")
     public DeployCustomContainerInputGpuConfig gpuConfig;
 
@@ -163,6 +166,14 @@ public class DeployCustomContainerInput extends TeaModel {
     }
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public DeployCustomContainerInput setFeatureGates(DeployCustomContainerInputFeatureGates featureGates) {
+        this.featureGates = featureGates;
+        return this;
+    }
+    public DeployCustomContainerInputFeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     public DeployCustomContainerInput setGpuConfig(DeployCustomContainerInputGpuConfig gpuConfig) {
@@ -700,6 +711,36 @@ public class DeployCustomContainerInput extends TeaModel {
 
     }
 
+    public static class DeployCustomContainerInputFeatureGates extends TeaModel {
+        @NameInMap("asyncProvisionCheck")
+        public Boolean asyncProvisionCheck;
+
+        @NameInMap("disableRollbackOnProvisionFailure")
+        public Boolean disableRollbackOnProvisionFailure;
+
+        public static DeployCustomContainerInputFeatureGates build(java.util.Map<String, ?> map) throws Exception {
+            DeployCustomContainerInputFeatureGates self = new DeployCustomContainerInputFeatureGates();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputFeatureGates setAsyncProvisionCheck(Boolean asyncProvisionCheck) {
+            this.asyncProvisionCheck = asyncProvisionCheck;
+            return this;
+        }
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        public DeployCustomContainerInputFeatureGates setDisableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+            this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+            return this;
+        }
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+    }
+
     public static class DeployCustomContainerInputGpuConfig extends TeaModel {
         @NameInMap("gpuMemorySize")
         public Long gpuMemorySize;
@@ -731,6 +772,9 @@ public class DeployCustomContainerInput extends TeaModel {
     }
 
     public static class DeployCustomContainerInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -746,6 +790,14 @@ public class DeployCustomContainerInput extends TeaModel {
         public static DeployCustomContainerInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployCustomContainerInputHttpTriggerTriggerConfig self = new DeployCustomContainerInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeployCustomContainerInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeployCustomContainerInputHttpTriggerTriggerConfig setAuthType(String authType) {
@@ -889,6 +941,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @NameInMap("prefix")
         public String prefix;
 
+        @NameInMap("skipDownload")
+        public Boolean skipDownload;
+
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -912,6 +967,12 @@ public class DeployCustomContainerInput extends TeaModel {
 
         @NameInMap("syncStrategy")
         public String syncStrategy;
+
+        @NameInMap("withPPU")
+        public Boolean withPPU;
+
+        @NameInMap("workingDir")
+        public String workingDir;
 
         public static DeployCustomContainerInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployCustomContainerInputModelConfig self = new DeployCustomContainerInputModelConfig();
@@ -940,6 +1001,14 @@ public class DeployCustomContainerInput extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+        public DeployCustomContainerInputModelConfig setSkipDownload(Boolean skipDownload) {
+            this.skipDownload = skipDownload;
+            return this;
+        }
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         public DeployCustomContainerInputModelConfig setSourceType(String sourceType) {
@@ -1004,6 +1073,22 @@ public class DeployCustomContainerInput extends TeaModel {
         }
         public String getSyncStrategy() {
             return this.syncStrategy;
+        }
+
+        public DeployCustomContainerInputModelConfig setWithPPU(Boolean withPPU) {
+            this.withPPU = withPPU;
+            return this;
+        }
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        public DeployCustomContainerInputModelConfig setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
         }
 
     }

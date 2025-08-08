@@ -25,6 +25,9 @@ public class DeployOllamaModelInput extends TeaModel {
     @NameInMap("environmentVariables")
     public java.util.Map<String, ?> environmentVariables;
 
+    @NameInMap("featureGates")
+    public DeployOllamaModelInputFeatureGates featureGates;
+
     @NameInMap("gpuConfig")
     public DeployOllamaModelInputGpuConfig gpuConfig;
 
@@ -144,6 +147,14 @@ public class DeployOllamaModelInput extends TeaModel {
     }
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public DeployOllamaModelInput setFeatureGates(DeployOllamaModelInputFeatureGates featureGates) {
+        this.featureGates = featureGates;
+        return this;
+    }
+    public DeployOllamaModelInputFeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     public DeployOllamaModelInput setGpuConfig(DeployOllamaModelInputGpuConfig gpuConfig) {
@@ -309,6 +320,36 @@ public class DeployOllamaModelInput extends TeaModel {
 
     }
 
+    public static class DeployOllamaModelInputFeatureGates extends TeaModel {
+        @NameInMap("asyncProvisionCheck")
+        public Boolean asyncProvisionCheck;
+
+        @NameInMap("disableRollbackOnProvisionFailure")
+        public Boolean disableRollbackOnProvisionFailure;
+
+        public static DeployOllamaModelInputFeatureGates build(java.util.Map<String, ?> map) throws Exception {
+            DeployOllamaModelInputFeatureGates self = new DeployOllamaModelInputFeatureGates();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployOllamaModelInputFeatureGates setAsyncProvisionCheck(Boolean asyncProvisionCheck) {
+            this.asyncProvisionCheck = asyncProvisionCheck;
+            return this;
+        }
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        public DeployOllamaModelInputFeatureGates setDisableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+            this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+            return this;
+        }
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+    }
+
     public static class DeployOllamaModelInputGpuConfig extends TeaModel {
         @NameInMap("gpuMemorySize")
         public Integer gpuMemorySize;
@@ -340,6 +381,9 @@ public class DeployOllamaModelInput extends TeaModel {
     }
 
     public static class DeployOllamaModelInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -355,6 +399,14 @@ public class DeployOllamaModelInput extends TeaModel {
         public static DeployOllamaModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployOllamaModelInputHttpTriggerTriggerConfig self = new DeployOllamaModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeployOllamaModelInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeployOllamaModelInputHttpTriggerTriggerConfig setAuthType(String authType) {
@@ -784,6 +836,9 @@ public class DeployOllamaModelInput extends TeaModel {
         @NameInMap("prefix")
         public String prefix;
 
+        @NameInMap("skipDownload")
+        public Boolean skipDownload;
+
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -807,6 +862,12 @@ public class DeployOllamaModelInput extends TeaModel {
 
         @NameInMap("syncStrategy")
         public String syncStrategy;
+
+        @NameInMap("withPPU")
+        public Boolean withPPU;
+
+        @NameInMap("workingDir")
+        public String workingDir;
 
         public static DeployOllamaModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployOllamaModelInputModelConfig self = new DeployOllamaModelInputModelConfig();
@@ -843,6 +904,14 @@ public class DeployOllamaModelInput extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+        public DeployOllamaModelInputModelConfig setSkipDownload(Boolean skipDownload) {
+            this.skipDownload = skipDownload;
+            return this;
+        }
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         public DeployOllamaModelInputModelConfig setSourceType(String sourceType) {
@@ -907,6 +976,22 @@ public class DeployOllamaModelInput extends TeaModel {
         }
         public String getSyncStrategy() {
             return this.syncStrategy;
+        }
+
+        public DeployOllamaModelInputModelConfig setWithPPU(Boolean withPPU) {
+            this.withPPU = withPPU;
+            return this;
+        }
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        public DeployOllamaModelInputModelConfig setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
         }
 
     }

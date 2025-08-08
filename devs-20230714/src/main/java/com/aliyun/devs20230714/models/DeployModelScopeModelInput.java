@@ -340,6 +340,9 @@ public class DeployModelScopeModelInput extends TeaModel {
     }
 
     public static class DeployModelScopeModelInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -355,6 +358,14 @@ public class DeployModelScopeModelInput extends TeaModel {
         public static DeployModelScopeModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployModelScopeModelInputHttpTriggerTriggerConfig self = new DeployModelScopeModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeployModelScopeModelInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeployModelScopeModelInputHttpTriggerTriggerConfig setAuthType(String authType) {

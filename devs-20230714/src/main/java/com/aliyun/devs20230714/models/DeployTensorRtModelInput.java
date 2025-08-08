@@ -340,6 +340,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
 
     public static class DeployTensorRtModelInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -355,6 +358,14 @@ public class DeployTensorRtModelInput extends TeaModel {
         public static DeployTensorRtModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployTensorRtModelInputHttpTriggerTriggerConfig self = new DeployTensorRtModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeployTensorRtModelInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeployTensorRtModelInputHttpTriggerTriggerConfig setAuthType(String authType) {

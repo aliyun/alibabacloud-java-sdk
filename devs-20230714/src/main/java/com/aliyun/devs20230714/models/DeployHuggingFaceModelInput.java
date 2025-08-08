@@ -25,6 +25,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
     @NameInMap("environmentVariables")
     public java.util.Map<String, ?> environmentVariables;
 
+    @NameInMap("featureGates")
+    public DeployHuggingFaceModelInputFeatureGates featureGates;
+
     @NameInMap("gpuConfig")
     public DeployHuggingFaceModelInputGpuConfig gpuConfig;
 
@@ -144,6 +147,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
     }
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public DeployHuggingFaceModelInput setFeatureGates(DeployHuggingFaceModelInputFeatureGates featureGates) {
+        this.featureGates = featureGates;
+        return this;
+    }
+    public DeployHuggingFaceModelInputFeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     public DeployHuggingFaceModelInput setGpuConfig(DeployHuggingFaceModelInputGpuConfig gpuConfig) {
@@ -309,6 +320,36 @@ public class DeployHuggingFaceModelInput extends TeaModel {
 
     }
 
+    public static class DeployHuggingFaceModelInputFeatureGates extends TeaModel {
+        @NameInMap("asyncProvisionCheck")
+        public Boolean asyncProvisionCheck;
+
+        @NameInMap("disableRollbackOnProvisionFailure")
+        public Boolean disableRollbackOnProvisionFailure;
+
+        public static DeployHuggingFaceModelInputFeatureGates build(java.util.Map<String, ?> map) throws Exception {
+            DeployHuggingFaceModelInputFeatureGates self = new DeployHuggingFaceModelInputFeatureGates();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployHuggingFaceModelInputFeatureGates setAsyncProvisionCheck(Boolean asyncProvisionCheck) {
+            this.asyncProvisionCheck = asyncProvisionCheck;
+            return this;
+        }
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        public DeployHuggingFaceModelInputFeatureGates setDisableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+            this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+            return this;
+        }
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+    }
+
     public static class DeployHuggingFaceModelInputGpuConfig extends TeaModel {
         @NameInMap("gpuMemorySize")
         public Integer gpuMemorySize;
@@ -340,6 +381,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
     }
 
     public static class DeployHuggingFaceModelInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -355,6 +399,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         public static DeployHuggingFaceModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployHuggingFaceModelInputHttpTriggerTriggerConfig self = new DeployHuggingFaceModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeployHuggingFaceModelInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeployHuggingFaceModelInputHttpTriggerTriggerConfig setAuthType(String authType) {
@@ -531,6 +583,9 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         @NameInMap("prefix")
         public String prefix;
 
+        @NameInMap("skipDownload")
+        public Boolean skipDownload;
+
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -554,6 +609,12 @@ public class DeployHuggingFaceModelInput extends TeaModel {
 
         @NameInMap("syncStrategy")
         public String syncStrategy;
+
+        @NameInMap("withPPU")
+        public Boolean withPPU;
+
+        @NameInMap("workingDir")
+        public String workingDir;
 
         public static DeployHuggingFaceModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployHuggingFaceModelInputModelConfig self = new DeployHuggingFaceModelInputModelConfig();
@@ -590,6 +651,14 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+        public DeployHuggingFaceModelInputModelConfig setSkipDownload(Boolean skipDownload) {
+            this.skipDownload = skipDownload;
+            return this;
+        }
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         public DeployHuggingFaceModelInputModelConfig setSourceType(String sourceType) {
@@ -654,6 +723,22 @@ public class DeployHuggingFaceModelInput extends TeaModel {
         }
         public String getSyncStrategy() {
             return this.syncStrategy;
+        }
+
+        public DeployHuggingFaceModelInputModelConfig setWithPPU(Boolean withPPU) {
+            this.withPPU = withPPU;
+            return this;
+        }
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        public DeployHuggingFaceModelInputModelConfig setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
         }
 
     }

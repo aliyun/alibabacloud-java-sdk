@@ -3,7 +3,7 @@ package com.aliyun.devs20230714.models;
 
 import com.aliyun.tea.*;
 
-public class Toolset extends TeaModel {
+public class ModelSet extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>2021-11-19T09:34:38Z</p>
@@ -18,20 +18,20 @@ public class Toolset extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
     @NameInMap("generation")
     public Long generation;
 
     /**
      * <strong>example:</strong>
-     * <p>Toolset</p>
+     * <p>ModelProvider</p>
      */
     @NameInMap("kind")
     public String kind;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key=value</p>
+     */
     @NameInMap("labels")
     public java.util.Map<String, String> labels;
 
@@ -39,16 +39,13 @@ public class Toolset extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>my-toolset</p>
+     * <p>my-modelset</p>
      */
     @NameInMap("name")
     public String name;
 
-    @NameInMap("spec")
-    public ToolsetSpec spec;
-
     @NameInMap("status")
-    public ToolsetStatus status;
+    public ModelSetStatus status;
 
     /**
      * <strong>example:</strong>
@@ -57,12 +54,12 @@ public class Toolset extends TeaModel {
     @NameInMap("uid")
     public String uid;
 
-    public static Toolset build(java.util.Map<String, ?> map) throws Exception {
-        Toolset self = new Toolset();
+    public static ModelSet build(java.util.Map<String, ?> map) throws Exception {
+        ModelSet self = new ModelSet();
         return TeaModel.build(map, self);
     }
 
-    public Toolset setCreatedTime(String createdTime) {
+    public ModelSet setCreatedTime(String createdTime) {
         this.createdTime = createdTime;
         return this;
     }
@@ -70,7 +67,7 @@ public class Toolset extends TeaModel {
         return this.createdTime;
     }
 
-    public Toolset setDescription(String description) {
+    public ModelSet setDescription(String description) {
         this.description = description;
         return this;
     }
@@ -78,7 +75,7 @@ public class Toolset extends TeaModel {
         return this.description;
     }
 
-    public Toolset setGeneration(Long generation) {
+    public ModelSet setGeneration(Long generation) {
         this.generation = generation;
         return this;
     }
@@ -86,7 +83,7 @@ public class Toolset extends TeaModel {
         return this.generation;
     }
 
-    public Toolset setKind(String kind) {
+    public ModelSet setKind(String kind) {
         this.kind = kind;
         return this;
     }
@@ -94,7 +91,7 @@ public class Toolset extends TeaModel {
         return this.kind;
     }
 
-    public Toolset setLabels(java.util.Map<String, String> labels) {
+    public ModelSet setLabels(java.util.Map<String, String> labels) {
         this.labels = labels;
         return this;
     }
@@ -102,7 +99,7 @@ public class Toolset extends TeaModel {
         return this.labels;
     }
 
-    public Toolset setName(String name) {
+    public ModelSet setName(String name) {
         this.name = name;
         return this;
     }
@@ -110,23 +107,15 @@ public class Toolset extends TeaModel {
         return this.name;
     }
 
-    public Toolset setSpec(ToolsetSpec spec) {
-        this.spec = spec;
-        return this;
-    }
-    public ToolsetSpec getSpec() {
-        return this.spec;
-    }
-
-    public Toolset setStatus(ToolsetStatus status) {
+    public ModelSet setStatus(ModelSetStatus status) {
         this.status = status;
         return this;
     }
-    public ToolsetStatus getStatus() {
+    public ModelSetStatus getStatus() {
         return this.status;
     }
 
-    public Toolset setUid(String uid) {
+    public ModelSet setUid(String uid) {
         this.uid = uid;
         return this;
     }

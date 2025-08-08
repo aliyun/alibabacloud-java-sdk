@@ -13,6 +13,9 @@ public class DeployVllmModelInput extends TeaModel {
     @NameInMap("cpu")
     public Float cpu;
 
+    @NameInMap("customContainerConfig")
+    public DeployVllmModelInputCustomContainerConfig customContainerConfig;
+
     @NameInMap("description")
     public String description;
 
@@ -24,6 +27,9 @@ public class DeployVllmModelInput extends TeaModel {
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, ?> environmentVariables;
+
+    @NameInMap("featureGates")
+    public DeployVllmModelInputFeatureGates featureGates;
 
     @NameInMap("gpuConfig")
     public DeployVllmModelInputGpuConfig gpuConfig;
@@ -57,6 +63,9 @@ public class DeployVllmModelInput extends TeaModel {
 
     @NameInMap("originalName")
     public String originalName;
+
+    @NameInMap("ossMountConfig")
+    public DeployVllmModelInputOssMountConfig ossMountConfig;
 
     @NameInMap("projectName")
     public String projectName;
@@ -114,6 +123,14 @@ public class DeployVllmModelInput extends TeaModel {
         return this.cpu;
     }
 
+    public DeployVllmModelInput setCustomContainerConfig(DeployVllmModelInputCustomContainerConfig customContainerConfig) {
+        this.customContainerConfig = customContainerConfig;
+        return this;
+    }
+    public DeployVllmModelInputCustomContainerConfig getCustomContainerConfig() {
+        return this.customContainerConfig;
+    }
+
     public DeployVllmModelInput setDescription(String description) {
         this.description = description;
         return this;
@@ -144,6 +161,14 @@ public class DeployVllmModelInput extends TeaModel {
     }
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public DeployVllmModelInput setFeatureGates(DeployVllmModelInputFeatureGates featureGates) {
+        this.featureGates = featureGates;
+        return this;
+    }
+    public DeployVllmModelInputFeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     public DeployVllmModelInput setGpuConfig(DeployVllmModelInputGpuConfig gpuConfig) {
@@ -224,6 +249,14 @@ public class DeployVllmModelInput extends TeaModel {
     }
     public String getOriginalName() {
         return this.originalName;
+    }
+
+    public DeployVllmModelInput setOssMountConfig(DeployVllmModelInputOssMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public DeployVllmModelInputOssMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     public DeployVllmModelInput setProjectName(String projectName) {
@@ -309,6 +342,55 @@ public class DeployVllmModelInput extends TeaModel {
 
     }
 
+    public static class DeployVllmModelInputCustomContainerConfig extends TeaModel {
+        @NameInMap("role")
+        public String role;
+
+        public static DeployVllmModelInputCustomContainerConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeployVllmModelInputCustomContainerConfig self = new DeployVllmModelInputCustomContainerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployVllmModelInputCustomContainerConfig setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
+    public static class DeployVllmModelInputFeatureGates extends TeaModel {
+        @NameInMap("asyncProvisionCheck")
+        public Boolean asyncProvisionCheck;
+
+        @NameInMap("disableRollbackOnProvisionFailure")
+        public Boolean disableRollbackOnProvisionFailure;
+
+        public static DeployVllmModelInputFeatureGates build(java.util.Map<String, ?> map) throws Exception {
+            DeployVllmModelInputFeatureGates self = new DeployVllmModelInputFeatureGates();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployVllmModelInputFeatureGates setAsyncProvisionCheck(Boolean asyncProvisionCheck) {
+            this.asyncProvisionCheck = asyncProvisionCheck;
+            return this;
+        }
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        public DeployVllmModelInputFeatureGates setDisableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+            this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+            return this;
+        }
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+    }
+
     public static class DeployVllmModelInputGpuConfig extends TeaModel {
         @NameInMap("gpuMemorySize")
         public Integer gpuMemorySize;
@@ -340,6 +422,9 @@ public class DeployVllmModelInput extends TeaModel {
     }
 
     public static class DeployVllmModelInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -355,6 +440,14 @@ public class DeployVllmModelInput extends TeaModel {
         public static DeployVllmModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployVllmModelInputHttpTriggerTriggerConfig self = new DeployVllmModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeployVllmModelInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeployVllmModelInputHttpTriggerTriggerConfig setAuthType(String authType) {
@@ -641,6 +734,9 @@ public class DeployVllmModelInput extends TeaModel {
         @NameInMap("prefix")
         public String prefix;
 
+        @NameInMap("skipDownload")
+        public Boolean skipDownload;
+
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -664,6 +760,12 @@ public class DeployVllmModelInput extends TeaModel {
 
         @NameInMap("syncStrategy")
         public String syncStrategy;
+
+        @NameInMap("withPPU")
+        public Boolean withPPU;
+
+        @NameInMap("workingDir")
+        public String workingDir;
 
         public static DeployVllmModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeployVllmModelInputModelConfig self = new DeployVllmModelInputModelConfig();
@@ -700,6 +802,14 @@ public class DeployVllmModelInput extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+        public DeployVllmModelInputModelConfig setSkipDownload(Boolean skipDownload) {
+            this.skipDownload = skipDownload;
+            return this;
+        }
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         public DeployVllmModelInputModelConfig setSourceType(String sourceType) {
@@ -764,6 +874,22 @@ public class DeployVllmModelInput extends TeaModel {
         }
         public String getSyncStrategy() {
             return this.syncStrategy;
+        }
+
+        public DeployVllmModelInputModelConfig setWithPPU(Boolean withPPU) {
+            this.withPPU = withPPU;
+            return this;
+        }
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        public DeployVllmModelInputModelConfig setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
         }
 
     }
@@ -846,6 +972,88 @@ public class DeployVllmModelInput extends TeaModel {
         }
         public Integer getUserId() {
             return this.userId;
+        }
+
+    }
+
+    public static class DeployVllmModelInputOssMountConfigMountPoints extends TeaModel {
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        @NameInMap("bucketPath")
+        public String bucketPath;
+
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        @NameInMap("mountDir")
+        public String mountDir;
+
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        public static DeployVllmModelInputOssMountConfigMountPoints build(java.util.Map<String, ?> map) throws Exception {
+            DeployVllmModelInputOssMountConfigMountPoints self = new DeployVllmModelInputOssMountConfigMountPoints();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployVllmModelInputOssMountConfigMountPoints setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public DeployVllmModelInputOssMountConfigMountPoints setBucketPath(String bucketPath) {
+            this.bucketPath = bucketPath;
+            return this;
+        }
+        public String getBucketPath() {
+            return this.bucketPath;
+        }
+
+        public DeployVllmModelInputOssMountConfigMountPoints setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public DeployVllmModelInputOssMountConfigMountPoints setMountDir(String mountDir) {
+            this.mountDir = mountDir;
+            return this;
+        }
+        public String getMountDir() {
+            return this.mountDir;
+        }
+
+        public DeployVllmModelInputOssMountConfigMountPoints setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+    }
+
+    public static class DeployVllmModelInputOssMountConfig extends TeaModel {
+        @NameInMap("mountPoints")
+        public java.util.List<DeployVllmModelInputOssMountConfigMountPoints> mountPoints;
+
+        public static DeployVllmModelInputOssMountConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeployVllmModelInputOssMountConfig self = new DeployVllmModelInputOssMountConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeployVllmModelInputOssMountConfig setMountPoints(java.util.List<DeployVllmModelInputOssMountConfigMountPoints> mountPoints) {
+            this.mountPoints = mountPoints;
+            return this;
+        }
+        public java.util.List<DeployVllmModelInputOssMountConfigMountPoints> getMountPoints() {
+            return this.mountPoints;
         }
 
     }

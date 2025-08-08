@@ -13,6 +13,9 @@ public class DeploySGLangModelInput extends TeaModel {
     @NameInMap("cpu")
     public Float cpu;
 
+    @NameInMap("customContainerConfig")
+    public DeploySGLangModelInputCustomContainerConfig customContainerConfig;
+
     @NameInMap("description")
     public String description;
 
@@ -24,6 +27,9 @@ public class DeploySGLangModelInput extends TeaModel {
 
     @NameInMap("environmentVariables")
     public java.util.Map<String, ?> environmentVariables;
+
+    @NameInMap("featureGates")
+    public DeploySGLangModelInputFeatureGates featureGates;
 
     @NameInMap("gpuConfig")
     public DeploySGLangModelInputGpuConfig gpuConfig;
@@ -57,6 +63,9 @@ public class DeploySGLangModelInput extends TeaModel {
 
     @NameInMap("originalName")
     public String originalName;
+
+    @NameInMap("ossMountConfig")
+    public DeploySGLangModelInputOssMountConfig ossMountConfig;
 
     @NameInMap("projectName")
     public String projectName;
@@ -114,6 +123,14 @@ public class DeploySGLangModelInput extends TeaModel {
         return this.cpu;
     }
 
+    public DeploySGLangModelInput setCustomContainerConfig(DeploySGLangModelInputCustomContainerConfig customContainerConfig) {
+        this.customContainerConfig = customContainerConfig;
+        return this;
+    }
+    public DeploySGLangModelInputCustomContainerConfig getCustomContainerConfig() {
+        return this.customContainerConfig;
+    }
+
     public DeploySGLangModelInput setDescription(String description) {
         this.description = description;
         return this;
@@ -144,6 +161,14 @@ public class DeploySGLangModelInput extends TeaModel {
     }
     public java.util.Map<String, ?> getEnvironmentVariables() {
         return this.environmentVariables;
+    }
+
+    public DeploySGLangModelInput setFeatureGates(DeploySGLangModelInputFeatureGates featureGates) {
+        this.featureGates = featureGates;
+        return this;
+    }
+    public DeploySGLangModelInputFeatureGates getFeatureGates() {
+        return this.featureGates;
     }
 
     public DeploySGLangModelInput setGpuConfig(DeploySGLangModelInputGpuConfig gpuConfig) {
@@ -224,6 +249,14 @@ public class DeploySGLangModelInput extends TeaModel {
     }
     public String getOriginalName() {
         return this.originalName;
+    }
+
+    public DeploySGLangModelInput setOssMountConfig(DeploySGLangModelInputOssMountConfig ossMountConfig) {
+        this.ossMountConfig = ossMountConfig;
+        return this;
+    }
+    public DeploySGLangModelInputOssMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
     }
 
     public DeploySGLangModelInput setProjectName(String projectName) {
@@ -309,6 +342,55 @@ public class DeploySGLangModelInput extends TeaModel {
 
     }
 
+    public static class DeploySGLangModelInputCustomContainerConfig extends TeaModel {
+        @NameInMap("role")
+        public String role;
+
+        public static DeploySGLangModelInputCustomContainerConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputCustomContainerConfig self = new DeploySGLangModelInputCustomContainerConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeploySGLangModelInputCustomContainerConfig setRole(String role) {
+            this.role = role;
+            return this;
+        }
+        public String getRole() {
+            return this.role;
+        }
+
+    }
+
+    public static class DeploySGLangModelInputFeatureGates extends TeaModel {
+        @NameInMap("asyncProvisionCheck")
+        public Boolean asyncProvisionCheck;
+
+        @NameInMap("disableRollbackOnProvisionFailure")
+        public Boolean disableRollbackOnProvisionFailure;
+
+        public static DeploySGLangModelInputFeatureGates build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputFeatureGates self = new DeploySGLangModelInputFeatureGates();
+            return TeaModel.build(map, self);
+        }
+
+        public DeploySGLangModelInputFeatureGates setAsyncProvisionCheck(Boolean asyncProvisionCheck) {
+            this.asyncProvisionCheck = asyncProvisionCheck;
+            return this;
+        }
+        public Boolean getAsyncProvisionCheck() {
+            return this.asyncProvisionCheck;
+        }
+
+        public DeploySGLangModelInputFeatureGates setDisableRollbackOnProvisionFailure(Boolean disableRollbackOnProvisionFailure) {
+            this.disableRollbackOnProvisionFailure = disableRollbackOnProvisionFailure;
+            return this;
+        }
+        public Boolean getDisableRollbackOnProvisionFailure() {
+            return this.disableRollbackOnProvisionFailure;
+        }
+
+    }
+
     public static class DeploySGLangModelInputGpuConfig extends TeaModel {
         @NameInMap("gpuMemorySize")
         public Integer gpuMemorySize;
@@ -340,6 +422,9 @@ public class DeploySGLangModelInput extends TeaModel {
     }
 
     public static class DeploySGLangModelInputHttpTriggerTriggerConfig extends TeaModel {
+        @NameInMap("authConfig")
+        public String authConfig;
+
         @NameInMap("authType")
         public String authType;
 
@@ -355,6 +440,14 @@ public class DeploySGLangModelInput extends TeaModel {
         public static DeploySGLangModelInputHttpTriggerTriggerConfig build(java.util.Map<String, ?> map) throws Exception {
             DeploySGLangModelInputHttpTriggerTriggerConfig self = new DeploySGLangModelInputHttpTriggerTriggerConfig();
             return TeaModel.build(map, self);
+        }
+
+        public DeploySGLangModelInputHttpTriggerTriggerConfig setAuthConfig(String authConfig) {
+            this.authConfig = authConfig;
+            return this;
+        }
+        public String getAuthConfig() {
+            return this.authConfig;
         }
 
         public DeploySGLangModelInputHttpTriggerTriggerConfig setAuthType(String authType) {
@@ -619,6 +712,9 @@ public class DeploySGLangModelInput extends TeaModel {
         @NameInMap("prefix")
         public String prefix;
 
+        @NameInMap("skipDownload")
+        public Boolean skipDownload;
+
         @NameInMap("sourceType")
         public String sourceType;
 
@@ -642,6 +738,12 @@ public class DeploySGLangModelInput extends TeaModel {
 
         @NameInMap("syncStrategy")
         public String syncStrategy;
+
+        @NameInMap("withPPU")
+        public Boolean withPPU;
+
+        @NameInMap("workingDir")
+        public String workingDir;
 
         public static DeploySGLangModelInputModelConfig build(java.util.Map<String, ?> map) throws Exception {
             DeploySGLangModelInputModelConfig self = new DeploySGLangModelInputModelConfig();
@@ -678,6 +780,14 @@ public class DeploySGLangModelInput extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+        public DeploySGLangModelInputModelConfig setSkipDownload(Boolean skipDownload) {
+            this.skipDownload = skipDownload;
+            return this;
+        }
+        public Boolean getSkipDownload() {
+            return this.skipDownload;
         }
 
         public DeploySGLangModelInputModelConfig setSourceType(String sourceType) {
@@ -742,6 +852,22 @@ public class DeploySGLangModelInput extends TeaModel {
         }
         public String getSyncStrategy() {
             return this.syncStrategy;
+        }
+
+        public DeploySGLangModelInputModelConfig setWithPPU(Boolean withPPU) {
+            this.withPPU = withPPU;
+            return this;
+        }
+        public Boolean getWithPPU() {
+            return this.withPPU;
+        }
+
+        public DeploySGLangModelInputModelConfig setWorkingDir(String workingDir) {
+            this.workingDir = workingDir;
+            return this;
+        }
+        public String getWorkingDir() {
+            return this.workingDir;
         }
 
     }
@@ -824,6 +950,88 @@ public class DeploySGLangModelInput extends TeaModel {
         }
         public Integer getUserId() {
             return this.userId;
+        }
+
+    }
+
+    public static class DeploySGLangModelInputOssMountConfigMountPoints extends TeaModel {
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        @NameInMap("bucketPath")
+        public String bucketPath;
+
+        @NameInMap("endpoint")
+        public String endpoint;
+
+        @NameInMap("mountDir")
+        public String mountDir;
+
+        @NameInMap("readOnly")
+        public Boolean readOnly;
+
+        public static DeploySGLangModelInputOssMountConfigMountPoints build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputOssMountConfigMountPoints self = new DeploySGLangModelInputOssMountConfigMountPoints();
+            return TeaModel.build(map, self);
+        }
+
+        public DeploySGLangModelInputOssMountConfigMountPoints setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public DeploySGLangModelInputOssMountConfigMountPoints setBucketPath(String bucketPath) {
+            this.bucketPath = bucketPath;
+            return this;
+        }
+        public String getBucketPath() {
+            return this.bucketPath;
+        }
+
+        public DeploySGLangModelInputOssMountConfigMountPoints setEndpoint(String endpoint) {
+            this.endpoint = endpoint;
+            return this;
+        }
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        public DeploySGLangModelInputOssMountConfigMountPoints setMountDir(String mountDir) {
+            this.mountDir = mountDir;
+            return this;
+        }
+        public String getMountDir() {
+            return this.mountDir;
+        }
+
+        public DeploySGLangModelInputOssMountConfigMountPoints setReadOnly(Boolean readOnly) {
+            this.readOnly = readOnly;
+            return this;
+        }
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+    }
+
+    public static class DeploySGLangModelInputOssMountConfig extends TeaModel {
+        @NameInMap("mountPoints")
+        public java.util.List<DeploySGLangModelInputOssMountConfigMountPoints> mountPoints;
+
+        public static DeploySGLangModelInputOssMountConfig build(java.util.Map<String, ?> map) throws Exception {
+            DeploySGLangModelInputOssMountConfig self = new DeploySGLangModelInputOssMountConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DeploySGLangModelInputOssMountConfig setMountPoints(java.util.List<DeploySGLangModelInputOssMountConfigMountPoints> mountPoints) {
+            this.mountPoints = mountPoints;
+            return this;
+        }
+        public java.util.List<DeploySGLangModelInputOssMountConfigMountPoints> getMountPoints() {
+            return this.mountPoints;
         }
 
     }
