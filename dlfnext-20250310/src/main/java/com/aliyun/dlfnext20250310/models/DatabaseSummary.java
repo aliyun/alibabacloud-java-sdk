@@ -28,6 +28,18 @@ public class DatabaseSummary extends TeaModel {
     @NameInMap("location")
     public String location;
 
+    @NameInMap("objTypeArchiveSize")
+    public Long objTypeArchiveSize;
+
+    @NameInMap("objTypeColdArchiveSize")
+    public Long objTypeColdArchiveSize;
+
+    @NameInMap("objTypeIaSize")
+    public Long objTypeIaSize;
+
+    @NameInMap("objTypeStandardSize")
+    public Long objTypeStandardSize;
+
     @NameInMap("partitionCount")
     public Long partitionCount;
 
@@ -81,6 +93,38 @@ public class DatabaseSummary extends TeaModel {
     }
     public String getLocation() {
         return this.location;
+    }
+
+    public DatabaseSummary setObjTypeArchiveSize(Long objTypeArchiveSize) {
+        this.objTypeArchiveSize = objTypeArchiveSize;
+        return this;
+    }
+    public Long getObjTypeArchiveSize() {
+        return this.objTypeArchiveSize;
+    }
+
+    public DatabaseSummary setObjTypeColdArchiveSize(Long objTypeColdArchiveSize) {
+        this.objTypeColdArchiveSize = objTypeColdArchiveSize;
+        return this;
+    }
+    public Long getObjTypeColdArchiveSize() {
+        return this.objTypeColdArchiveSize;
+    }
+
+    public DatabaseSummary setObjTypeIaSize(Long objTypeIaSize) {
+        this.objTypeIaSize = objTypeIaSize;
+        return this;
+    }
+    public Long getObjTypeIaSize() {
+        return this.objTypeIaSize;
+    }
+
+    public DatabaseSummary setObjTypeStandardSize(Long objTypeStandardSize) {
+        this.objTypeStandardSize = objTypeStandardSize;
+        return this;
+    }
+    public Long getObjTypeStandardSize() {
+        return this.objTypeStandardSize;
     }
 
     public DatabaseSummary setPartitionCount(Long partitionCount) {

@@ -130,6 +130,210 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新接收者</p>
+     * 
+     * @param request AlterReceiverRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AlterReceiverResponse
+     */
+    public AlterReceiverResponse alterReceiverWithOptions(String receiver, AlterReceiverRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverName)) {
+            body.put("receiverName", request.receiverName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlterReceiver"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/receivers/" + com.aliyun.openapiutil.Client.getEncodeParam(receiver) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlterReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新接收者</p>
+     * 
+     * @param request AlterReceiverRequest
+     * @return AlterReceiverResponse
+     */
+    public AlterReceiverResponse alterReceiver(String receiver, AlterReceiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.alterReceiverWithOptions(receiver, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新共享</p>
+     * 
+     * @param request AlterShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AlterShareResponse
+     */
+    public AlterShareResponse alterShareWithOptions(String share, AlterShareRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareName)) {
+            body.put("shareName", request.shareName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlterShare"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + ""),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlterShareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新共享</p>
+     * 
+     * @param request AlterShareRequest
+     * @return AlterShareResponse
+     */
+    public AlterShareResponse alterShare(String share, AlterShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.alterShareWithOptions(share, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新共享中的接收者</p>
+     * 
+     * @param request AlterShareReceiversRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AlterShareReceiversResponse
+     */
+    public AlterShareReceiversResponse alterShareReceiversWithOptions(String share, AlterShareReceiversRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addedReceivers)) {
+            body.put("addedReceivers", request.addedReceivers);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.removedReceivers)) {
+            body.put("removedReceivers", request.removedReceivers);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlterShareReceivers"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + "/receivers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlterShareReceiversResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新共享中的接收者</p>
+     * 
+     * @param request AlterShareReceiversRequest
+     * @return AlterShareReceiversResponse
+     */
+    public AlterShareReceiversResponse alterShareReceivers(String share, AlterShareReceiversRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.alterShareReceiversWithOptions(share, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更改共享资源</p>
+     * 
+     * @param request AlterShareResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AlterShareResourcesResponse
+     */
+    public AlterShareResourcesResponse alterShareResourcesWithOptions(String share, AlterShareResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.catalogId)) {
+            body.put("catalogId", request.catalogId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareResourceList)) {
+            body.put("shareResourceList", request.shareResourceList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AlterShareResources"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + "/resources"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AlterShareResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更改共享资源</p>
+     * 
+     * @param request AlterShareResourcesRequest
+     * @return AlterShareResourcesResponse
+     */
+    public AlterShareResourcesResponse alterShareResources(String share, AlterShareResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.alterShareResourcesWithOptions(share, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>更改Table</p>
      * 
      * @param request AlterTableRequest
@@ -281,12 +485,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateCatalogResponse createCatalogWithOptions(CreateCatalogRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isShared)) {
+            body.put("isShared", request.isShared);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("name", request.name);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.options)) {
             body.put("options", request.options);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareId)) {
+            body.put("shareId", request.shareId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -377,6 +589,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建接收者</p>
+     * 
+     * @param request CreateReceiverRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateReceiverResponse
+     */
+    public CreateReceiverResponse createReceiverWithOptions(CreateReceiverRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverName)) {
+            body.put("receiverName", request.receiverName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverTenantId)) {
+            body.put("receiverTenantId", request.receiverTenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateReceiver"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/receivers"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建接收者</p>
+     * 
+     * @param request CreateReceiverRequest
+     * @return CreateReceiverResponse
+     */
+    public CreateReceiverResponse createReceiver(CreateReceiverRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createReceiverWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建角色</p>
      * 
      * @param request CreateRoleRequest
@@ -428,6 +695,57 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createRoleWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建共享</p>
+     * 
+     * @param request CreateShareRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateShareResponse
+     */
+    public CreateShareResponse createShareWithOptions(CreateShareRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.comment)) {
+            body.put("comment", request.comment);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.shareName)) {
+            body.put("shareName", request.shareName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateShare"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateShareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建共享</p>
+     * 
+     * @param request CreateShareRequest
+     * @return CreateShareResponse
+     */
+    public CreateShareResponse createShare(CreateShareRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createShareWithOptions(request, headers, runtime);
     }
 
     /**
@@ -641,6 +959,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除接收者</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DropReceiverResponse
+     */
+    public DropReceiverResponse dropReceiverWithOptions(String receiver, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DropReceiver"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/receivers/" + com.aliyun.openapiutil.Client.getEncodeParam(receiver) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DropReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除接收者</p>
+     * @return DropReceiverResponse
+     */
+    public DropReceiverResponse dropReceiver(String receiver) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.dropReceiverWithOptions(receiver, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除共享</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DropShareResponse
+     */
+    public DropShareResponse dropShareWithOptions(String share, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DropShare"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DropShareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除共享</p>
+     * @return DropShareResponse
+     */
+    public DropShareResponse dropShare(String share) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.dropShareWithOptions(share, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除表</p>
      * 
      * @param headers map
@@ -754,13 +1146,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查看表</p>
      * 
+     * @param request GetCatalogSummaryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetCatalogSummaryResponse
      */
-    public GetCatalogSummaryResponse getCatalogSummaryWithOptions(String catalogId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetCatalogSummaryResponse getCatalogSummaryWithOptions(String catalogId, GetCatalogSummaryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("date", request.date);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetCatalogSummary"),
@@ -779,12 +1179,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>查看表</p>
+     * 
+     * @param request GetCatalogSummaryRequest
      * @return GetCatalogSummaryResponse
      */
-    public GetCatalogSummaryResponse getCatalogSummary(String catalogId) throws Exception {
+    public GetCatalogSummaryResponse getCatalogSummary(String catalogId, GetCatalogSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getCatalogSummaryWithOptions(catalogId, headers, runtime);
+        return this.getCatalogSummaryWithOptions(catalogId, request, headers, runtime);
     }
 
     /**
@@ -916,13 +1318,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>查看表</p>
      * 
+     * @param request GetDatabaseSummaryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetDatabaseSummaryResponse
      */
-    public GetDatabaseSummaryResponse getDatabaseSummaryWithOptions(String catalogId, String database, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetDatabaseSummaryResponse getDatabaseSummaryWithOptions(String catalogId, String database, GetDatabaseSummaryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("date", request.date);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetDatabaseSummary"),
@@ -941,12 +1351,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>查看表</p>
+     * 
+     * @param request GetDatabaseSummaryRequest
      * @return GetDatabaseSummaryResponse
      */
-    public GetDatabaseSummaryResponse getDatabaseSummary(String catalogId, String database) throws Exception {
+    public GetDatabaseSummaryResponse getDatabaseSummary(String catalogId, String database, GetDatabaseSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getDatabaseSummaryWithOptions(catalogId, database, headers, runtime);
+        return this.getDatabaseSummaryWithOptions(catalogId, database, request, headers, runtime);
     }
 
     /**
@@ -1021,6 +1433,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getIcebergTableWithOptions(catalogId, namespace, table, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接收者</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetReceiverResponse
+     */
+    public GetReceiverResponse getReceiverWithOptions(String receiver, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetReceiver"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/receivers/" + com.aliyun.openapiutil.Client.getEncodeParam(receiver) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetReceiverResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接收者</p>
+     * @return GetReceiverResponse
+     */
+    public GetReceiverResponse getReceiver(String receiver) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getReceiverWithOptions(receiver, headers, runtime);
     }
 
     /**
@@ -1109,6 +1558,43 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取共享</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetShareResponse
+     */
+    public GetShareResponse getShareWithOptions(String share, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetShare"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetShareResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取共享</p>
+     * @return GetShareResponse
+     */
+    public GetShareResponse getShare(String share) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getShareWithOptions(share, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查看表</p>
      * 
      * @param headers map
@@ -1146,15 +1632,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查看表快照</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTableSnapshotResponse
+     */
+    public GetTableSnapshotResponse getTableSnapshotWithOptions(String catalogId, String database, String table, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTableSnapshot"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/snapshot"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTableSnapshotResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表快照</p>
+     * @return GetTableSnapshotResponse
+     */
+    public GetTableSnapshotResponse getTableSnapshot(String catalogId, String database, String table) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getTableSnapshotWithOptions(catalogId, database, table, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查看表</p>
      * 
+     * @param request GetTableSummaryRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetTableSummaryResponse
      */
-    public GetTableSummaryResponse getTableSummaryWithOptions(String catalogId, String database, String table, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+    public GetTableSummaryResponse getTableSummaryWithOptions(String catalogId, String database, String table, GetTableSummaryRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.date)) {
+            query.put("date", request.date);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetTableSummary"),
@@ -1173,12 +1704,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>summary</b> : 
      * <p>查看表</p>
+     * 
+     * @param request GetTableSummaryRequest
      * @return GetTableSummaryResponse
      */
-    public GetTableSummaryResponse getTableSummary(String catalogId, String database, String table) throws Exception {
+    public GetTableSummaryResponse getTableSummary(String catalogId, String database, String table, GetTableSummaryRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.getTableSummaryWithOptions(catalogId, database, table, headers, runtime);
+        return this.getTableSummaryWithOptions(catalogId, database, table, request, headers, runtime);
     }
 
     /**
@@ -1737,6 +2270,163 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取提供的共享列表</p>
+     * 
+     * @param request ListProvidedSharesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListProvidedSharesResponse
+     */
+    public ListProvidedSharesResponse listProvidedSharesWithOptions(ListProvidedSharesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListProvidedShares"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/list/provided"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListProvidedSharesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取提供的共享列表</p>
+     * 
+     * @param request ListProvidedSharesRequest
+     * @return ListProvidedSharesResponse
+     */
+    public ListProvidedSharesResponse listProvidedShares(ListProvidedSharesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listProvidedSharesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接收的共享列表</p>
+     * 
+     * @param request ListReceivedSharesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListReceivedSharesResponse
+     */
+    public ListReceivedSharesResponse listReceivedSharesWithOptions(ListReceivedSharesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReceivedShares"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/list/received"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReceivedSharesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接收的共享列表</p>
+     * 
+     * @param request ListReceivedSharesRequest
+     * @return ListReceivedSharesResponse
+     */
+    public ListReceivedSharesResponse listReceivedShares(ListReceivedSharesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listReceivedSharesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接收者列表</p>
+     * 
+     * @param request ListReceiversRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListReceiversResponse
+     */
+    public ListReceiversResponse listReceiversWithOptions(ListReceiversRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiverName)) {
+            query.put("receiverName", request.receiverName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListReceivers"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/receivers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListReceiversResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接收者列表</p>
+     * 
+     * @param request ListReceiversRequest
+     * @return ListReceiversResponse
+     */
+    public ListReceiversResponse listReceivers(ListReceiversRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listReceiversWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取角色用户列表</p>
      * 
      * @param request ListRoleUsersRequest
@@ -1843,6 +2533,159 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listRolesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取共享中的接收者列表</p>
+     * 
+     * @param request ListShareReceiversRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListShareReceiversResponse
+     */
+    public ListShareReceiversResponse listShareReceiversWithOptions(String share, ListShareReceiversRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListShareReceivers"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + "/receivers"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListShareReceiversResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取共享中的接收者列表</p>
+     * 
+     * @param request ListShareReceiversRequest
+     * @return ListShareReceiversResponse
+     */
+    public ListShareReceiversResponse listShareReceivers(String share, ListShareReceiversRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listShareReceiversWithOptions(share, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取共享资源列表</p>
+     * 
+     * @param request ListShareResourcesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListShareResourcesResponse
+     */
+    public ListShareResourcesResponse listShareResourcesWithOptions(String share, ListShareResourcesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListShareResources"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/share/shares/" + com.aliyun.openapiutil.Client.getEncodeParam(share) + "/resources"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListShareResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取共享资源列表</p>
+     * 
+     * @param request ListShareResourcesRequest
+     * @return ListShareResourcesResponse
+     */
+    public ListShareResourcesResponse listShareResources(String share, ListShareResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listShareResourcesWithOptions(share, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表快照列表</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshotsWithOptions(String catalogId, String database, String table, ListSnapshotsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageToken)) {
+            query.put("pageToken", request.pageToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSnapshots"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/snapshots"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSnapshotsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看表快照列表</p>
+     * 
+     * @param request ListSnapshotsRequest
+     * @return ListSnapshotsResponse
+     */
+    public ListSnapshotsResponse listSnapshots(String catalogId, String database, String table, ListSnapshotsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSnapshotsWithOptions(catalogId, database, table, request, headers, runtime);
     }
 
     /**
@@ -2118,6 +2961,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.revokeRoleFromUsersWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>回滚表</p>
+     * 
+     * @param request RollbackTableRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RollbackTableResponse
+     */
+    public RollbackTableResponse rollbackTableWithOptions(String catalogId, String database, String table, RollbackTableRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instant)) {
+            body.put("instant", request.instant);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RollbackTable"),
+            new TeaPair("version", "2025-03-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/dlf/v1/" + com.aliyun.openapiutil.Client.getEncodeParam(catalogId) + "/databases/" + com.aliyun.openapiutil.Client.getEncodeParam(database) + "/tables/" + com.aliyun.openapiutil.Client.getEncodeParam(table) + "/rollback"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "none")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RollbackTableResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>回滚表</p>
+     * 
+     * @param request RollbackTableRequest
+     * @return RollbackTableResponse
+     */
+    public RollbackTableResponse rollbackTable(String catalogId, String database, String table, RollbackTableRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.rollbackTableWithOptions(catalogId, database, table, request, headers, runtime);
     }
 
     /**

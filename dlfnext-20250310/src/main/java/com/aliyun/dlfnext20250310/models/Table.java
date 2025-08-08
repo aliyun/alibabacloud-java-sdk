@@ -31,6 +31,15 @@ public class Table extends TeaModel {
     @NameInMap("schemaId")
     public Long schemaId;
 
+    @NameInMap("storageAction")
+    public String storageAction;
+
+    @NameInMap("storageActionTimestamp")
+    public Long storageActionTimestamp;
+
+    @NameInMap("storageClass")
+    public String storageClass;
+
     @NameInMap("updatedAt")
     public Long updatedAt;
 
@@ -112,6 +121,30 @@ public class Table extends TeaModel {
     }
     public Long getSchemaId() {
         return this.schemaId;
+    }
+
+    public Table setStorageAction(String storageAction) {
+        this.storageAction = storageAction;
+        return this;
+    }
+    public String getStorageAction() {
+        return this.storageAction;
+    }
+
+    public Table setStorageActionTimestamp(Long storageActionTimestamp) {
+        this.storageActionTimestamp = storageActionTimestamp;
+        return this;
+    }
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    public Table setStorageClass(String storageClass) {
+        this.storageClass = storageClass;
+        return this;
+    }
+    public String getStorageClass() {
+        return this.storageClass;
     }
 
     public Table setUpdatedAt(Long updatedAt) {

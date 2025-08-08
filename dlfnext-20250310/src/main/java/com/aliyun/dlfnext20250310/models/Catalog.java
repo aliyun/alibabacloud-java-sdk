@@ -13,6 +13,9 @@ public class Catalog extends TeaModel {
     @NameInMap("id")
     public String id;
 
+    @NameInMap("isShared")
+    public Boolean isShared;
+
     @NameInMap("name")
     public String name;
 
@@ -21,6 +24,9 @@ public class Catalog extends TeaModel {
 
     @NameInMap("owner")
     public String owner;
+
+    @NameInMap("shareId")
+    public String shareId;
 
     @NameInMap("status")
     public String status;
@@ -63,6 +69,14 @@ public class Catalog extends TeaModel {
         return this.id;
     }
 
+    public Catalog setIsShared(Boolean isShared) {
+        this.isShared = isShared;
+        return this;
+    }
+    public Boolean getIsShared() {
+        return this.isShared;
+    }
+
     public Catalog setName(String name) {
         this.name = name;
         return this;
@@ -85,6 +99,14 @@ public class Catalog extends TeaModel {
     }
     public String getOwner() {
         return this.owner;
+    }
+
+    public Catalog setShareId(String shareId) {
+        this.shareId = shareId;
+        return this;
+    }
+    public String getShareId() {
+        return this.shareId;
     }
 
     public Catalog setStatus(String status) {

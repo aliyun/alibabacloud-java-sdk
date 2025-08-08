@@ -22,6 +22,18 @@ public class TableSummary extends TeaModel {
     @NameInMap("lastAccessTime")
     public Long lastAccessTime;
 
+    @NameInMap("objTypeArchiveSize")
+    public Long objTypeArchiveSize;
+
+    @NameInMap("objTypeColdArchiveSize")
+    public Long objTypeColdArchiveSize;
+
+    @NameInMap("objTypeIaSize")
+    public Long objTypeIaSize;
+
+    @NameInMap("objTypeStandardSize")
+    public Long objTypeStandardSize;
+
     /**
      * <p>Creation timestamp in milliseconds</p>
      */
@@ -30,6 +42,15 @@ public class TableSummary extends TeaModel {
 
     @NameInMap("path")
     public String path;
+
+    @NameInMap("storageActionParams")
+    public java.util.Map<String, String> storageActionParams;
+
+    @NameInMap("storageActionTimestamp")
+    public Long storageActionTimestamp;
+
+    @NameInMap("storageClass")
+    public String storageClass;
 
     /**
      * <p>Table name</p>
@@ -45,6 +66,9 @@ public class TableSummary extends TeaModel {
 
     @NameInMap("totalFileSizeInBytes")
     public Long totalFileSizeInBytes;
+
+    @NameInMap("updatedAt")
+    public Long updatedAt;
 
     public static TableSummary build(java.util.Map<String, ?> map) throws Exception {
         TableSummary self = new TableSummary();
@@ -83,6 +107,38 @@ public class TableSummary extends TeaModel {
         return this.lastAccessTime;
     }
 
+    public TableSummary setObjTypeArchiveSize(Long objTypeArchiveSize) {
+        this.objTypeArchiveSize = objTypeArchiveSize;
+        return this;
+    }
+    public Long getObjTypeArchiveSize() {
+        return this.objTypeArchiveSize;
+    }
+
+    public TableSummary setObjTypeColdArchiveSize(Long objTypeColdArchiveSize) {
+        this.objTypeColdArchiveSize = objTypeColdArchiveSize;
+        return this;
+    }
+    public Long getObjTypeColdArchiveSize() {
+        return this.objTypeColdArchiveSize;
+    }
+
+    public TableSummary setObjTypeIaSize(Long objTypeIaSize) {
+        this.objTypeIaSize = objTypeIaSize;
+        return this;
+    }
+    public Long getObjTypeIaSize() {
+        return this.objTypeIaSize;
+    }
+
+    public TableSummary setObjTypeStandardSize(Long objTypeStandardSize) {
+        this.objTypeStandardSize = objTypeStandardSize;
+        return this;
+    }
+    public Long getObjTypeStandardSize() {
+        return this.objTypeStandardSize;
+    }
+
     public TableSummary setPartitionCount(Long partitionCount) {
         this.partitionCount = partitionCount;
         return this;
@@ -97,6 +153,30 @@ public class TableSummary extends TeaModel {
     }
     public String getPath() {
         return this.path;
+    }
+
+    public TableSummary setStorageActionParams(java.util.Map<String, String> storageActionParams) {
+        this.storageActionParams = storageActionParams;
+        return this;
+    }
+    public java.util.Map<String, String> getStorageActionParams() {
+        return this.storageActionParams;
+    }
+
+    public TableSummary setStorageActionTimestamp(Long storageActionTimestamp) {
+        this.storageActionTimestamp = storageActionTimestamp;
+        return this;
+    }
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    public TableSummary setStorageClass(String storageClass) {
+        this.storageClass = storageClass;
+        return this;
+    }
+    public String getStorageClass() {
+        return this.storageClass;
     }
 
     public TableSummary setTableName(String tableName) {
@@ -121,6 +201,14 @@ public class TableSummary extends TeaModel {
     }
     public Long getTotalFileSizeInBytes() {
         return this.totalFileSizeInBytes;
+    }
+
+    public TableSummary setUpdatedAt(Long updatedAt) {
+        this.updatedAt = updatedAt;
+        return this;
+    }
+    public Long getUpdatedAt() {
+        return this.updatedAt;
     }
 
 }

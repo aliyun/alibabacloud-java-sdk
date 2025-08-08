@@ -28,6 +28,15 @@ public class PartitionSummary extends TeaModel {
     @NameInMap("partitionName")
     public String partitionName;
 
+    @NameInMap("storageActionParams")
+    public java.util.Map<String, String> storageActionParams;
+
+    @NameInMap("storageActionTimestamp")
+    public Long storageActionTimestamp;
+
+    @NameInMap("storageClass")
+    public String storageClass;
+
     /**
      * <p>Table name</p>
      */
@@ -84,6 +93,30 @@ public class PartitionSummary extends TeaModel {
     }
     public String getPartitionName() {
         return this.partitionName;
+    }
+
+    public PartitionSummary setStorageActionParams(java.util.Map<String, String> storageActionParams) {
+        this.storageActionParams = storageActionParams;
+        return this;
+    }
+    public java.util.Map<String, String> getStorageActionParams() {
+        return this.storageActionParams;
+    }
+
+    public PartitionSummary setStorageActionTimestamp(Long storageActionTimestamp) {
+        this.storageActionTimestamp = storageActionTimestamp;
+        return this;
+    }
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    public PartitionSummary setStorageClass(String storageClass) {
+        this.storageClass = storageClass;
+        return this;
+    }
+    public String getStorageClass() {
+        return this.storageClass;
     }
 
     public PartitionSummary setTableName(String tableName) {

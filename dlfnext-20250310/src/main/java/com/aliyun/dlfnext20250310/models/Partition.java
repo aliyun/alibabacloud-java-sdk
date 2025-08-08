@@ -28,6 +28,15 @@ public class Partition extends TeaModel {
     @NameInMap("spec")
     public java.util.Map<String, ?> spec;
 
+    @NameInMap("storageAction")
+    public String storageAction;
+
+    @NameInMap("storageActionTimestamp")
+    public Long storageActionTimestamp;
+
+    @NameInMap("storageClass")
+    public String storageClass;
+
     @NameInMap("updatedAt")
     public Long updatedAt;
 
@@ -101,6 +110,30 @@ public class Partition extends TeaModel {
     }
     public java.util.Map<String, ?> getSpec() {
         return this.spec;
+    }
+
+    public Partition setStorageAction(String storageAction) {
+        this.storageAction = storageAction;
+        return this;
+    }
+    public String getStorageAction() {
+        return this.storageAction;
+    }
+
+    public Partition setStorageActionTimestamp(Long storageActionTimestamp) {
+        this.storageActionTimestamp = storageActionTimestamp;
+        return this;
+    }
+    public Long getStorageActionTimestamp() {
+        return this.storageActionTimestamp;
+    }
+
+    public Partition setStorageClass(String storageClass) {
+        this.storageClass = storageClass;
+        return this;
+    }
+    public String getStorageClass() {
+        return this.storageClass;
     }
 
     public Partition setUpdatedAt(Long updatedAt) {

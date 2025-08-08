@@ -19,6 +19,18 @@ public class CatalogSummary extends TeaModel {
     @NameInMap("generatedDate")
     public String generatedDate;
 
+    @NameInMap("objTypeArchiveSize")
+    public Long objTypeArchiveSize;
+
+    @NameInMap("objTypeColdArchiveSize")
+    public Long objTypeColdArchiveSize;
+
+    @NameInMap("objTypeIaSize")
+    public Long objTypeIaSize;
+
+    @NameInMap("objTypeStandardSize")
+    public Long objTypeStandardSize;
+
     @NameInMap("partitionCount")
     public MoMValues partitionCount;
 
@@ -69,6 +81,38 @@ public class CatalogSummary extends TeaModel {
     }
     public String getGeneratedDate() {
         return this.generatedDate;
+    }
+
+    public CatalogSummary setObjTypeArchiveSize(Long objTypeArchiveSize) {
+        this.objTypeArchiveSize = objTypeArchiveSize;
+        return this;
+    }
+    public Long getObjTypeArchiveSize() {
+        return this.objTypeArchiveSize;
+    }
+
+    public CatalogSummary setObjTypeColdArchiveSize(Long objTypeColdArchiveSize) {
+        this.objTypeColdArchiveSize = objTypeColdArchiveSize;
+        return this;
+    }
+    public Long getObjTypeColdArchiveSize() {
+        return this.objTypeColdArchiveSize;
+    }
+
+    public CatalogSummary setObjTypeIaSize(Long objTypeIaSize) {
+        this.objTypeIaSize = objTypeIaSize;
+        return this;
+    }
+    public Long getObjTypeIaSize() {
+        return this.objTypeIaSize;
+    }
+
+    public CatalogSummary setObjTypeStandardSize(Long objTypeStandardSize) {
+        this.objTypeStandardSize = objTypeStandardSize;
+        return this;
+    }
+    public Long getObjTypeStandardSize() {
+        return this.objTypeStandardSize;
     }
 
     public CatalogSummary setPartitionCount(MoMValues partitionCount) {
