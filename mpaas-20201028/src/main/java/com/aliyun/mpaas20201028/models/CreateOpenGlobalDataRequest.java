@@ -40,6 +40,9 @@ public class CreateOpenGlobalDataRequest extends TeaModel {
     @NameInMap("Payload")
     public String payload;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -136,6 +139,14 @@ public class CreateOpenGlobalDataRequest extends TeaModel {
     }
     public String getPayload() {
         return this.payload;
+    }
+
+    public CreateOpenGlobalDataRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public CreateOpenGlobalDataRequest setThirdMsgId(String thirdMsgId) {

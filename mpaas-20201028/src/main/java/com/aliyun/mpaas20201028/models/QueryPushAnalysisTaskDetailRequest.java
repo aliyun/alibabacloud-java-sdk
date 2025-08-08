@@ -16,6 +16,9 @@ public class QueryPushAnalysisTaskDetailRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -41,6 +44,14 @@ public class QueryPushAnalysisTaskDetailRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public QueryPushAnalysisTaskDetailRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public QueryPushAnalysisTaskDetailRequest setWorkspaceId(String workspaceId) {

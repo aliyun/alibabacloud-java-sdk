@@ -6,18 +6,27 @@ import com.aliyun.tea.*;
 public class QueryLinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BB5953C300957</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8hGb9SyJARqp7V4PGP92X</p>
      */
     @NameInMap("Url")
     public String url;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

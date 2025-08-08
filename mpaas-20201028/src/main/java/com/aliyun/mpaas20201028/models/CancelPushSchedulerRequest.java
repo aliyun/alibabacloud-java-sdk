@@ -10,6 +10,9 @@ public class CancelPushSchedulerRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("Type")
     public Integer type;
 
@@ -36,6 +39,14 @@ public class CancelPushSchedulerRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public CancelPushSchedulerRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public CancelPushSchedulerRequest setType(Integer type) {

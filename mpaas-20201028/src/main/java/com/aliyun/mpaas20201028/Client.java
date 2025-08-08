@@ -144,6 +144,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppId", request.appId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
         }
@@ -411,8 +415,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建短链
-     *
+     * <b>summary</b> : 
+     * <p>创建短链</p>
+     * 
      * @param request CreateLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateLinkResponse
@@ -462,214 +467,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 创建短链
-     *
+     * <b>summary</b> : 
+     * <p>创建短链</p>
+     * 
      * @param request CreateLinkRequest
      * @return CreateLinkResponse
      */
     public CreateLinkResponse createLink(CreateLinkRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createLinkWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request CreateMasCrowdRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateMasCrowdResponse
-     */
-    public CreateMasCrowdResponse createMasCrowdWithOptions(CreateMasCrowdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpMasCrowdCreateJsonStr)) {
-            body.put("MpaasMappcenterMcdpMasCrowdCreateJsonStr", request.mpaasMappcenterMcdpMasCrowdCreateJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateMasCrowd"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMasCrowdResponse());
-    }
-
-    /**
-     * @param request CreateMasCrowdRequest
-     * @return CreateMasCrowdResponse
-     */
-    public CreateMasCrowdResponse createMasCrowd(CreateMasCrowdRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMasCrowdWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request CreateMasFunnelRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateMasFunnelResponse
-     */
-    public CreateMasFunnelResponse createMasFunnelWithOptions(CreateMasFunnelRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpMasFunnelCreateJsonStr)) {
-            body.put("MpaasMappcenterMcdpMasFunnelCreateJsonStr", request.mpaasMappcenterMcdpMasFunnelCreateJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateMasFunnel"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMasFunnelResponse());
-    }
-
-    /**
-     * @param request CreateMasFunnelRequest
-     * @return CreateMasFunnelResponse
-     */
-    public CreateMasFunnelResponse createMasFunnel(CreateMasFunnelRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMasFunnelWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request CreateMcdpEventRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateMcdpEventResponse
-     */
-    public CreateMcdpEventResponse createMcdpEventWithOptions(CreateMcdpEventRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpEventCreateJsonStr)) {
-            body.put("MpaasMappcenterMcdpEventCreateJsonStr", request.mpaasMappcenterMcdpEventCreateJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateMcdpEvent"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcdpEventResponse());
-    }
-
-    /**
-     * @param request CreateMcdpEventRequest
-     * @return CreateMcdpEventResponse
-     */
-    public CreateMcdpEventResponse createMcdpEvent(CreateMcdpEventRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMcdpEventWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request CreateMcdpEventAttributeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateMcdpEventAttributeResponse
-     */
-    public CreateMcdpEventAttributeResponse createMcdpEventAttributeWithOptions(CreateMcdpEventAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpEventAttributeCreateJsonStr)) {
-            body.put("MpaasMappcenterMcdpEventAttributeCreateJsonStr", request.mpaasMappcenterMcdpEventAttributeCreateJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateMcdpEventAttribute"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMcdpEventAttributeResponse());
-    }
-
-    /**
-     * @param request CreateMcdpEventAttributeRequest
-     * @return CreateMcdpEventAttributeResponse
-     */
-    public CreateMcdpEventAttributeResponse createMcdpEventAttribute(CreateMcdpEventAttributeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMcdpEventAttributeWithOptions(request, runtime);
     }
 
     /**
@@ -1749,56 +1555,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request CreateMsaEnhanceRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return CreateMsaEnhanceResponse
-     */
-    public CreateMsaEnhanceResponse createMsaEnhanceWithOptions(CreateMsaEnhanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMsaEnhanceCreateJsonStr)) {
-            body.put("MpaasMappcenterMsaEnhanceCreateJsonStr", request.mpaasMappcenterMsaEnhanceCreateJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "CreateMsaEnhance"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateMsaEnhanceResponse());
-    }
-
-    /**
-     * @param request CreateMsaEnhanceRequest
-     * @return CreateMsaEnhanceResponse
-     */
-    public CreateMsaEnhanceResponse createMsaEnhance(CreateMsaEnhanceRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.createMsaEnhanceWithOptions(request, runtime);
-    }
-
-    /**
      * @param request CreateOpenGlobalDataRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateOpenGlobalDataResponse
@@ -1840,6 +1596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.payload)) {
             body.put("Payload", request.payload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdMsgId)) {
@@ -1930,6 +1690,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.payload)) {
             body.put("Payload", request.payload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.thirdMsgId)) {
@@ -2126,156 +1890,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteMcdpCrowdResponse deleteMcdpCrowd(DeleteMcdpCrowdRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteMcdpCrowdWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request DeleteMcdpEventAttributeByIdRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteMcdpEventAttributeByIdResponse
-     */
-    public DeleteMcdpEventAttributeByIdResponse deleteMcdpEventAttributeByIdWithOptions(DeleteMcdpEventAttributeByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpEventAttributeDeleteJsonStr)) {
-            body.put("MpaasMappcenterMcdpEventAttributeDeleteJsonStr", request.mpaasMappcenterMcdpEventAttributeDeleteJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteMcdpEventAttributeById"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcdpEventAttributeByIdResponse());
-    }
-
-    /**
-     * @param request DeleteMcdpEventAttributeByIdRequest
-     * @return DeleteMcdpEventAttributeByIdResponse
-     */
-    public DeleteMcdpEventAttributeByIdResponse deleteMcdpEventAttributeById(DeleteMcdpEventAttributeByIdRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteMcdpEventAttributeByIdWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request DeleteMcdpEventByIdRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteMcdpEventByIdResponse
-     */
-    public DeleteMcdpEventByIdResponse deleteMcdpEventByIdWithOptions(DeleteMcdpEventByIdRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpEventDeleteJsonStr)) {
-            body.put("MpaasMappcenterMcdpEventDeleteJsonStr", request.mpaasMappcenterMcdpEventDeleteJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteMcdpEventById"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcdpEventByIdResponse());
-    }
-
-    /**
-     * @param request DeleteMcdpEventByIdRequest
-     * @return DeleteMcdpEventByIdResponse
-     */
-    public DeleteMcdpEventByIdResponse deleteMcdpEventById(DeleteMcdpEventByIdRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteMcdpEventByIdWithOptions(request, runtime);
-    }
-
-    /**
-     * @param request DeleteMcdpMaterialRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DeleteMcdpMaterialResponse
-     */
-    public DeleteMcdpMaterialResponse deleteMcdpMaterialWithOptions(DeleteMcdpMaterialRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMappcenterMcdpMaterialDeleteJsonStr)) {
-            body.put("MpaasMappcenterMcdpMaterialDeleteJsonStr", request.mpaasMappcenterMcdpMaterialDeleteJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DeleteMcdpMaterial"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteMcdpMaterialResponse());
-    }
-
-    /**
-     * @param request DeleteMcdpMaterialRequest
-     * @return DeleteMcdpMaterialResponse
-     */
-    public DeleteMcdpMaterialResponse deleteMcdpMaterial(DeleteMcdpMaterialRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.deleteMcdpMaterialWithOptions(request, runtime);
     }
 
     /**
@@ -3977,62 +3591,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @param request LogMsaQueryRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return LogMsaQueryResponse
-     */
-    public LogMsaQueryResponse logMsaQueryWithOptions(LogMsaQueryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.id)) {
-            body.put("Id", request.id);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.onexFlag)) {
-            body.put("OnexFlag", request.onexFlag);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "LogMsaQuery"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new LogMsaQueryResponse());
-    }
-
-    /**
-     * @param request LogMsaQueryRequest
-     * @return LogMsaQueryResponse
-     */
-    public LogMsaQueryResponse logMsaQuery(LogMsaQueryRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.logMsaQueryWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary OCR通用接口
-     *
+     * <b>summary</b> : 
+     * <p>OCR通用接口</p>
+     * 
      * @param request MTRSOCRServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return MTRSOCRServiceResponse
@@ -4082,608 +3643,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary OCR通用接口
-     *
+     * <b>summary</b> : 
+     * <p>OCR通用接口</p>
+     * 
      * @param request MTRSOCRServiceRequest
      * @return MTRSOCRServiceResponse
      */
     public MTRSOCRServiceResponse mTRSOCRService(MTRSOCRServiceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.mTRSOCRServiceWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 新增主扫码
-     *
-     * @param request OpenApiAddActiveCodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiAddActiveCodeResponse
-     */
-    public OpenApiAddActiveCodeResponse openApiAddActiveCodeWithOptions(OpenApiAddActiveCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiAddActiveCodeReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiAddActiveCodeReqJsonStr", request.mpaasMqcpOpenApiAddActiveCodeReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiAddActiveCode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiAddActiveCodeResponse());
-    }
-
-    /**
-     * @summary 新增主扫码
-     *
-     * @param request OpenApiAddActiveCodeRequest
-     * @return OpenApiAddActiveCodeResponse
-     */
-    public OpenApiAddActiveCodeResponse openApiAddActiveCode(OpenApiAddActiveCodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiAddActiveCodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 新增场景
-     *
-     * @param request OpenApiAddActiveSceneRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiAddActiveSceneResponse
-     */
-    public OpenApiAddActiveSceneResponse openApiAddActiveSceneWithOptions(OpenApiAddActiveSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiAddActiveSceneReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiAddActiveSceneReqJsonStr", request.mpaasMqcpOpenApiAddActiveSceneReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiAddActiveScene"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiAddActiveSceneResponse());
-    }
-
-    /**
-     * @summary 新增场景
-     *
-     * @param request OpenApiAddActiveSceneRequest
-     * @return OpenApiAddActiveSceneResponse
-     */
-    public OpenApiAddActiveSceneResponse openApiAddActiveScene(OpenApiAddActiveSceneRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiAddActiveSceneWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 用户注册
-     *
-     * @param request OpenApiCallbackRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiCallbackResponse
-     */
-    public OpenApiCallbackResponse openApiCallbackWithOptions(OpenApiCallbackRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiCallbackRequestJsonStr)) {
-            body.put("MpaasMqcpOpenApiCallbackRequestJsonStr", request.mpaasMqcpOpenApiCallbackRequestJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiCallback"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiCallbackResponse());
-    }
-
-    /**
-     * @summary 用户注册
-     *
-     * @param request OpenApiCallbackRequest
-     * @return OpenApiCallbackResponse
-     */
-    public OpenApiCallbackResponse openApiCallback(OpenApiCallbackRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiCallbackWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 解码
-     *
-     * @param request OpenApiDecodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiDecodeResponse
-     */
-    public OpenApiDecodeResponse openApiDecodeWithOptions(OpenApiDecodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiDecodeRequestJsonStr)) {
-            body.put("MpaasMqcpOpenApiDecodeRequestJsonStr", request.mpaasMqcpOpenApiDecodeRequestJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiDecode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiDecodeResponse());
-    }
-
-    /**
-     * @summary 解码
-     *
-     * @param request OpenApiDecodeRequest
-     * @return OpenApiDecodeResponse
-     */
-    public OpenApiDecodeResponse openApiDecode(OpenApiDecodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiDecodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 删除主扫码
-     *
-     * @param request OpenApiDeleteActiveCodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiDeleteActiveCodeResponse
-     */
-    public OpenApiDeleteActiveCodeResponse openApiDeleteActiveCodeWithOptions(OpenApiDeleteActiveCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiDeleteActiveCodeReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiDeleteActiveCodeReqJsonStr", request.mpaasMqcpOpenApiDeleteActiveCodeReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiDeleteActiveCode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiDeleteActiveCodeResponse());
-    }
-
-    /**
-     * @summary 删除主扫码
-     *
-     * @param request OpenApiDeleteActiveCodeRequest
-     * @return OpenApiDeleteActiveCodeResponse
-     */
-    public OpenApiDeleteActiveCodeResponse openApiDeleteActiveCode(OpenApiDeleteActiveCodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiDeleteActiveCodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 编码
-     *
-     * @param request OpenApiEncodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiEncodeResponse
-     */
-    public OpenApiEncodeResponse openApiEncodeWithOptions(OpenApiEncodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiEncodeRequestJsonStr)) {
-            body.put("MpaasMqcpOpenApiEncodeRequestJsonStr", request.mpaasMqcpOpenApiEncodeRequestJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiEncode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiEncodeResponse());
-    }
-
-    /**
-     * @summary 编码
-     *
-     * @param request OpenApiEncodeRequest
-     * @return OpenApiEncodeResponse
-     */
-    public OpenApiEncodeResponse openApiEncode(OpenApiEncodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiEncodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 主扫码查询
-     *
-     * @param request OpenApiQueryActiveCodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiQueryActiveCodeResponse
-     */
-    public OpenApiQueryActiveCodeResponse openApiQueryActiveCodeWithOptions(OpenApiQueryActiveCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiQueryActiveCodeReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiQueryActiveCodeReqJsonStr", request.mpaasMqcpOpenApiQueryActiveCodeReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiQueryActiveCode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiQueryActiveCodeResponse());
-    }
-
-    /**
-     * @summary 主扫码查询
-     *
-     * @param request OpenApiQueryActiveCodeRequest
-     * @return OpenApiQueryActiveCodeResponse
-     */
-    public OpenApiQueryActiveCodeResponse openApiQueryActiveCode(OpenApiQueryActiveCodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiQueryActiveCodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 查询场景
-     *
-     * @param request OpenApiQueryActiveSceneRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiQueryActiveSceneResponse
-     */
-    public OpenApiQueryActiveSceneResponse openApiQueryActiveSceneWithOptions(OpenApiQueryActiveSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiQueryActiveSceneReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiQueryActiveSceneReqJsonStr", request.mpaasMqcpOpenApiQueryActiveSceneReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiQueryActiveScene"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiQueryActiveSceneResponse());
-    }
-
-    /**
-     * @summary 查询场景
-     *
-     * @param request OpenApiQueryActiveSceneRequest
-     * @return OpenApiQueryActiveSceneResponse
-     */
-    public OpenApiQueryActiveSceneResponse openApiQueryActiveScene(OpenApiQueryActiveSceneRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiQueryActiveSceneWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 生成唯一被扫码
-     *
-     * @param request OpenApiUniqueEncodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiUniqueEncodeResponse
-     */
-    public OpenApiUniqueEncodeResponse openApiUniqueEncodeWithOptions(OpenApiUniqueEncodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiUniqueEncodeRequestJsonStr)) {
-            body.put("MpaasMqcpOpenApiUniqueEncodeRequestJsonStr", request.mpaasMqcpOpenApiUniqueEncodeRequestJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiUniqueEncode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiUniqueEncodeResponse());
-    }
-
-    /**
-     * @summary 生成唯一被扫码
-     *
-     * @param request OpenApiUniqueEncodeRequest
-     * @return OpenApiUniqueEncodeResponse
-     */
-    public OpenApiUniqueEncodeResponse openApiUniqueEncode(OpenApiUniqueEncodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiUniqueEncodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 更新主扫码
-     *
-     * @param request OpenApiUpdateActiveCodeRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiUpdateActiveCodeResponse
-     */
-    public OpenApiUpdateActiveCodeResponse openApiUpdateActiveCodeWithOptions(OpenApiUpdateActiveCodeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiUpdateActiveCodeReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiUpdateActiveCodeReqJsonStr", request.mpaasMqcpOpenApiUpdateActiveCodeReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiUpdateActiveCode"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiUpdateActiveCodeResponse());
-    }
-
-    /**
-     * @summary 更新主扫码
-     *
-     * @param request OpenApiUpdateActiveCodeRequest
-     * @return OpenApiUpdateActiveCodeResponse
-     */
-    public OpenApiUpdateActiveCodeResponse openApiUpdateActiveCode(OpenApiUpdateActiveCodeRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiUpdateActiveCodeWithOptions(request, runtime);
-    }
-
-    /**
-     * @summary 更新场景
-     *
-     * @param request OpenApiUpdateActiveSceneRequest
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return OpenApiUpdateActiveSceneResponse
-     */
-    public OpenApiUpdateActiveSceneResponse openApiUpdateActiveSceneWithOptions(OpenApiUpdateActiveSceneRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
-            body.put("AppId", request.appId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.mpaasMqcpOpenApiUpdateActiveSceneReqJsonStr)) {
-            body.put("MpaasMqcpOpenApiUpdateActiveSceneReqJsonStr", request.mpaasMqcpOpenApiUpdateActiveSceneReqJsonStr);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
-            body.put("WorkspaceId", request.workspaceId);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "OpenApiUpdateActiveScene"),
-            new TeaPair("version", "2020-10-28"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "formData"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenApiUpdateActiveSceneResponse());
-    }
-
-    /**
-     * @summary 更新场景
-     *
-     * @param request OpenApiUpdateActiveSceneRequest
-     * @return OpenApiUpdateActiveSceneResponse
-     */
-    public OpenApiUpdateActiveSceneResponse openApiUpdateActiveScene(OpenApiUpdateActiveSceneRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        return this.openApiUpdateActiveSceneWithOptions(request, runtime);
     }
 
     /**
@@ -4708,6 +3676,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.phoneNumber)) {
             body.put("PhoneNumber", request.phoneNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
@@ -4834,8 +3806,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateName", request.templateName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdChannelCategoryShrink)) {
             body.put("ThirdChannelCategory", request.thirdChannelCategoryShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessagePayload)) {
+            body.put("TransparentMessagePayload", request.transparentMessagePayload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessageUrgency)) {
+            body.put("TransparentMessageUrgency", request.transparentMessageUrgency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.unBindPeriod)) {
@@ -4958,8 +3942,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateName", request.templateName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdChannelCategoryShrink)) {
             body.put("ThirdChannelCategory", request.thirdChannelCategoryShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessagePayload)) {
+            body.put("TransparentMessagePayload", request.transparentMessagePayload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessageUrgency)) {
+            body.put("TransparentMessageUrgency", request.transparentMessageUrgency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -5040,6 +4036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PushVersion", request.pushVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdChannel)) {
             body.put("ThirdChannel", request.thirdChannel);
         }
@@ -5079,6 +4079,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>极简推送</p>
+     * 
      * @param tmpReq PushSimpleRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return PushSimpleResponse
@@ -5192,12 +4195,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TaskName", request.taskName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdChannelCategoryShrink)) {
             body.put("ThirdChannelCategory", request.thirdChannelCategoryShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.title)) {
             body.put("Title", request.title);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessagePayload)) {
+            body.put("TransparentMessagePayload", request.transparentMessagePayload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessageUrgency)) {
+            body.put("TransparentMessageUrgency", request.transparentMessageUrgency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.uri)) {
@@ -5226,6 +4241,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>极简推送</p>
+     * 
      * @param request PushSimpleRequest
      * @return PushSimpleResponse
      */
@@ -5340,8 +4358,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TemplateName", request.templateName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.thirdChannelCategoryShrink)) {
             body.put("ThirdChannelCategory", request.thirdChannelCategoryShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessagePayload)) {
+            body.put("TransparentMessagePayload", request.transparentMessagePayload);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transparentMessageUrgency)) {
+            body.put("TransparentMessageUrgency", request.transparentMessageUrgency);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -5390,6 +4420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("DeliveryToken", request.deliveryToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
             body.put("UserId", request.userId);
         }
@@ -5425,8 +4459,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询Device+服务的
-     *
+     * <b>summary</b> : 
+     * <p>查询Device+服务的</p>
+     * 
      * @param request QueryInfoFromMdpRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryInfoFromMdpResponse
@@ -5450,12 +4485,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("MobileSha256", request.mobileSha256);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.riskScene)) {
-            body.put("RiskScene", request.riskScene);
+        if (!com.aliyun.teautil.Common.isUnset(request.mobileSm3)) {
+            body.put("MobileSm3", request.mobileSm3);
         }
 
-        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
-            body.put("TenantId", request.tenantId);
+        if (!com.aliyun.teautil.Common.isUnset(request.riskScene)) {
+            body.put("RiskScene", request.riskScene);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -5480,8 +4515,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询Device+服务的
-     *
+     * <b>summary</b> : 
+     * <p>查询Device+服务的</p>
+     * 
      * @param request QueryInfoFromMdpRequest
      * @return QueryInfoFromMdpResponse
      */
@@ -5491,8 +4527,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询短链
-     *
+     * <b>summary</b> : 
+     * <p>查询短链</p>
+     * 
      * @param request QueryLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryLinkResponse
@@ -5530,8 +4567,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 查询短链
-     *
+     * <b>summary</b> : 
+     * <p>查询短链</p>
+     * 
      * @param request QueryLinkRequest
      * @return QueryLinkResponse
      */
@@ -6190,6 +5228,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TaskId", request.taskId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
             body.put("Type", request.type);
         }
@@ -6238,6 +5280,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -6302,6 +5348,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TaskName", request.taskName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -6358,6 +5408,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
             body.put("StartTime", request.startTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.type)) {
@@ -6418,6 +5472,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("TargetId", request.targetId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             body.put("WorkspaceId", request.workspaceId);
         }
@@ -6462,6 +5520,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
             body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
@@ -6709,6 +5771,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>更新短链</p>
+     * 
+     * @param request UpdateLinkRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateLinkResponse
+     */
+    public UpdateLinkResponse updateLinkWithOptions(UpdateLinkRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cors)) {
+            body.put("Cors", request.cors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            body.put("Domain", request.domain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dynamicfield)) {
+            body.put("Dynamicfield", request.dynamicfield);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetUrl)) {
+            body.put("TargetUrl", request.targetUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateLink"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateLinkResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新短链</p>
+     * 
+     * @param request UpdateLinkRequest
+     * @return UpdateLinkResponse
+     */
+    public UpdateLinkResponse updateLink(UpdateLinkRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateLinkWithOptions(request, runtime);
+    }
+
+    /**
      * @param request UpdateMcubeWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateMcubeWhitelistResponse
@@ -6833,8 +5963,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 上传字节码到msa进行加固
-     *
+     * <b>summary</b> : 
+     * <p>上传字节码到msa进行加固</p>
+     * 
      * @param request UploadBitcodeToMsaRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UploadBitcodeToMsaResponse
@@ -6888,8 +6019,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
-     * @summary 上传字节码到msa进行加固
-     *
+     * <b>summary</b> : 
+     * <p>上传字节码到msa进行加固</p>
+     * 
      * @param request UploadBitcodeToMsaRequest
      * @return UploadBitcodeToMsaResponse
      */

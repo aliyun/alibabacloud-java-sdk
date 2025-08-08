@@ -16,6 +16,9 @@ public class PushUnBindRequest extends TeaModel {
     @NameInMap("DeliveryToken")
     public String deliveryToken;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -47,6 +50,14 @@ public class PushUnBindRequest extends TeaModel {
     }
     public String getDeliveryToken() {
         return this.deliveryToken;
+    }
+
+    public PushUnBindRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public PushUnBindRequest setUserId(String userId) {

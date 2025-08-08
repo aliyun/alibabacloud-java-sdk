@@ -4,11 +4,18 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class MTRSOCRServiceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ONEX8C7E7FA161089</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>xydasf==ac</p>
      */
     @NameInMap("ImageRaw")
     public String imageRaw;
@@ -16,15 +23,26 @@ public class MTRSOCRServiceRequest extends TeaModel {
     @NameInMap("Mask")
     public Boolean mask;
 
+    /**
+     * <strong>example:</strong>
+     * <p>tabcaa</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ID_CARD_OCR</p>
      */
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

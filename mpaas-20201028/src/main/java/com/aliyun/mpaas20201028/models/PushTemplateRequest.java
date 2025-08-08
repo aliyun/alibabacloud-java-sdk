@@ -88,8 +88,17 @@ public class PushTemplateRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannelCategory")
     public java.util.Map<String, ?> thirdChannelCategory;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
 
     /**
      * <p>This parameter is required.</p>
@@ -286,12 +295,36 @@ public class PushTemplateRequest extends TeaModel {
         return this.templateName;
     }
 
+    public PushTemplateRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public PushTemplateRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
         this.thirdChannelCategory = thirdChannelCategory;
         return this;
     }
     public java.util.Map<String, ?> getThirdChannelCategory() {
         return this.thirdChannelCategory;
+    }
+
+    public PushTemplateRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushTemplateRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     public PushTemplateRequest setWorkspaceId(String workspaceId) {

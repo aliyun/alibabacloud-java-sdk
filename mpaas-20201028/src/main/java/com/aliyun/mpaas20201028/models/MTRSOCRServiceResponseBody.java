@@ -10,15 +10,31 @@ public class MTRSOCRServiceResponseBody extends TeaModel {
     @NameInMap("Msg")
     public String msg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9B3C4E7-BEC7-1E2C-86A3-EA985B4FFD73</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;aa&quot;:&quot;ss&quot;}</p>
+     */
     @NameInMap("Result")
     public String result;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true/false</p>
+     */
     @NameInMap("Status")
     public Boolean status;
 
+    /**
+     * <strong>example:</strong>
+     * <p>777799aa</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 

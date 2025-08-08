@@ -3,7 +3,7 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLinkRequest extends TeaModel {
+public class UpdateLinkRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
      * 
@@ -15,7 +15,7 @@ public class CreateLinkRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>true</p>
      */
     @NameInMap("Cors")
     public Boolean cors;
@@ -47,17 +47,26 @@ public class CreateLinkRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
+     * <p><a href="https://xxx/8hGb9SyJARqp7V4PGP92X">https://xxx/8hGb9SyJARqp7V4PGP92X</a></p>
+     */
+    @NameInMap("Url")
+    public String url;
+
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
      * <p>default</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static CreateLinkRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateLinkRequest self = new CreateLinkRequest();
+    public static UpdateLinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        UpdateLinkRequest self = new UpdateLinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateLinkRequest setAppId(String appId) {
+    public UpdateLinkRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
@@ -65,7 +74,7 @@ public class CreateLinkRequest extends TeaModel {
         return this.appId;
     }
 
-    public CreateLinkRequest setCors(Boolean cors) {
+    public UpdateLinkRequest setCors(Boolean cors) {
         this.cors = cors;
         return this;
     }
@@ -73,7 +82,7 @@ public class CreateLinkRequest extends TeaModel {
         return this.cors;
     }
 
-    public CreateLinkRequest setDomain(String domain) {
+    public UpdateLinkRequest setDomain(String domain) {
         this.domain = domain;
         return this;
     }
@@ -81,7 +90,7 @@ public class CreateLinkRequest extends TeaModel {
         return this.domain;
     }
 
-    public CreateLinkRequest setDynamicfield(String dynamicfield) {
+    public UpdateLinkRequest setDynamicfield(String dynamicfield) {
         this.dynamicfield = dynamicfield;
         return this;
     }
@@ -89,7 +98,7 @@ public class CreateLinkRequest extends TeaModel {
         return this.dynamicfield;
     }
 
-    public CreateLinkRequest setTargetUrl(String targetUrl) {
+    public UpdateLinkRequest setTargetUrl(String targetUrl) {
         this.targetUrl = targetUrl;
         return this;
     }
@@ -97,7 +106,15 @@ public class CreateLinkRequest extends TeaModel {
         return this.targetUrl;
     }
 
-    public CreateLinkRequest setWorkspaceId(String workspaceId) {
+    public UpdateLinkRequest setUrl(String url) {
+        this.url = url;
+        return this;
+    }
+    public String getUrl() {
+        return this.url;
+    }
+
+    public UpdateLinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

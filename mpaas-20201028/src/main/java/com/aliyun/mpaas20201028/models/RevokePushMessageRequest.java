@@ -22,6 +22,9 @@ public class RevokePushMessageRequest extends TeaModel {
     @NameInMap("TargetId")
     public String targetId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -55,6 +58,14 @@ public class RevokePushMessageRequest extends TeaModel {
     }
     public String getTargetId() {
         return this.targetId;
+    }
+
+    public RevokePushMessageRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public RevokePushMessageRequest setWorkspaceId(String workspaceId) {

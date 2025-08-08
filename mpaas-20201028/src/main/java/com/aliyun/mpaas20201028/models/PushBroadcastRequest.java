@@ -76,8 +76,17 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannelCategory")
     public java.util.Map<String, ?> thirdChannelCategory;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
 
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
@@ -245,12 +254,36 @@ public class PushBroadcastRequest extends TeaModel {
         return this.templateName;
     }
 
+    public PushBroadcastRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public PushBroadcastRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
         this.thirdChannelCategory = thirdChannelCategory;
         return this;
     }
     public java.util.Map<String, ?> getThirdChannelCategory() {
         return this.thirdChannelCategory;
+    }
+
+    public PushBroadcastRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushBroadcastRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     public PushBroadcastRequest setUnBindPeriod(Long unBindPeriod) {

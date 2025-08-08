@@ -6,21 +6,39 @@ import com.aliyun.tea.*;
 public class UploadBitcodeToMsaRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALIPUBE5C3F6D091419</p>
      */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3sAXCwAAAAAUAAAACHoAAP</p>
+     */
     @NameInMap("Bitcode")
     public String bitcode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>xcode14</p>
+     */
     @NameInMap("CodeVersion")
     public String codeVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("License")
     public String license;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZXCXMAHQ-zh_CN</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
@@ -30,6 +48,9 @@ public class UploadBitcodeToMsaRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dev</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;

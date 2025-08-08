@@ -4,15 +4,27 @@ package com.aliyun.mpaas20201028.models;
 import com.aliyun.tea.*;
 
 public class UploadBitcodeToMsaResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("ResultCode")
     public String resultCode;
 
     @NameInMap("ResultContent")
     public UploadBitcodeToMsaResponseBodyResultContent resultContent;
 
+    /**
+     * <strong>example:</strong>
+     * <p>SYSTEM_ERROR</p>
+     */
     @NameInMap("ResultMessage")
     public String resultMessage;
 
@@ -54,15 +66,31 @@ public class UploadBitcodeToMsaResponseBody extends TeaModel {
     }
 
     public static class UploadBitcodeToMsaResponseBodyResultContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("Code")
         public String code;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1234</p>
+         */
         @NameInMap("Data")
         public String data;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Normal</p>
+         */
         @NameInMap("Message")
         public String message;
 
+        /**
+         * <strong>example:</strong>
+         * <p>True</p>
+         */
         @NameInMap("Success")
         public Boolean success;
 

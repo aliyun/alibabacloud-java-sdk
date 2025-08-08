@@ -76,8 +76,17 @@ public class PushBroadcastShrinkRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannelCategory")
     public String thirdChannelCategoryShrink;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
 
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
@@ -245,12 +254,36 @@ public class PushBroadcastShrinkRequest extends TeaModel {
         return this.templateName;
     }
 
+    public PushBroadcastShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public PushBroadcastShrinkRequest setThirdChannelCategoryShrink(String thirdChannelCategoryShrink) {
         this.thirdChannelCategoryShrink = thirdChannelCategoryShrink;
         return this;
     }
     public String getThirdChannelCategoryShrink() {
         return this.thirdChannelCategoryShrink;
+    }
+
+    public PushBroadcastShrinkRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushBroadcastShrinkRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     public PushBroadcastShrinkRequest setUnBindPeriod(Long unBindPeriod) {

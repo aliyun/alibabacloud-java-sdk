@@ -31,6 +31,9 @@ public class QueryPushAnalysisCoreIndexRequest extends TeaModel {
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("Type")
     public String type;
 
@@ -91,6 +94,14 @@ public class QueryPushAnalysisCoreIndexRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public QueryPushAnalysisCoreIndexRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public QueryPushAnalysisCoreIndexRequest setType(String type) {

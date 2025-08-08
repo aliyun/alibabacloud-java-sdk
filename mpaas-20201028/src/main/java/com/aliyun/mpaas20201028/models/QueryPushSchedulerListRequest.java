@@ -28,6 +28,9 @@ public class QueryPushSchedulerListRequest extends TeaModel {
     @NameInMap("StartTime")
     public Long startTime;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("Type")
     public Integer type;
 
@@ -83,6 +86,14 @@ public class QueryPushSchedulerListRequest extends TeaModel {
     }
     public Long getStartTime() {
         return this.startTime;
+    }
+
+    public QueryPushSchedulerListRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public QueryPushSchedulerListRequest setType(Integer type) {

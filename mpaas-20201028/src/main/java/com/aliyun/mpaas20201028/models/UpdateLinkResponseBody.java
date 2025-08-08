@@ -3,12 +3,12 @@ package com.aliyun.mpaas20201028.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLinkResponseBody extends TeaModel {
+public class UpdateLinkResponseBody extends TeaModel {
     /**
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
-     * <p>0CC8A9CB-9BA3-13FD-A404-6E2E7461881A</p>
+     * <p>11E66B29-9E5E-5C10-B64E-B5A0E0F26355</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -21,7 +21,7 @@ public class CreateLinkResponseBody extends TeaModel {
     public String resultCode;
 
     @NameInMap("ResultContent")
-    public CreateLinkResponseBodyResultContent resultContent;
+    public UpdateLinkResponseBodyResultContent resultContent;
 
     /**
      * <strong>example:</strong>
@@ -30,12 +30,12 @@ public class CreateLinkResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
-    public static CreateLinkResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateLinkResponseBody self = new CreateLinkResponseBody();
+    public static UpdateLinkResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateLinkResponseBody self = new UpdateLinkResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateLinkResponseBody setRequestId(String requestId) {
+    public UpdateLinkResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -43,7 +43,7 @@ public class CreateLinkResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public CreateLinkResponseBody setResultCode(String resultCode) {
+    public UpdateLinkResponseBody setResultCode(String resultCode) {
         this.resultCode = resultCode;
         return this;
     }
@@ -51,15 +51,15 @@ public class CreateLinkResponseBody extends TeaModel {
         return this.resultCode;
     }
 
-    public CreateLinkResponseBody setResultContent(CreateLinkResponseBodyResultContent resultContent) {
+    public UpdateLinkResponseBody setResultContent(UpdateLinkResponseBodyResultContent resultContent) {
         this.resultContent = resultContent;
         return this;
     }
-    public CreateLinkResponseBodyResultContent getResultContent() {
+    public UpdateLinkResponseBodyResultContent getResultContent() {
         return this.resultContent;
     }
 
-    public CreateLinkResponseBody setResultMessage(String resultMessage) {
+    public UpdateLinkResponseBody setResultMessage(String resultMessage) {
         this.resultMessage = resultMessage;
         return this;
     }
@@ -67,7 +67,7 @@ public class CreateLinkResponseBody extends TeaModel {
         return this.resultMessage;
     }
 
-    public static class CreateLinkResponseBodyResultContent extends TeaModel {
+    public static class UpdateLinkResponseBodyResultContent extends TeaModel {
         /**
          * <strong>example:</strong>
          * <p><a href="https://xxx/xxx">https://xxx/xxx</a></p>
@@ -84,17 +84,17 @@ public class CreateLinkResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>0</p>
+         * <p>1</p>
          */
         @NameInMap("Version")
         public String version;
 
-        public static CreateLinkResponseBodyResultContent build(java.util.Map<String, ?> map) throws Exception {
-            CreateLinkResponseBodyResultContent self = new CreateLinkResponseBodyResultContent();
+        public static UpdateLinkResponseBodyResultContent build(java.util.Map<String, ?> map) throws Exception {
+            UpdateLinkResponseBodyResultContent self = new UpdateLinkResponseBodyResultContent();
             return TeaModel.build(map, self);
         }
 
-        public CreateLinkResponseBodyResultContent setData(String data) {
+        public UpdateLinkResponseBodyResultContent setData(String data) {
             this.data = data;
             return this;
         }
@@ -102,7 +102,7 @@ public class CreateLinkResponseBody extends TeaModel {
             return this.data;
         }
 
-        public CreateLinkResponseBodyResultContent setTarget(String target) {
+        public UpdateLinkResponseBodyResultContent setTarget(String target) {
             this.target = target;
             return this;
         }
@@ -110,7 +110,7 @@ public class CreateLinkResponseBody extends TeaModel {
             return this.target;
         }
 
-        public CreateLinkResponseBodyResultContent setVersion(String version) {
+        public UpdateLinkResponseBodyResultContent setVersion(String version) {
             this.version = version;
             return this;
         }

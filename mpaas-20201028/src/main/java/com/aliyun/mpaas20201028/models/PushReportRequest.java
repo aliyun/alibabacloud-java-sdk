@@ -43,6 +43,9 @@ public class PushReportRequest extends TeaModel {
     @NameInMap("PushVersion")
     public String pushVersion;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannel")
     public Integer thirdChannel;
 
@@ -138,6 +141,14 @@ public class PushReportRequest extends TeaModel {
     }
     public String getPushVersion() {
         return this.pushVersion;
+    }
+
+    public PushReportRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public PushReportRequest setThirdChannel(Integer thirdChannel) {

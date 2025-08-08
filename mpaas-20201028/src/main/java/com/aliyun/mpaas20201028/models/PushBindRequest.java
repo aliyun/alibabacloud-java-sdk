@@ -25,6 +25,9 @@ public class PushBindRequest extends TeaModel {
     @NameInMap("PhoneNumber")
     public String phoneNumber;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -72,6 +75,14 @@ public class PushBindRequest extends TeaModel {
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
+    }
+
+    public PushBindRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public PushBindRequest setUserId(String userId) {

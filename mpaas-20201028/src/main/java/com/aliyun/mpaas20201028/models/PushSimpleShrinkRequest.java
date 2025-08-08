@@ -94,6 +94,9 @@ public class PushSimpleShrinkRequest extends TeaModel {
     @NameInMap("TaskName")
     public String taskName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannelCategory")
     public String thirdChannelCategoryShrink;
 
@@ -102,6 +105,12 @@ public class PushSimpleShrinkRequest extends TeaModel {
      */
     @NameInMap("Title")
     public String title;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
 
     @NameInMap("Uri")
     public String uri;
@@ -317,6 +326,14 @@ public class PushSimpleShrinkRequest extends TeaModel {
         return this.taskName;
     }
 
+    public PushSimpleShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public PushSimpleShrinkRequest setThirdChannelCategoryShrink(String thirdChannelCategoryShrink) {
         this.thirdChannelCategoryShrink = thirdChannelCategoryShrink;
         return this;
@@ -331,6 +348,22 @@ public class PushSimpleShrinkRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public PushSimpleShrinkRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushSimpleShrinkRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     public PushSimpleShrinkRequest setUri(String uri) {

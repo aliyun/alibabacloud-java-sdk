@@ -88,8 +88,17 @@ public class PushTemplateShrinkRequest extends TeaModel {
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannelCategory")
     public String thirdChannelCategoryShrink;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
 
     /**
      * <p>This parameter is required.</p>
@@ -286,12 +295,36 @@ public class PushTemplateShrinkRequest extends TeaModel {
         return this.templateName;
     }
 
+    public PushTemplateShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public PushTemplateShrinkRequest setThirdChannelCategoryShrink(String thirdChannelCategoryShrink) {
         this.thirdChannelCategoryShrink = thirdChannelCategoryShrink;
         return this;
     }
     public String getThirdChannelCategoryShrink() {
         return this.thirdChannelCategoryShrink;
+    }
+
+    public PushTemplateShrinkRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushTemplateShrinkRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     public PushTemplateShrinkRequest setWorkspaceId(String workspaceId) {

@@ -94,6 +94,9 @@ public class PushSimpleRequest extends TeaModel {
     @NameInMap("TaskName")
     public String taskName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("ThirdChannelCategory")
     public java.util.Map<String, ?> thirdChannelCategory;
 
@@ -102,6 +105,12 @@ public class PushSimpleRequest extends TeaModel {
      */
     @NameInMap("Title")
     public String title;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
 
     @NameInMap("Uri")
     public String uri;
@@ -317,6 +326,14 @@ public class PushSimpleRequest extends TeaModel {
         return this.taskName;
     }
 
+    public PushSimpleRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
     public PushSimpleRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
         this.thirdChannelCategory = thirdChannelCategory;
         return this;
@@ -331,6 +348,22 @@ public class PushSimpleRequest extends TeaModel {
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public PushSimpleRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushSimpleRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
     }
 
     public PushSimpleRequest setUri(String uri) {
