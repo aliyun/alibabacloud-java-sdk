@@ -122,7 +122,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          * <p>70%</p>
          */
         @NameInMap("CompleteRate")
-        public Double completeRate;
+        public String completeRate;
 
         /**
          * <strong>example:</strong>
@@ -150,7 +150,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          * <p>74.14%</p>
          */
         @NameInMap("DayConnectRate")
-        public Double dayConnectRate;
+        public String dayConnectRate;
 
         /**
          * <strong>example:</strong>
@@ -171,7 +171,7 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
          * <p>95.89%</p>
          */
         @NameInMap("HistoryConnectRate")
-        public Double historyConnectRate;
+        public String historyConnectRate;
 
         /**
          * <strong>example:</strong>
@@ -265,11 +265,11 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             return this.callingCount;
         }
 
-        public QueryAiCallTaskPageResponseBodyDataList setCompleteRate(Double completeRate) {
+        public QueryAiCallTaskPageResponseBodyDataList setCompleteRate(String completeRate) {
             this.completeRate = completeRate;
             return this;
         }
-        public Double getCompleteRate() {
+        public String getCompleteRate() {
             return this.completeRate;
         }
 
@@ -297,11 +297,11 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             return this.dayCallCount;
         }
 
-        public QueryAiCallTaskPageResponseBodyDataList setDayConnectRate(Double dayConnectRate) {
+        public QueryAiCallTaskPageResponseBodyDataList setDayConnectRate(String dayConnectRate) {
             this.dayConnectRate = dayConnectRate;
             return this;
         }
-        public Double getDayConnectRate() {
+        public String getDayConnectRate() {
             return this.dayConnectRate;
         }
 
@@ -321,11 +321,11 @@ public class QueryAiCallTaskPageResponseBody extends TeaModel {
             return this.failedCount;
         }
 
-        public QueryAiCallTaskPageResponseBodyDataList setHistoryConnectRate(Double historyConnectRate) {
+        public QueryAiCallTaskPageResponseBodyDataList setHistoryConnectRate(String historyConnectRate) {
             this.historyConnectRate = historyConnectRate;
             return this;
         }
-        public Double getHistoryConnectRate() {
+        public String getHistoryConnectRate() {
             return this.historyConnectRate;
         }
 

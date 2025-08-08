@@ -1,3 +1,12 @@
+2025-08-08 Version: 3.0.0
+- Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.CompleteRate' type has changed.
+- Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.CompleteRate' format has changed.
+- Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.DayConnectRate' type has changed.
+- Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.DayConnectRate' format has changed.
+- Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.HistoryConnectRate' type has changed.
+- Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.HistoryConnectRate' format has changed.
+
+
 2025-07-10 Version: 2.5.1
 - Update API CreateAiCallTask: add request parameters TaskCps.
 - Update API LlmSmartCall: add request parameters CustomerLineCode.
