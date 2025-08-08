@@ -32,6 +32,9 @@ public class ListTablesRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>Specifies whether to return the GUID of a table. Valid values:</p>
      * <ul>
@@ -90,6 +93,14 @@ public class ListTablesRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTablesRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public ListTablesRequest setReturnGuid(Boolean returnGuid) {

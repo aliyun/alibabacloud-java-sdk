@@ -40,6 +40,9 @@ public class SearchDatabaseRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The keyword that is used to search for databases.</p>
      * 
@@ -122,6 +125,14 @@ public class SearchDatabaseRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public SearchDatabaseRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public SearchDatabaseRequest setSearchKey(String searchKey) {

@@ -24,6 +24,9 @@ public class GetDatabaseRequest extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
@@ -74,6 +77,14 @@ public class GetDatabaseRequest extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public GetDatabaseRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public GetDatabaseRequest setSchemaName(String schemaName) {

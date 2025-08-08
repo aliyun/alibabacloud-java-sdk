@@ -24,6 +24,9 @@ public class GetInstanceRequest extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The system ID (SID) of the database instance. You can call the <a href="https://help.aliyun.com/document_detail/141936.html">ListInstances</a> operation to obtain the SID.</p>
      * 
@@ -61,6 +64,14 @@ public class GetInstanceRequest extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public GetInstanceRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public GetInstanceRequest setSid(String sid) {

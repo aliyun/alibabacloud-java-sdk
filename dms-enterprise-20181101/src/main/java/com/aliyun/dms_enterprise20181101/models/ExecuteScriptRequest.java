@@ -27,6 +27,9 @@ public class ExecuteScriptRequest extends TeaModel {
     @NameInMap("Logic")
     public Boolean logic;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The SQL statements to be executed. Data query language (DQL) statements, data definition language (DDL) statements, and data manipulation language (DML) statements are supported. The control mode of the instance that you want to query determines whether you can execute DDL and DML statements.</p>
      * <p>This parameter is required.</p>
@@ -68,6 +71,14 @@ public class ExecuteScriptRequest extends TeaModel {
     }
     public Boolean getLogic() {
         return this.logic;
+    }
+
+    public ExecuteScriptRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public ExecuteScriptRequest setScript(String script) {

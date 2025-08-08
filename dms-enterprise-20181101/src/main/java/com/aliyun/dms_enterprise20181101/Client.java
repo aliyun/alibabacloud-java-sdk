@@ -3827,6 +3827,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建工作空间</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspaceWithOptions(CreateWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateWorkspace"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建工作空间</p>
+     * 
+     * @param request CreateWorkspaceRequest
+     * @return CreateWorkspaceResponse
+     */
+    public CreateWorkspaceResponse createWorkspace(CreateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除权限策略授权</p>
      * 
      * @param request DeleteAbacAuthorizationRequest
@@ -4994,6 +5056,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除工作空间</p>
+     * 
+     * @param request DeleteWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteWorkspaceResponse
+     */
+    public DeleteWorkspaceResponse deleteWorkspaceWithOptions(DeleteWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteWorkspace"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除工作空间</p>
+     * 
+     * @param request DeleteWorkspaceRequest
+     * @return DeleteWorkspaceResponse
+     */
+    public DeleteWorkspaceResponse deleteWorkspace(DeleteWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteWorkspaceWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h2>请求说明</h2>
      * <ul>
@@ -5775,6 +5881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Logic", request.logic);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.script)) {
             query.put("Script", request.script);
         }
@@ -5963,6 +6073,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.question)) {
             query.put("Question", request.question);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.tableNames)) {
@@ -7514,6 +7628,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Port", request.port);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.schemaName)) {
             query.put("SchemaName", request.schemaName);
         }
@@ -7670,6 +7788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.port)) {
             query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sid)) {
@@ -7933,6 +8055,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetMetaTableDetailInfoResponse getMetaTableDetailInfoWithOptions(GetMetaTableDetailInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tableGuid)) {
             query.put("TableGuid", request.tableGuid);
         }
@@ -9479,6 +9605,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetUserUploadFileJobResponse getUserUploadFileJob(GetUserUploadFileJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getUserUploadFileJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间描述</p>
+     * 
+     * @param request GetWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspaceWithOptions(GetWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetWorkspace"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取空间描述</p>
+     * 
+     * @param request GetWorkspaceRequest
+     * @return GetWorkspaceResponse
+     */
+    public GetWorkspaceResponse getWorkspace(GetWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getWorkspaceWithOptions(request, runtime);
     }
 
     /**
@@ -11990,6 +12160,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             query.put("Region", request.region);
         }
@@ -13249,6 +13423,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.returnGuid)) {
             query.put("ReturnGuid", request.returnGuid);
         }
@@ -14079,6 +14257,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWorkFlowTemplatesResponse listWorkFlowTemplates(ListWorkFlowTemplatesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listWorkFlowTemplatesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索工作空间列表</p>
+     * 
+     * @param request ListWorkspacesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListWorkspacesResponse
+     */
+    public ListWorkspacesResponse listWorkspacesWithOptions(ListWorkspacesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alreadyJoined)) {
+            query.put("AlreadyJoined", request.alreadyJoined);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.region)) {
+            query.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
+            query.put("SearchKey", request.searchKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceAccountId)) {
+            query.put("ServiceAccountId", request.serviceAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListWorkspaces"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListWorkspacesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>搜索工作空间列表</p>
+     * 
+     * @param request ListWorkspacesRequest
+     * @return ListWorkspacesResponse
+     */
+    public ListWorkspacesResponse listWorkspaces(ListWorkspacesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listWorkspacesWithOptions(request, runtime);
     }
 
     /**
@@ -15836,6 +16090,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.searchKey)) {
             query.put("SearchKey", request.searchKey);
         }
@@ -16128,6 +16386,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.port)) {
             query.put("Port", request.port);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.realLoginUserUid)) {
+            query.put("RealLoginUserUid", request.realLoginUserUid);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -18395,5 +18657,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUserResponse updateUser(UpdateUserRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateUserWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改工作空间</p>
+     * 
+     * @param request UpdateWorkspaceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateWorkspaceResponse
+     */
+    public UpdateWorkspaceResponse updateWorkspaceWithOptions(UpdateWorkspaceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceName)) {
+            query.put("WorkspaceName", request.workspaceName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateWorkspace"),
+            new TeaPair("version", "2018-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateWorkspaceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改工作空间</p>
+     * 
+     * @param request UpdateWorkspaceRequest
+     * @return UpdateWorkspaceResponse
+     */
+    public UpdateWorkspaceResponse updateWorkspace(UpdateWorkspaceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateWorkspaceWithOptions(request, runtime);
     }
 }

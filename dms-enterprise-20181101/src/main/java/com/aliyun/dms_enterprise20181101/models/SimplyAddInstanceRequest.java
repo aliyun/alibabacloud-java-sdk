@@ -50,6 +50,9 @@ public class SimplyAddInstanceRequest extends TeaModel {
     @NameInMap("Port")
     public Integer port;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     public static SimplyAddInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SimplyAddInstanceRequest self = new SimplyAddInstanceRequest();
         return TeaModel.build(map, self);
@@ -101,6 +104,14 @@ public class SimplyAddInstanceRequest extends TeaModel {
     }
     public Integer getPort() {
         return this.port;
+    }
+
+    public SimplyAddInstanceRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
 }

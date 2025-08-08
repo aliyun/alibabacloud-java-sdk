@@ -47,6 +47,9 @@ public class GenerateSqlFromNLRequest extends TeaModel {
     @NameInMap("Question")
     public String question;
 
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <strong>example:</strong>
      * <p>users,orders</p>
@@ -105,6 +108,14 @@ public class GenerateSqlFromNLRequest extends TeaModel {
     }
     public String getQuestion() {
         return this.question;
+    }
+
+    public GenerateSqlFromNLRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public GenerateSqlFromNLRequest setTableNames(String tableNames) {

@@ -4,6 +4,9 @@ package com.aliyun.dms_enterprise20181101.models;
 import com.aliyun.tea.*;
 
 public class GetMetaTableDetailInfoRequest extends TeaModel {
+    @NameInMap("RealLoginUserUid")
+    public String realLoginUserUid;
+
     /**
      * <p>The GUID of the table in Data Management (DMS).</p>
      * <blockquote>
@@ -37,6 +40,14 @@ public class GetMetaTableDetailInfoRequest extends TeaModel {
     public static GetMetaTableDetailInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         GetMetaTableDetailInfoRequest self = new GetMetaTableDetailInfoRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetMetaTableDetailInfoRequest setRealLoginUserUid(String realLoginUserUid) {
+        this.realLoginUserUid = realLoginUserUid;
+        return this;
+    }
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
     }
 
     public GetMetaTableDetailInfoRequest setTableGuid(String tableGuid) {
