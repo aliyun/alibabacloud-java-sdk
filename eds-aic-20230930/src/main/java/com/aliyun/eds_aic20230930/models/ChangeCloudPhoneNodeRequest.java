@@ -4,6 +4,12 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class ChangeCloudPhoneNodeRequest extends TeaModel {
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
+    @NameInMap("DownBandwidthLimit")
+    public Integer downBandwidthLimit;
+
     /**
      * <strong>example:</strong>
      * <p>ac.max</p>
@@ -25,9 +31,31 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("PhoneCount")
     public Integer phoneCount;
 
+    @NameInMap("PhoneDataVolume")
+    public Integer phoneDataVolume;
+
+    @NameInMap("UpBandwidthLimit")
+    public Integer upBandwidthLimit;
+
     public static ChangeCloudPhoneNodeRequest build(java.util.Map<String, ?> map) throws Exception {
         ChangeCloudPhoneNodeRequest self = new ChangeCloudPhoneNodeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ChangeCloudPhoneNodeRequest setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    public ChangeCloudPhoneNodeRequest setDownBandwidthLimit(Integer downBandwidthLimit) {
+        this.downBandwidthLimit = downBandwidthLimit;
+        return this;
+    }
+    public Integer getDownBandwidthLimit() {
+        return this.downBandwidthLimit;
     }
 
     public ChangeCloudPhoneNodeRequest setInstanceType(String instanceType) {
@@ -52,6 +80,22 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     }
     public Integer getPhoneCount() {
         return this.phoneCount;
+    }
+
+    public ChangeCloudPhoneNodeRequest setPhoneDataVolume(Integer phoneDataVolume) {
+        this.phoneDataVolume = phoneDataVolume;
+        return this;
+    }
+    public Integer getPhoneDataVolume() {
+        return this.phoneDataVolume;
+    }
+
+    public ChangeCloudPhoneNodeRequest setUpBandwidthLimit(Integer upBandwidthLimit) {
+        this.upBandwidthLimit = upBandwidthLimit;
+        return this;
+    }
+    public Integer getUpBandwidthLimit() {
+        return this.upBandwidthLimit;
     }
 
 }

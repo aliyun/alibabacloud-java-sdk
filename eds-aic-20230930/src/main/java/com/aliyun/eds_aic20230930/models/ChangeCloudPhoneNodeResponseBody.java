@@ -7,6 +7,9 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
     @NameInMap("NodeInfos")
     public java.util.List<ChangeCloudPhoneNodeResponseBodyNodeInfos> nodeInfos;
 
+    @NameInMap("OrderId")
+    public String orderId;
+
     /**
      * <strong>example:</strong>
      * <p>4610632D-D661-5982-B3D7-5D3FD183F****</p>
@@ -27,6 +30,14 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         return this.nodeInfos;
     }
 
+    public ChangeCloudPhoneNodeResponseBody setOrderId(String orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public String getOrderId() {
+        return this.orderId;
+    }
+
     public ChangeCloudPhoneNodeResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
@@ -43,6 +54,9 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         @NameInMap("InstanceId")
         public String instanceId;
 
+        @NameInMap("PhoneDataVolume")
+        public Integer phoneDataVolume;
+
         public static ChangeCloudPhoneNodeResponseBodyNodeInfosInstanceInfos build(java.util.Map<String, ?> map) throws Exception {
             ChangeCloudPhoneNodeResponseBodyNodeInfosInstanceInfos self = new ChangeCloudPhoneNodeResponseBodyNodeInfosInstanceInfos();
             return TeaModel.build(map, self);
@@ -54,6 +68,14 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public ChangeCloudPhoneNodeResponseBodyNodeInfosInstanceInfos setPhoneDataVolume(Integer phoneDataVolume) {
+            this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+        public Integer getPhoneDataVolume() {
+            return this.phoneDataVolume;
         }
 
     }
@@ -68,6 +90,9 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
          */
         @NameInMap("NodeId")
         public String nodeId;
+
+        @NameInMap("ShareDataVolume")
+        public Integer shareDataVolume;
 
         public static ChangeCloudPhoneNodeResponseBodyNodeInfos build(java.util.Map<String, ?> map) throws Exception {
             ChangeCloudPhoneNodeResponseBodyNodeInfos self = new ChangeCloudPhoneNodeResponseBodyNodeInfos();
@@ -88,6 +113,14 @@ public class ChangeCloudPhoneNodeResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public ChangeCloudPhoneNodeResponseBodyNodeInfos setShareDataVolume(Integer shareDataVolume) {
+            this.shareDataVolume = shareDataVolume;
+            return this;
+        }
+        public Integer getShareDataVolume() {
+            return this.shareDataVolume;
         }
 
     }

@@ -222,6 +222,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @NameInMap("BandwidthPackageId")
         public String bandwidthPackageId;
 
+        @NameInMap("BandwidthPackageStatus")
+        public String bandwidthPackageStatus;
+
         @NameInMap("BandwidthPackageType")
         public String bandwidthPackageType;
 
@@ -404,6 +407,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
         public String getBandwidthPackageId() {
             return this.bandwidthPackageId;
+        }
+
+        public DescribeCloudPhoneNodesResponseBodyNodeModel setBandwidthPackageStatus(String bandwidthPackageStatus) {
+            this.bandwidthPackageStatus = bandwidthPackageStatus;
+            return this;
+        }
+        public String getBandwidthPackageStatus() {
+            return this.bandwidthPackageStatus;
         }
 
         public DescribeCloudPhoneNodesResponseBodyNodeModel setBandwidthPackageType(String bandwidthPackageType) {
