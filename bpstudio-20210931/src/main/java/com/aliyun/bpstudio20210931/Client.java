@@ -759,6 +759,84 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取模板变参可选值</p>
+     * 
+     * @param tmpReq GetLinkageAttributesTemplateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetLinkageAttributesTemplateResponse
+     */
+    public GetLinkageAttributesTemplateResponse getLinkageAttributesTemplateWithOptions(GetLinkageAttributesTemplateRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        GetLinkageAttributesTemplateShrinkRequest request = new GetLinkageAttributesTemplateShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instances)) {
+            request.instancesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instances, "Instances", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.variables)) {
+            request.variablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.variables, "Variables", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.areaId)) {
+            body.put("AreaId", request.areaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instancesShrink)) {
+            body.put("Instances", request.instancesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            body.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            body.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetVariable)) {
+            body.put("TargetVariable", request.targetVariable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            body.put("TemplateId", request.templateId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variablesShrink)) {
+            body.put("Variables", request.variablesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetLinkageAttributesTemplate"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetLinkageAttributesTemplateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取模板变参可选值</p>
+     * 
+     * @param request GetLinkageAttributesTemplateRequest
+     * @return GetLinkageAttributesTemplateResponse
+     */
+    public GetLinkageAttributesTemplateResponse getLinkageAttributesTemplate(GetLinkageAttributesTemplateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getLinkageAttributesTemplateWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the zones where the specified disaster recovery service can be switched.</p>
      * 
