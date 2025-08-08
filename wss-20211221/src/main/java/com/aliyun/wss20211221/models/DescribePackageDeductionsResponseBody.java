@@ -138,6 +138,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("GroupResourceType")
+        public String groupResourceType;
+
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -245,6 +248,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribePackageDeductionsResponseBodyDeductions setGroupResourceType(String groupResourceType) {
+            this.groupResourceType = groupResourceType;
+            return this;
+        }
+        public String getGroupResourceType() {
+            return this.groupResourceType;
         }
 
         public DescribePackageDeductionsResponseBodyDeductions setInstanceId(String instanceId) {
