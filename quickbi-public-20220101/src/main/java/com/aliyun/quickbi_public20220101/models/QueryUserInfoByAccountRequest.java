@@ -28,8 +28,7 @@ public class QueryUserInfoByAccountRequest extends TeaModel {
     public String account;
 
     /**
-     * <p>当查询子账号出现重复报错时，输入主账号的账号名，
-     * 例如<a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>。</p>
+     * <p>When a duplicate error occurs while querying the sub-account, enter the primary account\&quot;s username, for example, <a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:zhangsan@test.onaliyun.com">zhangsan@test.onaliyun.com</a></p>

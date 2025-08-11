@@ -134,7 +134,7 @@ public class QueryUserInfoByAccountResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>用户绑定的组织角色ID列表。</p>
+         * <p>List of organization role IDs bound to the user.</p>
          */
         @NameInMap("RoleIdList")
         public java.util.List<Long> roleIdList;

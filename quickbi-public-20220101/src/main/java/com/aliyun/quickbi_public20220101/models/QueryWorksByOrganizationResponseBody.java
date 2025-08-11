@@ -176,7 +176,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>作品修改的毫秒级时间戳。</p>
+         * <p>Millisecond-level timestamp of the work modification.</p>
          * 
          * <strong>example:</strong>
          * <p>1572334870000</p>
@@ -185,7 +185,7 @@ public class QueryWorksByOrganizationResponseBody extends TeaModel {
         public String gmtModify;
 
         /**
-         * <p>作品修改者的阿里云账户名。</p>
+         * <p>The Alibaba Cloud account name of the work modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

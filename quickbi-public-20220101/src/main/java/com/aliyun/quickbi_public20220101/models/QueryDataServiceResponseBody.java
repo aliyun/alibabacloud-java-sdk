@@ -108,7 +108,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
         public String granularity;
 
         /**
-         * <p>字段别名，结果参数values中map数据行的key。</p>
+         * <p>Alias for the field, serving as the key in the map data row of the values parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>area</p>
@@ -191,7 +191,7 @@ public class QueryDataServiceResponseBody extends TeaModel {
          * <p>The SQL of the query request.</p>
          * 
          * <strong>example:</strong>
-         * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<code>area</code> LIKE \&quot;%华东%\&quot; GROUP BY COMPANY_T_1_.<code>area</code>, COMPANY_T_1_.<code>city</code> HAVING SUM(COMPANY_T_1_.<code>order_amt</code>) &gt; 1 LIMIT 0, 10</p>
+         * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_   LIMIT 0, 10</p>
          */
         @NameInMap("Sql")
         public String sql;

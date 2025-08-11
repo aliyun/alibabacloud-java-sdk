@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryReadableResourcesListByUserIdV2Request extends TeaModel {
     /**
+     * <p>User ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,17 @@ public class QueryReadableResourcesListByUserIdV2Request extends TeaModel {
     public String userId;
 
     /**
+     * <p>Work type. Possible values:</p>
+     * <ul>
+     * <li>DATAPRODUCT: Data Portal</li>
+     * <li>PAGE: Dashboard</li>
+     * <li>REPORT: Spreadsheet</li>
+     * <li>dashboardOfflineQuery: Self-service Data Extraction</li>
+     * <li>SCREEN: Data Wall</li>
+     * <li>DATAFORM: Data Entry</li>
+     * <li>ANALYSIS: Ad-hoc Analysis</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>DATAFORM</p>
      */
@@ -21,6 +33,8 @@ public class QueryReadableResourcesListByUserIdV2Request extends TeaModel {
     public String workType;
 
     /**
+     * <p>Workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
      */

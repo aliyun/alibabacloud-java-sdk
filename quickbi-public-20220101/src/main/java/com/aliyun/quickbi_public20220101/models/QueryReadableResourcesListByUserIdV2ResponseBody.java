@@ -5,16 +5,27 @@ import com.aliyun.tea.*;
 
 public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D787E1A3-A93C********05DF8D885</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returns the query result.</p>
+     */
     @NameInMap("Result")
     public java.util.List<QueryReadableResourcesListByUserIdV2ResponseBodyResult> result;
 
     /**
+     * <p>Indicates whether the request was successful. Possible values:</p>
+     * <ul>
+     * <li>true: Request succeeded</li>
+     * <li>false: Request failed</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -52,22 +63,38 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
 
     public static class QueryReadableResourcesListByUserIdV2ResponseBodyResultDirectory extends TeaModel {
         /**
+         * <p>The ID of the directory to which it belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>a3eecab7-618d-4f9f-*****</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the directory to which it belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The hierarchical structure of directory IDs, separated by『/』.</p>
+         * 
          * <strong>example:</strong>
          * <p>88b680****</p>
          */
         @NameInMap("PathId")
         public String pathId;
 
+        /**
+         * <p>The hierarchical structure of directory names, separated by『/』.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas/safas</p>
+         */
         @NameInMap("PathName")
         public String pathName;
 
@@ -112,22 +139,41 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
 
     public static class QueryReadableResourcesListByUserIdV2ResponseBodyResult extends TeaModel {
         /**
+         * <p>Timestamp of creation in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1611023338000</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>Work remarks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The directory structure where the work is located.</p>
+         */
         @NameInMap("Directory")
         public QueryReadableResourcesListByUserIdV2ResponseBodyResultDirectory directory;
 
+        /**
+         * <p>Alibaba Cloud account name of the modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas</p>
+         */
         @NameInMap("ModifyName")
         public String modifyName;
 
         /**
+         * <p>Timestamp of the last modification in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1530078690000</p>
          */
@@ -135,16 +181,31 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
+         * <p>The UserID of the work owner in Quick BI.</p>
+         * 
          * <strong>example:</strong>
          * <p>fe67f61a35a94b7da1a34ba174a7****</p>
          */
         @NameInMap("OwnerId")
         public String ownerId;
 
+        /**
+         * <p>Alibaba Cloud account name of the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas</p>
+         */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>Security policy for collaborative work. Values: - 0: Private - 12: Authorize specific members - 1 or 11: Authorize all space members</p>
+         * <blockquote>
+         * <ul>
+         * <li>If you are using the old version of permissions, the return value is 1. - If you are using the new version of permissions, the return value is 11.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -152,6 +213,14 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         public String securityLevel;
 
         /**
+         * <p>Report status. Possible values:</p>
+         * <ul>
+         * <li>0: Unpublished</li>
+         * <li>1: Published</li>
+         * <li>2: Modified but not published</li>
+         * <li>3: Offline</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,16 +228,39 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         public Integer status;
 
         /**
+         * <p>Third-party embedding status. Possible values:</p>
+         * <ul>
+         * <li>0: Embedding not enabled</li>
+         * <li>1: Embedding enabled</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("ThirdPartAuthFlag")
         public Integer thirdPartAuthFlag;
 
+        /**
+         * <p>The name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas</p>
+         */
         @NameInMap("WorkName")
         public String workName;
 
         /**
+         * <p>Work type. Possible values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: Data Portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: Spreadsheet</li>
+         * <li>dashboardOfflineQuery: Self-service Data Extraction</li>
+         * <li>SCREEN: Data Wall</li>
+         * <li>DATAFORM: Data Entry</li>
+         * <li>ANALYSIS: Ad-hoc Analysis</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PAGE</p>
          */
@@ -176,6 +268,8 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         public String workType;
 
         /**
+         * <p>The ID of the work.</p>
+         * 
          * <strong>example:</strong>
          * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
          */
@@ -183,12 +277,20 @@ public class QueryReadableResourcesListByUserIdV2ResponseBody extends TeaModel {
         public String worksId;
 
         /**
+         * <p>ID of the workspace to which the work belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>c5f86ad2-ef53-4c51-8720-162ecfdb****</p>
          */
         @NameInMap("WorkspaceId")
         public String workspaceId;
 
+        /**
+         * <p>The name of the workspace to which the work belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asdas</p>
+         */
         @NameInMap("WorkspaceName")
         public String workspaceName;
 

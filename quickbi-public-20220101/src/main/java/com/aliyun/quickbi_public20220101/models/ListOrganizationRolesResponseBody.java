@@ -20,10 +20,10 @@ public class ListOrganizationRolesResponseBody extends TeaModel {
     public java.util.List<ListOrganizationRolesResponseBodyResult> result;
 
     /**
-     * <p>是否请求成功。取值范围：</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true：请求成功</li>
-     * <li>false：请求失败</li>
+     * <li>true: The request was successful.</li>
+     * <li>false: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -63,6 +63,13 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
 
     public static class ListPortalMenuAuthorizationResponseBodyResultReceivers extends TeaModel {
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("AuthPointsValue")
+        public Integer authPointsValue;
+
+        /**
          * <p>The ID of the authorization object.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +94,14 @@ public class ListPortalMenuAuthorizationResponseBody extends TeaModel {
         public static ListPortalMenuAuthorizationResponseBodyResultReceivers build(java.util.Map<String, ?> map) throws Exception {
             ListPortalMenuAuthorizationResponseBodyResultReceivers self = new ListPortalMenuAuthorizationResponseBodyResultReceivers();
             return TeaModel.build(map, self);
+        }
+
+        public ListPortalMenuAuthorizationResponseBodyResultReceivers setAuthPointsValue(Integer authPointsValue) {
+            this.authPointsValue = authPointsValue;
+            return this;
+        }
+        public Integer getAuthPointsValue() {
+            return this.authPointsValue;
         }
 
         public ListPortalMenuAuthorizationResponseBodyResultReceivers setReceiverId(String receiverId) {

@@ -3313,6 +3313,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询仪表板的问数资源信息</p>
+     * 
+     * @param request QueryDashboardNl2sqlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryDashboardNl2sqlResponse
+     */
+    public QueryDashboardNl2sqlResponse queryDashboardNl2sqlWithOptions(QueryDashboardNl2sqlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            query.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryDashboardNl2sql"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryDashboardNl2sqlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询仪表板的问数资源信息</p>
+     * 
+     * @param request QueryDashboardNl2sqlRequest
+     * @return QueryDashboardNl2sqlResponse
+     */
+    public QueryDashboardNl2sqlResponse queryDashboardNl2sql(QueryDashboardNl2sqlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryDashboardNl2sqlWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Prerequisites</h3>
      * <p>You need to create a data service API through Quick BI\&quot;s data service. For more details, see: <a href="https://help.aliyun.com/document_detail/144980.html">Data Service</a>.</p>
@@ -3902,6 +3950,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>通过数据集ID查询最近一次加速任务</p>
+     * 
+     * @param request QueryLastAccelerationEngineJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryLastAccelerationEngineJobResponse
+     */
+    public QueryLastAccelerationEngineJobResponse queryLastAccelerationEngineJobWithOptions(QueryLastAccelerationEngineJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cubeId)) {
+            query.put("CubeId", request.cubeId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryLastAccelerationEngineJob"),
+            new TeaPair("version", "2022-01-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryLastAccelerationEngineJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>通过数据集ID查询最近一次加速任务</p>
+     * 
+     * @param request QueryLastAccelerationEngineJobRequest
+     * @return QueryLastAccelerationEngineJobResponse
+     */
+    public QueryLastAccelerationEngineJobResponse queryLastAccelerationEngineJob(QueryLastAccelerationEngineJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryLastAccelerationEngineJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Check which datasets and analysis themes the user has question authorization for</p>
      * 
      * @param request QueryLlmCubeWithThemeListByUserIdRequest
@@ -4098,7 +4190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户有权查看的作品列表(新)</p>
+     * <p>Query list of works user has permission to view (new)</p>
      * 
      * @param request QueryReadableResourcesListByUserIdV2Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -4138,7 +4230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询用户有权查看的作品列表(新)</p>
+     * <p>Query list of works user has permission to view (new)</p>
      * 
      * @param request QueryReadableResourcesListByUserIdV2Request
      * @return QueryReadableResourcesListByUserIdV2Response

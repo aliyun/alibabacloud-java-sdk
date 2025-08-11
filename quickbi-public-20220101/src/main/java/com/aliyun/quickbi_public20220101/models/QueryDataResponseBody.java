@@ -131,6 +131,13 @@ public class QueryDataResponseBody extends TeaModel {
         public String label;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("OriginalColumn")
+        public String originalColumn;
+
+        /**
          * <p>Field type, used to distinguish between dimension and measure fields.</p>
          * <ul>
          * <li>Dimension: dimension</li>
@@ -186,6 +193,14 @@ public class QueryDataResponseBody extends TeaModel {
         }
         public String getLabel() {
             return this.label;
+        }
+
+        public QueryDataResponseBodyResultHeaders setOriginalColumn(String originalColumn) {
+            this.originalColumn = originalColumn;
+            return this;
+        }
+        public String getOriginalColumn() {
+            return this.originalColumn;
         }
 
         public QueryDataResponseBodyResultHeaders setType(String type) {
