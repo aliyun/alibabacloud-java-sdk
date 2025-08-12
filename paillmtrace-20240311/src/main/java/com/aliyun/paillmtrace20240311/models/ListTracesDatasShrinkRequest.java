@@ -112,6 +112,9 @@ public class ListTracesDatasShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("SessionId")
+    public String sessionId;
+
     /**
      * <p>The field used to sort the returned results. Valid values: StartTime and Duration.</p>
      * 
@@ -279,6 +282,14 @@ public class ListTracesDatasShrinkRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListTracesDatasShrinkRequest setSessionId(String sessionId) {
+        this.sessionId = sessionId;
+        return this;
+    }
+    public String getSessionId() {
+        return this.sessionId;
     }
 
     public ListTracesDatasShrinkRequest setSortBy(String sortBy) {
