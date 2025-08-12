@@ -21,6 +21,9 @@ public class LlmStreamChatRequest extends TeaModel {
     @NameInMap("TopP")
     public Float topP;
 
+    @NameInMap("Type")
+    public String type;
+
     public static LlmStreamChatRequest build(java.util.Map<String, ?> map) throws Exception {
         LlmStreamChatRequest self = new LlmStreamChatRequest();
         return TeaModel.build(map, self);
@@ -48,6 +51,14 @@ public class LlmStreamChatRequest extends TeaModel {
     }
     public Float getTopP() {
         return this.topP;
+    }
+
+    public LlmStreamChatRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }
