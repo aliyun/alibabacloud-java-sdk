@@ -3,7 +3,7 @@ package com.aliyun.eds_user20210308.models;
 
 import com.aliyun.tea.*;
 
-public class DescribeOrgsRequest extends TeaModel {
+public class DescribeOrgsShrinkRequest extends TeaModel {
     /**
      * <p>The maximum number of entries to return. Valid values: 1 to 100.\
      * Default value: 100.</p>
@@ -42,14 +42,14 @@ public class DescribeOrgsRequest extends TeaModel {
     public String parentOrgId;
 
     @NameInMap("ShowExtras")
-    public java.util.Map<String, ?> showExtras;
+    public String showExtrasShrink;
 
-    public static DescribeOrgsRequest build(java.util.Map<String, ?> map) throws Exception {
-        DescribeOrgsRequest self = new DescribeOrgsRequest();
+    public static DescribeOrgsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        DescribeOrgsShrinkRequest self = new DescribeOrgsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public DescribeOrgsRequest setMaxResults(Long maxResults) {
+    public DescribeOrgsShrinkRequest setMaxResults(Long maxResults) {
         this.maxResults = maxResults;
         return this;
     }
@@ -57,7 +57,7 @@ public class DescribeOrgsRequest extends TeaModel {
         return this.maxResults;
     }
 
-    public DescribeOrgsRequest setNextToken(String nextToken) {
+    public DescribeOrgsShrinkRequest setNextToken(String nextToken) {
         this.nextToken = nextToken;
         return this;
     }
@@ -65,7 +65,7 @@ public class DescribeOrgsRequest extends TeaModel {
         return this.nextToken;
     }
 
-    public DescribeOrgsRequest setOrgName(String orgName) {
+    public DescribeOrgsShrinkRequest setOrgName(String orgName) {
         this.orgName = orgName;
         return this;
     }
@@ -73,7 +73,7 @@ public class DescribeOrgsRequest extends TeaModel {
         return this.orgName;
     }
 
-    public DescribeOrgsRequest setParentOrgId(String parentOrgId) {
+    public DescribeOrgsShrinkRequest setParentOrgId(String parentOrgId) {
         this.parentOrgId = parentOrgId;
         return this;
     }
@@ -81,12 +81,12 @@ public class DescribeOrgsRequest extends TeaModel {
         return this.parentOrgId;
     }
 
-    public DescribeOrgsRequest setShowExtras(java.util.Map<String, ?> showExtras) {
-        this.showExtras = showExtras;
+    public DescribeOrgsShrinkRequest setShowExtrasShrink(String showExtrasShrink) {
+        this.showExtrasShrink = showExtrasShrink;
         return this;
     }
-    public java.util.Map<String, ?> getShowExtras() {
-        return this.showExtras;
+    public String getShowExtrasShrink() {
+        return this.showExtrasShrink;
     }
 
 }

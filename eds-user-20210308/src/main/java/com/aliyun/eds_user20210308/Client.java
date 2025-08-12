@@ -850,12 +850,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Queries organizations.</p>
      * 
-     * @param request DescribeOrgsRequest
+     * @param tmpReq DescribeOrgsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeOrgsResponse
      */
-    public DescribeOrgsResponse describeOrgsWithOptions(DescribeOrgsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public DescribeOrgsResponse describeOrgsWithOptions(DescribeOrgsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeOrgsShrinkRequest request = new DescribeOrgsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.showExtras)) {
+            request.showExtrasShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.showExtras, "ShowExtras", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
@@ -871,6 +877,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.parentOrgId)) {
             query.put("ParentOrgId", request.parentOrgId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.showExtrasShrink)) {
+            query.put("ShowExtras", request.showExtrasShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

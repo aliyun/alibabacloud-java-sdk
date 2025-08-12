@@ -76,6 +76,9 @@ public class DescribeOrgsResponseBody extends TeaModel {
         @NameInMap("OrgName")
         public String orgName;
 
+        @NameInMap("OrgNamePath")
+        public String orgNamePath;
+
         /**
          * <p>The parent organization ID.</p>
          * 
@@ -104,6 +107,14 @@ public class DescribeOrgsResponseBody extends TeaModel {
         }
         public String getOrgName() {
             return this.orgName;
+        }
+
+        public DescribeOrgsResponseBodyOrgs setOrgNamePath(String orgNamePath) {
+            this.orgNamePath = orgNamePath;
+            return this;
+        }
+        public String getOrgNamePath() {
+            return this.orgNamePath;
         }
 
         public DescribeOrgsResponseBodyOrgs setParentOrgId(String parentOrgId) {
