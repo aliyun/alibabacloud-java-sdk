@@ -23,14 +23,14 @@ public class DescribeProductsOfActiveMetricRuleResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The information about the services for which one-click alert is enabled. Services are separated with commas (,). Valid values:</p>
+     * <p>The information about the services for which the initiative alert feature is enabled. Services are separated with commas (,). Valid values:</p>
      * <ul>
-     * <li>ecs: Elastic Compute Service (ECS)</li>
+     * <li>ECS: Elastic Compute Service (ECS)</li>
      * <li>rds: ApsaraDB RDS</li>
      * <li>slb: Server Load Balancer (SLB)</li>
-     * <li>redis_standard: ApsaraDB for Redis of the standard architecture</li>
-     * <li>redis_sharding: ApsaraDB for Redis of the cluster architecture</li>
-     * <li>redis_splitrw: ApsaraDB for Redis of the read/write splitting architecture</li>
+     * <li>redis_standard: Redis Open-Source Edition (standard architecture)</li>
+     * <li>redis_sharding: Redis Open-Source Edition (cluster architecture)</li>
+     * <li>redis_splitrw: Redis Open-Source Edition (read/write splitting architecture)</li>
      * <li>mongodb: ApsaraDB for MongoDB of the replica set architecture</li>
      * <li>mongodb_sharding: ApsaraDB for MongoDB of the sharded cluster architecture</li>
      * <li>hbase: ApsaraDB for HBase</li>

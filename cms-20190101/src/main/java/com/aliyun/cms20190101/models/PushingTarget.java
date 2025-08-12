@@ -167,8 +167,14 @@ public class PushingTarget extends TeaModel {
         @NameInMap("ContentType")
         public String contentType;
 
+        @NameInMap("EncryptSignatureKey")
+        public String encryptSignatureKey;
+
         @NameInMap("EncryptString")
         public String encryptString;
+
+        @NameInMap("EncryptTimestampKey")
+        public String encryptTimestampKey;
 
         @NameInMap("Headers")
         public java.util.List<PushingTargetHttpRequestTargetHeaders> headers;
@@ -192,12 +198,28 @@ public class PushingTarget extends TeaModel {
             return this.contentType;
         }
 
+        public PushingTargetHttpRequestTarget setEncryptSignatureKey(String encryptSignatureKey) {
+            this.encryptSignatureKey = encryptSignatureKey;
+            return this;
+        }
+        public String getEncryptSignatureKey() {
+            return this.encryptSignatureKey;
+        }
+
         public PushingTargetHttpRequestTarget setEncryptString(String encryptString) {
             this.encryptString = encryptString;
             return this;
         }
         public String getEncryptString() {
             return this.encryptString;
+        }
+
+        public PushingTargetHttpRequestTarget setEncryptTimestampKey(String encryptTimestampKey) {
+            this.encryptTimestampKey = encryptTimestampKey;
+            return this;
+        }
+        public String getEncryptTimestampKey() {
+            return this.encryptTimestampKey;
         }
 
         public PushingTargetHttpRequestTarget setHeaders(java.util.List<PushingTargetHttpRequestTargetHeaders> headers) {

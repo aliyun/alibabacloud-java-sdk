@@ -49,7 +49,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     /**
      * <p>The relationship between the conditional expressions for the tag values of the cloud resources. Valid values:</p>
      * <ul>
-     * <li>and (default value)</li>
+     * <li>and (default)</li>
      * <li>or</li>
      * </ul>
      * 

@@ -16,6 +16,8 @@ public class PutContactGroupRequest extends TeaModel {
     public String contactGroupName;
 
     /**
+     * <p>The name of the alert contact. Valid values of N: 1 to 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>Alice</p>
      */
@@ -38,7 +40,7 @@ public class PutContactGroupRequest extends TeaModel {
      * <li>false: The weekly report subscription feature is disabled.</li>
      * </ul>
      * <blockquote>
-     * <p> You can enable the weekly report subscription only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
+     * <p> You can enable the weekly report subscription feature only for an Alibaba Cloud account that has at least five Elastic Compute Service (ECS) instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

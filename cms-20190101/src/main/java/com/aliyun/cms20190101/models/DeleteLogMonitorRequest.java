@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLogMonitorRequest extends TeaModel {
     /**
-     * <p>The ID returned by Log Service.</p>
+     * <p>The ID of the log monitoring metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

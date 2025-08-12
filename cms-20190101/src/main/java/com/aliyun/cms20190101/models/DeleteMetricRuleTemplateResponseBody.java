@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7B63F8CF-D48D-4608-A402-04FB5B2B4B6A</p>
@@ -35,13 +35,13 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the alert template.</p>
+     * <p>The template information.</p>
      */
     @NameInMap("Resource")
     public DeleteMetricRuleTemplateResponseBodyResource resource;
 
     /**
-     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

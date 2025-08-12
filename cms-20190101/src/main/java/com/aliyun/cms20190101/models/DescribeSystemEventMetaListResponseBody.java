@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The detailed meta information.</p>
+     * <p>The queried meta information.</p>
      */
     @NameInMap("Data")
     public DescribeSystemEventMetaListResponseBodyData data;
@@ -32,7 +32,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>A6582C8B-E67C-4A19-BC15-EAEFEBDC7995</p>
@@ -41,10 +41,10 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,9 +102,9 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         /**
          * <p>The type of the system event. Valid values:</p>
          * <ul>
-         * <li>StatusNotification</li>
-         * <li>Exception</li>
-         * <li>Maintenance</li>
+         * <li>StatusNotification: fault notifications</li>
+         * <li>Exception: exceptions</li>
+         * <li>Maintenance: O\&amp;M</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         public String eventType;
 
         /**
-         * <p>The level of the alert. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <ul>
          * <li>CRITICAL</li>
          * <li>WARN</li>
@@ -137,7 +137,7 @@ public class DescribeSystemEventMetaListResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The description of the system event, in Chinese.</p>
+         * <p>The description of the event name.</p>
          * 
          * <strong>example:</strong>
          * <p>High query failure rate</p>

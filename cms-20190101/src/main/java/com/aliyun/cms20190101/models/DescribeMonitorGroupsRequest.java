@@ -126,8 +126,8 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
      * <p>The type of the application group. Valid values:</p>
      * <ul>
      * <li>custom: a self-managed application group</li>
-     * <li>ehpc_cluster: an application group that is synchronized from an Elastic High Performance Computing (E-HPC) cluster</li>
-     * <li>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster</li>
+     * <li>ehpc_cluster: an application group that is synchronized from an E-HPC cluster</li>
+     * <li>kubernetes: an application group that is synchronized from an ACK cluster</li>
      * </ul>
      * 
      * <strong>example:</strong>

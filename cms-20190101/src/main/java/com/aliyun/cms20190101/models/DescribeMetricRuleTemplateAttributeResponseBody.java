@@ -551,6 +551,9 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         @NameInMap("Selector")
         public String selector;
 
+        @NameInMap("SilenceTime")
+        public Integer silenceTime;
+
         /**
          * <p>The callback URL to which a request is sent when an alert is triggered.</p>
          * 
@@ -627,6 +630,14 @@ public class DescribeMetricRuleTemplateAttributeResponseBody extends TeaModel {
         }
         public String getSelector() {
             return this.selector;
+        }
+
+        public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setSilenceTime(Integer silenceTime) {
+            this.silenceTime = silenceTime;
+            return this;
+        }
+        public Integer getSilenceTime() {
+            return this.silenceTime;
         }
 
         public DescribeMetricRuleTemplateAttributeResponseBodyResourceAlertTemplatesAlertTemplate setWebhook(String webhook) {

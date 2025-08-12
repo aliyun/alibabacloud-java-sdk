@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutCustomMetricRuleRequest extends TeaModel {
     /**
-     * <p>The comparison operator before the threshold. Valid values:</p>
+     * <p>The operator that is used to compare the metric value with the threshold. Valid values:</p>
      * <ul>
      * <li><code>&gt;=</code></li>
      * <li><code>=</code></li>
@@ -25,7 +25,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String comparisonOperator;
 
     /**
-     * <p>The alert group that receives alert notifications. Separate multiple alert groups with commas (,).</p>
+     * <p>The alert contact groups. Separate multiple alert contact groups with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String contactGroups;
 
     /**
-     * <p>The time period during which the alert rule is effective. Valid values: 00:00 to 23:59.</p>
+     * <p>The period of time during which the alert rule is effective. Valid values: 00:00 to 23:59.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00-23:59</p>
@@ -50,7 +50,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String emailSubject;
 
     /**
-     * <p>The consecutive number of times for which the metric value is measured before an alert is triggered.</p>
+     * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The level of the alert. Valid values:</p>
+     * <p>The alert level. Valid values:</p>
      * <ul>
      * <li>CRITICAL</li>
      * <li>WARN</li>
@@ -87,7 +87,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The name of the metric.</p>
+     * <p>The metric name.</p>
      * <blockquote>
      * <p> For more information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</p>
      * </blockquote>
@@ -100,7 +100,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The cycle that is used to aggregate custom monitoring data. Unit: seconds. Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.</p>
+     * <p>The cycle that is used to aggregate custom monitoring data. Unit: seconds Set the value to an integral multiple of 60. The original reporting cycle of custom monitoring data is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -141,9 +141,9 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The mute period during which notifications are not repeatedly sent for an alert. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+     * <p>The mute period during which new alert notifications are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400, which is equivalent to one day.</p>
      * <blockquote>
-     * <p> Only one alert notification is sent during each mute period even if the metric value consecutively exceeds the alert threshold several times.</p>
+     * <p> Only one alert notification is sent during each mute period even if the metric value exceeds the alert threshold several times.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public Integer silenceTime;
 
     /**
-     * <p>The method that is used to calculate the metric values that trigger alerts.</p>
+     * <p>The method used to calculate the metric value based on which alerts are triggered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -163,7 +163,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String statistics;
 
     /**
-     * <p>The threshold of the metric value.</p>
+     * <p>The alert threshold.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

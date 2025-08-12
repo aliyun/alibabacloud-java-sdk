@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
+    @NameInMap("AgentGroup")
+    public String agentGroup;
+
     /**
      * <p>The keyword to be matched.</p>
      * <blockquote>
@@ -71,6 +74,14 @@ public class DescribeSiteMonitorListRequest extends TeaModel {
     public static DescribeSiteMonitorListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSiteMonitorListRequest self = new DescribeSiteMonitorListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSiteMonitorListRequest setAgentGroup(String agentGroup) {
+        this.agentGroup = agentGroup;
+        return this;
+    }
+    public String getAgentGroup() {
+        return this.agentGroup;
     }
 
     public DescribeSiteMonitorListRequest setKeyword(String keyword) {

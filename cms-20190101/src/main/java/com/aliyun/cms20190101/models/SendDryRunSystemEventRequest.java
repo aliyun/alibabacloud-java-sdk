@@ -41,7 +41,7 @@ public class SendDryRunSystemEventRequest extends TeaModel {
     /**
      * <p>The name of the cloud service.</p>
      * <blockquote>
-     * <p> For information about the system events supported by Cloud Monitor for Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/167388.html">System events</a>.</p>
+     * <p> For information about the Alibaba Cloud services that are supported by CloudMonitor, see <a href="https://help.aliyun.com/document_detail/167388.html">Supported cloud services and their system events</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

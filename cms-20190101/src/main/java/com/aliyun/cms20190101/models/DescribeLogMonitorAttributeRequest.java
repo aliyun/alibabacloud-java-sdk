@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMonitorAttributeRequest extends TeaModel {
     /**
-     * <p>The name of the log monitoring metric. Exact match is supported.</p>
+     * <p>The metric name. Exact match is supported.</p>
      * <p>For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 

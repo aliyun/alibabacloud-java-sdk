@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleListResponseBody extends TeaModel {
     /**
-     * <p>The alert rules.</p>
+     * <p>The queried alert rules.</p>
      */
     @NameInMap("Alarms")
     public DescribeMetricRuleListResponseBodyAlarms alarms;
@@ -1010,6 +1010,12 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         @NameInMap("Escalations")
         public DescribeMetricRuleListResponseBodyAlarmsAlarmEscalations escalations;
 
+        @NameInMap("GmtCreate")
+        public Long gmtCreate;
+
+        @NameInMap("GmtUpdate")
+        public String gmtUpdate;
+
         /**
          * <p>The ID of the application group.</p>
          * 
@@ -1095,6 +1101,9 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
          */
         @NameInMap("Period")
         public String period;
+
+        @NameInMap("ProductCategory")
+        public String productCategory;
 
         /**
          * <p>The Prometheus alerts.</p>
@@ -1221,6 +1230,22 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
             return this.escalations;
         }
 
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setGmtCreate(Long gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public Long getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setGmtUpdate(String gmtUpdate) {
+            this.gmtUpdate = gmtUpdate;
+            return this;
+        }
+        public String getGmtUpdate() {
+            return this.gmtUpdate;
+        }
+
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setGroupId(String groupId) {
             this.groupId = groupId;
             return this;
@@ -1291,6 +1316,14 @@ public class DescribeMetricRuleListResponseBody extends TeaModel {
         }
         public String getPeriod() {
             return this.period;
+        }
+
+        public DescribeMetricRuleListResponseBodyAlarmsAlarm setProductCategory(String productCategory) {
+            this.productCategory = productCategory;
+            return this;
+        }
+        public String getProductCategory() {
+            return this.productCategory;
         }
 
         public DescribeMetricRuleListResponseBodyAlarmsAlarm setPrometheus(DescribeMetricRuleListResponseBodyAlarmsAlarmPrometheus prometheus) {

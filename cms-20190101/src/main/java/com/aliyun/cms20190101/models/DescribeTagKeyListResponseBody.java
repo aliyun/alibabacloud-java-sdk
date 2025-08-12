@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeTagKeyListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeTagKeyListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B04B8CF3-4489-432D-83BA-6F128E5F2293</p>
@@ -35,10 +35,10 @@ public class DescribeTagKeyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,6 @@ public class DescribeTagKeyListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The tag keys returned.</p>
-     */
     @NameInMap("TagKeys")
     public DescribeTagKeyListResponseBodyTagKeys tagKeys;
 

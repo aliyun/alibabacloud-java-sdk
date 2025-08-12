@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     public DescribeLogMonitorAttributeResponseBodyLogMonitor logMonitor;
 
     /**
-     * <p>The returned message. If the call was successful, the value success is returned. If the call failed, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, a success message is returned. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C6718537-E673-4A58-8EE1-24B8B38C7AAE</p>
@@ -41,10 +41,10 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates extends TeaModel {
         /**
-         * <p>The alias of the aggregate function.</p>
+         * <p>The alias of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>HostName</p>
@@ -118,16 +118,16 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         public String fieldName;
 
         /**
-         * <p>The function that is used to aggregate the monitoring data of logs within an aggregation period. Valid values:</p>
+         * <p>The function that is used to aggregate the monitoring data of logs within a statistical period. Valid values:</p>
          * <ul>
-         * <li>count: counts the number.</li>
-         * <li>sum: calculates the total value.</li>
-         * <li>avg: calculates the average value.</li>
-         * <li>max: selects the maximum value.</li>
-         * <li>min: selects the minimum value.</li>
-         * <li>countps: calculates the counted number of the specified field divided by the total number of seconds of the aggregation period.</li>
-         * <li>sumps: calculates the total value of the specified field divided by the total number of seconds of the aggregation period.</li>
-         * <li>distinct: counts the number of logs where the specified field appears within the aggregation period.</li>
+         * <li>count: counts the number</li>
+         * <li>sum: calculates the total value</li>
+         * <li>avg: calculates the average value</li>
+         * <li>max: calculates the maximum value</li>
+         * <li>min: calculates the minimum value</li>
+         * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within a statistical period</li>
+         * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within a statistical period</li>
+         * <li>distinct: calculates the number of unique values of the specified field within a statistical period</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,8 +214,8 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>The method that is used to match the field value. Valid values:</p>
          * <ul>
-         * <li><code>contain</code></li>
-         * <li><code>notContain</code></li>
+         * <li><code>contain</code>: contains</li>
+         * <li><code>notContain</code>: does not contain</li>
          * <li><code>&gt;</code>: greater than</li>
          * <li><code>&lt;</code>: less than</li>
          * <li><code>&gt;=</code>: greater than or equal to</li>
@@ -270,14 +270,14 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeLogMonitorAttributeResponseBodyLogMonitor extends TeaModel {
         /**
-         * <p>The aggregate functions.</p>
+         * <p>The aggregation logic.</p>
          */
         @NameInMap("Aggregates")
         public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorAggregates> aggregates;
 
         /**
-         * <p>The time when the log monitoring metric was created.</p>
-         * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The time when the metric was created.</p>
+         * <p>This value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1547431398000</p>
@@ -294,14 +294,11 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("GroupId")
         public Long groupId;
 
-        /**
-         * <p>The dimension based on which the data is grouped. This parameter is equivalent to the GROUP BY clause in SQL statements. If no dimension is specified, all data is aggregated based on the aggregate function.</p>
-         */
         @NameInMap("Groupbys")
         public java.util.List<String> groupbys;
 
         /**
-         * <p>The ID returned by Log Service.</p>
+         * <p>The ID of the log.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -311,7 +308,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
 
         /**
          * <p>The extended field. The extended field allows you to perform basic operations on the aggregation results.</p>
-         * <p>Assume that you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</p>
+         * <p>For example, if you have calculated TotalNumber and 5XXNumber by aggregating the data. TotalNumber indicates the total number of HTTP requests, and 5XXNumber indicates the number of HTTP requests whose status code is greater than 499. You can calculate the server error rate by adding the following formula to the extended field: 5XXNumber/TotalNumber\*100.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;extend&quot;:{&quot;errorPercent&quot;:&quot;5XXNumber/TotalNumber*100&quot;}}</p>
@@ -320,7 +317,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         public String metricExpress;
 
         /**
-         * <p>The name of the log monitoring metric. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+         * <p>The metric name. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>cpu_total</p>
@@ -329,7 +326,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The name of the Log Service Logstore.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
@@ -338,7 +335,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         public String slsLogstore;
 
         /**
-         * <p>The name of the Log Service project.</p>
+         * <p>The name of the SLS project.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project</p>
@@ -347,7 +344,7 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         public String slsProject;
 
         /**
-         * <p>The ID of the region where the Log Service Logstore resides.</p>
+         * <p>The ID of the region where the Simple Log Service (SLS) Logstore resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -355,21 +352,18 @@ public class DescribeLogMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("SlsRegionId")
         public String slsRegionId;
 
-        /**
-         * <p>The size of the tumbling window for calculation. Unit: seconds. The system performs an aggregation for each tumbling window.</p>
-         */
         @NameInMap("Tumblingwindows")
         public java.util.List<String> tumblingwindows;
 
         /**
          * <p>The condition that is used to filter logs. The ValueFilter and ValueFilterRelation parameters are used in pair. The filter condition is equivalent to the WHERE clause in SQL statements.</p>
-         * <p>If no filter condition is specified, all logs are processed. Assume that logs contain the Level field, which may be set to Error. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
+         * <p>If no filter condition is specified, all logs are processed. For example, logs contain the Level and Error fields. If you need to calculate the number of times that logs of the Error level appear every minute, you can set the filter condition to Level=Error and count the number of logs that meet this condition.</p>
          */
         @NameInMap("ValueFilter")
         public java.util.List<DescribeLogMonitorAttributeResponseBodyLogMonitorValueFilter> valueFilter;
 
         /**
-         * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters are used in pair. Valid values:</p>
+         * <p>The logical operator that is used between log filter conditions. The ValueFilter and ValueFilterRelation parameters must be used in pair. Valid values:</p>
          * <ul>
          * <li>and</li>
          * <li>or</li>

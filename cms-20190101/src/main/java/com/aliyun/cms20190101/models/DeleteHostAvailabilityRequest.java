@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteHostAvailabilityRequest extends TeaModel {
     /**
+     * <p>The task ID. Valid values of N: 1 to 20.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

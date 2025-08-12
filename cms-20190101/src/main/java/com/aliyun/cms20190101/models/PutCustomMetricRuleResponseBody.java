@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutCustomMetricRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The value 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message. If the call was successful, the return value is null. If the call failed, an error message is returned.</p>
+     * <p>The returned message. If the request was successful, the return value is null. If the request failed, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>ComparisonOperator is mandatory for this action.</p>
@@ -26,7 +26,7 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>65D50468-ECEF-48F1-A6E1-D952E89D9432</p>
@@ -35,10 +35,10 @@ public class PutCustomMetricRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

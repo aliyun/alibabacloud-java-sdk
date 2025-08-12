@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The HTTP status code 200 indicates that the call succeeds.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>13356BCA-3EC3-4748-A771-2064DA69AEF1</p>
@@ -35,7 +35,7 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of entries that are returned.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,10 +44,10 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     public Integer result;
 
     /**
-     * <p>Indicates whether the call succeeds. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call succeeds.</li>
-     * <li>false: The call fails.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

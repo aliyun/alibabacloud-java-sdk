@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination cursor. If more entries are to be returned on the next page, a pagination cursor is returned.</p>
+     * <p>The pagination token. If more entries are to be returned on the next page, a pagination token is returned.</p>
      * <blockquote>
-     * <p> If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination cursor as a request parameter to obtain entries on the next page. If the value of this parameter is null, all the entries have been returned.</p>
+     * <p> If the value of this parameter is not null, more entries are to be returned on the next page. You can use the returned pagination token as a request parameter to retrieve a new page of results. If the value of this parameter is null, all the entries have been returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>945ACAA9-89F2-4A62-8913-076FDEDAA8DB</p>
@@ -47,7 +47,7 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -55,9 +55,6 @@ public class DescribeProductResourceTagKeyListResponseBody extends TeaModel {
     @NameInMap("Success")
     public Boolean success;
 
-    /**
-     * <p>The keys of tags.</p>
-     */
     @NameInMap("TagKeys")
     public DescribeProductResourceTagKeyListResponseBodyTagKeys tagKeys;
 

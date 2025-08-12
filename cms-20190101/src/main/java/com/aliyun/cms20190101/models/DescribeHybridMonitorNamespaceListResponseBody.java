@@ -299,6 +299,9 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         @NameInMap("NamespaceRegion")
         public String namespaceRegion;
 
+        @NameInMap("PrometheusInstanceId")
+        public String prometheusInstanceId;
+
         /**
          * <p>The project where the metric data is located.</p>
          * <blockquote>
@@ -339,6 +342,14 @@ public class DescribeHybridMonitorNamespaceListResponseBody extends TeaModel {
         }
         public String getNamespaceRegion() {
             return this.namespaceRegion;
+        }
+
+        public DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail setPrometheusInstanceId(String prometheusInstanceId) {
+            this.prometheusInstanceId = prometheusInstanceId;
+            return this;
+        }
+        public String getPrometheusInstanceId() {
+            return this.prometheusInstanceId;
         }
 
         public DescribeHybridMonitorNamespaceListResponseBodyDescribeHybridMonitorNamespaceDetail setSLSProject(String SLSProject) {

@@ -7,7 +7,7 @@ public class AddTagsRequest extends TeaModel {
     /**
      * <p>The ID of the application group.</p>
      * <p>Valid values of N: 1 to 20.</p>
-     * <p>For more information about how to obtain the ID of an application group, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
+     * <p>For information about how to query the IDs of application groups, see <a href="https://help.aliyun.com/document_detail/2513168.html">DescribeMonitorGroups</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class AddTagsRequest extends TeaModel {
         /**
          * <p>The tag key.</p>
          * <p>Valid values of N: 1 to 3. A tag key can be 1 to 64 characters in length.</p>
-         * <p>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/145558.html">DescribeTagKeyList</a>.</p>
+         * <p>You can create a tag key or specify an existing tag key. For more information about how to obtain a tag key, see <a href="https://help.aliyun.com/document_detail/2513189.html">DescribeTagKeyList</a>.</p>
          * <blockquote>
          * <p> The tag key cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
          * </blockquote>
@@ -74,7 +74,7 @@ public class AddTagsRequest extends TeaModel {
         /**
          * <p>The tag value.</p>
          * <p>Valid values of N: 1 to 3. A tag value can be 1 to 64 characters in length.</p>
-         * <p>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/145557.html">DescribeTagValueList</a>.</p>
+         * <p>You can create a tag value or specify an existing tag value. For more information about how to obtain a tag value, see <a href="https://help.aliyun.com/document_detail/2513188.html">DescribeTagValueList</a>.</p>
          * <blockquote>
          * <p> The tag value cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key (<code>Tag.N.Key</code>) and tag value (<code>Tag.N.Value</code>) must be specified at the same time.</p>
          * </blockquote>

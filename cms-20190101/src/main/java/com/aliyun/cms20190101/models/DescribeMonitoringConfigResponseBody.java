@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitoringConfigResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the Cloud Monitor agent is automatically installed on existing ECS instances. Valid values:</p>
+     * <p>Indicates whether the CloudMonitor agent is automatically installed on existing Elastic Compute Service (ECS) instances. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -18,9 +18,9 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
     public Boolean autoInstall;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the Cloud Monitor agent is automatically installed on new Elastic Compute Service (ECS) instances. Valid values:</p>
+     * <p>Indicates whether the CloudMonitor agent is automatically installed on new ECS instances. Valid values: Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -52,7 +52,7 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F35654DB-0C9D-4FB3-903F-479BA7663061</p>
@@ -61,10 +61,10 @@ public class DescribeMonitoringConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true</li>
+     * <li>false</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -34,7 +34,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The configurations of the logs that are imported from Log Service.</p>
+     * <p>The configurations of the logs that are imported from Simple Log Service.</p>
      */
     @NameInMap("SLSProcessConfig")
     public ModifyHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig;
@@ -207,7 +207,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
         /**
-         * <p>The method that is used to filter logs imported from Log Service. Valid values:</p>
+         * <p>The method that is used to filter logs imported from Simple Log Service. Valid values:</p>
          * <ul>
          * <li><code>contain</code>: contains</li>
          * <li><code>notContain</code>: does not contain</li>
@@ -226,7 +226,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The name of the key that is used to filter logs imported from Log Service.</p>
+         * <p>The name of the key that is used to filter logs imported from Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -235,7 +235,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String SLSKeyName;
 
         /**
-         * <p>The value of the key that is used to filter logs imported from Log Service.</p>
+         * <p>The value of the key that is used to filter logs imported from Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -276,7 +276,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigFilter extends TeaModel {
         /**
-         * <p>None</p>
+         * <p>None.</p>
          */
         @NameInMap("Filters")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigFilterFilters> filters;
@@ -328,7 +328,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>code</p>
@@ -378,10 +378,10 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
          * <li>max: calculates the maximum value.</li>
          * <li>min: calculates the minimum value.</li>
          * <li>value: collects samples within the statistical period.</li>
-         * <li>countps: calculates the counted number of the specified field divided by the total number of seconds within the statistical period.</li>
-         * <li>sumps: calculates the total value of the specified field divided by the total number of seconds within the statistical period.</li>
-         * <li>distinct: counts the number of logs where the specified field appears within the statistical period.</li>
-         * <li>distribution: counts the number of logs that meet a specified condition within the statistical period.</li>
+         * <li>countps: calculates the number of values of the specified field divided by the total number of seconds within the statistical period.</li>
+         * <li>sumps: calculates the sum of the values of the specified field divided by the total number of seconds within the statistical period.</li>
+         * <li>distinct: calculates the number of unique values of the specified field within the statistical period.</li>
+         * <li>distribution: calculates the number of logs that meet a specified condition within the statistical period.</li>
          * <li>percentile: sorts the values of the specified field in ascending order, and then returns the value that is at the specified percentile within the statistical period. Example: P50.</li>
          * </ul>
          * 
@@ -392,10 +392,10 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String function;
 
         /**
-         * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
+         * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
          * <ul>
          * <li>If the <code>Function</code> parameter is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 200.</li>
-         * <li>If you set the <code>Function</code> parameter to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
+         * <li>If the <code>Function</code> parameter is set to <code>percentile</code>, this parameter specifies the percentile at which the expected value is. For example, 0.5 specifies P50.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -405,9 +405,9 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String parameter1;
 
         /**
-         * <p>The value of the function that is used to aggregate logs imported from Log Service.</p>
+         * <p>The value of the function that is used to aggregate logs imported from Simple Log Service.</p>
          * <blockquote>
-         * <p>This parameter must be specified when <code>Function</code> is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
+         * <p> This parameter is required only if the <code>Function</code> parameter is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical interval. For example, if you want to calculate the number of HTTP requests whose status code is 2XX, set this parameter to 299.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -417,7 +417,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String parameter2;
 
         /**
-         * <p>The name of the key that is used to aggregate logs imported from Log Service.</p>
+         * <p>The name of the key that is used to aggregate logs imported from Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -480,19 +480,19 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigExpress> express;
 
         /**
-         * <p>The conditions that are used to filter logs imported from Log Service.</p>
+         * <p>The conditions that are used to filter logs imported from Simple Log Service.</p>
          */
         @NameInMap("Filter")
         public ModifyHybridMonitorTaskRequestSLSProcessConfigFilter filter;
 
         /**
-         * <p>The dimensions based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
+         * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL.</p>
          */
         @NameInMap("GroupBy")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;
 
         /**
-         * <p>None</p>
+         * <p>None.</p>
          */
         @NameInMap("Statistics")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigStatistics> statistics;

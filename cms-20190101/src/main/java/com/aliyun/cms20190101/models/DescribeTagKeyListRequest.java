@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTagKeyListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class DescribeTagKeyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Maximum value: 100. Default value: 50.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMetricRuleTemplateRequest extends TeaModel {
+    /**
+     * <p>The details of the alert template.</p>
+     */
     @NameInMap("AlertTemplates")
     public java.util.List<CreateMetricRuleTemplateRequestAlertTemplates> alertTemplates;
 
@@ -301,8 +304,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         public CreateMetricRuleTemplateRequestAlertTemplatesEscalations escalations;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
-         * <p>To obtain the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation. The <code>metricCategory</code> tag in the <code>Labels</code> response parameter indicates the abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
+         * <p>Valid values of N: 1 to 200.</p>
+         * <p>For more information about how to obtain the abbreviation of a cloud service name, see <code>metricCategory</code> in the response parameter <code>Labels</code> of the <a href="https://help.aliyun.com/document_detail/114916.html">DescribeProjectMeta</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -312,10 +316,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         public String category;
 
         /**
-         * <p>The name of the metric. Valid values of N: 1 to 200.</p>
-         * <blockquote>
-         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-         * </blockquote>
+         * <p>The metric name.</p>
+         * <p>Valid values of N: 1 to 200.</p>
+         * <p>For information about how to obtain the name of a metric, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,10 +328,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The namespace of the cloud service. Valid values of N: 1 to 200.</p>
-         * <blockquote>
-         * <p> For more information, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/28619.html">Appendix 1: Metrics</a>.</p>
-         * </blockquote>
+         * <p>The namespace of the cloud service.</p>
+         * <p>Valid values of N: 1 to 200.</p>
+         * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -349,14 +351,23 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The name of the alert rule. Valid values of N: 1 to 200.</p>
+         * <p>The name of the alert rule.</p>
+         * <p>Valid values of N: 1 to 200.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS_Rule1</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
 
         /**
-         * <p>The extended field selectors. Valid values of N: 1 to 200.</p>
+         * <p>The dimension of the alert. It is an extended field.</p>
+         * <p>Valid values of N: 1 to 200.</p>
+         * <p>For example, an alert template is applied to an application group, this parameter is set to <code>{&quot;disk&quot;:&quot;/&quot;}</code>, and the MetricName parameter is set to <code>DiskUtilization</code>. In this case, the generated alert rule is applied to the root disk partition (<code>&quot;/&quot;</code>) of all instances in the application group to which the alert template is applied.</p>
+         * <blockquote>
+         * <p> For more information about the values of extended fields, see <a href="https://help.aliyun.com/document_detail/114979.html">DescribeMetricRuleTemplateAttribute</a>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>{&quot;disk&quot;:&quot;/&quot;}</p>
@@ -365,7 +376,9 @@ public class CreateMetricRuleTemplateRequest extends TeaModel {
         public String selector;
 
         /**
-         * <p>The callback URL to which a POST request is sent when an alert is triggered based on the alert rule.</p>
+         * <p>The callback URL.</p>
+         * <p>Valid values of N: 1 to 200.</p>
+         * <p>The callback URL must be accessible over the Internet. CloudMonitor pushes an alert notification to the specified callback URL by sending an HTTP POST request. Only the HTTP protocol is supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ww.aliyun.com">http://ww.aliyun.com</a></p>

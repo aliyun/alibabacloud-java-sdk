@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorAgentProcessRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateMonitorAgentProcessRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the process.</p>
+     * <p>The process name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

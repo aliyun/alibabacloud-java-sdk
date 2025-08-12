@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeCustomEventCountRequest extends TeaModel {
     /**
      * <p>The end of the time range to query.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1552220485596</p>
@@ -15,7 +15,7 @@ public class DescribeCustomEventCountRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ID of the custom event.</p>
+     * <p>The event ID.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -33,7 +33,7 @@ public class DescribeCustomEventCountRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the custom event.</p>
+     * <p>The event name.</p>
      * 
      * <strong>example:</strong>
      * <p>BABEL_BUY</p>
@@ -45,7 +45,7 @@ public class DescribeCustomEventCountRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The keywords that are contained in the content of the custom event to query. You can use a logical operator between keywords.</p>
+     * <p>The keywords that are used to search for the event.</p>
      * <ul>
      * <li>If you need to query the custom event whose content contains a and b, set the value to a and b.</li>
      * <li>If you need to query the custom event whose content contains a or b, set the value to a or b.</li>
@@ -59,7 +59,7 @@ public class DescribeCustomEventCountRequest extends TeaModel {
 
     /**
      * <p>The beginning of the time range to query.</p>
-     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
+     * <p>This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>1552209685596</p>

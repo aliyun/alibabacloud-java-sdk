@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactGroupRequest extends TeaModel {
     /**
-     * <p>The name of the alert group.</p>
+     * <p>The name of the alert contact group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

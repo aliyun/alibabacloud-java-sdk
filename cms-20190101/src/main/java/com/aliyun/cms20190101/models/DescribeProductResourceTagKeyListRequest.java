@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeProductResourceTagKeyListRequest extends TeaModel {
     /**
-     * <p>The pagination cursor.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>dbc2826f237e****</p>

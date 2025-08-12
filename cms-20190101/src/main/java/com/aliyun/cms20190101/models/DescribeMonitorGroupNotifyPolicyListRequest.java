@@ -32,7 +32,7 @@ public class DescribeMonitorGroupNotifyPolicyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The policy type.</p>
+     * <p>The type of the policy.</p>
      * <p>Valid value: PauseNotify.</p>
      * <p>This parameter is required.</p>
      * 

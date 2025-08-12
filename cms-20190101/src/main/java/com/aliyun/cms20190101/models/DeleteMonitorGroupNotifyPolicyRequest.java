@@ -14,7 +14,7 @@ public class DeleteMonitorGroupNotifyPolicyRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The policy type.</p>
+     * <p>The type of the policy.</p>
      * <p>Valid value: PauseNotify.</p>
      * <p>This parameter is required.</p>
      * 

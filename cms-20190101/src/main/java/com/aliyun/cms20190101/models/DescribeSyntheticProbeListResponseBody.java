@@ -11,6 +11,9 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The queried detection points.</p>
+     */
     @NameInMap("IspCityList")
     public java.util.List<DescribeSyntheticProbeListResponseBodyIspCityList> ispCityList;
 
@@ -132,9 +135,18 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         @NameInMap("IdcV4ProbeCount")
         public Integer idcV4ProbeCount;
 
+        /**
+         * <p>The number of IPv6 nodes in data centers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IdcV6ProbeCount")
         public Integer idcV6ProbeCount;
 
+        /**
+         * <p>The IP addresses of the monitored nodes.</p>
+         */
         @NameInMap("IpPool")
         public java.util.List<String> ipPool;
 

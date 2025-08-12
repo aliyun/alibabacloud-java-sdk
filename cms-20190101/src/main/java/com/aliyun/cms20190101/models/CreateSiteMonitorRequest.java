@@ -89,6 +89,10 @@ public class CreateSiteMonitorRequest extends TeaModel {
     @NameInMap("TaskType")
     public String taskType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;vpcId&quot;: &quot;vpc-xxxxxx&quot;, &quot;vswitchId&quot;: &quot;vsw-xxxxxx&quot;, &quot;securityGroupId&quot;: &quot;sg-xxxxxx&quot;, &quot;region&quot;: &quot;cn-beijing&quot;}</p>
+     */
     @NameInMap("VpcConfig")
     public String vpcConfig;
 

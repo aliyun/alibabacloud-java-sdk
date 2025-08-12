@@ -273,6 +273,66 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo extends TeaModel {
+        @NameInMap("EffectTime")
+        public Long effectTime;
+
+        @NameInMap("TemplateId")
+        public String templateId;
+
+        @NameInMap("Ver")
+        public String ver;
+
+        public static DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo self = new DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo setEffectTime(Long effectTime) {
+            this.effectTime = effectTime;
+            return this;
+        }
+        public Long getEffectTime() {
+            return this.effectTime;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo setVer(String ver) {
+            this.ver = ver;
+            return this;
+        }
+        public String getVer() {
+            return this.ver;
+        }
+
+    }
+
+    public static class DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos extends TeaModel {
+        @NameInMap("TemplateInfo")
+        public java.util.List<DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo> templateInfo;
+
+        public static DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos self = new DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos setTemplateInfo(java.util.List<DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo> templateInfo) {
+            this.templateInfo = templateInfo;
+            return this;
+        }
+        public java.util.List<DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfosTemplateInfo> getTemplateInfo() {
+            return this.templateInfo;
+        }
+
+    }
+
     public static class DescribeMonitorGroupsResponseBodyResourcesResource extends TeaModel {
         /**
          * <p>The URL of the ACK cluster from which the application group is synchronized.</p>
@@ -381,6 +441,9 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
          */
         @NameInMap("TemplateIds")
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds templateIds;
+
+        @NameInMap("TemplateInfos")
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos templateInfos;
 
         /**
          * <p>The type of the application group. Valid values:</p>
@@ -503,6 +566,14 @@ public class DescribeMonitorGroupsResponseBody extends TeaModel {
         }
         public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateIds getTemplateIds() {
             return this.templateIds;
+        }
+
+        public DescribeMonitorGroupsResponseBodyResourcesResource setTemplateInfos(DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos templateInfos) {
+            this.templateInfos = templateInfos;
+            return this;
+        }
+        public DescribeMonitorGroupsResponseBodyResourcesResourceTemplateInfos getTemplateInfos() {
+            return this.templateInfos;
         }
 
         public DescribeMonitorGroupsResponseBodyResourcesResource setType(String type) {

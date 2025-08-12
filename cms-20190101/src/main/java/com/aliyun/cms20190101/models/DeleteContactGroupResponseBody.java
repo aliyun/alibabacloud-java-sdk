@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteContactGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p> The status code 200 indicates that the call was successful.</p>
+     * <p> The status code 200 indicates that the request was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DeleteContactGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F722BE59-2400-4A64-9C1A-AD886AED9A69</p>
@@ -35,7 +35,7 @@ public class DeleteContactGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. The value true indicates a success. The value false indicates a failure.</p>
+     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
