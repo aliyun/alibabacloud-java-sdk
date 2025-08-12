@@ -180,6 +180,9 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         @NameInMap("AccessTokenEffectiveTime")
         public Long accessTokenEffectiveTime;
 
+        @NameInMap("AllowedPublicClient")
+        public Boolean allowedPublicClient;
+
         /**
          * <p>The validity period of the issued code. Unit: seconds. Default value: 60.</p>
          * 
@@ -308,6 +311,14 @@ public class SetApplicationSsoConfigRequest extends TeaModel {
         }
         public Long getAccessTokenEffectiveTime() {
             return this.accessTokenEffectiveTime;
+        }
+
+        public SetApplicationSsoConfigRequestOidcSsoConfig setAllowedPublicClient(Boolean allowedPublicClient) {
+            this.allowedPublicClient = allowedPublicClient;
+            return this;
+        }
+        public Boolean getAllowedPublicClient() {
+            return this.allowedPublicClient;
         }
 
         public SetApplicationSsoConfigRequestOidcSsoConfig setCodeEffectiveTime(Long codeEffectiveTime) {

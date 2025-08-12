@@ -15,6 +15,13 @@ public class CreateApplicationClientSecretRequest extends TeaModel {
     public String applicationId;
 
     /**
+     * <strong>example:</strong>
+     * <p>1735530123762</p>
+     */
+    @NameInMap("ExpirationTime")
+    public Long expirationTime;
+
+    /**
      * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
@@ -35,6 +42,14 @@ public class CreateApplicationClientSecretRequest extends TeaModel {
     }
     public String getApplicationId() {
         return this.applicationId;
+    }
+
+    public CreateApplicationClientSecretRequest setExpirationTime(Long expirationTime) {
+        this.expirationTime = expirationTime;
+        return this;
+    }
+    public Long getExpirationTime() {
+        return this.expirationTime;
     }
 
     public CreateApplicationClientSecretRequest setInstanceId(String instanceId) {

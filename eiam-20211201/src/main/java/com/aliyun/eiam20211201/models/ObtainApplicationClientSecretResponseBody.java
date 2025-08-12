@@ -68,6 +68,9 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         @NameInMap("ClientSecret")
         public String clientSecret;
 
+        @NameInMap("ExpirationTime")
+        public Long expirationTime;
+
         /**
          * <p>The ID of the instance.</p>
          * 
@@ -135,6 +138,14 @@ public class ObtainApplicationClientSecretResponseBody extends TeaModel {
         }
         public String getClientSecret() {
             return this.clientSecret;
+        }
+
+        public ObtainApplicationClientSecretResponseBodyApplicationClientSecret setExpirationTime(Long expirationTime) {
+            this.expirationTime = expirationTime;
+            return this;
+        }
+        public Long getExpirationTime() {
+            return this.expirationTime;
         }
 
         public ObtainApplicationClientSecretResponseBodyApplicationClientSecret setInstanceId(String instanceId) {
