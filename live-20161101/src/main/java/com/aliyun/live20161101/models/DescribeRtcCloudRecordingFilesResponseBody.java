@@ -35,6 +35,47 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
         return this.taskInfo;
     }
 
+    public static class DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList extends TeaModel {
+        @NameInMap("MediaIds")
+        public java.util.List<String> mediaIds;
+
+        @NameInMap("MergedIds")
+        public java.util.List<String> mergedIds;
+
+        @NameInMap("Stream")
+        public String stream;
+
+        public static DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList self = new DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList setMediaIds(java.util.List<String> mediaIds) {
+            this.mediaIds = mediaIds;
+            return this;
+        }
+        public java.util.List<String> getMediaIds() {
+            return this.mediaIds;
+        }
+
+        public DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList setMergedIds(java.util.List<String> mergedIds) {
+            this.mergedIds = mergedIds;
+            return this;
+        }
+        public java.util.List<String> getMergedIds() {
+            return this.mergedIds;
+        }
+
+        public DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList setStream(String stream) {
+            this.stream = stream;
+            return this;
+        }
+        public String getStream() {
+            return this.stream;
+        }
+
+    }
+
     public static class DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList extends TeaModel {
         @NameInMap("HlsFileList")
         public java.util.List<String> hlsFileList;
@@ -44,6 +85,9 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
 
         @NameInMap("Mp4FileList")
         public java.util.List<String> mp4FileList;
+
+        @NameInMap("VodMediaList")
+        public java.util.List<DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList> vodMediaList;
 
         public static DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList build(java.util.Map<String, ?> map) throws Exception {
             DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList self = new DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList();
@@ -72,6 +116,14 @@ public class DescribeRtcCloudRecordingFilesResponseBody extends TeaModel {
         }
         public java.util.List<String> getMp4FileList() {
             return this.mp4FileList;
+        }
+
+        public DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileList setVodMediaList(java.util.List<DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList> vodMediaList) {
+            this.vodMediaList = vodMediaList;
+            return this;
+        }
+        public java.util.List<DescribeRtcCloudRecordingFilesResponseBodyTaskInfoRecordFileListVodMediaList> getVodMediaList() {
+            return this.vodMediaList;
         }
 
     }

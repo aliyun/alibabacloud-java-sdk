@@ -28710,12 +28710,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ChannelId", request.channelId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.maxIdleTime)) {
+            query.put("MaxIdleTime", request.maxIdleTime);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.mixLayoutParamsShrink)) {
             query.put("MixLayoutParams", request.mixLayoutParamsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.mixTranscodeParamsShrink)) {
             query.put("MixTranscodeParams", request.mixTranscodeParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyAuthKey)) {
+            query.put("NotifyAuthKey", request.notifyAuthKey);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.notifyUrl)) {

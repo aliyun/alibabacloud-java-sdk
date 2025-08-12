@@ -22,11 +22,17 @@ public class StartRtcCloudRecordingShrinkRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    @NameInMap("MaxIdleTime")
+    public Long maxIdleTime;
+
     @NameInMap("MixLayoutParams")
     public String mixLayoutParamsShrink;
 
     @NameInMap("MixTranscodeParams")
     public String mixTranscodeParamsShrink;
+
+    @NameInMap("NotifyAuthKey")
+    public String notifyAuthKey;
 
     /**
      * <strong>example:</strong>
@@ -74,6 +80,14 @@ public class StartRtcCloudRecordingShrinkRequest extends TeaModel {
         return this.channelId;
     }
 
+    public StartRtcCloudRecordingShrinkRequest setMaxIdleTime(Long maxIdleTime) {
+        this.maxIdleTime = maxIdleTime;
+        return this;
+    }
+    public Long getMaxIdleTime() {
+        return this.maxIdleTime;
+    }
+
     public StartRtcCloudRecordingShrinkRequest setMixLayoutParamsShrink(String mixLayoutParamsShrink) {
         this.mixLayoutParamsShrink = mixLayoutParamsShrink;
         return this;
@@ -88,6 +102,14 @@ public class StartRtcCloudRecordingShrinkRequest extends TeaModel {
     }
     public String getMixTranscodeParamsShrink() {
         return this.mixTranscodeParamsShrink;
+    }
+
+    public StartRtcCloudRecordingShrinkRequest setNotifyAuthKey(String notifyAuthKey) {
+        this.notifyAuthKey = notifyAuthKey;
+        return this;
+    }
+    public String getNotifyAuthKey() {
+        return this.notifyAuthKey;
     }
 
     public StartRtcCloudRecordingShrinkRequest setNotifyUrl(String notifyUrl) {

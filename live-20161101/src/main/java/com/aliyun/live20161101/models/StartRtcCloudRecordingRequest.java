@@ -22,11 +22,17 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
     @NameInMap("ChannelId")
     public String channelId;
 
+    @NameInMap("MaxIdleTime")
+    public Long maxIdleTime;
+
     @NameInMap("MixLayoutParams")
     public StartRtcCloudRecordingRequestMixLayoutParams mixLayoutParams;
 
     @NameInMap("MixTranscodeParams")
     public StartRtcCloudRecordingRequestMixTranscodeParams mixTranscodeParams;
+
+    @NameInMap("NotifyAuthKey")
+    public String notifyAuthKey;
 
     /**
      * <strong>example:</strong>
@@ -74,6 +80,14 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
         return this.channelId;
     }
 
+    public StartRtcCloudRecordingRequest setMaxIdleTime(Long maxIdleTime) {
+        this.maxIdleTime = maxIdleTime;
+        return this;
+    }
+    public Long getMaxIdleTime() {
+        return this.maxIdleTime;
+    }
+
     public StartRtcCloudRecordingRequest setMixLayoutParams(StartRtcCloudRecordingRequestMixLayoutParams mixLayoutParams) {
         this.mixLayoutParams = mixLayoutParams;
         return this;
@@ -88,6 +102,14 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
     }
     public StartRtcCloudRecordingRequestMixTranscodeParams getMixTranscodeParams() {
         return this.mixTranscodeParams;
+    }
+
+    public StartRtcCloudRecordingRequest setNotifyAuthKey(String notifyAuthKey) {
+        this.notifyAuthKey = notifyAuthKey;
+        return this;
+    }
+    public String getNotifyAuthKey() {
+        return this.notifyAuthKey;
     }
 
     public StartRtcCloudRecordingRequest setNotifyUrl(String notifyUrl) {
@@ -579,6 +601,9 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
         @NameInMap("FileNamePattern")
         public String fileNamePattern;
 
+        @NameInMap("FilePathPrefix")
+        public java.util.List<String> filePathPrefix;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -606,6 +631,14 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
         }
         public String getFileNamePattern() {
             return this.fileNamePattern;
+        }
+
+        public StartRtcCloudRecordingRequestStorageParamsFileInfo setFilePathPrefix(java.util.List<String> filePathPrefix) {
+            this.filePathPrefix = filePathPrefix;
+            return this;
+        }
+        public java.util.List<String> getFilePathPrefix() {
+            return this.filePathPrefix;
         }
 
         public StartRtcCloudRecordingRequestStorageParamsFileInfo setFormat(String format) {
@@ -668,6 +701,58 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
 
     }
 
+    public static class StartRtcCloudRecordingRequestStorageParamsVodParams extends TeaModel {
+        @NameInMap("AutoCompose")
+        public Integer autoCompose;
+
+        @NameInMap("ComposeVodTranscodeGroupId")
+        public String composeVodTranscodeGroupId;
+
+        @NameInMap("StorageLocation")
+        public String storageLocation;
+
+        @NameInMap("VodTranscodeGroupId")
+        public String vodTranscodeGroupId;
+
+        public static StartRtcCloudRecordingRequestStorageParamsVodParams build(java.util.Map<String, ?> map) throws Exception {
+            StartRtcCloudRecordingRequestStorageParamsVodParams self = new StartRtcCloudRecordingRequestStorageParamsVodParams();
+            return TeaModel.build(map, self);
+        }
+
+        public StartRtcCloudRecordingRequestStorageParamsVodParams setAutoCompose(Integer autoCompose) {
+            this.autoCompose = autoCompose;
+            return this;
+        }
+        public Integer getAutoCompose() {
+            return this.autoCompose;
+        }
+
+        public StartRtcCloudRecordingRequestStorageParamsVodParams setComposeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
+            this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
+            return this;
+        }
+        public String getComposeVodTranscodeGroupId() {
+            return this.composeVodTranscodeGroupId;
+        }
+
+        public StartRtcCloudRecordingRequestStorageParamsVodParams setStorageLocation(String storageLocation) {
+            this.storageLocation = storageLocation;
+            return this;
+        }
+        public String getStorageLocation() {
+            return this.storageLocation;
+        }
+
+        public StartRtcCloudRecordingRequestStorageParamsVodParams setVodTranscodeGroupId(String vodTranscodeGroupId) {
+            this.vodTranscodeGroupId = vodTranscodeGroupId;
+            return this;
+        }
+        public String getVodTranscodeGroupId() {
+            return this.vodTranscodeGroupId;
+        }
+
+    }
+
     public static class StartRtcCloudRecordingRequestStorageParams extends TeaModel {
         @NameInMap("FileInfo")
         public java.util.List<StartRtcCloudRecordingRequestStorageParamsFileInfo> fileInfo;
@@ -683,6 +768,9 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
          */
         @NameInMap("StorageType")
         public Integer storageType;
+
+        @NameInMap("VodParams")
+        public StartRtcCloudRecordingRequestStorageParamsVodParams vodParams;
 
         public static StartRtcCloudRecordingRequestStorageParams build(java.util.Map<String, ?> map) throws Exception {
             StartRtcCloudRecordingRequestStorageParams self = new StartRtcCloudRecordingRequestStorageParams();
@@ -711,6 +799,14 @@ public class StartRtcCloudRecordingRequest extends TeaModel {
         }
         public Integer getStorageType() {
             return this.storageType;
+        }
+
+        public StartRtcCloudRecordingRequestStorageParams setVodParams(StartRtcCloudRecordingRequestStorageParamsVodParams vodParams) {
+            this.vodParams = vodParams;
+            return this;
+        }
+        public StartRtcCloudRecordingRequestStorageParamsVodParams getVodParams() {
+            return this.vodParams;
         }
 
     }
