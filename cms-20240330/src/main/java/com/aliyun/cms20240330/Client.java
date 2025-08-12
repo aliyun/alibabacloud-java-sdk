@@ -288,10 +288,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateUmodelResponse createUmodelWithOptions(String workspace, CreateUmodelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.commonSchemaRef)) {
-            body.put("commonSchemaRef", request.commonSchemaRef);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }
@@ -1151,10 +1147,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateUmodelResponse updateUmodelWithOptions(String workspace, UpdateUmodelRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.commonSchemaRef)) {
-            body.put("commonSchemaRef", request.commonSchemaRef);
-        }
-
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
         }

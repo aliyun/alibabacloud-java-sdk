@@ -88,9 +88,6 @@ public class GetUmodelResponseBody extends TeaModel {
         @NameInMap("group")
         public String group;
 
-        @NameInMap("items")
-        public java.util.List<String> items;
-
         /**
          * <strong>example:</strong>
          * <p>5</p>
@@ -109,14 +106,6 @@ public class GetUmodelResponseBody extends TeaModel {
         }
         public String getGroup() {
             return this.group;
-        }
-
-        public GetUmodelResponseBodyCommonSchemaRef setItems(java.util.List<String> items) {
-            this.items = items;
-            return this;
-        }
-        public java.util.List<String> getItems() {
-            return this.items;
         }
 
         public GetUmodelResponseBodyCommonSchemaRef setVersion(String version) {
