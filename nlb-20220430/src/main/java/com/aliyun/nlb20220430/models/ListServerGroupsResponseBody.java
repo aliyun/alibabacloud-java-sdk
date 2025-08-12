@@ -164,6 +164,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
+        /**
+         * <p>The version of the HTTP protocol. Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP1.0</p>
+         */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 

@@ -217,8 +217,8 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
 
     public static class ListSecurityPolicyResponseBodySecurityPolicies extends TeaModel {
         /**
-         * <p>The supported cipher suites, which are determined by the TLS protocol version. You can specify at most 32 cipher suites.</p>
-         * <p>TLS 1.0 and TLS 1.1 support the following cipher suites:</p>
+         * <p>The cipher suites supported by the security policy. Valid values of this parameter vary based on the value of TlsVersions. A security policy supports up to 32 cipher suites.</p>
+         * <p>TLSv1.0 and TLSv1.1 support the following cipher suites:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -228,7 +228,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
          * <li><strong>AES256-SHA</strong></li>
          * <li><strong>DES-CBC3-SHA</strong></li>
          * </ul>
-         * <p>TLS 1.2 supports the following cipher suites:</p>
+         * <p>TLSv1.2 supports the following cipher suites:</p>
          * <ul>
          * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
          * <li><strong>ECDHE-ECDSA-AES256-SHA</strong></li>
@@ -250,7 +250,7 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
          * <li><strong>AES128-SHA256</strong></li>
          * <li><strong>AES256-SHA256</strong></li>
          * </ul>
-         * <p>TLS 1.3 supports the following cipher suites:</p>
+         * <p>TLSv1.3 supports the following cipher suites:</p>
          * <ul>
          * <li><strong>TLS_AES_128_GCM_SHA256</strong></li>
          * <li><strong>TLS_AES_256_GCM_SHA384</strong></li>

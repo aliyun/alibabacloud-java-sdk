@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateLoadBalancerRequest extends TeaModel {
     /**
-     * <p>The IP version of the NLB instance. Valid values:</p>
+     * <p>The version of IP addresses used for the NLB instance. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong> (default): IPv4</li>
-     * <li><strong>DualStack</strong>: dual-stack</li>
+     * <li><strong>ipv4</strong> (default)</li>
+     * <li><strong>DualStack</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String addressIpVersion;
 
     /**
-     * <p>The type of the IPv4 address used by the NLB instance. Valid values:</p>
+     * <p>The type of IPv4 addresses used for the NLB instance. Valid values are:</p>
      * <ul>
-     * <li><strong>Internet</strong>: The NLB instance uses a public IP address. The domain name of the instance is resolved to the public IP address. The instance is accessible over the Internet.</li>
-     * <li><strong>Intranet</strong>: The NLB instance uses a private IP address. The domain name of the instance is resolved to the private IP address. The instance is accessible only within the virtual private cloud (VPC) where the instance is deployed.</li>
+     * <li><strong>Internet</strong>: The nodes of an Internet-facing NLB instance have public IP addresses. The DNS name of an Internet-facing NLB instance is publicly resolvable to the public IP addresses of the nodes. Therefore, Internet-facing NLB instances can route requests from clients over the Internet.</li>
+     * <li><strong>Intranet</strong>: The nodes of an internal-facing NLB instance have only private IP addresses. The DNS name of an internal-facing NLB instance is publicly resolvable to the private IP addresses of the nodes. Therefore, internal-facing NLB instances can route requests only from clients with access to the virtual private cloud (VPC) for the NLB instance.</li>
      * </ul>
      * <blockquote>
      * <p> To enable a public IPv6 address for a dual-stack NLB instance, call the <a href="https://help.aliyun.com/document_detail/445878.html">EnableLoadBalancerIpv6Internet</a> operation.</p>
@@ -63,10 +63,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public CreateLoadBalancerRequestDeletionProtectionConfig deletionProtectionConfig;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Perform a dry run without actually making the request. Valid values are:</p>
      * <ul>
-     * <li><strong>true</strong>: validates the request without performing the operation. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the validation, the corresponding error message is returned. If the request passes the validation, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): validates the request and performs the operation. If the request passes the validation, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: Perform only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the check, an error message specifying the issue is returned. If the request passes, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Check the request and perform the operation. If the request passes the check, a 2xx HTTP status code is returned, and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * <p>The type of the Server Load Balancer (SLB) instance. Set the value to <strong>network</strong>, which specifies NLB.</p>
+     * <p>The type of the Server Load Balancer (SLB) instance. Set the value to <strong>network</strong>, which indicates an NLB instance.</p>
      * 
      * <strong>example:</strong>
      * <p>network</p>

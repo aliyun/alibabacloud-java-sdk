@@ -220,7 +220,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public Integer healthCheckConnectPort;
 
         /**
-         * <p>The timeout period for a health check response. Unit: seconds. Valid values: <strong>1 to 300</strong>. Default value: <strong>5</strong></p>
+         * <p>The timeout period for a health check response. Unit: seconds. Valid values: <strong>1 to 300</strong>. Default value: <strong>5</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -275,11 +275,20 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         @NameInMap("HealthCheckHttpCode")
         public java.util.List<String> healthCheckHttpCode;
 
+        /**
+         * <p>The version of the HTTP protocol. Valid values: <strong>HTTP1.0</strong> and <strong>HTTP1.1</strong>.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only if you set <strong>HealthCheckType</strong> to <strong>HTTP</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP1.0</p>
+         */
         @NameInMap("HealthCheckHttpVersion")
         public String healthCheckHttpVersion;
 
         /**
-         * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong></p>
+         * <p>The interval at which health checks are performed. Unit: seconds. Default value: <strong>5</strong>.</p>
          * <ul>
          * <li>If you set <strong>HealthCheckType</strong> to <strong>TCP</strong> or <strong>HTTP</strong>, valid values are <strong>1 to 50</strong>.</li>
          * <li>If you set <strong>HealthCheckType</strong> to <strong>UDP</strong>, valid values are <strong>1 to 300</strong>. Set the health check interval equal to or larger than the response timeout period to ensure that UDP response timeouts are not determined as no responses.</li>
@@ -301,7 +310,7 @@ public class UpdateServerGroupAttributeRequest extends TeaModel {
         public String healthCheckReq;
 
         /**
-         * <p>The protocol that you want to use for health checks. Valid values:</p>
+         * <p>The protocol that is used for health checks. Valid values:</p>
          * <ul>
          * <li><strong>TCP</strong></li>
          * <li><strong>HTTP</strong></li>

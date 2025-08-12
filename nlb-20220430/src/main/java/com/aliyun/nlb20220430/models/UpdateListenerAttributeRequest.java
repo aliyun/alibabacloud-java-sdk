@@ -18,12 +18,12 @@ public class UpdateListenerAttributeRequest extends TeaModel {
     public Boolean alpnEnabled;
 
     /**
-     * <p>The ALPN policy. Valid values:</p>
+     * <p>The name of the ALPN policy. The following are the possible values:</p>
      * <ul>
-     * <li><strong>HTTP1Only</strong>: uses only HTTP 1.x. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
-     * <li><strong>HTTP2Only</strong>: uses only HTTP 2.0.</li>
-     * <li><strong>HTTP2Optional</strong>: preferentially uses HTTP 1.x over HTTP 2.0. The priority of HTTP 1.1 is higher than the priority of HTTP 1.0, and the priority of HTTP 1.0 is higher than the priority of HTTP 2.0.</li>
-     * <li><strong>HTTP2Preferred</strong>: preferentially uses HTTP 2.0 over HTTP 1.x. The priority of HTTP 2.0 is higher than the priority of HTTP 1.1, and the priority of HTTP 1.1 is higher than the priority of HTTP 1.0.</li>
+     * <li><strong>HTTP1Only</strong>: Negotiate only HTTP/1.\*. The ALPN preference list is HTTP/1.1, HTTP/1.0.</li>
+     * <li><strong>HTTP2Only</strong>: Negotiate only HTTP/2. The ALPN preference list is HTTP/2.</li>
+     * <li><strong>HTTP2Optional</strong>: Prefer HTTP/1.\* over HTTP/2. The ALPN preference list is HTTP/1.1, HTTP/1.0, HTTP/2.</li>
+     * <li><strong>HTTP2Preferred</strong>: Prefer HTTP/2 over HTTP/1.\*. The ALPN preference list is HTTP/2, HTTP/1.1, HTTP/1.0.</li>
      * </ul>
      * <blockquote>
      * <p> This parameter is required if AlpnEnabled is set to true.</p>

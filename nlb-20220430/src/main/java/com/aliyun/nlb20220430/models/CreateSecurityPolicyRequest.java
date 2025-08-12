@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecurityPolicyRequest extends TeaModel {
     /**
-     * <p>The cipher suites supported by the security policy. Valid values of this parameter vary based on TlsVersions. A security policy supports up to 32 cipher suites.</p>
+     * <p>The cipher suites supported by the security policy. Valid values of this parameter vary based on the value of TlsVersions. You can specify up to 32 cipher suites.</p>
      * <p>TLSv1.0 and TLSv1.1 support the following cipher suites:</p>
      * <ul>
      * <li><strong>ECDHE-ECDSA-AES128-SHA</strong></li>
