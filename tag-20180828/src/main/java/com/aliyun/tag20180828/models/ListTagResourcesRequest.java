@@ -60,6 +60,18 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The Alibaba Cloud Resource Name (ARN) of a resource.</p>
+     * <p>Valid values of N: 1 to 50.</p>
+     * <p>ARN format: <code>arn:acs:${ProductCode}:${Region}:${Account}:${ResourceType}/${ResourceId}</code> Fields:</p>
+     * <ul>
+     * <li><code>ProductCode</code>: the service code. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+     * <li><code>Region</code>: the region ID of the resource. You can set this field to an asterisk (\*) to indicate the current region.</li>
+     * <li><code>Account</code>: the ID of the Alibaba Cloud account to which the resource belongs. You can set this field to an asterisk (\*) to indicate the current Alibaba Cloud account.</li>
+     * <li><code>ResourceType</code>: the resource type. You can set this field to a value obtained from the response of the <a href="https://help.aliyun.com/document_detail/2330915.html">ListSupportResourceTypes</a> operation.</li>
+     * <li><code>ResourceId</code>: the ID of the resource.</li>
+     * </ul>
+     * <blockquote>
+     * <p> You can set <code>ProductCode</code> and <code>ResourceType</code> in ResourceARN to values defined in Resource Group, ActionTrail, or Resource Center.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>arn:acs:ecs:cn-hangzhou:123456789****:instance/i-bp15hr53jws84akg****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyPolicyRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run for the request. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
      * <ul>
-     * <li>false: The system performs the related operation based on the parameter settings in the request. This is the default value.</li>
-     * <li>true: The system does not perform the related operation based on the parameter settings in the request but only verifies the parameter settings.</li>
+     * <li>false (default): performs a dry run and performs the actual request.</li>
+     * <li>true: performs only a dry run.</li>
      * </ul>
      * 
      * <strong>example:</strong>

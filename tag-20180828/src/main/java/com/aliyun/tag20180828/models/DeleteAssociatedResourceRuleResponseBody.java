@@ -3,22 +3,22 @@ package com.aliyun.tag20180828.models;
 
 import com.aliyun.tea.*;
 
-public class DetachPolicyResponseBody extends TeaModel {
+public class DeleteAssociatedResourceRuleResponseBody extends TeaModel {
     /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>4A32F5B0-0B0B-5537-B4A0-7A6E1C3AA96A</p>
+     * <p>BB532282-94F5-5F56-877F-32D5E2A04F3F</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
-    public static DetachPolicyResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        DetachPolicyResponseBody self = new DetachPolicyResponseBody();
+    public static DeleteAssociatedResourceRuleResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        DeleteAssociatedResourceRuleResponseBody self = new DeleteAssociatedResourceRuleResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public DetachPolicyResponseBody setRequestId(String requestId) {
+    public DeleteAssociatedResourceRuleResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

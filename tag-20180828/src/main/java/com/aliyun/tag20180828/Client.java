@@ -118,12 +118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new AttachPolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new AttachPolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachPolicyResponse());
     }
 
     /**
@@ -187,12 +182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CheckCreatedByEnabledResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CheckCreatedByEnabledResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckCreatedByEnabledResponse());
     }
 
     /**
@@ -252,12 +242,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CloseCreatedByResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CloseCreatedByResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CloseCreatedByResponse());
     }
 
     /**
@@ -270,6 +255,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CloseCreatedByResponse closeCreatedBy(CloseCreatedByRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.closeCreatedByWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates associated resource tagging rules.</p>
+     * 
+     * @param request CreateAssociatedResourceRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAssociatedResourceRulesResponse
+     */
+    public CreateAssociatedResourceRulesResponse createAssociatedResourceRulesWithOptions(CreateAssociatedResourceRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createRulesList)) {
+            query.put("CreateRulesList", request.createRulesList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAssociatedResourceRules"),
+            new TeaPair("version", "2018-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAssociatedResourceRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates associated resource tagging rules.</p>
+     * 
+     * @param request CreateAssociatedResourceRulesRequest
+     * @return CreateAssociatedResourceRulesResponse
+     */
+    public CreateAssociatedResourceRulesResponse createAssociatedResourceRules(CreateAssociatedResourceRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createAssociatedResourceRulesWithOptions(request, runtime);
     }
 
     /**
@@ -337,12 +382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreatePolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePolicyResponse());
     }
 
     /**
@@ -411,12 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTagsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new CreateTagsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTagsResponse());
     }
 
     /**
@@ -437,12 +472,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Deletes an associated resource tagging rule.</p>
+     * 
+     * @param request DeleteAssociatedResourceRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAssociatedResourceRuleResponse
+     */
+    public DeleteAssociatedResourceRuleResponse deleteAssociatedResourceRuleWithOptions(DeleteAssociatedResourceRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.settingName)) {
+            query.put("SettingName", request.settingName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAssociatedResourceRule"),
+            new TeaPair("version", "2018-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAssociatedResourceRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Deletes an associated resource tagging rule.</p>
+     * 
+     * @param request DeleteAssociatedResourceRuleRequest
+     * @return DeleteAssociatedResourceRuleResponse
+     */
+    public DeleteAssociatedResourceRuleResponse deleteAssociatedResourceRule(DeleteAssociatedResourceRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteAssociatedResourceRuleWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Before you delete a tag policy, make sure that the tag policy is detached from all objects to which the tag policy is attached. For more information about how to detach a tag policy, see <a href="https://help.aliyun.com/document_detail/429724.html">DetachPolicy</a>.
      * This topic provides an example on how to call the API operation to delete the tag policy with an ID of <code>p-557cb141331f41c7****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除策略</p>
+     * <p>Deletes a tag policy.</p>
      * 
      * @param request DeletePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -485,12 +580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeletePolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePolicyResponse());
     }
 
     /**
@@ -499,7 +589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to delete the tag policy with an ID of <code>p-557cb141331f41c7****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>删除策略</p>
+     * <p>Deletes a tag policy.</p>
      * 
      * @param request DeletePolicyRequest
      * @return DeletePolicyResponse
@@ -561,12 +651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTagResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DeleteTagResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteTagResponse());
     }
 
     /**
@@ -633,12 +718,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeRegionsResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeRegionsResponse());
     }
 
     /**
@@ -655,11 +735,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h3></h3>
      * <p>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
      * This topic provides an example on how to call the API operation to detach the tag policy with an ID of <code>p-a3381efe2fe34a75****</code> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>解除策略绑定</p>
+     * <p>Detaches a tag policy from an object.</p>
      * 
      * @param request DetachPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -710,21 +791,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DetachPolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DetachPolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachPolicyResponse());
     }
 
     /**
      * <b>description</b> :
+     * <h3></h3>
      * <p>If you use the Tag Policy feature in single-account mode, you can call this API operation to detach a tag policy from the current logon account. If you use the Tag Policy feature in multi-account mode, you can call this API operation to detach a tag policy from the Root folder, a folder other than the Root folder, or a member in a resource directory. For more information about the modes of the Tag Policy feature, see <a href="https://help.aliyun.com/document_detail/417434.html">Modes of the Tag Policy feature</a>.
      * This topic provides an example on how to call the API operation to detach the tag policy with an ID of <code>p-a3381efe2fe34a75****</code> from the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>解除策略绑定</p>
+     * <p>Detaches a tag policy from an object.</p>
      * 
      * @param request DetachPolicyRequest
      * @return DetachPolicyResponse
@@ -787,12 +864,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DisablePolicyTypeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DisablePolicyTypeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisablePolicyTypeResponse());
     }
 
     /**
@@ -860,12 +932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new EnablePolicyTypeResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new EnablePolicyTypeResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnablePolicyTypeResponse());
     }
 
     /**
@@ -937,12 +1004,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateConfigRuleReportResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GenerateConfigRuleReportResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateConfigRuleReportResponse());
     }
 
     /**
@@ -1018,12 +1080,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigRuleReportResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetConfigRuleReportResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetConfigRuleReportResponse());
     }
 
     /**
@@ -1049,7 +1106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询有效策略</p>
+     * <p>Queries the information about the effective policy.</p>
      * 
      * @param request GetEffectivePolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1100,12 +1157,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetEffectivePolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetEffectivePolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEffectivePolicyResponse());
     }
 
     /**
@@ -1115,7 +1167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example on how to call the API operation to query the effective tag policy for the current logon account. In this example, the Tag Policy feature in single-account mode is used.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询有效策略</p>
+     * <p>Queries the information about the effective policy.</p>
      * 
      * @param request GetEffectivePolicyRequest
      * @return GetEffectivePolicyResponse
@@ -1130,7 +1182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of <code>p-557cb141331f41c7****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询策略</p>
+     * <p>Queries the details of a tag policy.</p>
      * 
      * @param request GetPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1173,12 +1225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetPolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyResponse());
     }
 
     /**
@@ -1186,7 +1233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example on how to call the API operation to query the details of the tag policy with an ID of <code>p-557cb141331f41c7****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>查询策略</p>
+     * <p>Queries the details of a tag policy.</p>
      * 
      * @param request GetPolicyRequest
      * @return GetPolicyResponse
@@ -1252,12 +1299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyEnableStatusResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new GetPolicyEnableStatusResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPolicyEnableStatusResponse());
     }
 
     /**
@@ -1273,6 +1315,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetPolicyEnableStatusResponse getPolicyEnableStatus(GetPolicyEnableStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getPolicyEnableStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Search the rules for associated resources that the user has set up.</p>
+     * 
+     * @param request ListAssociatedResourceRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAssociatedResourceRulesResponse
+     */
+    public ListAssociatedResourceRulesResponse listAssociatedResourceRulesWithOptions(ListAssociatedResourceRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResult)) {
+            query.put("MaxResult", request.maxResult);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.settingName)) {
+            query.put("SettingName", request.settingName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAssociatedResourceRules"),
+            new TeaPair("version", "2018-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAssociatedResourceRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Search the rules for associated resources that the user has set up.</p>
+     * 
+     * @param request ListAssociatedResourceRulesRequest
+     * @return ListAssociatedResourceRulesResponse
+     */
+    public ListAssociatedResourceRulesResponse listAssociatedResourceRules(ListAssociatedResourceRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAssociatedResourceRulesWithOptions(request, runtime);
     }
 
     /**
@@ -1348,12 +1462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListConfigRulesForTargetResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListConfigRulesForTargetResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListConfigRulesForTargetResponse());
     }
 
     /**
@@ -1437,12 +1546,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListPoliciesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesResponse());
     }
 
     /**
@@ -1522,12 +1626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesForTargetResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListPoliciesForTargetResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPoliciesForTargetResponse());
     }
 
     /**
@@ -1618,12 +1717,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesByTagResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListResourcesByTagResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListResourcesByTagResponse());
     }
 
     /**
@@ -1714,12 +1808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupportResourceTypesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListSupportResourceTypesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSupportResourceTypesResponse());
     }
 
     /**
@@ -1818,12 +1907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagKeysResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagKeysResponse());
     }
 
     /**
@@ -1909,12 +1993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
     }
 
     /**
@@ -2008,12 +2087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTagValuesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagValuesResponse());
     }
 
     /**
@@ -2088,12 +2162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ListTargetsForPolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ListTargetsForPolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTargetsForPolicyResponse());
     }
 
     /**
@@ -2114,10 +2183,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a></h3>
      * <p>This topic provides an example on how to call the API operation to change the name of a tag policy to <code>test</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改策略</p>
+     * <p>Modifies a tag policy.</p>
      * 
      * @param request ModifyPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2176,20 +2246,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPolicyResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new ModifyPolicyResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPolicyResponse());
     }
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a></h3>
      * <p>This topic provides an example on how to call the API operation to change the name of a tag policy to <code>test</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>修改策略</p>
+     * <p>Modifies a tag policy.</p>
      * 
      * @param request ModifyPolicyRequest
      * @return ModifyPolicyResponse
@@ -2247,12 +2313,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new OpenCreatedByResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new OpenCreatedByResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new OpenCreatedByResponse());
     }
 
     /**
@@ -2327,12 +2388,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new TagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
     }
 
     /**
@@ -2408,12 +2464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new UntagResourcesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
     }
 
     /**
@@ -2430,5 +2481,77 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Update the rule for tagging associated resources.</p>
+     * 
+     * @param request UpdateAssociatedResourceRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAssociatedResourceRuleResponse
+     */
+    public UpdateAssociatedResourceRuleResponse updateAssociatedResourceRuleWithOptions(UpdateAssociatedResourceRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.existingStatus)) {
+            query.put("ExistingStatus", request.existingStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.settingName)) {
+            query.put("SettingName", request.settingName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKeys)) {
+            query.put("TagKeys", request.tagKeys);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAssociatedResourceRule"),
+            new TeaPair("version", "2018-08-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAssociatedResourceRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Update the rule for tagging associated resources.</p>
+     * 
+     * @param request UpdateAssociatedResourceRuleRequest
+     * @return UpdateAssociatedResourceRuleResponse
+     */
+    public UpdateAssociatedResourceRuleResponse updateAssociatedResourceRule(UpdateAssociatedResourceRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateAssociatedResourceRuleWithOptions(request, runtime);
     }
 }
