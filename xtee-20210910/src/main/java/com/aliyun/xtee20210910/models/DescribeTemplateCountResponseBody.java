@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplateCountResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeTemplateCountResponseBodyResultObject resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeTemplateCountResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplateCountResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Template quantity limit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("limit")
         public Boolean limit;
 
+        /**
+         * <p>Maximum count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("maxTotalItem")
         public Integer maxTotalItem;
 
+        /**
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>13</p>
+         */
         @NameInMap("totalItem")
         public Integer totalItem;
 

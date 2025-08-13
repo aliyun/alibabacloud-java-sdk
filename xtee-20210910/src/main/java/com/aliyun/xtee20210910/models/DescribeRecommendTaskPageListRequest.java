@@ -4,18 +4,52 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendTaskPageListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Current page number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public String currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Task name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>策略推荐任务</p>
+     */
     @NameInMap("taskName")
     public String taskName;
 

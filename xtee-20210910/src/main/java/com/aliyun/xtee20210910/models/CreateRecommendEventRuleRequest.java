@@ -4,21 +4,61 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateRecommendEventRuleRequest extends TeaModel {
+    /**
+     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Event code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_ahqido8038</p>
+     */
     @NameInMap("eventCode")
     public String eventCode;
 
+    /**
+     * <p>Event name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>用户昵称文本审核检测结果</p>
+     */
     @NameInMap("eventName")
     public String eventName;
 
+    /**
+     * <p>Strategy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;100234\&quot;,\&quot;100235\&quot;]</p>
+     */
     @NameInMap("recommendRuleIdsStr")
     public String recommendRuleIdsStr;
 
+    /**
+     * <p>Region code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6770764</p>
+     */
     @NameInMap("taskId")
     public Long taskId;
 

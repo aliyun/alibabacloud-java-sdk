@@ -4,21 +4,45 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeResultCountRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Start time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1739841750000</p>
      */
     @NameInMap("beginTime")
     public Long beginTime;
 
     /**
+     * <p>End time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1739843750000</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 

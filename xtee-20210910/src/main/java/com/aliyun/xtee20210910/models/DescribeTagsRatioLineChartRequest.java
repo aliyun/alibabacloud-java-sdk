@@ -4,33 +4,73 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRatioLineChartRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Start time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1751249559000</p>
      */
     @NameInMap("beginTime")
     public Long beginTime;
 
+    /**
+     * <p>Bypass event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_amnhke2482</p>
+     */
     @NameInMap("byPassEventCodes")
     public String byPassEventCodes;
 
     /**
+     * <p>End time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1751595912000</p>
      */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>Main event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_amnhke2482</p>
+     */
     @NameInMap("mainEventCodes")
     public String mainEventCodes;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Shunt event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_amnhke2488</p>
+     */
     @NameInMap("shuntEventCodes")
     public String shuntEventCodes;
 

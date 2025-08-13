@@ -4,6 +4,12 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeServiceAppKeyRequest extends TeaModel {
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 

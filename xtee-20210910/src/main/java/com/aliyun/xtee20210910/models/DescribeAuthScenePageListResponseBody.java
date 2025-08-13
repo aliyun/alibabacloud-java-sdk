@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuthScenePageListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Long currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeAuthScenePageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Long totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Long totalPage;
 
@@ -76,18 +109,48 @@ public class DescribeAuthScenePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeAuthScenePageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Number of common rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("commonRuleCount")
         public Long commonRuleCount;
 
+        /**
+         * <p>Number of custom rules</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("customRuleCount")
         public Long customRuleCount;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_avypfd8253</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险识别服务</p>
+         */
         @NameInMap("sceneName")
         public String sceneName;
 
+        /**
+         * <p>Service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse</p>
+         */
         @NameInMap("serverName")
         public String serverName;
 

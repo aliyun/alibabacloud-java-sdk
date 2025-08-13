@@ -4,53 +4,103 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateExpressionVariableRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>获取入参的手机号前7位</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Event code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_ahpayh4121</p>
      */
     @NameInMap("eventCode")
     public String eventCode;
 
     /**
+     * <p>Calculation expression</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@ex_GX9rrlTq4b67 + 1001</p>
      */
     @NameInMap("expression")
     public String expression;
 
     /**
+     * <p>Display value of calculation expression</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>@selfvariable_02 + 1001</p>
      */
     @NameInMap("expressionTitle")
     public String expressionTitle;
 
+    /**
+     * <p>Calculation expression variable</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;name&quot;:&quot;ex_GX9rrlTq4b67&quot;,&quot;code&quot;:&quot;deInvokeSelfVariable(44659)&quot;,&quot;fieldType&quot;:&quot;INT&quot;}]</p>
+     */
     @NameInMap("expressionVariable")
     public String expressionVariable;
 
     /**
+     * <p>Outlier</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("outlier")
     public String outlier;
 
     /**
+     * <p>Variable return type</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STRING</p>
      */
     @NameInMap("outputs")
     public String outputs;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
     /**
+     * <p>Title.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>获取手机号前7位</p>
      */
     @NameInMap("title")
     public String title;

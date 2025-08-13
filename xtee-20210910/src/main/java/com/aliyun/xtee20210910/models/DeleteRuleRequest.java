@@ -4,18 +4,52 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DeleteRuleRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Policy primary key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7035</p>
+     */
     @NameInMap("consoleRuleId")
     public Long consoleRuleId;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Policy ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102059</p>
+     */
     @NameInMap("ruleId")
     public String ruleId;
 
+    /**
+     * <p>Policy version primary key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10203</p>
+     */
     @NameInMap("ruleVersionId")
     public Long ruleVersionId;
 

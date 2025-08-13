@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressionVariablePageResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeExpressionVariablePageResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,27 +109,75 @@ public class DescribeExpressionVariablePageResponseBody extends TeaModel {
     }
 
     public static class DescribeExpressionVariablePageResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Primary key of custom variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2793</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Variable return type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOUBLE</p>
+         */
         @NameInMap("outputs")
         public String outputs;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>获取手机号前7位自定义变量</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Version information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Long version;
 

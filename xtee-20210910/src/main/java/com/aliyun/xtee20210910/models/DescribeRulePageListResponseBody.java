@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRulePageListResponseBody extends TeaModel {
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeRulePageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>28</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,51 +109,147 @@ public class DescribeRulePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeRulePageListResponseBodyResultObjectConsoleAudit extends TeaModel {
+        /**
+         * <p>UID of the user who passed the audit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户uid</p>
+         */
         @NameInMap("applyUserId")
         public String applyUserId;
 
+        /**
+         * <p>Name of the user who passed the audit</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("applyUserName")
         public String applyUserName;
 
+        /**
+         * <p>Approval comments</p>
+         * 
+         * <strong>example:</strong>
+         * <p>同意</p>
+         */
         @NameInMap("auditMsg")
         public String auditMsg;
 
+        /**
+         * <p>UID of the final auditor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1728</p>
+         */
         @NameInMap("auditRealUserId")
         public String auditRealUserId;
 
+        /**
+         * <p>Name of the final auditor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("auditRealUserName")
         public String auditRealUserName;
 
+        /**
+         * <p>Remarks by the approver.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
         @NameInMap("auditRemark")
         public String auditRemark;
 
+        /**
+         * <p>Application audit status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AGREE</p>
+         */
         @NameInMap("auditStatus")
         public String auditStatus;
 
+        /**
+         * <p>Approval time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545726028000</p>
+         */
         @NameInMap("auditTime")
         public Long auditTime;
 
+        /**
+         * <p>UID of the auditor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234xxxx</p>
+         */
         @NameInMap("auditUserId")
         public String auditUserId;
 
+        /**
+         * <p>Name of the auditor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("auditUserName")
         public String auditUserName;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1545726028000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1728</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Information of other related parties (in JSON format)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("relationExt")
         public String relationExt;
 
+        /**
+         * <p>ID of the related transaction for the approval</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
         @NameInMap("relationId")
         public Long relationId;
 
+        /**
+         * <p>Name of the related transaction for the approval (can be null)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>策略1</p>
+         */
         @NameInMap("relationName")
         public String relationName;
 
+        /**
+         * <p>Type of the approval (e.g., <code>rule</code> represents the approval of a rule)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RULE</p>
+         */
         @NameInMap("relationType")
         public String relationType;
 
@@ -260,60 +389,189 @@ public class DescribeRulePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeRulePageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Service authorization type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("authType")
         public String authType;
 
+        /**
+         * <p>Audit object</p>
+         */
         @NameInMap("consoleAudit")
         public DescribeRulePageListResponseBodyResultObjectConsoleAudit consoleAudit;
 
+        /**
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_arcehq4370</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Event type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 
+        /**
+         * <p>External name of the rule</p>
+         * 
+         * <strong>example:</strong>
+         * <p>策略1</p>
+         */
         @NameInMap("externalRuleName")
         public String externalRuleName;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Whether there is a new version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("hasNewVersion")
+        public Boolean hasNewVersion;
+
+        /**
+         * <p>Primary key ID of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2793</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Main rule ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4399</p>
+         */
         @NameInMap("mainRuleId")
         public String mainRuleId;
 
+        /**
+         * <p>Policy priority, the higher the number, the higher the priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("priority")
         public Long priority;
 
+        /**
+         * <p>Rule type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("ruleAuthType")
         public String ruleAuthType;
 
+        /**
+         * <p>Policy ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102059</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>Policy description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述信息</p>
+         */
         @NameInMap("ruleMemo")
         public String ruleMemo;
 
+        /**
+         * <p>Policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <p>Policy status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ruleStatus")
         public String ruleStatus;
 
+        /**
+         * <p>Rule type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
+        @NameInMap("ruleType")
+        public String ruleType;
+
+        /**
+         * <p>Primary key ID of the rule version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11300</p>
+         */
         @NameInMap("ruleVersionId")
         public Long ruleVersionId;
 
+        /**
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("templateId")
         public Long templateId;
 
+        /**
+         * <p>Version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Integer version;
 
@@ -386,6 +644,14 @@ public class DescribeRulePageListResponseBody extends TeaModel {
             return this.gmtModified;
         }
 
+        public DescribeRulePageListResponseBodyResultObject setHasNewVersion(Boolean hasNewVersion) {
+            this.hasNewVersion = hasNewVersion;
+            return this;
+        }
+        public Boolean getHasNewVersion() {
+            return this.hasNewVersion;
+        }
+
         public DescribeRulePageListResponseBodyResultObject setId(Long id) {
             this.id = id;
             return this;
@@ -448,6 +714,14 @@ public class DescribeRulePageListResponseBody extends TeaModel {
         }
         public String getRuleStatus() {
             return this.ruleStatus;
+        }
+
+        public DescribeRulePageListResponseBodyResultObject setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
         }
 
         public DescribeRulePageListResponseBodyResultObject setRuleVersionId(Long ruleVersionId) {

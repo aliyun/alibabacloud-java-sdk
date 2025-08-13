@@ -4,33 +4,98 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeVariableMarketListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Charging mode</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FREE</p>
+     */
     @NameInMap("chargingMode")
     public String chargingMode;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Paging indicator, default is true.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("paging")
     public String paging;
 
+    /**
+     * <p>Query content, supports fuzzy search.</p>
+     * <p> Title/Description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>手机号</p>
+     */
     @NameInMap("queryContent")
     public String queryContent;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Scenario</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[\&quot;coupon_abuse_detection\&quot;]</p>
+     */
     @NameInMap("scenesStr")
     public String scenesStr;
 
+    /**
+     * <p>Source</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAF</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>Title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>设备风险识别_标签</p>
+     */
     @NameInMap("title")
     public String title;
 

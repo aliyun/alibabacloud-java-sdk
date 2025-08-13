@@ -4,21 +4,61 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeHitRuleListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Start time, accurate to milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1737101348000</p>
+     */
     @NameInMap("beginTime")
     public Long beginTime;
 
+    /**
+     * <p>End time, accurate to milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1752027960000</p>
+     */
     @NameInMap("endTime")
     public Long endTime;
 
+    /**
+     * <p>Event codes, separated by commas if multiple.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_ahqhsw7665,de_ahqhsw7622</p>
+     */
     @NameInMap("eventCodes")
     public String eventCodes;
 
+    /**
+     * <p>Event type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MAIN</p>
+     */
     @NameInMap("eventType")
     public String eventType;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 

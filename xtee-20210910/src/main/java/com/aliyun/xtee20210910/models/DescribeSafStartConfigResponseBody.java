@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSafStartConfigResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeSafStartConfigResponseBodyResultObject resultObject;
 
@@ -32,15 +41,27 @@ public class DescribeSafStartConfigResponseBody extends TeaModel {
     }
 
     public static class DescribeSafStartConfigResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>List of device types.</p>
+         */
         @NameInMap("deviceTypes")
         public java.util.List<String> deviceTypes;
 
+        /**
+         * <p>Event codes.</p>
+         */
         @NameInMap("eventCodes")
         public java.util.List<String> eventCodes;
 
+        /**
+         * <p>Configuration language details.</p>
+         */
         @NameInMap("languages")
         public java.util.List<String> languages;
 
+        /**
+         * <p>Server region</p>
+         */
         @NameInMap("serverRegions")
         public java.util.List<String> serverRegions;
 

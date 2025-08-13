@@ -5,16 +5,30 @@ import com.aliyun.tea.*;
 
 public class CreateSampleApiRequest extends TeaModel {
     /**
+     * <p>Same as input parameter</p>
+     * 
      * <strong>example:</strong>
      * <p>ip/accountID</p>
      */
     @NameInMap("DataType")
     public String dataType;
 
+    /**
+     * <p>Specific data value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>同参数</p>
+     */
     @NameInMap("DataValue")
     public String dataValue;
 
     /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -30,9 +44,21 @@ public class CreateSampleApiRequest extends TeaModel {
     @NameInMap("RegId")
     public String regId;
 
+    /**
+     * <p>Sample batch type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>白名单/黑名单/混合</p>
+     */
     @NameInMap("SampleBatchType")
     public String sampleBatchType;
 
+    /**
+     * <p>Service list.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>同参数</p>
+     */
     @NameInMap("ServiceList")
     public String serviceList;
 

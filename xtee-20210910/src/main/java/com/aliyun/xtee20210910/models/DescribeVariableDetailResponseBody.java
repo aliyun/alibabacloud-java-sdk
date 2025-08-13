@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeVariableDetailResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeVariableDetailResponseBodyResultObject resultObject;
 
@@ -32,108 +41,313 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVariableDetailResponseBodyResultObjectBaseInfo extends TeaModel {
+        /**
+         * <p>Whether variable binding is allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("allowBind")
         public String allowBind;
 
+        /**
+         * <p>Charging mode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREE</p>
+         */
         @NameInMap("chargingMode")
         public String chargingMode;
 
+        /**
+         * <p>Charging mode description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>免费</p>
+         */
         @NameInMap("chargingModeDesc")
         public String chargingModeDesc;
 
+        /**
+         * <p>Creator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>176020</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <p>Data distribution display, in JSON format</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("dataDisplay")
         public String dataDisplay;
 
+        /**
+         * <p>Data valid range, left-closed and right-closed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(0,10)</p>
+         */
         @NameInMap("dataThreshold")
         public String dataThreshold;
 
+        /**
+         * <p>Deduction factor</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("deductionFactor")
         public Integer deductionFactor;
 
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Front-end binding allowed</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("frontAllowBind")
         public String frontAllowBind;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698143758000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1698143758000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Required parameters</p>
+         * <pre><code> When inputRequired=__all__, it means all parameters are required
+         *  When inputRequired=__one__, it means only one input is needed
+         *  Required fields are separated by commas, e.g., mobile,ip,email
+         * </code></pre>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>one</strong></p>
+         */
         @NameInMap("inputRequired")
         public String inputRequired;
 
+        /**
+         * <p>Input parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip,age,mobile</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Input parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip,年龄,手机号</p>
+         */
         @NameInMap("inputsDesc")
         public String inputsDesc;
 
+        /**
+         * <p>Invoke key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>onlineScamDetectionTags_v</p>
+         */
         @NameInMap("invokeKey")
         public String invokeKey;
 
+        /**
+         * <p>Invoke RT, unit: milliseconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("invokeRt")
         public Integer invokeRt;
 
+        /**
+         * <p>Invocation success rate</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("invokeSuccessRate")
         public String invokeSuccessRate;
 
+        /**
+         * <p>Number of invocations</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
+         */
         @NameInMap("invokeTimes")
         public Long invokeTimes;
 
+        /**
+         * <p>Last modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("lastModifiedOperator")
         public String lastModifiedOperator;
 
+        /**
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p><strong>onlineScamDetectionTags</strong></p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Output</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("outputs")
         public String outputs;
 
+        /**
+         * <p>Output description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>字符串</p>
+         */
         @NameInMap("outputsDesc")
         public String outputsDesc;
 
+        /**
+         * <p>Code of applicable scenarios</p>
+         */
         @NameInMap("scene")
         public java.util.List<String> scene;
 
+        /**
+         * <p>Applicable scenario description</p>
+         */
         @NameInMap("sceneDesc")
         public java.util.List<String> sceneDesc;
 
+        /**
+         * <p>Display order</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("showOrder")
         public String showOrder;
 
+        /**
+         * <p>Source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>Source description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>风险识别</p>
+         */
         @NameInMap("sourceDesc")
         public String sourceDesc;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>List of supported regions.</p>
+         */
         @NameInMap("supportRegions")
         public java.util.List<String> supportRegions;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>诈骗引流识别_标签</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>Category description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>事件字段</p>
+         */
         @NameInMap("typeDesc")
         public String typeDesc;
 
+        /**
+         * <p>X-axis label for data distribution display</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("xLabel")
         public String xLabel;
 
+        /**
+         * <p>Data distribution display y-axis label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("yLabel")
         public String yLabel;
 
@@ -425,6 +639,9 @@ public class DescribeVariableDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVariableDetailResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Basic attributes.</p>
+         */
         @NameInMap("baseInfo")
         public DescribeVariableDetailResponseBodyResultObjectBaseInfo baseInfo;
 

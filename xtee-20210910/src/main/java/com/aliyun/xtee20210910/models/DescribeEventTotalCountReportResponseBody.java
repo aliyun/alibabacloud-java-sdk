@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventTotalCountReportResponseBody extends TeaModel {
+    /**
+     * <p>Status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeEventTotalCountReportResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Indicates whether this operation was successful, <code>true</code> means success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class DescribeEventTotalCountReportResponseBody extends TeaModel {
     }
 
     public static class DescribeEventTotalCountReportResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Comparison with yesterday\&quot;s event invocation count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("ratio")
         public String ratio;
 
+        /**
+         * <p>Today\&quot;s event invocation count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("value")
         public String value;
 

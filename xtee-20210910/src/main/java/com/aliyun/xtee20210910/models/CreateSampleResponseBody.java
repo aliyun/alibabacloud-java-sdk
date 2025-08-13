@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateSampleResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public CreateSampleResponseBodyResultObject resultObject;
 
@@ -32,21 +41,57 @@ public class CreateSampleResponseBody extends TeaModel {
     }
 
     public static class CreateSampleResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Number of colored groups</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("communityCount")
         public Integer communityCount;
 
+        /**
+         * <p>Number of failed samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("failCount")
         public Integer failCount;
 
+        /**
+         * <p>Recall probability</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.5%</p>
+         */
         @NameInMap("recallProbability")
         public String recallProbability;
 
+        /**
+         * <p>Risk density</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.5%</p>
+         */
         @NameInMap("riskDensity")
         public String riskDensity;
 
+        /**
+         * <p>Number of samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("sampleCount")
         public Integer sampleCount;
 
+        /**
+         * <p>Number of successful samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99</p>
+         */
         @NameInMap("successCount")
         public Integer successCount;
 

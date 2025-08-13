@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class ModifyCustVariableResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<ModifyCustVariableResponseBodyResultObject> resultObject;
 
@@ -32,12 +41,30 @@ public class ModifyCustVariableResponseBody extends TeaModel {
     }
 
     public static class ModifyCustVariableResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Failure type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rule</p>
+         */
         @NameInMap("failType")
         public String failType;
 
+        /**
+         * <p>Detailed information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ok</p>
+         */
         @NameInMap("message")
         public String message;
 
+        /**
+         * <p>Whether the operation was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("success")
         public Boolean success;
 

@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventResultBarChartResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeEventResultBarChartResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeEventResultBarChartResponseBodyResultObjectSeriesData extends TeaModel {
+        /**
+         * <p>Number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("num")
         public Long num;
 
+        /**
+         * <p>Scale</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50.00%</p>
+         */
         @NameInMap("scale")
         public String scale;
 
@@ -106,12 +151,27 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeEventResultBarChartResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Returned data object</p>
+         */
         @NameInMap("data")
         public java.util.List<DescribeEventResultBarChartResponseBodyResultObjectSeriesData> data;
 
+        /**
+         * <p>Series name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Label key</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通过</p>
+         */
         @NameInMap("stack")
         public String stack;
 
@@ -147,6 +207,9 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeEventResultBarChartResponseBodyResultObjectXaxis extends TeaModel {
+        /**
+         * <p>Returned data object</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -166,9 +229,15 @@ public class DescribeEventResultBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeEventResultBarChartResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Chart data</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeEventResultBarChartResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>xaxis interface configuration.</p>
+         */
         @NameInMap("xaxis")
         public DescribeEventResultBarChartResponseBodyResultObjectXaxis xaxis;
 

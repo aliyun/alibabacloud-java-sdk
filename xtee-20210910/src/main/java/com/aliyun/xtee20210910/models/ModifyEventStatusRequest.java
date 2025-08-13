@@ -4,21 +4,61 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class ModifyEventStatusRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Creation type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("createType")
     public String createType;
 
+    /**
+     * <p>Event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_aamexg3015</p>
+     */
     @NameInMap("eventCode")
     public String eventCode;
 
+    /**
+     * <p>Initial event status, to avoid duplicate submissions or historical replays</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ONLINE</p>
+     */
     @NameInMap("fromEventSatus")
     public String fromEventSatus;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Updated event status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OFFLINE</p>
+     */
     @NameInMap("toEventSatus")
     public String toEventSatus;
 

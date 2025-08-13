@@ -4,24 +4,70 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeLoanExecListRequest extends TeaModel {
+    /**
+     * <p>Set the language type for request and response messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Import batch number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("batchNo")
     public String batchNo;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public String currentPage;
 
+    /**
+     * <p>Monitoring metric data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_afghcf6411</p>
+     */
     @NameInMap("monitorObj")
     public String monitorObj;
 
+    /**
+     * <p>Status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>WAIT</p>
+     */
     @NameInMap("monitorStatus")
     public String monitorStatus;
 
+    /**
+     * <p>Page size, with a default value of 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 

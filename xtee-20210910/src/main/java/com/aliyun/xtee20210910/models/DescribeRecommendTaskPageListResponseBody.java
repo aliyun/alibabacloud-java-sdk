@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeRecommendTaskPageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,36 +109,99 @@ public class DescribeRecommendTaskPageListResponseBody extends TeaModel {
     }
 
     public static class DescribeRecommendTaskPageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Impact indicators</p>
+         */
         @NameInMap("expectVelocities")
         public java.util.List<String> expectVelocities;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Number of samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("normalCount")
         public Long normalCount;
 
+        /**
+         * <p>Number of normal samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("normalSize")
         public Long normalSize;
 
+        /**
+         * <p>Number of records displayed on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("riskCount")
         public Long riskCount;
 
+        /**
+         * <p>Number of risk samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("riskSize")
         public Long riskSize;
 
+        /**
+         * <p>Sample name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白样本</p>
+         */
         @NameInMap("sampleName")
         public String sampleName;
 
+        /**
+         * <p>Sample scenario</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse_detection</p>
+         */
         @NameInMap("sampleScene")
         public String sampleScene;
 
+        /**
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>240c93ddffa74e38be3a00375eb3041d</p>
+         */
         @NameInMap("taskId")
         public Long taskId;
 
+        /**
+         * <p>Task name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>策略推荐任务</p>
+         */
         @NameInMap("taskName")
         public String taskName;
 
+        /**
+         * <p>Task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
+         */
         @NameInMap("taskStatus")
         public String taskStatus;
 

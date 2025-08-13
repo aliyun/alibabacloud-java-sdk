@@ -4,59 +4,161 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class BindVariableRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>API region ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("apiRegionId")
     public String apiRegionId;
 
+    /**
+     * <p>API type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELF</p>
+     */
     @NameInMap("apiType")
     public String apiType;
 
+    /**
+     * <p>Creation type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NORMAL</p>
+     */
     @NameInMap("createType")
     public String createType;
 
+    /**
+     * <p>Associated variable definition primary key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2438</p>
+     */
     @NameInMap("defineId")
     public String defineId;
 
+    /**
+     * <p>Variable definition IDs, can be multiple. If binding multiple IDs, separate them with commas</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1546, 1547</p>
+     */
     @NameInMap("defineIds")
     public String defineIds;
 
+    /**
+     * <p>Description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>变量描述</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Event code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_agbzfi5134</p>
      */
     @NameInMap("eventCode")
     public String eventCode;
 
+    /**
+     * <p>Exception value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SYS_ERROR</p>
+     */
     @NameInMap("exceptionValue")
     public String exceptionValue;
 
+    /**
+     * <p>Variable primary key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>106875</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Output field path</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BOOLEAN</p>
+     */
     @NameInMap("outputField")
     public String outputField;
 
+    /**
+     * <p>Output type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STRING</p>
+     */
     @NameInMap("outputType")
     public String outputType;
 
+    /**
+     * <p>Binding input parameter information</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;accountId&quot;:&quot;accountId&quot;,&quot;mobile&quot;:&quot;&quot;}</p>
+     */
     @NameInMap("params")
     public String params;
 
+    /**
+     * <p>Event parameter mapping 2.0, either params or paramsList must not be empty. List, JSON structure</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;eventFieldName&quot;:&quot;accountId&quot;,&quot;required&quot;:false}]</p>
+     */
     @NameInMap("paramsList")
     public String paramsList;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Variable source</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SAF</p>
+     */
     @NameInMap("sourceType")
     public String sourceType;
 
     /**
+     * <p>Title</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>变量title</p>
      */
     @NameInMap("title")
     public String title;

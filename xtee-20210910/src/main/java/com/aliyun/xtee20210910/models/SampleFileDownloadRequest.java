@@ -4,12 +4,34 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class SampleFileDownloadRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Region code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegId")
     public String regId;
 
+    /**
+     * <p>Scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FINANCE</p>
+     */
     @NameInMap("Tab")
     public String tab;
 

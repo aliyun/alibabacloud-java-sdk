@@ -4,59 +4,161 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateAnalysisExportTaskRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for the request and response messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Custom columns</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;requestId&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;RequestId&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;eventTime&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;事件时间&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;accountId&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;账号&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;deviceId&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;设备ID&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;eventCode&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;事件编码&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;ip&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;IP&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;score&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;分值&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;tags&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;标签&quot;
+     *                 },
+     *                 {
+     *                     &quot;fieldName&quot;: &quot;DEtest222&quot;,
+     *                     &quot;fieldTitle&quot;: &quot;测试222&quot;
+     *                 }
+     *             ]</p>
+     */
     @NameInMap("columns")
     public String columns;
 
+    /**
+     * <p>Query expression</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{
+     *      &quot;fieldName&quot;: null, 
+     *       &quot;fieldValue&quot;: null 
+     *       }</p>
+     */
     @NameInMap("conditions")
     public String conditions;
 
     /**
+     * <p>Start time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1752076800000</p>
      */
     @NameInMap("eventBeginTime")
     public Long eventBeginTime;
 
     /**
+     * <p>Event code.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_afghcf6411</p>
      */
     @NameInMap("eventCodes")
     public String eventCodes;
 
     /**
+     * <p>End time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1753891199000</p>
      */
     @NameInMap("eventEndTime")
     public Long eventEndTime;
 
+    /**
+     * <p>Field name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
+     */
     @NameInMap("fieldName")
     public String fieldName;
 
+    /**
+     * <p>Field value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("fieldValue")
     public String fieldValue;
 
     /**
+     * <p>File format, Excel, CSV</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CSV</p>
      */
     @NameInMap("fileFormat")
     public String fileFormat;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
     /**
+     * <p>Export scope: ALL: All, SELECT: Selected rows</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ALL</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
+     * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BASIC</p>
      */
     @NameInMap("type")
     public String type;

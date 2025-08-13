@@ -4,18 +4,61 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSafTagListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Tag name. Fuzzy search.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rn0301</p>
+     */
+    @NameInMap("TagName")
+    public String tagName;
+
+    /**
+     * <p>API service ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>34</p>
+     */
     @NameInMap("apiId")
     public String apiId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public String currentPage;
 
+    /**
+     * <p>Page size, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
+    /**
+     * <p>Region code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
@@ -30,6 +73,14 @@ public class DescribeSafTagListRequest extends TeaModel {
     }
     public String getLang() {
         return this.lang;
+    }
+
+    public DescribeSafTagListRequest setTagName(String tagName) {
+        this.tagName = tagName;
+        return this;
+    }
+    public String getTagName() {
+        return this.tagName;
     }
 
     public DescribeSafTagListRequest setApiId(String apiId) {

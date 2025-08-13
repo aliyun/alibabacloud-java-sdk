@@ -5,11 +5,21 @@ import com.aliyun.tea.*;
 
 public class RecallRuleAuditRequest extends TeaModel {
     /**
+     * <p>Primary key ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 

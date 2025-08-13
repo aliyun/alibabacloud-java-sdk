@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSelectItemResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeSelectItemResponseBodyResultObject resultObject;
 
@@ -32,9 +41,15 @@ public class DescribeSelectItemResponseBody extends TeaModel {
     }
 
     public static class DescribeSelectItemResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Monitoring status list.</p>
+         */
         @NameInMap("monitorStatusList")
         public java.util.List<String> monitorStatusList;
 
+        /**
+         * <p>Task ID list.</p>
+         */
         @NameInMap("taskIdList")
         public java.util.List<String> taskIdList;
 

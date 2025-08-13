@@ -4,33 +4,90 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventResultListResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Long currentPage;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error details</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventResultListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Whether the query was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>31</p>
+     */
     @NameInMap("totalItem")
     public Long totalItem;
 
+    /**
+     * <p>Total number of pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Long totalPage;
 
@@ -120,21 +177,57 @@ public class DescribeEventResultListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventResultListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Number of passed checks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90</p>
+         */
         @NameInMap("passNum")
         public Long passNum;
 
+        /**
+         * <p>Number of pending items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("pendingNum")
         public Long pendingNum;
 
+        /**
+         * <p>Number of rejected approvals.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("rejectNum")
         public Long rejectNum;
 
+        /**
+         * <p>Total number of items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("totalNum")
         public Long totalNum;
 

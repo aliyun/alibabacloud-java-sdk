@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6E8817D5-5354-5953-84B1-D98379F036DC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeExpressionVariableFunctionListResponseBodyResultObject> resultObject;
 
@@ -32,27 +41,75 @@ public class DescribeExpressionVariableFunctionListResponseBody extends TeaModel
     }
 
     public static class DescribeExpressionVariableFunctionListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Function name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>concat</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>Maximum number of parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("maxParamSize")
         public Long maxParamSize;
 
+        /**
+         * <p>Minimum number of parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("minParamSize")
         public Long minParamSize;
 
+        /**
+         * <p>Parameter types</p>
+         * 
+         * <strong>example:</strong>
+         * <p>*STRING</p>
+         */
         @NameInMap("paramTypes")
         public String paramTypes;
 
+        /**
+         * <p>Whether it is directly invoked</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("redirect")
         public Boolean redirect;
 
+        /**
+         * <p>Method return types</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("returnTypes")
         public String returnTypes;
 
+        /**
+         * <p>Function value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>concat</p>
+         */
         @NameInMap("value")
         public String value;
 

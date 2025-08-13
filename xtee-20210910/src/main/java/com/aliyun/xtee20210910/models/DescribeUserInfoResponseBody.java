@@ -4,18 +4,45 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeUserInfoResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeUserInfoResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Indicates whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -65,15 +92,39 @@ public class DescribeUserInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeUserInfoResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Client IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.1</p>
+         */
         @NameInMap("clientIp")
         public String clientIp;
 
+        /**
+         * <p>Sub-account ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>555666</p>
+         */
         @NameInMap("subId")
         public String subId;
 
+        /**
+         * <p>User UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15633333331111</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <p>User name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("userName")
         public String userName;
 

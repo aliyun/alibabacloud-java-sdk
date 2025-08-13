@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSampleListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeSampleListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,21 +109,57 @@ public class DescribeSampleListResponseBody extends TeaModel {
     }
 
     public static class DescribeSampleListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Sample tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm0102</p>
+         */
         @NameInMap("sampleTags")
         public String sampleTags;
 
+        /**
+         * <p>Sample type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHONE</p>
+         */
         @NameInMap("sampleType")
         public Integer sampleType;
 
+        /**
+         * <p>Sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1770000000</p>
+         */
         @NameInMap("sampleValue")
         public String sampleValue;
 
+        /**
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699450018265</p>
+         */
         @NameInMap("updateTime")
         public Long updateTime;
 
+        /**
+         * <p>Version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Integer version;
 

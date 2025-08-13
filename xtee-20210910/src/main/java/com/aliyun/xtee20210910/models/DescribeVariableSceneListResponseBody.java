@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeVariableSceneListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeVariableSceneListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,33 +109,93 @@ public class DescribeVariableSceneListResponseBody extends TeaModel {
     }
 
     public static class DescribeVariableSceneListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Business category identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>variable_scene</p>
+         */
         @NameInMap("bizType")
         public String bizType;
 
+        /**
+         * <p>Configuration key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse_detection</p>
+         */
         @NameInMap("configKey")
         public String configKey;
 
+        /**
+         * <p>Configuration value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("configValue")
         public String configValue;
 
+        /**
+         * <p>Created by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>配置描述信息</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Primary key ID of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Last modified by.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
+         */
         @NameInMap("lastModifiedOperator")
         public String lastModifiedOperator;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 

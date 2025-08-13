@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsTrendResponseBody extends TeaModel {
+    /**
+     * <p>Status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeTagsTrendResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class DescribeTagsTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsTrendResponseBodyResultObjectSeriesData extends TeaModel {
+        /**
+         * <p>The number of items in this category.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("num")
         public Long num;
 
+        /**
+         * <p>Proportion</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10%</p>
+         */
         @NameInMap("scale")
         public String scale;
 
@@ -106,9 +151,18 @@ public class DescribeTagsTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsTrendResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Chart data list</p>
+         */
         @NameInMap("data")
         public java.util.List<DescribeTagsTrendResponseBodyResultObjectSeriesData> data;
 
+        /**
+         * <p>Category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rm0102</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -136,6 +190,9 @@ public class DescribeTagsTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsTrendResponseBodyResultObjectXaxis extends TeaModel {
+        /**
+         * <p>X-axis data</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -155,9 +212,15 @@ public class DescribeTagsTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsTrendResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeTagsTrendResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>xaxis returned data</p>
+         */
         @NameInMap("xaxis")
         public DescribeTagsTrendResponseBodyResultObjectXaxis xaxis;
 

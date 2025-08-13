@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeEventVariableTemplateBindResponseBodyResultObject resultObject;
 
@@ -32,24 +41,66 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableTemplateBindResponseBodyResultObjectChargeVariables extends TeaModel {
+        /**
+         * <p>Variable code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Description of the variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -117,24 +168,66 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableTemplateBindResponseBodyResultObjectFreeVariables extends TeaModel {
+        /**
+         * <p>Variable code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Variable description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>234</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -202,15 +295,33 @@ public class DescribeEventVariableTemplateBindResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableTemplateBindResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>List of chargeable variables</p>
+         */
         @NameInMap("chargeVariables")
         public java.util.List<DescribeEventVariableTemplateBindResponseBodyResultObjectChargeVariables> chargeVariables;
 
+        /**
+         * <p>List of free variables</p>
+         */
         @NameInMap("freeVariables")
         public java.util.List<DescribeEventVariableTemplateBindResponseBodyResultObjectFreeVariables> freeVariables;
 
+        /**
+         * <p>Template code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("templateCode")
         public String templateCode;
 
+        /**
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>38</p>
+         */
         @NameInMap("totalCount")
         public String totalCount;
 

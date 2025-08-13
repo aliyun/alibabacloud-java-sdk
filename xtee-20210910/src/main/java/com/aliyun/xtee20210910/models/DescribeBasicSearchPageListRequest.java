@@ -4,47 +4,93 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeBasicSearchPageListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Current page number.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("currentPage")
     public Long currentPage;
 
     /**
+     * <p>Query start time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1753372800000</p>
      */
     @NameInMap("eventBeginTime")
     public Long eventBeginTime;
 
     /**
+     * <p>Event code.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;de_ahqhsw7665&quot;]</p>
      */
     @NameInMap("eventCodes")
     public String eventCodes;
 
     /**
+     * <p>End time, accurate to milliseconds (ms).</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1753459199059</p>
      */
     @NameInMap("eventEndTime")
     public Long eventEndTime;
 
+    /**
+     * <p>Field name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
+     */
     @NameInMap("fieldName")
     public String fieldName;
 
+    /**
+     * <p>Field value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("fieldValue")
     public String fieldValue;
 
     /**
+     * <p>Page size, with a default value of 10</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("pageSize")
     public Long pageSize;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;

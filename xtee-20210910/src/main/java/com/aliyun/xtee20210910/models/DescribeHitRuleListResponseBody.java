@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeHitRuleListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Response object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeHitRuleListResponseBodyResultObject> resultObject;
 
@@ -32,9 +41,21 @@ public class DescribeHitRuleListResponseBody extends TeaModel {
     }
 
     public static class DescribeHitRuleListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Number of hits.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("hitCount")
         public Integer hitCount;
 
+        /**
+         * <p>Strategy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 

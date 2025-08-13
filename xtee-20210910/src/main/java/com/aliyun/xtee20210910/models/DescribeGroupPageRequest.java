@@ -4,27 +4,79 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupPageRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and responses, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public String currentPage;
 
+    /**
+     * <p>Order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("direction")
     public String direction;
 
+    /**
+     * <p>Sorting condition.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>asc</p>
+     */
     @NameInMap("order")
     public String order;
 
+    /**
+     * <p>Page size, with a default value of 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
+    /**
+     * <p>Region code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6770764</p>
+     */
     @NameInMap("taskId")
     public String taskId;
 
+    /**
+     * <p>Time type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("timeType")
     public String timeType;
 

@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAppKeyPageResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>E01E1B4A-6747-5329-9046-B6D6B2D91349</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Number of items per page, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeAppKeyPageResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,30 +109,84 @@ public class DescribeAppKeyPageResponseBody extends TeaModel {
     }
 
     public static class DescribeAppKeyPageResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Android SDK download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
+         */
         @NameInMap("androidSdkUrl")
         public String androidSdkUrl;
 
+        /**
+         * <p>Android SDK version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("androidSdkVersion")
         public String androidSdkVersion;
 
+        /**
+         * <p>Application appkey.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sh9a71f07fhs556bd767586307e82795</p>
+         */
         @NameInMap("appKey")
         public String appKey;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>iOS SDK download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
+         */
         @NameInMap("iosSdkUrl")
         public String iosSdkUrl;
 
+        /**
+         * <p>iOS SDK version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("iosSdkVersion")
         public String iosSdkVersion;
 
+        /**
+         * <p>Memo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>Deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>已作废</p>
+         */
         @NameInMap("sdkItems")
         public String sdkItems;
 
+        /**
+         * <p>Whether this appKey is integrated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("used")
         public String used;
 

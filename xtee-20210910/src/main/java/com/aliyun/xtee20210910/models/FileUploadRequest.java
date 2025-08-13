@@ -4,15 +4,43 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class FileUploadRequest extends TeaModel {
+    /**
+     * <p>File name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>P4911_2707.csv</p>
+     */
     @NameInMap("FileName")
     public String fileName;
 
+    /**
+     * <p>File URL</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://res-v1.cupl-fdfs.com/direct/79886bdc-9855-4ff4-aa34-eb5b21cd43a7">https://res-v1.cupl-fdfs.com/direct/79886bdc-9855-4ff4-aa34-eb5b21cd43a7</a></p>
+     */
     @NameInMap("FileUrl")
     public String fileUrl;
 
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Scenario.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FNNCIEA</p>
+     */
     @NameInMap("Tab")
     public String tab;
 

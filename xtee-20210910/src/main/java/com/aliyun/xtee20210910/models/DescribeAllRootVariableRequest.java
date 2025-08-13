@@ -4,33 +4,97 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllRootVariableRequest extends TeaModel {
+    /**
+     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Request source IP. No need to fill in, the system will automatically obtain it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>61.169.104.202</p>
+     */
     @NameInMap("SourceIp")
     public String sourceIp;
 
+    /**
+     * <p>Device variable list</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[180]</p>
+     */
     @NameInMap("deviceVariableIds")
     public String deviceVariableIds;
 
+    /**
+     * <p>Event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_arqbuy7206</p>
+     */
     @NameInMap("eventCode")
     public String eventCode;
 
+    /**
+     * <p>Custom variable list</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[6780]</p>
+     */
     @NameInMap("expressionVariableIds")
     public String expressionVariableIds;
 
+    /**
+     * <p>Variable ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2557</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Event field list</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[106780]</p>
+     */
     @NameInMap("nativeVariableIds")
     public String nativeVariableIds;
 
+    /**
+     * <p>Custom query variable</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[2678]</p>
+     */
     @NameInMap("queryVariableIds")
     public String queryVariableIds;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Custom cumulative variable</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[780]</p>
+     */
     @NameInMap("velocityVariableIds")
     public String velocityVariableIds;
 

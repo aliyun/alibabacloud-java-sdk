@@ -4,39 +4,115 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class ModifyRuleStatusRequest extends TeaModel {
+    /**
+     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>UID of the applicant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1519714049632764</p>
+     */
     @NameInMap("applyUserId")
     public String applyUserId;
 
+    /**
+     * <p>Name of the applicant.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("applyUserName")
     public String applyUserName;
 
+    /**
+     * <p>Approval remarks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>申请发布上线</p>
+     */
     @NameInMap("auditRemark")
     public String auditRemark;
 
+    /**
+     * <p>UID of the auditor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1519714049632764</p>
+     */
     @NameInMap("auditUserId")
     public String auditUserId;
 
+    /**
+     * <p>Name of the auditor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>root</p>
+     */
     @NameInMap("auditUserName")
     public String auditUserName;
 
+    /**
+     * <p>Primary key ID of the policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6843</p>
+     */
     @NameInMap("consoleRuleId")
     public Long consoleRuleId;
 
+    /**
+     * <p>Event type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MAIN</p>
+     */
     @NameInMap("eventType")
     public String eventType;
 
+    /**
+     * <p>Region code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Audit status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DRAFT_TO_RUNNING</p>
+     */
     @NameInMap("ruleAuditType")
     public String ruleAuditType;
 
+    /**
+     * <p>Policy ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101544</p>
+     */
     @NameInMap("ruleId")
     public String ruleId;
 
+    /**
+     * <p>Primary key ID of the policy version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>11519</p>
+     */
     @NameInMap("ruleVersionId")
     public Long ruleVersionId;
 

@@ -4,15 +4,43 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppKeyRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>appkey information.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("appKey")
     public String appKey;
 
+    /**
+     * <p>Application memo information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>备注</p>
+     */
     @NameInMap("memo")
     public String memo;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 

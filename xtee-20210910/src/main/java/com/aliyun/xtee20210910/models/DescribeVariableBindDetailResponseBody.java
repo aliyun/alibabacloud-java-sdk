@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeVariableBindDetailResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeVariableBindDetailResponseBodyResultObject resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVariableBindDetailResponseBodyResultObjectParams extends TeaModel {
+        /**
+         * <p>Event field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("eventFieldName")
         public String eventFieldName;
 
+        /**
+         * <p>Whether it is required, default is false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("required")
         public Boolean required;
 
+        /**
+         * <p>Bound variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ip</p>
+         */
         @NameInMap("variableName")
         public String variableName;
 
@@ -73,9 +100,21 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVariableBindDetailResponseBodyResultObjectRelationRules extends TeaModel {
+        /**
+         * <p>Policy rule ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>104566</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -103,30 +142,78 @@ public class DescribeVariableBindDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeVariableBindDetailResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Whether modification is allowed, default is false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("allowModify")
         public Boolean allowModify;
 
+        /**
+         * <p>Variable definition ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("defineId")
         public Long defineId;
 
+        /**
+         * <p>Variable definition title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IP所在地_城市Code</p>
+         */
         @NameInMap("defineTitle")
         public String defineTitle;
 
+        /**
+         * <p>Variable description information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Bound parameters.</p>
+         */
         @NameInMap("params")
         public java.util.List<DescribeVariableBindDetailResponseBodyResultObjectParams> params;
 
+        /**
+         * <p>List of associated policies</p>
+         */
         @NameInMap("relationRules")
         public java.util.List<DescribeVariableBindDetailResponseBodyResultObjectRelationRules> relationRules;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量title</p>
+         */
         @NameInMap("title")
         public String title;
 

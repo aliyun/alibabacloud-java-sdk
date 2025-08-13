@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     /**
+     * <p>Status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
+     * <p>Error details</p>
+     * 
      * <strong>example:</strong>
      * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
      */
@@ -26,16 +32,23 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID, which is unique for each request, facilitating subsequent troubleshooting</p>
+     * 
      * <strong>example:</strong>
      * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
      */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeSceneAllEventNameCodeListResponseBodyResultObject> resultObject;
 
     /**
+     * <p>Indicates whether the operation was successful, where true means success.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
 
     public static class DescribeSceneAllEventNameCodeListResponseBodyResultObjectChildren extends TeaModel {
         /**
+         * <p>Creation type</p>
+         * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
          */
@@ -104,16 +119,26 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         public String createType;
 
         /**
+         * <p>Event code</p>
+         * 
          * <strong>example:</strong>
          * <p>de_aamexg3015</p>
          */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
         /**
+         * <p>Event type</p>
+         * 
          * <strong>example:</strong>
          * <p>BYPASS</p>
          */
@@ -160,10 +185,15 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
     }
 
     public static class DescribeSceneAllEventNameCodeListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Child objects</p>
+         */
         @NameInMap("children")
         public java.util.List<DescribeSceneAllEventNameCodeListResponseBodyResultObjectChildren> children;
 
         /**
+         * <p>Creation type</p>
+         * 
          * <strong>example:</strong>
          * <p>MORMAL</p>
          */
@@ -171,16 +201,26 @@ public class DescribeSceneAllEventNameCodeListResponseBody extends TeaModel {
         public String createType;
 
         /**
+         * <p>Event code</p>
+         * 
          * <strong>example:</strong>
          * <p>de_aszbjb7236</p>
          */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别_增强版</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
         /**
+         * <p>Event type</p>
+         * 
          * <strong>example:</strong>
          * <p>MAIN</p>
          */

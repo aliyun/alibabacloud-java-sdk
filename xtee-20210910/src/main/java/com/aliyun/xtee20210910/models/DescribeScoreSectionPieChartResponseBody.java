@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeScoreSectionPieChartResponseBodyResultObject resultObject;
 
@@ -32,6 +41,12 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
     }
 
     public static class DescribeScoreSectionPieChartResponseBodyResultObjectGrid extends TeaModel {
+        /**
+         * <p>Chart field, default false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("show")
         public Boolean show;
 
@@ -51,9 +66,21 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
     }
 
     public static class DescribeScoreSectionPieChartResponseBodyResultObjectSeriesData extends TeaModel {
+        /**
+         * <p>Category item name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Result value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -81,12 +108,27 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
     }
 
     public static class DescribeScoreSectionPieChartResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Chart data list</p>
+         */
         @NameInMap("data")
         public java.util.List<DescribeScoreSectionPieChartResponseBodyResultObjectSeriesData> data;
 
+        /**
+         * <p>Category name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分值区间占比</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Chart field, default false</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("roseType")
         public Boolean roseType;
 
@@ -122,12 +164,24 @@ public class DescribeScoreSectionPieChartResponseBody extends TeaModel {
     }
 
     public static class DescribeScoreSectionPieChartResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Chart field, default true</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("animation")
         public Boolean animation;
 
+        /**
+         * <p>Belongs to grid.</p>
+         */
         @NameInMap("grid")
         public DescribeScoreSectionPieChartResponseBodyResultObjectGrid grid;
 
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeScoreSectionPieChartResponseBodyResultObjectSeries> series;
 

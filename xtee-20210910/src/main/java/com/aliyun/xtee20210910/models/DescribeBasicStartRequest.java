@@ -4,18 +4,48 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeBasicStartRequest extends TeaModel {
+    /**
+     * <p>Application appkey.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("appKey")
     public String appKey;
 
+    /**
+     * <p>End time, accurate to milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20250320</p>
+     */
     @NameInMap("endDs")
     public String endDs;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Service to call</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service_tender_cee</p>
+     */
     @NameInMap("service")
     public String service;
 
+    /**
+     * <p>Start time, accurate to milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20250310</p>
+     */
     @NameInMap("startDs")
     public String startDs;
 

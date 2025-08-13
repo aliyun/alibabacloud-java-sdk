@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeEventBaseInfoByEventCodeResponseBodyResultObject resultObject;
 
@@ -32,21 +41,57 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventBaseInfoByEventCodeResponseBodyResultObjectInputFields extends TeaModel {
+        /**
+         * <p>Field description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Field code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("fieldCode")
         public String fieldCode;
 
+        /**
+         * <p>Field ranking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("fieldRank")
         public String fieldRank;
 
+        /**
+         * <p>Field source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("fieldSource")
         public String fieldSource;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("title")
         public String title;
 
@@ -106,27 +151,75 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventBaseInfoByEventCodeResponseBodyResultObjectRuleDetails extends TeaModel {
+        /**
+         * <p>Policy Execution Logic</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3&amp;((1&amp;2&amp;4)</p>
+         */
         @NameInMap("logicExpression")
         public String logicExpression;
 
+        /**
+         * <p>Memo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>Rule Actions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;inputs\&quot;:[\&quot;auto_accselist\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
+         */
         @NameInMap("ruleActions")
         public String ruleActions;
 
+        /**
+         * <p>Policy Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
         @NameInMap("ruleAuthType")
         public String ruleAuthType;
 
+        /**
+         * <p>Event Expressions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;expressionName\&quot;:\&quot;同一设备同一IP上的注册用户数\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;dK7EXHr490f\&quot;},\&quot;operatorCode\&quot;:\&quot;gte\&quot;,\&quot;operatorName\&quot;:\&quot;大于等于\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;2\&quot;}}]</p>
+         */
         @NameInMap("ruleExpressions")
         public String ruleExpressions;
 
+        /**
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101544</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>Policy Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>手机号MD5命中人脸测试名单</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <p>Policy Status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DRAFT</p>
+         */
         @NameInMap("ruleStatus")
         public String ruleStatus;
 
@@ -202,33 +295,87 @@ public class DescribeEventBaseInfoByEventCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeEventBaseInfoByEventCodeResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Business version number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("bizVersion")
         public Integer bizVersion;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Event status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("eventStauts")
         public String eventStauts;
 
+        /**
+         * <p>Field list.</p>
+         */
         @NameInMap("inputFields")
         public java.util.List<DescribeEventBaseInfoByEventCodeResponseBodyResultObjectInputFields> inputFields;
 
+        /**
+         * <p>Memo.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>备注</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>Policy Information</p>
+         */
         @NameInMap("ruleDetails")
         public java.util.List<DescribeEventBaseInfoByEventCodeResponseBodyResultObjectRuleDetails> ruleDetails;
 
+        /**
+         * <p>Operation template code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("templateCode")
         public String templateCode;
 
+        /**
+         * <p>Template name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册事件模板</p>
+         */
         @NameInMap("templateName")
         public String templateName;
 
+        /**
+         * <p>Template type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
+         */
         @NameInMap("templateType")
         public String templateType;
 

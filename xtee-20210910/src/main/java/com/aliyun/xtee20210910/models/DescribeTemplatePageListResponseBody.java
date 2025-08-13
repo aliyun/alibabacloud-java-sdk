@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatePageListResponseBody extends TeaModel {
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Number of items per page, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeTemplatePageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,42 +109,120 @@ public class DescribeTemplatePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeTemplatePageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Number of policies</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("ruleCount")
         public Integer ruleCount;
 
+        /**
+         * <p>Template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("templateCode")
         public String templateCode;
 
+        /**
+         * <p>Template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册事件</p>
+         */
         @NameInMap("templateName")
         public String templateName;
 
+        /**
+         * <p>Event status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("templateStatus")
         public String templateStatus;
 
+        /**
+         * <p>Template type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_SERVICE</p>
+         */
         @NameInMap("templateType")
         public String templateType;
 
+        /**
+         * <p>Number of customer authorizations</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("userCount")
         public Integer userCount;
 
+        /**
+         * <p>Version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Integer version;
 

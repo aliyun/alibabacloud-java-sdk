@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleBarChartResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeRuleBarChartResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,15 +109,39 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleBarChartResponseBodyResultObjectSeriesData extends TeaModel {
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销事件</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("num")
         public Long num;
 
+        /**
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别评分_高风险_拒绝</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -128,9 +185,18 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleBarChartResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Response data.</p>
+         */
         @NameInMap("data")
         public java.util.List<DescribeRuleBarChartResponseBodyResultObjectSeriesData> data;
 
+        /**
+         * <p>Bar chart type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bar</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -158,6 +224,9 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleBarChartResponseBodyResultObjectYaxis extends TeaModel {
+        /**
+         * <p>yaxis data items</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -177,9 +246,15 @@ public class DescribeRuleBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleBarChartResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeRuleBarChartResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>yaxis related results.</p>
+         */
         @NameInMap("yaxis")
         public DescribeRuleBarChartResponseBodyResultObjectYaxis yaxis;
 

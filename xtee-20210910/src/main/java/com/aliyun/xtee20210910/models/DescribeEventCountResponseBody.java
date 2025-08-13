@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventCountResponseBody extends TeaModel {
+    /**
+     * <p>Status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error details</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeEventCountResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,12 +109,30 @@ public class DescribeEventCountResponseBody extends TeaModel {
     }
 
     public static class DescribeEventCountResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Whether it exceeds the maximum number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("limit")
         public Boolean limit;
 
+        /**
+         * <p>Maximum creation count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("maxTotalItem")
         public Integer maxTotalItem;
 
+        /**
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101</p>
+         */
         @NameInMap("totalItem")
         public Integer totalItem;
 

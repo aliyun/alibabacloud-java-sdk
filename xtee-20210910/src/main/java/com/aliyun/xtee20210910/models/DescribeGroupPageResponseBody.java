@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeGroupPageResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeGroupPageResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,27 +109,75 @@ public class DescribeGroupPageResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupPageResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Community number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>129838420210118141502RaMMIgVG</p>
+         */
         @NameInMap("communityNo")
         public String communityNo;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1699450018265</p>
+         */
         @NameInMap("createTime")
         public Long createTime;
 
+        /**
+         * <p>Group risk concentration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
+         */
         @NameInMap("groupRisk")
         public String groupRisk;
 
+        /**
+         * <p>Group scale.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("groupScale")
         public String groupScale;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Scene name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>通用图计算</p>
+         */
         @NameInMap("sceneName")
         public String sceneName;
 
+        /**
+         * <p>Task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6770764</p>
+         */
         @NameInMap("taskId")
         public Long taskId;
 
+        /**
+         * <p>User UID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
+         */
         @NameInMap("userId")
         public String userId;
 

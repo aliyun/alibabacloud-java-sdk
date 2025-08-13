@@ -4,30 +4,88 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTemplatePageListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public String currentPage;
 
+    /**
+     * <p>Event code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>d6_h1fe4cfa1g</p>
+     */
     @NameInMap("eventCodes")
     public String eventCodes;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Event name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>注册事件</p>
+     */
     @NameInMap("templateName")
     public String templateName;
 
+    /**
+     * <p>Event template search field</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
+     */
     @NameInMap("templateSearchItem")
     public String templateSearchItem;
 
+    /**
+     * <p>Event status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ONLINE</p>
+     */
     @NameInMap("templateStatus")
     public String templateStatus;
 
+    /**
+     * <p>Template type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PUB_SERVICE</p>
+     */
     @NameInMap("templateType")
     public String templateType;
 

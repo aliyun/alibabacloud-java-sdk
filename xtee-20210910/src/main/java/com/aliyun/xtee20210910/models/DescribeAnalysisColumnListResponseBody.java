@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnalysisColumnListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeAnalysisColumnListResponseBodyResultObject> resultObject;
 
@@ -32,21 +41,57 @@ public class DescribeAnalysisColumnListResponseBody extends TeaModel {
     }
 
     public static class DescribeAnalysisColumnListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Whether it is a default column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isDefault")
         public Boolean isDefault;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("variableName")
         public String variableName;
 
+        /**
+         * <p>Variable title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("variableTitle")
         public String variableTitle;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("variableType")
         public String variableType;
 

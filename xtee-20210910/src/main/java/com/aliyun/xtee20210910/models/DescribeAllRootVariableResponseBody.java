@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllRootVariableResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeAllRootVariableResponseBodyResultObject> resultObject;
 
@@ -32,9 +41,21 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
     }
 
     public static class DescribeAllRootVariableResponseBodyResultObjectOutputThreshold extends TeaModel {
+        /**
+         * <p>Maximum value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("maxValue")
         public Double maxValue;
 
+        /**
+         * <p>Minimum value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("minValue")
         public Double minValue;
 
@@ -62,45 +83,126 @@ public class DescribeAllRootVariableResponseBody extends TeaModel {
     }
 
     public static class DescribeAllRootVariableResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Variable code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Variable description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Display type and group label</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("displayType")
         public String displayType;
 
+        /**
+         * <p>Favorite flag</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("favoriteFlag")
         public Boolean favoriteFlag;
 
+        /**
+         * <p>Field ranking</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("fieldRank")
         public Long fieldRank;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Variable ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Input field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("inputFieldType")
         public String inputFieldType;
 
+        /**
+         * <p>Variable input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Variable name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Maximum cross-sectional area of the checkbox.</p>
+         */
         @NameInMap("outputThreshold")
         public DescribeAllRootVariableResponseBodyResultObjectOutputThreshold outputThreshold;
 
+        /**
+         * <p>Data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("type")
         public String type;
 

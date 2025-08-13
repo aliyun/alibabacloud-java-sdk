@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSampleDataListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeSampleDataListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,69 +109,201 @@ public class DescribeSampleDataListResponseBody extends TeaModel {
     }
 
     public static class DescribeSampleDataListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Classification type, binary or multi-class.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>二分类</p>
+         */
         @NameInMap("classificationType")
         public String classificationType;
 
+        /**
+         * <p>Criterion value for sample data calculation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;正样本&quot;:&quot;1&quot;，&quot;负样本&quot;:&quot;1&quot;}</p>
+         */
         @NameInMap("dataDistributed")
         public String dataDistributed;
 
+        /**
+         * <p>First row of sample data. Used to define the values of each column.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17700000000</p>
+         */
         @NameInMap("dataTitle")
         public String dataTitle;
 
+        /**
+         * <p>Deletion tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DELETE</p>
+         */
         @NameInMap("deleteTag")
         public String deleteTag;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册样本</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Number of normal samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>999</p>
+         */
         @NameInMap("normalSize")
         public Long normalSize;
 
+        /**
+         * <p>Recall configuration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;variables&quot;:&quot;a,b,c&quot;}</p>
+         */
         @NameInMap("recallConfig")
         public String recallConfig;
 
+        /**
+         * <p>Number of risk samples</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("riskSize")
         public Long riskSize;
 
+        /**
+         * <p>Specified risk value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>black</p>
+         */
         @NameInMap("riskValue")
         public String riskValue;
 
+        /**
+         * <p>Sample label details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;type&quot;:&quot;positive&quot;,&quot;size&quot;:&quot;2000&quot;,&quot;value&quot;:1},{&quot;type&quot;:&quot;negative&quot;,&quot;size&quot;:1900,&quot;value&quot;:0}]</p>
+         */
         @NameInMap("sampleLabelDetail")
         public String sampleLabelDetail;
 
+        /**
+         * <p>Sample size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
+         */
         @NameInMap("sampleSize")
         public Long sampleSize;
 
+        /**
+         * <p>Scene code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse_detection</p>
+         */
         @NameInMap("scene")
         public String scene;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Storage path</p>
+         * 
+         * <strong>example:</strong>
+         * <p>saf/de/sample/3dc2spspHKq4G3YI9d08</p>
+         */
         @NameInMap("storePath")
         public String storePath;
 
+        /**
+         * <p>Storage type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("storeType")
         public String storeType;
 
+        /**
+         * <p>Whether recall is supported</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("supportRecall")
         public String supportRecall;
 
+        /**
+         * <p>User UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
+         */
         @NameInMap("userId")
         public Long userId;
 
+        /**
+         * <p>Version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Integer version;
 

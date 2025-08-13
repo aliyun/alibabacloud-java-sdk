@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSDKDownloadListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeSDKDownloadListResponseBodyResultObject> resultObject;
 
@@ -32,33 +41,93 @@ public class DescribeSDKDownloadListResponseBody extends TeaModel {
     }
 
     public static class DescribeSDKDownloadListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Developer</p>
+         * 
+         * <strong>example:</strong>
+         * <p>阿里云安全-风险识别</p>
+         */
         @NameInMap("developer")
         public String developer;
 
+        /**
+         * <p>Device type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ANDROID</p>
+         */
         @NameInMap("deviceType")
         public String deviceType;
 
+        /**
+         * <p>Download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz">https://aliyun-xxxx.oss-cn-xxx.xxx.com/sdk/xxx/10056.1/Android-AliyunDeviceEnhance-10056.1-20250611.tgz</a></p>
+         */
         @NameInMap("downloadUrl")
         public String downloadUrl;
 
+        /**
+         * <p>File MD5.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E582EEB6B4BC9B5CB168AA5A7DD0EE93</p>
+         */
         @NameInMap("md5")
         public String md5;
 
+        /**
+         * <p>Package name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>net.security.device</p>
+         */
         @NameInMap("packageName")
         public String packageName;
 
+        /**
+         * <p>Risk recognition SDK privacy policy link</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html">https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202111120818_92724.html</a></p>
+         */
         @NameInMap("privacyLink")
         public String privacyLink;
 
+        /**
+         * <p>Release time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1751212800000</p>
+         */
         @NameInMap("pushTime")
         public String pushTime;
 
+        /**
+         * <p>SDK version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("sdkVersion")
         public String sdkVersion;
 
+        /**
+         * <p>Size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4.12 MB</p>
+         */
         @NameInMap("size")
         public String size;
 

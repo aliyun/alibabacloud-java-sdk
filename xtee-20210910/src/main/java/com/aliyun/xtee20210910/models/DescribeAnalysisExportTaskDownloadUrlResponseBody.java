@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAnalysisExportTaskDownloadUrlResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeAnalysisExportTaskDownloadUrlResponseBodyResultObject resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeAnalysisExportTaskDownloadUrlResponseBody extends TeaModel 
     }
 
     public static class DescribeAnalysisExportTaskDownloadUrlResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Download URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&OSSAccessKeyId=xxxxxxxxx&Signature=%2F%xxxxxxxxxxxx%3D">https://xxxxx-oss-xxxxx.xxxxxx.aliyuncs.com/xx/xx/xxx/xxxxxx.csv?Expires=1753433384&amp;OSSAccessKeyId=xxxxxxxxx&amp;Signature=%2F%xxxxxxxxxxxx%3D</a></p>
+         */
         @NameInMap("downloadFileUrl")
         public String downloadFileUrl;
 
+        /**
+         * <p>Download execution time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753891199000</p>
+         */
         @NameInMap("executeTime")
         public Long executeTime;
 
+        /**
+         * <p>Task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("status")
         public String status;
 

@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeHitRuleTrendResponseBody extends TeaModel {
+    /**
+     * <p>Status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error details</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Response object</p>
+     */
     @NameInMap("resultObject")
     public DescribeHitRuleTrendResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Indicates whether the operation was successful, where true means success.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class DescribeHitRuleTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeHitRuleTrendResponseBodyResultObjectSeriesData extends TeaModel {
+        /**
+         * <p>Number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
+         */
         @NameInMap("num")
         public Long num;
 
+        /**
+         * <p>Scale</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.00%</p>
+         */
         @NameInMap("scale")
         public String scale;
 
@@ -106,9 +151,18 @@ public class DescribeHitRuleTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeHitRuleTrendResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Returned data object</p>
+         */
         @NameInMap("data")
         public java.util.List<DescribeHitRuleTrendResponseBodyResultObjectSeriesData> data;
 
+        /**
+         * <p>Display title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>策略name</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -136,6 +190,9 @@ public class DescribeHitRuleTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeHitRuleTrendResponseBodyResultObjectXaxis extends TeaModel {
+        /**
+         * <p>Returned data object</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -155,9 +212,15 @@ public class DescribeHitRuleTrendResponseBody extends TeaModel {
     }
 
     public static class DescribeHitRuleTrendResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Chart data</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeHitRuleTrendResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>X-axis data</p>
+         */
         @NameInMap("xaxis")
         public DescribeHitRuleTrendResponseBodyResultObjectXaxis xaxis;
 

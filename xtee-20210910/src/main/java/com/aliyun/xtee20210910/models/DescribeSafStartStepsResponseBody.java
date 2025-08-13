@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSafStartStepsResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeSafStartStepsResponseBodyResultObject> resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeSafStartStepsResponseBody extends TeaModel {
     }
 
     public static class DescribeSafStartStepsResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Step content</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://help.aliyun.com/document_detail/177689.html">https://help.aliyun.com/document_detail/177689.html</a></p>
+         */
         @NameInMap("content")
         public String content;
 
+        /**
+         * <p>Step title</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ios</p>
+         */
         @NameInMap("id")
         public String id;
 
+        /**
+         * <p>Type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>URL</p>
+         */
         @NameInMap("type")
         public String type;
 

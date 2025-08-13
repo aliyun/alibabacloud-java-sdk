@@ -4,9 +4,21 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CheckFieldLimitResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Whether the condition is met: -<strong>true</strong>: meets the condition-<strong>false</strong>: does not meet the condition</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("resultObject")
     public Boolean resultObject;
 

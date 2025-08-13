@@ -4,15 +4,43 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRecommendVelocitiesRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and responses, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Metric code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>coupon_abuse_detection</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>Region ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Metric type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>recommend_velocity</p>
+     */
     @NameInMap("type")
     public String type;
 

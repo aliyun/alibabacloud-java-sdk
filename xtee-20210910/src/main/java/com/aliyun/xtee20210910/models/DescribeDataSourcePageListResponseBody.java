@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeDataSourcePageListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeDataSourcePageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,30 +109,84 @@ public class DescribeDataSourcePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeDataSourcePageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Creator of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx</p>
+         */
         @NameInMap("creator")
         public String creator;
 
+        /**
+         * <p>Data source description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Time when the data source was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public String gmtCreate;
 
+        /**
+         * <p>Time when the data source was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public String gmtModified;
 
+        /**
+         * <p>Data source ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Last modifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("modifier")
         public String modifier;
 
+        /**
+         * <p>Data source name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data_source</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Total pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("total")
         public Long total;
 
+        /**
+         * <p>Data source type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FILE</p>
+         */
         @NameInMap("type")
         public String type;
 

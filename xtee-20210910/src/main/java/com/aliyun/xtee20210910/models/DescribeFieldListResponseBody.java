@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeFieldListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeFieldListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,30 +109,84 @@ public class DescribeFieldListResponseBody extends TeaModel {
     }
 
     public static class DescribeFieldListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Field classification</p>
+         * 
+         * <strong>example:</strong>
+         * <p>REQUEST_PARAM</p>
+         */
         @NameInMap("classify")
         public String classify;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Enum data</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STATUS</p>
+         */
         @NameInMap("enumData")
         public String enumData;
 
+        /**
+         * <p>Field ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Field name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Field source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFINE</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ENABLE</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Field type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("type")
         public String type;
 

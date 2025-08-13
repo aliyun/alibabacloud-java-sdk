@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsBarChartResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeTagsBarChartResponseBodyResultObject resultObject;
 
+    /**
+     * <p>Whether the request was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,9 +109,21 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsBarChartResponseBodyResultObjectSeriesData extends TeaModel {
+        /**
+         * <p>Number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("num")
         public Long num;
 
+        /**
+         * <p>Scale</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10%</p>
+         */
         @NameInMap("scale")
         public String scale;
 
@@ -106,12 +151,27 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsBarChartResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Chart data list</p>
+         */
         @NameInMap("data")
         public java.util.List<DescribeTagsBarChartResponseBodyResultObjectSeriesData> data;
 
+        /**
+         * <p>Series name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Chart field, same as name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tag</p>
+         */
         @NameInMap("stack")
         public String stack;
 
@@ -147,6 +207,9 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsBarChartResponseBodyResultObjectXaxis extends TeaModel {
+        /**
+         * <p>xaxis data items</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -166,9 +229,15 @@ public class DescribeTagsBarChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsBarChartResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeTagsBarChartResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>xaxis interface configuration.</p>
+         */
         @NameInMap("xaxis")
         public DescribeTagsBarChartResponseBodyResultObjectXaxis xaxis;
 

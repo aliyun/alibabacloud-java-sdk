@@ -4,30 +4,88 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSampleDataListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public String currentPage;
 
+    /**
+     * <p>Deletion status</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DELETE</p>
+     */
     @NameInMap("deleteTag")
     public String deleteTag;
 
+    /**
+     * <p>Page size, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public String pageSize;
 
+    /**
+     * <p>Query content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>手机号</p>
+     */
     @NameInMap("queryContent")
     public String queryContent;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Sample ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5467</p>
+     */
     @NameInMap("sampleId")
     public Long sampleId;
 
+    /**
+     * <p>Scene</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("scene")
     public String scene;
 
+    /**
+     * <p>Status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CREATE</p>
+     */
     @NameInMap("status")
     public String status;
 

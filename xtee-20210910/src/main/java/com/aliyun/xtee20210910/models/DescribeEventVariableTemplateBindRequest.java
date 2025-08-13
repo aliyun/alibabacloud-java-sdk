@@ -4,23 +4,53 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateBindRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages. Default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Input parameters, separated by commas if multiple.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age,ip</p>
      */
     @NameInMap("inputs")
     public String inputs;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Template code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>register</p>
+     */
     @NameInMap("templateCode")
     public String templateCode;
 
     /**
+     * <p>Type</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NATIVE</p>
      */
     @NameInMap("type")
     public String type;

@@ -4,68 +4,124 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class UpdateQueryVariableRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
     /**
+     * <p>Data source code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ds_vcaoii1697</p>
      */
     @NameInMap("dataSourceCode")
     public String dataSourceCode;
 
+    /**
+     * <p>Description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述</p>
+     */
     @NameInMap("description")
     public String description;
 
     /**
+     * <p>Event code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_ajnoqe2016</p>
      */
     @NameInMap("eventCode")
     public String eventCode;
 
     /**
+     * <p>Expression.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT  AVG( $source )\nFROM ds_vcaoii1697 \nWHERE  $age &gt; 0</p>
      */
     @NameInMap("expression")
     public String expression;
 
     /**
+     * <p>Display expression</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</p>
      */
     @NameInMap("expressionTitle")
     public String expressionTitle;
 
     /**
+     * <p>Expression associated variable</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
      */
     @NameInMap("expressionVariable")
     public String expressionVariable;
 
     /**
+     * <p>Primary key ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3144</p>
      */
     @NameInMap("id")
     public Long id;
 
     /**
+     * <p>Outlier</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("outlier")
     public String outlier;
 
     /**
+     * <p>Variable return type</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STRING</p>
      */
     @NameInMap("outputs")
     public String outputs;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
     /**
+     * <p>Title.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>获取年龄大于30的数据</p>
      */
     @NameInMap("title")
     public String title;

@@ -4,17 +4,43 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DeleteSampleBatchRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>IDs for batch deletion operations.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>324,343</p>
+     */
     @NameInMap("ids")
     public String ids;
 
+    /**
+     * <p>Region code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
     /**
+     * <p>List of versions.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1,1</p>
      */
     @NameInMap("versions")
     public String versions;

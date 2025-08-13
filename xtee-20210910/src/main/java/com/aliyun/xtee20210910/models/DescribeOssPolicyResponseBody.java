@@ -4,21 +4,57 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeOssPolicyResponseBody extends TeaModel {
+    /**
+     * <p>accessId, a parameter used in OSS SDK uploads, corresponding to OSSAccessKeyId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAIpeYTKEbC0v10</p>
+     */
     @NameInMap("AccessId")
     public String accessId;
 
+    /**
+     * <p>OSS host ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testvm.biubiubiuu.com</p>
+     */
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>Key required for file upload.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>saf/a/uid/ccc</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>OSS security policy</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJleHBpxxxxxx</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>Signature data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>tzl1wL4q8rR/xxxxxx</p>
+     */
     @NameInMap("Signature")
     public String signature;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

@@ -4,30 +4,80 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class ModifyFieldRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Field classification</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REQUEST_PARAM</p>
+     */
     @NameInMap("classify")
     public String classify;
 
+    /**
+     * <p>Description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>描述</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Enum type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;name\&quot;:\&quot;ENABLE\&quot;,\&quot;value\&quot;:\&quot;禁用\&quot;}]</p>
+     */
     @NameInMap("enumData")
     public String enumData;
 
+    /**
+     * <p>Variable ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>376773</p>
+     */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Variable name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>年龄</p>
+     */
     @NameInMap("title")
     public String title;
 

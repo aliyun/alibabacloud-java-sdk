@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeUsedServiceResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Record details</p>
+     */
     @NameInMap("records")
     public java.util.List<DescribeUsedServiceResponseBodyRecords> records;
 
@@ -32,12 +41,30 @@ public class DescribeUsedServiceResponseBody extends TeaModel {
     }
 
     public static class DescribeUsedServiceResponseBodyRecords extends TeaModel {
+        /**
+         * <p>English name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse</p>
+         */
         @NameInMap("enName")
         public String enName;
 
+        /**
+         * <p>Service name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险识别服务</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Service code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>account_abuse</p>
+         */
         @NameInMap("serviceCode")
         public String serviceCode;
 

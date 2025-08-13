@@ -4,36 +4,82 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class UpdateAuthRuleRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Policy primary key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7088</p>
+     */
     @NameInMap("consoleRuleId")
     public Long consoleRuleId;
 
+    /**
+     * <p>Event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_afghcf6411</p>
+     */
     @NameInMap("eventCode")
     public String eventCode;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Policy output action</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;inputs\&quot;:[\&quot;auto_accselist\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
+     */
     @NameInMap("ruleActions")
     public String ruleActions;
 
     /**
+     * <p>Expression</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{\&quot;expressionName\&quot;:\&quot;设备token不为空\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;deviceToken\&quot;},\&quot;operatorCode\&quot;:\&quot;isNotEmptyWrapper\&quot;,\&quot;operatorName\&quot;:\&quot;不为空\&quot;}]</p>
      */
     @NameInMap("ruleExpressions")
     public String ruleExpressions;
 
     /**
+     * <p>Policy ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101544</p>
      */
     @NameInMap("ruleId")
     public String ruleId;
 
+    /**
+     * <p>Policy version primary key ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5190</p>
+     */
     @NameInMap("ruleVersionId")
     public Long ruleVersionId;
 

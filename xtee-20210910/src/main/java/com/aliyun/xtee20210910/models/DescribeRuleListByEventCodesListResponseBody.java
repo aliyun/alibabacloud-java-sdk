@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRuleListByEventCodesListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeRuleListByEventCodesListResponseBodyResultObject> resultObject;
 
@@ -32,9 +41,21 @@ public class DescribeRuleListByEventCodesListResponseBody extends TeaModel {
     }
 
     public static class DescribeRuleListByEventCodesListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4730</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 

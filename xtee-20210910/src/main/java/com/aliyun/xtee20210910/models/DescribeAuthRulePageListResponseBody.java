@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAuthRulePageListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Long currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Long pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeAuthRulePageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Long totalItem;
 
+    /**
+     * <p>Total pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Long totalPage;
 
@@ -76,33 +109,93 @@ public class DescribeAuthRulePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeAuthRulePageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Console rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6715</p>
+         */
         @NameInMap("consoleRuleId")
         public Long consoleRuleId;
 
+        /**
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MORMAL</p>
+         */
         @NameInMap("createType")
         public String createType;
 
+        /**
+         * <p>Modification time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Policy primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Memo</p>
+         * 
+         * <strong>example:</strong>
+         * <p>分析中心事件测试_策略01</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102059</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <p>Policy version primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3823</p>
+         */
         @NameInMap("ruleVersionId")
         public Long ruleVersionId;
 
+        /**
+         * <p>Status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Version number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("version")
         public Long version;
 

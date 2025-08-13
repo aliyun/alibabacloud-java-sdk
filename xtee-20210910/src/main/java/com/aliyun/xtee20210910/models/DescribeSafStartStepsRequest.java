@@ -4,24 +4,76 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSafStartStepsRequest extends TeaModel {
+    /**
+     * <p>Set the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Whether the server is an Alibaba Cloud server</p>
+     * <p>true or false</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("aliyunServer")
     public Boolean aliyunServer;
 
+    /**
+     * <p>Used to receive a collection of strings from the frontend that POP cannot accept</p>
+     * <p>Device type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ios</p>
+     */
     @NameInMap("deviceTypesStr")
     public String deviceTypesStr;
 
+    /**
+     * <p>Event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_ahqido8038</p>
+     */
     @NameInMap("eventCode")
     public String eventCode;
 
+    /**
+     * <p>Language, parameters can be passed</p>
+     * <ul>
+     * <li>zh-CN: Chinese (default)</li>
+     * <li>en-US: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh_CN</p>
+     */
     @NameInMap("language")
     public String language;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Server region</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("serverRegion")
     public String serverRegion;
 

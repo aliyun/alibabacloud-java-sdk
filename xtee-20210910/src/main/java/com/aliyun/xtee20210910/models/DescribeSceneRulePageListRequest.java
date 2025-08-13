@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSceneRulePageListRequest extends TeaModel {
     /**
+     * <p>Set the language type for requests and received messages. Default value is <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeSceneRulePageListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Creation type</p>
+     * 
      * <strong>example:</strong>
      * <p>NOMAL</p>
      */
@@ -19,6 +27,8 @@ public class DescribeSceneRulePageListRequest extends TeaModel {
     public String createType;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +36,8 @@ public class DescribeSceneRulePageListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>Event code</p>
+     * 
      * <strong>example:</strong>
      * <p>de_ahgctb7098</p>
      */
@@ -33,6 +45,8 @@ public class DescribeSceneRulePageListRequest extends TeaModel {
     public String eventCode;
 
     /**
+     * <p>Number of items per page in the returned results. Default value: 20, minimum value: 1, maximum value: 50.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -40,6 +54,8 @@ public class DescribeSceneRulePageListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>Region code</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -47,16 +63,26 @@ public class DescribeSceneRulePageListRequest extends TeaModel {
     public String regId;
 
     /**
+     * <p>Strategy type</p>
+     * 
      * <strong>example:</strong>
      * <p>CUSTMER</p>
      */
     @NameInMap("ruleAuthType")
     public String ruleAuthType;
 
+    /**
+     * <p>Strategy name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>营销风险识别</p>
+     */
     @NameInMap("ruleName")
     public String ruleName;
 
     /**
+     * <p>Strategy status</p>
+     * 
      * <strong>example:</strong>
      * <p>RUNNING</p>
      */

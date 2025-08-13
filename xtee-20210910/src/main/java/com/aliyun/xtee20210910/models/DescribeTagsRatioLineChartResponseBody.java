@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeTagsRatioLineChartResponseBodyResultObject resultObject;
 
@@ -32,9 +41,18 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsRatioLineChartResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Result data.</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
+        /**
+         * <p>Series name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn101</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -62,6 +80,9 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsRatioLineChartResponseBodyResultObjectXaxis extends TeaModel {
+        /**
+         * <p>X-axis data</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -81,9 +102,15 @@ public class DescribeTagsRatioLineChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsRatioLineChartResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeTagsRatioLineChartResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>xaxis node.</p>
+         */
         @NameInMap("xaxis")
         public DescribeTagsRatioLineChartResponseBodyResultObjectXaxis xaxis;
 

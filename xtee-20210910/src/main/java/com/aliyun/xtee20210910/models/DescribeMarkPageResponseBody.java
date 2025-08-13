@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeMarkPageResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object.</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeMarkPageResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,15 +109,39 @@ public class DescribeMarkPageResponseBody extends TeaModel {
     }
 
     public static class DescribeMarkPageResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mobile</p>
+         */
         @NameInMap("fieldName")
         public String fieldName;
 
+        /**
+         * <p>Field value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18000000000</p>
+         */
         @NameInMap("fieldValue")
         public String fieldValue;
 
+        /**
+         * <p>Primary key ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2793</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Mark (0 No / 1 Yes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("markType")
         public String markType;
 

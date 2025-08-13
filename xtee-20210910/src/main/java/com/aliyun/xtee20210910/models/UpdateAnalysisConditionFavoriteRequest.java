@@ -4,42 +4,108 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class UpdateAnalysisConditionFavoriteRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Condition value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;relationship\&quot;:\&quot;and\&quot;,\&quot;list\&quot;:[{\&quot;deepCount\&quot;:1,\&quot;left\&quot;:{\&quot;hasRightVariable\&quot;:true,\&quot;fieldType\&quot;:\&quot;INT\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;,\&quot;leftVariableType\&quot;:\&quot;NATIVE\&quot;,\&quot;name\&quot;:\&quot;DEtest222\&quot;,\&quot;operatorCode\&quot;:\&quot;equals\&quot;},\&quot;right\&quot;:{\&quot;rightVariableType\&quot;:\&quot;constant\&quot;,\&quot;name\&quot;:\&quot;9007199254\&quot;,\&quot;functionName\&quot;:\&quot;\&quot;},\&quot;operatorCode\&quot;:\&quot;equals\&quot;}]}</p>
+     */
     @NameInMap("condition")
     public String condition;
 
+    /**
+     * <p>Start time, accurate to milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1752076800000</p>
+     */
     @NameInMap("eventBeginTime")
     public Long eventBeginTime;
 
+    /**
+     * <p>Event code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_ajnoqe2016</p>
+     */
     @NameInMap("eventCode")
     public String eventCode;
 
+    /**
+     * <p>End time, accurate to milliseconds (ms).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1753891199000</p>
+     */
     @NameInMap("eventEndTime")
     public Long eventEndTime;
 
+    /**
+     * <p>Field name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
+     */
     @NameInMap("fieldName")
     public String fieldName;
 
+    /**
+     * <p>Field value</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("fieldValue")
     public String fieldValue;
 
     /**
+     * <p>Primary key ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3144</p>
      */
     @NameInMap("id")
     public Long id;
 
+    /**
+     * <p>Condition name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>查询条件1</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>Region code</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Type, BASIC: Basic query, ADVANCE: Advanced query, BATCH: Batch query</p>
+     * 
+     * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
     @NameInMap("type")
     public String type;
 

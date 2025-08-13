@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeRequestHitResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeRequestHitResponseBodyResultObject resultObject;
 
@@ -32,27 +41,75 @@ public class DescribeRequestHitResponseBody extends TeaModel {
     }
 
     public static class DescribeRequestHitResponseBodyResultObjectRuleHitRecords extends TeaModel {
+        /**
+         * <p>Duration</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("cost")
         public Integer cost;
 
+        /**
+         * <p>Whether the rule was hit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("hitSuccessful")
         public Boolean hitSuccessful;
 
+        /**
+         * <p>Whether to show details</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isShowDetail")
         public Boolean isShowDetail;
 
+        /**
+         * <p>Order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("order")
         public Integer order;
 
+        /**
+         * <p>Policy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>101544</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>Policy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册手机号是11位数字</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <p>Rule snapshot ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("ruleSnapshotId")
         public String ruleSnapshotId;
 
+        /**
+         * <p>Policy status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ruleStatus")
         public String ruleStatus;
 
@@ -128,27 +185,72 @@ public class DescribeRequestHitResponseBody extends TeaModel {
     }
 
     public static class DescribeRequestHitResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Input parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;eventCode\&quot;:\&quot;de_afghcf6411\&quot;,\&quot;ip\&quot;:\&quot;196.168.0.1\&quot;,\&quot;DEtest222\&quot;:9007199254740999,\&quot;age\&quot;:20}</p>
+         */
         @NameInMap("inputs")
         public String inputs;
 
+        /**
+         * <p>Output parameters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;tags\&quot;:\&quot;rm0102,test_tag,age\&quot;,\&quot;score\&quot;:\&quot;30.0\&quot;,\&quot;extend\&quot;:\&quot;{\\\&quot;OUT_V01\\\&quot;:\\\&quot;Maritime\\\&quot;,\\\&quot;OUT_V02\\\&quot;:\\\&quot;Lome\\\&quot;,\\\&quot;OUT_V03\\\&quot;:\\\&quot;196.168.0.1_A\\\&quot;}\&quot;,\&quot;finalDecision\&quot;:\&quot;REJECT\&quot;}</p>
+         */
         @NameInMap("outputs")
         public String outputs;
 
+        /**
+         * <p>Timestamp of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752571330000</p>
+         */
         @NameInMap("requestTime")
         public Long requestTime;
 
+        /**
+         * <p>Details of the executed rules.</p>
+         */
         @NameInMap("ruleHitRecords")
         public java.util.List<DescribeRequestHitResponseBodyResultObjectRuleHitRecords> ruleHitRecords;
 
+        /**
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60C97040-D5D5-4906-9522-B9B413730CAA</p>
+         */
         @NameInMap("sRequestId")
         public String sRequestId;
 
+        /**
+         * <p>Total amount of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("totalCost")
         public Long totalCost;
 

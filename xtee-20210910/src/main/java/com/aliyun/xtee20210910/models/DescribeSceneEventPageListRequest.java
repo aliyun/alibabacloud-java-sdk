@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSceneEventPageListRequest extends TeaModel {
     /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeSceneEventPageListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +27,8 @@ public class DescribeSceneEventPageListRequest extends TeaModel {
     public String currentPage;
 
     /**
+     * <p>Search name or service code</p>
+     * 
      * <strong>example:</strong>
      * <p>servicer_code</p>
      */
@@ -26,6 +36,8 @@ public class DescribeSceneEventPageListRequest extends TeaModel {
     public String nameOrCode;
 
     /**
+     * <p>Page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +45,8 @@ public class DescribeSceneEventPageListRequest extends TeaModel {
     public String pageSize;
 
     /**
+     * <p>Region code</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

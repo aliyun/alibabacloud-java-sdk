@@ -4,29 +4,79 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeNameListPageListRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, default value is <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Update start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1753372800000</p>
+     */
     @NameInMap("updateBeginTime")
     public Long updateBeginTime;
 
+    /**
+     * <p>Update end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1753459199059</p>
+     */
     @NameInMap("updateEndTime")
     public Long updateEndTime;
 
+    /**
+     * <p>Variable name/description</p>
+     * 
+     * <strong>example:</strong>
+     * <p>白名单</p>
+     */
     @NameInMap("value")
     public String value;
 
     /**
+     * <p>Variable ID</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>762</p>
      */
     @NameInMap("variableId")
     public Long variableId;

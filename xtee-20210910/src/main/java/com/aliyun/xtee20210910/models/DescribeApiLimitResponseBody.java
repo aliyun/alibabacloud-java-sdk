@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeApiLimitResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeApiLimitResponseBodyResultObject resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeApiLimitResponseBody extends TeaModel {
     }
 
     public static class DescribeApiLimitResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Whether the maximum number has been exceeded</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("limit")
         public Boolean limit;
 
+        /**
+         * <p>Maximum number of items that can be created</p>
+         * 
+         * <strong>example:</strong>
+         * <p>150</p>
+         */
         @NameInMap("maxTotalItem")
         public Long maxTotalItem;
 
+        /**
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>31</p>
+         */
         @NameInMap("totalItem")
         public Long totalItem;
 

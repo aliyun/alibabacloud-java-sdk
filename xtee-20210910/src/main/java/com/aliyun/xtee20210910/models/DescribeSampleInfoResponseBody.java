@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeSampleInfoResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeSampleInfoResponseBodyResultObject resultObject;
 
@@ -32,21 +41,57 @@ public class DescribeSampleInfoResponseBody extends TeaModel {
     }
 
     public static class DescribeSampleInfoResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3144</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Sample tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>em0102</p>
+         */
         @NameInMap("sampleTags")
         public String sampleTags;
 
+        /**
+         * <p>Sample type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PHONE</p>
+         */
         @NameInMap("sampleType")
         public String sampleType;
 
+        /**
+         * <p>Sample value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17700000000</p>
+         */
         @NameInMap("sampleValue")
         public String sampleValue;
 
+        /**
+         * <p>Update time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753804800000</p>
+         */
         @NameInMap("updateTime")
         public String updateTime;
 
+        /**
+         * <p>Version number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Integer version;
 

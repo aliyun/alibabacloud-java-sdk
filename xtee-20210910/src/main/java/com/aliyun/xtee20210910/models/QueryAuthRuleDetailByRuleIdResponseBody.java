@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public QueryAuthRuleDetailByRuleIdResponseBodyResultObject resultObject;
 
@@ -32,66 +41,200 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
     }
 
     public static class QueryAuthRuleDetailByRuleIdResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Audit ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>225</p>
+         */
         @NameInMap("auditId")
         public Long auditId;
 
+        /**
+         * <p>Authorization type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
+         */
         @NameInMap("authType")
         public String authType;
 
+        /**
+         * <p>Authorized user UID</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("authUsers")
         public String authUsers;
 
+        /**
+         * <p>Primary key ID of the strategy</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6843</p>
+         */
         @NameInMap("consoleRuleId")
         public Long consoleRuleId;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Execution logic</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1&amp;2</p>
+         */
         @NameInMap("logicExpression")
         public String logicExpression;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>Rule priority, the higher the number, the higher the priority.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("priority")
         public Long priority;
 
+        /**
+         * <p>Returned rule action structure.</p>
+         */
         @NameInMap("ruleActionMap")
         public java.util.Map<String, String> ruleActionMap;
 
+        /**
+         * <p>Output actions</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;inputs\&quot;:[\&quot;unusualBrand\&quot;],\&quot;name\&quot;:\&quot;<strong>addDeTags</strong>\&quot;,\&quot;actionType\&quot;:\&quot;TAG\&quot;,\&quot;outputType\&quot;:\&quot;const\&quot;}]</p>
+         */
         @NameInMap("ruleActions")
         public String ruleActions;
 
+        /**
+         * <p>Rule authorization type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHITE_BOX</p>
+         */
         @NameInMap("ruleAuthType")
         public String ruleAuthType;
 
+        /**
+         * <p>Rule expressions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{\&quot;expressionName\&quot;:\&quot;同一设备同一IP上的注册用户数\&quot;,\&quot;itemId\&quot;:1,\&quot;left\&quot;:{\&quot;name\&quot;:\&quot;dK7EXHr490f\&quot;},\&quot;operatorCode\&quot;:\&quot;gte\&quot;,\&quot;operatorName\&quot;:\&quot;大于等于\&quot;,\&quot;right\&quot;:{\&quot;fieldValue\&quot;:\&quot;2\&quot;}}]</p>
+         */
         @NameInMap("ruleExpressions")
         public String ruleExpressions;
 
+        /**
+         * <p>Strategy ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>102224</p>
+         */
         @NameInMap("ruleId")
         public String ruleId;
 
+        /**
+         * <p>Strategy name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>营销风险识别</p>
+         */
         @NameInMap("ruleName")
         public String ruleName;
 
+        /**
+         * <p>Strategy status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("ruleStatus")
         public String ruleStatus;
 
+        /**
+         * <p>Rule type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEFAULT</p>
+         */
+        @NameInMap("ruleType")
+        public String ruleType;
+
+        /**
+         * <p>Primary key ID of the strategy version</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11519</p>
+         */
         @NameInMap("ruleVersionId")
         public Long ruleVersionId;
 
+        /**
+         * <p>Template type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PUB_SERVICE</p>
+         */
         @NameInMap("templateType")
         public String templateType;
 
+        /**
+         * <p>Version number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("version")
         public Long version;
 
@@ -242,6 +385,14 @@ public class QueryAuthRuleDetailByRuleIdResponseBody extends TeaModel {
         }
         public String getRuleStatus() {
             return this.ruleStatus;
+        }
+
+        public QueryAuthRuleDetailByRuleIdResponseBodyResultObject setRuleType(String ruleType) {
+            this.ruleType = ruleType;
+            return this;
+        }
+        public String getRuleType() {
+            return this.ruleType;
         }
 
         public QueryAuthRuleDetailByRuleIdResponseBodyResultObject setRuleVersionId(Long ruleVersionId) {

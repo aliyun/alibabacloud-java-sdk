@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeQueryVariableDetailResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeQueryVariableDetailResponseBodyResultObject resultObject;
 
@@ -32,36 +41,102 @@ public class DescribeQueryVariableDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeQueryVariableDetailResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Data source code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ds_vcaoii1697</p>
+         */
         @NameInMap("dataSourceCode")
         public Long dataSourceCode;
 
+        /**
+         * <p>Data source name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>名称数据源</p>
+         */
         @NameInMap("dataSourceName")
         public String dataSourceName;
 
+        /**
+         * <p>Description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  AVG( $source )\nFROM ds_vcaoii1697 \nWHERE  $age &gt; 0</p>
+         */
         @NameInMap("expression")
         public String expression;
 
+        /**
+         * <p>Expression title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SELECT  AVG( $source )\nFROM testCase\nWHERE  $age &gt; 0</p>
+         */
         @NameInMap("expressionTitle")
         public String expressionTitle;
 
+        /**
+         * <p>Expression variable.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[96426]</p>
+         */
         @NameInMap("expressionVariable")
         public String expressionVariable;
 
+        /**
+         * <p>Variable ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>355</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Outlier</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("outlier")
         public String outlier;
 
+        /**
+         * <p>Output results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOUBLE</p>
+         */
         @NameInMap("outputs")
         public String outputs;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>自定义查询变量标题</p>
+         */
         @NameInMap("title")
         public String title;
 

@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeNameListTypeListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeNameListTypeListResponseBodyResultObject> resultObject;
 
@@ -32,9 +41,21 @@ public class DescribeNameListTypeListResponseBody extends TeaModel {
     }
 
     public static class DescribeNameListTypeListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Match Key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>accountId</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>Variable value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>账号ID</p>
+         */
         @NameInMap("value")
         public String value;
 

@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeNameListVariablePageListResponseBody extends TeaModel {
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeNameListVariablePageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>101</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,45 +109,129 @@ public class DescribeNameListVariablePageListResponseBody extends TeaModel {
     }
 
     public static class DescribeNameListVariablePageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Used capacity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("capacity")
         public Long capacity;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>变量描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Name list ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Remaining capacity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>99997</p>
+         */
         @NameInMap("leftCapacity")
         public Long leftCapacity;
 
+        /**
+         * <p>Parameter name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nl_UN8otElLb490</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Name list type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>手机号</p>
+         */
         @NameInMap("nameListType")
         public String nameListType;
 
+        /**
+         * <p>Associated event eventCode</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
+         */
         @NameInMap("refObjId")
         public String refObjId;
 
+        /**
+         * <p>Association type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>EVENT</p>
+         */
         @NameInMap("refObjType")
         public Long refObjType;
 
+        /**
+         * <p>Data source</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAF</p>
+         */
         @NameInMap("sourceType")
         public String sourceType;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>白名单</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NAME_LIST</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>User UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>180650758xxxxxxx</p>
+         */
         @NameInMap("userId")
         public Long userId;
 

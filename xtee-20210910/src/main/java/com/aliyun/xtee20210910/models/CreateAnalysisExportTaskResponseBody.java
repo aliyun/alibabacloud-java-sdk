@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateAnalysisExportTaskResponseBody extends TeaModel {
+    /**
+     * <p>Request ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public CreateAnalysisExportTaskResponseBodyResultObject resultObject;
 
@@ -32,36 +41,142 @@ public class CreateAnalysisExportTaskResponseBody extends TeaModel {
     }
 
     public static class CreateAnalysisExportTaskResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Export list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;requestId&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;RequestId&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;eventTime&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;事件时间&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;accountId&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;账号&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;deviceId&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;设备ID&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;eventCode&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;事件编码&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;ip&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;IP&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;score&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;分值&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;tags&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;标签&quot;
+         *                 },
+         *                 {
+         *                     &quot;fieldName&quot;: &quot;DEtest222&quot;,
+         *                     &quot;fieldTitle&quot;: &quot;测试222&quot;
+         *                 }
+         *             ]</p>
+         */
         @NameInMap("columns")
         public String columns;
 
+        /**
+         * <p>Export task conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *      &quot;fieldName&quot;: null, 
+         *       &quot;fieldValue&quot;: null 
+         *       }</p>
+         */
         @NameInMap("conditions")
         public String conditions;
 
+        /**
+         * <p>Event start time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1752076800000</p>
+         */
         @NameInMap("eventBeginTime")
         public Long eventBeginTime;
 
+        /**
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_ahespg8137</p>
+         */
         @NameInMap("eventCodes")
         public String eventCodes;
 
+        /**
+         * <p>End time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1753891199000</p>
+         */
         @NameInMap("eventEndTime")
         public Long eventEndTime;
 
+        /**
+         * <p>File format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CSV</p>
+         */
         @NameInMap("fileFormat")
         public String fileFormat;
 
+        /**
+         * <p>OSS-generated key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxxx</p>
+         */
         @NameInMap("ossKey")
         public String ossKey;
 
+        /**
+         * <p>Export task scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
         @NameInMap("scope")
         public String scope;
 
+        /**
+         * <p>Task status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <p>Export task type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BASIC</p>
+         */
         @NameInMap("type")
         public String type;
 
+        /**
+         * <p>User UID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1519714049632764</p>
+         */
         @NameInMap("userId")
         public Long userId;
 

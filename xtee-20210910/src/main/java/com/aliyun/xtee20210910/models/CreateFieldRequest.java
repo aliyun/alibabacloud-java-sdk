@@ -4,33 +4,89 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateFieldRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>Field classification.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>REQUEST_PARAM</p>
+     */
     @NameInMap("classify")
     public String classify;
 
+    /**
+     * <p>Description information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>字段描述信息</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>Enum data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enum</p>
+     */
     @NameInMap("enumData")
     public String enumData;
 
+    /**
+     * <p>Field name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>age</p>
+     */
     @NameInMap("name")
     public String name;
 
     /**
+     * <p>Region code.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Business source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>DEFINE</p>
+     */
     @NameInMap("source")
     public String source;
 
+    /**
+     * <p>Title.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>年龄</p>
+     */
     @NameInMap("title")
     public String title;
 
+    /**
+     * <p>Field type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STRING</p>
+     */
     @NameInMap("type")
     public String type;
 

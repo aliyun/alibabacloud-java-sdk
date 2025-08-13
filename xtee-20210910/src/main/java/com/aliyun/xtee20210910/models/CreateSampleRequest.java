@@ -4,30 +4,88 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class CreateSampleRequest extends TeaModel {
+    /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values: </p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>zh</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>OSS client uploaded file name</p>
+     * 
+     * <strong>example:</strong>
+     * <p>样本文件.csv</p>
+     */
     @NameInMap("clientFileName")
     public String clientFileName;
 
+    /**
+     * <p>OSS client address</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sample/path</p>
+     */
     @NameInMap("clientPath")
     public String clientPath;
 
+    /**
+     * <p>File type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CSV</p>
+     */
     @NameInMap("fileType")
     public String fileType;
 
+    /**
+     * <p>Region code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("regId")
     public String regId;
 
+    /**
+     * <p>Sample tag</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm0102</p>
+     */
     @NameInMap("sampleTag")
     public String sampleTag;
 
+    /**
+     * <p>Sample type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PHONE</p>
+     */
     @NameInMap("sampleType")
     public String sampleType;
 
+    /**
+     * <p>Sample values</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1777000000,1777000001</p>
+     */
     @NameInMap("sampleValues")
     public String sampleValues;
 
+    /**
+     * <p>Upload type</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ANNEX</p>
+     */
     @NameInMap("uploadType")
     public String uploadType;
 

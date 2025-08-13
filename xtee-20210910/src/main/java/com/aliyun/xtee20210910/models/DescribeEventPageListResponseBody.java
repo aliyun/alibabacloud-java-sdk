@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventPageListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, with a default value of 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventPageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,27 +109,75 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventPageListResponseBodyResultObjectChildren extends TeaModel {
+        /**
+         * <p>Event code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aamexg3015</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Event status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("eventStatus")
         public String eventStatus;
 
+        /**
+         * <p>Event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BYPASS</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>334</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ruleCount")
         public Long ruleCount;
 
@@ -172,42 +253,117 @@ public class DescribeEventPageListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventPageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Object</p>
+         */
         @NameInMap("children")
         public java.util.List<DescribeEventPageListResponseBodyResultObjectChildren> children;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Event status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLINE</p>
+         */
         @NameInMap("eventStatus")
         public String eventStatus;
 
+        /**
+         * <p>Event type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Modification time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1565701886000</p>
+         */
         @NameInMap("gmtModified")
         public Long gmtModified;
 
+        /**
+         * <p>Database ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>497</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Total number of rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("ruleCount")
         public Integer ruleCount;
 
+        /**
+         * <p>Template code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("templateCode")
         public String templateCode;
 
+        /**
+         * <p>Template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册模版</p>
+         */
         @NameInMap("templateName")
         public String templateName;
 
+        /**
+         * <p>Template type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UNIVERSAL</p>
+         */
         @NameInMap("templateType")
         public String templateType;
 
+        /**
+         * <p>Number of customer authorizations</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("userCount")
         public Integer userCount;
 

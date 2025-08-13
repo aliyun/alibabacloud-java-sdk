@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
+    /**
+     * <p>Status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("code")
     public String code;
 
+    /**
+     * <p>HTTP status code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("httpStatusCode")
     public String httpStatusCode;
 
+    /**
+     * <p>Error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>The input parameter data is not valid. order_storage_company_num component not found</p>
+     */
     @NameInMap("message")
     public String message;
 
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeAllEventNameAndCodeResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Whether the operation was successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -76,15 +109,39 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeAllEventNameAndCodeResponseBodyResultObjectChildren extends TeaModel {
+        /**
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("createType")
         public String createType;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aamexg3015</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险旁路</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Event type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BYPASS</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 
@@ -128,18 +185,45 @@ public class DescribeAllEventNameAndCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeAllEventNameAndCodeResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>List of child fields.</p>
+         */
         @NameInMap("children")
         public java.util.List<DescribeAllEventNameAndCodeResponseBodyResultObjectChildren> children;
 
+        /**
+         * <p>Creation type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MORMAL</p>
+         */
         @NameInMap("createType")
         public String createType;
 
+        /**
+         * <p>Event code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de_aszbjb7236</p>
+         */
         @NameInMap("eventCode")
         public String eventCode;
 
+        /**
+         * <p>Event name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册风险</p>
+         */
         @NameInMap("eventName")
         public String eventName;
 
+        /**
+         * <p>Event type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MAIN</p>
+         */
         @NameInMap("eventType")
         public String eventType;
 

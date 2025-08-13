@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public DescribeInputFeildCountByEventCodeResponseBodyResultObject resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeInputFeildCountByEventCodeResponseBody extends TeaModel {
     }
 
     public static class DescribeInputFeildCountByEventCodeResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Whether it exceeds the maximum quantity</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("limit")
         public Boolean limit;
 
+        /**
+         * <p>Maximum number of created items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("maxTotalItem")
         public Integer maxTotalItem;
 
+        /**
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("totalItem")
         public Integer totalItem;
 

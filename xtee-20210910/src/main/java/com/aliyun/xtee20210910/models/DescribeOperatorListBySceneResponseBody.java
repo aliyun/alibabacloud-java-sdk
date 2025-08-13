@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeOperatorListBySceneResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeOperatorListBySceneResponseBodyResultObject> resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
     }
 
     public static class DescribeOperatorListBySceneResponseBodyResultObjectOperatorsRightVariables extends TeaModel {
+        /**
+         * <p>Field name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("fieldName")
         public String fieldName;
 
+        /**
+         * <p>Field type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INT</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Field value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
         @NameInMap("fieldValue")
         public String fieldValue;
 
@@ -73,18 +100,45 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
     }
 
     public static class DescribeOperatorListBySceneResponseBodyResultObjectOperators extends TeaModel {
+        /**
+         * <p>Operator code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equals</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Whether it contains a right variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("hasRightVariable")
         public Boolean hasRightVariable;
 
+        /**
+         * <p>Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>等于</p>
+         */
         @NameInMap("memo")
         public String memo;
 
+        /**
+         * <p>Operator name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>等于</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Right variable object</p>
+         */
         @NameInMap("rightVariables")
         public java.util.List<DescribeOperatorListBySceneResponseBodyResultObjectOperatorsRightVariables> rightVariables;
 
@@ -136,9 +190,18 @@ public class DescribeOperatorListBySceneResponseBody extends TeaModel {
     }
 
     public static class DescribeOperatorListBySceneResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Return value type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Operator list</p>
+         */
         @NameInMap("operators")
         public java.util.List<DescribeOperatorListBySceneResponseBodyResultObjectOperators> operators;
 

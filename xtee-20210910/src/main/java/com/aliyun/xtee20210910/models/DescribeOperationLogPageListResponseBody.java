@@ -4,21 +4,54 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeOperationLogPageListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <p>Page size, default value is 10</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeOperationLogPageListResponseBodyResultObject> resultObject;
 
+    /**
+     * <p>Total number of items</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <p>Total number of pages</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,24 +109,66 @@ public class DescribeOperationLogPageListResponseBody extends TeaModel {
     }
 
     public static class DescribeOperationLogPageListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Client IP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100.68.***.166</p>
+         */
         @NameInMap("clientIp")
         public String clientIp;
 
+        /**
+         * <p>Creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1621578648000</p>
+         */
         @NameInMap("gmtCreate")
         public Long gmtCreate;
 
+        /**
+         * <p>Content after operation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@selfvariable_02</p>
+         */
         @NameInMap("newContent")
         public String newContent;
 
+        /**
+         * <p>Content before operation</p>
+         * 
+         * <strong>example:</strong>
+         * <p>@selfvariable_02 + 1001</p>
+         */
         @NameInMap("oldContent")
         public String oldContent;
 
+        /**
+         * <p>Operation summary</p>
+         * 
+         * <strong>example:</strong>
+         * <p>更新事件:决策引擎可观测性持续建设_事件A(de_afghcf6411)</p>
+         */
         @NameInMap("operationSummary")
         public String operationSummary;
 
+        /**
+         * <p>Operation type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREATE_EVENT</p>
+         */
         @NameInMap("operationType")
         public String operationType;
 
+        /**
+         * <p>Operator</p>
+         * 
+         * <strong>example:</strong>
+         * <p>root</p>
+         */
         @NameInMap("userName")
         public String userName;
 

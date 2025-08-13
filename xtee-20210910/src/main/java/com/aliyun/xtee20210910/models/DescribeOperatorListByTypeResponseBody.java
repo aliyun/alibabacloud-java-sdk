@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeOperatorListByTypeResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeOperatorListByTypeResponseBodyResultObject> resultObject;
 
@@ -32,12 +41,30 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeOperatorListByTypeResponseBodyResultObjectOperators extends TeaModel {
+        /**
+         * <p>Operator code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>equals</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Whether it contains a right variable</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("hasRightVariable")
         public Boolean hasRightVariable;
 
+        /**
+         * <p>Operator name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>等于</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -73,9 +100,18 @@ public class DescribeOperatorListByTypeResponseBody extends TeaModel {
     }
 
     public static class DescribeOperatorListByTypeResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Return value type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Operator list</p>
+         */
         @NameInMap("operators")
         public java.util.List<DescribeOperatorListByTypeResponseBodyResultObjectOperators> operators;
 

@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return object</p>
+     */
     @NameInMap("resultObject")
     public java.util.List<DescribeEventVariableTemplateListResponseBodyResultObject> resultObject;
 
@@ -32,24 +41,66 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableTemplateListResponseBodyResultObjectVariables extends TeaModel {
+        /**
+         * <p>Variable code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("code")
         public String code;
 
+        /**
+         * <p>Description information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>Variable input type</p>
+         * 
+         * <strong>example:</strong>
+         * <p>STRING</p>
+         */
         @NameInMap("fieldType")
         public String fieldType;
 
+        /**
+         * <p>Primary key ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>454</p>
+         */
         @NameInMap("id")
         public Long id;
 
+        /**
+         * <p>Variable name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>age</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>Title.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>年龄</p>
+         */
         @NameInMap("title")
         public String title;
 
+        /**
+         * <p>Variable type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NATIVE</p>
+         */
         @NameInMap("type")
         public String type;
 
@@ -117,12 +168,27 @@ public class DescribeEventVariableTemplateListResponseBody extends TeaModel {
     }
 
     public static class DescribeEventVariableTemplateListResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Template code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>register</p>
+         */
         @NameInMap("templateCode")
         public String templateCode;
 
+        /**
+         * <p>Template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>注册模版</p>
+         */
         @NameInMap("templateName")
         public String templateName;
 
+        /**
+         * <p>Variable list.</p>
+         */
         @NameInMap("variables")
         public java.util.List<DescribeEventVariableTemplateListResponseBodyResultObjectVariables> variables;
 

@@ -4,9 +4,18 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeTagsNumLineChartResponseBody extends TeaModel {
+    /**
+     * <p>Request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AE7E6105-7DEB-5125-9B24-DCBC139F6CD2</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Returned object</p>
+     */
     @NameInMap("resultObject")
     public DescribeTagsNumLineChartResponseBodyResultObject resultObject;
 
@@ -32,9 +41,18 @@ public class DescribeTagsNumLineChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsNumLineChartResponseBodyResultObjectSeries extends TeaModel {
+        /**
+         * <p>Chart data list</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
+        /**
+         * <p>Series name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rn101</p>
+         */
         @NameInMap("name")
         public String name;
 
@@ -62,6 +80,9 @@ public class DescribeTagsNumLineChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsNumLineChartResponseBodyResultObjectXaxis extends TeaModel {
+        /**
+         * <p>Chart data list</p>
+         */
         @NameInMap("data")
         public java.util.List<String> data;
 
@@ -81,9 +102,15 @@ public class DescribeTagsNumLineChartResponseBody extends TeaModel {
     }
 
     public static class DescribeTagsNumLineChartResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Data list</p>
+         */
         @NameInMap("series")
         public java.util.List<DescribeTagsNumLineChartResponseBodyResultObjectSeries> series;
 
+        /**
+         * <p>xaxis node.</p>
+         */
         @NameInMap("xaxis")
         public DescribeTagsNumLineChartResponseBodyResultObjectXaxis xaxis;
 

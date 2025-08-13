@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSceneAllEventNameCodeListRequest extends TeaModel {
     /**
+     * <p>Sets the language type for requests and received messages, with a default value of <strong>zh</strong>. Values:</p>
+     * <ul>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>zh</p>
      */
@@ -12,6 +18,8 @@ public class DescribeSceneAllEventNameCodeListRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>Creation type</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -19,6 +27,8 @@ public class DescribeSceneAllEventNameCodeListRequest extends TeaModel {
     public String createType;
 
     /**
+     * <p>Region code</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */

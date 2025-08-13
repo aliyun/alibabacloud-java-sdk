@@ -4,21 +4,41 @@ package com.aliyun.xtee20210910.models;
 import com.aliyun.tea.*;
 
 public class DescribeEventLogPageResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>A32FE941-35F2-5378-B37C-4B8FDB16F094</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("currentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
     @NameInMap("resultObject")
     public java.util.List<DescribeEventLogPageResponseBodyResultObject> resultObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
     @NameInMap("totalItem")
     public Integer totalItem;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("totalPage")
     public Integer totalPage;
 
@@ -76,36 +96,74 @@ public class DescribeEventLogPageResponseBody extends TeaModel {
     }
 
     public static class DescribeEventLogPageResponseBodyResultObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1631801314885832</p>
+         */
         @NameInMap("accountId")
         public String accountId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="mailto:xxxx@123.com">xxxx@123.com</a></p>
+         */
         @NameInMap("email")
         public String email;
 
+        /**
+         * <p>ip。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.200.5.100</p>
+         */
         @NameInMap("ip")
         public String ip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>13817606333</p>
+         */
         @NameInMap("mobile")
         public String mobile;
 
         @NameInMap("nickName")
         public String nickName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>546F8063-0104-5271-9EB7-56FB3F375BAD</p>
+         */
         @NameInMap("requestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10.0</p>
+         */
         @NameInMap("score")
         public String score;
 
         @NameInMap("service")
         public String service;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rm0102</p>
+         */
         @NameInMap("tags")
         public String tags;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1737101348000</p>
+         */
         @NameInMap("timestamp")
         public String timestamp;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4239</p>
+         */
         @NameInMap("umid")
         public String umid;
 
