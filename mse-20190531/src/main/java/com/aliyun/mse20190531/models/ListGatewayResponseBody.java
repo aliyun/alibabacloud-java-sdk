@@ -316,12 +316,22 @@ public class ListGatewayResponseBody extends TeaModel {
         @NameInMap("IpList")
         public java.util.List<String> ipList;
 
+        @NameInMap("Ipv6List")
+        public java.util.List<String> ipv6List;
+
         /**
          * <strong>example:</strong>
          * <p>PUB_NET</p>
          */
         @NameInMap("NetType")
         public String netType;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Ready</p>
+         */
+        @NameInMap("Status")
+        public String status;
 
         public static ListGatewayResponseBodyDataResultGatewayEntry build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayResponseBodyDataResultGatewayEntry self = new ListGatewayResponseBodyDataResultGatewayEntry();
@@ -360,12 +370,28 @@ public class ListGatewayResponseBody extends TeaModel {
             return this.ipList;
         }
 
+        public ListGatewayResponseBodyDataResultGatewayEntry setIpv6List(java.util.List<String> ipv6List) {
+            this.ipv6List = ipv6List;
+            return this;
+        }
+        public java.util.List<String> getIpv6List() {
+            return this.ipv6List;
+        }
+
         public ListGatewayResponseBodyDataResultGatewayEntry setNetType(String netType) {
             this.netType = netType;
             return this;
         }
         public String getNetType() {
             return this.netType;
+        }
+
+        public ListGatewayResponseBodyDataResultGatewayEntry setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
