@@ -2910,6 +2910,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>创建一个MCP Server</p>
+     * 
+     * @param request CreateNacosMcpServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateNacosMcpServerResponse
+     */
+    public CreateNacosMcpServerResponse createNacosMcpServerWithOptions(CreateNacosMcpServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverName)) {
+            query.put("ServerName", request.serverName);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.endpointSpecification)) {
+            body.put("EndpointSpecification", request.endpointSpecification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serverSpecification)) {
+            body.put("ServerSpecification", request.serverSpecification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toolSpecification)) {
+            body.put("ToolSpecification", request.toolSpecification);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.yamlConfig)) {
+            body.put("YamlConfig", request.yamlConfig);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateNacosMcpServer"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateNacosMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建一个MCP Server</p>
+     * 
+     * @param request CreateNacosMcpServerRequest
+     * @return CreateNacosMcpServerResponse
+     */
+    public CreateNacosMcpServerResponse createNacosMcpServer(CreateNacosMcpServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createNacosMcpServerWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>The operation is not provided in Nacos SDKs. For information about Nacos SDKs, see the <a href="https://nacos.io/zh-cn/docs/sdk.html">official documentation</a>.</p>
@@ -4809,6 +4883,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteNacosInstanceResponse deleteNacosInstance(DeleteNacosInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteNacosInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除一个MCP Server</p>
+     * 
+     * @param request DeleteNacosMcpServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteNacosMcpServerResponse
+     */
+    public DeleteNacosMcpServerResponse deleteNacosMcpServerWithOptions(DeleteNacosMcpServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerId)) {
+            query.put("McpServerId", request.mcpServerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteNacosMcpServer"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteNacosMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除一个MCP Server</p>
+     * 
+     * @param request DeleteNacosMcpServerRequest
+     * @return DeleteNacosMcpServerResponse
+     */
+    public DeleteNacosMcpServerResponse deleteNacosMcpServer(DeleteNacosMcpServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteNacosMcpServerWithOptions(request, runtime);
     }
 
     /**
@@ -7073,6 +7203,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetNacosHistoryConfigResponse getNacosHistoryConfig(GetNacosHistoryConfigRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getNacosHistoryConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取MCP Server的详情</p>
+     * 
+     * @param request GetNacosMcpServerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNacosMcpServerResponse
+     */
+    public GetNacosMcpServerResponse getNacosMcpServerWithOptions(GetNacosMcpServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerId)) {
+            query.put("McpServerId", request.mcpServerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpServerVersion)) {
+            query.put("McpServerVersion", request.mcpServerVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNacosMcpServer"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNacosMcpServerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取MCP Server的详情</p>
+     * 
+     * @param request GetNacosMcpServerRequest
+     * @return GetNacosMcpServerResponse
+     */
+    public GetNacosMcpServerResponse getNacosMcpServer(GetNacosMcpServerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNacosMcpServerWithOptions(request, runtime);
     }
 
     /**
@@ -10397,6 +10587,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListNacosHistoryConfigsResponse listNacosHistoryConfigs(ListNacosHistoryConfigsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listNacosHistoryConfigsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取McpServer列表</p>
+     * 
+     * @param request ListNacosMcpServersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListNacosMcpServersResponse
+     */
+    public ListNacosMcpServersResponse listNacosMcpServersWithOptions(ListNacosMcpServersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.acceptLanguage)) {
+            query.put("AcceptLanguage", request.acceptLanguage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
+            query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNum)) {
+            query.put("PageNum", request.pageNum);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.search)) {
+            query.put("Search", request.search);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListNacosMcpServers"),
+            new TeaPair("version", "2019-05-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListNacosMcpServersResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取McpServer列表</p>
+     * 
+     * @param request ListNacosMcpServersRequest
+     * @return ListNacosMcpServersResponse
+     */
+    public ListNacosMcpServersResponse listNacosMcpServers(ListNacosMcpServersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listNacosMcpServersWithOptions(request, runtime);
     }
 
     /**
