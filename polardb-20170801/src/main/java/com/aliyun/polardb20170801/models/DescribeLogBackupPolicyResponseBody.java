@@ -4,6 +4,9 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeLogBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("AdvancedLogPolicies")
+    public DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies advancedLogPolicies;
+
     /**
      * <p>Indicates whether the log backup feature is enabled. Valid values:</p>
      * <ul>
@@ -70,6 +73,14 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeLogBackupPolicyResponseBody setAdvancedLogPolicies(DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies advancedLogPolicies) {
+        this.advancedLogPolicies = advancedLogPolicies;
+        return this;
+    }
+    public DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies getAdvancedLogPolicies() {
+        return this.advancedLogPolicies;
+    }
+
     public DescribeLogBackupPolicyResponseBody setEnableBackupLog(Integer enableBackupLog) {
         this.enableBackupLog = enableBackupLog;
         return this;
@@ -108,6 +119,121 @@ public class DescribeLogBackupPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy extends TeaModel {
+        @NameInMap("DestRegion")
+        public String destRegion;
+
+        @NameInMap("DestType")
+        public String destType;
+
+        @NameInMap("EnableLogBackup")
+        public Integer enableLogBackup;
+
+        @NameInMap("LogRetentionType")
+        public String logRetentionType;
+
+        @NameInMap("LogRetentionValue")
+        public String logRetentionValue;
+
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("SrcRegion")
+        public String srcRegion;
+
+        @NameInMap("SrcType")
+        public String srcType;
+
+        public static DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy self = new DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setDestRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setEnableLogBackup(Integer enableLogBackup) {
+            this.enableLogBackup = enableLogBackup;
+            return this;
+        }
+        public Integer getEnableLogBackup() {
+            return this.enableLogBackup;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setLogRetentionType(String logRetentionType) {
+            this.logRetentionType = logRetentionType;
+            return this;
+        }
+        public String getLogRetentionType() {
+            return this.logRetentionType;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setLogRetentionValue(String logRetentionValue) {
+            this.logRetentionValue = logRetentionValue;
+            return this;
+        }
+        public String getLogRetentionValue() {
+            return this.logRetentionValue;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setSrcRegion(String srcRegion) {
+            this.srcRegion = srcRegion;
+            return this;
+        }
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy setSrcType(String srcType) {
+            this.srcType = srcType;
+            return this;
+        }
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+    }
+
+    public static class DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies extends TeaModel {
+        @NameInMap("AdvancedLogPolicy")
+        public java.util.List<DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy> advancedLogPolicy;
+
+        public static DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies self = new DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeLogBackupPolicyResponseBodyAdvancedLogPolicies setAdvancedLogPolicy(java.util.List<DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy> advancedLogPolicy) {
+            this.advancedLogPolicy = advancedLogPolicy;
+            return this;
+        }
+        public java.util.List<DescribeLogBackupPolicyResponseBodyAdvancedLogPoliciesAdvancedLogPolicy> getAdvancedLogPolicy() {
+            return this.advancedLogPolicy;
+        }
+
     }
 
 }

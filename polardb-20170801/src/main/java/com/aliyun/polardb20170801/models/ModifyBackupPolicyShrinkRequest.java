@@ -3,9 +3,9 @@ package com.aliyun.polardb20170801.models;
 
 import com.aliyun.tea.*;
 
-public class ModifyBackupPolicyRequest extends TeaModel {
+public class ModifyBackupPolicyShrinkRequest extends TeaModel {
     @NameInMap("AdvancedDataPolicies")
-    public java.util.List<ModifyBackupPolicyRequestAdvancedDataPolicies> advancedDataPolicies;
+    public String advancedDataPoliciesShrink;
 
     /**
      * <p>The backup frequency. Default value: Normal. Valid values:</p>
@@ -245,20 +245,20 @@ public class ModifyBackupPolicyRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    public static ModifyBackupPolicyRequest build(java.util.Map<String, ?> map) throws Exception {
-        ModifyBackupPolicyRequest self = new ModifyBackupPolicyRequest();
+    public static ModifyBackupPolicyShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        ModifyBackupPolicyShrinkRequest self = new ModifyBackupPolicyShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public ModifyBackupPolicyRequest setAdvancedDataPolicies(java.util.List<ModifyBackupPolicyRequestAdvancedDataPolicies> advancedDataPolicies) {
-        this.advancedDataPolicies = advancedDataPolicies;
+    public ModifyBackupPolicyShrinkRequest setAdvancedDataPoliciesShrink(String advancedDataPoliciesShrink) {
+        this.advancedDataPoliciesShrink = advancedDataPoliciesShrink;
         return this;
     }
-    public java.util.List<ModifyBackupPolicyRequestAdvancedDataPolicies> getAdvancedDataPolicies() {
-        return this.advancedDataPolicies;
+    public String getAdvancedDataPoliciesShrink() {
+        return this.advancedDataPoliciesShrink;
     }
 
-    public ModifyBackupPolicyRequest setBackupFrequency(String backupFrequency) {
+    public ModifyBackupPolicyShrinkRequest setBackupFrequency(String backupFrequency) {
         this.backupFrequency = backupFrequency;
         return this;
     }
@@ -266,7 +266,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.backupFrequency;
     }
 
-    public ModifyBackupPolicyRequest setBackupPolicyLevel(String backupPolicyLevel) {
+    public ModifyBackupPolicyShrinkRequest setBackupPolicyLevel(String backupPolicyLevel) {
         this.backupPolicyLevel = backupPolicyLevel;
         return this;
     }
@@ -274,7 +274,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.backupPolicyLevel;
     }
 
-    public ModifyBackupPolicyRequest setBackupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
+    public ModifyBackupPolicyShrinkRequest setBackupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
         this.backupRetentionPolicyOnClusterDeletion = backupRetentionPolicyOnClusterDeletion;
         return this;
     }
@@ -282,7 +282,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.backupRetentionPolicyOnClusterDeletion;
     }
 
-    public ModifyBackupPolicyRequest setDBClusterId(String DBClusterId) {
+    public ModifyBackupPolicyShrinkRequest setDBClusterId(String DBClusterId) {
         this.DBClusterId = DBClusterId;
         return this;
     }
@@ -290,7 +290,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.DBClusterId;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel1BackupFrequency(String dataLevel1BackupFrequency) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel1BackupFrequency(String dataLevel1BackupFrequency) {
         this.dataLevel1BackupFrequency = dataLevel1BackupFrequency;
         return this;
     }
@@ -298,7 +298,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel1BackupFrequency;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel1BackupPeriod(String dataLevel1BackupPeriod) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel1BackupPeriod(String dataLevel1BackupPeriod) {
         this.dataLevel1BackupPeriod = dataLevel1BackupPeriod;
         return this;
     }
@@ -306,7 +306,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel1BackupPeriod;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel1BackupRetentionPeriod(String dataLevel1BackupRetentionPeriod) {
         this.dataLevel1BackupRetentionPeriod = dataLevel1BackupRetentionPeriod;
         return this;
     }
@@ -314,7 +314,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel1BackupRetentionPeriod;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel1BackupTime(String dataLevel1BackupTime) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel1BackupTime(String dataLevel1BackupTime) {
         this.dataLevel1BackupTime = dataLevel1BackupTime;
         return this;
     }
@@ -322,7 +322,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel1BackupTime;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel2BackupAnotherRegionRegion(String dataLevel2BackupAnotherRegionRegion) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel2BackupAnotherRegionRegion(String dataLevel2BackupAnotherRegionRegion) {
         this.dataLevel2BackupAnotherRegionRegion = dataLevel2BackupAnotherRegionRegion;
         return this;
     }
@@ -330,7 +330,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel2BackupAnotherRegionRegion;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel2BackupAnotherRegionRetentionPeriod(String dataLevel2BackupAnotherRegionRetentionPeriod) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel2BackupAnotherRegionRetentionPeriod(String dataLevel2BackupAnotherRegionRetentionPeriod) {
         this.dataLevel2BackupAnotherRegionRetentionPeriod = dataLevel2BackupAnotherRegionRetentionPeriod;
         return this;
     }
@@ -338,7 +338,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel2BackupAnotherRegionRetentionPeriod;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel2BackupPeriod(String dataLevel2BackupPeriod) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel2BackupPeriod(String dataLevel2BackupPeriod) {
         this.dataLevel2BackupPeriod = dataLevel2BackupPeriod;
         return this;
     }
@@ -346,7 +346,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel2BackupPeriod;
     }
 
-    public ModifyBackupPolicyRequest setDataLevel2BackupRetentionPeriod(String dataLevel2BackupRetentionPeriod) {
+    public ModifyBackupPolicyShrinkRequest setDataLevel2BackupRetentionPeriod(String dataLevel2BackupRetentionPeriod) {
         this.dataLevel2BackupRetentionPeriod = dataLevel2BackupRetentionPeriod;
         return this;
     }
@@ -354,7 +354,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.dataLevel2BackupRetentionPeriod;
     }
 
-    public ModifyBackupPolicyRequest setOwnerAccount(String ownerAccount) {
+    public ModifyBackupPolicyShrinkRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -362,7 +362,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ModifyBackupPolicyRequest setOwnerId(Long ownerId) {
+    public ModifyBackupPolicyShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -370,7 +370,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ModifyBackupPolicyRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
+    public ModifyBackupPolicyShrinkRequest setPreferredBackupPeriod(String preferredBackupPeriod) {
         this.preferredBackupPeriod = preferredBackupPeriod;
         return this;
     }
@@ -378,7 +378,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.preferredBackupPeriod;
     }
 
-    public ModifyBackupPolicyRequest setPreferredBackupTime(String preferredBackupTime) {
+    public ModifyBackupPolicyShrinkRequest setPreferredBackupTime(String preferredBackupTime) {
         this.preferredBackupTime = preferredBackupTime;
         return this;
     }
@@ -386,7 +386,7 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.preferredBackupTime;
     }
 
-    public ModifyBackupPolicyRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public ModifyBackupPolicyShrinkRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -394,196 +394,12 @@ public class ModifyBackupPolicyRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ModifyBackupPolicyRequest setResourceOwnerId(Long resourceOwnerId) {
+    public ModifyBackupPolicyShrinkRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
-    }
-
-    public static class ModifyBackupPolicyRequestAdvancedDataPolicies extends TeaModel {
-        @NameInMap("ActionType")
-        public String actionType;
-
-        @NameInMap("AutoCreated")
-        public Boolean autoCreated;
-
-        @NameInMap("BakType")
-        public String bakType;
-
-        @NameInMap("DestRegion")
-        public String destRegion;
-
-        @NameInMap("DestType")
-        public String destType;
-
-        @NameInMap("DumpAction")
-        public String dumpAction;
-
-        @NameInMap("FilterKey")
-        public String filterKey;
-
-        @NameInMap("FilterType")
-        public String filterType;
-
-        @NameInMap("FilterValue")
-        public String filterValue;
-
-        @NameInMap("OnlyPreserveOneEachDay")
-        public Boolean onlyPreserveOneEachDay;
-
-        @NameInMap("OnlyPreserveOneEachHour")
-        public Boolean onlyPreserveOneEachHour;
-
-        @NameInMap("PolicyId")
-        public String policyId;
-
-        @NameInMap("RetentionType")
-        public String retentionType;
-
-        @NameInMap("RetentionValue")
-        public String retentionValue;
-
-        @NameInMap("SrcRegion")
-        public String srcRegion;
-
-        @NameInMap("SrcType")
-        public String srcType;
-
-        public static ModifyBackupPolicyRequestAdvancedDataPolicies build(java.util.Map<String, ?> map) throws Exception {
-            ModifyBackupPolicyRequestAdvancedDataPolicies self = new ModifyBackupPolicyRequestAdvancedDataPolicies();
-            return TeaModel.build(map, self);
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setActionType(String actionType) {
-            this.actionType = actionType;
-            return this;
-        }
-        public String getActionType() {
-            return this.actionType;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setAutoCreated(Boolean autoCreated) {
-            this.autoCreated = autoCreated;
-            return this;
-        }
-        public Boolean getAutoCreated() {
-            return this.autoCreated;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setBakType(String bakType) {
-            this.bakType = bakType;
-            return this;
-        }
-        public String getBakType() {
-            return this.bakType;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setDestRegion(String destRegion) {
-            this.destRegion = destRegion;
-            return this;
-        }
-        public String getDestRegion() {
-            return this.destRegion;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setDestType(String destType) {
-            this.destType = destType;
-            return this;
-        }
-        public String getDestType() {
-            return this.destType;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setDumpAction(String dumpAction) {
-            this.dumpAction = dumpAction;
-            return this;
-        }
-        public String getDumpAction() {
-            return this.dumpAction;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setFilterKey(String filterKey) {
-            this.filterKey = filterKey;
-            return this;
-        }
-        public String getFilterKey() {
-            return this.filterKey;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setFilterType(String filterType) {
-            this.filterType = filterType;
-            return this;
-        }
-        public String getFilterType() {
-            return this.filterType;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setFilterValue(String filterValue) {
-            this.filterValue = filterValue;
-            return this;
-        }
-        public String getFilterValue() {
-            return this.filterValue;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setOnlyPreserveOneEachDay(Boolean onlyPreserveOneEachDay) {
-            this.onlyPreserveOneEachDay = onlyPreserveOneEachDay;
-            return this;
-        }
-        public Boolean getOnlyPreserveOneEachDay() {
-            return this.onlyPreserveOneEachDay;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setOnlyPreserveOneEachHour(Boolean onlyPreserveOneEachHour) {
-            this.onlyPreserveOneEachHour = onlyPreserveOneEachHour;
-            return this;
-        }
-        public Boolean getOnlyPreserveOneEachHour() {
-            return this.onlyPreserveOneEachHour;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setPolicyId(String policyId) {
-            this.policyId = policyId;
-            return this;
-        }
-        public String getPolicyId() {
-            return this.policyId;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setRetentionType(String retentionType) {
-            this.retentionType = retentionType;
-            return this;
-        }
-        public String getRetentionType() {
-            return this.retentionType;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setRetentionValue(String retentionValue) {
-            this.retentionValue = retentionValue;
-            return this;
-        }
-        public String getRetentionValue() {
-            return this.retentionValue;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setSrcRegion(String srcRegion) {
-            this.srcRegion = srcRegion;
-            return this;
-        }
-        public String getSrcRegion() {
-            return this.srcRegion;
-        }
-
-        public ModifyBackupPolicyRequestAdvancedDataPolicies setSrcType(String srcType) {
-            this.srcType = srcType;
-            return this;
-        }
-        public String getSrcType() {
-            return this.srcType;
-        }
-
     }
 
 }

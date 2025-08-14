@@ -4,6 +4,12 @@ package com.aliyun.polardb20170801.models;
 import com.aliyun.tea.*;
 
 public class DescribeBackupPolicyResponseBody extends TeaModel {
+    @NameInMap("AdvancedDataPolicies")
+    public DescribeBackupPolicyResponseBodyAdvancedDataPolicies advancedDataPolicies;
+
+    @NameInMap("AdvancedPolicyOption")
+    public String advancedPolicyOption;
+
     /**
      * <p>The backup frequency. Default value: Normal. Valid values:</p>
      * <ul>
@@ -24,6 +30,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
      */
     @NameInMap("BackupFrequency")
     public String backupFrequency;
+
+    @NameInMap("BackupPolicyLevel")
+    public String backupPolicyLevel;
 
     /**
      * <p>Indicates whether backups are retained when you delete a cluster. Valid values:</p>
@@ -227,12 +236,36 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeBackupPolicyResponseBody setAdvancedDataPolicies(DescribeBackupPolicyResponseBodyAdvancedDataPolicies advancedDataPolicies) {
+        this.advancedDataPolicies = advancedDataPolicies;
+        return this;
+    }
+    public DescribeBackupPolicyResponseBodyAdvancedDataPolicies getAdvancedDataPolicies() {
+        return this.advancedDataPolicies;
+    }
+
+    public DescribeBackupPolicyResponseBody setAdvancedPolicyOption(String advancedPolicyOption) {
+        this.advancedPolicyOption = advancedPolicyOption;
+        return this;
+    }
+    public String getAdvancedPolicyOption() {
+        return this.advancedPolicyOption;
+    }
+
     public DescribeBackupPolicyResponseBody setBackupFrequency(String backupFrequency) {
         this.backupFrequency = backupFrequency;
         return this;
     }
     public String getBackupFrequency() {
         return this.backupFrequency;
+    }
+
+    public DescribeBackupPolicyResponseBody setBackupPolicyLevel(String backupPolicyLevel) {
+        this.backupPolicyLevel = backupPolicyLevel;
+        return this;
+    }
+    public String getBackupPolicyLevel() {
+        return this.backupPolicyLevel;
     }
 
     public DescribeBackupPolicyResponseBody setBackupRetentionPolicyOnClusterDeletion(String backupRetentionPolicyOnClusterDeletion) {
@@ -337,6 +370,198 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy extends TeaModel {
+        @NameInMap("AutoCreated")
+        public Boolean autoCreated;
+
+        @NameInMap("BakType")
+        public String bakType;
+
+        @NameInMap("DestRegion")
+        public String destRegion;
+
+        @NameInMap("DestType")
+        public String destType;
+
+        @NameInMap("DumpAction")
+        public String dumpAction;
+
+        @NameInMap("FilterKey")
+        public String filterKey;
+
+        @NameInMap("FilterType")
+        public String filterType;
+
+        @NameInMap("FilterValue")
+        public String filterValue;
+
+        @NameInMap("OnlyPreserveOneEachDay")
+        public Boolean onlyPreserveOneEachDay;
+
+        @NameInMap("OnlyPreserveOneEachHour")
+        public Boolean onlyPreserveOneEachHour;
+
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        @NameInMap("RetentionType")
+        public String retentionType;
+
+        @NameInMap("RetentionValue")
+        public String retentionValue;
+
+        @NameInMap("SrcRegion")
+        public String srcRegion;
+
+        @NameInMap("SrcType")
+        public String srcType;
+
+        public static DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy self = new DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setAutoCreated(Boolean autoCreated) {
+            this.autoCreated = autoCreated;
+            return this;
+        }
+        public Boolean getAutoCreated() {
+            return this.autoCreated;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setBakType(String bakType) {
+            this.bakType = bakType;
+            return this;
+        }
+        public String getBakType() {
+            return this.bakType;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setDestRegion(String destRegion) {
+            this.destRegion = destRegion;
+            return this;
+        }
+        public String getDestRegion() {
+            return this.destRegion;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setDestType(String destType) {
+            this.destType = destType;
+            return this;
+        }
+        public String getDestType() {
+            return this.destType;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setDumpAction(String dumpAction) {
+            this.dumpAction = dumpAction;
+            return this;
+        }
+        public String getDumpAction() {
+            return this.dumpAction;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setFilterKey(String filterKey) {
+            this.filterKey = filterKey;
+            return this;
+        }
+        public String getFilterKey() {
+            return this.filterKey;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setFilterType(String filterType) {
+            this.filterType = filterType;
+            return this;
+        }
+        public String getFilterType() {
+            return this.filterType;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setFilterValue(String filterValue) {
+            this.filterValue = filterValue;
+            return this;
+        }
+        public String getFilterValue() {
+            return this.filterValue;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setOnlyPreserveOneEachDay(Boolean onlyPreserveOneEachDay) {
+            this.onlyPreserveOneEachDay = onlyPreserveOneEachDay;
+            return this;
+        }
+        public Boolean getOnlyPreserveOneEachDay() {
+            return this.onlyPreserveOneEachDay;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setOnlyPreserveOneEachHour(Boolean onlyPreserveOneEachHour) {
+            this.onlyPreserveOneEachHour = onlyPreserveOneEachHour;
+            return this;
+        }
+        public Boolean getOnlyPreserveOneEachHour() {
+            return this.onlyPreserveOneEachHour;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setRetentionType(String retentionType) {
+            this.retentionType = retentionType;
+            return this;
+        }
+        public String getRetentionType() {
+            return this.retentionType;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setRetentionValue(String retentionValue) {
+            this.retentionValue = retentionValue;
+            return this;
+        }
+        public String getRetentionValue() {
+            return this.retentionValue;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setSrcRegion(String srcRegion) {
+            this.srcRegion = srcRegion;
+            return this;
+        }
+        public String getSrcRegion() {
+            return this.srcRegion;
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy setSrcType(String srcType) {
+            this.srcType = srcType;
+            return this;
+        }
+        public String getSrcType() {
+            return this.srcType;
+        }
+
+    }
+
+    public static class DescribeBackupPolicyResponseBodyAdvancedDataPolicies extends TeaModel {
+        @NameInMap("AdvancedDataPolicy")
+        public java.util.List<DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy> advancedDataPolicy;
+
+        public static DescribeBackupPolicyResponseBodyAdvancedDataPolicies build(java.util.Map<String, ?> map) throws Exception {
+            DescribeBackupPolicyResponseBodyAdvancedDataPolicies self = new DescribeBackupPolicyResponseBodyAdvancedDataPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeBackupPolicyResponseBodyAdvancedDataPolicies setAdvancedDataPolicy(java.util.List<DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy> advancedDataPolicy) {
+            this.advancedDataPolicy = advancedDataPolicy;
+            return this;
+        }
+        public java.util.List<DescribeBackupPolicyResponseBodyAdvancedDataPoliciesAdvancedDataPolicy> getAdvancedDataPolicy() {
+            return this.advancedDataPolicy;
+        }
+
     }
 
 }

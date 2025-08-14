@@ -8767,15 +8767,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Modifies the automatic backup policy of a PolarDB cluster.</p>
      * 
-     * @param request ModifyBackupPolicyRequest
+     * @param tmpReq ModifyBackupPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyBackupPolicyResponse
      */
-    public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public ModifyBackupPolicyResponse modifyBackupPolicyWithOptions(ModifyBackupPolicyRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ModifyBackupPolicyShrinkRequest request = new ModifyBackupPolicyShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.advancedDataPolicies)) {
+            request.advancedDataPoliciesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.advancedDataPolicies, "AdvancedDataPolicies", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.advancedDataPoliciesShrink)) {
+            query.put("AdvancedDataPolicies", request.advancedDataPoliciesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.backupFrequency)) {
             query.put("BackupFrequency", request.backupFrequency);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.backupPolicyLevel)) {
+            query.put("BackupPolicyLevel", request.backupPolicyLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.backupRetentionPolicyOnClusterDeletion)) {
