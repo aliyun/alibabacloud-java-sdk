@@ -40,6 +40,9 @@ public class SubmitDocParserJobRequest extends TeaModel {
     @NameInMap("OssEndpoint")
     public String ossEndpoint;
 
+    @NameInMap("OutputHtmlTable")
+    public Boolean outputHtmlTable;
+
     @NameInMap("PageIndex")
     public String pageIndex;
 
@@ -110,6 +113,14 @@ public class SubmitDocParserJobRequest extends TeaModel {
     }
     public String getOssEndpoint() {
         return this.ossEndpoint;
+    }
+
+    public SubmitDocParserJobRequest setOutputHtmlTable(Boolean outputHtmlTable) {
+        this.outputHtmlTable = outputHtmlTable;
+        return this;
+    }
+    public Boolean getOutputHtmlTable() {
+        return this.outputHtmlTable;
     }
 
     public SubmitDocParserJobRequest setPageIndex(String pageIndex) {
