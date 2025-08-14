@@ -84,7 +84,6 @@ public class CreateFlowlogRequest extends TeaModel {
      * </ul>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogStore</p>
@@ -113,7 +112,6 @@ public class CreateFlowlogRequest extends TeaModel {
      * </ul>
      * </li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogProject</p>

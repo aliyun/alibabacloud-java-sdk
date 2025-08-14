@@ -12991,6 +12991,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除PrivateZone</p>
+     * 
      * @param request UnroutePrivateZoneInCenToVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UnroutePrivateZoneInCenToVpcResponse
@@ -13040,6 +13043,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除PrivateZone</p>
+     * 
      * @param request UnroutePrivateZoneInCenToVpcRequest
      * @return UnroutePrivateZoneInCenToVpcResponse
      */
