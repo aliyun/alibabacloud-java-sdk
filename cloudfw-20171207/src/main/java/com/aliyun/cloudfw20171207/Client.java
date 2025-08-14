@@ -2165,6 +2165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ProxyId", request.proxyId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trimSql)) {
+            query.put("trimSql", request.trimSql);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
