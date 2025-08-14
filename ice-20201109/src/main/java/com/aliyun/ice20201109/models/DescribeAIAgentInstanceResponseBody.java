@@ -53,6 +53,12 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         @NameInMap("CallLogUrl")
         public String callLogUrl;
 
+        @NameInMap("GmtCreate")
+        public String gmtCreate;
+
+        @NameInMap("GmtModified")
+        public String gmtModified;
+
         /**
          * <p>The runtime configurations of the AI agent.</p>
          * 
@@ -112,6 +118,22 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         }
         public String getCallLogUrl() {
             return this.callLogUrl;
+        }
+
+        public DescribeAIAgentInstanceResponseBodyInstance setGmtCreate(String gmtCreate) {
+            this.gmtCreate = gmtCreate;
+            return this;
+        }
+        public String getGmtCreate() {
+            return this.gmtCreate;
+        }
+
+        public DescribeAIAgentInstanceResponseBodyInstance setGmtModified(String gmtModified) {
+            this.gmtModified = gmtModified;
+            return this;
+        }
+        public String getGmtModified() {
+            return this.gmtModified;
         }
 
         public DescribeAIAgentInstanceResponseBodyInstance setRuntimeConfig(AIAgentRuntimeConfig runtimeConfig) {

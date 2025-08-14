@@ -110,6 +110,9 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @NameInMap("CustomParams")
         public String customParams;
 
+        @NameInMap("VadDuration")
+        public Integer vadDuration;
+
         @NameInMap("VadLevel")
         public Integer vadLevel;
 
@@ -148,6 +151,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
         public String getCustomParams() {
             return this.customParams;
+        }
+
+        public AIAgentOutboundCallConfigAsrConfig setVadDuration(Integer vadDuration) {
+            this.vadDuration = vadDuration;
+            return this;
+        }
+        public Integer getVadDuration() {
+            return this.vadDuration;
         }
 
         public AIAgentOutboundCallConfigAsrConfig setVadLevel(Integer vadLevel) {
@@ -190,6 +201,36 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
     }
 
+    public static class AIAgentOutboundCallConfigLlmConfigFunctionMap extends TeaModel {
+        @NameInMap("Function")
+        public String function;
+
+        @NameInMap("MatchFunction")
+        public String matchFunction;
+
+        public static AIAgentOutboundCallConfigLlmConfigFunctionMap build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigLlmConfigFunctionMap self = new AIAgentOutboundCallConfigLlmConfigFunctionMap();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigLlmConfigFunctionMap setFunction(String function) {
+            this.function = function;
+            return this;
+        }
+        public String getFunction() {
+            return this.function;
+        }
+
+        public AIAgentOutboundCallConfigLlmConfigFunctionMap setMatchFunction(String matchFunction) {
+            this.matchFunction = matchFunction;
+            return this;
+        }
+        public String getMatchFunction() {
+            return this.matchFunction;
+        }
+
+    }
+
     public static class AIAgentOutboundCallConfigLlmConfigLlmHistory extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -224,6 +265,12 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
 
+        @NameInMap("FunctionMap")
+        public java.util.List<AIAgentOutboundCallConfigLlmConfigFunctionMap> functionMap;
+
+        @NameInMap("LlmCompleteReply")
+        public Boolean llmCompleteReply;
+
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentOutboundCallConfigLlmConfigLlmHistory> llmHistory;
 
@@ -232,6 +279,15 @@ public class AIAgentOutboundCallConfig extends TeaModel {
 
         @NameInMap("LlmSystemPrompt")
         public String llmSystemPrompt;
+
+        @NameInMap("OpenAIExtraQuery")
+        public String openAIExtraQuery;
+
+        @NameInMap("OutputMaxDelay")
+        public String outputMaxDelay;
+
+        @NameInMap("OutputMinLength")
+        public Integer outputMinLength;
 
         public static AIAgentOutboundCallConfigLlmConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentOutboundCallConfigLlmConfig self = new AIAgentOutboundCallConfigLlmConfig();
@@ -244,6 +300,22 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        public AIAgentOutboundCallConfigLlmConfig setFunctionMap(java.util.List<AIAgentOutboundCallConfigLlmConfigFunctionMap> functionMap) {
+            this.functionMap = functionMap;
+            return this;
+        }
+        public java.util.List<AIAgentOutboundCallConfigLlmConfigFunctionMap> getFunctionMap() {
+            return this.functionMap;
+        }
+
+        public AIAgentOutboundCallConfigLlmConfig setLlmCompleteReply(Boolean llmCompleteReply) {
+            this.llmCompleteReply = llmCompleteReply;
+            return this;
+        }
+        public Boolean getLlmCompleteReply() {
+            return this.llmCompleteReply;
         }
 
         public AIAgentOutboundCallConfigLlmConfig setLlmHistory(java.util.List<AIAgentOutboundCallConfigLlmConfigLlmHistory> llmHistory) {
@@ -268,6 +340,30 @@ public class AIAgentOutboundCallConfig extends TeaModel {
         }
         public String getLlmSystemPrompt() {
             return this.llmSystemPrompt;
+        }
+
+        public AIAgentOutboundCallConfigLlmConfig setOpenAIExtraQuery(String openAIExtraQuery) {
+            this.openAIExtraQuery = openAIExtraQuery;
+            return this;
+        }
+        public String getOpenAIExtraQuery() {
+            return this.openAIExtraQuery;
+        }
+
+        public AIAgentOutboundCallConfigLlmConfig setOutputMaxDelay(String outputMaxDelay) {
+            this.outputMaxDelay = outputMaxDelay;
+            return this;
+        }
+        public String getOutputMaxDelay() {
+            return this.outputMaxDelay;
+        }
+
+        public AIAgentOutboundCallConfigLlmConfig setOutputMinLength(Integer outputMinLength) {
+            this.outputMinLength = outputMinLength;
+            return this;
+        }
+        public Integer getOutputMinLength() {
+            return this.outputMinLength;
         }
 
     }
@@ -314,8 +410,20 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
 
     public static class AIAgentOutboundCallConfigTtsConfig extends TeaModel {
+        @NameInMap("Emotion")
+        public String emotion;
+
+        @NameInMap("LanguageId")
+        public String languageId;
+
+        @NameInMap("ModelId")
+        public String modelId;
+
         @NameInMap("PronunciationRules")
         public java.util.List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> pronunciationRules;
+
+        @NameInMap("SpeechRate")
+        public Double speechRate;
 
         @NameInMap("VoiceId")
         public String voiceId;
@@ -328,12 +436,44 @@ public class AIAgentOutboundCallConfig extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public AIAgentOutboundCallConfigTtsConfig setEmotion(String emotion) {
+            this.emotion = emotion;
+            return this;
+        }
+        public String getEmotion() {
+            return this.emotion;
+        }
+
+        public AIAgentOutboundCallConfigTtsConfig setLanguageId(String languageId) {
+            this.languageId = languageId;
+            return this;
+        }
+        public String getLanguageId() {
+            return this.languageId;
+        }
+
+        public AIAgentOutboundCallConfigTtsConfig setModelId(String modelId) {
+            this.modelId = modelId;
+            return this;
+        }
+        public String getModelId() {
+            return this.modelId;
+        }
+
         public AIAgentOutboundCallConfigTtsConfig setPronunciationRules(java.util.List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> pronunciationRules) {
             this.pronunciationRules = pronunciationRules;
             return this;
         }
         public java.util.List<AIAgentOutboundCallConfigTtsConfigPronunciationRules> getPronunciationRules() {
             return this.pronunciationRules;
+        }
+
+        public AIAgentOutboundCallConfigTtsConfig setSpeechRate(Double speechRate) {
+            this.speechRate = speechRate;
+            return this;
+        }
+        public Double getSpeechRate() {
+            return this.speechRate;
         }
 
         public AIAgentOutboundCallConfigTtsConfig setVoiceId(String voiceId) {

@@ -105,6 +105,18 @@ public class CreateMediaLiveInputRequest extends TeaModel {
         @NameInMap("SourceUrl")
         public String sourceUrl;
 
+        @NameInMap("SrtLatency")
+        public Integer srtLatency;
+
+        @NameInMap("SrtMaxBitrate")
+        public Integer srtMaxBitrate;
+
+        @NameInMap("SrtPassphrase")
+        public String srtPassphrase;
+
+        @NameInMap("SrtPbKeyLen")
+        public Integer srtPbKeyLen;
+
         /**
          * <p>The name of the pushed stream. This parameter is required for PUSH inputs. It can be up to 255 characters in length.</p>
          * 
@@ -141,6 +153,38 @@ public class CreateMediaLiveInputRequest extends TeaModel {
         }
         public String getSourceUrl() {
             return this.sourceUrl;
+        }
+
+        public CreateMediaLiveInputRequestInputSettings setSrtLatency(Integer srtLatency) {
+            this.srtLatency = srtLatency;
+            return this;
+        }
+        public Integer getSrtLatency() {
+            return this.srtLatency;
+        }
+
+        public CreateMediaLiveInputRequestInputSettings setSrtMaxBitrate(Integer srtMaxBitrate) {
+            this.srtMaxBitrate = srtMaxBitrate;
+            return this;
+        }
+        public Integer getSrtMaxBitrate() {
+            return this.srtMaxBitrate;
+        }
+
+        public CreateMediaLiveInputRequestInputSettings setSrtPassphrase(String srtPassphrase) {
+            this.srtPassphrase = srtPassphrase;
+            return this;
+        }
+        public String getSrtPassphrase() {
+            return this.srtPassphrase;
+        }
+
+        public CreateMediaLiveInputRequestInputSettings setSrtPbKeyLen(Integer srtPbKeyLen) {
+            this.srtPbKeyLen = srtPbKeyLen;
+            return this;
+        }
+        public Integer getSrtPbKeyLen() {
+            return this.srtPbKeyLen;
         }
 
         public CreateMediaLiveInputRequestInputSettings setStreamName(String streamName) {

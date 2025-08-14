@@ -137,6 +137,18 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         @NameInMap("SourceUrl")
         public String sourceUrl;
 
+        @NameInMap("SrtLatency")
+        public Integer srtLatency;
+
+        @NameInMap("SrtMaxBitrate")
+        public Integer srtMaxBitrate;
+
+        @NameInMap("SrtPassphrase")
+        public String srtPassphrase;
+
+        @NameInMap("SrtPbKeyLen")
+        public Integer srtPbKeyLen;
+
         /**
          * <p>The name of the pushed stream. This parameter is returned for PUSH inputs.</p>
          * 
@@ -189,6 +201,38 @@ public class ListMediaLiveInputsResponseBody extends TeaModel {
         }
         public String getSourceUrl() {
             return this.sourceUrl;
+        }
+
+        public ListMediaLiveInputsResponseBodyInputsInputInfos setSrtLatency(Integer srtLatency) {
+            this.srtLatency = srtLatency;
+            return this;
+        }
+        public Integer getSrtLatency() {
+            return this.srtLatency;
+        }
+
+        public ListMediaLiveInputsResponseBodyInputsInputInfos setSrtMaxBitrate(Integer srtMaxBitrate) {
+            this.srtMaxBitrate = srtMaxBitrate;
+            return this;
+        }
+        public Integer getSrtMaxBitrate() {
+            return this.srtMaxBitrate;
+        }
+
+        public ListMediaLiveInputsResponseBodyInputsInputInfos setSrtPassphrase(String srtPassphrase) {
+            this.srtPassphrase = srtPassphrase;
+            return this;
+        }
+        public String getSrtPassphrase() {
+            return this.srtPassphrase;
+        }
+
+        public ListMediaLiveInputsResponseBodyInputsInputInfos setSrtPbKeyLen(Integer srtPbKeyLen) {
+            this.srtPbKeyLen = srtPbKeyLen;
+            return this;
+        }
+        public Integer getSrtPbKeyLen() {
+            return this.srtPbKeyLen;
         }
 
         public ListMediaLiveInputsResponseBodyInputsInputInfos setStreamName(String streamName) {

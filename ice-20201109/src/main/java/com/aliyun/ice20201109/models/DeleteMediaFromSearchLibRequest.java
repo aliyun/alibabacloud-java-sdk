@@ -23,6 +23,9 @@ public class DeleteMediaFromSearchLibRequest extends TeaModel {
     @NameInMap("MsgBody")
     public String msgBody;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The name of the search library. Default value: ims-default-search-lib.</p>
      * 
@@ -51,6 +54,14 @@ public class DeleteMediaFromSearchLibRequest extends TeaModel {
     }
     public String getMsgBody() {
         return this.msgBody;
+    }
+
+    public DeleteMediaFromSearchLibRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public DeleteMediaFromSearchLibRequest setSearchLibName(String searchLibName) {

@@ -52,6 +52,9 @@ public class InsertMediaToSearchLibRequest extends TeaModel {
     @NameInMap("MsgBody")
     public String msgBody;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The name of the search library. Default value: ims-default-search-lib.</p>
      * 
@@ -104,6 +107,14 @@ public class InsertMediaToSearchLibRequest extends TeaModel {
     }
     public String getMsgBody() {
         return this.msgBody;
+    }
+
+    public InsertMediaToSearchLibRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public InsertMediaToSearchLibRequest setSearchLibName(String searchLibName) {

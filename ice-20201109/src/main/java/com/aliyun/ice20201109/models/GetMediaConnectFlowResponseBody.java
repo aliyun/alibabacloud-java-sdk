@@ -105,6 +105,9 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         @NameInMap("FlowName")
         public String flowName;
 
+        @NameInMap("FlowRegion")
+        public String flowRegion;
+
         /**
          * <p>The state of the flow.</p>
          * 
@@ -158,6 +161,14 @@ public class GetMediaConnectFlowResponseBody extends TeaModel {
         }
         public String getFlowName() {
             return this.flowName;
+        }
+
+        public GetMediaConnectFlowResponseBodyContent setFlowRegion(String flowRegion) {
+            this.flowRegion = flowRegion;
+            return this;
+        }
+        public String getFlowRegion() {
+            return this.flowRegion;
         }
 
         public GetMediaConnectFlowResponseBodyContent setFlowStatus(String flowStatus) {

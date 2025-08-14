@@ -14,6 +14,9 @@ public class SearchIndexJobRerunRequest extends TeaModel {
     @NameInMap("MediaIds")
     public String mediaIds;
 
+    @NameInMap("Namespace")
+    public String namespace;
+
     /**
      * <p>The search library.</p>
      * 
@@ -48,6 +51,14 @@ public class SearchIndexJobRerunRequest extends TeaModel {
     }
     public String getMediaIds() {
         return this.mediaIds;
+    }
+
+    public SearchIndexJobRerunRequest setNamespace(String namespace) {
+        this.namespace = namespace;
+        return this;
+    }
+    public String getNamespace() {
+        return this.namespace;
     }
 
     public SearchIndexJobRerunRequest setSearchLibName(String searchLibName) {
