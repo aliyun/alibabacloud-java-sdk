@@ -28,7 +28,6 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The ECR IDs.</p>
-     * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;

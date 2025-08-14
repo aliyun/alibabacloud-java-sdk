@@ -1934,6 +1934,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>修改专线网关关联的属性</p>
+     * 
+     * @param request ModifyExpressConnectRouterAssociationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyExpressConnectRouterAssociationResponse
+     */
+    public ModifyExpressConnectRouterAssociationResponse modifyExpressConnectRouterAssociationWithOptions(ModifyExpressConnectRouterAssociationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.associationId)) {
+            body.put("AssociationId", request.associationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrId)) {
+            body.put("EcrId", request.ecrId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyExpressConnectRouterAssociation"),
+            new TeaPair("version", "2023-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyExpressConnectRouterAssociationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改专线网关关联的属性</p>
+     * 
+     * @param request ModifyExpressConnectRouterAssociationRequest
+     * @return ModifyExpressConnectRouterAssociationResponse
+     */
+    public ModifyExpressConnectRouterAssociationResponse modifyExpressConnectRouterAssociation(ModifyExpressConnectRouterAssociationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyExpressConnectRouterAssociationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the route prefixes of a virtual private cloud (VPC) or a transit router (TR) that is associated with an Express Connect router (ECR).</p>
      * 
      * @param request ModifyExpressConnectRouterAssociationAllowedPrefixRequest
@@ -1998,6 +2058,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyExpressConnectRouterAssociationAllowedPrefixResponse modifyExpressConnectRouterAssociationAllowedPrefix(ModifyExpressConnectRouterAssociationAllowedPrefixRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyExpressConnectRouterAssociationAllowedPrefixWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改专线网关子实例的属性</p>
+     * 
+     * @param request ModifyExpressConnectRouterChildInstanceRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyExpressConnectRouterChildInstanceResponse
+     */
+    public ModifyExpressConnectRouterChildInstanceResponse modifyExpressConnectRouterChildInstanceWithOptions(ModifyExpressConnectRouterChildInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.childInstanceId)) {
+            body.put("ChildInstanceId", request.childInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.childInstanceType)) {
+            body.put("ChildInstanceType", request.childInstanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            body.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrId)) {
+            body.put("EcrId", request.ecrId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyExpressConnectRouterChildInstance"),
+            new TeaPair("version", "2023-09-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyExpressConnectRouterChildInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改专线网关子实例的属性</p>
+     * 
+     * @param request ModifyExpressConnectRouterChildInstanceRequest
+     * @return ModifyExpressConnectRouterChildInstanceResponse
+     */
+    public ModifyExpressConnectRouterChildInstanceResponse modifyExpressConnectRouterChildInstance(ModifyExpressConnectRouterChildInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyExpressConnectRouterChildInstanceWithOptions(request, runtime);
     }
 
     /**
