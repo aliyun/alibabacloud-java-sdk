@@ -183,6 +183,15 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @NameInMap("OutBizId")
         public String outBizId;
 
+        @NameInMap("ProductCode")
+        public String productCode;
+
+        @NameInMap("ProductName")
+        public String productName;
+
+        @NameInMap("RealAliyunId")
+        public String realAliyunId;
+
         /**
          * <strong>example:</strong>
          * <p>102277855749****</p>
@@ -241,6 +250,30 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
         public String getOutBizId() {
             return this.outBizId;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultEvaluateList setProductCode(String productCode) {
+            this.productCode = productCode;
+            return this;
+        }
+        public String getProductCode() {
+            return this.productCode;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultEvaluateList setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResultEvaluateList setRealAliyunId(String realAliyunId) {
+            this.realAliyunId = realAliyunId;
+            return this;
+        }
+        public String getRealAliyunId() {
+            return this.realAliyunId;
         }
 
         public DescribeInvoiceForIsvResponseBodyResultEvaluateList setRealAliyunPk(String realAliyunPk) {
@@ -403,6 +436,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @NameInMap("AliyunPk")
         public String aliyunPk;
 
+        @NameInMap("CheckNotice")
+        public String checkNotice;
+
         @NameInMap("CreateTimeStr")
         public String createTimeStr;
 
@@ -473,6 +509,9 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         @NameInMap("UserAddressDto")
         public DescribeInvoiceForIsvResponseBodyResultUserAddressDto userAddressDto;
 
+        @NameInMap("UserNotice")
+        public String userNotice;
+
         public static DescribeInvoiceForIsvResponseBodyResult build(java.util.Map<String, ?> map) throws Exception {
             DescribeInvoiceForIsvResponseBodyResult self = new DescribeInvoiceForIsvResponseBodyResult();
             return TeaModel.build(map, self);
@@ -484,6 +523,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
         public String getAliyunPk() {
             return this.aliyunPk;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResult setCheckNotice(String checkNotice) {
+            this.checkNotice = checkNotice;
+            return this;
+        }
+        public String getCheckNotice() {
+            return this.checkNotice;
         }
 
         public DescribeInvoiceForIsvResponseBodyResult setCreateTimeStr(String createTimeStr) {
@@ -596,6 +643,14 @@ public class DescribeInvoiceForIsvResponseBody extends TeaModel {
         }
         public DescribeInvoiceForIsvResponseBodyResultUserAddressDto getUserAddressDto() {
             return this.userAddressDto;
+        }
+
+        public DescribeInvoiceForIsvResponseBodyResult setUserNotice(String userNotice) {
+            this.userNotice = userNotice;
+            return this;
+        }
+        public String getUserNotice() {
+            return this.userNotice;
         }
 
     }
