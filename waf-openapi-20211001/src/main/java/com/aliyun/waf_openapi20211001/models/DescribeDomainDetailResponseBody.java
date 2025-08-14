@@ -607,6 +607,47 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeDomainDetailResponseBodyRedirectBackendPorts extends TeaModel {
+        @NameInMap("BackendPort")
+        public Integer backendPort;
+
+        @NameInMap("ListenPort")
+        public Integer listenPort;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static DescribeDomainDetailResponseBodyRedirectBackendPorts build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDomainDetailResponseBodyRedirectBackendPorts self = new DescribeDomainDetailResponseBodyRedirectBackendPorts();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDomainDetailResponseBodyRedirectBackendPorts setBackendPort(Integer backendPort) {
+            this.backendPort = backendPort;
+            return this;
+        }
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirectBackendPorts setListenPort(Integer listenPort) {
+            this.listenPort = listenPort;
+            return this;
+        }
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirectBackendPorts setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class DescribeDomainDetailResponseBodyRedirectBackends extends TeaModel {
         /**
          * <p>The IP address or domain name of the origin server.</p>
@@ -708,6 +749,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
 
         @NameInMap("BackendList")
         public java.util.List<String> backendList;
+
+        @NameInMap("BackendPorts")
+        public java.util.List<DescribeDomainDetailResponseBodyRedirectBackendPorts> backendPorts;
 
         /**
          * <p>An array of addresses of origin servers.</p>
@@ -887,6 +931,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
         public java.util.List<String> getBackendList() {
             return this.backendList;
+        }
+
+        public DescribeDomainDetailResponseBodyRedirect setBackendPorts(java.util.List<DescribeDomainDetailResponseBodyRedirectBackendPorts> backendPorts) {
+            this.backendPorts = backendPorts;
+            return this;
+        }
+        public java.util.List<DescribeDomainDetailResponseBodyRedirectBackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         @Deprecated

@@ -461,6 +461,47 @@ public class ModifyDomainRequest extends TeaModel {
 
     }
 
+    public static class ModifyDomainRequestRedirectBackendPorts extends TeaModel {
+        @NameInMap("BackendPort")
+        public Integer backendPort;
+
+        @NameInMap("ListenPort")
+        public Integer listenPort;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static ModifyDomainRequestRedirectBackendPorts build(java.util.Map<String, ?> map) throws Exception {
+            ModifyDomainRequestRedirectBackendPorts self = new ModifyDomainRequestRedirectBackendPorts();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyDomainRequestRedirectBackendPorts setBackendPort(Integer backendPort) {
+            this.backendPort = backendPort;
+            return this;
+        }
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        public ModifyDomainRequestRedirectBackendPorts setListenPort(Integer listenPort) {
+            this.listenPort = listenPort;
+            return this;
+        }
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        public ModifyDomainRequestRedirectBackendPorts setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class ModifyDomainRequestRedirectRequestHeaders extends TeaModel {
         /**
          * <p>The key of the custom header field.</p>
@@ -504,6 +545,9 @@ public class ModifyDomainRequest extends TeaModel {
     }
 
     public static class ModifyDomainRequestRedirect extends TeaModel {
+        @NameInMap("BackendPorts")
+        public java.util.List<ModifyDomainRequestRedirectBackendPorts> backendPorts;
+
         /**
          * <p>The IP addresses or domain names of the origin server. You cannot specify both IP addresses and domain names. If you specify domain names, the domain names can be resolved only to IPv4 addresses.</p>
          * <ul>
@@ -708,6 +752,14 @@ public class ModifyDomainRequest extends TeaModel {
         public static ModifyDomainRequestRedirect build(java.util.Map<String, ?> map) throws Exception {
             ModifyDomainRequestRedirect self = new ModifyDomainRequestRedirect();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyDomainRequestRedirect setBackendPorts(java.util.List<ModifyDomainRequestRedirectBackendPorts> backendPorts) {
+            this.backendPorts = backendPorts;
+            return this;
+        }
+        public java.util.List<ModifyDomainRequestRedirectBackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         public ModifyDomainRequestRedirect setBackends(java.util.List<String> backends) {

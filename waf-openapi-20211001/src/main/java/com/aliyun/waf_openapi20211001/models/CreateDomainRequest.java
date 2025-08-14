@@ -495,6 +495,47 @@ public class CreateDomainRequest extends TeaModel {
 
     }
 
+    public static class CreateDomainRequestRedirectBackendPorts extends TeaModel {
+        @NameInMap("BackendPort")
+        public Integer backendPort;
+
+        @NameInMap("ListenPort")
+        public Integer listenPort;
+
+        @NameInMap("Protocol")
+        public String protocol;
+
+        public static CreateDomainRequestRedirectBackendPorts build(java.util.Map<String, ?> map) throws Exception {
+            CreateDomainRequestRedirectBackendPorts self = new CreateDomainRequestRedirectBackendPorts();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateDomainRequestRedirectBackendPorts setBackendPort(Integer backendPort) {
+            this.backendPort = backendPort;
+            return this;
+        }
+        public Integer getBackendPort() {
+            return this.backendPort;
+        }
+
+        public CreateDomainRequestRedirectBackendPorts setListenPort(Integer listenPort) {
+            this.listenPort = listenPort;
+            return this;
+        }
+        public Integer getListenPort() {
+            return this.listenPort;
+        }
+
+        public CreateDomainRequestRedirectBackendPorts setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+    }
+
     public static class CreateDomainRequestRedirectRequestHeaders extends TeaModel {
         /**
          * <p>The key of the custom header field.</p>
@@ -538,6 +579,9 @@ public class CreateDomainRequest extends TeaModel {
     }
 
     public static class CreateDomainRequestRedirect extends TeaModel {
+        @NameInMap("BackendPorts")
+        public java.util.List<CreateDomainRequestRedirectBackendPorts> backendPorts;
+
         /**
          * <p>The IP addresses or domain names of the origin server.</p>
          */
@@ -738,6 +782,14 @@ public class CreateDomainRequest extends TeaModel {
         public static CreateDomainRequestRedirect build(java.util.Map<String, ?> map) throws Exception {
             CreateDomainRequestRedirect self = new CreateDomainRequestRedirect();
             return TeaModel.build(map, self);
+        }
+
+        public CreateDomainRequestRedirect setBackendPorts(java.util.List<CreateDomainRequestRedirectBackendPorts> backendPorts) {
+            this.backendPorts = backendPorts;
+            return this;
+        }
+        public java.util.List<CreateDomainRequestRedirectBackendPorts> getBackendPorts() {
+            return this.backendPorts;
         }
 
         public CreateDomainRequestRedirect setBackends(java.util.List<String> backends) {
