@@ -2412,6 +2412,140 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询财务单元分摊规则</p>
+     * 
+     * @param request QueryCostCenterShareRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryCostCenterShareRuleResponse
+     */
+    public QueryCostCenterShareRuleResponse queryCostCenterShareRuleWithOptions(QueryCostCenterShareRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccountId)) {
+            query.put("OwnerAccountId", request.ownerAccountId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryCostCenterShareRule"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryCostCenterShareRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询财务单元分摊规则</p>
+     * 
+     * @param request QueryCostCenterShareRuleRequest
+     * @return QueryCostCenterShareRuleResponse
+     */
+    public QueryCostCenterShareRuleResponse queryCostCenterShareRule(QueryCostCenterShareRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryCostCenterShareRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改财务单元分摊规则</p>
+     * 
+     * @param tmpReq SaveCostCenterShareRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SaveCostCenterShareRuleResponse
+     */
+    public SaveCostCenterShareRuleResponse saveCostCenterShareRuleWithOptions(SaveCostCenterShareRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SaveCostCenterShareRuleShrinkRequest request = new SaveCostCenterShareRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.createShareRuleList)) {
+            request.createShareRuleListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.createShareRuleList, "CreateShareRuleList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.modifyShareRuleList)) {
+            request.modifyShareRuleListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.modifyShareRuleList, "ModifyShareRuleList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.removeShareRuleList)) {
+            request.removeShareRuleListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.removeShareRuleList, "RemoveShareRuleList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.createShareRuleListShrink)) {
+            query.put("CreateShareRuleList", request.createShareRuleListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyShareRuleListShrink)) {
+            query.put("ModifyShareRuleList", request.modifyShareRuleListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccountId)) {
+            query.put("OwnerAccountId", request.ownerAccountId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.removeShareRuleListShrink)) {
+            query.put("RemoveShareRuleList", request.removeShareRuleListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SaveCostCenterShareRule"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SaveCostCenterShareRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改财务单元分摊规则</p>
+     * 
+     * @param request SaveCostCenterShareRuleRequest
+     * @return SaveCostCenterShareRuleResponse
+     */
+    public SaveCostCenterShareRuleResponse saveCostCenterShareRule(SaveCostCenterShareRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.saveCostCenterShareRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>设置资金账户的信控限额</p>
      * 
      * @param request SetFundAccountCreditAmountRequest

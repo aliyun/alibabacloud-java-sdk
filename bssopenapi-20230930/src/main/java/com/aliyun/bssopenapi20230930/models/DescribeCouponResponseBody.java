@@ -163,6 +163,9 @@ public class DescribeCouponResponseBody extends TeaModel {
         @NameInMap("EndTime")
         public String endTime;
 
+        @NameInMap("FirstBuy")
+        public Boolean firstBuy;
+
         /**
          * <strong>example:</strong>
          * <p>2021-03-02T15:12Z</p>
@@ -314,6 +317,14 @@ public class DescribeCouponResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public DescribeCouponResponseBodyData setFirstBuy(Boolean firstBuy) {
+            this.firstBuy = firstBuy;
+            return this;
+        }
+        public Boolean getFirstBuy() {
+            return this.firstBuy;
         }
 
         public DescribeCouponResponseBodyData setGmtCreate(String gmtCreate) {
