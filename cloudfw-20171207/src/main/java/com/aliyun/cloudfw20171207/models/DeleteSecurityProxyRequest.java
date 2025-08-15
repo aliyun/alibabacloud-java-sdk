@@ -27,9 +27,6 @@ public class DeleteSecurityProxyRequest extends TeaModel {
     @NameInMap("ProxyId")
     public String proxyId;
 
-    @NameInMap("trimSql")
-    public String trimSql;
-
     public static DeleteSecurityProxyRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteSecurityProxyRequest self = new DeleteSecurityProxyRequest();
         return TeaModel.build(map, self);
@@ -49,14 +46,6 @@ public class DeleteSecurityProxyRequest extends TeaModel {
     }
     public String getProxyId() {
         return this.proxyId;
-    }
-
-    public DeleteSecurityProxyRequest setTrimSql(String trimSql) {
-        this.trimSql = trimSql;
-        return this;
-    }
-    public String getTrimSql() {
-        return this.trimSql;
     }
 
 }

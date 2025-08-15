@@ -251,7 +251,7 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
          * <p>100</p>
          */
         @NameInMap("HitTimes")
-        public Integer hitTimes;
+        public Long hitTimes;
 
         /**
          * <p>The time when the access control policy was modified.</p>
@@ -581,11 +581,11 @@ public class DescribeNatFirewallControlPolicyResponseBody extends TeaModel {
             return this.hitLastTime;
         }
 
-        public DescribeNatFirewallControlPolicyResponseBodyPolicys setHitTimes(Integer hitTimes) {
+        public DescribeNatFirewallControlPolicyResponseBodyPolicys setHitTimes(Long hitTimes) {
             this.hitTimes = hitTimes;
             return this;
         }
-        public Integer getHitTimes() {
+        public Long getHitTimes() {
             return this.hitTimes;
         }
 
