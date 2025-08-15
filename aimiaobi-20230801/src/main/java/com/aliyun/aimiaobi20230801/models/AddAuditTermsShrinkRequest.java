@@ -3,9 +3,9 @@ package com.aliyun.aimiaobi20230801.models;
 
 import com.aliyun.tea.*;
 
-public class AddAuditTermsRequest extends TeaModel {
+public class AddAuditTermsShrinkRequest extends TeaModel {
     @NameInMap("ExceptionWord")
-    public java.util.List<String> exceptionWord;
+    public String exceptionWordShrink;
 
     /**
      * <strong>example:</strong>
@@ -37,20 +37,20 @@ public class AddAuditTermsRequest extends TeaModel {
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
-    public static AddAuditTermsRequest build(java.util.Map<String, ?> map) throws Exception {
-        AddAuditTermsRequest self = new AddAuditTermsRequest();
+    public static AddAuditTermsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        AddAuditTermsShrinkRequest self = new AddAuditTermsShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public AddAuditTermsRequest setExceptionWord(java.util.List<String> exceptionWord) {
-        this.exceptionWord = exceptionWord;
+    public AddAuditTermsShrinkRequest setExceptionWordShrink(String exceptionWordShrink) {
+        this.exceptionWordShrink = exceptionWordShrink;
         return this;
     }
-    public java.util.List<String> getExceptionWord() {
-        return this.exceptionWord;
+    public String getExceptionWordShrink() {
+        return this.exceptionWordShrink;
     }
 
-    public AddAuditTermsRequest setKeyword(String keyword) {
+    public AddAuditTermsShrinkRequest setKeyword(String keyword) {
         this.keyword = keyword;
         return this;
     }
@@ -58,7 +58,7 @@ public class AddAuditTermsRequest extends TeaModel {
         return this.keyword;
     }
 
-    public AddAuditTermsRequest setSuggestWord(String suggestWord) {
+    public AddAuditTermsShrinkRequest setSuggestWord(String suggestWord) {
         this.suggestWord = suggestWord;
         return this;
     }
@@ -66,7 +66,7 @@ public class AddAuditTermsRequest extends TeaModel {
         return this.suggestWord;
     }
 
-    public AddAuditTermsRequest setTermsDesc(String termsDesc) {
+    public AddAuditTermsShrinkRequest setTermsDesc(String termsDesc) {
         this.termsDesc = termsDesc;
         return this;
     }
@@ -74,7 +74,7 @@ public class AddAuditTermsRequest extends TeaModel {
         return this.termsDesc;
     }
 
-    public AddAuditTermsRequest setWorkspaceId(String workspaceId) {
+    public AddAuditTermsShrinkRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
     }

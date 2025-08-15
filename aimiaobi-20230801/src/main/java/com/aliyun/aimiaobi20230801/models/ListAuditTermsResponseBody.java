@@ -143,6 +143,9 @@ public class ListAuditTermsResponseBody extends TeaModel {
     }
 
     public static class ListAuditTermsResponseBodyData extends TeaModel {
+        @NameInMap("ExceptionWord")
+        public java.util.List<String> exceptionWord;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,6 +177,14 @@ public class ListAuditTermsResponseBody extends TeaModel {
         public static ListAuditTermsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListAuditTermsResponseBodyData self = new ListAuditTermsResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public ListAuditTermsResponseBodyData setExceptionWord(java.util.List<String> exceptionWord) {
+            this.exceptionWord = exceptionWord;
+            return this;
+        }
+        public java.util.List<String> getExceptionWord() {
+            return this.exceptionWord;
         }
 
         public ListAuditTermsResponseBodyData setId(String id) {

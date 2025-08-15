@@ -4,6 +4,9 @@ package com.aliyun.aimiaobi20230801.models;
 import com.aliyun.tea.*;
 
 public class EditAuditTermsRequest extends TeaModel {
+    @NameInMap("ExceptionWord")
+    public java.util.List<String> exceptionWord;
+
     /**
      * <strong>example:</strong>
      * <p>20103</p>
@@ -44,6 +47,14 @@ public class EditAuditTermsRequest extends TeaModel {
     public static EditAuditTermsRequest build(java.util.Map<String, ?> map) throws Exception {
         EditAuditTermsRequest self = new EditAuditTermsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EditAuditTermsRequest setExceptionWord(java.util.List<String> exceptionWord) {
+        this.exceptionWord = exceptionWord;
+        return this;
+    }
+    public java.util.List<String> getExceptionWord() {
+        return this.exceptionWord;
     }
 
     public EditAuditTermsRequest setId(String id) {

@@ -30,13 +30,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>添加审核自定义词库记录</p>
      * 
-     * @param request AddAuditTermsRequest
+     * @param tmpReq AddAuditTermsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AddAuditTermsResponse
      */
-    public AddAuditTermsResponse addAuditTermsWithOptions(AddAuditTermsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public AddAuditTermsResponse addAuditTermsWithOptions(AddAuditTermsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        AddAuditTermsShrinkRequest request = new AddAuditTermsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.exceptionWord)) {
+            request.exceptionWordShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.exceptionWord, "ExceptionWord", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exceptionWordShrink)) {
+            body.put("ExceptionWord", request.exceptionWordShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             body.put("Keyword", request.keyword);
         }
@@ -1246,6 +1256,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除指定的用于事实性审核的 URL。</p>
+     * 
+     * @param request DeleteFactAuditUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteFactAuditUrlResponse
+     */
+    public DeleteFactAuditUrlResponse deleteFactAuditUrlWithOptions(DeleteFactAuditUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteFactAuditUrl"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteFactAuditUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除指定的用于事实性审核的 URL。</p>
+     * 
+     * @param request DeleteFactAuditUrlRequest
+     * @return DeleteFactAuditUrlResponse
+     */
+    public DeleteFactAuditUrlResponse deleteFactAuditUrl(DeleteFactAuditUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteFactAuditUrlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>文档管理-删除。</p>
      * 
      * @param request DeleteGeneratedContentRequest
@@ -1556,13 +1614,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>编辑审核自定义词库记录</p>
      * 
-     * @param request EditAuditTermsRequest
+     * @param tmpReq EditAuditTermsRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return EditAuditTermsResponse
      */
-    public EditAuditTermsResponse editAuditTermsWithOptions(EditAuditTermsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public EditAuditTermsResponse editAuditTermsWithOptions(EditAuditTermsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EditAuditTermsShrinkRequest request = new EditAuditTermsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.exceptionWord)) {
+            request.exceptionWordShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.exceptionWord, "ExceptionWord", "json");
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.exceptionWordShrink)) {
+            body.put("ExceptionWord", request.exceptionWordShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
         }
@@ -3258,6 +3326,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetEnterpriseVocAnalysisTaskResponse getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getEnterpriseVocAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取当前正用于事实性审核的信源 URL。</p>
+     * 
+     * @param request GetFactAuditUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetFactAuditUrlResponse
+     */
+    public GetFactAuditUrlResponse getFactAuditUrlWithOptions(GetFactAuditUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetFactAuditUrl"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetFactAuditUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取当前正用于事实性审核的信源 URL。</p>
+     * 
+     * @param request GetFactAuditUrlRequest
+     * @return GetFactAuditUrlResponse
+     */
+    public GetFactAuditUrlResponse getFactAuditUrl(GetFactAuditUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getFactAuditUrlWithOptions(request, runtime);
     }
 
     /**
@@ -9752,6 +9864,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitExportTermsTaskResponse submitExportTermsTask(SubmitExportTermsTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitExportTermsTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</p>
+     * 
+     * @param request SubmitFactAuditUrlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitFactAuditUrlResponse
+     */
+    public SubmitFactAuditUrlResponse submitFactAuditUrlWithOptions(SubmitFactAuditUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.url)) {
+            body.put("Url", request.url);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitFactAuditUrl"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitFactAuditUrlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>妙笔为您提供了新的事实性审核能力，在联网搜索并判断正误的前提下，还支持用户自定义配置搜索来源 URL。</p>
+     * 
+     * @param request SubmitFactAuditUrlRequest
+     * @return SubmitFactAuditUrlResponse
+     */
+    public SubmitFactAuditUrlResponse submitFactAuditUrl(SubmitFactAuditUrlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitFactAuditUrlWithOptions(request, runtime);
     }
 
     /**
