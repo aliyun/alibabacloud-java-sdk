@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>D241532C-4EE9-5A2A-A5A5-C1FD98CE2EDD</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public Mobile3MetaVerifyIntlResponseBodyResult result;
 
@@ -67,6 +76,13 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
 
     public static class Mobile3MetaVerifyIntlResponseBodyResult extends TeaModel {
         /**
+         * <p>Verification result code.</p>
+         * <ul>
+         * <li>1: Verification consistent</li>
+         * <li>2: Verification inconsistent</li>
+         * <li>3: No record found</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +90,13 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         public String bizCode;
 
         /**
+         * <p>ISP name</p>
+         * <ul>
+         * <li>CMCC: China Mobile</li>
+         * <li>CUCC: China Unicom</li>
+         * <li>CTCC: China Telecom</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */
@@ -81,6 +104,16 @@ public class Mobile3MetaVerifyIntlResponseBody extends TeaModel {
         public String ispName;
 
         /**
+         * <p>Detailed verification results</p>
+         * <ul>
+         * <li>101: Verification passed </li>
+         * <li>201: Mobile number and name do not match, mobile number and ID number do not match </li>
+         * <li>202: Mobile number and name match, but mobile number and ID number do not match </li>
+         * <li>203: Mobile number and ID number match, but mobile number and name do not match </li>
+         * <li>204: Other inconsistencies</li>
+         * <li>301: No record found</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */

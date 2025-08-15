@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckResultRequest extends TeaModel {
     /**
+     * <p>Return additional information.</p>
+     * 
      * <strong>example:</strong>
      * <hr>
      */
@@ -12,6 +14,12 @@ public class CheckResultRequest extends TeaModel {
     public String extraImageControlList;
 
     /**
+     * <p>Whether to return images.</p>
+     * <ul>
+     * <li>Y: Return</li>
+     * <li>N: Do not return</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>N</p>
      */
@@ -19,6 +27,8 @@ public class CheckResultRequest extends TeaModel {
     public String isReturnImage;
 
     /**
+     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure its uniqueness.</p>
+     * 
      * <strong>example:</strong>
      * <p>djs20d***9-dsskc</p>
      */
@@ -26,6 +36,8 @@ public class CheckResultRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>Whether to return anti-fraud detection results.</p>
+     * 
      * <strong>example:</strong>
      * <p>Y</p>
      */
@@ -33,6 +45,8 @@ public class CheckResultRequest extends TeaModel {
     public String returnFiveCategorySpoofResult;
 
     /**
+     * <p>Authentication ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>4ab0b***cbde97</p>
      */

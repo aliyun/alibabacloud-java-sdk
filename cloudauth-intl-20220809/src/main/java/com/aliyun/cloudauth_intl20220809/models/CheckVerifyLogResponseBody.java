@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckVerifyLogResponseBody extends TeaModel {
     /**
+     * <p>Backend error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CheckVerifyLogResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class CheckVerifyLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
@@ -27,6 +31,9 @@ public class CheckVerifyLogResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public CheckVerifyLogResponseBodyResult result;
 
@@ -69,19 +76,53 @@ public class CheckVerifyLogResponseBody extends TeaModel {
 
     public static class CheckVerifyLogResponseBodyResult extends TeaModel {
         /**
+         * <p>Extended information</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
         @NameInMap("ExtInfo")
         public String extInfo;
 
+        /**
+         * <p>Records the last page where the authentication was interrupted.</p>
+         * <ul>
+         * <li>Page not started</li>
+         * <li>OCR guide page</li>
+         * <li>OCR camera authorization</li>
+         * <li>OCR document capture page</li>
+         * <li>OCR recognition loading</li>
+         * <li>OCR recognition result editing page</li>
+         * <li>OCR recognition result editing loading</li>
+         * <li>Liveness detection guide page</li>
+         * <li>Liveness detection camera authorization page</li>
+         * <li>Liveness detection page</li>
+         * <li>Liveness detection fallback page</li>
+         * <li>Liveness detection retry</li>
+         * <li>Liveness detection loading</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OCR拍摄证件页面</p>
+         */
         @NameInMap("InterruptPage")
         public String interruptPage;
 
+        @NameInMap("InterruptPageEn")
+        public String interruptPageEn;
+
+        /**
+         * <p>SDK operation log details</p>
+         */
         @NameInMap("LogInfo")
         public java.util.List<String> logInfo;
 
+        @NameInMap("LogInfoEn")
+        public java.util.List<String> logInfoEn;
+
         /**
+         * <p>SDK operation log statistics details</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *           &quot;faceOverTimes&quot;: 0,
@@ -106,6 +147,12 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         public String logStatisticsInfo;
 
         /**
+         * <p>Whether the authentication passed.</p>
+         * <ul>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -113,6 +160,8 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>Sub-result code</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -120,6 +169,26 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>Authentication interruption error codes</p>
+         * <ul>
+         * <li>1000: The user completed the face scanning process, and the suggested authentication result is pass</li>
+         * <li>1001: The user completed the face scanning process, and the suggested authentication result is fail</li>
+         * <li>1002: System error</li>
+         * <li>1003: SDK initialization failed, please check if the client time is correct</li>
+         * <li>1004: Camera permission error</li>
+         * <li>1005: Network error</li>
+         * <li>1006: User exited</li>
+         * <li>1007: Invalid TransactionId</li>
+         * <li>1009: Client timestamp error</li>
+         * <li>1011: Incorrect document type submitted</li>
+         * <li>1012: Missing or format validation failure of key information on the recognized document</li>
+         * <li>1013: Poor image quality</li>
+         * <li>1014: Exceeded the upper limit of errors</li>
+         * <li>1015: Android system version too low</li>
+         * <li>1016: Camera permission not obtained</li>
+         * <li>9999: Suspected authentication process interruption</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1001</p>
          */
@@ -127,6 +196,13 @@ public class CheckVerifyLogResponseBody extends TeaModel {
         public String verifyErrorCode;
 
         /**
+         * <p>Authentication status, values:</p>
+         * <ul>
+         * <li>0: finished (authentication completed)</li>
+         * <li>1: unfinished (authentication interrupted)</li>
+         * <li>2: notstart (authentication not started)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -154,12 +230,28 @@ public class CheckVerifyLogResponseBody extends TeaModel {
             return this.interruptPage;
         }
 
+        public CheckVerifyLogResponseBodyResult setInterruptPageEn(String interruptPageEn) {
+            this.interruptPageEn = interruptPageEn;
+            return this;
+        }
+        public String getInterruptPageEn() {
+            return this.interruptPageEn;
+        }
+
         public CheckVerifyLogResponseBodyResult setLogInfo(java.util.List<String> logInfo) {
             this.logInfo = logInfo;
             return this;
         }
         public java.util.List<String> getLogInfo() {
             return this.logInfo;
+        }
+
+        public CheckVerifyLogResponseBodyResult setLogInfoEn(java.util.List<String> logInfoEn) {
+            this.logInfoEn = logInfoEn;
+            return this;
+        }
+        public java.util.List<String> getLogInfoEn() {
+            return this.logInfoEn;
         }
 
         public CheckVerifyLogResponseBodyResult setLogStatisticsInfo(String logStatisticsInfo) {

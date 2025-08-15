@@ -4,10 +4,18 @@ package com.aliyun.cloudauth_intl20220809.models;
 import com.aliyun.tea.*;
 
 public class DocOcrRequest extends TeaModel {
+    /**
+     * <p>CardSide</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CardSide")
     public String cardSide;
 
     /**
+     * <p>Document type</p>
+     * 
      * <strong>example:</strong>
      * <p>00000006</p>
      */
@@ -15,26 +23,48 @@ public class DocOcrRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>Whether to perform ID face quality detection</p>
+     * <ul>
+     * <li>T: Indicates that detection is required</li>
+     * <li>F: Indicates that detection is not required (default F)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>F</p>
      */
     @NameInMap("IdFaceQuality")
     public String idFaceQuality;
 
+    /**
+     * <p>Base64 of the front side of the document image</p>
+     * 
+     * <strong>example:</strong>
+     * <p>base64</p>
+     */
     @NameInMap("IdOcrPictureBase64")
     public String idOcrPictureBase64;
 
     /**
+     * <p>URL of the front side of the document image</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
      */
     @NameInMap("IdOcrPictureUrl")
     public String idOcrPictureUrl;
 
+    /**
+     * <p>IdThreshold</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("IdThreshold")
     public String idThreshold;
 
     /**
+     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
+     * 
      * <strong>example:</strong>
      * <p>dso9322***dsjsd22</p>
      */
@@ -42,6 +72,8 @@ public class DocOcrRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>A custom user ID in the business, please keep it unique.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -49,16 +81,34 @@ public class DocOcrRequest extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>Whether to perform document OCR</p>
+     * <ul>
+     * <li>T: Indicates that document OCR is required</li>
+     * <li>F: Indicates that document OCR is not required</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>T</p>
      */
     @NameInMap("Ocr")
     public String ocr;
 
+    /**
+     * <p>Product code</p>
+     * 
+     * <strong>example:</strong>
+     * <p>产品方案类型ID_OCR_MIN</p>
+     */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
+     * <p>Whether to enable anti-counterfeiting detection</p>
+     * <ul>
+     * <li>T: Indicates that anti-counterfeiting is enabled</li>
+     * <li>F: Indicates that anti-counterfeiting is disabled</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>F</p>
      */

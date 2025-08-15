@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DocOcrResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class DocOcrResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class DocOcrResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
@@ -27,6 +31,9 @@ public class DocOcrResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public DocOcrResponseBodyResult result;
 
@@ -68,10 +75,40 @@ public class DocOcrResponseBody extends TeaModel {
     }
 
     public static class DocOcrResponseBodyResult extends TeaModel {
+        /**
+         * <p>Card and document recognition result	Only returned when the interface response is successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;idFaceQualityScore&quot;: 98.0
+         *   &quot;ocrIdInfo&quot;: {
+         *     &quot;expiryDate&quot;: &quot;&quot;,
+         *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+         *     &quot;englishName&quot;: &quot;LI SI&quot;,
+         *     &quot;sex&quot;: &quot;男&quot;,
+         *     &quot;name&quot;: &quot;李四&quot;,
+         *     &quot;idNumber&quot;: &quot;H11111112&quot;,
+         *     &quot;issueDate&quot;: &quot;2013-01-02&quot;,
+         *     &quot;birthDate&quot;: &quot;1990-02-21&quot;
+         *   },
+         *   &quot;spoofInfo&quot;: {
+         *     &quot;spoofResult&quot;: &quot;Y&quot;,
+         *     &quot;spoofType&quot;: [
+         *       &quot;SCREEN_REMARK&quot;
+         *     ]
+         *   }
+         * }</p>
+         */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
         /**
+         * <p>Whether the authentication passed.</p>
+         * <ul>
+         * <li>Y: Passed</li>
+         * <li>N: Not passed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -79,6 +116,8 @@ public class DocOcrResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>Sub-result code</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -86,6 +125,8 @@ public class DocOcrResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>Unique identifier of the authentication request</p>
+         * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
          */

@@ -84,7 +84,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>地址核验</p>
+     * <p>地址相似比对</p>
+     * 
+     * @param request AddressCompareIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddressCompareIntlResponse
+     */
+    public AddressCompareIntlResponse addressCompareIntlWithOptions(AddressCompareIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultCountry)) {
+            query.put("DefaultCountry", request.defaultCountry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text1)) {
+            query.put("Text1", request.text1);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text2)) {
+            query.put("Text2", request.text2);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddressCompareIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddressCompareIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>地址相似比对</p>
+     * 
+     * @param request AddressCompareIntlRequest
+     * @return AddressCompareIntlResponse
+     */
+    public AddressCompareIntlResponse addressCompareIntl(AddressCompareIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addressCompareIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Address Verification</p>
      * 
      * @param request AddressVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -155,8 +214,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Based on the operator\&quot;s capabilities, input the phone number and address (or latitude and longitude) to verify whether the provided address is the user\&quot;s usual residence.</p>
+     * 
      * <b>summary</b> : 
-     * <p>地址核验</p>
+     * <p>Address Verification</p>
      * 
      * @param request AddressVerifyIntlRequest
      * @return AddressVerifyIntlResponse
@@ -164,6 +226,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AddressVerifyIntlResponse addressVerifyIntl(AddressVerifyIntlRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.addressVerifyIntlWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>地址核验</p>
+     * 
+     * @param request AddressVerifyV2IntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AddressVerifyV2IntlResponse
+     */
+    public AddressVerifyV2IntlResponse addressVerifyV2IntlWithOptions(AddressVerifyV2IntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceToken)) {
+            query.put("DeviceToken", request.deviceToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mobile)) {
+            query.put("Mobile", request.mobile);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regCountry)) {
+            query.put("RegCountry", request.regCountry);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.text)) {
+            query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.verifyType)) {
+            query.put("VerifyType", request.verifyType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AddressVerifyV2Intl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AddressVerifyV2IntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>地址核验</p>
+     * 
+     * @param request AddressVerifyV2IntlRequest
+     * @return AddressVerifyV2IntlResponse
+     */
+    public AddressVerifyV2IntlResponse addressVerifyV2Intl(AddressVerifyV2IntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.addressVerifyV2IntlWithOptions(request, runtime);
     }
 
     /**
@@ -250,7 +376,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>证件OCR识别纯服务端接口</p>
+     * <p>Pure server-side interface for document OCR recognition</p>
      * 
      * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
      * 
@@ -320,7 +446,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>证件OCR识别纯服务端接口</p>
+     * <p>Pure server-side interface for document OCR recognition</p>
      * 
      * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.
      * 
@@ -336,7 +462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结果查询</p>
+     * <p>Result Query</p>
      * 
      * @param request CheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -384,7 +510,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>结果查询</p>
+     * <p>Result Query</p>
      * 
      * @param request CheckResultRequest
      * @return CheckResultResponse
@@ -396,7 +522,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认证日志查询接口</p>
+     * <p>Authentication Log Query Interface</p>
      * 
      * @param request CheckVerifyLogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -432,7 +558,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>认证日志查询接口</p>
+     * <p>Authentication Log Query Interface</p>
      * 
      * @param request CheckVerifyLogRequest
      * @return CheckVerifyLogResponse
@@ -443,8 +569,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证核验</p>
+     * <p>Credential Verification</p>
      * 
      * @param request CredentialVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -493,8 +622,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</p>
+     * 
      * <b>summary</b> : 
-     * <p>凭证核验</p>
+     * <p>Credential Verification</p>
      * 
      * @param request CredentialVerifyIntlRequest
      * @return CredentialVerifyIntlResponse
@@ -660,7 +792,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户认证记录结果</p>
+     * <p>Delete user authentication record results</p>
      * 
      * @param request DeleteVerifyResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -700,7 +832,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除用户认证记录结果</p>
+     * <p>Delete user authentication record results</p>
      * 
      * @param request DeleteVerifyResultRequest
      * @return DeleteVerifyResultResponse
@@ -712,7 +844,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>卡证ocr纯服务端</p>
+     * <p>Card and document OCR pure server-side</p>
      * 
      * @param request DocOcrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -786,7 +918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>卡证ocr纯服务端</p>
+     * <p>Card and document OCR pure server-side</p>
      * 
      * @param request DocOcrRequest
      * @return DocOcrResponse
@@ -1662,7 +1794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>手机号三要素国际版接口</p>
+     * <p>International Version of Mobile Three Elements API</p>
      * 
      * @param request Mobile3MetaVerifyIntlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1710,7 +1842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>手机号三要素国际版接口</p>
+     * <p>International Version of Mobile Three Elements API</p>
      * 
      * @param request Mobile3MetaVerifyIntlRequest
      * @return Mobile3MetaVerifyIntlResponse

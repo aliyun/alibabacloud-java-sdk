@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CardOcrResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CardOcrResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class CardOcrResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4EB356FE-BB6A-5DCC-B4C5-E8051787EBA1</p>
@@ -27,6 +31,9 @@ public class CardOcrResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public CardOcrResponseBodyResult result;
 
@@ -68,13 +75,50 @@ public class CardOcrResponseBody extends TeaModel {
     }
 
     public static class CardOcrResponseBodyResult extends TeaModel {
+        /**
+         * <p>Document recognition result</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;idFaceQualityScore&quot;: 98.90,
+         *   &quot;ocrIdInfo&quot;: {
+         *     &quot;expiryDate&quot;: &quot;2024-04-20&quot;,
+         *     &quot;placeOfIssue&quot;: &quot;广东&quot;,
+         *     &quot;englishName&quot;: &quot;ZHENGJIAN,YANGBEN&quot;,
+         *     &quot;originOfIssue&quot;: &quot;公安部出入境管理局&quot;,
+         *     &quot;sex&quot;: &quot;女&quot;,
+         *     &quot;name&quot;: &quot;证件样本&quot;,
+         *     &quot;idNumber&quot;: &quot;C00000000&quot;,
+         *     &quot;issueDate&quot;: &quot;2014-04-21&quot;,
+         *     &quot;birthDate&quot;: &quot;1981-08-03&quot;
+         *   },
+         *   &quot;spoofInfo&quot;: {
+         *     &quot;spoofResult&quot;: &quot;N&quot;,
+         *     &quot;spoofType&quot;: [
+         *       &quot;SCREEN_REMARK&quot;
+         *     ]
+         *   }
+         * }</p>
+         */
         @NameInMap("ExtCardInfo")
         public String extCardInfo;
 
+        /**
+         * <p>Additional result information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>**</p>
+         */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
         /**
+         * <p>Whether the authentication passed.</p>
+         * <ul>
+         * <li>Y: Passed.</li>
+         * <li>N: Not passed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -82,6 +126,8 @@ public class CardOcrResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>Sub-result code.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -89,6 +135,8 @@ public class CardOcrResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>Unique identifier for the authentication request</p>
+         * 
          * <strong>example:</strong>
          * <p>08573be80f944d95ac812e019e3655a8</p>
          */

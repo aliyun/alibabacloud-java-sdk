@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AddressVerifyIntlResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>86C40EC3-5940-5F47-995C-BFE90B70E540</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public AddressVerifyIntlResponseBodyResultObject resultObject;
 
@@ -67,6 +76,8 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
 
     public static class AddressVerifyIntlResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Address verification details.</p>
+         * 
          * <strong>example:</strong>
          * <p>0-3000</p>
          */
@@ -74,6 +85,13 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         public String addressInfo;
 
         /**
+         * <p>Operator name:</p>
+         * <ul>
+         * <li>CMCC: China Mobile</li>
+         * <li>CTCC: China Telecom</li>
+         * <li>CUCC: China Unicom</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */
@@ -81,6 +99,12 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         public String ispName;
 
         /**
+         * <p>Verification result, values:</p>
+         * <ul>
+         * <li>Y: Yes, the verified address distance is less than or equal to 10KM.</li>
+         * <li>N: No, the verified address distance is greater than 10KM.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -88,6 +112,8 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>Authentication result description.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -95,6 +121,8 @@ public class AddressVerifyIntlResponseBody extends TeaModel {
         public String subCode;
 
         /**
+         * <p>Unique identifier for the authentication request.</p>
+         * 
          * <strong>example:</strong>
          * <p>hksb7ba1b28130d24e015d69********</p>
          */

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddressVerifyIntlRequest extends TeaModel {
     /**
+     * <p>Verification address type:</p>
+     * <ul>
+     * <li>“0”: Text address</li>
+     * <li>“1”: Latitude and longitude</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -13,22 +18,46 @@ public class AddressVerifyIntlRequest extends TeaModel {
     @NameInMap("AddressType")
     public String addressType;
 
+    /**
+     * <p>Default city</p>
+     * 
+     * <strong>example:</strong>
+     * <p>杭州市</p>
+     */
     @NameInMap("DefaultCity")
     public String defaultCity;
 
     /**
+     * <p>Country name, currently only supports: China</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>中国</p>
      */
     @NameInMap("DefaultCountry")
     public String defaultCountry;
 
+    /**
+     * <p>Default district</p>
+     * 
+     * <strong>example:</strong>
+     * <p>余杭区</p>
+     */
     @NameInMap("DefaultDistrict")
     public String defaultDistrict;
 
+    /**
+     * <p>Default province</p>
+     * 
+     * <strong>example:</strong>
+     * <p>浙江省</p>
+     */
     @NameInMap("DefaultProvince")
     public String defaultProvince;
 
     /**
+     * <p>Latitude.</p>
+     * 
      * <strong>example:</strong>
      * <p>“31.2304”</p>
      */
@@ -36,6 +65,8 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String latitude;
 
     /**
+     * <p>Longitude.</p>
+     * 
      * <strong>example:</strong>
      * <p>“121.4737”</p>
      */
@@ -43,6 +74,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String longitude;
 
     /**
+     * <p>Supports Chinese mobile phone numbers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,6 +84,7 @@ public class AddressVerifyIntlRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Fixed value: ADD_VERIFY_PRO</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,10 +93,21 @@ public class AddressVerifyIntlRequest extends TeaModel {
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>Detailed address text content</p>
+     * 
+     * <strong>example:</strong>
+     * <p>阿里巴巴西溪园区</p>
+     */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>Address verification method:</p>
+     * <ul>
+     * <li>HOME: Home address verification</li>
+     * <li>WORK: Work address verification</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVerifyResultResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>ID of this request</p>
+     * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result</p>
+     */
     @NameInMap("Result")
     public DeleteVerifyResultResponseBodyResult result;
 
@@ -67,6 +76,8 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
 
     public static class DeleteVerifyResultResponseBodyResult extends TeaModel {
         /**
+         * <p>Deletion result. Y indicates successful deletion, N indicates failed deletion</p>
+         * 
          * <strong>example:</strong>
          * <p>Y/N</p>
          */
@@ -74,6 +85,8 @@ public class DeleteVerifyResultResponseBody extends TeaModel {
         public String deleteResult;
 
         /**
+         * <p>Unique identifier of the authentication request</p>
+         * 
          * <strong>example:</strong>
          * <p>4ab0b***cbde97</p>
          */

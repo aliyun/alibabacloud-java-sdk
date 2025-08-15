@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CheckResultResponseBody extends TeaModel {
     /**
+     * <p>Return code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -12,6 +14,8 @@ public class CheckResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class CheckResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4EB35****87EBA1</p>
@@ -27,6 +31,9 @@ public class CheckResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Return result.</p>
+     */
     @NameInMap("Result")
     public CheckResultResponseBodyResult result;
 
@@ -69,6 +76,8 @@ public class CheckResultResponseBody extends TeaModel {
 
     public static class CheckResultResponseBodyResult extends TeaModel {
         /**
+         * <p>Authentication result.</p>
+         * 
          * <strong>example:</strong>
          * <p>**</p>
          */
@@ -76,6 +85,8 @@ public class CheckResultResponseBody extends TeaModel {
         public String ekycResult;
 
         /**
+         * <p>Extended basic information.</p>
+         * 
          * <strong>example:</strong>
          * <p>**</p>
          */
@@ -83,6 +94,8 @@ public class CheckResultResponseBody extends TeaModel {
         public String extBasicInfo;
 
         /**
+         * <p>Face information.</p>
+         * 
          * <strong>example:</strong>
          * <p>**</p>
          */
@@ -90,16 +103,26 @@ public class CheckResultResponseBody extends TeaModel {
         public String extFaceInfo;
 
         /**
+         * <p>ID information.</p>
+         * 
          * <strong>example:</strong>
          * <p>**</p>
          */
         @NameInMap("ExtIdInfo")
         public String extIdInfo;
 
+        /**
+         * <p>Extended information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtInfo")
         public String extInfo;
 
         /**
+         * <p>Risk information.</p>
+         * 
          * <strong>example:</strong>
          * <p>**</p>
          */
@@ -107,6 +130,12 @@ public class CheckResultResponseBody extends TeaModel {
         public String extRiskInfo;
 
         /**
+         * <p>Whether the authentication is passed.</p>
+         * <ul>
+         * <li>Y: Passed</li>
+         * <li>N: Not passed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -114,6 +143,8 @@ public class CheckResultResponseBody extends TeaModel {
         public String passed;
 
         /**
+         * <p>Sub-result code.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */

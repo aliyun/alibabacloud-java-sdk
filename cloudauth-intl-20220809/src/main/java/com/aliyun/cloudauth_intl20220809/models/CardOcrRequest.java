@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CardOcrRequest extends TeaModel {
     /**
+     * <p>Document type.</p>
+     * 
      * <strong>example:</strong>
      * <p>00000006</p>
      */
@@ -12,16 +14,30 @@ public class CardOcrRequest extends TeaModel {
     public String docType;
 
     /**
+     * <p>Whether to perform face quality detection on the document</p>
+     * <ul>
+     * <li>T: Indicates that detection is needed</li>
+     * <li>F: Indicates that detection is not needed (default F)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>F</p>
      */
     @NameInMap("IdFaceQuality")
     public String idFaceQuality;
 
+    /**
+     * <p>Base64 on the front of the document image</p>
+     * 
+     * <strong>example:</strong>
+     * <p>base64</p>
+     */
     @NameInMap("IdOcrPictureBase64")
     public String idOcrPictureBase64;
 
     /**
+     * <p>URL of the front side of the document image</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></p>
      */
@@ -29,6 +45,8 @@ public class CardOcrRequest extends TeaModel {
     public String idOcrPictureUrl;
 
     /**
+     * <p>A unique business identifier defined by the merchant, used for subsequent troubleshooting. It supports a combination of letters and numbers, with a maximum length of 32 characters. Please ensure uniqueness.</p>
+     * 
      * <strong>example:</strong>
      * <p>dso9322***dsjsd22</p>
      */
@@ -36,6 +54,8 @@ public class CardOcrRequest extends TeaModel {
     public String merchantBizId;
 
     /**
+     * <p>Merchant user ID or other identifiers that can be used to identify specific users, such as phone numbers, email addresses, etc. It is strongly recommended to pre-desensitize the value of the userId field, for example, by hashing the value.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456789</p>
      */
@@ -43,6 +63,12 @@ public class CardOcrRequest extends TeaModel {
     public String merchantUserId;
 
     /**
+     * <p>Whether to perform document OCR</p>
+     * <ul>
+     * <li>T: Indicates that document OCR is required (default T)</li>
+     * <li>F: Indicates that it is not required</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>T</p>
      */
@@ -50,6 +76,8 @@ public class CardOcrRequest extends TeaModel {
     public String ocr;
 
     /**
+     * <p>Product code</p>
+     * 
      * <strong>example:</strong>
      * <p>ID_OCR_MIN</p>
      */
@@ -57,6 +85,12 @@ public class CardOcrRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Whether to enable anti-counterfeiting detection</p>
+     * <ul>
+     * <li>T: Indicates to enable anti-counterfeiting</li>
+     * <li>F: Indicates to disable (default F)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>F</p>
      */

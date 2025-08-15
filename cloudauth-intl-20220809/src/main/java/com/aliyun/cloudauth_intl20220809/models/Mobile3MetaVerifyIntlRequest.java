@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     /**
+     * <p>ID number</p>
+     * <ul>
+     * <li>When paramType is set to normal, enter the plaintext</li>
+     * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>429001********8211</p>
      */
@@ -12,6 +18,12 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String identifyNum;
 
     /**
+     * <p>Mobile phone number.</p>
+     * <ul>
+     * <li>When paramType is set to normal, enter the plaintext</li>
+     * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>186****1234</p>
      */
@@ -19,6 +31,12 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Parameter type:</p>
+     * <ul>
+     * <li>normal: unencrypted</li>
+     * <li>md5: md5 encrypted</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -26,12 +44,24 @@ public class Mobile3MetaVerifyIntlRequest extends TeaModel {
     public String paramType;
 
     /**
+     * <p>The product solution to be integrated, with a fixed value: MOBILE_3META</p>
+     * 
      * <strong>example:</strong>
      * <p>MOBILE_3META</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
+    /**
+     * <p>Name</p>
+     * <ul>
+     * <li>When paramType is set to normal, enter the plaintext</li>
+     * <li>When paramType is set to md5, enter a 32-character lowercase md5 string</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>张*</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
