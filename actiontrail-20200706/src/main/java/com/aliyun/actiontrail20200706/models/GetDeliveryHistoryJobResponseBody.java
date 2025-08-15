@@ -6,47 +6,69 @@ import com.aliyun.tea.*;
 public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     /**
      * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-27T07:15:03Z</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
 
     /**
      * <p>The time when the task ended.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-27T07:20:03Z</p>
      */
     @NameInMap("EndTime")
     public String endTime;
 
     /**
      * <p>The home region of the trail.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("HomeRegion")
     public String homeRegion;
 
     /**
      * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16602</p>
      */
     @NameInMap("JobId")
     public Long jobId;
 
     /**
      * <p>The task status. Valid values:</p>
-     * <br>
-     * <p>*   0: The task is initializing.</p>
-     * <p>*   1: The task is delivering historical events.</p>
-     * <p>*   2: The task is complete.</p>
-     * <p>*   3: The task fails.</p>
+     * <ul>
+     * <li>0: The task is initializing.</li>
+     * <li>1: The task is delivering historical events.</li>
+     * <li>2: The task is complete.</li>
+     * <li>3: The task fails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("JobStatus")
     public Integer jobStatus;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>FAFEC427-A00D-5653-B837-D0FA52220D8C</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The time when the task started.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-02-26T07:15:03Z</p>
      */
     @NameInMap("StartTime")
     public String startTime;
@@ -59,12 +81,18 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
 
     /**
      * <p>The name of the trail based on which the task delivers events.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trail-name</p>
      */
     @NameInMap("TrailName")
     public String trailName;
 
     /**
      * <p>The time when the task was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-05-27T07:28:47Z</p>
      */
     @NameInMap("UpdatedTime")
     public String updatedTime;
@@ -157,17 +185,24 @@ public class GetDeliveryHistoryJobResponseBody extends TeaModel {
     public static class GetDeliveryHistoryJobResponseBodyStatus extends TeaModel {
         /**
          * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The task status in each region. Valid values:</p>
-         * <br>
-         * <p>*   0: The task is initializing.</p>
-         * <p>*   1: The task is delivering historical events.</p>
-         * <p>*   2: The task is complete.</p>
-         * <p>*   3: The task fails.</p>
+         * <ul>
+         * <li>0: The task is initializing.</li>
+         * <li>1: The task is delivering historical events.</li>
+         * <li>2: The task is complete.</li>
+         * <li>3: The task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("Status")
         public Integer status;

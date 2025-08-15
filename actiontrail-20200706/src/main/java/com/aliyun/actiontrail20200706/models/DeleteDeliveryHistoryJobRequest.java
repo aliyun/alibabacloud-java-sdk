@@ -6,8 +6,11 @@ import com.aliyun.tea.*;
 public class DeleteDeliveryHistoryJobRequest extends TeaModel {
     /**
      * <p>The ID of the historical event delivery task to be deleted.</p>
-     * <br>
-     * <p>You can call the [ListDeliveryHistoryJobs](~~188101~~) operation to query task IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/188101.html">ListDeliveryHistoryJobs</a> operation to query task IDs.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16602</p>
      */
     @NameInMap("JobId")
     public Integer jobId;

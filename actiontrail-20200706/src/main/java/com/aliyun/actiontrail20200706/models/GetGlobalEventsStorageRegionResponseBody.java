@@ -6,38 +6,38 @@ import com.aliyun.tea.*;
 public class GetGlobalEventsStorageRegionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0474CD9D-DF37-55D4-8383-D978CFBE13A4</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The region where global events are stored.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   ap-southeast-1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the Singapore region</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   cn-hangzhou</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the China (Hangzhou) region</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>ap-southeast-1</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>the Singapore region</p>
+     * <!-- -->
+     * </li>
+     * <li><p>cn-hangzhou</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>the China (Hangzhou) region</p>
+     * <!-- --></li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("StorageRegion")
     public String storageRegion;

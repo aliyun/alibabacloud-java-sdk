@@ -6,12 +6,15 @@ import com.aliyun.tea.*;
 public class DescribeTrailsResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ED8BC689-69DA-42AC-855E-3B06C1271194</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>A list of returned trails.</p>
+     * <p>The trails.</p>
      */
     @NameInMap("TrailList")
     public java.util.List<DescribeTrailsResponseBodyTrailList> trailList;
@@ -40,133 +43,206 @@ public class DescribeTrailsResponseBody extends TeaModel {
     public static class DescribeTrailsResponseBodyTrailList extends TeaModel {
         /**
          * <p>The time when the trail was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-03-01T06:27:28Z</p>
          */
         @NameInMap("CreateTime")
         public String createTime;
 
         /**
          * <p>The read/write type of the events that are delivered. Valid values:</p>
-         * <br>
-         * <p>*   Write: write events. This is the default value.</p>
-         * <p>*   Read: read events.</p>
-         * <p>*   All: read and write events.</p>
+         * <ul>
+         * <li>Write: write events. This is the default value.</li>
+         * <li>Read: read events.</li>
+         * <li>All: read and write events.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("EventRW")
         public String eventRW;
 
         /**
          * <p>The home region of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("HomeRegion")
         public String homeRegion;
 
         /**
          * <p>Indicates whether the trail is a multi-account trail. Valid values:</p>
-         * <br>
-         * <p>*   false (default)</p>
-         * <p>*   true</p>
+         * <ul>
+         * <li>false (default)</li>
+         * <li>true</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("IsOrganizationTrail")
         public Boolean isOrganizationTrail;
 
+        /**
+         * <p>The ARN of the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:odps:cn-hangzhou:141266687691****:project/actiontrail_****</p>
+         */
         @NameInMap("MaxComputeProjectArn")
         public String maxComputeProjectArn;
 
+        /**
+         * <p>The ARN of the role that is assumed by ActionTrail to deliver events to the MaxCompute project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::141266687691****:role/aliyunserviceroleforactiontrail</p>
+         */
         @NameInMap("MaxComputeWriteRoleArn")
         public String maxComputeWriteRoleArn;
 
         /**
          * <p>The name of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-4</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
          * <p>The ID of the resource directory.</p>
-         * <br>
-         * <p>>  This parameter is returned only when the trail is a multi-account trail.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when the trail is a multi-account trail.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-EV****</p>
          */
         @NameInMap("OrganizationId")
         public String organizationId;
 
         /**
          * <p>The region where the OSS bucket resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss-cn-hangzhou</p>
          */
         @NameInMap("OssBucketLocation")
         public String ossBucketLocation;
 
         /**
          * <p>The name of the OSS bucket to which events are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secloud</p>
          */
         @NameInMap("OssBucketName")
         public String ossBucketName;
 
         /**
          * <p>The prefix of the files that are stored in the Object Storage Service (OSS) bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trail1</p>
          */
         @NameInMap("OssKeyPrefix")
         public String ossKeyPrefix;
 
         /**
          * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is assumed by ActionTrail to deliver events to the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::***:role/aliyunserviceroleforactiontrail</p>
          */
         @NameInMap("OssWriteRoleArn")
         public String ossWriteRoleArn;
 
         /**
          * <p>The region where the trail resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("Region")
         public String region;
 
         /**
          * <p>The ARN of the Log Service project to which events are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:log:cn-qingdao:159498693826****:project/zhengze-audit-log</p>
          */
         @NameInMap("SlsProjectArn")
         public String slsProjectArn;
 
         /**
          * <p>The ARN of the RAM role that is assumed by ActionTrail to deliver events to the Log Service project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::159498693826****:role/aliyunserviceroleforactiontrail</p>
          */
         @NameInMap("SlsWriteRoleArn")
         public String slsWriteRoleArn;
 
         /**
          * <p>The time when the trail was last enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-06T02:08:38Z</p>
          */
         @NameInMap("StartLoggingTime")
         public String startLoggingTime;
 
         /**
          * <p>The status of the trail. Valid values:</p>
-         * <br>
-         * <p>*   Disable: disabled.</p>
-         * <p>*   Enable: enabled.</p>
-         * <p>*   Fresh: The trail is created but is not enabled.</p>
+         * <ul>
+         * <li>Disable: disabled.</li>
+         * <li>Enable: enabled.</li>
+         * <li>Fresh: The trail is created but is not enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable</p>
          */
         @NameInMap("Status")
         public String status;
 
         /**
          * <p>The time when the trail was last disabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-06T02:09:04Z</p>
          */
         @NameInMap("StopLoggingTime")
         public String stopLoggingTime;
 
         /**
          * <p>The ARN of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:actiontrail:cn-hangzhou:159498693826****:trail/test-delivery-other</p>
          */
         @NameInMap("TrailArn")
         public String trailArn;
 
         /**
          * <p>The region of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>All</p>
          */
         @NameInMap("TrailRegion")
         public String trailRegion;
 
         /**
          * <p>The time when the configurations of the trail were last updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-06T02:16:24Z</p>
          */
         @NameInMap("UpdateTime")
         public String updateTime;

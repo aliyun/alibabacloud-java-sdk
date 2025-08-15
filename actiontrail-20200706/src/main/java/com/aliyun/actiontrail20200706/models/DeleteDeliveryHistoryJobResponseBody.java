@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteDeliveryHistoryJobResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D74DD20B-6598-429C-873B-B9B449B656B6</p>
      */
     @NameInMap("RequestId")
     public String requestId;

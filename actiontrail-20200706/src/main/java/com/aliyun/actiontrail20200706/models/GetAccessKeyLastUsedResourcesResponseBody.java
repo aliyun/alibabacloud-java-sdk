@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
     /**
      * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The request ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>145318BE-DEE1-4C57-AA7C-5BE7D34A6AE0</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The list of returned resources.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Resources")
     public java.util.List<GetAccessKeyLastUsedResourcesResponseBodyResources> resources;
@@ -54,68 +62,93 @@ public class GetAccessKeyLastUsedResourcesResponseBody extends TeaModel {
     public static class GetAccessKeyLastUsedResourcesResponseBodyResources extends TeaModel {
         /**
          * <p>The event details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;eventId&quot;: &quot;239EB588-CD24-522E-B0B5-174A1A58****&quot;,
+         *   &quot;eventVersion&quot;: 1,
+         *   &quot;eventSource&quot;: &quot;ecs.cn-hangzhou.aliyuncs.com&quot;,
+         *   &quot;sourceIpAddress&quot;: &quot;<code>10.10.**.**</code>&quot;,
+         *   &quot;eventType&quot;: &quot;ApiCall&quot;,
+         *   &quot;userIdentity&quot;: {
+         *     &quot;accountId&quot;: &quot;104758519118****&quot;,
+         *     &quot;principalId&quot;: &quot;24549429003625****&quot;,
+         *     &quot;type&quot;: &quot;ram-user&quot;,
+         *     &quot;userName&quot;: &quot;alice&quot;
+         *   },
+         *   &quot;serviceName&quot;: &quot;Ecs&quot;,
+         *   &quot;apiVersion&quot;: &quot;2016-01-20&quot;,
+         *   &quot;requestId&quot;: &quot;239EB588-CD24-522E-B0B5-174A1A588BE0&quot;,
+         *   &quot;eventTime&quot;: &quot;2021-08-05T09:21:32Z&quot;,
+         *   &quot;isGlobal&quot;: false,
+         *   &quot;acsRegion&quot;: &quot;cn-hangzhou&quot;,
+         *   &quot;eventName&quot;: &quot;DescribeInstances&quot;
+         * }</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
          * <p>The resource name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i-bp1ltva99x1a****</p>
          */
         @NameInMap("ResourceName")
         public String resourceName;
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACS::ECS::Instance</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
 
         /**
          * <p>The event source.</p>
-         * <br>
          * <p>Valid values:</p>
-         * <br>
-         * <p>*   Internal</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    other events</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   ManagementEvent</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    management events</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>*   DataEvent</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    :</p>
-         * <br>
-         * <p>    <!-- --></p>
-         * <br>
-         * <p>    data events</p>
-         * <br>
-         * <p>    <!-- --></p>
+         * <ul>
+         * <li><p>Internal</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>other events</p>
+         * <!-- -->
+         * </li>
+         * <li><p>ManagementEvent</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>management events</p>
+         * <!-- -->
+         * </li>
+         * <li><p>DataEvent</p>
+         * <!-- -->
+         * 
+         * <p>:</p>
+         * <!-- -->
+         * 
+         * <p>data events</p>
+         * <!-- --></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagementEvent</p>
          */
         @NameInMap("Source")
         public String source;
 
         /**
          * <p>The timestamp when the resource was used. Unit: millisecond.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1657247532000</p>
          */
         @NameInMap("UsedTimestamp")
         public Long usedTimestamp;

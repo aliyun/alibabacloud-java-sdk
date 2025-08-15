@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class GetDeliveryHistoryJobRequest extends TeaModel {
     /**
      * <p>The ID of the historical event delivery task.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16602</p>
      */
     @NameInMap("JobId")
     public Long jobId;

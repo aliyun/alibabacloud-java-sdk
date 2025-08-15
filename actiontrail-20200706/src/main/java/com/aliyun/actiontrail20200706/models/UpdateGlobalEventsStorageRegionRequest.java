@@ -6,32 +6,30 @@ import com.aliyun.tea.*;
 public class UpdateGlobalEventsStorageRegionRequest extends TeaModel {
     /**
      * <p>The region where you want to store global events.</p>
-     * <br>
      * <p>Valid values:</p>
-     * <br>
-     * <p>*   ap-southeast-1</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the Singapore region</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>*   cn-hangzhou</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    :</p>
-     * <br>
-     * <p>    <!-- --></p>
-     * <br>
-     * <p>    the China (Hangzhou) region</p>
-     * <br>
-     * <p>    <!-- --></p>
+     * <ul>
+     * <li><p>ap-southeast-1</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>the Singapore region</p>
+     * <!-- -->
+     * </li>
+     * <li><p>cn-hangzhou</p>
+     * <!-- -->
+     * 
+     * <p>:</p>
+     * <!-- -->
+     * 
+     * <p>the China (Hangzhou) region</p>
+     * <!-- --></li>
+     * </ul>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ap-southeast-1</p>
      */
     @NameInMap("StorageRegion")
     public String storageRegion;

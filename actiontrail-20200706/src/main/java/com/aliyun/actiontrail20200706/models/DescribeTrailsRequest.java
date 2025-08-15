@@ -6,24 +6,35 @@ import com.aliyun.tea.*;
 public class DescribeTrailsRequest extends TeaModel {
     /**
      * <p>Specifies whether to query the information about multi-account trails. Valid values:</p>
-     * <br>
-     * <p>*   true</p>
-     * <p>*   false (default)</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false (default)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeOrganizationTrail")
     public Boolean includeOrganizationTrail;
 
     /**
      * <p>Specifies whether to return the information about shadow trails. Valid values:</p>
-     * <br>
-     * <p>*   false: Do not return the information about shadow trails. It is the default value.</p>
-     * <p>*   true: Return the information about shadow trails.</p>
+     * <ul>
+     * <li>false: Do not return the information about shadow trails. It is the default value.</li>
+     * <li>true: Return the information about shadow trails.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeShadowTrails")
     public Boolean includeShadowTrails;
 
     /**
      * <p>The names of the trails whose information you want to query. Separate multiple trail names with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>abc,def</p>
      */
     @NameInMap("NameList")
     public String nameList;

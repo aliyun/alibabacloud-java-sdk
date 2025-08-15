@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class StopLoggingResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1C488B66-B819-4D14-8711-C4EAAA13AC01</p>
      */
     @NameInMap("RequestId")
     public String requestId;

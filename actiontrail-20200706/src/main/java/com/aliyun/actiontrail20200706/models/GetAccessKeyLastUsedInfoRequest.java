@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetAccessKeyLastUsedInfoRequest extends TeaModel {
     /**
-     * <p>The AccessKey secret.</p>
+     * <p>The AccessKey ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI****************</p>
      */
     @NameInMap("AccessKey")
     public String accessKey;

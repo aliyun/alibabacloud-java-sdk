@@ -6,29 +6,45 @@ import com.aliyun.tea.*;
 public class GetAccessKeyLastUsedResourcesRequest extends TeaModel {
     /**
      * <p>The AccessKey ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>LTAI****************</p>
      */
     @NameInMap("AccessKey")
     public String accessKey;
 
     /**
      * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
-     * <br>
-     * <p>> The request parameters must be the same as those of the last request.</p>
+     * <blockquote>
+     * <p>The request parameters must be the same as those of the last request.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhY2NvdW50IjoiMTQyNDM3OTU4NjM4NzE2MSIsImV2ZW50SWQiOiI3MkJDRTExRi02OTU3LTQ0NUItQjY0MC1CNEUyMkM4NUEwQzgiLCJsb2dJZCI6IjgyLTE0MjQzNzk1ODYzODcxNjEiLCJ0aW1lIjoxNjAyMzExNTQwMD****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>*   Valid values: 0 to 100.</p>
-     * <p>*   Default value: 20.</p>
+     * <ul>
+     * <li>Valid values: 0 to 100.</li>
+     * <li>Default value: 20.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public String pageSize;
 
     /**
-     * <p>The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see [Supported Alibaba Cloud services](~~28829~~).</p>
+     * <p>The Alibaba Cloud service. For more information about the Alibaba Cloud services supported by ActionTrail, see <a href="https://help.aliyun.com/document_detail/28829.html">Supported Alibaba Cloud services</a>.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ecs</p>
      */
     @NameInMap("ServiceName")
     public String serviceName;

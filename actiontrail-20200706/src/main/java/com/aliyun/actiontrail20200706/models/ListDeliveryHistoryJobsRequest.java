@@ -6,18 +6,26 @@ import com.aliyun.tea.*;
 public class ListDeliveryHistoryJobsRequest extends TeaModel {
     /**
      * <p>The page number.</p>
-     * <br>
-     * <p>*   Pages start from page 1.</p>
-     * <p>*   Default value: 1.</p>
+     * <ul>
+     * <li>Pages start from page 1.</li>
+     * <li>Default value: 1.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
-     * <br>
-     * <p>*   Valid values: 1 to 100.</p>
-     * <p>*   Default value: 20.</p>
+     * <ul>
+     * <li>Valid values: 1 to 100.</li>
+     * <li>Default value: 20.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

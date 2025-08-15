@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateGlobalEventsStorageRegionResponseBody extends TeaModel {
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>D7A0694E-C8FE-574E-92E3-63C5B5D23BD4</p>
      */
     @NameInMap("RequestId")
     public String requestId;

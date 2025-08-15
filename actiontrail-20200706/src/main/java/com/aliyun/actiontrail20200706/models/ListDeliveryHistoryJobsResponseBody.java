@@ -12,24 +12,36 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
 
     /**
      * <p>The page number of the returned page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageNumber")
     public Integer pageNumber;
 
     /**
      * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
     /**
      * <p>The ID of the request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>B190816C-6DCA-4DC5-9B8E-EE0367B57CFF</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
      * <p>The number of historical event delivery tasks returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -82,53 +94,78 @@ public class ListDeliveryHistoryJobsResponseBody extends TeaModel {
     public static class ListDeliveryHistoryJobsResponseBodyDeliveryHistoryJobs extends TeaModel {
         /**
          * <p>The time when the task was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-26T03:17:04Z</p>
          */
         @NameInMap("CreatedTime")
         public String createdTime;
 
         /**
          * <p>The time when the task ended.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-26T03:22:04Z</p>
          */
         @NameInMap("EndTime")
         public String endTime;
 
         /**
          * <p>The home region of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         @NameInMap("HomeRegion")
         public String homeRegion;
 
         /**
          * <p>The task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16602</p>
          */
         @NameInMap("JobId")
         public Long jobId;
 
         /**
          * <p>The task status. Valid values:</p>
-         * <br>
-         * <p>*   0: The task is initializing.</p>
-         * <p>*   1: The task is delivering historical events.</p>
-         * <p>*   2: The task is complete.</p>
-         * <p>*   3: The task fails.</p>
+         * <ul>
+         * <li>0: The task is initializing.</li>
+         * <li>1: The task is delivering historical events.</li>
+         * <li>2: The task is complete.</li>
+         * <li>3: The task fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("JobStatus")
         public Integer jobStatus;
 
         /**
          * <p>The time when the task started.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-01-26T03:17:04Z</p>
          */
         @NameInMap("StartTime")
         public String startTime;
 
         /**
          * <p>The name of the trail.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>trail-name</p>
          */
         @NameInMap("TrailName")
         public String trailName;
 
         /**
          * <p>The time when the task was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-04-26T03:20:08Z</p>
          */
         @NameInMap("UpdatedTime")
         public String updatedTime;
