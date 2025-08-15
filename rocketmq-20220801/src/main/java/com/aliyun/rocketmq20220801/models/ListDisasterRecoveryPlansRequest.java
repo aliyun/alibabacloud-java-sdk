@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisasterRecoveryPlansRequest extends TeaModel {
     /**
-     * <p>Filter conditions, filter by backup name and description</p>
+     * <p>The filter condition. Global Replicator tasks are filtered by task name or description.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -13,11 +13,17 @@ public class ListDisasterRecoveryPlansRequest extends TeaModel {
     @NameInMap("filter")
     public String filter;
 
+    /**
+     * <p>The instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rmq-cn-778xxx</p>
+     */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>Page number, the page of results to be queried.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +32,7 @@ public class ListDisasterRecoveryPlansRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size, the maximum number of results displayed per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

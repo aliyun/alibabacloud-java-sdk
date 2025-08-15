@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDisasterRecoveryItemsRequest extends TeaModel {
     /**
-     * <p>Filter condition, filter by topicName</p>
+     * <p>The filter condition. Topics are filtered by topic name.</p>
      * 
      * <strong>example:</strong>
      * <p>topic_test</p>
@@ -14,7 +14,7 @@ public class ListDisasterRecoveryItemsRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Page number, indicating which page of the results to query.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListDisasterRecoveryItemsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Page size, the maximum number of results displayed per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -31,6 +31,12 @@ public class ListDisasterRecoveryItemsRequest extends TeaModel {
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The topic name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>topic-test920</p>
+     */
     @NameInMap("topicName")
     public String topicName;
 

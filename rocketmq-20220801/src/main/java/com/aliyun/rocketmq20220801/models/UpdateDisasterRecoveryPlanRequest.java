@@ -5,10 +5,15 @@ import com.aliyun.tea.*;
 
 public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
     /**
-     * <p>Whether to enable automatic synchronization of consumption progress.</p>
+     * <p>Specifies whether to enable automatic consumer progress synchronization.</p>
      * <blockquote>
-     * <p>This is effective only when consumption progress synchronization is enabled, i.e., the value of <code>syncCheckpointEnabled</code> is true.</p>
+     * <p> This parameter takes effect only when you set <code>syncCheckpointEnabled</code> to true.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -17,13 +22,13 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
     public Boolean autoSyncCheckpoint;
 
     /**
-     * <p>The instances that are involved in the global message backup plan.</p>
+     * <p>The instances involved in the Global Replicator task. After you create a Global Replicator task, you cannot change the instances involved in the task. You can change only the message attribute and authentication type of the task.</p>
      */
     @NameInMap("instances")
     public java.util.List<UpdateDisasterRecoveryPlanRequestInstances> instances;
 
     /**
-     * <p>The description of the global message backup plan.</p>
+     * <p>The description of the Global Replicator task.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -32,7 +37,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
     public String planDesc;
 
     /**
-     * <p>The name of the global message backup plan.</p>
+     * <p>The name of the Global Replicator task.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx</p>
@@ -41,10 +46,10 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
     public String planName;
 
     /**
-     * <p>The type of the global message backup plan. Valid values:</p>
+     * <p>The type of the Global Replicator task. After you create a Global Replicator task, you cannot change the type of the task. Valid values:</p>
      * <ul>
-     * <li>ACTIVE_PASSIVE: geo-disaster recovery</li>
-     * <li>ACTIVE_ACTIVE: active geo-redundancy</li>
+     * <li>ACTIVE_PASSIVE: one-way backup</li>
+     * <li>ACTIVE_ACTIVE: two-way backup</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +59,12 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
     public String planType;
 
     /**
-     * <p>Switch for synchronizing consumption progress</p>
+     * <p>Specifies whether to enable consumer progress synchronization.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>true</li>
+     * <li>false</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -159,10 +169,16 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
 
     public static class UpdateDisasterRecoveryPlanRequestInstances extends TeaModel {
         /**
-         * <p>The authentication type.</p>
+         * <p>The authentication type. Valid values:</p>
          * <ul>
          * <li>NO_AUTH: no authentication</li>
          * <li>ACL_AUTH: access control list (ACL)-based authentication</li>
+         * </ul>
+         * <!---->
+         * 
+         * <ul>
+         * <li></li>
+         * <li></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -171,6 +187,12 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        /**
+         * <p>The consumer group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_DS_XXX_YYY</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
@@ -238,7 +260,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         public String networkType;
 
         /**
-         * <p>The password that is used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
+         * <p>The password used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -247,7 +269,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>The region in which the instance resides.</p>
+         * <p>The ID of the region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -256,7 +278,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
+         * <p>The ID of the security group to which the instance belongs. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp17hpmgz9******</p>
@@ -265,7 +287,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The username that is used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
+         * <p>The username used for authentication. This parameter is required only if you set authType to ACL_AUTH.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -274,7 +296,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         public String username;
 
         /**
-         * <p>The ID of the vSwitch with which the instance is associated. If you want to specify multiple vSwitches, separate the vSwitches with vertical bars (|).</p>
+         * <p>The ID of the vSwitch with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6gwtbn6etadpv******</p>
@@ -283,7 +305,7 @@ public class UpdateDisasterRecoveryPlanRequest extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ.</p>
+         * <p>The ID of the VPC with which the instance is associated. This parameter is required only if you set instanceType to EXTERNAL_ROCKETMQ and networkType to TCP_VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9qt50xhtj9krb******</p>

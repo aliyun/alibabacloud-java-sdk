@@ -25,6 +25,7 @@ public class CreateTopicRequest extends TeaModel {
      * <blockquote>
      * <p> The type of messages in the topic must be the same as the type of messages that you want to send. For example, if you create a topic whose message type is ordered messages, you can use the topic to send and receive only ordered messages.</p>
      * </blockquote>
+     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>NORMAL</p>

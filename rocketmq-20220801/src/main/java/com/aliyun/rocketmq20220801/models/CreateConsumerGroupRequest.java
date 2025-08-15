@@ -93,10 +93,10 @@ public class CreateConsumerGroupRequest extends TeaModel {
         public String deadLetterTargetTopic;
 
         /**
-         * <p>Fixed retry interval, unit: seconds.This option is effective when retryPolicy is FixedRetryPolicy.Value range：</p>
+         * <p>The fixed interval. Unit: seconds. This parameter takes effect only if you set retryPolicy to FixedRetryPolicy. Valid values:</p>
          * <ul>
-         * <li>Concurrently:10-600</li>
-         * <li>Orderly:1-60</li>
+         * <li>Concurrent delivery: 10 to 1800</li>
+         * <li>Ordered delivery: 1 to 600</li>
          * </ul>
          * 
          * <strong>example:</strong>

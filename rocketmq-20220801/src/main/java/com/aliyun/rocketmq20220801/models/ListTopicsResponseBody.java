@@ -38,6 +38,8 @@ public class ListTopicsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
+     * <p>HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>400</p>
      */

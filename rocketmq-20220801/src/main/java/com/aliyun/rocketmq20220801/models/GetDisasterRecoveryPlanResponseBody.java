@@ -23,7 +23,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetDisasterRecoveryPlanResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -74,7 +74,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -161,7 +161,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryPlanResponseBodyDataInstancesMessageProperty extends TeaModel {
         /**
-         * <p>Property key</p>
+         * <p>The attribute key.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -170,7 +170,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String propertyKey;
 
         /**
-         * <p>Property value</p>
+         * <p>The attribute value.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -203,11 +203,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryPlanResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>Authentication method. Not required for instanceType of ALIYUN_ROCKETMQ and version 4.0</p>
-         * <ul>
-         * <li>NO_AUTH: No authentication required</li>
-         * <li>ACL_AUTH: ACL authentication</li>
-         * </ul>
+         * <p>The authentication type.</p>
          * 
          * <strong>example:</strong>
          * <p>ACL_AUTH</p>
@@ -215,11 +211,17 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         @NameInMap("authType")
         public String authType;
 
+        /**
+         * <p>The consumer Group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GID_DS_XXX_YYY</p>
+         */
         @NameInMap("consumerGroupId")
         public String consumerGroupId;
 
         /**
-         * <p>Endpoint URL, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ</p>
+         * <p>The endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -237,11 +239,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Instance role, either primary or secondary </p>
-         * <ul>
-         * <li>ACTIVE: Primary</li>
-         * <li>PASSIVE: Secondary</li>
-         * </ul>
+         * <p>The instance role.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -250,11 +248,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String instanceRole;
 
         /**
-         * <p>Instance type</p>
-         * <ul>
-         * <li>ALIYUN_ROCKETMQ: Alibaba Cloud instance</li>
-         * <li>EXTERNAL_ROCKETMQ: External instance, open-source instance, open-source cluster</li>
-         * </ul>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN_ROCKETMQ</p>
@@ -263,17 +257,13 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Message filtering properties. When messages are synchronized to the target cluster, this property will be automatically added for SQL filtering during message consumption.</p>
+         * <p>The message attribute.</p>
          */
         @NameInMap("messageProperty")
         public GetDisasterRecoveryPlanResponseBodyDataInstancesMessageProperty messageProperty;
 
         /**
-         * <p>Network type, not required for instanceType of ALIYUN_ROCKETMQ, but required for EXTERNAL_ROCKETMQ Parameter values are as follows:</p>
-         * <ul>
-         * <li>TCP_INTERNET: TCP public network</li>
-         * <li>TCP_VPC: TCP VPC (Virtual Private Cloud)</li>
-         * </ul>
+         * <p>The network type.</p>
          * 
          * <strong>example:</strong>
          * <p>TCP_INTERNET</p>
@@ -282,7 +272,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String networkType;
 
         /**
-         * <p>Authentication password, required when authType is ACL_AUTH. Not required for instanceType of ALIYUN_ROCKETMQ</p>
+         * <p>The password used for authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -291,7 +281,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>Region ID.</p>
+         * <p>The ID of the region where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -300,7 +290,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Security group ID, required only when the instanceType is EXTERNAL_ROCKETMQ and networkType is TCP_VPC.</p>
+         * <p>The security group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-bp17hpmgz9******</p>
@@ -309,7 +299,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>Authentication username, required when authType is ACL_AUTH</p>
+         * <p>The username used for authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -318,7 +308,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String username;
 
         /**
-         * <p>The ID of the switch associated with the instance, required only when the instanceType is EXTERNAL_ROCKETMQ and networkType is TCP_VPC.</p>
+         * <p>The vSwitch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-uf6gwtbn6etadpv******</p>
@@ -327,7 +317,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The ID of the private network associated with the created instance. The instanceType instance type is only EXTERNAL_ROCKETMQ. It is required when the networkType is TCP_VPC.</p>
+         * <p>The virtual private cloud (VPC) ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9qt50xhtj9krb******</p>
@@ -456,7 +446,15 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
 
     public static class GetDisasterRecoveryPlanResponseBodyData extends TeaModel {
         /**
-         * <p>Whether to enable automatic synchronization of consumption progress.</p>
+         * <p>Indicates whether automatic consumer progress synchronization is enabled.</p>
+         * <blockquote>
+         * <p> This parameter takes effect only when <code>syncCheckpointEnabled</code> is set to true.</p>
+         * </blockquote>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -465,7 +463,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public Boolean autoSyncCheckpoint;
 
         /**
-         * <p>The time when the backup plan was created.</p>
+         * <p>The time when the query task was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
@@ -474,19 +472,19 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Additional Information</p>
+         * <p>The extended information.</p>
          */
         @NameInMap("extInfo")
         public java.util.Map<String, String> extInfo;
 
         /**
-         * <p>Instances involved in the backup plan</p>
+         * <p>The instances involved in the Global Replicator task.</p>
          */
         @NameInMap("instances")
         public java.util.List<GetDisasterRecoveryPlanResponseBodyDataInstances> instances;
 
         /**
-         * <p>The describe of the global message backup plan.</p>
+         * <p>The description of the Global Replicator task.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -495,7 +493,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planDesc;
 
         /**
-         * <p>The ID of the global message backup plan.</p>
+         * <p>The ID of the Global Replicator task.</p>
          * 
          * <strong>example:</strong>
          * <p>1300000016</p>
@@ -504,7 +502,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public Long planId;
 
         /**
-         * <p>The name of the global message backup plan.</p>
+         * <p>The name of the Global Replicator task.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -513,7 +511,12 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planName;
 
         /**
-         * <p>The status of the global message backup plan.</p>
+         * <p>The status of the Global Replicator task. Valid values:</p>
+         * <ul>
+         * <li>CREATED</li>
+         * <li>RUNNING</li>
+         * <li>DELETED</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -522,11 +525,10 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planStatus;
 
         /**
-         * <p>The type of the global message backup plan.
-         * values are as follows:</p>
+         * <p>The type of the Global Replicator task. Valid values:</p>
          * <ul>
-         * <li>ACTIVE_PASSIVE: One-way backup</li>
-         * <li>ACTIVE_ACTIVE: Two-way backup</li>
+         * <li>ACTIVE_PASSIVE: one-way backup</li>
+         * <li>ACTIVE_ACTIVE: two-way backup</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -536,7 +538,12 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public String planType;
 
         /**
-         * <p>Switch for synchronizing consumption progress</p>
+         * <p>Indicates whether consumer progress synchronization is enabled.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -545,7 +552,7 @@ public class GetDisasterRecoveryPlanResponseBody extends TeaModel {
         public Boolean syncCheckpointEnabled;
 
         /**
-         * <p>The time when the backup plan was created.</p>
+         * <p>The time when the query task was last modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-01 20:05:50</p>
