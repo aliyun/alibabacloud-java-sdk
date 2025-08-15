@@ -512,6 +512,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         @NameInMap("LimitedBandwidth")
         public Integer limitedBandwidth;
 
+        @NameInMap("PayType")
+        public String payType;
+
         public static CreateCloudPhoneNodeRequestNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateCloudPhoneNodeRequestNetworkInfo self = new CreateCloudPhoneNodeRequestNetworkInfo();
             return TeaModel.build(map, self);
@@ -563,6 +566,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         }
         public Integer getLimitedBandwidth() {
             return this.limitedBandwidth;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setPayType(String payType) {
+            this.payType = payType;
+            return this;
+        }
+        public String getPayType() {
+            return this.payType;
         }
 
     }
