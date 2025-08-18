@@ -405,6 +405,77 @@ public class GetInstanceListResponseBody extends TeaModel {
 
     }
 
+    public static class GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO extends TeaModel {
+        @NameInMap("ComponentType")
+        public String componentType;
+
+        @NameInMap("DeployModule")
+        public String deployModule;
+
+        @NameInMap("PubEndpoint")
+        public String pubEndpoint;
+
+        @NameInMap("VpcEndpoint")
+        public String vpcEndpoint;
+
+        public static GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO self = new GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO setComponentType(String componentType) {
+            this.componentType = componentType;
+            return this;
+        }
+        public String getComponentType() {
+            return this.componentType;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO setDeployModule(String deployModule) {
+            this.deployModule = deployModule;
+            return this;
+        }
+        public String getDeployModule() {
+            return this.deployModule;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO setPubEndpoint(String pubEndpoint) {
+            this.pubEndpoint = pubEndpoint;
+            return this;
+        }
+        public String getPubEndpoint() {
+            return this.pubEndpoint;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO setVpcEndpoint(String vpcEndpoint) {
+            this.vpcEndpoint = vpcEndpoint;
+            return this;
+        }
+        public String getVpcEndpoint() {
+            return this.vpcEndpoint;
+        }
+
+    }
+
+    public static class GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents extends TeaModel {
+        @NameInMap("ConfluentInstanceComponentVO")
+        public java.util.List<GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO> confluentInstanceComponentVO;
+
+        public static GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents build(java.util.Map<String, ?> map) throws Exception {
+            GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents self = new GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents();
+            return TeaModel.build(map, self);
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents setConfluentInstanceComponentVO(java.util.List<GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO> confluentInstanceComponentVO) {
+            this.confluentInstanceComponentVO = confluentInstanceComponentVO;
+            return this;
+        }
+        public java.util.List<GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponentsConfluentInstanceComponentVO> getConfluentInstanceComponentVO() {
+            return this.confluentInstanceComponentVO;
+        }
+
+    }
+
     public static class GetInstanceListResponseBodyInstanceListInstanceVOTagsTagVO extends TeaModel {
         /**
          * <p>The tag key.</p>
@@ -552,6 +623,9 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("ConfluentConfig")
         public GetInstanceListResponseBodyInstanceListInstanceVOConfluentConfig confluentConfig;
+
+        @NameInMap("ConfluentInstanceComponents")
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents confluentInstanceComponents;
 
         /**
          * <p>The time when the instance was created. Unit: milliseconds.</p>
@@ -736,6 +810,9 @@ public class GetInstanceListResponseBody extends TeaModel {
          */
         @NameInMap("PaidType")
         public Integer paidType;
+
+        @NameInMap("RecommendedPartitionCount")
+        public Integer recommendedPartitionCount;
 
         /**
          * <p>The ID of the region where the instance resides.</p>
@@ -1083,6 +1160,14 @@ public class GetInstanceListResponseBody extends TeaModel {
             return this.confluentConfig;
         }
 
+        public GetInstanceListResponseBodyInstanceListInstanceVO setConfluentInstanceComponents(GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents confluentInstanceComponents) {
+            this.confluentInstanceComponents = confluentInstanceComponents;
+            return this;
+        }
+        public GetInstanceListResponseBodyInstanceListInstanceVOConfluentInstanceComponents getConfluentInstanceComponents() {
+            return this.confluentInstanceComponents;
+        }
+
         public GetInstanceListResponseBodyInstanceListInstanceVO setCreateTime(Long createTime) {
             this.createTime = createTime;
             return this;
@@ -1225,6 +1310,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public Integer getPaidType() {
             return this.paidType;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVO setRecommendedPartitionCount(Integer recommendedPartitionCount) {
+            this.recommendedPartitionCount = recommendedPartitionCount;
+            return this;
+        }
+        public Integer getRecommendedPartitionCount() {
+            return this.recommendedPartitionCount;
         }
 
         public GetInstanceListResponseBodyInstanceListInstanceVO setRegionId(String regionId) {

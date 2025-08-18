@@ -1596,6 +1596,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>故障演练</p>
+     * 
+     * @param request FailoverTestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return FailoverTestResponse
+     */
+    public FailoverTestResponse failoverTestWithOptions(FailoverTestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configs)) {
+            query.put("Configs", request.configs);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.duration)) {
+            query.put("Duration", request.duration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.executeTime)) {
+            query.put("ExecuteTime", request.executeTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "FailoverTest"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new FailoverTestResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>故障演练</p>
+     * 
+     * @param request FailoverTestRequest
+     * @return FailoverTestResponse
+     */
+    public FailoverTestResponse failoverTest(FailoverTestRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.failoverTestWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries the IDs of all instances in the current account.</p>
      * 
      * @param request GetAllInstanceIdListRequest
@@ -2048,6 +2120,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetQuotaTipResponse getQuotaTip(GetQuotaTipRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getQuotaTipWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例风险列表</p>
+     * 
+     * @param request GetRiskListRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetRiskListResponse
+     */
+    public GetRiskListResponse getRiskListWithOptions(GetRiskListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startIndex)) {
+            query.put("StartIndex", request.startIndex);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetRiskList"),
+            new TeaPair("version", "2019-09-16"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetRiskListResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询实例风险列表</p>
+     * 
+     * @param request GetRiskListRequest
+     * @return GetRiskListResponse
+     */
+    public GetRiskListResponse getRiskList(GetRiskListRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getRiskListWithOptions(request, runtime);
     }
 
     /**

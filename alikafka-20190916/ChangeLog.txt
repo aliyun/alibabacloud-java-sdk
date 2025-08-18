@@ -1,3 +1,10 @@
+2025-08-18 Version: 1.13.0
+- Support API FailoverTest.
+- Support API GetRiskList.
+- Update API GetInstanceList: add response parameters Body.InstanceList.$.ConfluentInstanceComponents.
+- Update API GetInstanceList: add response parameters Body.InstanceList.$.RecommendedPartitionCount.
+
+
 2025-05-27 Version: 1.11.0
 - Support API ListRebalanceInfo.
 
