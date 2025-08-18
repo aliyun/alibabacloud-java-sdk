@@ -8546,6 +8546,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>AI生成视频剪辑脚本</p>
+     * 
+     * @param request RunVideoScriptGenerateRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunVideoScriptGenerateResponse
+     */
+    public RunVideoScriptGenerateResponse runVideoScriptGenerateWithOptions(RunVideoScriptGenerateRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            body.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prompt)) {
+            body.put("Prompt", request.prompt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptLength)) {
+            body.put("ScriptLength", request.scriptLength);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scriptNumber)) {
+            body.put("ScriptNumber", request.scriptNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.useSearch)) {
+            body.put("UseSearch", request.useSearch);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunVideoScriptGenerate"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunVideoScriptGenerateResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>AI生成视频剪辑脚本</p>
+     * 
+     * @param request RunVideoScriptGenerateRequest
+     * @return RunVideoScriptGenerateResponse
+     */
+    public RunVideoScriptGenerateResponse runVideoScriptGenerate(RunVideoScriptGenerateRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runVideoScriptGenerateWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>AI妙笔-创作-文风改写</p>
      * 
      * @param tmpReq RunWriteToneGenerationRequest
