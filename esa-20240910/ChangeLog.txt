@@ -1,3 +1,31 @@
+2025-08-18 Version: 2.33.0
+- Support API CreateUrlObservation.
+- Support API DeleteUrlObservation.
+- Support API DescribeUrlObservationData.
+- Support API ListESAIPInfo.
+- Support API ListUrlObservations.
+- Support API TagResources.
+- Support API UpdateUrlObservation.
+- Update API CreateRoutineRoute: add request parameters Fallback.
+- Update API CreateSiteDeliveryTask: add request parameters FilterVer.
+- Update API CreateSiteDeliveryTask: add request parameters HttpDelivery.LastLogSplit.
+- Update API CreateSiteDeliveryTask: add request parameters HttpDelivery.LogSplit.
+- Update API CreateSiteDeliveryTask: add request parameters HttpDelivery.LogSplitWords.
+- Update API CreateUserDeliveryTask: add request parameters FilterVer.
+- Update API GetEdgeContainerAppResourceStatus: add response parameters Body.Regions.$.IsOffline.
+- Update API GetEdgeContainerAppResourceStatus: add response parameters Body.Regions.$.IsStaging.
+- Update API GetRoutineRoute: add response parameters Body.Fallback.
+- Update API GetSiteDeliveryTask: add response parameters Body.FilterVer.
+- Update API GetSiteDeliveryTask: add response parameters Body.RawRule.
+- Update API GetUserDeliveryTask: add response parameters Body.FilterVer.
+- Update API GetUserDeliveryTask: add response parameters Body.RawRule.
+- Update API ListRoutineRoutes: add response parameters Body.Configs.$.Fallback.
+- Update API ListSiteRoutes: add response parameters Body.Configs.$.Fallback.
+- Update API UpdateRoutineRoute: add request parameters Fallback.
+- Update API UpdateSiteDeliveryTask: add request parameters FilterVer.
+- Update API UpdateUserDeliveryTask: add request parameters FilterVer.
+
+
 2025-06-16 Version: 2.31.3
 - Update API CreateLoadBalancer: add request parameters Monitor.MonitoringRegion.
 - Update API GetLoadBalancer: add response parameters Body.Monitor.MonitoringRegion.

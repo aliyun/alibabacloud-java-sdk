@@ -25,6 +25,9 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     @NameInMap("ConfigType")
     public String configType;
 
+    @NameInMap("Fallback")
+    public String fallback;
+
     /**
      * <strong>example:</strong>
      * <p>simple</p>
@@ -108,6 +111,14 @@ public class GetRoutineRouteResponseBody extends TeaModel {
     }
     public String getConfigType() {
         return this.configType;
+    }
+
+    public GetRoutineRouteResponseBody setFallback(String fallback) {
+        this.fallback = fallback;
+        return this;
+    }
+    public String getFallback() {
+        return this.fallback;
     }
 
     public GetRoutineRouteResponseBody setMode(String mode) {

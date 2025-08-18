@@ -26,7 +26,6 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
      * <li>cn: the Chinese mainland.</li>
      * <li>oversea: outside the Chinese mainland.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -70,6 +69,9 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
      */
     @NameInMap("FieldName")
     public String fieldName;
+
+    @NameInMap("FilterVer")
+    public String filterVer;
 
     /**
      * <p>The configurations for delivery to an HTTP server.</p>
@@ -164,6 +166,14 @@ public class CreateSiteDeliveryTaskShrinkRequest extends TeaModel {
     }
     public String getFieldName() {
         return this.fieldName;
+    }
+
+    public CreateSiteDeliveryTaskShrinkRequest setFilterVer(String filterVer) {
+        this.filterVer = filterVer;
+        return this;
+    }
+    public String getFilterVer() {
+        return this.filterVer;
     }
 
     public CreateSiteDeliveryTaskShrinkRequest setHttpDeliveryShrink(String httpDeliveryShrink) {

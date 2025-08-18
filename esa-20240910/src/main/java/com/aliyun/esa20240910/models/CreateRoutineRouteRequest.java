@@ -11,6 +11,9 @@ public class CreateRoutineRouteRequest extends TeaModel {
     @NameInMap("Bypass")
     public String bypass;
 
+    @NameInMap("Fallback")
+    public String fallback;
+
     /**
      * <strong>example:</strong>
      * <p>on</p>
@@ -68,6 +71,14 @@ public class CreateRoutineRouteRequest extends TeaModel {
     }
     public String getBypass() {
         return this.bypass;
+    }
+
+    public CreateRoutineRouteRequest setFallback(String fallback) {
+        this.fallback = fallback;
+        return this;
+    }
+    public String getFallback() {
+        return this.fallback;
     }
 
     public CreateRoutineRouteRequest setRouteEnable(String routeEnable) {

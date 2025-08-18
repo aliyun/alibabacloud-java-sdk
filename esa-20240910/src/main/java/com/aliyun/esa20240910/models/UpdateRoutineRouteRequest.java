@@ -20,6 +20,9 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     @NameInMap("ConfigId")
     public Long configId;
 
+    @NameInMap("Fallback")
+    public String fallback;
+
     /**
      * <strong>example:</strong>
      * <p>on</p>
@@ -83,6 +86,14 @@ public class UpdateRoutineRouteRequest extends TeaModel {
     }
     public Long getConfigId() {
         return this.configId;
+    }
+
+    public UpdateRoutineRouteRequest setFallback(String fallback) {
+        this.fallback = fallback;
+        return this;
+    }
+    public String getFallback() {
+        return this.fallback;
     }
 
     public UpdateRoutineRouteRequest setRouteEnable(String routeEnable) {

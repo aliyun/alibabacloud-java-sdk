@@ -26,7 +26,6 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
      * <li>cn: the Chinese mainland.</li>
      * <li>sg: outside the Chinese mainland.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -73,6 +72,9 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
      */
     @NameInMap("FieldName")
     public String fieldName;
+
+    @NameInMap("FilterVer")
+    public String filterVer;
 
     /**
      * <p>The configurations for delivery to an HTTP server.</p>
@@ -165,6 +167,14 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
     }
     public String getFieldName() {
         return this.fieldName;
+    }
+
+    public CreateUserDeliveryTaskRequest setFilterVer(String filterVer) {
+        this.filterVer = filterVer;
+        return this;
+    }
+    public String getFilterVer() {
+        return this.filterVer;
     }
 
     public CreateUserDeliveryTaskRequest setHttpDelivery(CreateUserDeliveryTaskRequestHttpDelivery httpDelivery) {
@@ -306,7 +316,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
          * <p>\n</p>
          */
         @NameInMap("LastLogSplit")
-        public String lastLogSplit;
+        public Boolean lastLogSplit;
 
         /**
          * <p>The prefix of the log delivery package.</p>
@@ -333,7 +343,7 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
          * <p>true</p>
          */
         @NameInMap("LogSplit")
-        public String logSplit;
+        public Boolean logSplit;
 
         /**
          * <p>The log separator.</p>
@@ -343,15 +353,6 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
          */
         @NameInMap("LogSplitWords")
         public String logSplitWords;
-
-        /**
-         * <p>The maximum backoff time. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
-        @NameInMap("MaxBackoffMS")
-        public Long maxBackoffMS;
 
         /**
          * <p>The maximum size of data for each delivery. Unit: MB.</p>
@@ -381,28 +382,10 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         public Long maxRetry;
 
         /**
-         * <p>The minimum backoff time. Unit: milliseconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("MinBackoffMS")
-        public Long minBackoffMS;
-
-        /**
          * <p>The custom query parameters.</p>
          */
         @NameInMap("QueryParam")
         public java.util.Map<String, HttpDeliveryQueryParamValue> queryParam;
-
-        /**
-         * <p>The response field key used for success check.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>err_code</p>
-         */
-        @NameInMap("ResponseBodyKey")
-        public String responseBodyKey;
 
         /**
          * <p>Specifies whether to use server authentication.</p>
@@ -418,15 +401,6 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
          */
         @NameInMap("StandardAuthParam")
         public CreateUserDeliveryTaskRequestHttpDeliveryStandardAuthParam standardAuthParam;
-
-        /**
-         * <p>The custom code for a success.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
-         */
-        @NameInMap("SuccessCode")
-        public Long successCode;
 
         /**
          * <p>The timeout period. Unit: seconds.</p>
@@ -466,11 +440,11 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
             return this.headerParam;
         }
 
-        public CreateUserDeliveryTaskRequestHttpDelivery setLastLogSplit(String lastLogSplit) {
+        public CreateUserDeliveryTaskRequestHttpDelivery setLastLogSplit(Boolean lastLogSplit) {
             this.lastLogSplit = lastLogSplit;
             return this;
         }
-        public String getLastLogSplit() {
+        public Boolean getLastLogSplit() {
             return this.lastLogSplit;
         }
 
@@ -490,11 +464,11 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
             return this.logBodySuffix;
         }
 
-        public CreateUserDeliveryTaskRequestHttpDelivery setLogSplit(String logSplit) {
+        public CreateUserDeliveryTaskRequestHttpDelivery setLogSplit(Boolean logSplit) {
             this.logSplit = logSplit;
             return this;
         }
-        public String getLogSplit() {
+        public Boolean getLogSplit() {
             return this.logSplit;
         }
 
@@ -504,14 +478,6 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         }
         public String getLogSplitWords() {
             return this.logSplitWords;
-        }
-
-        public CreateUserDeliveryTaskRequestHttpDelivery setMaxBackoffMS(Long maxBackoffMS) {
-            this.maxBackoffMS = maxBackoffMS;
-            return this;
-        }
-        public Long getMaxBackoffMS() {
-            return this.maxBackoffMS;
         }
 
         public CreateUserDeliveryTaskRequestHttpDelivery setMaxBatchMB(Long maxBatchMB) {
@@ -538,28 +504,12 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
             return this.maxRetry;
         }
 
-        public CreateUserDeliveryTaskRequestHttpDelivery setMinBackoffMS(Long minBackoffMS) {
-            this.minBackoffMS = minBackoffMS;
-            return this;
-        }
-        public Long getMinBackoffMS() {
-            return this.minBackoffMS;
-        }
-
         public CreateUserDeliveryTaskRequestHttpDelivery setQueryParam(java.util.Map<String, HttpDeliveryQueryParamValue> queryParam) {
             this.queryParam = queryParam;
             return this;
         }
         public java.util.Map<String, HttpDeliveryQueryParamValue> getQueryParam() {
             return this.queryParam;
-        }
-
-        public CreateUserDeliveryTaskRequestHttpDelivery setResponseBodyKey(String responseBodyKey) {
-            this.responseBodyKey = responseBodyKey;
-            return this;
-        }
-        public String getResponseBodyKey() {
-            return this.responseBodyKey;
         }
 
         public CreateUserDeliveryTaskRequestHttpDelivery setStandardAuthOn(Boolean standardAuthOn) {
@@ -576,14 +526,6 @@ public class CreateUserDeliveryTaskRequest extends TeaModel {
         }
         public CreateUserDeliveryTaskRequestHttpDeliveryStandardAuthParam getStandardAuthParam() {
             return this.standardAuthParam;
-        }
-
-        public CreateUserDeliveryTaskRequestHttpDelivery setSuccessCode(Long successCode) {
-            this.successCode = successCode;
-            return this;
-        }
-        public Long getSuccessCode() {
-            return this.successCode;
         }
 
         public CreateUserDeliveryTaskRequestHttpDelivery setTransformTimeout(Long transformTimeout) {

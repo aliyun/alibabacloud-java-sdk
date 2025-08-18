@@ -117,6 +117,9 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         @NameInMap("ConfigType")
         public String configType;
 
+        @NameInMap("Fallback")
+        public String fallback;
+
         /**
          * <strong>example:</strong>
          * <p>simple</p>
@@ -207,6 +210,14 @@ public class ListRoutineRoutesResponseBody extends TeaModel {
         }
         public String getConfigType() {
             return this.configType;
+        }
+
+        public ListRoutineRoutesResponseBodyConfigs setFallback(String fallback) {
+            this.fallback = fallback;
+            return this;
+        }
+        public String getFallback() {
+            return this.fallback;
         }
 
         public ListRoutineRoutesResponseBodyConfigs setMode(String mode) {

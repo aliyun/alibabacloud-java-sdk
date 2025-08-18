@@ -26,7 +26,6 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
      * <li>cn: the Chinese mainland.</li>
      * <li>oversea: outside the Chinese mainland.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>cn</p>
@@ -70,6 +69,9 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
      */
     @NameInMap("FieldName")
     public String fieldName;
+
+    @NameInMap("FilterVer")
+    public String filterVer;
 
     /**
      * <p>The configurations for delivery to an HTTP server.</p>
@@ -164,6 +166,14 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
     }
     public String getFieldName() {
         return this.fieldName;
+    }
+
+    public CreateSiteDeliveryTaskRequest setFilterVer(String filterVer) {
+        this.filterVer = filterVer;
+        return this;
+    }
+    public String getFilterVer() {
+        return this.filterVer;
     }
 
     public CreateSiteDeliveryTaskRequest setHttpDelivery(CreateSiteDeliveryTaskRequestHttpDelivery httpDelivery) {
@@ -309,6 +319,9 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         @NameInMap("HeaderParam")
         public java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
 
+        @NameInMap("LastLogSplit")
+        public Boolean lastLogSplit;
+
         /**
          * <p>The prefix of the log delivery package.</p>
          * 
@@ -326,6 +339,12 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
          */
         @NameInMap("LogBodySuffix")
         public String logBodySuffix;
+
+        @NameInMap("LogSplit")
+        public Boolean logSplit;
+
+        @NameInMap("LogSplitWords")
+        public String logSplitWords;
 
         /**
          * <p>The maximum size of data for each delivery. Unit: MB.</p>
@@ -413,6 +432,14 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
             return this.headerParam;
         }
 
+        public CreateSiteDeliveryTaskRequestHttpDelivery setLastLogSplit(Boolean lastLogSplit) {
+            this.lastLogSplit = lastLogSplit;
+            return this;
+        }
+        public Boolean getLastLogSplit() {
+            return this.lastLogSplit;
+        }
+
         public CreateSiteDeliveryTaskRequestHttpDelivery setLogBodyPrefix(String logBodyPrefix) {
             this.logBodyPrefix = logBodyPrefix;
             return this;
@@ -427,6 +454,22 @@ public class CreateSiteDeliveryTaskRequest extends TeaModel {
         }
         public String getLogBodySuffix() {
             return this.logBodySuffix;
+        }
+
+        public CreateSiteDeliveryTaskRequestHttpDelivery setLogSplit(Boolean logSplit) {
+            this.logSplit = logSplit;
+            return this;
+        }
+        public Boolean getLogSplit() {
+            return this.logSplit;
+        }
+
+        public CreateSiteDeliveryTaskRequestHttpDelivery setLogSplitWords(String logSplitWords) {
+            this.logSplitWords = logSplitWords;
+            return this;
+        }
+        public String getLogSplitWords() {
+            return this.logSplitWords;
         }
 
         public CreateSiteDeliveryTaskRequestHttpDelivery setMaxBatchMB(Long maxBatchMB) {

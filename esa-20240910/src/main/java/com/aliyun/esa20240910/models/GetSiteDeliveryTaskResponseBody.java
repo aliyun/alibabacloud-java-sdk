@@ -76,6 +76,12 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     @NameInMap("FilterRules")
     public String filterRules;
 
+    @NameInMap("FilterVer")
+    public String filterVer;
+
+    @NameInMap("RawRule")
+    public String rawRule;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -185,6 +191,22 @@ public class GetSiteDeliveryTaskResponseBody extends TeaModel {
     }
     public String getFilterRules() {
         return this.filterRules;
+    }
+
+    public GetSiteDeliveryTaskResponseBody setFilterVer(String filterVer) {
+        this.filterVer = filterVer;
+        return this;
+    }
+    public String getFilterVer() {
+        return this.filterVer;
+    }
+
+    public GetSiteDeliveryTaskResponseBody setRawRule(String rawRule) {
+        this.rawRule = rawRule;
+        return this;
+    }
+    public String getRawRule() {
+        return this.rawRule;
     }
 
     public GetSiteDeliveryTaskResponseBody setRequestId(String requestId) {

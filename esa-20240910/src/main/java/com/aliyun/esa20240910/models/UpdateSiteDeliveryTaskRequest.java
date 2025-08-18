@@ -38,6 +38,9 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     @NameInMap("FieldName")
     public String fieldName;
 
+    @NameInMap("FilterVer")
+    public String filterVer;
+
     /**
      * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * 
@@ -84,6 +87,14 @@ public class UpdateSiteDeliveryTaskRequest extends TeaModel {
     }
     public String getFieldName() {
         return this.fieldName;
+    }
+
+    public UpdateSiteDeliveryTaskRequest setFilterVer(String filterVer) {
+        this.filterVer = filterVer;
+        return this;
+    }
+    public String getFilterVer() {
+        return this.filterVer;
     }
 
     public UpdateSiteDeliveryTaskRequest setSiteId(Long siteId) {

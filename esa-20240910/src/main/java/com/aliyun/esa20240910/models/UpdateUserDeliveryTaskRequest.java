@@ -41,6 +41,9 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     @NameInMap("FieldName")
     public String fieldName;
 
+    @NameInMap("FilterVer")
+    public String filterVer;
+
     /**
      * <p>The name of the delivery task.</p>
      * <p>This parameter is required.</p>
@@ -86,6 +89,14 @@ public class UpdateUserDeliveryTaskRequest extends TeaModel {
     }
     public String getFieldName() {
         return this.fieldName;
+    }
+
+    public UpdateUserDeliveryTaskRequest setFilterVer(String filterVer) {
+        this.filterVer = filterVer;
+        return this;
+    }
+    public String getFilterVer() {
+        return this.filterVer;
     }
 
     public UpdateUserDeliveryTaskRequest setTaskName(String taskName) {

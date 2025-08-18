@@ -117,6 +117,9 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         @NameInMap("ConfigType")
         public String configType;
 
+        @NameInMap("Fallback")
+        public String fallback;
+
         /**
          * <strong>example:</strong>
          * <p>simple</p>
@@ -193,6 +196,14 @@ public class ListSiteRoutesResponseBody extends TeaModel {
         }
         public String getConfigType() {
             return this.configType;
+        }
+
+        public ListSiteRoutesResponseBodyConfigs setFallback(String fallback) {
+            this.fallback = fallback;
+            return this;
+        }
+        public String getFallback() {
+            return this.fallback;
         }
 
         public ListSiteRoutesResponseBodyConfigs setMode(String mode) {

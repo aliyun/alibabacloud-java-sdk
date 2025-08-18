@@ -36,6 +36,12 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
     }
 
     public static class GetEdgeContainerAppResourceStatusResponseBodyRegions extends TeaModel {
+        @NameInMap("IsOffline")
+        public Boolean isOffline;
+
+        @NameInMap("IsStaging")
+        public Boolean isStaging;
+
         /**
          * <strong>example:</strong>
          * <p>unicom</p>
@@ -67,6 +73,22 @@ public class GetEdgeContainerAppResourceStatusResponseBody extends TeaModel {
         public static GetEdgeContainerAppResourceStatusResponseBodyRegions build(java.util.Map<String, ?> map) throws Exception {
             GetEdgeContainerAppResourceStatusResponseBodyRegions self = new GetEdgeContainerAppResourceStatusResponseBodyRegions();
             return TeaModel.build(map, self);
+        }
+
+        public GetEdgeContainerAppResourceStatusResponseBodyRegions setIsOffline(Boolean isOffline) {
+            this.isOffline = isOffline;
+            return this;
+        }
+        public Boolean getIsOffline() {
+            return this.isOffline;
+        }
+
+        public GetEdgeContainerAppResourceStatusResponseBodyRegions setIsStaging(Boolean isStaging) {
+            this.isStaging = isStaging;
+            return this;
+        }
+        public Boolean getIsStaging() {
+            return this.isStaging;
         }
 
         public GetEdgeContainerAppResourceStatusResponseBodyRegions setIsp(String isp) {
