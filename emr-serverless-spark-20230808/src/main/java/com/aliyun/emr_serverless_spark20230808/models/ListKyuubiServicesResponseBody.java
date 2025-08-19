@@ -72,6 +72,9 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         @NameInMap("kyuubiConfigs")
         public String kyuubiConfigs;
 
+        @NameInMap("kyuubiReleaseVersion")
+        public String kyuubiReleaseVersion;
+
         /**
          * <p>KyuubiServer ID。</p>
          * 
@@ -181,6 +184,14 @@ public class ListKyuubiServicesResponseBody extends TeaModel {
         }
         public String getKyuubiConfigs() {
             return this.kyuubiConfigs;
+        }
+
+        public ListKyuubiServicesResponseBodyDataKyuubiServices setKyuubiReleaseVersion(String kyuubiReleaseVersion) {
+            this.kyuubiReleaseVersion = kyuubiReleaseVersion;
+            return this;
+        }
+        public String getKyuubiReleaseVersion() {
+            return this.kyuubiReleaseVersion;
         }
 
         public ListKyuubiServicesResponseBodyDataKyuubiServices setKyuubiServiceId(String kyuubiServiceId) {

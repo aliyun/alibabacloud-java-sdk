@@ -128,6 +128,9 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         @NameInMap("endTime")
         public String endTime;
 
+        @NameInMap("exitReason")
+        public String exitReason;
+
         @NameInMap("latestSqlStatementStatus")
         public String latestSqlStatementStatus;
 
@@ -222,6 +225,14 @@ public class ListKyuubiSparkApplicationsResponseBody extends TeaModel {
         }
         public String getEndTime() {
             return this.endTime;
+        }
+
+        public ListKyuubiSparkApplicationsResponseBodyApplications setExitReason(String exitReason) {
+            this.exitReason = exitReason;
+            return this;
+        }
+        public String getExitReason() {
+            return this.exitReason;
         }
 
         public ListKyuubiSparkApplicationsResponseBodyApplications setLatestSqlStatementStatus(String latestSqlStatementStatus) {

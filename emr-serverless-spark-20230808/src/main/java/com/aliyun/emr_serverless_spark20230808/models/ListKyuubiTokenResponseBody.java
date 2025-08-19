@@ -36,6 +36,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
     }
 
     public static class ListKyuubiTokenResponseBodyDataTokens extends TeaModel {
+        @NameInMap("accountNames")
+        public java.util.List<String> accountNames;
+
         /**
          * <strong>example:</strong>
          * <p>2025-02-11T02:23:02Z</p>
@@ -64,6 +67,9 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         @NameInMap("lastUsedTime")
         public Long lastUsedTime;
 
+        @NameInMap("memberArns")
+        public java.util.List<String> memberArns;
+
         /**
          * <strong>example:</strong>
          * <p>dev_serveless_spark</p>
@@ -90,6 +96,14 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         public static ListKyuubiTokenResponseBodyDataTokens build(java.util.Map<String, ?> map) throws Exception {
             ListKyuubiTokenResponseBodyDataTokens self = new ListKyuubiTokenResponseBodyDataTokens();
             return TeaModel.build(map, self);
+        }
+
+        public ListKyuubiTokenResponseBodyDataTokens setAccountNames(java.util.List<String> accountNames) {
+            this.accountNames = accountNames;
+            return this;
+        }
+        public java.util.List<String> getAccountNames() {
+            return this.accountNames;
         }
 
         public ListKyuubiTokenResponseBodyDataTokens setCreateTime(Long createTime) {
@@ -122,6 +136,14 @@ public class ListKyuubiTokenResponseBody extends TeaModel {
         }
         public Long getLastUsedTime() {
             return this.lastUsedTime;
+        }
+
+        public ListKyuubiTokenResponseBodyDataTokens setMemberArns(java.util.List<String> memberArns) {
+            this.memberArns = memberArns;
+            return this;
+        }
+        public java.util.List<String> getMemberArns() {
+            return this.memberArns;
         }
 
         public ListKyuubiTokenResponseBodyDataTokens setName(String name) {

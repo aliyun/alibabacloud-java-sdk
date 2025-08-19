@@ -4,6 +4,9 @@ package com.aliyun.emr_serverless_spark20230808.models;
 import com.aliyun.tea.*;
 
 public class ListJobRunsShrinkRequest extends TeaModel {
+    @NameInMap("applicationConfigs")
+    public String applicationConfigs;
+
     /**
      * <p>The ID of the user who created the job.</p>
      * 
@@ -94,6 +97,9 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     @NameInMap("resourceQueueId")
     public String resourceQueueId;
 
+    @NameInMap("runtimeConfigs")
+    public String runtimeConfigs;
+
     /**
      * <p>The range of start time.</p>
      */
@@ -118,6 +124,14 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     public static ListJobRunsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListJobRunsShrinkRequest self = new ListJobRunsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListJobRunsShrinkRequest setApplicationConfigs(String applicationConfigs) {
+        this.applicationConfigs = applicationConfigs;
+        return this;
+    }
+    public String getApplicationConfigs() {
+        return this.applicationConfigs;
     }
 
     public ListJobRunsShrinkRequest setCreator(String creator) {
@@ -206,6 +220,14 @@ public class ListJobRunsShrinkRequest extends TeaModel {
     }
     public String getResourceQueueId() {
         return this.resourceQueueId;
+    }
+
+    public ListJobRunsShrinkRequest setRuntimeConfigs(String runtimeConfigs) {
+        this.runtimeConfigs = runtimeConfigs;
+        return this;
+    }
+    public String getRuntimeConfigs() {
+        return this.runtimeConfigs;
     }
 
     public ListJobRunsShrinkRequest setStartTimeShrink(String startTimeShrink) {

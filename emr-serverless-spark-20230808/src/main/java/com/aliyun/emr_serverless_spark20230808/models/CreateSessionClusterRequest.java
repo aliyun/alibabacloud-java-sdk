@@ -26,6 +26,9 @@ public class CreateSessionClusterRequest extends TeaModel {
     @NameInMap("autoStopConfiguration")
     public CreateSessionClusterRequestAutoStopConfiguration autoStopConfiguration;
 
+    @NameInMap("clientToken")
+    public String clientToken;
+
     /**
      * <p>The version of the Spark engine.</p>
      * 
@@ -132,6 +135,14 @@ public class CreateSessionClusterRequest extends TeaModel {
     }
     public CreateSessionClusterRequestAutoStopConfiguration getAutoStopConfiguration() {
         return this.autoStopConfiguration;
+    }
+
+    public CreateSessionClusterRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateSessionClusterRequest setDisplayReleaseVersion(String displayReleaseVersion) {
