@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
+    @NameInMap("Attribute")
+    public String attribute;
+
     /**
      * <p>The direction in which the security group rule is applied. Valid values:</p>
      * <ul>
@@ -100,6 +103,14 @@ public class DescribeSecurityGroupAttributeRequest extends TeaModel {
     public static DescribeSecurityGroupAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSecurityGroupAttributeRequest self = new DescribeSecurityGroupAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeSecurityGroupAttributeRequest setAttribute(String attribute) {
+        this.attribute = attribute;
+        return this;
+    }
+    public String getAttribute() {
+        return this.attribute;
     }
 
     public DescribeSecurityGroupAttributeRequest setDirection(String direction) {

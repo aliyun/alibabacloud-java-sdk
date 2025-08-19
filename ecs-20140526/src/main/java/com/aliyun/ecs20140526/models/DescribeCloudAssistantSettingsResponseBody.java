@@ -25,6 +25,9 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Cloud Assistant Session Manager configuration.</p>
+     */
     @NameInMap("SessionManagerConfig")
     public DescribeCloudAssistantSettingsResponseBodySessionManagerConfig sessionManagerConfig;
 
@@ -314,6 +317,20 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     }
 
     public static class DescribeCloudAssistantSettingsResponseBodySessionManagerConfig extends TeaModel {
+        /**
+         * <p>Specify whether to enable Cloud Assistant Session Manager. Valid values:</p>
+         * <ul>
+         * <li>true: Enables the feature.</li>
+         * <li>false: Disables the feature.</li>
+         * </ul>
+         * <p>Note:</p>
+         * <ul>
+         * <li>The feature applies to all regions.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("SessionManagerEnabled")
         public Boolean sessionManagerEnabled;
 

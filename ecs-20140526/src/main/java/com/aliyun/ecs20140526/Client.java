@@ -20080,6 +20080,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeSecurityGroupAttributeResponse describeSecurityGroupAttributeWithOptions(DescribeSecurityGroupAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attribute)) {
+            query.put("Attribute", request.attribute);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
             query.put("Direction", request.direction);
         }
@@ -27952,6 +27956,82 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改实例时钟选项</p>
+     * 
+     * @param request ModifyInstanceClockOptionsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyInstanceClockOptionsResponse
+     */
+    public ModifyInstanceClockOptionsResponse modifyInstanceClockOptionsWithOptions(ModifyInstanceClockOptionsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ptpStatus)) {
+            query.put("PtpStatus", request.ptpStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyInstanceClockOptions"),
+            new TeaPair("version", "2014-05-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyInstanceClockOptionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改实例时钟选项</p>
+     * 
+     * @param request ModifyInstanceClockOptionsRequest
+     * @return ModifyInstanceClockOptionsResponse
+     */
+    public ModifyInstanceClockOptionsResponse modifyInstanceClockOptions(ModifyInstanceClockOptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyInstanceClockOptionsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Take note of the following items:</p>
      * <ul>
@@ -28244,8 +28324,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
+     * <li>You can modify only one attribute at a time. If you modify multiple attributes, call this operation multiple times.</li>
+     * <li>To modify the BandwidthWeighting, you must specify the specifications of the instance. The instance types that are supported. You can query the instance type list (DescribeInstanceTypes).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例网络选项</p>
+     * <p>Modifies instance network configurations.</p>
      * 
      * @param request ModifyInstanceNetworkOptionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28292,8 +28380,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, take note of the following item:</p>
+     * <ul>
+     * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
+     * <li>You can modify only one attribute at a time. If you modify multiple attributes, call this operation multiple times.</li>
+     * <li>To modify the BandwidthWeighting, you must specify the specifications of the instance. The instance types that are supported. You can query the instance type list (DescribeInstanceTypes).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例网络选项</p>
+     * <p>Modifies instance network configurations.</p>
      * 
      * @param request ModifyInstanceNetworkOptionsRequest
      * @return ModifyInstanceNetworkOptionsResponse
@@ -30719,12 +30815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Archive snapshots cannot be restored to standard snapshots.</p>
+     * <p>  Archived snapshots cannot be restored to standard snapshots.</p>
      * <ul>
      * <li>You can archive only standard snapshots that have been retained for at least 14 days.</li>
-     * <li>You cannot archive encrypted snapshots.</li>
      * <li>You cannot archive snapshots that are shared to you, snapshots managed by Cloud Backup, or snapshots in cloud boxes.</li>
-     * <li>The archive snapshot feature is available only in the China (Hohhot), Malaysia (Kuala Lumpur), South Korea (Seoul), Philippines (Manila), Thailand (Bangkok), and Mexico regions. The availability of the feature in other regions is subject to notice.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -30784,12 +30878,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Archive snapshots cannot be restored to standard snapshots.</p>
+     * <p>  Archived snapshots cannot be restored to standard snapshots.</p>
      * <ul>
      * <li>You can archive only standard snapshots that have been retained for at least 14 days.</li>
-     * <li>You cannot archive encrypted snapshots.</li>
      * <li>You cannot archive snapshots that are shared to you, snapshots managed by Cloud Backup, or snapshots in cloud boxes.</li>
-     * <li>The archive snapshot feature is available only in the China (Hohhot), Malaysia (Kuala Lumpur), South Korea (Seoul), Philippines (Manila), Thailand (Bangkok), and Mexico regions. The availability of the feature in other regions is subject to notice.</li>
      * </ul>
      * 
      * <b>summary</b> : 

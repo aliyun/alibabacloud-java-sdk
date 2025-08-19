@@ -77,6 +77,9 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     @NameInMap("SecurityGroupName")
     public String securityGroupName;
 
+    @NameInMap("SnapshotPolicyIds")
+    public DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds snapshotPolicyIds;
+
     /**
      * <p>The ID of the VPC. If a VPC ID is returned, the network type of the security group is VPC. If no VPC ID is returned, the network type of the security group is classic network.</p>
      * 
@@ -153,6 +156,14 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     }
     public String getSecurityGroupName() {
         return this.securityGroupName;
+    }
+
+    public DescribeSecurityGroupAttributeResponseBody setSnapshotPolicyIds(DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds snapshotPolicyIds) {
+        this.snapshotPolicyIds = snapshotPolicyIds;
+        return this;
+    }
+    public DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds getSnapshotPolicyIds() {
+        return this.snapshotPolicyIds;
     }
 
     public DescribeSecurityGroupAttributeResponseBody setVpcId(String vpcId) {
@@ -628,6 +639,25 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSecurityGroupAttributeResponseBodyPermissionsPermission> getPermission() {
             return this.permission;
+        }
+
+    }
+
+    public static class DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds extends TeaModel {
+        @NameInMap("SnapshotPolicyId")
+        public java.util.List<String> snapshotPolicyId;
+
+        public static DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds build(java.util.Map<String, ?> map) throws Exception {
+            DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds self = new DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodySnapshotPolicyIds setSnapshotPolicyId(java.util.List<String> snapshotPolicyId) {
+            this.snapshotPolicyId = snapshotPolicyId;
+            return this;
+        }
+        public java.util.List<String> getSnapshotPolicyId() {
+            return this.snapshotPolicyId;
         }
 
     }
