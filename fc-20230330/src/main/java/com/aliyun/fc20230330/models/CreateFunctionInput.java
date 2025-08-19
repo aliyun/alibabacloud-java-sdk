@@ -41,6 +41,7 @@ public class CreateFunctionInput extends TeaModel {
     public Integer diskSize;
 
     @NameInMap("enableLongLiving")
+    @Deprecated
     public Boolean enableLongLiving;
 
     @NameInMap("environmentVariables")
@@ -73,6 +74,9 @@ public class CreateFunctionInput extends TeaModel {
      */
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
+
+    @NameInMap("instanceIsolationMode")
+    public String instanceIsolationMode;
 
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
@@ -128,6 +132,9 @@ public class CreateFunctionInput extends TeaModel {
      */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
+
+    @NameInMap("sessionAffinityConfig")
+    public String sessionAffinityConfig;
 
     @NameInMap("tags")
     public java.util.List<Tag> tags;
@@ -214,6 +221,7 @@ public class CreateFunctionInput extends TeaModel {
         return this.diskSize;
     }
 
+    @Deprecated
     public CreateFunctionInput setEnableLongLiving(Boolean enableLongLiving) {
         this.enableLongLiving = enableLongLiving;
         return this;
@@ -260,6 +268,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public Integer getInstanceConcurrency() {
         return this.instanceConcurrency;
+    }
+
+    public CreateFunctionInput setInstanceIsolationMode(String instanceIsolationMode) {
+        this.instanceIsolationMode = instanceIsolationMode;
+        return this;
+    }
+    public String getInstanceIsolationMode() {
+        return this.instanceIsolationMode;
     }
 
     public CreateFunctionInput setInstanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
@@ -348,6 +364,14 @@ public class CreateFunctionInput extends TeaModel {
     }
     public String getSessionAffinity() {
         return this.sessionAffinity;
+    }
+
+    public CreateFunctionInput setSessionAffinityConfig(String sessionAffinityConfig) {
+        this.sessionAffinityConfig = sessionAffinityConfig;
+        return this;
+    }
+    public String getSessionAffinityConfig() {
+        return this.sessionAffinityConfig;
     }
 
     public CreateFunctionInput setTags(java.util.List<Tag> tags) {

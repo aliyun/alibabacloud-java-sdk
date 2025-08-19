@@ -59,6 +59,7 @@ public class Function extends TeaModel {
     public Integer diskSize;
 
     @NameInMap("enableLongLiving")
+    @Deprecated
     public Boolean enableLongLiving;
 
     @NameInMap("environmentVariables")
@@ -101,6 +102,9 @@ public class Function extends TeaModel {
      */
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
+
+    @NameInMap("instanceIsolationMode")
+    public String instanceIsolationMode;
 
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
@@ -179,12 +183,11 @@ public class Function extends TeaModel {
     @NameInMap("runtime")
     public String runtime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>MCP_SSE</p>
-     */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
+
+    @NameInMap("sessionAffinityConfig")
+    public String sessionAffinityConfig;
 
     /**
      * <strong>example:</strong>
@@ -308,6 +311,7 @@ public class Function extends TeaModel {
         return this.diskSize;
     }
 
+    @Deprecated
     public Function setEnableLongLiving(Boolean enableLongLiving) {
         this.enableLongLiving = enableLongLiving;
         return this;
@@ -370,6 +374,14 @@ public class Function extends TeaModel {
     }
     public Integer getInstanceConcurrency() {
         return this.instanceConcurrency;
+    }
+
+    public Function setInstanceIsolationMode(String instanceIsolationMode) {
+        this.instanceIsolationMode = instanceIsolationMode;
+        return this;
+    }
+    public String getInstanceIsolationMode() {
+        return this.instanceIsolationMode;
     }
 
     public Function setInstanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
@@ -498,6 +510,14 @@ public class Function extends TeaModel {
     }
     public String getSessionAffinity() {
         return this.sessionAffinity;
+    }
+
+    public Function setSessionAffinityConfig(String sessionAffinityConfig) {
+        this.sessionAffinityConfig = sessionAffinityConfig;
+        return this;
+    }
+    public String getSessionAffinityConfig() {
+        return this.sessionAffinityConfig;
     }
 
     public Function setState(String state) {

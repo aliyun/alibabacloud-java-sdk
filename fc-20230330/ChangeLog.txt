@@ -1,3 +1,7 @@
+2025-08-19 Version: 4.4.0
+- Support API ChangeResourceGroup.
+
+
 2025-07-02 Version: 4.3.6
 - Update API ListFunctions: add request parameters resourceGroupId.
 

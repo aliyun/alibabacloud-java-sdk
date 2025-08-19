@@ -41,6 +41,7 @@ public class UpdateFunctionInput extends TeaModel {
     public Integer diskSize;
 
     @NameInMap("enableLongLiving")
+    @Deprecated
     public Boolean enableLongLiving;
 
     @NameInMap("environmentVariables")
@@ -62,6 +63,9 @@ public class UpdateFunctionInput extends TeaModel {
      */
     @NameInMap("instanceConcurrency")
     public Integer instanceConcurrency;
+
+    @NameInMap("instanceIsolationMode")
+    public String instanceIsolationMode;
 
     @NameInMap("instanceLifecycleConfig")
     public InstanceLifecycleConfig instanceLifecycleConfig;
@@ -108,6 +112,9 @@ public class UpdateFunctionInput extends TeaModel {
      */
     @NameInMap("sessionAffinity")
     public String sessionAffinity;
+
+    @NameInMap("sessionAffinityConfig")
+    public String sessionAffinityConfig;
 
     /**
      * <strong>example:</strong>
@@ -191,6 +198,7 @@ public class UpdateFunctionInput extends TeaModel {
         return this.diskSize;
     }
 
+    @Deprecated
     public UpdateFunctionInput setEnableLongLiving(Boolean enableLongLiving) {
         this.enableLongLiving = enableLongLiving;
         return this;
@@ -229,6 +237,14 @@ public class UpdateFunctionInput extends TeaModel {
     }
     public Integer getInstanceConcurrency() {
         return this.instanceConcurrency;
+    }
+
+    public UpdateFunctionInput setInstanceIsolationMode(String instanceIsolationMode) {
+        this.instanceIsolationMode = instanceIsolationMode;
+        return this;
+    }
+    public String getInstanceIsolationMode() {
+        return this.instanceIsolationMode;
     }
 
     public UpdateFunctionInput setInstanceLifecycleConfig(InstanceLifecycleConfig instanceLifecycleConfig) {
@@ -309,6 +325,14 @@ public class UpdateFunctionInput extends TeaModel {
     }
     public String getSessionAffinity() {
         return this.sessionAffinity;
+    }
+
+    public UpdateFunctionInput setSessionAffinityConfig(String sessionAffinityConfig) {
+        this.sessionAffinityConfig = sessionAffinityConfig;
+        return this;
+    }
+    public String getSessionAffinityConfig() {
+        return this.sessionAffinityConfig;
     }
 
     public UpdateFunctionInput setTimeout(Integer timeout) {
