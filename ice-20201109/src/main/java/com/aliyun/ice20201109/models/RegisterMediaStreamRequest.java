@@ -22,6 +22,9 @@ public class RegisterMediaStreamRequest extends TeaModel {
     @NameInMap("MediaId")
     public String mediaId;
 
+    @NameInMap("StreamTags")
+    public String streamTags;
+
     /**
      * <p>The user data.</p>
      * 
@@ -50,6 +53,14 @@ public class RegisterMediaStreamRequest extends TeaModel {
     }
     public String getMediaId() {
         return this.mediaId;
+    }
+
+    public RegisterMediaStreamRequest setStreamTags(String streamTags) {
+        this.streamTags = streamTags;
+        return this;
+    }
+    public String getStreamTags() {
+        return this.streamTags;
     }
 
     public RegisterMediaStreamRequest setUserData(String userData) {

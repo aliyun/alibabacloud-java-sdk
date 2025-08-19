@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-1", "ice.aliyuncs.com"),
@@ -8650,7 +8649,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPublicMediaInfoResponse());
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new GetPublicMediaInfoResponse());
     }
 
     /**
@@ -9994,7 +9993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAllPublicMediaTagsResponse());
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new ListAllPublicMediaTagsResponse());
     }
 
     /**
@@ -12242,7 +12241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPublicMediaBasicInfosResponse());
+        return TeaModel.toModel(this.doRPCRequest(params.action, params.version, params.protocol, params.method, params.authType, params.bodyType, req, runtime), new ListPublicMediaBasicInfosResponse());
     }
 
     /**
@@ -14451,6 +14450,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mediaId)) {
             query.put("MediaId", request.mediaId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.streamTags)) {
+            query.put("StreamTags", request.streamTags);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userData)) {
