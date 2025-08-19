@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentPageResponseBody extends TeaModel {
     /**
-     * <p>Interface response code.</p>
+     * <p>API response code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Prompt message for the response result.</p>
+     * <p>Prompt message for the result.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -128,7 +128,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
          * <p>Delivered by.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>luna</p>
          */
         @NameInMap("DeliveredBy")
         public String deliveredBy;
@@ -137,7 +137,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
          * <p>Report name.</p>
          * 
          * <strong>example:</strong>
-         * <p>季度报告</p>
+         * <p>month report</p>
          */
         @NameInMap("DocumentName")
         public String documentName;
@@ -152,7 +152,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public String documentType;
 
         /**
-         * <p>Document primary key ID.</p>
+         * <p>Primary key ID of the document.</p>
          * 
          * <strong>example:</strong>
          * <p>346409</p>
@@ -160,6 +160,12 @@ public class GetDocumentPageResponseBody extends TeaModel {
         @NameInMap("Id")
         public Long id;
 
+        /**
+         * <p>Report status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>uploaded</p>
+         */
         @NameInMap("ReportStatus")
         public String reportStatus;
 
@@ -238,7 +244,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The number of data items displayed per page.</p>
+         * <p>Number of items per page in the returned data.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -247,7 +253,7 @@ public class GetDocumentPageResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of data items found.</p>
+         * <p>Total number of queried items.</p>
          * 
          * <strong>example:</strong>
          * <p>3149</p>

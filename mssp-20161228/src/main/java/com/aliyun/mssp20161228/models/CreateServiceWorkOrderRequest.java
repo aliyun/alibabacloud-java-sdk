@@ -45,6 +45,15 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     public String isAttachment;
 
     /**
+     * <p>Is milestone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Y</p>
+     */
+    @NameInMap("IsMilestone")
+    public String isMilestone;
+
+    /**
      * <p>Whether a reminder is needed.</p>
      * <p>This parameter is required.</p>
      * 
@@ -77,7 +86,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>新建</p>
+     * <p>newly built</p>
      */
     @NameInMap("OperateRemark")
     public String operateRemark;
@@ -113,7 +122,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2021-01-21 15:25:25</p>
+     * <p>1734788109000</p>
      */
     @NameInMap("StartTime")
     public Long startTime;
@@ -133,7 +142,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>安全月报交付任务</p>
+     * <p>Delivery task of safety monthly report</p>
      */
     @NameInMap("WorkOrderName")
     public String workOrderName;
@@ -143,7 +152,7 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>工单迁移</p>
+     * <p>Work order migration</p>
      */
     @NameInMap("WorkOrderSource")
     public String workOrderSource;
@@ -203,6 +212,14 @@ public class CreateServiceWorkOrderRequest extends TeaModel {
     }
     public String getIsAttachment() {
         return this.isAttachment;
+    }
+
+    public CreateServiceWorkOrderRequest setIsMilestone(String isMilestone) {
+        this.isMilestone = isMilestone;
+        return this;
+    }
+    public String getIsMilestone() {
+        return this.isMilestone;
     }
 
     public CreateServiceWorkOrderRequest setIsWorkOrderNotify(String isWorkOrderNotify) {

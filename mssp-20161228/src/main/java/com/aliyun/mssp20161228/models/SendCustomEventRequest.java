@@ -42,11 +42,20 @@ public class SendCustomEventRequest extends TeaModel {
     public String eventDetails;
 
     /**
+     * <p>Details of markdown format</p>
+     * 
+     * <strong>example:</strong>
+     * <p>None</p>
+     */
+    @NameInMap("EventMarkdown")
+    public String eventMarkdown;
+
+    /**
      * <p>Event name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>客户端离线</p>
+     * <p>客户端离线 Client offline</p>
      */
     @NameInMap("EventName")
     public String eventName;
@@ -184,6 +193,14 @@ public class SendCustomEventRequest extends TeaModel {
     }
     public String getEventDetails() {
         return this.eventDetails;
+    }
+
+    public SendCustomEventRequest setEventMarkdown(String eventMarkdown) {
+        this.eventMarkdown = eventMarkdown;
+        return this;
+    }
+    public String getEventMarkdown() {
+        return this.eventMarkdown;
     }
 
     public SendCustomEventRequest setEventName(String eventName) {

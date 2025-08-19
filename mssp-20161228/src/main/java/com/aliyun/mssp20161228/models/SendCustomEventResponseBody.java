@@ -129,7 +129,7 @@ public class SendCustomEventResponseBody extends TeaModel {
          * <p>Customer name.</p>
          * 
          * <strong>example:</strong>
-         * <p>天津瑞鹏昇科技发展有限公司</p>
+         * <p>Tianjin Ruipengsheng Technology Development Co., Ltd</p>
          */
         @NameInMap("CustomerName")
         public String customerName;
@@ -174,7 +174,7 @@ public class SendCustomEventResponseBody extends TeaModel {
          * <p>Owner name.</p>
          * 
          * <strong>example:</strong>
-         * <p>乐牙</p>
+         * <p>Le Ya</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;

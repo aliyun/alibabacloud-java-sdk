@@ -145,6 +145,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("IsAttachment", request.isAttachment);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.isMilestone)) {
+            body.put("IsMilestone", request.isMilestone);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.isWorkOrderNotify)) {
             body.put("IsWorkOrderNotify", request.isWorkOrderNotify);
         }
@@ -741,6 +745,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDocumentDownloadUrlResponse getDocumentDownloadUrlWithOptions(GetDocumentDownloadUrlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fileKey)) {
+            body.put("FileKey", request.fileKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.id)) {
             body.put("Id", request.id);
         }
@@ -1617,6 +1625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventDetails)) {
             body.put("EventDetails", request.eventDetails);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventMarkdown)) {
+            body.put("EventMarkdown", request.eventMarkdown);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.eventName)) {

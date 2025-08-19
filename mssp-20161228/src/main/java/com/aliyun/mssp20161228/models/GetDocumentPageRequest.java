@@ -18,7 +18,7 @@ public class GetDocumentPageRequest extends TeaModel {
      * <p>Delivered by.</p>
      * 
      * <strong>example:</strong>
-     * <p>张三</p>
+     * <p>luna</p>
      */
     @NameInMap("DeliveredBy")
     public String deliveredBy;
@@ -27,7 +27,7 @@ public class GetDocumentPageRequest extends TeaModel {
      * <p>Document name.</p>
      * 
      * <strong>example:</strong>
-     * <p>季度报告</p>
+     * <p>month report</p>
      */
     @NameInMap("DocumentName")
     public String documentName;
