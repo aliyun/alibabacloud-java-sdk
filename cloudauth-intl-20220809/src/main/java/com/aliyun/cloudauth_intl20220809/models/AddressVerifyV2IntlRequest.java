@@ -14,8 +14,6 @@ public class AddressVerifyV2IntlRequest extends TeaModel {
     public String deviceToken;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>1872334****</p>
      */
@@ -37,15 +35,10 @@ public class AddressVerifyV2IntlRequest extends TeaModel {
     @NameInMap("RegCountry")
     public String regCountry;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Text")
     public String text;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>HOME</p>
      */
