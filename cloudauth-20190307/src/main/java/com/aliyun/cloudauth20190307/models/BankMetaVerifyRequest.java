@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class BankMetaVerifyRequest extends TeaModel {
     /**
+     * <p>Bank card number.</p>
+     * <ul>
+     * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text bank card number.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>, enter the part of the card number except the last 6 digits in plain text + the last 6 digits encrypted with MD5 (32 lowercase).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>610*************1181</p>
      */
@@ -12,16 +18,36 @@ public class BankMetaVerifyRequest extends TeaModel {
     public String bankCard;
 
     /**
+     * <p>ID number.</p>
+     * <ul>
+     * <li>When <code>ProductType</code> is <code>BANK_CARD_3_META</code>, this field is required.</li>
+     * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text ID number.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>, enter the first 6 digits of the ID number in plain text + the birth date encrypted with MD5 (32 lowercase MD5) + the last 4 digits of the ID number.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>429001********8211</p>
      */
     @NameInMap("IdentifyNum")
     public String identifyNum;
 
+    /**
+     * <p>Identity type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>01</p>
+     */
     @NameInMap("IdentityType")
     public String identityType;
 
     /**
+     * <p>Mobile phone number.</p>
+     * <ul>
+     * <li>When <code>ProductType</code> is <code>BANK_CARD_4_META</code>, this field is required.</li>
+     * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text mobile phone number.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>, enter the mobile phone number (32 lowercase MD5).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>138******11</p>
      */
@@ -29,6 +55,12 @@ public class BankMetaVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Parameter type:</p>
+     * <ul>
+     * <li>normal: Unencrypted.</li>
+     * <li>md5: MD5 encrypted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
@@ -36,16 +68,35 @@ public class BankMetaVerifyRequest extends TeaModel {
     public String paramType;
 
     /**
+     * <p>Product type to call:</p>
+     * <ul>
+     * <li>BANK_CARD_2_META: Bank card number + name verification.</li>
+     * <li>BANK_CARD_3_META: Bank card number + name + ID number verification.</li>
+     * <li>BANK_CARD_4_META: Bank card number + name + ID number + mobile phone number verification.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>BANK_CARD_2_META</p>
      */
     @NameInMap("ProductType")
     public String productType;
 
+    /**
+     * <p>Name.</p>
+     * <ul>
+     * <li>When <code>paramType</code> is <code>normal</code>, enter the plain text name.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>, encrypt the first character of the name with MD5 (32 lowercase MD5) + the rest of the name in plain text.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>张*</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
     /**
+     * <p>VERIFY_BANK_CARD: Bank card authentication mode. It indicates whether the provided bank card number matches the user\&quot;s real name, ID number, and mobile phone number.</p>
+     * 
      * <strong>example:</strong>
      * <p>VERIFY_BANK_CARD</p>
      */

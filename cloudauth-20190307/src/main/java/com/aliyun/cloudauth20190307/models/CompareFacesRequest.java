@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class CompareFacesRequest extends TeaModel {
     /**
+     * <p>Type of Image 1, with values:</p>
+     * <ul>
+     * <li><strong>FacePic</strong>: User\&quot;s face photo</li>
+     * <li><strong>IDPic</strong>: Headshot from the user\&quot;s second-generation ID card chip (typically obtained and decoded by a second-generation ID card reader)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FacePic</p>
      */
@@ -12,6 +18,8 @@ public class CompareFacesRequest extends TeaModel {
     public String sourceImageType;
 
     /**
+     * <p>Address of Image 1. Please refer to the instructions on uploading image addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
      */
@@ -19,6 +27,12 @@ public class CompareFacesRequest extends TeaModel {
     public String sourceImageValue;
 
     /**
+     * <p>Type of Image 2, with values:</p>
+     * <ul>
+     * <li><strong>FacePic</strong>: User\&quot;s face photo</li>
+     * <li><strong>IDPic</strong>: Headshot from the user\&quot;s second-generation ID card chip (typically obtained and decoded by a second-generation ID card reader)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>FacePic</p>
      */
@@ -26,6 +40,8 @@ public class CompareFacesRequest extends TeaModel {
     public String targetImageType;
 
     /**
+     * <p>Address of Image 2. Please refer to the instructions on uploading image addresses.</p>
+     * 
      * <strong>example:</strong>
      * <p>http%3A%2F%2Fjiangsu.china.com.cn%2Fuploadfile%2F2015%2F0114%2F1421221304095989.jpg</p>
      */

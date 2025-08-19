@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result.</p>
+     */
     @NameInMap("ResultObject")
     public Mobile3MetaSimpleVerifyResponseBodyResultObject resultObject;
 
@@ -67,6 +76,13 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
 
     public static class Mobile3MetaSimpleVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Verification result code:</p>
+         * <ul>
+         * <li><strong>1</strong>: Verification consistent.</li>
+         * <li><strong>2</strong>: Verification inconsistent.</li>
+         * <li><strong>3</strong>: No record found.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +90,13 @@ public class Mobile3MetaSimpleVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
+         * <p>ISP name:</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile.</li>
+         * <li><strong>CUCC</strong>: China Unicom.</li>
+         * <li><strong>CTCC</strong>: China Telecom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */

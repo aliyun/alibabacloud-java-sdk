@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Id2MetaStandardVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D6163397-15C5-419C-9ACC-B7C83E0B4C10</p>
@@ -27,6 +31,9 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public Id2MetaStandardVerifyResponseBodyResultObject resultObject;
 
@@ -69,6 +76,13 @@ public class Id2MetaStandardVerifyResponseBody extends TeaModel {
 
     public static class Id2MetaStandardVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Verification result code:</p>
+         * <ul>
+         * <li><strong>1</strong>: verification matches.</li>
+         * <li><strong>2</strong>: verification does not match.</li>
+         * <li><strong>3</strong>: no record found.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

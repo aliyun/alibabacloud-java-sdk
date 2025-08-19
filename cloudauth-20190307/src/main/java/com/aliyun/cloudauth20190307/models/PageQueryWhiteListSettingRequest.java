@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PageQueryWhiteListSettingRequest extends TeaModel {
     /**
+     * <p>ID number.</p>
+     * 
      * <strong>example:</strong>
      * <p>330103xxxxxxxxxxxx</p>
      */
@@ -12,6 +14,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String certNo;
 
     /**
+     * <p>Unique identifier for real person authentication.</p>
+     * 
      * <strong>example:</strong>
      * <p>sha75b4e19a1ddda059b920757b0e12b</p>
      */
@@ -19,6 +23,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String certifyId;
 
     /**
+     * <p>Current page number, default is 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,6 +32,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>Number of items per page, default is 10</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +41,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Authentication scene ID. This ID is automatically generated after creating an authentication scene in the console. For how to create an authentication scene, see Adding an Authentication Scene.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000xxx</p>
      */
@@ -40,6 +50,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public Long sceneId;
 
     /**
+     * <p>ServiceCode of the real person cloud product, value: <strong>antcloudauth</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>antcloudauth</p>
      */
@@ -47,6 +59,13 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String serviceCode;
 
     /**
+     * <p>Status:</p>
+     * <ul>
+     * <li>DELETE: Deleted</li>
+     * <li>VALID: Not deleted and within the validity period, valid</li>
+     * <li>INVALID: Not deleted but outside the validity period, invalid</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>VALID</p>
      */
@@ -54,6 +73,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>End date of validity (timestamp in milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1725379200000</p>
      */
@@ -61,6 +82,8 @@ public class PageQueryWhiteListSettingRequest extends TeaModel {
     public String validEndDate;
 
     /**
+     * <p>Start date of validity (timestamp in milliseconds)</p>
+     * 
      * <strong>example:</strong>
      * <p>1725120000000</p>
      */

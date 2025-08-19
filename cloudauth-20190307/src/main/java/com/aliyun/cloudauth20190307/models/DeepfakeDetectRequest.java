@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DeepfakeDetectRequest extends TeaModel {
     /**
+     * <p>Enter the Base64 encoded string of the face image.</p>
+     * <blockquote>
+     * <p>Either FaceUrl or FaceBase64 must be provided.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
      */
@@ -12,6 +17,8 @@ public class DeepfakeDetectRequest extends TeaModel {
     public String faceBase64;
 
     /**
+     * <p>Input <strong>IMAGE</strong> to indicate an image type.</p>
+     * 
      * <strong>example:</strong>
      * <p>IMAGE</p>
      */
@@ -19,6 +26,11 @@ public class DeepfakeDetectRequest extends TeaModel {
     public String faceInputType;
 
     /**
+     * <p>Enter the URL of the face image.</p>
+     * <blockquote>
+     * <p>Either FaceUrl or FaceBase64 must be provided.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
      */
@@ -26,6 +38,8 @@ public class DeepfakeDetectRequest extends TeaModel {
     public String faceUrl;
 
     /**
+     * <p>A unique identifier for the merchant\&quot;s request, consisting of a 32-character alphanumeric combination. The first few characters can be a custom abbreviation defined by the merchant, the middle part may include a timestamp, and the latter part can use a random or incrementing sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c******</p>
      */

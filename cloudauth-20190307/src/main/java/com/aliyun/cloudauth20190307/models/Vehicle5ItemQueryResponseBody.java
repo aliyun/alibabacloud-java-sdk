@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Vehicle5ItemQueryResponseBody extends TeaModel {
     /**
+     * <p>Return code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0D******</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public Vehicle5ItemQueryResponseBodyResultObject resultObject;
 
@@ -67,12 +76,36 @@ public class Vehicle5ItemQueryResponseBody extends TeaModel {
 
     public static class Vehicle5ItemQueryResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Verification result code:</p>
+         * <ul>
+         * <li><strong>1</strong>: Found (charged)</li>
+         * <li><strong>3</strong>: No record found (not charged)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("BizCode")
         public String bizCode;
 
+        /**
+         * <p>Vehicle information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *         &quot;engineNo&quot;: &quot;F0******&quot;,
+         *         &quot;useProperty&quot;: 0,
+         *         &quot;registrationDate&quot;: &quot;<strong><strong>-</strong>-** <strong>:</strong>:<strong>&quot;,
+         *         &quot;engineType&quot;: &quot;B</strong>**</strong>&quot;,
+         *         &quot;vin&quot;: &quot;A********&quot;,
+         *         &quot;state&quot;: &quot;0&quot;,
+         *         &quot;modelNo&quot;: &quot;B********&quot;,
+         *         &quot;type&quot;: &quot;小型轿车&quot;,
+         *         &quot;brand&quot;: &quot;宝马&quot;,
+         *         &quot;usePropertyDesc&quot;: &quot;非营运&quot;,
+         *         &quot;stateDesc&quot;: &quot;正常&quot;
+         *     }</p>
+         */
         @NameInMap("VehicleInfo")
         public String vehicleInfo;
 

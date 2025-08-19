@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class VehicleMetaVerifyV2Request extends TeaModel {
     /**
+     * <p>ID number.</p>
+     * <p>This is a required field when VerifyMetaType is VEHICLE_3_META.</p>
+     * <blockquote>
+     * <ul>
+     * <li>When paramType is normal, enter plain text.</li>
+     * <li>When paramType is md5, enter the first 6 digits in plain text + MD5 (32 lowercase) of the birth date + the last 4 digits in plain text.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>4****************1</p>
      */
@@ -12,19 +21,51 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
     public String identifyNum;
 
     /**
+     * <p>Parameter type:</p>
+     * <ul>
+     * <li>normal: Unencrypted.</li>
+     * <li>md5: Md5 encrypted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <p>Name</p>
+     * <blockquote>
+     * <ul>
+     * <li>When paramType is normal, enter plain text.</li>
+     * <li>When paramType is md5, enter the first character of the name as MD5 (32 lowercase) + the rest of the name in plain text.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>张*</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
+    /**
+     * <p>License plate number</p>
+     * <blockquote>
+     * <ul>
+     * <li>When paramType is normal, enter plain text.</li>
+     * <li>When paramType is md5, enter all but the last two characters in plain text + the last two characters as MD5 (32 lowercase).</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>陕A9****</p>
+     */
     @NameInMap("VehicleNum")
     public String vehicleNum;
 
     /**
+     * <p>Vehicle type</p>
+     * 
      * <strong>example:</strong>
      * <p>02</p>
      */
@@ -32,6 +73,14 @@ public class VehicleMetaVerifyV2Request extends TeaModel {
     public String vehicleType;
 
     /**
+     * <p>Verification type</p>
+     * <blockquote>
+     * <ul>
+     * <li>VEHICLE_2_META: Two-element verification, name + license plate number verification;</li>
+     * <li>VEHICLE_3_META: Three-element verification, name + license plate number + ID number verification;</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>VEHICLE_3_META</p>
      */

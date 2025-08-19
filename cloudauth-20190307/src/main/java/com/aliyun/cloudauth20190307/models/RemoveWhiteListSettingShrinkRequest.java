@@ -4,10 +4,15 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class RemoveWhiteListSettingShrinkRequest extends TeaModel {
+    /**
+     * <p>IDs of the whitelist to be deleted in bulk.</p>
+     */
     @NameInMap("Ids")
     public String idsShrink;
 
     /**
+     * <p>ServiceCode for the real person cloud product, only value: <strong>antcloudauth</strong>.</p>
+     * 
      * <strong>example:</strong>
      * <p>antcloudauth</p>
      */

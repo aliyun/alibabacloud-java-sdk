@@ -4,10 +4,22 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class CompareFaceVerifyRequest extends TeaModel {
+    /**
+     * <p>Whether cropping is allowed. Default is not allowed, T/F.</p>
+     * <ul>
+     * <li>T: Indicates that cropping is required</li>
+     * <li>F: Indicates that cropping is not required (default F)</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>T</p>
+     */
     @NameInMap("Crop")
     public String crop;
 
     /**
+     * <p>A unique identifier for the merchant\&quot;s request. The value is a 32-character alphanumeric combination, where the first few characters are a custom abbreviation defined by the merchant, followed by a period, and the latter part can be a random or incrementing sequence.</p>
+     * 
      * <strong>example:</strong>
      * <p>e0c34a77f5ac40a5aa5e6ed20c353888</p>
      */
@@ -15,6 +27,8 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String outerOrderNo;
 
     /**
+     * <p>Fixed value: PV_FC.</p>
+     * 
      * <strong>example:</strong>
      * <p>PV_FC</p>
      */
@@ -22,6 +36,8 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String productCode;
 
     /**
+     * <p>Authentication scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000000006</p>
      */
@@ -29,6 +45,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public Long sceneId;
 
     /**
+     * <p>The CertifyId of a previously successful real-person verification, where the photo taken during that verification is used as the face comparison photo.</p>
+     * <blockquote>
+     * <p>Among the four ways to input facial photos (FaceContrastPicture, FaceContrastPictureUrl, CertifyId, OSS), choose one to provide.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0bfa7c493f850e5178b9f8613634c9xx</p>
      */
@@ -36,6 +57,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceCertifyId;
 
     /**
+     * <p>Base64 encoding of the photo.</p>
+     * <blockquote>
+     * <p>Choose one of the four ways to input a face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
      */
@@ -43,6 +69,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceFaceContrastPicture;
 
     /**
+     * <p>OSS photo URL, currently only supports authorized OSS photo URLs.</p>
+     * <blockquote>
+     * <p>Four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, and OSS. Choose one of them to input.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
      */
@@ -50,6 +81,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceFaceContrastPictureUrl;
 
     /**
+     * <p>Name of the authorized OSS bucket.</p>
+     * <blockquote>
+     * <p>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
      */
@@ -57,6 +93,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceOssBucketName;
 
     /**
+     * <p>Filename of the authorized OSS space.</p>
+     * <blockquote>
+     * <p>Choose one of the four ways to input face photos: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>verify/xxxxx/xxxxxx.jpeg</p>
      */
@@ -64,6 +105,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String sourceOssObjectName;
 
     /**
+     * <p>CertifyId from a previously successful real-person authentication, where the photo taken during the authentication is used for face comparison.</p>
+     * <blockquote>
+     * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>0bfa7c493f850e5178b9f8613634c9xx</p>
      */
@@ -71,6 +117,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetCertifyId;
 
     /**
+     * <p>Base64 encoding of the reference photo.</p>
+     * <blockquote>
+     * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>/9j/4AAQSkZJRgABAQAASxxxxxxx</p>
      */
@@ -78,6 +129,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetFaceContrastPicture;
 
     /**
+     * <p>OSS address of the reference photo. Currently, only authorized OSS addresses are supported.</p>
+     * <blockquote>
+     * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg">https://cn-shanghai-aliyun-cloudauth-xxxxxx.oss-cn-shanghai.aliyuncs.com/verify/xxxxx/xxxxx.jpeg</a></p>
      */
@@ -85,6 +141,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetFaceContrastPictureUrl;
 
     /**
+     * <p>Name of the authorized OSS bucket.</p>
+     * <blockquote>
+     * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
      */
@@ -92,6 +153,11 @@ public class CompareFaceVerifyRequest extends TeaModel {
     public String targetOssBucketName;
 
     /**
+     * <p>File name in the authorized OSS space.</p>
+     * <blockquote>
+     * <p>Choose one of the four methods to provide the reference face photo: FaceContrastPicture, FaceContrastPictureUrl, CertifyId, or OSS.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>verify/xxxxx/xxxxxx.jpeg</p>
      */

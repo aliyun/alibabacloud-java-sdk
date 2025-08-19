@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class VehicleMetaVerifyResponseBody extends TeaModel {
     /**
+     * <p>Response code, <strong>200</strong> indicates that the API response was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>8FC3D6AC-9FED-4311-8DA7-C4BF4*****</p>
@@ -27,6 +31,9 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public VehicleMetaVerifyResponseBodyResultObject resultObject;
 
@@ -69,6 +76,13 @@ public class VehicleMetaVerifyResponseBody extends TeaModel {
 
     public static class VehicleMetaVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Verification result.</p>
+         * <ul>
+         * <li>1: Consistent (billable)</li>
+         * <li>2: Inconsistent (billable)</li>
+         * <li>3: No record found (non-billable)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

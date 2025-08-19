@@ -4,13 +4,31 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class Id2MetaVerifyWithOCRAdvanceRequest extends TeaModel {
+    /**
+     * <p>Input stream for the portrait side of the ID card image.
+     * Choose one between CertUrl and CertFile.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("CertFile")
     public java.io.InputStream certFileObject;
 
+    /**
+     * <p>National emblem side of the ID card image address.
+     * Choose one between CertNationalUrl and CertNationalFile, or omit both.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无</p>
+     */
     @NameInMap("CertNationalFile")
     public java.io.InputStream certNationalFileObject;
 
     /**
+     * <p>National emblem side of the ID card image URL. National emblem side
+     * A publicly accessible HTTP or HTTPS link.
+     * Choose one between CertNationalUrl and CertNationalFile, or omit both.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></p>
      */
@@ -18,6 +36,10 @@ public class Id2MetaVerifyWithOCRAdvanceRequest extends TeaModel {
     public String certNationalUrl;
 
     /**
+     * <p>Portrait side of the ID card image.
+     * A publicly accessible HTTP or HTTPS link.
+     * Choose one between CertUrl and CertFile.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com/cert.jpeg">https://www.aliyun.com/cert.jpeg</a></p>
      */

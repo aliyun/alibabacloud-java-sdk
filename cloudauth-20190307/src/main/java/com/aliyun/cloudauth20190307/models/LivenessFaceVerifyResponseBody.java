@@ -4,12 +4,24 @@ package com.aliyun.cloudauth20190307.models;
 import com.aliyun.tea.*;
 
 public class LivenessFaceVerifyResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,15 +66,31 @@ public class LivenessFaceVerifyResponseBody extends TeaModel {
     }
 
     public static class LivenessFaceVerifyResponseBodyResultObject extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>91707dc296d469ad38e4c5efa6a0f24b</p>
+         */
         @NameInMap("CertifyId")
         public String certifyId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;faceAttack&quot;: &quot;F&quot;,&quot;facialPictureFront&quot;: {&quot;qualityScore&quot;: 88.3615493774414,&quot;verifyScore&quot;: 50.28594166529785}}</p>
+         */
         @NameInMap("MaterialInfo")
         public String materialInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>T</p>
+         */
         @NameInMap("Passed")
         public String passed;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
         @NameInMap("SubCode")
         public String subCode;
 

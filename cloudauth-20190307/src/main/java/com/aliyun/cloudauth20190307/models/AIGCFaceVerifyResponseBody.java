@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AIGCFaceVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result</p>
+     */
     @NameInMap("ResultObject")
     public AIGCFaceVerifyResponseBodyResultObject resultObject;
 
@@ -66,10 +75,20 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
     }
 
     public static class AIGCFaceVerifyResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Unique real-person authentication identifier.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91707dc296d469ad38e4c5efa6a0****</p>
+         */
         @NameInMap("CertifyId")
         public String certifyId;
 
         /**
+         * <p>Authentication result. Values:</p>
+         * <p>● Y: AIGC-generated face.</p>
+         * <p>● N: Not detected</p>
+         * 
          * <strong>example:</strong>
          * <p>Y</p>
          */
@@ -77,6 +96,8 @@ public class AIGCFaceVerifyResponseBody extends TeaModel {
         public String result;
 
         /**
+         * <p>Detection score</p>
+         * 
          * <strong>example:</strong>
          * <p>1.0000</p>
          */

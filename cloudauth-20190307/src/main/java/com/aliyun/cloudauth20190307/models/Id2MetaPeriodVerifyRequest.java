@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class Id2MetaPeriodVerifyRequest extends TeaModel {
     /**
+     * <p>ID number:</p>
+     * <ul>
+     * <li>When <code>paramType</code> is <code>normal</code>: Enter the plain text of the ID number.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>:
+     * The first 6 digits (plain text) + date of birth (encrypted) + last 4 digits (plain text).</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>4****************1</p>
      */
@@ -12,16 +19,34 @@ public class Id2MetaPeriodVerifyRequest extends TeaModel {
     public String identifyNum;
 
     /**
+     * <p>Parameter type:</p>
+     * <ul>
+     * <li>normal: Unencrypted.</li>
+     * <li>md5: MD5 encrypted.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <p>Name.</p>
+     * <ul>
+     * <li>When <code>paramType</code> = <code>normal</code>: Enter the plain text of the name.</li>
+     * <li>When <code>paramType</code> = <code>md5</code>: The first character of the name MD5 encrypted (32 lowercase MD5) + the rest of the name in plain text.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>张*</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
     /**
+     * <p>End date of ID validity, format: YYYYMMDD</p>
+     * 
      * <strong>example:</strong>
      * <p>20301001</p>
      */
@@ -29,6 +54,8 @@ public class Id2MetaPeriodVerifyRequest extends TeaModel {
     public String validityEndDate;
 
     /**
+     * <p>Start date of ID validity, format: YYYYMMDD</p>
+     * 
      * <strong>example:</strong>
      * <p>20201001</p>
      */

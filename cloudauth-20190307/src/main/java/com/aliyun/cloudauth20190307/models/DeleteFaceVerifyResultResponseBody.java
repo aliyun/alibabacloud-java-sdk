@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
@@ -27,6 +31,9 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public DeleteFaceVerifyResultResponseBodyResultObject resultObject;
 
@@ -69,6 +76,8 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
 
     public static class DeleteFaceVerifyResultResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Unique identifier for real-person authentication.</p>
+         * 
          * <strong>example:</strong>
          * <p>sha58aeae7ea2f5ed069530f58df4e6d</p>
          */
@@ -76,6 +85,12 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         public String certifyId;
 
         /**
+         * <p>Deletion result. Possible values are as follows:</p>
+         * <ul>
+         * <li>Y: Deletion successful.</li>
+         * <li>N: Deletion failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>N</p>
          */
@@ -83,6 +98,12 @@ public class DeleteFaceVerifyResultResponseBody extends TeaModel {
         public String deleteResult;
 
         /**
+         * <p>Reason for deletion failure</p>
+         * <ul>
+         * <li>NOT_DELETE_REPEATEDLY: Cannot be deleted repeatedly</li>
+         * <li>NEED_QUERY_VERIFY_RESULT: Need to query the verification result first, then delete</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>NOT_DELETE_REPEATEDLY</p>
          */

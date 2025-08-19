@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CredentialVerifyV2ResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public CredentialVerifyV2ResponseBodyResultObject resultObject;
 
@@ -67,12 +76,32 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
 
     public static class CredentialVerifyV2ResponseBodyResultObjectVlResult extends TeaModel {
         /**
+         * <p>Qwen interpretation success indicator</p>
+         * <p>true: Success</p>
+         * <p>false: Failure</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
         @NameInMap("Success")
         public Boolean success;
 
+        /**
+         * <p>Image understanding result:</p>
+         * <ul>
+         * <li><p>When PromptModel is DEFAULT, the output format refers to the example on the right.</p>
+         * </li>
+         * <li><p>When PromptModel is CUSTOM, the output format follows the agreed format of the Prompt.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *  &quot;CHK_DOOR_PHOTO&quot;:1, -- 是否门头照 1：是 0：否
+         *  &quot;CHK_INTERIOR_PHOTO&quot;:0, -- 是否内景照 1：是 0：否
+         *  &quot;CHK_COUNTER_PHOTO&quot;:0 -- 是否柜台照 1：是 0：否
+         * }</p>
+         */
         @NameInMap("VlContent")
         public String vlContent;
 
@@ -100,23 +129,72 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
     }
 
     public static class CredentialVerifyV2ResponseBodyResultObject extends TeaModel {
+        /**
+         * <p>Additional information in JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{</p>
+         * <p>&quot;sameBackgroundDetail&quot;: {</p>
+         * <p>// 相似背景对于的原始图请求RequestId</p>
+         * <p>&quot;originalRequestId&quot;: &quot;130A2C10-B9EE-4D84-88E3-5384FF03****&quot;;</p>
+         * <p>// 相似背景对于的原始图请求商户ID</p>
+         * <p>&quot;originalMerchantId&quot;: &quot;xxxxxxxx&quot;</p>
+         * <p>}</p>
+         * <p>}</p>
+         */
         @NameInMap("MaterialInfo")
         public String materialInfo;
 
+        /**
+         * <p>OCR recognition result.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *    &quot;certNo&quot;:&quot;20216*********&quot;,
+         *   &quot;certType&quot;:&quot;小学教师资格&quot;,
+         *    &quot;gender&quot;:&quot;男&quot;,
+         *    &quot;subject&quot;:&quot;美术&quot;,
+         *     &quot;name&quot;:&quot;李**&quot;,
+         *     &quot;ext_info&quot;:&quot;{}&quot;,
+         *     &quot;birthDate&quot;:&quot;1998-07-28&quot;,
+         *     &quot;idNo&quot;:&quot;620************&quot;,
+         *     &quot;certOrg&quot;:&quot;&quot;
+         * }</p>
+         */
         @NameInMap("OcrInfo")
         public String ocrInfo;
 
         /**
+         * <p>Risk result</p>
+         * <ul>
+         * <li>0: Low risk</li>
+         * <li>1: High risk</li>
+         * <li>2: Suspicious</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <p>Risk score map.</p>
+         */
         @NameInMap("RiskScore")
         public java.util.Map<String, String> riskScore;
 
         /**
+         * <p>Risk tags, separated by commas (,), including:</p>
+         * <ul>
+         * <li>PS: Image manipulation.</li>
+         * <li>SCREEN_PHOTO: Screen recapture.</li>
+         * <li>SCREENSHOT: Screenshot.</li>
+         * <li>WATERMARK: Watermark.</li>
+         * <li>SAME_BACKGROUND: Similar background.</li>
+         * <li>ORIGINAL_PHOTO: Not the original image</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>PS,SCREEN_PHOTO</p>
          */
@@ -124,6 +202,8 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String riskTag;
 
         /**
+         * <p>Authority verification details.</p>
+         * 
          * <strong>example:</strong>
          * <p>**</p>
          */
@@ -131,6 +211,8 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         public String verifyDetail;
 
         /**
+         * <p>Authority verification result</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -139,6 +221,9 @@ public class CredentialVerifyV2ResponseBody extends TeaModel {
         @NameInMap("VerifyResult")
         public String verifyResult;
 
+        /**
+         * <p>Qwen interpretation.</p>
+         */
         @NameInMap("VlResult")
         public CredentialVerifyV2ResponseBodyResultObjectVlResult vlResult;
 

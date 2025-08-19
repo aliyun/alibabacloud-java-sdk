@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CredentialProductVerifyV2AdvanceRequest extends TeaModel {
     /**
+     * <p>Credential name: Only supports value 0501 (product image).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class CredentialProductVerifyV2AdvanceRequest extends TeaModel {
     public String credName;
 
     /**
+     * <p>Credential type: Only supports value 05 (product image).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,8 @@ public class CredentialProductVerifyV2AdvanceRequest extends TeaModel {
     public String credType;
 
     /**
+     * <p>InputStream object of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://aliyundoc.com/picture*****.jpeg">https://aliyundoc.com/picture*****.jpeg</a></p>
      */
@@ -30,16 +34,26 @@ public class CredentialProductVerifyV2AdvanceRequest extends TeaModel {
     public java.io.InputStream imageFileObject;
 
     /**
+     * <p>URL of the image.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="https://aliyundoc.com/picture*****.jpeg">https://aliyundoc.com/picture*****.jpeg</a></p>
      */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>Merchant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>无。</p>
+     */
     @NameInMap("MerchantId")
     public String merchantId;
 
     /**
+     * <p>Invocation mode:
+     * Only supports value ANTI_FAKE_CHECK.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     /**
+     * <p>ID number:</p>
+     * <ul>
+     * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the ID number.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted text of the ID number.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>429001********8211</p>
      */
@@ -12,6 +18,12 @@ public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     public String identifyNum;
 
     /**
+     * <p>Phone number:</p>
+     * <ul>
+     * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the phone number.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted text of the phone number.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>138********</p>
      */
@@ -19,12 +31,28 @@ public class Mobile3MetaDetailStandardVerifyRequest extends TeaModel {
     public String mobile;
 
     /**
+     * <p>Parameter type:</p>
+     * <ul>
+     * <li>normal: Unencrypted.</li>
+     * <li>md5: Encrypted with MD5.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>normal</p>
      */
     @NameInMap("ParamType")
     public String paramType;
 
+    /**
+     * <p>Name:</p>
+     * <ul>
+     * <li>When <code>paramType</code> is <code>normal</code>: Input the plain text of the name.</li>
+     * <li>When <code>paramType</code> is <code>md5</code>: Input the encrypted text of the name.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>张*</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

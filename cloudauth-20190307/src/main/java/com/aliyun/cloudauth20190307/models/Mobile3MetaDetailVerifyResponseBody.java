@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code, <strong>200</strong> indicates a successful API response.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,12 +23,17 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5A6229C0-E156-48E4-B6EC-0F528BDF60D2</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information.</p>
+     */
     @NameInMap("ResultObject")
     public Mobile3MetaDetailVerifyResponseBodyResultObject resultObject;
 
@@ -67,6 +76,13 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
 
     public static class Mobile3MetaDetailVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Verification result code:</p>
+         * <ul>
+         * <li><strong>1</strong>: Verification consistent.</li>
+         * <li><strong>2</strong>: Verification inconsistent.</li>
+         * <li><strong>3</strong>: No record found.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +90,13 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
+         * <p>Operator name:</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile.</li>
+         * <li><strong>CUCC</strong>: China Unicom.</li>
+         * <li><strong>CTCC</strong>: China Telecom.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */
@@ -81,6 +104,16 @@ public class Mobile3MetaDetailVerifyResponseBody extends TeaModel {
         public String ispName;
 
         /**
+         * <p>Detailed verification results:</p>
+         * <ul>
+         * <li><strong>101</strong>: Verification passed.</li>
+         * <li><strong>201</strong>: Mobile number and name do not match, mobile number and ID number do not match.</li>
+         * <li><strong>202</strong>: Mobile number and name match, but mobile number and ID number do not match.</li>
+         * <li><strong>203</strong>: Mobile number and ID number match, but mobile number and name do not match.</li>
+         * <li><strong>204</strong>: Other inconsistencies.</li>
+         * <li><strong>301</strong>: No record found.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>101</p>
          */

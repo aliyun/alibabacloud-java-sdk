@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class InsertWhiteListSettingResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class InsertWhiteListSettingResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class InsertWhiteListSettingResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>Request ID</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -28,6 +32,8 @@ public class InsertWhiteListSettingResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Returned result</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -35,6 +41,8 @@ public class InsertWhiteListSettingResponseBody extends TeaModel {
     public Boolean resultObject;
 
     /**
+     * <p>Indicates whether the response was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

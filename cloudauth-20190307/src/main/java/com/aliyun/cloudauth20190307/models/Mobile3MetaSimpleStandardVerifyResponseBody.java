@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
     /**
+     * <p>Return code: 200 for success, others for failure</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Return message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -19,7 +23,7 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Id of the request</p>
+     * <p>ID of the request</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -27,6 +31,9 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Returned result information</p>
+     */
     @NameInMap("ResultObject")
     public Mobile3MetaSimpleStandardVerifyResponseBodyResultObject resultObject;
 
@@ -69,6 +76,13 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
 
     public static class Mobile3MetaSimpleStandardVerifyResponseBodyResultObject extends TeaModel {
         /**
+         * <p>Verification result:</p>
+         * <ul>
+         * <li>1: Consistent (billable)</li>
+         * <li>2: Inconsistent (billable)</li>
+         * <li>3: No record found (non-billable)</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -76,6 +90,14 @@ public class Mobile3MetaSimpleStandardVerifyResponseBody extends TeaModel {
         public String bizCode;
 
         /**
+         * <p>Operator name:</p>
+         * <ul>
+         * <li><strong>CMCC</strong>: China Mobile.</li>
+         * <li><strong>CUCC</strong>: China Unicom.</li>
+         * <li><strong>CTCC</strong>: China Telecom.</li>
+         * <li><strong>CBCC</strong>: China Broadcasting Network.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CMCC</p>
          */
