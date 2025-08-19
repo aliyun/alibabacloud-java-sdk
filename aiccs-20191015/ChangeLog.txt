@@ -1,3 +1,7 @@
+2025-08-19 Version: 3.1.0
+- Support API GetCallDialogContent.
+
+
 2025-08-08 Version: 3.0.0
 - Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.CompleteRate' type has changed.
 - Update API QueryAiCallTaskPage: update response parameters Body.Data.List.$.CompleteRate' format has changed.
