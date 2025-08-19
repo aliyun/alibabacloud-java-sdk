@@ -52,6 +52,36 @@ public class ListAppsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListAppsResponseBodyResultTags extends TeaModel {
+        @NameInMap("key")
+        public String key;
+
+        @NameInMap("value")
+        public String value;
+
+        public static ListAppsResponseBodyResultTags build(java.util.Map<String, ?> map) throws Exception {
+            ListAppsResponseBodyResultTags self = new ListAppsResponseBodyResultTags();
+            return TeaModel.build(map, self);
+        }
+
+        public ListAppsResponseBodyResultTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public ListAppsResponseBodyResultTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class ListAppsResponseBodyResult extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -123,6 +153,9 @@ public class ListAppsResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        @NameInMap("tags")
+        public java.util.List<ListAppsResponseBodyResultTags> tags;
 
         /**
          * <strong>example:</strong>
@@ -214,6 +247,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAppsResponseBodyResult setTags(java.util.List<ListAppsResponseBodyResultTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<ListAppsResponseBodyResultTags> getTags() {
+            return this.tags;
         }
 
         public ListAppsResponseBodyResult setVersion(String version) {
