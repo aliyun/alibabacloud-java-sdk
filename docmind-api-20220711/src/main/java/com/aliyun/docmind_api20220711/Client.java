@@ -1629,6 +1629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitDocParserJobResponse submitDocParserJobWithOptions(SubmitDocParserJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.enhancementMode)) {
+            query.put("EnhancementMode", request.enhancementMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
             query.put("FileName", request.fileName);
         }

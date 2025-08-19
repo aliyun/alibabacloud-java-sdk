@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocParserJobAdvanceRequest extends TeaModel {
+    @NameInMap("EnhancementMode")
+    public String enhancementMode;
+
     /**
      * <strong>example:</strong>
      * <p>docStructure.pdf</p>
@@ -49,6 +52,14 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     public static SubmitDocParserJobAdvanceRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocParserJobAdvanceRequest self = new SubmitDocParserJobAdvanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitDocParserJobAdvanceRequest setEnhancementMode(String enhancementMode) {
+        this.enhancementMode = enhancementMode;
+        return this;
+    }
+    public String getEnhancementMode() {
+        return this.enhancementMode;
     }
 
     public SubmitDocParserJobAdvanceRequest setFileName(String fileName) {
