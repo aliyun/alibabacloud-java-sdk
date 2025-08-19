@@ -44,6 +44,25 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         return this.vulsFixServicePurchased;
     }
 
+    public static class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList extends TeaModel {
+        @NameInMap("name")
+        public String name;
+
+        public static DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList self = new DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulList extends TeaModel {
         /**
          * <p>The alias of the vulnerability.</p>
@@ -93,6 +112,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @NameInMap("need_reboot")
         public Boolean needReboot;
 
+        @NameInMap("package_list")
+        public java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> packageList;
+
         public static DescribeNodePoolVulsResponseBodyVulRecordsVulList build(java.util.Map<String, ?> map) throws Exception {
             DescribeNodePoolVulsResponseBodyVulRecordsVulList self = new DescribeNodePoolVulsResponseBodyVulRecordsVulList();
             return TeaModel.build(map, self);
@@ -136,6 +158,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
         public Boolean getNeedReboot() {
             return this.needReboot;
+        }
+
+        public DescribeNodePoolVulsResponseBodyVulRecordsVulList setPackageList(java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> packageList) {
+            this.packageList = packageList;
+            return this;
+        }
+        public java.util.List<DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList> getPackageList() {
+            return this.packageList;
         }
 
     }

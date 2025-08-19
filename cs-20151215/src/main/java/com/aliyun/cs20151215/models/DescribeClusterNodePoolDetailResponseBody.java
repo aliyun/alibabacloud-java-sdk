@@ -733,6 +733,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
     }
 
     public static class DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy extends TeaModel {
+        @NameInMap("exclude_packages")
+        public String excludePackages;
+
         /**
          * <p>Whether to allow restarting nodes.</p>
          * 
@@ -754,6 +757,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         public static DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy build(java.util.Map<String, ?> map) throws Exception {
             DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy self = new DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy setExcludePackages(String excludePackages) {
+            this.excludePackages = excludePackages;
+            return this;
+        }
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         public DescribeClusterNodePoolDetailResponseBodyManagementAutoVulFixPolicy setRestartNode(Boolean restartNode) {

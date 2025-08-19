@@ -872,6 +872,9 @@ public class CreateClusterNodePoolRequest extends TeaModel {
     }
 
     public static class CreateClusterNodePoolRequestManagementAutoVulFixPolicy extends TeaModel {
+        @NameInMap("exclude_packages")
+        public String excludePackages;
+
         /**
          * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_vul_fix</code> is set to true. Valid values:</p>
          * <ul>
@@ -903,6 +906,14 @@ public class CreateClusterNodePoolRequest extends TeaModel {
         public static CreateClusterNodePoolRequestManagementAutoVulFixPolicy build(java.util.Map<String, ?> map) throws Exception {
             CreateClusterNodePoolRequestManagementAutoVulFixPolicy self = new CreateClusterNodePoolRequestManagementAutoVulFixPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public CreateClusterNodePoolRequestManagementAutoVulFixPolicy setExcludePackages(String excludePackages) {
+            this.excludePackages = excludePackages;
+            return this;
+        }
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         public CreateClusterNodePoolRequestManagementAutoVulFixPolicy setRestartNode(Boolean restartNode) {

@@ -116,6 +116,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     @NameInMap("external_loadbalancer_id")
     public String externalLoadbalancerId;
 
+    @NameInMap("extra_sans")
+    public java.util.List<String> extraSans;
+
     /**
      * <p>The initial Kubernetes version of the cluster.</p>
      * 
@@ -270,6 +273,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
+
+    @NameInMap("rrsa_config")
+    public DescribeClusterDetailResponseBodyRrsaConfig rrsaConfig;
 
     /**
      * <p>The ID of the security group to which the cluster belongs.</p>
@@ -500,6 +506,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.externalLoadbalancerId;
     }
 
+    public DescribeClusterDetailResponseBody setExtraSans(java.util.List<String> extraSans) {
+        this.extraSans = extraSans;
+        return this;
+    }
+    public java.util.List<String> getExtraSans() {
+        return this.extraSans;
+    }
+
     public DescribeClusterDetailResponseBody setInitVersion(String initVersion) {
         this.initVersion = initVersion;
         return this;
@@ -626,6 +640,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
     public String getResourceGroupId() {
         return this.resourceGroupId;
+    }
+
+    public DescribeClusterDetailResponseBody setRrsaConfig(DescribeClusterDetailResponseBodyRrsaConfig rrsaConfig) {
+        this.rrsaConfig = rrsaConfig;
+        return this;
+    }
+    public DescribeClusterDetailResponseBodyRrsaConfig getRrsaConfig() {
+        return this.rrsaConfig;
     }
 
     public DescribeClusterDetailResponseBody setSecurityGroupId(String securityGroupId) {
@@ -1226,6 +1248,102 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
         public DescribeClusterDetailResponseBodyOperationPolicyClusterAutoUpgrade getClusterAutoUpgrade() {
             return this.clusterAutoUpgrade;
+        }
+
+    }
+
+    public static class DescribeClusterDetailResponseBodyRrsaConfig extends TeaModel {
+        @NameInMap("audience")
+        public String audience;
+
+        @NameInMap("enabled")
+        public Boolean enabled;
+
+        @NameInMap("issuer")
+        public String issuer;
+
+        @NameInMap("jwks_url")
+        public String jwksUrl;
+
+        @NameInMap("max_oidc_token_expiration")
+        public String maxOidcTokenExpiration;
+
+        @NameInMap("oidc_arn")
+        public String oidcArn;
+
+        @NameInMap("oidc_name")
+        public String oidcName;
+
+        @NameInMap("open_api_configuration_url")
+        public String openApiConfigurationUrl;
+
+        public static DescribeClusterDetailResponseBodyRrsaConfig build(java.util.Map<String, ?> map) throws Exception {
+            DescribeClusterDetailResponseBodyRrsaConfig self = new DescribeClusterDetailResponseBodyRrsaConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setAudience(String audience) {
+            this.audience = audience;
+            return this;
+        }
+        public String getAudience() {
+            return this.audience;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setIssuer(String issuer) {
+            this.issuer = issuer;
+            return this;
+        }
+        public String getIssuer() {
+            return this.issuer;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setJwksUrl(String jwksUrl) {
+            this.jwksUrl = jwksUrl;
+            return this;
+        }
+        public String getJwksUrl() {
+            return this.jwksUrl;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setMaxOidcTokenExpiration(String maxOidcTokenExpiration) {
+            this.maxOidcTokenExpiration = maxOidcTokenExpiration;
+            return this;
+        }
+        public String getMaxOidcTokenExpiration() {
+            return this.maxOidcTokenExpiration;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setOidcArn(String oidcArn) {
+            this.oidcArn = oidcArn;
+            return this;
+        }
+        public String getOidcArn() {
+            return this.oidcArn;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setOidcName(String oidcName) {
+            this.oidcName = oidcName;
+            return this;
+        }
+        public String getOidcName() {
+            return this.oidcName;
+        }
+
+        public DescribeClusterDetailResponseBodyRrsaConfig setOpenApiConfigurationUrl(String openApiConfigurationUrl) {
+            this.openApiConfigurationUrl = openApiConfigurationUrl;
+            return this;
+        }
+        public String getOpenApiConfigurationUrl() {
+            return this.openApiConfigurationUrl;
         }
 
     }

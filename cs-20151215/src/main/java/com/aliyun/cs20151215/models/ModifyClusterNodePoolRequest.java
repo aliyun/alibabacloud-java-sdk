@@ -336,6 +336,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         @NameInMap("labels")
         public java.util.List<Tag> labels;
 
+        @NameInMap("node_name_mode")
+        public String nodeNameMode;
+
         /**
          * <p>Predefined custom data. Nodes automatically run predefined scripts before they are added to the cluster. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">User-Data script</a>.</p>
          * 
@@ -424,6 +427,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         }
         public java.util.List<Tag> getLabels() {
             return this.labels;
+        }
+
+        public ModifyClusterNodePoolRequestKubernetesConfig setNodeNameMode(String nodeNameMode) {
+            this.nodeNameMode = nodeNameMode;
+            return this;
+        }
+        public String getNodeNameMode() {
+            return this.nodeNameMode;
         }
 
         public ModifyClusterNodePoolRequestKubernetesConfig setPreUserData(String preUserData) {
@@ -590,6 +601,9 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
     }
 
     public static class ModifyClusterNodePoolRequestManagementAutoVulFixPolicy extends TeaModel {
+        @NameInMap("exclude_packages")
+        public String excludePackages;
+
         /**
          * <p>Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:</p>
          * <ul>
@@ -621,6 +635,14 @@ public class ModifyClusterNodePoolRequest extends TeaModel {
         public static ModifyClusterNodePoolRequestManagementAutoVulFixPolicy build(java.util.Map<String, ?> map) throws Exception {
             ModifyClusterNodePoolRequestManagementAutoVulFixPolicy self = new ModifyClusterNodePoolRequestManagementAutoVulFixPolicy();
             return TeaModel.build(map, self);
+        }
+
+        public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy setExcludePackages(String excludePackages) {
+            this.excludePackages = excludePackages;
+            return this;
+        }
+        public String getExcludePackages() {
+            return this.excludePackages;
         }
 
         public ModifyClusterNodePoolRequestManagementAutoVulFixPolicy setRestartNode(Boolean restartNode) {
