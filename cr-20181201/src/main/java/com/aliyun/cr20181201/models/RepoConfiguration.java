@@ -55,9 +55,6 @@ public class RepoConfiguration extends TeaModel {
         @NameInMap("ImageIndexOnly")
         public Boolean imageIndexOnly;
 
-        @NameInMap("PriorityFile")
-        public String priorityFile;
-
         public static RepoConfigurationArtifactBuildRuleParameters build(java.util.Map<String, ?> map) throws Exception {
             RepoConfigurationArtifactBuildRuleParameters self = new RepoConfigurationArtifactBuildRuleParameters();
             return TeaModel.build(map, self);
@@ -69,14 +66,6 @@ public class RepoConfiguration extends TeaModel {
         }
         public Boolean getImageIndexOnly() {
             return this.imageIndexOnly;
-        }
-
-        public RepoConfigurationArtifactBuildRuleParameters setPriorityFile(String priorityFile) {
-            this.priorityFile = priorityFile;
-            return this;
-        }
-        public String getPriorityFile() {
-            return this.priorityFile;
         }
 
     }

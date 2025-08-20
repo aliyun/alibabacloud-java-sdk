@@ -146,6 +146,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
          * <p>Vulnerability</p>
          */
         @NameInMap("AliasName")
+        @Deprecated
         public String aliasName;
 
         /**
@@ -264,6 +265,7 @@ public class ListRepoTagScanResultResponseBody extends TeaModel {
             return this.addedBy;
         }
 
+        @Deprecated
         public ListRepoTagScanResultResponseBodyVulnerabilities setAliasName(String aliasName) {
             this.aliasName = aliasName;
             return this;

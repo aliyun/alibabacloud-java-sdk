@@ -24,7 +24,7 @@ public class ListRepoTagRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

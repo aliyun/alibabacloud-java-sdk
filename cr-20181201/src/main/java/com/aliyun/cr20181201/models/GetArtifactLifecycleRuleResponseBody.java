@@ -89,6 +89,9 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     @NameInMap("NextTime")
     public Long nextTime;
 
+    @NameInMap("Policies")
+    public java.util.List<GetArtifactLifecycleRuleResponseBodyPolicies> policies;
+
     /**
      * <p>The name of the image repository.</p>
      * 
@@ -229,6 +232,14 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
         return this.nextTime;
     }
 
+    public GetArtifactLifecycleRuleResponseBody setPolicies(java.util.List<GetArtifactLifecycleRuleResponseBodyPolicies> policies) {
+        this.policies = policies;
+        return this;
+    }
+    public java.util.List<GetArtifactLifecycleRuleResponseBodyPolicies> getPolicies() {
+        return this.policies;
+    }
+
     public GetArtifactLifecycleRuleResponseBody setRepoName(String repoName) {
         this.repoName = repoName;
         return this;
@@ -283,6 +294,107 @@ public class GetArtifactLifecycleRuleResponseBody extends TeaModel {
     }
     public String getTagRegexp() {
         return this.tagRegexp;
+    }
+
+    public static class GetArtifactLifecycleRuleResponseBodyPoliciesCondition extends TeaModel {
+        @NameInMap("LastPullOlderThanDays")
+        public Integer lastPullOlderThanDays;
+
+        @NameInMap("LastPushOlderThanDays")
+        public Integer lastPushOlderThanDays;
+
+        @NameInMap("LatestTagCount")
+        public Integer latestTagCount;
+
+        public static GetArtifactLifecycleRuleResponseBodyPoliciesCondition build(java.util.Map<String, ?> map) throws Exception {
+            GetArtifactLifecycleRuleResponseBodyPoliciesCondition self = new GetArtifactLifecycleRuleResponseBodyPoliciesCondition();
+            return TeaModel.build(map, self);
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPoliciesCondition setLastPullOlderThanDays(Integer lastPullOlderThanDays) {
+            this.lastPullOlderThanDays = lastPullOlderThanDays;
+            return this;
+        }
+        public Integer getLastPullOlderThanDays() {
+            return this.lastPullOlderThanDays;
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPoliciesCondition setLastPushOlderThanDays(Integer lastPushOlderThanDays) {
+            this.lastPushOlderThanDays = lastPushOlderThanDays;
+            return this;
+        }
+        public Integer getLastPushOlderThanDays() {
+            return this.lastPushOlderThanDays;
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPoliciesCondition setLatestTagCount(Integer latestTagCount) {
+            this.latestTagCount = latestTagCount;
+            return this;
+        }
+        public Integer getLatestTagCount() {
+            return this.latestTagCount;
+        }
+
+    }
+
+    public static class GetArtifactLifecycleRuleResponseBodyPoliciesFilter extends TeaModel {
+        @NameInMap("TagWildcard")
+        public String tagWildcard;
+
+        public static GetArtifactLifecycleRuleResponseBodyPoliciesFilter build(java.util.Map<String, ?> map) throws Exception {
+            GetArtifactLifecycleRuleResponseBodyPoliciesFilter self = new GetArtifactLifecycleRuleResponseBodyPoliciesFilter();
+            return TeaModel.build(map, self);
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPoliciesFilter setTagWildcard(String tagWildcard) {
+            this.tagWildcard = tagWildcard;
+            return this;
+        }
+        public String getTagWildcard() {
+            return this.tagWildcard;
+        }
+
+    }
+
+    public static class GetArtifactLifecycleRuleResponseBodyPolicies extends TeaModel {
+        @NameInMap("Condition")
+        public GetArtifactLifecycleRuleResponseBodyPoliciesCondition condition;
+
+        @NameInMap("Filter")
+        public GetArtifactLifecycleRuleResponseBodyPoliciesFilter filter;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static GetArtifactLifecycleRuleResponseBodyPolicies build(java.util.Map<String, ?> map) throws Exception {
+            GetArtifactLifecycleRuleResponseBodyPolicies self = new GetArtifactLifecycleRuleResponseBodyPolicies();
+            return TeaModel.build(map, self);
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPolicies setCondition(GetArtifactLifecycleRuleResponseBodyPoliciesCondition condition) {
+            this.condition = condition;
+            return this;
+        }
+        public GetArtifactLifecycleRuleResponseBodyPoliciesCondition getCondition() {
+            return this.condition;
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPolicies setFilter(GetArtifactLifecycleRuleResponseBodyPoliciesFilter filter) {
+            this.filter = filter;
+            return this;
+        }
+        public GetArtifactLifecycleRuleResponseBodyPoliciesFilter getFilter() {
+            return this.filter;
+        }
+
+        public GetArtifactLifecycleRuleResponseBodyPolicies setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
     }
 
 }
