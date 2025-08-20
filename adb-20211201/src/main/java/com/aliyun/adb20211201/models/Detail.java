@@ -41,6 +41,13 @@ public class Detail extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>36000</p>
+     */
+    @NameInMap("ExecutionDurationInMillis")
+    public Long executionDurationInMillis;
+
+    /**
+     * <strong>example:</strong>
      * <p>s202204291426hzpre60cfa*****-0003</p>
      */
     @NameInMap("LastAttemptId")
@@ -66,6 +73,23 @@ public class Detail extends TeaModel {
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
+
+    /**
+     * <strong>example:</strong>
+     * <p>36000</p>
+     */
+    @NameInMap("ResourceProvisioningDurationInMillis")
+    public Long resourceProvisioningDurationInMillis;
+
+    /**
+     * <strong>example:</strong>
+     * <p>36000</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("RunningStartTimeInMillis")
+    public Long runningStartTimeInMillis;
 
     /**
      * <strong>example:</strong>
@@ -140,6 +164,14 @@ public class Detail extends TeaModel {
         return this.estimateExecutionCpuTimeInSeconds;
     }
 
+    public Detail setExecutionDurationInMillis(Long executionDurationInMillis) {
+        this.executionDurationInMillis = executionDurationInMillis;
+        return this;
+    }
+    public Long getExecutionDurationInMillis() {
+        return this.executionDurationInMillis;
+    }
+
     public Detail setLastAttemptId(String lastAttemptId) {
         this.lastAttemptId = lastAttemptId;
         return this;
@@ -170,6 +202,22 @@ public class Detail extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
+    }
+
+    public Detail setResourceProvisioningDurationInMillis(Long resourceProvisioningDurationInMillis) {
+        this.resourceProvisioningDurationInMillis = resourceProvisioningDurationInMillis;
+        return this;
+    }
+    public Long getResourceProvisioningDurationInMillis() {
+        return this.resourceProvisioningDurationInMillis;
+    }
+
+    public Detail setRunningStartTimeInMillis(Long runningStartTimeInMillis) {
+        this.runningStartTimeInMillis = runningStartTimeInMillis;
+        return this;
+    }
+    public Long getRunningStartTimeInMillis() {
+        return this.runningStartTimeInMillis;
     }
 
     public Detail setStartedTimeInMillis(Long startedTimeInMillis) {

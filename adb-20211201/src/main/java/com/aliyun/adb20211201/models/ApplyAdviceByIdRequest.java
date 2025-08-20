@@ -22,6 +22,12 @@ public class ApplyAdviceByIdRequest extends TeaModel {
     @NameInMap("AdviceId")
     public String adviceId;
 
+    @NameInMap("ApplyType")
+    public String applyType;
+
+    @NameInMap("BuildImmediately")
+    public Boolean buildImmediately;
+
     /**
      * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
@@ -61,6 +67,22 @@ public class ApplyAdviceByIdRequest extends TeaModel {
     }
     public String getAdviceId() {
         return this.adviceId;
+    }
+
+    public ApplyAdviceByIdRequest setApplyType(String applyType) {
+        this.applyType = applyType;
+        return this;
+    }
+    public String getApplyType() {
+        return this.applyType;
+    }
+
+    public ApplyAdviceByIdRequest setBuildImmediately(Boolean buildImmediately) {
+        this.buildImmediately = buildImmediately;
+        return this;
+    }
+    public Boolean getBuildImmediately() {
+        return this.buildImmediately;
     }
 
     public ApplyAdviceByIdRequest setDBClusterId(String DBClusterId) {

@@ -665,6 +665,9 @@ public class CreateApsDatasoureRequest extends TeaModel {
 
         /**
          * <p>The name of the database account of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
          */
         @NameInMap("UserName")
         public String userName;

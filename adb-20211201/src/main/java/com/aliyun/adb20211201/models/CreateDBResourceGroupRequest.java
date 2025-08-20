@@ -473,12 +473,24 @@ public class CreateDBResourceGroupRequest extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        @NameInMap("EnableUserEni")
+        public Boolean enableUserEni;
+
+        @NameInMap("HeadAllocateUnit")
+        public String headAllocateUnit;
+
+        @NameInMap("HeadDiskCapacity")
+        public String headDiskCapacity;
+
         /**
          * <strong>example:</strong>
          * <p>xlarge</p>
          */
         @NameInMap("HeadSpec")
         public String headSpec;
+
+        @NameInMap("HeadSpecType")
+        public String headSpecType;
 
         @NameInMap("WorkerGroups")
         public java.util.List<CreateDBResourceGroupRequestRayConfigWorkerGroups> workerGroups;
@@ -496,12 +508,44 @@ public class CreateDBResourceGroupRequest extends TeaModel {
             return this.category;
         }
 
+        public CreateDBResourceGroupRequestRayConfig setEnableUserEni(Boolean enableUserEni) {
+            this.enableUserEni = enableUserEni;
+            return this;
+        }
+        public Boolean getEnableUserEni() {
+            return this.enableUserEni;
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setHeadAllocateUnit(String headAllocateUnit) {
+            this.headAllocateUnit = headAllocateUnit;
+            return this;
+        }
+        public String getHeadAllocateUnit() {
+            return this.headAllocateUnit;
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setHeadDiskCapacity(String headDiskCapacity) {
+            this.headDiskCapacity = headDiskCapacity;
+            return this;
+        }
+        public String getHeadDiskCapacity() {
+            return this.headDiskCapacity;
+        }
+
         public CreateDBResourceGroupRequestRayConfig setHeadSpec(String headSpec) {
             this.headSpec = headSpec;
             return this;
         }
         public String getHeadSpec() {
             return this.headSpec;
+        }
+
+        public CreateDBResourceGroupRequestRayConfig setHeadSpecType(String headSpecType) {
+            this.headSpecType = headSpecType;
+            return this;
+        }
+        public String getHeadSpecType() {
+            return this.headSpecType;
         }
 
         public CreateDBResourceGroupRequestRayConfig setWorkerGroups(java.util.List<CreateDBResourceGroupRequestRayConfigWorkerGroups> workerGroups) {

@@ -138,6 +138,9 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         @NameInMap("BuildSQL")
         public String buildSQL;
 
+        @NameInMap("IndexFields")
+        public String indexFields;
+
         /**
          * <p>The status of the suggestion execution job. Valid values:</p>
          * <ul>
@@ -268,6 +271,14 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         }
         public String getBuildSQL() {
             return this.buildSQL;
+        }
+
+        public DescribeAppliedAdvicesResponseBodyItems setIndexFields(String indexFields) {
+            this.indexFields = indexFields;
+            return this;
+        }
+        public String getIndexFields() {
+            return this.indexFields;
         }
 
         public DescribeAppliedAdvicesResponseBodyItems setJobStatus(String jobStatus) {

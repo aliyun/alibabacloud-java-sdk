@@ -22,6 +22,12 @@ public class BatchApplyAdviceByIdListRequest extends TeaModel {
     @NameInMap("AdviceIdList")
     public String adviceIdList;
 
+    @NameInMap("ApplyType")
+    public String applyType;
+
+    @NameInMap("BuildImmediately")
+    public Boolean buildImmediately;
+
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
@@ -64,6 +70,22 @@ public class BatchApplyAdviceByIdListRequest extends TeaModel {
     }
     public String getAdviceIdList() {
         return this.adviceIdList;
+    }
+
+    public BatchApplyAdviceByIdListRequest setApplyType(String applyType) {
+        this.applyType = applyType;
+        return this;
+    }
+    public String getApplyType() {
+        return this.applyType;
+    }
+
+    public BatchApplyAdviceByIdListRequest setBuildImmediately(Boolean buildImmediately) {
+        this.buildImmediately = buildImmediately;
+        return this;
+    }
+    public Boolean getBuildImmediately() {
+        return this.buildImmediately;
     }
 
     public BatchApplyAdviceByIdListRequest setDBClusterId(String DBClusterId) {

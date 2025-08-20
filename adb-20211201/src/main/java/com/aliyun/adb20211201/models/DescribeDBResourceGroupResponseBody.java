@@ -129,8 +129,24 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("EnableUserEni")
+        public Boolean enableUserEni;
+
+        @NameInMap("HeadAllocateUnit")
+        public String headAllocateUnit;
+
+        @NameInMap("HeadDiskCapacity")
+        public String headDiskCapacity;
+
         @NameInMap("HeadSpec")
         public String headSpec;
+
+        @NameInMap("HeadSpecType")
+        public String headSpecType;
 
         @NameInMap("RayClusterAddress")
         public String rayClusterAddress;
@@ -157,12 +173,44 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             return this.category;
         }
 
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setEnableUserEni(Boolean enableUserEni) {
+            this.enableUserEni = enableUserEni;
+            return this;
+        }
+        public Boolean getEnableUserEni() {
+            return this.enableUserEni;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setHeadAllocateUnit(String headAllocateUnit) {
+            this.headAllocateUnit = headAllocateUnit;
+            return this;
+        }
+        public String getHeadAllocateUnit() {
+            return this.headAllocateUnit;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setHeadDiskCapacity(String headDiskCapacity) {
+            this.headDiskCapacity = headDiskCapacity;
+            return this;
+        }
+        public String getHeadDiskCapacity() {
+            return this.headDiskCapacity;
+        }
+
         public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setHeadSpec(String headSpec) {
             this.headSpec = headSpec;
             return this;
         }
         public String getHeadSpec() {
             return this.headSpec;
+        }
+
+        public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setHeadSpecType(String headSpecType) {
+            this.headSpecType = headSpecType;
+            return this;
+        }
+        public String getHeadSpecType() {
+            return this.headSpecType;
         }
 
         public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig setRayClusterAddress(String rayClusterAddress) {

@@ -134,6 +134,9 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     @NameInMap("StartTime")
     public String startTime;
 
+    @NameInMap("UserName")
+    public String userName;
+
     public static DescribeSQLPatternsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeSQLPatternsRequest self = new DescribeSQLPatternsRequest();
         return TeaModel.build(map, self);
@@ -209,6 +212,14 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     }
     public String getStartTime() {
         return this.startTime;
+    }
+
+    public DescribeSQLPatternsRequest setUserName(String userName) {
+        this.userName = userName;
+        return this;
+    }
+    public String getUserName() {
+        return this.userName;
     }
 
 }

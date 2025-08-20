@@ -22,6 +22,9 @@ public class OpenStructRefreshJobModel extends TeaModel {
     @NameInMap("ResourceGroup")
     public String resourceGroup;
 
+    @NameInMap("ScheduledStartTime")
+    public String scheduledStartTime;
+
     @NameInMap("SchemaName")
     public String schemaName;
 
@@ -82,6 +85,14 @@ public class OpenStructRefreshJobModel extends TeaModel {
     }
     public String getResourceGroup() {
         return this.resourceGroup;
+    }
+
+    public OpenStructRefreshJobModel setScheduledStartTime(String scheduledStartTime) {
+        this.scheduledStartTime = scheduledStartTime;
+        return this;
+    }
+    public String getScheduledStartTime() {
+        return this.scheduledStartTime;
     }
 
     public OpenStructRefreshJobModel setSchemaName(String schemaName) {

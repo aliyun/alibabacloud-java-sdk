@@ -151,6 +151,9 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         @NameInMap("Benefit")
         public String benefit;
 
+        @NameInMap("IndexFields")
+        public String indexFields;
+
         /**
          * <p>The page number. Pages start from page 1. Default value: 1.</p>
          * 
@@ -254,6 +257,14 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         }
         public String getBenefit() {
             return this.benefit;
+        }
+
+        public DescribeAvailableAdvicesResponseBodyItems setIndexFields(String indexFields) {
+            this.indexFields = indexFields;
+            return this;
+        }
+        public String getIndexFields() {
+            return this.indexFields;
         }
 
         public DescribeAvailableAdvicesResponseBodyItems setPageNumber(Long pageNumber) {
