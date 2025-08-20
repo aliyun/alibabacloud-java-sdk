@@ -35,7 +35,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -49,6 +96,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies self = new UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessAppUninstallPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -69,7 +132,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -83,6 +193,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies self = new UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessDeviceRegistrationPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -103,7 +229,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessDlpSendPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -117,6 +290,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessDlpSendPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessDlpSendPolicies self = new UpdateApprovalProcessResponseBodyProcessDlpSendPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDlpSendPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDlpSendPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDlpSendPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessDlpSendPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -137,7 +326,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -151,6 +387,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies self = new UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainBlacklistPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessDomainBlacklistPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -171,7 +423,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -185,6 +484,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies self = new UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessDomainWhitelistPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessDomainWhitelistPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -205,7 +520,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -215,6 +577,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies self = new UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessEndpointHardeningPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -235,7 +613,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -249,6 +674,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies self = new UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessPeripheraBlockPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -303,7 +744,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -317,6 +805,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies self = new UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareBlockPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessSoftwareBlockPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -337,7 +841,54 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
     }
 
+    public static class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap extends TeaModel {
+        @NameInMap("DisplayField")
+        public String displayField;
+
+        @NameInMap("DisplayFieldValue")
+        public String displayFieldValue;
+
+        @NameInMap("SystemField")
+        public String systemField;
+
+        public static UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap build(java.util.Map<String, ?> map) throws Exception {
+            UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap self = new UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap setDisplayField(String displayField) {
+            this.displayField = displayField;
+            return this;
+        }
+        public String getDisplayField() {
+            return this.displayField;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap setDisplayFieldValue(String displayFieldValue) {
+            this.displayFieldValue = displayFieldValue;
+            return this;
+        }
+        public String getDisplayFieldValue() {
+            return this.displayFieldValue;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap setSystemField(String systemField) {
+            this.systemField = systemField;
+            return this;
+        }
+        public String getSystemField() {
+            return this.systemField;
+        }
+
+    }
+
     public static class UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies extends TeaModel {
+        @NameInMap("ExternalProcessId")
+        public String externalProcessId;
+
+        @NameInMap("FieldMap")
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap> fieldMap;
+
         @NameInMap("PolicyIds")
         public java.util.List<String> policyIds;
 
@@ -347,6 +898,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         public static UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies build(java.util.Map<String, ?> map) throws Exception {
             UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies self = new UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies setExternalProcessId(String externalProcessId) {
+            this.externalProcessId = externalProcessId;
+            return this;
+        }
+        public String getExternalProcessId() {
+            return this.externalProcessId;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies setFieldMap(java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap> fieldMap) {
+            this.fieldMap = fieldMap;
+            return this;
+        }
+        public java.util.List<UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPoliciesFieldMap> getFieldMap() {
+            return this.fieldMap;
         }
 
         public UpdateApprovalProcessResponseBodyProcessSoftwareHardeningPolicies setPolicyIds(java.util.List<String> policyIds) {
@@ -370,6 +937,9 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
     public static class UpdateApprovalProcessResponseBodyProcess extends TeaModel {
         @NameInMap("AppUninstallPolicies")
         public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies appUninstallPolicies;
+
+        @NameInMap("ApprovalType")
+        public Integer approvalType;
 
         /**
          * <strong>example:</strong>
@@ -395,6 +965,12 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
 
         @NameInMap("EndpointHardeningPolicies")
         public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies endpointHardeningPolicies;
+
+        @NameInMap("EventLabel")
+        public String eventLabel;
+
+        @NameInMap("ExternalConfig")
+        public String externalConfig;
 
         @NameInMap("PeripheraBlockPolicies")
         public UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies peripheraBlockPolicies;
@@ -429,6 +1005,14 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
         public UpdateApprovalProcessResponseBodyProcessAppUninstallPolicies getAppUninstallPolicies() {
             return this.appUninstallPolicies;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcess setApprovalType(Integer approvalType) {
+            this.approvalType = approvalType;
+            return this;
+        }
+        public Integer getApprovalType() {
+            return this.approvalType;
         }
 
         public UpdateApprovalProcessResponseBodyProcess setCreateTime(String createTime) {
@@ -485,6 +1069,22 @@ public class UpdateApprovalProcessResponseBody extends TeaModel {
         }
         public UpdateApprovalProcessResponseBodyProcessEndpointHardeningPolicies getEndpointHardeningPolicies() {
             return this.endpointHardeningPolicies;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcess setEventLabel(String eventLabel) {
+            this.eventLabel = eventLabel;
+            return this;
+        }
+        public String getEventLabel() {
+            return this.eventLabel;
+        }
+
+        public UpdateApprovalProcessResponseBodyProcess setExternalConfig(String externalConfig) {
+            this.externalConfig = externalConfig;
+            return this;
+        }
+        public String getExternalConfig() {
+            return this.externalConfig;
         }
 
         public UpdateApprovalProcessResponseBodyProcess setPeripheraBlockPolicies(UpdateApprovalProcessResponseBodyProcessPeripheraBlockPolicies peripheraBlockPolicies) {

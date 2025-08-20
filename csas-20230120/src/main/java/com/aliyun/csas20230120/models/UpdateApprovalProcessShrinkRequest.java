@@ -4,8 +4,20 @@ package com.aliyun.csas20230120.models;
 import com.aliyun.tea.*;
 
 public class UpdateApprovalProcessShrinkRequest extends TeaModel {
+    @NameInMap("ApprovalType")
+    public Integer approvalType;
+
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("EventLabel")
+    public String eventLabel;
+
+    @NameInMap("ExternalConfig")
+    public String externalConfig;
+
+    @NameInMap("MatchSchemaConfigs")
+    public String matchSchemaConfigsShrink;
 
     @NameInMap("MatchSchemas")
     public String matchSchemasShrink;
@@ -30,12 +42,44 @@ public class UpdateApprovalProcessShrinkRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public UpdateApprovalProcessShrinkRequest setApprovalType(Integer approvalType) {
+        this.approvalType = approvalType;
+        return this;
+    }
+    public Integer getApprovalType() {
+        return this.approvalType;
+    }
+
     public UpdateApprovalProcessShrinkRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateApprovalProcessShrinkRequest setEventLabel(String eventLabel) {
+        this.eventLabel = eventLabel;
+        return this;
+    }
+    public String getEventLabel() {
+        return this.eventLabel;
+    }
+
+    public UpdateApprovalProcessShrinkRequest setExternalConfig(String externalConfig) {
+        this.externalConfig = externalConfig;
+        return this;
+    }
+    public String getExternalConfig() {
+        return this.externalConfig;
+    }
+
+    public UpdateApprovalProcessShrinkRequest setMatchSchemaConfigsShrink(String matchSchemaConfigsShrink) {
+        this.matchSchemaConfigsShrink = matchSchemaConfigsShrink;
+        return this;
+    }
+    public String getMatchSchemaConfigsShrink() {
+        return this.matchSchemaConfigsShrink;
     }
 
     public UpdateApprovalProcessShrinkRequest setMatchSchemasShrink(String matchSchemasShrink) {

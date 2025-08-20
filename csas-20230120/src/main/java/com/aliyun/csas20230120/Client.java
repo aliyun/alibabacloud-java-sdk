@@ -4718,8 +4718,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         UpdateApprovalProcessShrinkRequest request = new UpdateApprovalProcessShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.matchSchemaConfigs)) {
+            request.matchSchemaConfigsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.matchSchemaConfigs, "MatchSchemaConfigs", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.matchSchemas)) {
             request.matchSchemasShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.matchSchemas, "MatchSchemas", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.approvalType)) {
+            query.put("ApprovalType", request.approvalType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.eventLabel)) {
+            query.put("EventLabel", request.eventLabel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.externalConfig)) {
+            query.put("ExternalConfig", request.externalConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.matchSchemaConfigsShrink)) {
+            query.put("MatchSchemaConfigs", request.matchSchemaConfigsShrink);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
@@ -4749,6 +4770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             com.aliyun.openapiutil.Client.query(bodyFlat)
         );
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(

@@ -188,6 +188,9 @@ public class ListApprovalsResponseBody extends TeaModel {
         @NameInMap("ApprovalProgresses")
         public java.util.List<ListApprovalsResponseBodyApprovalsApprovalProgresses> approvalProgresses;
 
+        @NameInMap("ApprovalType")
+        public Integer approvalType;
+
         /**
          * <strong>example:</strong>
          * <p>2022-11-15 22:11:55</p>
@@ -293,6 +296,14 @@ public class ListApprovalsResponseBody extends TeaModel {
         }
         public java.util.List<ListApprovalsResponseBodyApprovalsApprovalProgresses> getApprovalProgresses() {
             return this.approvalProgresses;
+        }
+
+        public ListApprovalsResponseBodyApprovals setApprovalType(Integer approvalType) {
+            this.approvalType = approvalType;
+            return this;
+        }
+        public Integer getApprovalType() {
+            return this.approvalType;
         }
 
         public ListApprovalsResponseBodyApprovals setCreateTime(String createTime) {

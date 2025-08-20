@@ -14,6 +14,9 @@ public class DisposalContent extends TeaModel {
     @NameInMap("AlertContentEn")
     public String alertContentEn;
 
+    @NameInMap("AlertIntervalSeconds")
+    public Long alertIntervalSeconds;
+
     /**
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -45,6 +48,9 @@ public class DisposalContent extends TeaModel {
     @NameInMap("ProhibitActions")
     public java.util.List<String> prohibitActions;
 
+    @NameInMap("ProhibitSoftwareIds")
+    public java.util.List<String> prohibitSoftwareIds;
+
     public static DisposalContent build(java.util.Map<String, ?> map) throws Exception {
         DisposalContent self = new DisposalContent();
         return TeaModel.build(map, self);
@@ -64,6 +70,14 @@ public class DisposalContent extends TeaModel {
     }
     public String getAlertContentEn() {
         return this.alertContentEn;
+    }
+
+    public DisposalContent setAlertIntervalSeconds(Long alertIntervalSeconds) {
+        this.alertIntervalSeconds = alertIntervalSeconds;
+        return this;
+    }
+    public Long getAlertIntervalSeconds() {
+        return this.alertIntervalSeconds;
     }
 
     public DisposalContent setAlertTitle(String alertTitle) {
@@ -120,6 +134,14 @@ public class DisposalContent extends TeaModel {
     }
     public java.util.List<String> getProhibitActions() {
         return this.prohibitActions;
+    }
+
+    public DisposalContent setProhibitSoftwareIds(java.util.List<String> prohibitSoftwareIds) {
+        this.prohibitSoftwareIds = prohibitSoftwareIds;
+        return this;
+    }
+    public java.util.List<String> getProhibitSoftwareIds() {
+        return this.prohibitSoftwareIds;
     }
 
 }

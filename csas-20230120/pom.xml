@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>csas20230120</artifactId>
-  <version>1.14.5</version>
+  <version>1.14.6</version>
   <packaging>jar</packaging>
   <name>csas20230120</name>
   <description>Alibaba Cloud csas (20230120) SDK for Java
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.8</version>
+      <version>0.3.10</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>

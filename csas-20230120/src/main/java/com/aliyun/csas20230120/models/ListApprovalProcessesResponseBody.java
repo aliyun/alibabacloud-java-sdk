@@ -386,6 +386,9 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         @NameInMap("AppUninstallPolicies")
         public ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies appUninstallPolicies;
 
+        @NameInMap("ApprovalType")
+        public Integer approvalType;
+
         /**
          * <strong>example:</strong>
          * <p>2024-02-27 14:04:27</p>
@@ -444,6 +447,14 @@ public class ListApprovalProcessesResponseBody extends TeaModel {
         }
         public ListApprovalProcessesResponseBodyProcessesAppUninstallPolicies getAppUninstallPolicies() {
             return this.appUninstallPolicies;
+        }
+
+        public ListApprovalProcessesResponseBodyProcesses setApprovalType(Integer approvalType) {
+            this.approvalType = approvalType;
+            return this;
+        }
+        public Integer getApprovalType() {
+            return this.approvalType;
         }
 
         public ListApprovalProcessesResponseBodyProcesses setCreateTime(String createTime) {
