@@ -245,6 +245,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @NameInMap("CanPromFee")
         public Long canPromFee;
 
+        @NameInMap("CouponDesc")
+        public String couponDesc;
+
         /**
          * <strong>example:</strong>
          * <p>CouponName</p>
@@ -291,6 +294,14 @@ public class DescribePriceResponseBody extends TeaModel {
         }
         public Long getCanPromFee() {
             return this.canPromFee;
+        }
+
+        public DescribePriceResponseBodyCoupons setCouponDesc(String couponDesc) {
+            this.couponDesc = couponDesc;
+            return this;
+        }
+        public String getCouponDesc() {
+            return this.couponDesc;
         }
 
         public DescribePriceResponseBodyCoupons setCouponName(String couponName) {
