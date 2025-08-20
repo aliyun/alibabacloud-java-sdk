@@ -4,12 +4,24 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class DeleteReminderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>参数错误。</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

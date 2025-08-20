@@ -10,6 +10,9 @@ public class PullCashierRequest extends TeaModel {
     @NameInMap("Payload")
     public PullCashierRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public PullCashierRequestUserInfo userInfo;
 
@@ -43,18 +46,38 @@ public class PullCashierRequest extends TeaModel {
     }
 
     public static class PullCashierRequestDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,6 +129,10 @@ public class PullCashierRequest extends TeaModel {
     }
 
     public static class PullCashierRequestPayload extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>731D5F********DC3B</p>
+         */
         @NameInMap("originUuid")
         public String originUuid;
 
@@ -125,18 +152,46 @@ public class PullCashierRequest extends TeaModel {
     }
 
     public static class PullCashierRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

@@ -4,15 +4,27 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListRemindersResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>参数不合法。</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
     @NameInMap("Model")
     public ListRemindersResponseBodyModel model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -54,6 +66,10 @@ public class ListRemindersResponseBody extends TeaModel {
     }
 
     public static class ListRemindersResponseBodyModelRemindResponsesRecurrenceRule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>27</p>
+         */
         @NameInMap("Day")
         public Integer day;
 
@@ -63,27 +79,59 @@ public class ListRemindersResponseBody extends TeaModel {
         @NameInMap("DaysOfWeek")
         public java.util.List<Integer> daysOfWeek;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1661598000000</p>
+         */
         @NameInMap("EndDateTime")
         public String endDateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>WEEKLY</p>
+         */
         @NameInMap("Freq")
         public String freq;
 
+        /**
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("Hour")
         public Integer hour;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Minute")
         public Integer minute;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Month")
         public Integer month;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Second")
         public Integer second;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1630054800000</p>
+         */
         @NameInMap("StartDateTime")
         public String startDateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021</p>
+         */
         @NameInMap("Year")
         public Integer year;
 
@@ -183,24 +231,48 @@ public class ListRemindersResponseBody extends TeaModel {
     }
 
     public static class ListRemindersResponseBodyModelRemindResponses extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>宝宝快去刷牙</p>
+         */
         @NameInMap("ActionTopic")
         public String actionTopic;
 
+        /**
+         * <strong>example:</strong>
+         * <p>每天</p>
+         */
         @NameInMap("DayDesc")
         public String dayDesc;
 
         @NameInMap("RecurrenceRule")
         public ListRemindersResponseBodyModelRemindResponsesRecurrenceRule recurrenceRule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20****1</p>
+         */
         @NameInMap("RemindId")
         public Long remindId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1629850800000</p>
+         */
         @NameInMap("RemindTime")
         public String remindTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("RepeatCount")
         public Integer repeatCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>周三</p>
+         */
         @NameInMap("Week")
         public String week;
 

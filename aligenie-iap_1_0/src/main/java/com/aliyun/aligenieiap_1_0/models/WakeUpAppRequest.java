@@ -4,12 +4,25 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class WakeUpAppRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsDebug")
     public Boolean isDebug;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>应用拉起路径</p>
+     */
     @NameInMap("Path")
     public String path;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetInfo")
     public WakeUpAppRequestTargetInfo targetInfo;
 
@@ -43,18 +56,46 @@ public class WakeUpAppRequest extends TeaModel {
     }
 
     public static class WakeUpAppRequestTargetInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apk包名</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2VpiDQ6aMjxz******Eo7r6e08oIVZ3fKrm5TyEfY=</p>
+         */
         @NameInMap("TargetIdentity")
         public String targetIdentity;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEVICE_OPEN_ID</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 

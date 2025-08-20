@@ -10,6 +10,9 @@ public class VideoAppReportRequest extends TeaModel {
     @NameInMap("Payload")
     public VideoAppReportRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public VideoAppReportRequestUserInfo userInfo;
 
@@ -43,18 +46,38 @@ public class VideoAppReportRequest extends TeaModel {
     }
 
     public static class VideoAppReportRequestDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,27 +129,69 @@ public class VideoAppReportRequest extends TeaModel {
     }
 
     public static class VideoAppReportRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652337963097</p>
+         */
         @NameInMap("endTime")
         public Long endTime;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isLogin")
         public Boolean isLogin;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("isVip")
         public Boolean isVip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
         @NameInMap("loginNick")
         public String loginNick;
 
+        /**
+         * <strong>example:</strong>
+         * <p>731D5F********DC3B</p>
+         */
         @NameInMap("originUuid")
         public String originUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>188*777</p>
+         */
         @NameInMap("phone")
         public String phone;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>com.***.test</p>
+         */
         @NameInMap("pkgName")
         public String pkgName;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1652337963097</p>
+         */
         @NameInMap("startTime")
         public Long startTime;
 
@@ -202,18 +267,46 @@ public class VideoAppReportRequest extends TeaModel {
     }
 
     public static class VideoAppReportRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

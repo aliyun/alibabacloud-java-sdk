@@ -4,6 +4,10 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetAccountForAppResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RetCode")
     public Integer retCode;
 
@@ -43,12 +47,24 @@ public class GetAccountForAppResponseBody extends TeaModel {
     }
 
     public static class GetAccountForAppResponseBodyRetValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsVip")
         public Boolean isVip;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2022-05-12 15:22:18</p>
+         */
         @NameInMap("StrVipExpire")
         public String strVipExpire;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1652340138347</p>
+         */
         @NameInMap("VipExpireAt")
         public Long vipExpireAt;
 

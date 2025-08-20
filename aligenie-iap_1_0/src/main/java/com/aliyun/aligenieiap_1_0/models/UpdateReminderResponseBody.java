@@ -4,15 +4,31 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class UpdateReminderResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("ErrorCode")
     public Integer errorCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>不能设置过去的时间。</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20****1</p>
+     */
     @NameInMap("Model")
     public Long model;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

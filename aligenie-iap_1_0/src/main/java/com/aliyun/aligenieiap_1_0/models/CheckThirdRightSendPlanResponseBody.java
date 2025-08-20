@@ -4,9 +4,17 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class CheckThirdRightSendPlanResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RetCode")
     public Integer retCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
@@ -43,24 +51,52 @@ public class CheckThirdRightSendPlanResponseBody extends TeaModel {
     }
 
     public static class CheckThirdRightSendPlanResponseBodyRetValue extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;1713262192005&quot;</p>
+         */
         @NameInMap("ActivateDate")
         public String activateDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1001 日卡 1002 月卡 1003 季卡 1004 年卡</p>
+         */
         @NameInMap("CardType")
         public Integer cardType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TB</p>
+         */
         @NameInMap("ChannelCode")
         public String channelCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>淘宝</p>
+         */
         @NameInMap("ChannelName")
         public String channelName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("ExtendInfo")
         public java.util.Map<String, ?> extendInfo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>908FA068-529C-0C20-8DB5-63B0EF7CFF1F</p>
+         */
         @NameInMap("RequestId")
         public String requestId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>&quot;1713262192005&quot;</p>
+         */
         @NameInMap("RightsExpiredDate")
         public String rightsExpiredDate;
 

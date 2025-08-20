@@ -4,30 +4,66 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class CallBackThirdRightSendPlanRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc</p>
+     */
     @NameInMap("BizGroup")
     public String bizGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ailabs</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1001</p>
+     */
     @NameInMap("CardType")
     public Integer cardType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>领取异常</p>
+     */
     @NameInMap("ErrorMsg")
     public String errorMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtendInfo")
     public java.util.Map<String, ?> extendInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1dsds2FzCXFGVA1ADS</p>
+     */
     @NameInMap("GenieOpenId")
     public String genieOpenId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ReceiveStatus")
     public Integer receiveStatus;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01000019100307010000600</p>
+     */
     @NameInMap("Sn")
     public String sn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SupplierId")
     public Long supplierId;
 

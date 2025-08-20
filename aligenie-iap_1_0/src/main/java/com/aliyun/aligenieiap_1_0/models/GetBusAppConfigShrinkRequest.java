@@ -10,6 +10,9 @@ public class GetBusAppConfigShrinkRequest extends TeaModel {
     @NameInMap("Payload")
     public String payloadShrink;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public String userInfoShrink;
 

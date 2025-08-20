@@ -4,15 +4,27 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class CallBackThirdRightSendPlanResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>400</p>
+     */
     @NameInMap("RetCode")
     public String retCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>系统异常</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
     @NameInMap("RetValue")
     public Boolean retValue;
 
+    /**
+     * <strong>example:</strong>
+     * <p>908FA068-529C-0C20-8DB5-63B0EF7CFF1F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

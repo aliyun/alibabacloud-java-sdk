@@ -10,6 +10,9 @@ public class AppUseTimeReportRequest extends TeaModel {
     @NameInMap("Payload")
     public AppUseTimeReportRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public AppUseTimeReportRequestUserInfo userInfo;
 
@@ -43,18 +46,38 @@ public class AppUseTimeReportRequest extends TeaModel {
     }
 
     public static class AppUseTimeReportRequestDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,24 +129,64 @@ public class AppUseTimeReportRequest extends TeaModel {
     }
 
     public static class AppUseTimeReportRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>start</p>
+         */
         @NameInMap("Action")
         public String action;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsPrivilege")
         public Integer isPrivilege;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResourceId")
         public String resourceId;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ResourceType")
         public Integer resourceType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("StepCode")
         public String stepCode;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("VipType")
         public Integer vipType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>731D5F********DC3B</p>
+         */
         @NameInMap("originUuid")
         public String originUuid;
 
@@ -191,18 +254,46 @@ public class AppUseTimeReportRequest extends TeaModel {
     }
 
     public static class AppUseTimeReportRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

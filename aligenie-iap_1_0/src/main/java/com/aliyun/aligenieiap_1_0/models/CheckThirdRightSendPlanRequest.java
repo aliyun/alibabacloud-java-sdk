@@ -4,18 +4,38 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class CheckThirdRightSendPlanRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>cc</p>
+     */
     @NameInMap("BizGroup")
     public String bizGroup;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ailabs</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ExtendInfo")
     public java.util.Map<String, ?> extendInfo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>01000019100307010000600</p>
+     */
     @NameInMap("Sn")
     public String sn;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SupplierId")
     public Long supplierId;
 

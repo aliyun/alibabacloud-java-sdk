@@ -4,12 +4,21 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class ListRemindersRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public ListRemindersRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public ListRemindersRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public ListRemindersRequestUserInfo userInfo;
 
@@ -43,18 +52,46 @@ public class ListRemindersRequest extends TeaModel {
     }
 
     public static class ListRemindersRequestDeviceInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,6 +143,12 @@ public class ListRemindersRequest extends TeaModel {
     }
 
     public static class ListRemindersRequestPayload extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDebug")
         public Boolean isDebug;
 
@@ -125,18 +168,46 @@ public class ListRemindersRequest extends TeaModel {
     }
 
     public static class ListRemindersRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

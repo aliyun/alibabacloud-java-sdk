@@ -4,6 +4,9 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class PushNotificationsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NotificationUnicastRequest")
     public PushNotificationsRequestNotificationUnicastRequest notificationUnicastRequest;
 
@@ -32,9 +35,17 @@ public class PushNotificationsRequest extends TeaModel {
     }
 
     public static class PushNotificationsRequestNotificationUnicastRequestSendTarget extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2VpiDQ6aMjxz******Eo7r6e08oIVZ3fKrm5TyEfY=</p>
+         */
         @NameInMap("TargetIdentity")
         public String targetIdentity;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DEVICE_OPEN_ID</p>
+         */
         @NameInMap("TargetType")
         public String targetType;
 
@@ -62,24 +73,57 @@ public class PushNotificationsRequest extends TeaModel {
     }
 
     public static class PushNotificationsRequestNotificationUnicastRequest extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apk包名</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("IsDebug")
         public Boolean isDebug;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2iU81*****G9elJ</p>
+         */
         @NameInMap("MessageTemplateId")
         public String messageTemplateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;nick&quot;:&quot;张三&quot;}</p>
+         */
         @NameInMap("PlaceHolder")
         public java.util.Map<String, String> placeHolder;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SendTarget")
         public PushNotificationsRequestNotificationUnicastRequestSendTarget sendTarget;
 

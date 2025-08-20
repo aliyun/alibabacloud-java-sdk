@@ -4,15 +4,24 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class SendNotificationsRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeviceInfo")
     public SendNotificationsRequestDeviceInfo deviceInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("NotificationUnicastRequest")
     public SendNotificationsRequestNotificationUnicastRequest notificationUnicastRequest;
 
     @NameInMap("TenantInfo")
     public SendNotificationsRequestTenantInfo tenantInfo;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public SendNotificationsRequestUserInfo userInfo;
 
@@ -54,18 +63,46 @@ public class SendNotificationsRequest extends TeaModel {
     }
 
     public static class SendNotificationsRequestDeviceInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -125,15 +162,32 @@ public class SendNotificationsRequest extends TeaModel {
     }
 
     public static class SendNotificationsRequestNotificationUnicastRequest extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("IsDebug")
         public Boolean isDebug;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2iU81*****G9elJ</p>
+         */
         @NameInMap("MessageTemplateId")
         public String messageTemplateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{&quot;nick&quot;:&quot;张三&quot;}</p>
+         */
         @NameInMap("PlaceHolder")
         public java.util.Map<String, String> placeHolder;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("SendTarget")
         public SendNotificationsRequestNotificationUnicastRequestSendTarget sendTarget;
 
@@ -185,18 +239,46 @@ public class SendNotificationsRequest extends TeaModel {
     }
 
     public static class SendNotificationsRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PACKAGE_NAME</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 

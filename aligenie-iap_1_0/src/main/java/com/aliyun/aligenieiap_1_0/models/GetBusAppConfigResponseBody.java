@@ -4,9 +4,17 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class GetBusAppConfigResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RetCode")
     public Integer retCode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>请求异常</p>
+     */
     @NameInMap("RetMsg")
     public String retMsg;
 
@@ -46,12 +54,24 @@ public class GetBusAppConfigResponseBody extends TeaModel {
         @NameInMap("Cashier")
         public String cashier;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://<strong><strong><strong>.com/design/</strong></strong></strong>?imageId=xxxxx</p>
+         */
         @NameInMap("ShoppingBar")
         public String shoppingBar;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://<strong><strong><strong>.com/design/</strong></strong></strong>?imageId=xxxxx</p>
+         */
         @NameInMap("ShoppingWindow")
         public String shoppingWindow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>https://<strong><strong><strong>.com/design/</strong></strong></strong>?imageId=xxxxx</p>
+         */
         @NameInMap("VipLabel")
         public String vipLabel;
 

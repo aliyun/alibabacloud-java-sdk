@@ -4,12 +4,20 @@ package com.aliyun.aligenieiap_1_0.models;
 import com.aliyun.tea.*;
 
 public class AppUseTimeReportResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RetCode")
     public Integer retCode;
 
     @NameInMap("RetMsg")
     public String retMsg;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("RetValue")
     public Boolean retValue;
 

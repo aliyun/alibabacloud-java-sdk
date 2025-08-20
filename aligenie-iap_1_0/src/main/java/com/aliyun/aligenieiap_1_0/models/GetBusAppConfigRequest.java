@@ -10,6 +10,9 @@ public class GetBusAppConfigRequest extends TeaModel {
     @NameInMap("Payload")
     public GetBusAppConfigRequestPayload payload;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UserInfo")
     public GetBusAppConfigRequestUserInfo userInfo;
 
@@ -43,18 +46,38 @@ public class GetBusAppConfigRequest extends TeaModel {
     }
 
     public static class GetBusAppConfigRequestDeviceInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SKILL_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>DAFE****ce3ej=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
@@ -106,9 +129,17 @@ public class GetBusAppConfigRequest extends TeaModel {
     }
 
     public static class GetBusAppConfigRequestPayload extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>731D5F********DC3B</p>
+         */
         @NameInMap("originUuid")
         public String originUuid;
 
+        /**
+         * <strong>example:</strong>
+         * <p>136****1111</p>
+         */
         @NameInMap("phone")
         public String phone;
 
@@ -136,18 +167,46 @@ public class GetBusAppConfigRequest extends TeaModel {
     }
 
     public static class GetBusAppConfigRequestUserInfo extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12**45</p>
+         */
         @NameInMap("EncodeKey")
         public String encodeKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SKILL_ID</p>
+         */
         @NameInMap("EncodeType")
         public String encodeType;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HOFF****my7Iw=</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OPEN_ID</p>
+         */
         @NameInMap("IdType")
         public String idType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1**2</p>
+         */
         @NameInMap("OrganizationId")
         public String organizationId;
 
