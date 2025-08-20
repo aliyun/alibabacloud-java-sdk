@@ -4,6 +4,9 @@ package com.aliyun.brain_industrial20200920.models;
 import com.aliyun.tea.*;
 
 public class AicsOpenApiInvokeShrinkRequest extends TeaModel {
+    @NameInMap("JobId")
+    public String jobId;
+
     /**
      * <strong>example:</strong>
      * <p>119397</p>
@@ -37,6 +40,14 @@ public class AicsOpenApiInvokeShrinkRequest extends TeaModel {
     public static AicsOpenApiInvokeShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         AicsOpenApiInvokeShrinkRequest self = new AicsOpenApiInvokeShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AicsOpenApiInvokeShrinkRequest setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public AicsOpenApiInvokeShrinkRequest setNodeId(String nodeId) {
