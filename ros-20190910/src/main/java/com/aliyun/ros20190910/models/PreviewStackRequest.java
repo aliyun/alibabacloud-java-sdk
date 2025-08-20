@@ -196,6 +196,9 @@ public class PreviewStackRequest extends TeaModel {
     @NameInMap("TimeoutInMinutes")
     public Long timeoutInMinutes;
 
+    @NameInMap("UsePreviousParameters")
+    public Boolean usePreviousParameters;
+
     public static PreviewStackRequest build(java.util.Map<String, ?> map) throws Exception {
         PreviewStackRequest self = new PreviewStackRequest();
         return TeaModel.build(map, self);
@@ -343,6 +346,14 @@ public class PreviewStackRequest extends TeaModel {
     }
     public Long getTimeoutInMinutes() {
         return this.timeoutInMinutes;
+    }
+
+    public PreviewStackRequest setUsePreviousParameters(Boolean usePreviousParameters) {
+        this.usePreviousParameters = usePreviousParameters;
+        return this;
+    }
+    public Boolean getUsePreviousParameters() {
+        return this.usePreviousParameters;
     }
 
     public static class PreviewStackRequestParameters extends TeaModel {

@@ -5188,6 +5188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TimeoutInMinutes", request.timeoutInMinutes);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.usePreviousParameters)) {
+            query.put("UsePreviousParameters", request.usePreviousParameters);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.templateBody)) {
             body.put("TemplateBody", request.templateBody);
