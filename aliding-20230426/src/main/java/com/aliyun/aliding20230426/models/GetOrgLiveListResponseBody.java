@@ -76,6 +76,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @NameInMap("AnchorUnionId")
         public String anchorUnionId;
 
+        @NameInMap("AnchorUnionIdInAlibaba")
+        public String anchorUnionIdInAlibaba;
+
         /**
          * <strong>example:</strong>
          * <p>ersqqdddf</p>
@@ -137,6 +140,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         }
         public String getAnchorUnionId() {
             return this.anchorUnionId;
+        }
+
+        public GetOrgLiveListResponseBodyResultNewLiveLiveList setAnchorUnionIdInAlibaba(String anchorUnionIdInAlibaba) {
+            this.anchorUnionIdInAlibaba = anchorUnionIdInAlibaba;
+            return this;
+        }
+        public String getAnchorUnionIdInAlibaba() {
+            return this.anchorUnionIdInAlibaba;
         }
 
         public GetOrgLiveListResponseBodyResultNewLiveLiveList setAnchorUserId(String anchorUserId) {
@@ -283,6 +294,9 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         @NameInMap("AnchorUnionId")
         public String anchorUnionId;
 
+        @NameInMap("AnchorUnionIdInAlibaba")
+        public String anchorUnionIdInAlibaba;
+
         /**
          * <strong>example:</strong>
          * <p>012345</p>
@@ -337,6 +351,14 @@ public class GetOrgLiveListResponseBody extends TeaModel {
         }
         public String getAnchorUnionId() {
             return this.anchorUnionId;
+        }
+
+        public GetOrgLiveListResponseBodyResultUpdateLiveLiveList setAnchorUnionIdInAlibaba(String anchorUnionIdInAlibaba) {
+            this.anchorUnionIdInAlibaba = anchorUnionIdInAlibaba;
+            return this;
+        }
+        public String getAnchorUnionIdInAlibaba() {
+            return this.anchorUnionIdInAlibaba;
         }
 
         public GetOrgLiveListResponseBodyResultUpdateLiveLiveList setAnchorUserId(String anchorUserId) {
