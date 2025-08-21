@@ -125,6 +125,16 @@ public class MassPushRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>0</p>
+         * 
+         * <strong>if can be null:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("AndroidMeizuNoticeMsgType")
+        public Integer androidMeizuNoticeMsgType;
+
+        /**
+         * <strong>example:</strong>
          * <p>VOIP</p>
          */
         @NameInMap("AndroidMessageHuaweiCategory")
@@ -702,6 +712,14 @@ public class MassPushRequest extends TeaModel {
         }
         public String getAndroidInboxBody() {
             return this.androidInboxBody;
+        }
+
+        public MassPushRequestPushTask setAndroidMeizuNoticeMsgType(Integer androidMeizuNoticeMsgType) {
+            this.androidMeizuNoticeMsgType = androidMeizuNoticeMsgType;
+            return this;
+        }
+        public Integer getAndroidMeizuNoticeMsgType() {
+            return this.androidMeizuNoticeMsgType;
         }
 
         public MassPushRequestPushTask setAndroidMessageHuaweiCategory(String androidMessageHuaweiCategory) {
