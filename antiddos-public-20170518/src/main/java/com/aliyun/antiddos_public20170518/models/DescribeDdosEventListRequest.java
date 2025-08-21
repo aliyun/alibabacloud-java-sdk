@@ -76,6 +76,9 @@ public class DescribeDdosEventListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("QueryDays")
+    public Integer queryDays;
+
     public static DescribeDdosEventListRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDdosEventListRequest self = new DescribeDdosEventListRequest();
         return TeaModel.build(map, self);
@@ -127,6 +130,14 @@ public class DescribeDdosEventListRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public DescribeDdosEventListRequest setQueryDays(Integer queryDays) {
+        this.queryDays = queryDays;
+        return this;
+    }
+    public Integer getQueryDays() {
+        return this.queryDays;
     }
 
 }

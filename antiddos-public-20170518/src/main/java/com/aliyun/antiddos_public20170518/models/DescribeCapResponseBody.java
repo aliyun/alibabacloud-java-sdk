@@ -45,7 +45,7 @@ public class DescribeCapResponseBody extends TeaModel {
          * <p>The download link to the traffic data.</p>
          * 
          * <strong>example:</strong>
-         * <p><a href="http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021112511-121.89.XX.XX.cap?Expires=1637824408&OSSAccessKeyId=LTAIXu2lJhw3****&Signature=KKSzOMSUajtwcqfqxkU1nK69d4">http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021112511-121.89.XX.XX.cap?Expires=1637824408&amp;OSSAccessKeyId=LTAIXu2lJhw3****&amp;Signature=KKSzOMSUajtwcqfqxkU1nK69d4</a>****</p>
+         * <p><a href="http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021****-121.89.XX.XX.cap?Expires=1637****&OSSAccessKeyId=LTAI****************&Signature=">http://beaver-pack****.oss-cn-hangzhou.aliyuncs.com/ddos-2021****-121.89.XX.XX.cap?Expires=1637****&amp;OSSAccessKeyId=LTAI****************&amp;Signature=</a>******</p>
          */
         @NameInMap("Url")
         public String url;
