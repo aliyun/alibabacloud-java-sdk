@@ -117,6 +117,13 @@ public class ListCloudAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
+         */
+        @NameInMap("StablePatchId")
+        public String stablePatchId;
+
+        /**
+         * <strong>example:</strong>
          * <p>Success</p>
          */
         @NameInMap("Status")
@@ -194,6 +201,14 @@ public class ListCloudAppsResponseBody extends TeaModel {
         }
         public String getPkgType() {
             return this.pkgType;
+        }
+
+        public ListCloudAppsResponseBodyCloudApps setStablePatchId(String stablePatchId) {
+            this.stablePatchId = stablePatchId;
+            return this;
+        }
+        public String getStablePatchId() {
+            return this.stablePatchId;
         }
 
         public ListCloudAppsResponseBodyCloudApps setStatus(String status) {

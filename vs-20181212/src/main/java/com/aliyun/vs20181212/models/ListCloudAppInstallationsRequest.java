@@ -42,6 +42,13 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
+
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -106,6 +113,14 @@ public class ListCloudAppInstallationsRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public ListCloudAppInstallationsRequest setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public ListCloudAppInstallationsRequest setProjectId(String projectId) {

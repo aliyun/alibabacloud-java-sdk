@@ -111,6 +111,13 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
+         */
+        @NameInMap("PatchId")
+        public String patchId;
+
+        /**
+         * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
          */
         @NameInMap("RenderingInstanceId")
@@ -172,6 +179,14 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         }
         public String getInstallationTime() {
             return this.installationTime;
+        }
+
+        public ListCloudAppInstallationsResponseBodyInstallationInfos setPatchId(String patchId) {
+            this.patchId = patchId;
+            return this;
+        }
+        public String getPatchId() {
+            return this.patchId;
         }
 
         public ListCloudAppInstallationsResponseBodyInstallationInfos setRenderingInstanceId(String renderingInstanceId) {

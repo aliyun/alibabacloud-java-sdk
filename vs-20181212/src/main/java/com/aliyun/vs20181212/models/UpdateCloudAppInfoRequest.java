@@ -13,11 +13,18 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
     @NameInMap("AppId")
     public String appId;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("Patch")
+    public UpdateCloudAppInfoRequestPatch patch;
+
+    /**
+     * <strong>example:</strong>
+     * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
+     */
+    @NameInMap("StablePatchId")
+    public String stablePatchId;
 
     public static UpdateCloudAppInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCloudAppInfoRequest self = new UpdateCloudAppInfoRequest();
@@ -38,6 +45,75 @@ public class UpdateCloudAppInfoRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public UpdateCloudAppInfoRequest setPatch(UpdateCloudAppInfoRequestPatch patch) {
+        this.patch = patch;
+        return this;
+    }
+    public UpdateCloudAppInfoRequestPatch getPatch() {
+        return this.patch;
+    }
+
+    public UpdateCloudAppInfoRequest setStablePatchId(String stablePatchId) {
+        this.stablePatchId = stablePatchId;
+        return this;
+    }
+    public String getStablePatchId() {
+        return this.stablePatchId;
+    }
+
+    public static class UpdateCloudAppInfoRequestPatch extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="https://test_host/app/test-tar-pkg.tar">https://test_host/app/test-tar-pkg.tar</a></p>
+         */
+        @NameInMap("DownloadURL")
+        public String downloadURL;
+
+        /**
+         * <strong>example:</strong>
+         * <p>346f6404395adfg5bae1e45g4e943bf7</p>
+         */
+        @NameInMap("Md5")
+        public String md5;
+
+        /**
+         * <strong>example:</strong>
+         * <p>p1</p>
+         */
+        @NameInMap("PatchName")
+        public String patchName;
+
+        public static UpdateCloudAppInfoRequestPatch build(java.util.Map<String, ?> map) throws Exception {
+            UpdateCloudAppInfoRequestPatch self = new UpdateCloudAppInfoRequestPatch();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateCloudAppInfoRequestPatch setDownloadURL(String downloadURL) {
+            this.downloadURL = downloadURL;
+            return this;
+        }
+        public String getDownloadURL() {
+            return this.downloadURL;
+        }
+
+        public UpdateCloudAppInfoRequestPatch setMd5(String md5) {
+            this.md5 = md5;
+            return this;
+        }
+        public String getMd5() {
+            return this.md5;
+        }
+
+        public UpdateCloudAppInfoRequestPatch setPatchName(String patchName) {
+            this.patchName = patchName;
+            return this;
+        }
+        public String getPatchName() {
+            return this.patchName;
+        }
+
     }
 
 }

@@ -34,6 +34,13 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     @NameInMap("Location")
     public DescribeRenderingSessionResponseBodyLocation location;
 
+    /**
+     * <strong>example:</strong>
+     * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
+
     @NameInMap("PortMappings")
     public java.util.List<DescribeRenderingSessionResponseBodyPortMappings> portMappings;
 
@@ -115,6 +122,14 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
     public DescribeRenderingSessionResponseBodyLocation getLocation() {
         return this.location;
+    }
+
+    public DescribeRenderingSessionResponseBody setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public DescribeRenderingSessionResponseBody setPortMappings(java.util.List<DescribeRenderingSessionResponseBodyPortMappings> portMappings) {

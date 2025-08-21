@@ -36,6 +36,13 @@ public class ListRenderingSessionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <strong>example:</strong>
+     * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,6 +114,14 @@ public class ListRenderingSessionsRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListRenderingSessionsRequest setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public ListRenderingSessionsRequest setProjectId(String projectId) {

@@ -65,6 +65,13 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         @NameInMap("ClientId")
         public String clientId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
+         */
+        @NameInMap("PatchId")
+        public String patchId;
+
         @NameInMap("RenderingInstanceId")
         public String renderingInstanceId;
 
@@ -101,6 +108,14 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         }
         public String getClientId() {
             return this.clientId;
+        }
+
+        public ListRenderingSessionsResponseBodySessions setPatchId(String patchId) {
+            this.patchId = patchId;
+            return this;
+        }
+        public String getPatchId() {
+            return this.patchId;
         }
 
         public ListRenderingSessionsResponseBodySessions setRenderingInstanceId(String renderingInstanceId) {

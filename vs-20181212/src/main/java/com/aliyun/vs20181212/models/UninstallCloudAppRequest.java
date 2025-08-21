@@ -19,6 +19,13 @@ public class UninstallCloudAppRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
+
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -59,6 +66,14 @@ public class UninstallCloudAppRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public UninstallCloudAppRequest setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public UninstallCloudAppRequest setProjectId(String projectId) {

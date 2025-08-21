@@ -24,6 +24,13 @@ public class StartRenderingSessionShrinkRequest extends TeaModel {
     public String clientParamsShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>patch-03fa76e8e13a49b63456b063dgh309b4</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,6 +66,14 @@ public class StartRenderingSessionShrinkRequest extends TeaModel {
     }
     public String getClientParamsShrink() {
         return this.clientParamsShrink;
+    }
+
+    public StartRenderingSessionShrinkRequest setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public StartRenderingSessionShrinkRequest setProjectId(String projectId) {

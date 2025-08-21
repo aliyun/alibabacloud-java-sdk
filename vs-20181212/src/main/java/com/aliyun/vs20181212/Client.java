@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -6090,6 +6089,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
         }
@@ -6701,6 +6704,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
@@ -8449,6 +8456,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ClientParams", request.clientParamsShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
         }
@@ -9241,6 +9252,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PageSize", request.pageSize);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.projectId)) {
             query.put("ProjectId", request.projectId);
         }
@@ -9328,12 +9343,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>更新云应用信息</p>
      * 
-     * @param request UpdateCloudAppInfoRequest
+     * @param tmpReq UpdateCloudAppInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return UpdateCloudAppInfoResponse
      */
-    public UpdateCloudAppInfoResponse updateCloudAppInfoWithOptions(UpdateCloudAppInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public UpdateCloudAppInfoResponse updateCloudAppInfoWithOptions(UpdateCloudAppInfoRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateCloudAppInfoShrinkRequest request = new UpdateCloudAppInfoShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.patch)) {
+            request.patchShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.patch, "Patch", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
             query.put("AppId", request.appId);
@@ -9341,6 +9362,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             query.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchShrink)) {
+            query.put("Patch", request.patchShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stablePatchId)) {
+            query.put("StablePatchId", request.stablePatchId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -19,6 +19,13 @@ public class InstallCloudAppRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
+     */
+    @NameInMap("PatchId")
+    public String patchId;
+
     @NameInMap("ProjectId")
     public String projectId;
 
@@ -59,6 +66,14 @@ public class InstallCloudAppRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public InstallCloudAppRequest setPatchId(String patchId) {
+        this.patchId = patchId;
+        return this;
+    }
+    public String getPatchId() {
+        return this.patchId;
     }
 
     public InstallCloudAppRequest setProjectId(String projectId) {
