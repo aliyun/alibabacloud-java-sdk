@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAttributeRequest extends TeaModel {
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The hostname of the Elastic Compute Service (ECS) instance. The value can be 2 to 64 characters in length. You can use periods (.) to separate the value into multiple segments. Each segment can contain letters, digits, hyphens (-), and periods. Consecutive periods or hyphens are not allowed. The name cannot start or end with a period (.) or a hyphen (-).</p>
      * 
@@ -55,6 +58,14 @@ public class ModifyInstanceAttributeRequest extends TeaModel {
     public static ModifyInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceAttributeRequest self = new ModifyInstanceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyInstanceAttributeRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public ModifyInstanceAttributeRequest setHostName(String hostName) {

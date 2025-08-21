@@ -215,6 +215,12 @@ public class DescribeSDGsResponseBody extends TeaModel {
         @NameInMap("AvaliableRegionIds")
         public java.util.List<DescribeSDGsResponseBodySDGsAvaliableRegionIds> avaliableRegionIds;
 
+        @NameInMap("BillingCycle")
+        public String billingCycle;
+
+        @NameInMap("CreationDiskType")
+        public String creationDiskType;
+
         /**
          * <p>The ID of the instance on which the SDG is created.</p>
          * 
@@ -319,6 +325,22 @@ public class DescribeSDGsResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSDGsResponseBodySDGsAvaliableRegionIds> getAvaliableRegionIds() {
             return this.avaliableRegionIds;
+        }
+
+        public DescribeSDGsResponseBodySDGs setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
+            return this;
+        }
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        public DescribeSDGsResponseBodySDGs setCreationDiskType(String creationDiskType) {
+            this.creationDiskType = creationDiskType;
+            return this;
+        }
+        public String getCreationDiskType() {
+            return this.creationDiskType;
         }
 
         public DescribeSDGsResponseBodySDGs setCreationInstanceId(String creationInstanceId) {

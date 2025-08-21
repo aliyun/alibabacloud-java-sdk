@@ -1147,6 +1147,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("DataDisk")
         public DescribeInstancesResponseBodyInstancesInstanceDataDisk dataDisk;
 
+        @NameInMap("DeletionProtection")
+        public Boolean deletionProtection;
+
         /**
          * <p>The total size of the disk. Unit: MiB.</p>
          * 
@@ -1426,6 +1429,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public DescribeInstancesResponseBodyInstancesInstanceDataDisk getDataDisk() {
             return this.dataDisk;
+        }
+
+        public DescribeInstancesResponseBodyInstancesInstance setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         public DescribeInstancesResponseBodyInstancesInstance setDisk(Integer disk) {

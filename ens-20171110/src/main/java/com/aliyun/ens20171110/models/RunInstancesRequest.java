@@ -86,6 +86,9 @@ public class RunInstancesRequest extends TeaModel {
     @NameInMap("DataDisk")
     public java.util.List<RunInstancesRequestDataDisk> dataDisk;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The ID of the node.</p>
      * <blockquote>
@@ -501,6 +504,14 @@ public class RunInstancesRequest extends TeaModel {
     }
     public java.util.List<RunInstancesRequestDataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    public RunInstancesRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public RunInstancesRequest setEnsRegionId(String ensRegionId) {

@@ -11,6 +11,9 @@ public class PreloadRegionSDGShrinkRequest extends TeaModel {
     @NameInMap("DestinationRegionIds")
     public String destinationRegionIdsShrink;
 
+    @NameInMap("DiskType")
+    public String diskType;
+
     /**
      * <p>An array that consists of queried namespaces.</p>
      */
@@ -48,6 +51,14 @@ public class PreloadRegionSDGShrinkRequest extends TeaModel {
     }
     public String getDestinationRegionIdsShrink() {
         return this.destinationRegionIdsShrink;
+    }
+
+    public PreloadRegionSDGShrinkRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public PreloadRegionSDGShrinkRequest setNamespacesShrink(String namespacesShrink) {

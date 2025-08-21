@@ -13,6 +13,12 @@ public class DeployInstanceSDGShrinkRequest extends TeaModel {
     @NameInMap("DeploymentType")
     public String deploymentType;
 
+    @NameInMap("DiskAccessProtocol")
+    public String diskAccessProtocol;
+
+    @NameInMap("DiskType")
+    public String diskType;
+
     /**
      * <p>The IDs of the instances. The value is a JSON array that consists of up to 100 IDs.</p>
      * <p>This parameter is required.</p>
@@ -41,6 +47,22 @@ public class DeployInstanceSDGShrinkRequest extends TeaModel {
     }
     public String getDeploymentType() {
         return this.deploymentType;
+    }
+
+    public DeployInstanceSDGShrinkRequest setDiskAccessProtocol(String diskAccessProtocol) {
+        this.diskAccessProtocol = diskAccessProtocol;
+        return this;
+    }
+    public String getDiskAccessProtocol() {
+        return this.diskAccessProtocol;
+    }
+
+    public DeployInstanceSDGShrinkRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public DeployInstanceSDGShrinkRequest setInstanceIdsShrink(String instanceIdsShrink) {

@@ -40,6 +40,9 @@ public class ImportImageShrinkRequest extends TeaModel {
     @NameInMap("ImageName")
     public String imageName;
 
+    @NameInMap("LicenseType")
+    public String licenseType;
+
     /**
      * <strong>example:</strong>
      * <p>tmp-hybrid</p>
@@ -78,8 +81,6 @@ public class ImportImageShrinkRequest extends TeaModel {
     public String OSVersion;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>centos</p>
      */
@@ -136,6 +137,14 @@ public class ImportImageShrinkRequest extends TeaModel {
     }
     public String getImageName() {
         return this.imageName;
+    }
+
+    public ImportImageShrinkRequest setLicenseType(String licenseType) {
+        this.licenseType = licenseType;
+        return this;
+    }
+    public String getLicenseType() {
+        return this.licenseType;
     }
 
     public ImportImageShrinkRequest setOSSBucket(String OSSBucket) {

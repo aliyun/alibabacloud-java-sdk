@@ -184,6 +184,9 @@ public class DescribeSDGResponseBody extends TeaModel {
         @NameInMap("CreationTime")
         public String creationTime;
 
+        @NameInMap("DiskType")
+        public String diskType;
+
         /**
          * <p>The namespace.</p>
          * 
@@ -233,6 +236,14 @@ public class DescribeSDGResponseBody extends TeaModel {
             return this.creationTime;
         }
 
+        public DescribeSDGResponseBodySDGsPreloadInfos setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
+        }
+
         public DescribeSDGResponseBodySDGsPreloadInfos setNamespace(String namespace) {
             this.namespace = namespace;
             return this;
@@ -273,6 +284,12 @@ public class DescribeSDGResponseBody extends TeaModel {
          */
         @NameInMap("AvaliableRegionIds")
         public java.util.List<DescribeSDGResponseBodySDGsAvaliableRegionIds> avaliableRegionIds;
+
+        @NameInMap("BillingCycle")
+        public String billingCycle;
+
+        @NameInMap("CreationDiskType")
+        public String creationDiskType;
 
         /**
          * <p>The ID of the instance on which the SDG is created.</p>
@@ -378,6 +395,22 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
         public java.util.List<DescribeSDGResponseBodySDGsAvaliableRegionIds> getAvaliableRegionIds() {
             return this.avaliableRegionIds;
+        }
+
+        public DescribeSDGResponseBodySDGs setBillingCycle(String billingCycle) {
+            this.billingCycle = billingCycle;
+            return this;
+        }
+        public String getBillingCycle() {
+            return this.billingCycle;
+        }
+
+        public DescribeSDGResponseBodySDGs setCreationDiskType(String creationDiskType) {
+            this.creationDiskType = creationDiskType;
+            return this;
+        }
+        public String getCreationDiskType() {
+            return this.creationDiskType;
         }
 
         public DescribeSDGResponseBodySDGs setCreationInstanceId(String creationInstanceId) {

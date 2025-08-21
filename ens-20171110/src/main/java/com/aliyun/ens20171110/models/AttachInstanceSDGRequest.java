@@ -4,6 +4,12 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class AttachInstanceSDGRequest extends TeaModel {
+    @NameInMap("DiskAccessProtocol")
+    public String diskAccessProtocol;
+
+    @NameInMap("DiskType")
+    public String diskType;
+
     /**
      * <p>The IDs of the instances.</p>
      * <p>This parameter is required.</p>
@@ -27,6 +33,22 @@ public class AttachInstanceSDGRequest extends TeaModel {
     public static AttachInstanceSDGRequest build(java.util.Map<String, ?> map) throws Exception {
         AttachInstanceSDGRequest self = new AttachInstanceSDGRequest();
         return TeaModel.build(map, self);
+    }
+
+    public AttachInstanceSDGRequest setDiskAccessProtocol(String diskAccessProtocol) {
+        this.diskAccessProtocol = diskAccessProtocol;
+        return this;
+    }
+    public String getDiskAccessProtocol() {
+        return this.diskAccessProtocol;
+    }
+
+    public AttachInstanceSDGRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public AttachInstanceSDGRequest setInstanceIds(java.util.List<String> instanceIds) {

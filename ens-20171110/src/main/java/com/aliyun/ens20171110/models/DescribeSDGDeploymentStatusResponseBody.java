@@ -98,6 +98,12 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         @NameInMap("CacheSize")
         public Integer cacheSize;
 
+        @NameInMap("DiskAccessProtocol")
+        public String diskAccessProtocol;
+
+        @NameInMap("DiskType")
+        public String diskType;
+
         /**
          * <p>The ID of the AIC instance.</p>
          * 
@@ -182,6 +188,22 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
         public Integer getCacheSize() {
             return this.cacheSize;
+        }
+
+        public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setDiskAccessProtocol(String diskAccessProtocol) {
+            this.diskAccessProtocol = diskAccessProtocol;
+            return this;
+        }
+        public String getDiskAccessProtocol() {
+            return this.diskAccessProtocol;
+        }
+
+        public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
         }
 
         public DescribeSDGDeploymentStatusResponseBodyDeploymentStatus setInstanceId(String instanceId) {

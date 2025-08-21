@@ -575,6 +575,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskAccessProtocol)) {
+            query.put("DiskAccessProtocol", request.diskAccessProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            query.put("DiskType", request.diskType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
             query.put("InstanceIds", request.instanceIdsShrink);
         }
@@ -5109,6 +5117,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.deploymentType)) {
             query.put("DeploymentType", request.deploymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskAccessProtocol)) {
+            query.put("DiskAccessProtocol", request.diskAccessProtocol);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            query.put("DiskType", request.diskType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIdsShrink)) {
@@ -11243,6 +11259,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ImageName", request.imageName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.licenseType)) {
+            query.put("LicenseType", request.licenseType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.OSSBucket)) {
             query.put("OSSBucket", request.OSSBucket);
         }
@@ -12314,6 +12334,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyInstanceAttributeResponse modifyInstanceAttributeWithOptions(ModifyInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.hostName)) {
             query.put("HostName", request.hostName);
         }
@@ -13097,6 +13121,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.destinationRegionIdsShrink)) {
             query.put("DestinationRegionIds", request.destinationRegionIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.diskType)) {
+            query.put("DiskType", request.diskType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespacesShrink)) {
@@ -15037,6 +15065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dataDiskShrink)) {
             query.put("DataDisk", request.dataDiskShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.deletionProtection)) {
+            query.put("DeletionProtection", request.deletionProtection);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ensRegionId)) {

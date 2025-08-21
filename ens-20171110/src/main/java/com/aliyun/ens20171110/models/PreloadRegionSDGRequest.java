@@ -11,6 +11,9 @@ public class PreloadRegionSDGRequest extends TeaModel {
     @NameInMap("DestinationRegionIds")
     public java.util.List<String> destinationRegionIds;
 
+    @NameInMap("DiskType")
+    public String diskType;
+
     /**
      * <p>An array that consists of queried namespaces.</p>
      */
@@ -48,6 +51,14 @@ public class PreloadRegionSDGRequest extends TeaModel {
     }
     public java.util.List<String> getDestinationRegionIds() {
         return this.destinationRegionIds;
+    }
+
+    public PreloadRegionSDGRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public PreloadRegionSDGRequest setNamespaces(java.util.List<String> namespaces) {

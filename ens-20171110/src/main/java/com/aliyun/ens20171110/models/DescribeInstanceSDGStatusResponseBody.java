@@ -98,6 +98,12 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         @NameInMap("CacheSize")
         public Integer cacheSize;
 
+        @NameInMap("DiskAccessProtocol")
+        public String diskAccessProtocol;
+
+        @NameInMap("DiskType")
+        public String diskType;
+
         /**
          * <p>The ID of the edge node.</p>
          * 
@@ -180,6 +186,22 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         }
         public Integer getCacheSize() {
             return this.cacheSize;
+        }
+
+        public DescribeInstanceSDGStatusResponseBodyDeploymentStatus setDiskAccessProtocol(String diskAccessProtocol) {
+            this.diskAccessProtocol = diskAccessProtocol;
+            return this;
+        }
+        public String getDiskAccessProtocol() {
+            return this.diskAccessProtocol;
+        }
+
+        public DescribeInstanceSDGStatusResponseBodyDeploymentStatus setDiskType(String diskType) {
+            this.diskType = diskType;
+            return this;
+        }
+        public String getDiskType() {
+            return this.diskType;
         }
 
         public DescribeInstanceSDGStatusResponseBodyDeploymentStatus setEnsRegionId(String ensRegionId) {

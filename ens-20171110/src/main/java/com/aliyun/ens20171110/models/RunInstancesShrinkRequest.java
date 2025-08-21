@@ -86,6 +86,9 @@ public class RunInstancesShrinkRequest extends TeaModel {
     @NameInMap("DataDisk")
     public String dataDiskShrink;
 
+    @NameInMap("DeletionProtection")
+    public Boolean deletionProtection;
+
     /**
      * <p>The ID of the node.</p>
      * <blockquote>
@@ -501,6 +504,14 @@ public class RunInstancesShrinkRequest extends TeaModel {
     }
     public String getDataDiskShrink() {
         return this.dataDiskShrink;
+    }
+
+    public RunInstancesShrinkRequest setDeletionProtection(Boolean deletionProtection) {
+        this.deletionProtection = deletionProtection;
+        return this;
+    }
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     public RunInstancesShrinkRequest setEnsRegionId(String ensRegionId) {

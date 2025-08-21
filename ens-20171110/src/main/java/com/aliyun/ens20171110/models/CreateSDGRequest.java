@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class CreateSDGRequest extends TeaModel {
+    @NameInMap("BillingCycle")
+    public String billingCycle;
+
     /**
      * <p>The description of the SDG.</p>
      * <blockquote>
@@ -15,6 +18,9 @@ public class CreateSDGRequest extends TeaModel {
      */
     @NameInMap("Description")
     public String description;
+
+    @NameInMap("DiskType")
+    public String diskType;
 
     /**
      * <p>The ID of the SDG from which you want to create an SDG.</p>
@@ -69,12 +75,28 @@ public class CreateSDGRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public CreateSDGRequest setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
+        return this;
+    }
+    public String getBillingCycle() {
+        return this.billingCycle;
+    }
+
     public CreateSDGRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateSDGRequest setDiskType(String diskType) {
+        this.diskType = diskType;
+        return this;
+    }
+    public String getDiskType() {
+        return this.diskType;
     }
 
     public CreateSDGRequest setFromSDGId(String fromSDGId) {
