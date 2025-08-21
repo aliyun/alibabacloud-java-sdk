@@ -10,11 +10,17 @@ public class WafSiteSettings extends TeaModel {
     @NameInMap("AddSecurityHeaders")
     public WafSiteSettingsAddSecurityHeaders addSecurityHeaders;
 
+    @NameInMap("BandwidthAbuseProtection")
+    public WafSiteSettingsBandwidthAbuseProtection bandwidthAbuseProtection;
+
     @NameInMap("BotManagement")
     public WafSiteSettingsBotManagement botManagement;
 
     @NameInMap("ClientIpIdentifier")
     public WafSiteSettingsClientIpIdentifier clientIpIdentifier;
+
+    @NameInMap("DisableSecurityModule")
+    public WafSiteSettingsDisableSecurityModule disableSecurityModule;
 
     @NameInMap("SecurityLevel")
     public WafSiteSettingsSecurityLevel securityLevel;
@@ -40,6 +46,14 @@ public class WafSiteSettings extends TeaModel {
         return this.addSecurityHeaders;
     }
 
+    public WafSiteSettings setBandwidthAbuseProtection(WafSiteSettingsBandwidthAbuseProtection bandwidthAbuseProtection) {
+        this.bandwidthAbuseProtection = bandwidthAbuseProtection;
+        return this;
+    }
+    public WafSiteSettingsBandwidthAbuseProtection getBandwidthAbuseProtection() {
+        return this.bandwidthAbuseProtection;
+    }
+
     public WafSiteSettings setBotManagement(WafSiteSettingsBotManagement botManagement) {
         this.botManagement = botManagement;
         return this;
@@ -54,6 +68,14 @@ public class WafSiteSettings extends TeaModel {
     }
     public WafSiteSettingsClientIpIdentifier getClientIpIdentifier() {
         return this.clientIpIdentifier;
+    }
+
+    public WafSiteSettings setDisableSecurityModule(WafSiteSettingsDisableSecurityModule disableSecurityModule) {
+        this.disableSecurityModule = disableSecurityModule;
+        return this;
+    }
+    public WafSiteSettingsDisableSecurityModule getDisableSecurityModule() {
+        return this.disableSecurityModule;
     }
 
     public WafSiteSettings setSecurityLevel(WafSiteSettingsSecurityLevel securityLevel) {
@@ -98,6 +120,47 @@ public class WafSiteSettings extends TeaModel {
         }
         public Boolean getEnable() {
             return this.enable;
+        }
+
+    }
+
+    public static class WafSiteSettingsBandwidthAbuseProtection extends TeaModel {
+        @NameInMap("Action")
+        public String action;
+
+        @NameInMap("Id")
+        public Long id;
+
+        @NameInMap("Status")
+        public String status;
+
+        public static WafSiteSettingsBandwidthAbuseProtection build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsBandwidthAbuseProtection self = new WafSiteSettingsBandwidthAbuseProtection();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsBandwidthAbuseProtection setAction(String action) {
+            this.action = action;
+            return this;
+        }
+        public String getAction() {
+            return this.action;
+        }
+
+        public WafSiteSettingsBandwidthAbuseProtection setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public WafSiteSettingsBandwidthAbuseProtection setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }
@@ -319,6 +382,25 @@ public class WafSiteSettings extends TeaModel {
         }
         public String getMode() {
             return this.mode;
+        }
+
+    }
+
+    public static class WafSiteSettingsDisableSecurityModule extends TeaModel {
+        @NameInMap("Status")
+        public String status;
+
+        public static WafSiteSettingsDisableSecurityModule build(java.util.Map<String, ?> map) throws Exception {
+            WafSiteSettingsDisableSecurityModule self = new WafSiteSettingsDisableSecurityModule();
+            return TeaModel.build(map, self);
+        }
+
+        public WafSiteSettingsDisableSecurityModule setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
     }

@@ -286,6 +286,9 @@ public class ListRecordsResponseBody extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         /**
          * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records).</p>
          * 
@@ -415,6 +418,14 @@ public class ListRecordsResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public ListRecordsResponseBodyRecordsData setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public ListRecordsResponseBodyRecordsData setType(Integer type) {

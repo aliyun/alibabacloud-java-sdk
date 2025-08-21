@@ -235,6 +235,9 @@ public class GetRecordResponseBody extends TeaModel {
         @NameInMap("Tag")
         public String tag;
 
+        @NameInMap("Tags")
+        public java.util.Map<String, ?> tags;
+
         /**
          * <p>The certificate type of the record (in CERT records), or the public key type (in SSHFP records). This parameter is required when you add CERT or SSHFP records.</p>
          * 
@@ -364,6 +367,14 @@ public class GetRecordResponseBody extends TeaModel {
         }
         public String getTag() {
             return this.tag;
+        }
+
+        public GetRecordResponseBodyRecordModelData setTags(java.util.Map<String, ?> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.Map<String, ?> getTags() {
+            return this.tags;
         }
 
         public GetRecordResponseBodyRecordModelData setType(Integer type) {
