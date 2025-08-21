@@ -1061,6 +1061,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.documentControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.documentControl, "DocumentControl", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.imageControl)) {
+            request.imageControlShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.imageControl, "ImageControl", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.csvControlShrink)) {
             query.put("CsvControl", request.csvControlShrink);
@@ -1077,6 +1081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filename)) {
             body.put("Filename", request.filename);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.imageControlShrink)) {
+            body.put("ImageControl", request.imageControlShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.imageEmbedJpegQuality)) {

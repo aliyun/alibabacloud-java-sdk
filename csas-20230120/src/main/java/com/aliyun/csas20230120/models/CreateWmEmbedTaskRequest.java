@@ -28,6 +28,9 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    @NameInMap("ImageControl")
+    public CreateWmEmbedTaskRequestImageControl imageControl;
+
     /**
      * <strong>example:</strong>
      * <p>95</p>
@@ -121,6 +124,14 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public CreateWmEmbedTaskRequest setImageControl(CreateWmEmbedTaskRequestImageControl imageControl) {
+        this.imageControl = imageControl;
+        return this;
+    }
+    public CreateWmEmbedTaskRequestImageControl getImageControl() {
+        return this.imageControl;
     }
 
     public CreateWmEmbedTaskRequest setImageEmbedJpegQuality(Long imageEmbedJpegQuality) {
@@ -558,6 +569,483 @@ public class CreateWmEmbedTaskRequest extends TeaModel {
         }
         public Boolean getInvisibleAntiTextCopy() {
             return this.invisibleAntiTextCopy;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin extends TeaModel {
+        @NameInMap("Bottom")
+        public Float bottom;
+
+        @NameInMap("Left")
+        public Float left;
+
+        @NameInMap("Right")
+        public Float right;
+
+        @NameInMap("Top")
+        public Float top;
+
+        public static CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin self = new CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin setBottom(Float bottom) {
+            this.bottom = bottom;
+            return this;
+        }
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin setLeft(Float left) {
+            this.left = left;
+            return this;
+        }
+        public Float getLeft() {
+            return this.left;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin setRight(Float right) {
+            this.right = right;
+            return this;
+        }
+        public Float getRight() {
+            return this.right;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin setTop(Float top) {
+            this.top = top;
+            return this;
+        }
+        public Float getTop() {
+            return this.top;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestImageControlLogoVisibleControl extends TeaModel {
+        @NameInMap("Angle")
+        public Long angle;
+
+        @NameInMap("LogoBase64")
+        public String logoBase64;
+
+        @NameInMap("Margin")
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin margin;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("Opacity")
+        public Integer opacity;
+
+        @NameInMap("PosAx")
+        public Float posAx;
+
+        @NameInMap("PosAy")
+        public Float posAy;
+
+        @NameInMap("PosX")
+        public Long posX;
+
+        @NameInMap("PosY")
+        public Long posY;
+
+        @NameInMap("SpaceX")
+        public Long spaceX;
+
+        @NameInMap("SpaceY")
+        public Long spaceY;
+
+        @NameInMap("Visible")
+        public Boolean visible;
+
+        public static CreateWmEmbedTaskRequestImageControlLogoVisibleControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestImageControlLogoVisibleControl self = new CreateWmEmbedTaskRequestImageControlLogoVisibleControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setAngle(Long angle) {
+            this.angle = angle;
+            return this;
+        }
+        public Long getAngle() {
+            return this.angle;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setLogoBase64(String logoBase64) {
+            this.logoBase64 = logoBase64;
+            return this;
+        }
+        public String getLogoBase64() {
+            return this.logoBase64;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setMargin(CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin margin) {
+            this.margin = margin;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControlMargin getMargin() {
+            return this.margin;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setOpacity(Integer opacity) {
+            this.opacity = opacity;
+            return this;
+        }
+        public Integer getOpacity() {
+            return this.opacity;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setPosAx(Float posAx) {
+            this.posAx = posAx;
+            return this;
+        }
+        public Float getPosAx() {
+            return this.posAx;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setPosAy(Float posAy) {
+            this.posAy = posAy;
+            return this;
+        }
+        public Float getPosAy() {
+            return this.posAy;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setPosX(Long posX) {
+            this.posX = posX;
+            return this;
+        }
+        public Long getPosX() {
+            return this.posX;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setPosY(Long posY) {
+            this.posY = posY;
+            return this;
+        }
+        public Long getPosY() {
+            return this.posY;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setSpaceX(Long spaceX) {
+            this.spaceX = spaceX;
+            return this;
+        }
+        public Long getSpaceX() {
+            return this.spaceX;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setSpaceY(Long spaceY) {
+            this.spaceY = spaceY;
+            return this;
+        }
+        public Long getSpaceY() {
+            return this.spaceY;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl setVisible(Boolean visible) {
+            this.visible = visible;
+            return this;
+        }
+        public Boolean getVisible() {
+            return this.visible;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestImageControlMetadataControl extends TeaModel {
+        @NameInMap("Enable")
+        public Boolean enable;
+
+        @NameInMap("XmpKvBase64")
+        public String xmpKvBase64;
+
+        public static CreateWmEmbedTaskRequestImageControlMetadataControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestImageControlMetadataControl self = new CreateWmEmbedTaskRequestImageControlMetadataControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestImageControlMetadataControl setEnable(Boolean enable) {
+            this.enable = enable;
+            return this;
+        }
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlMetadataControl setXmpKvBase64(String xmpKvBase64) {
+            this.xmpKvBase64 = xmpKvBase64;
+            return this;
+        }
+        public String getXmpKvBase64() {
+            return this.xmpKvBase64;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin extends TeaModel {
+        @NameInMap("Bottom")
+        public Float bottom;
+
+        @NameInMap("Left")
+        public Float left;
+
+        @NameInMap("Right")
+        public Float right;
+
+        @NameInMap("Top")
+        public Float top;
+
+        public static CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin self = new CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin setBottom(Float bottom) {
+            this.bottom = bottom;
+            return this;
+        }
+        public Float getBottom() {
+            return this.bottom;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin setLeft(Float left) {
+            this.left = left;
+            return this;
+        }
+        public Float getLeft() {
+            return this.left;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin setRight(Float right) {
+            this.right = right;
+            return this;
+        }
+        public Float getRight() {
+            return this.right;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin setTop(Float top) {
+            this.top = top;
+            return this;
+        }
+        public Float getTop() {
+            return this.top;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestImageControlTextVisibleControl extends TeaModel {
+        @NameInMap("Angle")
+        public Long angle;
+
+        @NameInMap("FontColor")
+        public String fontColor;
+
+        @NameInMap("FontSize")
+        public Long fontSize;
+
+        @NameInMap("Margin")
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin margin;
+
+        @NameInMap("Mode")
+        public String mode;
+
+        @NameInMap("Opacity")
+        public Integer opacity;
+
+        @NameInMap("PosAx")
+        public Float posAx;
+
+        @NameInMap("PosAy")
+        public Float posAy;
+
+        @NameInMap("PosX")
+        public Long posX;
+
+        @NameInMap("PosY")
+        public Long posY;
+
+        @NameInMap("SpaceX")
+        public Long spaceX;
+
+        @NameInMap("SpaceY")
+        public Long spaceY;
+
+        @NameInMap("Visible")
+        public Boolean visible;
+
+        @NameInMap("VisibleText")
+        public String visibleText;
+
+        public static CreateWmEmbedTaskRequestImageControlTextVisibleControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestImageControlTextVisibleControl self = new CreateWmEmbedTaskRequestImageControlTextVisibleControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setAngle(Long angle) {
+            this.angle = angle;
+            return this;
+        }
+        public Long getAngle() {
+            return this.angle;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setFontColor(String fontColor) {
+            this.fontColor = fontColor;
+            return this;
+        }
+        public String getFontColor() {
+            return this.fontColor;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setFontSize(Long fontSize) {
+            this.fontSize = fontSize;
+            return this;
+        }
+        public Long getFontSize() {
+            return this.fontSize;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setMargin(CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin margin) {
+            this.margin = margin;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControlMargin getMargin() {
+            return this.margin;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setOpacity(Integer opacity) {
+            this.opacity = opacity;
+            return this;
+        }
+        public Integer getOpacity() {
+            return this.opacity;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setPosAx(Float posAx) {
+            this.posAx = posAx;
+            return this;
+        }
+        public Float getPosAx() {
+            return this.posAx;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setPosAy(Float posAy) {
+            this.posAy = posAy;
+            return this;
+        }
+        public Float getPosAy() {
+            return this.posAy;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setPosX(Long posX) {
+            this.posX = posX;
+            return this;
+        }
+        public Long getPosX() {
+            return this.posX;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setPosY(Long posY) {
+            this.posY = posY;
+            return this;
+        }
+        public Long getPosY() {
+            return this.posY;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setSpaceX(Long spaceX) {
+            this.spaceX = spaceX;
+            return this;
+        }
+        public Long getSpaceX() {
+            return this.spaceX;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setSpaceY(Long spaceY) {
+            this.spaceY = spaceY;
+            return this;
+        }
+        public Long getSpaceY() {
+            return this.spaceY;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setVisible(Boolean visible) {
+            this.visible = visible;
+            return this;
+        }
+        public Boolean getVisible() {
+            return this.visible;
+        }
+
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl setVisibleText(String visibleText) {
+            this.visibleText = visibleText;
+            return this;
+        }
+        public String getVisibleText() {
+            return this.visibleText;
+        }
+
+    }
+
+    public static class CreateWmEmbedTaskRequestImageControl extends TeaModel {
+        @NameInMap("LogoVisibleControl")
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl logoVisibleControl;
+
+        @NameInMap("MetadataControl")
+        public CreateWmEmbedTaskRequestImageControlMetadataControl metadataControl;
+
+        @NameInMap("TextVisibleControl")
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl textVisibleControl;
+
+        public static CreateWmEmbedTaskRequestImageControl build(java.util.Map<String, ?> map) throws Exception {
+            CreateWmEmbedTaskRequestImageControl self = new CreateWmEmbedTaskRequestImageControl();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateWmEmbedTaskRequestImageControl setLogoVisibleControl(CreateWmEmbedTaskRequestImageControlLogoVisibleControl logoVisibleControl) {
+            this.logoVisibleControl = logoVisibleControl;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestImageControlLogoVisibleControl getLogoVisibleControl() {
+            return this.logoVisibleControl;
+        }
+
+        public CreateWmEmbedTaskRequestImageControl setMetadataControl(CreateWmEmbedTaskRequestImageControlMetadataControl metadataControl) {
+            this.metadataControl = metadataControl;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestImageControlMetadataControl getMetadataControl() {
+            return this.metadataControl;
+        }
+
+        public CreateWmEmbedTaskRequestImageControl setTextVisibleControl(CreateWmEmbedTaskRequestImageControlTextVisibleControl textVisibleControl) {
+            this.textVisibleControl = textVisibleControl;
+            return this;
+        }
+        public CreateWmEmbedTaskRequestImageControlTextVisibleControl getTextVisibleControl() {
+            return this.textVisibleControl;
         }
 
     }

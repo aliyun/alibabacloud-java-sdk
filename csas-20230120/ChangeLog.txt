@@ -1,3 +1,7 @@
+2025-08-21 Version: 1.14.7
+- Update API CreateWmEmbedTask: add request parameters ImageControl.
+
+
 2025-08-20 Version: 1.14.6
 - Update API GetApprovalProcess: add response parameters Body.Process.ApprovalType.
 - Update API GetApprovalProcess: add response parameters Body.Process.EventLabel.

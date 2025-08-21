@@ -28,6 +28,9 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     @NameInMap("Filename")
     public String filename;
 
+    @NameInMap("ImageControl")
+    public String imageControlShrink;
+
     /**
      * <strong>example:</strong>
      * <p>95</p>
@@ -121,6 +124,14 @@ public class CreateWmEmbedTaskShrinkRequest extends TeaModel {
     }
     public String getFilename() {
         return this.filename;
+    }
+
+    public CreateWmEmbedTaskShrinkRequest setImageControlShrink(String imageControlShrink) {
+        this.imageControlShrink = imageControlShrink;
+        return this;
+    }
+    public String getImageControlShrink() {
+        return this.imageControlShrink;
     }
 
     public CreateWmEmbedTaskShrinkRequest setImageEmbedJpegQuality(Long imageEmbedJpegQuality) {
