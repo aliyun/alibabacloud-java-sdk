@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("elasticsearch", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -347,7 +346,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "json"),
             new TeaPair("bodyType", "json")
         ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new CapacityPlanResponse());
+        return TeaModel.toModel(this.doROARequest(params.action, params.version, params.protocol, params.method, params.authType, params.pathname, params.bodyType, req, runtime), new CapacityPlanResponse());
     }
 
     /**
@@ -2360,6 +2359,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看备份设置</p>
+     * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSnapshotSettingResponse
@@ -2383,6 +2385,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查看备份设置</p>
      * @return DescribeSnapshotSettingResponse
      */
     public DescribeSnapshotSettingResponse describeSnapshotSetting(String InstanceId) throws Exception {
@@ -2793,6 +2797,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>GetEmonAlarmRecordStatisticsDistribute</p>
+     * 
+     * @param request GetEmonAlarmRecordStatisticsDistributeRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetEmonAlarmRecordStatisticsDistributeResponse
+     */
+    public GetEmonAlarmRecordStatisticsDistributeResponse getEmonAlarmRecordStatisticsDistributeWithOptions(GetEmonAlarmRecordStatisticsDistributeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            query.put("body", request.body);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            query.put("groupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeEnd)) {
+            query.put("timeEnd", request.timeEnd);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeStart)) {
+            query.put("timeStart", request.timeStart);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetEmonAlarmRecordStatisticsDistribute"),
+            new TeaPair("version", "2017-06-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/openapi/emon/alarm-record-statistics/distribute"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetEmonAlarmRecordStatisticsDistributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>GetEmonAlarmRecordStatisticsDistribute</p>
+     * 
+     * @param request GetEmonAlarmRecordStatisticsDistributeRequest
+     * @return GetEmonAlarmRecordStatisticsDistributeResponse
+     */
+    public GetEmonAlarmRecordStatisticsDistributeResponse getEmonAlarmRecordStatisticsDistribute(GetEmonAlarmRecordStatisticsDistributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getEmonAlarmRecordStatisticsDistributeWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取高级监控报警自定义Grafana监控报警项</p>
      * 
      * @param request GetEmonGrafanaAlertsRequest
@@ -2802,9 +2865,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetEmonGrafanaAlertsResponse getEmonGrafanaAlertsWithOptions(String ProjectId, GetEmonGrafanaAlertsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            query.put("body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", request.body)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetEmonGrafanaAlerts"),
@@ -2844,9 +2912,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetEmonGrafanaDashboardsResponse getEmonGrafanaDashboardsWithOptions(String ProjectId, GetEmonGrafanaDashboardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            query.put("body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", request.body)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetEmonGrafanaDashboards"),
@@ -2876,6 +2949,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetEmonMonitorData</p>
+     * 
      * @param request GetEmonMonitorDataRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -2883,9 +2959,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public GetEmonMonitorDataResponse getEmonMonitorDataWithOptions(String ProjectId, GetEmonMonitorDataRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            query.put("body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", request.body)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "GetEmonMonitorData"),
@@ -2902,6 +2983,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>GetEmonMonitorData</p>
+     * 
      * @param request GetEmonMonitorDataRequest
      * @return GetEmonMonitorDataResponse
      */
@@ -4085,6 +4169,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询数据流</p>
+     * 
      * @param request ListDataStreamsRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4120,6 +4207,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询数据流</p>
+     * 
      * @param request ListDataStreamsRequest
      * @return ListDataStreamsResponse
      */
@@ -4607,6 +4697,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
      * 
+     * <b>summary</b> : 
+     * <p>查询ecs实例</p>
+     * 
      * @param request ListEcsInstancesRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4660,6 +4753,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p><em>Important</em>* To call this operation, you must create the Aliyun Elasticsearch AccessingOOSRole and the system service role AliyunOOSAccessingECS 4ESRole to Elasticsearch the service account to obtain the ECS access permissions of the primary account. For more information, see <a href="https://help.aliyun.com/document_detail/146446.html">Collect ECS service logs</a>.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>查询ecs实例</p>
      * 
      * @param request ListEcsInstancesRequest
      * @return ListEcsInstancesResponse
@@ -5414,6 +5510,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListPipeline</p>
+     * 
      * @param request ListPipelineRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5453,6 +5552,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>ListPipeline</p>
+     * 
      * @param request ListPipelineRequest
      * @return ListPipelineResponse
      */
@@ -6423,6 +6525,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>PostEmonTryAlarmRule</p>
+     * 
      * @param request PostEmonTryAlarmRuleRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -6430,9 +6535,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public PostEmonTryAlarmRuleResponse postEmonTryAlarmRuleWithOptions(String ProjectId, String AlarmGroupId, PostEmonTryAlarmRuleRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            query.put("body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("body", request.body)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "PostEmonTryAlarmRule"),
@@ -6449,6 +6559,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>PostEmonTryAlarmRule</p>
+     * 
      * @param request PostEmonTryAlarmRuleRequest
      * @return PostEmonTryAlarmRuleResponse
      */
@@ -7675,10 +7788,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("TagKeys", request.tagKeys);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.body)) {
+            query.put("body", request.body);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", request.body)
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "UntagResources"),
