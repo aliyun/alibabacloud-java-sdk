@@ -14,6 +14,9 @@ public class DescribeAttackAnalysisMaxQpsRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
+    @NameInMap("Ip")
+    public String ip;
+
     /**
      * <p>The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
      * <p>This parameter is required.</p>
@@ -35,6 +38,14 @@ public class DescribeAttackAnalysisMaxQpsRequest extends TeaModel {
     }
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    public DescribeAttackAnalysisMaxQpsRequest setIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    public String getIp() {
+        return this.ip;
     }
 
     public DescribeAttackAnalysisMaxQpsRequest setStartTime(Long startTime) {

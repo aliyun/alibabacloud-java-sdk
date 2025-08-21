@@ -31,6 +31,9 @@ public class DescribeDDosAllEventListRequest extends TeaModel {
     @NameInMap("EventType")
     public String eventType;
 
+    @NameInMap("Ip")
+    public String ip;
+
     /**
      * <p>The number of the page to return.</p>
      * <p>This parameter is required.</p>
@@ -80,6 +83,14 @@ public class DescribeDDosAllEventListRequest extends TeaModel {
     }
     public String getEventType() {
         return this.eventType;
+    }
+
+    public DescribeDDosAllEventListRequest setIp(String ip) {
+        this.ip = ip;
+        return this;
+    }
+    public String getIp() {
+        return this.ip;
     }
 
     public DescribeDDosAllEventListRequest setPageNumber(Integer pageNumber) {
