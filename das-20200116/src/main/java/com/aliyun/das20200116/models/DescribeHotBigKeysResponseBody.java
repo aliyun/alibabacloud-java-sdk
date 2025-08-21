@@ -207,6 +207,121 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey extends TeaModel {
+        @NameInMap("Db")
+        public Integer db;
+
+        @NameInMap("Hot")
+        public String hot;
+
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("KeyType")
+        public String keyType;
+
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("Size")
+        public Long size;
+
+        @NameInMap("inBytes")
+        public Long inBytes;
+
+        @NameInMap("outBytes")
+        public Long outBytes;
+
+        public static DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey self = new DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setDb(Integer db) {
+            this.db = db;
+            return this;
+        }
+        public Integer getDb() {
+            return this.db;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setHot(String hot) {
+            this.hot = hot;
+            return this;
+        }
+        public String getHot() {
+            return this.hot;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setKeyType(String keyType) {
+            this.keyType = keyType;
+            return this;
+        }
+        public String getKeyType() {
+            return this.keyType;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setInBytes(Long inBytes) {
+            this.inBytes = inBytes;
+            return this;
+        }
+        public Long getInBytes() {
+            return this.inBytes;
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey setOutBytes(Long outBytes) {
+            this.outBytes = outBytes;
+            return this;
+        }
+        public Long getOutBytes() {
+            return this.outBytes;
+        }
+
+    }
+
+    public static class DescribeHotBigKeysResponseBodyDataHighTrafficKeys extends TeaModel {
+        @NameInMap("HighTrafficKey")
+        public java.util.List<DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey> highTrafficKey;
+
+        public static DescribeHotBigKeysResponseBodyDataHighTrafficKeys build(java.util.Map<String, ?> map) throws Exception {
+            DescribeHotBigKeysResponseBodyDataHighTrafficKeys self = new DescribeHotBigKeysResponseBodyDataHighTrafficKeys();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeys setHighTrafficKey(java.util.List<DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey> highTrafficKey) {
+            this.highTrafficKey = highTrafficKey;
+            return this;
+        }
+        public java.util.List<DescribeHotBigKeysResponseBodyDataHighTrafficKeysHighTrafficKey> getHighTrafficKey() {
+            return this.highTrafficKey;
+        }
+
+    }
+
     public static class DescribeHotBigKeysResponseBodyDataHotKeysHotKey extends TeaModel {
         /**
          * <p>The database in which the key is stored.</p>
@@ -262,6 +377,9 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("Size")
+        public Long size;
+
         public static DescribeHotBigKeysResponseBodyDataHotKeysHotKey build(java.util.Map<String, ?> map) throws Exception {
             DescribeHotBigKeysResponseBodyDataHotKeysHotKey self = new DescribeHotBigKeysResponseBodyDataHotKeysHotKey();
             return TeaModel.build(map, self);
@@ -315,6 +433,14 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
             return this.nodeId;
         }
 
+        public DescribeHotBigKeysResponseBodyDataHotKeysHotKey setSize(Long size) {
+            this.size = size;
+            return this;
+        }
+        public Long getSize() {
+            return this.size;
+        }
+
     }
 
     public static class DescribeHotBigKeysResponseBodyDataHotKeys extends TeaModel {
@@ -352,6 +478,12 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         @NameInMap("BigKeys")
         public DescribeHotBigKeysResponseBodyDataBigKeys bigKeys;
 
+        @NameInMap("HighTrafficKeyMsg")
+        public String highTrafficKeyMsg;
+
+        @NameInMap("HighTrafficKeys")
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeys highTrafficKeys;
+
         /**
          * <p>The reason why the hot key failed to be queried.</p>
          * 
@@ -386,6 +518,22 @@ public class DescribeHotBigKeysResponseBody extends TeaModel {
         }
         public DescribeHotBigKeysResponseBodyDataBigKeys getBigKeys() {
             return this.bigKeys;
+        }
+
+        public DescribeHotBigKeysResponseBodyData setHighTrafficKeyMsg(String highTrafficKeyMsg) {
+            this.highTrafficKeyMsg = highTrafficKeyMsg;
+            return this;
+        }
+        public String getHighTrafficKeyMsg() {
+            return this.highTrafficKeyMsg;
+        }
+
+        public DescribeHotBigKeysResponseBodyData setHighTrafficKeys(DescribeHotBigKeysResponseBodyDataHighTrafficKeys highTrafficKeys) {
+            this.highTrafficKeys = highTrafficKeys;
+            return this;
+        }
+        public DescribeHotBigKeysResponseBodyDataHighTrafficKeys getHighTrafficKeys() {
+            return this.highTrafficKeys;
         }
 
         public DescribeHotBigKeysResponseBodyData setHotKeyMsg(String hotKeyMsg) {

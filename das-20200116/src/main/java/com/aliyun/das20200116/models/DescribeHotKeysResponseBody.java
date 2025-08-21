@@ -99,6 +99,9 @@ public class DescribeHotKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeHotKeysResponseBodyDataHotKey extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         /**
          * <p>The database in which the key is stored.</p>
          * 
@@ -116,6 +119,9 @@ public class DescribeHotKeysResponseBody extends TeaModel {
          */
         @NameInMap("Hot")
         public String hot;
+
+        @NameInMap("InBytes")
+        public Long inBytes;
 
         /**
          * <p>The name of the key.</p>
@@ -135,6 +141,12 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         @NameInMap("KeyType")
         public String keyType;
 
+        @NameInMap("NodeId")
+        public String nodeId;
+
+        @NameInMap("OutBytes")
+        public Long outBytes;
+
         /**
          * <p>The number of elements in the key.</p>
          * 
@@ -147,6 +159,14 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         public static DescribeHotKeysResponseBodyDataHotKey build(java.util.Map<String, ?> map) throws Exception {
             DescribeHotKeysResponseBodyDataHotKey self = new DescribeHotKeysResponseBodyDataHotKey();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeHotKeysResponseBodyDataHotKey setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeHotKeysResponseBodyDataHotKey setDb(Integer db) {
@@ -165,6 +185,14 @@ public class DescribeHotKeysResponseBody extends TeaModel {
             return this.hot;
         }
 
+        public DescribeHotKeysResponseBodyDataHotKey setInBytes(Long inBytes) {
+            this.inBytes = inBytes;
+            return this;
+        }
+        public Long getInBytes() {
+            return this.inBytes;
+        }
+
         public DescribeHotKeysResponseBodyDataHotKey setKey(String key) {
             this.key = key;
             return this;
@@ -179,6 +207,22 @@ public class DescribeHotKeysResponseBody extends TeaModel {
         }
         public String getKeyType() {
             return this.keyType;
+        }
+
+        public DescribeHotKeysResponseBodyDataHotKey setNodeId(String nodeId) {
+            this.nodeId = nodeId;
+            return this;
+        }
+        public String getNodeId() {
+            return this.nodeId;
+        }
+
+        public DescribeHotKeysResponseBodyDataHotKey setOutBytes(Long outBytes) {
+            this.outBytes = outBytes;
+            return this;
+        }
+        public Long getOutBytes() {
+            return this.outBytes;
         }
 
         public DescribeHotKeysResponseBodyDataHotKey setSize(Long size) {

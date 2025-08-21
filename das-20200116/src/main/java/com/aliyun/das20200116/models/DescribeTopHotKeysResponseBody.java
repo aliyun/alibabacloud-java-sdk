@@ -96,6 +96,9 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
     }
 
     public static class DescribeTopHotKeysResponseBodyDataHotKey extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
         /**
          * <p>The database in which the key is stored.</p>
          * 
@@ -113,6 +116,9 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
          */
         @NameInMap("Hot")
         public String hot;
+
+        @NameInMap("InBytes")
+        public Long inBytes;
 
         /**
          * <p>The key.</p>
@@ -150,9 +156,20 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         @NameInMap("NodeId")
         public String nodeId;
 
+        @NameInMap("OutBytes")
+        public Long outBytes;
+
         public static DescribeTopHotKeysResponseBodyDataHotKey build(java.util.Map<String, ?> map) throws Exception {
             DescribeTopHotKeysResponseBodyDataHotKey self = new DescribeTopHotKeysResponseBodyDataHotKey();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTopHotKeysResponseBodyDataHotKey setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeTopHotKeysResponseBodyDataHotKey setDb(Integer db) {
@@ -169,6 +186,14 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
         public String getHot() {
             return this.hot;
+        }
+
+        public DescribeTopHotKeysResponseBodyDataHotKey setInBytes(Long inBytes) {
+            this.inBytes = inBytes;
+            return this;
+        }
+        public Long getInBytes() {
+            return this.inBytes;
         }
 
         public DescribeTopHotKeysResponseBodyDataHotKey setKey(String key) {
@@ -201,6 +226,14 @@ public class DescribeTopHotKeysResponseBody extends TeaModel {
         }
         public String getNodeId() {
             return this.nodeId;
+        }
+
+        public DescribeTopHotKeysResponseBodyDataHotKey setOutBytes(Long outBytes) {
+            this.outBytes = outBytes;
+            return this;
+        }
+        public Long getOutBytes() {
+            return this.outBytes;
         }
 
     }
