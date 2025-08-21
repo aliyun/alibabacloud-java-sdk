@@ -888,6 +888,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>播放列表创建走OAuth2授权</p>
+     * 
+     * @param tmpReq CreatePlayingListOAuth2Request
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePlayingListOAuth2Response
+     */
+    public CreatePlayingListOAuth2Response createPlayingListOAuth2WithOptions(CreatePlayingListOAuth2Request tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreatePlayingListOAuth2ShrinkRequest request = new CreatePlayingListOAuth2ShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.deviceInfo)) {
+            request.deviceInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.deviceInfo, "DeviceInfo", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.openCreatePlayingListRequest)) {
+            request.openCreatePlayingListRequestShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.openCreatePlayingListRequest, "OpenCreatePlayingListRequest", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deviceInfoShrink)) {
+            query.put("DeviceInfo", request.deviceInfoShrink);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.openCreatePlayingListRequestShrink)) {
+            body.put("OpenCreatePlayingListRequest", request.openCreatePlayingListRequestShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePlayingListOAuth2"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/CreatePlayingListOAuth2"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePlayingListOAuth2Response());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>播放列表创建走OAuth2授权</p>
+     * 
+     * @param request CreatePlayingListOAuth2Request
+     * @return CreatePlayingListOAuth2Response
+     */
+    public CreatePlayingListOAuth2Response createPlayingListOAuth2(CreatePlayingListOAuth2Request request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPlayingListOAuth2WithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建定时任务</p>
      * 
      * @param tmpReq CreateScheduleTaskRequest
@@ -5316,6 +5379,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         SetDeviceSettingHeaders headers = new SetDeviceSettingHeaders();
         return this.setDeviceSettingWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>三方即时信息数据变更事件推送</p>
+     * 
+     * @param request ThirdImmediateMsgPushRequest
+     * @param headers ThirdImmediateMsgPushHeaders
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ThirdImmediateMsgPushResponse
+     */
+    public ThirdImmediateMsgPushResponse thirdImmediateMsgPushWithOptions(ThirdImmediateMsgPushRequest request, ThirdImmediateMsgPushHeaders headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizType)) {
+            query.put("BizType", request.bizType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.changeDetail)) {
+            query.put("ChangeDetail", request.changeDetail);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.psgIds)) {
+            query.put("PsgIds", request.psgIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficChangeType)) {
+            query.put("TrafficChangeType", request.trafficChangeType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficChangeTypeDesc)) {
+            query.put("TrafficChangeTypeDesc", request.trafficChangeTypeDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficJourneyIds)) {
+            query.put("TrafficJourneyIds", request.trafficJourneyIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficSubOrderIds)) {
+            query.put("TrafficSubOrderIds", request.trafficSubOrderIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        java.util.Map<String, String> realHeaders = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(headers.commonHeaders)) {
+            realHeaders = headers.commonHeaders;
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.xAcsAligenieAccessToken)) {
+            realHeaders.put("x-acs-aligenie-access-token", com.aliyun.teautil.Common.toJSONString(headers.xAcsAligenieAccessToken));
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(headers.authorization)) {
+            realHeaders.put("Authorization", com.aliyun.teautil.Common.toJSONString(headers.authorization));
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", realHeaders),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ThirdImmediateMsgPush"),
+            new TeaPair("version", "ssp_1.0"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/v1.0/ssp/thirdImmediateMsgPush"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ThirdImmediateMsgPushResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>三方即时信息数据变更事件推送</p>
+     * 
+     * @param request ThirdImmediateMsgPushRequest
+     * @return ThirdImmediateMsgPushResponse
+     */
+    public ThirdImmediateMsgPushResponse thirdImmediateMsgPush(ThirdImmediateMsgPushRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        ThirdImmediateMsgPushHeaders headers = new ThirdImmediateMsgPushHeaders();
+        return this.thirdImmediateMsgPushWithOptions(request, headers, runtime);
     }
 
     /**
