@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.chatbot20220408.models;
+
+import com.aliyun.tea.*;
+
+public class TongyiChatDebugInfoResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public TongyiChatDebugInfoResponseBody body;
+
+    public static TongyiChatDebugInfoResponse build(java.util.Map<String, ?> map) throws Exception {
+        TongyiChatDebugInfoResponse self = new TongyiChatDebugInfoResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public TongyiChatDebugInfoResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public TongyiChatDebugInfoResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public TongyiChatDebugInfoResponse setBody(TongyiChatDebugInfoResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public TongyiChatDebugInfoResponseBody getBody() {
+        return this.body;
+    }
+
+}

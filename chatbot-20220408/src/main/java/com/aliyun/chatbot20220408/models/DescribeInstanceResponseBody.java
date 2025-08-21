@@ -171,6 +171,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     public static class DescribeInstanceResponseBodyCategories extends TeaModel {
+        @NameInMap("AbilityType")
+        public String abilityType;
+
         /**
          * <strong>example:</strong>
          * <p>30000066832</p>
@@ -195,6 +198,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         public static DescribeInstanceResponseBodyCategories build(java.util.Map<String, ?> map) throws Exception {
             DescribeInstanceResponseBodyCategories self = new DescribeInstanceResponseBodyCategories();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceResponseBodyCategories setAbilityType(String abilityType) {
+            this.abilityType = abilityType;
+            return this;
+        }
+        public String getAbilityType() {
+            return this.abilityType;
         }
 
         public DescribeInstanceResponseBodyCategories setCategoryId(Long categoryId) {

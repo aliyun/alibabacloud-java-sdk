@@ -2803,6 +2803,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public LinkInstanceCategoryResponse linkInstanceCategoryWithOptions(LinkInstanceCategoryRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.abilityType)) {
+            query.put("AbilityType", request.abilityType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
             query.put("AgentKey", request.agentKey);
         }
@@ -4080,6 +4084,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SearchFaqResponse searchFaq(SearchFaqRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.searchFaqWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>大模型问答调试信息</p>
+     * 
+     * @param request TongyiChatDebugInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TongyiChatDebugInfoResponse
+     */
+    public TongyiChatDebugInfoResponse tongyiChatDebugInfoWithOptions(TongyiChatDebugInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentKey)) {
+            query.put("AgentKey", request.agentKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.messageId)) {
+            query.put("MessageId", request.messageId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TongyiChatDebugInfo"),
+            new TeaPair("version", "2022-04-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TongyiChatDebugInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>大模型问答调试信息</p>
+     * 
+     * @param request TongyiChatDebugInfoRequest
+     * @return TongyiChatDebugInfoResponse
+     */
+    public TongyiChatDebugInfoResponse tongyiChatDebugInfo(TongyiChatDebugInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tongyiChatDebugInfoWithOptions(request, runtime);
     }
 
     /**

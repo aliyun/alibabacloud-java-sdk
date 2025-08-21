@@ -6,6 +6,13 @@ import com.aliyun.tea.*;
 public class LinkInstanceCategoryRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>FAQ,MRC</p>
+     */
+    @NameInMap("AbilityType")
+    public String abilityType;
+
+    /**
+     * <strong>example:</strong>
      * <p>ac627989eb4f8a98ed05fd098bbae5_p_beebot_public</p>
      */
     @NameInMap("AgentKey")
@@ -28,6 +35,14 @@ public class LinkInstanceCategoryRequest extends TeaModel {
     public static LinkInstanceCategoryRequest build(java.util.Map<String, ?> map) throws Exception {
         LinkInstanceCategoryRequest self = new LinkInstanceCategoryRequest();
         return TeaModel.build(map, self);
+    }
+
+    public LinkInstanceCategoryRequest setAbilityType(String abilityType) {
+        this.abilityType = abilityType;
+        return this;
+    }
+    public String getAbilityType() {
+        return this.abilityType;
     }
 
     public LinkInstanceCategoryRequest setAgentKey(String agentKey) {
