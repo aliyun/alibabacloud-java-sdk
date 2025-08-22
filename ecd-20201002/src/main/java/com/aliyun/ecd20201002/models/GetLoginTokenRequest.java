@@ -26,6 +26,9 @@ public class GetLoginTokenRequest extends TeaModel {
     @NameInMap("ClientId")
     public String clientId;
 
+    @NameInMap("ClientName")
+    public String clientName;
+
     /**
      * <p>The operating system (OS) of the device that runs an Alibaba Cloud Workspace client.</p>
      * 
@@ -229,6 +232,14 @@ public class GetLoginTokenRequest extends TeaModel {
     }
     public String getClientId() {
         return this.clientId;
+    }
+
+    public GetLoginTokenRequest setClientName(String clientName) {
+        this.clientName = clientName;
+        return this;
+    }
+    public String getClientName() {
+        return this.clientName;
     }
 
     public GetLoginTokenRequest setClientOS(String clientOS) {
