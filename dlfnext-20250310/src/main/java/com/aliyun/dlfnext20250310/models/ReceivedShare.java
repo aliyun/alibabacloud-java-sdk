@@ -16,6 +16,9 @@ public class ReceivedShare extends TeaModel {
     @NameInMap("createdBy")
     public String createdBy;
 
+    @NameInMap("enableWrite")
+    public Boolean enableWrite;
+
     @NameInMap("owner")
     public String owner;
 
@@ -69,6 +72,14 @@ public class ReceivedShare extends TeaModel {
     }
     public String getCreatedBy() {
         return this.createdBy;
+    }
+
+    public ReceivedShare setEnableWrite(Boolean enableWrite) {
+        this.enableWrite = enableWrite;
+        return this;
+    }
+    public Boolean getEnableWrite() {
+        return this.enableWrite;
     }
 
     public ReceivedShare setOwner(String owner) {

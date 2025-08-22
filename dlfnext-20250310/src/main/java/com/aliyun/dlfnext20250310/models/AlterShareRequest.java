@@ -11,6 +11,9 @@ public class AlterShareRequest extends TeaModel {
     @NameInMap("comment")
     public String comment;
 
+    @NameInMap("enableWrite")
+    public Boolean enableWrite;
+
     /**
      * <strong>example:</strong>
      * <p>share_name</p>
@@ -29,6 +32,14 @@ public class AlterShareRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public AlterShareRequest setEnableWrite(Boolean enableWrite) {
+        this.enableWrite = enableWrite;
+        return this;
+    }
+    public Boolean getEnableWrite() {
+        return this.enableWrite;
     }
 
     public AlterShareRequest setShareName(String shareName) {

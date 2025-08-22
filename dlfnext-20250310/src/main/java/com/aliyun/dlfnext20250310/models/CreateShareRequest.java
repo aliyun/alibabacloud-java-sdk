@@ -11,6 +11,9 @@ public class CreateShareRequest extends TeaModel {
     @NameInMap("comment")
     public String comment;
 
+    @NameInMap("enableWrite")
+    public Boolean enableWrite;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -31,6 +34,14 @@ public class CreateShareRequest extends TeaModel {
     }
     public String getComment() {
         return this.comment;
+    }
+
+    public CreateShareRequest setEnableWrite(Boolean enableWrite) {
+        this.enableWrite = enableWrite;
+        return this;
+    }
+    public Boolean getEnableWrite() {
+        return this.enableWrite;
     }
 
     public CreateShareRequest setShareName(String shareName) {
