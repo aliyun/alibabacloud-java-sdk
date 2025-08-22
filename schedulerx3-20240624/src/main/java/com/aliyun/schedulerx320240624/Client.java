@@ -45,6 +45,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AppName", request.appName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appType)) {
+            body.put("AppType", request.appType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
             body.put("ClusterId", request.clusterId);
         }
@@ -277,6 +281,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
             body.put("Timezone", request.timezone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            body.put("Weight", request.weight);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2205,6 +2213,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.timezone)) {
             body.put("Timezone", request.timezone);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.weight)) {
+            body.put("Weight", request.weight);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

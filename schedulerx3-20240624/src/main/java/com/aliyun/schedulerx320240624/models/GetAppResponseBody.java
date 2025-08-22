@@ -104,6 +104,13 @@ public class GetAppResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AppType")
+        public Integer appType;
+
+        /**
+         * <strong>example:</strong>
          * <p>18582193685027xx</p>
          */
         @NameInMap("Creator")
@@ -190,6 +197,14 @@ public class GetAppResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public GetAppResponseBodyData setAppType(Integer appType) {
+            this.appType = appType;
+            return this;
+        }
+        public Integer getAppType() {
+            return this.appType;
         }
 
         public GetAppResponseBodyData setCreator(String creator) {

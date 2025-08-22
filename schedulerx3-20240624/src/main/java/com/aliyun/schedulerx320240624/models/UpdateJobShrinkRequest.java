@@ -148,6 +148,13 @@ public class UpdateJobShrinkRequest extends TeaModel {
     @NameInMap("Timezone")
     public String timezone;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("Weight")
+    public Integer weight;
+
     public static UpdateJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateJobShrinkRequest self = new UpdateJobShrinkRequest();
         return TeaModel.build(map, self);
@@ -327,6 +334,14 @@ public class UpdateJobShrinkRequest extends TeaModel {
     }
     public String getTimezone() {
         return this.timezone;
+    }
+
+    public UpdateJobShrinkRequest setWeight(Integer weight) {
+        this.weight = weight;
+        return this;
+    }
+    public Integer getWeight() {
+        return this.weight;
     }
 
 }

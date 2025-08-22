@@ -252,6 +252,13 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("Updater")
         public String updater;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Weight")
+        public Integer weight;
+
         @NameInMap("Xattrs")
         public String xattrs;
 
@@ -498,6 +505,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public String getUpdater() {
             return this.updater;
+        }
+
+        public ListJobsResponseBodyDataRecords setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
         public ListJobsResponseBodyDataRecords setXattrs(String xattrs) {

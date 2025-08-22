@@ -104,6 +104,13 @@ public class ListAppsResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("AppType")
+        public Integer appType;
+
+        /**
+         * <strong>example:</strong>
          * <p>1827811800555555</p>
          */
         @NameInMap("Creator")
@@ -190,6 +197,14 @@ public class ListAppsResponseBody extends TeaModel {
         }
         public String getAppName() {
             return this.appName;
+        }
+
+        public ListAppsResponseBodyDataRecords setAppType(Integer appType) {
+            this.appType = appType;
+            return this;
+        }
+        public Integer getAppType() {
+            return this.appType;
         }
 
         public ListAppsResponseBodyDataRecords setCreator(String creator) {

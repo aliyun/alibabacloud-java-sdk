@@ -21,6 +21,13 @@ public class CreateAppRequest extends TeaModel {
     public String appName;
 
     /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("AppType")
+    public Integer appType;
+
+    /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -71,6 +78,14 @@ public class CreateAppRequest extends TeaModel {
     }
     public String getAppName() {
         return this.appName;
+    }
+
+    public CreateAppRequest setAppType(Integer appType) {
+        this.appType = appType;
+        return this;
+    }
+    public Integer getAppType() {
+        return this.appType;
     }
 
     public CreateAppRequest setClusterId(String clusterId) {

@@ -135,6 +135,13 @@ public class ListExecutorsResponseBody extends TeaModel {
         @NameInMap("Version")
         public String version;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Weight")
+        public Integer weight;
+
         public static ListExecutorsResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             ListExecutorsResponseBodyData self = new ListExecutorsResponseBodyData();
             return TeaModel.build(map, self);
@@ -194,6 +201,14 @@ public class ListExecutorsResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public ListExecutorsResponseBodyData setWeight(Integer weight) {
+            this.weight = weight;
+            return this;
+        }
+        public Integer getWeight() {
+            return this.weight;
         }
 
     }
