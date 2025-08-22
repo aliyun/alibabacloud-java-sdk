@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("eds-aic", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -424,12 +423,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates pay-as-you-go or subscription instance groups.</p>
      * 
-     * @param request CreateAndroidInstanceGroupRequest
+     * @param tmpReq CreateAndroidInstanceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAndroidInstanceGroupResponse
      */
-    public CreateAndroidInstanceGroupResponse createAndroidInstanceGroupWithOptions(CreateAndroidInstanceGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateAndroidInstanceGroupResponse createAndroidInstanceGroupWithOptions(CreateAndroidInstanceGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAndroidInstanceGroupShrinkRequest request = new CreateAndroidInstanceGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.networkInfo)) {
+            request.networkInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.networkInfo, "NetworkInfo", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.amount)) {
             query.put("Amount", request.amount);
@@ -441,6 +446,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageId)) {
+            query.put("BandwidthPackageId", request.bandwidthPackageId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bandwidthPackageType)) {
+            query.put("BandwidthPackageType", request.bandwidthPackageType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
@@ -481,6 +494,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.keyPairId)) {
             query.put("KeyPairId", request.keyPairId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkInfoShrink)) {
+            query.put("NetworkInfo", request.networkInfoShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkType)) {
+            query.put("NetworkType", request.networkType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.numberOfInstances)) {
@@ -1604,6 +1625,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
             query.put("Status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4954,6 +4979,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceIdList)) {
             query.put("InstanceIdList", request.instanceIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reset)) {
+            query.put("Reset", request.reset);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

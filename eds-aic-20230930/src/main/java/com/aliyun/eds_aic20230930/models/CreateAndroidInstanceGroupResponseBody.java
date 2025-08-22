@@ -16,6 +16,9 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     @NameInMap("InstanceGroupInfos")
     public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> instanceGroupInfos;
 
+    @NameInMap("NetworkPackageOrderModel")
+    public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel networkPackageOrderModel;
+
     /**
      * <p>The ID of the order.</p>
      * 
@@ -53,6 +56,14 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
     }
     public java.util.List<CreateAndroidInstanceGroupResponseBodyInstanceGroupInfos> getInstanceGroupInfos() {
         return this.instanceGroupInfos;
+    }
+
+    public CreateAndroidInstanceGroupResponseBody setNetworkPackageOrderModel(CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel networkPackageOrderModel) {
+        this.networkPackageOrderModel = networkPackageOrderModel;
+        return this;
+    }
+    public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel getNetworkPackageOrderModel() {
+        return this.networkPackageOrderModel;
     }
 
     public CreateAndroidInstanceGroupResponseBody setOrderId(String orderId) {
@@ -106,6 +117,36 @@ public class CreateAndroidInstanceGroupResponseBody extends TeaModel {
         }
         public java.util.List<String> getInstanceIds() {
             return this.instanceIds;
+        }
+
+    }
+
+    public static class CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel extends TeaModel {
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("BandwidthPackageOrderId")
+        public String bandwidthPackageOrderId;
+
+        public static CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel build(java.util.Map<String, ?> map) throws Exception {
+            CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel self = new CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public CreateAndroidInstanceGroupResponseBodyNetworkPackageOrderModel setBandwidthPackageOrderId(String bandwidthPackageOrderId) {
+            this.bandwidthPackageOrderId = bandwidthPackageOrderId;
+            return this;
+        }
+        public String getBandwidthPackageOrderId() {
+            return this.bandwidthPackageOrderId;
         }
 
     }

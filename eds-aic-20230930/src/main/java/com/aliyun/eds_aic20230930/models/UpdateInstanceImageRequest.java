@@ -14,6 +14,9 @@ public class UpdateInstanceImageRequest extends TeaModel {
     @NameInMap("InstanceIdList")
     public java.util.List<String> instanceIdList;
 
+    @NameInMap("Reset")
+    public Boolean reset;
+
     public static UpdateInstanceImageRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateInstanceImageRequest self = new UpdateInstanceImageRequest();
         return TeaModel.build(map, self);
@@ -33,6 +36,14 @@ public class UpdateInstanceImageRequest extends TeaModel {
     }
     public java.util.List<String> getInstanceIdList() {
         return this.instanceIdList;
+    }
+
+    public UpdateInstanceImageRequest setReset(Boolean reset) {
+        this.reset = reset;
+        return this;
+    }
+    public Boolean getReset() {
+        return this.reset;
     }
 
 }

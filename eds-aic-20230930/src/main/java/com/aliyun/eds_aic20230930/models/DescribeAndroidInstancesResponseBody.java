@@ -636,6 +636,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("StreamMode")
         public Integer streamMode;
 
+        @NameInMap("SystemVersion")
+        public String systemVersion;
+
         /**
          * <p>The tags.</p>
          */
@@ -1006,6 +1009,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public Integer getStreamMode() {
             return this.streamMode;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setSystemVersion(String systemVersion) {
+            this.systemVersion = systemVersion;
+            return this;
+        }
+        public String getSystemVersion() {
+            return this.systemVersion;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setTags(java.util.List<DescribeAndroidInstancesResponseBodyInstanceModelTags> tags) {

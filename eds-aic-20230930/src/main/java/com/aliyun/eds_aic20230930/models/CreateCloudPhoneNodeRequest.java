@@ -515,6 +515,9 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         @NameInMap("PayType")
         public String payType;
 
+        @NameInMap("VisibleType")
+        public String visibleType;
+
         public static CreateCloudPhoneNodeRequestNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
             CreateCloudPhoneNodeRequestNetworkInfo self = new CreateCloudPhoneNodeRequestNetworkInfo();
             return TeaModel.build(map, self);
@@ -574,6 +577,14 @@ public class CreateCloudPhoneNodeRequest extends TeaModel {
         }
         public String getPayType() {
             return this.payType;
+        }
+
+        public CreateCloudPhoneNodeRequestNetworkInfo setVisibleType(String visibleType) {
+            this.visibleType = visibleType;
+            return this;
+        }
+        public String getVisibleType() {
+            return this.visibleType;
         }
 
     }

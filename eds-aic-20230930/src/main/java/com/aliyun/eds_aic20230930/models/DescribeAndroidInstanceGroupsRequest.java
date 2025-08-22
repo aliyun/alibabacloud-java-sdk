@@ -112,6 +112,9 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeAndroidInstanceGroupsRequestTags> tags;
+
     public static DescribeAndroidInstanceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeAndroidInstanceGroupsRequest self = new DescribeAndroidInstanceGroupsRequest();
         return TeaModel.build(map, self);
@@ -195,6 +198,44 @@ public class DescribeAndroidInstanceGroupsRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public DescribeAndroidInstanceGroupsRequest setTags(java.util.List<DescribeAndroidInstanceGroupsRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeAndroidInstanceGroupsRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeAndroidInstanceGroupsRequestTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAndroidInstanceGroupsRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstanceGroupsRequestTags self = new DescribeAndroidInstanceGroupsRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstanceGroupsRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAndroidInstanceGroupsRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

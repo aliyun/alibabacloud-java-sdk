@@ -116,6 +116,36 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags extends TeaModel {
+        @NameInMap("Key")
+        public String key;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags self = new DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
     public static class DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel extends TeaModel {
         /**
          * <p>The ID of the delivery group.</p>
@@ -146,6 +176,15 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         @NameInMap("AvailableInstanceAmount")
         public Integer availableInstanceAmount;
+
+        @NameInMap("BandwidthPackageId")
+        public String bandwidthPackageId;
+
+        @NameInMap("BandwidthPackageStatus")
+        public String bandwidthPackageStatus;
+
+        @NameInMap("BandwidthPackageType")
+        public String bandwidthPackageType;
 
         /**
          * <p>The billing method.</p>
@@ -293,6 +332,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("Memory")
         public Integer memory;
 
+        @NameInMap("NetworkType")
+        public String networkType;
+
         /**
          * <p>The number of instances in the instance group.</p>
          * 
@@ -380,6 +422,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @NameInMap("SystemVersion")
         public String systemVersion;
 
+        @NameInMap("Tags")
+        public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags> tags;
+
         /**
          * <p>The ID of the vSwitch.</p>
          * 
@@ -416,6 +461,30 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public Integer getAvailableInstanceAmount() {
             return this.availableInstanceAmount;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setBandwidthPackageId(String bandwidthPackageId) {
+            this.bandwidthPackageId = bandwidthPackageId;
+            return this;
+        }
+        public String getBandwidthPackageId() {
+            return this.bandwidthPackageId;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setBandwidthPackageStatus(String bandwidthPackageStatus) {
+            this.bandwidthPackageStatus = bandwidthPackageStatus;
+            return this;
+        }
+        public String getBandwidthPackageStatus() {
+            return this.bandwidthPackageStatus;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setBandwidthPackageType(String bandwidthPackageType) {
+            this.bandwidthPackageType = bandwidthPackageType;
+            return this;
+        }
+        public String getBandwidthPackageType() {
+            return this.bandwidthPackageType;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setChargeType(String chargeType) {
@@ -554,6 +623,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             return this.memory;
         }
 
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setNumberOfInstances(String numberOfInstances) {
             this.numberOfInstances = numberOfInstances;
             return this;
@@ -624,6 +701,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         }
         public String getSystemVersion() {
             return this.systemVersion;
+        }
+
+        public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setTags(java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModelTags> getTags() {
+            return this.tags;
         }
 
         public DescribeAndroidInstanceGroupsResponseBodyInstanceGroupModel setVSwitchId(String vSwitchId) {

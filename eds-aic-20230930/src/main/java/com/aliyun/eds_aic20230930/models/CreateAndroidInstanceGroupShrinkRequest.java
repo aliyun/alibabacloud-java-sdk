@@ -3,7 +3,7 @@ package com.aliyun.eds_aic20230930.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAndroidInstanceGroupRequest extends TeaModel {
+public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     /**
      * <p>The number of instance groups. Default value: 1. Maximum value: 1.</p>
      * 
@@ -176,7 +176,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     public String keyPairId;
 
     @NameInMap("NetworkInfo")
-    public CreateAndroidInstanceGroupRequestNetworkInfo networkInfo;
+    public String networkInfoShrink;
 
     @NameInMap("NetworkType")
     public String networkType;
@@ -240,7 +240,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
      * <p>The tags</p>
      */
     @NameInMap("Tag")
-    public java.util.List<CreateAndroidInstanceGroupRequestTag> tag;
+    public java.util.List<CreateAndroidInstanceGroupShrinkRequestTag> tag;
 
     /**
      * <p>The ID of the vSwitch. You can call the <a href="https://help.aliyun.com/document_detail/448774.html">DescribeVSwitches</a> operation to query vSwitches.</p>
@@ -255,12 +255,12 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    public static CreateAndroidInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAndroidInstanceGroupRequest self = new CreateAndroidInstanceGroupRequest();
+    public static CreateAndroidInstanceGroupShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAndroidInstanceGroupShrinkRequest self = new CreateAndroidInstanceGroupShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAndroidInstanceGroupRequest setAmount(Integer amount) {
+    public CreateAndroidInstanceGroupShrinkRequest setAmount(Integer amount) {
         this.amount = amount;
         return this;
     }
@@ -268,7 +268,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.amount;
     }
 
-    public CreateAndroidInstanceGroupRequest setAutoPay(Boolean autoPay) {
+    public CreateAndroidInstanceGroupShrinkRequest setAutoPay(Boolean autoPay) {
         this.autoPay = autoPay;
         return this;
     }
@@ -276,7 +276,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.autoPay;
     }
 
-    public CreateAndroidInstanceGroupRequest setAutoRenew(Boolean autoRenew) {
+    public CreateAndroidInstanceGroupShrinkRequest setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -284,7 +284,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.autoRenew;
     }
 
-    public CreateAndroidInstanceGroupRequest setBandwidthPackageId(String bandwidthPackageId) {
+    public CreateAndroidInstanceGroupShrinkRequest setBandwidthPackageId(String bandwidthPackageId) {
         this.bandwidthPackageId = bandwidthPackageId;
         return this;
     }
@@ -292,7 +292,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.bandwidthPackageId;
     }
 
-    public CreateAndroidInstanceGroupRequest setBandwidthPackageType(String bandwidthPackageType) {
+    public CreateAndroidInstanceGroupShrinkRequest setBandwidthPackageType(String bandwidthPackageType) {
         this.bandwidthPackageType = bandwidthPackageType;
         return this;
     }
@@ -300,7 +300,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.bandwidthPackageType;
     }
 
-    public CreateAndroidInstanceGroupRequest setBizRegionId(String bizRegionId) {
+    public CreateAndroidInstanceGroupShrinkRequest setBizRegionId(String bizRegionId) {
         this.bizRegionId = bizRegionId;
         return this;
     }
@@ -308,7 +308,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.bizRegionId;
     }
 
-    public CreateAndroidInstanceGroupRequest setChargeType(String chargeType) {
+    public CreateAndroidInstanceGroupShrinkRequest setChargeType(String chargeType) {
         this.chargeType = chargeType;
         return this;
     }
@@ -316,7 +316,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.chargeType;
     }
 
-    public CreateAndroidInstanceGroupRequest setClientToken(String clientToken) {
+    public CreateAndroidInstanceGroupShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -324,7 +324,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateAndroidInstanceGroupRequest setEnableIpv6(Boolean enableIpv6) {
+    public CreateAndroidInstanceGroupShrinkRequest setEnableIpv6(Boolean enableIpv6) {
         this.enableIpv6 = enableIpv6;
         return this;
     }
@@ -332,7 +332,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.enableIpv6;
     }
 
-    public CreateAndroidInstanceGroupRequest setGpuAcceleration(Boolean gpuAcceleration) {
+    public CreateAndroidInstanceGroupShrinkRequest setGpuAcceleration(Boolean gpuAcceleration) {
         this.gpuAcceleration = gpuAcceleration;
         return this;
     }
@@ -340,7 +340,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.gpuAcceleration;
     }
 
-    public CreateAndroidInstanceGroupRequest setImageId(String imageId) {
+    public CreateAndroidInstanceGroupShrinkRequest setImageId(String imageId) {
         this.imageId = imageId;
         return this;
     }
@@ -348,7 +348,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.imageId;
     }
 
-    public CreateAndroidInstanceGroupRequest setInstanceGroupName(String instanceGroupName) {
+    public CreateAndroidInstanceGroupShrinkRequest setInstanceGroupName(String instanceGroupName) {
         this.instanceGroupName = instanceGroupName;
         return this;
     }
@@ -356,7 +356,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.instanceGroupName;
     }
 
-    public CreateAndroidInstanceGroupRequest setInstanceGroupSpec(String instanceGroupSpec) {
+    public CreateAndroidInstanceGroupShrinkRequest setInstanceGroupSpec(String instanceGroupSpec) {
         this.instanceGroupSpec = instanceGroupSpec;
         return this;
     }
@@ -364,7 +364,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.instanceGroupSpec;
     }
 
-    public CreateAndroidInstanceGroupRequest setIpv6Bandwidth(Integer ipv6Bandwidth) {
+    public CreateAndroidInstanceGroupShrinkRequest setIpv6Bandwidth(Integer ipv6Bandwidth) {
         this.ipv6Bandwidth = ipv6Bandwidth;
         return this;
     }
@@ -372,7 +372,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.ipv6Bandwidth;
     }
 
-    public CreateAndroidInstanceGroupRequest setKeyPairId(String keyPairId) {
+    public CreateAndroidInstanceGroupShrinkRequest setKeyPairId(String keyPairId) {
         this.keyPairId = keyPairId;
         return this;
     }
@@ -380,15 +380,15 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.keyPairId;
     }
 
-    public CreateAndroidInstanceGroupRequest setNetworkInfo(CreateAndroidInstanceGroupRequestNetworkInfo networkInfo) {
-        this.networkInfo = networkInfo;
+    public CreateAndroidInstanceGroupShrinkRequest setNetworkInfoShrink(String networkInfoShrink) {
+        this.networkInfoShrink = networkInfoShrink;
         return this;
     }
-    public CreateAndroidInstanceGroupRequestNetworkInfo getNetworkInfo() {
-        return this.networkInfo;
+    public String getNetworkInfoShrink() {
+        return this.networkInfoShrink;
     }
 
-    public CreateAndroidInstanceGroupRequest setNetworkType(String networkType) {
+    public CreateAndroidInstanceGroupShrinkRequest setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
     }
@@ -396,7 +396,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.networkType;
     }
 
-    public CreateAndroidInstanceGroupRequest setNumberOfInstances(Integer numberOfInstances) {
+    public CreateAndroidInstanceGroupShrinkRequest setNumberOfInstances(Integer numberOfInstances) {
         this.numberOfInstances = numberOfInstances;
         return this;
     }
@@ -404,7 +404,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.numberOfInstances;
     }
 
-    public CreateAndroidInstanceGroupRequest setOfficeSiteId(String officeSiteId) {
+    public CreateAndroidInstanceGroupShrinkRequest setOfficeSiteId(String officeSiteId) {
         this.officeSiteId = officeSiteId;
         return this;
     }
@@ -412,7 +412,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.officeSiteId;
     }
 
-    public CreateAndroidInstanceGroupRequest setPeriod(Integer period) {
+    public CreateAndroidInstanceGroupShrinkRequest setPeriod(Integer period) {
         this.period = period;
         return this;
     }
@@ -420,7 +420,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.period;
     }
 
-    public CreateAndroidInstanceGroupRequest setPeriodUnit(String periodUnit) {
+    public CreateAndroidInstanceGroupShrinkRequest setPeriodUnit(String periodUnit) {
         this.periodUnit = periodUnit;
         return this;
     }
@@ -428,7 +428,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.periodUnit;
     }
 
-    public CreateAndroidInstanceGroupRequest setPolicyGroupId(String policyGroupId) {
+    public CreateAndroidInstanceGroupShrinkRequest setPolicyGroupId(String policyGroupId) {
         this.policyGroupId = policyGroupId;
         return this;
     }
@@ -436,15 +436,15 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.policyGroupId;
     }
 
-    public CreateAndroidInstanceGroupRequest setTag(java.util.List<CreateAndroidInstanceGroupRequestTag> tag) {
+    public CreateAndroidInstanceGroupShrinkRequest setTag(java.util.List<CreateAndroidInstanceGroupShrinkRequestTag> tag) {
         this.tag = tag;
         return this;
     }
-    public java.util.List<CreateAndroidInstanceGroupRequestTag> getTag() {
+    public java.util.List<CreateAndroidInstanceGroupShrinkRequestTag> getTag() {
         return this.tag;
     }
 
-    public CreateAndroidInstanceGroupRequest setVSwitchId(String vSwitchId) {
+    public CreateAndroidInstanceGroupShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
@@ -452,147 +452,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         return this.vSwitchId;
     }
 
-    public static class CreateAndroidInstanceGroupRequestNetworkInfo extends TeaModel {
-        @NameInMap("AutoPay")
-        public Boolean autoPay;
-
-        @NameInMap("AutoRenew")
-        public Boolean autoRenew;
-
-        @NameInMap("BandwidthPackageName")
-        public String bandwidthPackageName;
-
-        @NameInMap("CidrBlock")
-        public String cidrBlock;
-
-        @NameInMap("InternetChargeType")
-        public String internetChargeType;
-
-        @NameInMap("IpRatio")
-        public Integer ipRatio;
-
-        @NameInMap("Isp")
-        public String isp;
-
-        @NameInMap("LimitedBandwidth")
-        public Integer limitedBandwidth;
-
-        @NameInMap("PayType")
-        public String payType;
-
-        @NameInMap("Period")
-        public Integer period;
-
-        @NameInMap("PeriodUnit")
-        public String periodUnit;
-
-        @NameInMap("VisibleType")
-        public String visibleType;
-
-        public static CreateAndroidInstanceGroupRequestNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
-            CreateAndroidInstanceGroupRequestNetworkInfo self = new CreateAndroidInstanceGroupRequestNetworkInfo();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setAutoPay(Boolean autoPay) {
-            this.autoPay = autoPay;
-            return this;
-        }
-        public Boolean getAutoPay() {
-            return this.autoPay;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setAutoRenew(Boolean autoRenew) {
-            this.autoRenew = autoRenew;
-            return this;
-        }
-        public Boolean getAutoRenew() {
-            return this.autoRenew;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setBandwidthPackageName(String bandwidthPackageName) {
-            this.bandwidthPackageName = bandwidthPackageName;
-            return this;
-        }
-        public String getBandwidthPackageName() {
-            return this.bandwidthPackageName;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setCidrBlock(String cidrBlock) {
-            this.cidrBlock = cidrBlock;
-            return this;
-        }
-        public String getCidrBlock() {
-            return this.cidrBlock;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setInternetChargeType(String internetChargeType) {
-            this.internetChargeType = internetChargeType;
-            return this;
-        }
-        public String getInternetChargeType() {
-            return this.internetChargeType;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setIpRatio(Integer ipRatio) {
-            this.ipRatio = ipRatio;
-            return this;
-        }
-        public Integer getIpRatio() {
-            return this.ipRatio;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setIsp(String isp) {
-            this.isp = isp;
-            return this;
-        }
-        public String getIsp() {
-            return this.isp;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setLimitedBandwidth(Integer limitedBandwidth) {
-            this.limitedBandwidth = limitedBandwidth;
-            return this;
-        }
-        public Integer getLimitedBandwidth() {
-            return this.limitedBandwidth;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setPeriod(Integer period) {
-            this.period = period;
-            return this;
-        }
-        public Integer getPeriod() {
-            return this.period;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setPeriodUnit(String periodUnit) {
-            this.periodUnit = periodUnit;
-            return this;
-        }
-        public String getPeriodUnit() {
-            return this.periodUnit;
-        }
-
-        public CreateAndroidInstanceGroupRequestNetworkInfo setVisibleType(String visibleType) {
-            this.visibleType = visibleType;
-            return this;
-        }
-        public String getVisibleType() {
-            return this.visibleType;
-        }
-
-    }
-
-    public static class CreateAndroidInstanceGroupRequestTag extends TeaModel {
+    public static class CreateAndroidInstanceGroupShrinkRequestTag extends TeaModel {
         /**
          * <p>The tag key.</p>
          * 
@@ -611,12 +471,12 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
         @NameInMap("Value")
         public String value;
 
-        public static CreateAndroidInstanceGroupRequestTag build(java.util.Map<String, ?> map) throws Exception {
-            CreateAndroidInstanceGroupRequestTag self = new CreateAndroidInstanceGroupRequestTag();
+        public static CreateAndroidInstanceGroupShrinkRequestTag build(java.util.Map<String, ?> map) throws Exception {
+            CreateAndroidInstanceGroupShrinkRequestTag self = new CreateAndroidInstanceGroupShrinkRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public CreateAndroidInstanceGroupRequestTag setKey(String key) {
+        public CreateAndroidInstanceGroupShrinkRequestTag setKey(String key) {
             this.key = key;
             return this;
         }
@@ -624,7 +484,7 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
             return this.key;
         }
 
-        public CreateAndroidInstanceGroupRequestTag setValue(String value) {
+        public CreateAndroidInstanceGroupShrinkRequestTag setValue(String value) {
             this.value = value;
             return this;
         }
