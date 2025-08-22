@@ -144,6 +144,9 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         @NameInMap("FilterSide")
         public String filterSide;
 
+        @NameInMap("GrayBaseTags")
+        public java.util.List<String> grayBaseTags;
+
         /**
          * <p>The region ID.</p>
          * 
@@ -186,6 +189,14 @@ public class GetAppMessageQueueRouteResponseBody extends TeaModel {
         }
         public String getFilterSide() {
             return this.filterSide;
+        }
+
+        public GetAppMessageQueueRouteResponseBodyData setGrayBaseTags(java.util.List<String> grayBaseTags) {
+            this.grayBaseTags = grayBaseTags;
+            return this;
+        }
+        public java.util.List<String> getGrayBaseTags() {
+            return this.grayBaseTags;
         }
 
         public GetAppMessageQueueRouteResponseBodyData setRegion(String region) {

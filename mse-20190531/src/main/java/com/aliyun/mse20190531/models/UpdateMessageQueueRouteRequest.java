@@ -56,6 +56,9 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     @NameInMap("FilterSide")
     public String filterSide;
 
+    @NameInMap("GrayBaseTags")
+    public java.util.List<String> grayBaseTags;
+
     /**
      * <strong>example:</strong>
      * <p>default</p>
@@ -122,6 +125,14 @@ public class UpdateMessageQueueRouteRequest extends TeaModel {
     }
     public String getFilterSide() {
         return this.filterSide;
+    }
+
+    public UpdateMessageQueueRouteRequest setGrayBaseTags(java.util.List<String> grayBaseTags) {
+        this.grayBaseTags = grayBaseTags;
+        return this;
+    }
+    public java.util.List<String> getGrayBaseTags() {
+        return this.grayBaseTags;
     }
 
     public UpdateMessageQueueRouteRequest setNamespace(String namespace) {

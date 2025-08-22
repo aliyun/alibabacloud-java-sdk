@@ -56,6 +56,9 @@ public class UpdateMessageQueueRouteShrinkRequest extends TeaModel {
     @NameInMap("FilterSide")
     public String filterSide;
 
+    @NameInMap("GrayBaseTags")
+    public String grayBaseTagsShrink;
+
     /**
      * <strong>example:</strong>
      * <p>default</p>
@@ -122,6 +125,14 @@ public class UpdateMessageQueueRouteShrinkRequest extends TeaModel {
     }
     public String getFilterSide() {
         return this.filterSide;
+    }
+
+    public UpdateMessageQueueRouteShrinkRequest setGrayBaseTagsShrink(String grayBaseTagsShrink) {
+        this.grayBaseTagsShrink = grayBaseTagsShrink;
+        return this;
+    }
+    public String getGrayBaseTagsShrink() {
+        return this.grayBaseTagsShrink;
     }
 
     public UpdateMessageQueueRouteShrinkRequest setNamespace(String namespace) {
