@@ -4,6 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
+    @NameInMap("AllocatableCpu")
+    public String allocatableCpu;
+
+    @NameInMap("AllocatableMemory")
+    public String allocatableMemory;
+
     /**
      * <strong>example:</strong>
      * <p>2</p>
@@ -140,12 +146,34 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 
+    @NameInMap("SystemReservedCpu")
+    public String systemReservedCpu;
+
+    @NameInMap("SystemReservedMemory")
+    public String systemReservedMemory;
+
     @NameInMap("Tags")
     public java.util.List<GetResourceGroupMachineGroupResponseBodyTags> tags;
 
     public static GetResourceGroupMachineGroupResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetResourceGroupMachineGroupResponseBody self = new GetResourceGroupMachineGroupResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setAllocatableCpu(String allocatableCpu) {
+        this.allocatableCpu = allocatableCpu;
+        return this;
+    }
+    public String getAllocatableCpu() {
+        return this.allocatableCpu;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setAllocatableMemory(String allocatableMemory) {
+        this.allocatableMemory = allocatableMemory;
+        return this;
+    }
+    public String getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     public GetResourceGroupMachineGroupResponseBody setCpu(String cpu) {
@@ -306,6 +334,22 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     }
     public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setSystemReservedCpu(String systemReservedCpu) {
+        this.systemReservedCpu = systemReservedCpu;
+        return this;
+    }
+    public String getSystemReservedCpu() {
+        return this.systemReservedCpu;
+    }
+
+    public GetResourceGroupMachineGroupResponseBody setSystemReservedMemory(String systemReservedMemory) {
+        this.systemReservedMemory = systemReservedMemory;
+        return this;
+    }
+    public String getSystemReservedMemory() {
+        return this.systemReservedMemory;
     }
 
     public GetResourceGroupMachineGroupResponseBody setTags(java.util.List<GetResourceGroupMachineGroupResponseBodyTags> tags) {

@@ -7,6 +7,12 @@ public class Node extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    @NameInMap("AllocatableCPU")
+    public String allocatableCPU;
+
+    @NameInMap("AllocatableMemory")
+    public String allocatableMemory;
+
     @NameInMap("AvailabilityZone")
     public String availabilityZone;
 
@@ -94,6 +100,12 @@ public class Node extends TeaModel {
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
+    @NameInMap("SystemReservedCPU")
+    public String systemReservedCPU;
+
+    @NameInMap("SystemReservedMemory")
+    public String systemReservedMemory;
+
     @NameInMap("Users")
     public java.util.List<UserInfo> users;
 
@@ -111,6 +123,22 @@ public class Node extends TeaModel {
     }
     public String getAcceleratorType() {
         return this.acceleratorType;
+    }
+
+    public Node setAllocatableCPU(String allocatableCPU) {
+        this.allocatableCPU = allocatableCPU;
+        return this;
+    }
+    public String getAllocatableCPU() {
+        return this.allocatableCPU;
+    }
+
+    public Node setAllocatableMemory(String allocatableMemory) {
+        this.allocatableMemory = allocatableMemory;
+        return this;
+    }
+    public String getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     public Node setAvailabilityZone(String availabilityZone) {
@@ -343,6 +371,22 @@ public class Node extends TeaModel {
     }
     public String getResourceGroupName() {
         return this.resourceGroupName;
+    }
+
+    public Node setSystemReservedCPU(String systemReservedCPU) {
+        this.systemReservedCPU = systemReservedCPU;
+        return this;
+    }
+    public String getSystemReservedCPU() {
+        return this.systemReservedCPU;
+    }
+
+    public Node setSystemReservedMemory(String systemReservedMemory) {
+        this.systemReservedMemory = systemReservedMemory;
+        return this;
+    }
+    public String getSystemReservedMemory() {
+        return this.systemReservedMemory;
     }
 
     public Node setUsers(java.util.List<UserInfo> users) {

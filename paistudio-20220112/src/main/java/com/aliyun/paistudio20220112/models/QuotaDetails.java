@@ -7,6 +7,9 @@ public class QuotaDetails extends TeaModel {
     @NameInMap("ActualMinQuota")
     public ResourceAmount actualMinQuota;
 
+    @NameInMap("AllocatableQuota")
+    public ResourceAmount allocatableQuota;
+
     @NameInMap("AllocatedQuota")
     public ResourceAmount allocatedQuota;
 
@@ -28,6 +31,9 @@ public class QuotaDetails extends TeaModel {
     @NameInMap("SelfSubmittedQuota")
     public ResourceAmount selfSubmittedQuota;
 
+    @NameInMap("SystemReservedQuota")
+    public ResourceAmount systemReservedQuota;
+
     @NameInMap("UsedQuota")
     public ResourceAmount usedQuota;
 
@@ -42,6 +48,14 @@ public class QuotaDetails extends TeaModel {
     }
     public ResourceAmount getActualMinQuota() {
         return this.actualMinQuota;
+    }
+
+    public QuotaDetails setAllocatableQuota(ResourceAmount allocatableQuota) {
+        this.allocatableQuota = allocatableQuota;
+        return this;
+    }
+    public ResourceAmount getAllocatableQuota() {
+        return this.allocatableQuota;
     }
 
     public QuotaDetails setAllocatedQuota(ResourceAmount allocatedQuota) {
@@ -98,6 +112,14 @@ public class QuotaDetails extends TeaModel {
     }
     public ResourceAmount getSelfSubmittedQuota() {
         return this.selfSubmittedQuota;
+    }
+
+    public QuotaDetails setSystemReservedQuota(ResourceAmount systemReservedQuota) {
+        this.systemReservedQuota = systemReservedQuota;
+        return this;
+    }
+    public ResourceAmount getSystemReservedQuota() {
+        return this.systemReservedQuota;
     }
 
     public QuotaDetails setUsedQuota(ResourceAmount usedQuota) {

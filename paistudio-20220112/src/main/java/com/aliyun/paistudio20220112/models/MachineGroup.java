@@ -4,6 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MachineGroup extends TeaModel {
+    @NameInMap("AllocatableCpu")
+    public Long allocatableCpu;
+
+    @NameInMap("AllocatableMemory")
+    public Long allocatableMemory;
+
     @NameInMap("Cpu")
     public Long cpu;
 
@@ -90,9 +96,31 @@ public class MachineGroup extends TeaModel {
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 
+    @NameInMap("SystemReservedCpu")
+    public Long systemReservedCpu;
+
+    @NameInMap("SystemReservedMemory")
+    public Long systemReservedMemory;
+
     public static MachineGroup build(java.util.Map<String, ?> map) throws Exception {
         MachineGroup self = new MachineGroup();
         return TeaModel.build(map, self);
+    }
+
+    public MachineGroup setAllocatableCpu(Long allocatableCpu) {
+        this.allocatableCpu = allocatableCpu;
+        return this;
+    }
+    public Long getAllocatableCpu() {
+        return this.allocatableCpu;
+    }
+
+    public MachineGroup setAllocatableMemory(Long allocatableMemory) {
+        this.allocatableMemory = allocatableMemory;
+        return this;
+    }
+    public Long getAllocatableMemory() {
+        return this.allocatableMemory;
     }
 
     public MachineGroup setCpu(Long cpu) {
@@ -301,6 +329,22 @@ public class MachineGroup extends TeaModel {
     }
     public java.util.List<String> getSupportedDrivers() {
         return this.supportedDrivers;
+    }
+
+    public MachineGroup setSystemReservedCpu(Long systemReservedCpu) {
+        this.systemReservedCpu = systemReservedCpu;
+        return this;
+    }
+    public Long getSystemReservedCpu() {
+        return this.systemReservedCpu;
+    }
+
+    public MachineGroup setSystemReservedMemory(Long systemReservedMemory) {
+        this.systemReservedMemory = systemReservedMemory;
+        return this;
+    }
+    public Long getSystemReservedMemory() {
+        return this.systemReservedMemory;
     }
 
 }
