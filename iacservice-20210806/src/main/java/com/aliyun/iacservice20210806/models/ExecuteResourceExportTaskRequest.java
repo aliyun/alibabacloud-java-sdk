@@ -13,13 +13,6 @@ public class ExecuteResourceExportTaskRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    /**
-     * <strong>example:</strong>
-     * <p>{}</p>
-     */
-    @NameInMap("ramRole")
-    public String ramRole;
-
     public static ExecuteResourceExportTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         ExecuteResourceExportTaskRequest self = new ExecuteResourceExportTaskRequest();
         return TeaModel.build(map, self);
@@ -31,14 +24,6 @@ public class ExecuteResourceExportTaskRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    public ExecuteResourceExportTaskRequest setRamRole(String ramRole) {
-        this.ramRole = ramRole;
-        return this;
-    }
-    public String getRamRole() {
-        return this.ramRole;
     }
 
 }

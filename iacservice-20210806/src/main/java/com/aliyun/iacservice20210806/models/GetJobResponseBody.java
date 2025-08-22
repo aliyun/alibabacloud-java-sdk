@@ -232,9 +232,6 @@ public class GetJobResponseBody extends TeaModel {
         @NameInMap("parameters")
         public java.util.Map<String, String> parameters;
 
-        @NameInMap("runtimeType")
-        public String runtimeType;
-
         /**
          * <strong>example:</strong>
          * <p>Errored</p>
@@ -349,14 +346,6 @@ public class GetJobResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getParameters() {
             return this.parameters;
-        }
-
-        public GetJobResponseBodyJob setRuntimeType(String runtimeType) {
-            this.runtimeType = runtimeType;
-            return this;
-        }
-        public String getRuntimeType() {
-            return this.runtimeType;
         }
 
         public GetJobResponseBodyJob setStatus(String status) {

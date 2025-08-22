@@ -105,6 +105,77 @@ public class GetTaskResponseBody extends TeaModel {
 
     }
 
+    public static class GetTaskResponseBodyTaskTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static GetTaskResponseBodyTaskTags build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskTags self = new GetTaskResponseBodyTaskTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetTaskResponseBodyTaskTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
+    public static class GetTaskResponseBodyTaskTaskBackend extends TeaModel {
+        @NameInMap("bucketEndpoint")
+        public String bucketEndpoint;
+
+        @NameInMap("bucketName")
+        public String bucketName;
+
+        @NameInMap("objectPath")
+        public String objectPath;
+
+        public static GetTaskResponseBodyTaskTaskBackend build(java.util.Map<String, ?> map) throws Exception {
+            GetTaskResponseBodyTaskTaskBackend self = new GetTaskResponseBodyTaskTaskBackend();
+            return TeaModel.build(map, self);
+        }
+
+        public GetTaskResponseBodyTaskTaskBackend setBucketEndpoint(String bucketEndpoint) {
+            this.bucketEndpoint = bucketEndpoint;
+            return this;
+        }
+        public String getBucketEndpoint() {
+            return this.bucketEndpoint;
+        }
+
+        public GetTaskResponseBodyTaskTaskBackend setBucketName(String bucketName) {
+            this.bucketName = bucketName;
+            return this;
+        }
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        public GetTaskResponseBodyTaskTaskBackend setObjectPath(String objectPath) {
+            this.objectPath = objectPath;
+            return this;
+        }
+        public String getObjectPath() {
+            return this.objectPath;
+        }
+
+    }
+
     public static class GetTaskResponseBodyTask extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -134,6 +205,12 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("currentJobId")
         public String currentJobId;
 
+        @NameInMap("currentJobStatus")
+        public String currentJobStatus;
+
+        @NameInMap("deletionProtection")
+        public Boolean deletionProtection;
+
         /**
          * <strong>example:</strong>
          * <p>demo</p>
@@ -147,12 +224,18 @@ public class GetTaskResponseBody extends TeaModel {
         @NameInMap("initModuleState")
         public Boolean initModuleState;
 
+        @NameInMap("latestModuleVersion")
+        public String latestModuleVersion;
+
         /**
          * <strong>example:</strong>
          * <p>mod-4267dcfbf1b6d14625614ddbe15</p>
          */
         @NameInMap("moduleId")
         public String moduleId;
+
+        @NameInMap("moduleName")
+        public String moduleName;
 
         /**
          * <strong>example:</strong>
@@ -163,9 +246,6 @@ public class GetTaskResponseBody extends TeaModel {
 
         @NameInMap("name")
         public String name;
-
-        @NameInMap("parameters")
-        public java.util.Map<String, String> parameters;
 
         @NameInMap("protectionStrategy")
         public java.util.List<String> protectionStrategy;
@@ -186,6 +266,12 @@ public class GetTaskResponseBody extends TeaModel {
          */
         @NameInMap("status")
         public String status;
+
+        @NameInMap("tags")
+        public java.util.List<GetTaskResponseBodyTaskTags> tags;
+
+        @NameInMap("taskBackend")
+        public GetTaskResponseBodyTaskTaskBackend taskBackend;
 
         /**
          * <strong>example:</strong>
@@ -214,13 +300,6 @@ public class GetTaskResponseBody extends TeaModel {
          */
         @NameInMap("triggerStrategy")
         public String triggerStrategy;
-
-        /**
-         * <strong>example:</strong>
-         * <p>**<em>10</em></p>
-         */
-        @NameInMap("triggerValue")
-        public String triggerValue;
 
         public static GetTaskResponseBodyTask build(java.util.Map<String, ?> map) throws Exception {
             GetTaskResponseBodyTask self = new GetTaskResponseBodyTask();
@@ -259,6 +338,22 @@ public class GetTaskResponseBody extends TeaModel {
             return this.currentJobId;
         }
 
+        public GetTaskResponseBodyTask setCurrentJobStatus(String currentJobStatus) {
+            this.currentJobStatus = currentJobStatus;
+            return this;
+        }
+        public String getCurrentJobStatus() {
+            return this.currentJobStatus;
+        }
+
+        public GetTaskResponseBodyTask setDeletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
+        }
+
         public GetTaskResponseBodyTask setDescription(String description) {
             this.description = description;
             return this;
@@ -283,12 +378,28 @@ public class GetTaskResponseBody extends TeaModel {
             return this.initModuleState;
         }
 
+        public GetTaskResponseBodyTask setLatestModuleVersion(String latestModuleVersion) {
+            this.latestModuleVersion = latestModuleVersion;
+            return this;
+        }
+        public String getLatestModuleVersion() {
+            return this.latestModuleVersion;
+        }
+
         public GetTaskResponseBodyTask setModuleId(String moduleId) {
             this.moduleId = moduleId;
             return this;
         }
         public String getModuleId() {
             return this.moduleId;
+        }
+
+        public GetTaskResponseBodyTask setModuleName(String moduleName) {
+            this.moduleName = moduleName;
+            return this;
+        }
+        public String getModuleName() {
+            return this.moduleName;
         }
 
         public GetTaskResponseBodyTask setModuleVersion(String moduleVersion) {
@@ -305,14 +416,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getName() {
             return this.name;
-        }
-
-        public GetTaskResponseBodyTask setParameters(java.util.Map<String, String> parameters) {
-            this.parameters = parameters;
-            return this;
-        }
-        public java.util.Map<String, String> getParameters() {
-            return this.parameters;
         }
 
         public GetTaskResponseBodyTask setProtectionStrategy(java.util.List<String> protectionStrategy) {
@@ -347,6 +450,22 @@ public class GetTaskResponseBody extends TeaModel {
             return this.status;
         }
 
+        public GetTaskResponseBodyTask setTags(java.util.List<GetTaskResponseBodyTaskTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetTaskResponseBodyTaskTags> getTags() {
+            return this.tags;
+        }
+
+        public GetTaskResponseBodyTask setTaskBackend(GetTaskResponseBodyTaskTaskBackend taskBackend) {
+            this.taskBackend = taskBackend;
+            return this;
+        }
+        public GetTaskResponseBodyTaskTaskBackend getTaskBackend() {
+            return this.taskBackend;
+        }
+
         public GetTaskResponseBodyTask setTaskId(String taskId) {
             this.taskId = taskId;
             return this;
@@ -377,14 +496,6 @@ public class GetTaskResponseBody extends TeaModel {
         }
         public String getTriggerStrategy() {
             return this.triggerStrategy;
-        }
-
-        public GetTaskResponseBodyTask setTriggerValue(String triggerValue) {
-            this.triggerValue = triggerValue;
-            return this;
-        }
-        public String getTriggerValue() {
-            return this.triggerValue;
         }
 
     }

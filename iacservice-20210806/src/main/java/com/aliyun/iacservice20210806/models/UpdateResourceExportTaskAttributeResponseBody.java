@@ -4,12 +4,24 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class UpdateResourceExportTaskAttributeResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>ex-kw161ol8te1n701e1igt8q8</p>
+     */
     @NameInMap("exportTaskId")
     public String exportTaskId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("exportVersion")
     public String exportVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B43F08A7-F2A3-54D3-BDA4-69C9F32A7B9F</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 

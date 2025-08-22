@@ -13,18 +13,12 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     @NameInMap("clientToken")
     public String clientToken;
 
-    @NameInMap("configPath")
-    public String configPath;
-
     /**
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("description")
     public String description;
-
-    @NameInMap("excludeRules")
-    public java.util.List<CreateResourceExportTaskRequestExcludeRules> excludeRules;
 
     @NameInMap("exportToModule")
     public CreateResourceExportTaskRequestExportToModule exportToModule;
@@ -81,28 +75,12 @@ public class CreateResourceExportTaskRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateResourceExportTaskRequest setConfigPath(String configPath) {
-        this.configPath = configPath;
-        return this;
-    }
-    public String getConfigPath() {
-        return this.configPath;
-    }
-
     public CreateResourceExportTaskRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public CreateResourceExportTaskRequest setExcludeRules(java.util.List<CreateResourceExportTaskRequestExcludeRules> excludeRules) {
-        this.excludeRules = excludeRules;
-        return this;
-    }
-    public java.util.List<CreateResourceExportTaskRequestExcludeRules> getExcludeRules() {
-        return this.excludeRules;
     }
 
     public CreateResourceExportTaskRequest setExportToModule(CreateResourceExportTaskRequestExportToModule exportToModule) {
@@ -167,40 +145,6 @@ public class CreateResourceExportTaskRequest extends TeaModel {
     }
     public java.util.List<CreateResourceExportTaskRequestVariables> getVariables() {
         return this.variables;
-    }
-
-    public static class CreateResourceExportTaskRequestExcludeRules extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>VPC</p>
-         */
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("values")
-        public java.util.List<String> values;
-
-        public static CreateResourceExportTaskRequestExcludeRules build(java.util.Map<String, ?> map) throws Exception {
-            CreateResourceExportTaskRequestExcludeRules self = new CreateResourceExportTaskRequestExcludeRules();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateResourceExportTaskRequestExcludeRules setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public CreateResourceExportTaskRequestExcludeRules setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
     }
 
     public static class CreateResourceExportTaskRequestExportToModule extends TeaModel {

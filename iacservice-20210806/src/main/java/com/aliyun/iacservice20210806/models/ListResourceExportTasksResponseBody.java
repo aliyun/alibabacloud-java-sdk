@@ -7,15 +7,31 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
     @NameInMap("exportTasks")
     public java.util.List<ListResourceExportTasksResponseBodyExportTasks> exportTasks;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>65287CB9-AC46-5FE7-B785-0106C159DA42</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>330</p>
+     */
     @NameInMap("totalCount")
     public Integer totalCount;
 
@@ -64,43 +80,25 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         return this.totalCount;
     }
 
-    public static class ListResourceExportTasksResponseBodyExportTasksExcludeRules extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("values")
-        public java.util.List<String> values;
-
-        public static ListResourceExportTasksResponseBodyExportTasksExcludeRules build(java.util.Map<String, ?> map) throws Exception {
-            ListResourceExportTasksResponseBodyExportTasksExcludeRules self = new ListResourceExportTasksResponseBodyExportTasksExcludeRules();
-            return TeaModel.build(map, self);
-        }
-
-        public ListResourceExportTasksResponseBodyExportTasksExcludeRules setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public ListResourceExportTasksResponseBodyExportTasksExcludeRules setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
-    }
-
     public static class ListResourceExportTasksResponseBodyExportTasksExportToModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alibaba/security-group/alicloud</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("statePath")
         public String statePath;
 
@@ -136,6 +134,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
     }
 
     public static class ListResourceExportTasksResponseBodyExportTasksIncludeRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ZoneId</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -166,12 +168,24 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
     }
 
     public static class ListResourceExportTasksResponseBodyExportTasksModules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v3</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -210,6 +224,10 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         @NameInMap("properties")
         public java.util.List<String> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliCloud::VPC::VPC</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -237,32 +255,50 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
     }
 
     public static class ListResourceExportTasksResponseBodyExportTasks extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2025-02-20T02:10:06Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4243</p>
+         */
         @NameInMap("elapsedTime")
         public Long elapsedTime;
 
-        @NameInMap("excludeRules")
-        public java.util.List<ListResourceExportTasksResponseBodyExportTasksExcludeRules> excludeRules;
-
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("exportStatus")
         public String exportStatus;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ex-kw1a1ol8c0pngjav17q8eri</p>
+         */
         @NameInMap("exportTaskId")
         public String exportTaskId;
 
         @NameInMap("exportToModule")
         public ListResourceExportTasksResponseBodyExportTasksExportToModule exportToModule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("exportVersion")
         public String exportVersion;
-
-        @NameInMap("hasDestroy")
-        public Boolean hasDestroy;
 
         @NameInMap("includeRules")
         public java.util.List<ListResourceExportTasksResponseBodyExportTasksIncludeRules> includeRules;
@@ -270,9 +306,17 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         @NameInMap("modules")
         public java.util.List<ListResourceExportTasksResponseBodyExportTasksModules> modules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc_all</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Success</p>
+         */
         @NameInMap("status")
         public String status;
 
@@ -308,14 +352,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
             return this.elapsedTime;
         }
 
-        public ListResourceExportTasksResponseBodyExportTasks setExcludeRules(java.util.List<ListResourceExportTasksResponseBodyExportTasksExcludeRules> excludeRules) {
-            this.excludeRules = excludeRules;
-            return this;
-        }
-        public java.util.List<ListResourceExportTasksResponseBodyExportTasksExcludeRules> getExcludeRules() {
-            return this.excludeRules;
-        }
-
         public ListResourceExportTasksResponseBodyExportTasks setExportStatus(String exportStatus) {
             this.exportStatus = exportStatus;
             return this;
@@ -346,14 +382,6 @@ public class ListResourceExportTasksResponseBody extends TeaModel {
         }
         public String getExportVersion() {
             return this.exportVersion;
-        }
-
-        public ListResourceExportTasksResponseBodyExportTasks setHasDestroy(Boolean hasDestroy) {
-            this.hasDestroy = hasDestroy;
-            return this;
-        }
-        public Boolean getHasDestroy() {
-            return this.hasDestroy;
         }
 
         public ListResourceExportTasksResponseBodyExportTasks setIncludeRules(java.util.List<ListResourceExportTasksResponseBodyExportTasksIncludeRules> includeRules) {

@@ -4,6 +4,10 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetResourceExportTaskRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>v3</p>
+     */
     @NameInMap("exportVersion")
     public String exportVersion;
 

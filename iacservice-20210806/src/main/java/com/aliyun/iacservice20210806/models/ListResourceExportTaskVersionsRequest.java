@@ -4,18 +4,38 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListResourceExportTaskVersionsRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>v1</p>
+     */
     @NameInMap("exportVersion")
     public String exportVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>key</p>
+     */
     @NameInMap("keyword")
     public String keyword;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("pageNumber")
     public Integer pageNumber;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("pageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Errored</p>
+     */
     @NameInMap("status")
     public String status;
 

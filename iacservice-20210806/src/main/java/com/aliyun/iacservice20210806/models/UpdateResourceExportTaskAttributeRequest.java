@@ -6,18 +6,19 @@ import com.aliyun.tea.*;
 public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>a65451293e64979ba7a4b573950217fe</p>
      */
     @NameInMap("clientToken")
     public String clientToken;
 
-    @NameInMap("configPath")
-    public String configPath;
-
+    /**
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("description")
     public String description;
-
-    @NameInMap("excludeRules")
-    public java.util.List<UpdateResourceExportTaskAttributeRequestExcludeRules> excludeRules;
 
     @NameInMap("exportToModule")
     public UpdateResourceExportTaskAttributeRequestExportToModule exportToModule;
@@ -26,20 +27,37 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
     public java.util.List<UpdateResourceExportTaskAttributeRequestIncludeRules> includeRules;
 
     /**
-     * <p>This parameter is required.</p>
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ramName</p>
+     */
     @NameInMap("ramRole")
     public String ramRole;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.183.0</p>
+     */
     @NameInMap("terraformProviderVersion")
     public String terraformProviderVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1.2.6</p>
+     */
     @NameInMap("terraformVersion")
     public String terraformVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Manual</p>
+     */
     @NameInMap("triggerStrategy")
     public String triggerStrategy;
 
@@ -59,28 +77,12 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public UpdateResourceExportTaskAttributeRequest setConfigPath(String configPath) {
-        this.configPath = configPath;
-        return this;
-    }
-    public String getConfigPath() {
-        return this.configPath;
-    }
-
     public UpdateResourceExportTaskAttributeRequest setDescription(String description) {
         this.description = description;
         return this;
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public UpdateResourceExportTaskAttributeRequest setExcludeRules(java.util.List<UpdateResourceExportTaskAttributeRequestExcludeRules> excludeRules) {
-        this.excludeRules = excludeRules;
-        return this;
-    }
-    public java.util.List<UpdateResourceExportTaskAttributeRequestExcludeRules> getExcludeRules() {
-        return this.excludeRules;
     }
 
     public UpdateResourceExportTaskAttributeRequest setExportToModule(UpdateResourceExportTaskAttributeRequestExportToModule exportToModule) {
@@ -147,43 +149,25 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
         return this.variables;
     }
 
-    public static class UpdateResourceExportTaskAttributeRequestExcludeRules extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("values")
-        public java.util.List<String> values;
-
-        public static UpdateResourceExportTaskAttributeRequestExcludeRules build(java.util.Map<String, ?> map) throws Exception {
-            UpdateResourceExportTaskAttributeRequestExcludeRules self = new UpdateResourceExportTaskAttributeRequestExcludeRules();
-            return TeaModel.build(map, self);
-        }
-
-        public UpdateResourceExportTaskAttributeRequestExcludeRules setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public UpdateResourceExportTaskAttributeRequestExcludeRules setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
-    }
-
     public static class UpdateResourceExportTaskAttributeRequestExportToModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Registry</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alibaba/security-group/alicloud</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("statePath")
         public String statePath;
 
@@ -219,6 +203,10 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
     }
 
     public static class UpdateResourceExportTaskAttributeRequestIncludeRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ZoneId</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -252,6 +240,10 @@ public class UpdateResourceExportTaskAttributeRequest extends TeaModel {
         @NameInMap("properties")
         public java.util.List<String> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>AliCloud::VPC::VPC</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 

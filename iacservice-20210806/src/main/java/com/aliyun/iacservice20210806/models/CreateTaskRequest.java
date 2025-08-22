@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class CreateTaskRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -69,15 +67,10 @@ public class CreateTaskRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
-    @NameInMap("parameters")
-    public java.util.Map<String, String> parameters;
-
     @NameInMap("protectionStrategy")
     public java.util.List<String> protectionStrategy;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -86,6 +79,9 @@ public class CreateTaskRequest extends TeaModel {
 
     @NameInMap("skipPropertyValidation")
     public Boolean skipPropertyValidation;
+
+    @NameInMap("tags")
+    public java.util.List<CreateTaskRequestTags> tags;
 
     @NameInMap("taskBackend")
     public CreateTaskRequestTaskBackend taskBackend;
@@ -98,20 +94,11 @@ public class CreateTaskRequest extends TeaModel {
     public String terraformVersion;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>Always</p>
      */
     @NameInMap("triggerStrategy")
     public String triggerStrategy;
-
-    /**
-     * <strong>example:</strong>
-     * <hr>
-     */
-    @NameInMap("triggerValue")
-    public String triggerValue;
 
     public static CreateTaskRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTaskRequest self = new CreateTaskRequest();
@@ -190,14 +177,6 @@ public class CreateTaskRequest extends TeaModel {
         return this.name;
     }
 
-    public CreateTaskRequest setParameters(java.util.Map<String, String> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.Map<String, String> getParameters() {
-        return this.parameters;
-    }
-
     public CreateTaskRequest setProtectionStrategy(java.util.List<String> protectionStrategy) {
         this.protectionStrategy = protectionStrategy;
         return this;
@@ -222,6 +201,14 @@ public class CreateTaskRequest extends TeaModel {
         return this.skipPropertyValidation;
     }
 
+    public CreateTaskRequest setTags(java.util.List<CreateTaskRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateTaskRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateTaskRequest setTaskBackend(CreateTaskRequestTaskBackend taskBackend) {
         this.taskBackend = taskBackend;
         return this;
@@ -244,14 +231,6 @@ public class CreateTaskRequest extends TeaModel {
     }
     public String getTriggerStrategy() {
         return this.triggerStrategy;
-    }
-
-    public CreateTaskRequest setTriggerValue(String triggerValue) {
-        this.triggerValue = triggerValue;
-        return this;
-    }
-    public String getTriggerValue() {
-        return this.triggerValue;
     }
 
     public static class CreateTaskRequestGroupInfo extends TeaModel {
@@ -288,6 +267,36 @@ public class CreateTaskRequest extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+    }
+
+    public static class CreateTaskRequestTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static CreateTaskRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestTags self = new CreateTaskRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public CreateTaskRequestTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

@@ -8,15 +8,15 @@ public class JobsStatusDetailValue extends TeaModel {
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
-    @NameInMap("comment")
-    public String comment;
+    @NameInMap("jobResult")
+    public String jobResult;
 
     /**
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
      */
-    @NameInMap("jobResult")
-    public String jobResult;
+    @NameInMap("comment")
+    public String comment;
 
     /**
      * <strong>example:</strong>
@@ -30,20 +30,20 @@ public class JobsStatusDetailValue extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public JobsStatusDetailValue setComment(String comment) {
-        this.comment = comment;
-        return this;
-    }
-    public String getComment() {
-        return this.comment;
-    }
-
     public JobsStatusDetailValue setJobResult(String jobResult) {
         this.jobResult = jobResult;
         return this;
     }
     public String getJobResult() {
         return this.jobResult;
+    }
+
+    public JobsStatusDetailValue setComment(String comment) {
+        this.comment = comment;
+        return this;
+    }
+    public String getComment() {
+        return this.comment;
     }
 
     public JobsStatusDetailValue setTimeStamps(String timeStamps) {

@@ -152,6 +152,12 @@ public class ListTasksResponseBody extends TeaModel {
         @NameInMap("key")
         public String key;
 
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
         @NameInMap("value")
         public String value;
 
@@ -166,6 +172,22 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public ListTasksResponseBodyTasksTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListTasksResponseBodyTasksTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
         public ListTasksResponseBodyTasksTags setValue(String value) {
@@ -208,6 +230,9 @@ public class ListTasksResponseBody extends TeaModel {
 
         @NameInMap("groupInfo")
         public ListTasksResponseBodyTasksGroupInfo groupInfo;
+
+        @NameInMap("latestModuleVersion")
+        public String latestModuleVersion;
 
         /**
          * <strong>example:</strong>
@@ -301,6 +326,14 @@ public class ListTasksResponseBody extends TeaModel {
         }
         public ListTasksResponseBodyTasksGroupInfo getGroupInfo() {
             return this.groupInfo;
+        }
+
+        public ListTasksResponseBodyTasks setLatestModuleVersion(String latestModuleVersion) {
+            this.latestModuleVersion = latestModuleVersion;
+            return this;
+        }
+        public String getLatestModuleVersion() {
+            return this.latestModuleVersion;
         }
 
         public ListTasksResponseBodyTasks setModuleId(String moduleId) {

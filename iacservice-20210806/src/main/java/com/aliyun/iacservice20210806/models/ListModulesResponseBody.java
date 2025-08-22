@@ -136,6 +136,12 @@ public class ListModulesResponseBody extends TeaModel {
         @NameInMap("key")
         public String key;
 
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
         @NameInMap("value")
         public String value;
 
@@ -150,6 +156,22 @@ public class ListModulesResponseBody extends TeaModel {
         }
         public String getKey() {
             return this.key;
+        }
+
+        public ListModulesResponseBodyModulesTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public ListModulesResponseBodyModulesTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
         public ListModulesResponseBodyModulesTags setValue(String value) {
@@ -194,9 +216,6 @@ public class ListModulesResponseBody extends TeaModel {
         @NameInMap("latestVersion")
         public String latestVersion;
 
-        @NameInMap("meta")
-        public java.util.Map<String, ?> meta;
-
         /**
          * <strong>example:</strong>
          * <p>mod-518855d9a058cdbd3fd6951d59</p>
@@ -213,9 +232,6 @@ public class ListModulesResponseBody extends TeaModel {
          */
         @NameInMap("source")
         public String source;
-
-        @NameInMap("sourceConfig")
-        public java.util.Map<String, ?> sourceConfig;
 
         /**
          * <strong>example:</strong>
@@ -272,14 +288,6 @@ public class ListModulesResponseBody extends TeaModel {
             return this.latestVersion;
         }
 
-        public ListModulesResponseBodyModules setMeta(java.util.Map<String, ?> meta) {
-            this.meta = meta;
-            return this;
-        }
-        public java.util.Map<String, ?> getMeta() {
-            return this.meta;
-        }
-
         public ListModulesResponseBodyModules setModuleId(String moduleId) {
             this.moduleId = moduleId;
             return this;
@@ -302,14 +310,6 @@ public class ListModulesResponseBody extends TeaModel {
         }
         public String getSource() {
             return this.source;
-        }
-
-        public ListModulesResponseBodyModules setSourceConfig(java.util.Map<String, ?> sourceConfig) {
-            this.sourceConfig = sourceConfig;
-            return this;
-        }
-        public java.util.Map<String, ?> getSourceConfig() {
-            return this.sourceConfig;
         }
 
         public ListModulesResponseBodyModules setStatus(String status) {

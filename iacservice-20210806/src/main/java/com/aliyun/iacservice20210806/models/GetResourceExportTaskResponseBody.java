@@ -4,6 +4,10 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class GetResourceExportTaskResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>FC49AA8C-0A19-5556-8929-E7447F18D529</p>
+     */
     @NameInMap("requestId")
     public String requestId;
 
@@ -31,43 +35,25 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         return this.task;
     }
 
-    public static class GetResourceExportTaskResponseBodyTaskExcludeRules extends TeaModel {
-        @NameInMap("key")
-        public String key;
-
-        @NameInMap("values")
-        public java.util.List<String> values;
-
-        public static GetResourceExportTaskResponseBodyTaskExcludeRules build(java.util.Map<String, ?> map) throws Exception {
-            GetResourceExportTaskResponseBodyTaskExcludeRules self = new GetResourceExportTaskResponseBodyTaskExcludeRules();
-            return TeaModel.build(map, self);
-        }
-
-        public GetResourceExportTaskResponseBodyTaskExcludeRules setKey(String key) {
-            this.key = key;
-            return this;
-        }
-        public String getKey() {
-            return this.key;
-        }
-
-        public GetResourceExportTaskResponseBodyTaskExcludeRules setValues(java.util.List<String> values) {
-            this.values = values;
-            return this;
-        }
-        public java.util.List<String> getValues() {
-            return this.values;
-        }
-
-    }
-
     public static class GetResourceExportTaskResponseBodyTaskExportToModule extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>alibaba/security-group/alicloud</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("statePath")
         public String statePath;
 
@@ -103,6 +89,10 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
     }
 
     public static class GetResourceExportTaskResponseBodyTaskIncludeRules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>ZoneId</p>
+         */
         @NameInMap("key")
         public String key;
 
@@ -133,12 +123,24 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
     }
 
     public static class GetResourceExportTaskResponseBodyTaskModules extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>OSS</p>
+         */
         @NameInMap("source")
         public String source;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip</p>
+         */
         @NameInMap("sourcePath")
         public String sourcePath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v3</p>
+         */
         @NameInMap("version")
         public String version;
 
@@ -177,6 +179,10 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         @NameInMap("properties")
         public java.util.List<String> properties;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ALIYUN::Bastionhost::Instance</p>
+         */
         @NameInMap("resourceType")
         public String resourceType;
 
@@ -204,30 +210,48 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
     }
 
     public static class GetResourceExportTaskResponseBodyTask extends TeaModel {
-        @NameInMap("configPath")
-        public String configPath;
-
+        /**
+         * <strong>example:</strong>
+         * <p>2022-06-15T02:44:37Z</p>
+         */
         @NameInMap("createTime")
         public String createTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>demo</p>
+         */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4533</p>
+         */
         @NameInMap("elapsedTime")
         public Long elapsedTime;
 
-        @NameInMap("excludeRules")
-        public java.util.List<GetResourceExportTaskResponseBodyTaskExcludeRules> excludeRules;
-
+        /**
+         * <strong>example:</strong>
+         * <p>ex-al1111jlfh53i6mo4o94jj</p>
+         */
         @NameInMap("exportTaskId")
         public String exportTaskId;
 
         @NameInMap("exportToModule")
         public GetResourceExportTaskResponseBodyTaskExportToModule exportToModule;
 
+        /**
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
         @NameInMap("exportVersion")
         public String exportVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Reason</p>
+         */
         @NameInMap("failedReason")
         public String failedReason;
 
@@ -237,27 +261,59 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         @NameInMap("modules")
         public java.util.List<GetResourceExportTaskResponseBodyTaskModules> modules;
 
+        /**
+         * <strong>example:</strong>
+         * <p>vpc_all</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>role</p>
+         */
         @NameInMap("ramRole")
         public String ramRole;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
         @NameInMap("status")
         public String status;
 
+        /**
+         * <strong>example:</strong>
+         * <p>/</p>
+         */
         @NameInMap("taskOutputPath")
         public String taskOutputPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
         @NameInMap("terraformContext")
         public java.util.Map<String, ?> terraformContext;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.246.0</p>
+         */
         @NameInMap("terraformProviderVersion")
         public String terraformProviderVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.2.6</p>
+         */
         @NameInMap("terraformVersion")
         public String terraformVersion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>Manual</p>
+         */
         @NameInMap("triggerStrategy")
         public String triggerStrategy;
 
@@ -267,14 +323,6 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         public static GetResourceExportTaskResponseBodyTask build(java.util.Map<String, ?> map) throws Exception {
             GetResourceExportTaskResponseBodyTask self = new GetResourceExportTaskResponseBodyTask();
             return TeaModel.build(map, self);
-        }
-
-        public GetResourceExportTaskResponseBodyTask setConfigPath(String configPath) {
-            this.configPath = configPath;
-            return this;
-        }
-        public String getConfigPath() {
-            return this.configPath;
         }
 
         public GetResourceExportTaskResponseBodyTask setCreateTime(String createTime) {
@@ -299,14 +347,6 @@ public class GetResourceExportTaskResponseBody extends TeaModel {
         }
         public Long getElapsedTime() {
             return this.elapsedTime;
-        }
-
-        public GetResourceExportTaskResponseBodyTask setExcludeRules(java.util.List<GetResourceExportTaskResponseBodyTaskExcludeRules> excludeRules) {
-            this.excludeRules = excludeRules;
-            return this;
-        }
-        public java.util.List<GetResourceExportTaskResponseBodyTaskExcludeRules> getExcludeRules() {
-            return this.excludeRules;
         }
 
         public GetResourceExportTaskResponseBodyTask setExportTaskId(String exportTaskId) {

@@ -84,6 +84,9 @@ public class ListJobsResponseBody extends TeaModel {
         @NameInMap("isDestroy")
         public Boolean isDestroy;
 
+        @NameInMap("moduleDescription")
+        public String moduleDescription;
+
         /**
          * <strong>example:</strong>
          * <p>v4</p>
@@ -112,6 +115,14 @@ public class ListJobsResponseBody extends TeaModel {
         }
         public Boolean getIsDestroy() {
             return this.isDestroy;
+        }
+
+        public ListJobsResponseBodyJobsConfig setModuleDescription(String moduleDescription) {
+            this.moduleDescription = moduleDescription;
+            return this;
+        }
+        public String getModuleDescription() {
+            return this.moduleDescription;
         }
 
         public ListJobsResponseBodyJobsConfig setModuleVersion(String moduleVersion) {

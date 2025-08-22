@@ -4,9 +4,6 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListModulesShrinkRequest extends TeaModel {
-    @NameInMap("excludeModuleIds")
-    public String excludeModuleIdsShrink;
-
     @NameInMap("groupId")
     public String groupId;
 
@@ -40,14 +37,6 @@ public class ListModulesShrinkRequest extends TeaModel {
     public static ListModulesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListModulesShrinkRequest self = new ListModulesShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListModulesShrinkRequest setExcludeModuleIdsShrink(String excludeModuleIdsShrink) {
-        this.excludeModuleIdsShrink = excludeModuleIdsShrink;
-        return this;
-    }
-    public String getExcludeModuleIdsShrink() {
-        return this.excludeModuleIdsShrink;
     }
 
     public ListModulesShrinkRequest setGroupId(String groupId) {

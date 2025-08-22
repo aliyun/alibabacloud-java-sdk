@@ -4,9 +4,6 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
-    @NameInMap("excludeTaskIds")
-    public java.util.List<String> excludeTaskIds;
-
     /**
      * <strong>example:</strong>
      * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
@@ -65,14 +62,6 @@ public class ListTasksRequest extends TeaModel {
     public static ListTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksRequest self = new ListTasksRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTasksRequest setExcludeTaskIds(java.util.List<String> excludeTaskIds) {
-        this.excludeTaskIds = excludeTaskIds;
-        return this;
-    }
-    public java.util.List<String> getExcludeTaskIds() {
-        return this.excludeTaskIds;
     }
 
     public ListTasksRequest setGroupId(String groupId) {
@@ -148,31 +137,31 @@ public class ListTasksRequest extends TeaModel {
     }
 
     public static class ListTasksRequestTag extends TeaModel {
-        @NameInMap("key")
-        public String key;
+        @NameInMap("tagKey")
+        public String tagKey;
 
-        @NameInMap("value")
-        public String value;
+        @NameInMap("tagValue")
+        public String tagValue;
 
         public static ListTasksRequestTag build(java.util.Map<String, ?> map) throws Exception {
             ListTasksRequestTag self = new ListTasksRequestTag();
             return TeaModel.build(map, self);
         }
 
-        public ListTasksRequestTag setKey(String key) {
-            this.key = key;
+        public ListTasksRequestTag setTagKey(String tagKey) {
+            this.tagKey = tagKey;
             return this;
         }
-        public String getKey() {
-            return this.key;
+        public String getTagKey() {
+            return this.tagKey;
         }
 
-        public ListTasksRequestTag setValue(String value) {
-            this.value = value;
+        public ListTasksRequestTag setTagValue(String tagValue) {
+            this.tagValue = tagValue;
             return this;
         }
-        public String getValue() {
-            return this.value;
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

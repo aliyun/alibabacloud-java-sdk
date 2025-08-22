@@ -5,8 +5,6 @@ import com.aliyun.tea.*;
 
 public class UpdateTaskAttributeRequest extends TeaModel {
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +17,12 @@ public class UpdateTaskAttributeRequest extends TeaModel {
      */
     @NameInMap("autoDestroy")
     public Boolean autoDestroy;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
 
     /**
      * <strong>example:</strong>
@@ -34,17 +38,6 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public Boolean initModuleState;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>mod-148e7853433574fff6b316f4eb737e</p>
-     */
-    @NameInMap("moduleId")
-    public String moduleId;
-
-    /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>v1</p>
      */
@@ -52,23 +45,16 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public String moduleVersion;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("name")
     public String name;
 
-    @NameInMap("parameters")
-    public java.util.Map<String, String> parameters;
-
     @NameInMap("protectionStrategy")
     public java.util.List<String> protectionStrategy;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>{}</p>
      */
@@ -78,6 +64,9 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     @NameInMap("skipPropertyValidation")
     public Boolean skipPropertyValidation;
 
+    @NameInMap("tags")
+    public java.util.List<UpdateTaskAttributeRequestTags> tags;
+
     /**
      * <strong>example:</strong>
      * <p>1.2.6</p>
@@ -86,20 +75,11 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     public String terraformVersion;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>Manual</p>
      */
     @NameInMap("triggerStrategy")
     public String triggerStrategy;
-
-    /**
-     * <strong>example:</strong>
-     * <hr>
-     */
-    @NameInMap("triggerValue")
-    public String triggerValue;
 
     public static UpdateTaskAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateTaskAttributeRequest self = new UpdateTaskAttributeRequest();
@@ -120,6 +100,14 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     }
     public Boolean getAutoDestroy() {
         return this.autoDestroy;
+    }
+
+    public UpdateTaskAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateTaskAttributeRequest setDescription(String description) {
@@ -146,14 +134,6 @@ public class UpdateTaskAttributeRequest extends TeaModel {
         return this.initModuleState;
     }
 
-    public UpdateTaskAttributeRequest setModuleId(String moduleId) {
-        this.moduleId = moduleId;
-        return this;
-    }
-    public String getModuleId() {
-        return this.moduleId;
-    }
-
     public UpdateTaskAttributeRequest setModuleVersion(String moduleVersion) {
         this.moduleVersion = moduleVersion;
         return this;
@@ -168,14 +148,6 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     }
     public String getName() {
         return this.name;
-    }
-
-    public UpdateTaskAttributeRequest setParameters(java.util.Map<String, String> parameters) {
-        this.parameters = parameters;
-        return this;
-    }
-    public java.util.Map<String, String> getParameters() {
-        return this.parameters;
     }
 
     public UpdateTaskAttributeRequest setProtectionStrategy(java.util.List<String> protectionStrategy) {
@@ -202,6 +174,14 @@ public class UpdateTaskAttributeRequest extends TeaModel {
         return this.skipPropertyValidation;
     }
 
+    public UpdateTaskAttributeRequest setTags(java.util.List<UpdateTaskAttributeRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<UpdateTaskAttributeRequestTags> getTags() {
+        return this.tags;
+    }
+
     public UpdateTaskAttributeRequest setTerraformVersion(String terraformVersion) {
         this.terraformVersion = terraformVersion;
         return this;
@@ -216,14 +196,6 @@ public class UpdateTaskAttributeRequest extends TeaModel {
     }
     public String getTriggerStrategy() {
         return this.triggerStrategy;
-    }
-
-    public UpdateTaskAttributeRequest setTriggerValue(String triggerValue) {
-        this.triggerValue = triggerValue;
-        return this;
-    }
-    public String getTriggerValue() {
-        return this.triggerValue;
     }
 
     public static class UpdateTaskAttributeRequestGroupInfo extends TeaModel {
@@ -260,6 +232,36 @@ public class UpdateTaskAttributeRequest extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+    }
+
+    public static class UpdateTaskAttributeRequestTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static UpdateTaskAttributeRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            UpdateTaskAttributeRequestTags self = new UpdateTaskAttributeRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateTaskAttributeRequestTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public UpdateTaskAttributeRequestTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

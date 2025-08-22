@@ -33,6 +33,8 @@ public class CreateModuleRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>OSS</p>
      */
@@ -55,6 +57,9 @@ public class CreateModuleRequest extends TeaModel {
      */
     @NameInMap("statePath")
     public String statePath;
+
+    @NameInMap("tags")
+    public java.util.List<CreateModuleRequestTags> tags;
 
     /**
      * <strong>example:</strong>
@@ -124,6 +129,14 @@ public class CreateModuleRequest extends TeaModel {
         return this.statePath;
     }
 
+    public CreateModuleRequest setTags(java.util.List<CreateModuleRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<CreateModuleRequestTags> getTags() {
+        return this.tags;
+    }
+
     public CreateModuleRequest setVersionStrategy(String versionStrategy) {
         this.versionStrategy = versionStrategy;
         return this;
@@ -166,6 +179,36 @@ public class CreateModuleRequest extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+    }
+
+    public static class CreateModuleRequestTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static CreateModuleRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            CreateModuleRequestTags self = new CreateModuleRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateModuleRequestTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public CreateModuleRequestTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }

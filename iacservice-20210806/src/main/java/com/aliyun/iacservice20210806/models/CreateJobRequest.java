@@ -22,9 +22,6 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("description")
     public String description;
 
-    @NameInMap("executeType")
-    public String executeType;
-
     /**
      * <strong>example:</strong>
      * <p>null</p>
@@ -54,14 +51,6 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
-    }
-
-    public CreateJobRequest setExecuteType(String executeType) {
-        this.executeType = executeType;
-        return this;
-    }
-    public String getExecuteType() {
-        return this.executeType;
     }
 
     public CreateJobRequest setSubCommand(String subCommand) {

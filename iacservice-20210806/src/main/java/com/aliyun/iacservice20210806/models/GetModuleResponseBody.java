@@ -37,6 +37,88 @@ public class GetModuleResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetModuleResponseBodyModuleGroupInfo extends TeaModel {
+        @NameInMap("groupId")
+        public String groupId;
+
+        @NameInMap("groupName")
+        public String groupName;
+
+        @NameInMap("projectId")
+        public String projectId;
+
+        @NameInMap("projectName")
+        public String projectName;
+
+        public static GetModuleResponseBodyModuleGroupInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetModuleResponseBodyModuleGroupInfo self = new GetModuleResponseBodyModuleGroupInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetModuleResponseBodyModuleGroupInfo setGroupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public GetModuleResponseBodyModuleGroupInfo setGroupName(String groupName) {
+            this.groupName = groupName;
+            return this;
+        }
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        public GetModuleResponseBodyModuleGroupInfo setProjectId(String projectId) {
+            this.projectId = projectId;
+            return this;
+        }
+        public String getProjectId() {
+            return this.projectId;
+        }
+
+        public GetModuleResponseBodyModuleGroupInfo setProjectName(String projectName) {
+            this.projectName = projectName;
+            return this;
+        }
+        public String getProjectName() {
+            return this.projectName;
+        }
+
+    }
+
+    public static class GetModuleResponseBodyModuleTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static GetModuleResponseBodyModuleTags build(java.util.Map<String, ?> map) throws Exception {
+            GetModuleResponseBodyModuleTags self = new GetModuleResponseBodyModuleTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetModuleResponseBodyModuleTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetModuleResponseBodyModuleTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+    }
+
     public static class GetModuleResponseBodyModule extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -51,6 +133,9 @@ public class GetModuleResponseBody extends TeaModel {
          */
         @NameInMap("description")
         public String description;
+
+        @NameInMap("groupInfo")
+        public GetModuleResponseBodyModuleGroupInfo groupInfo;
 
         /**
          * <strong>example:</strong>
@@ -111,6 +196,9 @@ public class GetModuleResponseBody extends TeaModel {
         @NameInMap("status")
         public String status;
 
+        @NameInMap("tags")
+        public java.util.List<GetModuleResponseBodyModuleTags> tags;
+
         /**
          * <strong>example:</strong>
          * <p>Manual</p>
@@ -137,6 +225,14 @@ public class GetModuleResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetModuleResponseBodyModule setGroupInfo(GetModuleResponseBodyModuleGroupInfo groupInfo) {
+            this.groupInfo = groupInfo;
+            return this;
+        }
+        public GetModuleResponseBodyModuleGroupInfo getGroupInfo() {
+            return this.groupInfo;
         }
 
         public GetModuleResponseBodyModule setLatestVersion(String latestVersion) {
@@ -201,6 +297,14 @@ public class GetModuleResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetModuleResponseBodyModule setTags(java.util.List<GetModuleResponseBodyModuleTags> tags) {
+            this.tags = tags;
+            return this;
+        }
+        public java.util.List<GetModuleResponseBodyModuleTags> getTags() {
+            return this.tags;
         }
 
         public GetModuleResponseBodyModule setVersionStrategy(String versionStrategy) {

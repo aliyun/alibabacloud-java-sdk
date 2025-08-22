@@ -24,9 +24,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
     @NameInMap("totalCount")
     public Integer totalCount;
 
-    @NameInMap("verisonList")
-    public java.util.List<String> verisonList;
-
     @NameInMap("versions")
     public java.util.List<ListTerraformProviderVersionsResponseBodyVersions> versions;
 
@@ -65,14 +62,6 @@ public class ListTerraformProviderVersionsResponseBody extends TeaModel {
     }
     public Integer getTotalCount() {
         return this.totalCount;
-    }
-
-    public ListTerraformProviderVersionsResponseBody setVerisonList(java.util.List<String> verisonList) {
-        this.verisonList = verisonList;
-        return this;
-    }
-    public java.util.List<String> getVerisonList() {
-        return this.verisonList;
     }
 
     public ListTerraformProviderVersionsResponseBody setVersions(java.util.List<ListTerraformProviderVersionsResponseBodyVersions> versions) {

@@ -4,9 +4,6 @@ package com.aliyun.iacservice20210806.models;
 import com.aliyun.tea.*;
 
 public class ListTasksShrinkRequest extends TeaModel {
-    @NameInMap("excludeTaskIds")
-    public String excludeTaskIdsShrink;
-
     /**
      * <strong>example:</strong>
      * <p>g-59d8d22e78792ffe3d3eb6154d727</p>
@@ -65,14 +62,6 @@ public class ListTasksShrinkRequest extends TeaModel {
     public static ListTasksShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTasksShrinkRequest self = new ListTasksShrinkRequest();
         return TeaModel.build(map, self);
-    }
-
-    public ListTasksShrinkRequest setExcludeTaskIdsShrink(String excludeTaskIdsShrink) {
-        this.excludeTaskIdsShrink = excludeTaskIdsShrink;
-        return this;
-    }
-    public String getExcludeTaskIdsShrink() {
-        return this.excludeTaskIdsShrink;
     }
 
     public ListTasksShrinkRequest setGroupId(String groupId) {

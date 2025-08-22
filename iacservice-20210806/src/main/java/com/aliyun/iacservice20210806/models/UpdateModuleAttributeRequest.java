@@ -5,6 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateModuleAttributeRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("clientToken")
+    public String clientToken;
+
+    /**
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -23,13 +29,6 @@ public class UpdateModuleAttributeRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>OSS</p>
-     */
-    @NameInMap("source")
-    public String source;
-
-    /**
-     * <strong>example:</strong>
      * <p>OSS：
      * &quot;oss::<a href="https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip">https://terraform-pipeline.oss-eu-central-1.aliyuncs.com/code.zip</a>&quot;
      * Registry：
@@ -45,6 +44,9 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     @NameInMap("statePath")
     public String statePath;
 
+    @NameInMap("tags")
+    public java.util.List<UpdateModuleAttributeRequestTags> tags;
+
     /**
      * <strong>example:</strong>
      * <p>Manual</p>
@@ -55,6 +57,14 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     public static UpdateModuleAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateModuleAttributeRequest self = new UpdateModuleAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateModuleAttributeRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateModuleAttributeRequest setDescription(String description) {
@@ -81,14 +91,6 @@ public class UpdateModuleAttributeRequest extends TeaModel {
         return this.name;
     }
 
-    public UpdateModuleAttributeRequest setSource(String source) {
-        this.source = source;
-        return this;
-    }
-    public String getSource() {
-        return this.source;
-    }
-
     public UpdateModuleAttributeRequest setSourcePath(String sourcePath) {
         this.sourcePath = sourcePath;
         return this;
@@ -103,6 +105,14 @@ public class UpdateModuleAttributeRequest extends TeaModel {
     }
     public String getStatePath() {
         return this.statePath;
+    }
+
+    public UpdateModuleAttributeRequest setTags(java.util.List<UpdateModuleAttributeRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<UpdateModuleAttributeRequestTags> getTags() {
+        return this.tags;
     }
 
     public UpdateModuleAttributeRequest setVersionStrategy(String versionStrategy) {
@@ -139,6 +149,36 @@ public class UpdateModuleAttributeRequest extends TeaModel {
         }
         public String getProjectId() {
             return this.projectId;
+        }
+
+    }
+
+    public static class UpdateModuleAttributeRequestTags extends TeaModel {
+        @NameInMap("tagKey")
+        public String tagKey;
+
+        @NameInMap("tagValue")
+        public String tagValue;
+
+        public static UpdateModuleAttributeRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            UpdateModuleAttributeRequestTags self = new UpdateModuleAttributeRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateModuleAttributeRequestTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public UpdateModuleAttributeRequestTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
