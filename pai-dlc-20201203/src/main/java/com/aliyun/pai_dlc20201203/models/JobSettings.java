@@ -24,6 +24,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("Caller")
     public String caller;
 
+    @NameInMap("DataJuicerConfig")
+    public DataJuicerConfig dataJuicerConfig;
+
     /**
      * <strong>example:</strong>
      * <p>false</p>
@@ -44,6 +47,9 @@ public class JobSettings extends TeaModel {
      */
     @NameInMap("EnableCPUAffinity")
     public Boolean enableCPUAffinity;
+
+    @NameInMap("EnableDSWDev")
+    public Boolean enableDSWDev;
 
     /**
      * <strong>example:</strong>
@@ -162,6 +168,14 @@ public class JobSettings extends TeaModel {
         return this.caller;
     }
 
+    public JobSettings setDataJuicerConfig(DataJuicerConfig dataJuicerConfig) {
+        this.dataJuicerConfig = dataJuicerConfig;
+        return this;
+    }
+    public DataJuicerConfig getDataJuicerConfig() {
+        return this.dataJuicerConfig;
+    }
+
     public JobSettings setDisableEcsStockCheck(Boolean disableEcsStockCheck) {
         this.disableEcsStockCheck = disableEcsStockCheck;
         return this;
@@ -184,6 +198,14 @@ public class JobSettings extends TeaModel {
     }
     public Boolean getEnableCPUAffinity() {
         return this.enableCPUAffinity;
+    }
+
+    public JobSettings setEnableDSWDev(Boolean enableDSWDev) {
+        this.enableDSWDev = enableDSWDev;
+        return this;
+    }
+    public Boolean getEnableDSWDev() {
+        return this.enableDSWDev;
     }
 
     public JobSettings setEnableErrorMonitoringInAIMaster(Boolean enableErrorMonitoringInAIMaster) {

@@ -59,6 +59,9 @@ public class JobSpec extends TeaModel {
     @NameInMap("SpotSpec")
     public SpotSpec spotSpec;
 
+    @NameInMap("SystemDisk")
+    public SystemDisk systemDisk;
+
     /**
      * <strong>example:</strong>
      * <p>Worker</p>
@@ -190,6 +193,14 @@ public class JobSpec extends TeaModel {
     }
     public SpotSpec getSpotSpec() {
         return this.spotSpec;
+    }
+
+    public JobSpec setSystemDisk(SystemDisk systemDisk) {
+        this.systemDisk = systemDisk;
+        return this;
+    }
+    public SystemDisk getSystemDisk() {
+        return this.systemDisk;
     }
 
     public JobSpec setType(String type) {
