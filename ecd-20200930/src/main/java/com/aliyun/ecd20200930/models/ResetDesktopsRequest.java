@@ -38,6 +38,9 @@ public class ResetDesktopsRequest extends TeaModel {
     @NameInMap("ImageId")
     public String imageId;
 
+    @NameInMap("LastRetryTime")
+    public Long lastRetryTime;
+
     /**
      * <p>The billing method of the cloud computer share.</p>
      * <blockquote>
@@ -131,6 +134,14 @@ public class ResetDesktopsRequest extends TeaModel {
     }
     public String getImageId() {
         return this.imageId;
+    }
+
+    public ResetDesktopsRequest setLastRetryTime(Long lastRetryTime) {
+        this.lastRetryTime = lastRetryTime;
+        return this;
+    }
+    public Long getLastRetryTime() {
+        return this.lastRetryTime;
     }
 
     public ResetDesktopsRequest setPayType(String payType) {
