@@ -32,7 +32,6 @@ public class DeleteRumUploadFileRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>atc889zkcf@d8deedfa9bf****</p>
@@ -49,6 +48,9 @@ public class DeleteRumUploadFileRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     /**
      * <p>The file ID.</p>
@@ -67,6 +69,9 @@ public class DeleteRumUploadFileRequest extends TeaModel {
      */
     @NameInMap("VersionId")
     public String versionId;
+
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static DeleteRumUploadFileRequest build(java.util.Map<String, ?> map) throws Exception {
         DeleteRumUploadFileRequest self = new DeleteRumUploadFileRequest();
@@ -105,6 +110,14 @@ public class DeleteRumUploadFileRequest extends TeaModel {
         return this.regionId;
     }
 
+    public DeleteRumUploadFileRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
     public DeleteRumUploadFileRequest setUuid(String uuid) {
         this.uuid = uuid;
         return this;
@@ -119,6 +132,14 @@ public class DeleteRumUploadFileRequest extends TeaModel {
     }
     public String getVersionId() {
         return this.versionId;
+    }
+
+    public DeleteRumUploadFileRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

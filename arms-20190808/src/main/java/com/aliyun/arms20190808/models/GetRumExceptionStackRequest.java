@@ -48,7 +48,6 @@ public class GetRumExceptionStackRequest extends TeaModel {
 
     /**
      * <p>The application ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>atxxxxzkcf@d8deedfa9bf****</p>
@@ -65,6 +64,9 @@ public class GetRumExceptionStackRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ServiceId")
+    public String serviceId;
+
     /**
      * <p>The parsing type. Valid values:</p>
      * <ul>
@@ -80,6 +82,9 @@ public class GetRumExceptionStackRequest extends TeaModel {
      */
     @NameInMap("SourcemapType")
     public String sourcemapType;
+
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static GetRumExceptionStackRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumExceptionStackRequest self = new GetRumExceptionStackRequest();
@@ -134,12 +139,28 @@ public class GetRumExceptionStackRequest extends TeaModel {
         return this.regionId;
     }
 
+    public GetRumExceptionStackRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
     public GetRumExceptionStackRequest setSourcemapType(String sourcemapType) {
         this.sourcemapType = sourcemapType;
         return this;
     }
     public String getSourcemapType() {
         return this.sourcemapType;
+    }
+
+    public GetRumExceptionStackRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

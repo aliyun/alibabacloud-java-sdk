@@ -34,7 +34,6 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
 
     /**
      * <p>The process ID (PID) of the application.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>iioe7jcnuk@582846f37******</p>
@@ -51,6 +50,9 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    @NameInMap("ServiceId")
+    public String serviceId;
 
     /**
      * <p>The file type. Valid values: source-map: SourceMap files. mapping: symbol table files for Android. dsym: dSYM files for iOS.</p>
@@ -78,6 +80,9 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
      */
     @NameInMap("VersionId")
     public String versionId;
+
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static CreateRumUploadFileUrlRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRumUploadFileUrlRequest self = new CreateRumUploadFileUrlRequest();
@@ -124,6 +129,14 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
         return this.regionId;
     }
 
+    public CreateRumUploadFileUrlRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
     public CreateRumUploadFileUrlRequest setSourcemapType(String sourcemapType) {
         this.sourcemapType = sourcemapType;
         return this;
@@ -146,6 +159,14 @@ public class CreateRumUploadFileUrlRequest extends TeaModel {
     }
     public String getVersionId() {
         return this.versionId;
+    }
+
+    public CreateRumUploadFileUrlRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }

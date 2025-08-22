@@ -41,6 +41,9 @@ public class GetRumUploadFilesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    @NameInMap("ServiceId")
+    public String serviceId;
+
     /**
      * <p>The version number of the files. If you do not specify this parameter, all versions of the files are returned by default.</p>
      * 
@@ -49,6 +52,9 @@ public class GetRumUploadFilesRequest extends TeaModel {
      */
     @NameInMap("VersionId")
     public String versionId;
+
+    @NameInMap("Workspace")
+    public String workspace;
 
     public static GetRumUploadFilesRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRumUploadFilesRequest self = new GetRumUploadFilesRequest();
@@ -103,12 +109,28 @@ public class GetRumUploadFilesRequest extends TeaModel {
         return this.regionId;
     }
 
+    public GetRumUploadFilesRequest setServiceId(String serviceId) {
+        this.serviceId = serviceId;
+        return this;
+    }
+    public String getServiceId() {
+        return this.serviceId;
+    }
+
     public GetRumUploadFilesRequest setVersionId(String versionId) {
         this.versionId = versionId;
         return this;
     }
     public String getVersionId() {
         return this.versionId;
+    }
+
+    public GetRumUploadFilesRequest setWorkspace(String workspace) {
+        this.workspace = workspace;
+        return this;
+    }
+    public String getWorkspace() {
+        return this.workspace;
     }
 
 }
