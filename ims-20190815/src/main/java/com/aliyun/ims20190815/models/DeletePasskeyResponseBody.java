@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeletePasskeyResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8A1673AA-5DB3-5AFB-8758-AF9EC2889259</p>
      */

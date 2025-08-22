@@ -14,7 +14,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The overview information of the Alibaba Cloud account.</p>
+     * <p>The overview information about the Alibaba Cloud account.</p>
      */
     @NameInMap("SummaryMap")
     public GetAccountSummaryResponseBodySummaryMap summaryMap;
@@ -49,6 +49,9 @@ public class GetAccountSummaryResponseBody extends TeaModel {
          */
         @NameInMap("AccessKeysPerUserQuota")
         public Integer accessKeysPerUserQuota;
+
+        @NameInMap("AccountAccessKeysPerAccountQuota")
+        public Integer accountAccessKeysPerAccountQuota;
 
         /**
          * <p>The maximum number of custom policies that can be added to a RAM user group.</p>
@@ -105,6 +108,8 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer attachedSystemPoliciesPerUserQuota;
 
         /**
+         * <p>The maximum number of network access control policies that can be configured for an Alibaba Cloud account or AccessKey pair.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -139,6 +144,8 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         public Integer groupsQuota;
 
         /**
+         * <p>The maximum number of IP addresses that can be specified in an account-level AccessKey pair-based or AccessKey pair-level policy for network access control.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -255,6 +262,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         }
         public Integer getAccessKeysPerUserQuota() {
             return this.accessKeysPerUserQuota;
+        }
+
+        public GetAccountSummaryResponseBodySummaryMap setAccountAccessKeysPerAccountQuota(Integer accountAccessKeysPerAccountQuota) {
+            this.accountAccessKeysPerAccountQuota = accountAccessKeysPerAccountQuota;
+            return this;
+        }
+        public Integer getAccountAccessKeysPerAccountQuota() {
+            return this.accountAccessKeysPerAccountQuota;
         }
 
         public GetAccountSummaryResponseBodySummaryMap setAttachedPoliciesPerGroupQuota(Integer attachedPoliciesPerGroupQuota) {

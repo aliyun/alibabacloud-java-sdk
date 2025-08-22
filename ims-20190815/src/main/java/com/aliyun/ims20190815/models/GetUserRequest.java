@@ -11,7 +11,7 @@ public class GetUserRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+     * <p>LTAI*******************</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;

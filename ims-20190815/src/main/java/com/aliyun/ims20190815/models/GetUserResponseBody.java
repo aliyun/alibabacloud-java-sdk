@@ -201,6 +201,15 @@ public class GetUserResponseBody extends TeaModel {
         public String userId;
 
         /**
+         * <p>The username of the RAM user, which is the prefix of the logon name of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("UserName")
+        public String userName;
+
+        /**
          * <p>The logon name of the RAM user.</p>
          * 
          * <strong>example:</strong>
@@ -292,6 +301,14 @@ public class GetUserResponseBody extends TeaModel {
         }
         public String getUserId() {
             return this.userId;
+        }
+
+        public GetUserResponseBodyUser setUserName(String userName) {
+            this.userName = userName;
+            return this;
+        }
+        public String getUserName() {
+            return this.userName;
         }
 
         public GetUserResponseBodyUser setUserPrincipalName(String userPrincipalName) {

@@ -23,6 +23,12 @@ public class ListUsersRequest extends TeaModel {
     @NameInMap("MaxItems")
     public Integer maxItems;
 
+    /**
+     * <p>The status of the RAM users that you want to query. Valid values: active, freeze, and active,freeze. If you leave the parameter empty, the value active is used by default. If you specify a value for the Tag parameter, users in both states are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("Status")
     public String status;
 

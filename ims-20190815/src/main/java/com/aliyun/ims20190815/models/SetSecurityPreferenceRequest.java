@@ -17,6 +17,16 @@ public class SetSecurityPreferenceRequest extends TeaModel {
     @NameInMap("AllowUserToChangePassword")
     public Boolean allowUserToChangePassword;
 
+    /**
+     * <p>Specifies whether a RAM user can use a passkey for logon. Valid values:</p>
+     * <ul>
+     * <li>true: A RAM user can use a passkey for logon. This is the default value.</li>
+     * <li>false: A RAM user cannot use a passkey for logon.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("AllowUserToLoginWithPasskey")
     public Boolean allowUserToLoginWithPasskey;
 
@@ -123,6 +133,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
      * <p>autonomous</p>
      */
     @NameInMap("OperationForRiskLogin")
+    @Deprecated
     public String operationForRiskLogin;
 
     /**
@@ -208,6 +219,7 @@ public class SetSecurityPreferenceRequest extends TeaModel {
         return this.MFAOperationForLogin;
     }
 
+    @Deprecated
     public SetSecurityPreferenceRequest setOperationForRiskLogin(String operationForRiskLogin) {
         this.operationForRiskLogin = operationForRiskLogin;
         return this;

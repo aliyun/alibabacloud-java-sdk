@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdatePasskeyRequest extends TeaModel {
     /**
+     * <p>The ID of the passkey.</p>
+     * 
      * <strong>example:</strong>
      * <p>PASSKEY-CuZjEHhWcr7GIQOMGvkS</p>
      */
@@ -12,6 +14,8 @@ public class UpdatePasskeyRequest extends TeaModel {
     public String passkeyId;
 
     /**
+     * <p>The name of the passkey.</p>
+     * 
      * <strong>example:</strong>
      * <p>device1</p>
      */
@@ -19,6 +23,8 @@ public class UpdatePasskeyRequest extends TeaModel {
     public String passkeyName;
 
     /**
+     * <p>The logon name of the Resource Access Management (RAM) user.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@example.onaliyun.com">test@example.onaliyun.com</a></p>
      */

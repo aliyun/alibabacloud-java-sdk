@@ -75,6 +75,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("PredefinedScopes")
     public String predefinedScopes;
 
+    @NameInMap("ProtocolVersion")
+    public String protocolVersion;
+
     /**
      * <p>The callback URL.</p>
      * <p>If you enter multiple callback URLs, separate them with semicolons (;).</p>
@@ -184,6 +187,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public String getPredefinedScopes() {
         return this.predefinedScopes;
+    }
+
+    public CreateApplicationRequest setProtocolVersion(String protocolVersion) {
+        this.protocolVersion = protocolVersion;
+        return this;
+    }
+    public String getProtocolVersion() {
+        return this.protocolVersion;
     }
 
     public CreateApplicationRequest setRedirectUris(String redirectUris) {

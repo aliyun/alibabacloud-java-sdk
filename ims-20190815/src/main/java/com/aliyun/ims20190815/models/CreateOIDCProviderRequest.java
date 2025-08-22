@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateOIDCProviderRequest extends TeaModel {
     /**
-     * <p>The ID of the client, which is provided by the external IdP Okta. If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
-     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
-     * <p>The client ID can be up to 64 characters in length.</p>
+     * <p>The ID of the client, which is provided by the external IdP. If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
+     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
+     * <p>The client ID can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>498469743454717****</p>
@@ -26,9 +26,9 @@ public class CreateOIDCProviderRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The fingerprint of the HTTPS certificate, which is provided by the external IdP Okta. If you want to specify multiple fingerprints, separate the fingerprints with commas (,).</p>
+     * <p>The fingerprint of the HTTPS CA certificate, which is provided by the external IdP. If you want to specify multiple fingerprints, separate the fingerprints with commas (,).</p>
      * <p>The fingerprint can contain letters and digits.</p>
-     * <p>The fingerprint can be up to 40 characters in length.</p>
+     * <p>The fingerprint can be up to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>

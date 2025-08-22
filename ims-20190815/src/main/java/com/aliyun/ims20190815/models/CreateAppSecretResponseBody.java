@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAppSecretResponseBody extends TeaModel {
     /**
-     * <p>The information of the application secret.</p>
+     * <p>The details of the application secret.</p>
      */
     @NameInMap("AppSecret")
     public CreateAppSecretResponseBodyAppSecret appSecret;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EE46FC3C-3BDE-4771-B531-27B7B6EB533D</p>
@@ -60,7 +60,7 @@ public class CreateAppSecretResponseBody extends TeaModel {
         public String appSecretId;
 
         /**
-         * <p>The content of the application secret. This value can be used as the client secret for open authorization.</p>
+         * <p>The content of the application secret. This value can be used as the client secret for open authorization (OAuth).</p>
          * 
          * <strong>example:</strong>
          * <p>ai78ZmmxnlUG1jXlBZRDFKos9DIjY4m17Q7dCpMwn1rqXsTGb1X1XmrmveMp****</p>

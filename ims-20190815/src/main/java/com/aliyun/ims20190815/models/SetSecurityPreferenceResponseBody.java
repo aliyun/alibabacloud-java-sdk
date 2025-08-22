@@ -75,6 +75,12 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("AllowUserToChangePassword")
         public Boolean allowUserToChangePassword;
 
+        /**
+         * <p>Indicates whether a RAM user can use a passkey for logon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("AllowUserToLoginWithPasskey")
         public Boolean allowUserToLoginWithPasskey;
 
@@ -121,6 +127,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
          * <p>autonomous</p>
          */
         @NameInMap("OperationForRiskLogin")
+        @Deprecated
         public String operationForRiskLogin;
 
         public static SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference build(java.util.Map<String, ?> map) throws Exception {
@@ -176,6 +183,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             return this.MFAOperationForLogin;
         }
 
+        @Deprecated
         public SetSecurityPreferenceResponseBodySecurityPreferenceLoginProfilePreference setOperationForRiskLogin(String operationForRiskLogin) {
             this.operationForRiskLogin = operationForRiskLogin;
             return this;
@@ -213,6 +221,8 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
     public static class SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays extends TeaModel {
         /**
+         * <p>The maximum number of days that the AccessKey pair of a RAM user can stay unused. If an AccessKey pair is not used in the previous specified number of days, the AccessKey pair is automatically disabled on the next day. The default value is 730. You cannot change the value.</p>
+         * 
          * <strong>example:</strong>
          * <p>730</p>
          */
@@ -220,6 +230,8 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         public Integer maxIdleDaysForAccessKeys;
 
         /**
+         * <p>The maximum number of days that a RAM user can stay idle. If a RAM user for whom console logon is enabled does not log on to the console in the previous specified number of days, console logon is automatically disabled for the RAM user on the next day. SSO is not involved. The default value is 730. You cannot change the value.</p>
+         * 
          * <strong>example:</strong>
          * <p>730</p>
          */
@@ -315,6 +327,9 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         @NameInMap("MFAPreference")
         public SetSecurityPreferenceResponseBodySecurityPreferenceMFAPreference MFAPreference;
 
+        /**
+         * <p>The maximum idle periods. Unit: days.</p>
+         */
         @NameInMap("MaxIdleDays")
         public SetSecurityPreferenceResponseBodySecurityPreferenceMaxIdleDays maxIdleDays;
 

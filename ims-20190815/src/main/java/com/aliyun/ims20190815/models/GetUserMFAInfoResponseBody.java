@@ -24,7 +24,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     public GetUserMFAInfoResponseBodyMFADevice MFADevice;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>FCF7322A-20A9-4F68-8B7F-F86958839BC0</p>
@@ -74,8 +74,8 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         /**
          * <p>The type of the MFA device. Valid values:</p>
          * <ul>
-         * <li>VMFA: virtual MFA device</li>
-         * <li>U2F: Universal 2nd Factor (U2F) security key</li>
+         * <li>VMFA: virtual MFA device.</li>
+         * <li>U2F: Universal 2nd Factor (U2F) security key.</li>
          * </ul>
          * 
          * <strong>example:</strong>

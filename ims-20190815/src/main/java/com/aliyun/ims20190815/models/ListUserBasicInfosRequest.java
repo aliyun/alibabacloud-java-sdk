@@ -23,11 +23,17 @@ public class ListUserBasicInfosRequest extends TeaModel {
     @NameInMap("MaxItems")
     public Integer maxItems;
 
+    /**
+     * <p>The status of the RAM users that you want to query. Valid values: active, freeze, and active,freeze. If you set the value to active,freeze, RAM users in both active and freeze states are queried. If you leave the parameter empty, the value active is used by default. If the Tag parameter is specified, you cannot specify the Status parameter. In this case, RAM users in both states are queried.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>active</p>
+     */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The tag value.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListUserBasicInfosRequestTag> tag;

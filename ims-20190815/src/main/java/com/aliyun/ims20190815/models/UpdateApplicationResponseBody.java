@@ -243,6 +243,9 @@ public class UpdateApplicationResponseBody extends TeaModel {
         @NameInMap("IsMultiTenant")
         public Boolean isMultiTenant;
 
+        @NameInMap("ProtocolVersion")
+        public String protocolVersion;
+
         /**
          * <p>The callback URLs.</p>
          */
@@ -351,6 +354,14 @@ public class UpdateApplicationResponseBody extends TeaModel {
         }
         public Boolean getIsMultiTenant() {
             return this.isMultiTenant;
+        }
+
+        public UpdateApplicationResponseBodyApplication setProtocolVersion(String protocolVersion) {
+            this.protocolVersion = protocolVersion;
+            return this;
+        }
+        public String getProtocolVersion() {
+            return this.protocolVersion;
         }
 
         public UpdateApplicationResponseBodyApplication setRedirectUris(UpdateApplicationResponseBodyApplicationRedirectUris redirectUris) {

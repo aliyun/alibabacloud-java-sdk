@@ -23,7 +23,7 @@ public class UpdateAccessKeyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+     * <p>LTAI*******************</p>
      */
     @NameInMap("UserAccessKeyId")
     public String userAccessKeyId;

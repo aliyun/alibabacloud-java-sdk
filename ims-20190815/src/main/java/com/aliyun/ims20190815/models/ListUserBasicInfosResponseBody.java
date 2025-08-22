@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserBasicInfosResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the response is truncated. Valid value:</p>
+     * <p>Indicates whether the response is truncated. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -18,7 +18,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+     * <p>The <code>marker</code>. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.``</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>
@@ -27,7 +27,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     public String marker;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>EF2B25FD-CADE-445B-BE4D-E082E0FF1A0F</p>
@@ -36,7 +36,7 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array that consists of the information about the RAM user.</p>
+     * <p>The basic information about the RAM users.</p>
      */
     @NameInMap("UserBasicInfos")
     public ListUserBasicInfosResponseBodyUserBasicInfos userBasicInfos;
@@ -88,6 +88,12 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         @NameInMap("DisplayName")
         public String displayName;
 
+        /**
+         * <p>The status of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 

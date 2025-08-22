@@ -36,7 +36,7 @@ public class ListUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of the RAM user.</p>
+     * <p>The information about the RAM users.</p>
      */
     @NameInMap("Users")
     public ListUsersResponseBodyUsers users;
@@ -214,6 +214,12 @@ public class ListUsersResponseBody extends TeaModel {
         @NameInMap("ProvisionType")
         public String provisionType;
 
+        /**
+         * <p>The status of the RAM user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>active</p>
+         */
         @NameInMap("Status")
         public String status;
 

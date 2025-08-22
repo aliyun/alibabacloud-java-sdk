@@ -6,10 +6,10 @@ import com.aliyun.tea.*;
 public class UpdateOIDCProviderRequest extends TeaModel {
     /**
      * <p>The ID of the client. If you want to specify multiple client IDs, separate the client IDs with commas (,).</p>
-     * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
-     * <p>The client ID can be up to 64 characters in length.</p>
+     * <p>A client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
+     * <p>A client ID can be up to 128 characters in length.</p>
      * <blockquote>
-     * <p>If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see <a href="https://help.aliyun.com/document_detail/332057.html">AddClientIdToOIDCProvider</a> or <a href="https://help.aliyun.com/document_detail/332058.html">RemoveClientIdFromOIDCProvider</a>.</p>
+     * <p> If you specify this parameter, all the client IDs of the OIDC IdP are replaced. If you need to only add or remove a client ID, call the AddClientIdToOIDCProvider or RemoveClientIdFromOIDCProvider operation. For more information, see <a href="https://help.aliyun.com/document_detail/332057.html">AddClientIdToOIDCProvider</a> or <a href="https://help.aliyun.com/document_detail/332058.html">RemoveClientIdFromOIDCProvider</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

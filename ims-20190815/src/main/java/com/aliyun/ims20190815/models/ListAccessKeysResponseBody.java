@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAccessKeysResponseBody extends TeaModel {
     /**
-     * <p>The list of AccessKey pairs.</p>
+     * <p>The AccessKey pairs.</p>
      */
     @NameInMap("AccessKeys")
     public ListAccessKeysResponseBodyAccessKeys accessKeys;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
@@ -45,7 +45,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
          * <p>The AccessKey ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>0wNEpMMlzy7s****</p>
+         * <p>LTAI*******************</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;

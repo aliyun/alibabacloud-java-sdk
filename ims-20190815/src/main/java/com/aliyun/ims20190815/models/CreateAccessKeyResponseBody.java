@@ -45,7 +45,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
          * <p>The AccessKey ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4G3HaMmeHpay2gcq****</p>
+         * <p>yourAccessKeyID</p>
          */
         @NameInMap("AccessKeyId")
         public String accessKeyId;
@@ -54,7 +54,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
          * <p>The AccessKey secret.</p>
          * 
          * <strong>example:</strong>
-         * <p>Y3MSLE6OgizS4qrz5LVFDoyZEL****</p>
+         * <p>yourAccessKeySecret</p>
          */
         @NameInMap("AccessKeySecret")
         public String accessKeySecret;
