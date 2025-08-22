@@ -14,6 +14,9 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    @NameInMap("AgentGroup")
+    public String agentGroup;
+
     /**
      * <p>The detection points. If you leave this parameter empty, the system randomly selects three detection points.</p>
      * <p>The value is a <code>JSON array</code>. Example: {&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}. The values of the city field indicate Beijing, Hangzhou, and Qingdao.</p>
@@ -86,6 +89,14 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public CreateInstantSiteMonitorRequest setAgentGroup(String agentGroup) {
+        this.agentGroup = agentGroup;
+        return this;
+    }
+    public String getAgentGroup() {
+        return this.agentGroup;
     }
 
     public CreateInstantSiteMonitorRequest setIspCities(String ispCities) {

@@ -831,6 +831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Address", request.address);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentGroup)) {
+            query.put("AgentGroup", request.agentGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ispCities)) {
             query.put("IspCities", request.ispCities);
         }
