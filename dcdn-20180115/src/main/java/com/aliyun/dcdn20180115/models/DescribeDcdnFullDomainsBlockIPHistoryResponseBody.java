@@ -90,6 +90,9 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         @NameInMap("BlockIP")
         public String blockIP;
 
+        @NameInMap("BlockInterval")
+        public String blockInterval;
+
         /**
          * <p>The delivery time.</p>
          * 
@@ -98,6 +101,9 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
          */
         @NameInMap("DeliverTime")
         public String deliverTime;
+
+        @NameInMap("OperationType")
+        public String operationType;
 
         /**
          * <p>The delivery status.</p>
@@ -112,6 +118,9 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("UpdateType")
+        public String updateType;
+
         public static DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo build(java.util.Map<String, ?> map) throws Exception {
             DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo self = new DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo();
             return TeaModel.build(map, self);
@@ -125,6 +134,14 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             return this.blockIP;
         }
 
+        public DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo setBlockInterval(String blockInterval) {
+            this.blockInterval = blockInterval;
+            return this;
+        }
+        public String getBlockInterval() {
+            return this.blockInterval;
+        }
+
         public DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo setDeliverTime(String deliverTime) {
             this.deliverTime = deliverTime;
             return this;
@@ -133,12 +150,28 @@ public class DescribeDcdnFullDomainsBlockIPHistoryResponseBody extends TeaModel 
             return this.deliverTime;
         }
 
+        public DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo setOperationType(String operationType) {
+            this.operationType = operationType;
+            return this;
+        }
+        public String getOperationType() {
+            return this.operationType;
+        }
+
         public DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo setStatus(String status) {
             this.status = status;
             return this;
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDcdnFullDomainsBlockIPHistoryResponseBodyIPBlockInfo setUpdateType(String updateType) {
+            this.updateType = updateType;
+            return this;
+        }
+        public String getUpdateType() {
+            return this.updateType;
         }
 
     }

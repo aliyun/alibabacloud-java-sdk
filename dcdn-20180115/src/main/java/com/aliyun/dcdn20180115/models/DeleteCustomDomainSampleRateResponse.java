@@ -3,7 +3,7 @@ package com.aliyun.dcdn20180115.models;
 
 import com.aliyun.tea.*;
 
-public class SetDcdnDomainCertificateResponse extends TeaModel {
+public class DeleteCustomDomainSampleRateResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class SetDcdnDomainCertificateResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public SetDcdnDomainCertificateResponseBody body;
+    public DeleteCustomDomainSampleRateResponseBody body;
 
-    public static SetDcdnDomainCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
-        SetDcdnDomainCertificateResponse self = new SetDcdnDomainCertificateResponse();
+    public static DeleteCustomDomainSampleRateResponse build(java.util.Map<String, ?> map) throws Exception {
+        DeleteCustomDomainSampleRateResponse self = new DeleteCustomDomainSampleRateResponse();
         return TeaModel.build(map, self);
     }
 
-    public SetDcdnDomainCertificateResponse setHeaders(java.util.Map<String, String> headers) {
+    public DeleteCustomDomainSampleRateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class SetDcdnDomainCertificateResponse extends TeaModel {
         return this.headers;
     }
 
-    public SetDcdnDomainCertificateResponse setStatusCode(Integer statusCode) {
+    public DeleteCustomDomainSampleRateResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class SetDcdnDomainCertificateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public SetDcdnDomainCertificateResponse setBody(SetDcdnDomainCertificateResponseBody body) {
+    public DeleteCustomDomainSampleRateResponse setBody(DeleteCustomDomainSampleRateResponseBody body) {
         this.body = body;
         return this;
     }
-    public SetDcdnDomainCertificateResponseBody getBody() {
+    public DeleteCustomDomainSampleRateResponseBody getBody() {
         return this.body;
     }
 

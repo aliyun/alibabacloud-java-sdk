@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class PutDcdnKvNamespaceRequest extends TeaModel {
     /**
      * <p>The description of the namespace.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>the first namespace</p>

@@ -59,6 +59,12 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         @NameInMap("Domain")
         public String domain;
 
+        @NameInMap("ErrMsg")
+        public String errMsg;
+
+        @NameInMap("Passed")
+        public String passed;
+
         /**
          * <p>The configuration status of the CNAME record. If the operation returns 0 for the parameter, the configuration was successful. Otherwise, the configuration failed.</p>
          * 
@@ -87,6 +93,22 @@ public class DescribeDcdnDomainCnameResponseBody extends TeaModel {
         }
         public String getDomain() {
             return this.domain;
+        }
+
+        public DescribeDcdnDomainCnameResponseBodyCnameDatasData setErrMsg(String errMsg) {
+            this.errMsg = errMsg;
+            return this;
+        }
+        public String getErrMsg() {
+            return this.errMsg;
+        }
+
+        public DescribeDcdnDomainCnameResponseBodyCnameDatasData setPassed(String passed) {
+            this.passed = passed;
+            return this;
+        }
+        public String getPassed() {
+            return this.passed;
         }
 
         public DescribeDcdnDomainCnameResponseBodyCnameDatasData setStatus(Integer status) {

@@ -54,15 +54,6 @@ public class SetDcdnDomainSSLCertificateRequest extends TeaModel {
     @NameInMap("DomainName")
     public String domainName;
 
-    /**
-     * <p>Specifies whether the certificate is issued in canary releases. If you set this parameter to <strong>staging</strong>, the certificate is issued in canary releases. If you do not specify this parameter or set this parameter to other values, the certificate is officially issued.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>staging</p>
-     */
-    @NameInMap("Env")
-    public String env;
-
     @NameInMap("OwnerId")
     public Long ownerId;
 
@@ -144,14 +135,6 @@ public class SetDcdnDomainSSLCertificateRequest extends TeaModel {
     }
     public String getDomainName() {
         return this.domainName;
-    }
-
-    public SetDcdnDomainSSLCertificateRequest setEnv(String env) {
-        this.env = env;
-        return this;
-    }
-    public String getEnv() {
-        return this.env;
     }
 
     public SetDcdnDomainSSLCertificateRequest setOwnerId(Long ownerId) {

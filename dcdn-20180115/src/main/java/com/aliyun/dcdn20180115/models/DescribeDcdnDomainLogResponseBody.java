@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainLogResponseBody extends TeaModel {
     /**
-     * <p>The log information. The log information is indicated by the DomainLogDetail parameter.</p>
+     * <p>The log information.</p>
      */
     @NameInMap("DomainLogDetails")
     public DescribeDcdnDomainLogResponseBodyDomainLogDetails domainLogDetails;
@@ -81,7 +81,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
          * <p>Take note of the Expires field (expiration timestamp) in the response parameter LogPath. If the log download URL expires, you must obtain it again. For more information, see <a href="https://help.aliyun.com/document_detail/31952.html">LogPath field</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=LTAIviCc6zy8****&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
+         * <p>example.aliyundoc.com /v1.l1cache/105252530/example.com/2021_11_08/example.com_2021_11_08_010000_020000.gz?Expires=1636963354&amp;OSSAccessKeyId=yourAccessKeyID&amp;Signature=u0V6foRfZniHE8i%2BHUdxGOhZsK****</p>
          */
         @NameInMap("LogPath")
         public String logPath;
@@ -96,7 +96,7 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         public Long logSize;
 
         /**
-         * <p>The start of the time range during which data was queried.</p>
+         * <p>The beginning of the time range during which data was queried.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-07T17:00:00Z</p>
@@ -240,13 +240,13 @@ public class DescribeDcdnDomainLogResponseBody extends TeaModel {
         public Long logCount;
 
         /**
-         * <p>The log information. The log information is indicated by the LogInfoDetail parameter.</p>
+         * <p>Details about the logs.</p>
          */
         @NameInMap("LogInfos")
         public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailLogInfos logInfos;
 
         /**
-         * <p>The page information. The page information is indicated by the PageInfoDetail parameter.</p>
+         * <p>The page information.</p>
          */
         @NameInMap("PageInfos")
         public DescribeDcdnDomainLogResponseBodyDomainLogDetailsDomainLogDetailPageInfos pageInfos;

@@ -43,8 +43,8 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     public String field;
 
     /**
-     * <p>The name of the ISP. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the ISP name.</p>
-     * <p>If you leave this parameter empty, all ISPs are queried.</p>
+     * <p>The name of the ISP. You can call the <a href="~~DescribeDcdnRegionAndIsp~~">DescribeDcdnRegionAndIsp</a> operation to obtain the ISP name.</p>
+     * <p>If you do not set this parameter, data of all ISPs is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>unicom</p>
@@ -53,8 +53,8 @@ public class DescribeDcdnDomainRealTimeDetailDataRequest extends TeaModel {
     public String ispNameEn;
 
     /**
-     * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/207199.html">DescribeDcdnRegionAndIsp</a> operation to query the region name.</p>
-     * <p>If you leave this parameter empty, all regions are queried.</p>
+     * <p>The name of the region. You can call the <a href="~~DescribeDcdnRegionAndIsp~~">DescribeDcdnRegionAndIsp</a> operation to obtain the region name.</p>
+     * <p>If you do not set this parameter, all regions are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>beijing</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDcdnDomainLogRequest extends TeaModel {
     /**
-     * <p>The accelerated domain name that you want to query. You can specify only one domain name in each call.</p>
+     * <p>The accelerated domain name that you want to query. You can specify only one domain name in each request.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

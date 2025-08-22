@@ -3,7 +3,7 @@ package com.aliyun.dcdn20180115.models;
 
 import com.aliyun.tea.*;
 
-public class BatchSetDcdnDomainCertificateResponse extends TeaModel {
+public class ModifyCustomDomainSampleRateResponse extends TeaModel {
     @NameInMap("headers")
     public java.util.Map<String, String> headers;
 
@@ -11,14 +11,14 @@ public class BatchSetDcdnDomainCertificateResponse extends TeaModel {
     public Integer statusCode;
 
     @NameInMap("body")
-    public BatchSetDcdnDomainCertificateResponseBody body;
+    public ModifyCustomDomainSampleRateResponseBody body;
 
-    public static BatchSetDcdnDomainCertificateResponse build(java.util.Map<String, ?> map) throws Exception {
-        BatchSetDcdnDomainCertificateResponse self = new BatchSetDcdnDomainCertificateResponse();
+    public static ModifyCustomDomainSampleRateResponse build(java.util.Map<String, ?> map) throws Exception {
+        ModifyCustomDomainSampleRateResponse self = new ModifyCustomDomainSampleRateResponse();
         return TeaModel.build(map, self);
     }
 
-    public BatchSetDcdnDomainCertificateResponse setHeaders(java.util.Map<String, String> headers) {
+    public ModifyCustomDomainSampleRateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -26,7 +26,7 @@ public class BatchSetDcdnDomainCertificateResponse extends TeaModel {
         return this.headers;
     }
 
-    public BatchSetDcdnDomainCertificateResponse setStatusCode(Integer statusCode) {
+    public ModifyCustomDomainSampleRateResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -34,11 +34,11 @@ public class BatchSetDcdnDomainCertificateResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public BatchSetDcdnDomainCertificateResponse setBody(BatchSetDcdnDomainCertificateResponseBody body) {
+    public ModifyCustomDomainSampleRateResponse setBody(ModifyCustomDomainSampleRateResponseBody body) {
         this.body = body;
         return this;
     }
-    public BatchSetDcdnDomainCertificateResponseBody getBody() {
+    public ModifyCustomDomainSampleRateResponseBody getBody() {
         return this.body;
     }
 
