@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "arms.aliyuncs.com"),
@@ -8004,6 +8003,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appType)) {
             query.put("AppType", request.appType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileName)) {
+            query.put("FileName", request.fileName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pid)) {

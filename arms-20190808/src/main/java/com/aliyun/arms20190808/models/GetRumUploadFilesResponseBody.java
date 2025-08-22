@@ -17,7 +17,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
      * <p>The queried files.</p>
      */
     @NameInMap("Data")
-    public java.util.List<GetRumUploadFilesResponseBodyData> data;
+    public GetRumUploadFilesResponseBodyData data;
 
     /**
      * <p>The HTTP status code.</p>
@@ -72,11 +72,11 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         return this.code;
     }
 
-    public GetRumUploadFilesResponseBody setData(java.util.List<GetRumUploadFilesResponseBodyData> data) {
+    public GetRumUploadFilesResponseBody setData(GetRumUploadFilesResponseBodyData data) {
         this.data = data;
         return this;
     }
-    public java.util.List<GetRumUploadFilesResponseBodyData> getData() {
+    public GetRumUploadFilesResponseBodyData getData() {
         return this.data;
     }
 
@@ -112,58 +112,28 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetRumUploadFilesResponseBodyData extends TeaModel {
-        /**
-         * <p>The file name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test.js.map</p>
-         */
+    public static class GetRumUploadFilesResponseBodyDataFileList extends TeaModel {
         @NameInMap("FileName")
         public String fileName;
 
-        /**
-         * <p>The time when the file was last modified. The value is a timestamp.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1682863151000</p>
-         */
         @NameInMap("LastModifiedTime")
         public Object lastModifiedTime;
 
-        /**
-         * <p>The size of the file. Unit: bytes.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1000</p>
-         */
         @NameInMap("Size")
         public String size;
 
-        /**
-         * <p>The file ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cxxxerfewrfwerfwerffvrt</p>
-         */
         @NameInMap("Uuid")
         public String uuid;
 
-        /**
-         * <p>The version number of the file.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1.0.0</p>
-         */
         @NameInMap("VersionId")
         public String versionId;
 
-        public static GetRumUploadFilesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
-            GetRumUploadFilesResponseBodyData self = new GetRumUploadFilesResponseBodyData();
+        public static GetRumUploadFilesResponseBodyDataFileList build(java.util.Map<String, ?> map) throws Exception {
+            GetRumUploadFilesResponseBodyDataFileList self = new GetRumUploadFilesResponseBodyDataFileList();
             return TeaModel.build(map, self);
         }
 
-        public GetRumUploadFilesResponseBodyData setFileName(String fileName) {
+        public GetRumUploadFilesResponseBodyDataFileList setFileName(String fileName) {
             this.fileName = fileName;
             return this;
         }
@@ -171,7 +141,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             return this.fileName;
         }
 
-        public GetRumUploadFilesResponseBodyData setLastModifiedTime(Object lastModifiedTime) {
+        public GetRumUploadFilesResponseBodyDataFileList setLastModifiedTime(Object lastModifiedTime) {
             this.lastModifiedTime = lastModifiedTime;
             return this;
         }
@@ -179,7 +149,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             return this.lastModifiedTime;
         }
 
-        public GetRumUploadFilesResponseBodyData setSize(String size) {
+        public GetRumUploadFilesResponseBodyDataFileList setSize(String size) {
             this.size = size;
             return this;
         }
@@ -187,7 +157,7 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             return this.size;
         }
 
-        public GetRumUploadFilesResponseBodyData setUuid(String uuid) {
+        public GetRumUploadFilesResponseBodyDataFileList setUuid(String uuid) {
             this.uuid = uuid;
             return this;
         }
@@ -195,12 +165,42 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             return this.uuid;
         }
 
-        public GetRumUploadFilesResponseBodyData setVersionId(String versionId) {
+        public GetRumUploadFilesResponseBodyDataFileList setVersionId(String versionId) {
             this.versionId = versionId;
             return this;
         }
         public String getVersionId() {
             return this.versionId;
+        }
+
+    }
+
+    public static class GetRumUploadFilesResponseBodyData extends TeaModel {
+        @NameInMap("FileList")
+        public java.util.List<GetRumUploadFilesResponseBodyDataFileList> fileList;
+
+        @NameInMap("NextToken")
+        public String nextToken;
+
+        public static GetRumUploadFilesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
+            GetRumUploadFilesResponseBodyData self = new GetRumUploadFilesResponseBodyData();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRumUploadFilesResponseBodyData setFileList(java.util.List<GetRumUploadFilesResponseBodyDataFileList> fileList) {
+            this.fileList = fileList;
+            return this;
+        }
+        public java.util.List<GetRumUploadFilesResponseBodyDataFileList> getFileList() {
+            return this.fileList;
+        }
+
+        public GetRumUploadFilesResponseBodyData setNextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+        public String getNextToken() {
+            return this.nextToken;
         }
 
     }

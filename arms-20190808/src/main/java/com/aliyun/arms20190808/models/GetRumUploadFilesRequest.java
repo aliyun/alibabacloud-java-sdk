@@ -13,9 +13,17 @@ public class GetRumUploadFilesRequest extends TeaModel {
     @NameInMap("AppType")
     public String appType;
 
+    @NameInMap("FileName")
+    public String fileName;
+
+    @NameInMap("NextToken")
+    public String nextToken;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
     /**
      * <p>The process ID (PID) of the application.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>aoxxxxxly@741623b4e91****</p>
@@ -53,6 +61,30 @@ public class GetRumUploadFilesRequest extends TeaModel {
     }
     public String getAppType() {
         return this.appType;
+    }
+
+    public GetRumUploadFilesRequest setFileName(String fileName) {
+        this.fileName = fileName;
+        return this;
+    }
+    public String getFileName() {
+        return this.fileName;
+    }
+
+    public GetRumUploadFilesRequest setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+        return this;
+    }
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    public GetRumUploadFilesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public GetRumUploadFilesRequest setPid(String pid) {
