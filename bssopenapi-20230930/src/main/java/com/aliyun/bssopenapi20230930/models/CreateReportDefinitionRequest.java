@@ -11,6 +11,9 @@ public class CreateReportDefinitionRequest extends TeaModel {
     @NameInMap("BeginBillingCycle")
     public String beginBillingCycle;
 
+    @NameInMap("IncludeMembers")
+    public String includeMembers;
+
     /**
      * <strong>example:</strong>
      * <p>project</p>
@@ -31,6 +34,9 @@ public class CreateReportDefinitionRequest extends TeaModel {
      */
     @NameInMap("Nbid")
     public String nbid;
+
+    @NameInMap("NotSendOnNoData")
+    public String notSendOnNoData;
 
     /**
      * <strong>example:</strong>
@@ -69,6 +75,12 @@ public class CreateReportDefinitionRequest extends TeaModel {
     @NameInMap("ReportType")
     public String reportType;
 
+    @NameInMap("SendWithAttach")
+    public String sendWithAttach;
+
+    @NameInMap("SplitFileOnUserId")
+    public String splitFileOnUserId;
+
     public static CreateReportDefinitionRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateReportDefinitionRequest self = new CreateReportDefinitionRequest();
         return TeaModel.build(map, self);
@@ -80,6 +92,14 @@ public class CreateReportDefinitionRequest extends TeaModel {
     }
     public String getBeginBillingCycle() {
         return this.beginBillingCycle;
+    }
+
+    public CreateReportDefinitionRequest setIncludeMembers(String includeMembers) {
+        this.includeMembers = includeMembers;
+        return this;
+    }
+    public String getIncludeMembers() {
+        return this.includeMembers;
     }
 
     public CreateReportDefinitionRequest setMcProject(String mcProject) {
@@ -104,6 +124,14 @@ public class CreateReportDefinitionRequest extends TeaModel {
     }
     public String getNbid() {
         return this.nbid;
+    }
+
+    public CreateReportDefinitionRequest setNotSendOnNoData(String notSendOnNoData) {
+        this.notSendOnNoData = notSendOnNoData;
+        return this;
+    }
+    public String getNotSendOnNoData() {
+        return this.notSendOnNoData;
     }
 
     public CreateReportDefinitionRequest setOssBucketName(String ossBucketName) {
@@ -144,6 +172,22 @@ public class CreateReportDefinitionRequest extends TeaModel {
     }
     public String getReportType() {
         return this.reportType;
+    }
+
+    public CreateReportDefinitionRequest setSendWithAttach(String sendWithAttach) {
+        this.sendWithAttach = sendWithAttach;
+        return this;
+    }
+    public String getSendWithAttach() {
+        return this.sendWithAttach;
+    }
+
+    public CreateReportDefinitionRequest setSplitFileOnUserId(String splitFileOnUserId) {
+        this.splitFileOnUserId = splitFileOnUserId;
+        return this;
+    }
+    public String getSplitFileOnUserId() {
+        return this.splitFileOnUserId;
     }
 
 }

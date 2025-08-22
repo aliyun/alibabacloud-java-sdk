@@ -611,8 +611,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BeginBillingCycle", request.beginBillingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.includeMembers)) {
+            query.put("IncludeMembers", request.includeMembers);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
             query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notSendOnNoData)) {
+            query.put("NotSendOnNoData", request.notSendOnNoData);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
@@ -629,6 +637,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.reportType)) {
             query.put("ReportType", request.reportType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sendWithAttach)) {
+            query.put("SendWithAttach", request.sendWithAttach);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.splitFileOnUserId)) {
+            query.put("SplitFileOnUserId", request.splitFileOnUserId);
         }
 
         java.util.Map<String, Object> body = new java.util.HashMap<>();
