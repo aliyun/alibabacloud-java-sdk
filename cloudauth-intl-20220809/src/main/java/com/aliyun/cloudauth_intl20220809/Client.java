@@ -1571,6 +1571,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DocumentNumber", request.documentNumber);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.editOcrResult)) {
+            query.put("EditOcrResult", request.editOcrResult);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.experienceCode)) {
             query.put("ExperienceCode", request.experienceCode);
         }

@@ -59,6 +59,9 @@ public class InitializeShrinkRequest extends TeaModel {
     @NameInMap("DocumentNumber")
     public String documentNumber;
 
+    @NameInMap("EditOcrResult")
+    public String editOcrResult;
+
     @NameInMap("ExperienceCode")
     public String experienceCode;
 
@@ -307,6 +310,14 @@ public class InitializeShrinkRequest extends TeaModel {
     }
     public String getDocumentNumber() {
         return this.documentNumber;
+    }
+
+    public InitializeShrinkRequest setEditOcrResult(String editOcrResult) {
+        this.editOcrResult = editOcrResult;
+        return this;
+    }
+    public String getEditOcrResult() {
+        return this.editOcrResult;
     }
 
     public InitializeShrinkRequest setExperienceCode(String experienceCode) {
