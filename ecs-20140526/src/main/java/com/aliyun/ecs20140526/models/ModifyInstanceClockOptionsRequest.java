@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceClockOptionsRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
      */
@@ -12,6 +14,13 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>Specifies whether to perform only a dry run. Valid values:</p>
+     * <ul>
+     * <li>true: performs only a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. Otherwise, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li>false: performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+     * </ul>
+     * <p>Default value: false.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -19,6 +28,7 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <p>The ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +44,13 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
+     * <p>PTP status value. Valid values:</p>
+     * <ul>
+     * <li>enabled</li>
+     * <li>disabled</li>
+     * </ul>
+     * <p>Default value: disabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>enabled</p>
      */
@@ -41,6 +58,7 @@ public class ModifyInstanceClockOptionsRequest extends TeaModel {
     public String ptpStatus;
 
     /**
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

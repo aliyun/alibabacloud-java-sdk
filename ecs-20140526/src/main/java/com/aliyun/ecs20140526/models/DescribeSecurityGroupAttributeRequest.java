@@ -4,6 +4,12 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeSecurityGroupAttributeRequest extends TeaModel {
+    /**
+     * <p>The attributes of the security group. Valid value: snapshotPolicyIds: queries information about snapshot policies associated with a security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>snapshotPolicyIds</p>
+     */
     @NameInMap("Attribute")
     public String attribute;
 

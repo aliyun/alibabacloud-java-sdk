@@ -4,6 +4,9 @@ package com.aliyun.ecs20140526.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceTypesRequest extends TeaModel {
+    @NameInMap("AdditionalAttributes")
+    public java.util.List<String> additionalAttributes;
+
     /**
      * <p>The CPU architecture. Valid values:</p>
      * <ul>
@@ -517,6 +520,14 @@ public class DescribeInstanceTypesRequest extends TeaModel {
     public static DescribeInstanceTypesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeInstanceTypesRequest self = new DescribeInstanceTypesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeInstanceTypesRequest setAdditionalAttributes(java.util.List<String> additionalAttributes) {
+        this.additionalAttributes = additionalAttributes;
+        return this;
+    }
+    public java.util.List<String> getAdditionalAttributes() {
+        return this.additionalAttributes;
     }
 
     public DescribeInstanceTypesRequest setCpuArchitecture(String cpuArchitecture) {

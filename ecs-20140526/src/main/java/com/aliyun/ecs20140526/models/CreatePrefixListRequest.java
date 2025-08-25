@@ -210,16 +210,16 @@ public class CreatePrefixListRequest extends TeaModel {
 
     public static class CreatePrefixListRequestEntry extends TeaModel {
         /**
-         * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Take note of the following items:</p>
+         * <p>The CIDR block in entry N. Valid values of N: 0 to 200. Notes:</p>
          * <ul>
          * <li>The total number of entries cannot exceed the <code>MaxEntries</code> value.</li>
          * <li>CIDR block types are determined by the IP address family. You cannot combine IPv4 and IPv6 CIDR blocks in a single prefix list.</li>
          * <li>CIDR blocks must be unique across all entries in a prefix list. For example, you cannot specify 192.168.1.0/24 twice in the entries of the prefix list.</li>
-         * <li>IP addresses are supported. The system converts IP addresses into CIDR blocks. For example, if you specify 192.168.1.100, the system converts it into the 192.168.1.100/32 CIDR block.</li>
-         * <li>If an IPv6 CIDR block is used, the system converts it into the zero compression format and changes uppercase letters into lowercase ones. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it into 2001:db8::/32.</li>
+         * <li>You can set a single IP address. The system automatically converts the IP address to a CIDR block. For example, if you set 192.168.1.100, the system automatically converts it to 192.168.1.100/32.</li>
+         * <li>If you use an IPv6 CIDR block, the system automatically converts the CIDR block to zero and the letters to lowercase. For example, if you specify 2001:0DB8:0000:0000:0000:0000:0000:0000/32, the system converts it to 2001:db8::/32.</li>
          * </ul>
-         * <p>For more information about CIDR blocks, see the <a href="https://help.aliyun.com/document_detail/40637.html#title-gu4-uzk-12r">What is CIDR?</a> section in the &quot;Network FAQ&quot; topic.</p>
-         * <p>This parameter is empty by default.</p>
+         * <p>For more information about CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html#598efe6ef1v00">What is CIDR?</a></p>
+         * <p>By default, this parameter is left empty.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

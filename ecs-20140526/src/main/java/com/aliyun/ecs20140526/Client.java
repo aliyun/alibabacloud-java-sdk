@@ -16313,6 +16313,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeInstanceTypesResponse describeInstanceTypesWithOptions(DescribeInstanceTypesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.additionalAttributes)) {
+            query.put("AdditionalAttributes", request.additionalAttributes);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpuArchitecture)) {
             query.put("CpuArchitecture", request.cpuArchitecture);
         }
@@ -27956,8 +27960,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, note that:</p>
+     * <ul>
+     * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
+     * <li>To modify the PtpStatus parameter, you must specify the parameter. The instance types that are supported. You can query the instance type list (<a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> ).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例时钟选项</p>
+     * <p>Modifies the instance clock options.</p>
      * 
      * @param request ModifyInstanceClockOptionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28020,8 +28031,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>When you call this operation, note that:</p>
+     * <ul>
+     * <li>This is an asynchronous operation. The ID of the asynchronous task is returned after the call. Query the asynchronous task result to determine whether the execution is complete.</li>
+     * <li>To modify the PtpStatus parameter, you must specify the parameter. The instance types that are supported. You can query the instance type list (<a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> ).</li>
+     * </ul>
+     * 
      * <b>summary</b> : 
-     * <p>修改实例时钟选项</p>
+     * <p>Modifies the instance clock options.</p>
      * 
      * @param request ModifyInstanceClockOptionsRequest
      * @return ModifyInstanceClockOptionsResponse

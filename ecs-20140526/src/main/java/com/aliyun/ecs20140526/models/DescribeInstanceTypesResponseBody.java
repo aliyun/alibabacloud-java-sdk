@@ -368,6 +368,126 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo extends TeaModel {
+        @NameInMap("EbsBandwidth")
+        public Long ebsBandwidth;
+
+        @NameInMap("EbsBurstBandwidth")
+        public Long ebsBurstBandwidth;
+
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("VpcBandwidth")
+        public Long vpcBandwidth;
+
+        @NameInMap("VpcBurstBandwidth")
+        public Long vpcBurstBandwidth;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo setEbsBandwidth(Long ebsBandwidth) {
+            this.ebsBandwidth = ebsBandwidth;
+            return this;
+        }
+        public Long getEbsBandwidth() {
+            return this.ebsBandwidth;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo setEbsBurstBandwidth(Long ebsBurstBandwidth) {
+            this.ebsBurstBandwidth = ebsBurstBandwidth;
+            return this;
+        }
+        public Long getEbsBurstBandwidth() {
+            return this.ebsBurstBandwidth;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo setVpcBandwidth(Long vpcBandwidth) {
+            this.vpcBandwidth = vpcBandwidth;
+            return this;
+        }
+        public Long getVpcBandwidth() {
+            return this.vpcBandwidth;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo setVpcBurstBandwidth(Long vpcBurstBandwidth) {
+            this.vpcBurstBandwidth = vpcBurstBandwidth;
+            return this;
+        }
+        public Long getVpcBurstBandwidth() {
+            return this.vpcBurstBandwidth;
+        }
+
+    }
+
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos extends TeaModel {
+        @NameInMap("WeightingInfo")
+        public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo> weightingInfo;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos setWeightingInfo(java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo> weightingInfo) {
+            this.weightingInfo = weightingInfo;
+            return this;
+        }
+        public java.util.List<DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfosWeightingInfo> getWeightingInfo() {
+            return this.weightingInfo;
+        }
+
+    }
+
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting extends TeaModel {
+        @NameInMap("WeightingInfos")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos weightingInfos;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting setWeightingInfos(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos weightingInfos) {
+            this.weightingInfos = weightingInfos;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeightingWeightingInfos getWeightingInfos() {
+            return this.weightingInfos;
+        }
+
+    }
+
+    public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo extends TeaModel {
+        @NameInMap("BandwidthWeighting")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting bandwidthWeighting;
+
+        public static DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo self = new DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo setBandwidthWeighting(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting bandwidthWeighting) {
+            this.bandwidthWeighting = bandwidthWeighting;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfoBandwidthWeighting getBandwidthWeighting() {
+            return this.bandwidthWeighting;
+        }
+
+    }
+
     public static class DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeSupportedBootModes extends TeaModel {
         @NameInMap("SupportedBootMode")
         public java.util.List<String> supportedBootMode;
@@ -755,6 +875,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @NameInMap("NetworkEncryptionSupport")
         public Boolean networkEncryptionSupport;
 
+        @NameInMap("NetworkInfo")
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo networkInfo;
+
         /**
          * <p>Indicates whether cloud disks can be attached by using the NVMe protocol. Valid values:</p>
          * <ul>
@@ -1122,6 +1245,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         }
         public Boolean getNetworkEncryptionSupport() {
             return this.networkEncryptionSupport;
+        }
+
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setNetworkInfo(DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo networkInfo) {
+            this.networkInfo = networkInfo;
+            return this;
+        }
+        public DescribeInstanceTypesResponseBodyInstanceTypesInstanceTypeNetworkInfo getNetworkInfo() {
+            return this.networkInfo;
         }
 
         public DescribeInstanceTypesResponseBodyInstanceTypesInstanceType setNvmeSupport(String nvmeSupport) {

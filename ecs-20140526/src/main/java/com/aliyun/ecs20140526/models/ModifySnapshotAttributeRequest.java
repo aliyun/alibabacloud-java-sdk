@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <a href="http://https://%E3%80%82">http:// or https://</a>.</p>
+     * <p>The snapshot description. It can be empty or up to 256 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
