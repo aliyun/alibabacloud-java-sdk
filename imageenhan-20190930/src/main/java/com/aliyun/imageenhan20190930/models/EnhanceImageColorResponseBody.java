@@ -7,6 +7,10 @@ public class EnhanceImageColorResponseBody extends TeaModel {
     @NameInMap("Data")
     public EnhanceImageColorResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2F306ABD-5BC3-4FA0-89CF-0DED5B3654EB</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class EnhanceImageColorResponseBody extends TeaModel {
     }
 
     public static class EnhanceImageColorResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/image-recolor/2020-06-23-10/24%3A14-3cf26e84-a5d2-49b0-8332-0e139e20c49e.png?Expires=1592909654&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=fHrYvitvm0qZJ9nrWYa%2Fjd4pQS">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/image-recolor/2020-06-23-10/24%3A14-3cf26e84-a5d2-49b0-8332-0e139e20c49e.png?Expires=1592909654&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=fHrYvitvm0qZJ9nrWYa%2Fjd4pQS</a>****</p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

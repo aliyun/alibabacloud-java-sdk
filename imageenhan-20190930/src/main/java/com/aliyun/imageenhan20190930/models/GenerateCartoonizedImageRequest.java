@@ -4,12 +4,28 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GenerateCartoonizedImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>girl</p>
+     */
     @NameInMap("ImageType")
     public String imageType;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/zhangchaorun/1025.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/zhangchaorun/1025.jpg</a></p>
+     */
     @NameInMap("ImageUrl")
     public String imageUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Index")
     public String index;
 

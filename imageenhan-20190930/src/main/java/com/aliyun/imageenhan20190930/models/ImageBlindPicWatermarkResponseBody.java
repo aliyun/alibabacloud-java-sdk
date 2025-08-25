@@ -7,6 +7,10 @@ public class ImageBlindPicWatermarkResponseBody extends TeaModel {
     @NameInMap("Data")
     public ImageBlindPicWatermarkResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>DE7869E4-0ACE-4C02-8B98-540B49F49205</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ImageBlindPicWatermarkResponseBody extends TeaModel {
     }
 
     public static class ImageBlindPicWatermarkResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-taobao-mm-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/pixelai-portrait-beauty%2F2020_03_04%2F61f544a1a5004c88a2bf29452db494e9.jpeg?OSSAccessKeyId=LTAI4Fmdm1gQonFLrghJ****&Expires=158340****&Signature=Heet1ivG0xFP3YlO6usvd0pmrH">http://algo-app-taobao-mm-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/pixelai-portrait-beauty%2F2020_03_04%2F61f544a1a5004c88a2bf29452db494e9.jpeg?OSSAccessKeyId=LTAI4Fmdm1gQonFLrghJ****&amp;Expires=158340****&amp;Signature=Heet1ivG0xFP3YlO6usvd0pmrH</a>****</p>
+         */
         @NameInMap("LogoURL")
         public String logoURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-taobao-mm-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/pixelai-portrait-beauty%2F2020_03_04%2F61f544a1a5004c88a2bf29452db494e9.jpeg?OSSAccessKeyId=LTAI4Fmdm1gQonFLrghJ****&Expires=158340****&Signature=Heet1ivG0xFP3YlO6usvd0pmrH">http://algo-app-taobao-mm-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/pixelai-portrait-beauty%2F2020_03_04%2F61f544a1a5004c88a2bf29452db494e9.jpeg?OSSAccessKeyId=LTAI4Fmdm1gQonFLrghJ****&amp;Expires=158340****&amp;Signature=Heet1ivG0xFP3YlO6usvd0pmrH</a>****</p>
+         */
         @NameInMap("WatermarkImageURL")
         public String watermarkImageURL;
 

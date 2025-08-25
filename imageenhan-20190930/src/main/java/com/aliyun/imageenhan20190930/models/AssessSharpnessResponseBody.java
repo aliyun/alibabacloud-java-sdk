@@ -7,6 +7,10 @@ public class AssessSharpnessResponseBody extends TeaModel {
     @NameInMap("Data")
     public AssessSharpnessResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C0B594A1-383E-4F97-A740-0D51CF8E37D2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class AssessSharpnessResponseBody extends TeaModel {
     }
 
     public static class AssessSharpnessResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("Sharpness")
         public Float sharpness;
 

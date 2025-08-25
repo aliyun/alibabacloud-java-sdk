@@ -10,6 +10,10 @@ public class RecolorHDImageResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>9364CEB1-1C39-489F-B6DB-6E65577429F1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

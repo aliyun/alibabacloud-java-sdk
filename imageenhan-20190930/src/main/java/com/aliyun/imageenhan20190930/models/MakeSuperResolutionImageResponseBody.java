@@ -7,6 +7,10 @@ public class MakeSuperResolutionImageResponseBody extends TeaModel {
     @NameInMap("Data")
     public MakeSuperResolutionImageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>47DD87F1-D077-499A-8D96-C82F006A6839</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class MakeSuperResolutionImageResponseBody extends TeaModel {
     }
 
     public static class MakeSuperResolutionImageResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ivpd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/upload/ai-gateway_prod/ds%253D20191121/sisrx2_157433961551387538.jpg?Expires=1574598816&OSSAccessKeyId=LTAI4FeJ8qKkYn6SrHhQ****&Signature=8phY6dOz4U889nHfHC1g51nwAi">http://ivpd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/upload/ai-gateway_prod/ds%253D20191121/sisrx2_157433961551387538.jpg?Expires=1574598816&amp;OSSAccessKeyId=LTAI4FeJ8qKkYn6SrHhQ****&amp;Signature=8phY6dOz4U889nHfHC1g51nwAi</a>****</p>
+         */
         @NameInMap("Url")
         public String url;
 

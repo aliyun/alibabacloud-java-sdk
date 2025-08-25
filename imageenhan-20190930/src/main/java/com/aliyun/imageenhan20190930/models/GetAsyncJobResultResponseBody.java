@@ -7,6 +7,10 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAsyncJobResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>6B4B827E-1CAA-43CD-BBDF-BB572E035976</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     }
 
     public static class GetAsyncJobResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paramsIllegal</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7435839A-5B92-4AA1-B2DE-5B6C98C04DDE</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-cn-shanghai-dha-filter.oss-cn-shanghai.aliyuncs.com/upload/recoloring-hd-2020-06-22-19-39-25-798c9cb57f-v6pj4/2020-6-23/invi_filter_015928997797691000043_tIPX7W.jpg?Expires=1592901579&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=qelgcQJBnzRogPybEPDDrDIjHd">http://viapi-cn-shanghai-dha-filter.oss-cn-shanghai.aliyuncs.com/upload/recoloring-hd-2020-06-22-19-39-25-798c9cb57f-v6pj4/2020-6-23/invi_filter_015928997797691000043_tIPX7W.jpg?Expires=1592901579&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=qelgcQJBnzRogPybEPDDrDIjHd</a>****</p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROCESS_SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

@@ -10,6 +10,10 @@ public class GenerateImageWithTextAndImageResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>141fb6d1-28e8-4d93-8165-d966f7092e6a</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

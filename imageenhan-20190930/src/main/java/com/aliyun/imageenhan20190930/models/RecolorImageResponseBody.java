@@ -7,6 +7,10 @@ public class RecolorImageResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecolorImageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3A9BFC5E-3F7C-4D9A-9445-908C6D14AB5B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

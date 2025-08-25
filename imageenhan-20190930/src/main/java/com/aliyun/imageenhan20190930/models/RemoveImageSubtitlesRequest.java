@@ -4,18 +4,40 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RemoveImageSubtitlesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0.25</p>
+     */
     @NameInMap("BH")
     public Float BH;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BW")
     public Float BW;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BX")
     public Float BX;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.75</p>
+     */
     @NameInMap("BY")
     public Float BY;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/RemoveImageSubtitles/RemoveImageSubtitles1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/RemoveImageSubtitles/RemoveImageSubtitles1.jpg</a></p>
+     */
     @NameInMap("ImageURL")
     public String imageURL;
 

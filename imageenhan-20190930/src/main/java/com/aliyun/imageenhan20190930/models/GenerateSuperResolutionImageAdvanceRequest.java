@@ -4,15 +4,33 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GenerateSuperResolutionImageAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/xxx/1025.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/xxx/1025.jpg</a></p>
+     */
     @NameInMap("ImageUrl")
     public java.io.InputStream imageUrlObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>95</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("OutputQuality")
     public Integer outputQuality;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Scale")
     public Integer scale;
 

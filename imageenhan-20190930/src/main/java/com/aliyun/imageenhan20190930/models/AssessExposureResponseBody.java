@@ -7,6 +7,10 @@ public class AssessExposureResponseBody extends TeaModel {
     @NameInMap("Data")
     public AssessExposureResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>4EF3C65B-C3CC-425B-AFB3-2FE6B98C578B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class AssessExposureResponseBody extends TeaModel {
     }
 
     public static class AssessExposureResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
         @NameInMap("Exposure")
         public Float exposure;
 

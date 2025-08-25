@@ -4,21 +4,47 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class ImageBlindPicWatermarkAdvanceRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>encode_pic</p>
+     */
     @NameInMap("FunctionType")
     public String functionType;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xxxxx.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xxxxx.jpg</a></p>
+     */
     @NameInMap("LogoURL")
     public java.io.InputStream logoURLObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xxxxx.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xxxxx.jpg</a></p>
+     */
     @NameInMap("OriginImageURL")
     public java.io.InputStream originImageURLObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>jpg</p>
+     */
     @NameInMap("OutputFileType")
     public String outputFileType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("QualityFactor")
     public Integer qualityFactor;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-doc.oss-cn-shanghai.aliyuncs.com/imageenhan/xxxxx.jpg">https://viapi-doc.oss-cn-shanghai.aliyuncs.com/imageenhan/xxxxx.jpg</a></p>
+     */
     @NameInMap("WatermarkImageURL")
     public java.io.InputStream watermarkImageURLObject;
 

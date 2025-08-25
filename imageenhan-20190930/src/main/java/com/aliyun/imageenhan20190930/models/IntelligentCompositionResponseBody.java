@@ -7,6 +7,10 @@ public class IntelligentCompositionResponseBody extends TeaModel {
     @NameInMap("Data")
     public IntelligentCompositionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C1D52018-D67A-46AD-9AAA-031750A6E770</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class IntelligentCompositionResponseBody extends TeaModel {
     }
 
     public static class IntelligentCompositionResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>981</p>
+         */
         @NameInMap("MaxX")
         public Integer maxX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>672</p>
+         */
         @NameInMap("MaxY")
         public Integer maxY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("MinX")
         public Integer minX;
 
+        /**
+         * <strong>example:</strong>
+         * <p>96</p>
+         */
         @NameInMap("MinY")
         public Integer minY;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3.6567564</p>
+         */
         @NameInMap("Score")
         public Float score;
 

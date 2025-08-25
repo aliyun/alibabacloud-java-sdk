@@ -7,6 +7,10 @@ public class ChangeImageSizeResponseBody extends TeaModel {
     @NameInMap("Data")
     public ChangeImageSizeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2833446F-A431-40EB-A502-6EC9DFEEEEB0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class ChangeImageSizeResponseBody extends TeaModel {
     }
 
     public static class ChangeImageSizeResponseBodyDataRetainLocation extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>224</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>298</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -87,6 +107,10 @@ public class ChangeImageSizeResponseBody extends TeaModel {
         @NameInMap("RetainLocation")
         public ChangeImageSizeResponseBodyDataRetainLocation retainLocation;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://ivpd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/upload/result_filter/2019-11-21/invi_filter_015743271470661000112_NVKmET.png?Expires=1574586347&OSSAccessKeyId=LTAI4FeJ8qKkYn6SrHhQ****&Signature=QqRAiqvyXsVlZ77M8yFc5QKJDE">http://ivpd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/upload/result_filter/2019-11-21/invi_filter_015743271470661000112_NVKmET.png?Expires=1574586347&amp;OSSAccessKeyId=LTAI4FeJ8qKkYn6SrHhQ****&amp;Signature=QqRAiqvyXsVlZ77M8yFc5QKJDE</a>****</p>
+         */
         @NameInMap("Url")
         public String url;
 

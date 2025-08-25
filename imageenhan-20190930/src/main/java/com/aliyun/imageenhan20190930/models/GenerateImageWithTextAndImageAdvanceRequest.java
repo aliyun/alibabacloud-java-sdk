@@ -4,21 +4,46 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GenerateImageWithTextAndImageAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>center_crop</p>
+     */
     @NameInMap("AspectRatioMode")
     public String aspectRatioMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Number")
     public Integer number;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/yxrtest/%E6%96%87%E7%94%9F%E5%9B%BE/%E7%9D%A1%E8%8E%B2.jpg">https://viapi-test.oss-cn-shanghai.aliyuncs.com/yxrtest/%E6%96%87%E7%94%9F%E5%9B%BE/%E7%9D%A1%E8%8E%B2.jpg</a>&quot;</p>
+     */
     @NameInMap("RefImageUrl")
     public java.io.InputStream refImageUrlObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024*1024</p>
+     */
     @NameInMap("Resolution")
     public String resolution;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.2</p>
+     */
     @NameInMap("Similarity")
     public Float similarity;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 

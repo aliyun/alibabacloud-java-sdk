@@ -7,6 +7,10 @@ public class AssessCompositionResponseBody extends TeaModel {
     @NameInMap("Data")
     public AssessCompositionResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CCAD9435-AEDB-49E4-BCCC-99B65ECC6693</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class AssessCompositionResponseBody extends TeaModel {
     }
 
     public static class AssessCompositionResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4.2551436</p>
+         */
         @NameInMap("Score")
         public Float score;
 

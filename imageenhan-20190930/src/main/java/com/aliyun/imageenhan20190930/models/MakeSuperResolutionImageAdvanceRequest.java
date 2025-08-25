@@ -4,18 +4,40 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class MakeSuperResolutionImageAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>base</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>png</p>
+     */
     @NameInMap("OutputFormat")
     public String outputFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>95</p>
+     */
     @NameInMap("OutputQuality")
     public Long outputQuality;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("UpscaleFactor")
     public Long upscaleFactor;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/MakeSuperResolutionImage/MakeSuperResolutionImage5.png">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/MakeSuperResolutionImage/MakeSuperResolutionImage5.png</a></p>
+     */
     @NameInMap("Url")
     public java.io.InputStream urlObject;
 

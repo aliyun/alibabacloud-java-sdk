@@ -4,6 +4,10 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class RecolorImageRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("ColorCount")
     public Integer colorCount;
 
@@ -13,12 +17,26 @@ public class RecolorImageRequest extends TeaModel {
     @NameInMap("ColorTemplate")
     public java.util.List<RecolorImageRequestColorTemplate> colorTemplate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>TEMPLATE</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/RecolorImage/RecolorImage-REF_PIC7.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/RecolorImage/RecolorImage-REF_PIC7.jpg</a></p>
+     */
     @NameInMap("RefUrl")
     public String refUrl;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/RecolorImage/RecolorImage-REF_PIC1.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/imageenhan/RecolorImage/RecolorImage-REF_PIC1.jpg</a></p>
+     */
     @NameInMap("Url")
     public String url;
 
@@ -68,6 +86,10 @@ public class RecolorImageRequest extends TeaModel {
     }
 
     public static class RecolorImageRequestColorTemplate extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>056A6B</p>
+         */
         @NameInMap("Color")
         public String color;
 

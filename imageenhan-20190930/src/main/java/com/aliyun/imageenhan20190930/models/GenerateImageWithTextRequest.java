@@ -4,12 +4,23 @@ package com.aliyun.imageenhan20190930.models;
 import com.aliyun.tea.*;
 
 public class GenerateImageWithTextRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Number")
     public Integer number;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1024*1024</p>
+     */
     @NameInMap("Resolution")
     public String resolution;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Text")
     public String text;
 
