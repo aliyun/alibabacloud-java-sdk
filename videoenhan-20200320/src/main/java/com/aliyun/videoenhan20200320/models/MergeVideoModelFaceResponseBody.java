@@ -10,6 +10,10 @@ public class MergeVideoModelFaceResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>334F180F-3B50-51CB-B4CB-9A86A542D3BC</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class MergeVideoModelFaceResponseBody extends TeaModel {
     }
 
     public static class MergeVideoModelFaceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/video-face-fusion/334F180F-3B50-51CB-B4CB-9A86A542D3BC-5716-20210906-074905.mp4?Expires=1630916420&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=OEtNqVYxXRwkyO4BrsYVJ8q5bx">http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/video-face-fusion/334F180F-3B50-51CB-B4CB-9A86A542D3BC-5716-20210906-074905.mp4?Expires=1630916420&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=OEtNqVYxXRwkyO4BrsYVJ8q5bx</a>****</p>
+         */
         @NameInMap("VideoURL")
         public String videoURL;
 

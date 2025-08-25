@@ -10,6 +10,10 @@ public class AbstractEcommerceVideoResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>50B33B81-CCB8-42BC-8A73-AC838618936E</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,9 +47,17 @@ public class AbstractEcommerceVideoResponseBody extends TeaModel {
     }
 
     public static class AbstractEcommerceVideoResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/shop-video-abs/2020-03-20-19/YVgDynxB.jpg?Expires=1584707249&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=e5Q3O%2ByA6H7UhYJeMZxz4p70de">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/shop-video-abs/2020-03-20-19/YVgDynxB.jpg?Expires=1584707249&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=e5Q3O%2ByA6H7UhYJeMZxz4p70de</a>****</p>
+         */
         @NameInMap("VideoCoverUrl")
         public String videoCoverUrl;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/shop-video-abs/2020-03-20-19/YVgDynxB.mp4?Expires=1584707249&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=KErufmbHvTUYYLRj6i42wY7Tew">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/shop-video-abs/2020-03-20-19/YVgDynxB.mp4?Expires=1584707249&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=KErufmbHvTUYYLRj6i42wY7Tew</a>****</p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 

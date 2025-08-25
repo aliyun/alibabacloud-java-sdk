@@ -10,6 +10,10 @@ public class GenerateHumanAnimeStyleVideoResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d21a2afa-4d52-4bca-803b-e65028146603</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class GenerateHumanAnimeStyleVideoResponseBody extends TeaModel {
     }
 
     public static class GenerateHumanAnimeStyleVideoResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-xstream-cn-shanghai.oss-cn-shanghai.aliyuncs.com/xstream-framework/upload_result_video_2023-02-10_09.45.55.mp4?Expires=1675995564&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=aIXTeM4IU4nARjy3SNA3YGhhqj">http://vibktprfx-prod-prod-xstream-cn-shanghai.oss-cn-shanghai.aliyuncs.com/xstream-framework/upload_result_video_2023-02-10_09.45.55.mp4?Expires=1675995564&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSR****&amp;Signature=aIXTeM4IU4nARjy3SNA3YGhhqj</a>****</p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 

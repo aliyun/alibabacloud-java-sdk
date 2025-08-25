@@ -4,17 +4,32 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ConvertHdrVideoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>30</p>
+     */
     @NameInMap("Bitrate")
     public Integer bitrate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>HLG</p>
+     */
     @NameInMap("HDRFormat")
     public String HDRFormat;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("MaxIlluminance")
     public Integer maxIlluminance;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/test_for_api/xxxx.mp4">https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/test_for_api/xxxx.mp4</a></p>
      */
     @NameInMap("VideoURL")
     public String videoURL;

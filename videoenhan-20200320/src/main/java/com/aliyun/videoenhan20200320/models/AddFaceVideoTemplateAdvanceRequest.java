@@ -9,6 +9,9 @@ public class AddFaceVideoTemplateAdvanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://invi-label.oss-cn-shanghai.aliyuncs.com/labl/temp/faceswap/test_for_api/xxxx.mp4">http://invi-label.oss-cn-shanghai.aliyuncs.com/labl/temp/faceswap/test_for_api/xxxx.mp4</a></p>
      */
     @NameInMap("VideoURL")
     public java.io.InputStream videoURLObject;

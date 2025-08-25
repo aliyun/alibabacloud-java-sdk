@@ -10,6 +10,10 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F61182AE-515B-5B0A-A877-1C9AE908FF15</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -76,6 +80,10 @@ public class AddFaceVideoTemplateResponseBody extends TeaModel {
         @NameInMap("FaceInfos")
         public java.util.List<AddFaceVideoTemplateResponseBodyDateFaceInfos> faceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6cd509ea-54fa-4730-8e9d-c94cadcda048</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 

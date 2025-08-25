@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class EnhancePortraitVideoAdvanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xxx/shang/video/SD%289516100%29.mp4">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test-team/xxx/shang/video/SD%289516100%29.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;

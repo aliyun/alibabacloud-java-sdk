@@ -10,6 +10,10 @@ public class EraseVideoLogoResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>95532F36-98FC-4DCD-815C-282BB26D2DA1</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class EraseVideoLogoResponseBody extends TeaModel {
     }
 
     public static class EraseVideoLogoResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-delogo/2020-03-20-11/53%3A56-DGNUGG7AcRlAylhr.mp4?Expires=1584707036&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=7CvsX7X1rSU%2B%2FDxnw484lb3LCD">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-delogo/2020-03-20-11/53%3A56-DGNUGG7AcRlAylhr.mp4?Expires=1584707036&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=7CvsX7X1rSU%2B%2FDxnw484lb3LCD</a>****</p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 

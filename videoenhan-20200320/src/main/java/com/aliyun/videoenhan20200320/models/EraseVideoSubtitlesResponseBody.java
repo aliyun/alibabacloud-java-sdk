@@ -10,6 +10,10 @@ public class EraseVideoSubtitlesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CCB082BF-A6B1-4C28-9E49-562EEE7DE639</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class EraseVideoSubtitlesResponseBody extends TeaModel {
     }
 
     public static class EraseVideoSubtitlesResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-desubtitle/2021-04-13-10/41%3A57-TcFd6Zug7gXwbeqs.mp4?Expires=1618312317&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=LZnGSQ8019%2Br5rcR4vKOaaT2UE">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-desubtitle/2021-04-13-10/41%3A57-TcFd6Zug7gXwbeqs.mp4?Expires=1618312317&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=LZnGSQ8019%2Br5rcR4vKOaaT2UE</a>****</p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 

@@ -10,6 +10,10 @@ public class EnhanceVideoQualityResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>881F39DC-C107-4817-A6D5-000BE833CC2A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class EnhanceVideoQualityResponseBody extends TeaModel {
     }
 
     public static class EnhanceVideoQualityResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-vd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/uhd-enhance/20-11-20/Wwzf9z75GO5XdisS_20-11-20-07-13-48.mp4?Expires=1605858272&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=vvY0D%2Bl5eEzp%2BD7mPOWz0zMU7v">http://vibktprfx-prod-prod-aic-vd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/uhd-enhance/20-11-20/Wwzf9z75GO5XdisS_20-11-20-07-13-48.mp4?Expires=1605858272&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=vvY0D%2Bl5eEzp%2BD7mPOWz0zMU7v</a>****</p>
+         */
         @NameInMap("VideoURL")
         public String videoURL;
 

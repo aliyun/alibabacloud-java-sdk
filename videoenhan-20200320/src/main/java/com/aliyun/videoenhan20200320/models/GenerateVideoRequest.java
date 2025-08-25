@@ -4,41 +4,80 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class GenerateVideoRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Duration")
     public Float duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("DurationAdaption")
     public Boolean durationAdaption;
 
     /**
      * <p>1</p>
-     * <br>
      * <p>This parameter is required.</p>
      */
     @NameInMap("FileList")
     public java.util.List<GenerateVideoRequestFileList> fileList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>640</p>
+     */
     @NameInMap("Height")
     public Integer height;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Mute")
     public Boolean mute;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("PuzzleEffect")
     public Boolean puzzleEffect;
 
+    /**
+     * <strong>example:</strong>
+     * <p>costume</p>
+     */
     @NameInMap("Scene")
     public String scene;
 
+    /**
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("SmartEffect")
     public Boolean smartEffect;
 
+    /**
+     * <strong>example:</strong>
+     * <p>fast</p>
+     */
     @NameInMap("Style")
     public String style;
 
+    /**
+     * <strong>example:</strong>
+     * <p>brush</p>
+     */
     @NameInMap("TransitionStyle")
     public String transitionStyle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>640</p>
+     */
     @NameInMap("Width")
     public Integer width;
 
@@ -138,18 +177,27 @@ public class GenerateVideoRequest extends TeaModel {
     public static class GenerateVideoRequestFileList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1-video1.mp4</p>
          */
         @NameInMap("FileName")
         public String fileName;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/GenerateVideo/1-video1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/GenerateVideo/1-video1.mp4</a></p>
          */
         @NameInMap("FileUrl")
         public String fileUrl;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>video</p>
          */
         @NameInMap("Type")
         public String type;

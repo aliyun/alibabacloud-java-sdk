@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class GenerateHumanAnimeStyleVideoAdvanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>anime</p>
      */
     @NameInMap("CartoonStyle")
     public String cartoonStyle;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/xxx/eas/EvaluateVideoQuality/123.mp4">https://viapi-test.oss-cn-shanghai.aliyuncs.com/test/xxx/eas/EvaluateVideoQuality/123.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;

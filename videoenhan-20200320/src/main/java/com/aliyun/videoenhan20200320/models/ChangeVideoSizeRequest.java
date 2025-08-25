@@ -4,38 +4,71 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class ChangeVideoSizeRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("B")
     public Integer b;
 
+    /**
+     * <strong>example:</strong>
+     * <p>smart</p>
+     */
     @NameInMap("CropType")
     public String cropType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>image</p>
+     */
     @NameInMap("FillType")
     public String fillType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("G")
     public Integer g;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("Height")
     public Integer height;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("R")
     public Integer r;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("Tightness")
     public Float tightness;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/ChangeVideoSize/ChangeVideoSize1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/ChangeVideoSize/ChangeVideoSize1.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public String videoUrl;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>600</p>
      */
     @NameInMap("Width")
     public Integer width;

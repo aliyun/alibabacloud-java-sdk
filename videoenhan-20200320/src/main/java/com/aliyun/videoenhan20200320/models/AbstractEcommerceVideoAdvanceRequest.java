@@ -6,19 +6,33 @@ import com.aliyun.tea.*;
 public class AbstractEcommerceVideoAdvanceRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
      */
     @NameInMap("Duration")
     public Float duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>480</p>
+     */
     @NameInMap("Height")
     public Integer height;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/AbstractEcommerceVideo/AbstractEcommerceVideo1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/AbstractEcommerceVideo/AbstractEcommerceVideo1.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;
 
+    /**
+     * <strong>example:</strong>
+     * <p>480</p>
+     */
     @NameInMap("Width")
     public Integer width;
 

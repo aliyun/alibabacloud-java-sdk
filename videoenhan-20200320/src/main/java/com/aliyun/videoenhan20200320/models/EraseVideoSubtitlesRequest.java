@@ -4,20 +4,39 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class EraseVideoSubtitlesRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>0.25</p>
+     */
     @NameInMap("BH")
     public Float BH;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("BW")
     public Float BW;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("BX")
     public Float BX;
 
+    /**
+     * <strong>example:</strong>
+     * <p>0.75</p>
+     */
     @NameInMap("BY")
     public Float BY;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/EraseVideoSubtitles/EraseVideoSubtitles1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/EraseVideoSubtitles/EraseVideoSubtitles1.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public String videoUrl;

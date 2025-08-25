@@ -7,6 +7,10 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
     @NameInMap("Data")
     public QueryFaceVideoTemplateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A06E3D21-890D-500B-97DA-D8B99D2DDDC4</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -62,21 +66,41 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
     }
 
     public static class QueryFaceVideoTemplateResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-06 15:17:19</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
         @NameInMap("FaceInfos")
         public java.util.List<QueryFaceVideoTemplateResponseBodyDataElementsFaceInfos> faceInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3bf2418c-7adf-4002-a9d6-2f7cf1889c0d</p>
+         */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/image-face-fusion/OriginUrl/user/2021-09-06/e4d6ecf6-8dc8-4dac-acb5-56a737ccbc06?Expires=1630914551&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=kBcLm66y7%2FZ3eIMgwXJg1zNP7k">http://vibktprfx-prod-prod-aic-gd-cn-shanghai.oss-cn-shanghai.aliyuncs.com/image-face-fusion/OriginUrl/user/2021-09-06/e4d6ecf6-8dc8-4dac-acb5-56a737ccbc06?Expires=1630914551&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=kBcLm66y7%2FZ3eIMgwXJg1zNP7k</a>****</p>
+         */
         @NameInMap("TemplateURL")
         public String templateURL;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2021-09-06 15:18:15</p>
+         */
         @NameInMap("UpdateTime")
         public String updateTime;
 
+        /**
+         * <strong>example:</strong>
+         * <p>zhangsan</p>
+         */
         @NameInMap("UserId")
         public String userId;
 

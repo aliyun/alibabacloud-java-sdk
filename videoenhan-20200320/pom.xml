@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>videoenhan20200320</artifactId>
-  <version>2.0.21</version>
+  <version>2.0.22</version>
   <packaging>jar</packaging>
   <name>videoenhan20200320</name>
   <description>Aliyun VIDEOENHAN for Java
@@ -32,23 +32,23 @@
   <distributionManagement>
     <snapshotRepository>
       <id>sonatype-nexus-snapshots</id>
-      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+      <url>https://central.sonatype.com/repository/maven-snapshots/</url>
     </snapshotRepository>
     <repository>
       <id>sonatype-nexus-staging</id>
-      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <url>https://central.sonatype.com</url>
     </repository>
   </distributionManagement>
   <scm>
-    <connection/>
-    <developerConnection/>
-    <url/>
+    <connection>scm:git:git://github.com/aliyun/alibabacloud-java-sdk.git</connection>
+    <developerConnection>scm:git:git@github.com:aliyun/alibabacloud-java-sdk.git</developerConnection>
+    <url>https://github.com/aliyun/alibabacloud-java-sdk</url>
   </scm>
   <dependencies>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea</artifactId>
-      <version>1.2.7</version>
+      <version>1.3.1</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
@@ -58,29 +58,8 @@
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
-      <artifactId>oss-client</artifactId>
-      <version>3.0.3</version>
-      <exclusions>
-        <exclusion>
-          <groupId>com.aliyun</groupId>
-          <artifactId>tea</artifactId>
-        </exclusion>
-      </exclusions>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>openplatform20191219</artifactId>
-      <version>5.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
       <artifactId>tea-util</artifactId>
       <version>[0.1.9, 1.0.0)</version>
-    </dependency>
-    <dependency>
-      <groupId>com.aliyun</groupId>
-      <artifactId>oss-util</artifactId>
-      <version>1.0.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -96,17 +75,17 @@
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>endpoint-util</artifactId>
-      <version>0.0.7</version>
+      <version>0.0.8</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>tea-openapi</artifactId>
-      <version>0.3.3</version>
+      <version>0.3.10</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
       <artifactId>openapiutil</artifactId>
-      <version>0.2.1</version>
+      <version>0.2.2</version>
     </dependency>
     <dependency>
       <groupId>com.aliyun</groupId>
@@ -117,6 +96,16 @@
       <groupId>com.aliyun</groupId>
       <artifactId>darabonba-number</artifactId>
       <version>0.0.3</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>tea-xml</artifactId>
+      <version>0.1.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.aliyun</groupId>
+      <artifactId>credentials-java</artifactId>
+      <version>1.0.2</version>
     </dependency>
   </dependencies>
   <build>
@@ -133,7 +122,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-gpg-plugin</artifactId>
-        <version>1.6</version>
+        <version>3.1.0</version>
         <executions>
           <execution>
             <id>sign-artifacts</id>
@@ -143,17 +132,6 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.sonatype.plugins</groupId>
-        <artifactId>nexus-staging-maven-plugin</artifactId>
-        <version>1.6.3</version>
-        <extensions>true</extensions>
-        <configuration>
-          <serverId>sonatype-nexus-staging</serverId>
-          <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-          <autoReleaseAfterClose>true</autoReleaseAfterClose>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -248,6 +226,7 @@
               <artifactSet>
                 <excludes>
                   <exclude>org.jacoco:*</exclude>
+                  <exclude>org.bouncycastle:bcprov-jdk18on</exclude>
                 </excludes>
               </artifactSet>
               <filters>
@@ -269,6 +248,17 @@
             </configuration>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.sonatype.central</groupId>
+        <artifactId>central-publishing-maven-plugin</artifactId>
+        <version>0.8.0</version>
+        <extensions>true</extensions>
+        <configuration>
+          <publishingServerId>central</publishingServerId>
+          <autoPublish>true</autoPublish>
+          <waitUntil>published</waitUntil>
+        </configuration>
       </plugin>
     </plugins>
   </build>

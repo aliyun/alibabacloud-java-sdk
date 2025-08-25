@@ -9,6 +9,9 @@ public class EraseVideoLogoRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/EraseVideoLogo/EraseVideoLogo1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/EraseVideoLogo/EraseVideoLogo1.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public String videoUrl;
@@ -35,15 +38,31 @@ public class EraseVideoLogoRequest extends TeaModel {
     }
 
     public static class EraseVideoLogoRequestBoxes extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("H")
         public Float h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1.0</p>
+         */
         @NameInMap("W")
         public Float w;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("Y")
         public Float y;
 

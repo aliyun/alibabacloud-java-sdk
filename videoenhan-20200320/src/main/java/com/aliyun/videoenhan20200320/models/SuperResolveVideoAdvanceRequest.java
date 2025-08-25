@@ -4,11 +4,18 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class SuperResolveVideoAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("BitRate")
     public Integer bitRate;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/SuperResolveVideo/SuperResolveVideo2.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/SuperResolveVideo/SuperResolveVideo2.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;

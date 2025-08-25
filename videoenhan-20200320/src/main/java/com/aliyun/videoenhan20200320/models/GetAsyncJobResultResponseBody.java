@@ -7,6 +7,10 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAsyncJobResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>43A0AEB6-45F4-4138-8E89-E1A5D63200E3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     }
 
     public static class GetAsyncJobResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paramsIllegal</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49E2CC28-ED1D-4CC5-854D-7D0AE2B20976</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>{\&quot;VideoUrl\&quot;:\&quot;<a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-super-resolution/2020-03-26-02/55%3A59-XFLsuEKpPxleHl4n.mp4?Expires=1585193159&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=OqsxMwAKsFVjPO%2Brgw%2BpXHIm6v****%5C%5C%22%7D">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-super-resolution/2020-03-26-02/55%3A59-XFLsuEKpPxleHl4n.mp4?Expires=1585193159&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=OqsxMwAKsFVjPO%2Brgw%2BpXHIm6v****\\&quot;}</a></p>
+         */
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROCESS_SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

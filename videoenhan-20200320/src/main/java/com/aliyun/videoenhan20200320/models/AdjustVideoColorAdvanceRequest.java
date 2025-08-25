@@ -4,20 +4,39 @@ package com.aliyun.videoenhan20200320.models;
 import com.aliyun.tea.*;
 
 public class AdjustVideoColorAdvanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>LogC</p>
+     */
     @NameInMap("Mode")
     public String mode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("VideoBitrate")
     public Long videoBitrate;
 
+    /**
+     * <strong>example:</strong>
+     * <p>h264</p>
+     */
     @NameInMap("VideoCodec")
     public String videoCodec;
 
+    /**
+     * <strong>example:</strong>
+     * <p>mp4</p>
+     */
     @NameInMap("VideoFormat")
     public String videoFormat;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/AdjustVideoColor/AdjustVideoColor1.mp4">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/videoenhan/AdjustVideoColor/AdjustVideoColor1.mp4</a></p>
      */
     @NameInMap("VideoUrl")
     public java.io.InputStream videoUrlObject;

@@ -10,6 +10,10 @@ public class MergeVideoModelFaceRequest extends TeaModel {
     @NameInMap("Enhance")
     public Boolean enhance;
 
+    /**
+     * <strong>example:</strong>
+     * <p><a href="https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/ref/ref.jpg">https://invi-label.oss-cn-shanghai.aliyuncs.com/label/temp/faceswap/ref/ref.jpg</a></p>
+     */
     @NameInMap("FaceImageURL")
     public String faceImageURL;
 
@@ -18,6 +22,9 @@ public class MergeVideoModelFaceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3bf2418c-7adf-4002-a9d6-2f7cf1889c0d</p>
      */
     @NameInMap("TemplateId")
     public String templateId;

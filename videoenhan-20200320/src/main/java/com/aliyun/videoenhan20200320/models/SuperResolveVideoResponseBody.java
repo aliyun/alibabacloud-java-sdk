@@ -10,6 +10,10 @@ public class SuperResolveVideoResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>186AC396-0EEC-46F1-AAA1-BF3585227427</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,6 +47,10 @@ public class SuperResolveVideoResponseBody extends TeaModel {
     }
 
     public static class SuperResolveVideoResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-super-resolution/2020-03-20-12/12%3A11-UlLVELFzIy5EAyEh.mp4?Expires=1584708132&OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&Signature=0V8yKrCVybC4KIPtRuGKJDJaQT">http://algo-app-aic-vd-cn-shanghai-prod.oss-cn-shanghai.aliyuncs.com/video-super-resolution/2020-03-20-12/12%3A11-UlLVELFzIy5EAyEh.mp4?Expires=1584708132&amp;OSSAccessKeyId=LTAI4FoLmvQ9urWXgSRp****&amp;Signature=0V8yKrCVybC4KIPtRuGKJDJaQT</a>****</p>
+         */
         @NameInMap("VideoUrl")
         public String videoUrl;
 

@@ -7,9 +7,17 @@ public class QueryFaceVideoTemplateRequest extends TeaModel {
     @NameInMap("PageNo")
     public Long pageNo;
 
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("PageSize")
     public Long pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3bf2418c-7adf-4002-a9d6-2f7cf1889c0d</p>
+     */
     @NameInMap("TemplateId")
     public String templateId;
 
