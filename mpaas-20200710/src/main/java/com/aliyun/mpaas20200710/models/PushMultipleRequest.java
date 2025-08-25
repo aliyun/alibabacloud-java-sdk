@@ -4,20 +4,47 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class PushMultipleRequest extends TeaModel {
+    @NameInMap("ActivityContentState")
+    public Object activityContentState;
+
+    @NameInMap("ActivityEvent")
+    public String activityEvent;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("ChannelId")
+    public String channelId;
 
     @NameInMap("Classification")
     public String classification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
+    @NameInMap("DismissalDate")
+    public Long dismissalDate;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
 
     @NameInMap("ExtendedParams")
     public String extendedParams;
+
+    @NameInMap("MiChannelId")
+    public String miChannelId;
+
+    @NameInMap("NotifyLevel")
+    public java.util.Map<String, ?> notifyLevel;
 
     @NameInMap("NotifyType")
     public String notifyType;
@@ -34,15 +61,36 @@ public class PushMultipleRequest extends TeaModel {
     @NameInMap("StrategyType")
     public Integer strategyType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetMsg")
     public java.util.List<PushMultipleRequestTargetMsg> targetMsg;
 
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    @NameInMap("ThirdChannelCategory")
+    public java.util.Map<String, ?> thirdChannelCategory;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -51,12 +99,36 @@ public class PushMultipleRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public PushMultipleRequest setActivityContentState(Object activityContentState) {
+        this.activityContentState = activityContentState;
+        return this;
+    }
+    public Object getActivityContentState() {
+        return this.activityContentState;
+    }
+
+    public PushMultipleRequest setActivityEvent(String activityEvent) {
+        this.activityEvent = activityEvent;
+        return this;
+    }
+    public String getActivityEvent() {
+        return this.activityEvent;
+    }
+
     public PushMultipleRequest setAppId(String appId) {
         this.appId = appId;
         return this;
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public PushMultipleRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public PushMultipleRequest setClassification(String classification) {
@@ -75,6 +147,14 @@ public class PushMultipleRequest extends TeaModel {
         return this.deliveryType;
     }
 
+    public PushMultipleRequest setDismissalDate(Long dismissalDate) {
+        this.dismissalDate = dismissalDate;
+        return this;
+    }
+    public Long getDismissalDate() {
+        return this.dismissalDate;
+    }
+
     public PushMultipleRequest setExpiredSeconds(Long expiredSeconds) {
         this.expiredSeconds = expiredSeconds;
         return this;
@@ -89,6 +169,22 @@ public class PushMultipleRequest extends TeaModel {
     }
     public String getExtendedParams() {
         return this.extendedParams;
+    }
+
+    public PushMultipleRequest setMiChannelId(String miChannelId) {
+        this.miChannelId = miChannelId;
+        return this;
+    }
+    public String getMiChannelId() {
+        return this.miChannelId;
+    }
+
+    public PushMultipleRequest setNotifyLevel(java.util.Map<String, ?> notifyLevel) {
+        this.notifyLevel = notifyLevel;
+        return this;
+    }
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     public PushMultipleRequest setNotifyType(String notifyType) {
@@ -155,6 +251,38 @@ public class PushMultipleRequest extends TeaModel {
         return this.templateName;
     }
 
+    public PushMultipleRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public PushMultipleRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
+        this.thirdChannelCategory = thirdChannelCategory;
+        return this;
+    }
+    public java.util.Map<String, ?> getThirdChannelCategory() {
+        return this.thirdChannelCategory;
+    }
+
+    public PushMultipleRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushMultipleRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
+    }
+
     public PushMultipleRequest setWorkspaceId(String workspaceId) {
         this.workspaceId = workspaceId;
         return this;
@@ -167,9 +295,15 @@ public class PushMultipleRequest extends TeaModel {
         @NameInMap("ExtendedParams")
         public String extendedParams;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("MsgKey")
         public String msgKey;
 
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Target")
         public String target;
 

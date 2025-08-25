@@ -4,27 +4,42 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class QueryPushAnalysisCoreIndexRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("Channel")
     public String channel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("EndTime")
     public Long endTime;
 
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
     @NameInMap("Type")
     public String type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -79,6 +94,14 @@ public class QueryPushAnalysisCoreIndexRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public QueryPushAnalysisCoreIndexRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public QueryPushAnalysisCoreIndexRequest setType(String type) {

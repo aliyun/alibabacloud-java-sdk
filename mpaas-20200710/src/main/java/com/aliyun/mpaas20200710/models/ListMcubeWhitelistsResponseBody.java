@@ -139,11 +139,23 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
     }
 
     public static class ListMcubeWhitelistsResponseBodyListWhitelistResult extends TeaModel {
+        @NameInMap("CurrentPage")
+        public Integer currentPage;
+
+        @NameInMap("HasMore")
+        public Boolean hasMore;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
         @NameInMap("ResultMsg")
         public String resultMsg;
 
         @NameInMap("Success")
         public Boolean success;
+
+        @NameInMap("TotalCount")
+        public Long totalCount;
 
         @NameInMap("Whitelists")
         public java.util.List<ListMcubeWhitelistsResponseBodyListWhitelistResultWhitelists> whitelists;
@@ -151,6 +163,30 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
         public static ListMcubeWhitelistsResponseBodyListWhitelistResult build(java.util.Map<String, ?> map) throws Exception {
             ListMcubeWhitelistsResponseBodyListWhitelistResult self = new ListMcubeWhitelistsResponseBodyListWhitelistResult();
             return TeaModel.build(map, self);
+        }
+
+        public ListMcubeWhitelistsResponseBodyListWhitelistResult setCurrentPage(Integer currentPage) {
+            this.currentPage = currentPage;
+            return this;
+        }
+        public Integer getCurrentPage() {
+            return this.currentPage;
+        }
+
+        public ListMcubeWhitelistsResponseBodyListWhitelistResult setHasMore(Boolean hasMore) {
+            this.hasMore = hasMore;
+            return this;
+        }
+        public Boolean getHasMore() {
+            return this.hasMore;
+        }
+
+        public ListMcubeWhitelistsResponseBodyListWhitelistResult setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
         }
 
         public ListMcubeWhitelistsResponseBodyListWhitelistResult setResultMsg(String resultMsg) {
@@ -167,6 +203,14 @@ public class ListMcubeWhitelistsResponseBody extends TeaModel {
         }
         public Boolean getSuccess() {
             return this.success;
+        }
+
+        public ListMcubeWhitelistsResponseBodyListWhitelistResult setTotalCount(Long totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Long getTotalCount() {
+            return this.totalCount;
         }
 
         public ListMcubeWhitelistsResponseBodyListWhitelistResult setWhitelists(java.util.List<ListMcubeWhitelistsResponseBodyListWhitelistResultWhitelists> whitelists) {

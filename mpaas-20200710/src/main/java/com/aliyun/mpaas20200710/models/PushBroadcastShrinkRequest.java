@@ -1,0 +1,360 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.mpaas20200710.models;
+
+import com.aliyun.tea.*;
+
+public class PushBroadcastShrinkRequest extends TeaModel {
+    @NameInMap("AndroidChannel")
+    public Long androidChannel;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("AppId")
+    public String appId;
+
+    @NameInMap("BindEndTime")
+    public Long bindEndTime;
+
+    @NameInMap("BindStartTime")
+    public Long bindStartTime;
+
+    @NameInMap("ChannelId")
+    public String channelId;
+
+    @NameInMap("Classification")
+    public String classification;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("DeliveryType")
+    public Long deliveryType;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("ExpiredSeconds")
+    public Long expiredSeconds;
+
+    @NameInMap("ExtendedParams")
+    public String extendedParams;
+
+    @NameInMap("MiChannelId")
+    public String miChannelId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("Msgkey")
+    public String msgkey;
+
+    @NameInMap("NotifyLevel")
+    public String notifyLevelShrink;
+
+    @NameInMap("NotifyType")
+    public String notifyType;
+
+    @NameInMap("PushAction")
+    public Long pushAction;
+
+    @NameInMap("PushStatus")
+    public Long pushStatus;
+
+    @NameInMap("Silent")
+    public Long silent;
+
+    @NameInMap("StrategyContent")
+    public String strategyContent;
+
+    @NameInMap("StrategyType")
+    public Integer strategyType;
+
+    @NameInMap("TaskName")
+    public String taskName;
+
+    @NameInMap("TemplateKeyValue")
+    public String templateKeyValue;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("TemplateName")
+    public String templateName;
+
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    @NameInMap("ThirdChannelCategory")
+    public String thirdChannelCategoryShrink;
+
+    @NameInMap("TimeMode")
+    public Integer timeMode;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
+
+    @NameInMap("UnBindEndTime")
+    public Long unBindEndTime;
+
+    @NameInMap("UnBindPeriod")
+    public Long unBindPeriod;
+
+    @NameInMap("UnBindStartTime")
+    public Long unBindStartTime;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("WorkspaceId")
+    public String workspaceId;
+
+    public static PushBroadcastShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        PushBroadcastShrinkRequest self = new PushBroadcastShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public PushBroadcastShrinkRequest setAndroidChannel(Long androidChannel) {
+        this.androidChannel = androidChannel;
+        return this;
+    }
+    public Long getAndroidChannel() {
+        return this.androidChannel;
+    }
+
+    public PushBroadcastShrinkRequest setAppId(String appId) {
+        this.appId = appId;
+        return this;
+    }
+    public String getAppId() {
+        return this.appId;
+    }
+
+    public PushBroadcastShrinkRequest setBindEndTime(Long bindEndTime) {
+        this.bindEndTime = bindEndTime;
+        return this;
+    }
+    public Long getBindEndTime() {
+        return this.bindEndTime;
+    }
+
+    public PushBroadcastShrinkRequest setBindStartTime(Long bindStartTime) {
+        this.bindStartTime = bindStartTime;
+        return this;
+    }
+    public Long getBindStartTime() {
+        return this.bindStartTime;
+    }
+
+    public PushBroadcastShrinkRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
+    }
+
+    public PushBroadcastShrinkRequest setClassification(String classification) {
+        this.classification = classification;
+        return this;
+    }
+    public String getClassification() {
+        return this.classification;
+    }
+
+    public PushBroadcastShrinkRequest setDeliveryType(Long deliveryType) {
+        this.deliveryType = deliveryType;
+        return this;
+    }
+    public Long getDeliveryType() {
+        return this.deliveryType;
+    }
+
+    public PushBroadcastShrinkRequest setExpiredSeconds(Long expiredSeconds) {
+        this.expiredSeconds = expiredSeconds;
+        return this;
+    }
+    public Long getExpiredSeconds() {
+        return this.expiredSeconds;
+    }
+
+    public PushBroadcastShrinkRequest setExtendedParams(String extendedParams) {
+        this.extendedParams = extendedParams;
+        return this;
+    }
+    public String getExtendedParams() {
+        return this.extendedParams;
+    }
+
+    public PushBroadcastShrinkRequest setMiChannelId(String miChannelId) {
+        this.miChannelId = miChannelId;
+        return this;
+    }
+    public String getMiChannelId() {
+        return this.miChannelId;
+    }
+
+    public PushBroadcastShrinkRequest setMsgkey(String msgkey) {
+        this.msgkey = msgkey;
+        return this;
+    }
+    public String getMsgkey() {
+        return this.msgkey;
+    }
+
+    public PushBroadcastShrinkRequest setNotifyLevelShrink(String notifyLevelShrink) {
+        this.notifyLevelShrink = notifyLevelShrink;
+        return this;
+    }
+    public String getNotifyLevelShrink() {
+        return this.notifyLevelShrink;
+    }
+
+    public PushBroadcastShrinkRequest setNotifyType(String notifyType) {
+        this.notifyType = notifyType;
+        return this;
+    }
+    public String getNotifyType() {
+        return this.notifyType;
+    }
+
+    public PushBroadcastShrinkRequest setPushAction(Long pushAction) {
+        this.pushAction = pushAction;
+        return this;
+    }
+    public Long getPushAction() {
+        return this.pushAction;
+    }
+
+    public PushBroadcastShrinkRequest setPushStatus(Long pushStatus) {
+        this.pushStatus = pushStatus;
+        return this;
+    }
+    public Long getPushStatus() {
+        return this.pushStatus;
+    }
+
+    public PushBroadcastShrinkRequest setSilent(Long silent) {
+        this.silent = silent;
+        return this;
+    }
+    public Long getSilent() {
+        return this.silent;
+    }
+
+    public PushBroadcastShrinkRequest setStrategyContent(String strategyContent) {
+        this.strategyContent = strategyContent;
+        return this;
+    }
+    public String getStrategyContent() {
+        return this.strategyContent;
+    }
+
+    public PushBroadcastShrinkRequest setStrategyType(Integer strategyType) {
+        this.strategyType = strategyType;
+        return this;
+    }
+    public Integer getStrategyType() {
+        return this.strategyType;
+    }
+
+    public PushBroadcastShrinkRequest setTaskName(String taskName) {
+        this.taskName = taskName;
+        return this;
+    }
+    public String getTaskName() {
+        return this.taskName;
+    }
+
+    public PushBroadcastShrinkRequest setTemplateKeyValue(String templateKeyValue) {
+        this.templateKeyValue = templateKeyValue;
+        return this;
+    }
+    public String getTemplateKeyValue() {
+        return this.templateKeyValue;
+    }
+
+    public PushBroadcastShrinkRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
+    }
+
+    public PushBroadcastShrinkRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public PushBroadcastShrinkRequest setThirdChannelCategoryShrink(String thirdChannelCategoryShrink) {
+        this.thirdChannelCategoryShrink = thirdChannelCategoryShrink;
+        return this;
+    }
+    public String getThirdChannelCategoryShrink() {
+        return this.thirdChannelCategoryShrink;
+    }
+
+    public PushBroadcastShrinkRequest setTimeMode(Integer timeMode) {
+        this.timeMode = timeMode;
+        return this;
+    }
+    public Integer getTimeMode() {
+        return this.timeMode;
+    }
+
+    public PushBroadcastShrinkRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushBroadcastShrinkRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
+    }
+
+    public PushBroadcastShrinkRequest setUnBindEndTime(Long unBindEndTime) {
+        this.unBindEndTime = unBindEndTime;
+        return this;
+    }
+    public Long getUnBindEndTime() {
+        return this.unBindEndTime;
+    }
+
+    public PushBroadcastShrinkRequest setUnBindPeriod(Long unBindPeriod) {
+        this.unBindPeriod = unBindPeriod;
+        return this;
+    }
+    public Long getUnBindPeriod() {
+        return this.unBindPeriod;
+    }
+
+    public PushBroadcastShrinkRequest setUnBindStartTime(Long unBindStartTime) {
+        this.unBindStartTime = unBindStartTime;
+        return this;
+    }
+    public Long getUnBindStartTime() {
+        return this.unBindStartTime;
+    }
+
+    public PushBroadcastShrinkRequest setWorkspaceId(String workspaceId) {
+        this.workspaceId = workspaceId;
+        return this;
+    }
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+}

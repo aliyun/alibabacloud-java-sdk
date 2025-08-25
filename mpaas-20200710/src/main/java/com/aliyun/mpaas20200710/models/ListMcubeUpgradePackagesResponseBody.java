@@ -4,8 +4,17 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
+    @NameInMap("CurrentPage")
+    public Integer currentPage;
+
+    @NameInMap("HasMore")
+    public Boolean hasMore;
+
     @NameInMap("ListPackagesResult")
     public ListMcubeUpgradePackagesResponseBodyListPackagesResult listPackagesResult;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
 
     @NameInMap("RequestId")
     public String requestId;
@@ -16,9 +25,28 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
     @NameInMap("ResultMessage")
     public String resultMessage;
 
+    @NameInMap("TotalCount")
+    public Long totalCount;
+
     public static ListMcubeUpgradePackagesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListMcubeUpgradePackagesResponseBody self = new ListMcubeUpgradePackagesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListMcubeUpgradePackagesResponseBody setCurrentPage(Integer currentPage) {
+        this.currentPage = currentPage;
+        return this;
+    }
+    public Integer getCurrentPage() {
+        return this.currentPage;
+    }
+
+    public ListMcubeUpgradePackagesResponseBody setHasMore(Boolean hasMore) {
+        this.hasMore = hasMore;
+        return this;
+    }
+    public Boolean getHasMore() {
+        return this.hasMore;
     }
 
     public ListMcubeUpgradePackagesResponseBody setListPackagesResult(ListMcubeUpgradePackagesResponseBodyListPackagesResult listPackagesResult) {
@@ -27,6 +55,14 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
     }
     public ListMcubeUpgradePackagesResponseBodyListPackagesResult getListPackagesResult() {
         return this.listPackagesResult;
+    }
+
+    public ListMcubeUpgradePackagesResponseBody setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListMcubeUpgradePackagesResponseBody setRequestId(String requestId) {
@@ -51,6 +87,14 @@ public class ListMcubeUpgradePackagesResponseBody extends TeaModel {
     }
     public String getResultMessage() {
         return this.resultMessage;
+    }
+
+    public ListMcubeUpgradePackagesResponseBody setTotalCount(Long totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Long getTotalCount() {
+        return this.totalCount;
     }
 
     public static class ListMcubeUpgradePackagesResponseBodyListPackagesResultPackages extends TeaModel {

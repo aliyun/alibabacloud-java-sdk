@@ -4,6 +4,9 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class CreateOpenGlobalDataRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -13,6 +16,9 @@ public class CreateOpenGlobalDataRequest extends TeaModel {
     @NameInMap("AppMinVersion")
     public String appMinVersion;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("BizType")
     public String bizType;
 
@@ -28,9 +34,18 @@ public class CreateOpenGlobalDataRequest extends TeaModel {
     @NameInMap("OsType")
     public String osType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Payload")
     public String payload;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ThirdMsgId")
     public String thirdMsgId;
 
@@ -43,6 +58,9 @@ public class CreateOpenGlobalDataRequest extends TeaModel {
     @NameInMap("ValidTimeStart")
     public Long validTimeStart;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -121,6 +139,14 @@ public class CreateOpenGlobalDataRequest extends TeaModel {
     }
     public String getPayload() {
         return this.payload;
+    }
+
+    public CreateOpenGlobalDataRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public CreateOpenGlobalDataRequest setThirdMsgId(String thirdMsgId) {

@@ -4,12 +4,24 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class RevokePushTaskRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -32,6 +44,14 @@ public class RevokePushTaskRequest extends TeaModel {
     }
     public String getTaskId() {
         return this.taskId;
+    }
+
+    public RevokePushTaskRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public RevokePushTaskRequest setWorkspaceId(String workspaceId) {

@@ -4,15 +4,30 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class RevokePushMessageRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("MessageId")
     public String messageId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TargetId")
     public String targetId;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -43,6 +58,14 @@ public class RevokePushMessageRequest extends TeaModel {
     }
     public String getTargetId() {
         return this.targetId;
+    }
+
+    public RevokePushMessageRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public RevokePushMessageRequest setWorkspaceId(String workspaceId) {

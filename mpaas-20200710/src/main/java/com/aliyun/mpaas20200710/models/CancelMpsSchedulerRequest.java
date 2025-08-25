@@ -4,15 +4,24 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class CancelMpsSchedulerRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
     @NameInMap("Type")
     public Integer type;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("UniqueIds")
     public String uniqueIds;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

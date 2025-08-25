@@ -7,23 +7,50 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("AndroidChannel")
     public Long androidChannel;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
+
+    @NameInMap("BindEndTime")
+    public Long bindEndTime;
+
+    @NameInMap("BindStartTime")
+    public Long bindStartTime;
+
+    @NameInMap("ChannelId")
+    public String channelId;
 
     @NameInMap("Classification")
     public String classification;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("DeliveryType")
     public Long deliveryType;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("ExpiredSeconds")
     public Long expiredSeconds;
 
     @NameInMap("ExtendedParams")
     public String extendedParams;
 
+    @NameInMap("MiChannelId")
+    public String miChannelId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("Msgkey")
     public String msgkey;
+
+    @NameInMap("NotifyLevel")
+    public java.util.Map<String, ?> notifyLevel;
 
     @NameInMap("NotifyType")
     public String notifyType;
@@ -49,12 +76,39 @@ public class PushBroadcastRequest extends TeaModel {
     @NameInMap("TemplateKeyValue")
     public String templateKeyValue;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TemplateName")
     public String templateName;
+
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    @NameInMap("ThirdChannelCategory")
+    public java.util.Map<String, ?> thirdChannelCategory;
+
+    @NameInMap("TimeMode")
+    public Integer timeMode;
+
+    @NameInMap("TransparentMessagePayload")
+    public Object transparentMessagePayload;
+
+    @NameInMap("TransparentMessageUrgency")
+    public String transparentMessageUrgency;
+
+    @NameInMap("UnBindEndTime")
+    public Long unBindEndTime;
 
     @NameInMap("UnBindPeriod")
     public Long unBindPeriod;
 
+    @NameInMap("UnBindStartTime")
+    public Long unBindStartTime;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -77,6 +131,30 @@ public class PushBroadcastRequest extends TeaModel {
     }
     public String getAppId() {
         return this.appId;
+    }
+
+    public PushBroadcastRequest setBindEndTime(Long bindEndTime) {
+        this.bindEndTime = bindEndTime;
+        return this;
+    }
+    public Long getBindEndTime() {
+        return this.bindEndTime;
+    }
+
+    public PushBroadcastRequest setBindStartTime(Long bindStartTime) {
+        this.bindStartTime = bindStartTime;
+        return this;
+    }
+    public Long getBindStartTime() {
+        return this.bindStartTime;
+    }
+
+    public PushBroadcastRequest setChannelId(String channelId) {
+        this.channelId = channelId;
+        return this;
+    }
+    public String getChannelId() {
+        return this.channelId;
     }
 
     public PushBroadcastRequest setClassification(String classification) {
@@ -111,12 +189,28 @@ public class PushBroadcastRequest extends TeaModel {
         return this.extendedParams;
     }
 
+    public PushBroadcastRequest setMiChannelId(String miChannelId) {
+        this.miChannelId = miChannelId;
+        return this;
+    }
+    public String getMiChannelId() {
+        return this.miChannelId;
+    }
+
     public PushBroadcastRequest setMsgkey(String msgkey) {
         this.msgkey = msgkey;
         return this;
     }
     public String getMsgkey() {
         return this.msgkey;
+    }
+
+    public PushBroadcastRequest setNotifyLevel(java.util.Map<String, ?> notifyLevel) {
+        this.notifyLevel = notifyLevel;
+        return this;
+    }
+    public java.util.Map<String, ?> getNotifyLevel() {
+        return this.notifyLevel;
     }
 
     public PushBroadcastRequest setNotifyType(String notifyType) {
@@ -191,12 +285,68 @@ public class PushBroadcastRequest extends TeaModel {
         return this.templateName;
     }
 
+    public PushBroadcastRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
+    }
+
+    public PushBroadcastRequest setThirdChannelCategory(java.util.Map<String, ?> thirdChannelCategory) {
+        this.thirdChannelCategory = thirdChannelCategory;
+        return this;
+    }
+    public java.util.Map<String, ?> getThirdChannelCategory() {
+        return this.thirdChannelCategory;
+    }
+
+    public PushBroadcastRequest setTimeMode(Integer timeMode) {
+        this.timeMode = timeMode;
+        return this;
+    }
+    public Integer getTimeMode() {
+        return this.timeMode;
+    }
+
+    public PushBroadcastRequest setTransparentMessagePayload(Object transparentMessagePayload) {
+        this.transparentMessagePayload = transparentMessagePayload;
+        return this;
+    }
+    public Object getTransparentMessagePayload() {
+        return this.transparentMessagePayload;
+    }
+
+    public PushBroadcastRequest setTransparentMessageUrgency(String transparentMessageUrgency) {
+        this.transparentMessageUrgency = transparentMessageUrgency;
+        return this;
+    }
+    public String getTransparentMessageUrgency() {
+        return this.transparentMessageUrgency;
+    }
+
+    public PushBroadcastRequest setUnBindEndTime(Long unBindEndTime) {
+        this.unBindEndTime = unBindEndTime;
+        return this;
+    }
+    public Long getUnBindEndTime() {
+        return this.unBindEndTime;
+    }
+
     public PushBroadcastRequest setUnBindPeriod(Long unBindPeriod) {
         this.unBindPeriod = unBindPeriod;
         return this;
     }
     public Long getUnBindPeriod() {
         return this.unBindPeriod;
+    }
+
+    public PushBroadcastRequest setUnBindStartTime(Long unBindStartTime) {
+        this.unBindStartTime = unBindStartTime;
+        return this;
+    }
+    public Long getUnBindStartTime() {
+        return this.unBindStartTime;
     }
 
     public PushBroadcastRequest setWorkspaceId(String workspaceId) {

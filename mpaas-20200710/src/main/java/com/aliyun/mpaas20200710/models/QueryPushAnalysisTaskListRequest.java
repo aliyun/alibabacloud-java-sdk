@@ -4,6 +4,9 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class QueryPushAnalysisTaskListRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
@@ -13,6 +16,9 @@ public class QueryPushAnalysisTaskListRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("StartTime")
     public Long startTime;
 
@@ -22,6 +28,12 @@ public class QueryPushAnalysisTaskListRequest extends TeaModel {
     @NameInMap("TaskName")
     public String taskName;
 
+    @NameInMap("TenantId")
+    public String tenantId;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -76,6 +88,14 @@ public class QueryPushAnalysisTaskListRequest extends TeaModel {
     }
     public String getTaskName() {
         return this.taskName;
+    }
+
+    public QueryPushAnalysisTaskListRequest setTenantId(String tenantId) {
+        this.tenantId = tenantId;
+        return this;
+    }
+    public String getTenantId() {
+        return this.tenantId;
     }
 
     public QueryPushAnalysisTaskListRequest setWorkspaceId(String workspaceId) {

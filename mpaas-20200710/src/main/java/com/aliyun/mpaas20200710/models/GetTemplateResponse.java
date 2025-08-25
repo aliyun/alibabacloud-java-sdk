@@ -3,25 +3,22 @@ package com.aliyun.mpaas20200710.models;
 
 import com.aliyun.tea.*;
 
-public class TestProxyResponse extends TeaModel {
+public class GetTemplateResponse extends TeaModel {
     @NameInMap("headers")
-    @Validation(required = true)
     public java.util.Map<String, String> headers;
 
     @NameInMap("statusCode")
-    @Validation(required = true)
     public Integer statusCode;
 
     @NameInMap("body")
-    @Validation(required = true)
-    public TestProxyResponseBody body;
+    public GetTemplateResponseBody body;
 
-    public static TestProxyResponse build(java.util.Map<String, ?> map) throws Exception {
-        TestProxyResponse self = new TestProxyResponse();
+    public static GetTemplateResponse build(java.util.Map<String, ?> map) throws Exception {
+        GetTemplateResponse self = new GetTemplateResponse();
         return TeaModel.build(map, self);
     }
 
-    public TestProxyResponse setHeaders(java.util.Map<String, String> headers) {
+    public GetTemplateResponse setHeaders(java.util.Map<String, String> headers) {
         this.headers = headers;
         return this;
     }
@@ -29,7 +26,7 @@ public class TestProxyResponse extends TeaModel {
         return this.headers;
     }
 
-    public TestProxyResponse setStatusCode(Integer statusCode) {
+    public GetTemplateResponse setStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
@@ -37,11 +34,11 @@ public class TestProxyResponse extends TeaModel {
         return this.statusCode;
     }
 
-    public TestProxyResponse setBody(TestProxyResponseBody body) {
+    public GetTemplateResponse setBody(GetTemplateResponseBody body) {
         this.body = body;
         return this;
     }
-    public TestProxyResponseBody getBody() {
+    public GetTemplateResponseBody getBody() {
         return this.body;
     }
 

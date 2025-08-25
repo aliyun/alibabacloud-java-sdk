@@ -4,18 +4,39 @@ package com.aliyun.mpaas20200710.models;
 import com.aliyun.tea.*;
 
 public class ListMcubeMiniPackagesRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("AppId")
     public String appId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("H5Id")
     public String h5Id;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("PackageTypes")
     public String packageTypes;
 
+    @NameInMap("PageNum")
+    public Integer pageNum;
+
+    @NameInMap("PageSize")
+    public Integer pageSize;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
@@ -46,6 +67,22 @@ public class ListMcubeMiniPackagesRequest extends TeaModel {
     }
     public String getPackageTypes() {
         return this.packageTypes;
+    }
+
+    public ListMcubeMiniPackagesRequest setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
+        return this;
+    }
+    public Integer getPageNum() {
+        return this.pageNum;
+    }
+
+    public ListMcubeMiniPackagesRequest setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+    public Integer getPageSize() {
+        return this.pageSize;
     }
 
     public ListMcubeMiniPackagesRequest setTenantId(String tenantId) {
