@@ -57,7 +57,62 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeMfaDevicesResponseBodyMfaDevicesAdUser extends TeaModel {
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("DisplayNameNew")
+        public String displayNameNew;
+
+        @NameInMap("EndUser")
+        public String endUser;
+
+        @NameInMap("UserPrincipalName")
+        public String userPrincipalName;
+
+        public static DescribeMfaDevicesResponseBodyMfaDevicesAdUser build(java.util.Map<String, ?> map) throws Exception {
+            DescribeMfaDevicesResponseBodyMfaDevicesAdUser self = new DescribeMfaDevicesResponseBodyMfaDevicesAdUser();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeMfaDevicesResponseBodyMfaDevicesAdUser setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public DescribeMfaDevicesResponseBodyMfaDevicesAdUser setDisplayNameNew(String displayNameNew) {
+            this.displayNameNew = displayNameNew;
+            return this;
+        }
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
+        }
+
+        public DescribeMfaDevicesResponseBodyMfaDevicesAdUser setEndUser(String endUser) {
+            this.endUser = endUser;
+            return this;
+        }
+        public String getEndUser() {
+            return this.endUser;
+        }
+
+        public DescribeMfaDevicesResponseBodyMfaDevicesAdUser setUserPrincipalName(String userPrincipalName) {
+            this.userPrincipalName = userPrincipalName;
+            return this;
+        }
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
+        }
+
+    }
+
     public static class DescribeMfaDevicesResponseBodyMfaDevices extends TeaModel {
+        @NameInMap("AdUser")
+        public DescribeMfaDevicesResponseBodyMfaDevicesAdUser adUser;
+
         /**
          * <p>The number of consecutive failures to bind the virtual MFA device, or the number of authentication failures based on the virtual MFA device.</p>
          * 
@@ -169,6 +224,14 @@ public class DescribeMfaDevicesResponseBody extends TeaModel {
         public static DescribeMfaDevicesResponseBodyMfaDevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeMfaDevicesResponseBodyMfaDevices self = new DescribeMfaDevicesResponseBodyMfaDevices();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeMfaDevicesResponseBodyMfaDevices setAdUser(DescribeMfaDevicesResponseBodyMfaDevicesAdUser adUser) {
+            this.adUser = adUser;
+            return this;
+        }
+        public DescribeMfaDevicesResponseBodyMfaDevicesAdUser getAdUser() {
+            return this.adUser;
         }
 
         public DescribeMfaDevicesResponseBodyMfaDevices setConsecutiveFails(Integer consecutiveFails) {

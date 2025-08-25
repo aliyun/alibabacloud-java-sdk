@@ -22,6 +22,9 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    @NameInMap("Filter")
+    public String filter;
+
     /**
      * <p>The maximum number of entries to return. Valid values: 1 to 500.\
      * Default value: 100.</p>
@@ -69,6 +72,14 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserIds() {
         return this.endUserIds;
+    }
+
+    public DescribeMfaDevicesRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public DescribeMfaDevicesRequest setMaxResults(Long maxResults) {
