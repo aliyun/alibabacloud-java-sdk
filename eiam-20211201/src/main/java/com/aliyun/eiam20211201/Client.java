@@ -6502,6 +6502,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>更新应用的指定ClientSecret的到期时间</p>
+     * 
+     * @param request UpdateApplicationClientSecretExpirationTimeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateApplicationClientSecretExpirationTimeResponse
+     */
+    public UpdateApplicationClientSecretExpirationTimeResponse updateApplicationClientSecretExpirationTimeWithOptions(UpdateApplicationClientSecretExpirationTimeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.applicationId)) {
+            query.put("ApplicationId", request.applicationId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expirationTime)) {
+            query.put("ExpirationTime", request.expirationTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.secretId)) {
+            query.put("SecretId", request.secretId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateApplicationClientSecretExpirationTime"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApplicationClientSecretExpirationTimeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新应用的指定ClientSecret的到期时间</p>
+     * 
+     * @param request UpdateApplicationClientSecretExpirationTimeRequest
+     * @return UpdateApplicationClientSecretExpirationTimeResponse
+     */
+    public UpdateApplicationClientSecretExpirationTimeResponse updateApplicationClientSecretExpirationTime(UpdateApplicationClientSecretExpirationTimeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateApplicationClientSecretExpirationTimeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Modifies the description of an Employee Identity and Access Management (EIAM) application.</p>
      * 
      * @param request UpdateApplicationDescriptionRequest
