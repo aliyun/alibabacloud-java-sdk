@@ -4191,6 +4191,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取IVR轨迹小结</p>
+     * 
      * @param request GetIvrTrackingSummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetIvrTrackingSummaryResponse
@@ -4224,6 +4227,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取IVR轨迹小结</p>
+     * 
      * @param request GetIvrTrackingSummaryRequest
      * @return GetIvrTrackingSummaryResponse
      */
@@ -5454,6 +5460,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ImportDocumentsResponse importDocuments(ImportDocumentsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.importDocumentsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param request ImportRamUsersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportRamUsersResponse
+     */
+    public ImportRamUsersResponse importRamUsersWithOptions(ImportRamUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ramIdList)) {
+            query.put("RamIdList", request.ramIdList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.roleId)) {
+            query.put("RoleId", request.roleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillLevelList)) {
+            query.put("SkillLevelList", request.skillLevelList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workMode)) {
+            query.put("WorkMode", request.workMode);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportRamUsers"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportRamUsersResponse());
+    }
+
+    /**
+     * @param request ImportRamUsersRequest
+     * @return ImportRamUsersResponse
+     */
+    public ImportRamUsersResponse importRamUsers(ImportRamUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importRamUsersWithOptions(request, runtime);
     }
 
     /**
@@ -7158,6 +7218,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListFlashSmsApplicationsResponse listFlashSmsApplications(ListFlashSmsApplicationsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listFlashSmsApplicationsWithOptions(request, runtime);
+    }
+
+    /**
+     * @param tmpReq ListFlashSmsSettingsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListFlashSmsSettingsResponse
+     */
+    public ListFlashSmsSettingsResponse listFlashSmsSettingsWithOptions(ListFlashSmsSettingsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListFlashSmsSettingsShrinkRequest request = new ListFlashSmsSettingsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.skillGroupIdList)) {
+            request.skillGroupIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.skillGroupIdList, "SkillGroupIdList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupIdListShrink)) {
+            query.put("SkillGroupIdList", request.skillGroupIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.skillGroupName)) {
+            query.put("SkillGroupName", request.skillGroupName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListFlashSmsSettings"),
+            new TeaPair("version", "2020-07-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListFlashSmsSettingsResponse());
+    }
+
+    /**
+     * @param request ListFlashSmsSettingsRequest
+     * @return ListFlashSmsSettingsResponse
+     */
+    public ListFlashSmsSettingsResponse listFlashSmsSettings(ListFlashSmsSettingsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listFlashSmsSettingsWithOptions(request, runtime);
     }
 
     /**
