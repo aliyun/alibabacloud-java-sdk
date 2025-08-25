@@ -57,7 +57,62 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         return this.virtualMFADevices;
     }
 
+    public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser extends TeaModel {
+        @NameInMap("DisplayName")
+        public String displayName;
+
+        @NameInMap("DisplayNameNew")
+        public String displayNameNew;
+
+        @NameInMap("EndUser")
+        public String endUser;
+
+        @NameInMap("UserPrincipalName")
+        public String userPrincipalName;
+
+        public static DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser build(java.util.Map<String, ?> map) throws Exception {
+            DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser self = new DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser setDisplayNameNew(String displayNameNew) {
+            this.displayNameNew = displayNameNew;
+            return this;
+        }
+        public String getDisplayNameNew() {
+            return this.displayNameNew;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser setEndUser(String endUser) {
+            this.endUser = endUser;
+            return this;
+        }
+        public String getEndUser() {
+            return this.endUser;
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser setUserPrincipalName(String userPrincipalName) {
+            this.userPrincipalName = userPrincipalName;
+            return this;
+        }
+        public String getUserPrincipalName() {
+            return this.userPrincipalName;
+        }
+
+    }
+
     public static class DescribeVirtualMFADevicesResponseBodyVirtualMFADevices extends TeaModel {
+        @NameInMap("AdUser")
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser adUser;
+
         /**
          * <p>The number of consecutive failures to bind the virtual MFA device, or the number of failures on the verification of the virtual MFA device.</p>
          * 
@@ -158,6 +213,14 @@ public class DescribeVirtualMFADevicesResponseBody extends TeaModel {
         public static DescribeVirtualMFADevicesResponseBodyVirtualMFADevices build(java.util.Map<String, ?> map) throws Exception {
             DescribeVirtualMFADevicesResponseBodyVirtualMFADevices self = new DescribeVirtualMFADevicesResponseBodyVirtualMFADevices();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setAdUser(DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser adUser) {
+            this.adUser = adUser;
+            return this;
+        }
+        public DescribeVirtualMFADevicesResponseBodyVirtualMFADevicesAdUser getAdUser() {
+            return this.adUser;
         }
 
         public DescribeVirtualMFADevicesResponseBodyVirtualMFADevices setConsecutiveFails(Integer consecutiveFails) {

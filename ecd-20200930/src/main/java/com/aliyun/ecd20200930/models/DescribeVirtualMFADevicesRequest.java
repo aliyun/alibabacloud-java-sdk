@@ -13,6 +13,9 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
 
+    @NameInMap("Filter")
+    public String filter;
+
     /**
      * <p>The number of entries per page. Valid values: 1 to 500. Default value: 100.</p>
      * 
@@ -61,6 +64,14 @@ public class DescribeVirtualMFADevicesRequest extends TeaModel {
     }
     public java.util.List<String> getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeVirtualMFADevicesRequest setFilter(String filter) {
+        this.filter = filter;
+        return this;
+    }
+    public String getFilter() {
+        return this.filter;
     }
 
     public DescribeVirtualMFADevicesRequest setMaxResults(Integer maxResults) {

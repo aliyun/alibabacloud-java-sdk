@@ -11510,6 +11510,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EndUserId", request.endUserId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
+            query.put("Filter", request.filter);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
             query.put("MaxResults", request.maxResults);
         }
