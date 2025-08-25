@@ -7,6 +7,10 @@ public class ScanTextResponseBody extends TeaModel {
     @NameInMap("Data")
     public ScanTextResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>C7CD87E3-57A5-4E2F-8A44-809F3554692C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -54,6 +58,10 @@ public class ScanTextResponseBody extends TeaModel {
         @NameInMap("Contexts")
         public java.util.List<ScanTextResponseBodyDataElementsResultsDetailsContexts> contexts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ad</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -84,12 +92,24 @@ public class ScanTextResponseBody extends TeaModel {
         @NameInMap("Details")
         public java.util.List<ScanTextResponseBodyDataElementsResultsDetails> details;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ad</p>
+         */
         @NameInMap("Label")
         public String label;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.91</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -136,6 +156,10 @@ public class ScanTextResponseBody extends TeaModel {
         @NameInMap("Results")
         public java.util.List<ScanTextResponseBodyDataElementsResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>txt6Vh5Fv0DAFy5hgdVRt3pqf-1s82jj</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

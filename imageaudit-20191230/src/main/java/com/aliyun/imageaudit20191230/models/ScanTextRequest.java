@@ -6,12 +6,14 @@ import com.aliyun.tea.*;
 public class ScanTextRequest extends TeaModel {
     /**
      * <p>1</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Labels")
     public java.util.List<ScanTextRequestLabels> labels;
 
     /**
      * <p>1</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<ScanTextRequestTasks> tasks;
@@ -38,6 +40,12 @@ public class ScanTextRequest extends TeaModel {
     }
 
     public static class ScanTextRequestLabels extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ad</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -57,6 +65,9 @@ public class ScanTextRequest extends TeaModel {
     }
 
     public static class ScanTextRequestTasks extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         */
         @NameInMap("Content")
         public String content;
 

@@ -7,6 +7,10 @@ public class ScanImageResponseBody extends TeaModel {
     @NameInMap("Data")
     public ScanImageResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>69B41AE8-1234-1234-1234-12D395695D2D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class ScanImageResponseBody extends TeaModel {
     }
 
     public static class ScanImageResponseBodyDataResultsSubResultsFrames extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>89.85</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.xxx.com/xxx-0.jpg">http://xxx.xxx.com/xxx-0.jpg</a></p>
+         */
         @NameInMap("URL")
         public String URL;
 
@@ -62,6 +74,10 @@ public class ScanImageResponseBody extends TeaModel {
     }
 
     public static class ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Context")
         public String context;
 
@@ -81,21 +97,45 @@ public class ScanImageResponseBody extends TeaModel {
     }
 
     public static class ScanImageResponseBodyDataResultsSubResultsLogoDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>106</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>TV</p>
+         */
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>106</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>140</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>68</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -155,15 +195,31 @@ public class ScanImageResponseBody extends TeaModel {
     }
 
     public static class ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>413.0</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>402.0</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>11.0</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.0</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -207,12 +263,24 @@ public class ScanImageResponseBody extends TeaModel {
     }
 
     public static class ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AliFace_0001234</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <strong>example:</strong>
+         * <p>abc</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91.54</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
@@ -251,15 +319,31 @@ public class ScanImageResponseBody extends TeaModel {
         @NameInMap("Faces")
         public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataListFaces> faces;
 
+        /**
+         * <strong>example:</strong>
+         * <p>131</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>97</p>
+         */
         @NameInMap("Width")
         public Float width;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>39</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -317,6 +401,10 @@ public class ScanImageResponseBody extends TeaModel {
         @NameInMap("HintWordsInfoList")
         public java.util.List<ScanImageResponseBodyDataResultsSubResultsHintWordsInfoList> hintWordsInfoList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>normal</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -332,15 +420,27 @@ public class ScanImageResponseBody extends TeaModel {
         @NameInMap("ProgramCodeDataList")
         public java.util.List<ScanImageResponseBodyDataResultsSubResultsProgramCodeDataList> programCodeDataList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.91</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>ad</p>
+         */
         @NameInMap("Scene")
         public String scene;
 
         @NameInMap("SfaceDataList")
         public java.util.List<ScanImageResponseBodyDataResultsSubResultsSfaceDataList> sfaceDataList;
 
+        /**
+         * <strong>example:</strong>
+         * <p>block</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -432,15 +532,27 @@ public class ScanImageResponseBody extends TeaModel {
     }
 
     public static class ScanImageResponseBodyDataResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>uuid-xxxx-xxx-1234</p>
+         */
         @NameInMap("DataId")
         public String dataId;
 
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://xxx.xxx.xxx/xxx.jpg">http://xxx.xxx.xxx/xxx.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("SubResults")
         public java.util.List<ScanImageResponseBodyDataResultsSubResults> subResults;
 
+        /**
+         * <strong>example:</strong>
+         * <p>img4wlJcb7p4wH4lAP3111111-123456</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 
