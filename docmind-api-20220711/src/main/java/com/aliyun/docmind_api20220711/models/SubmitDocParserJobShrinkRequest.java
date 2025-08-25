@@ -3,7 +3,7 @@ package com.aliyun.docmind_api20220711.models;
 
 import com.aliyun.tea.*;
 
-public class SubmitDocParserJobRequest extends TeaModel {
+public class SubmitDocParserJobShrinkRequest extends TeaModel {
     @NameInMap("EnhancementMode")
     public String enhancementMode;
 
@@ -35,7 +35,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
     public Boolean llmEnhancement;
 
     @NameInMap("MultimediaParameters")
-    public SubmitDocParserJobRequestMultimediaParameters multimediaParameters;
+    public String multimediaParametersShrink;
 
     @NameInMap("Option")
     public String option;
@@ -52,12 +52,12 @@ public class SubmitDocParserJobRequest extends TeaModel {
     @NameInMap("PageIndex")
     public String pageIndex;
 
-    public static SubmitDocParserJobRequest build(java.util.Map<String, ?> map) throws Exception {
-        SubmitDocParserJobRequest self = new SubmitDocParserJobRequest();
+    public static SubmitDocParserJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitDocParserJobShrinkRequest self = new SubmitDocParserJobShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public SubmitDocParserJobRequest setEnhancementMode(String enhancementMode) {
+    public SubmitDocParserJobShrinkRequest setEnhancementMode(String enhancementMode) {
         this.enhancementMode = enhancementMode;
         return this;
     }
@@ -65,7 +65,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.enhancementMode;
     }
 
-    public SubmitDocParserJobRequest setFileName(String fileName) {
+    public SubmitDocParserJobShrinkRequest setFileName(String fileName) {
         this.fileName = fileName;
         return this;
     }
@@ -73,7 +73,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.fileName;
     }
 
-    public SubmitDocParserJobRequest setFileNameExtension(String fileNameExtension) {
+    public SubmitDocParserJobShrinkRequest setFileNameExtension(String fileNameExtension) {
         this.fileNameExtension = fileNameExtension;
         return this;
     }
@@ -81,7 +81,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.fileNameExtension;
     }
 
-    public SubmitDocParserJobRequest setFileUrl(String fileUrl) {
+    public SubmitDocParserJobShrinkRequest setFileUrl(String fileUrl) {
         this.fileUrl = fileUrl;
         return this;
     }
@@ -89,7 +89,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.fileUrl;
     }
 
-    public SubmitDocParserJobRequest setFormulaEnhancement(Boolean formulaEnhancement) {
+    public SubmitDocParserJobShrinkRequest setFormulaEnhancement(Boolean formulaEnhancement) {
         this.formulaEnhancement = formulaEnhancement;
         return this;
     }
@@ -97,7 +97,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.formulaEnhancement;
     }
 
-    public SubmitDocParserJobRequest setLlmEnhancement(Boolean llmEnhancement) {
+    public SubmitDocParserJobShrinkRequest setLlmEnhancement(Boolean llmEnhancement) {
         this.llmEnhancement = llmEnhancement;
         return this;
     }
@@ -105,15 +105,15 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.llmEnhancement;
     }
 
-    public SubmitDocParserJobRequest setMultimediaParameters(SubmitDocParserJobRequestMultimediaParameters multimediaParameters) {
-        this.multimediaParameters = multimediaParameters;
+    public SubmitDocParserJobShrinkRequest setMultimediaParametersShrink(String multimediaParametersShrink) {
+        this.multimediaParametersShrink = multimediaParametersShrink;
         return this;
     }
-    public SubmitDocParserJobRequestMultimediaParameters getMultimediaParameters() {
-        return this.multimediaParameters;
+    public String getMultimediaParametersShrink() {
+        return this.multimediaParametersShrink;
     }
 
-    public SubmitDocParserJobRequest setOption(String option) {
+    public SubmitDocParserJobShrinkRequest setOption(String option) {
         this.option = option;
         return this;
     }
@@ -121,7 +121,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.option;
     }
 
-    public SubmitDocParserJobRequest setOssBucket(String ossBucket) {
+    public SubmitDocParserJobShrinkRequest setOssBucket(String ossBucket) {
         this.ossBucket = ossBucket;
         return this;
     }
@@ -129,7 +129,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.ossBucket;
     }
 
-    public SubmitDocParserJobRequest setOssEndpoint(String ossEndpoint) {
+    public SubmitDocParserJobShrinkRequest setOssEndpoint(String ossEndpoint) {
         this.ossEndpoint = ossEndpoint;
         return this;
     }
@@ -137,7 +137,7 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.ossEndpoint;
     }
 
-    public SubmitDocParserJobRequest setOutputHtmlTable(Boolean outputHtmlTable) {
+    public SubmitDocParserJobShrinkRequest setOutputHtmlTable(Boolean outputHtmlTable) {
         this.outputHtmlTable = outputHtmlTable;
         return this;
     }
@@ -145,42 +145,12 @@ public class SubmitDocParserJobRequest extends TeaModel {
         return this.outputHtmlTable;
     }
 
-    public SubmitDocParserJobRequest setPageIndex(String pageIndex) {
+    public SubmitDocParserJobShrinkRequest setPageIndex(String pageIndex) {
         this.pageIndex = pageIndex;
         return this;
     }
     public String getPageIndex() {
         return this.pageIndex;
-    }
-
-    public static class SubmitDocParserJobRequestMultimediaParameters extends TeaModel {
-        @NameInMap("EnableSynopsisParse")
-        public Boolean enableSynopsisParse;
-
-        @NameInMap("VlParsePrompt")
-        public String vlParsePrompt;
-
-        public static SubmitDocParserJobRequestMultimediaParameters build(java.util.Map<String, ?> map) throws Exception {
-            SubmitDocParserJobRequestMultimediaParameters self = new SubmitDocParserJobRequestMultimediaParameters();
-            return TeaModel.build(map, self);
-        }
-
-        public SubmitDocParserJobRequestMultimediaParameters setEnableSynopsisParse(Boolean enableSynopsisParse) {
-            this.enableSynopsisParse = enableSynopsisParse;
-            return this;
-        }
-        public Boolean getEnableSynopsisParse() {
-            return this.enableSynopsisParse;
-        }
-
-        public SubmitDocParserJobRequestMultimediaParameters setVlParsePrompt(String vlParsePrompt) {
-            this.vlParsePrompt = vlParsePrompt;
-            return this;
-        }
-        public String getVlParsePrompt() {
-            return this.vlParsePrompt;
-        }
-
     }
 
 }

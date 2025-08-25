@@ -1622,12 +1622,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>文档智能解析流式输出</p>
      * 
-     * @param request SubmitDocParserJobRequest
+     * @param tmpReq SubmitDocParserJobRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SubmitDocParserJobResponse
      */
-    public SubmitDocParserJobResponse submitDocParserJobWithOptions(SubmitDocParserJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public SubmitDocParserJobResponse submitDocParserJobWithOptions(SubmitDocParserJobRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitDocParserJobShrinkRequest request = new SubmitDocParserJobShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.multimediaParameters)) {
+            request.multimediaParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multimediaParameters, "MultimediaParameters", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.enhancementMode)) {
             query.put("EnhancementMode", request.enhancementMode);
@@ -1651,6 +1657,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.llmEnhancement)) {
             query.put("LlmEnhancement", request.llmEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.multimediaParametersShrink)) {
+            query.put("MultimediaParameters", request.multimediaParametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.option)) {

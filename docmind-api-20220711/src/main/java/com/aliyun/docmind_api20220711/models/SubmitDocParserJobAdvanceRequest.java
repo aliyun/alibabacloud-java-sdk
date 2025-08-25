@@ -34,6 +34,9 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     @NameInMap("LlmEnhancement")
     public Boolean llmEnhancement;
 
+    @NameInMap("MultimediaParameters")
+    public SubmitDocParserJobAdvanceRequestMultimediaParameters multimediaParameters;
+
     @NameInMap("Option")
     public String option;
 
@@ -102,6 +105,14 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
         return this.llmEnhancement;
     }
 
+    public SubmitDocParserJobAdvanceRequest setMultimediaParameters(SubmitDocParserJobAdvanceRequestMultimediaParameters multimediaParameters) {
+        this.multimediaParameters = multimediaParameters;
+        return this;
+    }
+    public SubmitDocParserJobAdvanceRequestMultimediaParameters getMultimediaParameters() {
+        return this.multimediaParameters;
+    }
+
     public SubmitDocParserJobAdvanceRequest setOption(String option) {
         this.option = option;
         return this;
@@ -140,6 +151,36 @@ public class SubmitDocParserJobAdvanceRequest extends TeaModel {
     }
     public String getPageIndex() {
         return this.pageIndex;
+    }
+
+    public static class SubmitDocParserJobAdvanceRequestMultimediaParameters extends TeaModel {
+        @NameInMap("EnableSynopsisParse")
+        public Boolean enableSynopsisParse;
+
+        @NameInMap("VlParsePrompt")
+        public String vlParsePrompt;
+
+        public static SubmitDocParserJobAdvanceRequestMultimediaParameters build(java.util.Map<String, ?> map) throws Exception {
+            SubmitDocParserJobAdvanceRequestMultimediaParameters self = new SubmitDocParserJobAdvanceRequestMultimediaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitDocParserJobAdvanceRequestMultimediaParameters setEnableSynopsisParse(Boolean enableSynopsisParse) {
+            this.enableSynopsisParse = enableSynopsisParse;
+            return this;
+        }
+        public Boolean getEnableSynopsisParse() {
+            return this.enableSynopsisParse;
+        }
+
+        public SubmitDocParserJobAdvanceRequestMultimediaParameters setVlParsePrompt(String vlParsePrompt) {
+            this.vlParsePrompt = vlParsePrompt;
+            return this;
+        }
+        public String getVlParsePrompt() {
+            return this.vlParsePrompt;
+        }
+
     }
 
 }
