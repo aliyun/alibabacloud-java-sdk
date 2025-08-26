@@ -7,6 +7,10 @@ public class RecognizeCharacterResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeCharacterResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>7A9BC7FE-2D42-57AF-93BC-09A229DD2F1D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,38 @@ public class RecognizeCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeCharacterResponseBodyDataResultsTextRectangles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-65</p>
+         */
         @NameInMap("Angle")
         public Integer angle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>409</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>511</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>150</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>77</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -95,6 +119,10 @@ public class RecognizeCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeCharacterResponseBodyDataResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.99</p>
+         */
         @NameInMap("Probability")
         public Float probability;
 

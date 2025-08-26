@@ -7,6 +7,10 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeTicketInvoiceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>063C0178-7EA3-4754-96FB-C0C9AE6B9AAE</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,30 +36,58 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTicketInvoiceResponseBodyDataResultsContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>81931914902643039780</p>
+         */
         @NameInMap("AntiFakeCode")
         public String antiFakeCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>044031860107</p>
+         */
         @NameInMap("InvoiceCode")
         public String invoiceCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2018-09-20</p>
+         */
         @NameInMap("InvoiceDate")
         public String invoiceDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>09267581</p>
+         */
         @NameInMap("InvoiceNumber")
         public String invoiceNumber;
 
         @NameInMap("PayeeName")
         public String payeeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>914403002794492693</p>
+         */
         @NameInMap("PayeeRegisterNo")
         public String payeeRegisterNo;
 
         @NameInMap("PayerName")
         public String payerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91440300MA5EXWHW6F</p>
+         */
         @NameInMap("PayerRegisterNo")
         public String payerRegisterNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>￥220.00</p>
+         */
         @NameInMap("SumAmount")
         public String sumAmount;
 
@@ -139,9 +171,17 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfosValuePositions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>586</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -172,12 +212,20 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         @NameInMap("Key")
         public String key;
 
+        /**
+         * <strong>example:</strong>
+         * <p>044031860107</p>
+         */
         @NameInMap("Value")
         public String value;
 
         @NameInMap("ValuePositions")
         public java.util.List<RecognizeTicketInvoiceResponseBodyDataResultsKeyValueInfosValuePositions> valuePositions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ValueScore")
         public Float valueScore;
 
@@ -221,9 +269,17 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTicketInvoiceResponseBodyDataResultsSliceRectangle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>586</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -254,6 +310,10 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
         @NameInMap("Content")
         public RecognizeTicketInvoiceResponseBodyDataResultsContent content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Index")
         public Long index;
 
@@ -314,21 +374,41 @@ public class RecognizeTicketInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTicketInvoiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <strong>example:</strong>
+         * <p>594</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1417</p>
+         */
         @NameInMap("OrgHeight")
         public Long orgHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1417</p>
+         */
         @NameInMap("OrgWidth")
         public Long orgWidth;
 
         @NameInMap("Results")
         public java.util.List<RecognizeTicketInvoiceResponseBodyDataResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>594</p>
+         */
         @NameInMap("Width")
         public Long width;
 

@@ -10,6 +10,10 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D3F5BA69-79C4-46A4-B02B-58C4EEBC4C33</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -43,18 +47,38 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCharacterResponseBodyDataFramesElementsTextRectangles extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-90</p>
+         */
         @NameInMap("Angle")
         public Long angle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>213</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>213</p>
+         */
         @NameInMap("Left")
         public Long left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>98</p>
+         */
         @NameInMap("Top")
         public Long top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46</p>
+         */
         @NameInMap("Width")
         public Long width;
 
@@ -106,6 +130,10 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
     }
 
     public static class RecognizeVideoCharacterResponseBodyDataFramesElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.99</p>
+         */
         @NameInMap("Score")
         public Float score;
 
@@ -150,6 +178,10 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
         @NameInMap("Elements")
         public java.util.List<RecognizeVideoCharacterResponseBodyDataFramesElements> elements;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6124533574</p>
+         */
         @NameInMap("Timestamp")
         public Long timestamp;
 
@@ -180,12 +212,24 @@ public class RecognizeVideoCharacterResponseBody extends TeaModel {
         @NameInMap("Frames")
         public java.util.List<RecognizeVideoCharacterResponseBodyDataFrames> frames;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1080</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>oss://my-bucket/a/b/c.mp4</p>
+         */
         @NameInMap("InputFile")
         public String inputFile;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1920</p>
+         */
         @NameInMap("Width")
         public Long width;
 

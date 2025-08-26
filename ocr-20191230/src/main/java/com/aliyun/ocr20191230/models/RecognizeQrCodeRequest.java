@@ -6,6 +6,7 @@ import com.aliyun.tea.*;
 public class RecognizeQrCodeRequest extends TeaModel {
     /**
      * <p>1</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<RecognizeQrCodeRequestTasks> tasks;
@@ -24,6 +25,12 @@ public class RecognizeQrCodeRequest extends TeaModel {
     }
 
     public static class RecognizeQrCodeRequestTasks extends TeaModel {
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/ocr/RecognizeQrCode/RecognizeQrCode6.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/ocr/RecognizeQrCode/RecognizeQrCode6.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 

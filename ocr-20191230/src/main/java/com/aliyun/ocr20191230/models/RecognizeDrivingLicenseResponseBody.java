@@ -7,6 +7,10 @@ public class RecognizeDrivingLicenseResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeDrivingLicenseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1DD989C1-4E08-4E04-9D5D-314901E91226</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,33 +36,63 @@ public class RecognizeDrivingLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeDrivingLicenseResponseBodyDataBackResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>300</p>
+         */
         @NameInMap("ApprovedLoad")
         public String approvedLoad;
 
+        /**
+         * <strong>example:</strong>
+         * <p>5</p>
+         */
         @NameInMap("ApprovedPassengerCapacity")
         public String approvedPassengerCapacity;
 
+        /**
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
+         */
         @NameInMap("EnergyType")
         public String energyType;
 
         @NameInMap("FileNumber")
         public String fileNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2205</p>
+         */
         @NameInMap("GrossMass")
         public String grossMass;
 
         @NameInMap("InspectionRecord")
         public String inspectionRecord;
 
+        /**
+         * <strong>example:</strong>
+         * <p>4945x1845x1480</p>
+         */
         @NameInMap("OverallDimension")
         public String overallDimension;
 
         @NameInMap("PlateNumber")
         public String plateNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("TractionMass")
         public String tractionMass;
 
+        /**
+         * <strong>example:</strong>
+         * <p>2000</p>
+         */
         @NameInMap("UnladenMass")
         public String unladenMass;
 
@@ -153,9 +187,17 @@ public class RecognizeDrivingLicenseResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>111111</p>
+         */
         @NameInMap("EngineNumber")
         public String engineNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20180313</p>
+         */
         @NameInMap("IssueDate")
         public String issueDate;
 
@@ -168,6 +210,10 @@ public class RecognizeDrivingLicenseResponseBody extends TeaModel {
         @NameInMap("PlateNumber")
         public String plateNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20180312</p>
+         */
         @NameInMap("RegisterDate")
         public String registerDate;
 
@@ -177,6 +223,10 @@ public class RecognizeDrivingLicenseResponseBody extends TeaModel {
         @NameInMap("VehicleType")
         public String vehicleType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>SSVUDDTT2J2022555</p>
+         */
         @NameInMap("Vin")
         public String vin;
 

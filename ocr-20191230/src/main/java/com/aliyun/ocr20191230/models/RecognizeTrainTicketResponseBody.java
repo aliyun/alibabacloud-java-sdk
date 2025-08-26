@@ -7,6 +7,10 @@ public class RecognizeTrainTicketResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeTrainTicketResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BE4B73EA-30A0-4573-A548-3A101B34641A</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -47,9 +51,17 @@ public class RecognizeTrainTicketResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <strong>example:</strong>
+         * <p>G7350</p>
+         */
         @NameInMap("Number")
         public String number;
 
+        /**
+         * <strong>example:</strong>
+         * <p>104.5</p>
+         */
         @NameInMap("Price")
         public Float price;
 

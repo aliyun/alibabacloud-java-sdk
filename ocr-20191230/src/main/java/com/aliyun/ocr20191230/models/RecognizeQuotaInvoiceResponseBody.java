@@ -7,6 +7,10 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeQuotaInvoiceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BC4C12D0-7FD3-419A-B997-A91212DF6D82</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,27 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeQuotaInvoiceResponseBodyDataContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("InvoiceAmount")
         public String invoiceAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>144031800103</p>
+         */
         @NameInMap("InvoiceCode")
         public String invoiceCode;
 
         @NameInMap("InvoiceDetails")
         public String invoiceDetails;
 
+        /**
+         * <strong>example:</strong>
+         * <p>40637706</p>
+         */
         @NameInMap("InvoiceNo")
         public String invoiceNo;
 
@@ -95,9 +111,17 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeQuotaInvoiceResponseBodyDataKeyValueInfosValuePositions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>544</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>387</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -134,6 +158,10 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
         @NameInMap("ValuePositions")
         public java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfosValuePositions> valuePositions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ValueScore")
         public Float valueScore;
 
@@ -177,24 +205,44 @@ public class RecognizeQuotaInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeQuotaInvoiceResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Angle")
         public Long angle;
 
         @NameInMap("Content")
         public RecognizeQuotaInvoiceResponseBodyDataContent content;
 
+        /**
+         * <strong>example:</strong>
+         * <p>624</p>
+         */
         @NameInMap("Height")
         public Long height;
 
         @NameInMap("KeyValueInfos")
         public java.util.List<RecognizeQuotaInvoiceResponseBodyDataKeyValueInfos> keyValueInfos;
 
+        /**
+         * <strong>example:</strong>
+         * <p>610</p>
+         */
         @NameInMap("OrgHeight")
         public Long orgHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>855</p>
+         */
         @NameInMap("OrgWidth")
         public Long orgWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>865</p>
+         */
         @NameInMap("Width")
         public Long width;
 

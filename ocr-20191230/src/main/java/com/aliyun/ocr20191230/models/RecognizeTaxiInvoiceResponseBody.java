@@ -7,6 +7,10 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeTaxiInvoiceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>B2BBBD26-1D3E-4CFA-A80B-6A9266B8D125</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTaxiInvoiceResponseBodyDataInvoicesInvoiceRoi extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>3625</p>
+         */
         @NameInMap("H")
         public Float h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1773</p>
+         */
         @NameInMap("W")
         public Float w;
 
+        /**
+         * <strong>example:</strong>
+         * <p>513</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>302</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -84,9 +104,17 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoiCenter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1593</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1360</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -114,9 +142,17 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoiSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>81.999984741210938</p>
+         */
         @NameInMap("H")
         public Float h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>887.9998779296875</p>
+         */
         @NameInMap("W")
         public Float w;
 
@@ -144,6 +180,10 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoi extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-90</p>
+         */
         @NameInMap("Angle")
         public Float angle;
 
@@ -188,6 +228,10 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
         @NameInMap("ItemRoi")
         public RecognizeTaxiInvoiceResponseBodyDataInvoicesItemsItemRoi itemRoi;
 
+        /**
+         * <strong>example:</strong>
+         * <p>86655664</p>
+         */
         @NameInMap("Text")
         public String text;
 
@@ -221,6 +265,10 @@ public class RecognizeTaxiInvoiceResponseBody extends TeaModel {
         @NameInMap("Items")
         public java.util.List<RecognizeTaxiInvoiceResponseBodyDataInvoicesItems> items;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RotateType")
         public Integer rotateType;
 

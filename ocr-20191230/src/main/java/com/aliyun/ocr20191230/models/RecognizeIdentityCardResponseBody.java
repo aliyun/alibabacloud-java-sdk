@@ -7,6 +7,10 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeIdentityCardResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D3F5BA69-79C4-46A4-B02B-58C4EEBC4C33</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,20 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     }
 
     public static class RecognizeIdentityCardResponseBodyDataBackResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>19800101</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
         @NameInMap("Issue")
         public String issue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19970101</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
@@ -73,9 +85,17 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     }
 
     public static class RecognizeIdentityCardResponseBodyDataFrontResultCardAreas extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>40</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>81</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -103,9 +123,17 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     }
 
     public static class RecognizeIdentityCardResponseBodyDataFrontResultFaceRectVertices extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>429.46124267578125</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>164.23321533203125</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -133,9 +161,17 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     }
 
     public static class RecognizeIdentityCardResponseBodyDataFrontResultFaceRectangleCenter extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>475.59390258789062</p>
+         */
         @NameInMap("X")
         public Float x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>225.20643615722656</p>
+         */
         @NameInMap("Y")
         public Float y;
 
@@ -163,9 +199,17 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     }
 
     public static class RecognizeIdentityCardResponseBodyDataFrontResultFaceRectangleSize extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>97.063156127929688</p>
+         */
         @NameInMap("Height")
         public Float height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>118.16333770751953</p>
+         */
         @NameInMap("Width")
         public Float width;
 
@@ -193,6 +237,10 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
     }
 
     public static class RecognizeIdentityCardResponseBodyDataFrontResultFaceRectangle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>-87.710586547851562</p>
+         */
         @NameInMap("Angle")
         public Float angle;
 
@@ -237,6 +285,10 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>19960111</p>
+         */
         @NameInMap("BirthDate")
         public String birthDate;
 
@@ -252,6 +304,10 @@ public class RecognizeIdentityCardResponseBody extends TeaModel {
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>310228199601115411</p>
+         */
         @NameInMap("IDNumber")
         public String IDNumber;
 

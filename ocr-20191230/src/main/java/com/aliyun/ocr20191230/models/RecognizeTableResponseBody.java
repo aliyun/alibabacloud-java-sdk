@@ -7,6 +7,10 @@ public class RecognizeTableResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeTableResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CBC36BE6-2A18-5256-82BD-8B5477E5D058</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,24 +36,48 @@ public class RecognizeTableResponseBody extends TeaModel {
     }
 
     public static class RecognizeTableResponseBodyDataTablesTableRowsTableColumns extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
         @NameInMap("EndColumn")
         public Integer endColumn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("EndRow")
         public Integer endRow;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StartColumn")
         public Integer startColumn;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("StartRow")
         public Integer startRow;
 
         @NameInMap("Texts")
         public java.util.List<String> texts;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -177,6 +205,10 @@ public class RecognizeTableResponseBody extends TeaModel {
     }
 
     public static class RecognizeTableResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>UEsDBBQAAAAIAAAAIQBukMk4WAIAA****</p>
+         */
         @NameInMap("FileContent")
         public String fileContent;
 

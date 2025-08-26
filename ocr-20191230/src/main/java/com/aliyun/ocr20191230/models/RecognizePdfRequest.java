@@ -4,6 +4,12 @@ package com.aliyun.ocr20191230.models;
 import com.aliyun.tea.*;
 
 public class RecognizePdfRequest extends TeaModel {
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p><a href="https://viapi-test.oss-cn-shanghai.aliyuncs.com/ocr/xxxx.pdf">https://viapi-test.oss-cn-shanghai.aliyuncs.com/ocr/xxxx.pdf</a></p>
+     */
     @NameInMap("FileURL")
     public String fileURL;
 

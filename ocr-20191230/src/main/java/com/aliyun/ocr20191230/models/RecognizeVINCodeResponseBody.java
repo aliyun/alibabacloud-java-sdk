@@ -7,6 +7,10 @@ public class RecognizeVINCodeResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVINCodeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>911FC8CF-CC27-477E-BE3B-7ED77DF4DFE0</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class RecognizeVINCodeResponseBody extends TeaModel {
     }
 
     public static class RecognizeVINCodeResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>LVBB2FAF777999888</p>
+         */
         @NameInMap("VinCode")
         public String vinCode;
 

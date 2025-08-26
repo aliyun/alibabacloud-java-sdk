@@ -7,6 +7,10 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeLicensePlateResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3F10DAC3-CF4A-487C-BF33-3B8EB9AA12F2</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
     }
 
     public static class RecognizeLicensePlateResponseBodyDataPlatesPositions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>466</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>293</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -62,15 +74,31 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
     }
 
     public static class RecognizeLicensePlateResponseBodyDataPlatesRoi extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>53</p>
+         */
         @NameInMap("H")
         public Integer h;
 
+        /**
+         * <strong>example:</strong>
+         * <p>141</p>
+         */
         @NameInMap("W")
         public Integer w;
 
+        /**
+         * <strong>example:</strong>
+         * <p>294</p>
+         */
         @NameInMap("X")
         public Integer x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>256</p>
+         */
         @NameInMap("Y")
         public Integer y;
 
@@ -114,6 +142,10 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
     }
 
     public static class RecognizeLicensePlateResponseBodyDataPlates extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.99745339155197144</p>
+         */
         @NameInMap("Confidence")
         public Float confidence;
 
@@ -123,6 +155,10 @@ public class RecognizeLicensePlateResponseBody extends TeaModel {
         @NameInMap("PlateType")
         public String plateType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PlateTypeConfidence")
         public Float plateTypeConfidence;
 

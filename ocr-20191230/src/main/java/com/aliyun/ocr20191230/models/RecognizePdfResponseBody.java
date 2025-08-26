@@ -7,6 +7,10 @@ public class RecognizePdfResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizePdfResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>CD9A9659-ABEE-4A7D-837F-9FDF40879A97</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class RecognizePdfResponseBody extends TeaModel {
     }
 
     public static class RecognizePdfResponseBodyDataWordsInfoPositions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>863</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>43</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -62,24 +74,44 @@ public class RecognizePdfResponseBody extends TeaModel {
     }
 
     public static class RecognizePdfResponseBodyDataWordsInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Angle")
         public Long angle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("Height")
         public Long height;
 
         @NameInMap("Positions")
         public java.util.List<RecognizePdfResponseBodyDataWordsInfoPositions> positions;
 
+        /**
+         * <strong>example:</strong>
+         * <p>205</p>
+         */
         @NameInMap("Width")
         public Long width;
 
         @NameInMap("Word")
         public String word;
 
+        /**
+         * <strong>example:</strong>
+         * <p>863</p>
+         */
         @NameInMap("X")
         public Long x;
 
+        /**
+         * <strong>example:</strong>
+         * <p>46</p>
+         */
         @NameInMap("Y")
         public Long y;
 
@@ -147,21 +179,45 @@ public class RecognizePdfResponseBody extends TeaModel {
     }
 
     public static class RecognizePdfResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Angle")
         public Long angle;
 
+        /**
+         * <strong>example:</strong>
+         * <p>788</p>
+         */
         @NameInMap("Height")
         public Long height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>610</p>
+         */
         @NameInMap("OrgHeight")
         public Long orgHeight;
 
+        /**
+         * <strong>example:</strong>
+         * <p>394</p>
+         */
         @NameInMap("OrgWidth")
         public Long orgWidth;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1220</p>
+         */
         @NameInMap("Width")
         public Long width;
 

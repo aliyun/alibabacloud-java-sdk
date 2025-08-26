@@ -7,6 +7,10 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     @NameInMap("Data")
     public GetAsyncJobResultResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A1F44EC4-118D-4A03-B213-F908F36F7DAA</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,18 +36,34 @@ public class GetAsyncJobResultResponseBody extends TeaModel {
     }
 
     public static class GetAsyncJobResultResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>InvalidParameter</p>
+         */
         @NameInMap("ErrorCode")
         public String errorCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>paramsIllegal</p>
+         */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
+        /**
+         * <strong>example:</strong>
+         * <p>49E2CC28-ED1D-4CC5-854D-7D0AE2B20976</p>
+         */
         @NameInMap("JobId")
         public String jobId;
 
         @NameInMap("Result")
         public String result;
 
+        /**
+         * <strong>example:</strong>
+         * <p>PROCESS_SUCCESS</p>
+         */
         @NameInMap("Status")
         public String status;
 

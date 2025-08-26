@@ -7,6 +7,10 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeBusinessLicenseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>F34D031B-02BD-4A59-BA35-EE068DD6F6E6</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,15 +36,31 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeBusinessLicenseResponseBodyDataEmblem extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>163</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>366</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>8</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>162</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -84,15 +104,31 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeBusinessLicenseResponseBodyDataQRCode extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>132</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>156</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>914</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>126</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -136,15 +172,31 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeBusinessLicenseResponseBodyDataStamp extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>154</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>650</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1030</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>154</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -188,15 +240,31 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeBusinessLicenseResponseBodyDataTitle extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Height")
         public Integer height;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Left")
         public Integer left;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Top")
         public Integer top;
 
+        /**
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Width")
         public Integer width;
 
@@ -243,6 +311,10 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
         @NameInMap("Address")
         public String address;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("Angle")
         public Float angle;
 
@@ -255,6 +327,10 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
         @NameInMap("Emblem")
         public RecognizeBusinessLicenseResponseBodyDataEmblem emblem;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20150504</p>
+         */
         @NameInMap("EstablishDate")
         public String establishDate;
 
@@ -267,6 +343,10 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
         @NameInMap("QRCode")
         public RecognizeBusinessLicenseResponseBodyDataQRCode QRCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91500108320423****</p>
+         */
         @NameInMap("RegisterNumber")
         public String registerNumber;
 
@@ -279,6 +359,10 @@ public class RecognizeBusinessLicenseResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        /**
+         * <strong>example:</strong>
+         * <p>29991231</p>
+         */
         @NameInMap("ValidPeriod")
         public String validPeriod;
 

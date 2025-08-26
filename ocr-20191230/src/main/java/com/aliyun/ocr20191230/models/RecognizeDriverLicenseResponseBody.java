@@ -7,6 +7,10 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeDriverLicenseResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>374D8C7E-9ECC-4750-A87F-50571702F175</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,9 +36,17 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
     }
 
     public static class RecognizeDriverLicenseResponseBodyDataBackResult extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>130601473955</p>
+         */
         @NameInMap("ArchiveNumber")
         public String archiveNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>210288898898898888</p>
+         */
         @NameInMap("CardNumber")
         public String cardNumber;
 
@@ -90,18 +102,30 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("BirthDate")
         public String birthDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20190201</p>
+         */
         @NameInMap("EndDate")
         public String endDate;
 
         @NameInMap("Gender")
         public String gender;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20130208</p>
+         */
         @NameInMap("IssueDate")
         public String issueDate;
 
         @NameInMap("IssueUnit")
         public String issueUnit;
 
+        /**
+         * <strong>example:</strong>
+         * <p>210288898898898888</p>
+         */
         @NameInMap("LicenseNumber")
         public String licenseNumber;
 
@@ -111,9 +135,17 @@ public class RecognizeDriverLicenseResponseBody extends TeaModel {
         @NameInMap("Nationality")
         public String nationality;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20130208</p>
+         */
         @NameInMap("StartDate")
         public String startDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>C1</p>
+         */
         @NameInMap("VehicleType")
         public String vehicleType;
 

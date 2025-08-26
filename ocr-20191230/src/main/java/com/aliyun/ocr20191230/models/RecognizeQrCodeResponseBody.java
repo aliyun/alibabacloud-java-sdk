@@ -7,6 +7,10 @@ public class RecognizeQrCodeResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeQrCodeResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A53DC437-F883-4968-86D5-EB21FB044692</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,6 +36,10 @@ public class RecognizeQrCodeResponseBody extends TeaModel {
     }
 
     public static class RecognizeQrCodeResponseBodyDataElementsResults extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>qrcode</p>
+         */
         @NameInMap("Label")
         public String label;
 
@@ -41,9 +49,17 @@ public class RecognizeQrCodeResponseBody extends TeaModel {
         @NameInMap("QrCodesData")
         public java.util.List<String> qrCodesData;
 
+        /**
+         * <strong>example:</strong>
+         * <p>99.91</p>
+         */
         @NameInMap("Rate")
         public Float rate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>review</p>
+         */
         @NameInMap("Suggestion")
         public String suggestion;
 
@@ -87,12 +103,20 @@ public class RecognizeQrCodeResponseBody extends TeaModel {
     }
 
     public static class RecognizeQrCodeResponseBodyDataElements extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p><a href="http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/ocr/RecognizeQrCode/RecognizeQrCode6.jpg">http://viapi-test.oss-cn-shanghai.aliyuncs.com/viapi-3.0domepic/ocr/RecognizeQrCode/RecognizeQrCode6.jpg</a></p>
+         */
         @NameInMap("ImageURL")
         public String imageURL;
 
         @NameInMap("Results")
         public java.util.List<RecognizeQrCodeResponseBodyDataElementsResults> results;
 
+        /**
+         * <strong>example:</strong>
+         * <p>img5iGtwVIxQzc4Nqy$L84yHd-1v****</p>
+         */
         @NameInMap("TaskId")
         public String taskId;
 

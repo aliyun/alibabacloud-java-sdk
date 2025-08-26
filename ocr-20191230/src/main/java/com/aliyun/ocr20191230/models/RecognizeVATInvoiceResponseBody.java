@@ -7,6 +7,10 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeVATInvoiceResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>56A10D65-ECE0-59DE-9775-F6494D2AF13B</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -320,6 +324,10 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
     }
 
     public static class RecognizeVATInvoiceResponseBodyDataContent extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>02702870934284730434</p>
+         */
         @NameInMap("AntiFakeCode")
         public String antiFakeCode;
 
@@ -329,15 +337,31 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         @NameInMap("Clerk")
         public String clerk;
 
+        /**
+         * <strong>example:</strong>
+         * <p>200.00</p>
+         */
         @NameInMap("InvoiceAmount")
         public String invoiceAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>031001600311</p>
+         */
         @NameInMap("InvoiceCode")
         public String invoiceCode;
 
+        /**
+         * <strong>example:</strong>
+         * <p>20190415</p>
+         */
         @NameInMap("InvoiceDate")
         public String invoiceDate;
 
+        /**
+         * <strong>example:</strong>
+         * <p>03753869</p>
+         */
         @NameInMap("InvoiceNo")
         public String invoiceNo;
 
@@ -359,27 +383,51 @@ public class RecognizeVATInvoiceResponseBody extends TeaModel {
         @NameInMap("PayeeName")
         public String payeeName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91420200000123403</p>
+         */
         @NameInMap("PayeeRegisterNo")
         public String payeeRegisterNo;
 
         @NameInMap("PayerAddress")
         public String payerAddress;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6221************1234</p>
+         */
         @NameInMap("PayerBankName")
         public String payerBankName;
 
         @NameInMap("PayerName")
         public String payerName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>91420200000123403</p>
+         */
         @NameInMap("PayerRegisterNo")
         public String payerRegisterNo;
 
+        /**
+         * <strong>example:</strong>
+         * <p>87</p>
+         */
         @NameInMap("SumAmount")
         public String sumAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>9.52</p>
+         */
         @NameInMap("TaxAmount")
         public String taxAmount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>190.48</p>
+         */
         @NameInMap("WithoutTaxAmount")
         public String withoutTaxAmount;
 

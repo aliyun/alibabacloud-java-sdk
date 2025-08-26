@@ -7,6 +7,10 @@ public class RecognizeBankCardResponseBody extends TeaModel {
     @NameInMap("Data")
     public RecognizeBankCardResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>D9C7521-0367-42EE-9646-FD066CCADB26</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -35,12 +39,20 @@ public class RecognizeBankCardResponseBody extends TeaModel {
         @NameInMap("BankName")
         public String bankName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>6212262315007683105</p>
+         */
         @NameInMap("CardNumber")
         public String cardNumber;
 
         @NameInMap("CardType")
         public String cardType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>07/26</p>
+         */
         @NameInMap("ValidDate")
         public String validDate;
 
