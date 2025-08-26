@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAirflowLoginTokenRequest extends TeaModel {
     /**
+     * <p>The ID of the Airflow instance. You can view the instance ID on the <a href="https://help.aliyun.com/document_detail/2881043.html">Airflow Instances</a> page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
