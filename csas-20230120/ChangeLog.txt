@@ -1,3 +1,6 @@
+2025-08-27 Version: 1.14.8
+- Generated java 2023-01-20 for csas.
+
 2025-08-21 Version: 1.14.7
 - Update API CreateWmEmbedTask: add request parameters ImageControl.
 
