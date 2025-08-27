@@ -2388,6 +2388,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>实人服务端初始化接口</p>
+     * 
      * @param request InitFaceVerifyRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return InitFaceVerifyResponse
@@ -2563,6 +2566,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>实人服务端初始化接口</p>
+     * 
      * @param request InitFaceVerifyRequest
      * @return InitFaceVerifyResponse
      */
