@@ -4,6 +4,9 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class RunCommandRequest extends TeaModel {
+    @NameInMap("AgentType")
+    public String agentType;
+
     /**
      * <p>The content of the command.</p>
      * 
@@ -48,6 +51,14 @@ public class RunCommandRequest extends TeaModel {
     public static RunCommandRequest build(java.util.Map<String, ?> map) throws Exception {
         RunCommandRequest self = new RunCommandRequest();
         return TeaModel.build(map, self);
+    }
+
+    public RunCommandRequest setAgentType(String agentType) {
+        this.agentType = agentType;
+        return this;
+    }
+    public String getAgentType() {
+        return this.agentType;
     }
 
     public RunCommandRequest setCommandContent(String commandContent) {

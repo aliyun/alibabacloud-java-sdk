@@ -4307,6 +4307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RunCommandResponse runCommandWithOptions(RunCommandRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentType)) {
+            query.put("AgentType", request.agentType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.commandContent)) {
             query.put("CommandContent", request.commandContent);
         }
