@@ -199,6 +199,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    @NameInMap("SecondaryZoneId")
+    public String secondaryZoneId;
+
     @NameInMap("SecurityToken")
     public String securityToken;
 
@@ -375,6 +378,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public Long getResourceOwnerId() {
         return this.resourceOwnerId;
+    }
+
+    public DescribePriceRequest setSecondaryZoneId(String secondaryZoneId) {
+        this.secondaryZoneId = secondaryZoneId;
+        return this;
+    }
+    public String getSecondaryZoneId() {
+        return this.secondaryZoneId;
     }
 
     public DescribePriceRequest setSecurityToken(String securityToken) {

@@ -165,6 +165,9 @@ public class DescribeInstancesRequest extends TeaModel {
     @NameInMap("NetworkType")
     public String networkType;
 
+    @NameInMap("NodeType")
+    public String nodeType;
+
     @NameInMap("OwnerAccount")
     public String ownerAccount;
 
@@ -364,6 +367,14 @@ public class DescribeInstancesRequest extends TeaModel {
     }
     public String getNetworkType() {
         return this.networkType;
+    }
+
+    public DescribeInstancesRequest setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public DescribeInstancesRequest setOwnerAccount(String ownerAccount) {

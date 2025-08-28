@@ -114,6 +114,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO extends TeaModel {
+        @NameInMap("AckId")
+        public String ackId;
+
         @NameInMap("Capacity")
         public Long capacity;
 
@@ -168,6 +171,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @NameInMap("Tags")
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTags tags;
 
+        @NameInMap("VNodeCount")
+        public Integer VNodeCount;
+
         @NameInMap("VNodeName")
         public String VNodeName;
 
@@ -183,6 +189,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public static DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO build(java.util.Map<String, ?> map) throws Exception {
             DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO self = new DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setAckId(String ackId) {
+            this.ackId = ackId;
+            return this;
+        }
+        public String getAckId() {
+            return this.ackId;
         }
 
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setCapacity(Long capacity) {
@@ -327,6 +341,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTOTags getTags() {
             return this.tags;
+        }
+
+        public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setVNodeCount(Integer VNodeCount) {
+            this.VNodeCount = VNodeCount;
+            return this;
+        }
+        public Integer getVNodeCount() {
+            return this.VNodeCount;
         }
 
         public DescribeTairKVCacheInferInstancesResponseBodyInstancesTairInferInstanceDTO setVNodeName(String VNodeName) {
