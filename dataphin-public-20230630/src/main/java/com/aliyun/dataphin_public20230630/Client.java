@@ -5512,6 +5512,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>根据转交任务ID查询转交任务的进度</p>
+     * 
+     * @param request GetTransferInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTransferInfoResponse
+     */
+    public GetTransferInfoResponse getTransferInfoWithOptions(GetTransferInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proposalId)) {
+            query.put("ProposalId", request.proposalId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTransferInfo"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTransferInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据转交任务ID查询转交任务的进度</p>
+     * 
+     * @param request GetTransferInfoRequest
+     * @return GetTransferInfoResponse
+     */
+    public GetTransferInfoResponse getTransferInfo(GetTransferInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTransferInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取自定义函数详情。</p>
      * 
      * @param request GetUdfRequest
@@ -8504,6 +8552,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>重新转交运行失败的转交任务</p>
+     * 
+     * @param tmpReq RetryTransferOwnershipRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RetryTransferOwnershipResponse
+     */
+    public RetryTransferOwnershipResponse retryTransferOwnershipWithOptions(RetryTransferOwnershipRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        RetryTransferOwnershipShrinkRequest request = new RetryTransferOwnershipShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.privilegeTransferRecord)) {
+            request.privilegeTransferRecordShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.privilegeTransferRecord, "PrivilegeTransferRecord", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.privilegeTransferRecordShrink)) {
+            body.put("PrivilegeTransferRecord", request.privilegeTransferRecordShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RetryTransferOwnership"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RetryTransferOwnershipResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>重新转交运行失败的转交任务</p>
+     * 
+     * @param request RetryTransferOwnershipRequest
+     * @return RetryTransferOwnershipResponse
+     */
+    public RetryTransferOwnershipResponse retryTransferOwnership(RetryTransferOwnershipRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.retryTransferOwnershipWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>回收API授权。</p>
      * 
      * @param tmpReq RevokeDataServiceApiRequest
@@ -8724,6 +8828,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitBatchTaskResponse submitBatchTask(SubmitBatchTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitBatchTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>一键转交负责人</p>
+     * 
+     * @param tmpReq TransferOwnershipForAllObjectRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TransferOwnershipForAllObjectResponse
+     */
+    public TransferOwnershipForAllObjectResponse transferOwnershipForAllObjectWithOptions(TransferOwnershipForAllObjectRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        TransferOwnershipForAllObjectShrinkRequest request = new TransferOwnershipForAllObjectShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.privilegeTransferRecord)) {
+            request.privilegeTransferRecordShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.privilegeTransferRecord, "PrivilegeTransferRecord", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.opTenantId)) {
+            query.put("OpTenantId", request.opTenantId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.privilegeTransferRecordShrink)) {
+            body.put("PrivilegeTransferRecord", request.privilegeTransferRecordShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TransferOwnershipForAllObject"),
+            new TeaPair("version", "2023-06-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TransferOwnershipForAllObjectResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>一键转交负责人</p>
+     * 
+     * @param request TransferOwnershipForAllObjectRequest
+     * @return TransferOwnershipForAllObjectResponse
+     */
+    public TransferOwnershipForAllObjectResponse transferOwnershipForAllObject(TransferOwnershipForAllObjectRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.transferOwnershipForAllObjectWithOptions(request, runtime);
     }
 
     /**

@@ -101,6 +101,13 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>123123</p>
+         */
+        @NameInMap("JobId")
+        public Long jobId;
+
+        /**
+         * <strong>example:</strong>
          * <p>/dev/streamJob/7083701105376640?env=DEV&amp;projectId=7081229106458752&amp;tenantId=300001420</p>
          */
         @NameInMap("Url")
@@ -117,6 +124,14 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         }
         public String getFileId() {
             return this.fileId;
+        }
+
+        public CreateStreamBatchJobMappingResponseBodyData setJobId(Long jobId) {
+            this.jobId = jobId;
+            return this;
+        }
+        public Long getJobId() {
+            return this.jobId;
         }
 
         public CreateStreamBatchJobMappingResponseBodyData setUrl(String url) {
