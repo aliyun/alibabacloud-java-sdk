@@ -4,6 +4,9 @@ package com.aliyun.appstream_center20210901.models;
 import com.aliyun.tea.*;
 
 public class ListWuyingServerRequest extends TeaModel {
+    @NameInMap("AddVirtualNodePoolStatusList")
+    public java.util.List<String> addVirtualNodePoolStatusList;
+
     /**
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -60,6 +63,9 @@ public class ListWuyingServerRequest extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    @NameInMap("VirtualNodePoolId")
+    public String virtualNodePoolId;
+
     @NameInMap("WuyingServerIdList")
     public java.util.List<String> wuyingServerIdList;
 
@@ -73,6 +79,14 @@ public class ListWuyingServerRequest extends TeaModel {
     public static ListWuyingServerRequest build(java.util.Map<String, ?> map) throws Exception {
         ListWuyingServerRequest self = new ListWuyingServerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListWuyingServerRequest setAddVirtualNodePoolStatusList(java.util.List<String> addVirtualNodePoolStatusList) {
+        this.addVirtualNodePoolStatusList = addVirtualNodePoolStatusList;
+        return this;
+    }
+    public java.util.List<String> getAddVirtualNodePoolStatusList() {
+        return this.addVirtualNodePoolStatusList;
     }
 
     public ListWuyingServerRequest setBizRegionId(String bizRegionId) {
@@ -137,6 +151,14 @@ public class ListWuyingServerRequest extends TeaModel {
     }
     public String getStatus() {
         return this.status;
+    }
+
+    public ListWuyingServerRequest setVirtualNodePoolId(String virtualNodePoolId) {
+        this.virtualNodePoolId = virtualNodePoolId;
+        return this;
+    }
+    public String getVirtualNodePoolId() {
+        return this.virtualNodePoolId;
     }
 
     public ListWuyingServerRequest setWuyingServerIdList(java.util.List<String> wuyingServerIdList) {

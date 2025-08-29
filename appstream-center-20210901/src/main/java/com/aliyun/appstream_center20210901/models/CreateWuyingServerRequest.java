@@ -115,6 +115,9 @@ public class CreateWuyingServerRequest extends TeaModel {
     @NameInMap("VSwitchIds")
     public java.util.List<String> vSwitchIds;
 
+    @NameInMap("VirtualNodePoolId")
+    public String virtualNodePoolId;
+
     /**
      * <strong>example:</strong>
      * <p>exampleServerName</p>
@@ -261,6 +264,14 @@ public class CreateWuyingServerRequest extends TeaModel {
     }
     public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
+    }
+
+    public CreateWuyingServerRequest setVirtualNodePoolId(String virtualNodePoolId) {
+        this.virtualNodePoolId = virtualNodePoolId;
+        return this;
+    }
+    public String getVirtualNodePoolId() {
+        return this.virtualNodePoolId;
     }
 
     public CreateWuyingServerRequest setWuyingServerName(String wuyingServerName) {

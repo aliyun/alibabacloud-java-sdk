@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the region where the delivery group resides. For information about the supported regions, see <a href="https://help.aliyun.com/document_detail/426036.html">Limits</a>.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>cn-shanghai: China (Shanghai)</li>
+     * <li>cn-hangzhou: China (Hangzhou)</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -18,6 +25,9 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     @NameInMap("NodeCapacity")
     public Integer nodeCapacity;
 
+    /**
+     * <p>The auto scaling policy used by the delivery group.</p>
+     */
     @NameInMap("NodePoolStrategy")
     public String nodePoolStrategyShrink;
 
@@ -29,7 +39,11 @@ public class ModifyNodePoolAttributeShrinkRequest extends TeaModel {
     public String poolId;
 
     /**
-     * <p>产品类型。</p>
+     * <p>The product type.</p>
+     * <p>Valid value:</p>
+     * <ul>
+     * <li>CloudApp: App Streaming</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CloudApp</p>

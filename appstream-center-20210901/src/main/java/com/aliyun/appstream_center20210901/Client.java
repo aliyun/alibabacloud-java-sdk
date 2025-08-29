@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "";
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("appstream-center", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -488,6 +487,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIds)) {
             body.put("VSwitchIds", request.vSwitchIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualNodePoolId)) {
+            body.put("VirtualNodePoolId", request.virtualNodePoolId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerName)) {
@@ -1736,6 +1739,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListWuyingServerResponse listWuyingServerWithOptions(ListWuyingServerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> body = new java.util.HashMap<>();
+        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addVirtualNodePoolStatusList)) {
+            bodyFlat.put("AddVirtualNodePoolStatusList", request.addVirtualNodePoolStatusList);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.bizRegionId)) {
             body.put("BizRegionId", request.bizRegionId);
         }
@@ -1768,7 +1776,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Status", request.status);
         }
 
-        java.util.Map<String, Object> bodyFlat = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.virtualNodePoolId)) {
+            body.put("VirtualNodePoolId", request.virtualNodePoolId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.wuyingServerIdList)) {
             bodyFlat.put("WuyingServerIdList", request.wuyingServerIdList);
         }
@@ -2089,6 +2100,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can select one of the following scaling policies for cloud app resources:</p>
+     * <ul>
+     * <li>No scaling: Resources are not scaled.</li>
+     * <li>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</li>
+     * <li>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</p>
+     * 
      * @param tmpReq ModifyNodePoolAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyNodePoolAttributeResponse
@@ -2140,6 +2163,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can select one of the following scaling policies for cloud app resources:</p>
+     * <ul>
+     * <li>No scaling: Resources are not scaled.</li>
+     * <li>Auto scaling: Resources are automatically scaled based on the number of connected sessions and the duration during which no session is connected.</li>
+     * <li>Scheduled scaling: Resources are scaled during specific periods of time on specific dates.
+     * Before you call this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/426039.html">billing methods and prices</a> of App Streaming.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Changes the scaling policy of a delivery group. The following scaling policies are supported: fixed resource number, scheduled scaling, and auto scaling.</p>
+     * 
      * @param request ModifyNodePoolAttributeRequest
      * @return ModifyNodePoolAttributeResponse
      */

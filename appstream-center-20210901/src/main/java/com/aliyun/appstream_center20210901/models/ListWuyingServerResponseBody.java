@@ -255,6 +255,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
     }
 
     public static class ListWuyingServerResponseBodyWuyingServerList extends TeaModel {
+        @NameInMap("AddVirtualNodePoolStatus")
+        public String addVirtualNodePoolStatus;
+
         /**
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -334,6 +337,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("OsType")
         public String osType;
 
+        @NameInMap("SecurityGroupIds")
+        public java.util.List<String> securityGroupIds;
+
         @NameInMap("ServerInstanceTypeInfo")
         public ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo serverInstanceTypeInfo;
 
@@ -365,6 +371,9 @@ public class ListWuyingServerResponseBody extends TeaModel {
         @NameInMap("SystemDiskSize")
         public Integer systemDiskSize;
 
+        @NameInMap("VirtualNodePoolId")
+        public String virtualNodePoolId;
+
         /**
          * <strong>example:</strong>
          * <p>ws-0byd****8wn2lwi</p>
@@ -382,6 +391,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         public static ListWuyingServerResponseBodyWuyingServerList build(java.util.Map<String, ?> map) throws Exception {
             ListWuyingServerResponseBodyWuyingServerList self = new ListWuyingServerResponseBodyWuyingServerList();
             return TeaModel.build(map, self);
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setAddVirtualNodePoolStatus(String addVirtualNodePoolStatus) {
+            this.addVirtualNodePoolStatus = addVirtualNodePoolStatus;
+            return this;
+        }
+        public String getAddVirtualNodePoolStatus() {
+            return this.addVirtualNodePoolStatus;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setBizRegionId(String bizRegionId) {
@@ -488,6 +505,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
             return this.osType;
         }
 
+        public ListWuyingServerResponseBodyWuyingServerList setSecurityGroupIds(java.util.List<String> securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
+            return this;
+        }
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
         public ListWuyingServerResponseBodyWuyingServerList setServerInstanceTypeInfo(ListWuyingServerResponseBodyWuyingServerListServerInstanceTypeInfo serverInstanceTypeInfo) {
             this.serverInstanceTypeInfo = serverInstanceTypeInfo;
             return this;
@@ -526,6 +551,14 @@ public class ListWuyingServerResponseBody extends TeaModel {
         }
         public Integer getSystemDiskSize() {
             return this.systemDiskSize;
+        }
+
+        public ListWuyingServerResponseBodyWuyingServerList setVirtualNodePoolId(String virtualNodePoolId) {
+            this.virtualNodePoolId = virtualNodePoolId;
+            return this;
+        }
+        public String getVirtualNodePoolId() {
+            return this.virtualNodePoolId;
         }
 
         public ListWuyingServerResponseBodyWuyingServerList setWuyingServerId(String wuyingServerId) {
