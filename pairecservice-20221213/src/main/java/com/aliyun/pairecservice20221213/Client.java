@@ -1683,6 +1683,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SceneId", request.sceneId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            body.put("Type", request.type);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.value)) {
             body.put("Value", request.value);
         }
@@ -2271,6 +2275,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveSceneIds)) {
+            body.put("EffectiveSceneIds", request.effectiveSceneIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
         }
@@ -2321,6 +2329,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
             body.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIds)) {
+            body.put("ServiceIds", request.serviceIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
@@ -3285,6 +3297,61 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteTrafficControlTaskWithOptions(TrafficControlTaskId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成算法定制脚本</p>
+     * 
+     * @param request GenerateAlgorithmCustomizationScriptRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GenerateAlgorithmCustomizationScriptResponse
+     */
+    public GenerateAlgorithmCustomizationScriptResponse generateAlgorithmCustomizationScriptWithOptions(String AlgorithmCustomizationId, GenerateAlgorithmCustomizationScriptRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deployMode)) {
+            body.put("DeployMode", request.deployMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.moduleFieldTypes)) {
+            body.put("ModuleFieldTypes", request.moduleFieldTypes);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GenerateAlgorithmCustomizationScript"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/algorithmcustomizations/" + com.aliyun.openapiutil.Client.getEncodeParam(AlgorithmCustomizationId) + "/action/generatescript"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GenerateAlgorithmCustomizationScriptResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>生成算法定制脚本</p>
+     * 
+     * @param request GenerateAlgorithmCustomizationScriptRequest
+     * @return GenerateAlgorithmCustomizationScriptResponse
+     */
+    public GenerateAlgorithmCustomizationScriptResponse generateAlgorithmCustomizationScript(String AlgorithmCustomizationId, GenerateAlgorithmCustomizationScriptRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.generateAlgorithmCustomizationScriptWithOptions(AlgorithmCustomizationId, request, headers, runtime);
     }
 
     /**
@@ -5352,6 +5419,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListParamsResponse listParamsWithOptions(ListParamsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.encrypted)) {
+            query.put("Encrypted", request.encrypted);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.environment)) {
             query.put("Environment", request.environment);
         }
@@ -8329,6 +8400,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.effectiveSceneIds)) {
+            body.put("EffectiveSceneIds", request.effectiveSceneIds);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             body.put("EndTime", request.endTime);
         }
@@ -8379,6 +8454,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
             body.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceIds)) {
+            body.put("ServiceIds", request.serviceIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {

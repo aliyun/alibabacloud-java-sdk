@@ -121,6 +121,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @NameInMap("TrafficControlTargetId")
         public String trafficControlTargetId;
 
+        @NameInMap("TrafficControlTaskId")
+        public String trafficControlTaskId;
+
         @NameInMap("Value")
         public Float value;
 
@@ -257,6 +260,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
             return this.trafficControlTargetId;
         }
 
+        public ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets setTrafficControlTaskId(String trafficControlTaskId) {
+            this.trafficControlTaskId = trafficControlTaskId;
+            return this;
+        }
+        public String getTrafficControlTaskId() {
+            return this.trafficControlTaskId;
+        }
+
         public ListTrafficControlTasksResponseBodyTrafficControlTasksTrafficControlTargets setValue(Float value) {
             this.value = value;
             return this;
@@ -282,6 +293,12 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("EffectiveSceneIds")
+        public java.util.List<Integer> effectiveSceneIds;
+
+        @NameInMap("EffectiveSceneNames")
+        public java.util.List<Integer> effectiveSceneNames;
 
         @NameInMap("EndTime")
         public String endTime;
@@ -339,6 +356,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
         @NameInMap("ServiceId")
         public String serviceId;
+
+        @NameInMap("ServiceIds")
+        public java.util.List<String> serviceIds;
 
         @NameInMap("StartTime")
         public String startTime;
@@ -413,6 +433,22 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListTrafficControlTasksResponseBodyTrafficControlTasks setEffectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
+            this.effectiveSceneIds = effectiveSceneIds;
+            return this;
+        }
+        public java.util.List<Integer> getEffectiveSceneIds() {
+            return this.effectiveSceneIds;
+        }
+
+        public ListTrafficControlTasksResponseBodyTrafficControlTasks setEffectiveSceneNames(java.util.List<Integer> effectiveSceneNames) {
+            this.effectiveSceneNames = effectiveSceneNames;
+            return this;
+        }
+        public java.util.List<Integer> getEffectiveSceneNames() {
+            return this.effectiveSceneNames;
         }
 
         public ListTrafficControlTasksResponseBodyTrafficControlTasks setEndTime(String endTime) {
@@ -565,6 +601,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public ListTrafficControlTasksResponseBodyTrafficControlTasks setServiceIds(java.util.List<String> serviceIds) {
+            this.serviceIds = serviceIds;
+            return this;
+        }
+        public java.util.List<String> getServiceIds() {
+            return this.serviceIds;
         }
 
         public ListTrafficControlTasksResponseBodyTrafficControlTasks setStartTime(String startTime) {

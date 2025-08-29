@@ -19,6 +19,12 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EffectiveSceneIds")
+    public java.util.List<Integer> effectiveSceneIds;
+
+    @NameInMap("EffectiveSceneNames")
+    public java.util.List<String> effectiveSceneNames;
+
     @NameInMap("EndTime")
     public String endTime;
 
@@ -78,6 +84,9 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
 
     @NameInMap("ServiceId")
     public String serviceId;
+
+    @NameInMap("ServiceIds")
+    public java.util.List<Integer> serviceIds;
 
     @NameInMap("StartTime")
     public String startTime;
@@ -152,6 +161,22 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public GetTrafficControlTaskResponseBody setEffectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
+        this.effectiveSceneIds = effectiveSceneIds;
+        return this;
+    }
+    public java.util.List<Integer> getEffectiveSceneIds() {
+        return this.effectiveSceneIds;
+    }
+
+    public GetTrafficControlTaskResponseBody setEffectiveSceneNames(java.util.List<String> effectiveSceneNames) {
+        this.effectiveSceneNames = effectiveSceneNames;
+        return this;
+    }
+    public java.util.List<String> getEffectiveSceneNames() {
+        return this.effectiveSceneNames;
     }
 
     public GetTrafficControlTaskResponseBody setEndTime(String endTime) {
@@ -312,6 +337,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public GetTrafficControlTaskResponseBody setServiceIds(java.util.List<Integer> serviceIds) {
+        this.serviceIds = serviceIds;
+        return this;
+    }
+    public java.util.List<Integer> getServiceIds() {
+        return this.serviceIds;
     }
 
     public GetTrafficControlTaskResponseBody setStartTime(String startTime) {
@@ -484,6 +517,9 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         @NameInMap("TrafficControlTargetId")
         public String trafficControlTargetId;
 
+        @NameInMap("TrafficControlTaskId")
+        public String trafficControlTaskId;
+
         @NameInMap("Value")
         public Float value;
 
@@ -618,6 +654,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         }
         public String getTrafficControlTargetId() {
             return this.trafficControlTargetId;
+        }
+
+        public GetTrafficControlTaskResponseBodyTrafficControlTargets setTrafficControlTaskId(String trafficControlTaskId) {
+            this.trafficControlTaskId = trafficControlTaskId;
+            return this;
+        }
+        public String getTrafficControlTaskId() {
+            return this.trafficControlTaskId;
         }
 
         public GetTrafficControlTaskResponseBodyTrafficControlTargets setValue(Float value) {

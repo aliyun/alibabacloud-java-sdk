@@ -4,6 +4,9 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListParamsRequest extends TeaModel {
+    @NameInMap("Encrypted")
+    public Boolean encrypted;
+
     /**
      * <strong>example:</strong>
      * <p>Daily</p>
@@ -53,6 +56,14 @@ public class ListParamsRequest extends TeaModel {
     public static ListParamsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListParamsRequest self = new ListParamsRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListParamsRequest setEncrypted(Boolean encrypted) {
+        this.encrypted = encrypted;
+        return this;
+    }
+    public Boolean getEncrypted() {
+        return this.encrypted;
     }
 
     public ListParamsRequest setEnvironment(String environment) {

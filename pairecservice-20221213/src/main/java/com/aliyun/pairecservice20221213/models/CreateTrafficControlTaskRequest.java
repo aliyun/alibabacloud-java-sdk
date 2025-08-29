@@ -39,6 +39,9 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("EffectiveSceneIds")
+    public java.util.List<Integer> effectiveSceneIds;
+
     /**
      * <strong>example:</strong>
      * <p>2024-03-26</p>
@@ -116,6 +119,9 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
      */
     @NameInMap("ServiceId")
     public String serviceId;
+
+    @NameInMap("ServiceIds")
+    public java.util.List<Integer> serviceIds;
 
     /**
      * <strong>example:</strong>
@@ -221,6 +227,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
         return this.description;
     }
 
+    public CreateTrafficControlTaskRequest setEffectiveSceneIds(java.util.List<Integer> effectiveSceneIds) {
+        this.effectiveSceneIds = effectiveSceneIds;
+        return this;
+    }
+    public java.util.List<Integer> getEffectiveSceneIds() {
+        return this.effectiveSceneIds;
+    }
+
     public CreateTrafficControlTaskRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -323,6 +337,14 @@ public class CreateTrafficControlTaskRequest extends TeaModel {
     }
     public String getServiceId() {
         return this.serviceId;
+    }
+
+    public CreateTrafficControlTaskRequest setServiceIds(java.util.List<Integer> serviceIds) {
+        this.serviceIds = serviceIds;
+        return this;
+    }
+    public java.util.List<Integer> getServiceIds() {
+        return this.serviceIds;
     }
 
     public CreateTrafficControlTaskRequest setStartTime(String startTime) {

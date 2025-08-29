@@ -52,6 +52,9 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     @NameInMap("TrafficControlTargetId")
     public String trafficControlTargetId;
 
+    @NameInMap("TrafficControlTaskId")
+    public String trafficControlTaskId;
+
     @NameInMap("Value")
     public Float value;
 
@@ -186,6 +189,14 @@ public class GetTrafficControlTargetResponseBody extends TeaModel {
     }
     public String getTrafficControlTargetId() {
         return this.trafficControlTargetId;
+    }
+
+    public GetTrafficControlTargetResponseBody setTrafficControlTaskId(String trafficControlTaskId) {
+        this.trafficControlTaskId = trafficControlTaskId;
+        return this;
+    }
+    public String getTrafficControlTaskId() {
+        return this.trafficControlTaskId;
     }
 
     public GetTrafficControlTargetResponseBody setValue(Float value) {

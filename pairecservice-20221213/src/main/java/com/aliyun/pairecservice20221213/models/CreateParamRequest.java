@@ -32,6 +32,9 @@ public class CreateParamRequest extends TeaModel {
     @NameInMap("SceneId")
     public String sceneId;
 
+    @NameInMap("Type")
+    public String type;
+
     /**
      * <strong>example:</strong>
      * <p>house</p>
@@ -74,6 +77,14 @@ public class CreateParamRequest extends TeaModel {
     }
     public String getSceneId() {
         return this.sceneId;
+    }
+
+    public CreateParamRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
     public CreateParamRequest setValue(String value) {
