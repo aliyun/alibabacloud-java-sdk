@@ -297,6 +297,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         @NameInMap("EffectiveSceneIds")
         public java.util.List<Integer> effectiveSceneIds;
 
+        @NameInMap("EffectiveSceneNameList")
+        public java.util.List<String> effectiveSceneNameList;
+
         @NameInMap("EffectiveSceneNames")
         public java.util.List<Integer> effectiveSceneNames;
 
@@ -356,6 +359,9 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
 
         @NameInMap("ServiceId")
         public String serviceId;
+
+        @NameInMap("ServiceIdList")
+        public java.util.List<Integer> serviceIdList;
 
         @NameInMap("ServiceIds")
         public java.util.List<String> serviceIds;
@@ -441,6 +447,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
         public java.util.List<Integer> getEffectiveSceneIds() {
             return this.effectiveSceneIds;
+        }
+
+        public ListTrafficControlTasksResponseBodyTrafficControlTasks setEffectiveSceneNameList(java.util.List<String> effectiveSceneNameList) {
+            this.effectiveSceneNameList = effectiveSceneNameList;
+            return this;
+        }
+        public java.util.List<String> getEffectiveSceneNameList() {
+            return this.effectiveSceneNameList;
         }
 
         public ListTrafficControlTasksResponseBodyTrafficControlTasks setEffectiveSceneNames(java.util.List<Integer> effectiveSceneNames) {
@@ -601,6 +615,14 @@ public class ListTrafficControlTasksResponseBody extends TeaModel {
         }
         public String getServiceId() {
             return this.serviceId;
+        }
+
+        public ListTrafficControlTasksResponseBodyTrafficControlTasks setServiceIdList(java.util.List<Integer> serviceIdList) {
+            this.serviceIdList = serviceIdList;
+            return this;
+        }
+        public java.util.List<Integer> getServiceIdList() {
+            return this.serviceIdList;
         }
 
         public ListTrafficControlTasksResponseBodyTrafficControlTasks setServiceIds(java.util.List<String> serviceIds) {
