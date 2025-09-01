@@ -34,6 +34,13 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>source</p>
+     */
+    @NameInMap("Source")
+    public String source;
+
+    /**
+     * <strong>example:</strong>
      * <p>trafficChangeType</p>
      */
     @NameInMap("TrafficChangeType")
@@ -102,6 +109,14 @@ public class ThirdImmediateMsgPushRequest extends TeaModel {
     }
     public String getPsgIds() {
         return this.psgIds;
+    }
+
+    public ThirdImmediateMsgPushRequest setSource(String source) {
+        this.source = source;
+        return this;
+    }
+    public String getSource() {
+        return this.source;
     }
 
     public ThirdImmediateMsgPushRequest setTrafficChangeType(String trafficChangeType) {

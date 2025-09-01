@@ -5409,6 +5409,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("PsgIds", request.psgIds);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.source)) {
+            query.put("Source", request.source);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.trafficChangeType)) {
             query.put("TrafficChangeType", request.trafficChangeType);
         }
