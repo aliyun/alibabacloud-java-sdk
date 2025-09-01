@@ -18,6 +18,9 @@ public class GetListRecordRequest extends TeaModel {
     @NameInMap("pageSize")
     public Long pageSize;
 
+    @NameInMap("region")
+    public String region;
+
     public static GetListRecordRequest build(java.util.Map<String, ?> map) throws Exception {
         GetListRecordRequest self = new GetListRecordRequest();
         return TeaModel.build(map, self);
@@ -37,6 +40,14 @@ public class GetListRecordRequest extends TeaModel {
     }
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    public GetListRecordRequest setRegion(String region) {
+        this.region = region;
+        return this;
+    }
+    public String getRegion() {
+        return this.region;
     }
 
 }
