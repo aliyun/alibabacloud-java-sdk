@@ -237,7 +237,7 @@ public class GetMetaTableOutputResponseBody extends TeaModel {
 
     public static class GetMetaTableOutputResponseBodyData extends TeaModel {
         /**
-         * <p>The list of instances.</p>
+         * <p>The partitions.</p>
          */
         @NameInMap("DataEntityList")
         public java.util.List<GetMetaTableOutputResponseBodyDataDataEntityList> dataEntityList;

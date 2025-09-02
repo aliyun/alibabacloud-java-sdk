@@ -26,6 +26,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
      * <p>odps</p>
      */
     @NameInMap("EngineType")
+    @Deprecated
     public String engineType;
 
     /**
@@ -59,6 +60,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("OrderType")
+    @Deprecated
     public Integer orderType;
 
     /**
@@ -149,6 +151,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
         return this.endTime;
     }
 
+    @Deprecated
     public ListPermissionApplyOrdersRequest setEngineType(String engineType) {
         this.engineType = engineType;
         return this;
@@ -173,6 +176,7 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
         return this.maxComputeProjectName;
     }
 
+    @Deprecated
     public ListPermissionApplyOrdersRequest setOrderType(Integer orderType) {
         this.orderType = orderType;
         return this;

@@ -263,7 +263,10 @@ public class GetMetaTableBasicInfoResponseBody extends TeaModel {
         public Long lastModifyTime;
 
         /**
-         * <p>The lifecycle of the metatable. Unit: days.</p>
+         * <p>The lifecycle of the table. Unit: day.</p>
+         * <blockquote>
+         * <p> If the lifecycle is not set for a MaxCompute table, the return value is 0, indicating that the table is permanently valid.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>5</p>

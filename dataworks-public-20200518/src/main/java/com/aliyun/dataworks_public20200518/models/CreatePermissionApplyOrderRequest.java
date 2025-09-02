@@ -51,8 +51,12 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>odps</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("EngineType")
+    @Deprecated
     public String engineType;
 
     /**
@@ -69,8 +73,12 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>1</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
      */
     @NameInMap("OrderType")
+    @Deprecated
     public Integer orderType;
 
     /**
@@ -135,6 +143,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         return this.deadline;
     }
 
+    @Deprecated
     public CreatePermissionApplyOrderRequest setEngineType(String engineType) {
         this.engineType = engineType;
         return this;
@@ -151,6 +160,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         return this.maxComputeProjectName;
     }
 
+    @Deprecated
     public CreatePermissionApplyOrderRequest setOrderType(Integer orderType) {
         this.orderType = orderType;
         return this;
@@ -173,7 +183,6 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
         /**
          * <p>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>aColumnName</p>
@@ -222,7 +231,6 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
         /**
          * <p>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>aTableName</p>
