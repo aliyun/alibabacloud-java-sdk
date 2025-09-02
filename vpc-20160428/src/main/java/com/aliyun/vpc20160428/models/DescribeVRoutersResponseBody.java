@@ -139,7 +139,7 @@ public class DescribeVRoutersResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the route table in the vRouter.</p>
+         * <p>The IDs of the route tables.</p>
          */
         @NameInMap("RouteTableIds")
         public DescribeVRoutersResponseBodyVRoutersVRouterRouteTableIds routeTableIds;

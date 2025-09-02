@@ -31,6 +31,16 @@ public class CreateNatIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
+     * <strong>example:</strong>
+     * <p>null</p>
+     */
+    @NameInMap("Ipv4Prefix")
+    public String ipv4Prefix;
+
+    @NameInMap("Ipv4PrefixCount")
+    public Long ipv4PrefixCount;
+
+    /**
      * <p>The ID of the Virtual Private Cloud (VPC) NAT gateway for which you want to create the NAT IP address.</p>
      * <p>This parameter is required.</p>
      * 
@@ -122,6 +132,22 @@ public class CreateNatIpRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public CreateNatIpRequest setIpv4Prefix(String ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    public CreateNatIpRequest setIpv4PrefixCount(Long ipv4PrefixCount) {
+        this.ipv4PrefixCount = ipv4PrefixCount;
+        return this;
+    }
+    public Long getIpv4PrefixCount() {
+        return this.ipv4PrefixCount;
     }
 
     public CreateNatIpRequest setNatGatewayId(String natGatewayId) {

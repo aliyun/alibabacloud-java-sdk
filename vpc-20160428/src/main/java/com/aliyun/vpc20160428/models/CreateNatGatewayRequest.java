@@ -102,6 +102,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     @NameInMap("InternetChargeType")
     public String internetChargeType;
 
+    @NameInMap("Ipv4Prefix")
+    public String ipv4Prefix;
+
     /**
      * <p>The name of the NAT gateway.</p>
      * <p>The name must be 2 to 128 characters in length and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter.</p>
@@ -112,6 +115,9 @@ public class CreateNatGatewayRequest extends TeaModel {
      */
     @NameInMap("Name")
     public String name;
+
+    @NameInMap("NatIp")
+    public String natIp;
 
     /**
      * <p>The type of NAT gateway. Set the value to <strong>Enhanced</strong>, which specifies enhanced NAT gateway.</p>
@@ -308,12 +314,28 @@ public class CreateNatGatewayRequest extends TeaModel {
         return this.internetChargeType;
     }
 
+    public CreateNatGatewayRequest setIpv4Prefix(String ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
     public CreateNatGatewayRequest setName(String name) {
         this.name = name;
         return this;
     }
     public String getName() {
         return this.name;
+    }
+
+    public CreateNatGatewayRequest setNatIp(String natIp) {
+        this.natIp = natIp;
+        return this;
+    }
+    public String getNatIp() {
+        return this.natIp;
     }
 
     public CreateNatGatewayRequest setNatType(String natType) {

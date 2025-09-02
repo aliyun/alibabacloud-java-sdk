@@ -13,6 +13,11 @@ public class DeleteRouteEntryRequest extends TeaModel {
     @NameInMap("DestinationCidrBlock")
     public String destinationCidrBlock;
 
+    /**
+     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p><strong>true</strong>: sends a request without deleting the route entry. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): performs a dry run and the actual request. If the request passes the check, a 2xx HTTP status code is returned and the route entry is deleted.</p>
+     */
     @NameInMap("DryRun")
     public Boolean dryRun;
 

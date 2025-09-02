@@ -6283,8 +6283,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InternetChargeType", request.internetChargeType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             query.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natIp)) {
+            query.put("NatIp", request.natIp);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.natType)) {
@@ -6412,6 +6420,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
             query.put("DryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4PrefixCount)) {
+            query.put("Ipv4PrefixCount", request.ipv4PrefixCount);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
@@ -6830,6 +6846,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
             query.put("AutoPay", request.autoPay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
+            query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewDuration)) {
+            query.put("AutoRenewDuration", request.autoRenewDuration);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
@@ -12324,6 +12348,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DryRun", request.dryRun);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.ipv4Prefix)) {
+            query.put("Ipv4Prefix", request.ipv4Prefix);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.natGatewayId)) {
+            query.put("NatGatewayId", request.natGatewayId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.natIpId)) {
             query.put("NatIpId", request.natIpId);
         }
@@ -16420,7 +16452,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about flow logs.</p>
+     * <p>Query flow logs.</p>
      * 
      * @param request DescribeFlowLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16524,7 +16556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about flow logs.</p>
+     * <p>Query flow logs.</p>
      * 
      * @param request DescribeFlowLogsRequest
      * @return DescribeFlowLogsResponse
@@ -19554,7 +19586,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询满足筛选条件的标签列表。</p>
+     * <p>Queries tags that meet the specified filter conditions.</p>
      * 
      * @param request DescribeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19630,7 +19662,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>查询满足筛选条件的标签列表。</p>
+     * <p>Queries tags that meet the specified filter conditions.</p>
      * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
@@ -19642,7 +19674,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询路由器列表</p>
+     * <p>Queries vRouters in a region.</p>
      * 
      * @param request DescribeVRoutersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19702,7 +19734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询路由器列表</p>
+     * <p>Queries vRouters in a region.</p>
      * 
      * @param request DescribeVRoutersRequest
      * @return DescribeVRoutersResponse
@@ -20266,6 +20298,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeVpcAttributeResponse describeVpcAttribute(DescribeVpcAttributeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeVpcAttributeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询VPC跨账号授权给ECR</p>
+     * 
+     * @param request DescribeVpcGrantRulesToEcrRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeVpcGrantRulesToEcrResponse
+     */
+    public DescribeVpcGrantRulesToEcrResponse describeVpcGrantRulesToEcrWithOptions(DescribeVpcGrantRulesToEcrRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrInstanceId)) {
+            query.put("EcrInstanceId", request.ecrInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecrOwnerId)) {
+            query.put("EcrOwnerId", request.ecrOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceType)) {
+            query.put("InstanceType", request.instanceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeVpcGrantRulesToEcr"),
+            new TeaPair("version", "2016-04-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeVpcGrantRulesToEcrResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询VPC跨账号授权给ECR</p>
+     * 
+     * @param request DescribeVpcGrantRulesToEcrRequest
+     * @return DescribeVpcGrantRulesToEcrResponse
+     */
+    public DescribeVpcGrantRulesToEcrResponse describeVpcGrantRulesToEcr(DescribeVpcGrantRulesToEcrRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeVpcGrantRulesToEcrWithOptions(request, runtime);
     }
 
     /**
@@ -29578,6 +29702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.minTxInterval)) {
             query.put("MinTxInterval", request.minTxInterval);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mtu)) {
+            query.put("Mtu", request.mtu);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {

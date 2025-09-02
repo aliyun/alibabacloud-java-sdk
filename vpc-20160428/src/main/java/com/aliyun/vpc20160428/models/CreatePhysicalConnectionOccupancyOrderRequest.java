@@ -17,6 +17,12 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("AutoRenew")
+    public Boolean autoRenew;
+
+    @NameInMap("AutoRenewDuration")
+    public Integer autoRenewDuration;
+
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
@@ -107,6 +113,22 @@ public class CreatePhysicalConnectionOccupancyOrderRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setAutoRenew(Boolean autoRenew) {
+        this.autoRenew = autoRenew;
+        return this;
+    }
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    public CreatePhysicalConnectionOccupancyOrderRequest setAutoRenewDuration(Integer autoRenewDuration) {
+        this.autoRenewDuration = autoRenewDuration;
+        return this;
+    }
+    public Integer getAutoRenewDuration() {
+        return this.autoRenewDuration;
     }
 
     public CreatePhysicalConnectionOccupancyOrderRequest setClientToken(String clientToken) {

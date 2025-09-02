@@ -109,9 +109,21 @@ public class CreateVpcRequest extends TeaModel {
     @NameInMap("Ipv6CidrBlock")
     public String ipv6CidrBlock;
 
+    /**
+     * <p>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>56</p>
+     */
     @NameInMap("Ipv6CidrMask")
     public Integer ipv6CidrMask;
 
+    /**
+     * <p>The ID of the IP Address Manager (IPAM) pool of the IPv6 type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ipam-pool-bp1aq51kkfh477z03****</p>
+     */
     @NameInMap("Ipv6IpamPoolId")
     public String ipv6IpamPoolId;
 

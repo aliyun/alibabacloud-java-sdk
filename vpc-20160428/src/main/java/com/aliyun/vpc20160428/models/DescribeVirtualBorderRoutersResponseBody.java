@@ -728,6 +728,9 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         @NameInMap("MinTxInterval")
         public Long minTxInterval;
 
+        @NameInMap("Mtu")
+        public Integer mtu;
+
         /**
          * <p>The VBR name.</p>
          * 
@@ -1114,6 +1117,14 @@ public class DescribeVirtualBorderRoutersResponseBody extends TeaModel {
         }
         public Long getMinTxInterval() {
             return this.minTxInterval;
+        }
+
+        public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setMtu(Integer mtu) {
+            this.mtu = mtu;
+            return this;
+        }
+        public Integer getMtu() {
+            return this.mtu;
         }
 
         public DescribeVirtualBorderRoutersResponseBodyVirtualBorderRouterSetVirtualBorderRouterType setName(String name) {

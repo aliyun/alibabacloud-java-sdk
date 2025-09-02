@@ -4,6 +4,9 @@ package com.aliyun.vpc20160428.models;
 import com.aliyun.tea.*;
 
 public class CreateNatIpResponseBody extends TeaModel {
+    @NameInMap("Ipv4Prefix")
+    public String ipv4Prefix;
+
     /**
      * <p>The NAT IP address.</p>
      * 
@@ -34,6 +37,14 @@ public class CreateNatIpResponseBody extends TeaModel {
     public static CreateNatIpResponseBody build(java.util.Map<String, ?> map) throws Exception {
         CreateNatIpResponseBody self = new CreateNatIpResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public CreateNatIpResponseBody setIpv4Prefix(String ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
     }
 
     public CreateNatIpResponseBody setNatIp(String natIp) {

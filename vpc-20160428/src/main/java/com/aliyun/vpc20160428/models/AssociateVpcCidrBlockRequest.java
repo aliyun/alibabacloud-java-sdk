@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AssociateVpcCidrBlockRequest extends TeaModel {
     /**
-     * <p>The IPv6 CIDR block to be added.</p>
+     * <p>The IPv6 CIDR block that you want to add to the VPC.</p>
      * <blockquote>
-     * <p> You must and can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
+     * <p> You can specify only one of <strong>SecondaryCidrBlock</strong> and <strong>Ipv6CidrBlock</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String ipVersion;
 
     /**
-     * <p>The ID of the IP Address Manager (IPAM) pool that contains IPv4 addresses.</p>
+     * <p>The ID of the IPAM pool.</p>
      * 
      * <strong>example:</strong>
      * <p>ipam-pool-sycmt3p2a9v63i****</p>
@@ -38,6 +38,15 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     @NameInMap("IpamPoolId")
     public String ipamPoolId;
 
+    /**
+     * <p>Add an IPv6 CIDR block from the IPAM pool to the VPC by entering a mask.</p>
+     * <blockquote>
+     * <p> To add an IPv6 CIDR block to a VPC, specify at least one of the IPv6CidrBlock and Ipv6CidrMask parameters.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>56</p>
+     */
     @NameInMap("Ipv6CidrMask")
     public Integer ipv6CidrMask;
 
@@ -103,9 +112,9 @@ public class AssociateVpcCidrBlockRequest extends TeaModel {
     public String secondaryCidrBlock;
 
     /**
-     * <p>Add secondary CIDR blocks to the VPC from the IPAM pool by entering a mask.</p>
+     * <p>Add an IPv4 CIDR block from the IPAM pool to the VPC by specifying a mask.</p>
      * <blockquote>
-     * <p>To add a secondary CIDR block to the VPC using the specified IPAM pool, you must specify at least one of the parameters, SecondaryCidrBlock or SecondaryCidrMask.</p>
+     * <p> If you use an IPAM pool, you must specify at least one of SecondaryCidrBlock and SecondaryCidrMask.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

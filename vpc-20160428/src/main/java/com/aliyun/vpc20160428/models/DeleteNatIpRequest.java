@@ -30,9 +30,14 @@ public class DeleteNatIpRequest extends TeaModel {
     @NameInMap("DryRun")
     public Boolean dryRun;
 
+    @NameInMap("Ipv4Prefix")
+    public String ipv4Prefix;
+
+    @NameInMap("NatGatewayId")
+    public String natGatewayId;
+
     /**
      * <p>The ID of the NAT IP address that you want to delete.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8y7q3cpk3fggs87****</p>
@@ -82,6 +87,22 @@ public class DeleteNatIpRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public DeleteNatIpRequest setIpv4Prefix(String ipv4Prefix) {
+        this.ipv4Prefix = ipv4Prefix;
+        return this;
+    }
+    public String getIpv4Prefix() {
+        return this.ipv4Prefix;
+    }
+
+    public DeleteNatIpRequest setNatGatewayId(String natGatewayId) {
+        this.natGatewayId = natGatewayId;
+        return this;
+    }
+    public String getNatGatewayId() {
+        return this.natGatewayId;
     }
 
     public DeleteNatIpRequest setNatIpId(String natIpId) {

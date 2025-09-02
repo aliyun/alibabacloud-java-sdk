@@ -1,3 +1,10 @@
+2025-09-02 Version: 7.14.7
+- Update API CreatePhysicalConnectionOccupancyOrder: add request parameters AutoRenew.
+- Update API CreatePhysicalConnectionOccupancyOrder: add request parameters AutoRenewDuration.
+- Update API DescribeVirtualBorderRouters: add response parameters Body.VirtualBorderRouterSet.$.Mtu.
+- Update API ModifyVirtualBorderRouterAttribute: add request parameters Mtu.
+
+
 2025-07-24 Version: 7.14.6
 - Update API AssociateVpcCidrBlock: add request parameters Ipv6CidrMask.
 - Update API CreateVpc: add request parameters Ipv6CidrMask.

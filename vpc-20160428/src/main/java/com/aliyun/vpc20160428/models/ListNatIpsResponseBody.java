@@ -79,6 +79,9 @@ public class ListNatIpsResponseBody extends TeaModel {
     }
 
     public static class ListNatIpsResponseBodyNatIps extends TeaModel {
+        @NameInMap("Ipv4Prefix")
+        public String ipv4Prefix;
+
         /**
          * <p>Indicates whether the IP address is the default IP address of the NAT gateway. Valid values:</p>
          * <ul>
@@ -166,6 +169,14 @@ public class ListNatIpsResponseBody extends TeaModel {
         public static ListNatIpsResponseBodyNatIps build(java.util.Map<String, ?> map) throws Exception {
             ListNatIpsResponseBodyNatIps self = new ListNatIpsResponseBodyNatIps();
             return TeaModel.build(map, self);
+        }
+
+        public ListNatIpsResponseBodyNatIps setIpv4Prefix(String ipv4Prefix) {
+            this.ipv4Prefix = ipv4Prefix;
+            return this;
+        }
+        public String getIpv4Prefix() {
+            return this.ipv4Prefix;
         }
 
         public ListNatIpsResponseBodyNatIps setIsDefault(Boolean isDefault) {

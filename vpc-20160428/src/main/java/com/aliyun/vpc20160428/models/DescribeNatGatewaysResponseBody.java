@@ -281,6 +281,44 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList extends TeaModel {
+        @NameInMap("IpPrefix")
+        public String ipPrefix;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList setIpPrefix(String ipPrefix) {
+            this.ipPrefix = ipPrefix;
+            return this;
+        }
+        public String getIpPrefix() {
+            return this.ipPrefix;
+        }
+
+    }
+
+    public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList extends TeaModel {
+        @NameInMap("IpPrefixList")
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList> ipPrefixList;
+
+        public static DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList self = new DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList setIpPrefixList(java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList> ipPrefixList) {
+            this.ipPrefixList = ipPrefixList;
+            return this;
+        }
+        public java.util.List<DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixListIpPrefixList> getIpPrefixList() {
+            return this.ipPrefixList;
+        }
+
+    }
+
     public static class DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayNatGatewayPrivateInfo extends TeaModel {
         /**
          * <p>The ID of the elastic network interface (ENI).</p>
@@ -664,6 +702,9 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         @NameInMap("IpLists")
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists ipLists;
 
+        @NameInMap("IpPrefixList")
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList ipPrefixList;
+
         /**
          * <p>The name of the NAT gateway.</p>
          * 
@@ -948,6 +989,14 @@ public class DescribeNatGatewaysResponseBody extends TeaModel {
         }
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpLists getIpLists() {
             return this.ipLists;
+        }
+
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setIpPrefixList(DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList ipPrefixList) {
+            this.ipPrefixList = ipPrefixList;
+            return this;
+        }
+        public DescribeNatGatewaysResponseBodyNatGatewaysNatGatewayIpPrefixList getIpPrefixList() {
+            return this.ipPrefixList;
         }
 
         public DescribeNatGatewaysResponseBodyNatGatewaysNatGateway setName(String name) {

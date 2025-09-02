@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeFlowLogsRequest extends TeaModel {
     /**
      * <p>The description of the flow log.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my Flowlog.</p>
@@ -25,7 +25,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     /**
      * <p>The name of the flow log.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters long and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -34,7 +34,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The Logstore that stores the captured traffic data.</p>
+     * <p>The Logstore that stores the captured traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogStore</p>
@@ -49,7 +49,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>The page number, with a default value of <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -58,7 +58,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Maximum value: <strong>50</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of items per page in a paginated query, with a maximum value of <strong>50</strong> and a default value of <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -67,7 +67,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The project that manages the captured traffic data.</p>
+     * <p>The Project that manages the captured traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogProject</p>
@@ -77,7 +77,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the flow log.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can obtain the region ID by calling the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the flow log belongs.</p>
+     * <p>The resource group ID of the flow log.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -96,7 +96,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the resource from which traffic is captured.</p>
+     * <p>The resource ID of the traffic to capture.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-askldfas****</p>
@@ -111,11 +111,11 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of resource from which traffic is captured. Valid values:</p>
+     * <p>The resource type of the traffic to capture. Values:</p>
      * <ul>
-     * <li><strong>NetworkInterface</strong>: elastic network interface (ENI)</li>
-     * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
-     * <li><strong>VPC</strong>: all ENIs in a virtual private cloud (VPC)</li>
+     * <li><strong>NetworkInterface</strong>: Elastic Network Interface (ENI).</li>
+     * <li><strong>VSwitch</strong>: All ENIs within a VSwitch.</li>
+     * <li><strong>VPC</strong>: All ENIs within a VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -125,11 +125,11 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The status of the flow log. Valid values:</p>
+     * <p>The status of the flow log. Values:</p>
      * <ul>
-     * <li><strong>Active</strong></li>
-     * <li><strong>Activating</strong></li>
-     * <li><strong>Inactive</strong></li>
+     * <li><strong>Active</strong>: The flow log is in an active state.</li>
+     * <li><strong>Activating</strong>: The flow log is being created.</li>
+     * <li><strong>Inactive</strong>: The flow log is in an inactive state.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -145,11 +145,11 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public java.util.List<DescribeFlowLogsRequestTags> tags;
 
     /**
-     * <p>The type of traffic that is captured. Valid values:</p>
+     * <p>The type of traffic to collect. Values:</p>
      * <ul>
-     * <li><strong>All</strong>: all traffic</li>
-     * <li><strong>Allow</strong>: traffic that is allowed by access control</li>
-     * <li><strong>Drop</strong>: traffic that is denied by access control</li>
+     * <li><strong>All</strong>: All traffic.</li>
+     * <li><strong>Allow</strong>: Traffic allowed by access control.</li>
+     * <li><strong>Drop</strong>: Traffic denied by access control.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,7 +159,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String trafficType;
 
     /**
-     * <p>The ID of the VPC to which the flow log belongs.</p>
+     * <p>The ID of the VPC for which you want to view the flow log.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nwd16gvo1wgs****</p>
@@ -326,8 +326,8 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     public static class DescribeFlowLogsRequestTags extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be at most 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The key of the tag. Up to 20 tag keys are supported. If you need to pass this value, it cannot be an empty string.</p>
+         * <p>A tag key can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It also cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -336,8 +336,8 @@ public class DescribeFlowLogsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The value of the tag. Up to 20 tag values are supported. If you need to pass this value, it can be an empty string.</p>
+         * <p>A tag value can have up to 128 characters and cannot start with <code>aliyun</code> or <code>acs:</code>. It also cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -124,6 +124,9 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     @NameInMap("MinTxInterval")
     public Long minTxInterval;
 
+    @NameInMap("Mtu")
+    public Integer mtu;
+
     /**
      * <p>The name of the VBR.</p>
      * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The name must start with a letter. It cannot start with <code>http://</code> or <code>https://</code>.</p>
@@ -326,6 +329,14 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     }
     public Long getMinTxInterval() {
         return this.minTxInterval;
+    }
+
+    public ModifyVirtualBorderRouterAttributeRequest setMtu(Integer mtu) {
+        this.mtu = mtu;
+        return this;
+    }
+    public Integer getMtu() {
+        return this.mtu;
     }
 
     public ModifyVirtualBorderRouterAttributeRequest setName(String name) {

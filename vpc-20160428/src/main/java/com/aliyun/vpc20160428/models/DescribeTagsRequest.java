@@ -43,6 +43,9 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The resource IDs.</p>
+     */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
@@ -70,6 +73,9 @@ public class DescribeTagsRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The tags.</p>
+     */
     @NameInMap("Tag")
     public java.util.List<DescribeTagsRequestTag> tag;
 

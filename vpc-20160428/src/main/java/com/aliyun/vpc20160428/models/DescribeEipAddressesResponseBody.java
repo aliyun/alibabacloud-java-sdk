@@ -96,7 +96,8 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
          * <p>The reason why the EIP is locked. Valid values:</p>
          * <ul>
          * <li><strong>financial</strong>: The EIP is locked due to overdue payments.</li>
-         * <li><strong>security</strong>: The EIP is locked for security reasons.</li>
+         * <li><strong>security</strong>: The instance is locked for security purposes.</li>
+         * <li><strong>sharedPool</strong>: The shared IP address pool is locked due to overdue payments.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,10 +289,11 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
         public String bizType;
 
         /**
-         * <p>The service state of the EIP. Valid values:</p>
+         * <p>The service status of the EIP. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>OperationLock</strong></li>
+         * <li><strong>Unactivated</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>

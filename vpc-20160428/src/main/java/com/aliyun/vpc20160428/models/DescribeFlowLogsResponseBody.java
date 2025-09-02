@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeFlowLogsResponseBody extends TeaModel {
     /**
-     * <p>The information about the flow logs.</p>
+     * <p>List of flow logs.</p>
      */
     @NameInMap("FlowLogs")
     public DescribeFlowLogsResponseBodyFlowLogs flowLogs;
 
     /**
-     * <p>The number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page in a paginated query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,10 +38,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The number of flow logs that are queried.</p>
+     * <p>The number of entries in the queried flow log list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -114,7 +114,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
 
     public static class DescribeFlowLogsResponseBodyFlowLogsFlowLogTagsTag extends TeaModel {
         /**
-         * <p>The key of tag N.</p>
+         * <p>Tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -123,7 +123,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N.</p>
+         * <p>Tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>
@@ -203,10 +203,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public Integer aggregationInterval;
 
         /**
-         * <p>The business status of the flow log. Valid values:</p>
+         * <p>The business status. Values:</p>
          * <ul>
-         * <li><strong>Normal</strong></li>
-         * <li><strong>FinancialLocked</strong></li>
+         * <li><strong>Normal</strong>: Normal status.</li>
+         * <li><strong>FinancialLocked</strong>: Locked due to unpaid bills.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>The time when the flow log was created.</p>
+         * <p>The creation time of the flow log.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-21T03:08:50Z</p>
@@ -234,11 +234,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>If the flow log failed to be delivered, you can troubleshoot based on the following error messages that may be returned:</p>
+         * <p>When log delivery fails, you can troubleshoot based on the error messages. Possible error messages include:</p>
          * <ul>
-         * <li><strong>UnavaliableTarget</strong>: The Logstore of SLS is unavailable and cannot receive logs. Check whether the Logstore is available.</li>
-         * <li><strong>ProjectNotExist</strong>: The project of SLS does not exist. We recommend that you delete the project and create a new one.</li>
-         * <li><strong>UnknownError</strong>: An internal error occurred. Try again later.</li>
+         * <li><strong>UnavaliableTarget</strong>: The Logstore of the Log Service SLS is unavailable and cannot receive logs. It is recommended to check if the corresponding Logstore actually exists and is accessible. </li>
+         * <li><strong>ProjectNotExist</strong>: The Project of the Log Service SLS does not exist. It is suggested to delete the original flow log and create a new one pointing to an existing Project. </li>
+         * <li><strong>UnknownError</strong>: An internal error has occurred. Please try again later.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,10 +248,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String flowLogDeliverErrorMessage;
 
         /**
-         * <p>Indicates whether the flow log is delivered. Valid values:</p>
+         * <p>The delivery status of the flow log, with values:</p>
          * <ul>
-         * <li><strong>SUCCESS</strong> </li>
-         * <li><strong>FAILED</strong></li>
+         * <li><strong>SUCCESS</strong>: Delivery succeeded. </li>
+         * <li><strong>FAILED</strong>: Delivery failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -278,11 +278,17 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         @NameInMap("FlowLogName")
         public String flowLogName;
 
+        /**
+         * <p>The type of IP address for collecting flow log traffic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
+         */
         @NameInMap("IpVersion")
         public String ipVersion;
 
         /**
-         * <p>The Logstore that stores the captured traffic data.</p>
+         * <p>The Logstore where the captured traffic is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowLogStore</p>
@@ -291,7 +297,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The project that manages the captured traffic data.</p>
+         * <p>The Project that manages the captured traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>FlowLogProject</p>
@@ -300,7 +306,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The region ID of the flow log.</p>
+         * <p>The region ID to which the flow log belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -318,7 +324,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The ID of the resource from which traffic is captured.</p>
+         * <p>The resource ID of the traffic captured by the flow log.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-askldfas****</p>
@@ -327,11 +333,11 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource from which traffic is captured. Valid values:</p>
+         * <p>The resource type of the traffic captured by the flow log:</p>
          * <ul>
-         * <li><strong>NetworkInterface</strong>: ENI</li>
-         * <li><strong>VSwitch</strong>: all ENIs in a vSwitch</li>
-         * <li><strong>VPC</strong>: all ENIs in a VPC</li>
+         * <li><strong>NetworkInterface</strong>: Elastic network interface.</li>
+         * <li><strong>VSwitch</strong>: All elastic network interfaces within a VSwitch.</li>
+         * <li><strong>VPC</strong>: All elastic network interfaces within a VPC.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -343,12 +349,12 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         /**
          * <p>The hosting type of the cloud service.</p>
          * <ul>
-         * <li>This parameter can be empty, which indicates that the flow log is created by the user.</li>
-         * <li>If this parameter is not empty, the value is set to <strong>sls</strong>. The value sls indicates that the flow log is created in the Simple Log Service (SLS) console.</li>
-         * </ul>
-         * <blockquote>
-         * <p>A flow log that is created in the SLS console can be displayed in the VPC list. However, you cannot modify, start, stop, or delete the flow log in the VPC console. If you want to manage the flow log, you can log on to the <a href="https://sls.console.aliyun.com">SLS console</a> and perform required operations.</p>
+         * <li>It can be empty, indicating that the flow log was created by the user. </li>
+         * <li>When not empty, the only supported value is: <strong>sls</strong>, indicating that the flow log was created through the Log Service console.<blockquote>
+         * <p>Flow log instances created through the Log Service console can be displayed in the VPC list, but they cannot be modified, started, stopped, or deleted within the VPC. If you need to perform these operations on the flow log, you can log in to the <a href="https://sls.console.aliyun.com">Log Service console</a> to modify, start, stop, or delete it.</p>
          * </blockquote>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>sls</p>
@@ -357,11 +363,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String serviceType;
 
         /**
-         * <p>The status of the flow log. Valid values:</p>
+         * <p>The status of the flow log. Values:</p>
          * <ul>
-         * <li><strong>Active</strong></li>
-         * <li><strong>Activating</strong></li>
-         * <li><strong>Inactive</strong></li>
+         * <li><p><strong>Active</strong>: The flow log is in an active state.</p>
+         * </li>
+         * <li><p><strong>Activating</strong>: The flow log is being created.</p>
+         * </li>
+         * <li><p><strong>Inactive</strong>: The flow log is in an inactive state.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -371,30 +380,27 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of tags.</p>
+         * <p>List of tags</p>
          */
         @NameInMap("Tags")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTags tags;
 
         /**
-         * <p>The sampling scope of the traffic that is collected. Valid values:</p>
+         * <p>The path of the captured traffic. Values:</p>
          * <ul>
-         * <li><strong>all</strong> (default value): all traffic</li>
-         * <li><strong>internetGateway</strong>: Internet traffic</li>
+         * <li><strong>all</strong>: Indicates full collection.</li>
+         * <li><strong>internetGateway</strong>: Indicates public network traffic collection.</li>
          * </ul>
-         * <blockquote>
-         * <p>By default, the traffic path feature is unavailable. To use this feature, <a href="https://workorder-intl.console.aliyun.com/?spm=5176.11182188.console-base-top.dworkorder.18ae4882n3v6ZW#/ticket/createIndex">submit a ticket</a>.</p>
-         * </blockquote>
          */
         @NameInMap("TrafficPath")
         public DescribeFlowLogsResponseBodyFlowLogsFlowLogTrafficPath trafficPath;
 
         /**
-         * <p>The type of traffic that is captured by the flow log. Valid values:</p>
+         * <p>The type of traffic captured by the flow log. Values:</p>
          * <ul>
-         * <li><strong>All</strong>: all traffic</li>
-         * <li><strong>Allow</strong>: traffic that is allowed by access control</li>
-         * <li><strong>Drop</strong>: traffic that is denied by access control</li>
+         * <li><strong>All</strong>: All traffic.</li>
+         * <li><strong>Allow</strong>: Traffic allowed by access control.</li>
+         * <li><strong>Drop</strong>: Traffic denied by access control.</li>
          * </ul>
          * 
          * <strong>example:</strong>

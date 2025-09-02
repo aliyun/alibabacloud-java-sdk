@@ -43,6 +43,10 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     @NameInMap("FlowLogName")
     public String flowLogName;
 
+    /**
+     * <strong>example:</strong>
+     * <p>IPv4</p>
+     */
     @NameInMap("IpVersion")
     public String ipVersion;
 
