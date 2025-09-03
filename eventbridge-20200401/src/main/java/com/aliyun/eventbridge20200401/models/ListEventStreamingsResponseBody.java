@@ -392,6 +392,403 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
     }
 
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId extends TeaModel {
+        @NameInMap("Form")
+        public String form;
+
+        @NameInMap("Template")
+        public String template;
+
+        @NameInMap("Value")
+        public String value;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId setForm(String form) {
+            this.form = form;
+            return this;
+        }
+        public String getForm() {
+            return this.form;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId setTemplate(String template) {
+            this.template = template;
+            return this;
+        }
+        public String getTemplate() {
+            return this.template;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters extends TeaModel {
+        @NameInMap("Acks")
+        public String acks;
+
+        @NameInMap("Bootstraps")
+        public String bootstraps;
+
+        @NameInMap("Key")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey key;
+
+        @NameInMap("NetworkType")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType networkType;
+
+        @NameInMap("SaslMechanism")
+        public String saslMechanism;
+
+        @NameInMap("SaslPassword")
+        public String saslPassword;
+
+        @NameInMap("SaslUser")
+        public String saslUser;
+
+        @NameInMap("SecurityGroupId")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId securityGroupId;
+
+        @NameInMap("SecurityProtocol")
+        public String securityProtocol;
+
+        @NameInMap("Topic")
+        public String topic;
+
+        @NameInMap("VSwitchIds")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds vSwitchIds;
+
+        @NameInMap("Value")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue value;
+
+        @NameInMap("VpcId")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId vpcId;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters self = new ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setAcks(String acks) {
+            this.acks = acks;
+            return this;
+        }
+        public String getAcks() {
+            return this.acks;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setBootstraps(String bootstraps) {
+            this.bootstraps = bootstraps;
+            return this;
+        }
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setKey(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey key) {
+            this.key = key;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersKey getKey() {
+            return this.key;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setNetworkType(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersNetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setSaslMechanism(String saslMechanism) {
+            this.saslMechanism = saslMechanism;
+            return this;
+        }
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setSaslPassword(String saslPassword) {
+            this.saslPassword = saslPassword;
+            return this;
+        }
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setSaslUser(String saslUser) {
+            this.saslUser = saslUser;
+            return this;
+        }
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setSecurityGroupId(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersSecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setSecurityProtocol(String securityProtocol) {
+            this.securityProtocol = securityProtocol;
+            return this;
+        }
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setVSwitchIds(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setValue(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue value) {
+            this.value = value;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersValue getValue() {
+            return this.value;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters setVpcId(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParametersVpcId getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheRocketMQCheckpointParametersConsumeTimestamp extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -6407,6 +6804,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     }
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSink extends TeaModel {
+        @NameInMap("SinkApacheKafkaParameters")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters sinkApacheKafkaParameters;
+
         @NameInMap("SinkApacheRocketMQCheckpointParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters;
 
@@ -6479,6 +6879,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public static ListEventStreamingsResponseBodyDataEventStreamingsSink build(java.util.Map<String, ?> map) throws Exception {
             ListEventStreamingsResponseBodyDataEventStreamingsSink self = new ListEventStreamingsResponseBodyDataEventStreamingsSink();
             return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkApacheKafkaParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters sinkApacheKafkaParameters) {
+            this.sinkApacheKafkaParameters = sinkApacheKafkaParameters;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheKafkaParameters getSinkApacheKafkaParameters() {
+            return this.sinkApacheKafkaParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSink setSinkApacheRocketMQCheckpointParameters(ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters) {
@@ -6607,6 +7015,157 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
         public ListEventStreamingsResponseBodyDataEventStreamingsSinkSinkSLSParameters getSinkSLSParameters() {
             return this.sinkSLSParameters;
+        }
+
+    }
+
+    public static class ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters extends TeaModel {
+        @NameInMap("Bootstraps")
+        public String bootstraps;
+
+        @NameInMap("ConsumerGroup")
+        public String consumerGroup;
+
+        @NameInMap("NetworkType")
+        public String networkType;
+
+        @NameInMap("OffsetReset")
+        public String offsetReset;
+
+        @NameInMap("SaslMechanism")
+        public String saslMechanism;
+
+        @NameInMap("SaslPassword")
+        public String saslPassword;
+
+        @NameInMap("SaslUser")
+        public String saslUser;
+
+        @NameInMap("SecurityGroupId")
+        public String securityGroupId;
+
+        @NameInMap("SecurityProtocol")
+        public String securityProtocol;
+
+        @NameInMap("Topic")
+        public String topic;
+
+        @NameInMap("VSwitchIds")
+        public String vSwitchIds;
+
+        @NameInMap("ValueDataType")
+        public String valueDataType;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters self = new ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setBootstraps(String bootstraps) {
+            this.bootstraps = bootstraps;
+            return this;
+        }
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setConsumerGroup(String consumerGroup) {
+            this.consumerGroup = consumerGroup;
+            return this;
+        }
+        public String getConsumerGroup() {
+            return this.consumerGroup;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setNetworkType(String networkType) {
+            this.networkType = networkType;
+            return this;
+        }
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setOffsetReset(String offsetReset) {
+            this.offsetReset = offsetReset;
+            return this;
+        }
+        public String getOffsetReset() {
+            return this.offsetReset;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setSaslMechanism(String saslMechanism) {
+            this.saslMechanism = saslMechanism;
+            return this;
+        }
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setSaslPassword(String saslPassword) {
+            this.saslPassword = saslPassword;
+            return this;
+        }
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setSaslUser(String saslUser) {
+            this.saslUser = saslUser;
+            return this;
+        }
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setSecurityGroupId(String securityGroupId) {
+            this.securityGroupId = securityGroupId;
+            return this;
+        }
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setSecurityProtocol(String securityProtocol) {
+            this.securityProtocol = securityProtocol;
+            return this;
+        }
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setTopic(String topic) {
+            this.topic = topic;
+            return this;
+        }
+        public String getTopic() {
+            return this.topic;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setVSwitchIds(String vSwitchIds) {
+            this.vSwitchIds = vSwitchIds;
+            return this;
+        }
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setValueDataType(String valueDataType) {
+            this.valueDataType = valueDataType;
+            return this;
+        }
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
         }
 
     }
@@ -8338,6 +8897,9 @@ public class ListEventStreamingsResponseBody extends TeaModel {
     }
 
     public static class ListEventStreamingsResponseBodyDataEventStreamingsSource extends TeaModel {
+        @NameInMap("SourceApacheKafkaParameters")
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters sourceApacheKafkaParameters;
+
         @NameInMap("SourceApacheRocketMQCheckpointParameters")
         public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters;
 
@@ -8410,6 +8972,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         public static ListEventStreamingsResponseBodyDataEventStreamingsSource build(java.util.Map<String, ?> map) throws Exception {
             ListEventStreamingsResponseBodyDataEventStreamingsSource self = new ListEventStreamingsResponseBodyDataEventStreamingsSource();
             return TeaModel.build(map, self);
+        }
+
+        public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceApacheKafkaParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters sourceApacheKafkaParameters) {
+            this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
+            return this;
+        }
+        public ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheKafkaParameters getSourceApacheKafkaParameters() {
+            return this.sourceApacheKafkaParameters;
         }
 
         public ListEventStreamingsResponseBodyDataEventStreamingsSource setSourceApacheRocketMQCheckpointParameters(ListEventStreamingsResponseBodyDataEventStreamingsSourceSourceApacheRocketMQCheckpointParameters sourceApacheRocketMQCheckpointParameters) {
