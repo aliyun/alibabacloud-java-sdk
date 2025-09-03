@@ -68,6 +68,20 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         public String accountName;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ConfigSetId")
+        public String configSetId;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("ConfigSetName")
+        public String configSetName;
+
+        /**
          * <p>Detailed classification of error reasons: - SendOk - SmtpNxBox
          * etc.</p>
          * 
@@ -76,6 +90,20 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
          */
         @NameInMap("ErrorClassification")
         public String errorClassification;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("IpPoolId")
+        public String ipPoolId;
+
+        /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("IpPoolName")
+        public String ipPoolName;
 
         /**
          * <p>Update time</p>
@@ -144,12 +172,44 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             return this.accountName;
         }
 
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setConfigSetId(String configSetId) {
+            this.configSetId = configSetId;
+            return this;
+        }
+        public String getConfigSetId() {
+            return this.configSetId;
+        }
+
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setConfigSetName(String configSetName) {
+            this.configSetName = configSetName;
+            return this;
+        }
+        public String getConfigSetName() {
+            return this.configSetName;
+        }
+
         public SenderStatisticsDetailByParamResponseBodyDataMailDetail setErrorClassification(String errorClassification) {
             this.errorClassification = errorClassification;
             return this;
         }
         public String getErrorClassification() {
             return this.errorClassification;
+        }
+
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setIpPoolId(String ipPoolId) {
+            this.ipPoolId = ipPoolId;
+            return this;
+        }
+        public String getIpPoolId() {
+            return this.ipPoolId;
+        }
+
+        public SenderStatisticsDetailByParamResponseBodyDataMailDetail setIpPoolName(String ipPoolName) {
+            this.ipPoolName = ipPoolName;
+            return this;
+        }
+        public String getIpPoolName() {
+            return this.ipPoolName;
         }
 
         public SenderStatisticsDetailByParamResponseBodyDataMailDetail setLastUpdateTime(String lastUpdateTime) {

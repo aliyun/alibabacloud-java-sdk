@@ -16,6 +16,9 @@ public class GetTrackListRequest extends TeaModel {
     @NameInMap("AccountName")
     public String accountName;
 
+    @NameInMap("ConfigSetId")
+    public String configSetId;
+
     @NameInMap("DedicatedIp")
     public String dedicatedIp;
 
@@ -128,6 +131,14 @@ public class GetTrackListRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public GetTrackListRequest setConfigSetId(String configSetId) {
+        this.configSetId = configSetId;
+        return this;
+    }
+    public String getConfigSetId() {
+        return this.configSetId;
     }
 
     public GetTrackListRequest setDedicatedIp(String dedicatedIp) {

@@ -17,6 +17,13 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("ConfigSetId")
+    public String configSetId;
+
+    /**
      * <p>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +31,13 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
      */
     @NameInMap("EndTime")
     public String endTime;
+
+    /**
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("IpPoolId")
+    public String ipPoolId;
 
     /**
      * <p>Specifies the number of results to return in this request. Range is 1~100.</p>
@@ -107,12 +121,28 @@ public class SenderStatisticsDetailByParamRequest extends TeaModel {
         return this.accountName;
     }
 
+    public SenderStatisticsDetailByParamRequest setConfigSetId(String configSetId) {
+        this.configSetId = configSetId;
+        return this;
+    }
+    public String getConfigSetId() {
+        return this.configSetId;
+    }
+
     public SenderStatisticsDetailByParamRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public SenderStatisticsDetailByParamRequest setIpPoolId(String ipPoolId) {
+        this.ipPoolId = ipPoolId;
+        return this;
+    }
+    public String getIpPoolId() {
+        return this.ipPoolId;
     }
 
     public SenderStatisticsDetailByParamRequest setLength(Integer length) {

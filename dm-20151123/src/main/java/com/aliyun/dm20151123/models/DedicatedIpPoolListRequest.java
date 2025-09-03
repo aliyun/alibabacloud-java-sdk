@@ -4,6 +4,9 @@ package com.aliyun.dm20151123.models;
 import com.aliyun.tea.*;
 
 public class DedicatedIpPoolListRequest extends TeaModel {
+    @NameInMap("All")
+    public Boolean all;
+
     /**
      * <p>Search keyword for the name</p>
      * 
@@ -34,6 +37,14 @@ public class DedicatedIpPoolListRequest extends TeaModel {
     public static DedicatedIpPoolListRequest build(java.util.Map<String, ?> map) throws Exception {
         DedicatedIpPoolListRequest self = new DedicatedIpPoolListRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DedicatedIpPoolListRequest setAll(Boolean all) {
+        this.all = all;
+        return this;
+    }
+    public Boolean getAll() {
+        return this.all;
     }
 
     public DedicatedIpPoolListRequest setKeyword(String keyword) {

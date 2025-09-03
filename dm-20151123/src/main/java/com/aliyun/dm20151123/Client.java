@@ -1063,6 +1063,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DedicatedIpPoolListResponse dedicatedIpPoolListWithOptions(DedicatedIpPoolListRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
             query.put("Keyword", request.keyword);
         }
@@ -1939,6 +1943,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountName", request.accountName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configSetId)) {
+            query.put("ConfigSetId", request.configSetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
             query.put("DedicatedIp", request.dedicatedIp);
         }
@@ -2041,6 +2049,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.accountName)) {
             query.put("AccountName", request.accountName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configSetId)) {
+            query.put("ConfigSetId", request.configSetId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.dedicatedIp)) {
@@ -3279,8 +3291,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AccountName", request.accountName);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.configSetId)) {
+            query.put("ConfigSetId", request.configSetId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
             query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ipPoolId)) {
+            query.put("IpPoolId", request.ipPoolId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.length)) {

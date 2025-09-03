@@ -110,6 +110,12 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         @NameInMap("AccountStatus")
         public String accountStatus;
 
+        @NameInMap("ConfigSetId")
+        public String configSetId;
+
+        @NameInMap("ConfigSetName")
+        public String configSetName;
+
         /**
          * <p>Creation time</p>
          * 
@@ -223,6 +229,22 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
         public String getAccountStatus() {
             return this.accountStatus;
+        }
+
+        public QueryMailAddressByParamResponseBodyDataMailAddress setConfigSetId(String configSetId) {
+            this.configSetId = configSetId;
+            return this;
+        }
+        public String getConfigSetId() {
+            return this.configSetId;
+        }
+
+        public QueryMailAddressByParamResponseBodyDataMailAddress setConfigSetName(String configSetName) {
+            this.configSetName = configSetName;
+            return this;
+        }
+        public String getConfigSetName() {
+            return this.configSetName;
         }
 
         public QueryMailAddressByParamResponseBodyDataMailAddress setCreateTime(String createTime) {

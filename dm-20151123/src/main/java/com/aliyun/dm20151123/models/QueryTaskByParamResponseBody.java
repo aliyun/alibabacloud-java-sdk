@@ -101,6 +101,12 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         @NameInMap("AddressType")
         public String addressType;
 
+        @NameInMap("ConfigSetId")
+        public String configSetId;
+
+        @NameInMap("ConfigSetName")
+        public String configSetName;
+
         /**
          * <p>Creation time</p>
          * 
@@ -202,6 +208,22 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
         public String getAddressType() {
             return this.addressType;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setConfigSetId(String configSetId) {
+            this.configSetId = configSetId;
+            return this;
+        }
+        public String getConfigSetId() {
+            return this.configSetId;
+        }
+
+        public QueryTaskByParamResponseBodyDataTask setConfigSetName(String configSetName) {
+            this.configSetName = configSetName;
+            return this;
+        }
+        public String getConfigSetName() {
+            return this.configSetName;
         }
 
         public QueryTaskByParamResponseBodyDataTask setCreateTime(String createTime) {
