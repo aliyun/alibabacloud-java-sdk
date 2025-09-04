@@ -37,6 +37,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateAccountResponse createAccountWithOptions(CreateAccountRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.accountAccessKey)) {
             query.put("accountAccessKey", request.accountAccessKey);
         }

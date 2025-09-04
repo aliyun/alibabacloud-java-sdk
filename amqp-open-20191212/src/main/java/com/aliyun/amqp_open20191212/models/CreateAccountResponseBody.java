@@ -138,6 +138,13 @@ public class CreateAccountResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <strong>example:</strong>
+         * <p>***环境</p>
+         */
+        @NameInMap("Remark")
+        public String remark;
+
+        /**
          * <p>The created static username.</p>
          * 
          * <strong>example:</strong>
@@ -189,6 +196,14 @@ public class CreateAccountResponseBody extends TeaModel {
         }
         public String getPassword() {
             return this.password;
+        }
+
+        public CreateAccountResponseBodyData setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public CreateAccountResponseBodyData setUserName(String userName) {

@@ -67,6 +67,13 @@ public class DataValue extends TeaModel {
     @NameInMap("createTimestamp")
     public Long createTimestamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>***环境</p>
+     */
+    @NameInMap("Remark")
+    public String remark;
+
     public static DataValue build(java.util.Map<String, ?> map) throws Exception {
         DataValue self = new DataValue();
         return TeaModel.build(map, self);
@@ -126,6 +133,14 @@ public class DataValue extends TeaModel {
     }
     public Long getCreateTimestamp() {
         return this.createTimestamp;
+    }
+
+    public DataValue setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
 }

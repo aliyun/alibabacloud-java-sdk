@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateAccountRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>***环境</p>
+     */
+    @NameInMap("Remark")
+    public String remark;
+
+    /**
      * <p>The AccessKey ID of your Alibaba Cloud account or RAM user. For information about how to obtain an AccessKey pair, see <a href="https://help.aliyun.com/document_detail/116401.html">Create an AccessKey pair</a>.</p>
      * <blockquote>
      * <p> If you use the pair of static username and password that is created by using the Accesskey pair of a RAM user to access ApsaraMQ for RabbitMQ to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/146559.html">RAM policies</a>.</p>
@@ -76,6 +83,14 @@ public class CreateAccountRequest extends TeaModel {
     public static CreateAccountRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateAccountRequest self = new CreateAccountRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateAccountRequest setRemark(String remark) {
+        this.remark = remark;
+        return this;
+    }
+    public String getRemark() {
+        return this.remark;
     }
 
     public CreateAccountRequest setAccountAccessKey(String accountAccessKey) {
