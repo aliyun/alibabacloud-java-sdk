@@ -24,6 +24,9 @@ public class ExpandDataVolumeRequest extends TeaModel {
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     /**
      * <strong>example:</strong>
      * <p>100</p>
@@ -66,6 +69,14 @@ public class ExpandDataVolumeRequest extends TeaModel {
     }
     public Integer getPhoneDataVolume() {
         return this.phoneDataVolume;
+    }
+
+    public ExpandDataVolumeRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public ExpandDataVolumeRequest setShareDataVolume(Integer shareDataVolume) {

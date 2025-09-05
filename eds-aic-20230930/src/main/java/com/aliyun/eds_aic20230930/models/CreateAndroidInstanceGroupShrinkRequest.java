@@ -236,6 +236,9 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     /**
      * <p>The tags</p>
      */
@@ -434,6 +437,14 @@ public class CreateAndroidInstanceGroupShrinkRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public CreateAndroidInstanceGroupShrinkRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public CreateAndroidInstanceGroupShrinkRequest setTag(java.util.List<CreateAndroidInstanceGroupShrinkRequestTag> tag) {

@@ -47,6 +47,9 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     public static RenewAndroidInstanceGroupsRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewAndroidInstanceGroupsRequest self = new RenewAndroidInstanceGroupsRequest();
         return TeaModel.build(map, self);
@@ -82,6 +85,14 @@ public class RenewAndroidInstanceGroupsRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public RenewAndroidInstanceGroupsRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
 }

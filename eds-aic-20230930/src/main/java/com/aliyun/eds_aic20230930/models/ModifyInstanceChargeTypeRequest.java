@@ -64,6 +64,9 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     public static ModifyInstanceChargeTypeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyInstanceChargeTypeRequest self = new ModifyInstanceChargeTypeRequest();
         return TeaModel.build(map, self);
@@ -115,6 +118,14 @@ public class ModifyInstanceChargeTypeRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public ModifyInstanceChargeTypeRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
 }

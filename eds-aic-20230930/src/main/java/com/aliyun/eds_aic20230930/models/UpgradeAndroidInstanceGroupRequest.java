@@ -36,6 +36,9 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("InstanceGroupId")
     public String instanceGroupId;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     public static UpgradeAndroidInstanceGroupRequest build(java.util.Map<String, ?> map) throws Exception {
         UpgradeAndroidInstanceGroupRequest self = new UpgradeAndroidInstanceGroupRequest();
         return TeaModel.build(map, self);
@@ -63,6 +66,14 @@ public class UpgradeAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getInstanceGroupId() {
         return this.instanceGroupId;
+    }
+
+    public UpgradeAndroidInstanceGroupRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
 }

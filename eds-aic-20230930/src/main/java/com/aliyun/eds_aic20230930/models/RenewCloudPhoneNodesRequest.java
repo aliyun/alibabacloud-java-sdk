@@ -54,6 +54,9 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     @NameInMap("PeriodUnit")
     public String periodUnit;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     public static RenewCloudPhoneNodesRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewCloudPhoneNodesRequest self = new RenewCloudPhoneNodesRequest();
         return TeaModel.build(map, self);
@@ -97,6 +100,14 @@ public class RenewCloudPhoneNodesRequest extends TeaModel {
     }
     public String getPeriodUnit() {
         return this.periodUnit;
+    }
+
+    public RenewCloudPhoneNodesRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
 }

@@ -236,6 +236,9 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     @NameInMap("PolicyGroupId")
     public String policyGroupId;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     /**
      * <p>The tags</p>
      */
@@ -434,6 +437,14 @@ public class CreateAndroidInstanceGroupRequest extends TeaModel {
     }
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    public CreateAndroidInstanceGroupRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public CreateAndroidInstanceGroupRequest setTag(java.util.List<CreateAndroidInstanceGroupRequestTag> tag) {

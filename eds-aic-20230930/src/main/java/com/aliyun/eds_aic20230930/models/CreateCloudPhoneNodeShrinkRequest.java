@@ -158,6 +158,9 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     /**
      * <p>The resolution height. Unit: pixel.</p>
      * 
@@ -378,6 +381,14 @@ public class CreateCloudPhoneNodeShrinkRequest extends TeaModel {
     }
     public Integer getPhoneDataVolume() {
         return this.phoneDataVolume;
+    }
+
+    public CreateCloudPhoneNodeShrinkRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public CreateCloudPhoneNodeShrinkRequest setResolutionHeight(Integer resolutionHeight) {

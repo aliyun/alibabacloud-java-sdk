@@ -34,6 +34,9 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("PhoneDataVolume")
     public Integer phoneDataVolume;
 
+    @NameInMap("PromotionId")
+    public String promotionId;
+
     @NameInMap("UpBandwidthLimit")
     public Integer upBandwidthLimit;
 
@@ -88,6 +91,14 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     }
     public Integer getPhoneDataVolume() {
         return this.phoneDataVolume;
+    }
+
+    public ChangeCloudPhoneNodeRequest setPromotionId(String promotionId) {
+        this.promotionId = promotionId;
+        return this;
+    }
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     public ChangeCloudPhoneNodeRequest setUpBandwidthLimit(Integer upBandwidthLimit) {
