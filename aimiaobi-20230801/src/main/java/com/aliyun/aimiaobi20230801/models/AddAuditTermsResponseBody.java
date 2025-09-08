@@ -20,6 +20,13 @@ public class AddAuditTermsResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
+     * <p>返回添加的实体信息</p>
+     */
+    @NameInMap("DataV1")
+    public AddAuditTermsResponseBodyDataV1 dataV1;
+
+    /**
+     * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("HttpStatusCode")
@@ -69,6 +76,14 @@ public class AddAuditTermsResponseBody extends TeaModel {
         return this.data;
     }
 
+    public AddAuditTermsResponseBody setDataV1(AddAuditTermsResponseBodyDataV1 dataV1) {
+        this.dataV1 = dataV1;
+        return this;
+    }
+    public AddAuditTermsResponseBodyDataV1 getDataV1() {
+        return this.dataV1;
+    }
+
     public AddAuditTermsResponseBody setHttpStatusCode(Integer httpStatusCode) {
         this.httpStatusCode = httpStatusCode;
         return this;
@@ -99,6 +114,29 @@ public class AddAuditTermsResponseBody extends TeaModel {
     }
     public Boolean getSuccess() {
         return this.success;
+    }
+
+    public static class AddAuditTermsResponseBodyDataV1 extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>562fe4163a59d7bcb44bfdde4e3d5046</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        public static AddAuditTermsResponseBodyDataV1 build(java.util.Map<String, ?> map) throws Exception {
+            AddAuditTermsResponseBodyDataV1 self = new AddAuditTermsResponseBodyDataV1();
+            return TeaModel.build(map, self);
+        }
+
+        public AddAuditTermsResponseBodyDataV1 setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
     }
 
 }

@@ -540,6 +540,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>取消深度写作任务</p>
+     * 
+     * @param request CancelDeepWriteTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CancelDeepWriteTaskResponse
+     */
+    public CancelDeepWriteTaskResponse cancelDeepWriteTaskWithOptions(CancelDeepWriteTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CancelDeepWriteTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CancelDeepWriteTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>取消深度写作任务</p>
+     * 
+     * @param request CancelDeepWriteTaskRequest
+     * @return CancelDeepWriteTaskResponse
+     */
+    public CancelDeepWriteTaskResponse cancelDeepWriteTask(CancelDeepWriteTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.cancelDeepWriteTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>清除所有干预内容</p>
      * 
      * @param request ClearIntervenesRequest
@@ -3176,6 +3224,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetDatasetDocumentResponse getDatasetDocument(GetDatasetDocumentRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getDatasetDocumentWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度写作任务</p>
+     * 
+     * @param request GetDeepWriteTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeepWriteTaskResponse
+     */
+    public GetDeepWriteTaskResponse getDeepWriteTaskWithOptions(GetDeepWriteTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeepWriteTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeepWriteTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度写作任务</p>
+     * 
+     * @param request GetDeepWriteTaskRequest
+     * @return GetDeepWriteTaskResponse
+     */
+    public GetDeepWriteTaskResponse getDeepWriteTask(GetDeepWriteTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeepWriteTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度写作任务的结果</p>
+     * 
+     * @param request GetDeepWriteTaskResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDeepWriteTaskResultResponse
+     */
+    public GetDeepWriteTaskResultResponse getDeepWriteTaskResultWithOptions(GetDeepWriteTaskResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDeepWriteTaskResult"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDeepWriteTaskResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询深度写作任务的结果</p>
+     * 
+     * @param request GetDeepWriteTaskResultRequest
+     * @return GetDeepWriteTaskResultResponse
+     */
+    public GetDeepWriteTaskResultResponse getDeepWriteTaskResult(GetDeepWriteTaskResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDeepWriteTaskResultWithOptions(request, runtime);
     }
 
     /**
@@ -7204,6 +7348,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>流式输出深度写作事件</p>
+     * 
+     * @param request RunDeepWritingRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RunDeepWritingResponse
+     */
+    public RunDeepWritingResponse runDeepWritingWithOptions(RunDeepWritingRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.cursor)) {
+            body.put("Cursor", request.cursor);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RunDeepWriting"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RunDeepWritingResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>流式输出深度写作事件</p>
+     * 
+     * @param request RunDeepWritingRequest
+     * @return RunDeepWritingResponse
+     */
+    public RunDeepWritingResponse runDeepWriting(RunDeepWritingRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.runDeepWritingWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>妙读脑图生成接口</p>
      * 
      * @param request RunDocBrainmapRequest
@@ -9718,6 +9914,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SubmitCustomTopicSelectionPerspectiveAnalysisTaskResponse submitCustomTopicSelectionPerspectiveAnalysisTask(SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.submitCustomTopicSelectionPerspectiveAnalysisTaskWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交深度写作任务</p>
+     * 
+     * @param tmpReq SubmitDeepWriteTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SubmitDeepWriteTaskResponse
+     */
+    public SubmitDeepWriteTaskResponse submitDeepWriteTaskWithOptions(SubmitDeepWriteTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        SubmitDeepWriteTaskShrinkRequest request = new SubmitDeepWriteTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.agentOrchestration)) {
+            request.agentOrchestrationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.agentOrchestration, "AgentOrchestration", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.files)) {
+            request.filesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.files, "Files", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentOrchestrationShrink)) {
+            query.put("AgentOrchestration", request.agentOrchestrationShrink);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filesShrink)) {
+            body.put("Files", request.filesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.input)) {
+            body.put("Input", request.input);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instructions)) {
+            body.put("Instructions", request.instructions);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SubmitDeepWriteTask"),
+            new TeaPair("version", "2023-08-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SubmitDeepWriteTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提交深度写作任务</p>
+     * 
+     * @param request SubmitDeepWriteTaskRequest
+     * @return SubmitDeepWriteTaskResponse
+     */
+    public SubmitDeepWriteTaskResponse submitDeepWriteTask(SubmitDeepWriteTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.submitDeepWriteTaskWithOptions(request, runtime);
     }
 
     /**
