@@ -102,6 +102,9 @@ public class InitFaceVerifyRequest extends TeaModel {
     @NameInMap("Model")
     public String model;
 
+    @NameInMap("NeedMultiFaceCheck")
+    public String needMultiFaceCheck;
+
     /**
      * <strong>example:</strong>
      * <p>cn-shanghai-aliyun-cloudauth-xxxxx</p>
@@ -354,6 +357,14 @@ public class InitFaceVerifyRequest extends TeaModel {
     }
     public String getModel() {
         return this.model;
+    }
+
+    public InitFaceVerifyRequest setNeedMultiFaceCheck(String needMultiFaceCheck) {
+        this.needMultiFaceCheck = needMultiFaceCheck;
+        return this;
+    }
+    public String getNeedMultiFaceCheck() {
+        return this.needMultiFaceCheck;
     }
 
     public InitFaceVerifyRequest setOssBucketName(String ossBucketName) {

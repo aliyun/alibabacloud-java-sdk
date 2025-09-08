@@ -2470,6 +2470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Mode", request.mode);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.needMultiFaceCheck)) {
+            query.put("NeedMultiFaceCheck", request.needMultiFaceCheck);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.ossBucketName)) {
             query.put("OssBucketName", request.ossBucketName);
         }
