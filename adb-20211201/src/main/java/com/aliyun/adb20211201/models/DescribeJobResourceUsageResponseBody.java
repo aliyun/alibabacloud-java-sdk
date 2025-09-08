@@ -265,6 +265,12 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @NameInMap("JobAcuUsage")
         public java.util.List<DescribeJobResourceUsageResponseBodyDataJobAcuUsage> jobAcuUsage;
 
+        @NameInMap("PageNumber")
+        public Integer pageNumber;
+
+        @NameInMap("PageSize")
+        public Integer pageSize;
+
         /**
          * <p>The start time of the query. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
@@ -273,6 +279,9 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
          */
         @NameInMap("StartTime")
         public String startTime;
+
+        @NameInMap("TotalCount")
+        public Integer totalCount;
 
         public static DescribeJobResourceUsageResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DescribeJobResourceUsageResponseBodyData self = new DescribeJobResourceUsageResponseBodyData();
@@ -303,12 +312,36 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
             return this.jobAcuUsage;
         }
 
+        public DescribeJobResourceUsageResponseBodyData setPageNumber(Integer pageNumber) {
+            this.pageNumber = pageNumber;
+            return this;
+        }
+        public Integer getPageNumber() {
+            return this.pageNumber;
+        }
+
+        public DescribeJobResourceUsageResponseBodyData setPageSize(Integer pageSize) {
+            this.pageSize = pageSize;
+            return this;
+        }
+        public Integer getPageSize() {
+            return this.pageSize;
+        }
+
         public DescribeJobResourceUsageResponseBodyData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
         }
         public String getStartTime() {
             return this.startTime;
+        }
+
+        public DescribeJobResourceUsageResponseBodyData setTotalCount(Integer totalCount) {
+            this.totalCount = totalCount;
+            return this;
+        }
+        public Integer getTotalCount() {
+            return this.totalCount;
         }
 
     }

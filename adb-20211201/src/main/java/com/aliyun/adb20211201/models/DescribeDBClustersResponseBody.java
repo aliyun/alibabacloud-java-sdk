@@ -368,6 +368,12 @@ public class DescribeDBClustersResponseBody extends TeaModel {
     }
 
     public static class DescribeDBClustersResponseBodyItemsDBCluster extends TeaModel {
+        @NameInMap("AINodeNumber")
+        public Integer AINodeNumber;
+
+        @NameInMap("AINodeSpec")
+        public String AINodeSpec;
+
         /**
          * <p>The mode of the cluster. This parameter is returned only for Data Warehouse Edition clusters. Valid values:</p>
          * <ul>
@@ -830,6 +836,22 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         public static DescribeDBClustersResponseBodyItemsDBCluster build(java.util.Map<String, ?> map) throws Exception {
             DescribeDBClustersResponseBodyItemsDBCluster self = new DescribeDBClustersResponseBodyItemsDBCluster();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setAINodeNumber(Integer AINodeNumber) {
+            this.AINodeNumber = AINodeNumber;
+            return this;
+        }
+        public Integer getAINodeNumber() {
+            return this.AINodeNumber;
+        }
+
+        public DescribeDBClustersResponseBodyItemsDBCluster setAINodeSpec(String AINodeSpec) {
+            this.AINodeSpec = AINodeSpec;
+            return this;
+        }
+        public String getAINodeSpec() {
+            return this.AINodeSpec;
         }
 
         public DescribeDBClustersResponseBodyItemsDBCluster setCategory(String category) {
