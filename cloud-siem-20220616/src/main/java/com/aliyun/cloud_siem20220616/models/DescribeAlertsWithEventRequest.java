@@ -4,10 +4,6 @@ package com.aliyun.cloud_siem20220616.models;
 import com.aliyun.tea.*;
 
 public class DescribeAlertsWithEventRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AlertName")
     public String alertName;
 
@@ -20,24 +16,12 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     @NameInMap("AlertTitle")
     public String alertTitle;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AlertType")
     public String alertType;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AssetId")
     public String assetId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("AssetName")
     public String assetName;
 
@@ -58,17 +42,9 @@ public class DescribeAlertsWithEventRequest extends TeaModel {
     @NameInMap("EndTime")
     public Long endTime;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("EntityId")
     public String entityId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>异常连接-TFTP恶意扫描</p>
-     */
     @NameInMap("EntityName")
     public String entityName;
 

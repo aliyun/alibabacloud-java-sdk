@@ -396,9 +396,6 @@ public class DescribeDisposeAndPlaybookResponseBody extends TeaModel {
 
         /**
          * <p>The playbooks that can handle the entity.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>[{&quot;name&quot;:&quot;云安全中心-云服务器安全&quot;,&quot;code&quot;:&quot;1&quot;}]</p>
          */
         @NameInMap("PlaybookList")
         public java.util.List<DescribeDisposeAndPlaybookResponseBodyDataResponseDataPlaybookList> playbookList;
