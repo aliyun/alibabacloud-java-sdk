@@ -45,6 +45,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ExpireSecond", request.expireSecond);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            query.put("ExtraInfo", request.extraInfo);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.integrateId)) {
             query.put("IntegrateId", request.integrateId);
         }

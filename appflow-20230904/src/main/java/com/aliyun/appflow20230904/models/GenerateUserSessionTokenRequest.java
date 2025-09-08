@@ -22,6 +22,9 @@ public class GenerateUserSessionTokenRequest extends TeaModel {
     @NameInMap("ExpireSecond")
     public Long expireSecond;
 
+    @NameInMap("ExtraInfo")
+    public String extraInfo;
+
     /**
      * <p>Integration ID</p>
      * 
@@ -78,6 +81,14 @@ public class GenerateUserSessionTokenRequest extends TeaModel {
     }
     public Long getExpireSecond() {
         return this.expireSecond;
+    }
+
+    public GenerateUserSessionTokenRequest setExtraInfo(String extraInfo) {
+        this.extraInfo = extraInfo;
+        return this;
+    }
+    public String getExtraInfo() {
+        return this.extraInfo;
     }
 
     public GenerateUserSessionTokenRequest setIntegrateId(String integrateId) {
