@@ -569,6 +569,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>凭证识别</p>
+     * 
+     * @param request CredentialRecognitionIntlRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CredentialRecognitionIntlResponse
+     */
+    public CredentialRecognitionIntlResponse credentialRecognitionIntlWithOptions(CredentialRecognitionIntlRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.docType)) {
+            query.put("DocType", request.docType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fraudCheck)) {
+            query.put("FraudCheck", request.fraudCheck);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ocrArea)) {
+            query.put("OcrArea", request.ocrArea);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
+            query.put("ProductCode", request.productCode);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureBase64)) {
+            body.put("CredentialOcrPictureBase64", request.credentialOcrPictureBase64);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.credentialOcrPictureUrl)) {
+            body.put("CredentialOcrPictureUrl", request.credentialOcrPictureUrl);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CredentialRecognitionIntl"),
+            new TeaPair("version", "2022-08-09"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CredentialRecognitionIntlResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>凭证识别</p>
+     * 
+     * @param request CredentialRecognitionIntlRequest
+     * @return CredentialRecognitionIntlResponse
+     */
+    public CredentialRecognitionIntlResponse credentialRecognitionIntl(CredentialRecognitionIntlRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.credentialRecognitionIntlWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Input credential image information, perform image quality, tampering, and forgery detection, and return the detection results.</p>
      * 
