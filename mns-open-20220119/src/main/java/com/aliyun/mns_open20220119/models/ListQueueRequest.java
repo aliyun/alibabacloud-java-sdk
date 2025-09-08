@@ -31,6 +31,9 @@ public class ListQueueRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    @NameInMap("QueueType")
+    public String queueType;
+
     /**
      * <p>The tags.</p>
      */
@@ -64,6 +67,14 @@ public class ListQueueRequest extends TeaModel {
     }
     public String getQueueName() {
         return this.queueName;
+    }
+
+    public ListQueueRequest setQueueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+    public String getQueueType() {
+        return this.queueType;
     }
 
     public ListQueueRequest setTag(java.util.List<ListQueueRequestTag> tag) {

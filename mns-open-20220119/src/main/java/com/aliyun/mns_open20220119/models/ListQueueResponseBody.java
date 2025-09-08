@@ -319,6 +319,9 @@ public class ListQueueResponseBody extends TeaModel {
         @NameInMap("QueueName")
         public String queueName;
 
+        @NameInMap("QueueType")
+        public String queueType;
+
         /**
          * <p>The tags added to the resources.</p>
          */
@@ -433,6 +436,14 @@ public class ListQueueResponseBody extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public ListQueueResponseBodyDataPageData setQueueType(String queueType) {
+            this.queueType = queueType;
+            return this;
+        }
+        public String getQueueType() {
+            return this.queueType;
         }
 
         public ListQueueResponseBodyDataPageData setTags(java.util.List<ListQueueResponseBodyDataPageDataTags> tags) {

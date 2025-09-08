@@ -233,6 +233,9 @@ public class ListTopicResponseBody extends TeaModel {
         @NameInMap("TopicName")
         public String topicName;
 
+        @NameInMap("TopicType")
+        public String topicType;
+
         /**
          * <p>The URL of the message topic.</p>
          * 
@@ -317,6 +320,14 @@ public class ListTopicResponseBody extends TeaModel {
         }
         public String getTopicName() {
             return this.topicName;
+        }
+
+        public ListTopicResponseBodyDataPageData setTopicType(String topicType) {
+            this.topicType = topicType;
+            return this;
+        }
+        public String getTopicType() {
+            return this.topicType;
         }
 
         public ListTopicResponseBodyDataPageData setTopicUrl(String topicUrl) {

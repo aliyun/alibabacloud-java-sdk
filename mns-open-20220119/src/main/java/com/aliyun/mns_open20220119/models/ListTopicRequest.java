@@ -37,6 +37,9 @@ public class ListTopicRequest extends TeaModel {
     @NameInMap("TopicName")
     public String topicName;
 
+    @NameInMap("TopicType")
+    public String topicType;
+
     public static ListTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTopicRequest self = new ListTopicRequest();
         return TeaModel.build(map, self);
@@ -72,6 +75,14 @@ public class ListTopicRequest extends TeaModel {
     }
     public String getTopicName() {
         return this.topicName;
+    }
+
+    public ListTopicRequest setTopicType(String topicType) {
+        this.topicType = topicType;
+        return this;
+    }
+    public String getTopicType() {
+        return this.topicType;
     }
 
     public static class ListTopicRequestTag extends TeaModel {

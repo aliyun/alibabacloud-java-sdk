@@ -224,6 +224,9 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         @NameInMap("TopicName")
         public String topicName;
 
+        @NameInMap("TopicType")
+        public String topicType;
+
         public static GetTopicAttributesResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetTopicAttributesResponseBodyData self = new GetTopicAttributesResponseBodyData();
             return TeaModel.build(map, self);
@@ -291,6 +294,14 @@ public class GetTopicAttributesResponseBody extends TeaModel {
         }
         public String getTopicName() {
             return this.topicName;
+        }
+
+        public GetTopicAttributesResponseBodyData setTopicType(String topicType) {
+            this.topicType = topicType;
+            return this;
+        }
+        public String getTopicType() {
+            return this.topicType;
         }
 
     }

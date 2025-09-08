@@ -42,6 +42,9 @@ public class CreateTopicRequest extends TeaModel {
     @NameInMap("TopicName")
     public String topicName;
 
+    @NameInMap("TopicType")
+    public String topicType;
+
     public static CreateTopicRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateTopicRequest self = new CreateTopicRequest();
         return TeaModel.build(map, self);
@@ -77,6 +80,14 @@ public class CreateTopicRequest extends TeaModel {
     }
     public String getTopicName() {
         return this.topicName;
+    }
+
+    public CreateTopicRequest setTopicType(String topicType) {
+        this.topicType = topicType;
+        return this;
+    }
+    public String getTopicType() {
+        return this.topicType;
     }
 
     public static class CreateTopicRequestTag extends TeaModel {

@@ -349,6 +349,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @NameInMap("QueueName")
         public String queueName;
 
+        @NameInMap("QueueType")
+        public String queueType;
+
         /**
          * <p>The tag.</p>
          */
@@ -466,6 +469,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
         public String getQueueName() {
             return this.queueName;
+        }
+
+        public GetQueueAttributesResponseBodyData setQueueType(String queueType) {
+            this.queueType = queueType;
+            return this;
+        }
+        public String getQueueType() {
+            return this.queueType;
         }
 
         public GetQueueAttributesResponseBodyData setTags(java.util.List<GetQueueAttributesResponseBodyDataTags> tags) {

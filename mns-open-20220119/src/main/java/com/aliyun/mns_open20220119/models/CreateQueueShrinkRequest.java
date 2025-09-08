@@ -70,6 +70,9 @@ public class CreateQueueShrinkRequest extends TeaModel {
     @NameInMap("QueueName")
     public String queueName;
 
+    @NameInMap("QueueType")
+    public String queueType;
+
     /**
      * <p>The tags.</p>
      */
@@ -147,6 +150,14 @@ public class CreateQueueShrinkRequest extends TeaModel {
     }
     public String getQueueName() {
         return this.queueName;
+    }
+
+    public CreateQueueShrinkRequest setQueueType(String queueType) {
+        this.queueType = queueType;
+        return this;
+    }
+    public String getQueueType() {
+        return this.queueType;
     }
 
     public CreateQueueShrinkRequest setTag(java.util.List<CreateQueueShrinkRequestTag> tag) {
