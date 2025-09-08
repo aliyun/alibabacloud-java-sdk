@@ -434,6 +434,9 @@ public class DescribeJobResponseBody extends TeaModel {
         @NameInMap("BackoffLimit")
         public Long backoffLimit;
 
+        @NameInMap("BestEffortType")
+        public String bestEffortType;
+
         /**
          * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
          * <pre><code>command:
@@ -1052,6 +1055,14 @@ public class DescribeJobResponseBody extends TeaModel {
         }
         public Long getBackoffLimit() {
             return this.backoffLimit;
+        }
+
+        public DescribeJobResponseBodyData setBestEffortType(String bestEffortType) {
+            this.bestEffortType = bestEffortType;
+            return this;
+        }
+        public String getBestEffortType() {
+            return this.bestEffortType;
         }
 
         public DescribeJobResponseBodyData setCommand(String command) {

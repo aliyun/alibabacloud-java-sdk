@@ -41,6 +41,9 @@ public class UpdateJobRequest extends TeaModel {
     @NameInMap("BackoffLimit")
     public Long backoffLimit;
 
+    @NameInMap("BestEffortType")
+    public String bestEffortType;
+
     /**
      * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
      * <pre><code>command:
@@ -222,6 +225,9 @@ public class UpdateJobRequest extends TeaModel {
      */
     @NameInMap("MountHost")
     public String mountHost;
+
+    @NameInMap("NasConfigs")
+    public String nasConfigs;
 
     /**
      * <p>The ID of the Apsara File Storage NAS file system. If you do not need to modify the NAS configurations when you deploy the application, configure <strong>NasId</strong> only in the first request. If you no longer need to use NAS, leave <strong>NasId</strong> empty in the request.</p>
@@ -530,6 +536,14 @@ public class UpdateJobRequest extends TeaModel {
         return this.backoffLimit;
     }
 
+    public UpdateJobRequest setBestEffortType(String bestEffortType) {
+        this.bestEffortType = bestEffortType;
+        return this;
+    }
+    public String getBestEffortType() {
+        return this.bestEffortType;
+    }
+
     public UpdateJobRequest setCommand(String command) {
         this.command = command;
         return this;
@@ -648,6 +662,14 @@ public class UpdateJobRequest extends TeaModel {
     }
     public String getMountHost() {
         return this.mountHost;
+    }
+
+    public UpdateJobRequest setNasConfigs(String nasConfigs) {
+        this.nasConfigs = nasConfigs;
+        return this;
+    }
+    public String getNasConfigs() {
+        return this.nasConfigs;
     }
 
     public UpdateJobRequest setNasId(String nasId) {

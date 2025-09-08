@@ -311,6 +311,12 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("GpuConfig")
     public String gpuConfig;
 
+    @NameInMap("HeadlessPvtzDiscoverySvc")
+    public String headlessPvtzDiscoverySvc;
+
+    @NameInMap("Html")
+    public String html;
+
     /**
      * <p>The ID of the corresponding Secret.</p>
      * 
@@ -1160,6 +1166,22 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getGpuConfig() {
         return this.gpuConfig;
+    }
+
+    public CreateApplicationShrinkRequest setHeadlessPvtzDiscoverySvc(String headlessPvtzDiscoverySvc) {
+        this.headlessPvtzDiscoverySvc = headlessPvtzDiscoverySvc;
+        return this;
+    }
+    public String getHeadlessPvtzDiscoverySvc() {
+        return this.headlessPvtzDiscoverySvc;
+    }
+
+    public CreateApplicationShrinkRequest setHtml(String html) {
+        this.html = html;
+        return this;
+    }
+    public String getHtml() {
+        return this.html;
     }
 
     public CreateApplicationShrinkRequest setImagePullSecrets(String imagePullSecrets) {

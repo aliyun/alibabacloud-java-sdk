@@ -4,6 +4,9 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class DescribeConfigurationPriceRequest extends TeaModel {
+    @NameInMap("BestEffortType")
+    public String bestEffortType;
+
     /**
      * <p>The CPU specifications that are required for each instance. Unit: millicores. This parameter cannot be set to 0. Valid values:</p>
      * <ul>
@@ -68,6 +71,14 @@ public class DescribeConfigurationPriceRequest extends TeaModel {
     public static DescribeConfigurationPriceRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeConfigurationPriceRequest self = new DescribeConfigurationPriceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeConfigurationPriceRequest setBestEffortType(String bestEffortType) {
+        this.bestEffortType = bestEffortType;
+        return this;
+    }
+    public String getBestEffortType() {
+        return this.bestEffortType;
     }
 
     public DescribeConfigurationPriceRequest setCpu(Integer cpu) {

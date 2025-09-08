@@ -63,6 +63,9 @@ public class CreateJobRequest extends TeaModel {
     @NameInMap("BackoffLimit")
     public Long backoffLimit;
 
+    @NameInMap("BestEffortType")
+    public String bestEffortType;
+
     /**
      * <p>The command that is used to start the image. The command must be an existing executable object in the container. Sample statements:</p>
      * <pre><code>command:
@@ -296,6 +299,9 @@ public class CreateJobRequest extends TeaModel {
      */
     @NameInMap("NamespaceId")
     public String namespaceId;
+
+    @NameInMap("NasConfigs")
+    public String nasConfigs;
 
     /**
      * <p>The ID of the Apsara File Storage NAS file system. After the application is created, you may want to call other operations to manage the application. If you do not want to change the NAS configurations in these subsequent operations, you can omit the <strong>NasId</strong> parameter in the requests. If you want to unmount the NAS file system, you must set the <strong>NasId</strong> values in the subsequent requests to an empty string (&quot;&quot;).</p>
@@ -667,6 +673,14 @@ public class CreateJobRequest extends TeaModel {
         return this.backoffLimit;
     }
 
+    public CreateJobRequest setBestEffortType(String bestEffortType) {
+        this.bestEffortType = bestEffortType;
+        return this;
+    }
+    public String getBestEffortType() {
+        return this.bestEffortType;
+    }
+
     public CreateJobRequest setCommand(String command) {
         this.command = command;
         return this;
@@ -809,6 +823,14 @@ public class CreateJobRequest extends TeaModel {
     }
     public String getNamespaceId() {
         return this.namespaceId;
+    }
+
+    public CreateJobRequest setNasConfigs(String nasConfigs) {
+        this.nasConfigs = nasConfigs;
+        return this;
+    }
+    public String getNasConfigs() {
+        return this.nasConfigs;
     }
 
     public CreateJobRequest setNasId(String nasId) {

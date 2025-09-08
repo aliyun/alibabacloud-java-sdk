@@ -1088,6 +1088,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @NameInMap("ClusterId")
         public String clusterId;
 
+        @NameInMap("CmsServiceId")
+        public String cmsServiceId;
+
         /**
          * <p>The command that is used to start the image. The command must be an existing executable object in the container. Example:</p>
          * <pre><code>
@@ -1294,6 +1297,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
 
         @NameInMap("GpuType")
         public String gpuType;
+
+        @NameInMap("HeadlessPvtzDiscovery")
+        public String headlessPvtzDiscovery;
+
+        @NameInMap("Html")
+        public String html;
 
         /**
          * <p>The ID of the corresponding secret dictionary.</p>
@@ -2065,6 +2074,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             return this.clusterId;
         }
 
+        public DescribeApplicationConfigResponseBodyData setCmsServiceId(String cmsServiceId) {
+            this.cmsServiceId = cmsServiceId;
+            return this;
+        }
+        public String getCmsServiceId() {
+            return this.cmsServiceId;
+        }
+
         public DescribeApplicationConfigResponseBodyData setCommand(String command) {
             this.command = command;
             return this;
@@ -2207,6 +2224,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
         public String getGpuType() {
             return this.gpuType;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setHeadlessPvtzDiscovery(String headlessPvtzDiscovery) {
+            this.headlessPvtzDiscovery = headlessPvtzDiscovery;
+            return this;
+        }
+        public String getHeadlessPvtzDiscovery() {
+            return this.headlessPvtzDiscovery;
+        }
+
+        public DescribeApplicationConfigResponseBodyData setHtml(String html) {
+            this.html = html;
+            return this;
+        }
+        public String getHtml() {
+            return this.html;
         }
 
         public DescribeApplicationConfigResponseBodyData setImagePullSecrets(String imagePullSecrets) {

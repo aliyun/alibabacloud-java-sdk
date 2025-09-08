@@ -515,6 +515,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GpuConfig", request.gpuConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.headlessPvtzDiscoverySvc)) {
+            query.put("HeadlessPvtzDiscoverySvc", request.headlessPvtzDiscoverySvc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.html)) {
+            query.put("Html", request.html);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imagePullSecrets)) {
             query.put("ImagePullSecrets", request.imagePullSecrets);
         }
@@ -1180,6 +1188,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackoffLimit", request.backoffLimit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bestEffortType)) {
+            query.put("BestEffortType", request.bestEffortType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.command)) {
             query.put("Command", request.command);
         }
@@ -1242,6 +1254,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.namespaceId)) {
             query.put("NamespaceId", request.namespaceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nasConfigs)) {
+            query.put("NasConfigs", request.nasConfigs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {
@@ -2613,6 +2629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("GpuConfig", request.gpuConfig);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.html)) {
+            query.put("Html", request.html);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.imagePullSecrets)) {
             query.put("ImagePullSecrets", request.imagePullSecrets);
         }
@@ -3166,6 +3186,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * @param request DescribeApplicationMseServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeApplicationMseServiceResponse
+     */
+    public DescribeApplicationMseServiceResponse describeApplicationMseServiceWithOptions(DescribeApplicationMseServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAhas)) {
+            query.put("EnableAhas", request.enableAhas);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeApplicationMseService"),
+            new TeaPair("version", "2019-05-06"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/pop/v1/sam/app/applicationMseService"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApplicationMseServiceResponse());
+    }
+
+    /**
+     * @param request DescribeApplicationMseServiceRequest
+     * @return DescribeApplicationMseServiceResponse
+     */
+    public DescribeApplicationMseServiceResponse describeApplicationMseService(DescribeApplicationMseServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.describeApplicationMseServiceWithOptions(request, headers, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the Network Load Balancer (NLB) instances bound to an application and their listeners.</p>
      * 
@@ -3561,6 +3626,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeConfigurationPriceResponse describeConfigurationPriceWithOptions(DescribeConfigurationPriceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bestEffortType)) {
+            query.put("BestEffortType", request.bestEffortType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.cpu)) {
             query.put("Cpu", request.cpu);
         }
@@ -8518,6 +8587,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BackoffLimit", request.backoffLimit);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.bestEffortType)) {
+            query.put("BestEffortType", request.bestEffortType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.command)) {
             query.put("Command", request.command);
         }
@@ -8568,6 +8641,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.mountHost)) {
             query.put("MountHost", request.mountHost);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nasConfigs)) {
+            query.put("NasConfigs", request.nasConfigs);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.nasId)) {

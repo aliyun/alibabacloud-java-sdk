@@ -309,6 +309,9 @@ public class DeployApplicationRequest extends TeaModel {
     @NameInMap("GpuConfig")
     public String gpuConfig;
 
+    @NameInMap("Html")
+    public String html;
+
     /**
      * <p>The ID of the corresponding Secret.</p>
      * 
@@ -1191,6 +1194,14 @@ public class DeployApplicationRequest extends TeaModel {
     }
     public String getGpuConfig() {
         return this.gpuConfig;
+    }
+
+    public DeployApplicationRequest setHtml(String html) {
+        this.html = html;
+        return this;
+    }
+    public String getHtml() {
+        return this.html;
     }
 
     public DeployApplicationRequest setImagePullSecrets(String imagePullSecrets) {
