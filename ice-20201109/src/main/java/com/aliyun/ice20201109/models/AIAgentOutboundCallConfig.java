@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentOutboundCallConfig extends TeaModel {
+    @NameInMap("AmbientSoundConfig")
+    public AIAgentOutboundCallConfigAmbientSoundConfig ambientSoundConfig;
+
     @NameInMap("AsrConfig")
     public AIAgentOutboundCallConfigAsrConfig asrConfig;
 
@@ -31,6 +34,14 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     public static AIAgentOutboundCallConfig build(java.util.Map<String, ?> map) throws Exception {
         AIAgentOutboundCallConfig self = new AIAgentOutboundCallConfig();
         return TeaModel.build(map, self);
+    }
+
+    public AIAgentOutboundCallConfig setAmbientSoundConfig(AIAgentOutboundCallConfigAmbientSoundConfig ambientSoundConfig) {
+        this.ambientSoundConfig = ambientSoundConfig;
+        return this;
+    }
+    public AIAgentOutboundCallConfigAmbientSoundConfig getAmbientSoundConfig() {
+        return this.ambientSoundConfig;
     }
 
     public AIAgentOutboundCallConfig setAsrConfig(AIAgentOutboundCallConfigAsrConfig asrConfig) {
@@ -95,6 +106,36 @@ public class AIAgentOutboundCallConfig extends TeaModel {
     }
     public AIAgentOutboundCallConfigTurnDetectionConfig getTurnDetectionConfig() {
         return this.turnDetectionConfig;
+    }
+
+    public static class AIAgentOutboundCallConfigAmbientSoundConfig extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static AIAgentOutboundCallConfigAmbientSoundConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentOutboundCallConfigAmbientSoundConfig self = new AIAgentOutboundCallConfigAmbientSoundConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentOutboundCallConfigAmbientSoundConfig setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public AIAgentOutboundCallConfigAmbientSoundConfig setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
     }
 
     public static class AIAgentOutboundCallConfigAsrConfig extends TeaModel {

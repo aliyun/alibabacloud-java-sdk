@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AIAgentConfig extends TeaModel {
+    @NameInMap("AmbientSoundConfig")
+    public AIAgentConfigAmbientSoundConfig ambientSoundConfig;
+
     @NameInMap("AsrConfig")
     public AIAgentConfigAsrConfig asrConfig;
 
@@ -70,6 +73,14 @@ public class AIAgentConfig extends TeaModel {
     public static AIAgentConfig build(java.util.Map<String, ?> map) throws Exception {
         AIAgentConfig self = new AIAgentConfig();
         return TeaModel.build(map, self);
+    }
+
+    public AIAgentConfig setAmbientSoundConfig(AIAgentConfigAmbientSoundConfig ambientSoundConfig) {
+        this.ambientSoundConfig = ambientSoundConfig;
+        return this;
+    }
+    public AIAgentConfigAmbientSoundConfig getAmbientSoundConfig() {
+        return this.ambientSoundConfig;
     }
 
     public AIAgentConfig setAsrConfig(AIAgentConfigAsrConfig asrConfig) {
@@ -238,6 +249,36 @@ public class AIAgentConfig extends TeaModel {
     }
     public String getWorkflowOverrideParams() {
         return this.workflowOverrideParams;
+    }
+
+    public static class AIAgentConfigAmbientSoundConfig extends TeaModel {
+        @NameInMap("ResourceId")
+        public String resourceId;
+
+        @NameInMap("Volume")
+        public Integer volume;
+
+        public static AIAgentConfigAmbientSoundConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigAmbientSoundConfig self = new AIAgentConfigAmbientSoundConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAmbientSoundConfig setResourceId(String resourceId) {
+            this.resourceId = resourceId;
+            return this;
+        }
+        public String getResourceId() {
+            return this.resourceId;
+        }
+
+        public AIAgentConfigAmbientSoundConfig setVolume(Integer volume) {
+            this.volume = volume;
+            return this;
+        }
+        public Integer getVolume() {
+            return this.volume;
+        }
+
     }
 
     public static class AIAgentConfigAsrConfig extends TeaModel {
@@ -765,6 +806,25 @@ public class AIAgentConfig extends TeaModel {
 
     }
 
+    public static class AIAgentConfigVcrConfigLookAway extends TeaModel {
+        @NameInMap("Enabled")
+        public Boolean enabled;
+
+        public static AIAgentConfigVcrConfigLookAway build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigVcrConfigLookAway self = new AIAgentConfigVcrConfigLookAway();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigVcrConfigLookAway setEnabled(Boolean enabled) {
+            this.enabled = enabled;
+            return this;
+        }
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+    }
+
     public static class AIAgentConfigVcrConfigPeopleCount extends TeaModel {
         @NameInMap("Enabled")
         public Boolean enabled;
@@ -824,6 +884,9 @@ public class AIAgentConfig extends TeaModel {
         @NameInMap("InvalidFrameMotion")
         public AIAgentConfigVcrConfigInvalidFrameMotion invalidFrameMotion;
 
+        @NameInMap("LookAway")
+        public AIAgentConfigVcrConfigLookAway lookAway;
+
         @NameInMap("PeopleCount")
         public AIAgentConfigVcrConfigPeopleCount peopleCount;
 
@@ -857,6 +920,14 @@ public class AIAgentConfig extends TeaModel {
         }
         public AIAgentConfigVcrConfigInvalidFrameMotion getInvalidFrameMotion() {
             return this.invalidFrameMotion;
+        }
+
+        public AIAgentConfigVcrConfig setLookAway(AIAgentConfigVcrConfigLookAway lookAway) {
+            this.lookAway = lookAway;
+            return this;
+        }
+        public AIAgentConfigVcrConfigLookAway getLookAway() {
+            return this.lookAway;
         }
 
         public AIAgentConfigVcrConfig setPeopleCount(AIAgentConfigVcrConfigPeopleCount peopleCount) {

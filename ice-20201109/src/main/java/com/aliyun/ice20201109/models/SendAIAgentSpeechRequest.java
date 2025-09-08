@@ -28,6 +28,9 @@ public class SendAIAgentSpeechRequest extends TeaModel {
     @NameInMap("Text")
     public String text;
 
+    @NameInMap("Type")
+    public String type;
+
     public static SendAIAgentSpeechRequest build(java.util.Map<String, ?> map) throws Exception {
         SendAIAgentSpeechRequest self = new SendAIAgentSpeechRequest();
         return TeaModel.build(map, self);
@@ -55,6 +58,14 @@ public class SendAIAgentSpeechRequest extends TeaModel {
     }
     public String getText() {
         return this.text;
+    }
+
+    public SendAIAgentSpeechRequest setType(String type) {
+        this.type = type;
+        return this;
+    }
+    public String getType() {
+        return this.type;
     }
 
 }

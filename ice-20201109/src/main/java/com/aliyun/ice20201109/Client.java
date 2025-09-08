@@ -3462,7 +3462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a channel in MediaWeaver.</p>
+     * <p>Deletes a channel.</p>
      * 
      * @param request DeleteChannelRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3494,7 +3494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a channel in MediaWeaver.</p>
+     * <p>Deletes a channel.</p>
      * 
      * @param request DeleteChannelRequest
      * @return DeleteChannelResponse
@@ -8814,7 +8814,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a source in MediaWeaver.</p>
+     * <p>Queries a source.</p>
      * 
      * @param request GetSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8854,7 +8854,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a source in MediaWeaver.</p>
+     * <p>Queries a source.</p>
      * 
      * @param request GetSourceRequest
      * @return GetSourceResponse
@@ -15272,6 +15272,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.text)) {
             query.put("Text", request.text);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.type)) {
+            query.put("Type", request.type);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

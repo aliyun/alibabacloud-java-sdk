@@ -47,6 +47,12 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
+        /**
+         * <p>The name of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>insx6-1310</p>
+         */
         @NameInMap("JobName")
         public String jobName;
 
@@ -179,13 +185,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
          * <ul>
          * <li>Inited: The task is initialized.</li>
          * <li>Running</li>
-         * <li>Success</li>
-         * <li>Failed</li>
+         * <li>Complete</li>
+         * <li>Error</li>
          * <li>Cancelled</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Created</p>
+         * <p>Inited</p>
          */
         @NameInMap("State")
         public String state;
