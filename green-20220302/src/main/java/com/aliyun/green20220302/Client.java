@@ -200,6 +200,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询异步多模态检测结果</p>
+     * 
+     * @param request DescribeMultimodalModerationResultRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeMultimodalModerationResultResponse
+     */
+    public DescribeMultimodalModerationResultResponse describeMultimodalModerationResultWithOptions(DescribeMultimodalModerationResultRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.reqId)) {
+            query.put("ReqId", request.reqId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeMultimodalModerationResult"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeMultimodalModerationResultResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询异步多模态检测结果</p>
+     * 
+     * @param request DescribeMultimodalModerationResultRequest
+     * @return DescribeMultimodalModerationResultResponse
+     */
+    public DescribeMultimodalModerationResultResponse describeMultimodalModerationResult(DescribeMultimodalModerationResultRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeMultimodalModerationResultWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询上传token</p>
      * 
      * @param request DescribeUploadTokenRequest
@@ -690,6 +734,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public MultiModalGuardResponse multiModalGuard(MultiModalGuardRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.multiModalGuardWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>多模态-异步检测</p>
+     * 
+     * @param request MultimodalAsyncModerationRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return MultimodalAsyncModerationResponse
+     */
+    public MultimodalAsyncModerationResponse multimodalAsyncModerationWithOptions(MultimodalAsyncModerationRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "MultimodalAsyncModeration"),
+            new TeaPair("version", "2022-03-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new MultimodalAsyncModerationResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>多模态-异步检测</p>
+     * 
+     * @param request MultimodalAsyncModerationRequest
+     * @return MultimodalAsyncModerationResponse
+     */
+    public MultimodalAsyncModerationResponse multimodalAsyncModeration(MultimodalAsyncModerationRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.multimodalAsyncModerationWithOptions(request, runtime);
     }
 
     /**
