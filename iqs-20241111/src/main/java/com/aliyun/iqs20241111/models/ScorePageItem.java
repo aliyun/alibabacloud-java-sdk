@@ -22,6 +22,9 @@ public class ScorePageItem extends TeaModel {
     @NameInMap("displayLink")
     public String displayLink;
 
+    @NameInMap("hostAuthorityScore")
+    public Double hostAuthorityScore;
+
     /**
      * <strong>example:</strong>
      * <p><a href="https://s2.zimgs.cn/ims?kt=url&at=smstruct&key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&tv=400_400">https://s2.zimgs.cn/ims?kt=url&amp;at=smstruct&amp;key=aHR0cHM6Ly9ndy5hbGljZG4uY29tL0wxLzcyMy8xNTY1MjU2NjAwLzJhL2YwL2I0LzJhZjBiNDQxMGI5YmVlMDVjOGVlNGJmODk3MTNkNTFjLnBuZw==&amp;sign=yx:CUlNNQVJQjFrk3Kxt2F3KWhTOFU=&amp;tv=400_400</a></p>
@@ -151,6 +154,14 @@ public class ScorePageItem extends TeaModel {
     }
     public String getDisplayLink() {
         return this.displayLink;
+    }
+
+    public ScorePageItem setHostAuthorityScore(Double hostAuthorityScore) {
+        this.hostAuthorityScore = hostAuthorityScore;
+        return this;
+    }
+    public Double getHostAuthorityScore() {
+        return this.hostAuthorityScore;
     }
 
     public ScorePageItem setHostLogo(String hostLogo) {
