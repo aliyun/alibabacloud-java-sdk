@@ -266,6 +266,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提货券账户检查是否存在</p>
+     * 
+     * @param request CheckAccountExistRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckAccountExistResponse
+     */
+    public CheckAccountExistResponse checkAccountExistWithOptions(CheckAccountExistRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.toUserType)) {
+            body.put("ToUserType", request.toUserType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.transferAccount)) {
+            body.put("TransferAccount", request.transferAccount);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckAccountExist"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckAccountExistResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提货券账户检查是否存在</p>
+     * 
+     * @param request CheckAccountExistRequest
+     * @return CheckAccountExistResponse
+     */
+    public CheckAccountExistResponse checkAccountExist(CheckAccountExistRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.checkAccountExistWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建财务单元</p>
      * 
      * @param tmpReq CreateCostCenterRequest
@@ -2234,6 +2292,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyCostCenterRuleResponse modifyCostCenterRule(ModifyCostCenterRuleRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyCostCenterRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>对客订单支付接口</p>
+     * 
+     * @param request PayOrderRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return PayOrderResponse
+     */
+    public PayOrderResponse payOrderWithOptions(PayOrderRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.buyerId)) {
+            query.put("BuyerId", request.buyerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ecIdAccountIds)) {
+            query.put("EcIdAccountIds", request.ecIdAccountIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nbid)) {
+            query.put("Nbid", request.nbid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderId)) {
+            query.put("OrderId", request.orderId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paySubmitUid)) {
+            query.put("PaySubmitUid", request.paySubmitUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.payerId)) {
+            query.put("PayerId", request.payerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            query.put("Token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "PayOrder"),
+            new TeaPair("version", "2023-09-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PayOrderResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>对客订单支付接口</p>
+     * 
+     * @param request PayOrderRequest
+     * @return PayOrderResponse
+     */
+    public PayOrderResponse payOrder(PayOrderRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.payOrderWithOptions(request, runtime);
     }
 
     /**
