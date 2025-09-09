@@ -97,6 +97,9 @@ public class DescribeModificationPriceRequest extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("RootDiskPerformanceLevel")
+    public String rootDiskPerformanceLevel;
+
     /**
      * <p>The size of the system disk. Unit: GiB.</p>
      * 
@@ -105,6 +108,9 @@ public class DescribeModificationPriceRequest extends TeaModel {
      */
     @NameInMap("RootDiskSizeGib")
     public Integer rootDiskSizeGib;
+
+    @NameInMap("UserDiskPerformanceLevel")
+    public String userDiskPerformanceLevel;
 
     /**
      * <p>The size of the data disk. Unit: GiB.</p>
@@ -184,12 +190,28 @@ public class DescribeModificationPriceRequest extends TeaModel {
         return this.resourceType;
     }
 
+    public DescribeModificationPriceRequest setRootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
+        this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
+        return this;
+    }
+    public String getRootDiskPerformanceLevel() {
+        return this.rootDiskPerformanceLevel;
+    }
+
     public DescribeModificationPriceRequest setRootDiskSizeGib(Integer rootDiskSizeGib) {
         this.rootDiskSizeGib = rootDiskSizeGib;
         return this;
     }
     public Integer getRootDiskSizeGib() {
         return this.rootDiskSizeGib;
+    }
+
+    public DescribeModificationPriceRequest setUserDiskPerformanceLevel(String userDiskPerformanceLevel) {
+        this.userDiskPerformanceLevel = userDiskPerformanceLevel;
+        return this;
+    }
+    public String getUserDiskPerformanceLevel() {
+        return this.userDiskPerformanceLevel;
     }
 
     public DescribeModificationPriceRequest setUserDiskSizeGib(Integer userDiskSizeGib) {

@@ -177,6 +177,9 @@ public class DescribePriceRequest extends TeaModel {
     @NameInMap("RootDiskCategory")
     public String rootDiskCategory;
 
+    @NameInMap("RootDiskPerformanceLevel")
+    public String rootDiskPerformanceLevel;
+
     /**
      * <p>The size of the system disk. Unit: GiB. If you set <code>ResourceType</code> to <code>Desktop</code>, you must specify this parameter.</p>
      * 
@@ -200,6 +203,9 @@ public class DescribePriceRequest extends TeaModel {
      */
     @NameInMap("UserDiskCategory")
     public String userDiskCategory;
+
+    @NameInMap("UserDiskPerformanceLevel")
+    public String userDiskPerformanceLevel;
 
     /**
      * <p>The size of the data disk. Unit: GiB.</p>
@@ -327,6 +333,14 @@ public class DescribePriceRequest extends TeaModel {
         return this.rootDiskCategory;
     }
 
+    public DescribePriceRequest setRootDiskPerformanceLevel(String rootDiskPerformanceLevel) {
+        this.rootDiskPerformanceLevel = rootDiskPerformanceLevel;
+        return this;
+    }
+    public String getRootDiskPerformanceLevel() {
+        return this.rootDiskPerformanceLevel;
+    }
+
     public DescribePriceRequest setRootDiskSizeGib(Integer rootDiskSizeGib) {
         this.rootDiskSizeGib = rootDiskSizeGib;
         return this;
@@ -341,6 +355,14 @@ public class DescribePriceRequest extends TeaModel {
     }
     public String getUserDiskCategory() {
         return this.userDiskCategory;
+    }
+
+    public DescribePriceRequest setUserDiskPerformanceLevel(String userDiskPerformanceLevel) {
+        this.userDiskPerformanceLevel = userDiskPerformanceLevel;
+        return this;
+    }
+    public String getUserDiskPerformanceLevel() {
+        return this.userDiskPerformanceLevel;
     }
 
     public DescribePriceRequest setUserDiskSizeGib(Integer userDiskSizeGib) {

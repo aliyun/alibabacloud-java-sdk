@@ -9620,8 +9620,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceType", request.resourceType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rootDiskPerformanceLevel)) {
+            query.put("RootDiskPerformanceLevel", request.rootDiskPerformanceLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.rootDiskSizeGib)) {
             query.put("RootDiskSizeGib", request.rootDiskSizeGib);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDiskPerformanceLevel)) {
+            query.put("UserDiskPerformanceLevel", request.userDiskPerformanceLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userDiskSizeGib)) {
@@ -10068,12 +10076,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RootDiskCategory", request.rootDiskCategory);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.rootDiskPerformanceLevel)) {
+            query.put("RootDiskPerformanceLevel", request.rootDiskPerformanceLevel);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.rootDiskSizeGib)) {
             query.put("RootDiskSizeGib", request.rootDiskSizeGib);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userDiskCategory)) {
             query.put("UserDiskCategory", request.userDiskCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userDiskPerformanceLevel)) {
+            query.put("UserDiskPerformanceLevel", request.userDiskPerformanceLevel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.userDiskSizeGib)) {
@@ -17829,6 +17845,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.snapshotId)) {
             query.put("SnapshotId", request.snapshotId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.stopDesktop)) {
+            query.put("StopDesktop", request.stopDesktop);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
