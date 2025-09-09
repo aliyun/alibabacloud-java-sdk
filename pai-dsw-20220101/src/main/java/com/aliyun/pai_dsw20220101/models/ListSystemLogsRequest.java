@@ -29,6 +29,9 @@ public class ListSystemLogsRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    @NameInMap("LifecycleId")
+    public String lifecycleId;
+
     /**
      * <strong>example:</strong>
      * <p>Error</p>
@@ -36,26 +39,18 @@ public class ListSystemLogsRequest extends TeaModel {
     @NameInMap("LogLevel")
     public String logLevel;
 
+    @NameInMap("LogRepository")
+    public String logRepository;
+
+    @NameInMap("Offset")
+    public String offset;
+
     /**
      * <strong>example:</strong>
      * <p>ASC</p>
      */
     @NameInMap("Order")
     public String order;
-
-    /**
-     * <strong>example:</strong>
-     * <p>1</p>
-     */
-    @NameInMap("PageNumber")
-    public Long pageNumber;
-
-    /**
-     * <strong>example:</strong>
-     * <p>100</p>
-     */
-    @NameInMap("PageSize")
-    public Long pageSize;
 
     /**
      * <strong>example:</strong>
@@ -77,13 +72,6 @@ public class ListSystemLogsRequest extends TeaModel {
      */
     @NameInMap("SourceRequestId")
     public String sourceRequestId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>NotebookMainContainerLogs</p>
-     */
-    @NameInMap("SourceType")
-    public String sourceType;
 
     public static ListSystemLogsRequest build(java.util.Map<String, ?> map) throws Exception {
         ListSystemLogsRequest self = new ListSystemLogsRequest();
@@ -114,6 +102,14 @@ public class ListSystemLogsRequest extends TeaModel {
         return this.instanceId;
     }
 
+    public ListSystemLogsRequest setLifecycleId(String lifecycleId) {
+        this.lifecycleId = lifecycleId;
+        return this;
+    }
+    public String getLifecycleId() {
+        return this.lifecycleId;
+    }
+
     public ListSystemLogsRequest setLogLevel(String logLevel) {
         this.logLevel = logLevel;
         return this;
@@ -122,28 +118,28 @@ public class ListSystemLogsRequest extends TeaModel {
         return this.logLevel;
     }
 
+    public ListSystemLogsRequest setLogRepository(String logRepository) {
+        this.logRepository = logRepository;
+        return this;
+    }
+    public String getLogRepository() {
+        return this.logRepository;
+    }
+
+    public ListSystemLogsRequest setOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    public String getOffset() {
+        return this.offset;
+    }
+
     public ListSystemLogsRequest setOrder(String order) {
         this.order = order;
         return this;
     }
     public String getOrder() {
         return this.order;
-    }
-
-    public ListSystemLogsRequest setPageNumber(Long pageNumber) {
-        this.pageNumber = pageNumber;
-        return this;
-    }
-    public Long getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public ListSystemLogsRequest setPageSize(Long pageSize) {
-        this.pageSize = pageSize;
-        return this;
-    }
-    public Long getPageSize() {
-        return this.pageSize;
     }
 
     public ListSystemLogsRequest setProblemCategory(String problemCategory) {
@@ -168,14 +164,6 @@ public class ListSystemLogsRequest extends TeaModel {
     }
     public String getSourceRequestId() {
         return this.sourceRequestId;
-    }
-
-    public ListSystemLogsRequest setSourceType(String sourceType) {
-        this.sourceType = sourceType;
-        return this;
-    }
-    public String getSourceType() {
-        return this.sourceType;
     }
 
 }

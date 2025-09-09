@@ -1507,20 +1507,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("InstanceId", request.instanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lifecycleId)) {
+            query.put("LifecycleId", request.lifecycleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.logLevel)) {
             query.put("LogLevel", request.logLevel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.logRepository)) {
+            query.put("LogRepository", request.logRepository);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.offset)) {
+            query.put("Offset", request.offset);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
-            query.put("PageNumber", request.pageNumber);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
-            query.put("PageSize", request.pageSize);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.problemCategory)) {
@@ -1533,10 +1537,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceRequestId)) {
             query.put("SourceRequestId", request.sourceRequestId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.sourceType)) {
-            query.put("SourceType", request.sourceType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -4,19 +4,23 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class ListSystemLogsResponseBody extends TeaModel {
+    @NameInMap("Offset")
+    public String offset;
+
     @NameInMap("SystemLogs")
     public java.util.List<ListSystemLogsResponseBodySystemLogs> systemLogs;
-
-    /**
-     * <strong>example:</strong>
-     * <p>10</p>
-     */
-    @NameInMap("TotalCount")
-    public Long totalCount;
 
     public static ListSystemLogsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         ListSystemLogsResponseBody self = new ListSystemLogsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public ListSystemLogsResponseBody setOffset(String offset) {
+        this.offset = offset;
+        return this;
+    }
+    public String getOffset() {
+        return this.offset;
     }
 
     public ListSystemLogsResponseBody setSystemLogs(java.util.List<ListSystemLogsResponseBodySystemLogs> systemLogs) {
@@ -25,14 +29,6 @@ public class ListSystemLogsResponseBody extends TeaModel {
     }
     public java.util.List<ListSystemLogsResponseBodySystemLogs> getSystemLogs() {
         return this.systemLogs;
-    }
-
-    public ListSystemLogsResponseBody setTotalCount(Long totalCount) {
-        this.totalCount = totalCount;
-        return this;
-    }
-    public Long getTotalCount() {
-        return this.totalCount;
     }
 
     public static class ListSystemLogsResponseBodySystemLogs extends TeaModel {
