@@ -418,6 +418,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         @NameInMap("CloudCode")
         public String cloudCode;
 
+        @NameInMap("DetectionRuleId")
+        public String detectionRuleId;
+
         /**
          * <p>The time when the alert was closed.</p>
          * 
@@ -515,6 +518,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         @NameInMap("OccurTime")
         public String occurTime;
 
+        @NameInMap("ProductId")
+        public String productId;
+
         /**
          * <p>The time at which the alert was first generated.</p>
          * 
@@ -539,6 +545,9 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
          */
         @NameInMap("SubUserName")
         public String subUserName;
+
+        @NameInMap("VendorId")
+        public String vendorId;
 
         public static DescribeAlertsWithEntityResponseBodyDataResponseData build(java.util.Map<String, ?> map) throws Exception {
             DescribeAlertsWithEntityResponseBodyDataResponseData self = new DescribeAlertsWithEntityResponseBodyDataResponseData();
@@ -705,6 +714,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             return this.cloudCode;
         }
 
+        public DescribeAlertsWithEntityResponseBodyDataResponseData setDetectionRuleId(String detectionRuleId) {
+            this.detectionRuleId = detectionRuleId;
+            return this;
+        }
+        public String getDetectionRuleId() {
+            return this.detectionRuleId;
+        }
+
         public DescribeAlertsWithEntityResponseBodyDataResponseData setEndTime(String endTime) {
             this.endTime = endTime;
             return this;
@@ -793,6 +810,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
             return this.occurTime;
         }
 
+        public DescribeAlertsWithEntityResponseBodyDataResponseData setProductId(String productId) {
+            this.productId = productId;
+            return this;
+        }
+        public String getProductId() {
+            return this.productId;
+        }
+
         public DescribeAlertsWithEntityResponseBodyDataResponseData setStartTime(String startTime) {
             this.startTime = startTime;
             return this;
@@ -815,6 +840,14 @@ public class DescribeAlertsWithEntityResponseBody extends TeaModel {
         }
         public String getSubUserName() {
             return this.subUserName;
+        }
+
+        public DescribeAlertsWithEntityResponseBodyDataResponseData setVendorId(String vendorId) {
+            this.vendorId = vendorId;
+            return this;
+        }
+        public String getVendorId() {
+            return this.vendorId;
         }
 
     }

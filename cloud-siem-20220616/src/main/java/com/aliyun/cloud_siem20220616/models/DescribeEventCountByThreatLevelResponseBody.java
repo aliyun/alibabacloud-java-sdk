@@ -117,6 +117,9 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         @NameInMap("HighLevelEventNum")
         public Long highLevelEventNum;
 
+        @NameInMap("InfoLevelEventNum")
+        public Long infoLevelEventNum;
+
         /**
          * <p>The number of low-risk events.</p>
          * 
@@ -134,6 +137,9 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
          */
         @NameInMap("MediumLevelEventNum")
         public Long mediumLevelEventNum;
+
+        @NameInMap("SeriousLevelEventNum")
+        public Long seriousLevelEventNum;
 
         /**
          * <p>The number of unhandled events.</p>
@@ -165,6 +171,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             return this.highLevelEventNum;
         }
 
+        public DescribeEventCountByThreatLevelResponseBodyData setInfoLevelEventNum(Long infoLevelEventNum) {
+            this.infoLevelEventNum = infoLevelEventNum;
+            return this;
+        }
+        public Long getInfoLevelEventNum() {
+            return this.infoLevelEventNum;
+        }
+
         public DescribeEventCountByThreatLevelResponseBodyData setLowLevelEventNum(Long lowLevelEventNum) {
             this.lowLevelEventNum = lowLevelEventNum;
             return this;
@@ -179,6 +193,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
         public Long getMediumLevelEventNum() {
             return this.mediumLevelEventNum;
+        }
+
+        public DescribeEventCountByThreatLevelResponseBodyData setSeriousLevelEventNum(Long seriousLevelEventNum) {
+            this.seriousLevelEventNum = seriousLevelEventNum;
+            return this;
+        }
+        public Long getSeriousLevelEventNum() {
+            return this.seriousLevelEventNum;
         }
 
         public DescribeEventCountByThreatLevelResponseBodyData setUndealEventNum(Long undealEventNum) {
