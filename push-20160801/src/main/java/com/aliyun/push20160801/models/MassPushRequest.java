@@ -483,6 +483,15 @@ public class MassPushRequest extends TeaModel {
         @NameInMap("Trim")
         public Boolean trim;
 
+        @NameInMap("androidOppoPrivateContentParameters")
+        public java.util.Map<String, String> androidOppoPrivateContentParameters;
+
+        @NameInMap("androidOppoPrivateMsgTemplateId")
+        public String androidOppoPrivateMsgTemplateId;
+
+        @NameInMap("androidOppoPrivateTitleParameters")
+        public java.util.Map<String, String> androidOppoPrivateTitleParameters;
+
         /**
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -1238,6 +1247,30 @@ public class MassPushRequest extends TeaModel {
         }
         public Boolean getTrim() {
             return this.trim;
+        }
+
+        public MassPushRequestPushTask setAndroidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
+            this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
+            return this;
+        }
+        public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
+            return this.androidOppoPrivateContentParameters;
+        }
+
+        public MassPushRequestPushTask setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
+            this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
+            return this;
+        }
+        public String getAndroidOppoPrivateMsgTemplateId() {
+            return this.androidOppoPrivateMsgTemplateId;
+        }
+
+        public MassPushRequestPushTask setAndroidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
+            this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
+            return this;
+        }
+        public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
+            return this.androidOppoPrivateTitleParameters;
         }
 
         public MassPushRequestPushTask setIOSApnsEnv(String iOSApnsEnv) {

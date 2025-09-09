@@ -3,7 +3,7 @@ package com.aliyun.push20160801.models;
 
 import com.aliyun.tea.*;
 
-public class PushRequest extends TeaModel {
+public class PushShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>com.alibaba.cloudpushdemo.bizactivity</p>
@@ -467,13 +467,13 @@ public class PushRequest extends TeaModel {
     public Boolean trim;
 
     @NameInMap("androidOppoPrivateContentParameters")
-    public java.util.Map<String, String> androidOppoPrivateContentParameters;
+    public String androidOppoPrivateContentParametersShrink;
 
     @NameInMap("androidOppoPrivateMsgTemplateId")
     public String androidOppoPrivateMsgTemplateId;
 
     @NameInMap("androidOppoPrivateTitleParameters")
-    public java.util.Map<String, String> androidOppoPrivateTitleParameters;
+    public String androidOppoPrivateTitleParametersShrink;
 
     /**
      * <strong>example:</strong>
@@ -597,12 +597,12 @@ public class PushRequest extends TeaModel {
     @NameInMap("iOSSubtitle")
     public String iOSSubtitle;
 
-    public static PushRequest build(java.util.Map<String, ?> map) throws Exception {
-        PushRequest self = new PushRequest();
+    public static PushShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        PushShrinkRequest self = new PushShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public PushRequest setAndroidActivity(String androidActivity) {
+    public PushShrinkRequest setAndroidActivity(String androidActivity) {
         this.androidActivity = androidActivity;
         return this;
     }
@@ -610,7 +610,7 @@ public class PushRequest extends TeaModel {
         return this.androidActivity;
     }
 
-    public PushRequest setAndroidBadgeAddNum(Integer androidBadgeAddNum) {
+    public PushShrinkRequest setAndroidBadgeAddNum(Integer androidBadgeAddNum) {
         this.androidBadgeAddNum = androidBadgeAddNum;
         return this;
     }
@@ -618,7 +618,7 @@ public class PushRequest extends TeaModel {
         return this.androidBadgeAddNum;
     }
 
-    public PushRequest setAndroidBadgeClass(String androidBadgeClass) {
+    public PushShrinkRequest setAndroidBadgeClass(String androidBadgeClass) {
         this.androidBadgeClass = androidBadgeClass;
         return this;
     }
@@ -626,7 +626,7 @@ public class PushRequest extends TeaModel {
         return this.androidBadgeClass;
     }
 
-    public PushRequest setAndroidBadgeSetNum(Integer androidBadgeSetNum) {
+    public PushShrinkRequest setAndroidBadgeSetNum(Integer androidBadgeSetNum) {
         this.androidBadgeSetNum = androidBadgeSetNum;
         return this;
     }
@@ -634,7 +634,7 @@ public class PushRequest extends TeaModel {
         return this.androidBadgeSetNum;
     }
 
-    public PushRequest setAndroidBigBody(String androidBigBody) {
+    public PushShrinkRequest setAndroidBigBody(String androidBigBody) {
         this.androidBigBody = androidBigBody;
         return this;
     }
@@ -642,7 +642,7 @@ public class PushRequest extends TeaModel {
         return this.androidBigBody;
     }
 
-    public PushRequest setAndroidBigPictureUrl(String androidBigPictureUrl) {
+    public PushShrinkRequest setAndroidBigPictureUrl(String androidBigPictureUrl) {
         this.androidBigPictureUrl = androidBigPictureUrl;
         return this;
     }
@@ -650,7 +650,7 @@ public class PushRequest extends TeaModel {
         return this.androidBigPictureUrl;
     }
 
-    public PushRequest setAndroidBigTitle(String androidBigTitle) {
+    public PushShrinkRequest setAndroidBigTitle(String androidBigTitle) {
         this.androidBigTitle = androidBigTitle;
         return this;
     }
@@ -658,7 +658,7 @@ public class PushRequest extends TeaModel {
         return this.androidBigTitle;
     }
 
-    public PushRequest setAndroidExtParameters(String androidExtParameters) {
+    public PushShrinkRequest setAndroidExtParameters(String androidExtParameters) {
         this.androidExtParameters = androidExtParameters;
         return this;
     }
@@ -666,7 +666,7 @@ public class PushRequest extends TeaModel {
         return this.androidExtParameters;
     }
 
-    public PushRequest setAndroidHonorTargetUserType(Integer androidHonorTargetUserType) {
+    public PushShrinkRequest setAndroidHonorTargetUserType(Integer androidHonorTargetUserType) {
         this.androidHonorTargetUserType = androidHonorTargetUserType;
         return this;
     }
@@ -674,7 +674,7 @@ public class PushRequest extends TeaModel {
         return this.androidHonorTargetUserType;
     }
 
-    public PushRequest setAndroidHuaweiReceiptId(String androidHuaweiReceiptId) {
+    public PushShrinkRequest setAndroidHuaweiReceiptId(String androidHuaweiReceiptId) {
         this.androidHuaweiReceiptId = androidHuaweiReceiptId;
         return this;
     }
@@ -682,7 +682,7 @@ public class PushRequest extends TeaModel {
         return this.androidHuaweiReceiptId;
     }
 
-    public PushRequest setAndroidHuaweiTargetUserType(Integer androidHuaweiTargetUserType) {
+    public PushShrinkRequest setAndroidHuaweiTargetUserType(Integer androidHuaweiTargetUserType) {
         this.androidHuaweiTargetUserType = androidHuaweiTargetUserType;
         return this;
     }
@@ -690,7 +690,7 @@ public class PushRequest extends TeaModel {
         return this.androidHuaweiTargetUserType;
     }
 
-    public PushRequest setAndroidImageUrl(String androidImageUrl) {
+    public PushShrinkRequest setAndroidImageUrl(String androidImageUrl) {
         this.androidImageUrl = androidImageUrl;
         return this;
     }
@@ -698,7 +698,7 @@ public class PushRequest extends TeaModel {
         return this.androidImageUrl;
     }
 
-    public PushRequest setAndroidInboxBody(String androidInboxBody) {
+    public PushShrinkRequest setAndroidInboxBody(String androidInboxBody) {
         this.androidInboxBody = androidInboxBody;
         return this;
     }
@@ -706,7 +706,7 @@ public class PushRequest extends TeaModel {
         return this.androidInboxBody;
     }
 
-    public PushRequest setAndroidMeizuNoticeMsgType(Integer androidMeizuNoticeMsgType) {
+    public PushShrinkRequest setAndroidMeizuNoticeMsgType(Integer androidMeizuNoticeMsgType) {
         this.androidMeizuNoticeMsgType = androidMeizuNoticeMsgType;
         return this;
     }
@@ -714,7 +714,7 @@ public class PushRequest extends TeaModel {
         return this.androidMeizuNoticeMsgType;
     }
 
-    public PushRequest setAndroidMessageHuaweiCategory(String androidMessageHuaweiCategory) {
+    public PushShrinkRequest setAndroidMessageHuaweiCategory(String androidMessageHuaweiCategory) {
         this.androidMessageHuaweiCategory = androidMessageHuaweiCategory;
         return this;
     }
@@ -722,7 +722,7 @@ public class PushRequest extends TeaModel {
         return this.androidMessageHuaweiCategory;
     }
 
-    public PushRequest setAndroidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
+    public PushShrinkRequest setAndroidMessageHuaweiUrgency(String androidMessageHuaweiUrgency) {
         this.androidMessageHuaweiUrgency = androidMessageHuaweiUrgency;
         return this;
     }
@@ -730,7 +730,7 @@ public class PushRequest extends TeaModel {
         return this.androidMessageHuaweiUrgency;
     }
 
-    public PushRequest setAndroidMessageOppoCategory(String androidMessageOppoCategory) {
+    public PushShrinkRequest setAndroidMessageOppoCategory(String androidMessageOppoCategory) {
         this.androidMessageOppoCategory = androidMessageOppoCategory;
         return this;
     }
@@ -738,7 +738,7 @@ public class PushRequest extends TeaModel {
         return this.androidMessageOppoCategory;
     }
 
-    public PushRequest setAndroidMessageOppoNotifyLevel(Integer androidMessageOppoNotifyLevel) {
+    public PushShrinkRequest setAndroidMessageOppoNotifyLevel(Integer androidMessageOppoNotifyLevel) {
         this.androidMessageOppoNotifyLevel = androidMessageOppoNotifyLevel;
         return this;
     }
@@ -746,7 +746,7 @@ public class PushRequest extends TeaModel {
         return this.androidMessageOppoNotifyLevel;
     }
 
-    public PushRequest setAndroidMessageVivoCategory(String androidMessageVivoCategory) {
+    public PushShrinkRequest setAndroidMessageVivoCategory(String androidMessageVivoCategory) {
         this.androidMessageVivoCategory = androidMessageVivoCategory;
         return this;
     }
@@ -754,7 +754,7 @@ public class PushRequest extends TeaModel {
         return this.androidMessageVivoCategory;
     }
 
-    public PushRequest setAndroidMusic(String androidMusic) {
+    public PushShrinkRequest setAndroidMusic(String androidMusic) {
         this.androidMusic = androidMusic;
         return this;
     }
@@ -762,7 +762,7 @@ public class PushRequest extends TeaModel {
         return this.androidMusic;
     }
 
-    public PushRequest setAndroidNotificationBarPriority(Integer androidNotificationBarPriority) {
+    public PushShrinkRequest setAndroidNotificationBarPriority(Integer androidNotificationBarPriority) {
         this.androidNotificationBarPriority = androidNotificationBarPriority;
         return this;
     }
@@ -770,7 +770,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationBarPriority;
     }
 
-    public PushRequest setAndroidNotificationBarType(Integer androidNotificationBarType) {
+    public PushShrinkRequest setAndroidNotificationBarType(Integer androidNotificationBarType) {
         this.androidNotificationBarType = androidNotificationBarType;
         return this;
     }
@@ -778,7 +778,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationBarType;
     }
 
-    public PushRequest setAndroidNotificationChannel(String androidNotificationChannel) {
+    public PushShrinkRequest setAndroidNotificationChannel(String androidNotificationChannel) {
         this.androidNotificationChannel = androidNotificationChannel;
         return this;
     }
@@ -786,7 +786,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationChannel;
     }
 
-    public PushRequest setAndroidNotificationGroup(String androidNotificationGroup) {
+    public PushShrinkRequest setAndroidNotificationGroup(String androidNotificationGroup) {
         this.androidNotificationGroup = androidNotificationGroup;
         return this;
     }
@@ -794,7 +794,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationGroup;
     }
 
-    public PushRequest setAndroidNotificationHonorChannel(String androidNotificationHonorChannel) {
+    public PushShrinkRequest setAndroidNotificationHonorChannel(String androidNotificationHonorChannel) {
         this.androidNotificationHonorChannel = androidNotificationHonorChannel;
         return this;
     }
@@ -802,7 +802,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationHonorChannel;
     }
 
-    public PushRequest setAndroidNotificationHuaweiChannel(String androidNotificationHuaweiChannel) {
+    public PushShrinkRequest setAndroidNotificationHuaweiChannel(String androidNotificationHuaweiChannel) {
         this.androidNotificationHuaweiChannel = androidNotificationHuaweiChannel;
         return this;
     }
@@ -810,7 +810,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationHuaweiChannel;
     }
 
-    public PushRequest setAndroidNotificationNotifyId(Integer androidNotificationNotifyId) {
+    public PushShrinkRequest setAndroidNotificationNotifyId(Integer androidNotificationNotifyId) {
         this.androidNotificationNotifyId = androidNotificationNotifyId;
         return this;
     }
@@ -818,7 +818,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationNotifyId;
     }
 
-    public PushRequest setAndroidNotificationThreadId(String androidNotificationThreadId) {
+    public PushShrinkRequest setAndroidNotificationThreadId(String androidNotificationThreadId) {
         this.androidNotificationThreadId = androidNotificationThreadId;
         return this;
     }
@@ -826,7 +826,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationThreadId;
     }
 
-    public PushRequest setAndroidNotificationVivoChannel(String androidNotificationVivoChannel) {
+    public PushShrinkRequest setAndroidNotificationVivoChannel(String androidNotificationVivoChannel) {
         this.androidNotificationVivoChannel = androidNotificationVivoChannel;
         return this;
     }
@@ -834,7 +834,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationVivoChannel;
     }
 
-    public PushRequest setAndroidNotificationXiaomiChannel(String androidNotificationXiaomiChannel) {
+    public PushShrinkRequest setAndroidNotificationXiaomiChannel(String androidNotificationXiaomiChannel) {
         this.androidNotificationXiaomiChannel = androidNotificationXiaomiChannel;
         return this;
     }
@@ -842,7 +842,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotificationXiaomiChannel;
     }
 
-    public PushRequest setAndroidNotifyType(String androidNotifyType) {
+    public PushShrinkRequest setAndroidNotifyType(String androidNotifyType) {
         this.androidNotifyType = androidNotifyType;
         return this;
     }
@@ -850,7 +850,7 @@ public class PushRequest extends TeaModel {
         return this.androidNotifyType;
     }
 
-    public PushRequest setAndroidOpenType(String androidOpenType) {
+    public PushShrinkRequest setAndroidOpenType(String androidOpenType) {
         this.androidOpenType = androidOpenType;
         return this;
     }
@@ -858,7 +858,7 @@ public class PushRequest extends TeaModel {
         return this.androidOpenType;
     }
 
-    public PushRequest setAndroidOpenUrl(String androidOpenUrl) {
+    public PushShrinkRequest setAndroidOpenUrl(String androidOpenUrl) {
         this.androidOpenUrl = androidOpenUrl;
         return this;
     }
@@ -866,7 +866,7 @@ public class PushRequest extends TeaModel {
         return this.androidOpenUrl;
     }
 
-    public PushRequest setAndroidPopupActivity(String androidPopupActivity) {
+    public PushShrinkRequest setAndroidPopupActivity(String androidPopupActivity) {
         this.androidPopupActivity = androidPopupActivity;
         return this;
     }
@@ -874,7 +874,7 @@ public class PushRequest extends TeaModel {
         return this.androidPopupActivity;
     }
 
-    public PushRequest setAndroidPopupBody(String androidPopupBody) {
+    public PushShrinkRequest setAndroidPopupBody(String androidPopupBody) {
         this.androidPopupBody = androidPopupBody;
         return this;
     }
@@ -882,7 +882,7 @@ public class PushRequest extends TeaModel {
         return this.androidPopupBody;
     }
 
-    public PushRequest setAndroidPopupTitle(String androidPopupTitle) {
+    public PushShrinkRequest setAndroidPopupTitle(String androidPopupTitle) {
         this.androidPopupTitle = androidPopupTitle;
         return this;
     }
@@ -890,7 +890,7 @@ public class PushRequest extends TeaModel {
         return this.androidPopupTitle;
     }
 
-    public PushRequest setAndroidRemind(Boolean androidRemind) {
+    public PushShrinkRequest setAndroidRemind(Boolean androidRemind) {
         this.androidRemind = androidRemind;
         return this;
     }
@@ -898,7 +898,7 @@ public class PushRequest extends TeaModel {
         return this.androidRemind;
     }
 
-    public PushRequest setAndroidRenderStyle(Integer androidRenderStyle) {
+    public PushShrinkRequest setAndroidRenderStyle(Integer androidRenderStyle) {
         this.androidRenderStyle = androidRenderStyle;
         return this;
     }
@@ -906,7 +906,7 @@ public class PushRequest extends TeaModel {
         return this.androidRenderStyle;
     }
 
-    public PushRequest setAndroidTargetUserType(Integer androidTargetUserType) {
+    public PushShrinkRequest setAndroidTargetUserType(Integer androidTargetUserType) {
         this.androidTargetUserType = androidTargetUserType;
         return this;
     }
@@ -914,7 +914,7 @@ public class PushRequest extends TeaModel {
         return this.androidTargetUserType;
     }
 
-    public PushRequest setAndroidVivoPushMode(Integer androidVivoPushMode) {
+    public PushShrinkRequest setAndroidVivoPushMode(Integer androidVivoPushMode) {
         this.androidVivoPushMode = androidVivoPushMode;
         return this;
     }
@@ -922,7 +922,7 @@ public class PushRequest extends TeaModel {
         return this.androidVivoPushMode;
     }
 
-    public PushRequest setAndroidVivoReceiptId(String androidVivoReceiptId) {
+    public PushShrinkRequest setAndroidVivoReceiptId(String androidVivoReceiptId) {
         this.androidVivoReceiptId = androidVivoReceiptId;
         return this;
     }
@@ -931,7 +931,7 @@ public class PushRequest extends TeaModel {
     }
 
     @Deprecated
-    public PushRequest setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
+    public PushShrinkRequest setAndroidXiaoMiActivity(String androidXiaoMiActivity) {
         this.androidXiaoMiActivity = androidXiaoMiActivity;
         return this;
     }
@@ -940,7 +940,7 @@ public class PushRequest extends TeaModel {
     }
 
     @Deprecated
-    public PushRequest setAndroidXiaoMiNotifyBody(String androidXiaoMiNotifyBody) {
+    public PushShrinkRequest setAndroidXiaoMiNotifyBody(String androidXiaoMiNotifyBody) {
         this.androidXiaoMiNotifyBody = androidXiaoMiNotifyBody;
         return this;
     }
@@ -949,7 +949,7 @@ public class PushRequest extends TeaModel {
     }
 
     @Deprecated
-    public PushRequest setAndroidXiaoMiNotifyTitle(String androidXiaoMiNotifyTitle) {
+    public PushShrinkRequest setAndroidXiaoMiNotifyTitle(String androidXiaoMiNotifyTitle) {
         this.androidXiaoMiNotifyTitle = androidXiaoMiNotifyTitle;
         return this;
     }
@@ -958,7 +958,7 @@ public class PushRequest extends TeaModel {
     }
 
     @Deprecated
-    public PushRequest setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
+    public PushShrinkRequest setAndroidXiaomiBigPictureUrl(String androidXiaomiBigPictureUrl) {
         this.androidXiaomiBigPictureUrl = androidXiaomiBigPictureUrl;
         return this;
     }
@@ -967,7 +967,7 @@ public class PushRequest extends TeaModel {
     }
 
     @Deprecated
-    public PushRequest setAndroidXiaomiImageUrl(String androidXiaomiImageUrl) {
+    public PushShrinkRequest setAndroidXiaomiImageUrl(String androidXiaomiImageUrl) {
         this.androidXiaomiImageUrl = androidXiaomiImageUrl;
         return this;
     }
@@ -975,7 +975,7 @@ public class PushRequest extends TeaModel {
         return this.androidXiaomiImageUrl;
     }
 
-    public PushRequest setAppKey(Long appKey) {
+    public PushShrinkRequest setAppKey(Long appKey) {
         this.appKey = appKey;
         return this;
     }
@@ -983,7 +983,7 @@ public class PushRequest extends TeaModel {
         return this.appKey;
     }
 
-    public PushRequest setBody(String body) {
+    public PushShrinkRequest setBody(String body) {
         this.body = body;
         return this;
     }
@@ -991,7 +991,7 @@ public class PushRequest extends TeaModel {
         return this.body;
     }
 
-    public PushRequest setDeviceType(String deviceType) {
+    public PushShrinkRequest setDeviceType(String deviceType) {
         this.deviceType = deviceType;
         return this;
     }
@@ -999,7 +999,7 @@ public class PushRequest extends TeaModel {
         return this.deviceType;
     }
 
-    public PushRequest setExpireTime(String expireTime) {
+    public PushShrinkRequest setExpireTime(String expireTime) {
         this.expireTime = expireTime;
         return this;
     }
@@ -1007,7 +1007,7 @@ public class PushRequest extends TeaModel {
         return this.expireTime;
     }
 
-    public PushRequest setHarmonyAction(String harmonyAction) {
+    public PushShrinkRequest setHarmonyAction(String harmonyAction) {
         this.harmonyAction = harmonyAction;
         return this;
     }
@@ -1015,7 +1015,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyAction;
     }
 
-    public PushRequest setHarmonyActionType(String harmonyActionType) {
+    public PushShrinkRequest setHarmonyActionType(String harmonyActionType) {
         this.harmonyActionType = harmonyActionType;
         return this;
     }
@@ -1023,7 +1023,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyActionType;
     }
 
-    public PushRequest setHarmonyBadgeAddNum(Integer harmonyBadgeAddNum) {
+    public PushShrinkRequest setHarmonyBadgeAddNum(Integer harmonyBadgeAddNum) {
         this.harmonyBadgeAddNum = harmonyBadgeAddNum;
         return this;
     }
@@ -1031,7 +1031,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyBadgeAddNum;
     }
 
-    public PushRequest setHarmonyBadgeSetNum(Integer harmonyBadgeSetNum) {
+    public PushShrinkRequest setHarmonyBadgeSetNum(Integer harmonyBadgeSetNum) {
         this.harmonyBadgeSetNum = harmonyBadgeSetNum;
         return this;
     }
@@ -1039,7 +1039,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyBadgeSetNum;
     }
 
-    public PushRequest setHarmonyCategory(String harmonyCategory) {
+    public PushShrinkRequest setHarmonyCategory(String harmonyCategory) {
         this.harmonyCategory = harmonyCategory;
         return this;
     }
@@ -1047,7 +1047,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyCategory;
     }
 
-    public PushRequest setHarmonyExtParameters(String harmonyExtParameters) {
+    public PushShrinkRequest setHarmonyExtParameters(String harmonyExtParameters) {
         this.harmonyExtParameters = harmonyExtParameters;
         return this;
     }
@@ -1055,7 +1055,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyExtParameters;
     }
 
-    public PushRequest setHarmonyExtensionExtraData(String harmonyExtensionExtraData) {
+    public PushShrinkRequest setHarmonyExtensionExtraData(String harmonyExtensionExtraData) {
         this.harmonyExtensionExtraData = harmonyExtensionExtraData;
         return this;
     }
@@ -1063,7 +1063,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyExtensionExtraData;
     }
 
-    public PushRequest setHarmonyExtensionPush(Boolean harmonyExtensionPush) {
+    public PushShrinkRequest setHarmonyExtensionPush(Boolean harmonyExtensionPush) {
         this.harmonyExtensionPush = harmonyExtensionPush;
         return this;
     }
@@ -1071,7 +1071,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyExtensionPush;
     }
 
-    public PushRequest setHarmonyImageUrl(String harmonyImageUrl) {
+    public PushShrinkRequest setHarmonyImageUrl(String harmonyImageUrl) {
         this.harmonyImageUrl = harmonyImageUrl;
         return this;
     }
@@ -1079,7 +1079,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyImageUrl;
     }
 
-    public PushRequest setHarmonyInboxContent(String harmonyInboxContent) {
+    public PushShrinkRequest setHarmonyInboxContent(String harmonyInboxContent) {
         this.harmonyInboxContent = harmonyInboxContent;
         return this;
     }
@@ -1087,7 +1087,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyInboxContent;
     }
 
-    public PushRequest setHarmonyNotificationSlotType(String harmonyNotificationSlotType) {
+    public PushShrinkRequest setHarmonyNotificationSlotType(String harmonyNotificationSlotType) {
         this.harmonyNotificationSlotType = harmonyNotificationSlotType;
         return this;
     }
@@ -1095,7 +1095,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyNotificationSlotType;
     }
 
-    public PushRequest setHarmonyNotifyId(Integer harmonyNotifyId) {
+    public PushShrinkRequest setHarmonyNotifyId(Integer harmonyNotifyId) {
         this.harmonyNotifyId = harmonyNotifyId;
         return this;
     }
@@ -1103,7 +1103,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyNotifyId;
     }
 
-    public PushRequest setHarmonyReceiptId(String harmonyReceiptId) {
+    public PushShrinkRequest setHarmonyReceiptId(String harmonyReceiptId) {
         this.harmonyReceiptId = harmonyReceiptId;
         return this;
     }
@@ -1111,7 +1111,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyReceiptId;
     }
 
-    public PushRequest setHarmonyRemind(Boolean harmonyRemind) {
+    public PushShrinkRequest setHarmonyRemind(Boolean harmonyRemind) {
         this.harmonyRemind = harmonyRemind;
         return this;
     }
@@ -1119,7 +1119,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyRemind;
     }
 
-    public PushRequest setHarmonyRemindBody(String harmonyRemindBody) {
+    public PushShrinkRequest setHarmonyRemindBody(String harmonyRemindBody) {
         this.harmonyRemindBody = harmonyRemindBody;
         return this;
     }
@@ -1127,7 +1127,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyRemindBody;
     }
 
-    public PushRequest setHarmonyRemindTitle(String harmonyRemindTitle) {
+    public PushShrinkRequest setHarmonyRemindTitle(String harmonyRemindTitle) {
         this.harmonyRemindTitle = harmonyRemindTitle;
         return this;
     }
@@ -1135,7 +1135,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyRemindTitle;
     }
 
-    public PushRequest setHarmonyRenderStyle(String harmonyRenderStyle) {
+    public PushShrinkRequest setHarmonyRenderStyle(String harmonyRenderStyle) {
         this.harmonyRenderStyle = harmonyRenderStyle;
         return this;
     }
@@ -1143,7 +1143,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyRenderStyle;
     }
 
-    public PushRequest setHarmonyTestMessage(Boolean harmonyTestMessage) {
+    public PushShrinkRequest setHarmonyTestMessage(Boolean harmonyTestMessage) {
         this.harmonyTestMessage = harmonyTestMessage;
         return this;
     }
@@ -1151,7 +1151,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyTestMessage;
     }
 
-    public PushRequest setHarmonyUri(String harmonyUri) {
+    public PushShrinkRequest setHarmonyUri(String harmonyUri) {
         this.harmonyUri = harmonyUri;
         return this;
     }
@@ -1159,7 +1159,7 @@ public class PushRequest extends TeaModel {
         return this.harmonyUri;
     }
 
-    public PushRequest setIdempotentToken(String idempotentToken) {
+    public PushShrinkRequest setIdempotentToken(String idempotentToken) {
         this.idempotentToken = idempotentToken;
         return this;
     }
@@ -1167,7 +1167,7 @@ public class PushRequest extends TeaModel {
         return this.idempotentToken;
     }
 
-    public PushRequest setJobKey(String jobKey) {
+    public PushShrinkRequest setJobKey(String jobKey) {
         this.jobKey = jobKey;
         return this;
     }
@@ -1175,7 +1175,7 @@ public class PushRequest extends TeaModel {
         return this.jobKey;
     }
 
-    public PushRequest setPushTime(String pushTime) {
+    public PushShrinkRequest setPushTime(String pushTime) {
         this.pushTime = pushTime;
         return this;
     }
@@ -1183,7 +1183,7 @@ public class PushRequest extends TeaModel {
         return this.pushTime;
     }
 
-    public PushRequest setPushType(String pushType) {
+    public PushShrinkRequest setPushType(String pushType) {
         this.pushType = pushType;
         return this;
     }
@@ -1191,7 +1191,7 @@ public class PushRequest extends TeaModel {
         return this.pushType;
     }
 
-    public PushRequest setSendChannels(String sendChannels) {
+    public PushShrinkRequest setSendChannels(String sendChannels) {
         this.sendChannels = sendChannels;
         return this;
     }
@@ -1200,7 +1200,7 @@ public class PushRequest extends TeaModel {
     }
 
     @Deprecated
-    public PushRequest setSendSpeed(Integer sendSpeed) {
+    public PushShrinkRequest setSendSpeed(Integer sendSpeed) {
         this.sendSpeed = sendSpeed;
         return this;
     }
@@ -1208,7 +1208,7 @@ public class PushRequest extends TeaModel {
         return this.sendSpeed;
     }
 
-    public PushRequest setSmsDelaySecs(Integer smsDelaySecs) {
+    public PushShrinkRequest setSmsDelaySecs(Integer smsDelaySecs) {
         this.smsDelaySecs = smsDelaySecs;
         return this;
     }
@@ -1216,7 +1216,7 @@ public class PushRequest extends TeaModel {
         return this.smsDelaySecs;
     }
 
-    public PushRequest setSmsParams(String smsParams) {
+    public PushShrinkRequest setSmsParams(String smsParams) {
         this.smsParams = smsParams;
         return this;
     }
@@ -1224,7 +1224,7 @@ public class PushRequest extends TeaModel {
         return this.smsParams;
     }
 
-    public PushRequest setSmsSendPolicy(Integer smsSendPolicy) {
+    public PushShrinkRequest setSmsSendPolicy(Integer smsSendPolicy) {
         this.smsSendPolicy = smsSendPolicy;
         return this;
     }
@@ -1232,7 +1232,7 @@ public class PushRequest extends TeaModel {
         return this.smsSendPolicy;
     }
 
-    public PushRequest setSmsSignName(String smsSignName) {
+    public PushShrinkRequest setSmsSignName(String smsSignName) {
         this.smsSignName = smsSignName;
         return this;
     }
@@ -1240,7 +1240,7 @@ public class PushRequest extends TeaModel {
         return this.smsSignName;
     }
 
-    public PushRequest setSmsTemplateName(String smsTemplateName) {
+    public PushShrinkRequest setSmsTemplateName(String smsTemplateName) {
         this.smsTemplateName = smsTemplateName;
         return this;
     }
@@ -1248,7 +1248,7 @@ public class PushRequest extends TeaModel {
         return this.smsTemplateName;
     }
 
-    public PushRequest setStoreOffline(Boolean storeOffline) {
+    public PushShrinkRequest setStoreOffline(Boolean storeOffline) {
         this.storeOffline = storeOffline;
         return this;
     }
@@ -1256,7 +1256,7 @@ public class PushRequest extends TeaModel {
         return this.storeOffline;
     }
 
-    public PushRequest setTarget(String target) {
+    public PushShrinkRequest setTarget(String target) {
         this.target = target;
         return this;
     }
@@ -1264,7 +1264,7 @@ public class PushRequest extends TeaModel {
         return this.target;
     }
 
-    public PushRequest setTargetValue(String targetValue) {
+    public PushShrinkRequest setTargetValue(String targetValue) {
         this.targetValue = targetValue;
         return this;
     }
@@ -1272,7 +1272,7 @@ public class PushRequest extends TeaModel {
         return this.targetValue;
     }
 
-    public PushRequest setTitle(String title) {
+    public PushShrinkRequest setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -1280,7 +1280,7 @@ public class PushRequest extends TeaModel {
         return this.title;
     }
 
-    public PushRequest setTrim(Boolean trim) {
+    public PushShrinkRequest setTrim(Boolean trim) {
         this.trim = trim;
         return this;
     }
@@ -1288,15 +1288,15 @@ public class PushRequest extends TeaModel {
         return this.trim;
     }
 
-    public PushRequest setAndroidOppoPrivateContentParameters(java.util.Map<String, String> androidOppoPrivateContentParameters) {
-        this.androidOppoPrivateContentParameters = androidOppoPrivateContentParameters;
+    public PushShrinkRequest setAndroidOppoPrivateContentParametersShrink(String androidOppoPrivateContentParametersShrink) {
+        this.androidOppoPrivateContentParametersShrink = androidOppoPrivateContentParametersShrink;
         return this;
     }
-    public java.util.Map<String, String> getAndroidOppoPrivateContentParameters() {
-        return this.androidOppoPrivateContentParameters;
+    public String getAndroidOppoPrivateContentParametersShrink() {
+        return this.androidOppoPrivateContentParametersShrink;
     }
 
-    public PushRequest setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
+    public PushShrinkRequest setAndroidOppoPrivateMsgTemplateId(String androidOppoPrivateMsgTemplateId) {
         this.androidOppoPrivateMsgTemplateId = androidOppoPrivateMsgTemplateId;
         return this;
     }
@@ -1304,15 +1304,15 @@ public class PushRequest extends TeaModel {
         return this.androidOppoPrivateMsgTemplateId;
     }
 
-    public PushRequest setAndroidOppoPrivateTitleParameters(java.util.Map<String, String> androidOppoPrivateTitleParameters) {
-        this.androidOppoPrivateTitleParameters = androidOppoPrivateTitleParameters;
+    public PushShrinkRequest setAndroidOppoPrivateTitleParametersShrink(String androidOppoPrivateTitleParametersShrink) {
+        this.androidOppoPrivateTitleParametersShrink = androidOppoPrivateTitleParametersShrink;
         return this;
     }
-    public java.util.Map<String, String> getAndroidOppoPrivateTitleParameters() {
-        return this.androidOppoPrivateTitleParameters;
+    public String getAndroidOppoPrivateTitleParametersShrink() {
+        return this.androidOppoPrivateTitleParametersShrink;
     }
 
-    public PushRequest setIOSApnsEnv(String iOSApnsEnv) {
+    public PushShrinkRequest setIOSApnsEnv(String iOSApnsEnv) {
         this.iOSApnsEnv = iOSApnsEnv;
         return this;
     }
@@ -1320,7 +1320,7 @@ public class PushRequest extends TeaModel {
         return this.iOSApnsEnv;
     }
 
-    public PushRequest setIOSBadge(Integer iOSBadge) {
+    public PushShrinkRequest setIOSBadge(Integer iOSBadge) {
         this.iOSBadge = iOSBadge;
         return this;
     }
@@ -1328,7 +1328,7 @@ public class PushRequest extends TeaModel {
         return this.iOSBadge;
     }
 
-    public PushRequest setIOSBadgeAutoIncrement(Boolean iOSBadgeAutoIncrement) {
+    public PushShrinkRequest setIOSBadgeAutoIncrement(Boolean iOSBadgeAutoIncrement) {
         this.iOSBadgeAutoIncrement = iOSBadgeAutoIncrement;
         return this;
     }
@@ -1336,7 +1336,7 @@ public class PushRequest extends TeaModel {
         return this.iOSBadgeAutoIncrement;
     }
 
-    public PushRequest setIOSExtParameters(String iOSExtParameters) {
+    public PushShrinkRequest setIOSExtParameters(String iOSExtParameters) {
         this.iOSExtParameters = iOSExtParameters;
         return this;
     }
@@ -1344,7 +1344,7 @@ public class PushRequest extends TeaModel {
         return this.iOSExtParameters;
     }
 
-    public PushRequest setIOSInterruptionLevel(String iOSInterruptionLevel) {
+    public PushShrinkRequest setIOSInterruptionLevel(String iOSInterruptionLevel) {
         this.iOSInterruptionLevel = iOSInterruptionLevel;
         return this;
     }
@@ -1352,7 +1352,7 @@ public class PushRequest extends TeaModel {
         return this.iOSInterruptionLevel;
     }
 
-    public PushRequest setIOSLiveActivityAttributes(String iOSLiveActivityAttributes) {
+    public PushShrinkRequest setIOSLiveActivityAttributes(String iOSLiveActivityAttributes) {
         this.iOSLiveActivityAttributes = iOSLiveActivityAttributes;
         return this;
     }
@@ -1360,7 +1360,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityAttributes;
     }
 
-    public PushRequest setIOSLiveActivityAttributesType(String iOSLiveActivityAttributesType) {
+    public PushShrinkRequest setIOSLiveActivityAttributesType(String iOSLiveActivityAttributesType) {
         this.iOSLiveActivityAttributesType = iOSLiveActivityAttributesType;
         return this;
     }
@@ -1368,7 +1368,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityAttributesType;
     }
 
-    public PushRequest setIOSLiveActivityContentState(String iOSLiveActivityContentState) {
+    public PushShrinkRequest setIOSLiveActivityContentState(String iOSLiveActivityContentState) {
         this.iOSLiveActivityContentState = iOSLiveActivityContentState;
         return this;
     }
@@ -1376,7 +1376,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityContentState;
     }
 
-    public PushRequest setIOSLiveActivityDismissalDate(Long iOSLiveActivityDismissalDate) {
+    public PushShrinkRequest setIOSLiveActivityDismissalDate(Long iOSLiveActivityDismissalDate) {
         this.iOSLiveActivityDismissalDate = iOSLiveActivityDismissalDate;
         return this;
     }
@@ -1384,7 +1384,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityDismissalDate;
     }
 
-    public PushRequest setIOSLiveActivityEvent(String iOSLiveActivityEvent) {
+    public PushShrinkRequest setIOSLiveActivityEvent(String iOSLiveActivityEvent) {
         this.iOSLiveActivityEvent = iOSLiveActivityEvent;
         return this;
     }
@@ -1392,7 +1392,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityEvent;
     }
 
-    public PushRequest setIOSLiveActivityId(String iOSLiveActivityId) {
+    public PushShrinkRequest setIOSLiveActivityId(String iOSLiveActivityId) {
         this.iOSLiveActivityId = iOSLiveActivityId;
         return this;
     }
@@ -1400,7 +1400,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityId;
     }
 
-    public PushRequest setIOSLiveActivityStaleDate(Long iOSLiveActivityStaleDate) {
+    public PushShrinkRequest setIOSLiveActivityStaleDate(Long iOSLiveActivityStaleDate) {
         this.iOSLiveActivityStaleDate = iOSLiveActivityStaleDate;
         return this;
     }
@@ -1408,7 +1408,7 @@ public class PushRequest extends TeaModel {
         return this.iOSLiveActivityStaleDate;
     }
 
-    public PushRequest setIOSMusic(String iOSMusic) {
+    public PushShrinkRequest setIOSMusic(String iOSMusic) {
         this.iOSMusic = iOSMusic;
         return this;
     }
@@ -1416,7 +1416,7 @@ public class PushRequest extends TeaModel {
         return this.iOSMusic;
     }
 
-    public PushRequest setIOSMutableContent(Boolean iOSMutableContent) {
+    public PushShrinkRequest setIOSMutableContent(Boolean iOSMutableContent) {
         this.iOSMutableContent = iOSMutableContent;
         return this;
     }
@@ -1424,7 +1424,7 @@ public class PushRequest extends TeaModel {
         return this.iOSMutableContent;
     }
 
-    public PushRequest setIOSNotificationCategory(String iOSNotificationCategory) {
+    public PushShrinkRequest setIOSNotificationCategory(String iOSNotificationCategory) {
         this.iOSNotificationCategory = iOSNotificationCategory;
         return this;
     }
@@ -1432,7 +1432,7 @@ public class PushRequest extends TeaModel {
         return this.iOSNotificationCategory;
     }
 
-    public PushRequest setIOSNotificationCollapseId(String iOSNotificationCollapseId) {
+    public PushShrinkRequest setIOSNotificationCollapseId(String iOSNotificationCollapseId) {
         this.iOSNotificationCollapseId = iOSNotificationCollapseId;
         return this;
     }
@@ -1440,7 +1440,7 @@ public class PushRequest extends TeaModel {
         return this.iOSNotificationCollapseId;
     }
 
-    public PushRequest setIOSNotificationThreadId(String iOSNotificationThreadId) {
+    public PushShrinkRequest setIOSNotificationThreadId(String iOSNotificationThreadId) {
         this.iOSNotificationThreadId = iOSNotificationThreadId;
         return this;
     }
@@ -1448,7 +1448,7 @@ public class PushRequest extends TeaModel {
         return this.iOSNotificationThreadId;
     }
 
-    public PushRequest setIOSRelevanceScore(Double iOSRelevanceScore) {
+    public PushShrinkRequest setIOSRelevanceScore(Double iOSRelevanceScore) {
         this.iOSRelevanceScore = iOSRelevanceScore;
         return this;
     }
@@ -1456,7 +1456,7 @@ public class PushRequest extends TeaModel {
         return this.iOSRelevanceScore;
     }
 
-    public PushRequest setIOSRemind(Boolean iOSRemind) {
+    public PushShrinkRequest setIOSRemind(Boolean iOSRemind) {
         this.iOSRemind = iOSRemind;
         return this;
     }
@@ -1464,7 +1464,7 @@ public class PushRequest extends TeaModel {
         return this.iOSRemind;
     }
 
-    public PushRequest setIOSRemindBody(String iOSRemindBody) {
+    public PushShrinkRequest setIOSRemindBody(String iOSRemindBody) {
         this.iOSRemindBody = iOSRemindBody;
         return this;
     }
@@ -1472,7 +1472,7 @@ public class PushRequest extends TeaModel {
         return this.iOSRemindBody;
     }
 
-    public PushRequest setIOSSilentNotification(Boolean iOSSilentNotification) {
+    public PushShrinkRequest setIOSSilentNotification(Boolean iOSSilentNotification) {
         this.iOSSilentNotification = iOSSilentNotification;
         return this;
     }
@@ -1480,7 +1480,7 @@ public class PushRequest extends TeaModel {
         return this.iOSSilentNotification;
     }
 
-    public PushRequest setIOSSubtitle(String iOSSubtitle) {
+    public PushShrinkRequest setIOSSubtitle(String iOSSubtitle) {
         this.iOSSubtitle = iOSSubtitle;
         return this;
     }
