@@ -128,6 +128,114 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询域名备案信息</p>
+     * 
+     * @param request GetIcpFilingInfoForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIcpFilingInfoForPartnerResponse
+     */
+    public GetIcpFilingInfoForPartnerResponse getIcpFilingInfoForPartnerWithOptions(GetIcpFilingInfoForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domain)) {
+            query.put("Domain", request.domain);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIcpFilingInfoForPartner"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIcpFilingInfoForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询域名备案信息</p>
+     * 
+     * @param request GetIcpFilingInfoForPartnerRequest
+     * @return GetIcpFilingInfoForPartnerResponse
+     */
+    public GetIcpFilingInfoForPartnerResponse getIcpFilingInfoForPartner(GetIcpFilingInfoForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getIcpFilingInfoForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>合作伙伴获取用户SLR角色授权临时凭证</p>
+     * 
+     * @param request GetUserTmpIdentityForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetUserTmpIdentityForPartnerResponse
+     */
+    public GetUserTmpIdentityForPartnerResponse getUserTmpIdentityForPartnerWithOptions(GetUserTmpIdentityForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authPurpose)) {
+            query.put("AuthPurpose", request.authPurpose);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extend)) {
+            query.put("Extend", request.extend);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceLinkedRole)) {
+            query.put("ServiceLinkedRole", request.serviceLinkedRole);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetUserTmpIdentityForPartner"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetUserTmpIdentityForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>合作伙伴获取用户SLR角色授权临时凭证</p>
+     * 
+     * @param request GetUserTmpIdentityForPartnerRequest
+     * @return GetUserTmpIdentityForPartnerResponse
+     */
+    public GetUserTmpIdentityForPartnerResponse getUserTmpIdentityForPartner(GetUserTmpIdentityForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getUserTmpIdentityForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>合作伙伴操作应用</p>
      * 
      * @param request OperateAppInstanceForPartnerRequest
