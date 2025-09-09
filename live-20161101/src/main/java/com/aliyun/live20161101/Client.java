@@ -23440,6 +23440,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取在线频道列表</p>
+     * 
+     * @param request ListRTCLiveRoomsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListRTCLiveRoomsResponse
+     */
+    public ListRTCLiveRoomsResponse listRTCLiveRoomsWithOptions(ListRTCLiveRoomsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNo)) {
+            query.put("PageNo", request.pageNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListRTCLiveRooms"),
+            new TeaPair("version", "2016-11-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListRTCLiveRoomsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取在线频道列表</p>
+     * 
+     * @param request ListRTCLiveRoomsRequest
+     * @return ListRTCLiveRoomsResponse
+     */
+    public ListRTCLiveRoomsResponse listRTCLiveRooms(ListRTCLiveRoomsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listRTCLiveRoomsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation to query the callback records of a subscription to mixed-stream relay events in the last seven days.</p>
      * <h2><a href="#qps-"></a>QPS limit</h2>
