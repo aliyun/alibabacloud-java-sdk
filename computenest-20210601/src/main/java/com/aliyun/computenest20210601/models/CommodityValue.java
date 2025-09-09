@@ -295,9 +295,21 @@ public class CommodityValue extends TeaModel {
         @NameInMap("ModuleAttrs")
         public java.util.List<CommodityValueResultSubOrdersSubOrderModuleInstanceModuleAttrs> moduleAttrs;
 
+        /**
+         * <p>Module English name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>data unit</p>
+         */
         @NameInMap("ModuleNameEn")
         public String moduleNameEn;
 
+        /**
+         * <p>Price Unit English Name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yuan/Month</p>
+         */
         @NameInMap("PriceUnitEn")
         public String priceUnitEn;
 

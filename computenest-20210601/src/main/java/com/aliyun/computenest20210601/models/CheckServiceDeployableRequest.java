@@ -50,6 +50,9 @@ public class CheckServiceDeployableRequest extends TeaModel {
     @NameInMap("ServiceVersion")
     public String serviceVersion;
 
+    @NameInMap("TemplateName")
+    public String templateName;
+
     /**
      * <p>The trial type of the service instance. Valid values:</p>
      * <ul>
@@ -106,6 +109,14 @@ public class CheckServiceDeployableRequest extends TeaModel {
     }
     public String getServiceVersion() {
         return this.serviceVersion;
+    }
+
+    public CheckServiceDeployableRequest setTemplateName(String templateName) {
+        this.templateName = templateName;
+        return this;
+    }
+    public String getTemplateName() {
+        return this.templateName;
     }
 
     public CheckServiceDeployableRequest setTrialType(String trialType) {

@@ -220,9 +220,9 @@ public class GetServiceEstimateCostRequest extends TeaModel {
         /**
          * <p>The unit of the subscription duration. Valid values:</p>
          * <ul>
-         * <li>Year</li>
-         * <li>Month</li>
-         * <li>Day</li>
+         * <li>Year.</li>
+         * <li>Month.</li>
+         * <li>Day.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class GetServiceEstimateCostRequest extends TeaModel {
         public String payPeriodUnit;
 
         /**
-         * <p>Marketplace private offer Id</p>
+         * <p>The PrivateOffer ID of the Alibaba Cloud Marketplace.</p>
          * 
          * <strong>example:</strong>
          * <p>17cde2e8-2f5d-xxxx-xxxx-5120dd215d66</p>

@@ -165,6 +165,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ServiceVersion", request.serviceVersion);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.trialType)) {
             query.put("TrialType", request.trialType);
         }
@@ -878,6 +882,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetBackupResponse getBackup(GetBackupRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getBackupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据指定地域获取可用区列表</p>
+     * 
+     * @param request GetNetworkAvailableZonesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetNetworkAvailableZonesResponse
+     */
+    public GetNetworkAvailableZonesResponse getNetworkAvailableZonesWithOptions(GetNetworkAvailableZonesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.isPoc)) {
+            body.put("IsPoc", request.isPoc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.networkRegionId)) {
+            body.put("NetworkRegionId", request.networkRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.privateVpcConnectionMode)) {
+            body.put("PrivateVpcConnectionMode", request.privateVpcConnectionMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            body.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceEndpointServiceType)) {
+            body.put("ServiceInstanceEndpointServiceType", request.serviceInstanceEndpointServiceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceRegionId)) {
+            body.put("ServiceRegionId", request.serviceRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceVersion)) {
+            body.put("ServiceVersion", request.serviceVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.zoneId)) {
+            body.put("ZoneId", request.zoneId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetNetworkAvailableZones"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetNetworkAvailableZonesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>根据指定地域获取可用区列表</p>
+     * 
+     * @param request GetNetworkAvailableZonesRequest
+     * @return GetNetworkAvailableZonesResponse
+     */
+    public GetNetworkAvailableZonesResponse getNetworkAvailableZones(GetNetworkAvailableZonesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getNetworkAvailableZonesWithOptions(request, runtime);
     }
 
     /**
@@ -2882,5 +2958,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeServiceInstanceResponse upgradeServiceInstance(UpgradeServiceInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeServiceInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验服务实例名称</p>
+     * 
+     * @param request ValidateServiceInstanceNameRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ValidateServiceInstanceNameResponse
+     */
+    public ValidateServiceInstanceNameResponse validateServiceInstanceNameWithOptions(ValidateServiceInstanceNameRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isTrial)) {
+            query.put("IsTrial", request.isTrial);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceId)) {
+            query.put("ServiceId", request.serviceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceInstanceName)) {
+            query.put("ServiceInstanceName", request.serviceInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceVersion)) {
+            query.put("ServiceVersion", request.serviceVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateName)) {
+            query.put("TemplateName", request.templateName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ValidateServiceInstanceName"),
+            new TeaPair("version", "2021-06-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ValidateServiceInstanceNameResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>校验服务实例名称</p>
+     * 
+     * @param request ValidateServiceInstanceNameRequest
+     * @return ValidateServiceInstanceNameResponse
+     */
+    public ValidateServiceInstanceNameResponse validateServiceInstanceName(ValidateServiceInstanceNameRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.validateServiceInstanceNameWithOptions(request, runtime);
     }
 }
