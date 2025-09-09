@@ -132,6 +132,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建kyuubi的token</p>
+     * 
+     * @param request CreateKyuubiTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateKyuubiTokenResponse
+     */
+    public CreateKyuubiTokenResponse createKyuubiTokenWithOptions(String workspaceId, String kyuubiServiceId, CreateKyuubiTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoExpireConfiguration)) {
+            body.put("autoExpireConfiguration", request.autoExpireConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberArns)) {
+            body.put("memberArns", request.memberArns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateKyuubiToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/kyuubiService/" + com.aliyun.openapiutil.Client.getEncodeParam(kyuubiServiceId) + "/token"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateKyuubiTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建kyuubi的token</p>
+     * 
+     * @param request CreateKyuubiTokenRequest
+     * @return CreateKyuubiTokenResponse
+     */
+    public CreateKyuubiTokenResponse createKyuubiToken(String workspaceId, String kyuubiServiceId, CreateKyuubiTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createKyuubiTokenWithOptions(workspaceId, kyuubiServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建Livy compute</p>
      * 
      * @param request CreateLivyComputeRequest
@@ -567,6 +632,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("sqlComputeId", request.sqlComputeId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.taskBizId)) {
+            body.put("taskBizId", request.taskBizId);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
@@ -710,6 +779,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createWorkspaceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除compute的token</p>
+     * 
+     * @param request DeleteKyuubiTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteKyuubiTokenResponse
+     */
+    public DeleteKyuubiTokenResponse deleteKyuubiTokenWithOptions(String workspaceId, String kyuubiServiceId, String tokenId, DeleteKyuubiTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteKyuubiToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/kyuubiService/" + com.aliyun.openapiutil.Client.getEncodeParam(kyuubiServiceId) + "/token/" + com.aliyun.openapiutil.Client.getEncodeParam(tokenId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteKyuubiTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除compute的token</p>
+     * 
+     * @param request DeleteKyuubiTokenRequest
+     * @return DeleteKyuubiTokenResponse
+     */
+    public DeleteKyuubiTokenResponse deleteKyuubiToken(String workspaceId, String kyuubiServiceId, String tokenId, DeleteKyuubiTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteKyuubiTokenWithOptions(workspaceId, kyuubiServiceId, tokenId, request, headers, runtime);
     }
 
     /**
@@ -1022,6 +1138,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.getJobRunWithOptions(workspaceId, jobRunId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取compute的token</p>
+     * 
+     * @param request GetKyuubiTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetKyuubiTokenResponse
+     */
+    public GetKyuubiTokenResponse getKyuubiTokenWithOptions(String workspaceId, String kyuubiServiceId, String tokenId, GetKyuubiTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetKyuubiToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/kyuubiService/" + com.aliyun.openapiutil.Client.getEncodeParam(kyuubiServiceId) + "/token/" + com.aliyun.openapiutil.Client.getEncodeParam(tokenId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetKyuubiTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取compute的token</p>
+     * 
+     * @param request GetKyuubiTokenRequest
+     * @return GetKyuubiTokenResponse
+     */
+    public GetKyuubiTokenResponse getKyuubiToken(String workspaceId, String kyuubiServiceId, String tokenId, GetKyuubiTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getKyuubiTokenWithOptions(workspaceId, kyuubiServiceId, tokenId, request, headers, runtime);
     }
 
     /**
@@ -2645,6 +2808,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.terminateSqlStatementWithOptions(workspaceId, statementId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新kyuubi的token</p>
+     * 
+     * @param request UpdateKyuubiTokenRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateKyuubiTokenResponse
+     */
+    public UpdateKyuubiTokenResponse updateKyuubiTokenWithOptions(String workspaceId, String kyuubiServiceId, String tokenId, UpdateKyuubiTokenRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("regionId", request.regionId);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.autoExpireConfiguration)) {
+            body.put("autoExpireConfiguration", request.autoExpireConfiguration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.memberArns)) {
+            body.put("memberArns", request.memberArns);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
+            body.put("token", request.token);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateKyuubiToken"),
+            new TeaPair("version", "2023-08-08"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/workspaces/" + com.aliyun.openapiutil.Client.getEncodeParam(workspaceId) + "/kyuubiService/" + com.aliyun.openapiutil.Client.getEncodeParam(kyuubiServiceId) + "/token/" + com.aliyun.openapiutil.Client.getEncodeParam(tokenId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateKyuubiTokenResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新kyuubi的token</p>
+     * 
+     * @param request UpdateKyuubiTokenRequest
+     * @return UpdateKyuubiTokenResponse
+     */
+    public UpdateKyuubiTokenResponse updateKyuubiToken(String workspaceId, String kyuubiServiceId, String tokenId, UpdateKyuubiTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateKyuubiTokenWithOptions(workspaceId, kyuubiServiceId, tokenId, request, headers, runtime);
     }
 
     /**

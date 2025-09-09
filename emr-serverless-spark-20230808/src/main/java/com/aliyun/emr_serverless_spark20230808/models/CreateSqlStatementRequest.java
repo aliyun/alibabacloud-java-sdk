@@ -49,6 +49,9 @@ public class CreateSqlStatementRequest extends TeaModel {
     @NameInMap("sqlComputeId")
     public String sqlComputeId;
 
+    @NameInMap("taskBizId")
+    public String taskBizId;
+
     /**
      * <p>The region ID.</p>
      * 
@@ -101,6 +104,14 @@ public class CreateSqlStatementRequest extends TeaModel {
     }
     public String getSqlComputeId() {
         return this.sqlComputeId;
+    }
+
+    public CreateSqlStatementRequest setTaskBizId(String taskBizId) {
+        this.taskBizId = taskBizId;
+        return this;
+    }
+    public String getTaskBizId() {
+        return this.taskBizId;
     }
 
     public CreateSqlStatementRequest setRegionId(String regionId) {
