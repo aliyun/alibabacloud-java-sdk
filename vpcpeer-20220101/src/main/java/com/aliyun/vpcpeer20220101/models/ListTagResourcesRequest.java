@@ -5,6 +5,20 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
+     * <p>Tag Type:</p>
+     * <ul>
+     * <li>All(Default)</li>
+     * <li>Custom</li>
+     * <li>System</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>All</p>
+     */
+    @NameInMap("Category")
+    public String category;
+
+    /**
      * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -64,6 +78,14 @@ public class ListTagResourcesRequest extends TeaModel {
     public static ListTagResourcesRequest build(java.util.Map<String, ?> map) throws Exception {
         ListTagResourcesRequest self = new ListTagResourcesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListTagResourcesRequest setCategory(String category) {
+        this.category = category;
+        return this;
+    }
+    public String getCategory() {
+        return this.category;
     }
 
     public ListTagResourcesRequest setMaxResults(Integer maxResults) {

@@ -114,6 +114,13 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     public String linkType;
 
     /**
+     * <strong>example:</strong>
+     * <p>SWAS</p>
+     */
+    @NameInMap("ManagedService")
+    public String managedService;
+
+    /**
      * <p>The name of the VPC peering connection.</p>
      * 
      * <strong>example:</strong>
@@ -281,6 +288,14 @@ public class GetVpcPeerConnectionAttributeResponseBody extends TeaModel {
     }
     public String getLinkType() {
         return this.linkType;
+    }
+
+    public GetVpcPeerConnectionAttributeResponseBody setManagedService(String managedService) {
+        this.managedService = managedService;
+        return this;
+    }
+    public String getManagedService() {
+        return this.managedService;
     }
 
     public GetVpcPeerConnectionAttributeResponseBody setName(String name) {

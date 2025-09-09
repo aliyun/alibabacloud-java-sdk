@@ -53,6 +53,12 @@ public class AcceptVpcPeerConnectionRequest extends TeaModel {
     @NameInMap("ResourceOwnerAccount")
     public String resourceOwnerAccount;
 
+    /**
+     * <p>The tags.</p>
+     */
+    @NameInMap("Tag")
+    public java.util.List<Tag> tag;
+
     public static AcceptVpcPeerConnectionRequest build(java.util.Map<String, ?> map) throws Exception {
         AcceptVpcPeerConnectionRequest self = new AcceptVpcPeerConnectionRequest();
         return TeaModel.build(map, self);
@@ -96,6 +102,58 @@ public class AcceptVpcPeerConnectionRequest extends TeaModel {
     }
     public String getResourceOwnerAccount() {
         return this.resourceOwnerAccount;
+    }
+
+    public AcceptVpcPeerConnectionRequest setTag(java.util.List<Tag> tag) {
+        this.tag = tag;
+        return this;
+    }
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    public static class Tag extends TeaModel {
+        /**
+         * <p>The tag key. You must specify at least one tag key and at most 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceDept</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The tag value. You must specify at least one tag value and can specify at most 20 tag values. The tag value can be an empty string.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FinanceJoshua</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static Tag build(java.util.Map<String, ?> map) throws Exception {
+            Tag self = new Tag();
+            return TeaModel.build(map, self);
+        }
+
+        public Tag setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public Tag setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }
