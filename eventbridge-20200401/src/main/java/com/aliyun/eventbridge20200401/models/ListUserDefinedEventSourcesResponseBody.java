@@ -465,6 +465,47 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
 
     }
 
+    public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters extends TeaModel {
+        @NameInMap("EventTypes")
+        public java.util.List<String> eventTypes;
+
+        @NameInMap("MatchRules")
+        public Object matchRules;
+
+        @NameInMap("StsRoleArn")
+        public String stsRoleArn;
+
+        public static ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters build(java.util.Map<String, ?> map) throws Exception {
+            ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters self = new ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters setEventTypes(java.util.List<String> eventTypes) {
+            this.eventTypes = eventTypes;
+            return this;
+        }
+        public java.util.List<String> getEventTypes() {
+            return this.eventTypes;
+        }
+
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters setMatchRules(Object matchRules) {
+            this.matchRules = matchRules;
+            return this;
+        }
+        public Object getMatchRules() {
+            return this.matchRules;
+        }
+
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters setStsRoleArn(String stsRoleArn) {
+            this.stsRoleArn = stsRoleArn;
+            return this;
+        }
+        public String getStsRoleArn() {
+            return this.stsRoleArn;
+        }
+
+    }
+
     public static class ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters extends TeaModel {
         /**
          * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
@@ -1026,6 +1067,9 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         @NameInMap("SourceMNSParameters")
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceMNSParameters sourceMNSParameters;
 
+        @NameInMap("SourceOSSEventParameters")
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters sourceOSSEventParameters;
+
         /**
          * <p>The parameters that are returned if Message Queue for RabbitMQ is specified as the event source.</p>
          */
@@ -1135,6 +1179,14 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceMNSParameters getSourceMNSParameters() {
             return this.sourceMNSParameters;
+        }
+
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceList setSourceOSSEventParameters(ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters sourceOSSEventParameters) {
+            this.sourceOSSEventParameters = sourceOSSEventParameters;
+            return this;
+        }
+        public ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceOSSEventParameters getSourceOSSEventParameters() {
+            return this.sourceOSSEventParameters;
         }
 
         public ListUserDefinedEventSourcesResponseBodyDataEventSourceList setSourceRabbitMQParameters(ListUserDefinedEventSourcesResponseBodyDataEventSourceListSourceRabbitMQParameters sourceRabbitMQParameters) {

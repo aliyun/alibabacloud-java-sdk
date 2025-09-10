@@ -295,6 +295,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceMNSParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceMNSParameters, "SourceMNSParameters", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceOSSEventParameters)) {
+            request.sourceOSSEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceOSSEventParameters, "SourceOSSEventParameters", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceRabbitMQParameters)) {
             request.sourceRabbitMQParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
         }
@@ -346,6 +350,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMNSParametersShrink)) {
             body.put("SourceMNSParameters", request.sourceMNSParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceOSSEventParametersShrink)) {
+            body.put("SourceOSSEventParameters", request.sourceOSSEventParametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceRabbitMQParametersShrink)) {
@@ -2685,6 +2693,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.sourceMNSParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceMNSParameters, "SourceMNSParameters", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceOSSEventParameters)) {
+            request.sourceOSSEventParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceOSSEventParameters, "SourceOSSEventParameters", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.sourceRabbitMQParameters)) {
             request.sourceRabbitMQParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sourceRabbitMQParameters, "SourceRabbitMQParameters", "json");
         }
@@ -2736,6 +2748,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceMNSParametersShrink)) {
             body.put("SourceMNSParameters", request.sourceMNSParametersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sourceOSSEventParametersShrink)) {
+            body.put("SourceOSSEventParameters", request.sourceOSSEventParametersShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceRabbitMQParametersShrink)) {

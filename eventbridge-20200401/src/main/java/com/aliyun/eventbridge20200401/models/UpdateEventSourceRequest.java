@@ -75,6 +75,9 @@ public class UpdateEventSourceRequest extends TeaModel {
     @NameInMap("SourceMNSParameters")
     public UpdateEventSourceRequestSourceMNSParameters sourceMNSParameters;
 
+    @NameInMap("SourceOSSEventParameters")
+    public UpdateEventSourceRequestSourceOSSEventParameters sourceOSSEventParameters;
+
     /**
      * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
      */
@@ -174,6 +177,14 @@ public class UpdateEventSourceRequest extends TeaModel {
     }
     public UpdateEventSourceRequestSourceMNSParameters getSourceMNSParameters() {
         return this.sourceMNSParameters;
+    }
+
+    public UpdateEventSourceRequest setSourceOSSEventParameters(UpdateEventSourceRequestSourceOSSEventParameters sourceOSSEventParameters) {
+        this.sourceOSSEventParameters = sourceOSSEventParameters;
+        return this;
+    }
+    public UpdateEventSourceRequestSourceOSSEventParameters getSourceOSSEventParameters() {
+        return this.sourceOSSEventParameters;
     }
 
     public UpdateEventSourceRequest setSourceRabbitMQParameters(UpdateEventSourceRequestSourceRabbitMQParameters sourceRabbitMQParameters) {
@@ -546,6 +557,99 @@ public class UpdateEventSourceRequest extends TeaModel {
         }
         public String getRegionId() {
             return this.regionId;
+        }
+
+    }
+
+    public static class UpdateEventSourceRequestSourceOSSEventParametersMatchRules extends TeaModel {
+        @NameInMap("Suffix")
+        public String suffix;
+
+        @NameInMap("MatchState")
+        public Boolean matchState;
+
+        @NameInMap("Prefix")
+        public String prefix;
+
+        @NameInMap("Name")
+        public String name;
+
+        public static UpdateEventSourceRequestSourceOSSEventParametersMatchRules build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventSourceRequestSourceOSSEventParametersMatchRules self = new UpdateEventSourceRequestSourceOSSEventParametersMatchRules();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParametersMatchRules setSuffix(String suffix) {
+            this.suffix = suffix;
+            return this;
+        }
+        public String getSuffix() {
+            return this.suffix;
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParametersMatchRules setMatchState(Boolean matchState) {
+            this.matchState = matchState;
+            return this;
+        }
+        public Boolean getMatchState() {
+            return this.matchState;
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParametersMatchRules setPrefix(String prefix) {
+            this.prefix = prefix;
+            return this;
+        }
+        public String getPrefix() {
+            return this.prefix;
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParametersMatchRules setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+    }
+
+    public static class UpdateEventSourceRequestSourceOSSEventParameters extends TeaModel {
+        @NameInMap("EventTypes")
+        public java.util.List<String> eventTypes;
+
+        @NameInMap("MatchRules")
+        public java.util.List<java.util.List<UpdateEventSourceRequestSourceOSSEventParametersMatchRules>> matchRules;
+
+        @NameInMap("StsRoleArn")
+        public String stsRoleArn;
+
+        public static UpdateEventSourceRequestSourceOSSEventParameters build(java.util.Map<String, ?> map) throws Exception {
+            UpdateEventSourceRequestSourceOSSEventParameters self = new UpdateEventSourceRequestSourceOSSEventParameters();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParameters setEventTypes(java.util.List<String> eventTypes) {
+            this.eventTypes = eventTypes;
+            return this;
+        }
+        public java.util.List<String> getEventTypes() {
+            return this.eventTypes;
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParameters setMatchRules(java.util.List<java.util.List<UpdateEventSourceRequestSourceOSSEventParametersMatchRules>> matchRules) {
+            this.matchRules = matchRules;
+            return this;
+        }
+        public java.util.List<java.util.List<UpdateEventSourceRequestSourceOSSEventParametersMatchRules>> getMatchRules() {
+            return this.matchRules;
+        }
+
+        public UpdateEventSourceRequestSourceOSSEventParameters setStsRoleArn(String stsRoleArn) {
+            this.stsRoleArn = stsRoleArn;
+            return this;
+        }
+        public String getStsRoleArn() {
+            return this.stsRoleArn;
         }
 
     }

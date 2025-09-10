@@ -75,6 +75,9 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;
 
+    @NameInMap("SourceOSSEventParameters")
+    public String sourceOSSEventParametersShrink;
+
     /**
      * <p>The parameters that are configured if the event source is Message Queue for RabbitMQ.</p>
      */
@@ -174,6 +177,14 @@ public class UpdateEventSourceShrinkRequest extends TeaModel {
     }
     public String getSourceMNSParametersShrink() {
         return this.sourceMNSParametersShrink;
+    }
+
+    public UpdateEventSourceShrinkRequest setSourceOSSEventParametersShrink(String sourceOSSEventParametersShrink) {
+        this.sourceOSSEventParametersShrink = sourceOSSEventParametersShrink;
+        return this;
+    }
+    public String getSourceOSSEventParametersShrink() {
+        return this.sourceOSSEventParametersShrink;
     }
 
     public UpdateEventSourceShrinkRequest setSourceRabbitMQParametersShrink(String sourceRabbitMQParametersShrink) {
