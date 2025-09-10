@@ -92,6 +92,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String id;
 
         /**
+         * <strong>if can be null:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
          * <strong>example:</strong>
          * <p>cn-hangzhou-g-aliyun</p>
          */
@@ -124,6 +131,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getId() {
             return this.id;
+        }
+
+        public DescribeDBInstancesResponseBodyDBInstancesNodes setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
         }
 
         public DescribeDBInstancesResponseBodyDBInstancesNodes setRegionId(String regionId) {
