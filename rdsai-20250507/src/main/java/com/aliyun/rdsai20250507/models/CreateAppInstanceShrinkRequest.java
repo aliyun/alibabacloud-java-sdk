@@ -3,7 +3,7 @@ package com.aliyun.rdsai20250507.models;
 
 import com.aliyun.tea.*;
 
-public class CreateAppInstanceRequest extends TeaModel {
+public class CreateAppInstanceShrinkRequest extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>test-supabase</p>
@@ -26,7 +26,7 @@ public class CreateAppInstanceRequest extends TeaModel {
     public String clientToken;
 
     @NameInMap("DBInstanceConfig")
-    public CreateAppInstanceRequestDBInstanceConfig DBInstanceConfig;
+    public String DBInstanceConfigShrink;
 
     /**
      * <strong>example:</strong>
@@ -87,12 +87,12 @@ public class CreateAppInstanceRequest extends TeaModel {
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
-    public static CreateAppInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateAppInstanceRequest self = new CreateAppInstanceRequest();
+    public static CreateAppInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateAppInstanceShrinkRequest self = new CreateAppInstanceShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateAppInstanceRequest setAppName(String appName) {
+    public CreateAppInstanceShrinkRequest setAppName(String appName) {
         this.appName = appName;
         return this;
     }
@@ -100,7 +100,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.appName;
     }
 
-    public CreateAppInstanceRequest setAppType(String appType) {
+    public CreateAppInstanceShrinkRequest setAppType(String appType) {
         this.appType = appType;
         return this;
     }
@@ -108,7 +108,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.appType;
     }
 
-    public CreateAppInstanceRequest setClientToken(String clientToken) {
+    public CreateAppInstanceShrinkRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
     }
@@ -116,15 +116,15 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.clientToken;
     }
 
-    public CreateAppInstanceRequest setDBInstanceConfig(CreateAppInstanceRequestDBInstanceConfig DBInstanceConfig) {
-        this.DBInstanceConfig = DBInstanceConfig;
+    public CreateAppInstanceShrinkRequest setDBInstanceConfigShrink(String DBInstanceConfigShrink) {
+        this.DBInstanceConfigShrink = DBInstanceConfigShrink;
         return this;
     }
-    public CreateAppInstanceRequestDBInstanceConfig getDBInstanceConfig() {
-        return this.DBInstanceConfig;
+    public String getDBInstanceConfigShrink() {
+        return this.DBInstanceConfigShrink;
     }
 
-    public CreateAppInstanceRequest setDBInstanceName(String DBInstanceName) {
+    public CreateAppInstanceShrinkRequest setDBInstanceName(String DBInstanceName) {
         this.DBInstanceName = DBInstanceName;
         return this;
     }
@@ -132,7 +132,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.DBInstanceName;
     }
 
-    public CreateAppInstanceRequest setDashboardPassword(String dashboardPassword) {
+    public CreateAppInstanceShrinkRequest setDashboardPassword(String dashboardPassword) {
         this.dashboardPassword = dashboardPassword;
         return this;
     }
@@ -140,7 +140,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.dashboardPassword;
     }
 
-    public CreateAppInstanceRequest setDashboardUsername(String dashboardUsername) {
+    public CreateAppInstanceShrinkRequest setDashboardUsername(String dashboardUsername) {
         this.dashboardUsername = dashboardUsername;
         return this;
     }
@@ -148,7 +148,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.dashboardUsername;
     }
 
-    public CreateAppInstanceRequest setDatabasePassword(String databasePassword) {
+    public CreateAppInstanceShrinkRequest setDatabasePassword(String databasePassword) {
         this.databasePassword = databasePassword;
         return this;
     }
@@ -156,7 +156,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.databasePassword;
     }
 
-    public CreateAppInstanceRequest setInstanceClass(String instanceClass) {
+    public CreateAppInstanceShrinkRequest setInstanceClass(String instanceClass) {
         this.instanceClass = instanceClass;
         return this;
     }
@@ -164,7 +164,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.instanceClass;
     }
 
-    public CreateAppInstanceRequest setPublicNetworkAccessEnabled(Boolean publicNetworkAccessEnabled) {
+    public CreateAppInstanceShrinkRequest setPublicNetworkAccessEnabled(Boolean publicNetworkAccessEnabled) {
         this.publicNetworkAccessEnabled = publicNetworkAccessEnabled;
         return this;
     }
@@ -172,7 +172,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.publicNetworkAccessEnabled;
     }
 
-    public CreateAppInstanceRequest setRAGEnabled(Boolean RAGEnabled) {
+    public CreateAppInstanceShrinkRequest setRAGEnabled(Boolean RAGEnabled) {
         this.RAGEnabled = RAGEnabled;
         return this;
     }
@@ -180,7 +180,7 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.RAGEnabled;
     }
 
-    public CreateAppInstanceRequest setRegionId(String regionId) {
+    public CreateAppInstanceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -188,65 +188,12 @@ public class CreateAppInstanceRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateAppInstanceRequest setVSwitchId(String vSwitchId) {
+    public CreateAppInstanceShrinkRequest setVSwitchId(String vSwitchId) {
         this.vSwitchId = vSwitchId;
         return this;
     }
     public String getVSwitchId() {
         return this.vSwitchId;
-    }
-
-    public static class CreateAppInstanceRequestDBInstanceConfig extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>pg.n2.2c.1m</p>
-         */
-        @NameInMap("DBInstanceClass")
-        public String DBInstanceClass;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100</p>
-         */
-        @NameInMap("DBInstanceStorage")
-        public Integer DBInstanceStorage;
-
-        /**
-         * <strong>example:</strong>
-         * <p>Postpaid</p>
-         */
-        @NameInMap("PayType")
-        public String payType;
-
-        public static CreateAppInstanceRequestDBInstanceConfig build(java.util.Map<String, ?> map) throws Exception {
-            CreateAppInstanceRequestDBInstanceConfig self = new CreateAppInstanceRequestDBInstanceConfig();
-            return TeaModel.build(map, self);
-        }
-
-        public CreateAppInstanceRequestDBInstanceConfig setDBInstanceClass(String DBInstanceClass) {
-            this.DBInstanceClass = DBInstanceClass;
-            return this;
-        }
-        public String getDBInstanceClass() {
-            return this.DBInstanceClass;
-        }
-
-        public CreateAppInstanceRequestDBInstanceConfig setDBInstanceStorage(Integer DBInstanceStorage) {
-            this.DBInstanceStorage = DBInstanceStorage;
-            return this;
-        }
-        public Integer getDBInstanceStorage() {
-            return this.DBInstanceStorage;
-        }
-
-        public CreateAppInstanceRequestDBInstanceConfig setPayType(String payType) {
-            this.payType = payType;
-            return this;
-        }
-        public String getPayType() {
-            return this.payType;
-        }
-
     }
 
 }

@@ -30,12 +30,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>创建应用服务实例</p>
      * 
-     * @param request CreateAppInstanceRequest
+     * @param tmpReq CreateAppInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateAppInstanceResponse
      */
-    public CreateAppInstanceResponse createAppInstanceWithOptions(CreateAppInstanceRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateAppInstanceResponse createAppInstanceWithOptions(CreateAppInstanceRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateAppInstanceShrinkRequest request = new CreateAppInstanceShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.DBInstanceConfig)) {
+            request.DBInstanceConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.DBInstanceConfig, "DBInstanceConfig", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.appName)) {
             query.put("AppName", request.appName);
@@ -47,6 +53,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
             query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceConfigShrink)) {
+            query.put("DBInstanceConfig", request.DBInstanceConfigShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
@@ -71,6 +81,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.publicNetworkAccessEnabled)) {
             query.put("PublicNetworkAccessEnabled", request.publicNetworkAccessEnabled);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.RAGEnabled)) {
+            query.put("RAGEnabled", request.RAGEnabled);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
