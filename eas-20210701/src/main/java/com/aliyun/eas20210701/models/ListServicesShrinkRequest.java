@@ -347,6 +347,9 @@ public class ListServicesShrinkRequest extends TeaModel {
     @NameInMap("Sort")
     public String sort;
 
+    @NameInMap("TrafficState")
+    public String trafficState;
+
     /**
      * <p>The workspace ID.</p>
      * 
@@ -544,6 +547,14 @@ public class ListServicesShrinkRequest extends TeaModel {
     }
     public String getSort() {
         return this.sort;
+    }
+
+    public ListServicesShrinkRequest setTrafficState(String trafficState) {
+        this.trafficState = trafficState;
+        return this;
+    }
+    public String getTrafficState() {
+        return this.trafficState;
     }
 
     public ListServicesShrinkRequest setWorkspaceId(String workspaceId) {

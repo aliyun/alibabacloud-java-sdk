@@ -68,6 +68,9 @@ public class CreateServiceCronScalerRequest extends TeaModel {
         @NameInMap("TargetSize")
         public Integer targetSize;
 
+        @NameInMap("TimeZone")
+        public String timeZone;
+
         public static CreateServiceCronScalerRequestScaleJobs build(java.util.Map<String, ?> map) throws Exception {
             CreateServiceCronScalerRequestScaleJobs self = new CreateServiceCronScalerRequestScaleJobs();
             return TeaModel.build(map, self);
@@ -95,6 +98,14 @@ public class CreateServiceCronScalerRequest extends TeaModel {
         }
         public Integer getTargetSize() {
             return this.targetSize;
+        }
+
+        public CreateServiceCronScalerRequestScaleJobs setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
     }

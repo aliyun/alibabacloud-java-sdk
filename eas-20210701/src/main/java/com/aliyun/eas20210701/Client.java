@@ -3256,12 +3256,32 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListResourceInstanceWorkerResponse listResourceInstanceWorkerWithOptions(String ClusterId, String ResourceId, String InstanceName, ListResourceInstanceWorkerRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ready)) {
+            query.put("Ready", request.ready);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceName)) {
+            query.put("ServiceName", request.serviceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("Sort", request.sort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("Status", request.status);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.workerName)) {
@@ -3819,6 +3839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Sort", request.sort);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.trafficState)) {
+            query.put("TrafficState", request.trafficState);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
             query.put("WorkspaceId", request.workspaceId);
         }
@@ -3903,12 +3927,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListVirtualResourceResponse listVirtualResourceWithOptions(ListVirtualResourceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.order)) {
+            query.put("Order", request.order);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
             query.put("PageNumber", request.pageNumber);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
             query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sort)) {
+            query.put("Sort", request.sort);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.virtualResourceId)) {

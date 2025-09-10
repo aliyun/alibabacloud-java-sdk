@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListResourceInstanceWorkerRequest extends TeaModel {
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -22,6 +25,18 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    @NameInMap("Ready")
+    public Boolean ready;
+
+    @NameInMap("ServiceName")
+    public String serviceName;
+
+    @NameInMap("Sort")
+    public String sort;
+
+    @NameInMap("Status")
+    public String status;
+
     /**
      * <p>The worker name.</p>
      * 
@@ -34,6 +49,14 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     public static ListResourceInstanceWorkerRequest build(java.util.Map<String, ?> map) throws Exception {
         ListResourceInstanceWorkerRequest self = new ListResourceInstanceWorkerRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ListResourceInstanceWorkerRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
     }
 
     public ListResourceInstanceWorkerRequest setPageNumber(Integer pageNumber) {
@@ -50,6 +73,38 @@ public class ListResourceInstanceWorkerRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListResourceInstanceWorkerRequest setReady(Boolean ready) {
+        this.ready = ready;
+        return this;
+    }
+    public Boolean getReady() {
+        return this.ready;
+    }
+
+    public ListResourceInstanceWorkerRequest setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+        return this;
+    }
+    public String getServiceName() {
+        return this.serviceName;
+    }
+
+    public ListResourceInstanceWorkerRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
+    }
+
+    public ListResourceInstanceWorkerRequest setStatus(String status) {
+        this.status = status;
+        return this;
+    }
+    public String getStatus() {
+        return this.status;
     }
 
     public ListResourceInstanceWorkerRequest setWorkerName(String workerName) {

@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class ListVirtualResourceRequest extends TeaModel {
+    @NameInMap("Order")
+    public String order;
+
     /**
      * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
@@ -21,6 +24,9 @@ public class ListVirtualResourceRequest extends TeaModel {
      */
     @NameInMap("PageSize")
     public Integer pageSize;
+
+    @NameInMap("Sort")
+    public String sort;
 
     /**
      * <p>The ID of the virtual resource group.</p>
@@ -45,6 +51,14 @@ public class ListVirtualResourceRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ListVirtualResourceRequest setOrder(String order) {
+        this.order = order;
+        return this;
+    }
+    public String getOrder() {
+        return this.order;
+    }
+
     public ListVirtualResourceRequest setPageNumber(Integer pageNumber) {
         this.pageNumber = pageNumber;
         return this;
@@ -59,6 +73,14 @@ public class ListVirtualResourceRequest extends TeaModel {
     }
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    public ListVirtualResourceRequest setSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    public String getSort() {
+        return this.sort;
     }
 
     public ListVirtualResourceRequest setVirtualResourceId(String virtualResourceId) {
