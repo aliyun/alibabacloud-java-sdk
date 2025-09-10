@@ -41,6 +41,9 @@ public class ListClusterNodesRequest extends TeaModel {
     @NameInMap("NodeGroupId")
     public String nodeGroupId;
 
+    @NameInMap("OperatingStates")
+    public java.util.List<String> operatingStates;
+
     /**
      * <p>The resource group ID.</p>
      * 
@@ -91,6 +94,14 @@ public class ListClusterNodesRequest extends TeaModel {
     }
     public String getNodeGroupId() {
         return this.nodeGroupId;
+    }
+
+    public ListClusterNodesRequest setOperatingStates(java.util.List<String> operatingStates) {
+        this.operatingStates = operatingStates;
+        return this;
+    }
+    public java.util.List<String> getOperatingStates() {
+        return this.operatingStates;
     }
 
     public ListClusterNodesRequest setResourceGroupId(String resourceGroupId) {

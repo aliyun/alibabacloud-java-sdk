@@ -134,6 +134,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String nodeId;
 
     /**
+     * <strong>example:</strong>
+     * <p>standard</p>
+     */
+    @NameInMap("NodeType")
+    public String nodeType;
+
+    /**
      * <p>The node status.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -328,6 +335,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getNodeId() {
         return this.nodeId;
+    }
+
+    public DescribeNodeResponseBody setNodeType(String nodeType) {
+        this.nodeType = nodeType;
+        return this;
+    }
+    public String getNodeType() {
+        return this.nodeType;
     }
 
     public DescribeNodeResponseBody setOperatingState(String operatingState) {
