@@ -9,6 +9,7 @@ public class GetPolicyEnableStatusRequest extends TeaModel {
      * <ul>
      * <li>TAG_POLICY: the Tag Policy feature.</li>
      * <li>VERIFY_NO_TAG: the strong verification feature.</li>
+     * <li>TAG_POLICY_NOTIFY: the notification feature that sends notifications for resources found to be non-compliant with the tag policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
