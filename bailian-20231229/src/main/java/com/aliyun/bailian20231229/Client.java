@@ -218,6 +218,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("OssRegionId", request.ossRegionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.overWriteFileByOssKey)) {
+            body.put("OverWriteFileByOssKey", request.overWriteFileByOssKey);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
             body.put("Tags", request.tagsShrink);
         }

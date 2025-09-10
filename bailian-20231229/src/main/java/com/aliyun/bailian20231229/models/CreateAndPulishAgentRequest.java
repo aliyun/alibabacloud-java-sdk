@@ -150,6 +150,9 @@ public class CreateAndPulishAgentRequest extends TeaModel {
         @NameInMap("dialogRound")
         public Integer dialogRound;
 
+        @NameInMap("enable_thinking")
+        public Boolean enableThinking;
+
         @NameInMap("maxTokens")
         public Integer maxTokens;
 
@@ -167,6 +170,14 @@ public class CreateAndPulishAgentRequest extends TeaModel {
         }
         public Integer getDialogRound() {
             return this.dialogRound;
+        }
+
+        public CreateAndPulishAgentRequestApplicationConfigParameters setEnableThinking(Boolean enableThinking) {
+            this.enableThinking = enableThinking;
+            return this;
+        }
+        public Boolean getEnableThinking() {
+            return this.enableThinking;
         }
 
         public CreateAndPulishAgentRequestApplicationConfigParameters setMaxTokens(Integer maxTokens) {

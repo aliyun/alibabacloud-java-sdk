@@ -46,6 +46,9 @@ public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     @NameInMap("OssRegionId")
     public String ossRegionId;
 
+    @NameInMap("OverWriteFileByOssKey")
+    public Boolean overWriteFileByOssKey;
+
     @NameInMap("Tags")
     public String tagsShrink;
 
@@ -92,6 +95,14 @@ public class AddFilesFromAuthorizedOssShrinkRequest extends TeaModel {
     }
     public String getOssRegionId() {
         return this.ossRegionId;
+    }
+
+    public AddFilesFromAuthorizedOssShrinkRequest setOverWriteFileByOssKey(Boolean overWriteFileByOssKey) {
+        this.overWriteFileByOssKey = overWriteFileByOssKey;
+        return this;
+    }
+    public Boolean getOverWriteFileByOssKey() {
+        return this.overWriteFileByOssKey;
     }
 
     public AddFilesFromAuthorizedOssShrinkRequest setTagsShrink(String tagsShrink) {

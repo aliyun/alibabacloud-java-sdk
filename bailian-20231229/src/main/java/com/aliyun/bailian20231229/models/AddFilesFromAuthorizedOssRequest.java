@@ -46,6 +46,9 @@ public class AddFilesFromAuthorizedOssRequest extends TeaModel {
     @NameInMap("OssRegionId")
     public String ossRegionId;
 
+    @NameInMap("OverWriteFileByOssKey")
+    public Boolean overWriteFileByOssKey;
+
     @NameInMap("Tags")
     public java.util.List<String> tags;
 
@@ -92,6 +95,14 @@ public class AddFilesFromAuthorizedOssRequest extends TeaModel {
     }
     public String getOssRegionId() {
         return this.ossRegionId;
+    }
+
+    public AddFilesFromAuthorizedOssRequest setOverWriteFileByOssKey(Boolean overWriteFileByOssKey) {
+        this.overWriteFileByOssKey = overWriteFileByOssKey;
+        return this;
+    }
+    public Boolean getOverWriteFileByOssKey() {
+        return this.overWriteFileByOssKey;
     }
 
     public AddFilesFromAuthorizedOssRequest setTags(java.util.List<String> tags) {
