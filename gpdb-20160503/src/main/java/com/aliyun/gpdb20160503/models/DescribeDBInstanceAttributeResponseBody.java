@@ -389,6 +389,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @NameInMap("ExpireTime")
         public String expireTime;
 
+        @NameInMap("GraphEngineStatus")
+        public String graphEngineStatus;
+
         /**
          * <p>Compute group machine type, with the following values:</p>
          * <ul>
@@ -1056,6 +1059,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getExpireTime() {
             return this.expireTime;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setGraphEngineStatus(String graphEngineStatus) {
+            this.graphEngineStatus = graphEngineStatus;
+            return this;
+        }
+        public String getGraphEngineStatus() {
+            return this.graphEngineStatus;
         }
 
         public DescribeDBInstanceAttributeResponseBodyItemsDBInstanceAttribute setHostType(String hostType) {

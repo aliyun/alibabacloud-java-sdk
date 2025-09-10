@@ -1375,12 +1375,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>Creates a document collection.</p>
      * 
-     * @param request CreateDocumentCollectionRequest
+     * @param tmpReq CreateDocumentCollectionRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return CreateDocumentCollectionResponse
      */
-    public CreateDocumentCollectionResponse createDocumentCollectionWithOptions(CreateDocumentCollectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
+    public CreateDocumentCollectionResponse createDocumentCollectionWithOptions(CreateDocumentCollectionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateDocumentCollectionShrinkRequest request = new CreateDocumentCollectionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entityTypes)) {
+            request.entityTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entityTypes, "EntityTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relationshipTypes)) {
+            request.relationshipTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relationshipTypes, "RelationshipTypes", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
             query.put("Collection", request.collection);
@@ -1398,6 +1408,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("EmbeddingModel", request.embeddingModel);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.enableGraph)) {
+            query.put("EnableGraph", request.enableGraph);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityTypesShrink)) {
+            query.put("EntityTypes", request.entityTypesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.externalStorage)) {
             query.put("ExternalStorage", request.externalStorage);
         }
@@ -1412,6 +1430,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.hnswM)) {
             query.put("HnswM", request.hnswM);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.LLMModel)) {
+            query.put("LLMModel", request.LLMModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.managerAccount)) {
@@ -1452,6 +1478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationshipTypesShrink)) {
+            query.put("RelationshipTypes", request.relationshipTypesShrink);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -12417,6 +12447,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         QueryContentShrinkRequest request = new QueryContentShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.graphSearchArgs)) {
+            request.graphSearchArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.graphSearchArgs, "GraphSearchArgs", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.hybridSearchArgs)) {
             request.hybridSearchArgsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.hybridSearchArgs, "HybridSearchArgs", "json");
         }
@@ -12444,6 +12478,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filter)) {
             query.put("Filter", request.filter);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graphEnhance)) {
+            query.put("GraphEnhance", request.graphEnhance);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.graphSearchArgsShrink)) {
+            query.put("GraphSearchArgs", request.graphSearchArgsShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hybridSearch)) {

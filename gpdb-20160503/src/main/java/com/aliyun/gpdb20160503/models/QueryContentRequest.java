@@ -71,6 +71,12 @@ public class QueryContentRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("GraphEnhance")
+    public Boolean graphEnhance;
+
+    @NameInMap("GraphSearchArgs")
+    public QueryContentRequestGraphSearchArgs graphSearchArgs;
+
     /**
      * <p>Dual recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full text).</p>
      * <p>Available values:</p>
@@ -303,6 +309,22 @@ public class QueryContentRequest extends TeaModel {
         return this.filter;
     }
 
+    public QueryContentRequest setGraphEnhance(Boolean graphEnhance) {
+        this.graphEnhance = graphEnhance;
+        return this;
+    }
+    public Boolean getGraphEnhance() {
+        return this.graphEnhance;
+    }
+
+    public QueryContentRequest setGraphSearchArgs(QueryContentRequestGraphSearchArgs graphSearchArgs) {
+        this.graphSearchArgs = graphSearchArgs;
+        return this;
+    }
+    public QueryContentRequestGraphSearchArgs getGraphSearchArgs() {
+        return this.graphSearchArgs;
+    }
+
     public QueryContentRequest setHybridSearch(String hybridSearch) {
         this.hybridSearch = hybridSearch;
         return this;
@@ -421,6 +443,25 @@ public class QueryContentRequest extends TeaModel {
     }
     public Boolean getUseFullTextRetrieval() {
         return this.useFullTextRetrieval;
+    }
+
+    public static class QueryContentRequestGraphSearchArgs extends TeaModel {
+        @NameInMap("GraphTopK")
+        public Integer graphTopK;
+
+        public static QueryContentRequestGraphSearchArgs build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentRequestGraphSearchArgs self = new QueryContentRequestGraphSearchArgs();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentRequestGraphSearchArgs setGraphTopK(Integer graphTopK) {
+            this.graphTopK = graphTopK;
+            return this;
+        }
+        public Integer getGraphTopK() {
+            return this.graphTopK;
+        }
+
     }
 
 }

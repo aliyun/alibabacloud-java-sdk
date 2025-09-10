@@ -71,6 +71,12 @@ public class QueryContentShrinkRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("GraphEnhance")
+    public Boolean graphEnhance;
+
+    @NameInMap("GraphSearchArgs")
+    public String graphSearchArgsShrink;
+
     /**
      * <p>Dual recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full text).</p>
      * <p>Available values:</p>
@@ -301,6 +307,22 @@ public class QueryContentShrinkRequest extends TeaModel {
     }
     public String getFilter() {
         return this.filter;
+    }
+
+    public QueryContentShrinkRequest setGraphEnhance(Boolean graphEnhance) {
+        this.graphEnhance = graphEnhance;
+        return this;
+    }
+    public Boolean getGraphEnhance() {
+        return this.graphEnhance;
+    }
+
+    public QueryContentShrinkRequest setGraphSearchArgsShrink(String graphSearchArgsShrink) {
+        this.graphSearchArgsShrink = graphSearchArgsShrink;
+        return this;
+    }
+    public String getGraphSearchArgsShrink() {
+        return this.graphSearchArgsShrink;
     }
 
     public QueryContentShrinkRequest setHybridSearch(String hybridSearch) {

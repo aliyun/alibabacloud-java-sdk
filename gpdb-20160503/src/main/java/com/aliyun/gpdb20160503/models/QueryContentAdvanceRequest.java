@@ -71,6 +71,12 @@ public class QueryContentAdvanceRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    @NameInMap("GraphEnhance")
+    public Boolean graphEnhance;
+
+    @NameInMap("GraphSearchArgs")
+    public QueryContentAdvanceRequestGraphSearchArgs graphSearchArgs;
+
     /**
      * <p>Dual recall algorithm, default is empty (i.e., directly compare and sort the scores of vectors and full text).</p>
      * <p>Available values:</p>
@@ -303,6 +309,22 @@ public class QueryContentAdvanceRequest extends TeaModel {
         return this.filter;
     }
 
+    public QueryContentAdvanceRequest setGraphEnhance(Boolean graphEnhance) {
+        this.graphEnhance = graphEnhance;
+        return this;
+    }
+    public Boolean getGraphEnhance() {
+        return this.graphEnhance;
+    }
+
+    public QueryContentAdvanceRequest setGraphSearchArgs(QueryContentAdvanceRequestGraphSearchArgs graphSearchArgs) {
+        this.graphSearchArgs = graphSearchArgs;
+        return this;
+    }
+    public QueryContentAdvanceRequestGraphSearchArgs getGraphSearchArgs() {
+        return this.graphSearchArgs;
+    }
+
     public QueryContentAdvanceRequest setHybridSearch(String hybridSearch) {
         this.hybridSearch = hybridSearch;
         return this;
@@ -421,6 +443,25 @@ public class QueryContentAdvanceRequest extends TeaModel {
     }
     public Boolean getUseFullTextRetrieval() {
         return this.useFullTextRetrieval;
+    }
+
+    public static class QueryContentAdvanceRequestGraphSearchArgs extends TeaModel {
+        @NameInMap("GraphTopK")
+        public Integer graphTopK;
+
+        public static QueryContentAdvanceRequestGraphSearchArgs build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentAdvanceRequestGraphSearchArgs self = new QueryContentAdvanceRequestGraphSearchArgs();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentAdvanceRequestGraphSearchArgs setGraphTopK(Integer graphTopK) {
+            this.graphTopK = graphTopK;
+            return this;
+        }
+        public Integer getGraphTopK() {
+            return this.graphTopK;
+        }
+
     }
 
 }

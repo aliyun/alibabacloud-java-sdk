@@ -16,6 +16,9 @@ public class UpsertChunksResponseBody extends TeaModel {
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
+    @NameInMap("JobId")
+    public String jobId;
+
     /**
      * <p>Return message.</p>
      * 
@@ -58,6 +61,14 @@ public class UpsertChunksResponseBody extends TeaModel {
     }
     public String getEmbeddingTokens() {
         return this.embeddingTokens;
+    }
+
+    public UpsertChunksResponseBody setJobId(String jobId) {
+        this.jobId = jobId;
+        return this;
+    }
+    public String getJobId() {
+        return this.jobId;
     }
 
     public UpsertChunksResponseBody setMessage(String message) {

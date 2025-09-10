@@ -16,6 +16,9 @@ public class QueryContentResponseBody extends TeaModel {
     @NameInMap("EmbeddingTokens")
     public String embeddingTokens;
 
+    @NameInMap("Entities")
+    public QueryContentResponseBodyEntities entities;
+
     /**
      * <p>The retrieved data.</p>
      */
@@ -30,6 +33,9 @@ public class QueryContentResponseBody extends TeaModel {
      */
     @NameInMap("Message")
     public String message;
+
+    @NameInMap("Relations")
+    public QueryContentResponseBodyRelations relations;
 
     /**
      * <p>The request ID.</p>
@@ -78,6 +84,14 @@ public class QueryContentResponseBody extends TeaModel {
         return this.embeddingTokens;
     }
 
+    public QueryContentResponseBody setEntities(QueryContentResponseBodyEntities entities) {
+        this.entities = entities;
+        return this;
+    }
+    public QueryContentResponseBodyEntities getEntities() {
+        return this.entities;
+    }
+
     public QueryContentResponseBody setMatches(QueryContentResponseBodyMatches matches) {
         this.matches = matches;
         return this;
@@ -92,6 +106,14 @@ public class QueryContentResponseBody extends TeaModel {
     }
     public String getMessage() {
         return this.message;
+    }
+
+    public QueryContentResponseBody setRelations(QueryContentResponseBodyRelations relations) {
+        this.relations = relations;
+        return this;
+    }
+    public QueryContentResponseBodyRelations getRelations() {
+        return this.relations;
     }
 
     public QueryContentResponseBody setRequestId(String requestId) {
@@ -124,6 +146,88 @@ public class QueryContentResponseBody extends TeaModel {
     }
     public QueryContentResponseBodyWindowMatches getWindowMatches() {
         return this.windowMatches;
+    }
+
+    public static class QueryContentResponseBodyEntitiesEntities extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Entity")
+        public String entity;
+
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("Type")
+        public String type;
+
+        public static QueryContentResponseBodyEntitiesEntities build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyEntitiesEntities self = new QueryContentResponseBodyEntitiesEntities();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyEntitiesEntities setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public QueryContentResponseBodyEntitiesEntities setEntity(String entity) {
+            this.entity = entity;
+            return this;
+        }
+        public String getEntity() {
+            return this.entity;
+        }
+
+        public QueryContentResponseBodyEntitiesEntities setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public QueryContentResponseBodyEntitiesEntities setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryContentResponseBodyEntitiesEntities setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyEntities extends TeaModel {
+        @NameInMap("entities")
+        public java.util.List<QueryContentResponseBodyEntitiesEntities> entities;
+
+        public static QueryContentResponseBodyEntities build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyEntities self = new QueryContentResponseBodyEntities();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyEntities setEntities(java.util.List<QueryContentResponseBodyEntitiesEntities> entities) {
+            this.entities = entities;
+            return this;
+        }
+        public java.util.List<QueryContentResponseBodyEntitiesEntities> getEntities() {
+            return this.entities;
+        }
+
     }
 
     public static class QueryContentResponseBodyMatchesMatchListVector extends TeaModel {
@@ -346,6 +450,88 @@ public class QueryContentResponseBody extends TeaModel {
         }
         public java.util.List<QueryContentResponseBodyMatchesMatchList> getMatchList() {
             return this.matchList;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyRelationsRelations extends TeaModel {
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("FileName")
+        public String fileName;
+
+        @NameInMap("Id")
+        public String id;
+
+        @NameInMap("SourceEntity")
+        public String sourceEntity;
+
+        @NameInMap("TargetEntity")
+        public String targetEntity;
+
+        public static QueryContentResponseBodyRelationsRelations build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyRelationsRelations self = new QueryContentResponseBodyRelationsRelations();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyRelationsRelations setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public QueryContentResponseBodyRelationsRelations setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public QueryContentResponseBodyRelationsRelations setId(String id) {
+            this.id = id;
+            return this;
+        }
+        public String getId() {
+            return this.id;
+        }
+
+        public QueryContentResponseBodyRelationsRelations setSourceEntity(String sourceEntity) {
+            this.sourceEntity = sourceEntity;
+            return this;
+        }
+        public String getSourceEntity() {
+            return this.sourceEntity;
+        }
+
+        public QueryContentResponseBodyRelationsRelations setTargetEntity(String targetEntity) {
+            this.targetEntity = targetEntity;
+            return this;
+        }
+        public String getTargetEntity() {
+            return this.targetEntity;
+        }
+
+    }
+
+    public static class QueryContentResponseBodyRelations extends TeaModel {
+        @NameInMap("relations")
+        public java.util.List<QueryContentResponseBodyRelationsRelations> relations;
+
+        public static QueryContentResponseBodyRelations build(java.util.Map<String, ?> map) throws Exception {
+            QueryContentResponseBodyRelations self = new QueryContentResponseBodyRelations();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryContentResponseBodyRelations setRelations(java.util.List<QueryContentResponseBodyRelationsRelations> relations) {
+            this.relations = relations;
+            return this;
+        }
+        public java.util.List<QueryContentResponseBodyRelationsRelations> getRelations() {
+            return this.relations;
         }
 
     }

@@ -3,7 +3,7 @@ package com.aliyun.gpdb20160503.models;
 
 import com.aliyun.tea.*;
 
-public class CreateDocumentCollectionRequest extends TeaModel {
+public class CreateDocumentCollectionShrinkRequest extends TeaModel {
     /**
      * <p>The name of the document collection that you want to create.</p>
      * <blockquote>
@@ -79,7 +79,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public Boolean enableGraph;
 
     @NameInMap("EntityTypes")
-    public java.util.List<String> entityTypes;
+    public String entityTypesShrink;
 
     /**
      * <p>Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.</p>
@@ -250,14 +250,14 @@ public class CreateDocumentCollectionRequest extends TeaModel {
     public String regionId;
 
     @NameInMap("RelationshipTypes")
-    public java.util.List<String> relationshipTypes;
+    public String relationshipTypesShrink;
 
-    public static CreateDocumentCollectionRequest build(java.util.Map<String, ?> map) throws Exception {
-        CreateDocumentCollectionRequest self = new CreateDocumentCollectionRequest();
+    public static CreateDocumentCollectionShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        CreateDocumentCollectionShrinkRequest self = new CreateDocumentCollectionShrinkRequest();
         return TeaModel.build(map, self);
     }
 
-    public CreateDocumentCollectionRequest setCollection(String collection) {
+    public CreateDocumentCollectionShrinkRequest setCollection(String collection) {
         this.collection = collection;
         return this;
     }
@@ -265,7 +265,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.collection;
     }
 
-    public CreateDocumentCollectionRequest setDBInstanceId(String DBInstanceId) {
+    public CreateDocumentCollectionShrinkRequest setDBInstanceId(String DBInstanceId) {
         this.DBInstanceId = DBInstanceId;
         return this;
     }
@@ -273,7 +273,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.DBInstanceId;
     }
 
-    public CreateDocumentCollectionRequest setDimension(Integer dimension) {
+    public CreateDocumentCollectionShrinkRequest setDimension(Integer dimension) {
         this.dimension = dimension;
         return this;
     }
@@ -281,7 +281,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.dimension;
     }
 
-    public CreateDocumentCollectionRequest setEmbeddingModel(String embeddingModel) {
+    public CreateDocumentCollectionShrinkRequest setEmbeddingModel(String embeddingModel) {
         this.embeddingModel = embeddingModel;
         return this;
     }
@@ -289,7 +289,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.embeddingModel;
     }
 
-    public CreateDocumentCollectionRequest setEnableGraph(Boolean enableGraph) {
+    public CreateDocumentCollectionShrinkRequest setEnableGraph(Boolean enableGraph) {
         this.enableGraph = enableGraph;
         return this;
     }
@@ -297,15 +297,15 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.enableGraph;
     }
 
-    public CreateDocumentCollectionRequest setEntityTypes(java.util.List<String> entityTypes) {
-        this.entityTypes = entityTypes;
+    public CreateDocumentCollectionShrinkRequest setEntityTypesShrink(String entityTypesShrink) {
+        this.entityTypesShrink = entityTypesShrink;
         return this;
     }
-    public java.util.List<String> getEntityTypes() {
-        return this.entityTypes;
+    public String getEntityTypesShrink() {
+        return this.entityTypesShrink;
     }
 
-    public CreateDocumentCollectionRequest setExternalStorage(Integer externalStorage) {
+    public CreateDocumentCollectionShrinkRequest setExternalStorage(Integer externalStorage) {
         this.externalStorage = externalStorage;
         return this;
     }
@@ -313,7 +313,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.externalStorage;
     }
 
-    public CreateDocumentCollectionRequest setFullTextRetrievalFields(String fullTextRetrievalFields) {
+    public CreateDocumentCollectionShrinkRequest setFullTextRetrievalFields(String fullTextRetrievalFields) {
         this.fullTextRetrievalFields = fullTextRetrievalFields;
         return this;
     }
@@ -321,7 +321,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.fullTextRetrievalFields;
     }
 
-    public CreateDocumentCollectionRequest setHnswEfConstruction(String hnswEfConstruction) {
+    public CreateDocumentCollectionShrinkRequest setHnswEfConstruction(String hnswEfConstruction) {
         this.hnswEfConstruction = hnswEfConstruction;
         return this;
     }
@@ -329,7 +329,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.hnswEfConstruction;
     }
 
-    public CreateDocumentCollectionRequest setHnswM(Integer hnswM) {
+    public CreateDocumentCollectionShrinkRequest setHnswM(Integer hnswM) {
         this.hnswM = hnswM;
         return this;
     }
@@ -337,7 +337,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.hnswM;
     }
 
-    public CreateDocumentCollectionRequest setLLMModel(String LLMModel) {
+    public CreateDocumentCollectionShrinkRequest setLLMModel(String LLMModel) {
         this.LLMModel = LLMModel;
         return this;
     }
@@ -345,7 +345,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.LLMModel;
     }
 
-    public CreateDocumentCollectionRequest setLanguage(String language) {
+    public CreateDocumentCollectionShrinkRequest setLanguage(String language) {
         this.language = language;
         return this;
     }
@@ -353,7 +353,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.language;
     }
 
-    public CreateDocumentCollectionRequest setManagerAccount(String managerAccount) {
+    public CreateDocumentCollectionShrinkRequest setManagerAccount(String managerAccount) {
         this.managerAccount = managerAccount;
         return this;
     }
@@ -361,7 +361,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.managerAccount;
     }
 
-    public CreateDocumentCollectionRequest setManagerAccountPassword(String managerAccountPassword) {
+    public CreateDocumentCollectionShrinkRequest setManagerAccountPassword(String managerAccountPassword) {
         this.managerAccountPassword = managerAccountPassword;
         return this;
     }
@@ -369,7 +369,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.managerAccountPassword;
     }
 
-    public CreateDocumentCollectionRequest setMetadata(String metadata) {
+    public CreateDocumentCollectionShrinkRequest setMetadata(String metadata) {
         this.metadata = metadata;
         return this;
     }
@@ -377,7 +377,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.metadata;
     }
 
-    public CreateDocumentCollectionRequest setMetadataIndices(String metadataIndices) {
+    public CreateDocumentCollectionShrinkRequest setMetadataIndices(String metadataIndices) {
         this.metadataIndices = metadataIndices;
         return this;
     }
@@ -385,7 +385,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.metadataIndices;
     }
 
-    public CreateDocumentCollectionRequest setMetrics(String metrics) {
+    public CreateDocumentCollectionShrinkRequest setMetrics(String metrics) {
         this.metrics = metrics;
         return this;
     }
@@ -393,7 +393,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.metrics;
     }
 
-    public CreateDocumentCollectionRequest setNamespace(String namespace) {
+    public CreateDocumentCollectionShrinkRequest setNamespace(String namespace) {
         this.namespace = namespace;
         return this;
     }
@@ -401,7 +401,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.namespace;
     }
 
-    public CreateDocumentCollectionRequest setOwnerId(Long ownerId) {
+    public CreateDocumentCollectionShrinkRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -409,7 +409,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public CreateDocumentCollectionRequest setParser(String parser) {
+    public CreateDocumentCollectionShrinkRequest setParser(String parser) {
         this.parser = parser;
         return this;
     }
@@ -417,7 +417,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.parser;
     }
 
-    public CreateDocumentCollectionRequest setPqEnable(Integer pqEnable) {
+    public CreateDocumentCollectionShrinkRequest setPqEnable(Integer pqEnable) {
         this.pqEnable = pqEnable;
         return this;
     }
@@ -425,7 +425,7 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.pqEnable;
     }
 
-    public CreateDocumentCollectionRequest setRegionId(String regionId) {
+    public CreateDocumentCollectionShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -433,12 +433,12 @@ public class CreateDocumentCollectionRequest extends TeaModel {
         return this.regionId;
     }
 
-    public CreateDocumentCollectionRequest setRelationshipTypes(java.util.List<String> relationshipTypes) {
-        this.relationshipTypes = relationshipTypes;
+    public CreateDocumentCollectionShrinkRequest setRelationshipTypesShrink(String relationshipTypesShrink) {
+        this.relationshipTypesShrink = relationshipTypesShrink;
         return this;
     }
-    public java.util.List<String> getRelationshipTypes() {
-        return this.relationshipTypes;
+    public String getRelationshipTypesShrink() {
+        return this.relationshipTypesShrink;
     }
 
 }
