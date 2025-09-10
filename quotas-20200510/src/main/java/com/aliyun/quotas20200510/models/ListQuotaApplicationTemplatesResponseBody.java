@@ -26,7 +26,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The queried quota templates.</p>
+     * <p>The information about quota templates.</p>
      */
     @NameInMap("QuotaApplicationTemplates")
     public java.util.List<ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates> quotaApplicationTemplates;
@@ -145,7 +145,7 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
     public static class ListQuotaApplicationTemplatesResponseBodyQuotaApplicationTemplates extends TeaModel {
         /**
-         * <p>None</p>
+         * <p>None.</p>
          */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;

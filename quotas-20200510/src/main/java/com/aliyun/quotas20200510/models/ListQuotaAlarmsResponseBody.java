@@ -26,7 +26,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The details about the quota alert.</p>
+     * <p>The details about the quota alert rules.</p>
      */
     @NameInMap("QuotaAlarms")
     public java.util.List<ListQuotaAlarmsResponseBodyQuotaAlarms> quotaAlarms;
@@ -142,7 +142,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The alert contact. The value is accountContact.</p>
+         * <p>The alert contact.</p>
+         * <blockquote>
+         * <p> Valid value: accountContact. Only the account contact is supported.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>accountContact</p>

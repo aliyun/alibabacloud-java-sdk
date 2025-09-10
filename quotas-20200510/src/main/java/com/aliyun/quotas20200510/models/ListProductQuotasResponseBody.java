@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductQuotasResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The number of records that are returned for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>If NextToken is empty, no next page exists.</li>
+     * <li>If a value of NextToken is returned, the value indicates the token that is used for the next query.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>AAAAAd98/tlL5GF2aM7UMKQGM8LZesIPr0CbfxASQvHV/pwcmVKNfdBbW8OPld3NvG9Cy8+dNcyFzyUttQA3IONfBhRGpXFyiVoTgK+dupBsP2mX</p>
@@ -23,13 +27,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The queried quotas.</p>
+     * <p>The details of the quotas.</p>
      */
     @NameInMap("Quotas")
     public java.util.List<ListProductQuotasResponseBodyQuotas> quotas;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D0131FD5-5397-44FE-BF5A-4B7165B813CC</p>
@@ -38,7 +42,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -93,13 +97,14 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
     public static class ListProductQuotasResponseBodyQuotasPeriod extends TeaModel {
         /**
-         * <p>The unit of the calculation cycle. Valid values:</p>
+         * <p>The unit of the calculation cycle.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>second</li>
-         * <li>minute</li>
+         * <li>week</li>
          * <li>hour</li>
          * <li>day</li>
-         * <li>week</li>
+         * <li>second</li>
+         * <li>minute</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +147,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
     public static class ListProductQuotasResponseBodyQuotasQuotaItems extends TeaModel {
         /**
-         * <p>The quota value.</p>
+         * <p>The value of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -160,7 +165,8 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaUnit;
 
         /**
-         * <p>The category of the quota. Valid values:</p>
+         * <p>The category of the quota.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>BaseQuota: base quota</li>
          * <li>ReservedQuota: reserved quota</li>
@@ -221,12 +227,28 @@ public class ListProductQuotasResponseBody extends TeaModel {
     }
 
     public static class ListProductQuotasResponseBodyQuotasUsageMetric extends TeaModel {
+        /**
+         * <p>The monitoring dimensions.</p>
+         * <p>The value is a collection of <code>key:value</code> pairs. Example: <code>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</code>.</p>
+         */
         @NameInMap("MetricDimensions")
         public java.util.Map<String, String> metricDimensions;
 
+        /**
+         * <p>The monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Usage</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The monitoring namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_quotas_flowcontrol</p>
+         */
         @NameInMap("MetricNamespace")
         public String metricNamespace;
 
@@ -263,7 +285,8 @@ public class ListProductQuotasResponseBody extends TeaModel {
 
     public static class ListProductQuotasResponseBodyQuotas extends TeaModel {
         /**
-         * <p>Indicates whether the quota is adjustable. Valid values:</p>
+         * <p>Indicates whether the quota is adjustable.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -276,13 +299,14 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public Boolean adjustable;
 
         /**
-         * <p>N/A</p>
+         * <p>The range of the quota value that can be requested for the quota item.</p>
          */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
 
         /**
-         * <p>The type of the adjustable value. Valid values:</p>
+         * <p>The type of the adjustable value.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>continuous</li>
          * <li>discontinuous</li>
@@ -304,7 +328,8 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String applyReasonTips;
 
         /**
-         * <p>Indicates whether the system shows the used value of the quota. Valid values:</p>
+         * <p>Indicates whether the system shows the used value of the quota.</p>
+         * <p>Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -317,7 +342,7 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public Boolean consumable;
 
         /**
-         * <p>The quota dimensions. Format: <code>{&quot;regionId&quot;:&quot;Region&quot;}</code>.</p>
+         * <p>The quota dimension. Format: <code>{&quot;regionId&quot;:&quot;Region&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
@@ -344,10 +369,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>Indicates whether the quota is a global quota. Valid values:</p>
+         * <p>Indicates whether the quota is a global quota.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li>true: The quota is shared in all regions.</li>
+         * <li>false: The quota is independently used in a region.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,11 +416,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaArn;
 
         /**
-         * <p>The type of the quota. Valid values:</p>
+         * <p>The type of the quota.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>CommonQuota: general quota</li>
          * <li>FlowControl: API rate limit</li>
-         * <li>WhiteListLabel: privilege</li>
+         * <li>WhiteListLabel: whitelist quota</li>
+         * <li>CommonQuota: general quota</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -413,13 +440,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaDescription;
 
         /**
-         * <p>The details of the quota.</p>
+         * <p>The details of the quotas.</p>
          */
         @NameInMap("QuotaItems")
         public java.util.List<ListProductQuotasResponseBodyQuotasQuotaItems> quotaItems;
 
         /**
-         * <p>The quota name.</p>
+         * <p>The name of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs.g5.2xlarge</p>
@@ -428,10 +455,11 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaName;
 
         /**
-         * <p>The type of the quota. Valid values:</p>
+         * <p>The type of the quota.</p>
+         * <p>Valid values:</p>
          * <ul>
-         * <li>privilege</li>
          * <li>normal</li>
+         * <li>privilege</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -450,13 +478,13 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public String quotaUnit;
 
         /**
-         * <p>N/A</p>
+         * <p>The range of the quota value that can be requested for the current quota item. When you configure a quota template, you can use the range as a reference.</p>
          */
         @NameInMap("SupportedRange")
         public java.util.List<Float> supportedRange;
 
         /**
-         * <p>The quota value.</p>
+         * <p>The value of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -474,11 +502,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
         public Float totalUsage;
 
         /**
-         * <p>The reason why the quota is not adjustable. Valid values:</p>
+         * <p>The reason why the quota is not adjustable.</p>
+         * <p>Valid values:</p>
          * <ul>
+         * <li>limitReached: The quota limit is reached.</li>
          * <li>nonactivated: The service is not activated.</li>
          * <li>applicationProcess: The application is being processed.</li>
-         * <li>limitReached: The quota limit is reached.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -487,6 +516,12 @@ public class ListProductQuotasResponseBody extends TeaModel {
         @NameInMap("UnadjustableDetail")
         public String unadjustableDetail;
 
+        /**
+         * <p>The monitoring information of the quota in CloudMonitor.</p>
+         * <blockquote>
+         * <p> If this parameter is empty, no monitoring data of the quota exists in CloudMonitor.</p>
+         * </blockquote>
+         */
         @NameInMap("UsageMetric")
         public ListProductQuotasResponseBodyQuotasUsageMetric usageMetric;
 

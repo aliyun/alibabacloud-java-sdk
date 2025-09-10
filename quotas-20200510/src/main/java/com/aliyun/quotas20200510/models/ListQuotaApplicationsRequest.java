@@ -20,7 +20,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of entries to return.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota. Valid values:</p>
+     * <p>The quota type. Valid values:</p>
      * <ul>
      * <li>CommonQuota: general quota</li>
      * <li>FlowControl: API rate limit</li>
@@ -71,12 +71,12 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The status of the application. Valid values:</p>
+     * <p>The approval state of the quota increase application. Valid values:</p>
      * <ul>
-     * <li>Disagree: rejects the application.</li>
-     * <li>Agree: approves the application.</li>
-     * <li>Process: reviews the application.</li>
-     * <li>Cancel: cancels the application.</li>
+     * <li>Disagree: The application is rejected.</li>
+     * <li>Agree: The application is approved.</li>
+     * <li>Process: The application is in review.</li>
+     * <li>Cancel: The application is canceled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

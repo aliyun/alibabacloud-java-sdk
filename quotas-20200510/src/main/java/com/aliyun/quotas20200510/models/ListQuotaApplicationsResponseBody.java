@@ -23,7 +23,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The details of the applications.</p>
+     * <p>The details of the quota increase applications.</p>
      */
     @NameInMap("QuotaApplications")
     public java.util.List<ListQuotaApplicationsResponseBodyQuotaApplications> quotaApplications;
@@ -268,6 +268,17 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        /**
+         * <p>The quota type. Valid values:</p>
+         * <ul>
+         * <li>CommonQuota (default): general quota.</li>
+         * <li>WhiteListLabel: whitelist quota.</li>
+         * <li>FlowControl: API rate limit.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
+         */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 

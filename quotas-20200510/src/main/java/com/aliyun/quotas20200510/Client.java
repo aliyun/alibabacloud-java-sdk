@@ -28,14 +28,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the alert.</p>
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to create a quota alert of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>The value of the quota dimension.
-     * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-     * <blockquote>
-     * <p>This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
-     * </blockquote>
+     * <p>Creates a quota alert.</p>
      * 
      * @param request CreateQuotaAlarmRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46,6 +42,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.alarmName)) {
             body.put("AlarmName", request.alarmName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.originalContext)) {
+            body.put("OriginalContext", request.originalContext);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.productCode)) {
@@ -95,14 +95,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The ID of the alert.</p>
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to create a quota alert of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>The value of the quota dimension.
-     * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-     * <blockquote>
-     * <p>This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.</p>
-     * </blockquote>
+     * <p>Creates a quota alert.</p>
      * 
      * @param request CreateQuotaAlarmRequest
      * @return CreateQuotaAlarmResponse
@@ -208,7 +204,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can add a maximum of 10 quota items to a quota template at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members in the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members.</p>
+     * <p>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members of the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members. Only the management account of a resource directory can create multiple quota applications at a time.</p>
      * 
      * @param request CreateQuotaApplicationsForTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -284,7 +280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>You can add a maximum of 10 quota items to a quota template at a time.</p>
      * 
      * <b>summary</b> : 
-     * <p>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members in the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members.</p>
+     * <p>Submits a quota increase application. After you add a quota item to a quota template, the system automatically submits quota applications only for new members of the resource directory. The quota values for existing members remain unchanged. If you want to increase the quota values of existing members, you can submit a quota application for the members by applying quota templates to the members. Only the management account of a resource directory can create multiple quota applications at a time.</p>
      * 
      * @param request CreateQuotaApplicationsForTemplateRequest
      * @return CreateQuotaApplicationsForTemplateResponse
@@ -296,12 +292,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
+     * <h3><a href="#"></a>Usage notes</h3>
      * <p>You must set the <code>ServiceStatus</code> parameter to <code>1</code>. This ensures that the quota template is enabled.
-     * You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the <code>ServiceStatus</code> parameter is set to <code>0</code> or <code>-1</code>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to set the ServiceStatus parameter to <code>1</code>.</p>
+     * You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the value of the <code>ServiceStatus</code> parameter in the response is <code>0</code> or <code>-1</code>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to modify the value to <code>1</code>. A value of 0 indicates that the quota template is not configured. A value of -1 indicates that the quota template is disabled. A value of 1 indicates that the quota template is enabled.</p>
+     * <h3><a href="#"></a></h3>
+     * <p>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If the value of the <code>Status</code> parameter in the response is <code>Agree</code>, the quota template is approved.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization.</p>
+     * <p>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization. Only the management account of a resource directory can create quota templates.</p>
      * 
      * @param request CreateTemplateQuotaItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -365,12 +363,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
+     * <h3><a href="#"></a>Usage notes</h3>
      * <p>You must set the <code>ServiceStatus</code> parameter to <code>1</code>. This ensures that the quota template is enabled.
-     * You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the <code>ServiceStatus</code> parameter is set to <code>0</code> or <code>-1</code>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to set the ServiceStatus parameter to <code>1</code>.</p>
+     * You can call the <a href="https://help.aliyun.com/document_detail/450407.html">GetQuotaTemplateServiceStatus</a> operation to query the status of a quota template. If the value of the <code>ServiceStatus</code> parameter in the response is <code>0</code> or <code>-1</code>, you must call the <a href="https://help.aliyun.com/document_detail/450406.html">ModifyQuotaTemplateServiceStatus</a> operation to modify the value to <code>1</code>. A value of 0 indicates that the quota template is not configured. A value of -1 indicates that the quota template is disabled. A value of 1 indicates that the quota template is enabled.</p>
+     * <h3><a href="#"></a></h3>
+     * <p>After you create a quota template, you can call the <a href="https://help.aliyun.com/document_detail/2584864.html">ListQuotaApplicationsForTemplate</a> operation to view the approval result. If the value of the <code>Status</code> parameter in the response is <code>Agree</code>, the quota template is approved.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization.</p>
+     * <p>Creates a quota template by using the management account of a resource directory. After you create a quota template, if a member is added to the resource directory, the quota template automatically submits a quota increase request for the member. The quota values for existing members remain unchanged. You can use a quota template to apply for increases on multiple quotas at the same time. This automated approach improves the efficiency of quota management across your organization. Only the management account of a resource directory can create quota templates.</p>
      * 
      * @param request CreateTemplateQuotaItemRequest
      * @return CreateTemplateQuotaItemResponse
@@ -382,7 +382,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the operation is called to delete a quota alert whose ID is <code>6b512ab7-da3a-4142-b529-2b2a9294****</code>.</p>
+     * <p>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to delete a quota alert rule of the old version. If you want to delete a quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * <ul>
+     * <li>In this example, the API operation is called to delete a quota alert rule whose ID is <code>6b512ab7-da3a-4142-b529-2b2a9294****</code>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota alert.</p>
@@ -417,7 +420,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the operation is called to delete a quota alert whose ID is <code>6b512ab7-da3a-4142-b529-2b2a9294****</code>.</p>
+     * <p>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to delete a quota alert rule of the old version. If you want to delete a quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513295.html">DeleteMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513294.html">DeleteMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * <ul>
+     * <li>In this example, the API operation is called to delete a quota alert rule whose ID is <code>6b512ab7-da3a-4142-b529-2b2a9294****</code>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Deletes a quota alert.</p>
@@ -432,7 +438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member.</p>
+     * <p>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member. Only the management account of a resource directory can delete quota templates.</p>
      * 
      * @param request DeleteTemplateQuotaItemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -464,7 +470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member.</p>
+     * <p>Deletes a quota template by using the management account of a resource directory. After you delete a quota template, if a member is added to the resource directory, the quota template no longer automatically submits a quota increase request for the member. Only the management account of a resource directory can delete quota templates.</p>
      * 
      * @param request DeleteTemplateQuotaItemRequest
      * @return DeleteTemplateQuotaItemResponse
@@ -479,7 +485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, the operation is called to query the details of a quota whose ID is <code>q_security-groups</code> and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is <code>Maximum Number of Security Groups</code>. The quota ID is <code>q_security-groups</code>. The description is <code>The maximum number of security groups that can be created for the current account</code>. The quota value is <code>801</code>. The used quota is <code>26</code>. The quota unit is <code>Number of security groups</code>. The quota dimension is <code>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the specified quota.</p>
+     * <p>Queries the details of a quota of a cloud service.</p>
      * 
      * @param request GetProductQuotaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -522,7 +528,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>In this example, the operation is called to query the details of a quota whose ID is <code>q_security-groups</code> and whose name is Maximum Number of Security Groups. This quota belongs to Elastic Compute Service (ECS). The query result shows the details of the quota. The details include the name, ID, description, quota value, used quota, unit, and dimension of the quota. In this example, the quota name is <code>Maximum Number of Security Groups</code>. The quota ID is <code>q_security-groups</code>. The description is <code>The maximum number of security groups that can be created for the current account</code>. The quota value is <code>801</code>. The used quota is <code>26</code>. The quota unit is <code>Number of security groups</code>. The quota dimension is <code>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the specified quota.</p>
+     * <p>Queries the details of a quota of a cloud service.</p>
      * 
      * @param request GetProductQuotaRequest
      * @return GetProductQuotaResponse
@@ -600,7 +606,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the operation is called to query the details of a quota alert whose ID is <code>78d7e436-4b25-4897-84b5-d7b656bb****</code>. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.</p>
+     * <p>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the details about the quota alert rules of the old version. If you want to query the details about the quota alert rules of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</p>
+     * <ul>
+     * <li>In this example, the operation is called to query the details of a quota alert rule whose ID is <code>78d7e436-4b25-4897-84b5-d7b656bb****</code>. The details of the alert rule are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert rule was created.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>In this example, the operation is called to query the details of a quota alert. The details of the alert are returned. The query results include the alert ID, alert name, alert contact, and time when the quota alert was created.</p>
@@ -635,7 +644,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the operation is called to query the details of a quota alert whose ID is <code>78d7e436-4b25-4897-84b5-d7b656bb****</code>. The details of the alert are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert was created.</p>
+     * <p>  The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the details about the quota alert rules of the old version. If you want to query the details about the quota alert rules of the new version, call CloudMonitor API operations. For more information, see <a href="https://help.aliyun.com/document_detail/2863234.html">Use API operations to manage new quota alert rules</a>.</p>
+     * <ul>
+     * <li>In this example, the operation is called to query the details of a quota alert rule whose ID is <code>78d7e436-4b25-4897-84b5-d7b656bb****</code>. The details of the alert rule are returned. The query result includes the alert ID, alert name, alert contact, and the time when the quota alert rule was created.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>In this example, the operation is called to query the details of a quota alert. The details of the alert are returned. The query results include the alert ID, alert name, alert contact, and time when the quota alert was created.</p>
@@ -751,6 +763,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, the value of <code>ServiceStatus</code> is <code>0</code>, which indicates that no quota template is specified. If you want to use a quota template, make sure that the quota template is enabled. In this case, the value of <code>ServiceStatus</code> is <code>1</code>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the status of a quota template.</p>
      * 
@@ -783,6 +798,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, the value of <code>ServiceStatus</code> is <code>0</code>, which indicates that no quota template is specified. If you want to use a quota template, make sure that the quota template is enabled. In this case, the value of <code>ServiceStatus</code> is <code>1</code>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the status of a quota template.</p>
      * 
@@ -795,6 +813,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the historical records of quota alert rules of the old version. If you want to query the historical records of quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> or <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the alert records.</p>
      * 
@@ -851,6 +872,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query the historical records of quota alert rules of the old version. If you want to query the historical records of quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513275.html">DescribeAlertLogCount</a> or <a href="https://help.aliyun.com/document_detail/2513276.html">DescribeAlertLogList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries the alert records.</p>
      * 
@@ -1187,6 +1211,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query quota alert rules of the old version. If you want to query quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries quota alerts.</p>
      * 
@@ -1239,6 +1266,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>The quota alerting feature has been upgraded and this API operation will be deprecated. You can call this operation only to query quota alert rules of the old version. If you want to query quota alert rules of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513291.html">DescribeMetricRuleList</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * 
      * <b>summary</b> : 
      * <p>Queries quota alerts.</p>
      * 
@@ -1550,7 +1580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If the <code>ServiceStatus</code> parameter is set to <code>0</code> or <code>-1</code>, you can call this operation to set the parameter to <code>1</code>. Then, you can call the <a href="https://help.aliyun.com/document_detail/450615.html">CreateTemplateQuotaItem</a> operation to create a quota template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the status of a quota template. By default, the quota template is not configured. If the management account of a resource directory uses a quota template for the first time, you must enable the quota template.</p>
+     * <p>Changes the status of a quota template. By default, the quota template is not configured. If the management account of a resource directory uses a quota template for the first time, you must enable the quota template. Only the management account of a resource directory can change the status of quota templates.</p>
      * 
      * @param request ModifyQuotaTemplateServiceStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1588,7 +1618,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If the <code>ServiceStatus</code> parameter is set to <code>0</code> or <code>-1</code>, you can call this operation to set the parameter to <code>1</code>. Then, you can call the <a href="https://help.aliyun.com/document_detail/450615.html">CreateTemplateQuotaItem</a> operation to create a quota template.</p>
      * 
      * <b>summary</b> : 
-     * <p>Changes the status of a quota template. By default, the quota template is not configured. If the management account of a resource directory uses a quota template for the first time, you must enable the quota template.</p>
+     * <p>Changes the status of a quota template. By default, the quota template is not configured. If the management account of a resource directory uses a quota template for the first time, you must enable the quota template. Only the management account of a resource directory can change the status of quota templates.</p>
      * 
      * @param request ModifyQuotaTemplateServiceStatusRequest
      * @return ModifyQuotaTemplateServiceStatusResponse
@@ -1736,7 +1766,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the operation is called to modify the information about a quota alert whose ID is <code>a2efa7fc-832f-47bb-8054-39e28012****</code> and whose name is <code>rules</code>. The alert threshold is changed from <code>150</code> to <code>160</code>.</p>
+     * <p>  The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to modify the information about a specific quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * <ul>
+     * <li>In this example, the API operation is called to modify the information about a quota alert rule whose ID is <code>a2efa7fc-832f-47bb-8054-39e28012****</code> and whose name is <code>rules</code>. The alert threshold is changed from <code>150</code> to <code>160</code>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies a quota alert rule.</p>
@@ -1791,7 +1824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In this example, the operation is called to modify the information about a quota alert whose ID is <code>a2efa7fc-832f-47bb-8054-39e28012****</code> and whose name is <code>rules</code>. The alert threshold is changed from <code>150</code> to <code>160</code>.</p>
+     * <p>  The quota alerting feature has been upgraded and this API operation will be deprecated. If you want to modify the information about a specific quota alert rule of the new version, call the CloudMonitor API operation <a href="https://help.aliyun.com/document_detail/2513316.html">PutResourceMetricRules</a> or <a href="https://help.aliyun.com/document_detail/2513302.html">PutMetricRuleTargets</a>. For more information about how to call API operations to manage quota alert rules of the new version, see <a href="https://help.aliyun.com/document_detail/2863234.html">Manage quota alerts of the new version by calling API operations</a>.</p>
+     * <ul>
+     * <li>In this example, the API operation is called to modify the information about a quota alert rule whose ID is <code>a2efa7fc-832f-47bb-8054-39e28012****</code> and whose name is <code>rules</code>. The alert threshold is changed from <code>150</code> to <code>160</code>.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
      * <p>Modifies a quota alert rule.</p>

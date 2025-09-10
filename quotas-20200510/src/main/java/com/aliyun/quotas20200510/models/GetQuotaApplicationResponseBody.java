@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaApplicationResponseBody extends TeaModel {
     /**
-     * <p>The details about the application.</p>
+     * <p>The details of the quota application.</p>
      */
     @NameInMap("QuotaApplication")
     public GetQuotaApplicationResponseBodyQuotaApplication quotaApplication;
@@ -155,6 +155,17 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         @NameInMap("QuotaArn")
         public String quotaArn;
 
+        /**
+         * <p>The quota type. Valid values:</p>
+         * <ul>
+         * <li>CommonQuota: general quota.</li>
+         * <li>FlowControl: API rate limit.</li>
+         * <li>WhiteListLabel: whitelist quota.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CommonQuota</p>
+         */
         @NameInMap("QuotaCategory")
         public String quotaCategory;
 

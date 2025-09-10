@@ -11,7 +11,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
     public GetProductQuotaResponseBodyQuota quota;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FF8CAF0-29D9-4F11-B6A4-FD2CBCA016D3</p>
@@ -173,12 +173,28 @@ public class GetProductQuotaResponseBody extends TeaModel {
     }
 
     public static class GetProductQuotaResponseBodyQuotaUsageMetric extends TeaModel {
+        /**
+         * <p>The monitoring dimensions.</p>
+         * <p>The value is a collection of <code>key:value</code> pairs. Example: <code>{&quot;productCode&quot;:&quot;***&quot;,&quot;metricKey&quot;:&quot;***&quot;,&quot;regionId&quot;:&quot;***&quot;,&quot;label&quot;:&quot;***&quot;}</code>.</p>
+         */
         @NameInMap("MetricDimensions")
         public java.util.Map<String, String> metricDimensions;
 
+        /**
+         * <p>The monitoring metric.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Usage</p>
+         */
         @NameInMap("MetricName")
         public String metricName;
 
+        /**
+         * <p>The monitoring namespace.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs_quotas_flowcontrol</p>
+         */
         @NameInMap("MetricNamespace")
         public String metricNamespace;
 
@@ -228,7 +244,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public Boolean adjustable;
 
         /**
-         * <p>The range of the quota value.</p>
+         * <p>The range of the quota value that can be requested for the quota item.</p>
          */
         @NameInMap("ApplicableRange")
         public java.util.List<Float> applicableRange;
@@ -269,7 +285,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public Boolean consumable;
 
         /**
-         * <p>The quota dimension. Format: <code>{&quot;regionId&quot;:&quot;Region&quot;}</code>.</p>
+         * <p>The quota dimensions. Format: <code>{&quot;regionId&quot;:&quot;Region&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
@@ -324,7 +340,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>q_security-groups</p>
@@ -365,7 +381,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public String quotaDescription;
 
         /**
-         * <p>The details of the quotas.</p>
+         * <p>The details of the quota.</p>
          */
         @NameInMap("QuotaItems")
         public java.util.List<GetProductQuotaResponseBodyQuotaQuotaItems> quotaItems;
@@ -383,7 +399,7 @@ public class GetProductQuotaResponseBody extends TeaModel {
          * <p>The type of the quota. Valid values:</p>
          * <ul>
          * <li>privilege</li>
-         * <li>normal (default value)</li>
+         * <li>normal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -393,9 +409,9 @@ public class GetProductQuotaResponseBody extends TeaModel {
         public String quotaType;
 
         /**
-         * <p>The unit of the new quota value.</p>
+         * <p>The unit of the quota.</p>
          * <blockquote>
-         * <p>The unit of each quota is unique.** For example, the quota whose ID is <code>q_cbdch3</code> represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is <code>q_security-groups</code> represents the maximum number of security groups. The unit of this quota is security groups.</p>
+         * <p> The unit of each quota is unique. For example, the quota whose ID is <code>q_cbdch3</code> represents the maximum number of Container Service for Kubernetes (ACK) clusters. The unit of this quota is clusters. The quota whose ID is <code>q_security-groups</code> represents the maximum number of security groups. The unit of this quota is security groups.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -443,6 +459,12 @@ public class GetProductQuotaResponseBody extends TeaModel {
         @NameInMap("UnadjustableDetail")
         public String unadjustableDetail;
 
+        /**
+         * <p>The monitoring information of the quota in CloudMonitor.</p>
+         * <blockquote>
+         * <p> If this parameter is empty, no monitoring data of the quota exists in CloudMonitor.</p>
+         * </blockquote>
+         */
         @NameInMap("UsageMetric")
         public GetProductQuotaResponseBodyQuotaUsageMetric usageMetric;
 

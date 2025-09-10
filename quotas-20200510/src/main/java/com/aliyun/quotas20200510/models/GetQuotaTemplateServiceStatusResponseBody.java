@@ -51,10 +51,11 @@ public class GetQuotaTemplateServiceStatusResponseBody extends TeaModel {
         public String resourceDirectoryId;
 
         /**
-         * <p>The state of the quota template. Valid values:</p>
+         * <p>The status of the quota template. Valid values:</p>
          * <ul>
          * <li>\-1: The quota template is disabled.</li>
          * <li>1: The quota template is enabled.</li>
+         * <li>0: No quota template is specified.</li>
          * </ul>
          * 
          * <strong>example:</strong>

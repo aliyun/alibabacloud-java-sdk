@@ -21,6 +21,9 @@ public class ListProductQuotasRequest extends TeaModel {
 
     /**
      * <p>The keyword that you want to use to search for the quotas.</p>
+     * <blockquote>
+     * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. The keyword is used to match the values of <code>QuotaName</code> and <code>QuotaActionCode</code>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>ecs-spec</p>
@@ -39,7 +42,11 @@ public class ListProductQuotasRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <ul>
+     * <li>You do not need to specify this parameter for the first and last requests.</li>
+     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -70,11 +77,13 @@ public class ListProductQuotasRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota. Valid values:</p>
+     * <p>The type of the quota.</p>
+     * <p>Default value: CommonQuota.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>CommonQuota (default value): general quota</li>
      * <li>FlowControl: API rate limit</li>
-     * <li>WhiteListLabel: whitelist quota</li>
+     * <li>WhiteListLabel: privilege</li>
+     * <li>CommonQuota: general quota</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,15 +93,16 @@ public class ListProductQuotasRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The field based on which you want to sort the returned records. Valid values:</p>
-     * <ul>
-     * <li>TIME: The returned records are sorted by the last update time.</li>
-     * <li>TOTAL: The returned records are sorted by the usage of the total quota.</li>
-     * <li>RESERVED: The returned records are sorted by the usage of the reserved quota.</li>
-     * </ul>
+     * <p>The field based on which you want to sort the returned records.</p>
      * <blockquote>
      * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>TOTAL: sorts the returned records based on the total quota.</li>
+     * <li>TIME: sorts the returned records based on the time when the quota was last modified.</li>
+     * <li>RESERVED: sorts the returned records based on the reserved quota.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>TIME</p>
@@ -101,14 +111,15 @@ public class ListProductQuotasRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The order in which you want to sort the returned records. Valid values:</p>
-     * <ul>
-     * <li>Ascending: ascending order</li>
-     * <li>Descending: descending order</li>
-     * </ul>
+     * <p>The order in which you want to sort the returned records.</p>
      * <blockquote>
      * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.</p>
      * </blockquote>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>Descending</li>
+     * <li>Ascending</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Ascending</p>

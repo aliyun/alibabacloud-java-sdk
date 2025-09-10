@@ -23,7 +23,7 @@ public class ListProductsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information of the Alibaba Cloud service.</p>
+     * <p>The information about the Alibaba Cloud services.</p>
      */
     @NameInMap("ProductInfo")
     public java.util.List<ListProductsResponseBodyProductInfo> productInfo;
@@ -106,6 +106,9 @@ public class ListProductsResponseBody extends TeaModel {
         public String commonQuotaSupport;
 
         /**
+         * <blockquote>
+         * <p> This parameter is discontinued and is not recommended.</p>
+         * </blockquote>
          * <p>Indicates whether the Alibaba Cloud service supports dynamic quota adjustment. Valid values:</p>
          * <ul>
          * <li>true</li>

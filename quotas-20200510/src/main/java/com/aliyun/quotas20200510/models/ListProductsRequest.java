@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of entries to return.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>

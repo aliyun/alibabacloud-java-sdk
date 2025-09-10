@@ -77,10 +77,10 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+     * <p>Indicates whether the notification about the application result is sent. Valid values:</p>
      * <ul>
-     * <li>0: Quota Center does not send a notification.</li>
-     * <li>3: Quota Center sends a notification.</li>
+     * <li>0: The notification is not sent.</li>
+     * <li>3: The notification is sent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -162,12 +162,13 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the application. Valid values:</p>
+     * <p>The approval state of the quota increase application.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>Disagree: The application is rejected.</li>
-     * <li>Agree: The application is approved.</li>
-     * <li>Process: The application is being reviewed.</li>
      * <li>Cancel: The application is canceled.</li>
+     * <li>Agree: The application is approved.</li>
+     * <li>Process: The application is in review.</li>
+     * <li>Disagree: The application is rejected.</li>
      * </ul>
      * 
      * <strong>example:</strong>

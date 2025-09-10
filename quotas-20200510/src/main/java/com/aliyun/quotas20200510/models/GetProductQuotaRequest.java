@@ -16,7 +16,7 @@ public class GetProductQuotaRequest extends TeaModel {
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,7 +27,10 @@ public class GetProductQuotaRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
+     * <blockquote>
+     * <p> To query a quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <code>QuotaActionCode</code> in the response.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,10 +72,7 @@ public class GetProductQuotaRequest extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
          * <blockquote>
-         * <ul>
-         * <li>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</li>
-         * <li>If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling (ESS) whose service code is ess.</li>
-         * </ul>
+         * <p> This parameter is required for cloud services that support dimensions. You must specify both <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code>. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. The following cloud services support dimensions: ECS whose service code is ecs, Enterprise Distributed Application Service (EDAS) whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling whose service code is ess.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -84,10 +84,7 @@ public class GetProductQuotaRequest extends TeaModel {
         /**
          * <p>The value of the dimension.</p>
          * <blockquote>
-         * <ul>
-         * <li>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</li>
-         * <li>If you call the operation to query the details of a quota that belongs to a cloud service that supports dimensions, you must configure this parameter. You must configure the <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> parameters at the same time. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and ESS whose service code is ess.</li>
-         * </ul>
+         * <p> This parameter is required for cloud services that support dimensions. You must specify both <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code>. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. The following cloud services support dimensions: ECS whose service code is ecs, EDAS whose service code is edas, ECS Quotas by Instance Type whose service code is ecs-spec, and Auto Scaling whose service code is ess.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

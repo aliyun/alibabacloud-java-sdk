@@ -5,14 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaApplicationRequest extends TeaModel {
     /**
-     * <p>The mode in which you want the application to be reviewed. Valid values:</p>
-     * <ul>
-     * <li>Sync: The application is reviewed in a synchronous manner. Quota Center automatically reviews the application. The result is returned immediately after you submit the application. However, the chance of an approval for an application that is reviewed in Sync mode is lower than the chance of an approval for an application that is reviewed in Async mode. The validity period of the new quota value is 1 hour.</li>
-     * <li>Async: The application is reviewed in an asynchronous manner. An Alibaba Cloud support engineer reviews the application. The chance of an approval for an application that is reviewed in Async mode is higher than the chance of an approval for an application that is reviewed in Sync mode. The validity period of the new quota value is one month.</li>
-     * </ul>
      * <blockquote>
-     * <p>This parameter is available only for ECS Quotas by Instance Type.</p>
+     * <p> This parameter is deprecated and is not recommended.</p>
      * </blockquote>
+     * <p>The mode in which you want the application to be reviewed.</p>
+     * <p>Valid values: </p>
+     * <ul>
+     * <li>Async</li>
+     * <li>Sync</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Sync</p>
@@ -39,7 +40,10 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public Float desireValue;
 
     /**
-     * <p>The quota dimensions.</p>
+     * <p>The quota dimensions. A quota item is uniquely determined by the values of Dimensions and QuotaActionCode.</p>
+     * <blockquote>
+     * <p> Some dimensions are required. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions that are supported by an Alibaba Cloud service. The value of <code>Requisite</code> in the response indicates whether a dimension is required.</p>
+     * </blockquote>
      */
     @NameInMap("Dimensions")
     public java.util.List<CreateQuotaApplicationRequestDimensions> dimensions;
@@ -57,10 +61,11 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The language of the quota alert notification. Valid values:</p>
+     * <p>The language of the quota alert notification.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>zh (default value): Chinese</li>
      * <li>en: English</li>
+     * <li>zh: Chinese</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,8 +89,8 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to send a notification about the application result. Valid values:</p>
      * <ul>
-     * <li>0 (default value): sends a notification about the application result.</li>
-     * <li>3: A notification about the application result is sent.</li>
+     * <li>0 (default): no</li>
+     * <li>3: sends a notification.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -121,11 +126,13 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota.</p>
+     * <p>The type of the quota. Valid values:</p>
+     * <p>Default value: CommonQuota.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li>CommonQuota (default value): general quota</li>
      * <li>FlowControl: API rate limit</li>
      * <li>WhiteListLabel: whitelist quota</li>
+     * <li>CommonQuota: general quota</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -244,13 +251,8 @@ public class CreateQuotaApplicationRequest extends TeaModel {
         /**
          * <p>The key of the dimension.</p>
          * <blockquote>
+         * <p> You must configure <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of elements in the returned array is N.</p>
          * </blockquote>
-         * <ul>
-         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * </li>
-         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>regionId</p>
@@ -261,13 +263,8 @@ public class CreateQuotaApplicationRequest extends TeaModel {
         /**
          * <p>The value of the dimension.</p>
          * <blockquote>
+         * <p> You must configure <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of elements in the returned array is N.</p>
          * </blockquote>
-         * <ul>
-         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * </li>
-         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

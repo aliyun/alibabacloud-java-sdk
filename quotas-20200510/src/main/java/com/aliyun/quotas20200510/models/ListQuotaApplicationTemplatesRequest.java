@@ -62,11 +62,11 @@ public class ListQuotaApplicationTemplatesRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota. Valid values:</p>
+     * <p>The quota type. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota</li>
-     * <li>WhiteListLabel: privilege</li>
-     * <li>FlowControl: API rate limit</li>
+     * <li>CommonQuota: general quota.</li>
+     * <li>WhiteListLabel: whitelist quota.</li>
+     * <li>FlowControl: API rate limit.</li>
      * </ul>
      * 
      * <strong>example:</strong>
