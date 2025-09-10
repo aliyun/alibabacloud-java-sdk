@@ -40,6 +40,9 @@ public class AlertRuleQuery extends TeaModel {
     @NameInMap("secondJoin")
     public AlertRuleSlsQueryJoin secondJoin;
 
+    @NameInMap("serviceIds")
+    public java.util.List<String> serviceIds;
+
     /**
      * <p>查询类型</p>
      * <p>This parameter is required.</p>
@@ -146,6 +149,14 @@ public class AlertRuleQuery extends TeaModel {
     }
     public AlertRuleSlsQueryJoin getSecondJoin() {
         return this.secondJoin;
+    }
+
+    public AlertRuleQuery setServiceIds(java.util.List<String> serviceIds) {
+        this.serviceIds = serviceIds;
+        return this;
+    }
+    public java.util.List<String> getServiceIds() {
+        return this.serviceIds;
     }
 
     public AlertRuleQuery setType(String type) {

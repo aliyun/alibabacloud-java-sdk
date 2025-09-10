@@ -28,6 +28,202 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>安装接入组件，代表进行一次接入</p>
+     * 
+     * @param request CreateAddonReleaseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAddonReleaseResponse
+     */
+    public CreateAddonReleaseResponse createAddonReleaseWithOptions(String policyId, CreateAddonReleaseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            body.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            body.put("aliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityRules)) {
+            body.put("entityRules", request.entityRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.envType)) {
+            body.put("envType", request.envType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentAddonReleaseId)) {
+            body.put("parentAddonReleaseId", request.parentAddonReleaseId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseName)) {
+            body.put("releaseName", request.releaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.values)) {
+            body.put("values", request.values);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAddonRelease"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/addon-releases"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAddonReleaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>安装接入组件，代表进行一次接入</p>
+     * 
+     * @param request CreateAddonReleaseRequest
+     * @return CreateAddonReleaseResponse
+     */
+    public CreateAddonReleaseResponse createAddonRelease(String policyId, CreateAddonReleaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAddonReleaseWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建聚合任务组</p>
+     * 
+     * @param request CreateAggTaskGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateAggTaskGroupResponse
+     */
+    public CreateAggTaskGroupResponse createAggTaskGroupWithOptions(String instanceId, CreateAggTaskGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.overrideIfExists)) {
+            query.put("overrideIfExists", request.overrideIfExists);
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggTaskGroupConfig)) {
+            body.put("aggTaskGroupConfig", request.aggTaskGroupConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggTaskGroupConfigType)) {
+            body.put("aggTaskGroupConfigType", request.aggTaskGroupConfigType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggTaskGroupName)) {
+            body.put("aggTaskGroupName", request.aggTaskGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpr)) {
+            body.put("cronExpr", request.cronExpr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.delay)) {
+            body.put("delay", request.delay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTime)) {
+            body.put("fromTime", request.fromTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRetries)) {
+            body.put("maxRetries", request.maxRetries);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRunTimeInSeconds)) {
+            body.put("maxRunTimeInSeconds", request.maxRunTimeInSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.precheckString)) {
+            body.put("precheckString", request.precheckString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleMode)) {
+            body.put("scheduleMode", request.scheduleMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleTimeExpr)) {
+            body.put("scheduleTimeExpr", request.scheduleTimeExpr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPrometheusId)) {
+            body.put("targetPrometheusId", request.targetPrometheusId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toTime)) {
+            body.put("toTime", request.toTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateAggTaskGroup"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/agg-task-groups"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateAggTaskGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建聚合任务组</p>
+     * 
+     * @param request CreateAggTaskGroupRequest
+     * @return CreateAggTaskGroupResponse
+     */
+    public CreateAggTaskGroupResponse createAggTaskGroup(String instanceId, CreateAggTaskGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createAggTaskGroupWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建EntityStore相关存储</p>
      * 
      * @param headers map
@@ -61,6 +257,73 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createEntityStoreWithOptions(workspaceName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建接入中心策略</p>
+     * 
+     * @param request CreateIntegrationPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateIntegrationPolicyResponse
+     */
+    public CreateIntegrationPolicyResponse createIntegrationPolicyWithOptions(CreateIntegrationPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.entityGroup)) {
+            body.put("entityGroup", request.entityGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            body.put("policyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyType)) {
+            body.put("policyType", request.policyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateIntegrationPolicy"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateIntegrationPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建接入中心策略</p>
+     * 
+     * @param request CreateIntegrationPolicyRequest
+     * @return CreateIntegrationPolicyResponse
+     */
+    public CreateIntegrationPolicyResponse createIntegrationPolicy(CreateIntegrationPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createIntegrationPolicyWithOptions(request, headers, runtime);
     }
 
     /**
@@ -152,6 +415,136 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createPrometheusInstanceWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建prometheus视图</p>
+     * 
+     * @param request CreatePrometheusViewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePrometheusViewResponse
+     */
+    public CreatePrometheusViewResponse createPrometheusViewWithOptions(CreatePrometheusViewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authFreeReadPolicy)) {
+            body.put("authFreeReadPolicy", request.authFreeReadPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthFreeRead)) {
+            body.put("enableAuthFreeRead", request.enableAuthFreeRead);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthToken)) {
+            body.put("enableAuthToken", request.enableAuthToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusInstances)) {
+            body.put("prometheusInstances", request.prometheusInstances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusViewName)) {
+            body.put("prometheusViewName", request.prometheusViewName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            body.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrometheusView"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-views"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrometheusViewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建prometheus视图</p>
+     * 
+     * @param request CreatePrometheusViewRequest
+     * @return CreatePrometheusViewResponse
+     */
+    public CreatePrometheusViewResponse createPrometheusView(CreatePrometheusViewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPrometheusViewWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Prometheus监控实例</p>
+     * 
+     * @param request CreatePrometheusVirtualInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePrometheusVirtualInstanceResponse
+     */
+    public CreatePrometheusVirtualInstanceResponse createPrometheusVirtualInstanceWithOptions(CreatePrometheusVirtualInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            body.put("namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePrometheusVirtualInstance"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/virtual-instances"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePrometheusVirtualInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建Prometheus监控实例</p>
+     * 
+     * @param request CreatePrometheusVirtualInstanceRequest
+     * @return CreatePrometheusVirtualInstanceResponse
+     */
+    public CreatePrometheusVirtualInstanceResponse createPrometheusVirtualInstance(CreatePrometheusVirtualInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createPrometheusVirtualInstanceWithOptions(request, headers, runtime);
     }
 
     /**
@@ -325,6 +718,98 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>删除addon release信息</p>
+     * 
+     * @param request DeleteAddonReleaseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAddonReleaseResponse
+     */
+    public DeleteAddonReleaseResponse deleteAddonReleaseWithOptions(String policyId, DeleteAddonReleaseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            query.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("force", request.force);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.releaseName)) {
+            query.put("releaseName", request.releaseName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAddonRelease"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/addon-releases"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAddonReleaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除addon release信息</p>
+     * 
+     * @param request DeleteAddonReleaseRequest
+     * @return DeleteAddonReleaseResponse
+     */
+    public DeleteAddonReleaseResponse deleteAddonRelease(String policyId, DeleteAddonReleaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAddonReleaseWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除聚合任务组</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteAggTaskGroupResponse
+     */
+    public DeleteAggTaskGroupResponse deleteAggTaskGroupWithOptions(String instanceId, String groupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteAggTaskGroup"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/agg-task-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteAggTaskGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除聚合任务组</p>
+     * @return DeleteAggTaskGroupResponse
+     */
+    public DeleteAggTaskGroupResponse deleteAggTaskGroup(String instanceId, String groupId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteAggTaskGroupWithOptions(instanceId, groupId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>删除EntityStore相关存储</p>
      * 
      * @param headers map
@@ -358,6 +843,127 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteEntityStoreWithOptions(workspaceName, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除接入中心策略</p>
+     * 
+     * @param request DeleteIntegrationPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteIntegrationPolicyResponse
+     */
+    public DeleteIntegrationPolicyResponse deleteIntegrationPolicyWithOptions(String policyId, DeleteIntegrationPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.force)) {
+            query.put("force", request.force);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteIntegrationPolicy"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteIntegrationPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除接入中心策略</p>
+     * 
+     * @param request DeleteIntegrationPolicyRequest
+     * @return DeleteIntegrationPolicyResponse
+     */
+    public DeleteIntegrationPolicyResponse deleteIntegrationPolicy(String policyId, DeleteIntegrationPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteIntegrationPolicyWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除prom实例</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePrometheusInstanceResponse
+     */
+    public DeletePrometheusInstanceResponse deletePrometheusInstanceWithOptions(String prometheusInstanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePrometheusInstance"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusInstanceId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePrometheusInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除prom实例</p>
+     * @return DeletePrometheusInstanceResponse
+     */
+    public DeletePrometheusInstanceResponse deletePrometheusInstance(String prometheusInstanceId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deletePrometheusInstanceWithOptions(prometheusInstanceId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除prometheus视图实例</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePrometheusViewResponse
+     */
+    public DeletePrometheusViewResponse deletePrometheusViewWithOptions(String prometheusViewId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePrometheusView"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-views/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusViewId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePrometheusViewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除prometheus视图实例</p>
+     * @return DeletePrometheusViewResponse
+     */
+    public DeletePrometheusViewResponse deletePrometheusView(String prometheusViewId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deletePrometheusViewWithOptions(prometheusViewId, headers, runtime);
     }
 
     /**
@@ -528,6 +1134,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查看addon release(查看接入状态)</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAddonReleaseResponse
+     */
+    public GetAddonReleaseResponse getAddonReleaseWithOptions(String releaseName, String policyId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAddonRelease"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/addon-releases/" + com.aliyun.openapiutil.Client.getEncodeParam(releaseName) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAddonReleaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查看addon release(查看接入状态)</p>
+     * @return GetAddonReleaseResponse
+     */
+    public GetAddonReleaseResponse getAddonRelease(String releaseName, String policyId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAddonReleaseWithOptions(releaseName, policyId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>描述聚合任务组</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetAggTaskGroupResponse
+     */
+    public GetAggTaskGroupResponse getAggTaskGroupWithOptions(String instanceId, String groupId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetAggTaskGroup"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/agg-task-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetAggTaskGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>描述聚合任务组</p>
+     * @return GetAggTaskGroupResponse
+     */
+    public GetAggTaskGroupResponse getAggTaskGroup(String instanceId, String groupId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getAggTaskGroupWithOptions(instanceId, groupId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>获取EntityStore相关存储信息</p>
      * 
      * @param headers map
@@ -625,6 +1305,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         GetEntityStoreDataHeaders headers = new GetEntityStoreDataHeaders();
         return this.getEntityStoreDataWithOptions(workspace, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询接入中心策略列表信息</p>
+     * 
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetIntegrationPolicyResponse
+     */
+    public GetIntegrationPolicyResponse getIntegrationPolicyWithOptions(String policyId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetIntegrationPolicy"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetIntegrationPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询接入中心策略列表信息</p>
+     * @return GetIntegrationPolicyResponse
+     */
+    public GetIntegrationPolicyResponse getIntegrationPolicy(String policyId) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getIntegrationPolicyWithOptions(policyId, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定环境实例</p>
+     * 
+     * @param request GetPrometheusInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPrometheusInstanceResponse
+     */
+    public GetPrometheusInstanceResponse getPrometheusInstanceWithOptions(String prometheusInstanceId, GetPrometheusInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("aliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrometheusInstance"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusInstanceId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPrometheusInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定环境实例</p>
+     * 
+     * @param request GetPrometheusInstanceRequest
+     * @return GetPrometheusInstanceResponse
+     */
+    public GetPrometheusInstanceResponse getPrometheusInstance(String prometheusInstanceId, GetPrometheusInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPrometheusInstanceWithOptions(prometheusInstanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定Prometheus视图实例</p>
+     * 
+     * @param request GetPrometheusViewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetPrometheusViewResponse
+     */
+    public GetPrometheusViewResponse getPrometheusViewWithOptions(String prometheusViewId, GetPrometheusViewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("aliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetPrometheusView"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-views/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusViewId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetPrometheusViewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询指定Prometheus视图实例</p>
+     * 
+     * @param request GetPrometheusViewRequest
+     * @return GetPrometheusViewResponse
+     */
+    public GetPrometheusViewResponse getPrometheusView(String prometheusViewId, GetPrometheusViewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getPrometheusViewWithOptions(prometheusViewId, request, headers, runtime);
     }
 
     /**
@@ -830,6 +1649,138 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>addon的release列表</p>
+     * 
+     * @param request ListAddonReleasesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAddonReleasesResponse
+     */
+    public ListAddonReleasesResponse listAddonReleasesWithOptions(String policyId, ListAddonReleasesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            query.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.parentAddonReleaseId)) {
+            query.put("parentAddonReleaseId", request.parentAddonReleaseId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAddonReleases"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/addon-releases"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAddonReleasesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>addon的release列表</p>
+     * 
+     * @param request ListAddonReleasesRequest
+     * @return ListAddonReleasesResponse
+     */
+    public ListAddonReleasesResponse listAddonReleases(String policyId, ListAddonReleasesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAddonReleasesWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举聚合任务组</p>
+     * 
+     * @param tmpReq ListAggTaskGroupsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAggTaskGroupsResponse
+     */
+    public ListAggTaskGroupsResponse listAggTaskGroupsWithOptions(String instanceId, ListAggTaskGroupsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAggTaskGroupsShrinkRequest request = new ListAggTaskGroupsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tags)) {
+            request.tagsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tags, "tags", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterAggTaskGroupIds)) {
+            query.put("filterAggTaskGroupIds", request.filterAggTaskGroupIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.filterAggTaskGroupNames)) {
+            query.put("filterAggTaskGroupNames", request.filterAggTaskGroupNames);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.query)) {
+            query.put("query", request.query);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagsShrink)) {
+            query.put("tags", request.tagsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPrometheusId)) {
+            query.put("targetPrometheusId", request.targetPrometheusId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAggTaskGroups"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/agg-task-groups"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAggTaskGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>列举聚合任务组</p>
+     * 
+     * @param request ListAggTaskGroupsRequest
+     * @return ListAggTaskGroupsResponse
+     */
+    public ListAggTaskGroupsResponse listAggTaskGroups(String instanceId, ListAggTaskGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAggTaskGroupsWithOptions(instanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询告警动作</p>
      * 
      * @param tmpReq ListAlertActionsRequest
@@ -895,6 +1846,443 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAlertActionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接入中心策略的存储要求信息</p>
+     * 
+     * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
+     */
+    public ListIntegrationPolicyCustomScrapeJobRulesResponse listIntegrationPolicyCustomScrapeJobRulesWithOptions(String policyId, ListIntegrationPolicyCustomScrapeJobRulesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonReleaseName)) {
+            query.put("addonReleaseName", request.addonReleaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptYaml)) {
+            query.put("encryptYaml", request.encryptYaml);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIntegrationPolicyCustomScrapeJobRules"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/custom-scrape-job-rules"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntegrationPolicyCustomScrapeJobRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接入中心策略的存储要求信息</p>
+     * 
+     * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
+     * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
+     */
+    public ListIntegrationPolicyCustomScrapeJobRulesResponse listIntegrationPolicyCustomScrapeJobRules(String policyId, ListIntegrationPolicyCustomScrapeJobRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIntegrationPolicyCustomScrapeJobRulesWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接入中心策略的PodMonitor资源</p>
+     * 
+     * @param request ListIntegrationPolicyPodMonitorsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIntegrationPolicyPodMonitorsResponse
+     */
+    public ListIntegrationPolicyPodMonitorsResponse listIntegrationPolicyPodMonitorsWithOptions(String policyId, ListIntegrationPolicyPodMonitorsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonReleaseName)) {
+            query.put("addonReleaseName", request.addonReleaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.encryptYaml)) {
+            query.put("encryptYaml", request.encryptYaml);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIntegrationPolicyPodMonitors"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/pod-monitors"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntegrationPolicyPodMonitorsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接入中心策略的PodMonitor资源</p>
+     * 
+     * @param request ListIntegrationPolicyPodMonitorsRequest
+     * @return ListIntegrationPolicyPodMonitorsResponse
+     */
+    public ListIntegrationPolicyPodMonitorsResponse listIntegrationPolicyPodMonitors(String policyId, ListIntegrationPolicyPodMonitorsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIntegrationPolicyPodMonitorsWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接入中心策略的存储要求信息</p>
+     * 
+     * @param request ListIntegrationPolicyStorageRequirementsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListIntegrationPolicyStorageRequirementsResponse
+     */
+    public ListIntegrationPolicyStorageRequirementsResponse listIntegrationPolicyStorageRequirementsWithOptions(String policyId, ListIntegrationPolicyStorageRequirementsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonName)) {
+            query.put("addonName", request.addonName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.addonReleaseName)) {
+            query.put("addonReleaseName", request.addonReleaseName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("storageType", request.storageType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListIntegrationPolicyStorageRequirements"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/storage-requirements"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListIntegrationPolicyStorageRequirementsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取接入中心策略的存储要求信息</p>
+     * 
+     * @param request ListIntegrationPolicyStorageRequirementsRequest
+     * @return ListIntegrationPolicyStorageRequirementsResponse
+     */
+    public ListIntegrationPolicyStorageRequirementsResponse listIntegrationPolicyStorageRequirements(String policyId, ListIntegrationPolicyStorageRequirementsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listIntegrationPolicyStorageRequirementsWithOptions(policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus实例大盘列表</p>
+     * 
+     * @param request ListPrometheusDashboardsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPrometheusDashboardsResponse
+     */
+    public ListPrometheusDashboardsResponse listPrometheusDashboardsWithOptions(String prometheusInstanceId, ListPrometheusDashboardsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
+            query.put("aliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrometheusDashboards"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusInstanceId) + "/dashboards"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusDashboardsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus实例大盘列表</p>
+     * 
+     * @param request ListPrometheusDashboardsRequest
+     * @return ListPrometheusDashboardsResponse
+     */
+    public ListPrometheusDashboardsResponse listPrometheusDashboards(String prometheusInstanceId, ListPrometheusDashboardsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPrometheusDashboardsWithOptions(prometheusInstanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus实例信息列表</p>
+     * 
+     * @param tmpReq ListPrometheusInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPrometheusInstancesResponse
+     */
+    public ListPrometheusInstancesResponse listPrometheusInstancesWithOptions(ListPrometheusInstancesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPrometheusInstancesShrinkRequest request = new ListPrometheusInstancesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRegionIds)) {
+            query.put("filterRegionIds", request.filterRegionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusInstanceIds)) {
+            query.put("prometheusInstanceIds", request.prometheusInstanceIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusInstanceName)) {
+            query.put("prometheusInstanceName", request.prometheusInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("resourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("tag", request.tagShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrometheusInstances"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus实例信息列表</p>
+     * 
+     * @param request ListPrometheusInstancesRequest
+     * @return ListPrometheusInstancesResponse
+     */
+    public ListPrometheusInstancesResponse listPrometheusInstances(ListPrometheusInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPrometheusInstancesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus视图实例信息列表</p>
+     * 
+     * @param tmpReq ListPrometheusViewsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPrometheusViewsResponse
+     */
+    public ListPrometheusViewsResponse listPrometheusViewsWithOptions(ListPrometheusViewsRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListPrometheusViewsShrinkRequest request = new ListPrometheusViewsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.tag)) {
+            request.tagShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.tag, "tag", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.filterRegionIds)) {
+            query.put("filterRegionIds", request.filterRegionIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusViewIds)) {
+            query.put("prometheusViewIds", request.prometheusViewIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusViewName)) {
+            query.put("prometheusViewName", request.prometheusViewName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("resourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagShrink)) {
+            query.put("tag", request.tagShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.version)) {
+            query.put("version", request.version);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrometheusViews"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-views"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusViewsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus视图实例信息列表</p>
+     * 
+     * @param request ListPrometheusViewsRequest
+     * @return ListPrometheusViewsResponse
+     */
+    public ListPrometheusViewsResponse listPrometheusViews(ListPrometheusViewsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPrometheusViewsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus虚拟实例</p>
+     * 
+     * @param request ListPrometheusVirtualInstancesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPrometheusVirtualInstancesResponse
+     */
+    public ListPrometheusVirtualInstancesResponse listPrometheusVirtualInstancesWithOptions(ListPrometheusVirtualInstancesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("namespace", request.namespace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPrometheusVirtualInstances"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/virtual-instances"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPrometheusVirtualInstancesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Prometheus虚拟实例</p>
+     * 
+     * @param request ListPrometheusVirtualInstancesRequest
+     * @return ListPrometheusVirtualInstancesResponse
+     */
+    public ListPrometheusVirtualInstancesResponse listPrometheusVirtualInstances(ListPrometheusVirtualInstancesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listPrometheusVirtualInstancesWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1074,6 +2462,436 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.putWorkspaceWithOptions(workspaceName, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>升级接入组件</p>
+     * 
+     * @param request UpdateAddonReleaseRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAddonReleaseResponse
+     */
+    public UpdateAddonReleaseResponse updateAddonReleaseWithOptions(String releaseName, String policyId, UpdateAddonReleaseRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.addonVersion)) {
+            body.put("addonVersion", request.addonVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.dryRun)) {
+            body.put("dryRun", request.dryRun);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityRules)) {
+            body.put("entityRules", request.entityRules);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.values)) {
+            body.put("values", request.values);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAddonRelease"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(policyId) + "/addon-releases/" + com.aliyun.openapiutil.Client.getEncodeParam(releaseName) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAddonReleaseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>升级接入组件</p>
+     * 
+     * @param request UpdateAddonReleaseRequest
+     * @return UpdateAddonReleaseResponse
+     */
+    public UpdateAddonReleaseResponse updateAddonRelease(String releaseName, String policyId, UpdateAddonReleaseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAddonReleaseWithOptions(releaseName, policyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用聚合任务组</p>
+     * 
+     * @param request UpdateAggTaskGroupRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAggTaskGroupResponse
+     */
+    public UpdateAggTaskGroupResponse updateAggTaskGroupWithOptions(String instanceId, String groupId, UpdateAggTaskGroupRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.aggTaskGroupConfig)) {
+            body.put("aggTaskGroupConfig", request.aggTaskGroupConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggTaskGroupConfigType)) {
+            body.put("aggTaskGroupConfigType", request.aggTaskGroupConfigType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.aggTaskGroupName)) {
+            body.put("aggTaskGroupName", request.aggTaskGroupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cronExpr)) {
+            body.put("cronExpr", request.cronExpr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.delay)) {
+            body.put("delay", request.delay);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fromTime)) {
+            body.put("fromTime", request.fromTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRetries)) {
+            body.put("maxRetries", request.maxRetries);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxRunTimeInSeconds)) {
+            body.put("maxRunTimeInSeconds", request.maxRunTimeInSeconds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.precheckString)) {
+            body.put("precheckString", request.precheckString);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleMode)) {
+            body.put("scheduleMode", request.scheduleMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.scheduleTimeExpr)) {
+            body.put("scheduleTimeExpr", request.scheduleTimeExpr);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.targetPrometheusId)) {
+            body.put("targetPrometheusId", request.targetPrometheusId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.toTime)) {
+            body.put("toTime", request.toTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAggTaskGroup"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/agg-task-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAggTaskGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>应用聚合任务组</p>
+     * 
+     * @param request UpdateAggTaskGroupRequest
+     * @return UpdateAggTaskGroupResponse
+     */
+    public UpdateAggTaskGroupResponse updateAggTaskGroup(String instanceId, String groupId, UpdateAggTaskGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAggTaskGroupWithOptions(instanceId, groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新聚合任务组状态</p>
+     * 
+     * @param request UpdateAggTaskGroupStatusRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateAggTaskGroupStatusResponse
+     */
+    public UpdateAggTaskGroupStatusResponse updateAggTaskGroupStatusWithOptions(String instanceId, String groupId, UpdateAggTaskGroupStatusRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateAggTaskGroupStatus"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/agg-task-groups/" + com.aliyun.openapiutil.Client.getEncodeParam(groupId) + "/status"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateAggTaskGroupStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新聚合任务组状态</p>
+     * 
+     * @param request UpdateAggTaskGroupStatusRequest
+     * @return UpdateAggTaskGroupStatusResponse
+     */
+    public UpdateAggTaskGroupStatusResponse updateAggTaskGroupStatus(String instanceId, String groupId, UpdateAggTaskGroupStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateAggTaskGroupStatusWithOptions(instanceId, groupId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新指定策略</p>
+     * 
+     * @param request UpdateIntegrationPolicyRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateIntegrationPolicyResponse
+     */
+    public UpdateIntegrationPolicyResponse updateIntegrationPolicyWithOptions(String integrationPolicyId, UpdateIntegrationPolicyRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.feePackage)) {
+            body.put("feePackage", request.feePackage);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyName)) {
+            body.put("policyName", request.policyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            body.put("resourceGroupId", request.resourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            body.put("tags", request.tags);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateIntegrationPolicy"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/integration-policies/" + com.aliyun.openapiutil.Client.getEncodeParam(integrationPolicyId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateIntegrationPolicyResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新指定策略</p>
+     * 
+     * @param request UpdateIntegrationPolicyRequest
+     * @return UpdateIntegrationPolicyResponse
+     */
+    public UpdateIntegrationPolicyResponse updateIntegrationPolicy(String integrationPolicyId, UpdateIntegrationPolicyRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updateIntegrationPolicyWithOptions(integrationPolicyId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Prom实例信息</p>
+     * 
+     * @param request UpdatePrometheusInstanceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePrometheusInstanceResponse
+     */
+    public UpdatePrometheusInstanceResponse updatePrometheusInstanceWithOptions(String prometheusInstanceId, UpdatePrometheusInstanceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.archiveDuration)) {
+            body.put("archiveDuration", request.archiveDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authFreeReadPolicy)) {
+            body.put("authFreeReadPolicy", request.authFreeReadPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authFreeWritePolicy)) {
+            body.put("authFreeWritePolicy", request.authFreeWritePolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthFreeRead)) {
+            body.put("enableAuthFreeRead", request.enableAuthFreeRead);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthFreeWrite)) {
+            body.put("enableAuthFreeWrite", request.enableAuthFreeWrite);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthToken)) {
+            body.put("enableAuthToken", request.enableAuthToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.paymentType)) {
+            body.put("paymentType", request.paymentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusInstanceName)) {
+            body.put("prometheusInstanceName", request.prometheusInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageDuration)) {
+            body.put("storageDuration", request.storageDuration);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrometheusInstance"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-instances/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusInstanceId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusInstanceResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Prom实例信息</p>
+     * 
+     * @param request UpdatePrometheusInstanceRequest
+     * @return UpdatePrometheusInstanceResponse
+     */
+    public UpdatePrometheusInstanceResponse updatePrometheusInstance(String prometheusInstanceId, UpdatePrometheusInstanceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePrometheusInstanceWithOptions(prometheusInstanceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Prom视图实例信息</p>
+     * 
+     * @param request UpdatePrometheusViewRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdatePrometheusViewResponse
+     */
+    public UpdatePrometheusViewResponse updatePrometheusViewWithOptions(String prometheusViewId, UpdatePrometheusViewRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.authFreeReadPolicy)) {
+            body.put("authFreeReadPolicy", request.authFreeReadPolicy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthFreeRead)) {
+            body.put("enableAuthFreeRead", request.enableAuthFreeRead);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableAuthToken)) {
+            body.put("enableAuthToken", request.enableAuthToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusInstances)) {
+            body.put("prometheusInstances", request.prometheusInstances);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.prometheusViewName)) {
+            body.put("prometheusViewName", request.prometheusViewName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            body.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            body.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdatePrometheusView"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/prometheus-views/" + com.aliyun.openapiutil.Client.getEncodeParam(prometheusViewId) + ""),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdatePrometheusViewResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新Prom视图实例信息</p>
+     * 
+     * @param request UpdatePrometheusViewRequest
+     * @return UpdatePrometheusViewResponse
+     */
+    public UpdatePrometheusViewResponse updatePrometheusView(String prometheusViewId, UpdatePrometheusViewRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.updatePrometheusViewWithOptions(prometheusViewId, request, headers, runtime);
     }
 
     /**

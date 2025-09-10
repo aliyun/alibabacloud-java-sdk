@@ -40,6 +40,9 @@ public class AlertRuleCondition extends TeaModel {
     @NameInMap("noDataPolicy")
     public String noDataPolicy;
 
+    @NameInMap("oper")
+    public String oper;
+
     @NameInMap("relation")
     public String relation;
 
@@ -52,6 +55,9 @@ public class AlertRuleCondition extends TeaModel {
      */
     @NameInMap("type")
     public String type;
+
+    @NameInMap("value")
+    public Double value;
 
     public static AlertRuleCondition build(java.util.Map<String, ?> map) throws Exception {
         AlertRuleCondition self = new AlertRuleCondition();
@@ -130,6 +136,14 @@ public class AlertRuleCondition extends TeaModel {
         return this.noDataPolicy;
     }
 
+    public AlertRuleCondition setOper(String oper) {
+        this.oper = oper;
+        return this;
+    }
+    public String getOper() {
+        return this.oper;
+    }
+
     public AlertRuleCondition setRelation(String relation) {
         this.relation = relation;
         return this;
@@ -152,6 +166,14 @@ public class AlertRuleCondition extends TeaModel {
     }
     public String getType() {
         return this.type;
+    }
+
+    public AlertRuleCondition setValue(Double value) {
+        this.value = value;
+        return this;
+    }
+    public Double getValue() {
+        return this.value;
     }
 
     public static class AlertRuleConditionCaseList extends TeaModel {
