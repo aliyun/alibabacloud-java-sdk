@@ -104,7 +104,7 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
         public String fileKey;
 
         @NameInMap("FormDatas")
-        public java.util.Map<String, ?> formDatas;
+        public java.util.Map<String, String> formDatas;
 
         /**
          * <strong>example:</strong>
@@ -126,11 +126,11 @@ public class GenerateUploadConfigResponseBody extends TeaModel {
             return this.fileKey;
         }
 
-        public GenerateUploadConfigResponseBodyData setFormDatas(java.util.Map<String, ?> formDatas) {
+        public GenerateUploadConfigResponseBodyData setFormDatas(java.util.Map<String, String> formDatas) {
             this.formDatas = formDatas;
             return this;
         }
-        public java.util.Map<String, ?> getFormDatas() {
+        public java.util.Map<String, String> getFormDatas() {
             return this.formDatas;
         }
 
