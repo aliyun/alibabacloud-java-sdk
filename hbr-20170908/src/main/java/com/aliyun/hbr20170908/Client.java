@@ -8,7 +8,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
-        this._signatureAlgorithm = "v2";
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
             new TeaPair("ap-northeast-2-pop", "hbr.aliyuncs.com"),
@@ -131,6 +130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelBackupJobResponse cancelBackupJobWithOptions(CancelBackupJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
             query.put("JobId", request.jobId);
         }
@@ -179,6 +182,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CancelRestoreJobResponse cancelRestoreJobWithOptions(CancelRestoreJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.restoreId)) {
             query.put("RestoreId", request.restoreId);
         }
@@ -1313,6 +1320,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("CrossAccountUserId", request.crossAccountUserId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.failbackDetailShrink)) {
             query.put("FailbackDetail", request.failbackDetailShrink);
         }
@@ -1785,6 +1796,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteBackupPlanResponse deleteBackupPlanWithOptions(DeleteBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
             query.put("PlanId", request.planId);
         }
@@ -2437,6 +2452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeBackupJobs2Response describeBackupJobs2WithOptions(DescribeBackupJobs2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
             query.put("Filters", request.filters);
         }
@@ -2497,6 +2516,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeBackupPlansResponse describeBackupPlansWithOptions(DescribeBackupPlansRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
             query.put("Filters", request.filters);
         }
@@ -3542,6 +3565,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeRestoreJobs2Response describeRestoreJobs2WithOptions(DescribeRestoreJobs2Request request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.filters)) {
             query.put("Filters", request.filters);
         }
@@ -3931,6 +3958,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DisableBackupPlanResponse disableBackupPlanWithOptions(DisableBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
             query.put("PlanId", request.planId);
         }
@@ -4051,6 +4082,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public EnableBackupPlanResponse enableBackupPlanWithOptions(EnableBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
             query.put("PlanId", request.planId);
         }
@@ -4168,6 +4203,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteBackupPlanResponse executeBackupPlanWithOptions(ExecuteBackupPlanRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.planId)) {
             query.put("PlanId", request.planId);
         }
@@ -4498,6 +4537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.limit)) {
             query.put("Limit", request.limit);
         }
@@ -4836,6 +4879,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.detailShrink)) {
             query.put("Detail", request.detailShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.edition)) {
+            query.put("Edition", request.edition);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.keepLatestSnapshots)) {

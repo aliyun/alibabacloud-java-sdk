@@ -883,6 +883,13 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         public String latestExecuteJobId;
 
         /**
+         * <strong>example:</strong>
+         * <p>job-00**************9khz</p>
+         */
+        @NameInMap("LatestFinishJobId")
+        public String latestFinishJobId;
+
+        /**
          * <p>This parameter is valid only when <strong>SourceType</strong> is set to <strong>ECS_FILE</strong>. This parameter indicates whether Windows Volume Shadow Copy Service (VSS) is used to define a source path.</p>
          * 
          * <strong>example:</strong>
@@ -1246,6 +1253,14 @@ public class DescribeBackupPlansResponseBody extends TeaModel {
         }
         public String getLatestExecuteJobId() {
             return this.latestExecuteJobId;
+        }
+
+        public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setLatestFinishJobId(String latestFinishJobId) {
+            this.latestFinishJobId = latestFinishJobId;
+            return this;
+        }
+        public String getLatestFinishJobId() {
+            return this.latestFinishJobId;
         }
 
         public DescribeBackupPlansResponseBodyBackupPlansBackupPlan setOptions(String options) {

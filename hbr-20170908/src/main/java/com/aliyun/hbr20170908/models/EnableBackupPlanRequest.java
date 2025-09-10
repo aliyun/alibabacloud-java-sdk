@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class EnableBackupPlanRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
      * <p>The ID of the backup plan.</p>
      * <p>This parameter is required.</p>
      * 
@@ -40,6 +47,14 @@ public class EnableBackupPlanRequest extends TeaModel {
     public static EnableBackupPlanRequest build(java.util.Map<String, ?> map) throws Exception {
         EnableBackupPlanRequest self = new EnableBackupPlanRequest();
         return TeaModel.build(map, self);
+    }
+
+    public EnableBackupPlanRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public EnableBackupPlanRequest setPlanId(String planId) {

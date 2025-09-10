@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupPlansRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
      * <p>The filters.</p>
      */
     @NameInMap("Filters")
@@ -48,6 +55,14 @@ public class DescribeBackupPlansRequest extends TeaModel {
     public static DescribeBackupPlansRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeBackupPlansRequest self = new DescribeBackupPlansRequest();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeBackupPlansRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public DescribeBackupPlansRequest setFilters(java.util.List<DescribeBackupPlansRequestFilters> filters) {

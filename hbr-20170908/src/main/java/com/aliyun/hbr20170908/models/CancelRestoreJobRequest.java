@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelRestoreJobRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
      * <p>The ID of the restore job.</p>
      * <p>This parameter is required.</p>
      * 
@@ -16,7 +23,6 @@ public class CancelRestoreJobRequest extends TeaModel {
 
     /**
      * <p>The ID of the backup vault.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>v-*********************</p>
@@ -27,6 +33,14 @@ public class CancelRestoreJobRequest extends TeaModel {
     public static CancelRestoreJobRequest build(java.util.Map<String, ?> map) throws Exception {
         CancelRestoreJobRequest self = new CancelRestoreJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CancelRestoreJobRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public CancelRestoreJobRequest setRestoreId(String restoreId) {

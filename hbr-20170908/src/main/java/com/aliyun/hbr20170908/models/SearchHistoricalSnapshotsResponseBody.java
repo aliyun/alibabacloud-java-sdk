@@ -401,6 +401,13 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         public String prefix;
 
         /**
+         * <strong>example:</strong>
+         * <p>42949672960</p>
+         */
+        @NameInMap("ProtectedDataSize")
+        public Long protectedDataSize;
+
+        /**
          * <p>The time when the backup job ended. The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -753,6 +760,14 @@ public class SearchHistoricalSnapshotsResponseBody extends TeaModel {
         }
         public String getPrefix() {
             return this.prefix;
+        }
+
+        public SearchHistoricalSnapshotsResponseBodySnapshotsSnapshot setProtectedDataSize(Long protectedDataSize) {
+            this.protectedDataSize = protectedDataSize;
+            return this;
+        }
+        public Long getProtectedDataSize() {
+            return this.protectedDataSize;
         }
 
         public SearchHistoricalSnapshotsResponseBodySnapshotsSnapshot setRangeEnd(Long rangeEnd) {

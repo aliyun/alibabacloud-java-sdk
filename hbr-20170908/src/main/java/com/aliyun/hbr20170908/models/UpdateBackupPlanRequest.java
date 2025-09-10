@@ -29,6 +29,13 @@ public class UpdateBackupPlanRequest extends TeaModel {
     public java.util.Map<String, ?> detail;
 
     /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
      * <p>This parameter is required only if the <strong>SourceType</strong> parameter is set to <strong>ECS_FILE</strong>. This parameter specifies the paths to the files that are excluded from the backup job. The value must be 1 to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -212,6 +219,14 @@ public class UpdateBackupPlanRequest extends TeaModel {
     }
     public java.util.Map<String, ?> getDetail() {
         return this.detail;
+    }
+
+    public UpdateBackupPlanRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public UpdateBackupPlanRequest setExclude(String exclude) {

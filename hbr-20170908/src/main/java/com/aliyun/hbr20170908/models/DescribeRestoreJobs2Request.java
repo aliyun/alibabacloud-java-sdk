@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRestoreJobs2Request extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>STANDARD</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
      * <p>The keys in the filter.</p>
      */
     @NameInMap("Filters")
@@ -47,6 +54,14 @@ public class DescribeRestoreJobs2Request extends TeaModel {
     public static DescribeRestoreJobs2Request build(java.util.Map<String, ?> map) throws Exception {
         DescribeRestoreJobs2Request self = new DescribeRestoreJobs2Request();
         return TeaModel.build(map, self);
+    }
+
+    public DescribeRestoreJobs2Request setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public DescribeRestoreJobs2Request setFilters(java.util.List<DescribeRestoreJobs2RequestFilters> filters) {

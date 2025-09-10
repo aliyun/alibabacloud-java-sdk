@@ -35,6 +35,9 @@ public class CreateRestoreJobShrinkRequest extends TeaModel {
     @NameInMap("CrossAccountUserId")
     public Long crossAccountUserId;
 
+    @NameInMap("Edition")
+    public String edition;
+
     /**
      * <p>The path not to be restored. All documents under this path will not be restored. Maximum length is 255 characters.</p>
      * 
@@ -321,6 +324,14 @@ public class CreateRestoreJobShrinkRequest extends TeaModel {
     }
     public Long getCrossAccountUserId() {
         return this.crossAccountUserId;
+    }
+
+    public CreateRestoreJobShrinkRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public CreateRestoreJobShrinkRequest setExclude(String exclude) {

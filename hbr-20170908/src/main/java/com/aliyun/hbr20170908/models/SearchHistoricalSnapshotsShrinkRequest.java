@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
+    @NameInMap("Edition")
+    public String edition;
+
+    /**
      * <p>The maximum number of rows that you want the current query to return. To query only the number of matched rows without the need to return specific data, you can set the Limit parameter to <code>0</code>. Then, the operation returns only the number of matched rows.</p>
      * 
      * <strong>example:</strong>
@@ -118,6 +125,14 @@ public class SearchHistoricalSnapshotsShrinkRequest extends TeaModel {
     public static SearchHistoricalSnapshotsShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SearchHistoricalSnapshotsShrinkRequest self = new SearchHistoricalSnapshotsShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SearchHistoricalSnapshotsShrinkRequest setEdition(String edition) {
+        this.edition = edition;
+        return this;
+    }
+    public String getEdition() {
+        return this.edition;
     }
 
     public SearchHistoricalSnapshotsShrinkRequest setLimit(Integer limit) {

@@ -549,6 +549,9 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         @NameInMap("SnapshotId")
         public String snapshotId;
 
+        @NameInMap("SourceInstanceId")
+        public String sourceInstanceId;
+
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
@@ -971,6 +974,14 @@ public class DescribeRestoreJobs2ResponseBody extends TeaModel {
         }
         public String getSnapshotId() {
             return this.snapshotId;
+        }
+
+        public DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJob setSourceInstanceId(String sourceInstanceId) {
+            this.sourceInstanceId = sourceInstanceId;
+            return this;
+        }
+        public String getSourceInstanceId() {
+            return this.sourceInstanceId;
         }
 
         public DescribeRestoreJobs2ResponseBodyRestoreJobsRestoreJob setSourceType(String sourceType) {
