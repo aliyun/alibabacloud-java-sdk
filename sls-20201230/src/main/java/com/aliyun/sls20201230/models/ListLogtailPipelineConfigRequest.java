@@ -13,6 +13,9 @@ public class ListLogtailPipelineConfigRequest extends TeaModel {
     @NameInMap("configName")
     public String configName;
 
+    @NameInMap("configType")
+    public String configType;
+
     /**
      * <p>The name of the Logstore.</p>
      * 
@@ -51,6 +54,14 @@ public class ListLogtailPipelineConfigRequest extends TeaModel {
     }
     public String getConfigName() {
         return this.configName;
+    }
+
+    public ListLogtailPipelineConfigRequest setConfigType(String configType) {
+        this.configType = configType;
+        return this;
+    }
+    public String getConfigType() {
+        return this.configType;
     }
 
     public ListLogtailPipelineConfigRequest setLogstoreName(String logstoreName) {

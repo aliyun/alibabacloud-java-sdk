@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class PutProjectTransferAccelerationRequest extends TeaModel {
     /**
+     * <p>Whether to enable transfer acceleration.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;

@@ -4,15 +4,39 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListConsumeProcessorsRequest extends TeaModel {
+    /**
+     * <p>The display name of the consumption processor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>filter-get-request</p>
+     */
     @NameInMap("displayName")
     public String displayName;
 
+    /**
+     * <p>The offset. Default value: 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("offset")
     public String offset;
 
+    /**
+     * <p>The identifier of the consumption processor.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>consume-processor-1</p>
+     */
     @NameInMap("processorName")
     public String processorName;
 
+    /**
+     * <p>The number of entries. Default value: 200.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("size")
     public String size;
 

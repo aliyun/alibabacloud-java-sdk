@@ -418,7 +418,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateAlert</p>
+     * <p>Creates an alert rule in a project.</p>
      * 
      * @param request CreateAlertRequest
      * @param headers map
@@ -471,7 +471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>CreateAlert</p>
+     * <p>Creates an alert rule in a project.</p>
      * 
      * @param request CreateAlertRequest
      * @return CreateAlertResponse
@@ -1292,6 +1292,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.processors)) {
             body.put("processors", request.processors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.task)) {
+            body.put("task", request.task);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -4344,7 +4348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetConsumeProcessor</p>
+     * <p>Query the details of a consumer processor</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4373,7 +4377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>GetConsumeProcessor</p>
+     * <p>Query the details of a consumer processor</p>
      * @return GetConsumeProcessorResponse
      */
     public GetConsumeProcessorResponse getConsumeProcessor(String project, String processorName) throws Exception {
@@ -5226,11 +5230,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</p>
+     * <p>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</p>
      * <ul>
-     * <li>You can call this operation by using Simple Log Service SDK for Go or Java.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</li>
+     * <li>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</li>
      * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:GetLogStoreLogs</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code></td>
+     * </tr>
+     * </tbody></table>
      * 
      * <b>summary</b> : 
      * <p>Queries the raw log data in a Logstore of a project. The returned result contains the raw log data within a specific time range. The returned result is compressed before transmission.</p>
@@ -5319,11 +5337,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  You can call this operation by using Alibaba Cloud SDK for Go, Java, TypeScript, or Python.</p>
+     * <p>You can call this operation by using Simple Log Service SDK for Go, Java, or Python. You can call this operation by using Alibaba Cloud SDK for all programming languages.</p>
      * <ul>
-     * <li>You can call this operation by using Simple Log Service SDK for Go or Java.</li>
-     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/29029.html">GetLogs</a>.</li>
+     * <li>When you call this operation, take note of the compression method that you use. The supported compression algorithms vary based on the programming language. For more information, see the description of the Accept-Encoding parameter in this topic.</li>
+     * <li>For more information, see <a href="https://help.aliyun.com/document_detail/2771313.html">GetLogs</a>.</li>
      * </ul>
+     * <h3>Authentication resources</h3>
+     * <p>The following table describes the authorization information that is required for this operation. You can add the information to the Action element of a Resource Access Management (RAM) policy statement to grant a RAM user or a RAM role the permissions to call this operation.</p>
+     * <table>
+     * <thead>
+     * <tr>
+     * <th align="left">Action</th>
+     * <th align="left">Resource</th>
+     * </tr>
+     * </thead>
+     * <tbody><tr>
+     * <td align="left"><code>log:GetLogStoreLogs</code></td>
+     * <td align="left"><code>acs:log:{#regionId}:{#accountId}:project/{#ProjectName}</code></td>
+     * </tr>
+     * </tbody></table>
      * 
      * <b>summary</b> : 
      * <p>Queries the raw log data in a Logstore of a project. The returned result contains the raw log data within a specific time range. The returned result is compressed before transmission.</p>
@@ -6758,7 +6790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListConsumeProcessors</p>
+     * <p>Queries a list of consumption processors that meet specific conditions.</p>
      * 
      * @param request ListConsumeProcessorsRequest
      * @param headers map
@@ -6807,7 +6839,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ListConsumeProcessors</p>
+     * <p>Queries a list of consumption processors that meet specific conditions.</p>
      * 
      * @param request ListConsumeProcessorsRequest
      * @return ListConsumeProcessorsResponse
@@ -7373,6 +7405,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.configName)) {
             query.put("configName", request.configName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.configType)) {
+            query.put("configType", request.configType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.logstoreName)) {
@@ -8498,7 +8534,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PutConsumeProcessor</p>
+     * <p>Creates or updates a consumption processor.</p>
      * 
      * @param request PutConsumeProcessorRequest
      * @param headers map
@@ -8543,7 +8579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>PutConsumeProcessor</p>
+     * <p>Creates or updates a consumption processor.</p>
      * 
      * @param request PutConsumeProcessorRequest
      * @return PutConsumeProcessorResponse
@@ -8765,7 +8801,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置project传输加速状态</p>
+     * <p>Enables or disables transfer acceleration.</p>
      * 
      * @param request PutProjectTransferAccelerationRequest
      * @param headers map
@@ -8802,7 +8838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>设置project传输加速状态</p>
+     * <p>Enables or disables transfer acceleration.</p>
      * 
      * @param request PutProjectTransferAccelerationRequest
      * @return PutProjectTransferAccelerationResponse
@@ -10662,6 +10698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.processors)) {
             body.put("processors", request.processors);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.task)) {
+            body.put("task", request.task);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

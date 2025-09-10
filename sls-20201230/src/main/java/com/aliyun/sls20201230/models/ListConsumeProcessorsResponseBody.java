@@ -4,12 +4,27 @@ package com.aliyun.sls20201230.models;
 import com.aliyun.tea.*;
 
 public class ListConsumeProcessorsResponseBody extends TeaModel {
+    /**
+     * <p>The number of consumption processors for offset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("count")
     public Integer count;
 
+    /**
+     * <p>The list of consumption processor information.</p>
+     */
     @NameInMap("processors")
     public java.util.List<ConsumeProcessor> processors;
 
+    /**
+     * <p>The total number of consumption processors that meet the query conditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("total")
     public Integer total;
 

@@ -55,6 +55,13 @@ public class LogtailPipelineConfig extends TeaModel {
     @NameInMap("processors")
     public java.util.List<java.util.Map<String, ?>> processors;
 
+    /**
+     * <strong>example:</strong>
+     * <p>{&quot;Type&quot;: &quot;task_example&quot;}</p>
+     */
+    @NameInMap("task")
+    public java.util.Map<String, ?> task;
+
     public static LogtailPipelineConfig build(java.util.Map<String, ?> map) throws Exception {
         LogtailPipelineConfig self = new LogtailPipelineConfig();
         return TeaModel.build(map, self);
@@ -130,6 +137,14 @@ public class LogtailPipelineConfig extends TeaModel {
     }
     public java.util.List<java.util.Map<String, ?>> getProcessors() {
         return this.processors;
+    }
+
+    public LogtailPipelineConfig setTask(java.util.Map<String, ?> task) {
+        this.task = task;
+        return this;
+    }
+    public java.util.Map<String, ?> getTask() {
+        return this.task;
     }
 
 }
