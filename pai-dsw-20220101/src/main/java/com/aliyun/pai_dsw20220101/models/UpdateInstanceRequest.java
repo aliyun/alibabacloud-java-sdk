@@ -24,6 +24,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("Affinity")
     public UpdateInstanceRequestAffinity affinity;
 
+    @NameInMap("AssignNodeSpec")
+    public UpdateInstanceRequestAssignNodeSpec assignNodeSpec;
+
     /**
      * <p>The cloud disks.</p>
      * 
@@ -44,6 +47,9 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("Datasets")
     public java.util.List<UpdateInstanceRequestDatasets> datasets;
+
+    @NameInMap("DisassociateAssignNode")
+    public Boolean disassociateAssignNode;
 
     /**
      * <p>Specifies whether to delete the credential injection information.</p>
@@ -87,6 +93,9 @@ public class UpdateInstanceRequest extends TeaModel {
      */
     @NameInMap("DisassociateForwardInfos")
     public Boolean disassociateForwardInfos;
+
+    @NameInMap("DisassociateSpot")
+    public Boolean disassociateSpot;
 
     @NameInMap("DisassociateUserCommand")
     public Boolean disassociateUserCommand;
@@ -192,6 +201,9 @@ public class UpdateInstanceRequest extends TeaModel {
     @NameInMap("RequestedResource")
     public UpdateInstanceRequestRequestedResource requestedResource;
 
+    @NameInMap("SpotSpec")
+    public UpdateInstanceRequestSpotSpec spotSpec;
+
     @NameInMap("UserCommand")
     public UpdateInstanceRequestUserCommand userCommand;
 
@@ -252,6 +264,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.affinity;
     }
 
+    public UpdateInstanceRequest setAssignNodeSpec(UpdateInstanceRequestAssignNodeSpec assignNodeSpec) {
+        this.assignNodeSpec = assignNodeSpec;
+        return this;
+    }
+    public UpdateInstanceRequestAssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
+    }
+
     public UpdateInstanceRequest setCloudDisks(java.util.List<UpdateInstanceRequestCloudDisks> cloudDisks) {
         this.cloudDisks = cloudDisks;
         return this;
@@ -274,6 +294,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public java.util.List<UpdateInstanceRequestDatasets> getDatasets() {
         return this.datasets;
+    }
+
+    public UpdateInstanceRequest setDisassociateAssignNode(Boolean disassociateAssignNode) {
+        this.disassociateAssignNode = disassociateAssignNode;
+        return this;
+    }
+    public Boolean getDisassociateAssignNode() {
+        return this.disassociateAssignNode;
     }
 
     public UpdateInstanceRequest setDisassociateCredential(Boolean disassociateCredential) {
@@ -314,6 +342,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public Boolean getDisassociateForwardInfos() {
         return this.disassociateForwardInfos;
+    }
+
+    public UpdateInstanceRequest setDisassociateSpot(Boolean disassociateSpot) {
+        this.disassociateSpot = disassociateSpot;
+        return this;
+    }
+    public Boolean getDisassociateSpot() {
+        return this.disassociateSpot;
     }
 
     public UpdateInstanceRequest setDisassociateUserCommand(Boolean disassociateUserCommand) {
@@ -420,6 +456,14 @@ public class UpdateInstanceRequest extends TeaModel {
         return this.requestedResource;
     }
 
+    public UpdateInstanceRequest setSpotSpec(UpdateInstanceRequestSpotSpec spotSpec) {
+        this.spotSpec = spotSpec;
+        return this;
+    }
+    public UpdateInstanceRequestSpotSpec getSpotSpec() {
+        return this.spotSpec;
+    }
+
     public UpdateInstanceRequest setUserCommand(UpdateInstanceRequestUserCommand userCommand) {
         this.userCommand = userCommand;
         return this;
@@ -499,6 +543,44 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public UpdateInstanceRequestAffinityCPU getCPU() {
             return this.CPU;
+        }
+
+    }
+
+    public static class UpdateInstanceRequestAssignNodeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>node-b</p>
+         */
+        @NameInMap("AntiAffinityNodeNames")
+        public String antiAffinityNodeNames;
+
+        /**
+         * <strong>example:</strong>
+         * <p>node-a</p>
+         */
+        @NameInMap("NodeNames")
+        public String nodeNames;
+
+        public static UpdateInstanceRequestAssignNodeSpec build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestAssignNodeSpec self = new UpdateInstanceRequestAssignNodeSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestAssignNodeSpec setAntiAffinityNodeNames(String antiAffinityNodeNames) {
+            this.antiAffinityNodeNames = antiAffinityNodeNames;
+            return this;
+        }
+        public String getAntiAffinityNodeNames() {
+            return this.antiAffinityNodeNames;
+        }
+
+        public UpdateInstanceRequestAssignNodeSpec setNodeNames(String nodeNames) {
+            this.nodeNames = nodeNames;
+            return this;
+        }
+        public String getNodeNames() {
+            return this.nodeNames;
         }
 
     }
@@ -814,6 +896,74 @@ public class UpdateInstanceRequest extends TeaModel {
         }
         public String getSharedMemory() {
             return this.sharedMemory;
+        }
+
+    }
+
+    public static class UpdateInstanceRequestSpotSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
+        @NameInMap("SpotDiscountLimit")
+        public String spotDiscountLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SpotDuration")
+        public String spotDuration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.12</p>
+         */
+        @NameInMap("SpotPriceLimit")
+        public String spotPriceLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
+         */
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        public static UpdateInstanceRequestSpotSpec build(java.util.Map<String, ?> map) throws Exception {
+            UpdateInstanceRequestSpotSpec self = new UpdateInstanceRequestSpotSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateInstanceRequestSpotSpec setSpotDiscountLimit(String spotDiscountLimit) {
+            this.spotDiscountLimit = spotDiscountLimit;
+            return this;
+        }
+        public String getSpotDiscountLimit() {
+            return this.spotDiscountLimit;
+        }
+
+        public UpdateInstanceRequestSpotSpec setSpotDuration(String spotDuration) {
+            this.spotDuration = spotDuration;
+            return this;
+        }
+        public String getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        public UpdateInstanceRequestSpotSpec setSpotPriceLimit(String spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public String getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public UpdateInstanceRequestSpotSpec setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
     }

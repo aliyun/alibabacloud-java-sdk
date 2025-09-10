@@ -24,6 +24,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("Affinity")
     public CreateInstanceRequestAffinity affinity;
 
+    @NameInMap("AssignNodeSpec")
+    public CreateInstanceRequestAssignNodeSpec assignNodeSpec;
+
     /**
      * <p>The cloud disks.</p>
      * 
@@ -161,6 +164,9 @@ public class CreateInstanceRequest extends TeaModel {
     @NameInMap("ResourceId")
     public String resourceId;
 
+    @NameInMap("SpotSpec")
+    public CreateInstanceRequestSpotSpec spotSpec;
+
     /**
      * <p>The tags.</p>
      */
@@ -234,6 +240,14 @@ public class CreateInstanceRequest extends TeaModel {
     }
     public CreateInstanceRequestAffinity getAffinity() {
         return this.affinity;
+    }
+
+    public CreateInstanceRequest setAssignNodeSpec(CreateInstanceRequestAssignNodeSpec assignNodeSpec) {
+        this.assignNodeSpec = assignNodeSpec;
+        return this;
+    }
+    public CreateInstanceRequestAssignNodeSpec getAssignNodeSpec() {
+        return this.assignNodeSpec;
     }
 
     public CreateInstanceRequest setCloudDisks(java.util.List<CreateInstanceRequestCloudDisks> cloudDisks) {
@@ -364,6 +378,14 @@ public class CreateInstanceRequest extends TeaModel {
         return this.resourceId;
     }
 
+    public CreateInstanceRequest setSpotSpec(CreateInstanceRequestSpotSpec spotSpec) {
+        this.spotSpec = spotSpec;
+        return this;
+    }
+    public CreateInstanceRequestSpotSpec getSpotSpec() {
+        return this.spotSpec;
+    }
+
     public CreateInstanceRequest setTag(java.util.List<CreateInstanceRequestTag> tag) {
         this.tag = tag;
         return this;
@@ -459,6 +481,44 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public CreateInstanceRequestAffinityCPU getCPU() {
             return this.CPU;
+        }
+
+    }
+
+    public static class CreateInstanceRequestAssignNodeSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>node-b</p>
+         */
+        @NameInMap("AntiAffinityNodeNames")
+        public String antiAffinityNodeNames;
+
+        /**
+         * <strong>example:</strong>
+         * <p>node-a</p>
+         */
+        @NameInMap("NodeNames")
+        public String nodeNames;
+
+        public static CreateInstanceRequestAssignNodeSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestAssignNodeSpec self = new CreateInstanceRequestAssignNodeSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestAssignNodeSpec setAntiAffinityNodeNames(String antiAffinityNodeNames) {
+            this.antiAffinityNodeNames = antiAffinityNodeNames;
+            return this;
+        }
+        public String getAntiAffinityNodeNames() {
+            return this.antiAffinityNodeNames;
+        }
+
+        public CreateInstanceRequestAssignNodeSpec setNodeNames(String nodeNames) {
+            this.nodeNames = nodeNames;
+            return this;
+        }
+        public String getNodeNames() {
+            return this.nodeNames;
         }
 
     }
@@ -930,6 +990,74 @@ public class CreateInstanceRequest extends TeaModel {
         }
         public String getSharedMemory() {
             return this.sharedMemory;
+        }
+
+    }
+
+    public static class CreateInstanceRequestSpotSpec extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0.1</p>
+         */
+        @NameInMap("SpotDiscountLimit")
+        public String spotDiscountLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SpotDuration")
+        public String spotDuration;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0.12</p>
+         */
+        @NameInMap("SpotPriceLimit")
+        public String spotPriceLimit;
+
+        /**
+         * <strong>example:</strong>
+         * <p>SpotWithPriceLimit</p>
+         */
+        @NameInMap("SpotStrategy")
+        public String spotStrategy;
+
+        public static CreateInstanceRequestSpotSpec build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceRequestSpotSpec self = new CreateInstanceRequestSpotSpec();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceRequestSpotSpec setSpotDiscountLimit(String spotDiscountLimit) {
+            this.spotDiscountLimit = spotDiscountLimit;
+            return this;
+        }
+        public String getSpotDiscountLimit() {
+            return this.spotDiscountLimit;
+        }
+
+        public CreateInstanceRequestSpotSpec setSpotDuration(String spotDuration) {
+            this.spotDuration = spotDuration;
+            return this;
+        }
+        public String getSpotDuration() {
+            return this.spotDuration;
+        }
+
+        public CreateInstanceRequestSpotSpec setSpotPriceLimit(String spotPriceLimit) {
+            this.spotPriceLimit = spotPriceLimit;
+            return this;
+        }
+        public String getSpotPriceLimit() {
+            return this.spotPriceLimit;
+        }
+
+        public CreateInstanceRequestSpotSpec setSpotStrategy(String spotStrategy) {
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+        public String getSpotStrategy() {
+            return this.spotStrategy;
         }
 
     }

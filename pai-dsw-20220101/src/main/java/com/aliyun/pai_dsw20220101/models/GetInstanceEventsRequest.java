@@ -13,6 +13,9 @@ public class GetInstanceEventsRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    @NameInMap("EventLevel")
+    public String eventLevel;
+
     /**
      * <p>The maximum number of events. Default value: 2000.</p>
      * 
@@ -48,6 +51,14 @@ public class GetInstanceEventsRequest extends TeaModel {
     }
     public String getEndTime() {
         return this.endTime;
+    }
+
+    public GetInstanceEventsRequest setEventLevel(String eventLevel) {
+        this.eventLevel = eventLevel;
+        return this;
+    }
+    public String getEventLevel() {
+        return this.eventLevel;
     }
 
     public GetInstanceEventsRequest setMaxEventsNum(Integer maxEventsNum) {

@@ -4,6 +4,9 @@ package com.aliyun.pai_dsw20220101.models;
 import com.aliyun.tea.*;
 
 public class GetInstanceRequest extends TeaModel {
+    @NameInMap("Fields")
+    public String fields;
+
     /**
      * <p>The sharing token information.</p>
      * 
@@ -16,6 +19,14 @@ public class GetInstanceRequest extends TeaModel {
     public static GetInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         GetInstanceRequest self = new GetInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public GetInstanceRequest setFields(String fields) {
+        this.fields = fields;
+        return this;
+    }
+    public String getFields() {
+        return this.fields;
     }
 
     public GetInstanceRequest setToken(String token) {
