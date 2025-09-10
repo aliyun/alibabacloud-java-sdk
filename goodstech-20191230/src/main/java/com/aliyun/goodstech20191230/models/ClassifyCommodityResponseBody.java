@@ -7,6 +7,10 @@ public class ClassifyCommodityResponseBody extends TeaModel {
     @NameInMap("Data")
     public ClassifyCommodityResponseBodyData data;
 
+    /**
+     * <strong>example:</strong>
+     * <p>87C5AF93-F641-54C2-873D-0501E637489C</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
@@ -32,12 +36,20 @@ public class ClassifyCommodityResponseBody extends TeaModel {
     }
 
     public static class ClassifyCommodityResponseBodyDataCategories extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>584</p>
+         */
         @NameInMap("CategoryId")
         public String categoryId;
 
         @NameInMap("CategoryName")
         public String categoryName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0.417248</p>
+         */
         @NameInMap("Score")
         public Float score;
 
