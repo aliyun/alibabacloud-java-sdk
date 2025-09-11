@@ -165,6 +165,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @NameInMap("BackupStartTime")
         public String backupStartTime;
 
+        @NameInMap("BackupStatus")
+        public String backupStatus;
+
         /**
          * <p>The backup type. Valid values:</p>
          * <ul>
@@ -249,6 +252,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
         public String getBackupStartTime() {
             return this.backupStartTime;
+        }
+
+        public DescribeBackupsResponseBodyItemsBackup setBackupStatus(String backupStatus) {
+            this.backupStatus = backupStatus;
+            return this;
+        }
+        public String getBackupStatus() {
+            return this.backupStatus;
         }
 
         public DescribeBackupsResponseBodyItemsBackup setBackupType(String backupType) {

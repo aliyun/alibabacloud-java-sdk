@@ -1,3 +1,7 @@
+2025-09-11 Version: 4.2.2
+- Update API DescribeBackups: add response parameters Body.Items.$.BackupStatus.
+
+
 2025-09-08 Version: 4.2.1
 - Update API DescribeDBClusters: add response parameters Body.Items.$.AINodeNumber.
 - Update API DescribeDBClusters: add response parameters Body.Items.$.AINodeSpec.
