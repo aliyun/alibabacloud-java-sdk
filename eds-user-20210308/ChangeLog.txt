@@ -1,3 +1,9 @@
+2025-09-11 Version: 1.6.4
+- Update API DescribeGroups: add request parameters ExcludeAttachedLoginPolicyGroups.
+- Update API DescribeGroups: add request parameters LoginPolicyId.
+- Update API DescribeGroups: add response parameters Body.Groups.$.AttachedLoginPolicy.
+
+
 2025-08-25 Version: 1.6.3
 - Update API DescribeMfaDevices: add request parameters Filter.
 - Update API DescribeMfaDevices: add response parameters Body.MfaDevices.$.AdUser.

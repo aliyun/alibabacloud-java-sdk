@@ -681,12 +681,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("BizType", request.bizType);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.excludeAttachedLoginPolicyGroups)) {
+            query.put("ExcludeAttachedLoginPolicyGroups", request.excludeAttachedLoginPolicyGroups);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
             query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.loginPolicyId)) {
+            query.put("LoginPolicyId", request.loginPolicyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {

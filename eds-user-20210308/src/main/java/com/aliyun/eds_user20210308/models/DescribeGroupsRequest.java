@@ -11,6 +11,9 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    @NameInMap("ExcludeAttachedLoginPolicyGroups")
+    public Boolean excludeAttachedLoginPolicyGroups;
+
     /**
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
@@ -20,6 +23,9 @@ public class DescribeGroupsRequest extends TeaModel {
 
     @NameInMap("GroupName")
     public String groupName;
+
+    @NameInMap("LoginPolicyId")
+    public String loginPolicyId;
 
     @NameInMap("PageNumber")
     public Integer pageNumber;
@@ -50,6 +56,14 @@ public class DescribeGroupsRequest extends TeaModel {
         return this.bizType;
     }
 
+    public DescribeGroupsRequest setExcludeAttachedLoginPolicyGroups(Boolean excludeAttachedLoginPolicyGroups) {
+        this.excludeAttachedLoginPolicyGroups = excludeAttachedLoginPolicyGroups;
+        return this;
+    }
+    public Boolean getExcludeAttachedLoginPolicyGroups() {
+        return this.excludeAttachedLoginPolicyGroups;
+    }
+
     public DescribeGroupsRequest setGroupId(String groupId) {
         this.groupId = groupId;
         return this;
@@ -64,6 +78,14 @@ public class DescribeGroupsRequest extends TeaModel {
     }
     public String getGroupName() {
         return this.groupName;
+    }
+
+    public DescribeGroupsRequest setLoginPolicyId(String loginPolicyId) {
+        this.loginPolicyId = loginPolicyId;
+        return this;
+    }
+    public String getLoginPolicyId() {
+        return this.loginPolicyId;
     }
 
     public DescribeGroupsRequest setPageNumber(Integer pageNumber) {

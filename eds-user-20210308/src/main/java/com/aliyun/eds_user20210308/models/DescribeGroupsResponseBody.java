@@ -46,7 +46,40 @@ public class DescribeGroupsResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class DescribeGroupsResponseBodyGroupsAttachedLoginPolicy extends TeaModel {
+        @NameInMap("Name")
+        public String name;
+
+        @NameInMap("PolicyId")
+        public String policyId;
+
+        public static DescribeGroupsResponseBodyGroupsAttachedLoginPolicy build(java.util.Map<String, ?> map) throws Exception {
+            DescribeGroupsResponseBodyGroupsAttachedLoginPolicy self = new DescribeGroupsResponseBodyGroupsAttachedLoginPolicy();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy setPolicyId(String policyId) {
+            this.policyId = policyId;
+            return this;
+        }
+        public String getPolicyId() {
+            return this.policyId;
+        }
+
+    }
+
     public static class DescribeGroupsResponseBodyGroups extends TeaModel {
+        @NameInMap("AttachedLoginPolicy")
+        public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy attachedLoginPolicy;
+
         @NameInMap("AuthedResources")
         public java.util.Map<String, String> authedResources;
 
@@ -75,6 +108,14 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public static DescribeGroupsResponseBodyGroups build(java.util.Map<String, ?> map) throws Exception {
             DescribeGroupsResponseBodyGroups self = new DescribeGroupsResponseBodyGroups();
             return TeaModel.build(map, self);
+        }
+
+        public DescribeGroupsResponseBodyGroups setAttachedLoginPolicy(DescribeGroupsResponseBodyGroupsAttachedLoginPolicy attachedLoginPolicy) {
+            this.attachedLoginPolicy = attachedLoginPolicy;
+            return this;
+        }
+        public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy getAttachedLoginPolicy() {
+            return this.attachedLoginPolicy;
         }
 
         public DescribeGroupsResponseBodyGroups setAuthedResources(java.util.Map<String, String> authedResources) {
