@@ -8916,6 +8916,40 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>输出指定用户ID下可用资源对应的nas信息</p>
+     * 
+     * @param request DescribeNASAvailableResourceInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeNASAvailableResourceInfoResponse
+     */
+    public DescribeNASAvailableResourceInfoResponse describeNASAvailableResourceInfoWithOptions(com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teaopenapi.models.OpenApiRequest req = new com.aliyun.teaopenapi.models.OpenApiRequest();
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeNASAvailableResourceInfo"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeNASAvailableResourceInfoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>输出指定用户ID下可用资源对应的nas信息</p>
+     * @return DescribeNASAvailableResourceInfoResponse
+     */
+    public DescribeNASAvailableResourceInfoResponse describeNASAvailableResourceInfo() throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeNASAvailableResourceInfoWithOptions(runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>根据筛选条件获取指定NC属性和资源量信息</p>
      * 
      * @param request DescribeNCInformationRequest
