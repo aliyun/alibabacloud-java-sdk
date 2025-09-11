@@ -1,3 +1,7 @@
+2025-09-11 Version: 9.0.2
+- Update API CreateSiteMonitor: add request parameters AgentGroup.
+
+
 2025-08-22 Version: 9.0.1
 - Update API CreateInstantSiteMonitor: add request parameters AgentGroup.
 

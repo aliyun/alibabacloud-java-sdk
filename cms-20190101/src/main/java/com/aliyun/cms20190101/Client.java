@@ -1452,6 +1452,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Address", request.address);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentGroup)) {
+            query.put("AgentGroup", request.agentGroup);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.alertIds)) {
             query.put("AlertIds", request.alertIds);
         }
@@ -6069,6 +6073,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * This topic provides an example of how to query the processes of the <code>i-hp3hl3cx1pbahzy8****</code> instance. The response indicates the details of the <code>NGINX</code> and <code>HTTP</code> processes.</p>
      * </blockquote>
      * 
+     * <b>summary</b> : 
+     * <p>查询指定资源的进程数列表</p>
+     * 
      * @param request DescribeMonitoringAgentProcessesRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeMonitoringAgentProcessesResponse
@@ -6103,6 +6110,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p> Before you call this operation, call the CreateMonitoringAgentProcess operation to create processes. For more information, see <a href="https://help.aliyun.com/document_detail/114951.html~">CreateMonitoringAgentProcess</a>.
      * This topic provides an example of how to query the processes of the <code>i-hp3hl3cx1pbahzy8****</code> instance. The response indicates the details of the <code>NGINX</code> and <code>HTTP</code> processes.</p>
      * </blockquote>
+     * 
+     * <b>summary</b> : 
+     * <p>查询指定资源的进程数列表</p>
      * 
      * @param request DescribeMonitoringAgentProcessesRequest
      * @return DescribeMonitoringAgentProcessesResponse
@@ -7857,6 +7867,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改应用分组内的进程监控</p>
+     * 
      * @param request ModifyGroupMonitoringAgentProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyGroupMonitoringAgentProcessResponse
@@ -7898,6 +7911,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改应用分组内的进程监控</p>
+     * 
      * @param request ModifyGroupMonitoringAgentProcessRequest
      * @return ModifyGroupMonitoringAgentProcessResponse
      */
@@ -7992,6 +8008,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <hr>
      * 
+     * <b>summary</b> : 
+     * <p>修改非阿里云的主机显示信息</p>
+     * 
      * @param request ModifyHostInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyHostInfoResponse
@@ -8027,6 +8046,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <hr>
+     * 
+     * <b>summary</b> : 
+     * <p>修改非阿里云的主机显示信息</p>
      * 
      * @param request ModifyHostInfoRequest
      * @return ModifyHostInfoResponse
@@ -8373,6 +8395,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改应用分组</p>
+     * 
      * @param request ModifyMonitorGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyMonitorGroupResponse
@@ -8410,6 +8435,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>修改应用分组</p>
+     * 
      * @param request ModifyMonitorGroupRequest
      * @return ModifyMonitorGroupResponse
      */
@@ -8420,7 +8448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ModifyMonitorGroupInstances</p>
+     * <p>修改应用分组中的资源</p>
      * 
      * @param request ModifyMonitorGroupInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8456,7 +8484,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>ModifyMonitorGroupInstances</p>
+     * <p>修改应用分组中的资源</p>
      * 
      * @param request ModifyMonitorGroupInstancesRequest
      * @return ModifyMonitorGroupInstancesResponse

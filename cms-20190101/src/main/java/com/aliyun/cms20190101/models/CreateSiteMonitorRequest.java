@@ -14,6 +14,9 @@ public class CreateSiteMonitorRequest extends TeaModel {
     @NameInMap("Address")
     public String address;
 
+    @NameInMap("AgentGroup")
+    public String agentGroup;
+
     /**
      * <p>The ID of the alert rule.</p>
      * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
@@ -107,6 +110,14 @@ public class CreateSiteMonitorRequest extends TeaModel {
     }
     public String getAddress() {
         return this.address;
+    }
+
+    public CreateSiteMonitorRequest setAgentGroup(String agentGroup) {
+        this.agentGroup = agentGroup;
+        return this;
+    }
+    public String getAgentGroup() {
+        return this.agentGroup;
     }
 
     public CreateSiteMonitorRequest setAlertIds(String alertIds) {
