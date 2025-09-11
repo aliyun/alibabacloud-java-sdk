@@ -140,6 +140,13 @@ public class GetInstanceResponseBody extends TeaModel {
         public String orderId;
 
         /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("PqcEnabled")
+        public Integer pqcEnabled;
+
+        /**
          * <p>The ID of the region.</p>
          * 
          * <strong>example:</strong>
@@ -317,6 +324,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
         public String getOrderId() {
             return this.orderId;
+        }
+
+        public GetInstanceResponseBodyInstance setPqcEnabled(Integer pqcEnabled) {
+            this.pqcEnabled = pqcEnabled;
+            return this;
+        }
+        public Integer getPqcEnabled() {
+            return this.pqcEnabled;
         }
 
         public GetInstanceResponseBodyInstance setRegionId(String regionId) {

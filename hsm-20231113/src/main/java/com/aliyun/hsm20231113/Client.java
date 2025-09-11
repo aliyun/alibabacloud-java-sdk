@@ -862,6 +862,64 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API允许用户获取特定集群的管理证书。</li>
+     * <li>返回的数据是经过base64编码的证书内容。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>下载集群托管证书</p>
+     * 
+     * @param request DownloadClusterManagedCertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DownloadClusterManagedCertResponse
+     */
+    public DownloadClusterManagedCertResponse downloadClusterManagedCertWithOptions(DownloadClusterManagedCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DownloadClusterManagedCert"),
+            new TeaPair("version", "2023-11-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DownloadClusterManagedCertResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该API允许用户获取特定集群的管理证书。</li>
+     * <li>返回的数据是经过base64编码的证书内容。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>下载集群托管证书</p>
+     * 
+     * @param request DownloadClusterManagedCertRequest
+     * @return DownloadClusterManagedCertResponse
+     */
+    public DownloadClusterManagedCertResponse downloadClusterManagedCert(DownloadClusterManagedCertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.downloadClusterManagedCertWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>This operation is available only for backups in the Chinese mainland.</p>
      * 
      * <b>summary</b> : 
@@ -1779,6 +1837,88 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>快速部署集群</p>
+     * 
+     * @param tmpReq QuickDeployClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QuickDeployClusterResponse
+     */
+    public QuickDeployClusterResponse quickDeployClusterWithOptions(QuickDeployClusterRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        QuickDeployClusterShrinkRequest request = new QuickDeployClusterShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.instanceList)) {
+            request.instanceListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.instanceList, "InstanceList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.vSwitchIdList)) {
+            request.vSwitchIdListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.vSwitchIdList, "VSwitchIdList", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.whiteList)) {
+            request.whiteListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.whiteList, "WhiteList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.certManaged)) {
+            query.put("CertManaged", request.certManaged);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
+            query.put("ClusterName", request.clusterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceListShrink)) {
+            query.put("InstanceList", request.instanceListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vSwitchIdListShrink)) {
+            query.put("VSwitchIdList", request.vSwitchIdListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            query.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.whiteListShrink)) {
+            query.put("WhiteList", request.whiteListShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QuickDeployCluster"),
+            new TeaPair("version", "2023-11-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QuickDeployClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>快速部署集群</p>
+     * 
+     * @param request QuickDeployClusterRequest
+     * @return QuickDeployClusterResponse
+     */
+    public QuickDeployClusterResponse quickDeployCluster(QuickDeployClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.quickDeployClusterWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>This operation is supported only for general virtual security modules (GVSMs) in the Chinese mainland.</p>
      * 
@@ -2024,6 +2164,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ResumeInstanceResponse resumeInstance(ResumeInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.resumeInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于触发指定集群的管理证书轮转过程。通过提供<code>ClusterId</code>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</p>
+     * <h3>注意事项</h3>
+     * <ul>
+     * <li>确保提供的<code>ClusterId</code>是有效的，并且用户具有对该集群的操作权限。</li>
+     * <li>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>轮转集群托管证书</p>
+     * 
+     * @param request RotateClusterManagedCertRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RotateClusterManagedCertResponse
+     */
+    public RotateClusterManagedCertResponse rotateClusterManagedCertWithOptions(RotateClusterManagedCertRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterId)) {
+            query.put("ClusterId", request.clusterId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RotateClusterManagedCert"),
+            new TeaPair("version", "2023-11-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RotateClusterManagedCertResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <p>该API用于触发指定集群的管理证书轮转过程。通过提供<code>ClusterId</code>参数，可以指定需要进行证书轮转的集群。此操作有助于提高集群的安全性，建议定期执行。</p>
+     * <h3>注意事项</h3>
+     * <ul>
+     * <li>确保提供的<code>ClusterId</code>是有效的，并且用户具有对该集群的操作权限。</li>
+     * <li>证书轮转可能会影响依赖于旧证书的服务，请在适当的时间窗口内执行此操作。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>轮转集群托管证书</p>
+     * 
+     * @param request RotateClusterManagedCertRequest
+     * @return RotateClusterManagedCertResponse
+     */
+    public RotateClusterManagedCertResponse rotateClusterManagedCert(RotateClusterManagedCertRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.rotateClusterManagedCertWithOptions(request, runtime);
     }
 
     /**
