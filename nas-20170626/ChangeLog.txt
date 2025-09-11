@@ -1,3 +1,10 @@
+2025-09-11 Version: 3.1.0
+- Support API AttachVscToFilesystems.
+- Support API DescribeFilesystemsVscAttachInfo.
+- Support API DetachVscFromFilesystems.
+- Update API DescribeDataFlowTasks: add request parameters WithReports.
+
+
 2025-07-01 Version: 3.0.0
 - Delete API AddTags.
 - Delete API RemoveTags.

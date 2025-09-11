@@ -54,7 +54,7 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     public Boolean createDirIfNotExist;
 
     /**
-     * <p>The dataflow ID.</p>
+     * <p>The ID of the dataflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -173,11 +173,27 @@ public class CreateDataFlowTaskRequest extends TeaModel {
     @NameInMap("FileSystemId")
     public String fileSystemId;
 
+    /**
+     * <p>Filters subdirectories and transfers their contents.</p>
+     * <blockquote>
+     * <ul>
+     * <li>This parameter takes effect only when the Directory parameter is specified.</li>
+     * <li>The path length of a single folder must be 1 to 1023 characters, start and end with a forward slash (/), and the total length must not exceed 3000 characters.</li>
+     * <li>Only CPFS for Lingjun supports this parameter.</li>
+     * </ul>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;/test/&quot;,&quot;/test1/&quot;]</p>
+     */
     @NameInMap("Includes")
     public String includes;
 
     /**
-     * <p>If you specify SrcTaskId, the configurations of the TaskAction, DataType, and EntryList parameters are copied from the desired dataflow task. You do not need to specify them.</p>
+     * <p>If you specify SrcTaskId, you must enter the ID of the dataflow task. The system copies the TaskAction, DataType, and EntryList parameters from the destination dataflow task. You do not need to specify them.</p>
+     * <blockquote>
+     * <p> Streaming dataflow tasks are not supported.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>task-27aa8e890f45****</p>

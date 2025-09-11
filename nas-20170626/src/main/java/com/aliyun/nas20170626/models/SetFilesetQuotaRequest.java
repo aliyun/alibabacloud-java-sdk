@@ -32,11 +32,14 @@ public class SetFilesetQuotaRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The limit of the file quantity of the quota. Valid values:</p>
+     * <p>The number of files of the quota. Valid values:</p>
      * <ul>
-     * <li>Minimum value: 10000.</li>
-     * <li>Maximum value: 10000000000.</li>
+     * <li>Minimum value: 10,000.</li>
+     * <li>Maximum value: 10,000,000,000.</li>
      * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the number of files is unlimited.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10000</p>
@@ -68,9 +71,12 @@ public class SetFilesetQuotaRequest extends TeaModel {
      * <p>The total capacity of the quota. Unit: bytes.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>Minimum value: 10737418240 (10 GiB).</li>
-     * <li>Step size: 1073741824 (1 GiB).</li>
+     * <li>Minimum value: 10,737,418,240 (10 GiB).</li>
+     * <li>Step size: 1,073,741,824 (1 GiB).</li>
      * </ul>
+     * <blockquote>
+     * <p> If you do not specify this parameter, the capacity is unlimited.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>10737418240</p>

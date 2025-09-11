@@ -269,6 +269,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates the VSC device with the file system.</p>
+     * 
+     * @param request AttachVscToFilesystemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AttachVscToFilesystemsResponse
+     */
+    public AttachVscToFilesystemsResponse attachVscToFilesystemsWithOptions(AttachVscToFilesystemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AttachVscToFilesystems"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AttachVscToFilesystemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Associates the VSC device with the file system.</p>
+     * 
+     * @param request AttachVscToFilesystemsRequest
+     * @return AttachVscToFilesystemsResponse
+     */
+    public AttachVscToFilesystemsResponse attachVscToFilesystems(AttachVscToFilesystemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.attachVscToFilesystemsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
      * <li>Only advanced Extreme NAS file systems support this feature.</li>
@@ -1429,13 +1489,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.4.0 and later support dataflow. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>You can create a data flow task only for a data flow that is in the Running state.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</li>
-     * <li>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</li>
-     * <li>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</li>
-     * <li>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
+     * <li>Dataflow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</li>
+     * <li>You can create a dataflow task only for a dataflow that is in the Running state.</li>
+     * <li>When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.</li>
+     * <li>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS for Lingjun file system does not exceed 1,023 characters.</li>
+     * <li>CPFS for Lingjun supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1519,13 +1579,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  Only Cloud Parallel File Storage CPFS for LINGJUN V2.4.0 and later support data flows. You can view the version information on the file system details page in the console.</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.4.0 and later support dataflow. You can view the version information on the file system details page in the console.</p>
      * <ul>
-     * <li>You can create a data flow task only for a data flow that is in the Running state.</li>
-     * <li>Data flow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</li>
-     * <li>When you manually run a data flow task, the automatic data update task for the data flow is interrupted and enters the pending state.</li>
-     * <li>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS or CPFS for LINGJUN file system does not exceed 1,023 characters.</li>
-     * <li>CPFS for LINGJUN supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
+     * <li>Dataflow tasks are executed asynchronously. You can call the <a href="https://help.aliyun.com/document_detail/2838089.html">DescribeDataFlowTasks</a> operation to query the task execution status. The task duration depends on the amount of data to be imported and exported. If a large amount of data exists, we recommend that you create multiple tasks.</li>
+     * <li>You can create a dataflow task only for a dataflow that is in the Running state.</li>
+     * <li>When you manually run a dataflow task, the automatic data update task for the dataflow is interrupted and enters the pending state.</li>
+     * <li>When you create an export task, make sure that the total length of the absolute path of the files to be exported from a CPFS for Lingjun file system does not exceed 1,023 characters.</li>
+     * <li>CPFS for Lingjun supports two types of tasks: batch tasks and streaming tasks. For more information, see <a href="https://help.aliyun.com/document_detail/2845429.html">Task types</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4021,6 +4081,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NextToken", request.nextToken);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.withReports)) {
+            query.put("WithReports", request.withReports);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
@@ -4385,6 +4449,70 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeFilesetsResponse describeFilesets(DescribeFilesetsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeFilesetsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about virtual storage channels associated with a file system.</p>
+     * 
+     * @param request DescribeFilesystemsVscAttachInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeFilesystemsVscAttachInfoResponse
+     */
+    public DescribeFilesystemsVscAttachInfoResponse describeFilesystemsVscAttachInfoWithOptions(DescribeFilesystemsVscAttachInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("MaxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeFilesystemsVscAttachInfo"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeFilesystemsVscAttachInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries information about virtual storage channels associated with a file system.</p>
+     * 
+     * @param request DescribeFilesystemsVscAttachInfoRequest
+     * @return DescribeFilesystemsVscAttachInfoResponse
+     */
+    public DescribeFilesystemsVscAttachInfoResponse describeFilesystemsVscAttachInfo(DescribeFilesystemsVscAttachInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeFilesystemsVscAttachInfoWithOptions(request, runtime);
     }
 
     /**
@@ -5091,6 +5219,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeZonesResponse describeZones(DescribeZonesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeZonesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unassociates a VSC device from a file system.</p>
+     * 
+     * @param request DetachVscFromFilesystemsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DetachVscFromFilesystemsResponse
+     */
+    public DetachVscFromFilesystemsResponse detachVscFromFilesystemsWithOptions(DetachVscFromFilesystemsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.clientToken)) {
+            query.put("ClientToken", request.clientToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceIds)) {
+            query.put("ResourceIds", request.resourceIds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DetachVscFromFilesystems"),
+            new TeaPair("version", "2017-06-26"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DetachVscFromFilesystemsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Only CPFS for Lingjun supports this operation.</p>
+     * <ul>
+     * <li>Batch execution is supported. In batch execution, only one VscId can be associated with multiple FileSystemIDs, meaning the VscId in the ResourceIds must be the same.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Unassociates a VSC device from a file system.</p>
+     * 
+     * @param request DetachVscFromFilesystemsRequest
+     * @return DetachVscFromFilesystemsResponse
+     */
+    public DetachVscFromFilesystemsResponse detachVscFromFilesystems(DetachVscFromFilesystemsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.detachVscFromFilesystemsWithOptions(request, runtime);
     }
 
     /**
@@ -7083,7 +7271,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</li>
      * <li>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</li>
-     * <li>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</li>
+     * <li>When modifying a directory quota, you must set the new capacity or file quantity higher than what is currently used.</li>
+     * <li>You must configure at least one of the Capacity Limit (GiB) and File Limit parameters.</li>
      * <li>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</li>
      * </ul>
      * 
@@ -7144,7 +7333,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <ul>
      * <li>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</li>
      * <li>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</li>
-     * <li>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</li>
+     * <li>When modifying a directory quota, you must set the new capacity or file quantity higher than what is currently used.</li>
+     * <li>You must configure at least one of the Capacity Limit (GiB) and File Limit parameters.</li>
      * <li>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</li>
      * </ul>
      * 

@@ -25,14 +25,17 @@ public class DescribeFileSystemsRequest extends TeaModel {
      * <p>The type of the file system.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>all (default): all types</li>
-     * <li>standard: General-purpose NAS file system</li>
-     * <li>extreme: Extreme NAS file system</li>
-     * <li>cpfs: CPFS file system<blockquote>
-     * <p>CPFS file systems are available only on the China site (aliyun.com).</p>
-     * </blockquote>
-     * </li>
+     * <li>all (default): All types.</li>
+     * <li>standard: General-purpose NAS file system.</li>
+     * <li>extreme: Extreme NAS file system.</li>
+     * <li>cpfs: Cloud Parallel File Storage (CPFS) file system.</li>
      * </ul>
+     * <blockquote>
+     * <ul>
+     * <li>CPFS file systems are available only on the China site (aliyun.com).</li>
+     * <li>Separate multiple file types with commas (,).</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>standard</p>
@@ -150,13 +153,13 @@ public class DescribeFileSystemsRequest extends TeaModel {
 
     public static class DescribeFileSystemsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N to add to the resource.</p>
+         * <p>The tag key.</p>
          * <p>Limits:</p>
          * <ul>
          * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag key must be 1 to 128 characters in length.</li>
-         * <li>The tag key cannot start with aliyun or acs:.</li>
-         * <li>The tag key cannot contain http:// or https://.</li>
+         * <li>The tag key can be up to 128 characters in length.</li>
+         * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -166,13 +169,13 @@ public class DescribeFileSystemsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N to add to the resource.</p>
+         * <p>The tag value.</p>
          * <p>Limits:</p>
          * <ul>
          * <li>Valid values of N: 1 to 20.</li>
-         * <li>The tag value must be 1 to 128 characters in length.</li>
-         * <li>The tag value cannot start with aliyun or acs:.</li>
-         * <li>The tag value cannot contain http:// or https://.</li>
+         * <li>The tag value can be up to 128 characters in length.</li>
+         * <li>The tag value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+         * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

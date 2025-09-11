@@ -50,6 +50,9 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
     @NameInMap("NextToken")
     public String nextToken;
 
+    @NameInMap("WithReports")
+    public Boolean withReports;
+
     public static DescribeDataFlowTasksRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeDataFlowTasksRequest self = new DescribeDataFlowTasksRequest();
         return TeaModel.build(map, self);
@@ -85,6 +88,14 @@ public class DescribeDataFlowTasksRequest extends TeaModel {
     }
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    public DescribeDataFlowTasksRequest setWithReports(Boolean withReports) {
+        this.withReports = withReports;
+        return this;
+    }
+    public Boolean getWithReports() {
+        return this.withReports;
     }
 
     public static class DescribeDataFlowTasksRequestFilters extends TeaModel {
