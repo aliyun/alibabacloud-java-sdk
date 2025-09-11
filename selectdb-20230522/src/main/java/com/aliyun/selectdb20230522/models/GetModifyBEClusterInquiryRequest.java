@@ -119,6 +119,13 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <strong>example:</strong>
+     * <p>123412345</p>
+     */
+    @NameInMap("PromotionOptionNo")
+    public String promotionOptionNo;
+
+    /**
      * <p>The number of clusters whose specifications are to be changed.</p>
      * <p>This parameter is required.</p>
      * 
@@ -224,6 +231,14 @@ public class GetModifyBEClusterInquiryRequest extends TeaModel {
     }
     public String getPricingCycle() {
         return this.pricingCycle;
+    }
+
+    public GetModifyBEClusterInquiryRequest setPromotionOptionNo(String promotionOptionNo) {
+        this.promotionOptionNo = promotionOptionNo;
+        return this;
+    }
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
     }
 
     public GetModifyBEClusterInquiryRequest setQuantity(Long quantity) {

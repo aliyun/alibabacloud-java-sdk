@@ -40,6 +40,89 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    public static class GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("CanPromFee")
+        public String canPromFee;
+
+        /**
+         * <strong>example:</strong>
+         * <p>7afs9d</p>
+         */
+        @NameInMap("OptionCode")
+        public String optionCode;
+
+        /**
+         * <strong>example:</strong>
+         * <p>通用优惠券可抵扣100</p>
+         */
+        @NameInMap("PromotionDesc")
+        public String promotionDesc;
+
+        /**
+         * <strong>example:</strong>
+         * <p>通用优惠券</p>
+         */
+        @NameInMap("PromotionName")
+        public String promotionName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>775735400028</p>
+         */
+        @NameInMap("PromotionOptionNo")
+        public String promotionOptionNo;
+
+        public static GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions build(java.util.Map<String, ?> map) throws Exception {
+            GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions self = new GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions setCanPromFee(String canPromFee) {
+            this.canPromFee = canPromFee;
+            return this;
+        }
+        public String getCanPromFee() {
+            return this.canPromFee;
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions setOptionCode(String optionCode) {
+            this.optionCode = optionCode;
+            return this;
+        }
+        public String getOptionCode() {
+            return this.optionCode;
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions setPromotionDesc(String promotionDesc) {
+            this.promotionDesc = promotionDesc;
+            return this;
+        }
+        public String getPromotionDesc() {
+            return this.promotionDesc;
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions setPromotionName(String promotionName) {
+            this.promotionName = promotionName;
+            return this;
+        }
+        public String getPromotionName() {
+            return this.promotionName;
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions setPromotionOptionNo(String promotionOptionNo) {
+            this.promotionOptionNo = promotionOptionNo;
+            return this;
+        }
+        public String getPromotionOptionNo() {
+            return this.promotionOptionNo;
+        }
+
+    }
+
     public static class GetCreateBEClusterInquiryResponseBodyData extends TeaModel {
         /**
          * <p>The currency.</p>
@@ -49,6 +132,9 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
          */
         @NameInMap("Currency")
         public String currency;
+
+        @NameInMap("OptionalPromotions")
+        public java.util.List<GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions> optionalPromotions;
 
         @NameInMap("PricingRules")
         public java.util.Map<String, String> pricingRules;
@@ -73,6 +159,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         }
         public String getCurrency() {
             return this.currency;
+        }
+
+        public GetCreateBEClusterInquiryResponseBodyData setOptionalPromotions(java.util.List<GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions> optionalPromotions) {
+            this.optionalPromotions = optionalPromotions;
+            return this;
+        }
+        public java.util.List<GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions> getOptionalPromotions() {
+            return this.optionalPromotions;
         }
 
         public GetCreateBEClusterInquiryResponseBodyData setPricingRules(java.util.Map<String, String> pricingRules) {

@@ -1,3 +1,15 @@
+2025-09-11 Version: 3.4.0
+- Support API ChangeResourceGroup.
+- Support API CheckIpExistsInSecurityIpList.
+- Support API DescribeDBClusterStorageLimitation.
+- Support API TagResources.
+- Support API UntagResources.
+- Update API GetCreateBEClusterInquiry: add request parameters PromotionOptionNo.
+- Update API GetCreateBEClusterInquiry: add response parameters Body.Data.OptionalPromotions.
+- Update API GetModifyBEClusterInquiry: add request parameters PromotionOptionNo.
+- Update API GetModifyBEClusterInquiry: add response parameters Body.Data.OptionalPromotions.
+
+
 2025-07-30 Version: 3.3.1
 - Update API CreateDBCluster: add request parameters ClusterNodeCount.
 - Update API CreateDBCluster: add request parameters ClusterNodeType.

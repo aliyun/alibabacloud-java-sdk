@@ -100,6 +100,13 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <strong>example:</strong>
+     * <p>2374923467</p>
+     */
+    @NameInMap("PromotionOptionNo")
+    public String promotionOptionNo;
+
+    /**
      * <p>The number of clusters to be created.</p>
      * <p>This parameter is required.</p>
      * 
@@ -189,6 +196,14 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     }
     public String getPricingCycle() {
         return this.pricingCycle;
+    }
+
+    public GetCreateBEClusterInquiryRequest setPromotionOptionNo(String promotionOptionNo) {
+        this.promotionOptionNo = promotionOptionNo;
+        return this;
+    }
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
     }
 
     public GetCreateBEClusterInquiryRequest setQuantity(Long quantity) {
