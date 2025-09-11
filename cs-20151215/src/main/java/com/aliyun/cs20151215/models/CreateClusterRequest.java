@@ -8,6 +8,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>The network access control list (ACL) rule of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
+    @Deprecated
     public java.util.List<String> accessControlList;
 
     /**
@@ -161,7 +162,6 @@ public class CreateClusterRequest extends TeaModel {
      * <li><code>ManagedKubernetes</code>: ACK managed cluster. ACK managed clusters include ACK Basic clusters, ACK Pro clusters, ACK Serverless clusters (Basic Edition and Pro Edition), ACK Edge clusters (Basic Edition and Pro Edition), and ACK Lingjun clusters (Pro Edition).</li>
      * <li><code>ExternalKubernetes</code>: registered cluster.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>Kubernetes</p>
@@ -477,6 +477,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>SLS</p>
      */
     @NameInMap("logging_type")
+    @Deprecated
     public String loggingType;
 
     /**
@@ -664,6 +665,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("nat_gateway")
+    @Deprecated
     public Boolean natGateway;
 
     /**
@@ -701,6 +703,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>30000~32767</p>
      */
     @NameInMap("node_port_range")
+    @Deprecated
     public String nodePortRange;
 
     /**
@@ -796,6 +799,7 @@ public class CreateClusterRequest extends TeaModel {
      * </blockquote>
      */
     @NameInMap("pod_vswitch_ids")
+    @Deprecated
     public java.util.List<String> podVswitchIds;
 
     /**
@@ -862,6 +866,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>For more information about how to select a proper container runtime, see <a href="https://help.aliyun.com/document_detail/160313.html">Comparison among Docker, containerd, and Sandboxed-Container</a>.</p>
      */
     @NameInMap("runtime")
+    @Deprecated
     public Runtime runtime;
 
     /**
@@ -902,7 +907,6 @@ public class CreateClusterRequest extends TeaModel {
     /**
      * <p>The Service CIDR block. Valid values: 10.0.0.0/16-24, 172.16-31.0.0/16-24, and 192.168.0.0/16-24. The Service CIDR block cannot overlap with the VPC CIDR block (10.1.0.0/21) or the CIDR blocks of existing clusters in the VPC. You cannot modify the Service CIDR block after the cluster is created.</p>
      * <p>By default, the Service CIDR block is set to 172.19.0.0/20.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>172.21.0.0/20</p>
@@ -919,6 +923,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>By default, this parameter is not specified.</p>
      */
     @NameInMap("service_discovery_types")
+    @Deprecated
     public java.util.List<String> serviceDiscoveryTypes;
 
     /**
@@ -1024,6 +1029,7 @@ public class CreateClusterRequest extends TeaModel {
      * <p>IyEvdXNyL2Jpbi9iYXNoCmVjaG8gIkhlbGxvIEFD****</p>
      */
     @NameInMap("user_data")
+    @Deprecated
     public String userData;
 
     /**
@@ -1219,6 +1225,7 @@ public class CreateClusterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public CreateClusterRequest setAccessControlList(java.util.List<String> accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -1531,6 +1538,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.loadBalancerSpec;
     }
 
+    @Deprecated
     public CreateClusterRequest setLoggingType(String loggingType) {
         this.loggingType = loggingType;
         return this;
@@ -1672,6 +1680,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.name;
     }
 
+    @Deprecated
     public CreateClusterRequest setNatGateway(Boolean natGateway) {
         this.natGateway = natGateway;
         return this;
@@ -1697,6 +1706,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.nodeNameMode;
     }
 
+    @Deprecated
     public CreateClusterRequest setNodePortRange(String nodePortRange) {
         this.nodePortRange = nodePortRange;
         return this;
@@ -1766,6 +1776,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.platform;
     }
 
+    @Deprecated
     public CreateClusterRequest setPodVswitchIds(java.util.List<String> podVswitchIds) {
         this.podVswitchIds = podVswitchIds;
         return this;
@@ -1823,6 +1834,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.rrsaConfig;
     }
 
+    @Deprecated
     public CreateClusterRequest setRuntime(Runtime runtime) {
         this.runtime = runtime;
         return this;
@@ -1864,6 +1876,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.serviceCidr;
     }
 
+    @Deprecated
     public CreateClusterRequest setServiceDiscoveryTypes(java.util.List<String> serviceDiscoveryTypes) {
         this.serviceDiscoveryTypes = serviceDiscoveryTypes;
         return this;
@@ -1939,6 +1952,7 @@ public class CreateClusterRequest extends TeaModel {
         return this.userCa;
     }
 
+    @Deprecated
     public CreateClusterRequest setUserData(String userData) {
         this.userData = userData;
         return this;

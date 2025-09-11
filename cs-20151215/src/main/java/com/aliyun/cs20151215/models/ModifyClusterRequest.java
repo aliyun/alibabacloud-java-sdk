@@ -8,6 +8,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <p>The network access control list (ACL) of the SLB instance associated with the API server if the cluster is a registered cluster.</p>
      */
     @NameInMap("access_control_list")
+    @Deprecated
     public java.util.List<String> accessControlList;
 
     /**
@@ -93,6 +94,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("ingress_domain_rebinding")
+    @Deprecated
     public Boolean ingressDomainRebinding;
 
     /**
@@ -102,6 +104,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <p>lb-wz97kes8tnndkpodw****</p>
      */
     @NameInMap("ingress_loadbalancer_id")
+    @Deprecated
     public String ingressLoadbalancerId;
 
     /**
@@ -116,6 +119,7 @@ public class ModifyClusterRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("instance_deletion_protection")
+    @Deprecated
     public Boolean instanceDeletionProtection;
 
     /**
@@ -219,6 +223,7 @@ public class ModifyClusterRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ModifyClusterRequest setAccessControlList(java.util.List<String> accessControlList) {
         this.accessControlList = accessControlList;
         return this;
@@ -283,6 +288,7 @@ public class ModifyClusterRequest extends TeaModel {
         return this.enableRrsa;
     }
 
+    @Deprecated
     public ModifyClusterRequest setIngressDomainRebinding(Boolean ingressDomainRebinding) {
         this.ingressDomainRebinding = ingressDomainRebinding;
         return this;
@@ -291,6 +297,7 @@ public class ModifyClusterRequest extends TeaModel {
         return this.ingressDomainRebinding;
     }
 
+    @Deprecated
     public ModifyClusterRequest setIngressLoadbalancerId(String ingressLoadbalancerId) {
         this.ingressLoadbalancerId = ingressLoadbalancerId;
         return this;
@@ -299,6 +306,7 @@ public class ModifyClusterRequest extends TeaModel {
         return this.ingressLoadbalancerId;
     }
 
+    @Deprecated
     public ModifyClusterRequest setInstanceDeletionProtection(Boolean instanceDeletionProtection) {
         this.instanceDeletionProtection = instanceDeletionProtection;
         return this;

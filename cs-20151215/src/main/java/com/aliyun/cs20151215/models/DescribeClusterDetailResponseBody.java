@@ -105,6 +105,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>19.03.5</p>
      */
     @NameInMap("docker_version")
+    @Deprecated
     public String dockerVersion;
 
     /**
@@ -114,6 +115,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>lb-2zehc05z3b8dwiifh****</p>
      */
     @NameInMap("external_loadbalancer_id")
+    @Deprecated
     public String externalLoadbalancerId;
 
     @NameInMap("extra_sans")
@@ -181,6 +183,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>vpc</p>
      */
     @NameInMap("network_mode")
+    @Deprecated
     public String networkMode;
 
     /**
@@ -212,6 +215,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>The Resource Orchestration Service (ROS) parameters of the cluster.</p>
      */
     @NameInMap("parameters")
+    @Deprecated
     public java.util.Map<String, String> parameters;
 
     /**
@@ -226,6 +230,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>false</p>
      */
     @NameInMap("private_zone")
+    @Deprecated
     public Boolean privateZone;
 
     /**
@@ -403,6 +408,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
      * <p>cn-beijing-a</p>
      */
     @NameInMap("zone_id")
+    @Deprecated
     public String zoneId;
 
     public static DescribeClusterDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
@@ -490,6 +496,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.deletionProtection;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setDockerVersion(String dockerVersion) {
         this.dockerVersion = dockerVersion;
         return this;
@@ -498,6 +505,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.dockerVersion;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setExternalLoadbalancerId(String externalLoadbalancerId) {
         this.externalLoadbalancerId = externalLoadbalancerId;
         return this;
@@ -562,6 +570,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.name;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setNetworkMode(String networkMode) {
         this.networkMode = networkMode;
         return this;
@@ -594,6 +603,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.operationPolicy;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setParameters(java.util.Map<String, String> parameters) {
         this.parameters = parameters;
         return this;
@@ -602,6 +612,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.parameters;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setPrivateZone(Boolean privateZone) {
         this.privateZone = privateZone;
         return this;
@@ -748,6 +759,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         return this.workerRamRoleName;
     }
 
+    @Deprecated
     public DescribeClusterDetailResponseBody setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;

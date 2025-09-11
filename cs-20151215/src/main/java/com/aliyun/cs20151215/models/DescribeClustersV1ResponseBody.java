@@ -191,6 +191,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>19.03.5</p>
          */
         @NameInMap("docker_version")
+        @Deprecated
         public String dockerVersion;
 
         /**
@@ -201,6 +202,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>lb-2vcrbmlevo6kjpgch****</p>
          */
         @NameInMap("external_loadbalancer_id")
+        @Deprecated
         public String externalLoadbalancerId;
 
         /**
@@ -271,6 +273,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>vpc</p>
          */
         @NameInMap("network_mode")
+        @Deprecated
         public String networkMode;
 
         /**
@@ -299,6 +302,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>false</p>
          */
         @NameInMap("private_zone")
+        @Deprecated
         public Boolean privateZone;
 
         /**
@@ -458,6 +462,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>KubernetesWorkerRole-ec87d15b-edca-4302-933f-c8a16bf0****</p>
          */
         @NameInMap("worker_ram_role_name")
+        @Deprecated
         public String workerRamRoleName;
 
         /**
@@ -467,6 +472,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
          * <p>cn-beijing-b</p>
          */
         @NameInMap("zone_id")
+        @Deprecated
         public String zoneId;
 
         public static DescribeClustersV1ResponseBodyClusters build(java.util.Map<String, ?> map) throws Exception {
@@ -538,6 +544,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.deletionProtection;
         }
 
+        @Deprecated
         public DescribeClustersV1ResponseBodyClusters setDockerVersion(String dockerVersion) {
             this.dockerVersion = dockerVersion;
             return this;
@@ -546,6 +553,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.dockerVersion;
         }
 
+        @Deprecated
         public DescribeClustersV1ResponseBodyClusters setExternalLoadbalancerId(String externalLoadbalancerId) {
             this.externalLoadbalancerId = externalLoadbalancerId;
             return this;
@@ -602,6 +610,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.name;
         }
 
+        @Deprecated
         public DescribeClustersV1ResponseBodyClusters setNetworkMode(String networkMode) {
             this.networkMode = networkMode;
             return this;
@@ -626,6 +635,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.operationPolicy;
         }
 
+        @Deprecated
         public DescribeClustersV1ResponseBodyClusters setPrivateZone(Boolean privateZone) {
             this.privateZone = privateZone;
             return this;
@@ -756,6 +766,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.vswitchIds;
         }
 
+        @Deprecated
         public DescribeClustersV1ResponseBodyClusters setWorkerRamRoleName(String workerRamRoleName) {
             this.workerRamRoleName = workerRamRoleName;
             return this;
@@ -764,6 +775,7 @@ public class DescribeClustersV1ResponseBody extends TeaModel {
             return this.workerRamRoleName;
         }
 
+        @Deprecated
         public DescribeClustersV1ResponseBodyClusters setZoneId(String zoneId) {
             this.zoneId = zoneId;
             return this;

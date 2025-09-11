@@ -168,6 +168,9 @@ public class KubeletConfig extends TeaModel {
     @NameInMap("serializeImagePulls")
     public Boolean serializeImagePulls;
 
+    @NameInMap("serverTLSBootstrap")
+    public Boolean serverTLSBootstrap;
+
     @NameInMap("systemReserved")
     public java.util.Map<String, ?> systemReserved;
 
@@ -408,6 +411,14 @@ public class KubeletConfig extends TeaModel {
     }
     public Boolean getSerializeImagePulls() {
         return this.serializeImagePulls;
+    }
+
+    public KubeletConfig setServerTLSBootstrap(Boolean serverTLSBootstrap) {
+        this.serverTLSBootstrap = serverTLSBootstrap;
+        return this;
+    }
+    public Boolean getServerTLSBootstrap() {
+        return this.serverTLSBootstrap;
     }
 
     public KubeletConfig setSystemReserved(java.util.Map<String, ?> systemReserved) {

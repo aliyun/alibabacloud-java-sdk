@@ -40,6 +40,7 @@ public class UpgradeClusterRequest extends TeaModel {
      * <p>The rolling update configuration.</p>
      */
     @NameInMap("rolling_policy")
+    @Deprecated
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
     /**
@@ -82,6 +83,7 @@ public class UpgradeClusterRequest extends TeaModel {
         return this.nextVersion;
     }
 
+    @Deprecated
     public UpgradeClusterRequest setRollingPolicy(UpgradeClusterRequestRollingPolicy rollingPolicy) {
         this.rollingPolicy = rollingPolicy;
         return this;
@@ -107,6 +109,7 @@ public class UpgradeClusterRequest extends TeaModel {
          * <p>3</p>
          */
         @NameInMap("max_parallelism")
+        @Deprecated
         public Integer maxParallelism;
 
         public static UpgradeClusterRequestRollingPolicy build(java.util.Map<String, ?> map) throws Exception {
@@ -114,6 +117,7 @@ public class UpgradeClusterRequest extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        @Deprecated
         public UpgradeClusterRequestRollingPolicy setMaxParallelism(Integer maxParallelism) {
             this.maxParallelism = maxParallelism;
             return this;
