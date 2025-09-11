@@ -126,6 +126,9 @@ public class UpdateSmsTemplateShrinkRequest extends TeaModel {
     @NameInMap("TemplateType")
     public Integer templateType;
 
+    @NameInMap("TrafficDriving")
+    public String trafficDriving;
+
     public static UpdateSmsTemplateShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateSmsTemplateShrinkRequest self = new UpdateSmsTemplateShrinkRequest();
         return TeaModel.build(map, self);
@@ -233,6 +236,14 @@ public class UpdateSmsTemplateShrinkRequest extends TeaModel {
     }
     public Integer getTemplateType() {
         return this.templateType;
+    }
+
+    public UpdateSmsTemplateShrinkRequest setTrafficDriving(String trafficDriving) {
+        this.trafficDriving = trafficDriving;
+        return this;
+    }
+    public String getTrafficDriving() {
+        return this.trafficDriving;
     }
 
 }

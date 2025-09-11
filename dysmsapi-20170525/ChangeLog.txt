@@ -1,3 +1,9 @@
+2025-09-11 Version: 4.1.3
+- Update API CreateSmsTemplate: add request parameters TrafficDriving.
+- Update API QuerySmsTemplateList: add response parameters Body.SmsTemplateList.$.SignatureName.
+- Update API UpdateSmsTemplate: add request parameters TrafficDriving.
+
+
 2025-06-30 Version: 4.1.2
 - Update API GetSmsSign: add response parameters Body.SignIspRegisterDetailList.
 

@@ -113,6 +113,9 @@ public class CreateSmsTemplateRequest extends TeaModel {
     @NameInMap("TemplateType")
     public Integer templateType;
 
+    @NameInMap("TrafficDriving")
+    public String trafficDriving;
+
     public static CreateSmsTemplateRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateSmsTemplateRequest self = new CreateSmsTemplateRequest();
         return TeaModel.build(map, self);
@@ -212,6 +215,14 @@ public class CreateSmsTemplateRequest extends TeaModel {
     }
     public Integer getTemplateType() {
         return this.templateType;
+    }
+
+    public CreateSmsTemplateRequest setTrafficDriving(String trafficDriving) {
+        this.trafficDriving = trafficDriving;
+        return this;
+    }
+    public String getTrafficDriving() {
+        return this.trafficDriving;
     }
 
 }

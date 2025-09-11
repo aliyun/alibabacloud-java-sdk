@@ -251,6 +251,9 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         @NameInMap("Reason")
         public QuerySmsTemplateListResponseBodySmsTemplateListReason reason;
 
+        @NameInMap("SignatureName")
+        public String signatureName;
+
         /**
          * <p>The code of the message template.</p>
          * <p>You can log on to the <a href="https://dysms.console.aliyun.com/dysms.htm">Short Message Service (SMS) console</a>, click <strong>Go China</strong> or <strong>Go Globe</strong> in the left-side navigation pane, and then view the template code on the <strong>Templates</strong> tab. You can also call the <a href="https://help.aliyun.com/document_detail/121208.html">AddSmsTemplate</a> operation to obtain the template code.</p>
@@ -338,6 +341,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
         public QuerySmsTemplateListResponseBodySmsTemplateListReason getReason() {
             return this.reason;
+        }
+
+        public QuerySmsTemplateListResponseBodySmsTemplateList setSignatureName(String signatureName) {
+            this.signatureName = signatureName;
+            return this;
+        }
+        public String getSignatureName() {
+            return this.signatureName;
         }
 
         public QuerySmsTemplateListResponseBodySmsTemplateList setTemplateCode(String templateCode) {
