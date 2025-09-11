@@ -37,6 +37,9 @@ public class GetRoutineResponseBody extends TeaModel {
     @NameInMap("Envs")
     public java.util.List<GetRoutineResponseBodyEnvs> envs;
 
+    @NameInMap("HasAssets")
+    public Boolean hasAssets;
+
     /**
      * <p>The request ID.</p>
      * 
@@ -83,12 +86,124 @@ public class GetRoutineResponseBody extends TeaModel {
         return this.envs;
     }
 
+    public GetRoutineResponseBody setHasAssets(Boolean hasAssets) {
+        this.hasAssets = hasAssets;
+        return this;
+    }
+    public Boolean getHasAssets() {
+        return this.hasAssets;
+    }
+
     public GetRoutineResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
     public String getRequestId() {
         return this.requestId;
+    }
+
+    public static class GetRoutineResponseBodyEnvsCodeDeployCodeVersions extends TeaModel {
+        @NameInMap("CodeVersion")
+        public String codeVersion;
+
+        @NameInMap("CreateTime")
+        public String createTime;
+
+        @NameInMap("Description")
+        public String description;
+
+        @NameInMap("Percentage")
+        public Long percentage;
+
+        public static GetRoutineResponseBodyEnvsCodeDeployCodeVersions build(java.util.Map<String, ?> map) throws Exception {
+            GetRoutineResponseBodyEnvsCodeDeployCodeVersions self = new GetRoutineResponseBodyEnvsCodeDeployCodeVersions();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeployCodeVersions setCodeVersion(String codeVersion) {
+            this.codeVersion = codeVersion;
+            return this;
+        }
+        public String getCodeVersion() {
+            return this.codeVersion;
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeployCodeVersions setCreateTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeployCodeVersions setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeployCodeVersions setPercentage(Long percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public Long getPercentage() {
+            return this.percentage;
+        }
+
+    }
+
+    public static class GetRoutineResponseBodyEnvsCodeDeploy extends TeaModel {
+        @NameInMap("CodeVersions")
+        public java.util.List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> codeVersions;
+
+        @NameInMap("CreationTime")
+        public String creationTime;
+
+        @NameInMap("DeployId")
+        public String deployId;
+
+        @NameInMap("Strategy")
+        public String strategy;
+
+        public static GetRoutineResponseBodyEnvsCodeDeploy build(java.util.Map<String, ?> map) throws Exception {
+            GetRoutineResponseBodyEnvsCodeDeploy self = new GetRoutineResponseBodyEnvsCodeDeploy();
+            return TeaModel.build(map, self);
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeploy setCodeVersions(java.util.List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> codeVersions) {
+            this.codeVersions = codeVersions;
+            return this;
+        }
+        public java.util.List<GetRoutineResponseBodyEnvsCodeDeployCodeVersions> getCodeVersions() {
+            return this.codeVersions;
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeploy setCreationTime(String creationTime) {
+            this.creationTime = creationTime;
+            return this;
+        }
+        public String getCreationTime() {
+            return this.creationTime;
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeploy setDeployId(String deployId) {
+            this.deployId = deployId;
+            return this;
+        }
+        public String getDeployId() {
+            return this.deployId;
+        }
+
+        public GetRoutineResponseBodyEnvsCodeDeploy setStrategy(String strategy) {
+            this.strategy = strategy;
+            return this;
+        }
+        public String getStrategy() {
+            return this.strategy;
+        }
+
     }
 
     public static class GetRoutineResponseBodyEnvs extends TeaModel {
@@ -106,6 +221,9 @@ public class GetRoutineResponseBody extends TeaModel {
          */
         @NameInMap("CanaryCodeVersion")
         public String canaryCodeVersion;
+
+        @NameInMap("CodeDeploy")
+        public GetRoutineResponseBodyEnvsCodeDeploy codeDeploy;
 
         /**
          * <p>The version number of the code in the environment.</p>
@@ -144,6 +262,14 @@ public class GetRoutineResponseBody extends TeaModel {
         }
         public String getCanaryCodeVersion() {
             return this.canaryCodeVersion;
+        }
+
+        public GetRoutineResponseBodyEnvs setCodeDeploy(GetRoutineResponseBodyEnvsCodeDeploy codeDeploy) {
+            this.codeDeploy = codeDeploy;
+            return this;
+        }
+        public GetRoutineResponseBodyEnvsCodeDeploy getCodeDeploy() {
+            return this.codeDeploy;
         }
 
         public GetRoutineResponseBodyEnvs setCodeVersion(String codeVersion) {

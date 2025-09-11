@@ -13,6 +13,9 @@ public class CreateRoutineRequest extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    @NameInMap("HasAssets")
+    public Boolean hasAssets;
+
     /**
      * <p>The routine name, which must be unique in the same account.</p>
      * <p>This parameter is required.</p>
@@ -34,6 +37,14 @@ public class CreateRoutineRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public CreateRoutineRequest setHasAssets(Boolean hasAssets) {
+        this.hasAssets = hasAssets;
+        return this;
+    }
+    public Boolean getHasAssets() {
+        return this.hasAssets;
     }
 
     public CreateRoutineRequest setName(String name) {

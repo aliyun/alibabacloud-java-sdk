@@ -3171,6 +3171,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Description", request.description);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.hasAssets)) {
+            body.put("HasAssets", request.hasAssets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.name)) {
             body.put("Name", request.name);
         }
@@ -3202,6 +3206,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRoutineResponse createRoutine(CreateRoutineRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRoutineWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布Routine某版本代码</p>
+     * 
+     * @param tmpReq CreateRoutineCodeDeploymentRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoutineCodeDeploymentResponse
+     */
+    public CreateRoutineCodeDeploymentResponse createRoutineCodeDeploymentWithOptions(CreateRoutineCodeDeploymentRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateRoutineCodeDeploymentShrinkRequest request = new CreateRoutineCodeDeploymentShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.codeVersions)) {
+            request.codeVersionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.codeVersions, "CodeVersions", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.codeVersionsShrink)) {
+            body.put("CodeVersions", request.codeVersionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.env)) {
+            body.put("Env", request.env);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategy)) {
+            body.put("Strategy", request.strategy);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRoutineCodeDeployment"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoutineCodeDeploymentResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发布Routine某版本代码</p>
+     * 
+     * @param request CreateRoutineCodeDeploymentRequest
+     * @return CreateRoutineCodeDeploymentResponse
+     */
+    public CreateRoutineCodeDeploymentResponse createRoutineCodeDeployment(CreateRoutineCodeDeploymentRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRoutineCodeDeploymentWithOptions(request, runtime);
     }
 
     /**
@@ -3326,6 +3392,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateRoutineRouteResponse createRoutineRoute(CreateRoutineRouteRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createRoutineRouteWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建带Assets资源的Routine代码版本</p>
+     * 
+     * @param tmpReq CreateRoutineWithAssetsCodeVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateRoutineWithAssetsCodeVersionResponse
+     */
+    public CreateRoutineWithAssetsCodeVersionResponse createRoutineWithAssetsCodeVersionWithOptions(CreateRoutineWithAssetsCodeVersionRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateRoutineWithAssetsCodeVersionShrinkRequest request = new CreateRoutineWithAssetsCodeVersionShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.confOptions)) {
+            request.confOptionsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.confOptions, "ConfOptions", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.buildId)) {
+            body.put("BuildId", request.buildId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.codeDescription)) {
+            body.put("CodeDescription", request.codeDescription);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.confOptionsShrink)) {
+            body.put("ConfOptions", request.confOptionsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extraInfo)) {
+            body.put("ExtraInfo", request.extraInfo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("Name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateRoutineWithAssetsCodeVersion"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateRoutineWithAssetsCodeVersionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建带Assets资源的Routine代码版本</p>
+     * 
+     * @param request CreateRoutineWithAssetsCodeVersionRequest
+     * @return CreateRoutineWithAssetsCodeVersionResponse
+     */
+    public CreateRoutineWithAssetsCodeVersionResponse createRoutineWithAssetsCodeVersion(CreateRoutineWithAssetsCodeVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createRoutineWithAssetsCodeVersionWithOptions(request, runtime);
     }
 
     /**
@@ -15420,7 +15552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点中国大陆网络接入优化配置</p>
+     * <p>Modifies the configuration of the Chinese mainland network access optimization.</p>
      * 
      * @param request UpdateCrossBorderOptimizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15456,7 +15588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改站点中国大陆网络接入优化配置</p>
+     * <p>Modifies the configuration of the Chinese mainland network access optimization.</p>
      * 
      * @param request UpdateCrossBorderOptimizationRequest
      * @return UpdateCrossBorderOptimizationResponse

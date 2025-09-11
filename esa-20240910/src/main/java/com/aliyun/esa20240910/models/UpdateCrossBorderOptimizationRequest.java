@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpdateCrossBorderOptimizationRequest extends TeaModel {
     /**
+     * <p>Whether to enable Chinese mainland network access optimization. By default, it is disabled. Valid values:</p>
+     * <ul>
+     * <li>on</li>
+     * <li>off</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +19,7 @@ public class UpdateCrossBorderOptimizationRequest extends TeaModel {
     public String enable;
 
     /**
+     * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

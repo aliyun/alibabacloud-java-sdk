@@ -93,8 +93,14 @@ public class ListUserRoutinesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        @NameInMap("DefaultRelatedRecord")
+        public String defaultRelatedRecord;
+
         @NameInMap("Description")
         public String description;
+
+        @NameInMap("HasAssets")
+        public Boolean hasAssets;
 
         @NameInMap("RoutineName")
         public String routineName;
@@ -112,12 +118,28 @@ public class ListUserRoutinesResponseBody extends TeaModel {
             return this.createTime;
         }
 
+        public ListUserRoutinesResponseBodyRoutines setDefaultRelatedRecord(String defaultRelatedRecord) {
+            this.defaultRelatedRecord = defaultRelatedRecord;
+            return this;
+        }
+        public String getDefaultRelatedRecord() {
+            return this.defaultRelatedRecord;
+        }
+
         public ListUserRoutinesResponseBodyRoutines setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public ListUserRoutinesResponseBodyRoutines setHasAssets(Boolean hasAssets) {
+            this.hasAssets = hasAssets;
+            return this;
+        }
+        public Boolean getHasAssets() {
+            return this.hasAssets;
         }
 
         public ListUserRoutinesResponseBodyRoutines setRoutineName(String routineName) {

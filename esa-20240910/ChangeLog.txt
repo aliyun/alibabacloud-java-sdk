@@ -1,3 +1,17 @@
+2025-09-11 Version: 2.34.0
+- Support API CreateRoutineCodeDeployment.
+- Support API CreateRoutineWithAssetsCodeVersion.
+- Update API CreateRoutine: add request parameters HasAssets.
+- Update API GetRoutine: add response parameters Body.HasAssets.
+- Update API GetRoutine: add response parameters Body.Envs.$.CodeDeploy.
+- Update API ListRoutineCodeVersions: add response parameters Body.CodeVersions.$.BuildId.
+- Update API ListRoutineCodeVersions: add response parameters Body.CodeVersions.$.ConfOptions.
+- Update API ListRoutineCodeVersions: add response parameters Body.CodeVersions.$.ExtraInfo.
+- Update API ListRoutineCodeVersions: add response parameters Body.CodeVersions.$.Status.
+- Update API ListUserRoutines: add response parameters Body.Routines.$.DefaultRelatedRecord.
+- Update API ListUserRoutines: add response parameters Body.Routines.$.HasAssets.
+
+
 2025-08-21 Version: 2.33.1
 - Update API GetRecord: add response parameters Body.RecordModel.Data.Tags.
 - Update API ListRecords: add response parameters Body.Records.$.Data.Tags.
