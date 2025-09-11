@@ -130,6 +130,9 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         @NameInMap("Metadata")
         public java.util.Map<String, String> metadata;
 
+        @NameInMap("MetadataV2")
+        public java.util.Map<String, ?> metadataV2;
+
         /**
          * <p>The similarity score of this data, which is related to the algorithm <code>(l2/ip/cosine)</code> specified when creating the index.</p>
          * 
@@ -164,6 +167,14 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
         public java.util.Map<String, String> getMetadata() {
             return this.metadata;
+        }
+
+        public QueryCollectionDataResponseBodyMatchesMatch setMetadataV2(java.util.Map<String, ?> metadataV2) {
+            this.metadataV2 = metadataV2;
+            return this;
+        }
+        public java.util.Map<String, ?> getMetadataV2() {
+            return this.metadataV2;
         }
 
         public QueryCollectionDataResponseBodyMatchesMatch setScore(Double score) {
