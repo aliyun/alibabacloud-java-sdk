@@ -311,6 +311,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("MultiZone", request.multiZoneShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeCount)) {
+            query.put("NodeCount", request.nodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeScaleMax)) {
+            query.put("NodeScaleMax", request.nodeScaleMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeScaleMin)) {
+            query.put("NodeScaleMin", request.nodeScaleMin);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -329,6 +341,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.sourceDBInstanceId)) {
             query.put("SourceDBInstanceId", request.sourceDBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageQuota)) {
+            query.put("StorageQuota", request.storageQuota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
@@ -1777,6 +1797,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBInstanceId", request.DBInstanceId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeCount)) {
+            query.put("NodeCount", request.nodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeScaleMax)) {
+            query.put("NodeScaleMax", request.nodeScaleMax);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeScaleMin)) {
+            query.put("NodeScaleMin", request.nodeScaleMin);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }
@@ -1787,6 +1819,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scaleMin)) {
             query.put("ScaleMin", request.scaleMin);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageQuota)) {
+            query.put("StorageQuota", request.storageQuota);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageType)) {
+            query.put("StorageType", request.storageType);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

@@ -183,6 +183,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String bid;
 
         /**
+         * <strong>example:</strong>
+         * <p>enterprise</p>
+         */
+        @NameInMap("Category")
+        public String category;
+
+        /**
          * <p>The billing method. Enterprise Edition clusters use the pay-as-you-go billing method.</p>
          * 
          * <strong>example:</strong>
@@ -341,6 +348,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDataMultiZones> multiZones;
 
         /**
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        @NameInMap("NodeCount")
+        public String nodeCount;
+
+        /**
+         * <strong>example:</strong>
+         * <p>32</p>
+         */
+        @NameInMap("NodeScaleMax")
+        public String nodeScaleMax;
+
+        /**
+         * <strong>example:</strong>
+         * <p>4</p>
+         */
+        @NameInMap("NodeScaleMin")
+        public String nodeScaleMin;
+
+        /**
          * <p>The nodes.</p>
          */
         @NameInMap("Nodes")
@@ -399,6 +427,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("StorageQuota")
+        public String storageQuota;
 
         /**
          * <p>The size of the storage space. Unit: GB.</p>
@@ -470,6 +505,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getBid() {
             return this.bid;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setChargeType(String chargeType) {
@@ -608,6 +651,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.multiZones;
         }
 
+        public DescribeDBInstanceAttributeResponseBodyData setNodeCount(String nodeCount) {
+            this.nodeCount = nodeCount;
+            return this;
+        }
+        public String getNodeCount() {
+            return this.nodeCount;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setNodeScaleMax(String nodeScaleMax) {
+            this.nodeScaleMax = nodeScaleMax;
+            return this;
+        }
+        public String getNodeScaleMax() {
+            return this.nodeScaleMax;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setNodeScaleMin(String nodeScaleMin) {
+            this.nodeScaleMin = nodeScaleMin;
+            return this;
+        }
+        public String getNodeScaleMin() {
+            return this.nodeScaleMin;
+        }
+
         public DescribeDBInstanceAttributeResponseBodyData setNodes(java.util.List<DescribeDBInstanceAttributeResponseBodyDataNodes> nodes) {
             this.nodes = nodes;
             return this;
@@ -662,6 +729,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyData setStorageQuota(String storageQuota) {
+            this.storageQuota = storageQuota;
+            return this;
+        }
+        public String getStorageQuota() {
+            return this.storageQuota;
         }
 
         public DescribeDBInstanceAttributeResponseBodyData setStorageSize(Integer storageSize) {

@@ -259,6 +259,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <strong>example:</strong>
+         * <p>oss</p>
+         */
+        @NameInMap("StorageType")
+        public String storageType;
+
+        /**
          * <p>The tags.</p>
          */
         @NameInMap("Tags")
@@ -446,6 +453,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeDBInstancesResponseBodyDataDBInstances setStorageType(String storageType) {
+            this.storageType = storageType;
+            return this;
+        }
+        public String getStorageType() {
+            return this.storageType;
         }
 
         public DescribeDBInstancesResponseBodyDataDBInstances setTags(java.util.List<DescribeDBInstancesResponseBodyDataDBInstancesTags> tags) {

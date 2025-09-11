@@ -65,6 +65,27 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     public String multiZoneShrink;
 
     /**
+     * <strong>example:</strong>
+     * <p>6</p>
+     */
+    @NameInMap("NodeCount")
+    public Integer nodeCount;
+
+    /**
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
+    @NameInMap("NodeScaleMax")
+    public Integer nodeScaleMax;
+
+    /**
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
+    @NameInMap("NodeScaleMin")
+    public Integer nodeScaleMin;
+
+    /**
      * <p>The region ID</p>
      * <p>This parameter is required.</p>
      * 
@@ -107,6 +128,20 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
      */
     @NameInMap("SourceDBInstanceId")
     public String sourceDBInstanceId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("StorageQuota")
+    public String storageQuota;
+
+    /**
+     * <strong>example:</strong>
+     * <p>oss</p>
+     */
+    @NameInMap("StorageType")
+    public String storageType;
 
     /**
      * <p>The virtual private cloud (VPC) ID.</p>
@@ -196,6 +231,30 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
         return this.multiZoneShrink;
     }
 
+    public CreateDBInstanceShrinkRequest setNodeCount(Integer nodeCount) {
+        this.nodeCount = nodeCount;
+        return this;
+    }
+    public Integer getNodeCount() {
+        return this.nodeCount;
+    }
+
+    public CreateDBInstanceShrinkRequest setNodeScaleMax(Integer nodeScaleMax) {
+        this.nodeScaleMax = nodeScaleMax;
+        return this;
+    }
+    public Integer getNodeScaleMax() {
+        return this.nodeScaleMax;
+    }
+
+    public CreateDBInstanceShrinkRequest setNodeScaleMin(Integer nodeScaleMin) {
+        this.nodeScaleMin = nodeScaleMin;
+        return this;
+    }
+    public Integer getNodeScaleMin() {
+        return this.nodeScaleMin;
+    }
+
     public CreateDBInstanceShrinkRequest setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
@@ -234,6 +293,22 @@ public class CreateDBInstanceShrinkRequest extends TeaModel {
     }
     public String getSourceDBInstanceId() {
         return this.sourceDBInstanceId;
+    }
+
+    public CreateDBInstanceShrinkRequest setStorageQuota(String storageQuota) {
+        this.storageQuota = storageQuota;
+        return this;
+    }
+    public String getStorageQuota() {
+        return this.storageQuota;
+    }
+
+    public CreateDBInstanceShrinkRequest setStorageType(String storageType) {
+        this.storageType = storageType;
+        return this;
+    }
+    public String getStorageType() {
+        return this.storageType;
     }
 
     public CreateDBInstanceShrinkRequest setVpcId(String vpcId) {
