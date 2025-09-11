@@ -1870,11 +1870,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         CreateRenderingInstanceShrinkRequest request = new CreateRenderingInstanceShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.attributes)) {
+            request.attributesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.attributes, "Attributes", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.clientInfo)) {
             request.clientInfoShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.clientInfo, "ClientInfo", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.attributesShrink)) {
+            query.put("Attributes", request.attributesShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
         }
@@ -6176,6 +6184,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询一个云应用的Patch列表。</p>
+     * 
+     * @param request ListCloudAppPatchesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListCloudAppPatchesResponse
+     */
+    public ListCloudAppPatchesResponse listCloudAppPatchesWithOptions(ListCloudAppPatchesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            query.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchId)) {
+            query.put("PatchId", request.patchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.patchName)) {
+            query.put("PatchName", request.patchName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListCloudAppPatches"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListCloudAppPatchesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询一个云应用的Patch列表。</p>
+     * 
+     * @param request ListCloudAppPatchesRequest
+     * @return ListCloudAppPatchesResponse
+     */
+    public ListCloudAppPatchesResponse listCloudAppPatches(ListCloudAppPatchesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listCloudAppPatchesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询云应用列表</p>
      * 
      * @param request ListCloudAppsRequest
@@ -7366,6 +7442,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyRenderingInstanceResponse modifyRenderingInstance(ModifyRenderingInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyRenderingInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云应用服务实例密码</p>
+     * 
+     * @param request ModifyRenderingInstanceAttributeRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyRenderingInstanceAttributeResponse
+     */
+    public ModifyRenderingInstanceAttributeResponse modifyRenderingInstanceAttributeWithOptions(ModifyRenderingInstanceAttributeRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.password)) {
+            query.put("Password", request.password);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.renderingInstanceId)) {
+            query.put("RenderingInstanceId", request.renderingInstanceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyRenderingInstanceAttribute"),
+            new TeaPair("version", "2018-12-12"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyRenderingInstanceAttributeResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改云应用服务实例密码</p>
+     * 
+     * @param request ModifyRenderingInstanceAttributeRequest
+     * @return ModifyRenderingInstanceAttributeResponse
+     */
+    public ModifyRenderingInstanceAttributeResponse modifyRenderingInstanceAttribute(ModifyRenderingInstanceAttributeRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyRenderingInstanceAttributeWithOptions(request, runtime);
     }
 
     /**

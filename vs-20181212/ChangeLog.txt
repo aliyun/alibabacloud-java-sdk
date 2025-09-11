@@ -1,3 +1,9 @@
+2025-09-11 Version: 3.5.0
+- Support API ListCloudAppPatches.
+- Support API ModifyRenderingInstanceAttribute.
+- Update API CreateRenderingInstance: add request parameters Attributes.
+
+
 2025-08-21 Version: 3.4.3
 - Update API DescribeRenderingSession: add response parameters Body.PatchId.
 - Update API InstallCloudApp: add request parameters PatchId.

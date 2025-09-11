@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateRenderingInstanceRequest extends TeaModel {
+    @NameInMap("Attributes")
+    public CreateRenderingInstanceRequestAttributes attributes;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -60,6 +63,14 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     public static CreateRenderingInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRenderingInstanceRequest self = new CreateRenderingInstanceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRenderingInstanceRequest setAttributes(CreateRenderingInstanceRequestAttributes attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+    public CreateRenderingInstanceRequestAttributes getAttributes() {
+        return this.attributes;
     }
 
     public CreateRenderingInstanceRequest setAutoRenew(Boolean autoRenew) {
@@ -132,6 +143,58 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     }
     public String getStorageSize() {
         return this.storageSize;
+    }
+
+    public static class CreateRenderingInstanceRequestAttributes extends TeaModel {
+        @NameInMap("EdgeMediaService")
+        public String edgeMediaService;
+
+        @NameInMap("InAccess")
+        public String inAccess;
+
+        @NameInMap("OutAccess")
+        public String outAccess;
+
+        @NameInMap("Zone")
+        public String zone;
+
+        public static CreateRenderingInstanceRequestAttributes build(java.util.Map<String, ?> map) throws Exception {
+            CreateRenderingInstanceRequestAttributes self = new CreateRenderingInstanceRequestAttributes();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateRenderingInstanceRequestAttributes setEdgeMediaService(String edgeMediaService) {
+            this.edgeMediaService = edgeMediaService;
+            return this;
+        }
+        public String getEdgeMediaService() {
+            return this.edgeMediaService;
+        }
+
+        public CreateRenderingInstanceRequestAttributes setInAccess(String inAccess) {
+            this.inAccess = inAccess;
+            return this;
+        }
+        public String getInAccess() {
+            return this.inAccess;
+        }
+
+        public CreateRenderingInstanceRequestAttributes setOutAccess(String outAccess) {
+            this.outAccess = outAccess;
+            return this;
+        }
+        public String getOutAccess() {
+            return this.outAccess;
+        }
+
+        public CreateRenderingInstanceRequestAttributes setZone(String zone) {
+            this.zone = zone;
+            return this;
+        }
+        public String getZone() {
+            return this.zone;
+        }
+
     }
 
     public static class CreateRenderingInstanceRequestClientInfo extends TeaModel {

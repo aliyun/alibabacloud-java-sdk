@@ -4,6 +4,9 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class CreateRenderingInstanceShrinkRequest extends TeaModel {
+    @NameInMap("Attributes")
+    public String attributesShrink;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -60,6 +63,14 @@ public class CreateRenderingInstanceShrinkRequest extends TeaModel {
     public static CreateRenderingInstanceShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateRenderingInstanceShrinkRequest self = new CreateRenderingInstanceShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateRenderingInstanceShrinkRequest setAttributesShrink(String attributesShrink) {
+        this.attributesShrink = attributesShrink;
+        return this;
+    }
+    public String getAttributesShrink() {
+        return this.attributesShrink;
     }
 
     public CreateRenderingInstanceShrinkRequest setAutoRenew(Boolean autoRenew) {
