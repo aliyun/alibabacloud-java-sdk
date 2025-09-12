@@ -3623,6 +3623,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IsSpot", request.isSpot);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.memberType)) {
+            query.put("MemberType", request.memberType);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.order)) {
             query.put("Order", request.order);
         }
@@ -4720,6 +4724,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateServiceResponse updateServiceWithOptions(String ClusterId, String ServiceName, UpdateServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.memberToUpdate)) {
+            query.put("MemberToUpdate", request.memberToUpdate);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.updateType)) {
             query.put("UpdateType", request.updateType);
         }

@@ -4,6 +4,9 @@ package com.aliyun.eas20210701.models;
 import com.aliyun.tea.*;
 
 public class UpdateServiceRequest extends TeaModel {
+    @NameInMap("MemberToUpdate")
+    public String memberToUpdate;
+
     /**
      * <p>The type of the service update. Valid values: merge and replace. By default, merge is used if you do not specify this parameter.</p>
      * <ul>
@@ -29,6 +32,14 @@ public class UpdateServiceRequest extends TeaModel {
     public static UpdateServiceRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateServiceRequest self = new UpdateServiceRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateServiceRequest setMemberToUpdate(String memberToUpdate) {
+        this.memberToUpdate = memberToUpdate;
+        return this;
+    }
+    public String getMemberToUpdate() {
+        return this.memberToUpdate;
     }
 
     public UpdateServiceRequest setUpdateType(String updateType) {

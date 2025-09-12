@@ -1,3 +1,8 @@
+2025-09-12 Version: 7.1.5
+- Update API ListServiceInstances: add request parameters MemberType.
+- Update API UpdateService: add request parameters MemberToUpdate.
+
+
 2025-09-10 Version: 7.1.4
 - Update API CreateServiceCronScaler: add request parameters body.ScaleJobs.$.TimeZone.
 - Update API ListResourceInstanceWorker: add request parameters Order.

@@ -67,6 +67,9 @@ public class ListServiceInstancesRequest extends TeaModel {
     @NameInMap("IsSpot")
     public Boolean isSpot;
 
+    @NameInMap("MemberType")
+    public String memberType;
+
     /**
      * <p>The sorting order.</p>
      * <p>Valid values:</p>
@@ -278,6 +281,14 @@ public class ListServiceInstancesRequest extends TeaModel {
     }
     public Boolean getIsSpot() {
         return this.isSpot;
+    }
+
+    public ListServiceInstancesRequest setMemberType(String memberType) {
+        this.memberType = memberType;
+        return this;
+    }
+    public String getMemberType() {
+        return this.memberType;
     }
 
     public ListServiceInstancesRequest setOrder(String order) {
