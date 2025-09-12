@@ -1,3 +1,13 @@
+2025-09-12 Version: 1.1.0
+- Support API CreateKnowLedge.
+- Support API GetCrowdDataset.
+- Support API GetKnowledgeData.
+- Support API GetYzdInstanceTaskResult.
+- Support API GetYzdStsAK.
+- Support API SaveCrowdDatasetAndBindingDataset.
+- Support API ValidateKnowLedge.
+
+
 2025-02-26 Version: 1.0.6
 - Update API CreateComputeTask2: update param body.
 - Update API CreateComputeTask2: update response param.
