@@ -10,6 +10,9 @@ public class MigrateSingleZoneToMultiZoneRequest extends TeaModel {
     @NameInMap("ArbitraryZoneId")
     public String arbitraryZoneId;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>This parameter is required.</p>
      */
@@ -56,6 +59,14 @@ public class MigrateSingleZoneToMultiZoneRequest extends TeaModel {
     }
     public String getArbitraryZoneId() {
         return this.arbitraryZoneId;
+    }
+
+    public MigrateSingleZoneToMultiZoneRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public MigrateSingleZoneToMultiZoneRequest setInstanceId(String instanceId) {

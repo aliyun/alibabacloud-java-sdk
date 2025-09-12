@@ -4,39 +4,87 @@ package com.aliyun.hitsdb20200615.models;
 import com.aliyun.tea.*;
 
 public class CreateLindormV2InstanceRequest extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-uf6664pqjawb87k36****</p>
+     */
     @NameInMap("ArbiterVSwitchId")
     public String arbiterVSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-g</p>
+     */
     @NameInMap("ArbiterZoneId")
     public String arbiterZoneId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("ArchVersion")
     public String archVersion;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("AutoRenewDuration")
     public String autoRenewDuration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("AutoRenewal")
     public Boolean autoRenewal;
 
+    /**
+     * <strong>example:</strong>
+     * <p>10000</p>
+     */
     @NameInMap("CapacityStorageSize")
     public Integer capacityStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>320</p>
+     */
     @NameInMap("CloudStorageSize")
     public Integer cloudStorageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>PerformanceStorage</p>
+     */
     @NameInMap("CloudStorageType")
     public String cloudStorageType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>BASIC</p>
+     */
     @NameInMap("ClusterMode")
     public String clusterMode;
 
+    /**
+     * <strong>example:</strong>
+     * <p>basic</p>
+     */
     @NameInMap("ClusterPattern")
     public String clusterPattern;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Duration")
     public Integer duration;
 
+    /**
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("EnableCapacityStorage")
     public Boolean enableCapacityStorage;
 
@@ -46,6 +94,10 @@ public class CreateLindormV2InstanceRequest extends TeaModel {
     @NameInMap("EngineList")
     public java.util.List<CreateLindormV2InstanceRequestEngineList> engineList;
 
+    /**
+     * <strong>example:</strong>
+     * <p>lindorm-test</p>
+     */
     @NameInMap("InstanceAlias")
     public String instanceAlias;
 
@@ -57,16 +109,31 @@ public class CreateLindormV2InstanceRequest extends TeaModel {
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
      */
     @NameInMap("PayType")
     public String payType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>Month</p>
+     */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-uf6fdqa7c0pipnqzq****</p>
+     */
     @NameInMap("PrimaryVSwitchId")
     public String primaryVSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-e</p>
+     */
     @NameInMap("PrimaryZoneId")
     public String primaryZoneId;
 
@@ -76,6 +143,10 @@ public class CreateLindormV2InstanceRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>rg-aek2i6weeb4nfii</p>
+     */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
@@ -88,23 +159,41 @@ public class CreateLindormV2InstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-2zec0kcn08cgdtr6****</p>
+     */
     @NameInMap("StandbyVSwitchId")
     public String standbyVSwitchId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>cn-shanghai-f</p>
+     */
     @NameInMap("StandbyZoneId")
     public String standbyZoneId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-wz9ydz3vg93s1ozsd****</p>
      */
     @NameInMap("VPCId")
     public String VPCId;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1e7clcw529l773d****</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai-f</p>
      */
     @NameInMap("ZoneId")
     public String zoneId;
@@ -357,22 +446,40 @@ public class CreateLindormV2InstanceRequest extends TeaModel {
     public static class CreateLindormV2InstanceRequestEngineListNodeGroupList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         @NameInMap("NodeCount")
         public Integer nodeCount;
 
+        /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("NodeDiskSize")
         public Integer nodeDiskSize;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cloud_essd</p>
+         */
         @NameInMap("NodeDiskType")
         public String nodeDiskType;
 
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lindorm.g.2xlarge</p>
          */
         @NameInMap("NodeSpec")
         public String nodeSpec;
 
+        /**
+         * <strong>example:</strong>
+         * <p>group_name_01</p>
+         */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
@@ -426,6 +533,9 @@ public class CreateLindormV2InstanceRequest extends TeaModel {
     public static class CreateLindormV2InstanceRequestEngineList extends TeaModel {
         /**
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TABLE</p>
          */
         @NameInMap("EngineType")
         public String engineType;

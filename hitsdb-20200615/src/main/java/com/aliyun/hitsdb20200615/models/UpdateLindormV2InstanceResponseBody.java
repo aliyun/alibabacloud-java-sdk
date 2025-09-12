@@ -3,7 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class CreateLindormV2InstanceResponseBody extends TeaModel {
+public class UpdateLindormV2InstanceResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
      * <p>{&quot;AuthAction&quot;:&quot;xxx&quot;,&quot;AuthPrincipalDisplayName&quot;:&quot;222&quot;,&quot;AuthPrincipalOwnerId&quot;:&quot;111&quot;,&quot;AuthPrincipalType&quot;:&quot;SubUser&quot;,,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;EncodedDiagnosticMessage&quot;:&quot;xxxxxx&quot;}</p>
@@ -11,12 +11,16 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
     @NameInMap("AccessDeniedDetail")
     public String accessDeniedDetail;
 
+    /**
+     * <strong>example:</strong>
+     * <p>ld-bp1478w1603****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
     /**
      * <strong>example:</strong>
-     * <p>211110656240000</p>
+     * <p>240136741090345</p>
      */
     @NameInMap("OrderId")
     public Long orderId;
@@ -28,12 +32,12 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
-    public static CreateLindormV2InstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        CreateLindormV2InstanceResponseBody self = new CreateLindormV2InstanceResponseBody();
+    public static UpdateLindormV2InstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        UpdateLindormV2InstanceResponseBody self = new UpdateLindormV2InstanceResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public CreateLindormV2InstanceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
+    public UpdateLindormV2InstanceResponseBody setAccessDeniedDetail(String accessDeniedDetail) {
         this.accessDeniedDetail = accessDeniedDetail;
         return this;
     }
@@ -41,7 +45,7 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         return this.accessDeniedDetail;
     }
 
-    public CreateLindormV2InstanceResponseBody setInstanceId(String instanceId) {
+    public UpdateLindormV2InstanceResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -49,7 +53,7 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         return this.instanceId;
     }
 
-    public CreateLindormV2InstanceResponseBody setOrderId(Long orderId) {
+    public UpdateLindormV2InstanceResponseBody setOrderId(Long orderId) {
         this.orderId = orderId;
         return this;
     }
@@ -57,7 +61,7 @@ public class CreateLindormV2InstanceResponseBody extends TeaModel {
         return this.orderId;
     }
 
-    public CreateLindormV2InstanceResponseBody setRequestId(String requestId) {
+    public UpdateLindormV2InstanceResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }

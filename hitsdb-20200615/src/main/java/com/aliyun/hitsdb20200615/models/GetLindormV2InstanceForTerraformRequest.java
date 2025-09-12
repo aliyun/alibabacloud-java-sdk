@@ -3,19 +3,9 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class ReleaseLindormV2InstanceRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("Immediately")
-    public Boolean immediately;
-
+public class GetLindormV2InstanceForTerraformRequest extends TeaModel {
     /**
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ld-bp1o3y0yme2i2****</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
@@ -35,20 +25,12 @@ public class ReleaseLindormV2InstanceRequest extends TeaModel {
     @NameInMap("SecurityToken")
     public String securityToken;
 
-    public static ReleaseLindormV2InstanceRequest build(java.util.Map<String, ?> map) throws Exception {
-        ReleaseLindormV2InstanceRequest self = new ReleaseLindormV2InstanceRequest();
+    public static GetLindormV2InstanceForTerraformRequest build(java.util.Map<String, ?> map) throws Exception {
+        GetLindormV2InstanceForTerraformRequest self = new GetLindormV2InstanceForTerraformRequest();
         return TeaModel.build(map, self);
     }
 
-    public ReleaseLindormV2InstanceRequest setImmediately(Boolean immediately) {
-        this.immediately = immediately;
-        return this;
-    }
-    public Boolean getImmediately() {
-        return this.immediately;
-    }
-
-    public ReleaseLindormV2InstanceRequest setInstanceId(String instanceId) {
+    public GetLindormV2InstanceForTerraformRequest setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -56,7 +38,7 @@ public class ReleaseLindormV2InstanceRequest extends TeaModel {
         return this.instanceId;
     }
 
-    public ReleaseLindormV2InstanceRequest setOwnerAccount(String ownerAccount) {
+    public GetLindormV2InstanceForTerraformRequest setOwnerAccount(String ownerAccount) {
         this.ownerAccount = ownerAccount;
         return this;
     }
@@ -64,7 +46,7 @@ public class ReleaseLindormV2InstanceRequest extends TeaModel {
         return this.ownerAccount;
     }
 
-    public ReleaseLindormV2InstanceRequest setOwnerId(Long ownerId) {
+    public GetLindormV2InstanceForTerraformRequest setOwnerId(Long ownerId) {
         this.ownerId = ownerId;
         return this;
     }
@@ -72,7 +54,7 @@ public class ReleaseLindormV2InstanceRequest extends TeaModel {
         return this.ownerId;
     }
 
-    public ReleaseLindormV2InstanceRequest setResourceOwnerAccount(String resourceOwnerAccount) {
+    public GetLindormV2InstanceForTerraformRequest setResourceOwnerAccount(String resourceOwnerAccount) {
         this.resourceOwnerAccount = resourceOwnerAccount;
         return this;
     }
@@ -80,7 +62,7 @@ public class ReleaseLindormV2InstanceRequest extends TeaModel {
         return this.resourceOwnerAccount;
     }
 
-    public ReleaseLindormV2InstanceRequest setResourceOwnerId(Long resourceOwnerId) {
+    public GetLindormV2InstanceForTerraformRequest setResourceOwnerId(Long resourceOwnerId) {
         this.resourceOwnerId = resourceOwnerId;
         return this;
     }
@@ -88,7 +70,7 @@ public class ReleaseLindormV2InstanceRequest extends TeaModel {
         return this.resourceOwnerId;
     }
 
-    public ReleaseLindormV2InstanceRequest setSecurityToken(String securityToken) {
+    public GetLindormV2InstanceForTerraformRequest setSecurityToken(String securityToken) {
         this.securityToken = securityToken;
         return this;
     }

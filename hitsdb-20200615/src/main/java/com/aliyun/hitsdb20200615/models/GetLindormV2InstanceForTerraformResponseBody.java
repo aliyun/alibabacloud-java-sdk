@@ -3,7 +3,7 @@ package com.aliyun.hitsdb20200615.models;
 
 import com.aliyun.tea.*;
 
-public class GetLindormV2InstanceResponseBody extends TeaModel {
+public class GetLindormV2InstanceForTerraformResponseBody extends TeaModel {
     @NameInMap("AliUid")
     public Long aliUid;
 
@@ -41,7 +41,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     public Boolean enableCompute;
 
     @NameInMap("EngineList")
-    public java.util.List<GetLindormV2InstanceResponseBodyEngineList> engineList;
+    public java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineList> engineList;
 
     @NameInMap("ExpiredMilliseconds")
     public Long expiredMilliseconds;
@@ -98,7 +98,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     public String standbyZoneId;
 
     @NameInMap("StorageUsage")
-    public GetLindormV2InstanceResponseBodyStorageUsage storageUsage;
+    public GetLindormV2InstanceForTerraformResponseBodyStorageUsage storageUsage;
 
     @NameInMap("VpcId")
     public String vpcId;
@@ -107,7 +107,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     public String vswitchId;
 
     @NameInMap("WhiteIpList")
-    public java.util.List<GetLindormV2InstanceResponseBodyWhiteIpList> whiteIpList;
+    public java.util.List<GetLindormV2InstanceForTerraformResponseBodyWhiteIpList> whiteIpList;
 
     @NameInMap("ZoneEngineInfoMap")
     public java.util.Map<String, ?> zoneEngineInfoMap;
@@ -115,12 +115,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
     @NameInMap("ZoneId")
     public String zoneId;
 
-    public static GetLindormV2InstanceResponseBody build(java.util.Map<String, ?> map) throws Exception {
-        GetLindormV2InstanceResponseBody self = new GetLindormV2InstanceResponseBody();
+    public static GetLindormV2InstanceForTerraformResponseBody build(java.util.Map<String, ?> map) throws Exception {
+        GetLindormV2InstanceForTerraformResponseBody self = new GetLindormV2InstanceForTerraformResponseBody();
         return TeaModel.build(map, self);
     }
 
-    public GetLindormV2InstanceResponseBody setAliUid(Long aliUid) {
+    public GetLindormV2InstanceForTerraformResponseBody setAliUid(Long aliUid) {
         this.aliUid = aliUid;
         return this;
     }
@@ -128,7 +128,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.aliUid;
     }
 
-    public GetLindormV2InstanceResponseBody setArbiterVSwitchId(String arbiterVSwitchId) {
+    public GetLindormV2InstanceForTerraformResponseBody setArbiterVSwitchId(String arbiterVSwitchId) {
         this.arbiterVSwitchId = arbiterVSwitchId;
         return this;
     }
@@ -136,7 +136,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.arbiterVSwitchId;
     }
 
-    public GetLindormV2InstanceResponseBody setArbiterZoneId(String arbiterZoneId) {
+    public GetLindormV2InstanceForTerraformResponseBody setArbiterZoneId(String arbiterZoneId) {
         this.arbiterZoneId = arbiterZoneId;
         return this;
     }
@@ -144,7 +144,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.arbiterZoneId;
     }
 
-    public GetLindormV2InstanceResponseBody setAutoRenew(Boolean autoRenew) {
+    public GetLindormV2InstanceForTerraformResponseBody setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
     }
@@ -152,7 +152,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.autoRenew;
     }
 
-    public GetLindormV2InstanceResponseBody setCloudStorageSize(Long cloudStorageSize) {
+    public GetLindormV2InstanceForTerraformResponseBody setCloudStorageSize(Long cloudStorageSize) {
         this.cloudStorageSize = cloudStorageSize;
         return this;
     }
@@ -160,7 +160,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.cloudStorageSize;
     }
 
-    public GetLindormV2InstanceResponseBody setColdStorage(Integer coldStorage) {
+    public GetLindormV2InstanceForTerraformResponseBody setColdStorage(Integer coldStorage) {
         this.coldStorage = coldStorage;
         return this;
     }
@@ -168,7 +168,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.coldStorage;
     }
 
-    public GetLindormV2InstanceResponseBody setCreateMilliseconds(Long createMilliseconds) {
+    public GetLindormV2InstanceForTerraformResponseBody setCreateMilliseconds(Long createMilliseconds) {
         this.createMilliseconds = createMilliseconds;
         return this;
     }
@@ -176,7 +176,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.createMilliseconds;
     }
 
-    public GetLindormV2InstanceResponseBody setDeletionProtection(String deletionProtection) {
+    public GetLindormV2InstanceForTerraformResponseBody setDeletionProtection(String deletionProtection) {
         this.deletionProtection = deletionProtection;
         return this;
     }
@@ -184,7 +184,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.deletionProtection;
     }
 
-    public GetLindormV2InstanceResponseBody setDiskCategory(String diskCategory) {
+    public GetLindormV2InstanceForTerraformResponseBody setDiskCategory(String diskCategory) {
         this.diskCategory = diskCategory;
         return this;
     }
@@ -192,7 +192,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.diskCategory;
     }
 
-    public GetLindormV2InstanceResponseBody setDiskThreshold(String diskThreshold) {
+    public GetLindormV2InstanceForTerraformResponseBody setDiskThreshold(String diskThreshold) {
         this.diskThreshold = diskThreshold;
         return this;
     }
@@ -200,7 +200,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.diskThreshold;
     }
 
-    public GetLindormV2InstanceResponseBody setDiskUsage(String diskUsage) {
+    public GetLindormV2InstanceForTerraformResponseBody setDiskUsage(String diskUsage) {
         this.diskUsage = diskUsage;
         return this;
     }
@@ -208,7 +208,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.diskUsage;
     }
 
-    public GetLindormV2InstanceResponseBody setEnableCompute(Boolean enableCompute) {
+    public GetLindormV2InstanceForTerraformResponseBody setEnableCompute(Boolean enableCompute) {
         this.enableCompute = enableCompute;
         return this;
     }
@@ -216,15 +216,15 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.enableCompute;
     }
 
-    public GetLindormV2InstanceResponseBody setEngineList(java.util.List<GetLindormV2InstanceResponseBodyEngineList> engineList) {
+    public GetLindormV2InstanceForTerraformResponseBody setEngineList(java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineList> engineList) {
         this.engineList = engineList;
         return this;
     }
-    public java.util.List<GetLindormV2InstanceResponseBodyEngineList> getEngineList() {
+    public java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineList> getEngineList() {
         return this.engineList;
     }
 
-    public GetLindormV2InstanceResponseBody setExpiredMilliseconds(Long expiredMilliseconds) {
+    public GetLindormV2InstanceForTerraformResponseBody setExpiredMilliseconds(Long expiredMilliseconds) {
         this.expiredMilliseconds = expiredMilliseconds;
         return this;
     }
@@ -232,7 +232,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.expiredMilliseconds;
     }
 
-    public GetLindormV2InstanceResponseBody setInitialRootPassword(String initialRootPassword) {
+    public GetLindormV2InstanceForTerraformResponseBody setInitialRootPassword(String initialRootPassword) {
         this.initialRootPassword = initialRootPassword;
         return this;
     }
@@ -240,7 +240,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.initialRootPassword;
     }
 
-    public GetLindormV2InstanceResponseBody setInstanceAlias(String instanceAlias) {
+    public GetLindormV2InstanceForTerraformResponseBody setInstanceAlias(String instanceAlias) {
         this.instanceAlias = instanceAlias;
         return this;
     }
@@ -248,7 +248,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.instanceAlias;
     }
 
-    public GetLindormV2InstanceResponseBody setInstanceId(String instanceId) {
+    public GetLindormV2InstanceForTerraformResponseBody setInstanceId(String instanceId) {
         this.instanceId = instanceId;
         return this;
     }
@@ -256,7 +256,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.instanceId;
     }
 
-    public GetLindormV2InstanceResponseBody setInstanceStatus(String instanceStatus) {
+    public GetLindormV2InstanceForTerraformResponseBody setInstanceStatus(String instanceStatus) {
         this.instanceStatus = instanceStatus;
         return this;
     }
@@ -264,7 +264,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.instanceStatus;
     }
 
-    public GetLindormV2InstanceResponseBody setInstanceType(String instanceType) {
+    public GetLindormV2InstanceForTerraformResponseBody setInstanceType(String instanceType) {
         this.instanceType = instanceType;
         return this;
     }
@@ -272,7 +272,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.instanceType;
     }
 
-    public GetLindormV2InstanceResponseBody setMaintainEndTime(String maintainEndTime) {
+    public GetLindormV2InstanceForTerraformResponseBody setMaintainEndTime(String maintainEndTime) {
         this.maintainEndTime = maintainEndTime;
         return this;
     }
@@ -280,7 +280,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.maintainEndTime;
     }
 
-    public GetLindormV2InstanceResponseBody setMaintainStartTime(String maintainStartTime) {
+    public GetLindormV2InstanceForTerraformResponseBody setMaintainStartTime(String maintainStartTime) {
         this.maintainStartTime = maintainStartTime;
         return this;
     }
@@ -288,7 +288,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.maintainStartTime;
     }
 
-    public GetLindormV2InstanceResponseBody setNetworkType(String networkType) {
+    public GetLindormV2InstanceForTerraformResponseBody setNetworkType(String networkType) {
         this.networkType = networkType;
         return this;
     }
@@ -296,7 +296,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.networkType;
     }
 
-    public GetLindormV2InstanceResponseBody setPayType(String payType) {
+    public GetLindormV2InstanceForTerraformResponseBody setPayType(String payType) {
         this.payType = payType;
         return this;
     }
@@ -304,7 +304,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.payType;
     }
 
-    public GetLindormV2InstanceResponseBody setPrimaryVSwitchId(String primaryVSwitchId) {
+    public GetLindormV2InstanceForTerraformResponseBody setPrimaryVSwitchId(String primaryVSwitchId) {
         this.primaryVSwitchId = primaryVSwitchId;
         return this;
     }
@@ -312,7 +312,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.primaryVSwitchId;
     }
 
-    public GetLindormV2InstanceResponseBody setPrimaryZoneId(String primaryZoneId) {
+    public GetLindormV2InstanceForTerraformResponseBody setPrimaryZoneId(String primaryZoneId) {
         this.primaryZoneId = primaryZoneId;
         return this;
     }
@@ -320,7 +320,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.primaryZoneId;
     }
 
-    public GetLindormV2InstanceResponseBody setRegionId(String regionId) {
+    public GetLindormV2InstanceForTerraformResponseBody setRegionId(String regionId) {
         this.regionId = regionId;
         return this;
     }
@@ -328,7 +328,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.regionId;
     }
 
-    public GetLindormV2InstanceResponseBody setRequestId(String requestId) {
+    public GetLindormV2InstanceForTerraformResponseBody setRequestId(String requestId) {
         this.requestId = requestId;
         return this;
     }
@@ -336,7 +336,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.requestId;
     }
 
-    public GetLindormV2InstanceResponseBody setResourceGroupId(String resourceGroupId) {
+    public GetLindormV2InstanceForTerraformResponseBody setResourceGroupId(String resourceGroupId) {
         this.resourceGroupId = resourceGroupId;
         return this;
     }
@@ -344,7 +344,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.resourceGroupId;
     }
 
-    public GetLindormV2InstanceResponseBody setServiceType(String serviceType) {
+    public GetLindormV2InstanceForTerraformResponseBody setServiceType(String serviceType) {
         this.serviceType = serviceType;
         return this;
     }
@@ -352,7 +352,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.serviceType;
     }
 
-    public GetLindormV2InstanceResponseBody setStandbyVSwitchId(String standbyVSwitchId) {
+    public GetLindormV2InstanceForTerraformResponseBody setStandbyVSwitchId(String standbyVSwitchId) {
         this.standbyVSwitchId = standbyVSwitchId;
         return this;
     }
@@ -360,7 +360,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.standbyVSwitchId;
     }
 
-    public GetLindormV2InstanceResponseBody setStandbyZoneId(String standbyZoneId) {
+    public GetLindormV2InstanceForTerraformResponseBody setStandbyZoneId(String standbyZoneId) {
         this.standbyZoneId = standbyZoneId;
         return this;
     }
@@ -368,15 +368,15 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.standbyZoneId;
     }
 
-    public GetLindormV2InstanceResponseBody setStorageUsage(GetLindormV2InstanceResponseBodyStorageUsage storageUsage) {
+    public GetLindormV2InstanceForTerraformResponseBody setStorageUsage(GetLindormV2InstanceForTerraformResponseBodyStorageUsage storageUsage) {
         this.storageUsage = storageUsage;
         return this;
     }
-    public GetLindormV2InstanceResponseBodyStorageUsage getStorageUsage() {
+    public GetLindormV2InstanceForTerraformResponseBodyStorageUsage getStorageUsage() {
         return this.storageUsage;
     }
 
-    public GetLindormV2InstanceResponseBody setVpcId(String vpcId) {
+    public GetLindormV2InstanceForTerraformResponseBody setVpcId(String vpcId) {
         this.vpcId = vpcId;
         return this;
     }
@@ -384,7 +384,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.vpcId;
     }
 
-    public GetLindormV2InstanceResponseBody setVswitchId(String vswitchId) {
+    public GetLindormV2InstanceForTerraformResponseBody setVswitchId(String vswitchId) {
         this.vswitchId = vswitchId;
         return this;
     }
@@ -392,15 +392,15 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.vswitchId;
     }
 
-    public GetLindormV2InstanceResponseBody setWhiteIpList(java.util.List<GetLindormV2InstanceResponseBodyWhiteIpList> whiteIpList) {
+    public GetLindormV2InstanceForTerraformResponseBody setWhiteIpList(java.util.List<GetLindormV2InstanceForTerraformResponseBodyWhiteIpList> whiteIpList) {
         this.whiteIpList = whiteIpList;
         return this;
     }
-    public java.util.List<GetLindormV2InstanceResponseBodyWhiteIpList> getWhiteIpList() {
+    public java.util.List<GetLindormV2InstanceForTerraformResponseBodyWhiteIpList> getWhiteIpList() {
         return this.whiteIpList;
     }
 
-    public GetLindormV2InstanceResponseBody setZoneEngineInfoMap(java.util.Map<String, ?> zoneEngineInfoMap) {
+    public GetLindormV2InstanceForTerraformResponseBody setZoneEngineInfoMap(java.util.Map<String, ?> zoneEngineInfoMap) {
         this.zoneEngineInfoMap = zoneEngineInfoMap;
         return this;
     }
@@ -408,7 +408,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.zoneEngineInfoMap;
     }
 
-    public GetLindormV2InstanceResponseBody setZoneId(String zoneId) {
+    public GetLindormV2InstanceForTerraformResponseBody setZoneId(String zoneId) {
         this.zoneId = zoneId;
         return this;
     }
@@ -416,7 +416,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         return this.zoneId;
     }
 
-    public static class GetLindormV2InstanceResponseBodyEngineListConnectAddressList extends TeaModel {
+    public static class GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList extends TeaModel {
         @NameInMap("Address")
         public String address;
 
@@ -426,12 +426,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
-        public static GetLindormV2InstanceResponseBodyEngineListConnectAddressList build(java.util.Map<String, ?> map) throws Exception {
-            GetLindormV2InstanceResponseBodyEngineListConnectAddressList self = new GetLindormV2InstanceResponseBodyEngineListConnectAddressList();
+        public static GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList self = new GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList();
             return TeaModel.build(map, self);
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListConnectAddressList setAddress(String address) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList setAddress(String address) {
             this.address = address;
             return this;
         }
@@ -439,7 +439,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.address;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListConnectAddressList setPort(String port) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList setPort(String port) {
             this.port = port;
             return this;
         }
@@ -447,7 +447,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.port;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListConnectAddressList setType(String type) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList setType(String type) {
             this.type = type;
             return this;
         }
@@ -457,7 +457,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     }
 
-    public static class GetLindormV2InstanceResponseBodyEngineListNodeGroup extends TeaModel {
+    public static class GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup extends TeaModel {
         @NameInMap("Category")
         public String category;
 
@@ -491,12 +491,12 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
-        public static GetLindormV2InstanceResponseBodyEngineListNodeGroup build(java.util.Map<String, ?> map) throws Exception {
-            GetLindormV2InstanceResponseBodyEngineListNodeGroup self = new GetLindormV2InstanceResponseBodyEngineListNodeGroup();
+        public static GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup self = new GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup();
             return TeaModel.build(map, self);
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setCategory(String category) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setCategory(String category) {
             this.category = category;
             return this;
         }
@@ -504,7 +504,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.category;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setCpuCoreCount(Integer cpuCoreCount) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setCpuCoreCount(Integer cpuCoreCount) {
             this.cpuCoreCount = cpuCoreCount;
             return this;
         }
@@ -512,7 +512,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.cpuCoreCount;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setEnableAttachLocalDisk(Boolean enableAttachLocalDisk) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setEnableAttachLocalDisk(Boolean enableAttachLocalDisk) {
             this.enableAttachLocalDisk = enableAttachLocalDisk;
             return this;
         }
@@ -520,7 +520,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.enableAttachLocalDisk;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setLocalDiskCapacity(Long localDiskCapacity) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setLocalDiskCapacity(Long localDiskCapacity) {
             this.localDiskCapacity = localDiskCapacity;
             return this;
         }
@@ -528,7 +528,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.localDiskCapacity;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setLocalDiskCategory(String localDiskCategory) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setLocalDiskCategory(String localDiskCategory) {
             this.localDiskCategory = localDiskCategory;
             return this;
         }
@@ -536,7 +536,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.localDiskCategory;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setMemorySizeGiB(Integer memorySizeGiB) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setMemorySizeGiB(Integer memorySizeGiB) {
             this.memorySizeGiB = memorySizeGiB;
             return this;
         }
@@ -544,7 +544,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.memorySizeGiB;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setNodeSpec(String nodeSpec) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setNodeSpec(String nodeSpec) {
             this.nodeSpec = nodeSpec;
             return this;
         }
@@ -552,7 +552,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.nodeSpec;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setQuantity(Integer quantity) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setQuantity(Integer quantity) {
             this.quantity = quantity;
             return this;
         }
@@ -560,7 +560,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.quantity;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setResourceGroupName(String resourceGroupName) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setResourceGroupName(String resourceGroupName) {
             this.resourceGroupName = resourceGroupName;
             return this;
         }
@@ -568,7 +568,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.resourceGroupName;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setSpecId(String specId) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setSpecId(String specId) {
             this.specId = specId;
             return this;
         }
@@ -576,7 +576,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.specId;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineListNodeGroup setStatus(String status) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -586,15 +586,9 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     }
 
-    public static class GetLindormV2InstanceResponseBodyEngineList extends TeaModel {
+    public static class GetLindormV2InstanceForTerraformResponseBodyEngineList extends TeaModel {
         @NameInMap("ConnectAddressList")
-        public java.util.List<GetLindormV2InstanceResponseBodyEngineListConnectAddressList> connectAddressList;
-
-        @NameInMap("EnableBackup")
-        public String enableBackup;
-
-        @NameInMap("EnableCDC")
-        public String enableCDC;
+        public java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList> connectAddressList;
 
         @NameInMap("Engine")
         public String engine;
@@ -606,41 +600,25 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
         public String latestVersion;
 
         @NameInMap("NodeGroup")
-        public java.util.List<GetLindormV2InstanceResponseBodyEngineListNodeGroup> nodeGroup;
+        public java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup> nodeGroup;
 
         @NameInMap("Version")
         public String version;
 
-        public static GetLindormV2InstanceResponseBodyEngineList build(java.util.Map<String, ?> map) throws Exception {
-            GetLindormV2InstanceResponseBodyEngineList self = new GetLindormV2InstanceResponseBodyEngineList();
+        public static GetLindormV2InstanceForTerraformResponseBodyEngineList build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormV2InstanceForTerraformResponseBodyEngineList self = new GetLindormV2InstanceForTerraformResponseBodyEngineList();
             return TeaModel.build(map, self);
         }
 
-        public GetLindormV2InstanceResponseBodyEngineList setConnectAddressList(java.util.List<GetLindormV2InstanceResponseBodyEngineListConnectAddressList> connectAddressList) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineList setConnectAddressList(java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList> connectAddressList) {
             this.connectAddressList = connectAddressList;
             return this;
         }
-        public java.util.List<GetLindormV2InstanceResponseBodyEngineListConnectAddressList> getConnectAddressList() {
+        public java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineListConnectAddressList> getConnectAddressList() {
             return this.connectAddressList;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineList setEnableBackup(String enableBackup) {
-            this.enableBackup = enableBackup;
-            return this;
-        }
-        public String getEnableBackup() {
-            return this.enableBackup;
-        }
-
-        public GetLindormV2InstanceResponseBodyEngineList setEnableCDC(String enableCDC) {
-            this.enableCDC = enableCDC;
-            return this;
-        }
-        public String getEnableCDC() {
-            return this.enableCDC;
-        }
-
-        public GetLindormV2InstanceResponseBodyEngineList setEngine(String engine) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineList setEngine(String engine) {
             this.engine = engine;
             return this;
         }
@@ -648,7 +626,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.engine;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineList setIsLastVersion(Boolean isLastVersion) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineList setIsLastVersion(Boolean isLastVersion) {
             this.isLastVersion = isLastVersion;
             return this;
         }
@@ -656,7 +634,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.isLastVersion;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineList setLatestVersion(String latestVersion) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineList setLatestVersion(String latestVersion) {
             this.latestVersion = latestVersion;
             return this;
         }
@@ -664,15 +642,15 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.latestVersion;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineList setNodeGroup(java.util.List<GetLindormV2InstanceResponseBodyEngineListNodeGroup> nodeGroup) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineList setNodeGroup(java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup> nodeGroup) {
             this.nodeGroup = nodeGroup;
             return this;
         }
-        public java.util.List<GetLindormV2InstanceResponseBodyEngineListNodeGroup> getNodeGroup() {
+        public java.util.List<GetLindormV2InstanceForTerraformResponseBodyEngineListNodeGroup> getNodeGroup() {
             return this.nodeGroup;
         }
 
-        public GetLindormV2InstanceResponseBodyEngineList setVersion(String version) {
+        public GetLindormV2InstanceForTerraformResponseBodyEngineList setVersion(String version) {
             this.version = version;
             return this;
         }
@@ -682,19 +660,19 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     }
 
-    public static class GetLindormV2InstanceResponseBodyStorageUsage extends TeaModel {
+    public static class GetLindormV2InstanceForTerraformResponseBodyStorageUsage extends TeaModel {
         @NameInMap("CapacityByDiskCategory")
         public java.util.List<java.util.Map<String, ?>> capacityByDiskCategory;
 
         @NameInMap("EngineUsage")
         public java.util.Map<String, ?> engineUsage;
 
-        public static GetLindormV2InstanceResponseBodyStorageUsage build(java.util.Map<String, ?> map) throws Exception {
-            GetLindormV2InstanceResponseBodyStorageUsage self = new GetLindormV2InstanceResponseBodyStorageUsage();
+        public static GetLindormV2InstanceForTerraformResponseBodyStorageUsage build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormV2InstanceForTerraformResponseBodyStorageUsage self = new GetLindormV2InstanceForTerraformResponseBodyStorageUsage();
             return TeaModel.build(map, self);
         }
 
-        public GetLindormV2InstanceResponseBodyStorageUsage setCapacityByDiskCategory(java.util.List<java.util.Map<String, ?>> capacityByDiskCategory) {
+        public GetLindormV2InstanceForTerraformResponseBodyStorageUsage setCapacityByDiskCategory(java.util.List<java.util.Map<String, ?>> capacityByDiskCategory) {
             this.capacityByDiskCategory = capacityByDiskCategory;
             return this;
         }
@@ -702,7 +680,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.capacityByDiskCategory;
         }
 
-        public GetLindormV2InstanceResponseBodyStorageUsage setEngineUsage(java.util.Map<String, ?> engineUsage) {
+        public GetLindormV2InstanceForTerraformResponseBodyStorageUsage setEngineUsage(java.util.Map<String, ?> engineUsage) {
             this.engineUsage = engineUsage;
             return this;
         }
@@ -712,19 +690,19 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
 
     }
 
-    public static class GetLindormV2InstanceResponseBodyWhiteIpList extends TeaModel {
+    public static class GetLindormV2InstanceForTerraformResponseBodyWhiteIpList extends TeaModel {
         @NameInMap("GroupName")
         public String groupName;
 
         @NameInMap("IpList")
         public String ipList;
 
-        public static GetLindormV2InstanceResponseBodyWhiteIpList build(java.util.Map<String, ?> map) throws Exception {
-            GetLindormV2InstanceResponseBodyWhiteIpList self = new GetLindormV2InstanceResponseBodyWhiteIpList();
+        public static GetLindormV2InstanceForTerraformResponseBodyWhiteIpList build(java.util.Map<String, ?> map) throws Exception {
+            GetLindormV2InstanceForTerraformResponseBodyWhiteIpList self = new GetLindormV2InstanceForTerraformResponseBodyWhiteIpList();
             return TeaModel.build(map, self);
         }
 
-        public GetLindormV2InstanceResponseBodyWhiteIpList setGroupName(String groupName) {
+        public GetLindormV2InstanceForTerraformResponseBodyWhiteIpList setGroupName(String groupName) {
             this.groupName = groupName;
             return this;
         }
@@ -732,7 +710,7 @@ public class GetLindormV2InstanceResponseBody extends TeaModel {
             return this.groupName;
         }
 
-        public GetLindormV2InstanceResponseBodyWhiteIpList setIpList(String ipList) {
+        public GetLindormV2InstanceForTerraformResponseBodyWhiteIpList setIpList(String ipList) {
             this.ipList = ipList;
             return this;
         }

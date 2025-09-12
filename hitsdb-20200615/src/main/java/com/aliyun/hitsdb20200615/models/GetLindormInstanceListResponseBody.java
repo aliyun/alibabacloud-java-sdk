@@ -143,6 +143,9 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         @NameInMap("AliUid")
         public Long aliUid;
 
+        @NameInMap("CreateErrorCode")
+        public String createErrorCode;
+
         /**
          * <p>The time when the instance is created. This value is a UNIX timestamp that indicates the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>
          * 
@@ -433,6 +436,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
         public Long getAliUid() {
             return this.aliUid;
+        }
+
+        public GetLindormInstanceListResponseBodyInstanceList setCreateErrorCode(String createErrorCode) {
+            this.createErrorCode = createErrorCode;
+            return this;
+        }
+        public String getCreateErrorCode() {
+            return this.createErrorCode;
         }
 
         public GetLindormInstanceListResponseBodyInstanceList setCreateMilliseconds(Long createMilliseconds) {
