@@ -229,6 +229,25 @@ public class CreateTaskRequest extends TeaModel {
 
     }
 
+    public static class CreateTaskRequestParametersAutoChapters extends TeaModel {
+        @NameInMap("ChapterGranularity")
+        public String chapterGranularity;
+
+        public static CreateTaskRequestParametersAutoChapters build(java.util.Map<String, ?> map) throws Exception {
+            CreateTaskRequestParametersAutoChapters self = new CreateTaskRequestParametersAutoChapters();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParametersAutoChapters setChapterGranularity(String chapterGranularity) {
+            this.chapterGranularity = chapterGranularity;
+            return this;
+        }
+        public String getChapterGranularity() {
+            return this.chapterGranularity;
+        }
+
+    }
+
     public static class CreateTaskRequestParametersContentExtractionExtractionContents extends TeaModel {
         @NameInMap("Content")
         public String content;
@@ -392,6 +411,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("DomainEducationEnabled")
         public Boolean domainEducationEnabled;
 
+        @NameInMap("FullTextSummaryFormat")
+        public String fullTextSummaryFormat;
+
         @NameInMap("MaxKeywords")
         public Integer maxKeywords;
 
@@ -415,6 +437,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getDomainEducationEnabled() {
             return this.domainEducationEnabled;
+        }
+
+        public CreateTaskRequestParametersExtraParams setFullTextSummaryFormat(String fullTextSummaryFormat) {
+            this.fullTextSummaryFormat = fullTextSummaryFormat;
+            return this;
+        }
+        public String getFullTextSummaryFormat() {
+            return this.fullTextSummaryFormat;
         }
 
         public CreateTaskRequestParametersExtraParams setMaxKeywords(Integer maxKeywords) {
@@ -756,6 +786,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("PhraseId")
         public String phraseId;
 
+        @NameInMap("ProfanityFilterEnabled")
+        public Boolean profanityFilterEnabled;
+
         @NameInMap("RealtimeDiarizationEnabled")
         public Boolean realtimeDiarizationEnabled;
 
@@ -820,6 +853,14 @@ public class CreateTaskRequest extends TeaModel {
             return this.phraseId;
         }
 
+        public CreateTaskRequestParametersTranscription setProfanityFilterEnabled(Boolean profanityFilterEnabled) {
+            this.profanityFilterEnabled = profanityFilterEnabled;
+            return this;
+        }
+        public Boolean getProfanityFilterEnabled() {
+            return this.profanityFilterEnabled;
+        }
+
         public CreateTaskRequestParametersTranscription setRealtimeDiarizationEnabled(Boolean realtimeDiarizationEnabled) {
             this.realtimeDiarizationEnabled = realtimeDiarizationEnabled;
             return this;
@@ -872,6 +913,9 @@ public class CreateTaskRequest extends TeaModel {
     }
 
     public static class CreateTaskRequestParameters extends TeaModel {
+        @NameInMap("AutoChapters")
+        public CreateTaskRequestParametersAutoChapters autoChapters;
+
         /**
          * <strong>example:</strong>
          * <p>true</p>
@@ -900,6 +944,9 @@ public class CreateTaskRequest extends TeaModel {
         @NameInMap("IdentityRecognitionEnabled")
         public Boolean identityRecognitionEnabled;
 
+        @NameInMap("LlmOutputLanguage")
+        public String llmOutputLanguage;
+
         @NameInMap("MeetingAssistance")
         public CreateTaskRequestParametersMeetingAssistance meetingAssistance;
 
@@ -909,6 +956,9 @@ public class CreateTaskRequest extends TeaModel {
          */
         @NameInMap("MeetingAssistanceEnabled")
         public Boolean meetingAssistanceEnabled;
+
+        @NameInMap("Model")
+        public String model;
 
         @NameInMap("PptExtractionEnabled")
         public Boolean pptExtractionEnabled;
@@ -951,6 +1001,14 @@ public class CreateTaskRequest extends TeaModel {
         public static CreateTaskRequestParameters build(java.util.Map<String, ?> map) throws Exception {
             CreateTaskRequestParameters self = new CreateTaskRequestParameters();
             return TeaModel.build(map, self);
+        }
+
+        public CreateTaskRequestParameters setAutoChapters(CreateTaskRequestParametersAutoChapters autoChapters) {
+            this.autoChapters = autoChapters;
+            return this;
+        }
+        public CreateTaskRequestParametersAutoChapters getAutoChapters() {
+            return this.autoChapters;
         }
 
         public CreateTaskRequestParameters setAutoChaptersEnabled(Boolean autoChaptersEnabled) {
@@ -1017,6 +1075,14 @@ public class CreateTaskRequest extends TeaModel {
             return this.identityRecognitionEnabled;
         }
 
+        public CreateTaskRequestParameters setLlmOutputLanguage(String llmOutputLanguage) {
+            this.llmOutputLanguage = llmOutputLanguage;
+            return this;
+        }
+        public String getLlmOutputLanguage() {
+            return this.llmOutputLanguage;
+        }
+
         public CreateTaskRequestParameters setMeetingAssistance(CreateTaskRequestParametersMeetingAssistance meetingAssistance) {
             this.meetingAssistance = meetingAssistance;
             return this;
@@ -1031,6 +1097,14 @@ public class CreateTaskRequest extends TeaModel {
         }
         public Boolean getMeetingAssistanceEnabled() {
             return this.meetingAssistanceEnabled;
+        }
+
+        public CreateTaskRequestParameters setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
         }
 
         public CreateTaskRequestParameters setPptExtractionEnabled(Boolean pptExtractionEnabled) {
