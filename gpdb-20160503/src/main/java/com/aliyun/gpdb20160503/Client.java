@@ -8436,6 +8436,104 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>知识库开启构建知识图谱</p>
+     * 
+     * @param tmpReq EnableCollectionGraphRAGRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableCollectionGraphRAGResponse
+     */
+    public EnableCollectionGraphRAGResponse enableCollectionGraphRAGWithOptions(EnableCollectionGraphRAGRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        EnableCollectionGraphRAGShrinkRequest request = new EnableCollectionGraphRAGShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.entityTypes)) {
+            request.entityTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.entityTypes, "EntityTypes", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.relationshipTypes)) {
+            request.relationshipTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.relationshipTypes, "RelationshipTypes", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.entityTypesShrink)) {
+            query.put("EntityTypes", request.entityTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.LLMModel)) {
+            query.put("LLMModel", request.LLMModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.language)) {
+            query.put("Language", request.language);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerAccount)) {
+            query.put("ManagerAccount", request.managerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.managerAccountPassword)) {
+            query.put("ManagerAccountPassword", request.managerAccountPassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.relationshipTypesShrink)) {
+            query.put("RelationshipTypes", request.relationshipTypesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableCollectionGraphRAG"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableCollectionGraphRAGResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>知识库开启构建知识图谱</p>
+     * 
+     * @param request EnableCollectionGraphRAGRequest
+     * @return EnableCollectionGraphRAGResponse
+     */
+    public EnableCollectionGraphRAGResponse enableCollectionGraphRAG(EnableCollectionGraphRAGRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.enableCollectionGraphRAGWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  You can call this operation only for AnalyticDB for PostgreSQL V6.0 instances in elastic storage mode whose minor version is V6.6.1.0 or later.</p>
      * <ul>
@@ -8647,6 +8745,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetAccountResponse getAccount(GetAccountRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getAccountWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取构建知识图谱任务</p>
+     * 
+     * @param request GetGraphRAGJobRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGraphRAGJobResponse
+     */
+    public GetGraphRAGJobResponse getGraphRAGJobWithOptions(GetGraphRAGJobRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.collection)) {
+            query.put("Collection", request.collection);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.jobId)) {
+            query.put("JobId", request.jobId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespace)) {
+            query.put("Namespace", request.namespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacePassword)) {
+            query.put("NamespacePassword", request.namespacePassword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGraphRAGJob"),
+            new TeaPair("version", "2016-05-03"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGraphRAGJobResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取构建知识图谱任务</p>
+     * 
+     * @param request GetGraphRAGJobRequest
+     * @return GetGraphRAGJobResponse
+     */
+    public GetGraphRAGJobResponse getGraphRAGJob(GetGraphRAGJobRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGraphRAGJobWithOptions(request, runtime);
     }
 
     /**
