@@ -1713,43 +1713,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Describe APM</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return DescribeApmResponse
-     */
-    public DescribeApmResponse describeApmWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "DescribeApm"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/apm/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeApmResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>Describe APM</p>
-     * @return DescribeApmResponse
-     */
-    public DescribeApmResponse describeApm(String instanceId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.describeApmWithOptions(instanceId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Queries the details of a shipper.</p>
      * 
      * @param headers map
@@ -3907,69 +3870,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listAlternativeSnapshotReposWithOptions(InstanceId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>ListApm</p>
-     * 
-     * @param request ListApmRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return ListApmResponse
-     */
-    public ListApmResponse listApmWithOptions(ListApmRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            query.put("description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
-            query.put("instanceId", request.instanceId);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.output)) {
-            query.put("output", request.output);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
-            query.put("page", request.page);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
-            query.put("size", request.size);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ListApm"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/apm"),
-            new TeaPair("method", "GET"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ListApmResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>ListApm</p>
-     * 
-     * @param request ListApmRequest
-     * @return ListApmResponse
-     */
-    public ListApmResponse listApm(ListApmRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.listApmWithOptions(request, headers, runtime);
     }
 
     /**
@@ -6662,43 +6562,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>RemoveApm</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return RemoveApmResponse
-     */
-    public RemoveApmResponse removeApmWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "RemoveApm"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/apm/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
-            new TeaPair("method", "DELETE"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new RemoveApmResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>RemoveApm</p>
-     * @return RemoveApmResponse
-     */
-    public RemoveApmResponse removeApm(String instanceId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.removeApmWithOptions(instanceId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Call RenewInstance to renew a subscription instance.</p>
      * 
      * @param request RenewInstanceRequest
@@ -7220,43 +7083,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>StartApm</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return StartApmResponse
-     */
-    public StartApmResponse startApmWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StartApm"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/apm/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/actions/start"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StartApmResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>StartApm</p>
-     * @return StartApmResponse
-     */
-    public StartApmResponse startApm(String instanceId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.startApmWithOptions(instanceId, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
      * <p>Starts a collector to collect data.</p>
      * 
      * @param request StartCollectorRequest
@@ -7300,43 +7126,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.startCollectorWithOptions(ResId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>StopApm</p>
-     * 
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return StopApmResponse
-     */
-    public StopApmResponse stopApmWithOptions(String instanceId, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers)
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "StopApm"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/apm/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + "/actions/stop"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new StopApmResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>StopApm</p>
-     * @return StopApmResponse
-     */
-    public StopApmResponse stopApm(String instanceId) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.stopApmWithOptions(instanceId, headers, runtime);
     }
 
     /**
@@ -8002,69 +7791,6 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.updateAliwsDictWithOptions(InstanceId, request, headers, runtime);
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>修改APM实规格配置</p>
-     * 
-     * @param request UpdateApmRequest
-     * @param headers map
-     * @param runtime runtime options for this request RuntimeOptions
-     * @return UpdateApmResponse
-     */
-    public UpdateApmResponse updateApmWithOptions(String instanceId, UpdateApmRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> body = new java.util.HashMap<>();
-        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
-            body.put("description", request.description);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outputES)) {
-            body.put("outputES", request.outputES);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outputESPassword)) {
-            body.put("outputESPassword", request.outputESPassword);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.outputESUserName)) {
-            body.put("outputESUserName", request.outputESUserName);
-        }
-
-        if (!com.aliyun.teautil.Common.isUnset(request.token)) {
-            body.put("token", request.token);
-        }
-
-        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("headers", headers),
-            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
-        ));
-        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "UpdateApm"),
-            new TeaPair("version", "2017-06-13"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/openapi/apm/" + com.aliyun.openapiutil.Client.getEncodeParam(instanceId) + ""),
-            new TeaPair("method", "PUT"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "ROA"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateApmResponse());
-    }
-
-    /**
-     * <b>summary</b> : 
-     * <p>修改APM实规格配置</p>
-     * 
-     * @param request UpdateApmRequest
-     * @return UpdateApmResponse
-     */
-    public UpdateApmResponse updateApm(String instanceId, UpdateApmRequest request) throws Exception {
-        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
-        java.util.Map<String, String> headers = new java.util.HashMap<>();
-        return this.updateApmWithOptions(instanceId, request, headers, runtime);
     }
 
     /**
