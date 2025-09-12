@@ -128,6 +128,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>提供给服务商的域名查询接口</p>
+     * 
+     * @param request GetDomainInfoForPartnerRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetDomainInfoForPartnerResponse
+     */
+    public GetDomainInfoForPartnerResponse getDomainInfoForPartnerWithOptions(GetDomainInfoForPartnerRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.bizId)) {
+            query.put("BizId", request.bizId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            query.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.userId)) {
+            query.put("UserId", request.userId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetDomainInfoForPartner"),
+            new TeaPair("version", "2025-04-29"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetDomainInfoForPartnerResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>提供给服务商的域名查询接口</p>
+     * 
+     * @param request GetDomainInfoForPartnerRequest
+     * @return GetDomainInfoForPartnerResponse
+     */
+    public GetDomainInfoForPartnerResponse getDomainInfoForPartner(GetDomainInfoForPartnerRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getDomainInfoForPartnerWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询域名备案信息</p>
      * 
      * @param request GetIcpFilingInfoForPartnerRequest
