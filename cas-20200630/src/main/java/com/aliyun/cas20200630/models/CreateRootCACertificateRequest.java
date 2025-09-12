@@ -16,13 +16,15 @@ public class CreateRootCACertificateRequest extends TeaModel {
      * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
      * </ul>
      * <p>The encryption algorithm of the root CA certificate must be consistent with the <strong>encryption algorithm</strong> of the private root CA instance that you purchase. For example, if the <strong>encryption algorithm</strong> of the private root CA instance that you purchase is <strong>RSA</strong>, the key algorithm of the root CA certificate must be <strong>RSA_1024</strong>, <strong>RSA_2048</strong>, or <strong>RSA_4096</strong>.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>RSA_2048</p>
      */
     @NameInMap("Algorithm")
     public String algorithm;
+
+    @NameInMap("ClientToken")
+    public String clientToken;
 
     /**
      * <p>The common name or abbreviation of the organization. The value can contain letters.</p>
@@ -108,6 +110,14 @@ public class CreateRootCACertificateRequest extends TeaModel {
     }
     public String getAlgorithm() {
         return this.algorithm;
+    }
+
+    public CreateRootCACertificateRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public CreateRootCACertificateRequest setCommonName(String commonName) {

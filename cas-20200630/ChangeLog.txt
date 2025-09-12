@@ -1,3 +1,13 @@
+2025-09-12 Version: 1.2.0
+- Support API CreateExternalCACertificate.
+- Support API ListPcaCaCertificate.
+- Update API CreateRootCACertificate: add request parameters ClientToken.
+- Update API DescribeCACertificate: add response parameters Body.Certificate.FullAlgorithm.
+- Update API DescribeCACertificate: add response parameters Body.Certificate.IssuerType.
+- Update API DescribeCACertificate: add response parameters Body.Certificate.Years.
+- Update API UpdateCACertificateStatus: add request parameters ClientToken.
+
+
 2025-06-27 Version: 1.1.2
 - Update API DescribeCACertificateList: add response parameters Body.CertificateList.$.Gift.
 - Update API DescribeCACertificateList: add response parameters Body.CertificateList.$.Trial.

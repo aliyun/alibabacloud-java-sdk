@@ -4,6 +4,9 @@ package com.aliyun.cas20200630.models;
 import com.aliyun.tea.*;
 
 public class UpdateCACertificateStatusRequest extends TeaModel {
+    @NameInMap("ClientToken")
+    public String clientToken;
+
     /**
      * <p>The unique identifier of the CA certificate whose status you want to change.</p>
      * <blockquote>
@@ -22,7 +25,6 @@ public class UpdateCACertificateStatusRequest extends TeaModel {
      * <blockquote>
      * <p> You can call this operation only if the status of a CA certificate is <strong>ISSUE</strong>. You can call the <a href="https://help.aliyun.com/document_detail/328096.html">DescribeCACertificate</a> operation to query the status of a CA certificate.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>REVOKE</p>
@@ -33,6 +35,14 @@ public class UpdateCACertificateStatusRequest extends TeaModel {
     public static UpdateCACertificateStatusRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateCACertificateStatusRequest self = new UpdateCACertificateStatusRequest();
         return TeaModel.build(map, self);
+    }
+
+    public UpdateCACertificateStatusRequest setClientToken(String clientToken) {
+        this.clientToken = clientToken;
+        return this;
+    }
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     public UpdateCACertificateStatusRequest setIdentifier(String identifier) {

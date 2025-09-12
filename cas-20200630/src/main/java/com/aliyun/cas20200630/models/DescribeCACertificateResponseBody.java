@@ -193,6 +193,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("CrlUrl")
         public String crlUrl;
 
+        @NameInMap("FullAlgorithm")
+        public String fullAlgorithm;
+
         /**
          * <p>The unique identifier of the CA certificate.</p>
          * 
@@ -201,6 +204,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         @NameInMap("Identifier")
         public String identifier;
+
+        @NameInMap("IssuerType")
+        public String issuerType;
 
         /**
          * <p>The key length of the CA certificate.</p>
@@ -343,6 +349,9 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         @NameInMap("X509Certificate")
         public String x509Certificate;
 
+        @NameInMap("Years")
+        public Integer years;
+
         public static DescribeCACertificateResponseBodyCertificate build(java.util.Map<String, ?> map) throws Exception {
             DescribeCACertificateResponseBodyCertificate self = new DescribeCACertificateResponseBodyCertificate();
             return TeaModel.build(map, self);
@@ -452,12 +461,28 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             return this.crlUrl;
         }
 
+        public DescribeCACertificateResponseBodyCertificate setFullAlgorithm(String fullAlgorithm) {
+            this.fullAlgorithm = fullAlgorithm;
+            return this;
+        }
+        public String getFullAlgorithm() {
+            return this.fullAlgorithm;
+        }
+
         public DescribeCACertificateResponseBodyCertificate setIdentifier(String identifier) {
             this.identifier = identifier;
             return this;
         }
         public String getIdentifier() {
             return this.identifier;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setIssuerType(String issuerType) {
+            this.issuerType = issuerType;
+            return this;
+        }
+        public String getIssuerType() {
+            return this.issuerType;
         }
 
         public DescribeCACertificateResponseBodyCertificate setKeySize(Integer keySize) {
@@ -570,6 +595,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
         public String getX509Certificate() {
             return this.x509Certificate;
+        }
+
+        public DescribeCACertificateResponseBodyCertificate setYears(Integer years) {
+            this.years = years;
+            return this;
+        }
+        public Integer getYears() {
+            return this.years;
         }
 
     }
