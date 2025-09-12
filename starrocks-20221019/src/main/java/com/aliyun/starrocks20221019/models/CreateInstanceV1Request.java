@@ -13,6 +13,12 @@ public class CreateInstanceV1Request extends TeaModel {
     @NameInMap("AdminPassword")
     public String adminPassword;
 
+    @NameInMap("AgentNodeGroup")
+    public CreateInstanceV1RequestAgentNodeGroup agentNodeGroup;
+
+    @NameInMap("AutoPay")
+    public Boolean autoPay;
+
     /**
      * <strong>example:</strong>
      * <p>true</p>
@@ -46,6 +52,9 @@ public class CreateInstanceV1Request extends TeaModel {
 
     @NameInMap("FrontendNodeGroups")
     public java.util.List<CreateInstanceV1RequestFrontendNodeGroups> frontendNodeGroups;
+
+    @NameInMap("GatewayType")
+    public String gatewayType;
 
     /**
      * <p>This parameter is required.</p>
@@ -177,6 +186,22 @@ public class CreateInstanceV1Request extends TeaModel {
         return this.adminPassword;
     }
 
+    public CreateInstanceV1Request setAgentNodeGroup(CreateInstanceV1RequestAgentNodeGroup agentNodeGroup) {
+        this.agentNodeGroup = agentNodeGroup;
+        return this;
+    }
+    public CreateInstanceV1RequestAgentNodeGroup getAgentNodeGroup() {
+        return this.agentNodeGroup;
+    }
+
+    public CreateInstanceV1Request setAutoPay(Boolean autoPay) {
+        this.autoPay = autoPay;
+        return this;
+    }
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
     public CreateInstanceV1Request setAutoRenew(Boolean autoRenew) {
         this.autoRenew = autoRenew;
         return this;
@@ -223,6 +248,14 @@ public class CreateInstanceV1Request extends TeaModel {
     }
     public java.util.List<CreateInstanceV1RequestFrontendNodeGroups> getFrontendNodeGroups() {
         return this.frontendNodeGroups;
+    }
+
+    public CreateInstanceV1Request setGatewayType(String gatewayType) {
+        this.gatewayType = gatewayType;
+        return this;
+    }
+    public String getGatewayType() {
+        return this.gatewayType;
     }
 
     public CreateInstanceV1Request setInstanceName(String instanceName) {
@@ -351,6 +384,25 @@ public class CreateInstanceV1Request extends TeaModel {
     }
     public String getZoneId() {
         return this.zoneId;
+    }
+
+    public static class CreateInstanceV1RequestAgentNodeGroup extends TeaModel {
+        @NameInMap("cu")
+        public Integer cu;
+
+        public static CreateInstanceV1RequestAgentNodeGroup build(java.util.Map<String, ?> map) throws Exception {
+            CreateInstanceV1RequestAgentNodeGroup self = new CreateInstanceV1RequestAgentNodeGroup();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateInstanceV1RequestAgentNodeGroup setCu(Integer cu) {
+            this.cu = cu;
+            return this;
+        }
+        public Integer getCu() {
+            return this.cu;
+        }
+
     }
 
     public static class CreateInstanceV1RequestBackendNodeGroups extends TeaModel {

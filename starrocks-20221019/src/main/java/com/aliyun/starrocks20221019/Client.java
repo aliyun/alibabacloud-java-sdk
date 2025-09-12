@@ -101,6 +101,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("AdminPassword", request.adminPassword);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.agentNodeGroup)) {
+            body.put("AgentNodeGroup", request.agentNodeGroup);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoPay)) {
+            body.put("AutoPay", request.autoPay);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             body.put("AutoRenew", request.autoRenew);
         }
@@ -123,6 +131,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.frontendNodeGroups)) {
             body.put("FrontendNodeGroups", request.frontendNodeGroups);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.gatewayType)) {
+            body.put("GatewayType", request.gatewayType);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.instanceName)) {
@@ -675,6 +687,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyDiskSizeResponse modifyDiskSizeWithOptions(ModifyDiskSizeRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.fastMode)) {
+            query.put("FastMode", request.fastMode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
             query.put("InstanceId", request.instanceId);
         }

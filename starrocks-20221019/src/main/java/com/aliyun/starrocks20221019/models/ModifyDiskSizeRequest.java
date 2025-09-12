@@ -4,6 +4,9 @@ package com.aliyun.starrocks20221019.models;
 import com.aliyun.tea.*;
 
 public class ModifyDiskSizeRequest extends TeaModel {
+    @NameInMap("FastMode")
+    public Boolean fastMode;
+
     /**
      * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
@@ -40,6 +43,14 @@ public class ModifyDiskSizeRequest extends TeaModel {
     public static ModifyDiskSizeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDiskSizeRequest self = new ModifyDiskSizeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyDiskSizeRequest setFastMode(Boolean fastMode) {
+        this.fastMode = fastMode;
+        return this;
+    }
+    public Boolean getFastMode() {
+        return this.fastMode;
     }
 
     public ModifyDiskSizeRequest setInstanceId(String instanceId) {
