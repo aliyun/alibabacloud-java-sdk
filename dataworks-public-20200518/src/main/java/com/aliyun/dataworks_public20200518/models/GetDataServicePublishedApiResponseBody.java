@@ -1559,6 +1559,13 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         public GetDataServicePublishedApiResponseBodyDataScriptDetails scriptDetails;
 
         /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("SqlMode")
+        public Integer sqlMode;
+
+        /**
          * <p>The status of the API. Valid values: 0 and 1. The value 0 indicates that the API is not published. The value 1 indicates that the API is published.</p>
          * 
          * <strong>example:</strong>
@@ -1731,6 +1738,14 @@ public class GetDataServicePublishedApiResponseBody extends TeaModel {
         }
         public GetDataServicePublishedApiResponseBodyDataScriptDetails getScriptDetails() {
             return this.scriptDetails;
+        }
+
+        public GetDataServicePublishedApiResponseBodyData setSqlMode(Integer sqlMode) {
+            this.sqlMode = sqlMode;
+            return this;
+        }
+        public Integer getSqlMode() {
+            return this.sqlMode;
         }
 
         public GetDataServicePublishedApiResponseBodyData setStatus(Integer status) {
