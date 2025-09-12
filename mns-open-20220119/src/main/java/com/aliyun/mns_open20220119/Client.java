@@ -1229,6 +1229,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("NotifyStrategy", request.notifyStrategy);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.stsRoleArn)) {
+            query.put("StsRoleArn", request.stsRoleArn);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.subscriptionName)) {
             query.put("SubscriptionName", request.subscriptionName);
         }

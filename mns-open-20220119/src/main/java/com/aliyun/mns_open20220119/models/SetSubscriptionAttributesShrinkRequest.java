@@ -24,6 +24,13 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     public String notifyStrategy;
 
     /**
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890:role/roleName</p>
+     */
+    @NameInMap("StsRoleArn")
+    public String stsRoleArn;
+
+    /**
      * <p>The name of the subscription.</p>
      * <p>This parameter is required.</p>
      * 
@@ -65,6 +72,14 @@ public class SetSubscriptionAttributesShrinkRequest extends TeaModel {
     }
     public String getNotifyStrategy() {
         return this.notifyStrategy;
+    }
+
+    public SetSubscriptionAttributesShrinkRequest setStsRoleArn(String stsRoleArn) {
+        this.stsRoleArn = stsRoleArn;
+        return this;
+    }
+    public String getStsRoleArn() {
+        return this.stsRoleArn;
     }
 
     public SetSubscriptionAttributesShrinkRequest setSubscriptionName(String subscriptionName) {
