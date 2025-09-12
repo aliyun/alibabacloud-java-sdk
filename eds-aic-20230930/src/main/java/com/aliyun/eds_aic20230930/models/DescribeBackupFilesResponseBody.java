@@ -235,6 +235,9 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        @NameInMap("SystemVersion")
+        public String systemVersion;
+
         /**
          * <p>The task ID.</p>
          * 
@@ -397,6 +400,14 @@ public class DescribeBackupFilesResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public DescribeBackupFilesResponseBodyData setSystemVersion(String systemVersion) {
+            this.systemVersion = systemVersion;
+            return this;
+        }
+        public String getSystemVersion() {
+            return this.systemVersion;
         }
 
         public DescribeBackupFilesResponseBodyData setTaskId(String taskId) {

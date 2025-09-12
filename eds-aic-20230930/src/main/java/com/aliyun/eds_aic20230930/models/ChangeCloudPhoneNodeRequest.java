@@ -7,6 +7,9 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    @NameInMap("DisplayConfig")
+    public String displayConfig;
+
     @NameInMap("DownBandwidthLimit")
     public Integer downBandwidthLimit;
 
@@ -51,6 +54,14 @@ public class ChangeCloudPhoneNodeRequest extends TeaModel {
     }
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    public ChangeCloudPhoneNodeRequest setDisplayConfig(String displayConfig) {
+        this.displayConfig = displayConfig;
+        return this;
+    }
+    public String getDisplayConfig() {
+        return this.displayConfig;
     }
 
     public ChangeCloudPhoneNodeRequest setDownBandwidthLimit(Integer downBandwidthLimit) {

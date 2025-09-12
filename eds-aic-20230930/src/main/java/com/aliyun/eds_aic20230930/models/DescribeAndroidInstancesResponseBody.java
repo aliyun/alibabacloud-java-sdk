@@ -492,6 +492,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @NameInMap("InstanceType")
         public String instanceType;
 
+        @NameInMap("InternetStatus")
+        public String internetStatus;
+
         /**
          * <p>The ID of the key pair.</p>
          * 
@@ -857,6 +860,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        public DescribeAndroidInstancesResponseBodyInstanceModel setInternetStatus(String internetStatus) {
+            this.internetStatus = internetStatus;
+            return this;
+        }
+        public String getInternetStatus() {
+            return this.internetStatus;
         }
 
         public DescribeAndroidInstancesResponseBodyInstanceModel setKeyPairId(String keyPairId) {

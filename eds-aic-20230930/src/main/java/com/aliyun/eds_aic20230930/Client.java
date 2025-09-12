@@ -299,6 +299,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AutoPay", request.autoPay);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.displayConfig)) {
+            query.put("DisplayConfig", request.displayConfig);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.downBandwidthLimit)) {
             query.put("DownBandwidthLimit", request.downBandwidthLimit);
         }
