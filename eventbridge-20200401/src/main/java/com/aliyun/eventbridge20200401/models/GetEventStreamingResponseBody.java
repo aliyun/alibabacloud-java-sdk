@@ -7076,6 +7076,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @NameInMap("SinkDataHubParameters")
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParameters sinkDataHubParameters;
 
+        @NameInMap("SinkDataWorksTriggerParameters")
+        public SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters;
+
         @NameInMap("SinkDorisParameters")
         public GetEventStreamingResponseBodyDataSinkSinkDorisParameters sinkDorisParameters;
 
@@ -7192,6 +7195,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
         public GetEventStreamingResponseBodyDataSinkSinkDataHubParameters getSinkDataHubParameters() {
             return this.sinkDataHubParameters;
+        }
+
+        public GetEventStreamingResponseBodyDataSink setSinkDataWorksTriggerParameters(SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters) {
+            this.sinkDataWorksTriggerParameters = sinkDataWorksTriggerParameters;
+            return this;
+        }
+        public SinkDataWorksTriggerParameters getSinkDataWorksTriggerParameters() {
+            return this.sinkDataWorksTriggerParameters;
         }
 
         public GetEventStreamingResponseBodyDataSink setSinkDorisParameters(GetEventStreamingResponseBodyDataSinkSinkDorisParameters sinkDorisParameters) {

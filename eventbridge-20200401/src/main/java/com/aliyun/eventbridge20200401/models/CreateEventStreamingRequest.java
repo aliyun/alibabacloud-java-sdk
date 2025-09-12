@@ -7668,6 +7668,9 @@ public class CreateEventStreamingRequest extends TeaModel {
         @NameInMap("SinkDataHubParameters")
         public CreateEventStreamingRequestSinkSinkDataHubParameters sinkDataHubParameters;
 
+        @NameInMap("SinkDataWorksTriggerParameters")
+        public SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters;
+
         @NameInMap("SinkDorisParameters")
         public CreateEventStreamingRequestSinkSinkDorisParameters sinkDorisParameters;
 
@@ -7784,6 +7787,14 @@ public class CreateEventStreamingRequest extends TeaModel {
         }
         public CreateEventStreamingRequestSinkSinkDataHubParameters getSinkDataHubParameters() {
             return this.sinkDataHubParameters;
+        }
+
+        public CreateEventStreamingRequestSink setSinkDataWorksTriggerParameters(SinkDataWorksTriggerParameters sinkDataWorksTriggerParameters) {
+            this.sinkDataWorksTriggerParameters = sinkDataWorksTriggerParameters;
+            return this;
+        }
+        public SinkDataWorksTriggerParameters getSinkDataWorksTriggerParameters() {
+            return this.sinkDataWorksTriggerParameters;
         }
 
         public CreateEventStreamingRequestSink setSinkDorisParameters(CreateEventStreamingRequestSinkSinkDorisParameters sinkDorisParameters) {
