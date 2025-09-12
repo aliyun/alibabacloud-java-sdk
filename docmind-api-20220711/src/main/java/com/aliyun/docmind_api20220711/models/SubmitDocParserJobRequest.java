@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocParserJobRequest extends TeaModel {
+    @NameInMap("CustomOssConfig")
+    public SubmitDocParserJobRequestCustomOssConfig customOssConfig;
+
     @NameInMap("EnhancementMode")
     public String enhancementMode;
 
@@ -31,6 +34,9 @@ public class SubmitDocParserJobRequest extends TeaModel {
     @NameInMap("FormulaEnhancement")
     public Boolean formulaEnhancement;
 
+    @NameInMap("LLMParam")
+    public SubmitDocParserJobRequestLLMParam LLMParam;
+
     @NameInMap("LlmEnhancement")
     public Boolean llmEnhancement;
 
@@ -55,6 +61,14 @@ public class SubmitDocParserJobRequest extends TeaModel {
     public static SubmitDocParserJobRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocParserJobRequest self = new SubmitDocParserJobRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitDocParserJobRequest setCustomOssConfig(SubmitDocParserJobRequestCustomOssConfig customOssConfig) {
+        this.customOssConfig = customOssConfig;
+        return this;
+    }
+    public SubmitDocParserJobRequestCustomOssConfig getCustomOssConfig() {
+        return this.customOssConfig;
     }
 
     public SubmitDocParserJobRequest setEnhancementMode(String enhancementMode) {
@@ -95,6 +109,14 @@ public class SubmitDocParserJobRequest extends TeaModel {
     }
     public Boolean getFormulaEnhancement() {
         return this.formulaEnhancement;
+    }
+
+    public SubmitDocParserJobRequest setLLMParam(SubmitDocParserJobRequestLLMParam LLMParam) {
+        this.LLMParam = LLMParam;
+        return this;
+    }
+    public SubmitDocParserJobRequestLLMParam getLLMParam() {
+        return this.LLMParam;
     }
 
     public SubmitDocParserJobRequest setLlmEnhancement(Boolean llmEnhancement) {
@@ -151,6 +173,97 @@ public class SubmitDocParserJobRequest extends TeaModel {
     }
     public String getPageIndex() {
         return this.pageIndex;
+    }
+
+    public static class SubmitDocParserJobRequestCustomOssConfig extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>AccessId</p>
+         */
+        @NameInMap("AccessId")
+        public String accessId;
+
+        /**
+         * <strong>example:</strong>
+         * <p>AccessKeySecret</p>
+         */
+        @NameInMap("AccessKeySecret")
+        public String accessKeySecret;
+
+        /**
+         * <strong>example:</strong>
+         * <p>StsToken</p>
+         */
+        @NameInMap("StsToken")
+        public String stsToken;
+
+        public static SubmitDocParserJobRequestCustomOssConfig build(java.util.Map<String, ?> map) throws Exception {
+            SubmitDocParserJobRequestCustomOssConfig self = new SubmitDocParserJobRequestCustomOssConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitDocParserJobRequestCustomOssConfig setAccessId(String accessId) {
+            this.accessId = accessId;
+            return this;
+        }
+        public String getAccessId() {
+            return this.accessId;
+        }
+
+        public SubmitDocParserJobRequestCustomOssConfig setAccessKeySecret(String accessKeySecret) {
+            this.accessKeySecret = accessKeySecret;
+            return this;
+        }
+        public String getAccessKeySecret() {
+            return this.accessKeySecret;
+        }
+
+        public SubmitDocParserJobRequestCustomOssConfig setStsToken(String stsToken) {
+            this.stsToken = stsToken;
+            return this;
+        }
+        public String getStsToken() {
+            return this.stsToken;
+        }
+
+    }
+
+    public static class SubmitDocParserJobRequestLLMParam extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>qwen-vl-ocr-latest</p>
+         */
+        @NameInMap("Model")
+        public String model;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Read all the text from the image.</p>
+         */
+        @NameInMap("Prompt")
+        public String prompt;
+
+        public static SubmitDocParserJobRequestLLMParam build(java.util.Map<String, ?> map) throws Exception {
+            SubmitDocParserJobRequestLLMParam self = new SubmitDocParserJobRequestLLMParam();
+            return TeaModel.build(map, self);
+        }
+
+        public SubmitDocParserJobRequestLLMParam setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public SubmitDocParserJobRequestLLMParam setPrompt(String prompt) {
+            this.prompt = prompt;
+            return this;
+        }
+        public String getPrompt() {
+            return this.prompt;
+        }
+
     }
 
     public static class SubmitDocParserJobRequestMultimediaParameters extends TeaModel {

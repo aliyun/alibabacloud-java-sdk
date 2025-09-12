@@ -4,6 +4,9 @@ package com.aliyun.docmind_api20220711.models;
 import com.aliyun.tea.*;
 
 public class SubmitDocParserJobShrinkRequest extends TeaModel {
+    @NameInMap("CustomOssConfig")
+    public String customOssConfigShrink;
+
     @NameInMap("EnhancementMode")
     public String enhancementMode;
 
@@ -31,6 +34,9 @@ public class SubmitDocParserJobShrinkRequest extends TeaModel {
     @NameInMap("FormulaEnhancement")
     public Boolean formulaEnhancement;
 
+    @NameInMap("LLMParam")
+    public String LLMParamShrink;
+
     @NameInMap("LlmEnhancement")
     public Boolean llmEnhancement;
 
@@ -55,6 +61,14 @@ public class SubmitDocParserJobShrinkRequest extends TeaModel {
     public static SubmitDocParserJobShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         SubmitDocParserJobShrinkRequest self = new SubmitDocParserJobShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public SubmitDocParserJobShrinkRequest setCustomOssConfigShrink(String customOssConfigShrink) {
+        this.customOssConfigShrink = customOssConfigShrink;
+        return this;
+    }
+    public String getCustomOssConfigShrink() {
+        return this.customOssConfigShrink;
     }
 
     public SubmitDocParserJobShrinkRequest setEnhancementMode(String enhancementMode) {
@@ -95,6 +109,14 @@ public class SubmitDocParserJobShrinkRequest extends TeaModel {
     }
     public Boolean getFormulaEnhancement() {
         return this.formulaEnhancement;
+    }
+
+    public SubmitDocParserJobShrinkRequest setLLMParamShrink(String LLMParamShrink) {
+        this.LLMParamShrink = LLMParamShrink;
+        return this;
+    }
+    public String getLLMParamShrink() {
+        return this.LLMParamShrink;
     }
 
     public SubmitDocParserJobShrinkRequest setLlmEnhancement(Boolean llmEnhancement) {

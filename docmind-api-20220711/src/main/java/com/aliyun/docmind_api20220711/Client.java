@@ -1630,11 +1630,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         SubmitDocParserJobShrinkRequest request = new SubmitDocParserJobShrinkRequest();
         com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.customOssConfig)) {
+            request.customOssConfigShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.customOssConfig, "CustomOssConfig", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.LLMParam)) {
+            request.LLMParamShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.LLMParam, "LLMParam", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.multimediaParameters)) {
             request.multimediaParametersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.multimediaParameters, "MultimediaParameters", "json");
         }
 
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.customOssConfigShrink)) {
+            query.put("CustomOssConfig", request.customOssConfigShrink);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.enhancementMode)) {
             query.put("EnhancementMode", request.enhancementMode);
         }
@@ -1653,6 +1665,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.formulaEnhancement)) {
             query.put("FormulaEnhancement", request.formulaEnhancement);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.LLMParamShrink)) {
+            query.put("LLMParam", request.LLMParamShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.llmEnhancement)) {
