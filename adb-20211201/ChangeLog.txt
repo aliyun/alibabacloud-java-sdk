@@ -1,3 +1,7 @@
+2025-09-12 Version: 4.2.3
+- Update API DescribeSQLWebSocketDomain: add request parameters Module.
+
+
 2025-09-11 Version: 4.2.2
 - Update API DescribeBackups: add response parameters Body.Items.$.BackupStatus.
 

@@ -7759,6 +7759,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("DBClusterId", request.DBClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.module)) {
+            query.put("Module", request.module);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("RegionId", request.regionId);
         }

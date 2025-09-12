@@ -17,6 +17,9 @@ public class DescribeSQLWebSocketDomainRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    @NameInMap("Module")
+    public String module;
+
     /**
      * <p>The region ID</p>
      * <blockquote>
@@ -41,6 +44,14 @@ public class DescribeSQLWebSocketDomainRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeSQLWebSocketDomainRequest setModule(String module) {
+        this.module = module;
+        return this;
+    }
+    public String getModule() {
+        return this.module;
     }
 
     public DescribeSQLWebSocketDomainRequest setRegionId(String regionId) {
