@@ -57,6 +57,25 @@ public class ShrinkClusterRequest extends TeaModel {
         return this.nodeGroups;
     }
 
+    public static class ShrinkClusterRequestNodeGroupsHyperNodes extends TeaModel {
+        @NameInMap("HyperNodeId")
+        public String hyperNodeId;
+
+        public static ShrinkClusterRequestNodeGroupsHyperNodes build(java.util.Map<String, ?> map) throws Exception {
+            ShrinkClusterRequestNodeGroupsHyperNodes self = new ShrinkClusterRequestNodeGroupsHyperNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public ShrinkClusterRequestNodeGroupsHyperNodes setHyperNodeId(String hyperNodeId) {
+            this.hyperNodeId = hyperNodeId;
+            return this;
+        }
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
+        }
+
+    }
+
     public static class ShrinkClusterRequestNodeGroupsNodes extends TeaModel {
         /**
          * <p>The node ID.</p>
@@ -83,6 +102,9 @@ public class ShrinkClusterRequest extends TeaModel {
     }
 
     public static class ShrinkClusterRequestNodeGroups extends TeaModel {
+        @NameInMap("HyperNodes")
+        public java.util.List<ShrinkClusterRequestNodeGroupsHyperNodes> hyperNodes;
+
         /**
          * <p>The node group ID.</p>
          * 
@@ -101,6 +123,14 @@ public class ShrinkClusterRequest extends TeaModel {
         public static ShrinkClusterRequestNodeGroups build(java.util.Map<String, ?> map) throws Exception {
             ShrinkClusterRequestNodeGroups self = new ShrinkClusterRequestNodeGroups();
             return TeaModel.build(map, self);
+        }
+
+        public ShrinkClusterRequestNodeGroups setHyperNodes(java.util.List<ShrinkClusterRequestNodeGroupsHyperNodes> hyperNodes) {
+            this.hyperNodes = hyperNodes;
+            return this;
+        }
+        public java.util.List<ShrinkClusterRequestNodeGroupsHyperNodes> getHyperNodes() {
+            return this.hyperNodes;
         }
 
         public ShrinkClusterRequestNodeGroups setNodeGroupId(String nodeGroupId) {

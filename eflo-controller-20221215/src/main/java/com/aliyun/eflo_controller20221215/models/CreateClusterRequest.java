@@ -954,6 +954,132 @@ public class CreateClusterRequest extends TeaModel {
 
     }
 
+    public static class CreateClusterRequestNodeGroupsHyperNodesDataDisk extends TeaModel {
+        @NameInMap("Category")
+        public String category;
+
+        @NameInMap("DeleteWithNode")
+        public Boolean deleteWithNode;
+
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
+        @NameInMap("Size")
+        public Integer size;
+
+        public static CreateClusterRequestNodeGroupsHyperNodesDataDisk build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNodeGroupsHyperNodesDataDisk self = new CreateClusterRequestNodeGroupsHyperNodesDataDisk();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodesDataDisk setCategory(String category) {
+            this.category = category;
+            return this;
+        }
+        public String getCategory() {
+            return this.category;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodesDataDisk setDeleteWithNode(Boolean deleteWithNode) {
+            this.deleteWithNode = deleteWithNode;
+            return this;
+        }
+        public Boolean getDeleteWithNode() {
+            return this.deleteWithNode;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodesDataDisk setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodesDataDisk setSize(Integer size) {
+            this.size = size;
+            return this;
+        }
+        public Integer getSize() {
+            return this.size;
+        }
+
+    }
+
+    public static class CreateClusterRequestNodeGroupsHyperNodes extends TeaModel {
+        @NameInMap("DataDisk")
+        public java.util.List<CreateClusterRequestNodeGroupsHyperNodesDataDisk> dataDisk;
+
+        @NameInMap("Hostname")
+        public String hostname;
+
+        @NameInMap("HyperNodeId")
+        public String hyperNodeId;
+
+        @NameInMap("LoginPassword")
+        public String loginPassword;
+
+        @NameInMap("VSwitchId")
+        public String vSwitchId;
+
+        @NameInMap("VpcId")
+        public String vpcId;
+
+        public static CreateClusterRequestNodeGroupsHyperNodes build(java.util.Map<String, ?> map) throws Exception {
+            CreateClusterRequestNodeGroupsHyperNodes self = new CreateClusterRequestNodeGroupsHyperNodes();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodes setDataDisk(java.util.List<CreateClusterRequestNodeGroupsHyperNodesDataDisk> dataDisk) {
+            this.dataDisk = dataDisk;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNodeGroupsHyperNodesDataDisk> getDataDisk() {
+            return this.dataDisk;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodes setHostname(String hostname) {
+            this.hostname = hostname;
+            return this;
+        }
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodes setHyperNodeId(String hyperNodeId) {
+            this.hyperNodeId = hyperNodeId;
+            return this;
+        }
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodes setLoginPassword(String loginPassword) {
+            this.loginPassword = loginPassword;
+            return this;
+        }
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodes setVSwitchId(String vSwitchId) {
+            this.vSwitchId = vSwitchId;
+            return this;
+        }
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public CreateClusterRequestNodeGroupsHyperNodes setVpcId(String vpcId) {
+            this.vpcId = vpcId;
+            return this;
+        }
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+    }
+
     public static class CreateClusterRequestNodeGroupsNodesDataDisk extends TeaModel {
         /**
          * <p>Type</p>
@@ -1213,6 +1339,9 @@ public class CreateClusterRequest extends TeaModel {
         @NameInMap("FileSystemMountEnabled")
         public Boolean fileSystemMountEnabled;
 
+        @NameInMap("HyperNodes")
+        public java.util.List<CreateClusterRequestNodeGroupsHyperNodes> hyperNodes;
+
         /**
          * <p>System image ID</p>
          * 
@@ -1317,6 +1446,14 @@ public class CreateClusterRequest extends TeaModel {
         }
         public Boolean getFileSystemMountEnabled() {
             return this.fileSystemMountEnabled;
+        }
+
+        public CreateClusterRequestNodeGroups setHyperNodes(java.util.List<CreateClusterRequestNodeGroupsHyperNodes> hyperNodes) {
+            this.hyperNodes = hyperNodes;
+            return this;
+        }
+        public java.util.List<CreateClusterRequestNodeGroupsHyperNodes> getHyperNodes() {
+            return this.hyperNodes;
         }
 
         public CreateClusterRequestNodeGroups setImageId(String imageId) {
