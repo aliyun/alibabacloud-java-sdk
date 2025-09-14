@@ -231,6 +231,13 @@ public class ListClusterNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <strong>example:</strong>
+         * <p>e01-cn-2r42tmj4z02</p>
+         */
+        @NameInMap("HyperNodeId")
+        public String hyperNodeId;
+
+        /**
          * <p>The system image ID.</p>
          * 
          * <strong>example:</strong>
@@ -417,6 +424,14 @@ public class ListClusterNodesResponseBody extends TeaModel {
         }
         public String getHpnZone() {
             return this.hpnZone;
+        }
+
+        public ListClusterNodesResponseBodyNodes setHyperNodeId(String hyperNodeId) {
+            this.hyperNodeId = hyperNodeId;
+            return this;
+        }
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
         }
 
         public ListClusterNodesResponseBodyNodes setImageId(String imageId) {
