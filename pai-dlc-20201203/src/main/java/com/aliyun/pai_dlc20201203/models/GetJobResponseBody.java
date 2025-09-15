@@ -239,6 +239,9 @@ public class GetJobResponseBody extends TeaModel {
     @NameInMap("ResourceType")
     public String resourceType;
 
+    @NameInMap("RestartRecord")
+    public java.util.List<GetJobResponseBodyRestartRecord> restartRecord;
+
     /**
      * <p>The number of retries and the maximum number of retries used by the job.</p>
      * 
@@ -586,6 +589,14 @@ public class GetJobResponseBody extends TeaModel {
     }
     public String getResourceType() {
         return this.resourceType;
+    }
+
+    public GetJobResponseBody setRestartRecord(java.util.List<GetJobResponseBodyRestartRecord> restartRecord) {
+        this.restartRecord = restartRecord;
+        return this;
+    }
+    public java.util.List<GetJobResponseBodyRestartRecord> getRestartRecord() {
+        return this.restartRecord;
     }
 
     public GetJobResponseBody setRestartTimes(String restartTimes) {
@@ -1208,6 +1219,220 @@ public class GetJobResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+    }
+
+    public static class GetJobResponseBodyRestartRecordDetailErrorInfoList extends TeaModel {
+        @NameInMap("AddJobLevelBlacklist")
+        public Boolean addJobLevelBlacklist;
+
+        @NameInMap("AddNodeToBlacklist")
+        public Boolean addNodeToBlacklist;
+
+        @NameInMap("DetailErrorMsg")
+        public String detailErrorMsg;
+
+        @NameInMap("ErrorCode")
+        public String errorCode;
+
+        @NameInMap("ErrorMsg")
+        public String errorMsg;
+
+        @NameInMap("ErrorSource")
+        public String errorSource;
+
+        @NameInMap("Node")
+        public String node;
+
+        @NameInMap("Pod")
+        public String pod;
+
+        @NameInMap("TriggerRestart")
+        public Boolean triggerRestart;
+
+        public static GetJobResponseBodyRestartRecordDetailErrorInfoList build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyRestartRecordDetailErrorInfoList self = new GetJobResponseBodyRestartRecordDetailErrorInfoList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setAddJobLevelBlacklist(Boolean addJobLevelBlacklist) {
+            this.addJobLevelBlacklist = addJobLevelBlacklist;
+            return this;
+        }
+        public Boolean getAddJobLevelBlacklist() {
+            return this.addJobLevelBlacklist;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setAddNodeToBlacklist(Boolean addNodeToBlacklist) {
+            this.addNodeToBlacklist = addNodeToBlacklist;
+            return this;
+        }
+        public Boolean getAddNodeToBlacklist() {
+            return this.addNodeToBlacklist;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setDetailErrorMsg(String detailErrorMsg) {
+            this.detailErrorMsg = detailErrorMsg;
+            return this;
+        }
+        public String getDetailErrorMsg() {
+            return this.detailErrorMsg;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setErrorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setErrorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+        public String getErrorMsg() {
+            return this.errorMsg;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setErrorSource(String errorSource) {
+            this.errorSource = errorSource;
+            return this;
+        }
+        public String getErrorSource() {
+            return this.errorSource;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setNode(String node) {
+            this.node = node;
+            return this;
+        }
+        public String getNode() {
+            return this.node;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setPod(String pod) {
+            this.pod = pod;
+            return this;
+        }
+        public String getPod() {
+            return this.pod;
+        }
+
+        public GetJobResponseBodyRestartRecordDetailErrorInfoList setTriggerRestart(Boolean triggerRestart) {
+            this.triggerRestart = triggerRestart;
+            return this;
+        }
+        public Boolean getTriggerRestart() {
+            return this.triggerRestart;
+        }
+
+    }
+
+    public static class GetJobResponseBodyRestartRecord extends TeaModel {
+        @NameInMap("DetailErrorInfoList")
+        public java.util.List<GetJobResponseBodyRestartRecordDetailErrorInfoList> detailErrorInfoList;
+
+        @NameInMap("JobRestartCount")
+        public Long jobRestartCount;
+
+        @NameInMap("OccurPhase")
+        public String occurPhase;
+
+        @NameInMap("OccurTime")
+        public String occurTime;
+
+        @NameInMap("Reason")
+        public String reason;
+
+        @NameInMap("RestartDurationInSec")
+        public Long restartDurationInSec;
+
+        @NameInMap("RestartFailReason")
+        public String restartFailReason;
+
+        @NameInMap("RestartStatus")
+        public String restartStatus;
+
+        @NameInMap("TriggerID")
+        public String triggerID;
+
+        public static GetJobResponseBodyRestartRecord build(java.util.Map<String, ?> map) throws Exception {
+            GetJobResponseBodyRestartRecord self = new GetJobResponseBodyRestartRecord();
+            return TeaModel.build(map, self);
+        }
+
+        public GetJobResponseBodyRestartRecord setDetailErrorInfoList(java.util.List<GetJobResponseBodyRestartRecordDetailErrorInfoList> detailErrorInfoList) {
+            this.detailErrorInfoList = detailErrorInfoList;
+            return this;
+        }
+        public java.util.List<GetJobResponseBodyRestartRecordDetailErrorInfoList> getDetailErrorInfoList() {
+            return this.detailErrorInfoList;
+        }
+
+        public GetJobResponseBodyRestartRecord setJobRestartCount(Long jobRestartCount) {
+            this.jobRestartCount = jobRestartCount;
+            return this;
+        }
+        public Long getJobRestartCount() {
+            return this.jobRestartCount;
+        }
+
+        public GetJobResponseBodyRestartRecord setOccurPhase(String occurPhase) {
+            this.occurPhase = occurPhase;
+            return this;
+        }
+        public String getOccurPhase() {
+            return this.occurPhase;
+        }
+
+        public GetJobResponseBodyRestartRecord setOccurTime(String occurTime) {
+            this.occurTime = occurTime;
+            return this;
+        }
+        public String getOccurTime() {
+            return this.occurTime;
+        }
+
+        public GetJobResponseBodyRestartRecord setReason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+        public String getReason() {
+            return this.reason;
+        }
+
+        public GetJobResponseBodyRestartRecord setRestartDurationInSec(Long restartDurationInSec) {
+            this.restartDurationInSec = restartDurationInSec;
+            return this;
+        }
+        public Long getRestartDurationInSec() {
+            return this.restartDurationInSec;
+        }
+
+        public GetJobResponseBodyRestartRecord setRestartFailReason(String restartFailReason) {
+            this.restartFailReason = restartFailReason;
+            return this;
+        }
+        public String getRestartFailReason() {
+            return this.restartFailReason;
+        }
+
+        public GetJobResponseBodyRestartRecord setRestartStatus(String restartStatus) {
+            this.restartStatus = restartStatus;
+            return this;
+        }
+        public String getRestartStatus() {
+            return this.restartStatus;
+        }
+
+        public GetJobResponseBodyRestartRecord setTriggerID(String triggerID) {
+            this.triggerID = triggerID;
+            return this;
+        }
+        public String getTriggerID() {
+            return this.triggerID;
         }
 
     }
