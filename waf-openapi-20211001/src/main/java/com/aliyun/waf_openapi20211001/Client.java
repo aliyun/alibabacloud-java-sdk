@@ -850,6 +850,110 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a hybrid cloud cluster.</p>
+     * 
+     * @param request CreateHybridCloudClusterRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHybridCloudClusterResponse
+     */
+    public CreateHybridCloudClusterResponse createHybridCloudClusterWithOptions(CreateHybridCloudClusterRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.accessMode)) {
+            query.put("AccessMode", request.accessMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.accessRegion)) {
+            query.put("AccessRegion", request.accessRegion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.clusterName)) {
+            query.put("ClusterName", request.clusterName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpPorts)) {
+            query.put("HttpPorts", request.httpPorts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsPorts)) {
+            query.put("HttpsPorts", request.httpsPorts);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logFieldsNotReturned)) {
+            query.put("LogFieldsNotReturned", request.logFieldsNotReturned);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.protectionServerCount)) {
+            query.put("ProtectionServerCount", request.protectionServerCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyStatus)) {
+            query.put("ProxyStatus", request.proxyStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.proxyType)) {
+            query.put("ProxyType", request.proxyType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.remark)) {
+            query.put("Remark", request.remark);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleConfig)) {
+            query.put("RuleConfig", request.ruleConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleStatus)) {
+            query.put("RuleStatus", request.ruleStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleType)) {
+            query.put("RuleType", request.ruleType);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHybridCloudCluster"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHybridCloudClusterResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a hybrid cloud cluster.</p>
+     * 
+     * @param request CreateHybridCloudClusterRequest
+     * @return CreateHybridCloudClusterResponse
+     */
+    public CreateHybridCloudClusterResponse createHybridCloudCluster(CreateHybridCloudClusterRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHybridCloudClusterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>新增集群规则信息</p>
      * 
      * @param request CreateHybridCloudClusterRuleRequest
@@ -3960,6 +4064,76 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询日志服务支持的所有字段</p>
+     * 
+     * @param tmpReq DescribeCommonLogFieldsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeCommonLogFieldsResponse
+     */
+    public DescribeCommonLogFieldsResponse describeCommonLogFieldsWithOptions(DescribeCommonLogFieldsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeCommonLogFieldsShrinkRequest request = new DescribeCommonLogFieldsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.logKeyList)) {
+            request.logKeyListShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.logKeyList, "LogKeyList", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDefault)) {
+            query.put("IsDefault", request.isDefault);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isRequired)) {
+            query.put("IsRequired", request.isRequired);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logKeyListShrink)) {
+            query.put("LogKeyList", request.logKeyListShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeCommonLogFields"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeCommonLogFieldsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询日志服务支持的所有字段</p>
+     * 
+     * @param request DescribeCommonLogFieldsRequest
+     * @return DescribeCommonLogFieldsResponse
+     */
+    public DescribeCommonLogFieldsResponse describeCommonLogFields(DescribeCommonLogFieldsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeCommonLogFieldsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询自定义正则规则编译结果</p>
      * 
      * @param request DescribeCustomBaseRuleCompileResultRequest
@@ -4112,6 +4286,74 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDefaultHttpsResponse describeDefaultHttps(DescribeDefaultHttpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDefaultHttpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询可以被防护组绑定的防护对象列表</p>
+     * 
+     * @param request DescribeDefenseGroupValidResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDefenseGroupValidResourcesResponse
+     */
+    public DescribeDefenseGroupValidResourcesResponse describeDefenseGroupValidResourcesWithOptions(DescribeDefenseGroupValidResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDefenseGroupValidResources"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDefenseGroupValidResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询可以被防护组绑定的防护对象列表</p>
+     * 
+     * @param request DescribeDefenseGroupValidResourcesRequest
+     * @return DescribeDefenseGroupValidResourcesResponse
+     */
+    public DescribeDefenseGroupValidResourcesResponse describeDefenseGroupValidResources(DescribeDefenseGroupValidResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDefenseGroupValidResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -5020,6 +5262,78 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeDefenseTemplateValidGroupsResponse describeDefenseTemplateValidGroups(DescribeDefenseTemplateValidGroupsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeDefenseTemplateValidGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询可以被自定义模板绑定的防护对象列表</p>
+     * 
+     * @param request DescribeDefenseTemplateValidResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeDefenseTemplateValidResourcesResponse
+     */
+    public DescribeDefenseTemplateValidResourcesResponse describeDefenseTemplateValidResourcesWithOptions(DescribeDefenseTemplateValidResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.defenseScene)) {
+            query.put("DefenseScene", request.defenseScene);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resource)) {
+            query.put("Resource", request.resource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateId)) {
+            query.put("TemplateId", request.templateId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeDefenseTemplateValidResources"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeDefenseTemplateValidResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>分页查询可以被自定义模板绑定的防护对象列表</p>
+     * 
+     * @param request DescribeDefenseTemplateValidResourcesRequest
+     * @return DescribeDefenseTemplateValidResourcesResponse
+     */
+    public DescribeDefenseTemplateValidResourcesResponse describeDefenseTemplateValidResources(DescribeDefenseTemplateValidResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeDefenseTemplateValidResourcesWithOptions(request, runtime);
     }
 
     /**
@@ -9278,6 +9592,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询用户日志配置</p>
+     * 
+     * @param request DescribeUserLogFieldConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeUserLogFieldConfigResponse
+     */
+    public DescribeUserLogFieldConfigResponse describeUserLogFieldConfigWithOptions(DescribeUserLogFieldConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryType)) {
+            query.put("DeliveryType", request.deliveryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeUserLogFieldConfig"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeUserLogFieldConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询用户日志配置</p>
+     * 
+     * @param request DescribeUserLogFieldConfigRequest
+     * @return DescribeUserLogFieldConfigResponse
+     */
+    public DescribeUserLogFieldConfigResponse describeUserLogFieldConfig(DescribeUserLogFieldConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeUserLogFieldConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries available regions for log storage.</p>
      * 
      * @param request DescribeUserSlsLogRegionsRequest
@@ -11792,6 +12162,134 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyTemplateResourcesResponse modifyTemplateResources(ModifyTemplateResourcesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyTemplateResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户日志服务的默认字段配置</p>
+     * 
+     * @param request ModifyUserLogFieldConfigRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyUserLogFieldConfigResponse
+     */
+    public ModifyUserLogFieldConfigResponse modifyUserLogFieldConfigWithOptions(ModifyUserLogFieldConfigRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.deliveryType)) {
+            query.put("DeliveryType", request.deliveryType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.extendConfig)) {
+            query.put("ExtendConfig", request.extendConfig);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fieldList)) {
+            query.put("FieldList", request.fieldList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logDeliveryStrategy)) {
+            query.put("LogDeliveryStrategy", request.logDeliveryStrategy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyUserLogFieldConfig"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyUserLogFieldConfigResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改用户日志服务的默认字段配置</p>
+     * 
+     * @param request ModifyUserLogFieldConfigRequest
+     * @return ModifyUserLogFieldConfigResponse
+     */
+    public ModifyUserLogFieldConfigResponse modifyUserLogFieldConfig(ModifyUserLogFieldConfigRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyUserLogFieldConfigWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开通或关闭WAF日志服务</p>
+     * 
+     * @param request ModifyUserWafLogStatusRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyUserWafLogStatusResponse
+     */
+    public ModifyUserWafLogStatusResponse modifyUserWafLogStatusWithOptions(ModifyUserWafLogStatusRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            query.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logRegionId)) {
+            query.put("LogRegionId", request.logRegionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.logStatus)) {
+            query.put("LogStatus", request.logStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceManagerResourceGroupId)) {
+            query.put("ResourceManagerResourceGroupId", request.resourceManagerResourceGroupId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyUserWafLogStatus"),
+            new TeaPair("version", "2021-10-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyUserWafLogStatusResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>开通或关闭WAF日志服务</p>
+     * 
+     * @param request ModifyUserWafLogStatusRequest
+     * @return ModifyUserWafLogStatusResponse
+     */
+    public ModifyUserWafLogStatusResponse modifyUserWafLogStatus(ModifyUserWafLogStatusRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyUserWafLogStatusWithOptions(request, runtime);
     }
 
     /**
