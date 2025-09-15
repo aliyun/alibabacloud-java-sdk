@@ -49,6 +49,13 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public java.util.List<CreateCenterPolicyRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("AutoReconnect")
+    public String autoReconnect;
+
+    /**
      * <p>The business type.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -101,6 +108,16 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("Clipboard")
     public String clipboard;
+
+    @NameInMap("ClipboardGraineds")
+    public java.util.List<CreateCenterPolicyRequestClipboardGraineds> clipboardGraineds;
+
+    /**
+     * <strong>example:</strong>
+     * <p>GLOBAL</p>
+     */
+    @NameInMap("ClipboardScope")
+    public String clipboardScope;
 
     /**
      * <p>Specifies whether to enable color enhancement for design and 3D applications.</p>
@@ -468,6 +485,13 @@ public class CreateCenterPolicyRequest extends TeaModel {
     public String mobileRestart;
 
     /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("MobileSafeMenu")
+    public String mobileSafeMenu;
+
+    /**
      * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
      * <blockquote>
      * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
@@ -483,6 +507,20 @@ public class CreateCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("MobileShutdown")
     public String mobileShutdown;
+
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("MobileWuyingKeeper")
+    public String mobileWuyingKeeper;
+
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("MobileWyAssistant")
+    public String mobileWyAssistant;
 
     /**
      * <p>The policy name.</p>
@@ -588,11 +626,17 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("RecordEventDuration")
     public Integer recordEventDuration;
 
+    @NameInMap("RecordEventFileExts")
+    public java.util.List<String> recordEventFileExts;
+
     /**
      * <p>The absolute paths to screen recording files.</p>
      */
     @NameInMap("RecordEventFilePaths")
     public java.util.List<String> recordEventFilePaths;
+
+    @NameInMap("RecordEventLevels")
+    public java.util.List<CreateCenterPolicyRequestRecordEventLevels> recordEventLevels;
 
     /**
      * <p>The absolute paths to screen recording registries.</p>
@@ -1207,6 +1251,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.authorizeSecurityPolicyRule;
     }
 
+    public CreateCenterPolicyRequest setAutoReconnect(String autoReconnect) {
+        this.autoReconnect = autoReconnect;
+        return this;
+    }
+    public String getAutoReconnect() {
+        return this.autoReconnect;
+    }
+
     public CreateCenterPolicyRequest setBusinessType(Integer businessType) {
         this.businessType = businessType;
         return this;
@@ -1245,6 +1297,22 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getClipboard() {
         return this.clipboard;
+    }
+
+    public CreateCenterPolicyRequest setClipboardGraineds(java.util.List<CreateCenterPolicyRequestClipboardGraineds> clipboardGraineds) {
+        this.clipboardGraineds = clipboardGraineds;
+        return this;
+    }
+    public java.util.List<CreateCenterPolicyRequestClipboardGraineds> getClipboardGraineds() {
+        return this.clipboardGraineds;
+    }
+
+    public CreateCenterPolicyRequest setClipboardScope(String clipboardScope) {
+        this.clipboardScope = clipboardScope;
+        return this;
+    }
+    public String getClipboardScope() {
+        return this.clipboardScope;
     }
 
     public CreateCenterPolicyRequest setColorEnhancement(String colorEnhancement) {
@@ -1535,12 +1603,36 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.mobileRestart;
     }
 
+    public CreateCenterPolicyRequest setMobileSafeMenu(String mobileSafeMenu) {
+        this.mobileSafeMenu = mobileSafeMenu;
+        return this;
+    }
+    public String getMobileSafeMenu() {
+        return this.mobileSafeMenu;
+    }
+
     public CreateCenterPolicyRequest setMobileShutdown(String mobileShutdown) {
         this.mobileShutdown = mobileShutdown;
         return this;
     }
     public String getMobileShutdown() {
         return this.mobileShutdown;
+    }
+
+    public CreateCenterPolicyRequest setMobileWuyingKeeper(String mobileWuyingKeeper) {
+        this.mobileWuyingKeeper = mobileWuyingKeeper;
+        return this;
+    }
+    public String getMobileWuyingKeeper() {
+        return this.mobileWuyingKeeper;
+    }
+
+    public CreateCenterPolicyRequest setMobileWyAssistant(String mobileWyAssistant) {
+        this.mobileWyAssistant = mobileWyAssistant;
+        return this;
+    }
+    public String getMobileWyAssistant() {
+        return this.mobileWyAssistant;
     }
 
     public CreateCenterPolicyRequest setName(String name) {
@@ -1607,12 +1699,28 @@ public class CreateCenterPolicyRequest extends TeaModel {
         return this.recordEventDuration;
     }
 
+    public CreateCenterPolicyRequest setRecordEventFileExts(java.util.List<String> recordEventFileExts) {
+        this.recordEventFileExts = recordEventFileExts;
+        return this;
+    }
+    public java.util.List<String> getRecordEventFileExts() {
+        return this.recordEventFileExts;
+    }
+
     public CreateCenterPolicyRequest setRecordEventFilePaths(java.util.List<String> recordEventFilePaths) {
         this.recordEventFilePaths = recordEventFilePaths;
         return this;
     }
     public java.util.List<String> getRecordEventFilePaths() {
         return this.recordEventFilePaths;
+    }
+
+    public CreateCenterPolicyRequest setRecordEventLevels(java.util.List<CreateCenterPolicyRequestRecordEventLevels> recordEventLevels) {
+        this.recordEventLevels = recordEventLevels;
+        return this;
+    }
+    public java.util.List<CreateCenterPolicyRequestRecordEventLevels> getRecordEventLevels() {
+        return this.recordEventLevels;
     }
 
     public CreateCenterPolicyRequest setRecordEventRegisters(java.util.List<String> recordEventRegisters) {
@@ -2293,6 +2401,47 @@ public class CreateCenterPolicyRequest extends TeaModel {
 
     }
 
+    public static class CreateCenterPolicyRequestClipboardGraineds extends TeaModel {
+        @NameInMap("ClipboardSize")
+        public Integer clipboardSize;
+
+        @NameInMap("ClipboardType")
+        public String clipboardType;
+
+        @NameInMap("GrainedType")
+        public String grainedType;
+
+        public static CreateCenterPolicyRequestClipboardGraineds build(java.util.Map<String, ?> map) throws Exception {
+            CreateCenterPolicyRequestClipboardGraineds self = new CreateCenterPolicyRequestClipboardGraineds();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setClipboardSize(Integer clipboardSize) {
+            this.clipboardSize = clipboardSize;
+            return this;
+        }
+        public Integer getClipboardSize() {
+            return this.clipboardSize;
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setClipboardType(String clipboardType) {
+            this.clipboardType = clipboardType;
+            return this;
+        }
+        public String getClipboardType() {
+            return this.clipboardType;
+        }
+
+        public CreateCenterPolicyRequestClipboardGraineds setGrainedType(String grainedType) {
+            this.grainedType = grainedType;
+            return this;
+        }
+        public String getGrainedType() {
+            return this.grainedType;
+        }
+
+    }
+
     public static class CreateCenterPolicyRequestDeviceRedirects extends TeaModel {
         /**
          * <p>The peripheral type.</p>
@@ -2609,6 +2758,44 @@ public class CreateCenterPolicyRequest extends TeaModel {
         }
         public String getRuleType() {
             return this.ruleType;
+        }
+
+    }
+
+    public static class CreateCenterPolicyRequestRecordEventLevels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HIGH</p>
+         */
+        @NameInMap("EventLevel")
+        public String eventLevel;
+
+        /**
+         * <strong>example:</strong>
+         * <p>StartApplication</p>
+         */
+        @NameInMap("EventType")
+        public String eventType;
+
+        public static CreateCenterPolicyRequestRecordEventLevels build(java.util.Map<String, ?> map) throws Exception {
+            CreateCenterPolicyRequestRecordEventLevels self = new CreateCenterPolicyRequestRecordEventLevels();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateCenterPolicyRequestRecordEventLevels setEventLevel(String eventLevel) {
+            this.eventLevel = eventLevel;
+            return this;
+        }
+        public String getEventLevel() {
+            return this.eventLevel;
+        }
+
+        public CreateCenterPolicyRequestRecordEventLevels setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
         }
 
     }

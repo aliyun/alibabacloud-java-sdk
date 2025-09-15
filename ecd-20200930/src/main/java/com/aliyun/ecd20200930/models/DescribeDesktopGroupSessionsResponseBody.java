@@ -74,6 +74,74 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>wuying_mac_x86_64</p>
+         */
+        @NameInMap("Model")
+        public String model;
+
+        /**
+         * <strong>example:</strong>
+         * <p>Mac</p>
+         */
+        @NameInMap("ProductName")
+        public String productName;
+
+        /**
+         * <strong>example:</strong>
+         * <p>96c530bc-6095-4014-8bbc-d461b8ac****</p>
+         */
+        @NameInMap("SerialNumber")
+        public String serialNumber;
+
+        /**
+         * <strong>example:</strong>
+         * <p>EBFDC7773BEBAD418A9F89429652****</p>
+         */
+        @NameInMap("Uuid")
+        public String uuid;
+
+        public static DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo self = new DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo setModel(String model) {
+            this.model = model;
+            return this;
+        }
+        public String getModel() {
+            return this.model;
+        }
+
+        public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo setProductName(String productName) {
+            this.productName = productName;
+            return this;
+        }
+        public String getProductName() {
+            return this.productName;
+        }
+
+        public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo setSerialNumber(String serialNumber) {
+            this.serialNumber = serialNumber;
+            return this;
+        }
+        public String getSerialNumber() {
+            return this.serialNumber;
+        }
+
+        public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo setUuid(String uuid) {
+            this.uuid = uuid;
+            return this;
+        }
+        public String getUuid() {
+            return this.uuid;
+        }
+
+    }
+
     public static class DescribeDesktopGroupSessionsResponseBodySessions extends TeaModel {
         /**
          * <p>The IP address of the client.</p>
@@ -262,6 +330,9 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         @NameInMap("SessionStatus")
         public String sessionStatus;
 
+        @NameInMap("TerminalInfo")
+        public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo terminalInfo;
+
         /**
          * <p>The total duration of the sessions.</p>
          * 
@@ -418,6 +489,14 @@ public class DescribeDesktopGroupSessionsResponseBody extends TeaModel {
         }
         public String getSessionStatus() {
             return this.sessionStatus;
+        }
+
+        public DescribeDesktopGroupSessionsResponseBodySessions setTerminalInfo(DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo terminalInfo) {
+            this.terminalInfo = terminalInfo;
+            return this;
+        }
+        public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo getTerminalInfo() {
+            return this.terminalInfo;
         }
 
         public DescribeDesktopGroupSessionsResponseBodySessions setTotalConnectionDuration(Long totalConnectionDuration) {

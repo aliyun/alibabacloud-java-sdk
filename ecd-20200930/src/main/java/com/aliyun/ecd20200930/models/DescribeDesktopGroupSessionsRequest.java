@@ -4,6 +4,16 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class DescribeDesktopGroupSessionsRequest extends TeaModel {
+    @NameInMap("DesktopGroupIds")
+    public java.util.List<String> desktopGroupIds;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ecd-4oyi32wmrctgx****</p>
+     */
+    @NameInMap("DesktopGroupName")
+    public String desktopGroupName;
+
     /**
      * <p>The end of the time range to query.</p>
      * 
@@ -21,6 +31,16 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
      */
     @NameInMap("EndUserId")
     public String endUserId;
+
+    @NameInMap("FillTerminalInfo")
+    public Boolean fillTerminalInfo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
+    @NameInMap("Language")
+    public String language;
 
     /**
      * <p>The number of entries per page.</p>
@@ -102,6 +122,22 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public DescribeDesktopGroupSessionsRequest setDesktopGroupIds(java.util.List<String> desktopGroupIds) {
+        this.desktopGroupIds = desktopGroupIds;
+        return this;
+    }
+    public java.util.List<String> getDesktopGroupIds() {
+        return this.desktopGroupIds;
+    }
+
+    public DescribeDesktopGroupSessionsRequest setDesktopGroupName(String desktopGroupName) {
+        this.desktopGroupName = desktopGroupName;
+        return this;
+    }
+    public String getDesktopGroupName() {
+        return this.desktopGroupName;
+    }
+
     public DescribeDesktopGroupSessionsRequest setEndTime(String endTime) {
         this.endTime = endTime;
         return this;
@@ -116,6 +152,22 @@ public class DescribeDesktopGroupSessionsRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public DescribeDesktopGroupSessionsRequest setFillTerminalInfo(Boolean fillTerminalInfo) {
+        this.fillTerminalInfo = fillTerminalInfo;
+        return this;
+    }
+    public Boolean getFillTerminalInfo() {
+        return this.fillTerminalInfo;
+    }
+
+    public DescribeDesktopGroupSessionsRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeDesktopGroupSessionsRequest setMaxResults(Integer maxResults) {

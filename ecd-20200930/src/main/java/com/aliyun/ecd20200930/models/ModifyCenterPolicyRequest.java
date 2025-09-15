@@ -49,6 +49,13 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     public java.util.List<ModifyCenterPolicyRequestAuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule;
 
     /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("AutoReconnect")
+    public String autoReconnect;
+
+    /**
      * <p>The business type.</p>
      * <p>Valid values:</p>
      * <ul>
@@ -101,6 +108,12 @@ public class ModifyCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("Clipboard")
     public String clipboard;
+
+    @NameInMap("ClipboardGraineds")
+    public java.util.List<ModifyCenterPolicyRequestClipboardGraineds> clipboardGraineds;
+
+    @NameInMap("ClipboardScope")
+    public String clipboardScope;
 
     /**
      * <p>Specifies whether to enable color enhancement for design and 3D applications.</p>
@@ -478,6 +491,13 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     public String mobileRestart;
 
     /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("MobileSafeMenu")
+    public String mobileSafeMenu;
+
+    /**
      * <p>Specifies whether to display the Stop button in the DesktopAssistant menu when end users connect to cloud computers from Android clients.</p>
      * <blockquote>
      * <p> This feature applies to only mobile clients of version 7.4.0 or later.</p>
@@ -493,6 +513,20 @@ public class ModifyCenterPolicyRequest extends TeaModel {
      */
     @NameInMap("MobileShutdown")
     public String mobileShutdown;
+
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("MobileWuyingKeeper")
+    public String mobileWuyingKeeper;
+
+    /**
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
+    @NameInMap("MobileWyAssistant")
+    public String mobileWyAssistant;
 
     /**
      * <p>The policy name.</p>
@@ -607,11 +641,17 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     @NameInMap("RecordEventDuration")
     public Integer recordEventDuration;
 
+    @NameInMap("RecordEventFileExts")
+    public java.util.List<String> recordEventFileExts;
+
     /**
      * <p>The absolute paths to screen recording files.</p>
      */
     @NameInMap("RecordEventFilePaths")
     public java.util.List<String> recordEventFilePaths;
+
+    @NameInMap("RecordEventLevels")
+    public java.util.List<ModifyCenterPolicyRequestRecordEventLevels> recordEventLevels;
 
     /**
      * <p>The absolute paths to screen recording registries.</p>
@@ -1248,6 +1288,14 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         return this.authorizeSecurityPolicyRule;
     }
 
+    public ModifyCenterPolicyRequest setAutoReconnect(String autoReconnect) {
+        this.autoReconnect = autoReconnect;
+        return this;
+    }
+    public String getAutoReconnect() {
+        return this.autoReconnect;
+    }
+
     public ModifyCenterPolicyRequest setBusinessType(Integer businessType) {
         this.businessType = businessType;
         return this;
@@ -1286,6 +1334,22 @@ public class ModifyCenterPolicyRequest extends TeaModel {
     }
     public String getClipboard() {
         return this.clipboard;
+    }
+
+    public ModifyCenterPolicyRequest setClipboardGraineds(java.util.List<ModifyCenterPolicyRequestClipboardGraineds> clipboardGraineds) {
+        this.clipboardGraineds = clipboardGraineds;
+        return this;
+    }
+    public java.util.List<ModifyCenterPolicyRequestClipboardGraineds> getClipboardGraineds() {
+        return this.clipboardGraineds;
+    }
+
+    public ModifyCenterPolicyRequest setClipboardScope(String clipboardScope) {
+        this.clipboardScope = clipboardScope;
+        return this;
+    }
+    public String getClipboardScope() {
+        return this.clipboardScope;
     }
 
     public ModifyCenterPolicyRequest setColorEnhancement(String colorEnhancement) {
@@ -1576,12 +1640,36 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         return this.mobileRestart;
     }
 
+    public ModifyCenterPolicyRequest setMobileSafeMenu(String mobileSafeMenu) {
+        this.mobileSafeMenu = mobileSafeMenu;
+        return this;
+    }
+    public String getMobileSafeMenu() {
+        return this.mobileSafeMenu;
+    }
+
     public ModifyCenterPolicyRequest setMobileShutdown(String mobileShutdown) {
         this.mobileShutdown = mobileShutdown;
         return this;
     }
     public String getMobileShutdown() {
         return this.mobileShutdown;
+    }
+
+    public ModifyCenterPolicyRequest setMobileWuyingKeeper(String mobileWuyingKeeper) {
+        this.mobileWuyingKeeper = mobileWuyingKeeper;
+        return this;
+    }
+    public String getMobileWuyingKeeper() {
+        return this.mobileWuyingKeeper;
+    }
+
+    public ModifyCenterPolicyRequest setMobileWyAssistant(String mobileWyAssistant) {
+        this.mobileWyAssistant = mobileWyAssistant;
+        return this;
+    }
+    public String getMobileWyAssistant() {
+        return this.mobileWyAssistant;
     }
 
     public ModifyCenterPolicyRequest setName(String name) {
@@ -1656,12 +1744,28 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         return this.recordEventDuration;
     }
 
+    public ModifyCenterPolicyRequest setRecordEventFileExts(java.util.List<String> recordEventFileExts) {
+        this.recordEventFileExts = recordEventFileExts;
+        return this;
+    }
+    public java.util.List<String> getRecordEventFileExts() {
+        return this.recordEventFileExts;
+    }
+
     public ModifyCenterPolicyRequest setRecordEventFilePaths(java.util.List<String> recordEventFilePaths) {
         this.recordEventFilePaths = recordEventFilePaths;
         return this;
     }
     public java.util.List<String> getRecordEventFilePaths() {
         return this.recordEventFilePaths;
+    }
+
+    public ModifyCenterPolicyRequest setRecordEventLevels(java.util.List<ModifyCenterPolicyRequestRecordEventLevels> recordEventLevels) {
+        this.recordEventLevels = recordEventLevels;
+        return this;
+    }
+    public java.util.List<ModifyCenterPolicyRequestRecordEventLevels> getRecordEventLevels() {
+        return this.recordEventLevels;
     }
 
     public ModifyCenterPolicyRequest setRecordEventRegisters(java.util.List<String> recordEventRegisters) {
@@ -2356,6 +2460,47 @@ public class ModifyCenterPolicyRequest extends TeaModel {
 
     }
 
+    public static class ModifyCenterPolicyRequestClipboardGraineds extends TeaModel {
+        @NameInMap("ClipboardSize")
+        public Integer clipboardSize;
+
+        @NameInMap("ClipboardType")
+        public String clipboardType;
+
+        @NameInMap("GrainedType")
+        public String grainedType;
+
+        public static ModifyCenterPolicyRequestClipboardGraineds build(java.util.Map<String, ?> map) throws Exception {
+            ModifyCenterPolicyRequestClipboardGraineds self = new ModifyCenterPolicyRequestClipboardGraineds();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyCenterPolicyRequestClipboardGraineds setClipboardSize(Integer clipboardSize) {
+            this.clipboardSize = clipboardSize;
+            return this;
+        }
+        public Integer getClipboardSize() {
+            return this.clipboardSize;
+        }
+
+        public ModifyCenterPolicyRequestClipboardGraineds setClipboardType(String clipboardType) {
+            this.clipboardType = clipboardType;
+            return this;
+        }
+        public String getClipboardType() {
+            return this.clipboardType;
+        }
+
+        public ModifyCenterPolicyRequestClipboardGraineds setGrainedType(String grainedType) {
+            this.grainedType = grainedType;
+            return this;
+        }
+        public String getGrainedType() {
+            return this.grainedType;
+        }
+
+    }
+
     public static class ModifyCenterPolicyRequestDeviceRedirects extends TeaModel {
         /**
          * <p>The peripheral type.</p>
@@ -2672,6 +2817,44 @@ public class ModifyCenterPolicyRequest extends TeaModel {
         }
         public String getRuleType() {
             return this.ruleType;
+        }
+
+    }
+
+    public static class ModifyCenterPolicyRequestRecordEventLevels extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>HIGH</p>
+         */
+        @NameInMap("EventLevel")
+        public String eventLevel;
+
+        /**
+         * <strong>example:</strong>
+         * <p>StartApplication</p>
+         */
+        @NameInMap("EventType")
+        public String eventType;
+
+        public static ModifyCenterPolicyRequestRecordEventLevels build(java.util.Map<String, ?> map) throws Exception {
+            ModifyCenterPolicyRequestRecordEventLevels self = new ModifyCenterPolicyRequestRecordEventLevels();
+            return TeaModel.build(map, self);
+        }
+
+        public ModifyCenterPolicyRequestRecordEventLevels setEventLevel(String eventLevel) {
+            this.eventLevel = eventLevel;
+            return this;
+        }
+        public String getEventLevel() {
+            return this.eventLevel;
+        }
+
+        public ModifyCenterPolicyRequestRecordEventLevels setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
         }
 
     }

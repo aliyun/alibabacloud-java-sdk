@@ -659,6 +659,36 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
     }
 
+    public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels extends TeaModel {
+        @NameInMap("EventLevel")
+        public String eventLevel;
+
+        @NameInMap("EventType")
+        public String eventType;
+
+        public static DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels build(java.util.Map<String, ?> map) throws Exception {
+            DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels self = new DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels setEventLevel(String eventLevel) {
+            this.eventLevel = eventLevel;
+            return this;
+        }
+        public String getEventLevel() {
+            return this.eventLevel;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels setEventType(String eventType) {
+            this.eventType = eventType;
+            return this;
+        }
+        public String getEventType() {
+            return this.eventType;
+        }
+
+    }
+
     public static class DescribePolicyGroupsResponseBodyDescribePolicyGroupsUsbSupplyRedirectRule extends TeaModel {
         /**
          * <p>The rule description.</p>
@@ -834,6 +864,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("AuthorizeSecurityPolicyRules")
         public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsAuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules;
+
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("AutoReconnect")
+        public String autoReconnect;
 
         /**
          * <p>Indicates whether the webcam redirection feature is enabled.</p>
@@ -1247,6 +1284,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         public String mobileRestart;
 
         /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("MobileSafeMenu")
+        public String mobileSafeMenu;
+
+        /**
          * <p>Specifies whether to display the shut down button in the DesktopAssistant when the cloud computer is accessed from the Alibaba Cloud Workspace mobile clients (including the Android client and the iOS client).</p>
          * <blockquote>
          * <p>Mobile clients of V7.4 and higher versions required.</p>
@@ -1262,6 +1306,20 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         @NameInMap("MobileShutdown")
         public String mobileShutdown;
+
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("MobileWuyingKeeper")
+        public String mobileWuyingKeeper;
+
+        /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("MobileWyAssistant")
+        public String mobileWyAssistant;
 
         /**
          * <p>The name of the cloud computer policy.</p>
@@ -1417,11 +1475,17 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @NameInMap("RecordEventDuration")
         public Integer recordEventDuration;
 
+        @NameInMap("RecordEventFileExts")
+        public java.util.List<String> recordEventFileExts;
+
         /**
          * <p>The array of absolute paths of the monitored files in the screen recording audit policy.</p>
          */
         @NameInMap("RecordEventFilePaths")
         public java.util.List<String> recordEventFilePaths;
+
+        @NameInMap("RecordEventLevels")
+        public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> recordEventLevels;
 
         /**
          * <p>The array of absolute paths of the monitored registry entries in the screen recording audit policy.</p>
@@ -1995,6 +2059,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.authorizeSecurityPolicyRules;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setAutoReconnect(String autoReconnect) {
+            this.autoReconnect = autoReconnect;
+            return this;
+        }
+        public String getAutoReconnect() {
+            return this.autoReconnect;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setCameraRedirect(String cameraRedirect) {
             this.cameraRedirect = cameraRedirect;
             return this;
@@ -2339,12 +2411,36 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.mobileRestart;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMobileSafeMenu(String mobileSafeMenu) {
+            this.mobileSafeMenu = mobileSafeMenu;
+            return this;
+        }
+        public String getMobileSafeMenu() {
+            return this.mobileSafeMenu;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMobileShutdown(String mobileShutdown) {
             this.mobileShutdown = mobileShutdown;
             return this;
         }
         public String getMobileShutdown() {
             return this.mobileShutdown;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMobileWuyingKeeper(String mobileWuyingKeeper) {
+            this.mobileWuyingKeeper = mobileWuyingKeeper;
+            return this;
+        }
+        public String getMobileWuyingKeeper() {
+            return this.mobileWuyingKeeper;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setMobileWyAssistant(String mobileWyAssistant) {
+            this.mobileWyAssistant = mobileWyAssistant;
+            return this;
+        }
+        public String getMobileWyAssistant() {
+            return this.mobileWyAssistant;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setName(String name) {
@@ -2451,12 +2547,28 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             return this.recordEventDuration;
         }
 
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventFileExts(java.util.List<String> recordEventFileExts) {
+            this.recordEventFileExts = recordEventFileExts;
+            return this;
+        }
+        public java.util.List<String> getRecordEventFileExts() {
+            return this.recordEventFileExts;
+        }
+
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventFilePaths(java.util.List<String> recordEventFilePaths) {
             this.recordEventFilePaths = recordEventFilePaths;
             return this;
         }
         public java.util.List<String> getRecordEventFilePaths() {
             return this.recordEventFilePaths;
+        }
+
+        public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventLevels(java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> recordEventLevels) {
+            this.recordEventLevels = recordEventLevels;
+            return this;
+        }
+        public java.util.List<DescribePolicyGroupsResponseBodyDescribePolicyGroupsRecordEventLevels> getRecordEventLevels() {
+            return this.recordEventLevels;
         }
 
         public DescribePolicyGroupsResponseBodyDescribePolicyGroups setRecordEventRegisters(java.util.List<String> recordEventRegisters) {

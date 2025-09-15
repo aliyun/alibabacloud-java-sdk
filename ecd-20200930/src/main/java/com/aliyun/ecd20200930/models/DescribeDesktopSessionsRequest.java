@@ -55,6 +55,16 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     @NameInMap("EndUserIdFilter")
     public String endUserIdFilter;
 
+    @NameInMap("FillHardwareInfo")
+    public Boolean fillHardwareInfo;
+
+    /**
+     * <strong>example:</strong>
+     * <p>zh-CN</p>
+     */
+    @NameInMap("Language")
+    public String language;
+
     /**
      * <p>The office network ID.</p>
      * 
@@ -185,6 +195,22 @@ public class DescribeDesktopSessionsRequest extends TeaModel {
     }
     public String getEndUserIdFilter() {
         return this.endUserIdFilter;
+    }
+
+    public DescribeDesktopSessionsRequest setFillHardwareInfo(Boolean fillHardwareInfo) {
+        this.fillHardwareInfo = fillHardwareInfo;
+        return this;
+    }
+    public Boolean getFillHardwareInfo() {
+        return this.fillHardwareInfo;
+    }
+
+    public DescribeDesktopSessionsRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public DescribeDesktopSessionsRequest setOfficeSiteId(String officeSiteId) {
