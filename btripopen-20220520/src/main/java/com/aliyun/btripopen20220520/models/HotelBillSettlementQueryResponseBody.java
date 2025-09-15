@@ -92,6 +92,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class HotelBillSettlementQueryResponseBodyModuleDataList extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         @NameInMap("agreement_promotion_fee")
         public Double agreementPromotionFee;
 
@@ -127,8 +130,20 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("approver_email")
+        public String approverEmail;
+
+        @NameInMap("approver_id")
+        public String approverId;
+
+        @NameInMap("approver_name")
+        public String approverName;
+
         @NameInMap("average_nights")
         public String averageNights;
+
+        @NameInMap("base_location")
+        public String baseLocation;
 
         /**
          * <strong>example:</strong>
@@ -247,6 +262,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
+        @NameInMap("custom_content")
+        public String customContent;
+
         @NameInMap("deductible_tax")
         public Double deductibleTax;
 
@@ -278,6 +299,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("fines")
         public Double fines;
+
+        @NameInMap("foreigners_tag")
+        public String foreignersTag;
 
         /**
          * <strong>example:</strong>
@@ -319,6 +343,12 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("is_share_str")
         public String isShareStr;
+
+        @NameInMap("location")
+        public String location;
+
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
 
         /**
          * <strong>example:</strong>
@@ -377,12 +407,21 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
+        @NameInMap("position")
+        public String position;
+
+        @NameInMap("position_level")
+        public String positionLevel;
+
         /**
          * <strong>example:</strong>
          * <p>5038018</p>
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -474,6 +513,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
+        @NameInMap("sio")
+        public String sio;
+
         @NameInMap("star")
         public String star;
 
@@ -508,6 +550,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("trade_action_desc")
         public String tradeActionDesc;
+
+        @NameInMap("traveler_email")
+        public String travelerEmail;
 
         @NameInMap("traveler_id")
         public String travelerId;
@@ -544,6 +589,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         public static HotelBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             HotelBillSettlementQueryResponseBodyModuleDataList self = new HotelBillSettlementQueryResponseBodyModuleDataList();
             return TeaModel.build(map, self);
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setAgreementPromotionFee(Double agreementPromotionFee) {
@@ -610,12 +663,44 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.applyId;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setApproverEmail(String approverEmail) {
+            this.approverEmail = approverEmail;
+            return this;
+        }
+        public String getApproverEmail() {
+            return this.approverEmail;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setApproverId(String approverId) {
+            this.approverId = approverId;
+            return this;
+        }
+        public String getApproverId() {
+            return this.approverId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setApproverName(String approverName) {
+            this.approverName = approverName;
+            return this;
+        }
+        public String getApproverName() {
+            return this.approverName;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setAverageNights(String averageNights) {
             this.averageNights = averageNights;
             return this;
         }
         public String getAverageNights() {
             return this.averageNights;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setBaseLocation(String baseLocation) {
+            this.baseLocation = baseLocation;
+            return this;
+        }
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setBillRecordTime(String billRecordTime) {
@@ -834,6 +919,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setCustomContent(String customContent) {
+            this.customContent = customContent;
+            return this;
+        }
+        public String getCustomContent() {
+            return this.customContent;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
             this.deductibleTax = deductibleTax;
             return this;
@@ -896,6 +997,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getFines() {
             return this.fines;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setForeignersTag(String foreignersTag) {
+            this.foreignersTag = foreignersTag;
+            return this;
+        }
+        public String getForeignersTag() {
+            return this.foreignersTag;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setFuPointFee(Double fuPointFee) {
@@ -986,6 +1095,22 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.isShareStr;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setNights(Integer nights) {
             this.nights = nights;
             return this;
@@ -1074,12 +1199,36 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.personSettlePrice;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setPositionLevel(String positionLevel) {
+            this.positionLevel = positionLevel;
+            return this;
+        }
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setPrimaryId(Long primaryId) {
             this.primaryId = primaryId;
             return this;
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setProjectCode(String projectCode) {
@@ -1226,6 +1375,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
+        public HotelBillSettlementQueryResponseBodyModuleDataList setSio(String sio) {
+            this.sio = sio;
+            return this;
+        }
+        public String getSio() {
+            return this.sio;
+        }
+
         public HotelBillSettlementQueryResponseBodyModuleDataList setStar(String star) {
             this.star = star;
             return this;
@@ -1280,6 +1437,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTradeActionDesc() {
             return this.tradeActionDesc;
+        }
+
+        public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerEmail(String travelerEmail) {
+            this.travelerEmail = travelerEmail;
+            return this;
+        }
+        public String getTravelerEmail() {
+            return this.travelerEmail;
         }
 
         public HotelBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {

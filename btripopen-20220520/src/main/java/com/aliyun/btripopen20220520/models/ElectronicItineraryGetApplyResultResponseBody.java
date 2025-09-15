@@ -109,6 +109,9 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         @NameInMap("itinerary_status")
         public Integer itineraryStatus;
 
+        @NameInMap("remark")
+        public String remark;
+
         /**
          * <strong>example:</strong>
          * <p>781-6605285563</p>
@@ -143,6 +146,14 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         }
         public Integer getItineraryStatus() {
             return this.itineraryStatus;
+        }
+
+        public ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList setRemark(String remark) {
+            this.remark = remark;
+            return this;
+        }
+        public String getRemark() {
+            return this.remark;
         }
 
         public ElectronicItineraryGetApplyResultResponseBodyModuleApplyTicketList setTicketNo(String ticketNo) {

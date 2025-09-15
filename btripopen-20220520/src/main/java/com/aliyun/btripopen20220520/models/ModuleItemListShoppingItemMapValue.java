@@ -119,37 +119,25 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
 
     }
 
-    public static class ModuleItemListShoppingItemMapValueCabinQuantityListCabin extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
+    public static class ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo extends TeaModel {
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
         @NameInMap("cabin_class_name")
         public String cabinClassName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("quantity")
         public String quantity;
 
-        public static ModuleItemListShoppingItemMapValueCabinQuantityListCabin build(java.util.Map<String, ?> map) throws Exception {
-            ModuleItemListShoppingItemMapValueCabinQuantityListCabin self = new ModuleItemListShoppingItemMapValueCabinQuantityListCabin();
+        public static ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo self = new ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo();
             return TeaModel.build(map, self);
         }
 
-        public ModuleItemListShoppingItemMapValueCabinQuantityListCabin setCabin(String cabin) {
+        public ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo setCabin(String cabin) {
             this.cabin = cabin;
             return this;
         }
@@ -157,7 +145,7 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             return this.cabin;
         }
 
-        public ModuleItemListShoppingItemMapValueCabinQuantityListCabin setCabinClass(String cabinClass) {
+        public ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo setCabinClass(String cabinClass) {
             this.cabinClass = cabinClass;
             return this;
         }
@@ -165,7 +153,7 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             return this.cabinClass;
         }
 
-        public ModuleItemListShoppingItemMapValueCabinQuantityListCabin setCabinClassName(String cabinClassName) {
+        public ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo setCabinClassName(String cabinClassName) {
             this.cabinClassName = cabinClassName;
             return this;
         }
@@ -173,7 +161,7 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             return this.cabinClassName;
         }
 
-        public ModuleItemListShoppingItemMapValueCabinQuantityListCabin setQuantity(String quantity) {
+        public ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo setQuantity(String quantity) {
             this.quantity = quantity;
             return this;
         }
@@ -187,8 +175,8 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
         @NameInMap("segment_position")
         public ModuleItemListShoppingItemMapValueCabinQuantityListSegmentPosition segmentPosition;
 
-        @NameInMap("cabin")
-        public ModuleItemListShoppingItemMapValueCabinQuantityListCabin cabin;
+        @NameInMap("cabin_info")
+        public ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo;
 
         public static ModuleItemListShoppingItemMapValueCabinQuantityList build(java.util.Map<String, ?> map) throws Exception {
             ModuleItemListShoppingItemMapValueCabinQuantityList self = new ModuleItemListShoppingItemMapValueCabinQuantityList();
@@ -203,12 +191,12 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             return this.segmentPosition;
         }
 
-        public ModuleItemListShoppingItemMapValueCabinQuantityList setCabin(ModuleItemListShoppingItemMapValueCabinQuantityListCabin cabin) {
-            this.cabin = cabin;
+        public ModuleItemListShoppingItemMapValueCabinQuantityList setCabinInfo(ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo) {
+            this.cabinInfo = cabinInfo;
             return this;
         }
-        public ModuleItemListShoppingItemMapValueCabinQuantityListCabin getCabin() {
-            return this.cabin;
+        public ModuleItemListShoppingItemMapValueCabinQuantityListCabinInfo getCabinInfo() {
+            return this.cabinInfo;
         }
 
     }
@@ -627,15 +615,15 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
          * <strong>example:</strong>
          * <p>120000</p>
          */
-        @NameInMap("ticket_price")
-        public Integer ticketPrice;
+        @NameInMap("sell_price")
+        public Integer sellPrice;
 
         /**
          * <strong>example:</strong>
          * <p>120000</p>
          */
-        @NameInMap("sell_price")
-        public Integer sellPrice;
+        @NameInMap("ticket_price")
+        public Integer ticketPrice;
 
         /**
          * <strong>example:</strong>
@@ -649,20 +637,20 @@ public class ModuleItemListShoppingItemMapValue extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public ModuleItemListShoppingItemMapValueSegmentPriceListSearchPrice setTicketPrice(Integer ticketPrice) {
-            this.ticketPrice = ticketPrice;
-            return this;
-        }
-        public Integer getTicketPrice() {
-            return this.ticketPrice;
-        }
-
         public ModuleItemListShoppingItemMapValueSegmentPriceListSearchPrice setSellPrice(Integer sellPrice) {
             this.sellPrice = sellPrice;
             return this;
         }
         public Integer getSellPrice() {
             return this.sellPrice;
+        }
+
+        public ModuleItemListShoppingItemMapValueSegmentPriceListSearchPrice setTicketPrice(Integer ticketPrice) {
+            this.ticketPrice = ticketPrice;
+            return this;
+        }
+        public Integer getTicketPrice() {
+            return this.ticketPrice;
         }
 
         public ModuleItemListShoppingItemMapValueSegmentPriceListSearchPrice setTax(Integer tax) {

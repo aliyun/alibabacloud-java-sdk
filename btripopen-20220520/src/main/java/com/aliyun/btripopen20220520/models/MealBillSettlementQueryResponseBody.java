@@ -92,6 +92,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class MealBillSettlementQueryResponseBodyModuleItems extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         @NameInMap("apply_extend_field")
         public String applyExtendField;
 
@@ -175,6 +178,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
         @NameInMap("department")
         public String department;
 
@@ -211,6 +217,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("main_apply_id")
         public String mainApplyId;
+
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
 
         /**
          * <strong>example:</strong>
@@ -282,6 +291,9 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -414,6 +426,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         public static MealBillSettlementQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             MealBillSettlementQueryResponseBodyModuleItems self = new MealBillSettlementQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public MealBillSettlementQueryResponseBodyModuleItems setApplyExtendField(String applyExtendField) {
@@ -552,6 +572,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public MealBillSettlementQueryResponseBodyModuleItems setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
         public MealBillSettlementQueryResponseBodyModuleItems setDepartment(String department) {
             this.department = department;
             return this;
@@ -606,6 +634,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getMainApplyId() {
             return this.mainApplyId;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
         }
 
         public MealBillSettlementQueryResponseBodyModuleItems setMealAddress(String mealAddress) {
@@ -710,6 +746,14 @@ public class MealBillSettlementQueryResponseBody extends TeaModel {
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public MealBillSettlementQueryResponseBodyModuleItems setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public MealBillSettlementQueryResponseBodyModuleItems setProjectCode(String projectCode) {

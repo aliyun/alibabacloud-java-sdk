@@ -18,6 +18,9 @@ public class FuPointBillSettlementQueryRequest extends TeaModel {
     @NameInMap("cooperator_id")
     public String cooperatorId;
 
+    @NameInMap("order_id")
+    public Long orderId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -83,6 +86,14 @@ public class FuPointBillSettlementQueryRequest extends TeaModel {
     }
     public String getCooperatorId() {
         return this.cooperatorId;
+    }
+
+    public FuPointBillSettlementQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public FuPointBillSettlementQueryRequest setPageNo(Integer pageNo) {

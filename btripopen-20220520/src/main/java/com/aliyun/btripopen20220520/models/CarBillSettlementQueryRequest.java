@@ -7,6 +7,9 @@ public class CarBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_batch")
     public String billBatch;
 
+    @NameInMap("order_id")
+    public Long orderId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -56,6 +59,14 @@ public class CarBillSettlementQueryRequest extends TeaModel {
     }
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    public CarBillSettlementQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public CarBillSettlementQueryRequest setPageNo(Integer pageNo) {

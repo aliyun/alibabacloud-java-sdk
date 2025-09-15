@@ -6,12 +6,28 @@ import com.aliyun.tea.*;
 public class IntlFlightOrderPayCheckRequest extends TeaModel {
     /**
      * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("btrip_user_id")
+    public String btripUserId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ZHANG/SAN</p>
+     */
+    @NameInMap("buyer_name")
+    public String buyerName;
+
+    /**
+     * <strong>example:</strong>
      * <p>TRAVEL</p>
      */
     @NameInMap("isv_name")
     public String isvName;
 
     /**
+     * <p>This parameter is required.</p>
+     * 
      * <strong>example:</strong>
      * <p>1002094194679957528</p>
      */
@@ -28,6 +44,22 @@ public class IntlFlightOrderPayCheckRequest extends TeaModel {
     public static IntlFlightOrderPayCheckRequest build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightOrderPayCheckRequest self = new IntlFlightOrderPayCheckRequest();
         return TeaModel.build(map, self);
+    }
+
+    public IntlFlightOrderPayCheckRequest setBtripUserId(String btripUserId) {
+        this.btripUserId = btripUserId;
+        return this;
+    }
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    public IntlFlightOrderPayCheckRequest setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
+        return this;
+    }
+    public String getBuyerName() {
+        return this.buyerName;
     }
 
     public IntlFlightOrderPayCheckRequest setIsvName(String isvName) {

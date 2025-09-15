@@ -92,6 +92,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class CarBillSettlementQueryResponseBodyModuleDataList extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         /**
          * <strong>example:</strong>
          * <p>34534543545345</p>
@@ -120,6 +123,15 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("approver_email")
+        public String approverEmail;
+
+        @NameInMap("approver_id")
+        public String approverId;
+
+        @NameInMap("approver_name")
+        public String approverName;
+
         @NameInMap("arr_city")
         public String arrCity;
 
@@ -142,6 +154,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("arr_time")
         public String arrTime;
+
+        @NameInMap("base_location")
+        public String baseLocation;
 
         /**
          * <strong>example:</strong>
@@ -205,6 +220,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -218,6 +236,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("coupon_price")
         public Double couponPrice;
+
+        @NameInMap("custom_content")
+        public String customContent;
 
         @NameInMap("deductible_tax")
         public Double deductibleTax;
@@ -281,6 +302,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fee_type_desc")
         public String feeTypeDesc;
 
+        @NameInMap("foreigners_tag")
+        public String foreignersTag;
+
         /**
          * <strong>example:</strong>
          * <p>4988580</p>
@@ -293,6 +317,12 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("level_name")
         public String levelName;
+
+        @NameInMap("location")
+        public String location;
+
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
 
         @NameInMap("memo")
         public String memo;
@@ -331,12 +361,21 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("person_settle_fee")
         public Double personSettleFee;
 
+        @NameInMap("position")
+        public String position;
+
+        @NameInMap("position_level")
+        public String positionLevel;
+
         /**
          * <strong>example:</strong>
          * <p>4988580</p>
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -347,6 +386,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("project_name")
         public String projectName;
+
+        @NameInMap("protocol_discount_fee")
+        public Double protocolDiscountFee;
 
         @NameInMap("provider_name")
         public String providerName;
@@ -411,6 +453,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
+        @NameInMap("sio")
+        public String sio;
+
         @NameInMap("special_order")
         public String specialOrder;
 
@@ -455,6 +500,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade_action_desc")
         public String tradeActionDesc;
 
+        @NameInMap("traveler_email")
+        public String travelerEmail;
+
         @NameInMap("traveler_id")
         public String travelerId;
 
@@ -496,6 +544,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         public static CarBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             CarBillSettlementQueryResponseBodyModuleDataList self = new CarBillSettlementQueryResponseBodyModuleDataList();
             return TeaModel.build(map, self);
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setAlipayTradeNo(String alipayTradeNo) {
@@ -554,6 +610,30 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.applyId;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setApproverEmail(String approverEmail) {
+            this.approverEmail = approverEmail;
+            return this;
+        }
+        public String getApproverEmail() {
+            return this.approverEmail;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setApproverId(String approverId) {
+            this.approverId = approverId;
+            return this;
+        }
+        public String getApproverId() {
+            return this.approverId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setApproverName(String approverName) {
+            this.approverName = approverName;
+            return this;
+        }
+        public String getApproverName() {
+            return this.approverName;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setArrCity(String arrCity) {
             this.arrCity = arrCity;
             return this;
@@ -592,6 +672,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setBaseLocation(String baseLocation) {
+            this.baseLocation = baseLocation;
+            return this;
+        }
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setBillRecordTime(String billRecordTime) {
@@ -706,6 +794,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setCoupon(Double coupon) {
             this.coupon = coupon;
             return this;
@@ -720,6 +816,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getCouponPrice() {
             return this.couponPrice;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setCustomContent(String customContent) {
+            this.customContent = customContent;
+            return this;
+        }
+        public String getCustomContent() {
+            return this.customContent;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
@@ -834,6 +938,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.feeTypeDesc;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setForeignersTag(String foreignersTag) {
+            this.foreignersTag = foreignersTag;
+            return this;
+        }
+        public String getForeignersTag() {
+            return this.foreignersTag;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setIndex(String index) {
             this.index = index;
             return this;
@@ -856,6 +968,22 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getLevelName() {
             return this.levelName;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setMemo(String memo) {
@@ -914,12 +1042,36 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.personSettleFee;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setPositionLevel(String positionLevel) {
+            this.positionLevel = positionLevel;
+            return this;
+        }
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setPrimaryId(Long primaryId) {
             this.primaryId = primaryId;
             return this;
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setProjectCode(String projectCode) {
@@ -936,6 +1088,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getProjectName() {
             return this.projectName;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setProtocolDiscountFee(Double protocolDiscountFee) {
+            this.protocolDiscountFee = protocolDiscountFee;
+            return this;
+        }
+        public Double getProtocolDiscountFee() {
+            return this.protocolDiscountFee;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setProviderName(String providerName) {
@@ -1042,6 +1202,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
+        public CarBillSettlementQueryResponseBodyModuleDataList setSio(String sio) {
+            this.sio = sio;
+            return this;
+        }
+        public String getSio() {
+            return this.sio;
+        }
+
         public CarBillSettlementQueryResponseBodyModuleDataList setSpecialOrder(String specialOrder) {
             this.specialOrder = specialOrder;
             return this;
@@ -1120,6 +1288,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTradeActionDesc() {
             return this.tradeActionDesc;
+        }
+
+        public CarBillSettlementQueryResponseBodyModuleDataList setTravelerEmail(String travelerEmail) {
+            this.travelerEmail = travelerEmail;
+            return this;
+        }
+        public String getTravelerEmail() {
+            return this.travelerEmail;
         }
 
         public CarBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {

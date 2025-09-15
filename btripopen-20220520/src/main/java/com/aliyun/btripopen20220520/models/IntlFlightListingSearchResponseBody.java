@@ -91,12 +91,75 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes extends TeaModel {
+        @NameInMap("code")
+        public String code;
+
+        @NameInMap("type")
+        public String type;
+
+        public static IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes build(java.util.Map<String, ?> map) throws Exception {
+            IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes self = new IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes();
+            return TeaModel.build(map, self);
+        }
+
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes setCode(String code) {
+            this.code = code;
+            return this;
+        }
+        public String getCode() {
+            return this.code;
+        }
+
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList extends TeaModel {
+        @NameInMap("labelCode")
+        public Integer labelCode;
+
+        @NameInMap("labelName")
+        public String labelName;
+
+        public static IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList build(java.util.Map<String, ?> map) throws Exception {
+            IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList self = new IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList();
+            return TeaModel.build(map, self);
+        }
+
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList setLabelCode(Integer labelCode) {
+            this.labelCode = labelCode;
+            return this;
+        }
+        public Integer getLabelCode() {
+            return this.labelCode;
+        }
+
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList setLabelName(String labelName) {
+            this.labelName = labelName;
+            return this;
+        }
+        public String getLabelName() {
+            return this.labelName;
+        }
+
+    }
+
     public static class IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem extends TeaModel {
         @NameInMap("agreement_price_codes")
-        public java.util.List<String> agreementPriceCodes;
+        public java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes> agreementPriceCodes;
 
         @NameInMap("item_type")
         public String itemType;
+
+        @NameInMap("label_list")
+        public java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList> labelList;
 
         @NameInMap("shopping_item_map")
         public java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap;
@@ -106,11 +169,11 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem setAgreementPriceCodes(java.util.List<String> agreementPriceCodes) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem setAgreementPriceCodes(java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes> agreementPriceCodes) {
             this.agreementPriceCodes = agreementPriceCodes;
             return this;
         }
-        public java.util.List<String> getAgreementPriceCodes() {
+        public java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemAgreementPriceCodes> getAgreementPriceCodes() {
             return this.agreementPriceCodes;
         }
 
@@ -120,6 +183,14 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
         public String getItemType() {
             return this.itemType;
+        }
+
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem setLabelList(java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList> labelList) {
+            this.labelList = labelList;
+            return this;
+        }
+        public java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItemLabelList> getLabelList() {
+            return this.labelList;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListBestPriceItem setShoppingItemMap(java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap) {
@@ -133,12 +204,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
     }
 
     public static class IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo extends TeaModel {
-        @NameInMap("airline_chinese_name")
-        public String airlineChineseName;
-
-        @NameInMap("airline_chinese_short_name")
-        public String airlineChineseShortName;
-
         /**
          * <strong>example:</strong>
          * <p>9H</p>
@@ -146,39 +211,15 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @NameInMap("airline_code")
         public String airlineCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png_80x80.jpg">https://gw.alicdn.com/tfs/TB15EXDFHY1gK0jSZTEXXXDQVXa-450-450.png_80x80.jpg</a></p>
-         */
-        @NameInMap("airline_icon")
-        public String airlineIcon;
+        @NameInMap("airline_name")
+        public String airlineName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("cheap_flight")
-        public Boolean cheapFlight;
+        @NameInMap("short_name")
+        public String shortName;
 
         public static IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo self = new IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo();
             return TeaModel.build(map, self);
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setAirlineChineseName(String airlineChineseName) {
-            this.airlineChineseName = airlineChineseName;
-            return this;
-        }
-        public String getAirlineChineseName() {
-            return this.airlineChineseName;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setAirlineChineseShortName(String airlineChineseShortName) {
-            this.airlineChineseShortName = airlineChineseShortName;
-            return this;
-        }
-        public String getAirlineChineseShortName() {
-            return this.airlineChineseShortName;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setAirlineCode(String airlineCode) {
@@ -189,20 +230,20 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.airlineCode;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setAirlineIcon(String airlineIcon) {
-            this.airlineIcon = airlineIcon;
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setAirlineName(String airlineName) {
+            this.airlineName = airlineName;
             return this;
         }
-        public String getAirlineIcon() {
-            return this.airlineIcon;
+        public String getAirlineName() {
+            return this.airlineName;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setCheapFlight(Boolean cheapFlight) {
-            this.cheapFlight = cheapFlight;
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosAirlineInfo setShortName(String shortName) {
+            this.shortName = shortName;
             return this;
         }
-        public Boolean getCheapFlight() {
-            return this.cheapFlight;
+        public String getShortName() {
+            return this.shortName;
         }
 
     }
@@ -328,12 +369,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
     }
 
     public static class IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo extends TeaModel {
-        @NameInMap("airline_chinese_name")
-        public String airlineChineseName;
-
-        @NameInMap("airline_chinese_short_name")
-        public String airlineChineseShortName;
-
         /**
          * <strong>example:</strong>
          * <p>DR</p>
@@ -341,39 +376,15 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @NameInMap("airline_code")
         public String airlineCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p><a href="https://gw.alicdn.com/tfs/TB1gSXBFUT1gK0jSZFhXXaAtVXa-450-450.png_80x80.jpg">https://gw.alicdn.com/tfs/TB1gSXBFUT1gK0jSZFhXXaAtVXa-450-450.png_80x80.jpg</a></p>
-         */
-        @NameInMap("airline_icon")
-        public String airlineIcon;
+        @NameInMap("airline_name")
+        public String airlineName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>false</p>
-         */
-        @NameInMap("cheap_flight")
-        public Boolean cheapFlight;
+        @NameInMap("short_name")
+        public String shortName;
 
         public static IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo self = new IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo();
             return TeaModel.build(map, self);
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setAirlineChineseName(String airlineChineseName) {
-            this.airlineChineseName = airlineChineseName;
-            return this;
-        }
-        public String getAirlineChineseName() {
-            return this.airlineChineseName;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setAirlineChineseShortName(String airlineChineseShortName) {
-            this.airlineChineseShortName = airlineChineseShortName;
-            return this;
-        }
-        public String getAirlineChineseShortName() {
-            return this.airlineChineseShortName;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setAirlineCode(String airlineCode) {
@@ -384,20 +395,20 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.airlineCode;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setAirlineIcon(String airlineIcon) {
-            this.airlineIcon = airlineIcon;
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setAirlineName(String airlineName) {
+            this.airlineName = airlineName;
             return this;
         }
-        public String getAirlineIcon() {
-            return this.airlineIcon;
+        public String getAirlineName() {
+            return this.airlineName;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setCheapFlight(Boolean cheapFlight) {
-            this.cheapFlight = cheapFlight;
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightShareInfoOperatingAirlineInfo setShortName(String shortName) {
+            this.shortName = shortName;
             return this;
         }
-        public Boolean getCheapFlight() {
-            return this.cheapFlight;
+        public String getShortName() {
+            return this.shortName;
         }
 
     }
@@ -436,71 +447,40 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
     }
 
-    public static class IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
+    public static class IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList extends TeaModel {
         @NameInMap("stop_airport")
         public String stopAirport;
 
         @NameInMap("stop_airport_name")
         public String stopAirportName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>T3</p>
-         */
         @NameInMap("stop_arr_term")
         public String stopArrTerm;
 
-        /**
-         * <strong>example:</strong>
-         * <p>BJS</p>
-         */
         @NameInMap("stop_arr_time")
         public String stopArrTime;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("stop_city_code")
         public String stopCityCode;
 
-        /**
-         * <strong>example:</strong>
-         * <p>HGH</p>
-         */
         @NameInMap("stop_city_name")
         public String stopCityName;
 
-        @NameInMap("stop_city_names")
-        public java.util.List<String> stopCityNames;
-
-        /**
-         * <strong>example:</strong>
-         * <p>T4</p>
-         */
         @NameInMap("stop_dep_term")
         public String stopDepTerm;
 
-        /**
-         * <strong>example:</strong>
-         * <p>2023-08-13 07:25</p>
-         */
         @NameInMap("stop_dep_time")
         public String stopDepTime;
 
         @NameInMap("stop_time")
         public String stopTime;
 
-        public static IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo build(java.util.Map<String, ?> map) throws Exception {
-            IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo self = new IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo();
+        public static IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList build(java.util.Map<String, ?> map) throws Exception {
+            IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList self = new IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList();
             return TeaModel.build(map, self);
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopAirport(String stopAirport) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopAirport(String stopAirport) {
             this.stopAirport = stopAirport;
             return this;
         }
@@ -508,7 +488,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopAirport;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopAirportName(String stopAirportName) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopAirportName(String stopAirportName) {
             this.stopAirportName = stopAirportName;
             return this;
         }
@@ -516,7 +496,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopAirportName;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopArrTerm(String stopArrTerm) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopArrTerm(String stopArrTerm) {
             this.stopArrTerm = stopArrTerm;
             return this;
         }
@@ -524,7 +504,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopArrTerm;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopArrTime(String stopArrTime) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopArrTime(String stopArrTime) {
             this.stopArrTime = stopArrTime;
             return this;
         }
@@ -532,7 +512,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopArrTime;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopCityCode(String stopCityCode) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopCityCode(String stopCityCode) {
             this.stopCityCode = stopCityCode;
             return this;
         }
@@ -540,7 +520,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopCityCode;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopCityName(String stopCityName) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopCityName(String stopCityName) {
             this.stopCityName = stopCityName;
             return this;
         }
@@ -548,15 +528,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopCityName;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopCityNames(java.util.List<String> stopCityNames) {
-            this.stopCityNames = stopCityNames;
-            return this;
-        }
-        public java.util.List<String> getStopCityNames() {
-            return this.stopCityNames;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopDepTerm(String stopDepTerm) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopDepTerm(String stopDepTerm) {
             this.stopDepTerm = stopDepTerm;
             return this;
         }
@@ -564,7 +536,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopDepTerm;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopDepTime(String stopDepTime) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopDepTime(String stopDepTime) {
             this.stopDepTime = stopDepTime;
             return this;
         }
@@ -572,7 +544,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.stopDepTime;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo setStopTime(String stopTime) {
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList setStopTime(String stopTime) {
             this.stopTime = stopTime;
             return this;
         }
@@ -605,9 +577,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
          */
         @NameInMap("arr_time")
         public String arrTime;
-
-        @NameInMap("baggage_desc")
-        public String baggageDesc;
 
         @NameInMap("dep_airport_info")
         public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosDepAirportInfo depAirportInfo;
@@ -651,8 +620,8 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @NameInMap("flight_size")
         public String flightSize;
 
-        @NameInMap("flight_stop_info")
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo flightStopInfo;
+        @NameInMap("flight_stop_info_list")
+        public java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList> flightStopInfoList;
 
         /**
          * <strong>example:</strong>
@@ -666,20 +635,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
         @NameInMap("meal_desc")
         public String mealDesc;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100099</p>
-         */
-        @NameInMap("miles")
-        public Integer miles;
-
-        /**
-         * <strong>example:</strong>
-         * <p>80.20%</p>
-         */
-        @NameInMap("on_time_rate")
-        public String onTimeRate;
 
         /**
          * <strong>example:</strong>
@@ -725,16 +680,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @NameInMap("total_time")
         public String totalTime;
 
-        @NameInMap("transfer_time")
-        public String transferTime;
-
-        /**
-         * <strong>example:</strong>
-         * <p>150</p>
-         */
-        @NameInMap("transfer_time_number")
-        public Integer transferTimeNumber;
-
         public static IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos self = new IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos();
             return TeaModel.build(map, self);
@@ -778,14 +723,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
         public String getArrTime() {
             return this.arrTime;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setBaggageDesc(String baggageDesc) {
-            this.baggageDesc = baggageDesc;
-            return this;
-        }
-        public String getBaggageDesc() {
-            return this.baggageDesc;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setDepAirportInfo(IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosDepAirportInfo depAirportInfo) {
@@ -852,12 +789,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.flightSize;
         }
 
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setFlightStopInfo(IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo flightStopInfo) {
-            this.flightStopInfo = flightStopInfo;
+        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setFlightStopInfoList(java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList> flightStopInfoList) {
+            this.flightStopInfoList = flightStopInfoList;
             return this;
         }
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfo getFlightStopInfo() {
-            return this.flightStopInfo;
+        public java.util.List<IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfosFlightStopInfoList> getFlightStopInfoList() {
+            return this.flightStopInfoList;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setFlightType(String flightType) {
@@ -882,22 +819,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
         public String getMealDesc() {
             return this.mealDesc;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setMiles(Integer miles) {
-            this.miles = miles;
-            return this;
-        }
-        public Integer getMiles() {
-            return this.miles;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setOnTimeRate(String onTimeRate) {
-            this.onTimeRate = onTimeRate;
-            return this;
-        }
-        public String getOnTimeRate() {
-            return this.onTimeRate;
         }
 
         public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setOneMore(Integer oneMore) {
@@ -962,22 +883,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
         public String getTotalTime() {
             return this.totalTime;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setTransferTime(String transferTime) {
-            this.transferTime = transferTime;
-            return this;
-        }
-        public String getTransferTime() {
-            return this.transferTime;
-        }
-
-        public IntlFlightListingSearchResponseBodyModuleFlightItemListFlightJourneyInfosFlightSegmentInfos setTransferTimeNumber(Integer transferTimeNumber) {
-            this.transferTimeNumber = transferTimeNumber;
-            return this;
-        }
-        public Integer getTransferTimeNumber() {
-            return this.transferTimeNumber;
         }
 
     }

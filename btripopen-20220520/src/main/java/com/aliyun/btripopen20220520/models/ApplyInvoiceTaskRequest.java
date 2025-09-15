@@ -146,6 +146,9 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         @NameInMap("train_invoice_fee")
         public String trainInvoiceFee;
 
+        @NameInMap("vacation_normal_invoice_fee")
+        public String vacationNormalInvoiceFee;
+
         @NameInMap("vas_mall_special_invoice_fee")
         public String vasMallSpecialInvoiceFee;
 
@@ -330,6 +333,14 @@ public class ApplyInvoiceTaskRequest extends TeaModel {
         }
         public String getTrainInvoiceFee() {
             return this.trainInvoiceFee;
+        }
+
+        public ApplyInvoiceTaskRequestInvoiceTaskList setVacationNormalInvoiceFee(String vacationNormalInvoiceFee) {
+            this.vacationNormalInvoiceFee = vacationNormalInvoiceFee;
+            return this;
+        }
+        public String getVacationNormalInvoiceFee() {
+            return this.vacationNormalInvoiceFee;
         }
 
         public ApplyInvoiceTaskRequestInvoiceTaskList setVasMallSpecialInvoiceFee(String vasMallSpecialInvoiceFee) {

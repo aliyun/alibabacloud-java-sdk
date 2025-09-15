@@ -112,6 +112,9 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class FuPointBillSettlementQueryResponseBodyModuleItems extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         /**
          * <strong>example:</strong>
          * <p>123aaa</p>
@@ -250,6 +253,9 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>0.11</p>
@@ -302,6 +308,9 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("make_invoice")
         public String makeInvoice;
 
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
+
         /**
          * <strong>example:</strong>
          * <p>4801105714092</p>
@@ -345,6 +354,9 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -513,6 +525,14 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         public static FuPointBillSettlementQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             FuPointBillSettlementQueryResponseBodyModuleItems self = new FuPointBillSettlementQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
+        }
+
+        public FuPointBillSettlementQueryResponseBodyModuleItems setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public FuPointBillSettlementQueryResponseBodyModuleItems setAlipayId(String alipayId) {
@@ -723,6 +743,14 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public FuPointBillSettlementQueryResponseBodyModuleItems setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
         public FuPointBillSettlementQueryResponseBodyModuleItems setDeductibleTax(Double deductibleTax) {
             this.deductibleTax = deductibleTax;
             return this;
@@ -811,6 +839,14 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             return this.makeInvoice;
         }
 
+        public FuPointBillSettlementQueryResponseBodyModuleItems setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
+        }
+
         public FuPointBillSettlementQueryResponseBodyModuleItems setOrderId(String orderId) {
             this.orderId = orderId;
             return this;
@@ -873,6 +909,14 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public FuPointBillSettlementQueryResponseBodyModuleItems setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public FuPointBillSettlementQueryResponseBodyModuleItems setProjectCode(String projectCode) {

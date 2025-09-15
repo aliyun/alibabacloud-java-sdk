@@ -37,9 +37,6 @@ public class ExternalUserAddShrinkRequest extends TeaModel {
     @NameInMap("phone")
     public String phone;
 
-    /**
-     * <p>This parameter is required.</p>
-     */
     @NameInMap("real_name")
     public String realName;
 

@@ -7,6 +7,9 @@ public class HotelBillSettlementQueryRequest extends TeaModel {
     @NameInMap("bill_batch")
     public String billBatch;
 
+    @NameInMap("order_id")
+    public Long orderId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -56,6 +59,14 @@ public class HotelBillSettlementQueryRequest extends TeaModel {
     }
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    public HotelBillSettlementQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public HotelBillSettlementQueryRequest setPageNo(Integer pageNo) {

@@ -5,18 +5,27 @@ import com.aliyun.tea.*;
 
 public class IntlFlightInventoryPriceCheckShrinkRequest extends TeaModel {
     /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("btrip_user_id")
+    public String btripUserId;
+
+    /**
+     * <strong>example:</strong>
+     * <p>ZHANG/SAN</p>
+     */
+    @NameInMap("buyer_name")
+    public String buyerName;
+
+    /**
      * <strong>example:</strong>
      * <p>ZJTD</p>
      */
     @NameInMap("isv_name")
     public String isvName;
-
-    /**
-     * <strong>example:</strong>
-     * <p>chinese</p>
-     */
-    @NameInMap("language")
-    public String language;
 
     /**
      * <strong>example:</strong>
@@ -40,19 +49,25 @@ public class IntlFlightInventoryPriceCheckShrinkRequest extends TeaModel {
     @NameInMap("passenger_list")
     public String passengerListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>12412341234</p>
-     */
-    @NameInMap("user_id")
-    public String userId;
-
-    @NameInMap("user_name")
-    public String userName;
-
     public static IntlFlightInventoryPriceCheckShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightInventoryPriceCheckShrinkRequest self = new IntlFlightInventoryPriceCheckShrinkRequest();
         return TeaModel.build(map, self);
+    }
+
+    public IntlFlightInventoryPriceCheckShrinkRequest setBtripUserId(String btripUserId) {
+        this.btripUserId = btripUserId;
+        return this;
+    }
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    public IntlFlightInventoryPriceCheckShrinkRequest setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
+        return this;
+    }
+    public String getBuyerName() {
+        return this.buyerName;
     }
 
     public IntlFlightInventoryPriceCheckShrinkRequest setIsvName(String isvName) {
@@ -61,14 +76,6 @@ public class IntlFlightInventoryPriceCheckShrinkRequest extends TeaModel {
     }
     public String getIsvName() {
         return this.isvName;
-    }
-
-    public IntlFlightInventoryPriceCheckShrinkRequest setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-    public String getLanguage() {
-        return this.language;
     }
 
     public IntlFlightInventoryPriceCheckShrinkRequest setOrderPrice(Long orderPrice) {
@@ -93,22 +100,6 @@ public class IntlFlightInventoryPriceCheckShrinkRequest extends TeaModel {
     }
     public String getPassengerListShrink() {
         return this.passengerListShrink;
-    }
-
-    public IntlFlightInventoryPriceCheckShrinkRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public IntlFlightInventoryPriceCheckShrinkRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
     }
 
 }

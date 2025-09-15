@@ -281,6 +281,9 @@ public class FlightCreateOrderV2Request extends TeaModel {
         @NameInMap("project_title")
         public String projectTitle;
 
+        @NameInMap("tax_number")
+        public String taxNumber;
+
         /**
          * <p>This parameter is required.</p>
          * 
@@ -440,6 +443,14 @@ public class FlightCreateOrderV2Request extends TeaModel {
         }
         public String getProjectTitle() {
             return this.projectTitle;
+        }
+
+        public FlightCreateOrderV2RequestTravelers setTaxNumber(String taxNumber) {
+            this.taxNumber = taxNumber;
+            return this;
+        }
+        public String getTaxNumber() {
+            return this.taxNumber;
         }
 
         public FlightCreateOrderV2RequestTravelers setUserId(String userId) {

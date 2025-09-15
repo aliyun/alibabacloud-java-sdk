@@ -105,6 +105,15 @@ public class ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue extends
     @NameInMap("title")
     public String title;
 
+    @NameInMap("dep_time")
+    public String depTime;
+
+    @NameInMap("segment_number")
+    public String segmentNumber;
+
+    @NameInMap("desc_infos")
+    public java.util.Map<String, String> descInfos;
+
     public static ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue build(java.util.Map<String, ?> map) throws Exception {
         ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue self = new ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue();
         return TeaModel.build(map, self);
@@ -228,6 +237,30 @@ public class ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue extends
     }
     public String getTitle() {
         return this.title;
+    }
+
+    public ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue setDepTime(String depTime) {
+        this.depTime = depTime;
+        return this;
+    }
+    public String getDepTime() {
+        return this.depTime;
+    }
+
+    public ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue setSegmentNumber(String segmentNumber) {
+        this.segmentNumber = segmentNumber;
+        return this;
+    }
+    public String getSegmentNumber() {
+        return this.segmentNumber;
+    }
+
+    public ModuleOrderItemListRefundChangeRuleOfferPenaltyInfoMapValue setDescInfos(java.util.Map<String, String> descInfos) {
+        this.descInfos = descInfos;
+        return this;
+    }
+    public java.util.Map<String, String> getDescInfos() {
+        return this.descInfos;
     }
 
 }

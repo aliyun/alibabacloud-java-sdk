@@ -4,25 +4,25 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOrderCancelResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
+    @NameInMap("code")
+    public String code;
+
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public IntlFlightOrderCancelResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>A3F8DCAB-8301-5770-BD9F-71B0BF9E1A6E</p>
-     */
-    @NameInMap("request_id")
+    @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
-    @NameInMap("result_code")
-    public String resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     /**
      * <strong>example:</strong>
@@ -33,14 +33,30 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
+     * <p>210bc4b116835992457938931db4de</p>
      */
-    @NameInMap("trace_id")
+    @NameInMap("traceId")
     public String traceId;
 
     public static IntlFlightOrderCancelResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightOrderCancelResponseBody self = new IntlFlightOrderCancelResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public IntlFlightOrderCancelResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public IntlFlightOrderCancelResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public IntlFlightOrderCancelResponseBody setModule(IntlFlightOrderCancelResponseBodyModule module) {
@@ -57,22 +73,6 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public IntlFlightOrderCancelResponseBody setResultCode(String resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    public IntlFlightOrderCancelResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public IntlFlightOrderCancelResponseBody setSuccess(Boolean success) {

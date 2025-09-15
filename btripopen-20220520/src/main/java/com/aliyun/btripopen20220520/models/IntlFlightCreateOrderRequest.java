@@ -4,85 +4,62 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightCreateOrderRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
-     */
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
+
+    @NameInMap("async_create_order_mode")
+    public Boolean asyncCreateOrderMode;
 
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>10001</p>
      */
-    @NameInMap("async_create_order_mode")
-    public Boolean asyncCreateOrderMode;
+    @NameInMap("btrip_user_id")
+    public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZHANG/SAN</p>
+     */
+    @NameInMap("buyer_name")
+    public String buyerName;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public IntlFlightCreateOrderRequestContactInfo contactInfo;
-
-    @NameInMap("cost_center")
-    public IntlFlightCreateOrderRequestCostCenter costCenter;
 
     @NameInMap("extra_info")
     public java.util.Map<String, String> extraInfo;
 
-    /**
-     * <strong>example:</strong>
-     * <p>open12k0lclldfdc7v10E2HaRrOr00</p>
-     */
     @NameInMap("isv_name")
     public String isvName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>chinese</p>
-     */
-    @NameInMap("language")
-    public String language;
+    @NameInMap("order_price")
+    public Long orderPrice;
 
     /**
-     * <strong>example:</strong>
-     * <p>56319a175bdf4b1898190bd7edb603b5_0</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F11380075736888770560</p>
-     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_list")
     public java.util.List<IntlFlightCreateOrderRequestPassengerList> passengerList;
 
-    /**
-     * <strong>example:</strong>
-     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
-     */
     @NameInMap("render_key")
     public String renderKey;
-
-    /**
-     * <strong>example:</strong>
-     * <p>120000</p>
-     */
-    @NameInMap("total_price_cent")
-    public Long totalPriceCent;
-
-    /**
-     * <strong>example:</strong>
-     * <p>12341234</p>
-     */
-    @NameInMap("user_id")
-    public String userId;
-
-    @NameInMap("user_name")
-    public String userName;
 
     public static IntlFlightCreateOrderRequest build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightCreateOrderRequest self = new IntlFlightCreateOrderRequest();
@@ -105,20 +82,28 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         return this.asyncCreateOrderMode;
     }
 
+    public IntlFlightCreateOrderRequest setBtripUserId(String btripUserId) {
+        this.btripUserId = btripUserId;
+        return this;
+    }
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    public IntlFlightCreateOrderRequest setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
+        return this;
+    }
+    public String getBuyerName() {
+        return this.buyerName;
+    }
+
     public IntlFlightCreateOrderRequest setContactInfo(IntlFlightCreateOrderRequestContactInfo contactInfo) {
         this.contactInfo = contactInfo;
         return this;
     }
     public IntlFlightCreateOrderRequestContactInfo getContactInfo() {
         return this.contactInfo;
-    }
-
-    public IntlFlightCreateOrderRequest setCostCenter(IntlFlightCreateOrderRequestCostCenter costCenter) {
-        this.costCenter = costCenter;
-        return this;
-    }
-    public IntlFlightCreateOrderRequestCostCenter getCostCenter() {
-        return this.costCenter;
     }
 
     public IntlFlightCreateOrderRequest setExtraInfo(java.util.Map<String, String> extraInfo) {
@@ -137,12 +122,12 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         return this.isvName;
     }
 
-    public IntlFlightCreateOrderRequest setLanguage(String language) {
-        this.language = language;
+    public IntlFlightCreateOrderRequest setOrderPrice(Long orderPrice) {
+        this.orderPrice = orderPrice;
         return this;
     }
-    public String getLanguage() {
-        return this.language;
+    public Long getOrderPrice() {
+        return this.orderPrice;
     }
 
     public IntlFlightCreateOrderRequest setOtaItemId(String otaItemId) {
@@ -177,36 +162,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         return this.renderKey;
     }
 
-    public IntlFlightCreateOrderRequest setTotalPriceCent(Long totalPriceCent) {
-        this.totalPriceCent = totalPriceCent;
-        return this;
-    }
-    public Long getTotalPriceCent() {
-        return this.totalPriceCent;
-    }
-
-    public IntlFlightCreateOrderRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public IntlFlightCreateOrderRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
-    }
-
     public static class IntlFlightCreateOrderRequestContactInfo extends TeaModel {
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="mailto:XXX@aliyun.com">XXX@aliyun.com</a></p>
          */
         @NameInMap("contact_email")
         public String contactEmail;
@@ -219,21 +177,9 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>13812341234</p>
          */
         @NameInMap("contact_phone")
         public String contactPhone;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
-         */
-        @NameInMap("send_msg_to_passenger")
-        public Boolean sendMsgToPassenger;
 
         public static IntlFlightCreateOrderRequestContactInfo build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightCreateOrderRequestContactInfo self = new IntlFlightCreateOrderRequestContactInfo();
@@ -264,68 +210,14 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.contactPhone;
         }
 
-        public IntlFlightCreateOrderRequestContactInfo setSendMsgToPassenger(Boolean sendMsgToPassenger) {
-            this.sendMsgToPassenger = sendMsgToPassenger;
-            return this;
-        }
-        public Boolean getSendMsgToPassenger() {
-            return this.sendMsgToPassenger;
-        }
-
-    }
-
-    public static class IntlFlightCreateOrderRequestCostCenter extends TeaModel {
-        /**
-         * <p>This parameter is required.</p>
-         */
-        @NameInMap("cost_center_name")
-        public String costCenterName;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>312434</p>
-         */
-        @NameInMap("cost_center_number")
-        public String costCenterNumber;
-
-        public static IntlFlightCreateOrderRequestCostCenter build(java.util.Map<String, ?> map) throws Exception {
-            IntlFlightCreateOrderRequestCostCenter self = new IntlFlightCreateOrderRequestCostCenter();
-            return TeaModel.build(map, self);
-        }
-
-        public IntlFlightCreateOrderRequestCostCenter setCostCenterName(String costCenterName) {
-            this.costCenterName = costCenterName;
-            return this;
-        }
-        public String getCostCenterName() {
-            return this.costCenterName;
-        }
-
-        public IntlFlightCreateOrderRequestCostCenter setCostCenterNumber(String costCenterNumber) {
-            this.costCenterNumber = costCenterNumber;
-            return this;
-        }
-        public String getCostCenterNumber() {
-            return this.costCenterNumber;
-        }
-
     }
 
     public static class IntlFlightCreateOrderRequestPassengerListCertInfo extends TeaModel {
         /**
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
-        @NameInMap("cert_nation")
-        public String certNation;
-
-        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>H123456</p>
+         * <p>E1234567</p>
          */
         @NameInMap("cert_no")
         public String certNo;
@@ -340,8 +232,10 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         public Integer certType;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>2030-01-01</p>
+         * <p>2029-12-31</p>
          */
         @NameInMap("cert_valid_date")
         public String certValidDate;
@@ -350,22 +244,14 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ZHANG/SAN</p>
+         * <p>中国大陆</p>
          */
-        @NameInMap("name")
-        public String name;
+        @NameInMap("issue_place")
+        public String issuePlace;
 
         public static IntlFlightCreateOrderRequestPassengerListCertInfo build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightCreateOrderRequestPassengerListCertInfo self = new IntlFlightCreateOrderRequestPassengerListCertInfo();
             return TeaModel.build(map, self);
-        }
-
-        public IntlFlightCreateOrderRequestPassengerListCertInfo setCertNation(String certNation) {
-            this.certNation = certNation;
-            return this;
-        }
-        public String getCertNation() {
-            return this.certNation;
         }
 
         public IntlFlightCreateOrderRequestPassengerListCertInfo setCertNo(String certNo) {
@@ -392,101 +278,12 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.certValidDate;
         }
 
-        public IntlFlightCreateOrderRequestPassengerListCertInfo setName(String name) {
-            this.name = name;
+        public IntlFlightCreateOrderRequestPassengerListCertInfo setIssuePlace(String issuePlace) {
+            this.issuePlace = issuePlace;
             return this;
         }
-        public String getName() {
-            return this.name;
-        }
-
-    }
-
-    public static class IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>CN</p>
-         */
-        @NameInMap("cert_nation")
-        public String certNation;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>H123456</p>
-         */
-        @NameInMap("cert_no")
-        public String certNo;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
-         */
-        @NameInMap("cert_type")
-        public Integer certType;
-
-        /**
-         * <strong>example:</strong>
-         * <p>2030-01-01</p>
-         */
-        @NameInMap("cert_valid_date")
-        public String certValidDate;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ZHANG/SAN</p>
-         */
-        @NameInMap("name")
-        public String name;
-
-        public static IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList build(java.util.Map<String, ?> map) throws Exception {
-            IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList self = new IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList();
-            return TeaModel.build(map, self);
-        }
-
-        public IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList setCertNation(String certNation) {
-            this.certNation = certNation;
-            return this;
-        }
-        public String getCertNation() {
-            return this.certNation;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList setCertNo(String certNo) {
-            this.certNo = certNo;
-            return this;
-        }
-        public String getCertNo() {
-            return this.certNo;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList setCertType(Integer certType) {
-            this.certType = certType;
-            return this;
-        }
-        public Integer getCertType() {
-            return this.certType;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList setCertValidDate(String certValidDate) {
-            this.certValidDate = certValidDate;
-            return this;
-        }
-        public String getCertValidDate() {
-            return this.certValidDate;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList setName(String name) {
-            this.name = name;
-            return this;
-        }
-        public String getName() {
-            return this.name;
+        public String getIssuePlace() {
+            return this.issuePlace;
         }
 
     }
@@ -496,20 +293,10 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>2020-01-01</p>
+         * <p>1998-12-28</p>
          */
         @NameInMap("birthday")
         public String birthday;
-
-        /**
-         * <strong>example:</strong>
-         * <p>100/12131231</p>
-         */
-        @NameInMap("cascade_dept_mask")
-        public String cascadeDeptMask;
-
-        @NameInMap("cascade_dept_name")
-        public String cascadeDeptName;
 
         /**
          * <p>This parameter is required.</p>
@@ -517,27 +304,18 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
         @NameInMap("cert_info")
         public IntlFlightCreateOrderRequestPassengerListCertInfo certInfo;
 
-        @NameInMap("cost_center_name")
-        public String costCenterName;
-
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>312434</p>
+         * <p>ZHANG/SAN</p>
          */
-        @NameInMap("cost_center_number")
-        public String costCenterNumber;
+        @NameInMap("full_name")
+        public String fullName;
 
         /**
-         * <strong>example:</strong>
-         * <p>12131231</p>
-         */
-        @NameInMap("dept_id")
-        public String deptId;
-
-        @NameInMap("dept_name")
-        public String deptName;
-
-        /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -546,34 +324,22 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>10001313</p>
-         */
-        @NameInMap("invoice_id")
-        public String invoiceId;
-
-        @NameInMap("invoice_title")
-        public String invoiceTitle;
-
-        /**
-         * <strong>example:</strong>
-         * <p>ZNW0525</p>
+         * <p>L5000924</p>
          */
         @NameInMap("job_no")
         public String jobNo;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>086</p>
+         * <p>中国大陆</p>
          */
-        @NameInMap("mobile_country_code")
-        public String mobileCountryCode;
-
         @NameInMap("nationality")
         public String nationality;
 
         /**
-         * <strong>example:</strong>
-         * <p>CN</p>
+         * <p>This parameter is required.</p>
          */
         @NameInMap("nationality_code")
         public String nationalityCode;
@@ -582,38 +348,25 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("passenger_type")
-        public Integer passengerType;
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>18012341234</p>
+         * <p>13100008888</p>
          */
         @NameInMap("phone")
         public String phone;
 
         /**
+         * <p>This parameter is required.</p>
+         * 
          * <strong>example:</strong>
-         * <p>10123143</p>
+         * <p>0</p>
          */
-        @NameInMap("project_code")
-        public String projectCode;
-
-        @NameInMap("project_title")
-        public String projectTitle;
-
-        @NameInMap("subsidiary_cert_info_list")
-        public java.util.List<IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList> subsidiaryCertInfoList;
+        @NameInMap("type")
+        public Integer type;
 
         /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>13123123212</p>
+         * <p>12292812036903456</p>
          */
         @NameInMap("user_id")
         public String userId;
@@ -638,22 +391,6 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.birthday;
         }
 
-        public IntlFlightCreateOrderRequestPassengerList setCascadeDeptMask(String cascadeDeptMask) {
-            this.cascadeDeptMask = cascadeDeptMask;
-            return this;
-        }
-        public String getCascadeDeptMask() {
-            return this.cascadeDeptMask;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setCascadeDeptName(String cascadeDeptName) {
-            this.cascadeDeptName = cascadeDeptName;
-            return this;
-        }
-        public String getCascadeDeptName() {
-            return this.cascadeDeptName;
-        }
-
         public IntlFlightCreateOrderRequestPassengerList setCertInfo(IntlFlightCreateOrderRequestPassengerListCertInfo certInfo) {
             this.certInfo = certInfo;
             return this;
@@ -662,36 +399,12 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.certInfo;
         }
 
-        public IntlFlightCreateOrderRequestPassengerList setCostCenterName(String costCenterName) {
-            this.costCenterName = costCenterName;
+        public IntlFlightCreateOrderRequestPassengerList setFullName(String fullName) {
+            this.fullName = fullName;
             return this;
         }
-        public String getCostCenterName() {
-            return this.costCenterName;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setCostCenterNumber(String costCenterNumber) {
-            this.costCenterNumber = costCenterNumber;
-            return this;
-        }
-        public String getCostCenterNumber() {
-            return this.costCenterNumber;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setDeptId(String deptId) {
-            this.deptId = deptId;
-            return this;
-        }
-        public String getDeptId() {
-            return this.deptId;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setDeptName(String deptName) {
-            this.deptName = deptName;
-            return this;
-        }
-        public String getDeptName() {
-            return this.deptName;
+        public String getFullName() {
+            return this.fullName;
         }
 
         public IntlFlightCreateOrderRequestPassengerList setGender(Integer gender) {
@@ -702,36 +415,12 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.gender;
         }
 
-        public IntlFlightCreateOrderRequestPassengerList setInvoiceId(String invoiceId) {
-            this.invoiceId = invoiceId;
-            return this;
-        }
-        public String getInvoiceId() {
-            return this.invoiceId;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setInvoiceTitle(String invoiceTitle) {
-            this.invoiceTitle = invoiceTitle;
-            return this;
-        }
-        public String getInvoiceTitle() {
-            return this.invoiceTitle;
-        }
-
         public IntlFlightCreateOrderRequestPassengerList setJobNo(String jobNo) {
             this.jobNo = jobNo;
             return this;
         }
         public String getJobNo() {
             return this.jobNo;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setMobileCountryCode(String mobileCountryCode) {
-            this.mobileCountryCode = mobileCountryCode;
-            return this;
-        }
-        public String getMobileCountryCode() {
-            return this.mobileCountryCode;
         }
 
         public IntlFlightCreateOrderRequestPassengerList setNationality(String nationality) {
@@ -750,14 +439,6 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.nationalityCode;
         }
 
-        public IntlFlightCreateOrderRequestPassengerList setPassengerType(Integer passengerType) {
-            this.passengerType = passengerType;
-            return this;
-        }
-        public Integer getPassengerType() {
-            return this.passengerType;
-        }
-
         public IntlFlightCreateOrderRequestPassengerList setPhone(String phone) {
             this.phone = phone;
             return this;
@@ -766,28 +447,12 @@ public class IntlFlightCreateOrderRequest extends TeaModel {
             return this.phone;
         }
 
-        public IntlFlightCreateOrderRequestPassengerList setProjectCode(String projectCode) {
-            this.projectCode = projectCode;
+        public IntlFlightCreateOrderRequestPassengerList setType(Integer type) {
+            this.type = type;
             return this;
         }
-        public String getProjectCode() {
-            return this.projectCode;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setProjectTitle(String projectTitle) {
-            this.projectTitle = projectTitle;
-            return this;
-        }
-        public String getProjectTitle() {
-            return this.projectTitle;
-        }
-
-        public IntlFlightCreateOrderRequestPassengerList setSubsidiaryCertInfoList(java.util.List<IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList> subsidiaryCertInfoList) {
-            this.subsidiaryCertInfoList = subsidiaryCertInfoList;
-            return this;
-        }
-        public java.util.List<IntlFlightCreateOrderRequestPassengerListSubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
-            return this.subsidiaryCertInfoList;
+        public Integer getType() {
+            return this.type;
         }
 
         public IntlFlightCreateOrderRequestPassengerList setUserId(String userId) {

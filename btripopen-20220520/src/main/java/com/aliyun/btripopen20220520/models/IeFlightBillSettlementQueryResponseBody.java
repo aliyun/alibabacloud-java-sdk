@@ -107,6 +107,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class IeFlightBillSettlementQueryResponseBodyModuleDataList extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,6 +159,15 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("approver_email")
+        public String approverEmail;
+
+        @NameInMap("approver_id")
+        public String approverId;
+
+        @NameInMap("approver_name")
+        public String approverName;
+
         /**
          * <strong>example:</strong>
          * <p>CAN</p>
@@ -191,6 +203,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("arr_time")
         public String arrTime;
+
+        @NameInMap("base_location")
+        public String baseLocation;
 
         /**
          * <strong>example:</strong>
@@ -286,12 +301,18 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("coupon")
         public Double coupon;
+
+        @NameInMap("custom_content")
+        public String customContent;
 
         @NameInMap("deductible_tax")
         public Double deductibleTax;
@@ -369,6 +390,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("flight_no")
         public String flightNo;
 
+        @NameInMap("foreigners_tag")
+        public String foreignersTag;
+
         /**
          * <strong>example:</strong>
          * <p>4564547</p>
@@ -398,6 +422,12 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("invoice_title")
         public String invoiceTitle;
+
+        @NameInMap("location")
+        public String location;
+
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
 
         /**
          * <strong>example:</strong>
@@ -471,12 +501,21 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("payment_department_name")
         public String paymentDepartmentName;
 
+        @NameInMap("position")
+        public String position;
+
+        @NameInMap("position_level")
+        public String positionLevel;
+
         /**
          * <strong>example:</strong>
          * <p>4564547</p>
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -555,6 +594,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
+        @NameInMap("sio")
+        public String sio;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -608,6 +650,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade_action_desc")
         public String tradeActionDesc;
 
+        @NameInMap("traveler_email")
+        public String travelerEmail;
+
         /**
          * <strong>example:</strong>
          * <p>54463464</p>
@@ -631,6 +676,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("traveler_name")
         public String travelerName;
 
+        @NameInMap("trip_type")
+        public Integer tripType;
+
         /**
          * <strong>example:</strong>
          * <p>11</p>
@@ -647,6 +695,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         public static IeFlightBillSettlementQueryResponseBodyModuleDataList build(java.util.Map<String, ?> map) throws Exception {
             IeFlightBillSettlementQueryResponseBodyModuleDataList self = new IeFlightBillSettlementQueryResponseBodyModuleDataList();
             return TeaModel.build(map, self);
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setAdvanceDay(Integer advanceDay) {
@@ -729,6 +785,30 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.applyId;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApproverEmail(String approverEmail) {
+            this.approverEmail = approverEmail;
+            return this;
+        }
+        public String getApproverEmail() {
+            return this.approverEmail;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApproverId(String approverId) {
+            this.approverId = approverId;
+            return this;
+        }
+        public String getApproverId() {
+            return this.approverId;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setApproverName(String approverName) {
+            this.approverName = approverName;
+            return this;
+        }
+        public String getApproverName() {
+            return this.approverName;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setArrAirportCode(String arrAirportCode) {
             this.arrAirportCode = arrAirportCode;
             return this;
@@ -791,6 +871,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setBaseLocation(String baseLocation) {
+            this.baseLocation = baseLocation;
+            return this;
+        }
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setBillRecordTime(String billRecordTime) {
@@ -937,12 +1025,28 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setCoupon(Double coupon) {
             this.coupon = coupon;
             return this;
         }
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setCustomContent(String customContent) {
+            this.customContent = customContent;
+            return this;
+        }
+        public String getCustomContent() {
+            return this.customContent;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setDeductibleTax(Double deductibleTax) {
@@ -1073,6 +1177,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.flightNo;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setForeignersTag(String foreignersTag) {
+            this.foreignersTag = foreignersTag;
+            return this;
+        }
+        public String getForeignersTag() {
+            return this.foreignersTag;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setIndex(String index) {
             this.index = index;
             return this;
@@ -1119,6 +1231,22 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setMostDifferenceDeptTime(String mostDifferenceDeptTime) {
@@ -1217,12 +1345,36 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.paymentDepartmentName;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setPositionLevel(String positionLevel) {
+            this.positionLevel = positionLevel;
+            return this;
+        }
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setPrimaryId(Long primaryId) {
             this.primaryId = primaryId;
             return this;
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setProjectCode(String projectCode) {
@@ -1345,6 +1497,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setSio(String sio) {
+            this.sio = sio;
+            return this;
+        }
+        public String getSio() {
+            return this.sio;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setStatus(Integer status) {
             this.status = status;
             return this;
@@ -1417,6 +1577,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.tradeActionDesc;
         }
 
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setTravelerEmail(String travelerEmail) {
+            this.travelerEmail = travelerEmail;
+            return this;
+        }
+        public String getTravelerEmail() {
+            return this.travelerEmail;
+        }
+
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setTravelerId(String travelerId) {
             this.travelerId = travelerId;
             return this;
@@ -1455,6 +1623,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTravelerName() {
             return this.travelerName;
+        }
+
+        public IeFlightBillSettlementQueryResponseBodyModuleDataList setTripType(Integer tripType) {
+            this.tripType = tripType;
+            return this;
+        }
+        public Integer getTripType() {
+            return this.tripType;
         }
 
         public IeFlightBillSettlementQueryResponseBodyModuleDataList setVoucherType(Integer voucherType) {

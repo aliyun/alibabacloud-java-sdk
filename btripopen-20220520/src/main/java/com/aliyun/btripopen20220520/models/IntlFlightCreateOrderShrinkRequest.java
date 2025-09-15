@@ -4,85 +4,62 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
-    /**
-     * <strong>example:</strong>
-     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
-     */
     @NameInMap("async_create_order_key")
     public String asyncCreateOrderKey;
+
+    @NameInMap("async_create_order_mode")
+    public Boolean asyncCreateOrderMode;
 
     /**
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>false</p>
+     * <p>10001</p>
      */
-    @NameInMap("async_create_order_mode")
-    public Boolean asyncCreateOrderMode;
+    @NameInMap("btrip_user_id")
+    public String btripUserId;
 
+    /**
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ZHANG/SAN</p>
+     */
+    @NameInMap("buyer_name")
+    public String buyerName;
+
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("contact_info")
     public String contactInfoShrink;
-
-    @NameInMap("cost_center")
-    public String costCenterShrink;
 
     @NameInMap("extra_info")
     public String extraInfoShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>open12k0lclldfdc7v10E2HaRrOr00</p>
-     */
     @NameInMap("isv_name")
     public String isvName;
 
-    /**
-     * <strong>example:</strong>
-     * <p>chinese</p>
-     */
-    @NameInMap("language")
-    public String language;
+    @NameInMap("order_price")
+    public Long orderPrice;
 
     /**
-     * <strong>example:</strong>
-     * <p>56319a175bdf4b1898190bd7edb603b5_0</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("ota_item_id")
     public String otaItemId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F11380075736888770560</p>
-     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
+    /**
+     * <p>This parameter is required.</p>
+     */
     @NameInMap("passenger_list")
     public String passengerListShrink;
 
-    /**
-     * <strong>example:</strong>
-     * <p>fcoid_deb6372db8194f1c94c23bc4fadc508d</p>
-     */
     @NameInMap("render_key")
     public String renderKey;
-
-    /**
-     * <strong>example:</strong>
-     * <p>120000</p>
-     */
-    @NameInMap("total_price_cent")
-    public Long totalPriceCent;
-
-    /**
-     * <strong>example:</strong>
-     * <p>12341234</p>
-     */
-    @NameInMap("user_id")
-    public String userId;
-
-    @NameInMap("user_name")
-    public String userName;
 
     public static IntlFlightCreateOrderShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightCreateOrderShrinkRequest self = new IntlFlightCreateOrderShrinkRequest();
@@ -105,20 +82,28 @@ public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
         return this.asyncCreateOrderMode;
     }
 
+    public IntlFlightCreateOrderShrinkRequest setBtripUserId(String btripUserId) {
+        this.btripUserId = btripUserId;
+        return this;
+    }
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    public IntlFlightCreateOrderShrinkRequest setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
+        return this;
+    }
+    public String getBuyerName() {
+        return this.buyerName;
+    }
+
     public IntlFlightCreateOrderShrinkRequest setContactInfoShrink(String contactInfoShrink) {
         this.contactInfoShrink = contactInfoShrink;
         return this;
     }
     public String getContactInfoShrink() {
         return this.contactInfoShrink;
-    }
-
-    public IntlFlightCreateOrderShrinkRequest setCostCenterShrink(String costCenterShrink) {
-        this.costCenterShrink = costCenterShrink;
-        return this;
-    }
-    public String getCostCenterShrink() {
-        return this.costCenterShrink;
     }
 
     public IntlFlightCreateOrderShrinkRequest setExtraInfoShrink(String extraInfoShrink) {
@@ -137,12 +122,12 @@ public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
         return this.isvName;
     }
 
-    public IntlFlightCreateOrderShrinkRequest setLanguage(String language) {
-        this.language = language;
+    public IntlFlightCreateOrderShrinkRequest setOrderPrice(Long orderPrice) {
+        this.orderPrice = orderPrice;
         return this;
     }
-    public String getLanguage() {
-        return this.language;
+    public Long getOrderPrice() {
+        return this.orderPrice;
     }
 
     public IntlFlightCreateOrderShrinkRequest setOtaItemId(String otaItemId) {
@@ -175,30 +160,6 @@ public class IntlFlightCreateOrderShrinkRequest extends TeaModel {
     }
     public String getRenderKey() {
         return this.renderKey;
-    }
-
-    public IntlFlightCreateOrderShrinkRequest setTotalPriceCent(Long totalPriceCent) {
-        this.totalPriceCent = totalPriceCent;
-        return this;
-    }
-    public Long getTotalPriceCent() {
-        return this.totalPriceCent;
-    }
-
-    public IntlFlightCreateOrderShrinkRequest setUserId(String userId) {
-        this.userId = userId;
-        return this;
-    }
-    public String getUserId() {
-        return this.userId;
-    }
-
-    public IntlFlightCreateOrderShrinkRequest setUserName(String userName) {
-        this.userName = userName;
-        return this;
-    }
-    public String getUserName() {
-        return this.userName;
     }
 
 }

@@ -4,25 +4,25 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOrderPayResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
+    @NameInMap("code")
+    public String code;
+
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public IntlFlightOrderPayResponseBodyModule module;
 
-    /**
-     * <strong>example:</strong>
-     * <p>9BCDD5DE-E6CB-5C25-93B9-9BE178A0AA56</p>
-     */
-    @NameInMap("request_id")
+    @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
-    @NameInMap("result_code")
-    public String resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     /**
      * <strong>example:</strong>
@@ -33,14 +33,30 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
+     * <p>210bc4b116835992457938931db4de</p>
      */
-    @NameInMap("trace_id")
+    @NameInMap("traceId")
     public String traceId;
 
     public static IntlFlightOrderPayResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightOrderPayResponseBody self = new IntlFlightOrderPayResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public IntlFlightOrderPayResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public IntlFlightOrderPayResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public IntlFlightOrderPayResponseBody setModule(IntlFlightOrderPayResponseBodyModule module) {
@@ -57,22 +73,6 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public IntlFlightOrderPayResponseBody setResultCode(String resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    public IntlFlightOrderPayResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public IntlFlightOrderPayResponseBody setSuccess(Boolean success) {
@@ -92,24 +92,31 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
     }
 
     public static class IntlFlightOrderPayResponseBodyModule extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>51000</p>
-         */
-        @NameInMap("price")
-        public Long price;
+        @NameInMap("actual_pay_price")
+        public Long actualPayPrice;
+
+        @NameInMap("pay_status")
+        public Integer payStatus;
 
         public static IntlFlightOrderPayResponseBodyModule build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightOrderPayResponseBodyModule self = new IntlFlightOrderPayResponseBodyModule();
             return TeaModel.build(map, self);
         }
 
-        public IntlFlightOrderPayResponseBodyModule setPrice(Long price) {
-            this.price = price;
+        public IntlFlightOrderPayResponseBodyModule setActualPayPrice(Long actualPayPrice) {
+            this.actualPayPrice = actualPayPrice;
             return this;
         }
-        public Long getPrice() {
-            return this.price;
+        public Long getActualPayPrice() {
+            return this.actualPayPrice;
+        }
+
+        public IntlFlightOrderPayResponseBodyModule setPayStatus(Integer payStatus) {
+            this.payStatus = payStatus;
+            return this;
+        }
+        public Integer getPayStatus() {
+            return this.payStatus;
         }
 
     }

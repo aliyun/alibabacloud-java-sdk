@@ -6,20 +6,20 @@ import com.aliyun.tea.*;
 public class IntlFlightOrderPayCheckResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>9BCDD5DE-E6CB-5C25-93B9-9BE178A0AA56</p>
+     * <p>SUCCESS</p>
      */
-    @NameInMap("request_id")
-    public String requestId;
+    @NameInMap("code")
+    public String code;
 
     /**
      * <strong>example:</strong>
-     * <p>0</p>
+     * <p>成功</p>
      */
-    @NameInMap("result_code")
-    public String resultCode;
+    @NameInMap("message")
+    public String message;
 
-    @NameInMap("result_msg")
-    public String resultMsg;
+    @NameInMap("requestId")
+    public String requestId;
 
     /**
      * <strong>example:</strong>
@@ -30,14 +30,30 @@ public class IntlFlightOrderPayCheckResponseBody extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>21041ce316577904808056433edbb2</p>
+     * <p>210bc4b116835992457938931db4de</p>
      */
-    @NameInMap("trace_id")
+    @NameInMap("traceId")
     public String traceId;
 
     public static IntlFlightOrderPayCheckResponseBody build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightOrderPayCheckResponseBody self = new IntlFlightOrderPayCheckResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public IntlFlightOrderPayCheckResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public IntlFlightOrderPayCheckResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public IntlFlightOrderPayCheckResponseBody setRequestId(String requestId) {
@@ -46,22 +62,6 @@ public class IntlFlightOrderPayCheckResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public IntlFlightOrderPayCheckResponseBody setResultCode(String resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    public IntlFlightOrderPayCheckResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public IntlFlightOrderPayCheckResponseBody setSuccess(Boolean success) {

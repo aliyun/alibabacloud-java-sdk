@@ -14,6 +14,9 @@ public class CooperatorFlightBillSettlementQueryRequest extends TeaModel {
     @NameInMap("cooperator_id")
     public String cooperatorId;
 
+    @NameInMap("order_id")
+    public Long orderId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -71,6 +74,14 @@ public class CooperatorFlightBillSettlementQueryRequest extends TeaModel {
     }
     public String getCooperatorId() {
         return this.cooperatorId;
+    }
+
+    public CooperatorFlightBillSettlementQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public CooperatorFlightBillSettlementQueryRequest setPageNo(Integer pageNo) {

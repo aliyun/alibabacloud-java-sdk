@@ -117,6 +117,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("change_handling_fee")
         public Double changeHandlingFee;
 
+        @NameInMap("change_order_id")
+        public String changeOrderId;
+
         /**
          * <strong>example:</strong>
          * <p>004C</p>
@@ -256,6 +259,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public Double getChangeHandlingFee() {
             return this.changeHandlingFee;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setChangeOrderId(String changeOrderId) {
+            this.changeOrderId = changeOrderId;
+            return this;
+        }
+        public String getChangeOrderId() {
+            return this.changeOrderId;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleChangeTicketInfoList setChangeSeatNo(String changeSeatNo) {
@@ -1057,6 +1068,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @NameInMap("gmt_modify")
         public String gmtModify;
 
+        @NameInMap("refund_apply_id")
+        public String refundApplyId;
+
         /**
          * <strong>example:</strong>
          * <p>10</p>
@@ -1104,6 +1118,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
         public String getGmtModify() {
             return this.gmtModify;
+        }
+
+        public TrainOrderQueryV2ResponseBodyModuleRefundTicketInfoList setRefundApplyId(String refundApplyId) {
+            this.refundApplyId = refundApplyId;
+            return this;
+        }
+        public String getRefundApplyId() {
+            return this.refundApplyId;
         }
 
         public TrainOrderQueryV2ResponseBodyModuleRefundTicketInfoList setRefundFee(Double refundFee) {

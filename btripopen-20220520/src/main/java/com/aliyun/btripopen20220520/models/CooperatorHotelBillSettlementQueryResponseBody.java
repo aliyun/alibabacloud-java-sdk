@@ -96,6 +96,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class CooperatorHotelBillSettlementQueryResponseBodyModuleItems extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         /**
          * <strong>example:</strong>
          * <p>124</p>
@@ -133,12 +136,24 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("approver_email")
+        public String approverEmail;
+
+        @NameInMap("approver_id")
+        public String approverId;
+
+        @NameInMap("approver_name")
+        public String approverName;
+
         /**
          * <strong>example:</strong>
          * <p>1.0</p>
          */
         @NameInMap("average_nights")
         public Double averageNights;
+
+        @NameInMap("base_location")
+        public String baseLocation;
 
         /**
          * <strong>example:</strong>
@@ -273,6 +288,12 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
+        @NameInMap("custom_content")
+        public String customContent;
+
         @NameInMap("department")
         public String department;
 
@@ -306,6 +327,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("fines")
         public Double fines;
 
+        @NameInMap("foreigners_tag")
+        public String foreignersTag;
+
         /**
          * <strong>example:</strong>
          * <p>10.0</p>
@@ -334,6 +358,12 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
 
         @NameInMap("is_share_str")
         public String isShareStr;
+
+        @NameInMap("location")
+        public String location;
+
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
 
         /**
          * <strong>example:</strong>
@@ -393,12 +423,21 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
+        @NameInMap("position")
+        public String position;
+
+        @NameInMap("position_level")
+        public String positionLevel;
+
         /**
          * <strong>example:</strong>
          * <p>72328485</p>
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -481,6 +520,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
+        @NameInMap("sio")
+        public String sio;
+
         @NameInMap("star")
         public String star;
 
@@ -532,6 +574,9 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade_action_desc")
         public String tradeActionDesc;
 
+        @NameInMap("traveler_email")
+        public String travelerEmail;
+
         /**
          * <strong>example:</strong>
          * <p>123</p>
@@ -568,6 +613,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         public static CooperatorHotelBillSettlementQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             CooperatorHotelBillSettlementQueryResponseBodyModuleItems self = new CooperatorHotelBillSettlementQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setAlipayTradeNo(String alipayTradeNo) {
@@ -626,12 +679,44 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.applyId;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setApproverEmail(String approverEmail) {
+            this.approverEmail = approverEmail;
+            return this;
+        }
+        public String getApproverEmail() {
+            return this.approverEmail;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setApproverId(String approverId) {
+            this.approverId = approverId;
+            return this;
+        }
+        public String getApproverId() {
+            return this.approverId;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setApproverName(String approverName) {
+            this.approverName = approverName;
+            return this;
+        }
+        public String getApproverName() {
+            return this.approverName;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setAverageNights(Double averageNights) {
             this.averageNights = averageNights;
             return this;
         }
         public Double getAverageNights() {
             return this.averageNights;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setBaseLocation(String baseLocation) {
+            this.baseLocation = baseLocation;
+            return this;
+        }
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setBillRecordTime(String billRecordTime) {
@@ -850,6 +935,22 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setCustomContent(String customContent) {
+            this.customContent = customContent;
+            return this;
+        }
+        public String getCustomContent() {
+            return this.customContent;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setDepartment(String department) {
             this.department = department;
             return this;
@@ -906,6 +1007,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.fines;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setForeignersTag(String foreignersTag) {
+            this.foreignersTag = foreignersTag;
+            return this;
+        }
+        public String getForeignersTag() {
+            return this.foreignersTag;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setFuPointFee(Double fuPointFee) {
             this.fuPointFee = fuPointFee;
             return this;
@@ -960,6 +1069,22 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getIsShareStr() {
             return this.isShareStr;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setNights(Integer nights) {
@@ -1042,12 +1167,36 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.personSettlePrice;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setPositionLevel(String positionLevel) {
+            this.positionLevel = positionLevel;
+            return this;
+        }
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setPrimaryId(Long primaryId) {
             this.primaryId = primaryId;
             return this;
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setProjectCode(String projectCode) {
@@ -1170,6 +1319,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setSio(String sio) {
+            this.sio = sio;
+            return this;
+        }
+        public String getSio() {
+            return this.sio;
+        }
+
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setStar(String star) {
             this.star = star;
             return this;
@@ -1240,6 +1397,14 @@ public class CooperatorHotelBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTradeActionDesc() {
             return this.tradeActionDesc;
+        }
+
+        public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setTravelerEmail(String travelerEmail) {
+            this.travelerEmail = travelerEmail;
+            return this;
+        }
+        public String getTravelerEmail() {
+            return this.travelerEmail;
         }
 
         public CooperatorHotelBillSettlementQueryResponseBodyModuleItems setTravelerId(String travelerId) {

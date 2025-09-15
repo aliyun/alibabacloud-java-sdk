@@ -4,6 +4,20 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
+    /**
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
+    @NameInMap("code")
+    public String code;
+
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
+    @NameInMap("message")
+    public String message;
+
     @NameInMap("module")
     public IntlFlightInventoryPriceCheckResponseBodyModule module;
 
@@ -13,16 +27,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
-    @NameInMap("result_code")
-    public String resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     /**
      * <strong>example:</strong>
@@ -43,6 +47,22 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public IntlFlightInventoryPriceCheckResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
+    public IntlFlightInventoryPriceCheckResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
+    }
+
     public IntlFlightInventoryPriceCheckResponseBody setModule(IntlFlightInventoryPriceCheckResponseBodyModule module) {
         this.module = module;
         return this;
@@ -57,22 +77,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public IntlFlightInventoryPriceCheckResponseBody setResultCode(String resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    public IntlFlightInventoryPriceCheckResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public IntlFlightInventoryPriceCheckResponseBody setSuccess(Boolean success) {
@@ -94,20 +98,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     public static class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>9000</p>
-         */
-        @NameInMap("build_price")
-        public Long buildPrice;
-
-        /**
-         * <strong>example:</strong>
-         * <p>5000</p>
-         */
-        @NameInMap("oil_price")
-        public Long oilPrice;
-
-        /**
-         * <strong>example:</strong>
          * <p>12000</p>
          */
         @NameInMap("tax_price")
@@ -123,22 +113,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         public static IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice self = new IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice();
             return TeaModel.build(map, self);
-        }
-
-        public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice setBuildPrice(Long buildPrice) {
-            this.buildPrice = buildPrice;
-            return this;
-        }
-        public Long getBuildPrice() {
-            return this.buildPrice;
-        }
-
-        public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice setOilPrice(Long oilPrice) {
-            this.oilPrice = oilPrice;
-            return this;
-        }
-        public Long getOilPrice() {
-            return this.oilPrice;
         }
 
         public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListChangedPrice setTaxPrice(Long taxPrice) {
@@ -162,20 +136,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     public static class IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice extends TeaModel {
         /**
          * <strong>example:</strong>
-         * <p>9000</p>
-         */
-        @NameInMap("build_price")
-        public Long buildPrice;
-
-        /**
-         * <strong>example:</strong>
-         * <p>5000</p>
-         */
-        @NameInMap("oil_price")
-        public Long oilPrice;
-
-        /**
-         * <strong>example:</strong>
          * <p>12000</p>
          */
         @NameInMap("tax_price")
@@ -191,22 +151,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         public static IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice build(java.util.Map<String, ?> map) throws Exception {
             IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice self = new IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice();
             return TeaModel.build(map, self);
-        }
-
-        public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice setBuildPrice(Long buildPrice) {
-            this.buildPrice = buildPrice;
-            return this;
-        }
-        public Long getBuildPrice() {
-            return this.buildPrice;
-        }
-
-        public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice setOilPrice(Long oilPrice) {
-            this.oilPrice = oilPrice;
-            return this;
-        }
-        public Long getOilPrice() {
-            return this.oilPrice;
         }
 
         public IntlFlightInventoryPriceCheckResponseBodyModulePassengerChangedPriceInfoListOriginalPrice setTaxPrice(Long taxPrice) {

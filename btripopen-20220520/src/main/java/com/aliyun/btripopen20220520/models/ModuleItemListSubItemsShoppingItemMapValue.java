@@ -4,8 +4,14 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
+    @NameInMap("cabin_quantity_list")
+    public java.util.List<ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList> cabinQuantityList;
+
     @NameInMap("search_price")
     public ModuleItemListSubItemsShoppingItemMapValueSearchPrice searchPrice;
+
+    @NameInMap("segment_price_list")
+    public java.util.List<ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList> segmentPriceList;
 
     /**
      * <p>id</p>
@@ -27,12 +33,28 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public ModuleItemListSubItemsShoppingItemMapValue setCabinQuantityList(java.util.List<ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList> cabinQuantityList) {
+        this.cabinQuantityList = cabinQuantityList;
+        return this;
+    }
+    public java.util.List<ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList> getCabinQuantityList() {
+        return this.cabinQuantityList;
+    }
+
     public ModuleItemListSubItemsShoppingItemMapValue setSearchPrice(ModuleItemListSubItemsShoppingItemMapValueSearchPrice searchPrice) {
         this.searchPrice = searchPrice;
         return this;
     }
     public ModuleItemListSubItemsShoppingItemMapValueSearchPrice getSearchPrice() {
         return this.searchPrice;
+    }
+
+    public ModuleItemListSubItemsShoppingItemMapValue setSegmentPriceList(java.util.List<ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList> segmentPriceList) {
+        this.segmentPriceList = segmentPriceList;
+        return this;
+    }
+    public java.util.List<ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList> getSegmentPriceList() {
+        return this.segmentPriceList;
     }
 
     public ModuleItemListSubItemsShoppingItemMapValue setId(String id) {
@@ -57,6 +79,126 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
     }
     public java.util.Map<String, ModuleItemListSubItemsShoppingItemMapValueSegmentPriceValue> getSegmentPrice() {
         return this.segmentPrice;
+    }
+
+    public static class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
+
+        public static ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition self = new ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition();
+            return TeaModel.build(map, self);
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+    }
+
+    public static class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo extends TeaModel {
+        @NameInMap("cabin")
+        public String cabin;
+
+        @NameInMap("cabin_class")
+        public String cabinClass;
+
+        @NameInMap("cabin_class_name")
+        public String cabinClassName;
+
+        @NameInMap("quantity")
+        public String quantity;
+
+        public static ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo self = new ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo setCabin(String cabin) {
+            this.cabin = cabin;
+            return this;
+        }
+        public String getCabin() {
+            return this.cabin;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo setCabinClass(String cabinClass) {
+            this.cabinClass = cabinClass;
+            return this;
+        }
+        public String getCabinClass() {
+            return this.cabinClass;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo setCabinClassName(String cabinClassName) {
+            this.cabinClassName = cabinClassName;
+            return this;
+        }
+        public String getCabinClassName() {
+            return this.cabinClassName;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo setQuantity(String quantity) {
+            this.quantity = quantity;
+            return this;
+        }
+        public String getQuantity() {
+            return this.quantity;
+        }
+
+    }
+
+    public static class ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList extends TeaModel {
+        @NameInMap("segment_position")
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition segmentPosition;
+
+        @NameInMap("cabin_info")
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo;
+
+        public static ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList self = new ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList();
+            return TeaModel.build(map, self);
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList setSegmentPosition(ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition segmentPosition) {
+            this.segmentPosition = segmentPosition;
+            return this;
+        }
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListSegmentPosition getSegmentPosition() {
+            return this.segmentPosition;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityList setCabinInfo(ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo) {
+            this.cabinInfo = cabinInfo;
+            return this;
+        }
+        public ModuleItemListSubItemsShoppingItemMapValueCabinQuantityListCabinInfo getCabinInfo() {
+            return this.cabinInfo;
+        }
+
     }
 
     public static class ModuleItemListSubItemsShoppingItemMapValueSearchPricePriceShowInfo extends TeaModel {
@@ -426,6 +568,127 @@ public class ModuleItemListSubItemsShoppingItemMapValue extends TeaModel {
         }
         public ModuleItemListSubItemsShoppingItemMapValueSearchPricePriceShowInfo getPriceShowInfo() {
             return this.priceShowInfo;
+        }
+
+    }
+
+    public static class ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
+
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
+
+        public static ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition self = new ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition();
+            return TeaModel.build(map, self);
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition setJourneyIndex(Integer journeyIndex) {
+            this.journeyIndex = journeyIndex;
+            return this;
+        }
+        public Integer getJourneyIndex() {
+            return this.journeyIndex;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
+    }
+
+    public static class ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
+        @NameInMap("sell_price")
+        public Integer sellPrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>120000</p>
+         */
+        @NameInMap("ticket_price")
+        public Integer ticketPrice;
+
+        /**
+         * <strong>example:</strong>
+         * <p>6000</p>
+         */
+        @NameInMap("tax")
+        public Integer tax;
+
+        public static ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice self = new ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice();
+            return TeaModel.build(map, self);
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice setSellPrice(Integer sellPrice) {
+            this.sellPrice = sellPrice;
+            return this;
+        }
+        public Integer getSellPrice() {
+            return this.sellPrice;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice setTicketPrice(Integer ticketPrice) {
+            this.ticketPrice = ticketPrice;
+            return this;
+        }
+        public Integer getTicketPrice() {
+            return this.ticketPrice;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice setTax(Integer tax) {
+            this.tax = tax;
+            return this;
+        }
+        public Integer getTax() {
+            return this.tax;
+        }
+
+    }
+
+    public static class ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList extends TeaModel {
+        @NameInMap("segment_position")
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition segmentPosition;
+
+        @NameInMap("search_price")
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice searchPrice;
+
+        public static ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList build(java.util.Map<String, ?> map) throws Exception {
+            ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList self = new ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList();
+            return TeaModel.build(map, self);
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList setSegmentPosition(ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition segmentPosition) {
+            this.segmentPosition = segmentPosition;
+            return this;
+        }
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSegmentPosition getSegmentPosition() {
+            return this.segmentPosition;
+        }
+
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceList setSearchPrice(ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice searchPrice) {
+            this.searchPrice = searchPrice;
+            return this;
+        }
+        public ModuleItemListSubItemsShoppingItemMapValueSegmentPriceListSearchPrice getSearchPrice() {
+            return this.searchPrice;
         }
 
     }

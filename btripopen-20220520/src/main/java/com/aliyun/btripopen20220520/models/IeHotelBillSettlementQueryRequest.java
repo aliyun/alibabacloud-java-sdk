@@ -14,6 +14,9 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     @NameInMap("category")
     public Integer category;
 
+    @NameInMap("order_id")
+    public Long orderId;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -69,6 +72,14 @@ public class IeHotelBillSettlementQueryRequest extends TeaModel {
     }
     public Integer getCategory() {
         return this.category;
+    }
+
+    public IeHotelBillSettlementQueryRequest setOrderId(Long orderId) {
+        this.orderId = orderId;
+        return this;
+    }
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     public IeHotelBillSettlementQueryRequest setPageNo(Integer pageNo) {

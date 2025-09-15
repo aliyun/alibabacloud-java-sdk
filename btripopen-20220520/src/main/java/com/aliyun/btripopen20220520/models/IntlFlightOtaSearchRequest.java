@@ -15,8 +15,6 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     public String buyerName;
 
     /**
-     * <p>This parameter is required.</p>
-     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -25,27 +23,10 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
 
     /**
      * <strong>example:</strong>
-     * <p>false</p>
-     */
-    @NameInMap("direct_only")
-    public Boolean directOnly;
-
-    /**
-     * <strong>example:</strong>
      * <p>open12igetbis4o07v10B1TlOWcM00</p>
      */
     @NameInMap("isv_name")
     public String isvName;
-
-    @NameInMap("language")
-    public String language;
-
-    /**
-     * <strong>example:</strong>
-     * <p>true</p>
-     */
-    @NameInMap("need_share_flight")
-    public Boolean needShareFlight;
 
     /**
      * <p>This parameter is required.</p>
@@ -55,13 +36,6 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
 
     @NameInMap("search_passenger_list")
     public java.util.List<IntlFlightOtaSearchRequestSearchPassengerList> searchPassengerList;
-
-    /**
-     * <strong>example:</strong>
-     * <p>TEST</p>
-     */
-    @NameInMap("supplier_code")
-    public String supplierCode;
 
     /**
      * <p>This parameter is required.</p>
@@ -101,36 +75,12 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
         return this.cabinType;
     }
 
-    public IntlFlightOtaSearchRequest setDirectOnly(Boolean directOnly) {
-        this.directOnly = directOnly;
-        return this;
-    }
-    public Boolean getDirectOnly() {
-        return this.directOnly;
-    }
-
     public IntlFlightOtaSearchRequest setIsvName(String isvName) {
         this.isvName = isvName;
         return this;
     }
     public String getIsvName() {
         return this.isvName;
-    }
-
-    public IntlFlightOtaSearchRequest setLanguage(String language) {
-        this.language = language;
-        return this;
-    }
-    public String getLanguage() {
-        return this.language;
-    }
-
-    public IntlFlightOtaSearchRequest setNeedShareFlight(Boolean needShareFlight) {
-        this.needShareFlight = needShareFlight;
-        return this;
-    }
-    public Boolean getNeedShareFlight() {
-        return this.needShareFlight;
     }
 
     public IntlFlightOtaSearchRequest setSearchJourneys(java.util.List<IntlFlightOtaSearchRequestSearchJourneys> searchJourneys) {
@@ -147,14 +97,6 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
     }
     public java.util.List<IntlFlightOtaSearchRequestSearchPassengerList> getSearchPassengerList() {
         return this.searchPassengerList;
-    }
-
-    public IntlFlightOtaSearchRequest setSupplierCode(String supplierCode) {
-        this.supplierCode = supplierCode;
-        return this;
-    }
-    public String getSupplierCode() {
-        return this.supplierCode;
     }
 
     public IntlFlightOtaSearchRequest setTripType(Integer tripType) {
@@ -181,13 +123,6 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
          */
         @NameInMap("arr_city_code")
         public String arrCityCode;
-
-        /**
-         * <strong>example:</strong>
-         * <p>0</p>
-         */
-        @NameInMap("cabin_type")
-        public Integer cabinType;
 
         /**
          * <strong>example:</strong>
@@ -249,14 +184,6 @@ public class IntlFlightOtaSearchRequest extends TeaModel {
         }
         public String getArrCityCode() {
             return this.arrCityCode;
-        }
-
-        public IntlFlightOtaSearchRequestSearchJourneysSelectedFlights setCabinType(Integer cabinType) {
-            this.cabinType = cabinType;
-            return this;
-        }
-        public Integer getCabinType() {
-            return this.cabinType;
         }
 
         public IntlFlightOtaSearchRequestSearchJourneysSelectedFlights setDepAirportCode(String depAirportCode) {

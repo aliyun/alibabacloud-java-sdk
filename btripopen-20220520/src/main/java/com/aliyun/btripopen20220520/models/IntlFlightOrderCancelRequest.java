@@ -6,25 +6,27 @@ import com.aliyun.tea.*;
 public class IntlFlightOrderCancelRequest extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>TRAVEL</p>
+     * <p>10001</p>
      */
-    @NameInMap("isv_name")
-    public String isvName;
-
-    @NameInMap("memo")
-    public String memo;
+    @NameInMap("btrip_user_id")
+    public String btripUserId;
 
     /**
      * <strong>example:</strong>
-     * <p>1012000000000000</p>
+     * <p>ZHANG/SAN</p>
+     */
+    @NameInMap("buyer_name")
+    public String buyerName;
+
+    @NameInMap("isv_name")
+    public String isvName;
+
+    /**
+     * <p>This parameter is required.</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F11374007131319304192</p>
-     */
     @NameInMap("out_order_id")
     public String outOrderId;
 
@@ -33,20 +35,28 @@ public class IntlFlightOrderCancelRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    public IntlFlightOrderCancelRequest setBtripUserId(String btripUserId) {
+        this.btripUserId = btripUserId;
+        return this;
+    }
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    public IntlFlightOrderCancelRequest setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
+        return this;
+    }
+    public String getBuyerName() {
+        return this.buyerName;
+    }
+
     public IntlFlightOrderCancelRequest setIsvName(String isvName) {
         this.isvName = isvName;
         return this;
     }
     public String getIsvName() {
         return this.isvName;
-    }
-
-    public IntlFlightOrderCancelRequest setMemo(String memo) {
-        this.memo = memo;
-        return this;
-    }
-    public String getMemo() {
-        return this.memo;
     }
 
     public IntlFlightOrderCancelRequest setOrderId(String orderId) {

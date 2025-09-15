@@ -95,6 +95,58 @@ public class CarOrderQueryResponseBody extends TeaModel {
         return this.traceId;
     }
 
+    public static class CarOrderQueryResponseBodyModuleCarInfoWayPoints extends TeaModel {
+        @NameInMap("address")
+        public String address;
+
+        @NameInMap("index")
+        public String index;
+
+        @NameInMap("latitude")
+        public String latitude;
+
+        @NameInMap("longitude")
+        public String longitude;
+
+        public static CarOrderQueryResponseBodyModuleCarInfoWayPoints build(java.util.Map<String, ?> map) throws Exception {
+            CarOrderQueryResponseBodyModuleCarInfoWayPoints self = new CarOrderQueryResponseBodyModuleCarInfoWayPoints();
+            return TeaModel.build(map, self);
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfoWayPoints setAddress(String address) {
+            this.address = address;
+            return this;
+        }
+        public String getAddress() {
+            return this.address;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfoWayPoints setIndex(String index) {
+            this.index = index;
+            return this;
+        }
+        public String getIndex() {
+            return this.index;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfoWayPoints setLatitude(String latitude) {
+            this.latitude = latitude;
+            return this;
+        }
+        public String getLatitude() {
+            return this.latitude;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfoWayPoints setLongitude(String longitude) {
+            this.longitude = longitude;
+            return this;
+        }
+        public String getLongitude() {
+            return this.longitude;
+        }
+
+    }
+
     public static class CarOrderQueryResponseBodyModuleCarInfo extends TeaModel {
         /**
          * <strong>example:</strong>
@@ -227,6 +279,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
          */
         @NameInMap("travel_distance")
         public String travelDistance;
+
+        @NameInMap("way_points")
+        public java.util.List<CarOrderQueryResponseBodyModuleCarInfoWayPoints> wayPoints;
 
         public static CarOrderQueryResponseBodyModuleCarInfo build(java.util.Map<String, ?> map) throws Exception {
             CarOrderQueryResponseBodyModuleCarInfo self = new CarOrderQueryResponseBodyModuleCarInfo();
@@ -455,6 +510,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
         public String getTravelDistance() {
             return this.travelDistance;
+        }
+
+        public CarOrderQueryResponseBodyModuleCarInfo setWayPoints(java.util.List<CarOrderQueryResponseBodyModuleCarInfoWayPoints> wayPoints) {
+            this.wayPoints = wayPoints;
+            return this;
+        }
+        public java.util.List<CarOrderQueryResponseBodyModuleCarInfoWayPoints> getWayPoints() {
+            return this.wayPoints;
         }
 
     }

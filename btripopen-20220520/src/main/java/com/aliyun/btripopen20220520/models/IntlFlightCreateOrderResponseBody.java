@@ -6,10 +6,17 @@ import com.aliyun.tea.*;
 public class IntlFlightCreateOrderResponseBody extends TeaModel {
     /**
      * <strong>example:</strong>
-     * <p>200</p>
+     * <p>SUCCESS</p>
      */
-    @NameInMap("http_status_code")
-    public Integer httpStatusCode;
+    @NameInMap("code")
+    public String code;
+
+    /**
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
+    @NameInMap("message")
+    public String message;
 
     @NameInMap("module")
     public IntlFlightCreateOrderResponseBodyModule module;
@@ -20,16 +27,6 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
      */
     @NameInMap("requestId")
     public String requestId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>0</p>
-     */
-    @NameInMap("result_code")
-    public String resultCode;
-
-    @NameInMap("result_msg")
-    public String resultMsg;
 
     /**
      * <strong>example:</strong>
@@ -50,12 +47,20 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         return TeaModel.build(map, self);
     }
 
-    public IntlFlightCreateOrderResponseBody setHttpStatusCode(Integer httpStatusCode) {
-        this.httpStatusCode = httpStatusCode;
+    public IntlFlightCreateOrderResponseBody setCode(String code) {
+        this.code = code;
         return this;
     }
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getCode() {
+        return this.code;
+    }
+
+    public IntlFlightCreateOrderResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public IntlFlightCreateOrderResponseBody setModule(IntlFlightCreateOrderResponseBodyModule module) {
@@ -72,22 +77,6 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     }
     public String getRequestId() {
         return this.requestId;
-    }
-
-    public IntlFlightCreateOrderResponseBody setResultCode(String resultCode) {
-        this.resultCode = resultCode;
-        return this;
-    }
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    public IntlFlightCreateOrderResponseBody setResultMsg(String resultMsg) {
-        this.resultMsg = resultMsg;
-        return this;
-    }
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     public IntlFlightCreateOrderResponseBody setSuccess(Boolean success) {
@@ -116,17 +105,10 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
 
         /**
          * <strong>example:</strong>
-         * <p>2023-08-10 17:42:32</p>
-         */
-        @NameInMap("latest_pay_time")
-        public String latestPayTime;
-
-        /**
-         * <strong>example:</strong>
          * <p>1003038197806523003</p>
          */
         @NameInMap("order_id")
-        public Long orderId;
+        public String orderId;
 
         /**
          * <strong>example:</strong>
@@ -134,6 +116,9 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
          */
         @NameInMap("out_order_id")
         public String outOrderId;
+
+        @NameInMap("pay_latest_time")
+        public String payLatestTime;
 
         /**
          * <strong>example:</strong>
@@ -169,19 +154,11 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
             return this.asyncCreateOrderKey;
         }
 
-        public IntlFlightCreateOrderResponseBodyModule setLatestPayTime(String latestPayTime) {
-            this.latestPayTime = latestPayTime;
-            return this;
-        }
-        public String getLatestPayTime() {
-            return this.latestPayTime;
-        }
-
-        public IntlFlightCreateOrderResponseBodyModule setOrderId(Long orderId) {
+        public IntlFlightCreateOrderResponseBodyModule setOrderId(String orderId) {
             this.orderId = orderId;
             return this;
         }
-        public Long getOrderId() {
+        public String getOrderId() {
             return this.orderId;
         }
 
@@ -191,6 +168,14 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         }
         public String getOutOrderId() {
             return this.outOrderId;
+        }
+
+        public IntlFlightCreateOrderResponseBodyModule setPayLatestTime(String payLatestTime) {
+            this.payLatestTime = payLatestTime;
+            return this;
+        }
+        public String getPayLatestTime() {
+            return this.payLatestTime;
         }
 
         public IntlFlightCreateOrderResponseBodyModule setPayStatus(Integer payStatus) {

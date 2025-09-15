@@ -86,27 +86,19 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
          * <strong>example:</strong>
          * <p>0</p>
          */
-        @NameInMap("segment_index")
-        public Integer segmentIndex;
+        @NameInMap("journey_index")
+        public Integer journeyIndex;
 
         /**
          * <strong>example:</strong>
          * <p>0</p>
          */
-        @NameInMap("journey_index")
-        public Integer journeyIndex;
+        @NameInMap("segment_index")
+        public Integer segmentIndex;
 
         public static ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition build(java.util.Map<String, ?> map) throws Exception {
             ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition self = new ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition();
             return TeaModel.build(map, self);
-        }
-
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition setSegmentIndex(Integer segmentIndex) {
-            this.segmentIndex = segmentIndex;
-            return this;
-        }
-        public Integer getSegmentIndex() {
-            return this.segmentIndex;
         }
 
         public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition setJourneyIndex(Integer journeyIndex) {
@@ -117,39 +109,35 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return this.journeyIndex;
         }
 
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition setSegmentIndex(Integer segmentIndex) {
+            this.segmentIndex = segmentIndex;
+            return this;
+        }
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
     }
 
-    public static class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin extends TeaModel {
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
+    public static class ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo extends TeaModel {
         @NameInMap("cabin")
         public String cabin;
 
-        /**
-         * <strong>example:</strong>
-         * <p>Y</p>
-         */
         @NameInMap("cabin_class")
         public String cabinClass;
 
         @NameInMap("cabin_class_name")
         public String cabinClassName;
 
-        /**
-         * <strong>example:</strong>
-         * <p>A</p>
-         */
         @NameInMap("quantity")
         public String quantity;
 
-        public static ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin build(java.util.Map<String, ?> map) throws Exception {
-            ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin self = new ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin();
+        public static ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo build(java.util.Map<String, ?> map) throws Exception {
+            ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo self = new ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo();
             return TeaModel.build(map, self);
         }
 
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin setCabin(String cabin) {
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo setCabin(String cabin) {
             this.cabin = cabin;
             return this;
         }
@@ -157,7 +145,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return this.cabin;
         }
 
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin setCabinClass(String cabinClass) {
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo setCabinClass(String cabinClass) {
             this.cabinClass = cabinClass;
             return this;
         }
@@ -165,7 +153,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return this.cabinClass;
         }
 
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin setCabinClassName(String cabinClassName) {
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo setCabinClassName(String cabinClassName) {
             this.cabinClassName = cabinClassName;
             return this;
         }
@@ -173,7 +161,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return this.cabinClassName;
         }
 
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin setQuantity(String quantity) {
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo setQuantity(String quantity) {
             this.quantity = quantity;
             return this;
         }
@@ -187,8 +175,8 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         @NameInMap("segment_position")
         public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListSegmentPosition segmentPosition;
 
-        @NameInMap("cabin")
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin cabin;
+        @NameInMap("cabin_info")
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo;
 
         public static ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList build(java.util.Map<String, ?> map) throws Exception {
             ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList self = new ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList();
@@ -203,12 +191,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return this.segmentPosition;
         }
 
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList setCabin(ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin cabin) {
-            this.cabin = cabin;
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityList setCabinInfo(ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo cabinInfo) {
+            this.cabinInfo = cabinInfo;
             return this;
         }
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabin getCabin() {
-            return this.cabin;
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueCabinQuantityListCabinInfo getCabinInfo() {
+            return this.cabinInfo;
         }
 
     }
@@ -627,15 +615,15 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
          * <strong>example:</strong>
          * <p>120000</p>
          */
-        @NameInMap("ticket_price")
-        public Integer ticketPrice;
+        @NameInMap("sell_price")
+        public Integer sellPrice;
 
         /**
          * <strong>example:</strong>
          * <p>120000</p>
          */
-        @NameInMap("sell_price")
-        public Integer sellPrice;
+        @NameInMap("ticket_price")
+        public Integer ticketPrice;
 
         /**
          * <strong>example:</strong>
@@ -649,20 +637,20 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return TeaModel.build(map, self);
         }
 
-        public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice setTicketPrice(Integer ticketPrice) {
-            this.ticketPrice = ticketPrice;
-            return this;
-        }
-        public Integer getTicketPrice() {
-            return this.ticketPrice;
-        }
-
         public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice setSellPrice(Integer sellPrice) {
             this.sellPrice = sellPrice;
             return this;
         }
         public Integer getSellPrice() {
             return this.sellPrice;
+        }
+
+        public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice setTicketPrice(Integer ticketPrice) {
+            this.ticketPrice = ticketPrice;
+            return this;
+        }
+        public Integer getTicketPrice() {
+            return this.ticketPrice;
         }
 
         public ModuleFlightItemListBestPriceItemShoppingItemMapValueSegmentPriceListSearchPrice setTax(Integer tax) {

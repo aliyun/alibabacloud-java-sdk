@@ -94,6 +94,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static class CooperatorFlightBillSettlementQueryResponseBodyModuleItems extends TeaModel {
+        @NameInMap("adjust_time")
+        public String adjustTime;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -155,6 +158,15 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("apply_id")
         public String applyId;
 
+        @NameInMap("approver_email")
+        public String approverEmail;
+
+        @NameInMap("approver_id")
+        public String approverId;
+
+        @NameInMap("approver_name")
+        public String approverName;
+
         /**
          * <strong>example:</strong>
          * <p>CKG</p>
@@ -188,6 +200,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("arr_time")
         public String arrTime;
+
+        @NameInMap("base_location")
+        public String baseLocation;
 
         /**
          * <strong>example:</strong>
@@ -257,6 +272,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cabin_class")
         public String cabinClass;
 
+        @NameInMap("cabin_class_code")
+        public String cabinClassCode;
+
         @NameInMap("capital_direction")
         public String capitalDirection;
 
@@ -317,12 +335,18 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("cost_center_number")
         public String costCenterNumber;
 
+        @NameInMap("cost_department")
+        public String costDepartment;
+
         /**
          * <strong>example:</strong>
          * <p>0.0</p>
          */
         @NameInMap("coupon")
         public Double coupon;
+
+        @NameInMap("custom_content")
+        public String customContent;
 
         /**
          * <strong>example:</strong>
@@ -394,6 +418,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("flight_trip_type")
         public String flightTripType;
 
+        @NameInMap("foreigners_tag")
+        public String foreignersTag;
+
         /**
          * <strong>example:</strong>
          * <p>1</p>
@@ -441,6 +468,12 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("itinerary_price")
         public Double itineraryPrice;
+
+        @NameInMap("location")
+        public String location;
+
+        @NameInMap("mapping_company_code")
+        public String mappingCompanyCode;
 
         /**
          * <strong>example:</strong>
@@ -538,6 +571,12 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("person_settle_price")
         public Double personSettlePrice;
 
+        @NameInMap("position")
+        public String position;
+
+        @NameInMap("position_level")
+        public String positionLevel;
+
         @NameInMap("pre_book_tip")
         public String preBookTip;
 
@@ -547,6 +586,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
          */
         @NameInMap("primary_id")
         public Long primaryId;
+
+        @NameInMap("processor_oa_code")
+        public String processorOaCode;
 
         /**
          * <strong>example:</strong>
@@ -622,6 +664,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("settlement_type")
         public String settlementType;
 
+        @NameInMap("sio")
+        public String sio;
+
         /**
          * <strong>example:</strong>
          * <p>0</p>
@@ -677,6 +722,9 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         @NameInMap("trade_action_desc")
         public String tradeActionDesc;
 
+        @NameInMap("traveler_email")
+        public String travelerEmail;
+
         /**
          * <strong>example:</strong>
          * <p>A1234</p>
@@ -723,6 +771,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         public static CooperatorFlightBillSettlementQueryResponseBodyModuleItems build(java.util.Map<String, ?> map) throws Exception {
             CooperatorFlightBillSettlementQueryResponseBodyModuleItems self = new CooperatorFlightBillSettlementQueryResponseBodyModuleItems();
             return TeaModel.build(map, self);
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setAdjustTime(String adjustTime) {
+            this.adjustTime = adjustTime;
+            return this;
+        }
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setAdvanceDay(Integer advanceDay) {
@@ -813,6 +869,30 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.applyId;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setApproverEmail(String approverEmail) {
+            this.approverEmail = approverEmail;
+            return this;
+        }
+        public String getApproverEmail() {
+            return this.approverEmail;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setApproverId(String approverId) {
+            this.approverId = approverId;
+            return this;
+        }
+        public String getApproverId() {
+            return this.approverId;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setApproverName(String approverName) {
+            this.approverName = approverName;
+            return this;
+        }
+        public String getApproverName() {
+            return this.approverName;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setArrAirportCode(String arrAirportCode) {
             this.arrAirportCode = arrAirportCode;
             return this;
@@ -859,6 +939,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setBaseLocation(String baseLocation) {
+            this.baseLocation = baseLocation;
+            return this;
+        }
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setBillRecordTime(String billRecordTime) {
@@ -957,6 +1045,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.cabinClass;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setCabinClassCode(String cabinClassCode) {
+            this.cabinClassCode = cabinClassCode;
+            return this;
+        }
+        public String getCabinClassCode() {
+            return this.cabinClassCode;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setCapitalDirection(String capitalDirection) {
             this.capitalDirection = capitalDirection;
             return this;
@@ -1053,12 +1149,28 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.costCenterNumber;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setCostDepartment(String costDepartment) {
+            this.costDepartment = costDepartment;
+            return this;
+        }
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setCoupon(Double coupon) {
             this.coupon = coupon;
             return this;
         }
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setCustomContent(String customContent) {
+            this.customContent = customContent;
+            return this;
+        }
+        public String getCustomContent() {
+            return this.customContent;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setDepAirportCode(String depAirportCode) {
@@ -1173,6 +1285,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.flightTripType;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setForeignersTag(String foreignersTag) {
+            this.foreignersTag = foreignersTag;
+            return this;
+        }
+        public String getForeignersTag() {
+            return this.foreignersTag;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setIndex(String index) {
             this.index = index;
             return this;
@@ -1235,6 +1355,22 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Double getItineraryPrice() {
             return this.itineraryPrice;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setLocation(String location) {
+            this.location = location;
+            return this;
+        }
+        public String getLocation() {
+            return this.location;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setMappingCompanyCode(String mappingCompanyCode) {
+            this.mappingCompanyCode = mappingCompanyCode;
+            return this;
+        }
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setMileage(Integer mileage) {
@@ -1365,6 +1501,22 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.personSettlePrice;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setPosition(String position) {
+            this.position = position;
+            return this;
+        }
+        public String getPosition() {
+            return this.position;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setPositionLevel(String positionLevel) {
+            this.positionLevel = positionLevel;
+            return this;
+        }
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setPreBookTip(String preBookTip) {
             this.preBookTip = preBookTip;
             return this;
@@ -1379,6 +1531,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setProcessorOaCode(String processorOaCode) {
+            this.processorOaCode = processorOaCode;
+            return this;
+        }
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setProjectCode(String projectCode) {
@@ -1493,6 +1653,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
             return this.settlementType;
         }
 
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setSio(String sio) {
+            this.sio = sio;
+            return this;
+        }
+        public String getSio() {
+            return this.sio;
+        }
+
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setStatus(Integer status) {
             this.status = status;
             return this;
@@ -1563,6 +1731,14 @@ public class CooperatorFlightBillSettlementQueryResponseBody extends TeaModel {
         }
         public String getTradeActionDesc() {
             return this.tradeActionDesc;
+        }
+
+        public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setTravelerEmail(String travelerEmail) {
+            this.travelerEmail = travelerEmail;
+            return this;
+        }
+        public String getTravelerEmail() {
+            return this.travelerEmail;
         }
 
         public CooperatorFlightBillSettlementQueryResponseBodyModuleItems setTravelerId(String travelerId) {

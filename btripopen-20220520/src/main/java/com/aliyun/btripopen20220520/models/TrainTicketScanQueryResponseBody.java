@@ -128,6 +128,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("department")
         public String department;
 
+        @NameInMap("fee_type_show_code")
+        public Integer feeTypeShowCode;
+
         /**
          * <strong>example:</strong>
          * <p>71</p>
@@ -135,8 +138,17 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("id")
         public String id;
 
+        @NameInMap("invoice_date")
+        public String invoiceDate;
+
+        @NameInMap("invoice_material")
+        public Integer invoiceMaterial;
+
         @NameInMap("invoice_title")
         public String invoiceTitle;
+
+        @NameInMap("ofd_url")
+        public String ofdUrl;
 
         /**
          * <strong>example:</strong>
@@ -155,6 +167,9 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @NameInMap("passenger")
         public String passenger;
 
+        @NameInMap("pdf_url")
+        public String pdfUrl;
+
         /**
          * <strong>example:</strong>
          * <p>100</p>
@@ -164,6 +179,12 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
 
         @NameInMap("project")
         public String project;
+
+        @NameInMap("purchaser_name")
+        public String purchaserName;
+
+        @NameInMap("purchaser_tax_no")
+        public String purchaserTaxNo;
 
         @NameInMap("seat")
         public String seat;
@@ -279,6 +300,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             return this.department;
         }
 
+        public TrainTicketScanQueryResponseBodyModuleItems setFeeTypeShowCode(Integer feeTypeShowCode) {
+            this.feeTypeShowCode = feeTypeShowCode;
+            return this;
+        }
+        public Integer getFeeTypeShowCode() {
+            return this.feeTypeShowCode;
+        }
+
         public TrainTicketScanQueryResponseBodyModuleItems setId(String id) {
             this.id = id;
             return this;
@@ -287,12 +316,36 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             return this.id;
         }
 
+        public TrainTicketScanQueryResponseBodyModuleItems setInvoiceDate(String invoiceDate) {
+            this.invoiceDate = invoiceDate;
+            return this;
+        }
+        public String getInvoiceDate() {
+            return this.invoiceDate;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setInvoiceMaterial(Integer invoiceMaterial) {
+            this.invoiceMaterial = invoiceMaterial;
+            return this;
+        }
+        public Integer getInvoiceMaterial() {
+            return this.invoiceMaterial;
+        }
+
         public TrainTicketScanQueryResponseBodyModuleItems setInvoiceTitle(String invoiceTitle) {
             this.invoiceTitle = invoiceTitle;
             return this;
         }
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setOfdUrl(String ofdUrl) {
+            this.ofdUrl = ofdUrl;
+            return this;
+        }
+        public String getOfdUrl() {
+            return this.ofdUrl;
         }
 
         public TrainTicketScanQueryResponseBodyModuleItems setOrderId(Long orderId) {
@@ -319,6 +372,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             return this.passenger;
         }
 
+        public TrainTicketScanQueryResponseBodyModuleItems setPdfUrl(String pdfUrl) {
+            this.pdfUrl = pdfUrl;
+            return this;
+        }
+        public String getPdfUrl() {
+            return this.pdfUrl;
+        }
+
         public TrainTicketScanQueryResponseBodyModuleItems setPrice(String price) {
             this.price = price;
             return this;
@@ -333,6 +394,22 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
         public String getProject() {
             return this.project;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setPurchaserName(String purchaserName) {
+            this.purchaserName = purchaserName;
+            return this;
+        }
+        public String getPurchaserName() {
+            return this.purchaserName;
+        }
+
+        public TrainTicketScanQueryResponseBodyModuleItems setPurchaserTaxNo(String purchaserTaxNo) {
+            this.purchaserTaxNo = purchaserTaxNo;
+            return this;
+        }
+        public String getPurchaserTaxNo() {
+            return this.purchaserTaxNo;
         }
 
         public TrainTicketScanQueryResponseBodyModuleItems setSeat(String seat) {

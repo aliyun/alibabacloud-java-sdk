@@ -4,48 +4,54 @@ package com.aliyun.btripopen20220520.models;
 import com.aliyun.tea.*;
 
 public class IntlFlightOrderPayRequest extends TeaModel {
-    @NameInMap("ext_params")
-    public java.util.Map<String, ?> extParams;
+    /**
+     * <strong>example:</strong>
+     * <p>10001</p>
+     */
+    @NameInMap("btrip_user_id")
+    public String btripUserId;
 
     /**
      * <strong>example:</strong>
-     * <p>TRAVEL</p>
+     * <p>ZHANG/SAN</p>
      */
+    @NameInMap("buyer_name")
+    public String buyerName;
+
     @NameInMap("isv_name")
     public String isvName;
 
     /**
-     * <strong>example:</strong>
-     * <p>1002145190081005400</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("order_id")
     public String orderId;
 
-    /**
-     * <strong>example:</strong>
-     * <p>F11372878673688133632</p>
-     */
+    @NameInMap("order_price")
+    public Long orderPrice;
+
     @NameInMap("out_order_id")
     public String outOrderId;
-
-    /**
-     * <strong>example:</strong>
-     * <p>15500</p>
-     */
-    @NameInMap("total_price")
-    public Long totalPrice;
 
     public static IntlFlightOrderPayRequest build(java.util.Map<String, ?> map) throws Exception {
         IntlFlightOrderPayRequest self = new IntlFlightOrderPayRequest();
         return TeaModel.build(map, self);
     }
 
-    public IntlFlightOrderPayRequest setExtParams(java.util.Map<String, ?> extParams) {
-        this.extParams = extParams;
+    public IntlFlightOrderPayRequest setBtripUserId(String btripUserId) {
+        this.btripUserId = btripUserId;
         return this;
     }
-    public java.util.Map<String, ?> getExtParams() {
-        return this.extParams;
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    public IntlFlightOrderPayRequest setBuyerName(String buyerName) {
+        this.buyerName = buyerName;
+        return this;
+    }
+    public String getBuyerName() {
+        return this.buyerName;
     }
 
     public IntlFlightOrderPayRequest setIsvName(String isvName) {
@@ -64,20 +70,20 @@ public class IntlFlightOrderPayRequest extends TeaModel {
         return this.orderId;
     }
 
+    public IntlFlightOrderPayRequest setOrderPrice(Long orderPrice) {
+        this.orderPrice = orderPrice;
+        return this;
+    }
+    public Long getOrderPrice() {
+        return this.orderPrice;
+    }
+
     public IntlFlightOrderPayRequest setOutOrderId(String outOrderId) {
         this.outOrderId = outOrderId;
         return this;
     }
     public String getOutOrderId() {
         return this.outOrderId;
-    }
-
-    public IntlFlightOrderPayRequest setTotalPrice(Long totalPrice) {
-        this.totalPrice = totalPrice;
-        return this;
-    }
-    public Long getTotalPrice() {
-        return this.totalPrice;
     }
 
 }
