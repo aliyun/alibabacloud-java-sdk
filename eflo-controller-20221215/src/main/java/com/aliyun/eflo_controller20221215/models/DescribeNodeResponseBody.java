@@ -74,6 +74,13 @@ public class DescribeNodeResponseBody extends TeaModel {
     public String hpnZone;
 
     /**
+     * <strong>example:</strong>
+     * <p>e01-cn-zvp2tgykr08</p>
+     */
+    @NameInMap("HyperNodeId")
+    public String hyperNodeId;
+
+    /**
      * <p>The image ID.</p>
      * 
      * <strong>example:</strong>
@@ -279,6 +286,14 @@ public class DescribeNodeResponseBody extends TeaModel {
     }
     public String getHpnZone() {
         return this.hpnZone;
+    }
+
+    public DescribeNodeResponseBody setHyperNodeId(String hyperNodeId) {
+        this.hyperNodeId = hyperNodeId;
+        return this;
+    }
+    public String getHyperNodeId() {
+        return this.hyperNodeId;
     }
 
     public DescribeNodeResponseBody setImageId(String imageId) {

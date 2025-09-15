@@ -137,6 +137,13 @@ public class ListFreeNodesResponseBody extends TeaModel {
         public String hpnZone;
 
         /**
+         * <strong>example:</strong>
+         * <p>e01-cn-zvp2tgykr08</p>
+         */
+        @NameInMap("HyperNodeId")
+        public String hyperNodeId;
+
+        /**
          * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
@@ -231,6 +238,14 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
         public String getHpnZone() {
             return this.hpnZone;
+        }
+
+        public ListFreeNodesResponseBodyNodes setHyperNodeId(String hyperNodeId) {
+            this.hyperNodeId = hyperNodeId;
+            return this;
+        }
+        public String getHyperNodeId() {
+            return this.hyperNodeId;
         }
 
         public ListFreeNodesResponseBodyNodes setMachineType(String machineType) {
