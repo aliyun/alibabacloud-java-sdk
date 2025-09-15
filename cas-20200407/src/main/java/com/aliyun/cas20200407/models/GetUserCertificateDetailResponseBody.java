@@ -296,6 +296,9 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
     @NameInMap("StartDate")
     public String startDate;
 
+    @NameInMap("Tags")
+    public java.util.List<GetUserCertificateDetailResponseBodyTags> tags;
+
     public static GetUserCertificateDetailResponseBody build(java.util.Map<String, ?> map) throws Exception {
         GetUserCertificateDetailResponseBody self = new GetUserCertificateDetailResponseBody();
         return TeaModel.build(map, self);
@@ -549,6 +552,14 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return this.startDate;
     }
 
+    public GetUserCertificateDetailResponseBody setTags(java.util.List<GetUserCertificateDetailResponseBodyTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<GetUserCertificateDetailResponseBodyTags> getTags() {
+        return this.tags;
+    }
+
     public static class GetUserCertificateDetailResponseBodyCertChain extends TeaModel {
         /**
          * <p>The common name of the certificate.</p>
@@ -638,6 +649,36 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         }
         public Integer getRemainDay() {
             return this.remainDay;
+        }
+
+    }
+
+    public static class GetUserCertificateDetailResponseBodyTags extends TeaModel {
+        @NameInMap("TagKey")
+        public String tagKey;
+
+        @NameInMap("TagValue")
+        public String tagValue;
+
+        public static GetUserCertificateDetailResponseBodyTags build(java.util.Map<String, ?> map) throws Exception {
+            GetUserCertificateDetailResponseBodyTags self = new GetUserCertificateDetailResponseBodyTags();
+            return TeaModel.build(map, self);
+        }
+
+        public GetUserCertificateDetailResponseBodyTags setTagKey(String tagKey) {
+            this.tagKey = tagKey;
+            return this;
+        }
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        public GetUserCertificateDetailResponseBodyTags setTagValue(String tagValue) {
+            this.tagValue = tagValue;
+            return this;
+        }
+        public String getTagValue() {
+            return this.tagValue;
         }
 
     }
