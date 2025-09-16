@@ -569,6 +569,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         @NameInMap("Type")
         public String type;
 
+        @NameInMap("WebSDKConfigJson")
+        public String webSDKConfigJson;
+
         public static GetRumAppInfoResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             GetRumAppInfoResponseBodyData self = new GetRumAppInfoResponseBodyData();
             return TeaModel.build(map, self);
@@ -748,6 +751,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
         public String getType() {
             return this.type;
+        }
+
+        public GetRumAppInfoResponseBodyData setWebSDKConfigJson(String webSDKConfigJson) {
+            this.webSDKConfigJson = webSDKConfigJson;
+            return this;
+        }
+        public String getWebSDKConfigJson() {
+            return this.webSDKConfigJson;
         }
 
     }

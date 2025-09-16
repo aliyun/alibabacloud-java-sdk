@@ -123,6 +123,9 @@ public class UpdateRumAppRequest extends TeaModel {
     @NameInMap("Stop")
     public Boolean stop;
 
+    @NameInMap("WebSDKConfigJson")
+    public String webSDKConfigJson;
+
     public static UpdateRumAppRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateRumAppRequest self = new UpdateRumAppRequest();
         return TeaModel.build(map, self);
@@ -230,6 +233,14 @@ public class UpdateRumAppRequest extends TeaModel {
     }
     public Boolean getStop() {
         return this.stop;
+    }
+
+    public UpdateRumAppRequest setWebSDKConfigJson(String webSDKConfigJson) {
+        this.webSDKConfigJson = webSDKConfigJson;
+        return this;
+    }
+    public String getWebSDKConfigJson() {
+        return this.webSDKConfigJson;
     }
 
 }

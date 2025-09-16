@@ -15041,6 +15041,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("Stop", request.stop);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.webSDKConfigJson)) {
+            query.put("WebSDKConfigJson", request.webSDKConfigJson);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
