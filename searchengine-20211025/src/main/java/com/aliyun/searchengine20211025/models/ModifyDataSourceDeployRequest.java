@@ -433,6 +433,9 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tableFormat")
+        public String tableFormat;
+
         @NameInMap("tag")
         public String tag;
 
@@ -535,6 +538,14 @@ public class ModifyDataSourceDeployRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public ModifyDataSourceDeployRequestStorage setTableFormat(String tableFormat) {
+            this.tableFormat = tableFormat;
+            return this;
+        }
+        public String getTableFormat() {
+            return this.tableFormat;
         }
 
         public ModifyDataSourceDeployRequestStorage setTag(String tag) {

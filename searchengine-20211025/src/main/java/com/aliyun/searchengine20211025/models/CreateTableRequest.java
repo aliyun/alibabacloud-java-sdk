@@ -449,6 +449,9 @@ public class CreateTableRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tableFormat")
+        public String tableFormat;
+
         @NameInMap("tag")
         public String tag;
 
@@ -535,6 +538,14 @@ public class CreateTableRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public CreateTableRequestDataSourceConfig setTableFormat(String tableFormat) {
+            this.tableFormat = tableFormat;
+            return this;
+        }
+        public String getTableFormat() {
+            return this.tableFormat;
         }
 
         public CreateTableRequestDataSourceConfig setTag(String tag) {

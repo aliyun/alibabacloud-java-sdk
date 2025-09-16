@@ -67,6 +67,9 @@ public class BuildIndexRequest extends TeaModel {
     @NameInMap("partition")
     public String partition;
 
+    @NameInMap("path")
+    public String path;
+
     @NameInMap("tag")
     public String tag;
 
@@ -129,6 +132,14 @@ public class BuildIndexRequest extends TeaModel {
     }
     public String getPartition() {
         return this.partition;
+    }
+
+    public BuildIndexRequest setPath(String path) {
+        this.path = path;
+        return this;
+    }
+    public String getPath() {
+        return this.path;
     }
 
     public BuildIndexRequest setTag(String tag) {

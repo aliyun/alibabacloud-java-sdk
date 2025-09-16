@@ -337,6 +337,9 @@ public class ModifyIndexRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tableFormat")
+        public String tableFormat;
+
         @NameInMap("tag")
         public String tag;
 
@@ -447,6 +450,14 @@ public class ModifyIndexRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public ModifyIndexRequestDataSourceInfoConfig setTableFormat(String tableFormat) {
+            this.tableFormat = tableFormat;
+            return this;
+        }
+        public String getTableFormat() {
+            return this.tableFormat;
         }
 
         public ModifyIndexRequestDataSourceInfoConfig setTag(String tag) {

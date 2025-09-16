@@ -74,6 +74,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("partition", request.partition);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            body.put("path", request.path);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             body.put("tag", request.tag);
         }
@@ -4729,6 +4733,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>编辑索引表</p>
+     * 
      * @param request ModifyIndexRequest
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4814,6 +4821,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>编辑索引表</p>
+     * 
      * @param request ModifyIndexRequest
      * @return ModifyIndexResponse
      */

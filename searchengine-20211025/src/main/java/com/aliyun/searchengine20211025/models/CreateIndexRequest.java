@@ -291,6 +291,9 @@ public class CreateIndexRequest extends TeaModel {
         @NameInMap("table")
         public String table;
 
+        @NameInMap("tableFormat")
+        public String tableFormat;
+
         @NameInMap("tag")
         public String tag;
 
@@ -401,6 +404,14 @@ public class CreateIndexRequest extends TeaModel {
         }
         public String getTable() {
             return this.table;
+        }
+
+        public CreateIndexRequestDataSourceInfoConfig setTableFormat(String tableFormat) {
+            this.tableFormat = tableFormat;
+            return this;
+        }
+        public String getTableFormat() {
+            return this.tableFormat;
         }
 
         public CreateIndexRequestDataSourceInfoConfig setTag(String tag) {
