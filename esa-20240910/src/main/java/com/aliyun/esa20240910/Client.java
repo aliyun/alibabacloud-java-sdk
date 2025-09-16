@@ -1854,6 +1854,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>新增HTTP入站请求头规则</p>
+     * 
+     * @param tmpReq CreateHttpIncomingRequestHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public CreateHttpIncomingRequestHeaderModificationRuleResponse createHttpIncomingRequestHeaderModificationRuleWithOptions(CreateHttpIncomingRequestHeaderModificationRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateHttpIncomingRequestHeaderModificationRuleShrinkRequest request = new CreateHttpIncomingRequestHeaderModificationRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.requestHeaderModification)) {
+            request.requestHeaderModificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.requestHeaderModification, "RequestHeaderModification", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.requestHeaderModificationShrink)) {
+            query.put("RequestHeaderModification", request.requestHeaderModificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
+            query.put("SiteVersion", request.siteVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHttpIncomingRequestHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHttpIncomingRequestHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增HTTP入站请求头规则</p>
+     * 
+     * @param request CreateHttpIncomingRequestHeaderModificationRuleRequest
+     * @return CreateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public CreateHttpIncomingRequestHeaderModificationRuleResponse createHttpIncomingRequestHeaderModificationRule(CreateHttpIncomingRequestHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增HTTP入站响应头规则</p>
+     * 
+     * @param tmpReq CreateHttpIncomingResponseHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public CreateHttpIncomingResponseHeaderModificationRuleResponse createHttpIncomingResponseHeaderModificationRuleWithOptions(CreateHttpIncomingResponseHeaderModificationRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateHttpIncomingResponseHeaderModificationRuleShrinkRequest request = new CreateHttpIncomingResponseHeaderModificationRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.responseHeaderModification)) {
+            request.responseHeaderModificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.responseHeaderModification, "ResponseHeaderModification", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.responseHeaderModificationShrink)) {
+            query.put("ResponseHeaderModification", request.responseHeaderModificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteVersion)) {
+            query.put("SiteVersion", request.siteVersion);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateHttpIncomingResponseHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateHttpIncomingResponseHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>新增HTTP入站响应头规则</p>
+     * 
+     * @param request CreateHttpIncomingResponseHeaderModificationRuleRequest
+     * @return CreateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public CreateHttpIncomingResponseHeaderModificationRuleResponse createHttpIncomingResponseHeaderModificationRule(CreateHttpIncomingResponseHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Add HTTP Request Header Rule</p>
      * 
      * @param tmpReq CreateHttpRequestHeaderModificationRuleRequest
@@ -5036,6 +5184,102 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeleteEdgeContainerAppVersionResponse deleteEdgeContainerAppVersion(DeleteEdgeContainerAppVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deleteEdgeContainerAppVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除HTTP入站请求头规则</p>
+     * 
+     * @param request DeleteHttpIncomingRequestHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public DeleteHttpIncomingRequestHeaderModificationRuleResponse deleteHttpIncomingRequestHeaderModificationRuleWithOptions(DeleteHttpIncomingRequestHeaderModificationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteHttpIncomingRequestHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHttpIncomingRequestHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除HTTP入站请求头规则</p>
+     * 
+     * @param request DeleteHttpIncomingRequestHeaderModificationRuleRequest
+     * @return DeleteHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public DeleteHttpIncomingRequestHeaderModificationRuleResponse deleteHttpIncomingRequestHeaderModificationRule(DeleteHttpIncomingRequestHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除HTTP入站响应头规则</p>
+     * 
+     * @param request DeleteHttpIncomingResponseHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public DeleteHttpIncomingResponseHeaderModificationRuleResponse deleteHttpIncomingResponseHeaderModificationRuleWithOptions(DeleteHttpIncomingResponseHeaderModificationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteHttpIncomingResponseHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteHttpIncomingResponseHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除HTTP入站响应头规则</p>
+     * 
+     * @param request DeleteHttpIncomingResponseHeaderModificationRuleRequest
+     * @return DeleteHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public DeleteHttpIncomingResponseHeaderModificationRuleResponse deleteHttpIncomingResponseHeaderModificationRule(DeleteHttpIncomingResponseHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
     }
 
     /**
@@ -8642,6 +8886,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询HTTP入站请求头规则详情</p>
+     * 
+     * @param request GetHttpIncomingRequestHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public GetHttpIncomingRequestHeaderModificationRuleResponse getHttpIncomingRequestHeaderModificationRuleWithOptions(GetHttpIncomingRequestHeaderModificationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHttpIncomingRequestHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHttpIncomingRequestHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站请求头规则详情</p>
+     * 
+     * @param request GetHttpIncomingRequestHeaderModificationRuleRequest
+     * @return GetHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public GetHttpIncomingRequestHeaderModificationRuleResponse getHttpIncomingRequestHeaderModificationRule(GetHttpIncomingRequestHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站响应头规则</p>
+     * 
+     * @param request GetHttpIncomingResponseHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public GetHttpIncomingResponseHeaderModificationRuleResponse getHttpIncomingResponseHeaderModificationRuleWithOptions(GetHttpIncomingResponseHeaderModificationRuleRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetHttpIncomingResponseHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetHttpIncomingResponseHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站响应头规则</p>
+     * 
+     * @param request GetHttpIncomingResponseHeaderModificationRuleRequest
+     * @return GetHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public GetHttpIncomingResponseHeaderModificationRuleResponse getHttpIncomingResponseHeaderModificationRule(GetHttpIncomingResponseHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Query HTTP Request Header Rule Details</p>
      * 
      * @param request GetHttpRequestHeaderModificationRuleRequest
@@ -11444,6 +11768,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListEdgeRoutineRecordsResponse listEdgeRoutineRecords(ListEdgeRoutineRecordsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listEdgeRoutineRecordsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站请求头规则列表</p>
+     * 
+     * @param request ListHttpIncomingRequestHeaderModificationRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHttpIncomingRequestHeaderModificationRulesResponse
+     */
+    public ListHttpIncomingRequestHeaderModificationRulesResponse listHttpIncomingRequestHeaderModificationRulesWithOptions(ListHttpIncomingRequestHeaderModificationRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHttpIncomingRequestHeaderModificationRules"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHttpIncomingRequestHeaderModificationRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站请求头规则列表</p>
+     * 
+     * @param request ListHttpIncomingRequestHeaderModificationRulesRequest
+     * @return ListHttpIncomingRequestHeaderModificationRulesResponse
+     */
+    public ListHttpIncomingRequestHeaderModificationRulesResponse listHttpIncomingRequestHeaderModificationRules(ListHttpIncomingRequestHeaderModificationRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHttpIncomingRequestHeaderModificationRulesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站响应头规则列表</p>
+     * 
+     * @param request ListHttpIncomingResponseHeaderModificationRulesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListHttpIncomingResponseHeaderModificationRulesResponse
+     */
+    public ListHttpIncomingResponseHeaderModificationRulesResponse listHttpIncomingResponseHeaderModificationRulesWithOptions(ListHttpIncomingResponseHeaderModificationRulesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, String> query = com.aliyun.openapiutil.Client.query(com.aliyun.teautil.Common.toMap(request));
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListHttpIncomingResponseHeaderModificationRules"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListHttpIncomingResponseHeaderModificationRulesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询HTTP入站响应头规则列表</p>
+     * 
+     * @param request ListHttpIncomingResponseHeaderModificationRulesRequest
+     * @return ListHttpIncomingResponseHeaderModificationRulesResponse
+     */
+    public ListHttpIncomingResponseHeaderModificationRulesResponse listHttpIncomingResponseHeaderModificationRules(ListHttpIncomingResponseHeaderModificationRulesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listHttpIncomingResponseHeaderModificationRulesWithOptions(request, runtime);
     }
 
     /**
@@ -15830,6 +16234,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpdateEdgeContainerAppResourceReserveResponse updateEdgeContainerAppResourceReserve(UpdateEdgeContainerAppResourceReserveRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.updateEdgeContainerAppResourceReserveWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改HTTP入站请求头规则</p>
+     * 
+     * @param tmpReq UpdateHttpIncomingRequestHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public UpdateHttpIncomingRequestHeaderModificationRuleResponse updateHttpIncomingRequestHeaderModificationRuleWithOptions(UpdateHttpIncomingRequestHeaderModificationRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest request = new UpdateHttpIncomingRequestHeaderModificationRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.requestHeaderModification)) {
+            request.requestHeaderModificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.requestHeaderModification, "RequestHeaderModification", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestHeaderModificationShrink)) {
+            query.put("RequestHeaderModification", request.requestHeaderModificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateHttpIncomingRequestHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHttpIncomingRequestHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改HTTP入站请求头规则</p>
+     * 
+     * @param request UpdateHttpIncomingRequestHeaderModificationRuleRequest
+     * @return UpdateHttpIncomingRequestHeaderModificationRuleResponse
+     */
+    public UpdateHttpIncomingRequestHeaderModificationRuleResponse updateHttpIncomingRequestHeaderModificationRule(UpdateHttpIncomingRequestHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateHttpIncomingRequestHeaderModificationRuleWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改HTTP入站响应头规则</p>
+     * 
+     * @param tmpReq UpdateHttpIncomingResponseHeaderModificationRuleRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public UpdateHttpIncomingResponseHeaderModificationRuleResponse updateHttpIncomingResponseHeaderModificationRuleWithOptions(UpdateHttpIncomingResponseHeaderModificationRuleRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest request = new UpdateHttpIncomingResponseHeaderModificationRuleShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.responseHeaderModification)) {
+            request.responseHeaderModificationShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.responseHeaderModification, "ResponseHeaderModification", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.configId)) {
+            query.put("ConfigId", request.configId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseHeaderModificationShrink)) {
+            query.put("ResponseHeaderModification", request.responseHeaderModificationShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rule)) {
+            query.put("Rule", request.rule);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleEnable)) {
+            query.put("RuleEnable", request.ruleEnable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("RuleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sequence)) {
+            query.put("Sequence", request.sequence);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.siteId)) {
+            query.put("SiteId", request.siteId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateHttpIncomingResponseHeaderModificationRule"),
+            new TeaPair("version", "2024-09-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateHttpIncomingResponseHeaderModificationRuleResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>修改HTTP入站响应头规则</p>
+     * 
+     * @param request UpdateHttpIncomingResponseHeaderModificationRuleRequest
+     * @return UpdateHttpIncomingResponseHeaderModificationRuleResponse
+     */
+    public UpdateHttpIncomingResponseHeaderModificationRuleResponse updateHttpIncomingResponseHeaderModificationRule(UpdateHttpIncomingResponseHeaderModificationRuleRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateHttpIncomingResponseHeaderModificationRuleWithOptions(request, runtime);
     }
 
     /**

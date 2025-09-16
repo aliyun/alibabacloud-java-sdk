@@ -1,3 +1,16 @@
+2025-09-16 Version: 2.35.0
+- Support API CreateHttpIncomingRequestHeaderModificationRule.
+- Support API CreateHttpIncomingResponseHeaderModificationRule.
+- Support API DeleteHttpIncomingRequestHeaderModificationRule.
+- Support API DeleteHttpIncomingResponseHeaderModificationRule.
+- Support API GetHttpIncomingRequestHeaderModificationRule.
+- Support API GetHttpIncomingResponseHeaderModificationRule.
+- Support API ListHttpIncomingRequestHeaderModificationRules.
+- Support API ListHttpIncomingResponseHeaderModificationRules.
+- Support API UpdateHttpIncomingRequestHeaderModificationRule.
+- Support API UpdateHttpIncomingResponseHeaderModificationRule.
+
+
 2025-09-11 Version: 2.34.0
 - Support API CreateRoutineCodeDeployment.
 - Support API CreateRoutineWithAssetsCodeVersion.
