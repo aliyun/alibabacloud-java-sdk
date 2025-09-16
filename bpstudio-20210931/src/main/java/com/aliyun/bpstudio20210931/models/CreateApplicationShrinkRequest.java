@@ -31,6 +31,9 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     @NameInMap("Configuration")
     public String configurationShrink;
 
+    @NameInMap("CreateAsync")
+    public Boolean createAsync;
+
     /**
      * <p>The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).</p>
      */
@@ -109,6 +112,14 @@ public class CreateApplicationShrinkRequest extends TeaModel {
     }
     public String getConfigurationShrink() {
         return this.configurationShrink;
+    }
+
+    public CreateApplicationShrinkRequest setCreateAsync(Boolean createAsync) {
+        this.createAsync = createAsync;
+        return this;
+    }
+    public Boolean getCreateAsync() {
+        return this.createAsync;
     }
 
     public CreateApplicationShrinkRequest setInstancesShrink(String instancesShrink) {

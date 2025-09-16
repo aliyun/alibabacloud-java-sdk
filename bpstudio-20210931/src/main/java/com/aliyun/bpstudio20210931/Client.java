@@ -223,6 +223,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("Configuration", request.configurationShrink);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.createAsync)) {
+            body.put("CreateAsync", request.createAsync);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.instancesShrink)) {
             body.put("Instances", request.instancesShrink);
         }
@@ -274,6 +278,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreateApplicationResponse createApplication(CreateApplicationRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createApplicationWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建任务</p>
+     * 
+     * @param tmpReq CreateTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateTaskResponse
+     */
+    public CreateTaskResponse createTaskWithOptions(CreateTaskRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateTaskShrinkRequest request = new CreateTaskShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.variables)) {
+            request.variablesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.variables, "Variables", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.processId)) {
+            body.put("ProcessId", request.processId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.taskName)) {
+            body.put("TaskName", request.taskName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.variablesShrink)) {
+            body.put("Variables", request.variablesShrink);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateTask"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建任务</p>
+     * 
+     * @param request CreateTaskRequest
+     * @return CreateTaskResponse
+     */
+    public CreateTaskResponse createTask(CreateTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createTaskWithOptions(request, runtime);
     }
 
     /**
@@ -522,6 +588,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ExecuteOperationSyncResponse executeOperationSync(ExecuteOperationSyncRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeOperationSyncWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建任务</p>
+     * 
+     * @param request ExecuteTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteTaskResponse
+     */
+    public ExecuteTaskResponse executeTaskWithOptions(ExecuteTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExecuteTask"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建任务</p>
+     * 
+     * @param request ExecuteTaskRequest
+     * @return ExecuteTaskResponse
+     */
+    public ExecuteTaskResponse executeTask(ExecuteTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.executeTaskWithOptions(request, runtime);
     }
 
     /**
@@ -988,6 +1098,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetResult4QueryInstancePrice4ModifyResponse getResult4QueryInstancePrice4Modify(GetResult4QueryInstancePrice4ModifyRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getResult4QueryInstancePrice4ModifyWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Task信息</p>
+     * 
+     * @param request GetTaskRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetTaskResponse
+     */
+    public GetTaskResponse getTaskWithOptions(GetTaskRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.taskId)) {
+            body.put("TaskId", request.taskId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetTask"),
+            new TeaPair("version", "2021-09-31"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetTaskResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取Task信息</p>
+     * 
+     * @param request GetTaskRequest
+     * @return GetTaskResponse
+     */
+    public GetTaskResponse getTask(GetTaskRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getTaskWithOptions(request, runtime);
     }
 
     /**

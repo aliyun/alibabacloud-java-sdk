@@ -31,6 +31,9 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Configuration")
     public java.util.Map<String, String> configuration;
 
+    @NameInMap("CreateAsync")
+    public Boolean createAsync;
+
     /**
      * <p>The instances in which you want to create the application. You can create applications in an existing virtual private cloud (VPC).</p>
      */
@@ -109,6 +112,14 @@ public class CreateApplicationRequest extends TeaModel {
     }
     public java.util.Map<String, String> getConfiguration() {
         return this.configuration;
+    }
+
+    public CreateApplicationRequest setCreateAsync(Boolean createAsync) {
+        this.createAsync = createAsync;
+        return this;
+    }
+    public Boolean getCreateAsync() {
+        return this.createAsync;
     }
 
     public CreateApplicationRequest setInstances(java.util.List<CreateApplicationRequestInstances> instances) {
