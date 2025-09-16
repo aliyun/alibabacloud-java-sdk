@@ -110,6 +110,25 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     }
 
+    public static class DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks extends TeaModel {
+        @NameInMap("SecondaryCidrBlock")
+        public java.util.List<String> secondaryCidrBlock;
+
+        public static DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks self = new DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks setSecondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
+            this.secondaryCidrBlock = secondaryCidrBlock;
+            return this;
+        }
+        public java.util.List<String> getSecondaryCidrBlock() {
+            return this.secondaryCidrBlock;
+        }
+
+    }
+
     public static class DescribeNetworksResponseBodyNetworksNetworkTagsTag extends TeaModel {
         /**
          * <p>The key of the tag.</p>
@@ -321,6 +340,9 @@ public class DescribeNetworksResponseBody extends TeaModel {
         @NameInMap("RouterTableId")
         public String routerTableId;
 
+        @NameInMap("SecondaryCidrBlocks")
+        public DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks secondaryCidrBlocks;
+
         /**
          * <p>The status of the network. Valid values:</p>
          * <ul>
@@ -434,6 +456,14 @@ public class DescribeNetworksResponseBody extends TeaModel {
         }
         public String getRouterTableId() {
             return this.routerTableId;
+        }
+
+        public DescribeNetworksResponseBodyNetworksNetwork setSecondaryCidrBlocks(DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks secondaryCidrBlocks) {
+            this.secondaryCidrBlocks = secondaryCidrBlocks;
+            return this;
+        }
+        public DescribeNetworksResponseBodyNetworksNetworkSecondaryCidrBlocks getSecondaryCidrBlocks() {
+            return this.secondaryCidrBlocks;
         }
 
         public DescribeNetworksResponseBodyNetworksNetwork setStatus(String status) {

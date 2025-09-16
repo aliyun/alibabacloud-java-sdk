@@ -52,6 +52,13 @@ public class CreateSDGRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
+    @NameInMap("PerformanceLevel")
+    public Long performanceLevel;
+
+    /**
      * <p>The maximum capacity of the SDG. Unit: GB.</p>
      * <blockquote>
      * </blockquote>
@@ -113,6 +120,14 @@ public class CreateSDGRequest extends TeaModel {
     }
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    public CreateSDGRequest setPerformanceLevel(Long performanceLevel) {
+        this.performanceLevel = performanceLevel;
+        return this;
+    }
+    public Long getPerformanceLevel() {
+        return this.performanceLevel;
     }
 
     public CreateSDGRequest setSize(String size) {

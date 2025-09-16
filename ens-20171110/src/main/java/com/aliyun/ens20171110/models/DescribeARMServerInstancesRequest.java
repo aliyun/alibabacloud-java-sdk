@@ -113,6 +113,9 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     @NameInMap("States")
     public java.util.List<String> states;
 
+    @NameInMap("Tags")
+    public java.util.List<DescribeARMServerInstancesRequestTags> tags;
+
     public static DescribeARMServerInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeARMServerInstancesRequest self = new DescribeARMServerInstancesRequest();
         return TeaModel.build(map, self);
@@ -220,6 +223,52 @@ public class DescribeARMServerInstancesRequest extends TeaModel {
     }
     public java.util.List<String> getStates() {
         return this.states;
+    }
+
+    public DescribeARMServerInstancesRequest setTags(java.util.List<DescribeARMServerInstancesRequestTags> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.List<DescribeARMServerInstancesRequestTags> getTags() {
+        return this.tags;
+    }
+
+    public static class DescribeARMServerInstancesRequestTags extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <strong>example:</strong>
+         * <p>value-1</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static DescribeARMServerInstancesRequestTags build(java.util.Map<String, ?> map) throws Exception {
+            DescribeARMServerInstancesRequestTags self = new DescribeARMServerInstancesRequestTags();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeARMServerInstancesRequestTags setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public DescribeARMServerInstancesRequestTags setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
     }
 
 }

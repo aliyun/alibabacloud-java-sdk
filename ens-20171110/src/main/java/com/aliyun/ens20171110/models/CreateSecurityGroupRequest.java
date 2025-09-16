@@ -106,6 +106,12 @@ public class CreateSecurityGroupRequest extends TeaModel {
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        @NameInMap("Ipv6DestCidrIp")
+        public String ipv6DestCidrIp;
+
+        @NameInMap("Ipv6SourceCidrIp")
+        public String ipv6SourceCidrIp;
+
         /**
          * <p>The action of the security group rule. Valid values:</p>
          * <ul>
@@ -203,6 +209,22 @@ public class CreateSecurityGroupRequest extends TeaModel {
         }
         public String getIpProtocol() {
             return this.ipProtocol;
+        }
+
+        public CreateSecurityGroupRequestPermissions setIpv6DestCidrIp(String ipv6DestCidrIp) {
+            this.ipv6DestCidrIp = ipv6DestCidrIp;
+            return this;
+        }
+        public String getIpv6DestCidrIp() {
+            return this.ipv6DestCidrIp;
+        }
+
+        public CreateSecurityGroupRequestPermissions setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
+            this.ipv6SourceCidrIp = ipv6SourceCidrIp;
+            return this;
+        }
+        public String getIpv6SourceCidrIp() {
+            return this.ipv6SourceCidrIp;
         }
 
         public CreateSecurityGroupRequestPermissions setPolicy(String policy) {

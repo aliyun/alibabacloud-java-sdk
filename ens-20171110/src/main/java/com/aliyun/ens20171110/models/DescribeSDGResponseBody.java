@@ -336,6 +336,9 @@ public class DescribeSDGResponseBody extends TeaModel {
         @NameInMap("ParentSDGId")
         public String parentSDGId;
 
+        @NameInMap("PerformanceLevel")
+        public String performanceLevel;
+
         /**
          * <p>The preload information.</p>
          */
@@ -451,6 +454,14 @@ public class DescribeSDGResponseBody extends TeaModel {
         }
         public String getParentSDGId() {
             return this.parentSDGId;
+        }
+
+        public DescribeSDGResponseBodySDGs setPerformanceLevel(String performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public String getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public DescribeSDGResponseBodySDGs setPreloadInfos(java.util.List<DescribeSDGResponseBodySDGsPreloadInfos> preloadInfos) {

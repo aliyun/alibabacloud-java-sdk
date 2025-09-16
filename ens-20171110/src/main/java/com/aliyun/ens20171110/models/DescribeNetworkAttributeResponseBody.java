@@ -145,6 +145,9 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     @NameInMap("RouterTableId")
     public String routerTableId;
 
+    @NameInMap("SecondaryCidrBlocks")
+    public DescribeNetworkAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks;
+
     /**
      * <p>The status of the network. Valid values:</p>
      * <ul>
@@ -311,6 +314,14 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     }
     public String getRouterTableId() {
         return this.routerTableId;
+    }
+
+    public DescribeNetworkAttributeResponseBody setSecondaryCidrBlocks(DescribeNetworkAttributeResponseBodySecondaryCidrBlocks secondaryCidrBlocks) {
+        this.secondaryCidrBlocks = secondaryCidrBlocks;
+        return this;
+    }
+    public DescribeNetworkAttributeResponseBodySecondaryCidrBlocks getSecondaryCidrBlocks() {
+        return this.secondaryCidrBlocks;
     }
 
     public DescribeNetworkAttributeResponseBody setStatus(String status) {
@@ -500,6 +511,25 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
         }
         public java.util.List<String> getRouteTableId() {
             return this.routeTableId;
+        }
+
+    }
+
+    public static class DescribeNetworkAttributeResponseBodySecondaryCidrBlocks extends TeaModel {
+        @NameInMap("SecondaryCidrBlock")
+        public java.util.List<String> secondaryCidrBlock;
+
+        public static DescribeNetworkAttributeResponseBodySecondaryCidrBlocks build(java.util.Map<String, ?> map) throws Exception {
+            DescribeNetworkAttributeResponseBodySecondaryCidrBlocks self = new DescribeNetworkAttributeResponseBodySecondaryCidrBlocks();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeNetworkAttributeResponseBodySecondaryCidrBlocks setSecondaryCidrBlock(java.util.List<String> secondaryCidrBlock) {
+            this.secondaryCidrBlock = secondaryCidrBlock;
+            return this;
+        }
+        public java.util.List<String> getSecondaryCidrBlock() {
+            return this.secondaryCidrBlock;
         }
 
     }

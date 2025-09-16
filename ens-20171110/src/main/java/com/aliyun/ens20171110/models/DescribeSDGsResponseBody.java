@@ -273,6 +273,13 @@ public class DescribeSDGsResponseBody extends TeaModel {
         public String parentSDGId;
 
         /**
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("PerformanceLevel")
+        public Long performanceLevel;
+
+        /**
          * <p>The ID of the SDG.</p>
          * 
          * <strong>example:</strong>
@@ -389,6 +396,14 @@ public class DescribeSDGsResponseBody extends TeaModel {
         }
         public String getParentSDGId() {
             return this.parentSDGId;
+        }
+
+        public DescribeSDGsResponseBodySDGs setPerformanceLevel(Long performanceLevel) {
+            this.performanceLevel = performanceLevel;
+            return this;
+        }
+        public Long getPerformanceLevel() {
+            return this.performanceLevel;
         }
 
         public DescribeSDGsResponseBodySDGs setSDGId(String SDGId) {

@@ -137,6 +137,12 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         @NameInMap("IpProtocol")
         public String ipProtocol;
 
+        @NameInMap("Ipv6DestCidrIp")
+        public String ipv6DestCidrIp;
+
+        @NameInMap("Ipv6SourceCidrIp")
+        public String ipv6SourceCidrIp;
+
         /**
          * <p>The policy.</p>
          * 
@@ -225,6 +231,22 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
         }
         public String getIpProtocol() {
             return this.ipProtocol;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setIpv6DestCidrIp(String ipv6DestCidrIp) {
+            this.ipv6DestCidrIp = ipv6DestCidrIp;
+            return this;
+        }
+        public String getIpv6DestCidrIp() {
+            return this.ipv6DestCidrIp;
+        }
+
+        public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setIpv6SourceCidrIp(String ipv6SourceCidrIp) {
+            this.ipv6SourceCidrIp = ipv6SourceCidrIp;
+            return this;
+        }
+        public String getIpv6SourceCidrIp() {
+            return this.ipv6SourceCidrIp;
         }
 
         public DescribeSecurityGroupAttributeResponseBodyPermissionsPermission setPolicy(String policy) {

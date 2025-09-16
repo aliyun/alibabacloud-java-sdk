@@ -113,6 +113,9 @@ public class DescribeARMServerInstancesShrinkRequest extends TeaModel {
     @NameInMap("States")
     public String statesShrink;
 
+    @NameInMap("Tags")
+    public String tagsShrink;
+
     public static DescribeARMServerInstancesShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeARMServerInstancesShrinkRequest self = new DescribeARMServerInstancesShrinkRequest();
         return TeaModel.build(map, self);
@@ -220,6 +223,14 @@ public class DescribeARMServerInstancesShrinkRequest extends TeaModel {
     }
     public String getStatesShrink() {
         return this.statesShrink;
+    }
+
+    public DescribeARMServerInstancesShrinkRequest setTagsShrink(String tagsShrink) {
+        this.tagsShrink = tagsShrink;
+        return this;
+    }
+    public String getTagsShrink() {
+        return this.tagsShrink;
     }
 
 }
