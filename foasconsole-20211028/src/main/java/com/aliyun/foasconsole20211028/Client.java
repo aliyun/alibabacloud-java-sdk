@@ -121,8 +121,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PricingCycle", request.pricingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            body.put("PromotionCode", request.promotionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -802,10 +810,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>修改集群交换机</p>
      * 
+     * @deprecated OpenAPI ModifyInstanceVswitch is deprecated
+     * 
      * @param tmpReq ModifyInstanceVswitchRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ModifyInstanceVswitchResponse
      */
+    @Deprecated
+    // Deprecated
     public ModifyInstanceVswitchResponse modifyInstanceVswitchWithOptions(ModifyInstanceVswitchRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(tmpReq);
         ModifyInstanceVswitchShrinkRequest request = new ModifyInstanceVswitchShrinkRequest();
@@ -852,9 +864,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>summary</b> : 
      * <p>修改集群交换机</p>
      * 
+     * @deprecated OpenAPI ModifyInstanceVswitch is deprecated
+     * 
      * @param request ModifyInstanceVswitchRequest
      * @return ModifyInstanceVswitchResponse
      */
+    @Deprecated
+    // Deprecated
     public ModifyInstanceVswitchResponse modifyInstanceVswitch(ModifyInstanceVswitchRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyInstanceVswitchWithOptions(request, runtime);
@@ -1133,8 +1149,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PricingCycle", request.pricingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            body.put("PromotionCode", request.promotionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1445,8 +1469,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PricingCycle", request.pricingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            body.put("PromotionCode", request.promotionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -1501,8 +1533,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("PricingCycle", request.pricingCycle);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.promotionCode)) {
+            body.put("PromotionCode", request.promotionCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.region)) {
             body.put("Region", request.region);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.usePromotionCode)) {
+            body.put("UsePromotionCode", request.usePromotionCode);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(

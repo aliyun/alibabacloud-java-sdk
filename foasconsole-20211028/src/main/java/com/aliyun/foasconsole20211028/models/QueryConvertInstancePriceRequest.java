@@ -46,6 +46,9 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -54,6 +57,9 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
      */
     @NameInMap("Region")
     public String region;
+
+    @NameInMap("UsePromotionCode")
+    public Boolean usePromotionCode;
 
     public static QueryConvertInstancePriceRequest build(java.util.Map<String, ?> map) throws Exception {
         QueryConvertInstancePriceRequest self = new QueryConvertInstancePriceRequest();
@@ -100,12 +106,28 @@ public class QueryConvertInstancePriceRequest extends TeaModel {
         return this.pricingCycle;
     }
 
+    public QueryConvertInstancePriceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
     public QueryConvertInstancePriceRequest setRegion(String region) {
         this.region = region;
         return this;
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public QueryConvertInstancePriceRequest setUsePromotionCode(Boolean usePromotionCode) {
+        this.usePromotionCode = usePromotionCode;
+        return this;
+    }
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
     public static class QueryConvertInstancePriceRequestNamespaceResourceSpecsResourceSpec extends TeaModel {

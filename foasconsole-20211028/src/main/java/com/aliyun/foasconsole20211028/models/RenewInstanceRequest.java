@@ -31,6 +31,9 @@ public class RenewInstanceRequest extends TeaModel {
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
+    @NameInMap("PromotionCode")
+    public String promotionCode;
+
     /**
      * <p>This parameter is required.</p>
      * 
@@ -39,6 +42,9 @@ public class RenewInstanceRequest extends TeaModel {
      */
     @NameInMap("Region")
     public String region;
+
+    @NameInMap("UsePromotionCode")
+    public Boolean usePromotionCode;
 
     public static RenewInstanceRequest build(java.util.Map<String, ?> map) throws Exception {
         RenewInstanceRequest self = new RenewInstanceRequest();
@@ -69,12 +75,28 @@ public class RenewInstanceRequest extends TeaModel {
         return this.pricingCycle;
     }
 
+    public RenewInstanceRequest setPromotionCode(String promotionCode) {
+        this.promotionCode = promotionCode;
+        return this;
+    }
+    public String getPromotionCode() {
+        return this.promotionCode;
+    }
+
     public RenewInstanceRequest setRegion(String region) {
         this.region = region;
         return this;
     }
     public String getRegion() {
         return this.region;
+    }
+
+    public RenewInstanceRequest setUsePromotionCode(Boolean usePromotionCode) {
+        this.usePromotionCode = usePromotionCode;
+        return this;
+    }
+    public Boolean getUsePromotionCode() {
+        return this.usePromotionCode;
     }
 
 }
