@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePermissionApplyOrderRequest extends TeaModel {
     /**
-     * <p>The objects on which you want to request permissions.</p>
+     * <p>The list of requested objects.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyObject")
@@ -21,6 +21,10 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     @NameInMap("ApplyReason")
     public String applyReason;
 
+    /**
+     * <strong>example:</strong>
+     * <p>MaxComputeTable</p>
+     */
     @NameInMap("ApplyType")
     public String applyType;
 
@@ -34,6 +38,10 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     @NameInMap("ApplyUserIds")
     public String applyUserIds;
 
+    /**
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
@@ -47,7 +55,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public Long deadline;
 
     /**
-     * <p>The type of the compute engine in which you want to request permissions on the fields of a table. The parameter value is odps and cannot be changed. This value indicates that you can request permissions only on fields of tables in the MaxCompute compute engine.</p>
+     * <p>The type of compute engine for permission requests. Currently only supports ODPS, which means only MaxCompute compute engine permissions are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>odps</p>
@@ -60,7 +68,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The name of the MaxCompute project in which you request permissions on the fields of a table.</p>
+     * <p>The name of the MaxCompute project you request access to.</p>
      * 
      * <strong>example:</strong>
      * <p>aMaxcomputeProjectName</p>
@@ -69,7 +77,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public String maxComputeProjectName;
 
     /**
-     * <p>The type of the permission request order. The parameter value is 1 and cannot be changed. This value indicates ACL-based authorization.</p>
+     * <p>The request type. The only supported value is 1, which represents an object ACL permission request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -82,7 +90,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     public Integer orderType;
 
     /**
-     * <p>The ID of the DataWorks workspace that is associated with the MaxCompute project in which you want to request permissions on the fields of a table. You can go to the SettingCenter page in the DataWorks console to view the workspace ID.</p>
+     * <p>The DataWorks workspace ID to which the MaxCompute project belongs for permission requests. You can check the workspace ID on the DataWorks workspace configuration page.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -178,11 +186,15 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
     }
 
     public static class CreatePermissionApplyOrderRequestApplyObjectColumnMetaList extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>Select</p>
+         */
         @NameInMap("Actions")
         public String actions;
 
         /**
-         * <p>The field on which you want to request permissions. If you want to request permissions on an entire table, enter all fields in the table. You can request permissions on specific fields of a table in a MaxCompute project only after LabelSecurity is enabled for this project. If LabelSecurity is disabled, you can request permissions only on an entire table.</p>
+         * <p>Permissions for the target columns. Enter the column names here. If applying for permissions on the entire table, enter all column names of the table. Permissions for specific columns can only be requested if labelSecurity is enabled for the MaxCompute project. Otherwise, you can only apply for permissions on the entire table.</p>
          * 
          * <strong>example:</strong>
          * <p>aColumnName</p>
@@ -215,7 +227,7 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
 
     public static class CreatePermissionApplyOrderRequestApplyObject extends TeaModel {
         /**
-         * <p>The permission that you want to request. If you want to request multiple permissions at the same time, separate them with commas (,). You can request only the following permissions: Select, Describe, Drop, Alter, Update, and Download.</p>
+         * <p>The type of permissions requested. Use commas (,) to separate multiple permission types in a single request. Currently only supports Select, Describe, Drop, Alter, Update, and Download permission types.</p>
          * 
          * <strong>example:</strong>
          * <p>Select,Describe</p>
@@ -224,13 +236,13 @@ public class CreatePermissionApplyOrderRequest extends TeaModel {
         public String actions;
 
         /**
-         * <p>The fields on which you want to request permissions.</p>
+         * <p>The list of column objects.</p>
          */
         @NameInMap("ColumnMetaList")
         public java.util.List<CreatePermissionApplyOrderRequestApplyObjectColumnMetaList> columnMetaList;
 
         /**
-         * <p>The name of the object on which you want to request permissions. You can request permissions only on MaxCompute tables. Set this parameter to the name of the table on which you want to request permissions.</p>
+         * <p>The object you request access to. Currently, only permission requests for MaxCompute tables are supported. The name of the target table needs to be entered here.</p>
          * 
          * <strong>example:</strong>
          * <p>aTableName</p>

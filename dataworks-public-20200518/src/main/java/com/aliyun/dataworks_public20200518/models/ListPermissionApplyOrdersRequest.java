@@ -4,9 +4,30 @@ package com.aliyun.dataworks_public20200518.models;
 import com.aliyun.tea.*;
 
 public class ListPermissionApplyOrdersRequest extends TeaModel {
+    /**
+     * <p>设置申请单类型，枚举值为：</p>
+     * <ul>
+     * <li>[ MaxComputeTable]  MaxCompute表权限申请单</li>
+     * <li>[ MaxComputeFunction] MaxCompute函数申请单</li>
+     * <li>[ MaxComputeResource] MaxCompute资源申请单</li>
+     * <li>[ DLFSchema] DLF1.0版本Schema权限申请单</li>
+     * <li>[ DLFTable] DLF1.0版本表权限申请单</li>
+     * <li>[ DLFColumn] DLF1.0版本列权限申请单</li>
+     * <li>[ DsApiDeploy] 发布数据服务权限申请单</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>MaxComputeTable</p>
+     */
     @NameInMap("ApplyType")
     public String applyType;
 
+    /**
+     * <p>查询的数据目录名称。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>hive</p>
+     */
     @NameInMap("CatalogName")
     public String catalogName;
 
@@ -26,7 +47,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
      * <p>odps</p>
      */
     @NameInMap("EngineType")
-    @Deprecated
     public String engineType;
 
     /**
@@ -60,7 +80,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
      * <p>1</p>
      */
     @NameInMap("OrderType")
-    @Deprecated
     public Integer orderType;
 
     /**
@@ -151,7 +170,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
         return this.endTime;
     }
 
-    @Deprecated
     public ListPermissionApplyOrdersRequest setEngineType(String engineType) {
         this.engineType = engineType;
         return this;
@@ -176,7 +194,6 @@ public class ListPermissionApplyOrdersRequest extends TeaModel {
         return this.maxComputeProjectName;
     }
 
-    @Deprecated
     public ListPermissionApplyOrdersRequest setOrderType(Integer orderType) {
         this.orderType = orderType;
         return this;

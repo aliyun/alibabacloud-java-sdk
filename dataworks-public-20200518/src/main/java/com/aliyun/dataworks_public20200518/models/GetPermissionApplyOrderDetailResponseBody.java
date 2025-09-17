@@ -430,6 +430,12 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         @NameInMap("ApproveContent")
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent approveContent;
 
+        @NameInMap("FinishAapprovalTimestamp")
+        public Long finishAapprovalTimestamp;
+
+        @NameInMap("FinishApprovalComment")
+        public String finishApprovalComment;
+
         /**
          * <p>The ID of the permission request order.</p>
          * 
@@ -495,6 +501,22 @@ public class GetPermissionApplyOrderDetailResponseBody extends TeaModel {
         }
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetailApproveContent getApproveContent() {
             return this.approveContent;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setFinishAapprovalTimestamp(Long finishAapprovalTimestamp) {
+            this.finishAapprovalTimestamp = finishAapprovalTimestamp;
+            return this;
+        }
+        public Long getFinishAapprovalTimestamp() {
+            return this.finishAapprovalTimestamp;
+        }
+
+        public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setFinishApprovalComment(String finishApprovalComment) {
+            this.finishApprovalComment = finishApprovalComment;
+            return this;
+        }
+        public String getFinishApprovalComment() {
+            return this.finishApprovalComment;
         }
 
         public GetPermissionApplyOrderDetailResponseBodyApplyOrderDetail setFlowId(String flowId) {

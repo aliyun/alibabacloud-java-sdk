@@ -13150,7 +13150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of permission request orders.</p>
+     * <p>Views permission requests.</p>
      * 
      * @param request ListPermissionApplyOrdersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13230,7 +13230,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of permission request orders.</p>
+     * <p>Views permission requests.</p>
      * 
      * @param request ListPermissionApplyOrdersRequest
      * @return ListPermissionApplyOrdersResponse
