@@ -1,3 +1,8 @@
+2025-09-17 Version: 4.2.0
+- Support API SendLogisticsSms.
+- Support API VerifyLogisticsSmsMailNo.
+
+
 2025-09-11 Version: 4.1.3
 - Update API CreateSmsTemplate: add request parameters TrafficDriving.
 - Update API QuerySmsTemplateList: add response parameters Body.SmsTemplateList.$.SignatureName.

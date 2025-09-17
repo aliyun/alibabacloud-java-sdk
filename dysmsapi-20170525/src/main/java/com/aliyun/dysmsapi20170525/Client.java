@@ -3569,6 +3569,86 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>发送物流短信</p>
+     * 
+     * @param request SendLogisticsSmsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return SendLogisticsSmsResponse
+     */
+    public SendLogisticsSmsResponse sendLogisticsSmsWithOptions(SendLogisticsSmsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expressCompanyCode)) {
+            query.put("ExpressCompanyCode", request.expressCompanyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mailNo)) {
+            query.put("MailNo", request.mailNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.outId)) {
+            query.put("OutId", request.outId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformCompanyCode)) {
+            query.put("PlatformCompanyCode", request.platformCompanyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.signName)) {
+            query.put("SignName", request.signName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateCode)) {
+            query.put("TemplateCode", request.templateCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.templateParam)) {
+            query.put("TemplateParam", request.templateParam);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "SendLogisticsSms"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new SendLogisticsSmsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>发送物流短信</p>
+     * 
+     * @param request SendLogisticsSmsRequest
+     * @return SendLogisticsSmsResponse
+     */
+    public SendLogisticsSmsResponse sendLogisticsSms(SendLogisticsSmsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.sendLogisticsSmsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>  This operation is mainly used to send a single message. In special scenarios, you can send multiple messages with the same content to a maximum of 1,000 mobile numbers. Note that group sending may be delayed.</p>
      * <ul>
@@ -4560,5 +4640,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ValidPhoneCodeResponse validPhoneCode(ValidPhoneCodeRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.validPhoneCodeWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>物流短信运单号校验</p>
+     * 
+     * @param request VerifyLogisticsSmsMailNoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return VerifyLogisticsSmsMailNoResponse
+     */
+    public VerifyLogisticsSmsMailNoResponse verifyLogisticsSmsMailNoWithOptions(VerifyLogisticsSmsMailNoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.expressCompanyCode)) {
+            query.put("ExpressCompanyCode", request.expressCompanyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mailNo)) {
+            query.put("MailNo", request.mailNo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.platformCompanyCode)) {
+            query.put("PlatformCompanyCode", request.platformCompanyCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "VerifyLogisticsSmsMailNo"),
+            new TeaPair("version", "2017-05-25"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new VerifyLogisticsSmsMailNoResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>物流短信运单号校验</p>
+     * 
+     * @param request VerifyLogisticsSmsMailNoRequest
+     * @return VerifyLogisticsSmsMailNoResponse
+     */
+    public VerifyLogisticsSmsMailNoResponse verifyLogisticsSmsMailNo(VerifyLogisticsSmsMailNoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.verifyLogisticsSmsMailNoWithOptions(request, runtime);
     }
 }
