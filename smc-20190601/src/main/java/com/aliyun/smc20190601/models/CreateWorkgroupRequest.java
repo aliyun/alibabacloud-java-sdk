@@ -14,8 +14,7 @@ public class CreateWorkgroupRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the workgroup.</p>
-     * <p>The description must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The description of the workgroup. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -27,7 +26,7 @@ public class CreateWorkgroupRequest extends TeaModel {
      * <p>The name of the workgroup. The name must meet the following requirements:</p>
      * <ul>
      * <li>The name must be unique.</li>
-     * <li>The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li>The name must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), periods (.), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +42,7 @@ public class CreateWorkgroupRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The tag information of the workgroup.</p>
+     * <p>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateWorkgroupRequestTag> tag;
@@ -103,8 +102,7 @@ public class CreateWorkgroupRequest extends TeaModel {
 
     public static class CreateWorkgroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key of a specified workgroup.</p>
-         * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * <p>The tag key of the workgroup. You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -113,8 +111,7 @@ public class CreateWorkgroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of a specified workgroup.</p>
-         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * <p>The tag value of the workgroup. The tag value can be up to 128 characters in length, cannot be an empty string, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

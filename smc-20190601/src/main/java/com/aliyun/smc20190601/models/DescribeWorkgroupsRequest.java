@@ -53,7 +53,7 @@ public class DescribeWorkgroupsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The list of tag information of workgroups.</p>
+     * <p>The tags of the reserved instance. You can specify up to 20 tags. If you specify multiple tags, the tag keys cannot be duplicated.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeWorkgroupsRequestTag> tag;
@@ -135,8 +135,7 @@ public class DescribeWorkgroupsRequest extends TeaModel {
 
     public static class DescribeWorkgroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the workgroup. Valid values of N: 1 to 20.</p>
-         * <p>You cannot specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://. The tag key cannot start with acs: or aliyun.</p>
+         * <p>The tag key of the workgroup. You cannot specify an empty string as a tag key. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -145,8 +144,7 @@ public class DescribeWorkgroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the workgroup. Valid values of N: 1 to 20.</p>
-         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * <p>The tag value of the workgroup. The tag value can be up to 128 characters in length, cannot be an empty string, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

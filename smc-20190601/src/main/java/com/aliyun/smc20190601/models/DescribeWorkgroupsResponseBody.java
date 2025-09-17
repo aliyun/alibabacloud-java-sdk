@@ -41,7 +41,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The queried workgroups.</p>
+     * <p>The details of the workgroup.</p>
      */
     @NameInMap("Workgroups")
     public DescribeWorkgroupsResponseBodyWorkgroups workgroups;
@@ -94,7 +94,6 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
     public static class DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupTagsTag extends TeaModel {
         /**
          * <p>The tag key of the workgroup.</p>
-         * <p>You can specify an empty string as a tag key. The tag key can be up to 64 characters in length and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -103,8 +102,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the workgroup. Valid values of N: 1 to 20.</p>
-         * <p>You can specify an empty string as a tag value. The tag value can be up to 64 characters in length and cannot contain http:// or https://.</p>
+         * <p>The tag value of the workgroup.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>
@@ -283,7 +281,7 @@ public class DescribeWorkgroupsResponseBody extends TeaModel {
         public DescribeWorkgroupsResponseBodyWorkgroupsWorkgroupWarnings warnings;
 
         /**
-         * <p>The workgroup ID.</p>
+         * <p>The ID of the workgroup.</p>
          * 
          * <strong>example:</strong>
          * <p>w-***</p>

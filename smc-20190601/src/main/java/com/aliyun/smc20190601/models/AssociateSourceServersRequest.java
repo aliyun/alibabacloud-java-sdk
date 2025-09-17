@@ -11,7 +11,7 @@ public class AssociateSourceServersRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The IDs of migration sources. You can specify up to 50 IDs.</p>
+     * <p>The ID of the migration source. A workgroup can be associated with a maximum of 50 migration sources.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SourceId")

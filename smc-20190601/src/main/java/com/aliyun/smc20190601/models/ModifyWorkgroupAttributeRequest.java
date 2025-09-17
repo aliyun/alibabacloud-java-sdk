@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyWorkgroupAttributeRequest extends TeaModel {
     /**
-     * <p>The new description of the workgroup.</p>
-     * <p>The description must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The new description of the workgroup. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -15,7 +14,11 @@ public class ModifyWorkgroupAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The new name of the workgroup. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the workgroup. The name must meet the following requirements:</p>
+     * <ul>
+     * <li>The name must be unique.</li>
+     * <li>The name must be 2 to 64 characters in length. It must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), periods (.), underscores (_), and hyphens (-).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>testMigrationTaskName</p>
@@ -30,7 +33,7 @@ public class ModifyWorkgroupAttributeRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The workgroup ID.</p>
+     * <p>The ID of the workgroup.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

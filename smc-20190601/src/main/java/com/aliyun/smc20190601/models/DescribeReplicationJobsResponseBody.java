@@ -1290,6 +1290,9 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         @NameInMap("VpcId")
         public String vpcId;
 
+        @NameInMap("WorkgroupId")
+        public String workgroupId;
+
         public static DescribeReplicationJobsResponseBodyReplicationJobsReplicationJob build(java.util.Map<String, ?> map) throws Exception {
             DescribeReplicationJobsResponseBodyReplicationJobsReplicationJob self = new DescribeReplicationJobsResponseBodyReplicationJobsReplicationJob();
             return TeaModel.build(map, self);
@@ -1637,6 +1640,14 @@ public class DescribeReplicationJobsResponseBody extends TeaModel {
         }
         public String getVpcId() {
             return this.vpcId;
+        }
+
+        public DescribeReplicationJobsResponseBodyReplicationJobsReplicationJob setWorkgroupId(String workgroupId) {
+            this.workgroupId = workgroupId;
+            return this;
+        }
+        public String getWorkgroupId() {
+            return this.workgroupId;
         }
 
     }

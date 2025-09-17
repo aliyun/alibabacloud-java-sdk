@@ -11,7 +11,7 @@ public class DeleteWorkgroupRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The workgroup ID.</p>
+     * <p>The ID of the workgroup.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
