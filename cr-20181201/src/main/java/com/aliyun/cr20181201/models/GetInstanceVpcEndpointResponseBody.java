@@ -154,6 +154,13 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         public String ip;
 
         /**
+         * <strong>example:</strong>
+         * <p>PRIVATE_ZONE_CONFLICT_AT_{private_zone_id}</p>
+         */
+        @NameInMap("Issue")
+        public String issue;
+
+        /**
          * <p>The status of the VPC. Valid values:</p>
          * <ul>
          * <li><code>CREATING</code></li>
@@ -203,6 +210,14 @@ public class GetInstanceVpcEndpointResponseBody extends TeaModel {
         }
         public String getIp() {
             return this.ip;
+        }
+
+        public GetInstanceVpcEndpointResponseBodyLinkedVpcs setIssue(String issue) {
+            this.issue = issue;
+            return this;
+        }
+        public String getIssue() {
+            return this.issue;
         }
 
         public GetInstanceVpcEndpointResponseBodyLinkedVpcs setStatus(String status) {
