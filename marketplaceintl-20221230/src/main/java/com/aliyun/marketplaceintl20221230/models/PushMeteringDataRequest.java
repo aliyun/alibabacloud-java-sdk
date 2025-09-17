@@ -66,6 +66,13 @@ public class PushMeteringDataRequest extends TeaModel {
 
         /**
          * <strong>example:</strong>
+         * <p>ORDER20231001</p>
+         */
+        @NameInMap("PushOrderBizId")
+        public String pushOrderBizId;
+
+        /**
+         * <strong>example:</strong>
          * <p>1662284820000</p>
          */
         @NameInMap("StartTime")
@@ -106,6 +113,14 @@ public class PushMeteringDataRequest extends TeaModel {
         }
         public String getMeteringEntity() {
             return this.meteringEntity;
+        }
+
+        public PushMeteringDataRequestMeteringData setPushOrderBizId(String pushOrderBizId) {
+            this.pushOrderBizId = pushOrderBizId;
+            return this;
+        }
+        public String getPushOrderBizId() {
+            return this.pushOrderBizId;
         }
 
         public PushMeteringDataRequestMeteringData setStartTime(Long startTime) {

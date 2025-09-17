@@ -28,6 +28,50 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>获取推送计量数据结果</p>
+     * 
+     * @param request DescribePushMeteringDataRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePushMeteringDataResponse
+     */
+    public DescribePushMeteringDataResponse describePushMeteringDataWithOptions(DescribePushMeteringDataRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.pushOrderBizId)) {
+            query.put("PushOrderBizId", request.pushOrderBizId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePushMeteringData"),
+            new TeaPair("version", "2022-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePushMeteringDataResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取推送计量数据结果</p>
+     * 
+     * @param request DescribePushMeteringDataRequest
+     * @return DescribePushMeteringDataResponse
+     */
+    public DescribePushMeteringDataResponse describePushMeteringData(DescribePushMeteringDataRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePushMeteringDataWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>卖家查询实例列表</p>
      * 
      * @param request DescribeSellerInstancesRequest
@@ -71,12 +115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSellerInstancesResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new DescribeSellerInstancesResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSellerInstancesResponse());
     }
 
     /**
@@ -128,12 +167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new NoticeInstanceUserResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new NoticeInstanceUserResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new NoticeInstanceUserResponse());
     }
 
     /**
@@ -181,12 +215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
-        if (com.aliyun.teautil.Common.isUnset(_signatureVersion) || !com.aliyun.teautil.Common.equalString(_signatureVersion, "v4")) {
-            return TeaModel.toModel(this.callApi(params, req, runtime), new PushMeteringDataResponse());
-        } else {
-            return TeaModel.toModel(this.execute(params, req, runtime), new PushMeteringDataResponse());
-        }
-
+        return TeaModel.toModel(this.callApi(params, req, runtime), new PushMeteringDataResponse());
     }
 
     /**
